@@ -2,19 +2,19 @@
 title: Usando os comandos para modificar dados
 ms.date: 03/30/2017
 ms.assetid: f4160389-b9ff-4b74-b655-437c76dcd586
-ms.openlocfilehash: 9f13eb2079df959281a44086edf84c34f3c63a14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6388eecb2e96970f47383b61985d672bd0419a1e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365038"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395939"
 ---
 # <a name="using-commands-to-modify-data"></a>Usando os comandos para modificar dados
-Usando um provedor de dados do .NET Framework, você pode executar os procedimentos armazenados ou instruções definição de dados idioma (por exemplo, CREATE TABLE e ALTER COLUMN) para executar a manipulação de esquema em um banco de dados ou catálogo. Esses comandos não retornam linhas como uma consulta, portanto, o **comando** objeto fornece um **ExecuteNonQuery** para processá-las.  
+Usando um provedor de dados .NET Framework, você pode executar os procedimentos armazenados ou dados instruções linguagem de definição (por exemplo, CREATE TABLE e ALTER COLUMN) para executar a manipulação de esquema em um banco de dados ou o catálogo. Esses comandos não retornam linhas, como faria com uma consulta, portanto, o **comando** objeto fornece um **ExecuteNonQuery** para processá-las.  
   
  Além de usar **ExecuteNonQuery** para modificar o esquema, você também pode usar esse método para instruções SQL de processo que modificam dados, mas que não retornam linhas, como INSERT, UPDATE e excluir.  
   
- Embora linhas não são retornadas pelo **ExecuteNonQuery** parâmetros de método de entrada e saída e valores de retorno podem ser passados e retornados por meio de **parâmetros** coleção do **comando**  objeto.  
+ Embora linhas não são retornadas pelo **ExecuteNonQuery** parâmetros de método, entrada e saída e valores retornados podem ser passados e retornados por meio de **parâmetros** coleção do **comando**  objeto.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Atualizando dados em uma fonte de dados](../../../../docs/framework/data/adonet/updating-data-in-a-data-source.md)  
@@ -26,4 +26,4 @@ Usando um provedor de dados do .NET Framework, você pode executar os procedimen
 ## <a name="see-also"></a>Consulte também  
  [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

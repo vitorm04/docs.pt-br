@@ -2,37 +2,37 @@
 title: Resolvedor peer
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494602"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385075"
 ---
 # <a name="peer-resolvers"></a>Resolvedor peer
-Para conectar a uma malha, um nó ponto requer que os endereços IP de outros nós. Endereços IP são obtidos entrando em contato com um serviço de resolução, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrado com esse ID de malha. O resolvedor mantém uma lista de endereços de registrado, ele cria, fazendo com que cada nó na malha registrar com o serviço.  
+Para se conectar a uma malha, um nó par exige que os endereços IP dos outros nós. Endereços IP são obtidos por entrar em contato com um serviço de resolvedor, que usa a ID de malha e retorna uma lista de endereços correspondentes a nós registrados com essa ID de malha. O resolvedor mantém uma lista de endereços registrados, que será criado, fazendo com que cada nó na malha registrar com o serviço.  
   
  Você pode especificar qual serviço PeerResolver usar por meio de `Resolver` propriedade do <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
-## <a name="supported-peer-resolvers"></a>Resolvedor Peer com suporte  
+## <a name="supported-peer-resolvers"></a>Resolvedores de pares com suporte  
  Canal par dá suporte a dois tipos de resolvedores: resolução de protocolo PNRP (Peer Name) e os serviços do resolvedor personalizado.  
   
- Por padrão, o canal de mesmo nível usa o serviço de resolução PNRP ponto a ponto para a descoberta de pontos e vizinhos na malha. Para situações/plataformas em que o PNRP não está disponível ou viável, o Windows Communication Foundation (WCF) fornece um serviço de detecção baseada em servidor alternativo - o <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Você pode definir explicitamente um serviço resolvedor personalizado, escrevendo uma classe que implementa o <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interface.  
+ Por padrão, o canal de mesmo nível usa o serviço de resolvedor de pares PNRP para a descoberta de vizinhos e colegas na malha. Para situações/plataformas em que o PNRP não está disponível ou é viável, o Windows Communication Foundation (WCF) fornece um serviço de descoberta, com base em servidor alternativo - o <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Você pode definir explicitamente um serviço de resolvedor personalizado, escrevendo uma classe que implementa o <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interface.  
   
-### <a name="peer-name-resolution-protocol-pnrp"></a>Protocolo PNRP (PNRP)  
- O PNRP, o resolvedor padrão para [!INCLUDE[wv](../../../../includes/wv-md.md)], é um serviço de resolução de nome distribuída, sem servidor. O PNRP também pode ser usado em [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] instalando o pacote de rede avançado. Dois clientes executando a mesma versão do PNRP podem localizar uns aos outros usando esse protocolo, desde que eles atendam a certas condições (como a falta de um firewall corporativo intermediário). Observe que a versão do PNRP que acompanha o [!INCLUDE[wv](../../../../includes/wv-md.md)] é mais recente que a versão incluída no pacote de rede avançado. Verifique a Microsoft Download Center para atualizações PNRP para [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
+### <a name="peer-name-resolution-protocol-pnrp"></a>Protocolo de resolução de nome de ponto (PNRP)  
+ O PNRP, o resolvedor padrão para [!INCLUDE[wv](../../../../includes/wv-md.md)], é um serviço de resolvedor de nome distribuídos, sem servidor. O PNRP também pode ser usado em [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] instalando o Advanced Networking Pack. Quaisquer dois clientes executando a mesma versão do PNRP podem localizar uns aos outros usando esse protocolo, desde que eles atendem a determinadas condições (como a falta de um firewall corporativo intermediário). Observe que a versão do PNRP que é fornecido com [!INCLUDE[wv](../../../../includes/wv-md.md)] for mais recente que a versão incluída no Advanced Networking Pack. Verificar Microsoft Download Center as atualizações do PNRP para [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
   
-### <a name="custom-resolver-services"></a>Serviços de resolvedor personalizado  
- Quando o serviço PNRP não está disponível ou você deseja controle total sobre a formatação de malha, você pode usar um serviço resolvedor personalizado, com base em servidor. Você pode definir explicitamente esse serviço, escrevendo uma classe do resolvedor Implementando o <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interface ou usando a implementação do padrão de caixa de entrada, <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
+### <a name="custom-resolver-services"></a>Serviços do resolvedor personalizado  
+ Quando o serviço de PNRP não está disponível ou você deseja controle total sobre a formatação de malha, você pode usar um serviço de resolvedor personalizado, com base em servidor. Você pode definir explicitamente esse serviço, escrevendo uma classe de resolvedor Implementando a <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> interface ou usando a implementação padrão da caixa de entrada, <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>.  
   
- Na implementação padrão do serviço, registros de cliente expirarem após um determinado período de tempo se o cliente não atualiza explicitamente o registro. Os clientes que usam o serviço de resolução devem estar atento o limite superior na latência de cliente-servidor para atualizar com êxito os registros no tempo. Isso envolve a escolha de um tempo limite de atualização apropriado (`RefreshInterval`) no serviço de resolução. (Para obter mais informações, consulte [dentro o CustomPeerResolverService: registro de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
+ Na implementação padrão do serviço, registros de cliente expirarem após um determinado período de tempo, se o cliente não atualiza explicitamente o registro. Os clientes que usam o serviço de resolvedor devem estar cientes do limite superior na latência de cliente-servidor para atualizar os registros com êxito no tempo. Isso envolve a escolha de um tempo limite de atualização apropriado (`RefreshInterval`) no serviço resolvedor. (Para obter mais informações, consulte [dentro do CustomPeerResolverService: registros de cliente](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md).)  
   
- O gravador de aplicativos também deve considerar para proteger a conexão entre clientes e o serviço resolvedor personalizado. Você pode fazer isso usando as configurações de segurança no <xref:System.ServiceModel.NetTcpBinding> que os clientes usam para entrar em contato com o serviço de resolução. Você deve especificar credenciais (se usado) no `ChannelFactory` usado para criar o canal par. Essas credenciais são passadas para o `ChannelFactory` usado para criar canais para o resolvedor personalizado.  
+ O criador do aplicativo também deve considerar para proteger a conexão entre clientes e o serviço de resolvedor personalizado. Você pode fazer isso usando configurações de segurança no <xref:System.ServiceModel.NetTcpBinding> que os clientes usam para contatar o serviço resolvedor. Você deve especificar as credenciais (se usado) no `ChannelFactory` usado para criar o canal par. Essas credenciais são passadas para o `ChannelFactory` usado para criar canais para o resolvedor personalizado.  
   
 > [!NOTE]
->  Ao usar redes locais e imediatamente com um resolvedor personalizado, é altamente recomendável que aplicativos usando o ou o suporte a redes de local de link ou imediatamente incluem lógica que seleciona um único endereço de conexão local para usar ao se conectar. Isso evita confusão potencialmente causado por computadores com vários endereços de conexão local. Acordo com isso, canal par somente oferece suporte a um único endereço de conexão local a qualquer momento. Você pode especificar esse endereço com o `ListenIpAddress` propriedade o <xref:System.ServiceModel.NetPeerTcpBinding>.  
+>  Ao usar redes locais e improvisadas com um resolvedor personalizado, é altamente recomendável que os aplicativos usando ou que dão suporte a redes de local de link ou improvisadas incluem lógica que seleciona um único endereço de vínculo local para usar ao se conectar. Isso impede que qualquer confusão potencialmente causado por computadores com vários endereços de vínculo local. Acordo com isso, Peer Channel dá suporte somente a um único endereço de vínculo local a qualquer momento. Você pode especificar esse endereço com o `ListenIpAddress` propriedade no <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor ponto a ponto personalizado de canal par](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Para ver uma demonstração de como implementar um resolvedor personalizado, consulte [resolvedor de pares personalizado Peer Channel](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Sobre o CustomPeerResolverService: Registro de clientes](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

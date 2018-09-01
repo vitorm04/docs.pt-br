@@ -7,28 +7,28 @@ dev_langs:
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215d23be53fad330b6ab056af83ad907f207259e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495126"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386539"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
-A ilustração a seguir mostra um serviço do Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado x. 509. O cliente é autenticado usando um nome de usuário e senha.  
+A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado X.509. O cliente é autenticado usando um nome de usuário e senha.  
   
  Para um aplicativo de exemplo, consulte [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
- ![Segurança de mensagem usando a autenticação do nome de usuário](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![Segurança de mensagem usando a autenticação de nome de usuário](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|O Windows Communication Foundation (WCF) somente|  
-|Autenticação (servidor)|Negociação inicial requer autenticação de servidor|  
+|Interoperabilidade|Windows Communication Foundation (WCF) apenas|  
+|Autenticação (servidor)|Negociação inicial exige a autenticação de servidor|  
 |Autenticação (cliente)|Nome de usuário/senha|  
-|Integridade|Sim, usando o contexto de segurança compartilhada|  
-|Confidencialidade|Sim, usando o contexto de segurança compartilhada|  
+|Integridade|Sim, usando o contexto de segurança compartilhado|  
+|Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
 |Transporte|HTTP|  
 |Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -37,7 +37,7 @@ A ilustração a seguir mostra um serviço do Windows Communication Foundation (
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem.  
@@ -91,7 +91,7 @@ A ilustração a seguir mostra um serviço do Windows Communication Foundation (
 ## <a name="client"></a>Cliente  
   
 ### <a name="code"></a>Código  
- O código a seguir cria o cliente. A associação é a segurança de modo de mensagem e o tipo de credencial de cliente é definido como `UserName`. O nome de usuário e a senha só podem ser especificados usando o código (não é configurável). O código para retornar o nome de usuário e a senha não é mostrado aqui porque ele deve ser feito no nível do aplicativo. Por exemplo, use uma caixa de diálogo de Windows Forms para consultar o usuário para os dados.  
+ O código a seguir cria o cliente. A associação é a segurança de modo de mensagem e o tipo de credencial de cliente é definido como `UserName`. O nome de usuário e a senha só podem ser especificados usando o código (não é configurável). O código para retornar o nome de usuário e a senha não é mostrado aqui porque ele deve ser feito no nível do aplicativo. Por exemplo, use uma caixa de diálogo do Windows Forms para consultar o usuário para os dados.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
@@ -132,4 +132,4 @@ A ilustração a seguir mostra um serviço do Windows Communication Foundation (
  [Nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: Atraso durável em XAMLX
 ms.date: 03/30/2017
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
-ms.openlocfilehash: 1b0e418e382c20350a61a36164265c1693925e11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eef9211c67d190ecb5f329c481fa2e3d1763353
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516299"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389251"
 ---
 # <a name="durable-delay-in-xamlx"></a>Atraso durável em XAMLX
 Este exemplo demonstra como usar um atraso durável, que é um atraso que persiste o fluxo de trabalho para um dispositivo durável durante o atraso.  
@@ -17,16 +17,16 @@ Este exemplo demonstra como usar um atraso durável, que é um atraso que persis
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelayXamlx`  
   
 ## <a name="discussion"></a>Discussão  
  O fluxo de trabalho de exemplo contém duas mensagens em um arquivo local que são separadas por um atraso. Quando o atraso é disparado, o trabalho são descarregados e esperam 5 segundos no armazenamento de instância de trabalho antes de ser recarregado na memória.  
   
- O arquivo .xamlx é um serviço de fluxo de trabalho que está hospedado no Visual Studio. O Visual Studio usa Cassini que usa um serviço de fluxo de trabalho de host para host de fluxo de trabalho.  
+ O arquivo. xamlx é um serviço de fluxo de trabalho que está hospedado no Visual Studio. O Visual Studio usa Cassini que usa um serviço de fluxo de trabalho para host o fluxo de trabalho.  
   
- Além de hospedar o trabalho, o host serviço de trabalho gerencia as instâncias de fluxo de trabalho carregar e descarregando as. Para iniciar uma instância da definição do Windows Workflow Foundation (WF) (no host do serviço de fluxo de trabalho), defina um cliente que envia uma mensagem para o <xref:System.ServiceModel.Activities.Receive> atividade no fluxo de trabalho. Este <xref:System.ServiceModel.Activities.Receive> tem sua propriedade de <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> definida como `true`, permitindo que você criar uma nova instância de fluxo de trabalho uma vez que recebe uma mensagem.  
+ Além de hospedar o trabalho, o host serviço de trabalho gerencia as instâncias de fluxo de trabalho carregar e descarregando as. Para iniciar uma instância da definição do Windows Workflow Foundation (WF) (no host de serviço de fluxo de trabalho), defina um cliente que envia uma mensagem para o <xref:System.ServiceModel.Activities.Receive> atividade no fluxo de trabalho. Este <xref:System.ServiceModel.Activities.Receive> tem sua propriedade de <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> definida como `true`, permitindo que você criar uma nova instância de fluxo de trabalho uma vez que recebe uma mensagem.  
   
  Durante a inicialização, um comportamento de instância de unload é adicionado ao arquivo de configuração que especifica ao host serviço de fluxo de trabalho em que deve descarregar uma instância no armazenamento de persistência (base de dados). Para esse exemplo, descarrega a instância imediatamente após o fluxo de trabalho aparece ociosa (quando o atraso é disparado).  
   
@@ -42,7 +42,7 @@ Este exemplo demonstra como usar um atraso durável, que é um atraso que persis
   
 5.  Abra o arquivo de solução de DurableDelayXamlx.sln.  
   
-6.  Em **Solution Explorer**, a solução e selecione **propriedades**.  
+6.  Na **Gerenciador de soluções**, a solução com o botão direito e selecione **propriedades**.  
   
 7.  Selecione **vários projetos de inicialização** e defina os dois projetos como **iniciar**.  
   
@@ -63,6 +63,6 @@ Este exemplo demonstra como usar um atraso durável, que é um atraso que persis
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelayXamlX`

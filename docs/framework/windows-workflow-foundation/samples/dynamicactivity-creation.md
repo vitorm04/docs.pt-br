@@ -2,12 +2,12 @@
 title: Criação de DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-ms.openlocfilehash: 93435be69f90ca0b74dae6b934cb145fabb7afff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518096"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385255"
 ---
 # <a name="dynamicactivity-creation"></a>Criação de DynamicActivity
 Este exemplo demonstra duas maneiras diferentes para criar uma atividade em tempo de execução usando a atividade de <xref:System.Activities.DynamicActivity> .  
@@ -112,13 +112,13 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- O XAML pode ser criado usando [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]visualmente. Se estiver incluído em um projeto do Visual Studio, certifique-se de definir seu "Build Action" para "None" para impedir que está sendo compilada. O XAML pode então ser carregado dinamicamente usando a chamada a seguir.  
+ O XAML pode ser criado usando [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]visualmente. Se ele estiver incluído em um projeto do Visual Studio, certifique-se de definir sua "ação de compilação" como "None" para impedir que está sendo compilado. O XAML pode então ser carregado dinamicamente usando a chamada a seguir.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
 ```  
   
- A instância de <xref:System.Activities.DynamicActivity> criada ou carregar programaticamente com um fluxo de trabalho XAML pode ser usada como mostrado no exemplo de código. Observe que "atuar" passado para o `WorkflowInvoker.Invoke` é o ato de"" <xref:System.Activities.Activity> definido no primeiro exemplo de código.  
+ A instância de <xref:System.Activities.DynamicActivity> criada ou carregar programaticamente com um fluxo de trabalho XAML pode ser usada como mostrado no exemplo de código. Observe que "ato" passado para o `WorkflowInvoker.Invoke` é "ato" <xref:System.Activities.Activity> definido no primeiro exemplo de código.  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
@@ -143,6 +143,6 @@ Console.WriteLine("The average calculated using the code activity is = " + resul
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`

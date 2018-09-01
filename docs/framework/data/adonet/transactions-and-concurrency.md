@@ -2,12 +2,12 @@
 title: Transações e simultaneidade
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 9ea136a34c478f3619c81ad3cbbae0765fb99374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365261"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386679"
 ---
 # <a name="transactions-and-concurrency"></a>Transações e simultaneidade
 Uma transação consiste em um único comando ou em um grupo de comandos executados como um pacote. As transações permitem que você combine várias operações em uma única unidade de trabalho. Se uma falha ocorrer em determinado ponto na transação, todas as atualizações poderão ser revertidas para o estado em vigor antes da transação.  
@@ -19,7 +19,7 @@ Uma transação consiste em um único comando ou em um grupo de comandos executa
   
  Se uma transação envolver várias tabelas no mesmo banco de dados ou servidor, as transações explícitas em procedimentos armazenados geralmente apresentarão um melhor desempenho. Você pode criar transações em procedimentos armazenados do SQL Server usando as instruções Transact-SQL `BEGIN TRANSACTION`, `COMMIT TRANSACTION` e `ROLLBACK TRANSACTION`. Para obter mais informações, consulte os Manuais Online do SQL Server.  
   
- As transações que envolvem gerenciadores de recursos diferentes, como uma transação entre o SQL Server e Oracle, requerem uma transação distribuída.  
+ Transações que envolvem diferentes gerentes de recursos, como uma transação entre o SQL Server e Oracle, requerem uma transação distribuída.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Transações locais](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,4 +40,4 @@ Uma transação consiste em um único comando ou em um grupo de comandos executa
  [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

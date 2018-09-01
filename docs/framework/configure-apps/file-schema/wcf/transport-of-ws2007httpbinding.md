@@ -2,12 +2,12 @@
 title: '&lt;transporte&gt; de &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35af47551f742b0e48220611a874605fb752b626
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350934"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396791"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transporte&gt; de &lt;ws2007HttpBinding&gt;
 Define as configurações de autenticação para o transporte HTTP.  
@@ -39,10 +39,10 @@ transport clientCredentialType =
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`clientCredentialType`|Especifica a credencial usada para autenticar o cliente para o serviço. Esse atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Especifica a credencial usada para autenticar o cliente a um proxy do domínio. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|O realm de autenticação para a autenticação básica ou digest. O padrão é uma cadeia de caracteres vazia.<br /><br /> Pelo menos, um realm de autenticação especifica o nome do host que executa a autenticação. Ele também pode especificar uma coleção de usuários que têm acesso. Um usuário pode consultar o realm de autenticação para determinar qual da várias possíveis nomes de usuário e senhas pode ser usado.|  
+|`proxyCredentialType`|Especifica a credencial usada para autenticar o cliente para um proxy do domínio. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|O realm de autenticação para a autenticação básica ou digest. O padrão é uma cadeia de caracteres vazia.<br /><br /> Pelo menos, um realm de autenticação especifica o nome do host que executa a autenticação. Ele também pode especificar uma coleção de usuários que têm acesso. Um usuário pode consultar o realm de autenticação para determinar qual dos vários possíveis nomes de usuário e senhas pode ser usado.|  
   
-## <a name="clientcredentialtype-attribute"></a>clientCredentialType atributo  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialType de atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -50,8 +50,8 @@ transport clientCredentialType =
 |Basic|Usa a autenticação básica.|  
 |Digest|Usa autenticação digest.|  
 |NTLM|Usa a autenticação NTLM como um fallback com um domínio do Windows.|  
-|Windows|Usa autenticação integrada do Windows.|  
-|certificado|Usa certificados x. 509 para autenticar o cliente.|  
+|Windows|Usa integrada a autenticação do Windows.|  
+|Certificado|Usa certificados x. 509 para autenticar o cliente.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atributo  
   
@@ -61,8 +61,8 @@ transport clientCredentialType =
 |Basic|Usa a autenticação básica.|  
 |Digest|Usa autenticação digest.|  
 |NTLM|Usa NTLM como um fallback com um domínio do Windows.|  
-|Windows|Usa autenticação integrada do Windows.|  
-|certificado|Usa certificados x. 509 para autenticar o cliente.|  
+|Windows|Usa integrada a autenticação do Windows.|  
+|Certificado|Usa certificados x. 509 para autenticar o cliente.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -81,5 +81,5 @@ transport clientCredentialType =
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

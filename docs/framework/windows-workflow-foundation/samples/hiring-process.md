@@ -2,17 +2,17 @@
 title: Processo de aluguer
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519757"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396314"
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
   
- O processo de fluxo de trabalho de `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita a autorização de vários gerentes na organização. Para alcançar essa meta, o fluxo de trabalho usa outros serviços existentes na organização (no nosso caso, um serviço de caixa de entrada e um serviço de dados organizacionais implementados como serviços do Windows Communication Foundation (WCF) simples).  
+ O processo de fluxo de trabalho de `HiringRequest` (implementado como <xref:System.Activities.Statements.Flowchart>) solicita a autorização de vários gerentes na organização. Para atingir essa meta, o fluxo de trabalho usa outros serviços existentes na organização (em nosso caso, um serviço de caixa de entrada e um serviço de dados organizacionais implementados como serviços do Windows Communication Foundation (WCF) simples).  
   
  O fluxo de trabalho `ResumeRequest` (implementado como <xref:System.Activities.Statements.Sequence>) publica um anúncio de emprego externa no site de carreiras de Contoso e gerencia a aquisição de resumos. Um anúncio de emprego está disponível no site externo por um período de tempo fixo (até que um tempo limite expire) ou até que um funcionário de Contoso decida o remover.  
   
@@ -53,12 +53,12 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
 ## <a name="description-of-the-process"></a>Descrição do processo  
- Contoso, Inc. deseja que o controle de fechamento do número de funcionários em cada um dos seus departamentos. Portanto, quando qualquer funcionário deseja iniciar um novo processo de aluguer, precisam fazer uma aprovação de aluguer do processo de solicitação antes que o recrutamento possa realmente acontecer. Esse processo é chamado solicitação de aluguer de processo (definida no projeto de HiringRequestService) e consiste as seguintes etapas:  
+ Contoso, Inc. deseja ter controle de fechamento de headcount em cada um dos departamentos. Portanto, quando qualquer funcionário deseja iniciar um novo processo de aluguer, precisam fazer uma aprovação de aluguer do processo de solicitação antes que o recrutamento possa realmente acontecer. Esse processo é chamado solicitação de aluguer de processo (definida no projeto de HiringRequestService) e consiste as seguintes etapas:  
   
 1.  Um funcionário (solicitador) começa a solicitação de aluguer do processo.  
   
@@ -112,14 +112,14 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 |-------------|-----------------|-------------|  
 |Fluxograma|O processo empresarial é representado como um fluxograma. Esta descrição do fluxograma representa o processo da mesma maneira na qual um negócio o desenharia em um whiteboard.|HiringRequestService|  
 |Serviços de fluxo de trabalho|O fluxograma com a definição de processo é hospedado em um serviço (nesse exemplo, o serviço está hospedado em um aplicativo de console).|HiringRequestService|  
-|Atividades de mensagem|O fluxograma usa atividades de mensagem de duas maneiras:<br /><br /> -Para obter informações do usuário (para receber as decisões e informações relacionadas em cada etapa de aprovação).<br />-Para interagir com outros serviços existentes (InboxService e OrgDataService, usada por meio de referências de serviço).|HiringRequestService|  
-|O conteúdo com base correlação|As mensagens aprovação de correlacionam na propriedade ID de solicitação de aluguer:<br /><br /> -Quando um processo é iniciado, o identificador de correlação é inicializado com a ID da solicitação.<br />-Mensagens de aprovação entrada correlacionam em sua ID (o primeiro parâmetro de cada mensagem de aprovação é a ID da solicitação).|HiringRequestService/ResumeRequestService|  
-|Atividades personalizados (declarativas e código com base)|Há várias atividades personalizados nesse exemplo:<br /><br /> -   `SaveActionTracking`: Essa atividade emite um personalizado <xref:System.Activities.Tracking.TrackingRecord> (usando <xref:System.Activities.NativeActivityContext.Track%2A>). Esta atividade foi criada usando código obrigatório que estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Esta atividade recebe uma lista de IDs de tipo de posição e retorna uma lista de pessoas que têm a posição na Contoso. Esta atividade foi criado declarativamente (usando o designer de atividade).<br />-   `SaveHiringRequestInfo`: Essa atividade salva as informações de um `HiringRequest` (usando `HiringRequestRepository.Save`). Esta atividade foi criada usando código obrigatório que estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
+|Atividades de mensagem|O fluxograma usa atividades de mensagem de duas maneiras:<br /><br /> -Para obter informações do usuário (para receber decisões e informações relacionadas em cada etapa de aprovação).<br />-Para interagir com outros serviços existentes (InboxService e OrgDataService, usados com referências de serviço).|HiringRequestService|  
+|O conteúdo com base correlação|As mensagens aprovação de correlacionam na propriedade ID de solicitação de aluguer:<br /><br /> -Quando um processo é iniciado, o identificador da correlação é inicializado com a ID da solicitação.<br />-Mensagens de entrada aprovação de correlacionam em sua ID (o primeiro parâmetro de cada mensagem de aprovação é a ID da solicitação).|HiringRequestService/ResumeRequestService|  
+|Atividades personalizados (declarativas e código com base)|Há várias atividades personalizados nesse exemplo:<br /><br /> -   `SaveActionTracking`: Esta atividade emite um personalizado <xref:System.Activities.Tracking.TrackingRecord> (usando <xref:System.Activities.NativeActivityContext.Track%2A>). Esta atividade foi criada usando código obrigatório que estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Esta atividade recebe uma lista de IDs de tipo de posição e retorna uma lista de pessoas que têm essa posição em Contoso. Esta atividade foi criado declarativamente (usando o designer de atividade).<br />-   `SaveHiringRequestInfo`: Esta atividade salva informações de um `HiringRequest` (usando `HiringRequestRepository.Save`). Esta atividade foi criada usando código obrigatório que estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
 |Sistema forneceu persistência do SQL Server|A instância de <xref:System.ServiceModel.Activities.WorkflowServiceHost> que hospeda a definição de processo do fluxograma é configurado para usar o sistema forneceu persistência do SQL Server.|HiringRequestService/ResumeRequestService|  
 |Rastreamento personalizada|O exemplo inclui um participante personalizado de rastreamento que salva o histórico de `HiringRequestProcess` (esse registro que ação foi feita, por quem, e quando). O código-fonte está na pasta de rastreamento de HiringRequestService.|HiringRequestService|  
 |Rastreamento de ETW|Sistema forneceu o rastreamento de ETW é configurado no arquivo App.config no serviço de HiringRequestService.|HiringRequestService|  
 |Composição de atividades|A definição de processo usa a composição livre de <xref:System.Activities.Activity>. O fluxograma contém vários a sequência e as atividades paralelas que contêm ao mesmo tempo outras atividades (e assim por diante).|HiringRequestService|  
-|Atividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> é usado para registrar-se na caixa de entrada do CEO e gerentes de RH em paralelo (aguardando a etapa de aprovação de gerentes de RH duas).<br />-   <xref:System.Activities.Statements.Parallel> é usado para realizar algumas tarefas de limpeza nas etapas concluídas e rejeitados|HiringRequestService|  
+|Atividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601> é usado para registrar na caixa de entrada do CEO e gerentes de hora em paralelo (aguardando a etapa de aprovação de dois gerentes de hora).<br />-   <xref:System.Activities.Statements.Parallel> é usado para realizar algumas tarefas de limpeza nas etapas concluídas e descartados|HiringRequestService|  
 |Cancelar modelo|O fluxograma usa <xref:System.Activities.Statements.CancellationScope> para criar o comportamento de cancelamento (neste caso faz qualquer limpeza.)|HiringRequestService|  
 |Participante de persistência do cliente|`HiringRequestPersistenceParticipant` salva dados de uma variável de fluxo de trabalho a uma tabela armazenada na base de dados de Contoso hora.|HiringRequestService|  
 |Serviços de fluxo de trabalho|`ResumeRequestService` é implementado usando serviços de fluxo de trabalho. A definição de fluxo de trabalho e informações de serviço estão contidas em ResumeRequestService.xamlx. O serviço está configurado para usar a persistência e o rastreamento.|ResumeRequestService|  
@@ -131,7 +131,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 ## <a name="data-storage"></a>Armazenamento de dados  
  Os dados são armazenados em uma base de dados SQL Server (chamado `ContosoHR` script para criar este base de dados está localizado na pasta de `DbSetup` ). As instâncias de fluxo de trabalho são armazenadas em uma base de dados SQL Server (chamado `InstanceStore` os scripts para criar o armazenamento de instância são parte de distribuição de [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ).  
   
- Os bancos de dados são criados ao executar o script de Setup.cmd em um prompt de comando do Visual Studio.  
+ Ambos os bancos de dados são criados ao executar o script de Setup. cmd em um prompt de comando do Visual Studio.  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
   
@@ -149,9 +149,9 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 1.  Execute o Visual Studio como um administrador. HiringRequest.sln aberto.  
   
-2.  Com o botão direito na solução **Solution Explorer** e selecione **propriedades**.  
+2.  A solução no botão direito do mouse **Gerenciador de soluções** e selecione **propriedades**.  
   
-3.  Selecione a opção **vários projetos de inicialização** e defina o **CareersWebSite**, **InternalClient**, **HiringRequestService**, e **ResumeRequestService** para **iniciar**. Deixe **ContosoHR**, **InboxService**, e **OrgService** como None.  
+3.  Selecione a opção **vários projetos de inicialização** e defina as **CareersWebSite**, **InternalClient**, **HiringRequestService**, e **ResumeRequestService** à **iniciar**. Deixe **ContosoHR**, **InboxService**, e **OrgService** como None.  
   
 4.  Crie a solução. CTRL+SHIFT+B pressionando. Verifique se a compilação foi bem-sucedida.  
   
@@ -169,9 +169,9 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 6.  Clique com botão direito **CareersWebSite** na solução e selecione **exibir no navegador**.  
   
-7.  Navegue de volta para o `InternalClient` clicando **InternalClient** na solução e selecionando **exibir no navegador**.  
+7.  Navegue de volta para o `InternalClient` clicando com o **InternalClient** na solução e selecionando **exibir no navegador**.  
   
-8.  Vá para o **JobPostings** seção clicando o **vagas** link no menu superior da caixa de entrada. Você pode seguir o cenário detalhado aqui.  
+8.  Vá para o **JobPostings** seção clicando o **Job Postings** link no menu superior da caixa de entrada. Você pode seguir o cenário detalhado aqui.  
   
 ## <a name="scenarios"></a>Cenários  
   
@@ -179,7 +179,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 1.  Michael Alexander (Software Engineer) deseja solicitar uma nova posição para contratar uma Software Engineer no teste (SDET) no departamento de engenharia que tenha pelo menos 3 anos de experiência em C#.  
   
-2.  Após a criação, a solicitação é exibida na caixa de entrada de Michael (clique **atualizar** se você não vir a solicitação) está aguardando aprovação de Peter Brehm, que é o Gerenciador de Michael.  
+2.  Após a criação, a solicitação aparece na caixa de entrada de Michael (clique em **Refresh** se você não vir a solicitação) está aguardando a aprovação de Peter Brehm, que é gerente de Michael.  
   
 3.  Peter deseja atuar na solicitação de Michael. Pense as demandas da posição 5 anos de experiência C# em vez de 3, o que envia comentários volta para revisão.  
   
@@ -195,17 +195,17 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 ### <a name="start-resume-request"></a>Solicitação de resumo de Início  
   
-1.  Agora, a posição de trabalho está esperando para ser lançada para um site externo em que as pessoas podem aplicar (você pode vê-lo clicando o **vagas** link). Atualmente, a posição de trabalho é sentando-se com um representante de hora que é responsável para finalizar a posição de trabalho e a postagem.  
+1.  Agora, a posição de trabalho está esperando para ser lançada para um site externo no qual as pessoas podem aplicar (você pode vê-lo clicando na **Job Postings** link). Atualmente, a posição de trabalho é sentando-se com um representante de hora que é responsável para finalizar a posição de trabalho e a postagem.  
   
-2.  HR deseja editar este cargo (clicando o **editar** link), definindo um tempo limite de 60 minutos (em termos práticos, isso poderia ser dias ou semanas). O tempo limite permite que a posição de trabalho é decolada o site externo de acordo com os momentos especificados.  
+2.  HORA deseja editar essa posição de trabalho (clicando o **editar** link) definindo um tempo limite de 60 minutos (na vida real, isso pode ser dias ou semanas). O tempo limite permite que a posição de trabalho é decolada o site externo de acordo com os momentos especificados.  
   
-3.  Depois de salvar a posição de trabalho editado, ele aparece no **continua recebendo** guia (atualizar a página da Web para ver a nova posição de trabalho).  
+3.  Depois de salvar a posição editada de trabalho, ele aparece na **recebendo resumos** guia (atualize a página da Web para ver a nova posição de trabalho).  
   
 ### <a name="collecting-resumes"></a>Coletando resumos  
   
 1.  A posição de trabalho deve aparecer no site externo. Como uma pessoa interessada em aplicar para o trabalho, você pode usar para essa posição e enviar seu resumo.  
   
-2.  Se você voltar para o serviço de lista de lançamentos de trabalho, você poderá "Exibir currículos" que tenham sido coletados até o momento.  
+2.  Se você voltar para o serviço de anúncios de emprego listar, você pode exibir"retoma" que foram coletados até o momento.  
   
 3.  A hora também pode parar de coletar resumos (por exemplo, uma vez que o candidato à direita foi identificado).  
   

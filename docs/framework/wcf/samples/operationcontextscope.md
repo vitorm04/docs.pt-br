@@ -2,23 +2,23 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: f3dd9c8e83b0840ff68b060889421d60b734d964
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505138"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394998"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-O exemplo OperationContextScope demonstra como enviar informações extras em uma chamada do Windows Communication Foundation (WCF) usando cabeçalhos. Neste exemplo, o cliente e servidor são aplicativos de console.  
+O exemplo de OperationContextScope demonstra como enviar informações extras em uma chamada de Windows Communication Foundation (WCF) usando cabeçalhos. Neste exemplo, o servidor e o cliente são aplicativos de console.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- O exemplo demonstra como um cliente pode enviar informações adicionais, como um <xref:System.ServiceModel.Channels.MessageHeader> usando <xref:System.ServiceModel.OperationContextScope>. Um <xref:System.ServiceModel.OperationContextScope> objeto é criado por definir o escopo para um canal. Cabeçalhos que devem ser convertidos para o serviço remoto podem ser adicionados para o <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> coleção. Cabeçalhos adicionados a esta coleção podem ser recuperados do serviço acessando <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Suas chamadas são feitas em vários canais e, em seguida, os cabeçalhos adicionados ao cliente se aplicam somente para o canal que foi usado para criar o <xref:System.ServiceModel.OperationContextScope>.  
+ O exemplo demonstra como um cliente pode enviar informações adicionais, como uma <xref:System.ServiceModel.Channels.MessageHeader> usando <xref:System.ServiceModel.OperationContextScope>. Um <xref:System.ServiceModel.OperationContextScope> objeto é criado por ele de escopo para um canal. Cabeçalhos que devem ser convertidos para o serviço remoto podem ser adicionados para o <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> coleção. Adicionada a esta coleção de cabeçalhos podem ser recuperados no serviço acessando <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Suas chamadas são feitas em diversos canais e, em seguida, os cabeçalhos adicionados ao cliente se aplicam somente para o canal que foi usado para criar o <xref:System.ServiceModel.OperationContextScope>.  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- Este é o serviço de exemplo que recebe uma mensagem do cliente e procura o cabeçalho de <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> coleção. O cliente passa o GUID que ela enviou no cabeçalho e o serviço recupera o cabeçalho personalizado e, se presente, o compara com o GUID passado como o argumento pelo cliente.  
+ Este é o serviço de exemplo que recebe uma mensagem do cliente e tenta pesquisar o cabeçalho no <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> coleção. O cliente passa o GUID que ele enviado no cabeçalho e o serviço recupera o cabeçalho personalizado e, se estiver presente, o compara com o GUID passado como o argumento pelo cliente.  
   
 ```  
 public bool RetrieveHeader(string guid)  
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Isso é a implementação de cliente que usa o proxy gerado pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para se comunicar com o serviço remoto. Primeiro, ele cria dois objetos de proxy do `MessageHeaderReaderClient`.  
+ Esta é a implementação de cliente que usa o proxy gerado pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para se comunicar com o serviço remoto. Primeiro, ele cria dois objetos de proxy do `MessageHeaderReaderClient`.  
   
 ```  
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- Cliente, em seguida, cria um OperationContextScope e escopos para `client1`. Ele adiciona um <xref:System.ServiceModel.Channels.MessageHeader> para <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca uma chamada em ambos os clientes. Garante que o cabeçalho é enviado somente em `client1` e não no `client2` verificando o valor de retorno de `RetrieveHeader` chamar.  
+ Cliente, em seguida, cria um OperationContextScope e escopos para `client1`. Ele adiciona uma <xref:System.ServiceModel.Channels.MessageHeader> para <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca uma chamada em ambos os clientes. Isso garante que o cabeçalho é enviado somente em `client1` e não no `client2` verificando o valor de retorno a `RetrieveHeader` chamar.  
   
 ```  
 using (new OperationContextScope(client1.InnerChannel))  
@@ -90,7 +90,7 @@ using (new OperationContextScope(client1.InnerChannel))
 }  
 ```  
   
- Este exemplo é hospedado automaticamente. A seguinte saída de exemplo da execução do exemplo é fornecida:  
+ Este exemplo é auto-hospedado. A seguinte saída de exemplo da execução do exemplo é fornecida:  
   
 ```  
 Prompt> Service.exe  
@@ -115,9 +115,9 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -126,7 +126,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
   

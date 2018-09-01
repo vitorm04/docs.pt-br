@@ -2,12 +2,12 @@
 title: Elimina o escopo de transação
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
-ms.openlocfilehash: b38d168e7da4510b75ebeda7f4984c26fb68898d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518454"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385188"
 ---
 # <a name="suppress-transaction-scope"></a>Elimina o escopo de transação
 O exemplo demonstra como criar uma atividade personalizado de `SuppressTransactionScope` para suprimir a transação ambiente de tempo de execução, se presente.  
@@ -17,7 +17,7 @@ O exemplo demonstra como criar uma atividade personalizado de `SuppressTransacti
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`  
   
@@ -34,11 +34,11 @@ O exemplo demonstra como criar uma atividade personalizado de `SuppressTransacti
   
 1.  Abra a solução de SuppressTransactionScope.sln em [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Para criar a solução, pressione CTRL + SHIFT + B ou selecione **compilar solução** do **criar** menu.  
+2.  Para criar a solução, pressione CTRL + SHIFT + B ou selecione **compilar solução** da **Build** menu.  
   
-3.  Depois que a compilação foi bem-sucedida, a solução e selecione **definir projetos de inicialização**. Na caixa de diálogo, selecione **vários projetos de inicialização** e certifique-se de que a ação de ambos os projetos é **iniciar**.  
+3.  Depois que a compilação foi bem-sucedida, a solução com o botão direito e selecione **definir projetos de inicialização**. Na caixa de diálogo, selecione **vários projetos de inicialização** e verifique se a ação para ambos os projetos é **iniciar**.  
   
-4.  Pressione F5 ou selecione **iniciar depuração** do **depurar** menu. Como alternativa, você pode pressionar CTRL + F5 ou selecionar **Start Without Debugging** do **depurar** menu para executar sem depuração.  
+4.  Pressione F5 ou selecione **iniciar depuração** da **depurar** menu. Como alternativa, você pode pressionar CTRL + F5 ou selecione **Start Without Debugging** da **depurar** menu para executar sem depuração.  
   
     > [!NOTE]
     >  O servidor deve executar antes de iniciar o cliente. A saída da janela do console que hospeda o serviço indicam quando seguir o iniciarão.  
@@ -48,6 +48,6 @@ O exemplo demonstra como criar uma atividade personalizado de `SuppressTransacti
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`

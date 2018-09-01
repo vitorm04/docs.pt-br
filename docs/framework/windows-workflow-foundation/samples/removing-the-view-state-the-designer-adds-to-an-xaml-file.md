@@ -2,12 +2,12 @@
 title: Removendo o estado de exibição o designer adiciona a um Arquivo XAML
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517830"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386927"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Removendo o estado de exibição o designer adiciona a um Arquivo XAML
 Este exemplo demonstra como criar uma classe que deriva de <xref:System.Windows.Markup.XamlWriter> e se remova o modo estado de um arquivo XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] grava informações no documento XAML, que é conhecido como o estado de exibição. O estado de exibição se refere à informação que é necessária em tempo de design, como o posicionamento de layout, que não é necessário em tempo de execução. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] insere essas informações no documento XAML que é editado. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] grava o estado de exibição no arquivo XAML com o atributo de `mc:Ignorable` , o que essa informação não é carregada quando o tempo de execução carrega o arquivo XAML. Este exemplo demonstra como criar uma classe que remove essas informações de estado de exibição ao processar nós XAML.  
@@ -15,7 +15,7 @@ Este exemplo demonstra como criar uma classe que deriva de <xref:System.Windows.
 ## <a name="discussion"></a>Discussão  
  Este exemplo demonstra como criar um text writer personalizado.  
   
- Para criar um text writer personalizado XAML, crie uma classe que herda de <xref:System.Windows.Markup.XamlWriter>. Conforme os gravadores XAML são geralmente aninhados, é comum para controlar um gravador XAML "interno". Esses "interna ' gravadores podem ser pensados como referência para a pilha restante de gravadores XAML, permitindo que você tenha vários pontos de entrada para trabalhar e, então, delegar o processamento para o restante da pilha.  
+ Para criar um text writer personalizado XAML, crie uma classe que herda de <xref:System.Windows.Markup.XamlWriter>. Como gravadores XAML aninhados são geralmente, é comum para controlar um gravador XAML "interno". Esses "interna ' gravadores podem ser pensados como a referência à pilha restante de gravadores XAML, permitindo que você tenha vários pontos de entrada para trabalhar e, em seguida, delegue o processamento para o restante da pilha.  
   
  Nesse exemplo, há alguns itens de interesse. Um é a verifique se o item que está sendo gravada for um namespace de designer. Observe que isso também tira para fora o uso de outros tipos de namespace de designer em um fluxo de trabalho.  
   
@@ -39,7 +39,7 @@ XamlWriter InnerWriter {get; set; }
 Stack<XamlMember> MemberStack {get; set; }  
 ```  
   
- Isso também cria uma pilha de membros XAML que são usados para atravessar o fluxo de nó. Basicamente, o trabalho restante deste exemplo está contido no <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` método.  
+ Isso também cria uma pilha de membros XAML que são usados para atravessar o fluxo de nó. O trabalho restante deste exemplo é contido amplamente na <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` método.  
   
 ```csharp
 public override void WriteStartMember(XamlMember xamlMember)  
@@ -119,6 +119,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

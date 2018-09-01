@@ -2,12 +2,12 @@
 title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767135"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387296"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -23,7 +23,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
   
  O manifesto do provedor deve ser loadable por ferramentas em tempo de design sem ter que abrir uma conexão para o armazenamento de dados.  
   
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] diferencia maiusculas, mas não pode ser o armazenamento de dados subjacente. Quando os artefatos de EDM (identificadores e nomes de tipo, por exemplo) são definidos e usados no manifesto, devem usar a maiúsculas de minúsculas [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] . Se os elementos do armazenamento de dados que podem ser maiúsculas de minúsculas aparecem no manifesto do provedor, essa caixa precisa ser mantidas no manifesto do provedor.  
+ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] é o caso confidenciais, mas o armazenamento de dados subjacente pode não ser. Quando os artefatos de EDM (identificadores e nomes de tipo, por exemplo) são definidos e usados no manifesto, devem usar a maiúsculas de minúsculas [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] . Se os elementos do armazenamento de dados que podem ser maiúsculas de minúsculas aparecem no manifesto do provedor, essa caixa precisa ser mantidas no manifesto do provedor.  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requer um manifesto de provedor para todos os provedores de dados. Se você tentar usar um provedor que não tem um provedor de manifesto com o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], você obterá um erro.  
   
@@ -39,7 +39,7 @@ Esta seção discute como um provedor de armazenamento de dados pode suportar os
  Um provedor deve oferecer suporte aos seguintes situações:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Escrevendo um provedor com mapeamento simétrico de tipo  
- Você pode escrever um provedor para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] onde cada tipo de armazenamento mapeia para um único tipo EDM, independentemente da direção de mapeamento. Para um tipo de provedor que tenha o mapeamento muito simples que corresponde com um tipo de EDM, você pode usar uma solução simétrica porque o sistema de tipos é simples ou corresponde tipos de EDM.  
+ Você pode escrever um provedor para o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] onde cada tipo de armazenamento é mapeado para um único tipo EDM, independentemente da direção de mapeamento. Para um tipo de provedor que tenha o mapeamento muito simples que corresponde com um tipo de EDM, você pode usar uma solução simétrica porque o sistema de tipos é simples ou corresponde tipos de EDM.  
   
  Você pode usar a simplicidade do domínio e gerar um manifesto declarativo estática do provedor.  
   
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Usando um token de manifesto de provedor  
- Para o cenário off-line, o símbolo é escolhido da representação de SSDL. O SSDL permite que você especifique um ProviderManifestToken (consulte [elemento de esquema (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) para obter mais informações). Por exemplo, se uma conexão não pode ser aberta, SSDL tem um token de manifesto de provedor que especifica informações sobre o manifesto.  
+ Para o cenário off-line, o símbolo é escolhido da representação de SSDL. SSDL permite que você especifique um ProviderManifestToken (consulte [o elemento de esquema (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) para obter mais informações). Por exemplo, se uma conexão não pode ser aberta, SSDL tem um token de manifesto de provedor que especifica informações sobre o manifesto.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -274,7 +274,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nome|Cadeia de caracteres|Sim|N/D|Identificador/nome do parâmetro.|  
 |Tipo|Cadeia de Caracteres|Sim|N/D|O tipo de EDM de parâmetro.|  
-|Modo|Parâmetro<br /><br /> Direção|Sim|N/D|Direção do parâmetro:<br /><br /> -em<br />-out<br />-inout|  
+|Modo|Parâmetro<br /><br /> Direção|Sim|N/D|Direção do parâmetro:<br /><br /> -no<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo do namespace  
  Cada provedor de armazenamento de dados deve definir um namespace ou um grupo de namespaces para informações definida no manifesto. Este namespace pode ser usada em consultas Entity SQL para resolver nomes das funções e tipos. Por exemplo: SqlServer. O namespace deve ser diferente de namespace canônica, EDM, definido por serviços de entidade para que as funções padrão são suportadas por Entity consultas SQL.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 0bf1d646b8efc0d350be13dffc6136f6f1d7495a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0daa399e2d000a228773ee20f157af7439f7acbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547304"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396661"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Controles dos Windows Forms e controles WPF equivalentes
 Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] têm controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalentes, mas alguns controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não têm equivalentes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tópico compara os tipos de controle fornecidos pelas duas tecnologias.  
@@ -26,9 +26,9 @@ Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-wi
 |<xref:System.Windows.Forms.BindingSource>|<xref:System.Windows.Data.CollectionViewSource>||  
 |<xref:System.Windows.Forms.Button>|<xref:System.Windows.Controls.Button>||  
 |<xref:System.Windows.Forms.CheckBox>|<xref:System.Windows.Controls.CheckBox>||  
-|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox> com composição.||  
+|<xref:System.Windows.Forms.CheckedListBox>|<xref:System.Windows.Controls.ListBox> com a composição.||  
 |<xref:System.Windows.Forms.ColorDialog>|Nenhum controle equivalente.||  
-|<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox> não oferece suporte de preenchimento automático.|  
+|<xref:System.Windows.Forms.ComboBox>|<xref:System.Windows.Controls.ComboBox>|<xref:System.Windows.Controls.ComboBox> não oferece suporte a preenchimento automático.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|<xref:System.Windows.Controls.ContextMenu>||  
 |<xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Controls.DataGrid>||  
 |<xref:System.Windows.Forms.DateTimePicker>|<xref:System.Windows.Controls.DatePicker>||  
@@ -43,7 +43,7 @@ Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-wi
 |<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|A rolagem é incorporada em controles de recipiente.|  
 |<xref:System.Windows.Forms.ImageList>|Nenhum controle equivalente.||  
 |<xref:System.Windows.Forms.Label>|<xref:System.Windows.Controls.Label>||  
-|<xref:System.Windows.Forms.LinkLabel>|Nenhum controle equivalente.|Você pode usar o <xref:System.Windows.Documents.Hyperlink> classe para hospedar hiperlinks no conteúdo de fluxo.|  
+|<xref:System.Windows.Forms.LinkLabel>|Nenhum controle equivalente.|Você pode usar o <xref:System.Windows.Documents.Hyperlink> classe para hospedar hiperlinks dentro do conteúdo de fluxo.|  
 |<xref:System.Windows.Forms.ListBox>|<xref:System.Windows.Controls.ListBox>||  
 |<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|O <xref:System.Windows.Controls.ListView> controle fornece uma exibição de detalhes de somente leitura.|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Nenhum controle equivalente.||  
@@ -73,10 +73,10 @@ Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-wi
 |<xref:System.Windows.Forms.TextBox>|<xref:System.Windows.Controls.TextBox>||  
 |<xref:System.Windows.Forms.Timer>|<xref:System.Windows.Threading.DispatcherTimer>||  
 |<xref:System.Windows.Forms.ToolStrip>|<xref:System.Windows.Controls.ToolBar>||  
-|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar> com composição.||  
-|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar> com composição.||  
-|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar> com composição.||  
-|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar> com composição.||  
+|<xref:System.Windows.Forms.ToolStripContainer>|<xref:System.Windows.Controls.ToolBar> com a composição.||  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<xref:System.Windows.Controls.ToolBar> com a composição.||  
+|<xref:System.Windows.Forms.ToolStripDropDownMenu>|<xref:System.Windows.Controls.ToolBar> com a composição.||  
+|<xref:System.Windows.Forms.ToolStripPanel>|<xref:System.Windows.Controls.ToolBar> com a composição.||  
 |<xref:System.Windows.Forms.ToolTip>|<xref:System.Windows.Controls.ToolTip>||  
 |<xref:System.Windows.Forms.TrackBar>|<xref:System.Windows.Controls.Slider>||  
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
@@ -87,7 +87,7 @@ Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-wi
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Os desenvolvedores de formulários do WPF Designer para Windows](http://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)  
+ [Desenvolvedores de formulários do WPF Designer for Windows](https://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)  
  [Passo a passo: hospedando um controle do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
  [Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
  [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

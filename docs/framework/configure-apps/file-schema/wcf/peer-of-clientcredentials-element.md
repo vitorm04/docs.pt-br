@@ -2,12 +2,12 @@
 title: '&lt;par&gt; do elemento &lt;clientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 9d64f682f67dcc7c4f0c0f1600938f8ff9ac0dd6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385470"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;par&gt; do elemento &lt;clientCredentials&gt;
 Especifica as credenciais usadas ao autenticar clientes ponto a ponto.  
@@ -15,7 +15,7 @@ Especifica as credenciais usadas ao autenticar clientes ponto a ponto.
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento >  
+\<comportamento de >  
 \<clientCredentials>  
 \<par >  
   
@@ -39,7 +39,7 @@ Especifica as credenciais usadas ao autenticar clientes ponto a ponto.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Especifica um certificado x. 509 a ser usado para assinar e criptografar mensagens para clientes ponto a ponto. .|  
+|[\<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Especifica um certificado X.509 a ser usado para assinar e criptografar mensagens para clientes ponto a ponto. .|  
 |[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|Especifica as opções de autenticação para clientes ponto a ponto.|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|Especifica opções de autenticação para remetentes de mensagens.|  
   
@@ -50,7 +50,7 @@ Especifica as credenciais usadas ao autenticar clientes ponto a ponto.
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- Este elemento de configuração especifica credenciais que um nó par usa para se autenticar em outros nós da malha, bem como configurações de autenticação que um nó par usa para autenticar outros nós de mesmo nível. Para obter mais informações, consulte [autenticação de mensagem de canal par](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) e [proteger aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  
+ Este elemento de configuração especifica as credenciais que um nó par usa para se autenticar em outros nós na malha, bem como configurações de autenticação que um nó par usa para autenticar outros nós pares. Para obter mais informações, consulte [autenticação de mensagem de canal par](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95) e [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
@@ -62,7 +62,7 @@ Especifica as credenciais usadas ao autenticar clientes ponto a ponto.
  <xref:System.ServiceModel.Security.PeerCredential>  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)  
- [Autenticação de mensagens de canal par](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Autenticação personalizada de canal par](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticação de mensagem de canal par](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Autenticação personalizada de canal par](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

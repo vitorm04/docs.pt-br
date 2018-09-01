@@ -7,28 +7,28 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495048"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389913"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Mensagem de segurança com um cliente anônimo
-O cenário a seguir mostra um cliente e o serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro, ela pode suportar um modelo mais avançado baseado em declarações. Para obter mais informações sobre o uso de declarações avançada para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+O cenário a seguir mostra um cliente e serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro ele pode dar suporte a um modelo mais avançado baseado em declarações. Para obter mais informações sobre como usar rica de declarações para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
- Para um aplicativo de exemplo, consulte [mensagem segurança anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
+ Para um aplicativo de exemplo, consulte [mensagem de segurança anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
- ![Segurança com um cliente anônimo](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
+ ![Segurança com um cliente anônimo da mensagem](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
 |Interoperabilidade|Somente o WCF|  
-|Autenticação (servidor)|Negociação inicial requer autenticação de servidor, mas não a autenticação do cliente|  
+|Autenticação (servidor)|Negociação inicial exige a autenticação do servidor, mas não a autenticação do cliente|  
 |Autenticação (cliente)|Nenhum|  
-|Integridade|Sim, usando o contexto de segurança compartilhada|  
-|Confidencialidade|Sim, usando o contexto de segurança compartilhada|  
+|Integridade|Sim, usando o contexto de segurança compartilhado|  
+|Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
 |Transporte|HTTP|  
   
 ## <a name="service"></a>Serviço  
@@ -36,7 +36,7 @@ O cenário a seguir mostra um cliente e o serviço protegidos pela segurança de
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem.  
@@ -45,7 +45,7 @@ O cenário a seguir mostra um cliente e o serviço protegidos pela segurança de
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
 ### <a name="configuration"></a>Configuração  
- A configuração a seguir pode ser usada em vez do código. O elemento de comportamento de serviço é usado para especificar um certificado que é usado para autenticar o serviço ao cliente. O elemento de serviço deve especificar o comportamento usando o `behaviorConfiguration` atributo. O elemento de associação Especifica que o tipo de credencial de cliente `None`, permitindo que clientes anônimos usar o serviço.  
+ A configuração a seguir pode ser usada em vez do código. O elemento de comportamento de serviço é usado para especificar um certificado que é usado para autenticar o serviço ao cliente. O elemento de serviço deve especificar o comportamento usando o `behaviorConfiguration` atributo. O elemento de associação Especifica que o tipo de credencial de cliente `None`, permitindo que os clientes anônimos usar o serviço.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -97,7 +97,7 @@ O cenário a seguir mostra um cliente e o serviço protegidos pela segurança de
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- O código a seguir cria uma instância do cliente. A associação usa segurança de modo de mensagem e o tipo de credencial de cliente está definido como none.  
+ O código a seguir cria uma instância do cliente. A associação usa segurança de modo de mensagem e o tipo de credencial de cliente é definido como none.  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
@@ -138,4 +138,4 @@ O cenário a seguir mostra um cliente e o serviço protegidos pela segurança de
  [Segurança de aplicativos distribuídos](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [Segurança de mensagem anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

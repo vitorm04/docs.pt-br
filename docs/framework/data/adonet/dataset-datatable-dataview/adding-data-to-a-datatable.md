@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: c58f64dba0bceb4a35c67e16193a6627837436e0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c1ebe2d735924c559f450f4041884dc9845e4fe0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767122"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396079"
 ---
 # <a name="adding-data-to-a-datatable"></a>Adicionando dados a um DataTable
-Depois de criar <xref:System.Data.DataTable> e definir sua estrutura usando colunas e restrições, você pode adicionar novas linhas de dados à tabela. Para adicionar uma nova linha, declare uma nova variável como tipo <xref:System.Data.DataRow>. Um novo **DataRow** objeto é retornado ao chamar o <xref:System.Data.DataTable.NewRow%2A> método. O **DataTable** , em seguida, cria o **DataRow** objeto com base na estrutura da tabela, conforme definido pelo <xref:System.Data.DataColumnCollection>.  
+Depois de criar <xref:System.Data.DataTable> e definir sua estrutura usando colunas e restrições, você pode adicionar novas linhas de dados à tabela. Para adicionar uma nova linha, declare uma nova variável como tipo <xref:System.Data.DataRow>. Uma nova **DataRow** objeto é retornado ao chamar o <xref:System.Data.DataTable.NewRow%2A> método. O **DataTable** , em seguida, cria a **DataRow** objeto com base na estrutura da tabela, conforme definido pelo <xref:System.Data.DataColumnCollection>.  
   
  O exemplo a seguir demonstra como criar uma nova linha chamando o **NewRow** método.  
   
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Depois que dados são inseridos em nova linha, o **adicionar** método é usado para adicionar a linha para o <xref:System.Data.DataRowCollection>, conforme mostrado no código a seguir.  
+ Depois que dados são inseridos na nova linha, o **Add** método é usado para adicionar a linha para o <xref:System.Data.DataRowCollection>, conforme mostrado no código a seguir.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Você também pode chamar o **adicionar** tipado para adicionar uma nova linha, passando uma matriz de valores, como <xref:System.Object>, conforme mostrado no exemplo a seguir.  
+ Você também pode chamar o **Add** para adicionar uma nova linha passando uma matriz de valores, tipada como <xref:System.Object>, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Passando uma matriz de valores, digitado como **objeto**, para o **adicionar** método cria uma nova linha dentro da tabela e define seus valores de coluna com os valores na matriz de objetos. Observe que os valores na matriz são correspondidos sequencialmente a colunas, com base na ordem na qual aparecem na tabela.  
+ Passando uma matriz de valores, digitada como **objeto**, para o **Add** método cria uma nova linha dentro da tabela e define seus valores de coluna com os valores na matriz de objetos. Observe que os valores na matriz são correspondidos sequencialmente a colunas, com base na ordem na qual aparecem na tabela.  
   
- O exemplo a seguir adiciona 10 linhas para recém-criado **clientes** tabela.  
+ O exemplo a seguir adiciona 10 linhas ao recém-criado **clientes** tabela.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,4 +91,4 @@ for (int i = 0; i <= 9; i++)
  <xref:System.Data.DataRowCollection>  
  <xref:System.Data.DataTable>  
  [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

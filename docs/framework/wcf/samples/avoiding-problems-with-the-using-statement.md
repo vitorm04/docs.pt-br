@@ -2,24 +2,24 @@
 title: Evitando problemas com a instrução Using
 ms.date: 03/30/2017
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 14a0649c9996158f1503581c906d8dfd1a95ebc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7534a56b2cc8fdc674242e135d70bec7f5017a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503892"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394692"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Evitando problemas com a instrução Using
-Este exemplo demonstra como você não deve usar o c# "using" instrução para limpar automaticamente os recursos ao usar um cliente tipado. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado por serviços de informações da Internet (IIS).  
+Este exemplo demonstra como você não deve usar a "instrução c# using" para limpar automaticamente os recursos ao usar um cliente com tipo. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS).  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Este exemplo mostra dois problemas comuns que ocorrem ao usar o c# "using" instrução com clientes com tipo, bem como código que limpa corretamente depois de exceções.  
+ Este exemplo mostra dois dos problemas comuns que ocorrem ao usar o c# "using" de instrução com clientes com tipo, bem como código que limpa corretamente depois de exceções.  
   
- A instrução "using" c# resulta em uma chamada para `Dispose`(). Isso é o mesmo que `Close`(), que pode gerar exceções quando ocorre um erro de rede. Porque a chamada para `Dispose`() é inerente na chave de fechamento do bloco "using", essa fonte de exceções é provavelmente ir despercebidos por pessoas escrever o código e o código de leitura. Isso representa uma fonte em potencial de erros de aplicativo.  
+ A instrução "using" c# resulta em uma chamada para `Dispose`(). Isso é o mesmo que `Close`(), que pode gerar exceções quando ocorre um erro de rede. Porque a chamada para `Dispose`() é inerente em que a chave de fechamento do bloco "using", essa fonte de exceções é provavelmente passar despercebidos por pessoas escrevendo o código e a leitura do código. Isso representa uma possível fonte de erros de aplicativo.  
   
- O primeiro problema ilustrado no `DemonstrateProblemUsingCanThrow` método, é que a chave de fechamento lança uma exceção e o código depois que a chave de fechamento não são executadas:  
+ O primeiro problema ilustrado no `DemonstrateProblemUsingCanThrow` método, é que a chave de fechamento lança uma exceção e o código, depois que a chave de fechamento não são executadas:  
   
 ```csharp   
 using (CalculatorClient client = new CalculatorClient())  
@@ -29,9 +29,9 @@ using (CalculatorClient client = new CalculatorClient())
 Console.WriteLine("Hope this code wasn't important, because it might not happen.");  
 ```  
   
- Mesmo se nada dentro de usando bloquear lançará uma exceção ou todas as exceções dentro de usando bloco são detectados, o `Console.Writeline` pode não acontecer porque o implícita `Dispose`chamada () em que a chave de fechamento pode lançar uma exceção.  
+ Mesmo se nada dentro do usando bloquear gera uma exceção ou todas as exceções dentro do usando o bloco são capturadas, o `Console.Writeline` não pode acontecer porque o implícita `Dispose`chamada () em que a chave de fechamento pode gerar uma exceção.  
   
- O segundo problema ilustrado no `DemonstrateProblemUsingCanThrowAndMask` , é outra implicação a chave de fechamento lançar uma exceção:  
+ O segundo problema ilustrado no `DemonstrateProblemUsingCanThrowAndMask` método, é outra implicação a lançar uma exceção de fechamento:  
   
 ```csharp   
 using (CalculatorClient client = new CalculatorClient())  
@@ -42,9 +42,9 @@ using (CalculatorClient client = new CalculatorClient())
 } // <-- this line might throw an exception.  
 ```  
   
- Porque o `Dispose`() ocorre dentro de um bloco "finally", o `ApplicationException` nunca é visto fora do usando bloquear se o `Dispose`falhar (). Se o código fora deve saber sobre quando o `ApplicationException` ocorre, a construção "using" pode causar problemas mascarando essa exceção.  
+ Porque o `Dispose`() ocorre dentro de um bloco "finally", o `ApplicationException` nunca é visto fora de usando bloqueie se o `Dispose`falhar (). Se o código fora deve saber sobre quando o `ApplicationException` ocorre, a construção "using" pode causar problemas através do mascaramento essa exceção.  
   
- Por fim, o exemplo demonstra como limpar corretamente quando as exceções ocorrem em `DemonstrateCleanupWithExceptions`. Isso usa um bloco try/catch para relatar erros e chamada `Abort`. Consulte o [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo para obter mais detalhes sobre como capturar exceções de chamadas do cliente.  
+ Por fim, o exemplo demonstra como limpar corretamente quando exceções ocorrem em `DemonstrateCleanupWithExceptions`. Isso usa um bloco try/catch para relatar erros e chamada `Abort`. Consulte a [esperado exceções](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemplo para obter mais detalhes sobre como capturar exceções de chamadas do cliente.  
   
 ```csharp   
 try  
@@ -71,11 +71,11 @@ catch (Exception e)
 ```  
   
 > [!NOTE]
->  O usando a instrução e o ServiceHost: muitos aplicativos de hospedagem interna pouco mais de um serviço de host e ServiceHost.Close raramente lança uma exceção, para que esses aplicativos podem usar com segurança o usando a instrução com ServiceHost. No entanto, lembre-se de que ServiceHost.Close pode lançar um `CommunicationException`, portanto, se seu aplicativo continua depois de fechar o ServiceHost, você deve evitar o uso de instrução e seguem o padrão fornecido anteriormente.  
+>  O usando a instrução e o ServiceHost: muitos aplicativos de hospedagem interna pouco mais de um serviço de host e ServiceHost.Close raramente lança uma exceção, portanto, esses aplicativos podem usar com segurança o usando a instrução com o ServiceHost. No entanto, lembre-se de que ServiceHost.Close pode lançar um `CommunicationException`, portanto, se seu aplicativo continua depois de fechar o ServiceHost, você deve evitar o uso de instrução e siga o padrão fornecido anteriormente.  
   
- Quando você executar o exemplo, as exceções e respostas de operação são exibidas na janela do console do cliente.  
+ Quando você executar o exemplo, as exceções e respostas de operação são exibidas na janela do console de cliente.  
   
- O processo de cliente é executado três cenários, cada um dos quais tentativas de chamar `Divide`. O primeiro cenário demonstra o código que está sendo ignorado devido a uma exceção de `Dispose`(). O segundo cenário demonstra uma exceção importante que está sendo mascarada devido a uma exceção de `Dispose`(). O terceiro cenário demonstra correto de limpeza.  
+ O processo de cliente é executado em três cenários, cada um dos quais tentativas de chamar `Divide`. O primeiro cenário demonstra o código que está sendo ignorado devido a uma exceção de `Dispose`(). O segundo cenário demonstra uma exceção importante que está sendo mascarada por causa de uma exceção de `Dispose`(). O terceiro cenário demonstra correto de limpeza.  
   
  A saída esperada do processo de cliente é:  
   
@@ -103,9 +103,9 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -114,7 +114,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`  
   

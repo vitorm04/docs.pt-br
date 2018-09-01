@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540184"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385114"
 ---
 # <a name="menustrip-control-windows-forms"></a>Controle MenuStrip (Windows Forms)
 Esse controle agrupa comandos do aplicativo e os torna facilmente acessíveis.  
@@ -41,7 +41,7 @@ Esse controle agrupa comandos do aplicativo e os torna facilmente acessíveis.
  Descreve como definir várias propriedades para remover um item de menu da parte suspensa do menu MDI pai.  
   
  [Como configurar margens de imagem e margens de verificação MenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
- Descreve como personalizar um <xref:System.Windows.Forms.MenuStrip> definindo propriedades de margem de seleção e imagem de várias maneiras.  
+ Descreve como personalizar um <xref:System.Windows.Forms.MenuStrip> definindo propriedades de margem de imagens e seleção de várias maneiras.  
   
  [Como fornecer itens de menu padrão para um formulário](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
  Descreve como usar um <xref:System.Windows.Forms.MenuStrip> controle para criar um formulário com um menu padrão.  
@@ -55,29 +55,29 @@ Esse controle agrupa comandos do aplicativo e os torna facilmente acessíveis.
  [Como configurar a mesclagem de menu automática para aplicativos MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Descreve como mesclar itens de menu automaticamente no tempo de execução.  
   
--   [Editor de coleção de itens do MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Editor de coleção de itens do MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Como copiar ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [Como copiar ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Como ocultar ToolStripMenuItems usando o designer](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [Como ocultar ToolStripMenuItems usando o designer](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Como desabilitar ToolStripMenuItems usando o designer](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [Como desabilitar ToolStripMenuItems usando o designer](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Como mover ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [Como mover ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Passo a passo: fornecendo itens de menu padrão para um formulário](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [Passo a passo: fornecendo itens de menu padrão para um formulário](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Caixa de diálogo de tarefas do MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Caixa de diálogo de tarefas do MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.MenuStrip>  
- Descreve os recursos do <xref:System.Windows.Forms.MenuStrip> classe, que fornece um sistema de menu para um formulário.  
+ Descreve os recursos do <xref:System.Windows.Forms.MenuStrip> classe, que fornece um sistema de menus para um formulário.  
   
  <xref:System.Windows.Forms.ContextMenuStrip>  
  Descreve os recursos do <xref:System.Windows.Forms.ContextMenuStrip>, que representa um menu de atalho.  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- Descreve os recursos do <xref:System.Windows.Forms.ToolStripMenuItem> classe que representa uma opção selecionável exibida em uma <xref:System.Windows.Forms.MenuStrip> ou <xref:System.Windows.Forms.ContextMenuStrip>.  
+ Descreve os recursos da <xref:System.Windows.Forms.ToolStripMenuItem> classe, que representa uma opção selecionável exibida em um <xref:System.Windows.Forms.MenuStrip> ou <xref:System.Windows.Forms.ContextMenuStrip>.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  

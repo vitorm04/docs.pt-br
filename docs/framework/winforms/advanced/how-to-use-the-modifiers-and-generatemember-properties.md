@@ -15,18 +15,18 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523988"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387998"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Como usar os modificadores e as propriedades GenerateMember
 Quando você coloca um componente em um Windows Form, duas propriedades são fornecidas pelo ambiente de design: `GenerateMember` e `Modifiers`. A propriedade `GenerateMember` especifica quando o Designer de Formulários do Windows gera uma variável de membro de um componente. A propriedade `Modifiers` é o modificador de acesso atribuído a essa variável de membro. Se o valor da propriedade `GenerateMember` for `false`, o valor da propriedade `Modifiers` não terá efeito.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Para especificar se um componente é um membro do formulário  
   
@@ -34,7 +34,7 @@ Quando você coloca um componente em um Windows Form, duas propriedades são for
   
 2.  Abra o **caixa de ferramentas**e no formulário, coloque três <xref:System.Windows.Forms.Button> controles.  
   
-3.  Definir o `GenerateMember` e `Modifiers` propriedades para cada <xref:System.Windows.Forms.Button> controle de acordo com a tabela a seguir.  
+3.  Defina as `GenerateMember` e `Modifiers` propriedades de cada <xref:System.Windows.Forms.Button> controle de acordo com a tabela a seguir.  
   
     |Nome do botão|Valor GenerateMember|Valor de modificadores|  
     |-----------------|--------------------------|---------------------|  
@@ -57,7 +57,7 @@ Quando você coloca um componente em um Windows Form, duas propriedades são for
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  Por padrão, o Windows Forms Designer atribui o `private` (`Friend` no Visual Basic) modificador para controles de contêiner, como <xref:System.Windows.Forms.Panel>. Se sua base de <xref:System.Windows.Forms.UserControl> ou <xref:System.Windows.Forms.Form> tem um controle de contêiner, ele não aceitará novos filhos em controles em formulários herdados. A solução é alterar o modificador da caixa de controles de base para `protected` ou `public`.  
+>  Por padrão, o Designer de formulários do Windows atribui a `private` (`Friend` no Visual Basic) modificador para controles de contêiner como <xref:System.Windows.Forms.Panel>. Se sua base <xref:System.Windows.Forms.UserControl> ou <xref:System.Windows.Forms.Form> tem um controle de contêiner, ele não aceitará novos filhos em controles e formulários herdados. A solução é alterar o modificador da caixa de controles de base para `protected` ou `public`.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.Button>  

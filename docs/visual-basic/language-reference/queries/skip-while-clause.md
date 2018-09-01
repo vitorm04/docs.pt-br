@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 9d95dc4a9f61a9ec3a50f9d594b31d673c2d3764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602012"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393724"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Ignorar cláusula While (Visual Basic)
-Ignora elementos em uma coleção desde que uma condição especificada seja `true` e, em seguida, retorna os elementos restantes.  
+Ignora elementos em uma coleção, desde que uma condição especificada seja `true` e, em seguida, retorna os elementos restantes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,9 +31,9 @@ Skip While expression
 |`expression`|Necessário. Uma expressão que representa uma condição para testar elementos. A expressão deve retornar um `Boolean` valor ou um equivalente funcional, como um `Integer` a ser avaliada como um `Boolean`.|  
   
 ## <a name="remarks"></a>Comentários  
- O `Skip While` cláusula ignora elementos desde o início de uma consulta até fornecido `expression` retorna `false`. Depois de `expression` retorna `false`, a consulta retorna todos os elementos restantes. O `expression` é ignorada para os resultados restantes.  
+ O `Skip While` cláusula ignora elementos desde o início de um resultado de consulta até que o fornecido `expression` retorna `false`. Após `expression` retorna `false`, a consulta retorna todos os elementos restantes. O `expression` é ignorado para os resultados restantes.  
   
- O `Skip While` cláusula difere do `Where` cláusula em que o `Where` cláusula pode ser usada para excluir todos os elementos de uma consulta que não atendem a uma determinada condição. O `Skip While` cláusula excluir elementos apenas até a primeira vez que a condição não for atendida. O `Skip While` cláusula é mais útil quando você estiver trabalhando com um resultado de consulta ordenado.  
+ O `Skip While` cláusula difere de `Where` cláusula em que o `Where` cláusula pode ser usada para excluir todos os elementos de uma consulta que não atendem a uma determinada condição. O `Skip While` cláusula excluir elementos apenas até a primeira vez em que a condição não for atendida. O `Skip While` cláusula é mais útil quando você estiver trabalhando com um resultado de consulta ordenado.  
   
  Você pode ignorar um número específico de resultados desde o início de uma consulta usando o `Skip` cláusula.  
   
@@ -44,7 +44,7 @@ Skip While expression
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/index.md)  
  [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Cláusula Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  

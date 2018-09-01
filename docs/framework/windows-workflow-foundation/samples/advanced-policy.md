@@ -2,12 +2,12 @@
 title: Diretiva avançada
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515549"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387883"
 ---
 # <a name="advanced-policy"></a>Diretiva avançada
 Este exemplo amplia o exemplo simples de política. Além das regras residenciais de desconto e de desconto de negócio de exemplo simples de política, várias regras novos foram adicionadas.  
@@ -26,13 +26,13 @@ Este exemplo amplia o exemplo simples de política. Além das regras residenciai
   
  SE OrderValue > 500 E CustomerType = residencial  
   
- Em seguida, desconto = % 5  
+ ENTÃO desconto = % 5  
   
  **BusinessDiscountRule:**  
   
  SE OrderValue > 10000 E CustomerType = business  
   
- Em seguida, desconto = 10%  
+ ENTÃO desconto = 10%  
   
  **HighValueDiscountRule:**  
   
@@ -73,7 +73,7 @@ Este exemplo amplia o exemplo simples de política. Além das regras residenciai
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

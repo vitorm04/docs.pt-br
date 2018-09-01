@@ -2,12 +2,12 @@
 title: Tipos definido pelo usuário CLR
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: 344245ea7c67d7b5363c17bb42e2606ca11142bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ea415a348375c52e42ddf26ea09a74e7de5e355
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357576"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388717"
 ---
 # <a name="clr-user-defined-types"></a>Tipos definido pelo usuário CLR
 O Microsoft SQL Server oferece suporte a tipos definidos pelo usuário (UDTs) implementados com o CLR do Microsoft .NET Framework. O CLR é integrado no SQL Server e esse mecanismo permite estender o sistema de tipos do banco de dados. Os UDTs oferecem extensibilidade do usuário do sistema de tipo de dados do SQL Server, além da capacidade de definir tipos estruturados complexos.  
@@ -18,12 +18,12 @@ O Microsoft SQL Server oferece suporte a tipos definidos pelo usuário (UDTs) im
   
 -   Integração profunda com outros recursos relacionados ao servidor. Depois de definir seu próprio UDT, você poderá usá-lo em todos os contextos em que você pode usar um tipo de sistema no SQL Server, inclusive definições de coluna, e como variáveis, parâmetros, resultados de função, cursores, gatilhos e replicação.  
   
- Para obter informações detalhadas, consulte a versão dos Manuais Online do SQL Server da versão do SQL Server que você está usando.  
+ Para obter mais informações, consulte o [documentação do SQL Server](/sql) para a versão do SQL Server que você está usando.
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Documentação do SQL Server**
   
-1.  [Tipos CLR definidos pelo usuário](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [Tipos CLR definidos pelo usuário](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando objetos do SQL Server 2005 em código gerenciado](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+
+[ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)  

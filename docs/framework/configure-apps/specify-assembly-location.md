@@ -9,24 +9,24 @@ ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 65bd075115e33486e86e8081b01b96db665e9da5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a83f1e67377a5ce699301770ff0369f8f760884
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758263"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387322"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Especificando um Assembly&#39;s local
-Há duas maneiras de especificar o local de um assembly:  
+Há duas maneiras para especificar o local de um assembly:  
   
 -   Usando o [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elemento.  
   
 -   Usando o [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento.  
   
- Você também pode usar o [ferramenta de configuração do .NET Framework (Mscorcfg.msc)](http://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) para especificar locais de assembly ou especificar locais para o common language runtime para investigação para assemblies.  
+ Você também pode usar o [.NET Framework Configuration Tool (Mscorcfg. msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) para especificar locais de assembly ou especificar locais para o common language runtime investigar assemblies.  
   
 ## <a name="using-the-codebase-element"></a>Usando o \<codeBase > elemento  
- Você pode usar o  **\<codeBase >** elemento apenas na configuração ou publicador política arquivos de máquina que redirecionam também a versão do assembly. Quando o tempo de execução determina qual versão do assembly a ser usado, ele se aplica a configuração de base de código do arquivo que determina a versão. Se nenhuma base de código é indicado, o tempo de execução de testes para o assembly da maneira normal. Para obter detalhes, consulte [como o tempo de execução Localiza Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Você pode usar o  **\<codeBase >** elemento apenas na máquina configuração ou publicador arquivos de política que também redirecionar a versão do assembly. Quando o tempo de execução determina qual versão de assembly a ser usada, ela se aplica a configuração de base de código do arquivo que determina a versão. Se nenhuma base de código estiver indicado, o tempo de execução investiga o assembly da maneira normal. Para obter detalhes, consulte [como o tempo de execução Localiza Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
  O exemplo a seguir mostra como especificar o local de um assembly.  
   
@@ -46,15 +46,15 @@ Há duas maneiras de especificar o local de um assembly:
 </configuration>  
 ```  
   
- O **versão** atributo é necessário para todos os assemblies de nomes fortes, mas devem ser omitido para assemblies que não são fortes. O  **\<codeBase >** elemento requer o **href** atributo. Você não pode especificar intervalos de versão no  **\<codeBase >** elemento.  
+ O **versão** atributo é necessário para todos os assemblies de nome forte, mas deve ser omitido para assemblies que não são forte. O  **\<codeBase >** elemento requer o **href** atributo. Não é possível especificar intervalos de versão na  **\<codeBase >** elemento.  
   
 > [!NOTE]
->  Se você está fornecendo uma referência de base de código para um assembly que não está com nome forte, a dica deve apontar para a base de dados de aplicativo ou em um subdiretório do diretório base do aplicativo.  
+>  Se você estiver fornecendo uma referência de base de código para um assembly que não é forte, a dica deve apontar para a base do aplicativo ou em um subdiretório do diretório base do aplicativo.  
   
 ## <a name="using-the-probing-element"></a>Usando o \<probing > elemento  
- O tempo de execução localiza assemblies que não tem uma base de código por sondagem. Para obter mais informações sobre a sondagem, consulte [como o tempo de execução Localiza Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ O tempo de execução localiza assemblies que não têm uma base de código por sondagem. Para obter mais informações sobre a investigação, consulte [como o tempo de execução Localiza Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Você pode usar o [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento no arquivo de configuração do aplicativo para especificar o tempo de execução deve pesquisar para localizar um assembly de subdiretórios. O exemplo a seguir mostra como especificar diretórios que deve pesquisar o tempo de execução.  
+ Você pode usar o [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elemento no arquivo de configuração de aplicativo para especificar o tempo de execução deve pesquisar para localizar um assembly de subdiretórios. O exemplo a seguir mostra como especificar diretórios de que tempo de execução deve pesquisar.  
   
 ```xml  
 <configuration>  
@@ -66,10 +66,10 @@ Há duas maneiras de especificar o local de um assembly:
 </configuration>  
 ```  
   
- O **privatePath** atributo contém os diretórios que o tempo de execução deve procurar por assemblies. Se o aplicativo está localizado em MyApp C:\Program, o tempo de execução procurará assemblies que não especificam uma base de código em C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin e C:\Program Files\MyApp\Bin3. Diretórios especificados em **privatePath** devem ser subdiretórios do diretório base do aplicativo.  
+ O **privatePath** atributo contém os diretórios que o tempo de execução deve procurar assemblies. Se o aplicativo está localizado em C:\Program MyApp, o tempo de execução procura assemblies que não especificam uma base de código em C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin e C:\Program Files\MyApp\Bin3. Diretórios especificados em **privatePath** devem ser subdiretórios do diretório base do aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configuração de aplicativos .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

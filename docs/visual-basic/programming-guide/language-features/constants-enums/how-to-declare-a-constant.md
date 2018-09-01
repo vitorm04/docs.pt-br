@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649731"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394308"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Como declarar uma constante (Visual Basic)
-Você usa o `Const` instrução para declarar uma constante e definir seu valor. Ao declarar uma constante, você pode atribuir um nome significativo para um valor. Depois que uma constante é declarada, não pode ser modificado ou recebe um novo valor.  
+Você usa o `Const` instrução para declarar uma constante e defina seu valor. Ao declarar uma constante, você pode atribuir um nome significativo para um valor. Depois que uma constante é declarada, não pode ser modificado ou receber um novo valor.  
   
- Você declarar uma constante em um procedimento ou na seção de declarações de um módulo, classe ou estrutura. Classe ou constantes de nível de estrutura são `Private` por padrão, mas também podem ser declarados como `Public`, `Friend`, `Protected`, ou `Protected Friend` para o nível apropriado de acesso ao código.  
+ Você declarar uma constante dentro de um procedimento ou na seção de declarações de um módulo, classe ou estrutura. Classe ou constantes de nível de estrutura são `Private` por padrão, mas também podem ser declarados como `Public`, `Friend`, `Protected`, ou `Protected Friend` para o nível apropriado de acesso ao código.  
   
  A constante deve ter um nome simbólico válido (as regras são os mesmos para a criação de nomes de variável) e uma expressão composta de numérico ou cadeia de caracteres constantes e operadores (mas nenhuma chamada de função).  
   
@@ -41,23 +41,23 @@ Você usa o `Const` instrução para declarar uma constante e definir seu valor.
   
 ### <a name="to-declare-a-constant"></a>Para declarar uma constante  
   
--   Uma declaração que inclui um especificador de acesso de gravação a `Const` palavra-chave e uma expressão, como nos exemplos a seguir:  
+-   Escrever uma declaração que inclui um especificador de acesso, o `Const` palavra-chave e uma expressão, como nos exemplos a seguir:  
   
      [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
      Quando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) é `Off` e [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) é `On`, você deve declarar uma constante explicitamente especificando um tipo de dados (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, ou `String`).  
   
-     Quando `Option Infer` é `On` ou `Option Strict` é `Off`, você pode declarar uma constante sem especificar um tipo de dados com um `As` cláusula. O compilador determina o tipo de constante do tipo da expressão. Para obter mais informações, consulte [constante e Literal tipos de dados](constant-and-literal-data-types.md).  
+     Quando `Option Infer` está `On` ou `Option Strict` é `Off`, você pode declarar uma constante sem especificar um tipo de dados com um `As` cláusula. O compilador determina o tipo da constante do tipo da expressão. Para obter mais informações, consulte [constante e Literal tipos de dados](constant-and-literal-data-types.md).  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Para declarar uma constante que tem um tipo de dados declarados explicitamente  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Para declarar uma constante que tem um tipo de dados explicitamente declarados  
   
--   Escreva uma declaração que inclui o `As` palavra-chave e uma data explícita de tipo, como nos exemplos a seguir:  
+-   Escrever uma declaração que inclui o `As` palavra-chave e uma data explícita de tipo, como nos exemplos a seguir:  
   
      [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
-     Você pode declarar várias constantes em uma única linha, embora seu código é mais legível se você declarar uma única constante por linha. Se você declarar várias constantes em uma única linha, eles devem ter o mesmo nível de acesso (`Public`, `Private`, `Friend`, `Protected`, ou `Protected Friend`).  
+     Você pode declarar constantes múltiplas em uma única linha, embora seu código é mais legível, se você declarar uma única constante por linha. Se você declarar constantes múltiplas em uma única linha, elas devem ter o mesmo nível de acesso (`Public`, `Private`, `Friend`, `Protected`, ou `Protected Friend`).  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>Para declarar várias constantes em uma única linha  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>Para declarar constantes múltiplas em uma única linha  
   
 -   Separe as declarações com uma vírgula e um espaço, como no exemplo a seguir:  
   

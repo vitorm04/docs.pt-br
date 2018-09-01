@@ -12,24 +12,24 @@ ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 99f2f94d387858a657abab9ed9f762d4a7ee8f03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7353ad142bb276cde1c6fb0ff0c6dcf03b699aeb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407640"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388657"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Percorrer texto usando automação de interface do usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Este tópico mostra como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para atravessar o conteúdo textual de um documento por <xref:System.Windows.Automation.Text.TextUnit> incrementos.  
+ Este tópico mostra como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] atravessar o conteúdo textual de um documento por <xref:System.Windows.Automation.Text.TextUnit> incrementos.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como atravessar o conteúdo de um provedor de texto de automação de interface do usuário. O <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método Move o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> e <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> pontos de extremidade de um <xref:System.Windows.Automation.Text.TextPatternRange>. Este intervalo de texto é normalmente um intervalo degenerado que representa o ponto de inserção de texto.  
+ O exemplo de código a seguir demonstra como atravessar o conteúdo de um provedor de texto de automação de interface do usuário. O <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método Move a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> e <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> pontos de extremidade de um <xref:System.Windows.Automation.Text.TextPatternRange>. Esse intervalo de texto normalmente é um intervalo de degeneração que representa o ponto de inserção de texto.  
   
 > [!NOTE]
->  Já que somente objetos inseridos com base em texto são considerados parte do fluxo de texto, objetos inseridos como imagens não afetam `Move` ou seu valor de retorno.  
+>  Já que somente objetos inseridos com base em texto são considerados parte do fluxo de texto, objetos incorporados, como imagens não afetam `Move` ou seu valor de retorno.  
   
  [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
  [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -38,7 +38,7 @@ ms.locfileid: "33407640"
 [!code-csharp[FindText#Navigate](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#navigate)]
 [!code-vb[FindText#Navigate](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#navigate)]  
   
- Usando qualquer método <xref:System.Windows.Automation.Text.TextUnit> irá passar para o próximo maior <xref:System.Windows.Automation.Text.TextUnit> com suporte se o determinado <xref:System.Windows.Automation.Text.TextUnit> não é suportado pelo controle.  
+ Qualquer método que usa <xref:System.Windows.Automation.Text.TextUnit> passará para a próxima maior <xref:System.Windows.Automation.Text.TextUnit> com suporte se o determinado <xref:System.Windows.Automation.Text.TextUnit> não é compatível com o controle.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de TextPattern de automação de interface do usuário](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  

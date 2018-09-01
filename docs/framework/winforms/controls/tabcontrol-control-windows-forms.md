@@ -10,15 +10,15 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536755"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384948"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Controle TabControl (Windows Forms)
-Windows Forms `TabControl` exibe várias guias, como divisores em um bloco de anotações ou rótulos em um conjunto de pastas em um arquivo convencional. As guias podem conter imagens e outros controles. Use o `TabControl` para criar páginas de propriedades.  
+Os formulários do Windows `TabControl` exibe várias guias, como divisores em um bloco de anotações ou rótulos em um conjunto de pastas em um gabinete de arquivamento. As guias podem conter imagens e outros controles. Use o `TabControl` para criar páginas de propriedades.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do controle TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
@@ -31,12 +31,12 @@ Windows Forms `TabControl` exibe várias guias, como divisores em um bloco de an
  Fornece instruções para adicionar e remover guias no designer ou no código.  
   
  [Como alterar a aparência do TabControl dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
- Fornece instruções para ajustar as propriedades que afetam a aparência de guias individuais.  
+ Fornece instruções para ajustar as propriedades que afetam a aparência das guias individuais.  
   
  [Como desabilitar páginas de guia](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- Explica como restringir o acesso a uma página da guia, possivelmente com base nas credenciais do usuário.  
+ Explica como restringir o acesso a uma página da guia, possivelmente com base em credenciais do usuário.  
   
- Consulte também [como: adicionar e remover guias com o Windows Forms TabControl usando o Designer](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [como: adicionar um controle a uma guia página usando o Designer](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Consulte também [como: adicionar e remover guias com o Windows Forms TabControl usando o Designer](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [como: adicionar um controle a uma guia página usando o Designer](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.TabControl>  
@@ -44,7 +44,7 @@ Windows Forms `TabControl` exibe várias guias, como divisores em um bloco de an
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Caixas de diálogo nos Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
- Fornece uma lista de tarefas para as caixas de diálogo, que normalmente exibem guias.  
+ Fornece uma lista de tarefas para as caixas de diálogo, que geralmente exibem as guias.  
   
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: d2fbccfb3ecd7716420ca951e86f728798d25258
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8767ef0fb484d43ffad4888affebb9d6bb74cc3a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526427"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384634"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Acessando membros não expostos no Document Object Model HTML gerenciado
-O gerenciado HTML DOM Document Object Model () contém uma classe chamada <xref:System.Windows.Forms.HtmlElement> que expõe as propriedades, métodos e eventos que todos os elementos HTML têm em comum. Às vezes, no entanto, será necessário acessar membros que a interface gerenciada não expõe diretamente. Este tópico analisa duas maneiras de acessar membros não expostos, incluindo [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] e funções do VBScript definidas dentro de uma página da Web.  
+O gerenciado HTML documento Object Model (DOM) contém uma classe chamada <xref:System.Windows.Forms.HtmlElement> que expõe as propriedades, métodos e eventos que todos os elementos HTML têm em comum. Às vezes, no entanto, será necessário acessar membros que a interface gerenciada não expõe diretamente. Este tópico analisa duas maneiras de acessar membros não expostos, incluindo [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] e funções do VBScript definidas dentro de uma página da Web.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Acessando Membros Não Expostos por meio de Interfaces Gerenciadas  
  <xref:System.Windows.Forms.HtmlDocument> e <xref:System.Windows.Forms.HtmlElement> fornecem quatro métodos que permitem o acesso a membros não expostos. A tabela a seguir mostra os tipos e seus métodos correspondentes.  
@@ -47,7 +47,7 @@ O gerenciado HTML DOM Document Object Model () contém uma classe chamada <xref:
 </HTML>  
 ```  
   
- Depois que você carregar esta página para o <xref:System.Windows.Forms.WebBrowser> controle, você pode usar o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> método para recuperar o `FORM` em tempo de execução usando `form1` como argumento.  
+ Depois que você carregar esta página para o <xref:System.Windows.Forms.WebBrowser> controle, você pode usar o <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> método para recuperar o `FORM` em tempo de execução usando `form1` como o argumento.  
   
  [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
  [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
@@ -64,12 +64,12 @@ O gerenciado HTML DOM Document Object Model () contém uma classe chamada <xref:
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- A maneira mais fácil de usar as interfaces COM é adicionar uma referência à biblioteca de HTML DOM não gerenciada (MSHTML.dll) por meio do aplicativo, embora não haja suporte para isso. Para obter mais informações, consulte o [Artigo 934368 da base de dados de conhecimento](http://support.microsoft.com/kb/934368).  
+ A maneira mais fácil de usar as interfaces COM é adicionar uma referência à biblioteca de HTML DOM não gerenciada (MSHTML.dll) por meio do aplicativo, embora não haja suporte para isso. Para obter mais informações, consulte o [Artigo 934368 da base de dados de conhecimento](https://support.microsoft.com/kb/934368).  
   
 ## <a name="accessing-script-functions"></a>Acessando Funções de Script  
  Uma página HTML pode definir uma ou mais funções usando uma linguagem de script como [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] ou VBScript. Essas funções são colocadas dentro de uma página `SCRIPT` na página e podem ser executadas sob demanda ou em resposta a um evento no DOM.  
   
- Você pode chamar quaisquer funções de script que você define em uma página HTML usando o <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> método. Se o método de script retorna um elemento HTML, você pode usar uma conversão para converter esse resultado de retorno para um <xref:System.Windows.Forms.HtmlElement>. Para obter detalhes e o código de exemplo, consulte <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
+ Você pode chamar quaisquer funções de script que você define em uma página HTML usando o <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> método. Se o método de script retorna um elemento HTML, você pode usar uma conversão para converter o resultado retornado para um <xref:System.Windows.Forms.HtmlElement>. Para obter detalhes e o código de exemplo, consulte <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando o Modelo de Objeto do Documento HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5020c31f590f527856f966ede512e98c07496ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3eb23da5accd89931ee4b883bfa162035ec26ddd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435382"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384616"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>Método ICLRStrongName::StrongNameCompareAssemblies
-Determina se os dois assemblies diferem somente por suas assinaturas de nome forte.  
+Determina se dois assemblies diferem somente por suas assinaturas de nome forte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT StrongNameCompareAssemblies (
   
 #### <a name="parameters"></a>Parâmetros  
  `wszAssembly1`  
- [in] O caminho para o primeiro conjunto.  
+ [in] O caminho para o assembly primeiro.  
   
  `wszAssembly2`  
  [in] O caminho para o segundo conjunto.  
@@ -47,23 +47,23 @@ HRESULT StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Um dos seguintes valores:  
   
--   `SN_CMP_DIFFERENT` (0) - Especifica que os assemblies conterem dados diferentes.  
+-   `SN_CMP_DIFFERENT` (0) – Especifica que os assemblies contêm dados diferentes.  
   
--   `SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente iguais, incluindo suas assinaturas e a soma de verificação.  
+-   `SN_CMP_IDENTICAL` (1) - Especifica que os assemblies são exatamente os mesmos, incluindo suas assinaturas e a soma de verificação.  
   
--   `SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e soma de verificação.  
+-   `SN_CMP_SIGONLY` (2) - Especifica que os assemblies diferem somente por assinatura e a soma de verificação.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+ `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="remarks"></a>Comentários  
  A assinatura de um assembly de nome forte consiste em nome de texto, versão, cultura e token de chave pública do assembly.  

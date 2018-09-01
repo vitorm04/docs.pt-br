@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: f05f5afa0c0a7ef858442bd98233865834b8b89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8f6947a0fe39998d9dc229ad7b95bfd2d426f6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547437"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391401"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Suplementos do Firefox para dar suporte à implantação do aplicativo .NET
-Habilitar o Windows Presentation Foundation (WPF) plug-in para o Firefox e o Assistente do Framework .NET para o Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], perder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e aplicativos ClickOnce para trabalhar com o navegador Mozilla Firefox.  
+Habilitar o Windows Presentation Foundation (WPF) plug-in para Firefox e o .NET Framework Assistant para Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], flexível [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]e os aplicativos ClickOnce para trabalhar com o navegador Mozilla Firefox.  
   
 ## <a name="wpf-plug-in-for-firefox"></a>Plug-in WPF para Firefox  
  O plug-in de WPF para Firefox habilita que os arquivos [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] e [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] flexível sejam acessados e executados no nível superior ou em um IFRAME HTML no navegador Firefox. Um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que pode ser publicado em um servidor Web e iniciado em navegadores com suporte. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] flexível é um arquivo somente XAML que pode ser navegado e exibido em navegadores com suporte, assim como um arquivo XML.  
@@ -31,7 +31,7 @@ Habilitar o Windows Presentation Foundation (WPF) plug-in para o Firefox e o Ass
   
 -   Relate todas as versões instaladas do .NET Framework ou apenas a versão mais recente.  
   
- O .NET Framework Assistant para Firefox está incluído com o [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Para obter informações sobre como remover o .NET Framework Assistant para Firefox, consulte [Como remover o .NET Framework Assistant para Firefox](http://go.microsoft.com/fwlink/?LinkId=177944).  
+ O .NET Framework Assistant para Firefox está incluído com o [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Para obter informações sobre como remover o .NET Framework Assistant para Firefox, consulte [Como remover o .NET Framework Assistant para Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>Consulte também  
  [Implantando um aplicativo WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  

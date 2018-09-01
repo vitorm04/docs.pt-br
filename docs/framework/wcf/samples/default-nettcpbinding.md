@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: b51178c8ba84740598db62b9011fa33da318ca8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502271"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397780"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding padrão
-Este exemplo demonstra o uso de <xref:System.ServiceModel.NetTcpBinding> associação. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo. Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console.  
+Este exemplo demonstra o uso do <xref:System.ServiceModel.NetTcpBinding> associação. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o serviço é hospedado internamente. O cliente e o serviço são aplicativos de console.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo do [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo de configuração.  
+ A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado na `binding` atributo do [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Este exemplo demonstra o uso de <xref:System.ServiceModel.NetTcpBinding> associa
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O exemplo anterior mostra como configurar um ponto de extremidade para usar o `netTcpBinding` associação com as configurações padrão. Se você deseja configurar o `netTcpBinding` de associação e alterar algumas de suas configurações, é necessário definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação por nome com um `bindingConfiguration` atributo. Neste exemplo, a configuração de associação é denominada `Binding1` e é definido como mostrado no exemplo de configuração.  
+ O exemplo anterior mostra como configurar um ponto de extremidade para usar o `netTcpBinding` associação com as configurações padrão. Se você quiser configurar o `netTcpBinding` de associação e alterar algumas de suas configurações, é necessário definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação por nome com um `bindingConfiguration` atributo. Neste exemplo, a configuração de associação é chamada `Binding1` e é definido como mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <services>  
@@ -81,7 +81,7 @@ Este exemplo demonstra o uso de <xref:System.ServiceModel.NetTcpBinding> associa
 </bindings>  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -100,14 +100,14 @@ Press ENTER to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Como o servidor é hospedado automaticamente, você deve especificar uma identidade no arquivo de App. config do cliente para executar o exemplo em uma configuração de várias máquinas.  
+    >  Como o servidor for auto-hospedado, você deve especificar uma identidade no arquivo de App. config do cliente para executar o exemplo em uma configuração de várias máquinas.  
   
     ```xml  
     <client>  

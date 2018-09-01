@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 3554790bb65310031b00ca5fb320aa4c111e1e11
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f2282b7aea8adf9e7574e2abe86af7cc5a487e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758536"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392287"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Adicionando um DataTable a um DataSet
 O ADO.NET permite que você crie objetos <xref:System.Data.DataTable> e adicione-os a um <xref:System.Data.DataSet> existente. Você pode definir informações de restrição para um <xref:System.Data.DataTable> usando as propriedades <xref:System.Data.DataTable.PrimaryKey%2A> e <xref:System.Data.DataColumn.Unique%2A>.  
@@ -22,7 +22,7 @@ O ADO.NET permite que você crie objetos <xref:System.Data.DataTable> e adicione
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>Diferenciação de maiúsculas e minúsculas  
- Duas ou mais tabelas ou relacionamentos com o mesmo nome, mas maiúsculas e minúsculas diferentes, podem existir em um <xref:System.Data.DataSet>. Nesses casos, as referências por nome a tabelas e relações diferenciam maiúsculas de minúsculas. Por exemplo, se o <xref:System.Data.DataSet> **conjunto de dados** contém tabelas **Table1** e **table1**, você deve fazer referência a **Table1** por nome **dataSet.Tables["Table1"]**, e **table1** como **dataSet.Tables["table1"]**. Tentativa de fazer referência a uma das tabelas como **dataSet.Tables["TABLE1"]** poderia gerar uma exceção.  
+ Duas ou mais tabelas ou relacionamentos com o mesmo nome, mas maiúsculas e minúsculas diferentes, podem existir em um <xref:System.Data.DataSet>. Nesses casos, as referências por nome a tabelas e relações diferenciam maiúsculas de minúsculas. Por exemplo, se o <xref:System.Data.DataSet> **dataSet** contém tabelas **Table1** e **table1**, você faria referência **Table1** por nome como **dataSet.Tables["Table1"]**, e **table1** como **dataSet.Tables["table1"]**. Tentativa de fazer referência a qualquer uma das tabelas como **dataSet.Tables["TABLE1"]** geraria uma exceção.  
   
  O comportamento de maiúsculas e minúsculas não se aplica se apenas uma tabela ou relacionamento tiver um nome específico. Por exemplo, se o <xref:System.Data.DataSet> tem apenas **Table1**, você pode fazer referência a ele usando **dataSet.Tables["TABLE1"]**.  
   
@@ -34,4 +34,4 @@ O ADO.NET permite que você crie objetos <xref:System.Data.DataTable> e adicione
   
 ## <a name="see-also"></a>Consulte também  
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

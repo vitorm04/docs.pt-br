@@ -2,12 +2,12 @@
 title: Comportamento específico do processo do SQL Server do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-ms.openlocfilehash: 2e89a902bbe7f25586bc4e6574932c8da3e67d40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c2f1018748a0d5703119a1ab77d23a40a06457
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356597"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388124"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Comportamento específico do processo do SQL Server do ADO.NET
 Há quatro principais extensões funcionais para o ADO.NET, localizadas no namespace <xref:Microsoft.SqlServer.Server>, que são especificamente para uso no processo: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> e <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  
@@ -16,8 +16,8 @@ Há quatro principais extensões funcionais para o ADO.NET, localizadas no names
   
  **SQL Server Books Online** (Guias online do SQL Server)  
   
-1.  [Extensões específicas do SQL Server no processo para o ADO.NET](http://go.microsoft.com/fwlink/?LinkId=115403)  
+1.  [Extensões específicas do SQL Server em processo para o ADO.NET](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando objetos do SQL Server 2005 em código gerenciado](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [Criando objetos do SQL Server 2005 em código gerenciado](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

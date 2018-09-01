@@ -2,23 +2,23 @@
 title: Fluxo
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 96b77d0135a4dac1dcb8406a1b9a1372d0c4a35d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508209"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388794"
 ---
 # <a name="stream"></a>Fluxo
-O exemplo de fluxo demonstra o uso de fluxo de comunicação de modo de transferência. O serviço expõe diversas operações que enviam e recebem fluxos. Este exemplo é hospedado automaticamente. O cliente e o serviço são programas de console.  
+O exemplo de Stream demonstra o uso de fluxo de comunicação de modo de transferência. O serviço expõe diversas operações que enviam e recebem transmissões. Este exemplo é auto-hospedado. O cliente e o serviço são programas de console.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Windows Communication Foundation (WCF) pode se comunicar em dois modos de transferência — em buffer ou de fluxo contínuo. No modo de transferência do buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes de entregar completamente. O modo de streaming é útil quando as informações que são passadas é demoradas e podem ser processadas em série. O modo contínuo também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  
+ Windows Communication Foundation (WCF) podem se comunicar em dois modos de transferência — em buffer ou de streaming. No modo de transferência em buffer padrão, uma mensagem deve ser entregue completamente antes de um destinatário possa lê-lo. No modo de transferência de streaming, o receptor pode começar a processar a mensagem antes que seja entregue completamente. O modo de streaming é útil quando as informações que são passadas são demoradas e podem ser processadas em série. Modo de streaming também é útil quando a mensagem é muito grande para ser totalmente armazenada em buffer.  
   
-## <a name="streaming-and-service-contracts"></a>Fluxo contínuo e contratos de serviço  
- Streaming é algo a ser considerado ao projetar um contrato de serviço. Se uma operação recebe ou retorna grandes quantidades de dados, você deve considerar o fluxo de dados para evitar a utilização de memória alta devido a buffer de mensagens de entrada ou saídas. Para transmitir dados, o parâmetro que contém a que os dados devem ser o único parâmetro na mensagem. Por exemplo, se a mensagem de entrada for a ser transmitido, a operação deve ter exatamente um parâmetro de entrada. Da mesma forma, se a mensagem de saída é a transmissão, a operação deve ter exatamente uma saída ou um valor de retorno. No caso, o parâmetro ou retorno valor de tipo deve ser `Stream`, `Message`, ou `IXmlSerializable`. Este é o contrato de serviço usado neste exemplo de streaming.  
+## <a name="streaming-and-service-contracts"></a>Streaming e contratos de serviço  
+ Streaming é algo a ser considerados ao criar um contrato de serviço. Se uma operação recebe ou retorna grandes quantidades de dados, você deve considerar esses dados para evitar a utilização de memória alta devido a buffer de mensagens de entrada ou saídas de streaming. Para transmitir dados, o parâmetro que contém a que os dados devem ser o único parâmetro na mensagem. Por exemplo, se a mensagem de entrada é à ser transmitido, a operação deve ter exatamente um parâmetro de entrada. Da mesma forma, se a mensagem de saída deve ser transmitido, a operação deve ter exatamente um parâmetro de saída ou um valor de retorno. No caso, o parâmetro ou retorno valor de tipo deve ser `Stream`, `Message`, ou `IXmlSerializable`. Este é o contrato de serviço usado neste exemplo de streaming.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -36,14 +36,14 @@ public interface IStreamingSample
 }  
 ```  
   
- O `GetStream` operação recebe alguns dados de entrada como uma cadeia de caracteres, que é armazenado em buffer e retorna um `Stream`, que é transmitido. Por outro lado, `UploadStream` assume um `Stream` (Streaming) e retorna um `bool` (em buffer). `EchoStream` Obtém e retorna `Stream` e é um exemplo de uma operação cujas entradas e mensagens de saída ambos são transmitidas. Por fim, `GetReversedStream` não usa nenhuma entrada e retorna um `Stream` (Streaming).  
+ O `GetStream` operação recebe alguns dados de entrada como uma cadeia de caracteres, que é armazenada em buffer e retorna um `Stream`, que é transmitido. Por outro lado, `UploadStream` usa um `Stream` (em fluxo) e retorna um `bool` (em buffer). `EchoStream` usa e retorna `Stream` é um exemplo de uma operação cujas entradas e as mensagens de saída são transmitidas. Por fim, `GetReversedStream` não usa nenhuma entrada e retorna um `Stream` (em fluxo).  
   
-## <a name="enabling-streamed-transfers"></a>Habilitar transferências em fluxo  
- Definindo contratos de operação conforme descritos anteriormente, você fornece streaming no nível do modelo de programação. Se você parar, o transporte ainda armazena em buffer o conteúdo da mensagem inteira. Para habilitar o fluxo de transporte, selecione um modo de transferência no elemento de associação de transporte. O elemento de associação tem um `TransferMode` propriedade que pode ser definida como `Buffered`, `Streamed`, `StreamedRequest`, ou `StreamedResponse`. Definir o modo de transferência para `Streamed` permite transmitir comunicação nas duas direções. Definir o modo de transferência para `StreamedRequest` ou `StreamedResponse` permite transmitir comunicação em apenas a uma solicitação ou resposta, respectivamente.  
+## <a name="enabling-streamed-transfers"></a>Habilitar transferências em streaming  
+ Definindo contratos de operação conforme descritos anteriormente, você fornece no nível do modelo de programação de streaming. Se você parar por aqui, o transporte ainda armazena em buffer o conteúdo da mensagem inteira. Para habilitar o streaming de transporte, selecione um modo de transferência no elemento de associação de transporte. O elemento de associação tem um `TransferMode` propriedade pode ser definida como `Buffered`, `Streamed`, `StreamedRequest`, ou `StreamedResponse`. Definir o modo de transferência para `Streamed` permite a comunicação em ambas as direções de fluxo. Definir o modo de transferência para `StreamedRequest` ou `StreamedResponse` permite transmitir a comunicação apenas a solicitação ou resposta, respectivamente.  
   
- O `basicHttpBinding` expõe o `TransferMode` propriedade na associação de forma `NetTcpBinding` e `NetNamedPipeBinding`. Para outros transportes, você deve criar uma associação personalizada para definir o modo de transferência.  
+ O `basicHttpBinding` expõe o `TransferMode` propriedade na associação como faz `NetTcpBinding` e `NetNamedPipeBinding`. Para outros transportes, você deve criar uma ligação personalizada para definir o modo de transferência.  
   
- O código do exemplo de configuração a seguir mostra a configuração de `TransferMode` propriedade para streaming no `basicHttpBinding` e uma associação HTTP personalizada:  
+ O código do exemplo de configuração a seguir mostra a configuração de `TransferMode` propriedade para transmissão no `basicHttpBinding` e uma ligação HTTP personalizada:  
   
 ```xml  
 <!-- An example basicHttpBinding using streaming. -->  
@@ -61,12 +61,12 @@ public interface IStreamingSample
 </customBinding>  
 ```  
   
- Além de configuração de `transferMode` para `Streamed`, os conjuntos de código de configuração anterior a `maxReceivedMessageSize` 64 MB. Como um mecanismo de defesa, `maxReceivedMessageSize` locais que o tamanho máximo permitido de mensagens em um limite de recebimento. O padrão `maxReceivedMessageSize` é 64 KB, que geralmente é muito baixa para cenários de streaming.  
+ Além de configuração de `transferMode` para `Streamed`, os conjuntos de código de configuração anteriores a `maxReceivedMessageSize` 64 MB. Como um mecanismo de defesa, `maxReceivedMessageSize` coloca um limite para o tamanho máximo permitido de mensagens em receber. O padrão `maxReceivedMessageSize` é de 64 KB, que geralmente é muito baixa para cenários de streaming.  
   
-## <a name="processing-data-as-it-is-streamed"></a>Processamento de dados conforme ele é transmitido  
- As operações `GetStream`, `UploadStream` e `EchoStream` todos lidam com enviar dados diretamente de um arquivo ou salvar dados recebidos diretamente para um arquivo. No entanto, em alguns casos, há um requisito para enviar ou receber grandes quantidades de dados e executar algum processamento em partes dos dados que está sendo enviado ou recebido. É uma maneira de abordar esses cenários gravar um fluxo personalizado (uma classe que deriva de <xref:System.IO.Stream>) que processa os dados conforme ela é lida ou gravada. O `GetReversedStream` operação e `ReverseStream` classe são um exemplo disso.  
+## <a name="processing-data-as-it-is-streamed"></a>Processamento de dados quando ele é distribuído  
+ As operações `GetStream`, `UploadStream` e `EchoStream` todos lidam com o envio de dados diretamente de um arquivo ou salvar dados recebidos diretamente para um arquivo. No entanto, em alguns casos, há um requisito para enviar ou receber grandes quantidades de dados e executar algum processamento em partes dos dados enquanto ele é enviado ou recebido. Uma maneira de resolver esses cenários é gravar um fluxo personalizado (uma classe que deriva de <xref:System.IO.Stream>) que processa os dados conforme ela é lida ou gravada. O `GetReversedStream` operação e `ReverseStream` classe são um exemplo disso.  
   
- `GetReversedStream` cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre como o sistema lê de que `ReverseStream` objeto. O `ReverseStream.Read` implementação grava um bloco de bytes do arquivo de base, reverte-los e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo que o conteúdo está sendo lidos ou gravados de e para o fluxo.  
+ `GetReversedStream` cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre conforme o sistema lê do que `ReverseStream` objeto. O `ReverseStream.Read` implementação lê um bloco de bytes do arquivo subjacente, reverta e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo como o conteúdo está sendo lidos ou gravados de e para o fluxo.  
   
 ```  
 class ReverseStream : Stream  
@@ -112,8 +112,8 @@ class ReverseStream : Stream
 }  
 ```  
   
-## <a name="running-the-sample"></a>Executando o exemplo  
- Para executar o exemplo, primeiro crie o serviço e o cliente seguindo as instruções no final deste documento. Inicie o serviço e o cliente em duas janelas de console diferentes. Quando o cliente é iniciado, ele espera para que você pressione ENTER quando o serviço está pronto. O cliente, em seguida, chama os métodos `GetStream()`, `UploadStream()` e `GetReversedStream()` primeiro por HTTP e, em seguida, por meio de TCP. Aqui está um exemplo de saída do serviço, seguido pela saída de exemplo do cliente:  
+## <a name="running-the-sample"></a>A execução do exemplo  
+ Para executar o exemplo, primeiro crie o serviço e o cliente seguindo as instruções no final deste documento. Em seguida, inicie o serviço e o cliente nas duas janelas de console diferentes. Quando o cliente é iniciado, ele espera que você pressione ENTER quando o serviço está pronto. O cliente, em seguida, chama os métodos `GetStream()`, `UploadStream()` e `GetReversedStream()` primeiro por HTTP e, em seguida, por meio de TCP. Aqui está um exemplo de saída do serviço, seguido pela saída de exemplo do cliente:  
   
  Saída do serviço:  
   
@@ -129,7 +129,7 @@ Saving to file D:\...\uploadedfile
 File D:\...\uploadedfile saved  
 ```  
   
- Saída de cliente:  
+ Saída do cliente:  
   
 ```  
 Press <ENTER> when service is ready  
@@ -167,21 +167,21 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Se você usar o Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
+>  Se você usar Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   

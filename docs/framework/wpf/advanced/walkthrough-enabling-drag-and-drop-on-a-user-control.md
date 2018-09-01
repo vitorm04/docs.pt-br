@@ -8,17 +8,17 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: e4dba856b973f1210f2d088de3ed8ae5df2c6988
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e151eb7f428fecb330970210fd7addb1603a211f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549744"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386600"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Instruções passo a passo: habilitando arrastar e soltar em um controle de usuário
 Este passo a passo demonstra como criar um controle de usuário personalizado que pode participar na transferência de dados por arrastar e soltar no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- Neste passo a passo, você criará um personalizado WPF <xref:System.Windows.Controls.UserControl> que representa uma forma de círculo. Você implementará a funcionalidade no controle para permitir a transferência de dados por meio de arrastar e soltar. Por exemplo, se você arrastar de um controle do círculo para outro, os dados de cor de preenchimento serão copiados do círculo de origem para o destino. Se você arrastar um controle do círculo para um <xref:System.Windows.Controls.TextBox>, a representação de cadeia de caracteres da cor de preenchimento é copiada para o <xref:System.Windows.Controls.TextBox>. Você também criará um pequeno aplicativo que contém dois controles de painel e um <xref:System.Windows.Controls.TextBox> para testar a funcionalidade de arrastar e soltar. Será gravado um código que permite que os painéis processem os dados do círculo que foram soltos, o que permitirá mover ou copiar círculos da coleção de filhos de um painel para o outro.  
+ Neste passo a passo, você criará um WPF personalizado <xref:System.Windows.Controls.UserControl> que representa uma forma de círculo. Você implementará a funcionalidade no controle para permitir a transferência de dados por meio de arrastar e soltar. Por exemplo, se você arrastar de um controle do círculo para outro, os dados de cor de preenchimento serão copiados do círculo de origem para o destino. Se você arrastar de um controle do círculo para uma <xref:System.Windows.Controls.TextBox>, a representação de cadeia de caracteres da cor de preenchimento é copiada para o <xref:System.Windows.Controls.TextBox>. Você também criará um aplicativo pequeno que contém dois controles de painel e um <xref:System.Windows.Controls.TextBox> para testar a funcionalidade de arrastar e soltar. Será gravado um código que permite que os painéis processem os dados do círculo que foram soltos, o que permitirá mover ou copiar círculos da coleção de filhos de um painel para o outro.  
   
  Esta explicação passo a passo ilustra as seguintes tarefas:  
   
@@ -36,11 +36,11 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
 -   Visual Studio 2010  
   
 ## <a name="creating-the-application-project"></a>Criando o projeto de aplicativo  
- Nesta seção, você criará a infraestrutura de aplicativo, que inclui uma página principal com dois painéis e um <xref:System.Windows.Controls.TextBox>.  
+ Nesta seção, você criará a infraestrutura de aplicativo, que inclui uma página principal com dois painéis e uma <xref:System.Windows.Controls.TextBox>.  
   
 ### <a name="to-create-the-project"></a>Para criar o projeto  
   
-1.  Crie um novo projeto de aplicativo do WPF no Visual Basic ou no Visual C#, chamado `DragDropExample`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Crie um novo projeto de aplicativo do WPF no Visual Basic ou no Visual C#, chamado `DragDropExample`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  Abra MainWindow.xaml.  
   
@@ -82,13 +82,13 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 1.  Abra MainWindow.xaml.  
   
-2.  Adicionar o XAML a seguir para a abertura <xref:System.Windows.Window> marca para criar uma referência de namespace XML para o aplicativo atual.  
+2.  Adicionar o XAML a seguir para a abertura <xref:System.Windows.Window> marca para criar uma referência ao namespace XML para o aplicativo atual.  
   
     ```  
     xmlns:local="clr-namespace:DragDropExample"  
     ```  
   
-3.  Na primeira <xref:System.Windows.Controls.StackPanel>, adicionar o XAML a seguir para criar duas instâncias do controle de usuário círculo no primeiro painel.  
+3.  Na primeira <xref:System.Windows.Controls.StackPanel>, adicione o seguinte XAML para criar duas instâncias do controle de usuário do círculo no primeiro painel.  
   
      [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]  
   
@@ -97,15 +97,15 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
      [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]  
   
 ## <a name="implementing-drag-source-events-in-the-user-control"></a>Implementando eventos de origem do arrasto no controle de usuário  
- Nesta seção, você substituirá o <xref:System.Windows.UIElement.OnMouseMove%2A> método e iniciar a operação de arrastar e soltar.  
+ Nesta seção, você substituirá o <xref:System.Windows.UIElement.OnMouseMove%2A> método e inicia a operação de arrastar e soltar.  
   
- Se um arraste for iniciado (um botão do mouse é pressionado e o mouse é movido), você incluirá os dados a serem transferidos para um <xref:System.Windows.DataObject>. Nesse caso, o controle do círculo empacotará três itens de dados; uma representação de cadeia de caracteres da cor de preenchimento, uma representação dupla da altura e uma cópia de si mesmo.  
+ Se uma operação de arrastar for iniciada (um botão do mouse é pressionado e o mouse é movido), você empacotará os dados a serem transferidos para um <xref:System.Windows.DataObject>. Nesse caso, o controle do círculo empacotará três itens de dados; uma representação de cadeia de caracteres da cor de preenchimento, uma representação dupla da altura e uma cópia de si mesmo.  
   
 ### <a name="to-initiate-a-drag-and-drop-operation"></a>Para iniciar uma operação do tipo “arrastar e soltar”  
   
 1.  Abra Circle.xaml.cs ou Circle.xaml.vb.  
   
-2.  Adicione o seguinte <xref:System.Windows.UIElement.OnMouseMove%2A> substituição para fornecer manipulação de classe para o <xref:System.Windows.UIElement.MouseMove> evento.  
+2.  Adicione o seguinte <xref:System.Windows.UIElement.OnMouseMove%2A> substituição é para fornecer manipulação de classe para o <xref:System.Windows.UIElement.MouseMove> eventos.  
   
      [!code-csharp[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
      [!code-vb[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]  
@@ -114,9 +114,9 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
     -   Verifica se o botão esquerdo do mouse é pressionado enquanto o mouse se move.  
   
-    -   Empacota os dados de círculo em uma <xref:System.Windows.DataObject>. Nesse caso, o controle do círculo empacota três itens de dados; uma representação de cadeia de caracteres da cor de preenchimento, uma representação dupla da altura e uma cópia de si mesmo.  
+    -   Empacota os dados do círculo em um <xref:System.Windows.DataObject>. Nesse caso, o controle do círculo empacota três itens de dados; uma representação de cadeia de caracteres da cor de preenchimento, uma representação dupla da altura e uma cópia de si mesmo.  
   
-    -   Chama estático <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> método para iniciar a operação de arrastar e soltar. Passe os seguintes três parâmetros para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método:  
+    -   Chama estático <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> método para iniciar a operação de arrastar e soltar. Você passa três parâmetros a seguir para o <xref:System.Windows.DragDrop.DoDragDrop%2A> método:  
   
         -   `dragSource` – Uma referência para esse controle.  
   
@@ -126,34 +126,34 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 3.  Pressione F5 para compilar e executar o aplicativo.  
   
-4.  Clique em um dos controles do círculo e arraste-o sobre painéis, o círculo e o <xref:System.Windows.Controls.TextBox>. Ao arrastar sobre o <xref:System.Windows.Controls.TextBox>, o cursor muda para indicar uma movimentação.  
+4.  Clique em um dos controles do círculo e arraste-o sobre os painéis, o outro círculo e o <xref:System.Windows.Controls.TextBox>. Ao arrastar sobre a <xref:System.Windows.Controls.TextBox>, o cursor muda para indicar um movimento.  
   
-5.  Ao arrastar um círculo sobre o <xref:System.Windows.Controls.TextBox>, pressione a tecla CTRL. Observe como o cursor muda para indicar uma cópia.  
+5.  Enquanto arrasta um círculo sobre o <xref:System.Windows.Controls.TextBox>, pressione a tecla CTRL. Observe como o cursor muda para indicar uma cópia.  
   
-6.  Arraste e solte um círculo para o <xref:System.Windows.Controls.TextBox>. A representação de cadeia de caracteres da cor de preenchimento do círculo é acrescentada ao <xref:System.Windows.Controls.TextBox>.  
+6.  Arraste e solte um círculo no <xref:System.Windows.Controls.TextBox>. A representação de cadeia de caracteres da cor de preenchimento do círculo é acrescentada ao <xref:System.Windows.Controls.TextBox>.  
   
      ![Representação de cadeia de caracteres da cor de preenchimento do círculo](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")  
   
- Por padrão, o cursor será alterado durante uma operação do tipo “arrastar e soltar” para indicar qual será o efeito de soltar os dados. Você pode personalizar os comentários especificados para o usuário manipulando o <xref:System.Windows.UIElement.GiveFeedback> evento e definindo um cursor diferente.  
+ Por padrão, o cursor será alterado durante uma operação do tipo “arrastar e soltar” para indicar qual será o efeito de soltar os dados. Você pode personalizar os comentários fornecidos ao usuário manipulando o <xref:System.Windows.UIElement.GiveFeedback> evento e definindo um cursor diferente.  
   
 ### <a name="to-give-feedback-to-the-user"></a>Para fornecer comentários ao usuário  
   
 1.  Abra Circle.xaml.cs ou Circle.xaml.vb.  
   
-2.  Adicione o seguinte <xref:System.Windows.UIElement.OnGiveFeedback%2A> substituição para fornecer manipulação de classe para o <xref:System.Windows.UIElement.GiveFeedback> evento.  
+2.  Adicione o seguinte <xref:System.Windows.UIElement.OnGiveFeedback%2A> substituição é para fornecer manipulação de classe para o <xref:System.Windows.UIElement.GiveFeedback> eventos.  
   
      [!code-csharp[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
      [!code-vb[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]  
   
      Isso <xref:System.Windows.UIElement.OnGiveFeedback%2A> substituição executa as seguintes tarefas:  
   
-    -   Verifica o <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valores que são definidos no destino de soltar <xref:System.Windows.UIElement.DragOver> manipulador de eventos.  
+    -   Verifica a <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valores que são definidos no destino de soltar <xref:System.Windows.UIElement.DragOver> manipulador de eventos.  
   
     -   Define um cursor personalizado com base no <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> valor. O cursor deve fornecer comentários visuais ao usuário a respeito de qual será o efeito de soltar os dados.  
   
 3.  Pressione F5 para compilar e executar o aplicativo.  
   
-4.  Arraste um círculo controle sobre os painéis, o círculo, e o <xref:System.Windows.Controls.TextBox>. Observe que os cursores agora são os cursores personalizados que você especificou no <xref:System.Windows.UIElement.OnGiveFeedback%2A> substituir.  
+4.  Arraste um dos círculo controla ao longo de painéis, o outro círculo, e o <xref:System.Windows.Controls.TextBox>. Observe que os cursores agora são os cursores personalizados que você especificou no <xref:System.Windows.UIElement.OnGiveFeedback%2A> substituir.  
   
      ![Arraste e solte com os cursores personalizados](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")  
   
@@ -168,32 +168,32 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 1.  Abra o Circle.xaml.  
   
-2.  Na abertura <xref:System.Windows.Controls.UserControl> marca, adicione o <xref:System.Windows.UIElement.AllowDrop%2A> propriedade e defina-a como `true`.  
+2.  Na abertura <xref:System.Windows.Controls.UserControl> marca, adicione o <xref:System.Windows.UIElement.AllowDrop%2A> propriedade e defini-lo como `true`.  
   
      [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]  
   
- O <xref:System.Windows.UIElement.OnDrop%2A> método é chamado quando o <xref:System.Windows.UIElement.AllowDrop%2A> está definida como `true` e dados de origem do arrasto são arrastados para o controle de usuário do círculo. Nesse método, você processará os dados que foram soltos e aplicará os dados ao círculo.  
+ O <xref:System.Windows.UIElement.OnDrop%2A> método é chamado quando o <xref:System.Windows.UIElement.AllowDrop%2A> estiver definida como `true` e dados de origem do arrasto são soltos no controle de usuário do círculo. Nesse método, você processará os dados que foram soltos e aplicará os dados ao círculo.  
   
 ### <a name="to-process-the-dropped-data"></a>Para processar os dados soltos  
   
 1.  Abra Circle.xaml.cs ou Circle.xaml.vb.  
   
-2.  Adicione o seguinte <xref:System.Windows.UIElement.OnDrop%2A> substituição para fornecer manipulação de classe para o <xref:System.Windows.UIElement.Drop> evento.  
+2.  Adicione o seguinte <xref:System.Windows.UIElement.OnDrop%2A> substituição é para fornecer manipulação de classe para o <xref:System.Windows.UIElement.Drop> eventos.  
   
      [!code-csharp[DragDropWalkthrough#OnDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
      [!code-vb[DragDropWalkthrough#OnDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]  
   
      Isso <xref:System.Windows.UIElement.OnDrop%2A> substituição executa as seguintes tarefas:  
   
-    -   Usa o <xref:System.Windows.DataObject.GetDataPresent%2A> método para verificar se os dados arrastados contém um objeto de cadeia de caracteres.  
+    -   Usa o <xref:System.Windows.DataObject.GetDataPresent%2A> método para verificar se os dados arrastados contêm um objeto de cadeia de caracteres.  
   
-    -   Usa o <xref:System.Windows.DataObject.GetData%2A> método para extrair os dados de cadeia de caracteres se ele estiver presente.  
+    -   Usa o <xref:System.Windows.DataObject.GetData%2A> método para extrair os dados de cadeia de caracteres, se ele estiver presente.  
   
-    -   Usa um <xref:System.Windows.Media.BrushConverter> ao tentar converter a cadeia de caracteres para um <xref:System.Windows.Media.Brush>.  
+    -   Usa um <xref:System.Windows.Media.BrushConverter> para tentar converter a cadeia de caracteres para um <xref:System.Windows.Media.Brush>.  
   
     -   Se a conversão for bem-sucedida, o pincel aplica-se a <xref:System.Windows.Shapes.Shape.Fill%2A> do <xref:System.Windows.Shapes.Ellipse> que fornece a interface do usuário do controle do círculo.  
   
-    -   Marcas de <xref:System.Windows.UIElement.Drop> eventos tratados. O evento de soltar deve ser marcado como manipulado para que os outros elementos que o recebem saibam que foi manipulado pelo controle de usuário do círculo.  
+    -   As marcas de <xref:System.Windows.UIElement.Drop> evento como manipulado. O evento de soltar deve ser marcado como manipulado para que os outros elementos que o recebem saibam que foi manipulado pelo controle de usuário do círculo.  
   
 3.  Pressione F5 para compilar e executar o aplicativo.  
   
@@ -209,17 +209,17 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 8.  Arraste-o para um controle do círculo e solte-o. Observe que o cursor muda para indicar que é permitido soltar; porém, a cor do círculo não muda, porque `gre` não é uma cor válida.  
   
-9. Arraste do controle do círculo verde e solte no controle do círculo azul. O círculo muda de azul para verde. Observe que o cursor é mostrado depende se o <xref:System.Windows.Controls.TextBox> ou o círculo é a origem do arrasto.  
+9. Arraste do controle do círculo verde e solte no controle do círculo azul. O círculo muda de azul para verde. Observe que a que o cursor mostrado depende se o <xref:System.Windows.Controls.TextBox> ou o círculo é a origem do arrasto.  
   
- Definindo o <xref:System.Windows.UIElement.AllowDrop%2A> propriedade `true` e processamento de dados descartados é tudo o que é necessário para habilitar um elemento seja um destino de soltar. No entanto, para fornecer uma melhor experiência de usuário, você deve também tratar o <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, e <xref:System.Windows.UIElement.DragOver> eventos. Nesses eventos, é possível executar verificações e fornecer comentários adicionais ao usuário antes de soltar os dados.  
+ Definindo o <xref:System.Windows.UIElement.AllowDrop%2A> propriedade para `true` e processar os dados é tudo o que é necessária para habilitar um elemento a ser um destino de soltar. No entanto, para fornecer uma melhor experiência de usuário, você deve também lidar com o <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, e <xref:System.Windows.UIElement.DragOver> eventos. Nesses eventos, é possível executar verificações e fornecer comentários adicionais ao usuário antes de soltar os dados.  
   
- Quando dados são arrastados sobre o controle de usuário do círculo, o controle deve notificar a fonte de arrasto se os dados arrastados podem ser processados. Se o controle não souber como processar os dados, deverá recusá-los quando forem soltos. Para fazer isso, você irá manipular o <xref:System.Windows.UIElement.DragOver> evento e defina o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade.  
+ Quando dados são arrastados sobre o controle de usuário do círculo, o controle deve notificar a fonte de arrasto se os dados arrastados podem ser processados. Se o controle não souber como processar os dados, deverá recusá-los quando forem soltos. Para fazer isso, você irá lidar com o <xref:System.Windows.UIElement.DragOver> evento e defina o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade.  
   
 ### <a name="to-verify-that-the-data-drop-is-allowed"></a>Para verificar se é permitido soltar os dados  
   
 1.  Abra Circle.xaml.cs ou Circle.xaml.vb.  
   
-2.  Adicione o seguinte <xref:System.Windows.UIElement.OnDragOver%2A> substituição para fornecer manipulação de classe para o <xref:System.Windows.UIElement.DragOver> evento.  
+2.  Adicione o seguinte <xref:System.Windows.UIElement.OnDragOver%2A> substituição é para fornecer manipulação de classe para o <xref:System.Windows.UIElement.DragOver> eventos.  
   
      [!code-csharp[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
      [!code-vb[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]  
@@ -228,9 +228,9 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
     -   Define a propriedade <xref:System.Windows.DragEventArgs.Effects%2A> como <xref:System.Windows.DragDropEffects.None>.  
   
-    -   Executa as mesmas verificações são executadas no <xref:System.Windows.UIElement.OnDrop%2A> método para determinar se o controle de usuário do círculo pode processar os dados arrastados.  
+    -   Executa as mesmas verificações que são executadas no <xref:System.Windows.UIElement.OnDrop%2A> método para determinar se o controle de usuário do círculo pode processar os dados arrastados.  
   
-    -   Se o controle de usuário pode processar os dados, define o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.  
+    -   Define se o controle de usuário pode processar os dados, o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade para <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.  
   
 3.  Pressione F5 para compilar e executar o aplicativo.  
   
@@ -238,38 +238,38 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 5.  Arraste o texto para um controle do círculo. Observe que, agora, o cursor muda para indicar que não é permitido soltar, porque `gre` não é uma cor válida.  
   
- É possível aprimorar ainda mais a experiência do usuário por meio da aplicação de uma visualização da operação do tipo “soltar”. Para o controle de usuário do círculo, você substituirá o <xref:System.Windows.UIElement.OnDragEnter%2A> e <xref:System.Windows.UIElement.OnDragLeave%2A> métodos. Quando os dados são arrastados sobre o controle, o plano de fundo atual <xref:System.Windows.Shapes.Shape.Fill%2A> é salvo em uma variável de espaço reservado. A cadeia de caracteres é convertida em um pincel e aplicada para o <xref:System.Windows.Shapes.Ellipse> que fornece o círculo interface do usuário. Se os dados são arrastados para fora do círculo sem queda original <xref:System.Windows.Shapes.Shape.Fill%2A> valor novamente é aplicado ao círculo.  
+ É possível aprimorar ainda mais a experiência do usuário por meio da aplicação de uma visualização da operação do tipo “soltar”. Para o controle de usuário do círculo, você substituirá a <xref:System.Windows.UIElement.OnDragEnter%2A> e <xref:System.Windows.UIElement.OnDragLeave%2A> métodos. Quando os dados são arrastados sobre o controle, o plano de fundo atual <xref:System.Windows.Shapes.Shape.Fill%2A> é salvo em uma variável de espaço reservado. A cadeia de caracteres, em seguida, é convertida em um pincel e aplicada ao <xref:System.Windows.Shapes.Ellipse> que fornece o círculo interface do usuário. Se os dados é arrastados do círculo sem serem soltos, o original <xref:System.Windows.Shapes.Shape.Fill%2A> valor será reaplicado ao círculo.  
   
 ### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>Para visualizar os efeitos da operação do tipo “arrastar e soltar”  
   
 1.  Abra Circle.xaml.cs ou Circle.xaml.vb.  
   
-2.  Na classe do círculo, declarar uma particular <xref:System.Windows.Media.Brush> variável chamada `_previousFill` e inicializá-lo para `null`.  
+2.  Na classe do círculo, declare uma privada <xref:System.Windows.Media.Brush> variável nomeada `_previousFill` e inicializá-lo para `null`.  
   
      [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]  
   
-3.  Adicione o seguinte <xref:System.Windows.UIElement.OnDragEnter%2A> substituição para fornecer manipulação de classe para o <xref:System.Windows.UIElement.DragEnter> evento.  
+3.  Adicione o seguinte <xref:System.Windows.UIElement.OnDragEnter%2A> substituição é para fornecer manipulação de classe para o <xref:System.Windows.UIElement.DragEnter> eventos.  
   
      [!code-csharp[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
      [!code-vb[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]  
   
      Isso <xref:System.Windows.UIElement.OnDragEnter%2A> substituição executa as seguintes tarefas:  
   
-    -   Salva o <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade o <xref:System.Windows.Shapes.Ellipse> no `_previousFill` variável.  
+    -   Salva o <xref:System.Windows.Shapes.Shape.Fill%2A> propriedade do <xref:System.Windows.Shapes.Ellipse> no `_previousFill` variável.  
   
-    -   Executa as mesmas verificações são executadas no <xref:System.Windows.UIElement.OnDrop%2A> método para determinar se os dados podem ser convertidos em um <xref:System.Windows.Media.Brush>.  
+    -   Executa as mesmas verificações que são executadas na <xref:System.Windows.UIElement.OnDrop%2A> método para determinar se os dados podem ser convertidos para um <xref:System.Windows.Media.Brush>.  
   
-    -   Se os dados são convertidos para um válida <xref:System.Windows.Media.Brush>, aplica-se para o <xref:System.Windows.Shapes.Shape.Fill%2A> do <xref:System.Windows.Shapes.Ellipse>.  
+    -   Se os dados são convertidos para válida <xref:System.Windows.Media.Brush>, aplica-se ao <xref:System.Windows.Shapes.Shape.Fill%2A> da <xref:System.Windows.Shapes.Ellipse>.  
   
-4.  Adicione o seguinte <xref:System.Windows.UIElement.OnDragLeave%2A> substituição para fornecer manipulação de classe para o <xref:System.Windows.UIElement.DragLeave> evento.  
+4.  Adicione o seguinte <xref:System.Windows.UIElement.OnDragLeave%2A> substituição é para fornecer manipulação de classe para o <xref:System.Windows.UIElement.DragLeave> eventos.  
   
      [!code-csharp[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
      [!code-vb[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]  
   
      Isso <xref:System.Windows.UIElement.OnDragLeave%2A> substituição executa as seguintes tarefas:  
   
-    -   Aplica-se a <xref:System.Windows.Media.Brush> salvo no `_previousFill` variável para o <xref:System.Windows.Shapes.Shape.Fill%2A> do <xref:System.Windows.Shapes.Ellipse> que fornece a interface do usuário do controle de usuário do círculo.  
+    -   Aplica-se a <xref:System.Windows.Media.Brush> salvos na `_previousFill` variável para o <xref:System.Windows.Shapes.Shape.Fill%2A> da <xref:System.Windows.Shapes.Ellipse> que fornece a interface do usuário do controle de usuário do círculo.  
   
 5.  Pressione F5 para compilar e executar o aplicativo.  
   
@@ -288,7 +288,7 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 1.  Abra MainWindow.xaml.  
   
-2.  Como mostra o XAML a seguir, em cada uma da <xref:System.Windows.Controls.StackPanel> controles, adicionar manipuladores para o <xref:System.Windows.UIElement.DragOver> e <xref:System.Windows.UIElement.Drop> eventos. Nome do <xref:System.Windows.UIElement.DragOver> manipulador de eventos, `panel_DragOver`e nomeie o <xref:System.Windows.UIElement.Drop> manipulador de eventos, `panel_Drop`.  
+2.  Conforme mostrado no XAML a seguir, em cada um dos <xref:System.Windows.Controls.StackPanel> controles, adicione manipuladores para o <xref:System.Windows.UIElement.DragOver> e <xref:System.Windows.UIElement.Drop> eventos. Nome do <xref:System.Windows.UIElement.DragOver> manipulador de eventos `panel_DragOver`e nomeie o <xref:System.Windows.UIElement.Drop> manipulador de eventos, `panel_Drop`.  
   
      [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]  
   
@@ -301,11 +301,11 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
      Isso <xref:System.Windows.UIElement.DragOver> manipulador de eventos executa as seguintes tarefas:  
   
-    -   Verifica se os dados arrastados contém os dados de "Objeto" que foi empacotados no <xref:System.Windows.DataObject> pelo controle de usuário círculo e passado na chamada para <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
+    -   Verifica se os dados arrastados contêm os dados de "Objeto" que foi empacotados na <xref:System.Windows.DataObject> pelo controle de usuário do círculo e passados na chamada para <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
   
     -   Se os dados do “objeto” estiverem presentes, verifica se a tecla CTRL está pressionada.  
   
-    -   Se for pressionada a tecla CTRL, define o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade <xref:System.Windows.DragDropEffects.Copy>. Caso contrário, defina o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade <xref:System.Windows.DragDropEffects.Move>.  
+    -   Define se a tecla CTRL está pressionada, o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade para <xref:System.Windows.DragDropEffects.Copy>. Caso contrário, defina as <xref:System.Windows.DragEventArgs.Effects%2A> propriedade para <xref:System.Windows.DragDropEffects.Move>.  
   
 5.  Adicione o seguinte código para o <xref:System.Windows.UIElement.Drop> manipulador de eventos.  
   
@@ -314,15 +314,15 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
      Isso <xref:System.Windows.UIElement.Drop> manipulador de eventos executa as seguintes tarefas:  
   
-    -   Verifica se o <xref:System.Windows.UIElement.Drop> evento já foi tratado. Por exemplo, se um círculo é solto em outro círculo que identificadores o <xref:System.Windows.UIElement.Drop> evento, você não quiser que o painel que contém o círculo para manipulá-lo também.  
+    -   Verifica se o <xref:System.Windows.UIElement.Drop> evento já foi tratado. Por exemplo, se um círculo foi solto em outro círculo que manipula o <xref:System.Windows.UIElement.Drop> evento, você não quiser o painel que contém o círculo o manipule também.  
   
-    -   Se o <xref:System.Windows.UIElement.Drop> evento não é tratado, verifica se a tecla CTRL pressionada.  
+    -   Se o <xref:System.Windows.UIElement.Drop> evento não é tratada, verifica se a tecla CTRL está pressionada.  
   
-    -   Se a tecla CTRL foi pressionada quando o <xref:System.Windows.UIElement.Drop> acontece, faz uma cópia do círculo controla e adicioná-lo para o <xref:System.Windows.Controls.Panel.Children%2A> coleção do <xref:System.Windows.Controls.StackPanel>.  
+    -   Se a tecla CTRL está pressionada quando o <xref:System.Windows.UIElement.Drop> ocorrer, faz uma cópia do círculo de controle e adicioná-lo para o <xref:System.Windows.Controls.Panel.Children%2A> coleção do <xref:System.Windows.Controls.StackPanel>.  
   
-    -   Se não for pressionada a tecla CTRL, move o círculo do <xref:System.Windows.Controls.Panel.Children%2A> coleção de seu painel pai para o <xref:System.Windows.Controls.Panel.Children%2A> coleção do painel que ele foi removido.  
+    -   Se não estiver pressionada a tecla CTRL, mova o círculo do <xref:System.Windows.Controls.Panel.Children%2A> coleção do painel pai para o <xref:System.Windows.Controls.Panel.Children%2A> coleção do painel que foi solto.  
   
-    -   Conjuntos de <xref:System.Windows.DragEventArgs.Effects%2A> propriedade para notificar o <xref:System.Windows.DragDrop.DoDragDrop%2A> método se uma operação de mover ou copiar foi executada.  
+    -   Define o <xref:System.Windows.DragEventArgs.Effects%2A> propriedade para notificar o <xref:System.Windows.DragDrop.DoDragDrop%2A> método se uma operação de movimentação ou cópia foi executada.  
   
 6.  Pressione F5 para compilar e executar o aplicativo.  
   
@@ -332,7 +332,7 @@ Este passo a passo demonstra como criar um controle de usuário personalizado qu
   
 9. Arraste um controle do círculo do painel esquerdo para o painel direito e solte-o. O círculo é removido do <xref:System.Windows.Controls.Panel.Children%2A> coleção do painel esquerdo e adicionado à coleção de filhos do painel à direita.  
   
-10. Arraste um controle do círculo do painel em que está para o outro painel e solte-o enquanto pressiona a tecla CTRL. Círculo é copiado e a cópia é adicionada para o <xref:System.Windows.Controls.Panel.Children%2A> conjunto do painel de recebimento.  
+10. Arraste um controle do círculo do painel em que está para o outro painel e solte-o enquanto pressiona a tecla CTRL. O círculo é copiado e a cópia é adicionada para o <xref:System.Windows.Controls.Panel.Children%2A> coleção do painel destinatário.  
   
      ![Arrastando um círculo enquanto pressiona a tecla CTRL](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")  
   

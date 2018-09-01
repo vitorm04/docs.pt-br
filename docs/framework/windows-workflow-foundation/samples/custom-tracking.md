@@ -2,18 +2,18 @@
 title: Rastreamento personalizada
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a025c23f967b0a8f2c387aa581536233ddb70a76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c986d9845bb76219ad8b0657a3a7252aaaf4c6cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517998"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392537"
 ---
 # <a name="custom-tracking"></a>Rastreamento personalizada
 Este exemplo demonstra como criar um participante personalizado de rastreamento e gravar o conteúdo dos dados de acompanhamento no console. Além disso, o exemplo demonstra como emitir os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> preenchido com dados definidos pelo usuário. O participante controlando console- base filtra os objetos de <xref:System.Activities.Tracking.TrackingRecord> emissores pelo fluxo de trabalho usando um objeto de perfil de rastreamento criado em código.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Windows Workflow Foundation (WF) fornece uma infraestrutura de rastreamento para controlar a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento implementa uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados de rastreamento. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.  
+ Windows Workflow Foundation (WF) fornece uma infraestrutura de acompanhamento para controlar a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento implementa uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados de rastreamento. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.  
   
 |Componente|Descrição|  
 |---------------|-----------------|  
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
   
 -   Os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> são criados e preenchido com dados definidos pelo usuário que são desejados ser emitidos com o registro.  
   
--   O <xref:System.Activities.Tracking.CustomTrackingRecord> é emitido, chamando o método de controle do <xref:System.Activities.ActivityContext>.  
+-   O <xref:System.Activities.Tracking.CustomTrackingRecord> é emitida chamando o método de controle do <xref:System.Activities.ActivityContext>.  
   
  O exemplo a seguir demonstra como emitir objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> dentro de uma atividade personalizado.  
   
@@ -144,9 +144,9 @@ context.Track(customRecord);
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de monitoramento do AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

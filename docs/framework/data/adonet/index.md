@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 5869cbe62f8f3dd1b81dd176cf95a4a0a5491967
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765432"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388216"
 ---
 # <a name="adonet"></a>ADO.NET
 O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para desenvolvedores do .NET Framework. O ADO.NET fornece um conjunto rico de componentes para criar aplicativos distribuídos e de compartilhamento de dados. Faz parte do .NET Framework, fornecendo acesso a dados de aplicativo relacionais e XML. O ADO.NET oferece suporte a uma variedade de necessidades de desenvolvimento, incluindo a criação de clientes front-end de banco de dados e objetos comerciais de camada intermediária usados por aplicativos, ferramentas, linguagens ou navegadores da Internet.  
@@ -19,7 +19,7 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)  
  Fornece uma introdução ao design e aos componentes do ADO.NET.  
   
- [Entity Framework](http://go.microsoft.com/fwlink/?LinkID=213876)  
+ [Entity Framework](https://go.microsoft.com/fwlink/?LinkID=213876)  
  Descreve como criar aplicativos usando o Entity Framework.  
   
  [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
@@ -44,10 +44,10 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  Descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para Oracle.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
+ [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
  Fornece links para tópicos de segurança para o Visual Studio, o .NET Framework e criptografia.  
   
- [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  Fornece links para exemplos e tópicos do LINQ.  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
@@ -64,4 +64,4 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
   
 ## <a name="see-also"></a>Consulte também  
  [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

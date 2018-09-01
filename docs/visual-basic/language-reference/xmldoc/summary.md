@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: cf320b61a2ca1c54b22e3c3d31ae51d003366efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602641"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385704"
 ---
 # <a name="ltsummarygt-visual-basic"></a>&lt;Resumo&gt; (Visual Basic)
 Especifica o resumo do membro.  
@@ -26,16 +26,16 @@ Especifica o resumo do membro.
  Um resumo do objeto.  
   
 ## <a name="remarks"></a>Comentários  
- Use o `<summary>` marcas para descrever um tipo ou um membro de tipo. Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) para adicionar mais informações a uma descrição de tipo.  
+ Use o `<summary>` marca para descrever um tipo ou membro de tipo. Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) para adicionar mais informações a uma descrição de tipo.  
   
- O texto para o `<summary>` marca é a única fonte de informações sobre o tipo do IntelliSense e também é exibida no Pesquisador de objetos. Para obter informações sobre o Pesquisador de objetos, consulte [exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
+ O texto para o `<summary>` marca é a única fonte de informações sobre o tipo no IntelliSense e também é exibida no Pesquisador de objetos. Para obter informações sobre o Pesquisador de objetos, consulte [exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<summary>` marcas para descrever o `ResetCounter` método e `Counter` propriedade.  
+ Este exemplo usa o `<summary>` marca para descrever o `ResetCounter` método e `Counter` propriedade.  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

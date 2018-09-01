@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461078"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393901"
 ---
 # <a name="writepropertyvalue-function"></a>Função WritePropertyValue
 Grava um número especificado de bytes em uma propriedade identificada por um identificador de propriedade.
@@ -46,20 +46,20 @@ HRESULT WritePropertyValue (
 [in] Esse parâmetro é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) instância.
+[in] Um ponteiro para um [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instância.
 
 `lHandle`  
 [in] Um inteiro que contém o identificador que identifica esta propriedade. O identificador pode ser recuperado chamando o [GetPropertyHandle](getpropertyhandle.md) função.   
 
 `lNumBytes`  
-[in] O número de bytes que está sendo gravado na propriedade. Consulte o [comentários](#remarks) para obter mais informações.
+[in] O número de bytes que está sendo gravado na propriedade. Consulte a [comentários](#remarks) seção para obter mais informações.
 
 `pHandle`   
 [out] Um ponteiro para a matriz de bytes que contém os dados.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -69,18 +69,18 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) método.
 
-Use esta função para definir a cadeia de caracteres e todos os outros não -`DWORD` ou não-`QWORD` dados.
+Use essa função para definir a cadeia de caracteres e todos os outros não -`DWORD` ou não-`QWORD` dados.
 
-Para valores de propriedade não-String, `lNumBytes` devem ter o tamanho de dados correto do tipo de propriedade especificado. Para valores de propriedade de cadeia de caracteres, `lNumBytes` devem ter o comprimento da cadeia de caracteres especificada em bytes e a cadeia de caracteres em si deve ser de um mesmo comprimento em bytes e ser seguido por um caractere null de terminação.
+Para valores de propriedade não cadeia de caracteres, `lNumBytes` deve ser o tamanho dos dados corretos do tipo de propriedade especificado. Para valores de propriedade de cadeia de caracteres, `lNumBytes` deve ser o comprimento da cadeia de caracteres especificada em bytes e a cadeia de caracteres em si deve ser de um mesmo comprimento em bytes e ser seguida por um caractere nulo de terminação.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 60e9dd96824b2c9bef81d236bab8f577f9fb2062
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5db0925900a357134cf0103bbebbf5c9aac9e688
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399288"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386859"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5
 ## <a name="applies-to"></a>Aplica-se a  
@@ -27,7 +27,7 @@ ms.locfileid: "33399288"
 ### <a name="assembly-and-namespace-changes"></a>Alterações de namespace e assembly  
  O WIF 3.5, todas as classes do WIF estavam contidas no assembly `Microsoft.IdentityModel` (microsoft.identitymicrosoft.identitymodel.dll). No WIF 4.5, as classes WIF foram divididas entre os seguintes assemblies: `mscorlib` (mscorlib. dll), `System.IdentityModel` (System.IdentityModel.dll) `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll).  
   
- As classes do WIF 3.5 estavam contidas em um dos namespaces `Microsoft.IdentityModel`; por exemplo, `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web` e assim por diante. No WIF 4.5, as classes do WIF agora são distribuídas entre o namespaces [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004), o namespace <xref:System.Security.Claims?displayProperty=nameWithType> e o namespace <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Além dessa reorganização, algumas classes do WIF 3.5 foram descartadas no WIF 4.5.  
+ As classes do WIF 3.5 estavam contidas em um dos namespaces `Microsoft.IdentityModel`; por exemplo, `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web` e assim por diante. No WIF 4.5, as classes do WIF agora são distribuídas entre o namespaces [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004), o namespace <xref:System.Security.Claims?displayProperty=nameWithType> e o namespace <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Além dessa reorganização, algumas classes do WIF 3.5 foram descartadas no WIF 4.5.  
   
  A tabela a seguir mostra alguns dos mais importantes namespaces do WIF 4.5 e o tipo de classes que eles contêm. Para obter mais informações sobre como os namespaces fazem o mapeamento entre o WIF 3.5 e o WIF 4.5 e sobre namespaces e classes que foram descartados no WIF 4.5, consulte [Mapeamento de namespace entre WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33399288"
 ### <a name="visual-studio-tooling-changes"></a>Alterações de ferramentas do Visual Studio  
  O SDK do WIF 3.5 oferecia um utilitário de federação autônomo, FedUtil.exe (FedUtil), que você podia usar para terceirizar o gerenciamento de identidades em aplicativos habilitados para WIF para um serviço de token de segurança (STS). Essa ferramenta adicionava configurações do WIF ao arquivo de configuração do aplicativo e permitia ao aplicativo obter tokens de segurança de um ou mais STSs e apareceu no Visual Studio por meio do botão **Adicionar referência de serviço do STS**. O FedUtil não é fornecido com o WIF 4.5. Em vez disso, o WIF 4.5 oferece suporte a uma nova extensão do Visual Studio chamada ferramenta de identidade e acesso para o Visual Studio 2012 que você pode usar para modificar o arquivo de configuração do aplicativo com as configurações do WIF necessárias para terceirizar o gerenciamento de identidade para um STS. A ferramenta de acesso e identidade também implementa um STS chamado STS Local que você pode usar para testar seus aplicativos habilitados para o WIF. Em muitos casos, este recurso elimina a necessidade de criar STSs personalizados que geralmente eram necessários no WIF 3.5 para testar soluções em desenvolvimento. Por esse motivo, os modelos de STS não são mais suportados no Visual Studio 2012; no entanto, as classes que oferecem suporte ao desenvolvimento de STSs ainda estão disponíveis no WIF 4.5.  
   
- Você pode instalar a ferramenta de acesso e identidade do gerenciador de atualizações e extensões do Visual Studio ou você pode baixá-lo na seguinte página na Galeria de Código: [Ferramenta de identidade e acesso para o Visual Studio 2012 na Galeria de Código](http://go.microsoft.com/fwlink/?LinkID=245849). As alterações de ferramentas do Visual Studio são resumidas na lista a seguir:  
+ Você pode instalar a ferramenta de acesso e identidade do gerenciador de atualizações e extensões do Visual Studio ou você pode baixá-lo na seguinte página na Galeria de Código: [Ferramenta de identidade e acesso para o Visual Studio 2012 na Galeria de Código](https://go.microsoft.com/fwlink/?LinkID=245849). As alterações de ferramentas do Visual Studio são resumidas na lista a seguir:  
   
 -   A funcionalidade Adicionar referência de serviço do STS foi removida. Essa funcionalidade foi substituída pela ferramenta de acesso e identidade.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "33399288"
 ## <a name="enabling-wif-35-in-windows-8"></a>Habilitar o WIF 3.5 no Windows 8  
  Como o WIF 4.5 é parte do .NET 4.5, ele é habilitado automaticamente em computadores que executam o Windows 8 e o Windows Server 2012 e aplicativos que são criados usando o WIF 4.5 serão executados no Windows 8 ou no Windows Server 2012 por padrão. No entanto, talvez seja necessário executar aplicativos que foram criados usando o WIF 3.5 em um computador que esteja executando o Windows 8 ou o Windows Server 2012. Nesse caso, você precisa habilitar o WIF 3.5 no computador de destino. Em um computador executando o Windows 8, você pode fazer isso usando a ferramenta de Gerenciamento e Manutenção de Imagens de Implantação (DISM). Em um computador executando o Windows Server 2012, você pode usar a ferramenta DISM ou você pode usar o cmdlet `Add-WindowsFeature` do Windows PowerShell. Em ambos os casos, os comandos apropriados podem ser chamados na linha de comando ou de dentro do ambiente do Windows PowerShell.  
   
- Os comandos a seguir mostram como usar a ferramenta DISM a partir da linha de comando ou de dentro do ambiente do Windows PowerShell. Por padrão, o módulo do PowerShell do DISM está incluído no Windows 8 e no Windows Server 2012 e não precisa ser importado. Para obter mais informações sobre como usar o DISM com o Windows PowerShell, consulte [Como usar o DISM no Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=254419).  
+ Os comandos a seguir mostram como usar a ferramenta DISM a partir da linha de comando ou de dentro do ambiente do Windows PowerShell. Por padrão, o módulo do PowerShell do DISM está incluído no Windows 8 e no Windows Server 2012 e não precisa ser importado. Para obter mais informações sobre como usar o DISM com o Windows PowerShell, consulte [Como usar o DISM no Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=254419).  
   
  Para habilitar o WIF 3.5 usando o DISM:  
   

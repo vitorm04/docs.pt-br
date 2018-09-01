@@ -2,20 +2,20 @@
 title: Associação de dados em um cliente do Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502540"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393855"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associação de dados em um cliente do Windows Presentation Foundation
-Este exemplo demonstra o uso de associação de dados em um cliente do Windows Presentation Foundation (WPF). O exemplo usa um serviço do Windows Communication Foundation (WCF) que gera aleatoriamente uma matriz de álbuns para retornar ao cliente. Cada álbum tem um nome, um preço e uma lista de faixas de álbum. As faixas de álbum tem um nome e a duração. As informações que são retornadas pelo serviço é automaticamente vinculadas a interface do usuário (UI) fornecido pelo cliente do Windows Presentation Foundation (WPF).  
+Este exemplo demonstra o uso da ligação de dados em um cliente do Windows Presentation Foundation (WPF). O exemplo usa um serviço do Windows Communication Foundation (WCF) que gera aleatoriamente uma matriz de álbuns para retornar ao cliente. Cada álbum tem um nome, um preço e uma lista de faixas do álbum. As faixas do álbum tem um nome e uma duração. As informações que são retornadas pelo serviço são associadas automaticamente a interface do usuário (IU) fornecida pelo cliente do Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Associação de dados permite que uma fonte de dados a ser associado automaticamente a uma interface do usuário. Isso simplifica o modelo de programação porque ele não requer que você atualize cada elemento de interface do usuário por meio de programação com os dados de um objeto de dados ou uma matriz de objetos de dados. Você pode vincular um objeto a um único elemento de interface do usuário ou uma matriz a um controle que usa várias entradas, como um `ListBox`. O código a seguir mostra como associar dados para o `DataContext` de um elemento de interface do usuário.  
+ Associação de dados permite que uma fonte de dados ser automaticamente associado a uma interface do usuário. Isso simplifica o modelo de programação porque ele não requer que você atualize cada elemento de interface do usuário por meio de programação com os dados de um objeto de dados ou uma matriz de objetos de dados. Você pode associar um objeto a um único elemento de interface do usuário ou uma matriz a um controle que recebe várias entradas, como um `ListBox`. O código a seguir mostra como associar dados para o `DataContext` de um elemento de interface do usuário.  
   
 ```  
 // Event handler executed when call is complete  
@@ -26,7 +26,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 }  
 ```  
   
- No exemplo anterior, o `DataContext` para o `grid` elemento layout denominado `myPanel` é definido como os dados retornados pelo `GetAlbumList` método. O `DataContext` permite aos elementos herdar informações de seus elementos pais sobre a fonte de dados que é usado para associação, bem como outras características da associação, como o caminho. A linha de código deve ser executada sempre que os dados no servidor for atualizados. Por exemplo, ele é executado quando a janela é inicializada e quando é adicionado um novo álbum.  
+ No exemplo anterior, o `DataContext` para o `grid` elemento de layout denominado `myPanel` é definido como os dados retornados pelo `GetAlbumList` método. O `DataContext` permite aos elementos herdar informações de seus elementos pais sobre a fonte de dados que é usado para associação, bem como outras características da associação como o caminho. A linha de código deve ser executada toda vez que os dados no servidor são atualizados. Por exemplo, ele é executado quando a janela é inicializada e quando um novo álbum é adicionado.  
   
  No código a seguir XAML de exemplo, o `ListBox` especifica `ItemsSource="{Binding }"`.  
   
@@ -37,9 +37,9 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
           IsSynchronizedWithCurrentItem="true" />  
 ```  
   
- Especifica que os dados associados a elemento de interface do usuário de nível superior também são associados a este controle (ou seja, a matriz de álbuns). Além disso, `ItemTemplate="{StaticResource AlbumStyle}"` Especifica o modelo de dados a ser usado para cada item de `ListBox`. Você também pode definir modelos de dados para especificar como os dados devem ser formatados. Esses modelos podem ser reutilizados para outros elementos de interface do usuário no aplicativo de dados, a vantagem é que o modelo de dados é definido e mantido em um único local.  
+ Isso especifica que os dados associados ao elemento de interface do usuário de nível superior também estão associados a esse controle (ou seja, a matriz de álbuns). Além disso, `ItemTemplate="{StaticResource AlbumStyle}"` Especifica o modelo de dados a ser usado para cada item no `ListBox`. Você também pode definir modelos de dados para especificar como os dados devem ser formatados. Esses modelos podem ser reutilizados para outros elementos de interface do usuário no aplicativo de dados, a vantagem é que o modelo de dados é definido e mantido em um só lugar.  
   
- O `AlbumStyle` modelo de dados estabelece uma grade com dois `TextBlock`s lado a lado. Uma Especifica o nome do álbum e o outro, o número de faixas no álbum.  
+ O `AlbumStyle` modelo de dados dispõe de uma grade com dois `TextBlock`s lado a lado. Uma Especifica o nome do álbum e o outro, o número de faixas do álbum.  
   
 ```xaml  
 <DataTemplate x:Key="AlbumStyle">  
@@ -63,13 +63,13 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
             ItemsSource="{Binding Path=Tracks}" />  
 ```  
   
- O código especifica um caminho para o `ItemsSource`. Isso indica que os dados associados a este controle não são uma propriedade dos dados de nível superior chamados, mas os dados de nível superior `Tracks`. Esta propriedade representa a matriz de faixas contidos no álbum. Além disso, outro `DataTemplate` chamado `TrackStyle` for especificado. O layout do `TrackStyle` modelo é semelhante do `AlbumStyle` modelo, mas o `TextBlock`s estão associados a diferentes propriedades. Isso ocorre porque os dois modelos são usados com objetos de dados diferentes.  
+ O código especifica um caminho para o `ItemsSource`. Isso indica que os dados associados a esse controle não são uma propriedade dos dados de nível superior chamados, mas os dados de nível superior `Tracks`. Esta propriedade representa a matriz de faixas contidos no álbum. Além disso, uma opção diferente `DataTemplate` chamado `TrackStyle` for especificado. O layout do `TrackStyle` modelo é semelhante do `AlbumStyle` modelo, mas o `TextBlock`s são associados a diferentes propriedades. Isso ocorre porque os dois modelos são usados com objetos de dados diferentes.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -78,7 +78,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

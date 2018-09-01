@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508487"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391844"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento de transação de serviço
-Este exemplo demonstra o uso de uma transação de coordenada de cliente e as configurações de ServiceBehaviorAttribute e OperationBehaviorAttribute para controlar o comportamento de transação de serviço. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo, mas é estendido para manter um log das operações executadas em uma tabela de banco de dados e uma total para as operações de cálculo acumulado com monitoração de estado do servidor. Gravações persistentes para a tabela de log do servidor são dependentes após o resultado de uma transação de cliente coordenada - se a transação do cliente não for concluída, a transação de serviço da Web garante que as atualizações para o banco de dados não são confirmadas.  
+Este exemplo demonstra o uso de uma transação de coordenadas de cliente e as configurações de ServiceBehaviorAttribute e OperationBehaviorAttribute para controlar o comportamento de transação de serviço. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de Calculadora, mas é estendido para manter um log das operações realizadas em uma tabela de banco de dados e uma soma acumulada para as operações de calculadora com monitoração de estado do servidor. Gravações persistentes para a tabela de log do servidor são dependentes após o resultado de uma transação de coordenadas de cliente - se a transação do cliente não for concluída, a transação de serviço Web garante que as atualizações para o banco de dados não são confirmadas.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- O contrato para o serviço define que todas as operações requerem que uma transação flua com solicitações:  
+ O contrato para o serviço define que todas as operações requerem uma transação para fluir com solicitações:  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
@@ -39,7 +39,7 @@ public interface ICalculator
 }  
 ```  
   
- Para habilitar o fluxo de transações de entrada, o serviço está configurado com o wsHttpBinding fornecido pelo sistema com o atributo transactionFlow para `true`. Esta associação usa o protocolo WSAtomicTransactionOctober2004 interoperável:  
+ Para habilitar o fluxo de transações de entrada, o serviço está configurado com o wsHttpBinding fornecido pelo sistema com o atributo transactionFlow definido como `true`. Esta associação usa o protocolo WSAtomicTransactionOctober2004 interoperável:  
   
 ```xml  
 <bindings>  
@@ -49,7 +49,7 @@ public interface ICalculator
 </bindings>  
 ```  
   
- Depois de iniciar as duas uma conexão para o serviço e uma transação, o cliente acessa várias operações de serviço dentro do escopo de transação e, em seguida, conclui a transação e fecha a conexão:  
+ Após iniciar ambos os uma conexão para o serviço e uma transação, o cliente acessa várias operações de serviço dentro do escopo da transação e, em seguida, conclui a transação e fecha a conexão:  
   
 ```  
 // Create a client  
@@ -90,27 +90,27 @@ Console.WriteLine("Transaction committed");
 client.Close();  
 ```  
   
- Sobre o serviço, há três atributos que afetam o comportamento de transação de serviço e eles fazem isso das seguintes maneiras:  
+ No serviço, há três atributos que afetam o comportamento de transação de serviço e eles fazem isso das seguintes maneiras:  
   
 -   Sobre o `ServiceBehaviorAttribute`:  
   
-    -   O `TransactionTimeout` propriedade especifica o período de tempo no qual uma transação deve ser concluída. Neste exemplo, ele é definido como 30 segundos.  
+    -   O `TransactionTimeout` propriedade especifica o período de tempo dentro do qual uma transação deve ser concluída. Neste exemplo, ele é definido como 30 segundos.  
   
-    -   O `TransactionIsolationLevel` propriedade especifica o nível de isolamento com suporte do serviço. Isso é necessário para coincidir com o nível de isolamento do cliente.  
+    -   O `TransactionIsolationLevel` propriedade especifica o nível de isolamento com suporte do serviço. Isso é necessário para corresponder ao nível de isolamento do cliente.  
   
-    -   O `ReleaseServiceInstanceOnTransactionComplete` propriedade especifica se a instância do serviço será reciclada quando uma transação seja concluída. Definindo-a como `false`, o serviço mantém a mesma instância de serviço entre as solicitações de operação. Isso é necessário para manter a execução total. Se definido como `true`, uma nova instância é gerada após a conclusão de cada ação.  
+    -   O `ReleaseServiceInstanceOnTransactionComplete` propriedade especifica se a instância do serviço é reciclada quando uma transação é concluída. Definindo-a para `false`, o serviço mantém a mesma instância de serviço entre as solicitações de operação. Isso é necessário para manter a execução total. Se definido como `true`, uma nova instância é gerada após a conclusão de cada ação.  
   
-    -   O `TransactionAutoCompleteOnSessionClose` propriedade especifica se transações pendentes serão concluídas quando a sessão for fechada. Definindo-a como `false`, as operações individuais são necessárias para definir o `OperationBehaviorAttribute``TransactionAutoComplete` propriedade `true` ou para solicitar explicitamente uma chamada para o `SetTransactionComplete` método para concluir as transações. Este exemplo demonstra as duas abordagens.  
+    -   O `TransactionAutoCompleteOnSessionClose` propriedade especifica se as transações pendentes são concluídas quando a sessão é fechada. Definindo-a para `false`, as operações individuais são necessárias para configurar o `OperationBehaviorAttribute``TransactionAutoComplete` propriedade a ser `true` ou para solicitar explicitamente que uma chamada para o `SetTransactionComplete` método para concluir transações. Este exemplo demonstra as duas abordagens.  
   
 -   Sobre o `ServiceContractAttribute`:  
   
-    -   O `SessionMode` propriedade especifica se o serviço correlaciona as solicitações adequadas para uma sessão lógica. Como esse serviço inclui operações em que a propriedade OperationBehaviorAttribute TransactionAutoComplete é definida como `false` (multiplicar e dividir), `SessionMode.Required` deve ser especificado. Por exemplo, a multiplicação operação não concluir a sua transação e se baseia em vez disso, uma chamada posterior a divisão para ser concluída com o `SetTransactionComplete` método; o serviço deve ser capaz de determinar que essas operações estão ocorrendo na mesma sessão.  
+    -   O `SessionMode` propriedade especifica se o serviço correlaciona as solicitações adequadas em uma sessão lógica. Porque esse serviço inclui operações em que a propriedade de OperationBehaviorAttribute TransactionAutoComplete é definida como `false` (multiplicar e dividir), `SessionMode.Required` deve ser especificado. Por exemplo, a multiplicar a operação não concluir sua transação e em vez disso, depende de uma chamada posterior a divisão para ser concluída usando o `SetTransactionComplete` método; o serviço deve ser capaz de determinar que essas operações estão ocorrendo na mesma sessão.  
   
 -   Sobre o `OperationBehaviorAttribute`:  
   
-    -   O `TransactionScopeRequired` propriedade especifica se as ações da operação devem ser executadas em um escopo de transação. Isso é definido como `true` para todas as operações neste exemplo e, porque o cliente flui sua transação para todas as operações, as ações ocorrem dentro do escopo de transação do cliente.  
+    -   O `TransactionScopeRequired` propriedade especifica se as ações da operação devem ser executadas em um escopo de transação. Isso é definido como `true` para todas as operações nesse exemplo e, porque o cliente flui sua transação para todas as operações, ocorrem as ações dentro do escopo de transação do cliente.  
   
-    -   O `TransactionAutoComplete` propriedade especifica se a transação na qual o método é executado é preenchida automaticamente se nenhuma exceção não tratada ocorrer. Conforme descrito anteriormente, isso é definido como `true` para as operações de adicionar e subtrair mas `false` para as operações de divisão e multiplicação. As operações de adicionar e subtrair concluir suas ações automaticamente, a divisão conclua suas ações por meio de uma chamada explícita para o `SetTransactionComplete` método e a multiplicação não concluir suas ações, mas em vez disso, se baseia e requer uma chamada posterior, como a Divida, para concluir as ações.  
+    -   O `TransactionAutoComplete` propriedade especifica se a transação na qual o método é executado é preenchida automaticamente se não ocorrer nenhuma exceção sem tratamento. Conforme descrito anteriormente, isso é definido como `true` para as operações de adicionar e subtrair, mas `false` para as operações de divisão e multiplicação. As operações de adicionar e subtrair concluir suas ações automaticamente, a divisão conclua suas ações por meio de uma chamada explícita para o `SetTransactionComplete` método e a multiplicação não concluir suas ações, mas em vez disso, baseia-se em e requer uma chamada posterior, como a Divida, para concluir as ações.  
   
  A implementação de serviço atribuída é da seguinte maneira:  
   
@@ -166,7 +166,7 @@ public class CalculatorService : ICalculator
 }   
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Starting transaction  
@@ -191,30 +191,30 @@ Creating new service instance...
   Writing row 4 to database: Dividing 495 by 15  
 ```  
   
- Observe que, além de manter a execução total dos cálculos, o serviço de relatórios a criação de instâncias (uma instância para este exemplo) e registra as solicitações de operação em um banco de dados. Como todas as solicitações de fluem de transação do cliente, qualquer falha ao concluir a transação resulta em todas as operações de banco de dados que está sendo revertidas. Isso pode ser demonstrado de várias maneiras:  
+ Observe que, além de manter os em funcionamento total dos cálculos, o serviço reporta a criação de instâncias (uma instância para este exemplo) e registra as solicitações de operação em um banco de dados. Porque todas as solicitações de fluem de transação do cliente, qualquer falha ao concluir a transação resulta em todas as operações de banco de dados que estão sendo revertidas. Isso pode ser demonstrado de várias maneiras:  
   
--   Comente a chamada do cliente para `tx.Complete`() e execute - o resultado é o cliente sair do escopo da transação sem concluir a sua transação.  
+-   Comente a chamada do cliente para `tx.Complete`() e execute novamente – isso resulta no cliente de sair do escopo da transação sem concluir sua transação.  
   
--   Comentar out a chamada para a operação de serviço de divisão - este resultados impedem que a ação iniciada pela conclusão da operação de multiplicação e, portanto, a transação do cliente, por fim, também não for concluída.  
+-   Comente a chamada para a operação de serviço de divisão de k-out - este resultados impedir a ação iniciada pela conclusão da operação de multiplicação e, portanto, a transação do cliente, por fim, também não for concluída.  
   
--   Lançar uma exceção sem tratamento em qualquer lugar no escopo da transação do cliente - isso da mesma forma impede que o cliente concluir sua transação.  
+-   Lançar uma exceção sem tratamento em qualquer lugar no escopo de transação do cliente - isso da mesma forma impede que o cliente concluir sua transação.  
   
- O resultado de qualquer um desses é que nenhuma das operações executadas no escopo são confirmadas e a contagem de linhas persistentes no banco de dados não incrementam.  
+ O resultado de qualquer um desses é que nenhuma das operações executadas dentro do escopo são confirmadas e a contagem de linhas são mantidas no banco de dados não incrementam.  
   
 > [!NOTE]
 >  Como parte do processo de compilação, o arquivo de banco de dados é copiado para a pasta bin. Você deve examinar essa cópia do arquivo de banco de dados para observar as linhas que são mantidas no log, em vez do arquivo que está incluído no projeto do Visual Studio.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você tenha instalado o SQL Server 2005 Express Edition ou SQL Server 2005. No arquivo de App. config do serviço, o banco de dados `connectionString` pode ser definidas ou o banco de dados interações podem ser desabilitadas, definindo o appSettings `usingSql` valor `false`.  
+1.  Certifique-se de que você tenha instalado o SQL Server 2005 Express Edition ou SQL Server 2005. No arquivo de App. config do serviço, o banco de dados `connectionString` pode ser o conjunto ou o banco de dados interações podem ser desabilitadas definindo o appSettings `usingSql` valor `false`.  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Se você executar o exemplo em computadores, você deve configurar o Microsoft Distributed Transaction coordenador (MSDTC) para habilitar o fluxo de transações de rede e use a ferramenta de WsatConfig.exe para habilitar transações de rede do Windows Communication Foundation (WCF) suporte.  
+ Se você executar o exemplo entre máquinas, você deve configurar o Microsoft Distributed Transaction coordenador (MSDTC) para habilitar o fluxo de transações de rede e usar a ferramenta de WsatConfig.exe para habilitar transações de rede do Windows Communication Foundation (WCF) suporte.  
   
-### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Para configurar o Microsoft Distributed transação MSDTC (coordenador) para dar suporte à execução do exemplo em computadores  
+### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Para configurar o Microsoft Distributed Transaction coordenador (MSDTC) para dar suporte à execução do exemplo entre máquinas  
   
 1.  No computador do serviço, configure o MSDTC para permitir transações de rede de entrada.  
   
@@ -224,25 +224,25 @@ Creating new service instance...
   
     3.  Sobre o **MSDTC** , clique em **configuração de segurança**.  
   
-    4.  Verificar **acesso DTC de rede** e **permitir entrada**.  
+    4.  Verifique **acesso DTC de rede** e **permitir entrada**.  
   
-    5.  Clique em **Sim** para reiniciar o serviço MS DTC e, em seguida, clique em **Okey**.  
+    5.  Clique em **Yes** para reiniciar o serviço MS DTC e, em seguida, clique em **Okey**.  
   
     6.  Clique em **OK** para fechar a caixa de diálogo.  
   
-2.  No computador do serviço e o computador cliente, configure o Firewall do Windows para incluir o Microsoft Distributed Transaction MSDTC (coordenador) à lista de aplicativos de exceção:  
+2.  No computador do serviço e no computador cliente, configure o Firewall do Windows para incluir o Microsoft Distributed Transaction coordenador (MSDTC) à lista de aplicativos de exceção:  
   
     1.  Execute o aplicativo de Firewall do Windows no painel de controle.  
   
-    2.  Do **exceções** , clique em **adicionar programa**.  
+    2.  Dos **exceções** , clique em **adicionar programa**.  
   
     3.  Navegue até a pasta C:\WINDOWS\System32.  
   
-    4.  Selecione Msdtc.exe e clique em **abrir**.  
+    4.  Selecione Msdtc.exe e clique em **aberto**.  
   
     5.  Clique em **Okey** para fechar o **adicionar programa** caixa de diálogo e clique em **Okey** novamente para fechar o miniaplicativo de Firewall do Windows.  
   
-3.  No computador cliente, configure o MSDTC para permitir transações de rede de saída:  
+3.  O computador cliente, configure o MSDTC para permitir transações de rede de saída:  
   
     1.  Do **iniciar** menu, navegue até **painel de controle**, em seguida, **ferramentas administrativas**e, em seguida, **serviços de componentes**.  
   
@@ -250,9 +250,9 @@ Creating new service instance...
   
     3.  Sobre o **MSDTC** , clique em **configuração de segurança**.  
   
-    4.  Verificar **acesso DTC de rede** e **permitir saída**.  
+    4.  Verifique **acesso DTC de rede** e **permitir saída**.  
   
-    5.  Clique em **Sim** para reiniciar o serviço MS DTC e, em seguida, clique em **Okey**.  
+    5.  Clique em **Yes** para reiniciar o serviço MS DTC e, em seguida, clique em **Okey**.  
   
     6.  Clique em **OK** para fechar a caixa de diálogo.  
   
@@ -261,7 +261,7 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359309"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387458"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserindo uma imagem de um arquivo
 Você pode gravar um objeto binário grande (BLOB) em um banco de dados como dados binários ou de caracteres, dependendo do tipo de campo na fonte de dados. BLOB é um termo genérico que faz referência aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.  
   
- Para gravar um valor do BLOB em seu banco de dados, execute a instrução INSERT ou UPDATE apropriada e passar o valor do BLOB como um parâmetro de entrada (consulte [Configurando parâmetros e tipos de dados do parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Se seu BLOB estiver armazenado como texto, como um campo `text` do SQL Server, você poderá passar o BLOB como um parâmetro de cadeia de caracteres. Se o BLOB estiver armazenado no formato binário, como um campo `image` do SQL Server, você poderá passar uma matriz do tipo `byte` como um parâmetro binário.  
+ Para gravar um valor BLOB em seu banco de dados, emita a instrução INSERT ou UPDATE apropriada e passe o valor do BLOB como um parâmetro de entrada (consulte [Configurando parâmetros e tipos de dados do parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Se seu BLOB estiver armazenado como texto, como um campo `text` do SQL Server, você poderá passar o BLOB como um parâmetro de cadeia de caracteres. Se o BLOB estiver armazenado no formato binário, como um campo `image` do SQL Server, você poderá passar uma matriz do tipo `byte` como um parâmetro binário.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir adiciona informações do funcionário à tabela Employees no banco de dados Northwind. Uma foto do funcionário é lida de um arquivo e adicionada ao campo Photo na tabela, que é um campo de imagem.  
@@ -135,4 +135,4 @@ public static byte[] GetPhoto(string filePath)
  [Recuperando dados binários](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)  
  [Mapeamentos de tipo de dados do SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

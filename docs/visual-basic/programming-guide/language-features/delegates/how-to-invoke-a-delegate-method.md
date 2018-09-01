@@ -2,25 +2,25 @@
 title: Como invocar um método delegado (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: aca87dd9fa1990d44c99aab7753f2fd7d508adc1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646946"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392432"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Como invocar um método delegado (Visual Basic)
-Este exemplo mostra como associar um método um delegado e depois chama esse método por meio do representante.  
+Este exemplo mostra como associar um método com um delegado e, em seguida, chama esse método por meio do delegado.  
   
-### <a name="create-the-delegate-and-matching-procedures"></a>Crie o delegado e procedimentos correspondentes.  
+### <a name="create-the-delegate-and-matching-procedures"></a>Criar o delegado e procedimentos correspondentes.  
   
-1.  Cria um delegado de nome `MySubDelegate`.  
+1.  Criar um delegado chamado `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Declare uma classe que contém um método com a mesma assinatura do delegado.  
+2.  Declare uma classe que contém um método com a mesma assinatura que o delegado.  
   
     ```  
     Class class1  
@@ -30,7 +30,7 @@ Este exemplo mostra como associar um método um delegado e depois chama esse mé
     End Class  
     ```  
   
-3.  Definir um método que cria uma instância do delegado e invoca o método associado com o delegado chamando o interno `Invoke` método.  
+3.  Definir um método que cria uma instância do delegado e invoca o método associado com o delegado, chamando o interno `Invoke` método.  
   
     ```  
     Protected Sub DelegateTest()  
@@ -46,4 +46,4 @@ Este exemplo mostra como associar um método um delegado e depois chama esse mé
  [Instrução Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Aplicativos com Multithread](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+ [Aplicativos com Multithread](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

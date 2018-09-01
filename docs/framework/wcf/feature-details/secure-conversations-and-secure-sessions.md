@@ -5,11 +5,11 @@ ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d44a132f4bc4982ba0df437a56859de1a6fe441a
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332783"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391952"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Sessões seguras e conversas seguras
 Um recurso do Windows Communication Foundation (WCF) é a capacidade de estabelecer sessões seguras entre dois pontos de extremidade que se autenticam e concordem com um processo de criptografia e assinatura digital. Por exemplo, o ponto de extremidade de serviço pode exigir um ponto de extremidade do cliente para enviar um token de segurança com base em um certificado X.509 para autenticação. Quando o cliente é autenticado, o ponto de extremidade de serviço retorna um token de contexto de segurança (SCT) volta ao cliente que é usado para proteger todas as mensagens subsequentes dentro da sessão. Estabelecer essa sessão segura permite que o conjunto de mensagens trocadas entre os dois pontos de extremidade a ser mais eficiente, porque o SCT tem uma chave simétrica. Chaves assimétricas, quais certificados x. 509 se baseiam, exigem significativamente mais capacidade de computação do que as chaves simétricas quando gerar uma assinatura digital ou criptografar um conjunto de dados.  

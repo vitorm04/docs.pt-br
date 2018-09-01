@@ -2,20 +2,20 @@
 title: Exemplo de federação
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806842"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389482"
 ---
 # <a name="federation-sample"></a>Exemplo de federação
-Este exemplo demonstra segurança federada.  
+Este exemplo demonstra a segurança federada.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Windows Communication Foundation (WCF) oferece suporte para implantação de arquiteturas de segurança federada por meio de `wsFederationHttpBinding`. O `wsFederationHttpBinding` fornece uma associação segura, confiável e interoperável que envolve o uso do HTTP como o mecanismo de transporte subjacente para comunicação de solicitação/resposta e Text/XML como formato de conexão para a codificação. Para obter mais informações sobre a federação no WCF, consulte [federação](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) oferece suporte para implantação de arquiteturas de segurança federada por meio de `wsFederationHttpBinding`. O `wsFederationHttpBinding` fornece uma associação segura, confiável e interoperável que envolve o uso de HTTP como o mecanismo de transporte subjacente para comunicação de solicitação/resposta e Text/XML como formato de conexão para a codificação. Para obter mais informações sobre a federação no WCF, consulte [federação](../../../../docs/framework/wcf/feature-details/federation.md).  
   
- O cenário é composto de 4 partes:  
+ O cenário é composto por 4 partes:  
   
 -   Serviço livraria  
   
@@ -25,7 +25,7 @@ Este exemplo demonstra segurança federada.
   
 -   Cliente livraria  
   
- O serviço livraria dá suporte a duas operações, `BrowseBooks` e `BuyBook`. Permitir acesso anônimo para o `BrowseBooks` operação, mas requer acesso autenticado para acessar o `BuyBooks` operação. A autenticação assume a forma de um token emitido pelo STS livraria. O arquivo de configuração para o serviço livraria aponta clientes para o STS livraria usando o `wsFederationHttpBinding`.  
+ O serviço de livraria dá suporte a duas operações, `BrowseBooks` e `BuyBook`. Ele permite o acesso anônimo para o `BrowseBooks` operação, mas requer acesso autenticado para acessar o `BuyBooks` operação. A autenticação assume a forma de um token emitido pelo STS livraria. O arquivo de configuração para o serviço livraria aponta os clientes para o STS da livraria usando o `wsFederationHttpBinding`.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -45,7 +45,7 @@ Este exemplo demonstra segurança federada.
 </wsFederationHttpBinding>  
 ```  
   
- O STS livraria requer que os clientes se autenticar usando um token emitido pelo STS HomeRealm. Novamente, o arquivo de configuração para o STS livraria aponta clientes para o STS HomeRealm usando o `wsFederationHttpBinding`.  
+ O STS da livraria, em seguida, exige que os clientes se autenticar usando um token emitido pelo STS HomeRealm. Novamente, o arquivo de configuração para o STS da livraria aponta os clientes para o STS HomeRealm usando o `wsFederationHttpBinding`.  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -65,55 +65,55 @@ Este exemplo demonstra segurança federada.
 </wsFederationHttpBinding>  
 ```  
   
- A sequência de eventos ao acessar o `BuyBook` operação é o seguinte:  
+ A sequência de eventos ao acessar o `BuyBook` operação é da seguinte maneira:  
   
-1.  O cliente autentica para o STS HomeRealm usando credenciais do Windows.  
+1.  O cliente é autenticado para o STS HomeRealm usando as credenciais do Windows.  
   
-2.  HomeRealm STS emite um token que pode ser usado para autenticar para o STS livraria.  
+2.  O STS HomeRealm emite um token que pode ser usado para se autenticar no STS livraria.  
   
-3.  O cliente autentica para o STS livraria usando o token emitido pelo STS HomeRealm.  
+3.  O cliente é autenticado para o STS da livraria usando o token emitido pelo STS HomeRealm.  
   
-4.  O STS livraria emite um token que pode ser usado para autenticar o serviço livraria.  
+4.  O STS da livraria emite um token que pode ser usado para autenticar o serviço de livraria.  
   
-5.  O cliente autenticado para o serviço de livraria usando o token emitido pelo STS livraria.  
+5.  O cliente é autenticado para o serviço de livraria usando o token emitido pelo STS livraria.  
   
 6.  O cliente acessa o `BuyBook` operação.  
   
- Consulte as seguintes instruções sobre como configurar e executar esse exemplo.  
+ Consulte as instruções a seguir sobre como configurar e executar esse exemplo.  
   
 > [!NOTE]
 >  Você deve ter permissões de gravação para o **wwwroot** diretório para executar este exemplo.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Abra a janela de comando do SDK. No exemplo de caminho, execute bat. Isso cria os diretórios virtuais necessários para a amostra e instala os certificados necessários com permissões apropriadas.  
+1.  Abra a janela de comando do SDK. No exemplo de caminho, execute Setup. bat. Isso cria os diretórios virtuais necessários para o exemplo e instala os certificados necessários com permissões apropriadas.  
   
     > [!NOTE]
-    >  O arquivo em lotes bat é projetado para ser executado de um Prompt de comando do SDK do Windows. Isso requer que a variável de ambiente MSSDK apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definida automaticamente em um Prompt de comando do SDK do Windows. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], certifique-se de que o gerenciamento de compatibilidade do IIS 6.0 está instalado porque o conjunto de backup usa scripts de administrador do IIS. Execução do script de configuração em [!INCLUDE[wv](../../../../includes/wv-md.md)] requer privilégios de administrador.  
+    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Prompt de comando do SDK do Windows. Ele requer que a variável de ambiente MSSDK apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Prompt de comando do SDK do Windows. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], você deve garantir que o gerenciamento de compatibilidade do IIS 6.0 está instalado porque o conjunto de backup usa scripts de administrador do IIS. Execução do script de configuração em [!INCLUDE[wv](../../../../includes/wv-md.md)] requer privilégios de administrador.  
   
-2.  Abra FederationSample.sln no Visual Studio e selecione **compilar solução** do **criar** menu. Isso cria os arquivos de projeto comum, o serviço livraria livraria STS, HomeRealm STS e implanta-os no IIS. Isso também cria o aplicativo de cliente livraria e coloca o BookStoreClient.exe executável na pasta FederationSample\BookStoreClient\bin\Debug.  
+2.  Abra FederationSample.sln no Visual Studio e selecione **compilar solução** da **Build** menu. Isso cria os arquivos de projeto comum, o serviço de livraria, livraria STS, HomeRealm STS e os implanta no IIS. Isso também criará o aplicativo de cliente da livraria e coloca o BookStoreClient.exe executável na pasta FederationSample\BookStoreClient\bin\Debug.  
   
 3.  Clique duas vezes em BookStoreClient.exe. A janela BookStoreClient é exibida.  
   
-4.  Você pode procurar os livros disponíveis na livraria clicando **procurar manuais**.  
+4.  Você pode procurar os livros disponíveis na livraria clicando **livros procurar**.  
   
-5.  Para adquirir um catálogo específico, selecione o catálogo na lista e clique em **comprar catálogo**. O aplicativo é iniciado e é autenticado usando a autenticação do Windows com o serviço de Token de segurança HomeRealm.  
+5.  Para comprar um livro específico, selecione o catálogo na lista e clique em **comprar o livro**. O aplicativo é iniciado e é autenticado usando a autenticação do Windows com o serviço de Token de segurança HomeRealm.  
   
-     O exemplo é configurado para permitir que usuários Compre livros que custam r $15 ou menos. Tentando comprar livros que custam mais do que os resultados de r $15 no cliente que está recebendo uma mensagem de acesso negado do serviço de armazenamento do catálogo.  
+     O exemplo é configurado para permitir aos usuários comprar livros que custam US $15 ou menos. Tentando comprar livros que custam mais do que os resultados de US $15 no cliente recebendo uma mensagem de acesso negado do serviço de Store de livro.  
   
     > [!NOTE]
-    >  O exemplo não atualiza o limite de crédito do usuário após uma compra. Repetidamente, você pode comprar manuais no limite de crédito (fixo) do usuário.  
+    >  O exemplo não atualiza o limite de crédito do usuário depois de uma compra. Repetidamente, você pode comprar livros dentro do limite de crédito (fixa) do usuário.  
   
 #### <a name="to-clean-up"></a>Para limpar  
   
-1.  Execute Cleanup.bat. Isso exclui os diretórios virtuais que foram criados durante o conjunto de backup e também remove os certificados instalados durante a instalação.  
+1.  Execute CleanUp. Isso exclui os diretórios virtuais que foram criados durante a instalação e também remove os certificados instalados durante a instalação.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
