@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933697"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400176"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  
@@ -25,7 +25,7 @@ O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual St
   
  Mesmo depois de criar um projeto de Biblioteca de Classes Portátil no Visual Studio e começar a desenvolvê-lo, é possível alterar as plataformas de destino. O Visual Studio compilará a biblioteca com os novos assemblies, o que ajuda a identificar as alterações necessárias ao código.  
   
- Este artigo discute o desenvolvimento de aplicativo no Visual Studio, mas a Microsoft também fornece assemblies de referência da Biblioteca de Classes Portátil que podem ser usados para desenvolver aplicativos e bibliotecas com outras ferramentas, como Xamarin. É possível usar esses aplicativos e bibliotecas em qualquer tempo de execução baseado em .NET Framework ou em plataformas que não sejam da Microsoft. Para obter mais informações sobre os assemblies de referência, consulte a entrada de blog [classe de biblioteca portátil (PCL) agora está disponível em todas as plataformas](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Para baixar os assemblies, consulte [Assemblies de referência de biblioteca portátil do Microsoft .NET](http://www.microsoft.com/download/details.aspx?id=40727) no Microsoft Download Center. Para obter mais informações sobre como usar os assemblies com o Xamarin, consulte a entrada de blog [PCL e bibliotecas do .NET NuGet agora habilitadas para Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
+ Este artigo discute o desenvolvimento de aplicativo no Visual Studio, mas a Microsoft também fornece assemblies de referência da Biblioteca de Classes Portátil que podem ser usados para desenvolver aplicativos e bibliotecas com outras ferramentas, como Xamarin. É possível usar esses aplicativos e bibliotecas em qualquer tempo de execução baseado em .NET Framework ou em plataformas que não sejam da Microsoft. Para obter mais informações sobre os assemblies de referência, consulte a entrada de blog [classe de biblioteca portátil (PCL) agora está disponível em todas as plataformas](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Para baixar os assemblies, consulte [Assemblies de referência de biblioteca portátil do Microsoft .NET](https://www.microsoft.com/download/details.aspx?id=40727) no Microsoft Download Center. Para obter mais informações sobre como usar os assemblies com o Xamarin, consulte a entrada de blog [PCL e bibliotecas do .NET NuGet agora habilitadas para Xamarin](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
   
  O Visual Studio fornece modelos que ajudam a desenvolver com a Biblioteca de Classes Portátil. Dependendo da versão do Visual Studio que você está usando, os modelos e menus disponíveis podem ser diferentes dos descritos neste artigo.  
   
@@ -110,7 +110,7 @@ Página de propriedade da Biblioteca de Classes Portátil para Visual Studio 201
   
  Ao alterar os destinos, as APIs disponíveis para desenvolver o projeto mudarão conforme a sua seleção. O Visual Studio relata os erros e avisos que podem ocorrer como resultado de alterações nos destinos.  
   
- Se você quiser avaliar a portabilidade de seus assemblies antes de fazer alterações no Visual Studio, você pode usar o [.NET Portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Se você quiser avaliar a portabilidade de seus assemblies antes de fazer alterações no Visual Studio, você pode usar o [.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  As opções de menu variarão de acordo com a versão do Visual Studio em uso.  
   
@@ -224,6 +224,6 @@ Exemplo de informações de versão
 ## <a name="see-also"></a>Consulte também  
  [Usando a biblioteca de classes portátil com modelo MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [Recursos do aplicativo para bibliotecas direcionadas a várias plataformas](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Implantação](../../../docs/framework/deployment/net-framework-applications.md)
