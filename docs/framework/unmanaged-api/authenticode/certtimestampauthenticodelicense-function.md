@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b110adac8c1ae68a3918a9e0fdf3f3eb4d017f0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406202"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390767"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Função CertTimestampAuthenticodeLicense
 Carimbo de data/hora em uma licença Authenticode XrML.  
@@ -32,13 +32,13 @@ HRESULT CertTimestampAuthenticodeLicense (
   
 #### <a name="parameters"></a>Parâmetros  
  `pSignedLicenseBlob`  
- [in] A licença Authenticode XrML assinada a receber o carimbo de data/hora. Consulte o [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) estrutura.  
+ [in] A licença Authenticode XrML assinada a receber o carimbo de data/hora. Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.  
   
  `pwszTimestampURI`  
  [in] O URI do servidor de carimbo de data/hora.  
   
  `pTimestampSignatureBlob`  
- [out] Um ponteiro para CRYPT_DATA_BLOB para receber a assinatura do carimbo de data/hora codificado por base64. É responsabilidade do chamador para liberar `pTimestampSignatureBlob` -> `pbData` com `HepFree()` após o uso. Consulte o [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) estrutura.  
+ [out] Um ponteiro para CRYPT_DATA_BLOB para receber a assinatura do carimbo de data/hora codificado por base64. É responsabilidade do chamador liberar `pTimestampSignatureBlob` -> `pbData` com `HepFree()` após o uso. Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.  
   
 ## <a name="remarks"></a>Comentários  
  A assinatura do carimbo de data/hora é, na realidade, uma mensagem PKCS #7 SignedData cujo conteúdo é o formulário binário do SignatureValue da assinatura da licença. Basicamente, isso funciona como uma referenda da licença.  
