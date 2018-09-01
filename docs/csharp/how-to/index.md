@@ -2,12 +2,12 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999557"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421191"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -21,7 +21,7 @@ Há vários truques e dicas que são práticas comuns do desenvolvedor de C#.
 - [Aprenda as diferenças entre passar um struct e uma classe para um método](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Como usar expressões lambda](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Resolva conflitos de nome de tipo usando o alias de namespace global](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Use a sobrecarga de operador](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md).
+- [Use a sobrecarga de operador](../language-reference/keywords/operator.md).
 - [Implemente e chame um método de extensão personalizado](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Até os programadores de C# podem querer [usar o `My`namespace do VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Crie um novo método para um tipo `enum` usando métodos de extensão](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).

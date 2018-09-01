@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396523"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404602"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicativo. A maioria das informações destina-se a desenvolvedores, OEMs e administradores corporativos. Os usuários que desejam instalar o .NET Framework nos respectivos computadores devem ler o artigo [Instalando o .NET Framework](~/docs/framework/install/index.md).  
@@ -58,13 +58,13 @@ Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicati
   
 -   Implantação do .NET Framework (para OEMs e administradores):  
   
-    -   [Windows ADK (Kit de Avaliação e Implantação do Windows)](http://go.microsoft.com/fwlink/p/?LinkId=254976)  
+    -   [Windows ADK (Kit de Avaliação e Implantação do Windows)](https://go.microsoft.com/fwlink/p/?LinkId=254976)  
   
     -   [Guia do administrador](../../../docs/framework/deployment/guide-for-administrators.md)  
   
  **Manutenção**  
   
--   Para obter informações gerais, confira o [blog do .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=254977)  
+-   Para obter informações gerais, confira o [blog do .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977)  
   
 -   [Como detectar versões](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
   

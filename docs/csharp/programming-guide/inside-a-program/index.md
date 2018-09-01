@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: b1a6ab513420081ef4629eac93a5b5c568fc57b5
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 65ed1fedebc784d8ac257735f0e7c705623350d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42907785"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424039"
 ---
 # <a name="inside-a-c-program"></a>Por dentro de um programa em C#
 A seção discute a estrutura geral de um programa em C# e inclui o exemplo padrão "Olá, mundo!" .  
@@ -29,7 +29,7 @@ A seção discute a estrutura geral de um programa em C# e inclui o exemplo padr
   
 -   [Referência de C#](../../../csharp/language-reference/index.md)  
   
--   [\<Aplicativos de exemplo do paveover>C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+-   [\<Aplicativos de exemplo do paveover>C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos do .NET em 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404493"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388622"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Implantando aplicativos Web .NET Core baseados em um único contêiner em hosts do Linux ou do Windows Nano Server
 
@@ -41,7 +41,7 @@ O aplicativo [eShopWeb](https://github.com/dotnet-architecture/eShopOnContainers
 
 O aplicativo usa um banco de dados do SQL Server para o armazenamento de catálogo. Em implantações com base em contêiner, este aplicativo monolítico pode acessar o mesmo armazenamento de dados que o aplicativo baseado em microsserviços. O aplicativo é configurado para executar o SQL Server em um contêiner ao lado do aplicativo monolítico. Em um ambiente de produção, o SQL Server seria executado em um computador de alta disponibilidade, fora do host do Docker. Para facilitar, é recomendado executar o SQL Server em seu próprio contêiner em um ambiente de desenvolvimento ou de teste.
 
-O conjunto inicial de recursos apenas habilita a pesquisa no catálogo. As atualizações habilitarão o conjunto completo de recursos do aplicativo em contêiner. Uma arquitetura de aplicativo Web monolítico mais avançada é descrita no livro eletrônico [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Práticas de arquitetura do aplicativo Web ASP.NET) e no [aplicativo de exemplo eShopOnWeb](http://aka.ms/WebAppArchitecture) relacionado.
+O conjunto inicial de recursos apenas habilita a pesquisa no catálogo. As atualizações habilitarão o conjunto completo de recursos do aplicativo em contêiner. Uma arquitetura de aplicativo Web monolítico mais avançada é descrita no livro eletrônico [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) (Práticas de arquitetura do aplicativo Web ASP.NET) e no [aplicativo de exemplo eShopOnWeb](https://aka.ms/WebAppArchitecture) relacionado.
 
 ## <a name="docker-support"></a>Suporte ao Docker
 
