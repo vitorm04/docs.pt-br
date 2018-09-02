@@ -9,24 +9,24 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 4e4623c1c0fe7d082e4d1a1f404ddaa94e79fc2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533624"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395169"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="209d5-102">Como definir ToolTips para controles em um Windows Form no momento do design</span><span class="sxs-lookup"><span data-stu-id="209d5-102">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>
-<span data-ttu-id="209d5-103">Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres no código ou no Designer de formulários do Windows.</span><span class="sxs-lookup"><span data-stu-id="209d5-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer.</span></span> <span data-ttu-id="209d5-104">Para obter mais informações sobre o <xref:System.Windows.Forms.ToolTip> componente, consulte [visão geral do componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="209d5-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span></span>  
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="11e79-102">Como definir ToolTips para controles em um Windows Form no momento do design</span><span class="sxs-lookup"><span data-stu-id="11e79-102">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>
+<span data-ttu-id="11e79-103">Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres no código ou no Designer de formulários do Windows.</span><span class="sxs-lookup"><span data-stu-id="11e79-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer.</span></span> <span data-ttu-id="11e79-104">Para obter mais informações sobre o <xref:System.Windows.Forms.ToolTip> componente, consulte [visão geral do componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="11e79-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="209d5-105">As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.</span><span class="sxs-lookup"><span data-stu-id="209d5-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="209d5-106">Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="209d5-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="209d5-107">Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="209d5-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="11e79-105">As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas.</span><span class="sxs-lookup"><span data-stu-id="11e79-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="11e79-106">Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**.</span><span class="sxs-lookup"><span data-stu-id="11e79-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="11e79-107">Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="11e79-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-set-a-tooltip-programmatically"></a><span data-ttu-id="209d5-108">Para definir uma dica de ferramenta programaticamente</span><span class="sxs-lookup"><span data-stu-id="209d5-108">To set a ToolTip programmatically</span></span>  
+### <a name="to-set-a-tooltip-programmatically"></a><span data-ttu-id="11e79-108">Para definir uma dica de ferramenta de forma programática</span><span class="sxs-lookup"><span data-stu-id="11e79-108">To set a ToolTip programmatically</span></span>  
   
-1.  <span data-ttu-id="209d5-109">Adicione o controle que exibirá a dica de ferramenta.</span><span class="sxs-lookup"><span data-stu-id="209d5-109">Add the control that will display the ToolTip.</span></span>  
+1.  <span data-ttu-id="11e79-109">Adicione o controle que exibirá a dica de ferramenta.</span><span class="sxs-lookup"><span data-stu-id="11e79-109">Add the control that will display the ToolTip.</span></span>  
   
-2.  <span data-ttu-id="209d5-110">Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método o <xref:System.Windows.Forms.ToolTip> componente.</span><span class="sxs-lookup"><span data-stu-id="209d5-110">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
+2.  <span data-ttu-id="11e79-110">Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método da <xref:System.Windows.Forms.ToolTip> componente.</span><span class="sxs-lookup"><span data-stu-id="11e79-110">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -43,15 +43,15 @@ ms.locfileid: "33533624"
     toolTip1->SetToolTip(button1, "Save changes");  
     ```  
   
-### <a name="to-set-a-tooltip-in-the-designer"></a><span data-ttu-id="209d5-111">Para definir uma dica de ferramenta no designer</span><span class="sxs-lookup"><span data-stu-id="209d5-111">To set a ToolTip in the designer</span></span>  
+### <a name="to-set-a-tooltip-in-the-designer"></a><span data-ttu-id="11e79-111">Para definir uma dica de ferramenta no designer</span><span class="sxs-lookup"><span data-stu-id="11e79-111">To set a ToolTip in the designer</span></span>  
   
-1.  <span data-ttu-id="209d5-112">Adicionar um <xref:System.Windows.Forms.ToolTip> componente para o formulário.</span><span class="sxs-lookup"><span data-stu-id="209d5-112">Add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>  
+1.  <span data-ttu-id="11e79-112">Adicionar um <xref:System.Windows.Forms.ToolTip> componente para o formulário.</span><span class="sxs-lookup"><span data-stu-id="11e79-112">Add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>  
   
-2.  <span data-ttu-id="209d5-113">Selecione o controle que exibe a dica de ferramenta ou adicioná-lo ao formulário.</span><span class="sxs-lookup"><span data-stu-id="209d5-113">Select the control that will display the ToolTip, or add it to the form.</span></span>  
+2.  <span data-ttu-id="11e79-113">Selecione o controle que será exibir a dica de ferramenta ou adicioná-lo ao formulário.</span><span class="sxs-lookup"><span data-stu-id="11e79-113">Select the control that will display the ToolTip, or add it to the form.</span></span>  
   
-3.  <span data-ttu-id="209d5-114">No **propriedades** janela, defina o **dica de ferramenta em ToolTip1** valor para uma cadeia de caracteres de texto apropriada.</span><span class="sxs-lookup"><span data-stu-id="209d5-114">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>  
+3.  <span data-ttu-id="11e79-114">No **propriedades** janela, defina as **dica de ferramenta no ToolTip1** valor a ser uma cadeia de caracteres apropriada de texto.</span><span class="sxs-lookup"><span data-stu-id="11e79-114">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="209d5-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="209d5-115">See Also</span></span>  
- [<span data-ttu-id="209d5-116">Visão geral do componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="209d5-116">ToolTip Component Overview</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
- [<span data-ttu-id="209d5-117">Como alterar o atraso do componente ToolTip dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="209d5-117">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- [<span data-ttu-id="209d5-118">Componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="209d5-118">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="11e79-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="11e79-115">See Also</span></span>  
+ [<span data-ttu-id="11e79-116">Visão geral do componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="11e79-116">ToolTip Component Overview</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+ [<span data-ttu-id="11e79-117">Como alterar o atraso do componente ToolTip dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="11e79-117">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ [<span data-ttu-id="11e79-118">Componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="11e79-118">ToolTip Component</span></span>](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
