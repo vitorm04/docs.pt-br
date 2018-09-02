@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 30e4942934e5d65b214d24a0948f70169d625485
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34457572"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461070"
 ---
 # <a name="c-operators"></a>Operadores em C#
 O C# fornece muitos operadores, que são símbolos que especificam as operações (matemática, indexação, chamada de função, etc.) para executar em uma expressão. Você pode [sobrecarregar](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) muitos operadores para alterar seu significado quando aplicados a um tipo definido pelo usuário.  
@@ -207,10 +207,11 @@ O C# fornece muitos operadores, que são símbolos que especificam as operaçõe
 -   O estouro aritmético de ponto flutuante ou a divisão por zero nunca gera uma exceção, pois os tipos de ponto flutuante são baseados em IEEE 754 e têm provisões para representar o infinito e NaN (não um número).  
   
 -   Um estouro aritmético[Decimal](../../../csharp/language-reference/keywords/decimal.md) sempre lança uma <xref:System.OverflowException>. A divisão decimal por zero sempre lança uma <xref:System.DivideByZeroException>.  
-  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md) [Operadores sobrecarregáveis](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [C#](../../../csharp/index.md)
+- [Operadores sobrecarregáveis](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
