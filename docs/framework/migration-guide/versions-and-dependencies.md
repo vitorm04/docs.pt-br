@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255555"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464094"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versões e dependências do .NET Framework
 Cada versão do .NET Framework contém o CLR (Common Language Runtime), as bibliotecas de classes base e outras bibliotecas gerenciadas. Esse tópico descreve os principais recursos do .NET Framework por versão, fornece informações sobre as versões do CLR subjacentes e os ambientes de desenvolvimento associados e identifica as versões instaladas pelo sistema operacional Windows.  
@@ -61,7 +61,7 @@ Cada versão do .NET Framework contém o CLR (Common Language Runtime), as bibli
   
      O [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] são usados aqui somente como exemplos. Esse princípio vale para qualquer aplicativo direcionado a uma versão posterior do .NET Framework àquela que está instalada no sistema em que ele está em execução.  
   
- Algumas alterações no .NET Framework podem exigir alterações no código do aplicativo; confira [Compatibilidade de aplicativos](../../../docs/framework/migration-guide/application-compatibility.md) antes de executar seus aplicativos existentes com o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou versões posteriores. Para obter mais informações sobre como instalar a versão atual, consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md). Para saber mais sobre suporte ao .NET Framework, confira [Política de ciclo de vida de suporte do Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) no site de Suporte da Microsoft.  
+ Algumas alterações no .NET Framework podem exigir alterações no código do aplicativo; confira [Compatibilidade de aplicativos](../../../docs/framework/migration-guide/application-compatibility.md) antes de executar seus aplicativos existentes com o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou versões posteriores. Para obter mais informações sobre como instalar a versão atual, consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md). Para saber mais sobre suporte ao .NET Framework, confira [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) no site de Suporte da Microsoft.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Direcionamento e execução de aplicativos de versões mais antigas  
  As versões 2.0, 3.0, e 3;5 do .NET Framework são integradas com a mesma versão do CLR (CLR 2.0). Essas versões representam camadas sucessivas de uma única instalação. Cada versão é compilada incrementalmente sobre as versões anteriores. Não é possível executar as versões 2.0, 3.0 e 3.5 lado a lado em um computador. Ao instalar a versão 3.5, você obtém as camadas 2.0 e 3.0 automaticamente, e os aplicativos que foram criados para versões 2.0, 3.0 e 3.5 podem todos ser executados na versão 3.5. No entanto, o .NET Framework 4 encerra essa abordagem de camadas, e ele e versões posteriores (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 e 4.7.2) também representam camadas sucessivas de uma única instalação.  Começando no .NET Framework 4, você pode usar a hospedagem lado a lado de processos para executar várias versões do CLR em um único processo. Para saber mais, confira [Assemblies e execução lado a lado](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
@@ -81,5 +81,5 @@ Cada versão do .NET Framework contém o CLR (Common Language Runtime), as bibli
 ## <a name="see-also"></a>Consulte também
 
 [Compatibilidade de versão](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Política de ciclo de vida de suporte do Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
