@@ -5,12 +5,12 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: 5f744fd63116ac453a2a7db8eb94f12738c95f21
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: ba63ef6cdc092d06e267637112070e7cd5133a45
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315193"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456377"
 ---
 # <a name="net-core-additional-tools"></a>Ferramentas adicionais do .NET Core
 
@@ -22,7 +22,7 @@ O WCF (Windows Communication Foundation) Web Service Reference é um provedor de
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Ferramenta dotnet-svcutil do WCF](dotnet-svcutil-guide.md)
 
-A ferramenta dotnet-svcutil do WCF (Windows Communication Foundation) é uma ferramenta da CLI do .NET Core que recupera metadados de um serviço Web em um local de rede ou de um arquivo WSDL e gera um arquivo de origem compatível com o .NET Core, definindo uma classe proxy do WCF com métodos que você pode usar para acessar as operações do serviço Web. A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de serviços conectados do Visual Studio [**WCF Web Service Reference**](/dotnet/core/additional-tools/wcf-web-service-reference-guide) que foi primeiramente fornecido com o Visual Studio 2017 v15.5. A ferramenta **dotnet-svcutil**, como uma ferramenta da CLI do .NET Core, é a multiplataforma disponível no Linux, no macOS e no Windows.
+A ferramenta dotnet-svcutil do WCF (Windows Communication Foundation) é uma ferramenta da CLI do .NET Core que recupera metadados de um serviço Web em um local de rede ou de um arquivo WSDL e gera um arquivo de origem compatível com o .NET Core, definindo uma classe proxy do WCF com métodos que você pode usar para acessar as operações do serviço Web. A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de serviços conectados do Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que foi primeiramente fornecido com o Visual Studio 2017 v15.5. A ferramenta **dotnet-svcutil**, como uma ferramenta da CLI do .NET Core, é a multiplataforma disponível no Linux, no macOS e no Windows.
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[XML Serializer Generator](xml-serializer-generator.md)
 
