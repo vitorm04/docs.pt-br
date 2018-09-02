@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462154"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397507"
 ---
 # <a name="putinstancewmi-function"></a>Função PutInstanceWmi
 Cria ou atualiza uma instância de uma classe existente. A instância é gravada no repositório do WMI. 
@@ -42,65 +42,65 @@ HRESULT PutInstanceWmi (
 ## <a name="parameters"></a>Parâmetros
 
 `pInst`    
-[in] Um ponteiro para a instância a ser writen.
+[in] Um ponteiro para a instância a ser gravado.
 
 `lFlags`   
-[in] Uma combinação de sinalizadores que afetam o comportamento dessa função. Os seguintes valores são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código: 
+[in] Uma combinação de sinalizadores que afetam o comportamento dessa função. Os seguintes valores são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código: 
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se definido, WMI não armazena quaisquer qualificadores com o **Amended** flavor. </br> Se não for definido, presume-se que esse objeto não é localizado, e todos os qualificadores são storedwith essa instância. |
-| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Crie a instância se ele não existe ou substituí-lo se ele já existe. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se definido, WMI não armazena qualquer qualificador com a **Amended** sabor. </br> Se não for definido, supõe-se que esse objeto não está localizado, e todos os qualificadores são storedwith dessa instância. |
+| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Se ele não existir ou substituí-lo se ele já existir, crie a instância. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Atualize a instância. A instância deve existir para a chamada seja bem-sucedida. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Crie a instância. A chamada falhará se a instância já existe. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador faz com que uma chamada semi-síncrona. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | O sinalizador faz com que uma chamada semissíncrona. |
 
 `pCtx`  
-[in] Normalmente, esse valor é `null`. Caso contrário, é um ponteiro para um [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) instância pode ser usada pelo provedor que fornece as classes solicitadas. 
+[in] Normalmente, esse valor é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) instância que pode ser usada pelo provedor que está fornecendo as classes solicitadas. 
 
 `ppCallResult`  
-[out] Se `null`, esse parâmetro é usado. Se `lFlags` contém `WBEM_FLAG_RETURN_IMMEDIATELY`, a função retornará imediatamente com `WBEM_S_NO_ERROR`. O `ppCallResult` parâmetro recebe um ponteiro para um novo [IWbemCallResult](https://msdn.microsoft.com/library/aa391425(v=vs.85).aspx) objeto.
+[out] Se `null`, esse parâmetro é usado. Se `lFlags` contém `WBEM_FLAG_RETURN_IMMEDIATELY`, a função retornará imediatamente com `WBEM_S_NO_ERROR`. O `ppCallResult` parâmetro recebe um ponteiro para um novo [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) objeto.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | O usuário não tem permissão para atualizar uma instância da classe especificada. |
 | `WBEM_E_FAILED` | 0x80041001 | Ocorreu um erro não especificado. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | A classe com suporte a essa instância não é válida. |
-| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | um `null` foi especificado para uma propriedade que não pode ser `null`, como aquele que é marcado por um **indexado** ou **Not_Null** qualificador. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | A classe que dão suporte a essa instância não é válida. |
+| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | uma `null` foi especificado para uma propriedade que não pode ser `null`, por exemplo, um que é marcado por um **indexado** ou **Not_Null** qualificador. |
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | A instância especificada é inválida. (Por exemplo, chamar `PutInstanceWmi` com uma classe retorna esse valor.) |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um parâmetro não é válido. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | O `WBEM_FLAG_CREATE_ONLY` sinalizador foi especificado, mas a instância já existe. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` foi especificado em `lFlags`, mas a instância não existe. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` foi especificado no `lFlags`, mas a instância não existe. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chamar [ConnectServerWmi](connectserverwmi.md) novamente. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI foi provavelmente interrompido e reiniciar. Chame [ConnectServerWmi](connectserverwmi.md) novamente. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | O link RPC (chamada) de procedimento remoto entre o processo atual e a WMI falhou. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida. |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemServices::PutInstance](https://msdn.microsoft.com/library/aa392115(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemServices::PutInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) método.
 
-O `PutInstanceWmi` função oferece suporte à criação de instâncias e instâncias de classes existentes somente atualização.  Dependendo de como a `pCtx` parâmetro for definido, algumas ou todas as propriedades da instância são atualizadas. 
+O `PutInstanceWmi` função dá suporte à criação de instâncias e instâncias de classes existentes somente atualização.  Dependendo de como a `pCtx` parâmetro for definido, algumas ou todas as propriedades da instância são atualizadas. 
 
-Quando a instância apontada pelo `pInst` pertence a uma subclasse, o gerenciamento do Windows todos os provedores de responsáveis para as classes da qual deriva a subclasse de chamadas. Todos esses provedores devem ter êxito para o original `PutInstanceWmi` solicitação seja bem-sucedida. O provedor de suporte a classe de nível superior na hierarquia é chamado primeiro. A ordem de chamada continua com a subclasse da classe superior e continua de cima para baixo até que o Windows Management atinge o provedor para a classe que possui a instância apontada pelo `pInst`.
-Gerenciamento do Windows não chama os provedores para qualquer uma das classes filho de uma instância. 
+Quando a instância apontado pelo `pInst` pertence a uma subclasse, gerenciamento do Windows chama todos os provedores de responsáveis para as classes da qual deriva a subclasse. Todos esses provedores devem obter êxito para o original `PutInstanceWmi` solicitação seja bem-sucedida. O provedor de suporte a classe de nível mais alta na hierarquia é chamado pela primeira vez. A ordem de chamada continua com a subclasse da classe superior e prossegue de cima para baixo até que o gerenciamento do Windows alcança o provedor para a classe que tem a instância apontada pelo `pInst`.
+Gerenciamento do Windows não chama os provedores para qualquer uma das classes filhas de uma instância. 
 
-Quando um aplicativo deve atualizar uma instância que pertence a uma hierarquia de classe, o `pInst` parâmetro deve apontar para a instância que contém as propriedades a serem modificados. Ou seja, considere uma instância de destino que pertence a **ClassB**. O **ClassB** instância deriva **ClassA**, e **ClassA** define a propriedade **PropA**. Se um aplicativo deseja alterar o valor de **PropA** no **ClassB** instância, ele deve ser definido `pInst` para essa instância, em vez de uma instância de **ClassA** .
+Quando um aplicativo deve atualizar uma instância que pertence a uma hierarquia de classe, o `pInst` parâmetro deve apontar para a instância que contém as propriedades a ser modificado. Ou seja, considere uma instância de destino que pertence a **ClassB**. O **ClassB** instância deriva **ClassA**, e **ClassA** define a propriedade **PropA**. Se um aplicativo quiser fazer uma alteração para o valor de **PropA** na **ClassB** instância, ele deve definir `pInst` para essa instância em vez de uma instância do **ClassA** .
 
-Chamando `PutInstanceWmi` em uma instância de uma classe abstrata não é permitido.
+Chamar `PutInstanceWmi` em uma instância de uma classe abstrata não é permitido.
 
 Se a chamada de função falhar, você pode obter informações adicionais sobre erros chamando o [GetErrorInfo](geterrorinfo.md) função.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

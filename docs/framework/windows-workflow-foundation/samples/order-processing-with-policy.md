@@ -2,12 +2,12 @@
 title: Processamento de aplicativos com a política
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519412"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398364"
 ---
 # <a name="order-processing-with-policy"></a>Processamento de aplicativos com a política
 O exemplo de política de processamento de aplicativos demonstra alguns dos principais recursos introduzidos em [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] do Windows Workflow Foundation (WF). A seguinte funcionalidade é novo para o mecanismo de regras WF:  
@@ -24,7 +24,7 @@ O exemplo de política de processamento de aplicativos demonstra alguns dos prin
  O exemplo demonstra um projeto de `OrderProcessingPolicy` a que um pedido de cliente, que consiste em uma lista numerada de itens disponíveis e um código postal, é inserido. A ordem é processado com êxito se ambas as entradas estão corretas; caso contrário, a diretiva cria objetos de erro, utilizando um operador sobrecarregado de `+` e um método de extensão predefinido para informar ao usuário de erros.  
   
 > [!NOTE]
->  Para obter mais informações sobre métodos de extensão, consulte [c# versão 3.0 especificação](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Para obter mais informações sobre métodos de extensão, consulte [especificação do c# versão 3.0](https://go.microsoft.com/fwlink/?LinkId=95402).  
   
  O exemplo é composto de projetos seguintes:  
   
@@ -64,7 +64,7 @@ O exemplo de política de processamento de aplicativos demonstra alguns dos prin
   
          Essa regra verifica para ver se houver erros adicionado por duas regras anteriores dos dois objetos `OrderErrorCollection` e `invalidItemNumErrorCollection`de `invalidIZipCodeErrorCollection` . Se ocorreram erros ( `invalidItemNumErrorCollection` ou `invalidZipCodeErrorCollection` não são `null`), a regra faz o seguinte:  
   
-        1.  Chama o sobrecarregado `+` operador para copiar o conteúdo de `invalidItemNumErrorCollection` e `invalidZipCodeErrorCollection` para um `invalidOrdersCollection``OrderErrorCollection` instância.  
+        1.  Chama sobrecarregado `+` operador para copiar o conteúdo de `invalidItemNumErrorCollection` e `invalidZipCodeErrorCollection` para um `invalidOrdersCollection``OrderErrorCollection` instância.  
   
         2.  Chama o método de extensão de `PrintOrderErrors` em `invalidOrdersCollection` e saída que a propriedade de `ErrorText` em qualquer `orderError` objetos em `invalidOrdersCollection`.  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

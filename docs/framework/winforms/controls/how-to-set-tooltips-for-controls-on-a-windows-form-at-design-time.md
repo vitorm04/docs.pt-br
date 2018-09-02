@@ -9,24 +9,24 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 4e4623c1c0fe7d082e4d1a1f404ddaa94e79fc2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533624"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395169"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Como definir ToolTips para controles em um Windows Form no momento do design
 Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres no código ou no Designer de formulários do Windows. Para obter mais informações sobre o <xref:System.Windows.Forms.ToolTip> componente, consulte [visão geral do componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-set-a-tooltip-programmatically"></a>Para definir uma dica de ferramenta programaticamente  
+### <a name="to-set-a-tooltip-programmatically"></a>Para definir uma dica de ferramenta de forma programática  
   
 1.  Adicione o controle que exibirá a dica de ferramenta.  
   
-2.  Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método o <xref:System.Windows.Forms.ToolTip> componente.  
+2.  Use o <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método da <xref:System.Windows.Forms.ToolTip> componente.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -47,9 +47,9 @@ Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres n
   
 1.  Adicionar um <xref:System.Windows.Forms.ToolTip> componente para o formulário.  
   
-2.  Selecione o controle que exibe a dica de ferramenta ou adicioná-lo ao formulário.  
+2.  Selecione o controle que será exibir a dica de ferramenta ou adicioná-lo ao formulário.  
   
-3.  No **propriedades** janela, defina o **dica de ferramenta em ToolTip1** valor para uma cadeia de caracteres de texto apropriada.  
+3.  No **propriedades** janela, defina as **dica de ferramenta no ToolTip1** valor a ser uma cadeia de caracteres apropriada de texto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral do componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  

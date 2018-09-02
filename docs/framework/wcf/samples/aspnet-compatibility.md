@@ -2,41 +2,43 @@
 title: Compatibilidade ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806215"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398229"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilidade ASP.NET
-Este exemplo demonstra como habilitar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade do Windows Communication Foundation (WCF). Serviços em execução [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participar de modo de compatibilidade totalmente no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo pipeline e fazer uso de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos, como a autorização de URL do arquivo, estado de sessão e o <xref:System.Web.HttpContext> classe. O <xref:System.Web.HttpContext> classe permite o acesso a cookies, sessões e outros [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] recursos. Esse modo exige que as associações de usam o transporte HTTP e o próprio serviço deve ser hospedado no IIS.  
+Este exemplo demonstra como habilitar o modo de compatibilidade do ASP.NET no Windows Communication Foundation (WCF). Serviços em execução no modo participar totalmente no pipeline de aplicativo do ASP.NET e pode tornar a compatibilidade do ASP.NET usam recursos do ASP.NET, como autorização de URL do arquivo, estado de sessão e o <xref:System.Web.HttpContext> classe. O <xref:System.Web.HttpContext> classe permite o acesso a cookies, sessões e outros recursos do ASP.NET. Esse modo requer que as associações usam o transporte HTTP e o serviço em si deve ser hospedado no IIS.  
   
- Neste exemplo, o cliente é um aplicativo de console (um executável) e o serviço é hospedado no Internet Information Services (IIS).  
+ Neste exemplo, o cliente é um aplicativo de console (um executável) e o serviço está hospedado no Internet Information Services (IIS).  
   
 > [!NOTE]
 >  Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
   
-> [!NOTE]
->  Este exemplo requer uma [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pool de aplicativos para executar. Para criar um novo pool de aplicativos, ou para modificar o pool de aplicativos padrão, siga estas etapas.  
->   
->  1.  Abra **Painel de Controle**.  Abra o **ferramentas administrativas** miniaplicativo sob o **sistema e segurança** título. Abra o **serviços de informações da Internet (IIS) Manager** miniaplicativo.  
-> 2.  Expanda o modo de exibição de árvore no **conexões** painel. Selecione o **Pools de aplicativos** nó.  
-> 3.  Para definir o pool de aplicativos padrão para usar [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (que pode causar problemas de incompatibilidade com os sites existentes), com o botão direito do **DefaultAppPool** do item de lista e selecione **configurações básicas...** . Definir o **.Net Framework versão** pull-down até **.Net Framework v4.0.30128** (ou posterior).  
-> 4.  Para criar um novo pool de aplicativos que usa [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (para preservar a compatibilidade para outros aplicativos), com o botão direito do **Pools de aplicativos** nó e selecione **Adicionar Pool de aplicativos...** . Nomeie o novo pool de aplicativos e defina o **.Net Framework versão** pull-down até **.Net Framework v4.0.30128** (ou posterior). Depois de executar a instalação as etapas abaixo, clique com botão direito do **ServiceModelSamples** aplicativo e selecione **gerenciar aplicativo**, **configurações avançadas...** . Definir o **Pool de aplicativos** para o novo pool de aplicativos.  
+Este exemplo requer um [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pool de aplicativos para executar. Para criar um novo pool de aplicativos, ou para modificar o pool de aplicativos padrão, siga estas etapas.  
+
+1.  Abra **Painel de Controle**.  Abra o **ferramentas administrativas** miniaplicativo sob o **sistema e segurança** título. Abra o **serviços de informações da Internet (IIS) Manager** miniaplicativo.  
+
+2.  Expanda o modo de exibição de árvore na **conexões** painel. Selecione o **Pools de aplicativos** nó.  
+
+3.  Para definir o pool de aplicativos padrão para usar [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (que pode causar problemas de incompatibilidade com sites existentes), com o botão direito do **DefaultAppPool** do item de lista e selecione **configurações básicas...** . Defina a **.Net Framework versão** suspenso para **.Net Framework v4.0.30128** (ou posterior).  
+
+4.  Para criar um novo pool de aplicativos que usa [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (para preservar a compatibilidade para outros aplicativos), clique com botão direito do **Pools de aplicativos** nó e selecione **Adicionar Pool de aplicativos...** . Nomeie o novo pool de aplicativos e defina as **.Net Framework versão** suspenso para **.Net Framework v4.0.30128** (ou posterior). Depois de executar a instalação as etapas abaixo, clique com botão direito do **ServiceModelSamples** aplicativo e selecione **gerenciar aplicativo**, **configurações avançadas...** . Defina as **Pool de aplicativos** para o novo pool de aplicativos.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
- Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa um serviço de cálculo. O `ICalculator` contrato foi modificado como o `ICalculatorSession` contrato permitir que um conjunto de operações a serem executadas, mantendo um resultado de execução.  
+ Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa um serviço de calculadora. O `ICalculator` contrato foi modificado como o `ICalculatorSession` de contrato para permitir que um conjunto de operações a serem executadas, mantendo um resultado em execução.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculatorSession  
 {  
@@ -57,14 +59,14 @@ public interface ICalculatorSession
   
  O serviço mantém o estado, usando o recurso para cada cliente, como várias operações de serviço são chamadas para executar um cálculo. O cliente pode recuperar o resultado atual chamando `Result` e pode limpar o resultado como zero chamando `Clear`.  
   
- O serviço usa a [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sessão para armazenar o resultado para cada sessão de cliente. Isso permite que o serviço manter o resultado de execução para cada cliente em várias chamadas para o serviço.  
+ O serviço usa a sessão do ASP.NET para armazenar o resultado para cada sessão de cliente. Isso permite que o serviço manter o resultado em execução para cada cliente em várias chamadas para o serviço.  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] estado da sessão e sessões WCF são coisas muito diferentes.  Consulte o [sessão](../../../../docs/framework/wcf/samples/session.md) para obter detalhes sobre as sessões do WCF.  
+> Estado de sessão ASP.NET e as sessões WCF são coisas muito diferentes. Ver [sessão](../../../../docs/framework/wcf/samples/session.md) para obter detalhes sobre as sessões WCF.
   
- O serviço tem uma dependência profunda na [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] estado de sessão e requer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidade para funcionar corretamente. Esses requisitos são expressos declarativamente, aplicando o `AspNetCompatibilityRequirements` atributo.  
+ O serviço tem uma dependência profunda no estado de sessão ASP.NET e requer o modo de compatibilidade do ASP.NET para funcionar corretamente. Esses requisitos são expressos declarativamente por meio da aplicação de `AspNetCompatibilityRequirements` atributo.  
   
-```  
+```csharp  
 [AspNetCompatibilityRequirements(RequirementsMode =  
                        AspNetCompatibilityRequirementsMode.Required)]  
 public class CalculatorService : ICalculatorSession  
@@ -106,24 +108,24 @@ public class CalculatorService : ICalculatorSession
         return Result;  
     }  
 }  
-```  
+```
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console
 0, + 100, - 50, * 17.65, / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Depois que a solução foi criada, execute bat para configurar o aplicativo ServiceModelSamples em [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
+3.  Depois que a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de persistência e hospedagem de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

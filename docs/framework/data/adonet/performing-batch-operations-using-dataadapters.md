@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361979"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397492"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Executando operações em lote usando DataAdapters
 O suporte a lotes no ADO.NET permite que um <xref:System.Data.Common.DataAdapter> agrupe operações INSERT, UPDATE e DELETE de um <xref:System.Data.DataSet> ou <xref:System.Data.DataTable> para o servidor, em vez de enviar uma operação de cada vez. A redução no número de viagens de ida e volta para o servidor costuma resultar em ganhos significativos de desempenho. Atualizações em lotes têm suporte nos provedores de dados .NET para SQL Server (<xref:System.Data.SqlClient>) e Oracle (<xref:System.Data.OracleClient>).  
@@ -24,7 +24,7 @@ O suporte a lotes no ADO.NET permite que um <xref:System.Data.Common.DataAdapter
 ## <a name="using-the-updatebatchsize-property"></a>Usando a propriedade UpdateBatchSize  
  Quando atualizações em lotes são habilitadas, o valor da propriedade <xref:System.Data.IDbCommand.UpdatedRowSource%2A> de `UpdateCommand`, de `InsertCommand` e de `DeleteCommand` do DataAdapter deve ser definido como <xref:System.Data.UpdateRowSource.None> ou <xref:System.Data.UpdateRowSource.OutputParameters>. Ao executar uma atualização em lotes, o valor da propriedade <xref:System.Data.IDbCommand.UpdatedRowSource%2A> do comando de <xref:System.Data.UpdateRowSource.FirstReturnedRecord> ou de <xref:System.Data.UpdateRowSource.Both> é inválido.  
   
- O procedimento a seguir demonstra o uso da propriedade `UpdateBatchSize`. O procedimento leva dois argumentos, um <xref:System.Data.DataSet> objeto que tem colunas que representam o **ProductCategoryID** e **nome** campos de **ProductCategory**tabela e um inteiro que representa o tamanho do lote (o número de linhas no lote). O código cria um novo objeto <xref:System.Data.SqlClient.SqlDataAdapter>, definindo suas propriedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. O código pressupõe que o objeto <xref:System.Data.DataSet> alterou linhas. Ele define a propriedade `UpdateBatchSize` e executa a atualização.  
+ O procedimento a seguir demonstra o uso da propriedade `UpdateBatchSize`. O procedimento leva dois argumentos, uma <xref:System.Data.DataSet> objeto que tem colunas que representam os **ProductCategoryID** e **nome** campos no **Production**tabela e um inteiro que representa o tamanho do lote (o número de linhas no lote). O código cria um novo objeto <xref:System.Data.SqlClient.SqlDataAdapter>, definindo suas propriedades <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> e <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A>. O código pressupõe que o objeto <xref:System.Data.DataSet> alterou linhas. Ele define a propriedade `UpdateBatchSize` e executa a atualização.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Manipulando eventos relativos à atualização em lotes e erros  
- O **DataAdapter** tem dois eventos relacionados à atualização: **RowUpdating** e **RowUpdated**. Em versões anteriores do ADO.NET, quando o processamento em lotes estava desabilitado, cada um desses eventos era gerado uma vez para cada linha processada. **RowUpdating** é gerado antes que a atualização ocorra, e **RowUpdated** é gerado após a atualização do banco de dados foi concluída.  
+ O **DataAdapter** tem dois eventos relativos à atualização: **RowUpdating** e **RowUpdated**. Em versões anteriores do ADO.NET, quando o processamento em lotes estava desabilitado, cada um desses eventos era gerado uma vez para cada linha processada. **RowUpdating** é gerado antes que a atualização ocorra, e **RowUpdated** é gerado após a atualização do banco de dados foi concluída.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Alterações de comportamento dos eventos com atualizações em lotes  
  Quando o processamento em lotes está habilitado, várias linhas são atualizadas em uma única operação de banco de dados. Portanto, somente um evento `RowUpdated` ocorre para cada lote, enquanto o evento `RowUpdating` ocorre para cada linha processada. Quando o processamento em lotes está desabilitado, os dois eventos são disparados com interpolação um a um, onde um evento `RowUpdating` e um evento `RowUpdated` são disparados para uma linha e, depois, um evento `RowUpdating` e um evento `RowUpdated` são disparados para a próxima linha, até que todas as linhas sejam processadas.  
@@ -145,4 +145,4 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
  [Manipulação de eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

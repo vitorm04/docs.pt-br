@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258571"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395472"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
  Esta visão geral descreve como [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expõe objetos inseridos, ou elementos filho, dentro de um documento de texto ou um contêiner.  
   
@@ -46,7 +46,7 @@ Exemplo de um fluxo de texto com objetos inseridos e seus intervalos abrangentes
   
  Quando for necessário atravessar o conteúdo de um intervalo de texto, uma série de etapas envolvidas nos bastidores para que o <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método a ser executado com êxito.  
   
-1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido em um intervalo de degeneração a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover a ambiguidade em situações onde um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, "{a U} RL [ http://www.microsoft.com ](http://www.microsoft.com) é inserido no texto" onde "{" e "}" é pontos de extremidade do intervalo de texto.  
+1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido em um intervalo de degeneração a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover a ambiguidade em situações onde um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, "{a U} RL [ http://www.microsoft.com ](https://www.microsoft.com) é inserido no texto" onde "{" e "}" é pontos de extremidade do intervalo de texto.  
   
 2.  O intervalo resultante é movido para trás na <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> para o início da solicitada <xref:System.Windows.Automation.Text.TextUnit> limites.  
   
@@ -71,7 +71,7 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 ### <a name="hyperlink"></a>Hiperlink  
  **Exemplo 1 - um intervalo de texto que contém um hiperlink de texto inserido**  
   
- {A URL [ http://www.microsoft.com ](http://www.microsoft.com) é inserida em texto}.  
+ {A URL [ http://www.microsoft.com ](https://www.microsoft.com) é inserida em texto}.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
   
  **Exemplo 3: um intervalo de texto que abrange parcialmente o conteúdo de um contêiner de texto. O contêiner de texto tem um hiperlink de texto inserido não é parte do intervalo de texto.**  
   
- {URL} [ http://www.microsoft.com ](http://www.microsoft.com) é inserido no texto.  
+ {URL} [ http://www.microsoft.com ](https://www.microsoft.com) é inserido no texto.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
  [Acessar objetos inseridos usando automação de interface do usuário](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [Expor o conteúdo de uma tabela usando automação de interface do usuário](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [Percorrer texto usando automação de interface do usuário](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Pesquisa de TextPattern e exemplo de seleção](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [Pesquisa de TextPattern e exemplo de seleção](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

@@ -2,20 +2,20 @@
 title: '&lt;peer&gt; de &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: f50c192639df7b7ed35e863821d5b7a8d62f29bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 94f93a7955af3bff1c17e59a11af3fad85c9134d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747675"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399837"
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt; de &lt;serviceCredentials&gt;
-Especifica as credenciais atuais de um nó ponto a ponto.  
+Especifica as credenciais atuais para um nó par.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<serviceBehaviors >  
-\<comportamento >  
+\<comportamento de >  
 \<serviceCredentials>  
 \<par >  
   
@@ -30,7 +30,7 @@ Especifica as credenciais atuais de um nó ponto a ponto.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos pai de atributos e elementos filho  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
  nenhuma.  
@@ -39,7 +39,7 @@ Especifica as credenciais atuais de um nó ponto a ponto.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Especifica um certificado x. 509 a ser usado para assinar e criptografar mensagens para serviços ponto a ponto. .|  
+|[\<certificado >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Especifica um certificado X.509 a ser usado para assinar e criptografar mensagens para serviços ponto a ponto. .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Especifica opções de autenticação para remetentes de mensagens.|  
 |[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Especifica opções de autenticação para serviços ponto a ponto.|  
   
@@ -55,7 +55,7 @@ Especifica as credenciais atuais de um nó ponto a ponto.
  <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>  
  <xref:System.ServiceModel.Security.PeerCredential>  
  [Rede ponto a ponto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Autenticação de mensagens de canal par](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Autenticação personalizada de canal par](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Autenticação de mensagem de canal par](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Autenticação personalizada de canal par](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Protegendo aplicativos de canal par](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

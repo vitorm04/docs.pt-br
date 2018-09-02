@@ -2,26 +2,26 @@
 title: Codificação de MTOM
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: 1f30c3a1c7a9a4874f4b831ee27192468e63c192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f54a22b0004623c8aef8f2788ed7d59f7d777ce7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501410"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400094"
 ---
 # <a name="mtom-encoding"></a>Codificação de MTOM
-Este exemplo demonstra o uso da mensagem de mecanismo de otimização de transmissão da mensagem (MTOM) a codificação com WSHttpBinding. MTOM é um mecanismo para transmissão de grandes anexos binários com mensagens SOAP como bytes brutos, permitindo a mensagens menores.  
+Este exemplo demonstra o uso da mensagem MTOM Message Transmission Optimization Mechanism () codificação com WSHttpBinding. MTOM é um mecanismo para a transmissão de anexos binários grandes com mensagens SOAP como bytes brutos, permitindo mensagens menores.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- Por padrão, o WSHttpBinding envia e as mensagens recebidas como texto normal XML. Para habilitar o envio e recebimento de mensagens MTOM, defina o `messageEncoding` atributo na configuração da associação (como o código de exemplo a seguir), ou diretamente em associação com o `MessageEncoding` propriedade. O serviço ou cliente agora pode enviar e receber mensagens MTOM.  
+ Por padrão, o WSHttpBinding envia e as mensagens recebidas como XML de texto normal. Para habilitar o envio e recebimento de mensagens MTOM, defina as `messageEncoding` atributo na configuração da associação (como no seguinte exemplo de código), ou diretamente na associação usando o `MessageEncoding` propriedade. O serviço ou cliente agora pode enviar e receber mensagens MTOM.  
   
 ```xml  
 <wsHttpBinding>  
@@ -29,7 +29,7 @@ Este exemplo demonstra o uso da mensagem de mecanismo de otimização de transmi
 </wsHttpBinding>  
 ```  
   
- O codificador MTOM pode otimizar a matrizes de bytes e fluxos. Neste exemplo, a operação usa um `Stream` parâmetro e, portanto, podem ser otimizados.  
+ O codificador MTOM pode otimizar as matrizes de bytes e fluxos. Neste exemplo, a operação usa um `Stream` parâmetro e, portanto, pode ser otimizada.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -40,7 +40,7 @@ Este exemplo demonstra o uso da mensagem de mecanismo de otimização de transmi
   }  
 ```
   
- O contrato escolhido para este exemplo transmite dados binários para o serviço e recebe o número de bytes carregados como o valor de retorno. Quando o serviço está instalado e o cliente é executado, exibe o número 1000, o que indica que todos os 1.000 bytes foram recebidos. O restante da saída lista os tamanhos de mensagem otimizados e não otimizados para várias cargas.  
+ O contrato escolhido para este exemplo transmite dados binários para o serviço e recebe o número de bytes carregados como o valor de retorno. Quando o serviço está instalado e o cliente é executado, ele imprime o número 1000, o que indica que todos os 1.000 bytes foram recebidos. O restante da saída lista os tamanhos de mensagem otimizados e não otimizados para várias cargas.  
   
 ```  
 Output:  
@@ -64,7 +64,7 @@ MTOM encoding with a 1000000 byte payload: 1001080
 Press <ENTER> to terminate client.  
 ```  
   
- A finalidade de uso MTOM é otimizar a transmissão de grandes cargas binárias. Enviando uma mensagem SOAP usando MTOM tem uma sobrecarga notável para pequenas cargas binárias, mas se torna uma grande economia quando elas crescem em alguns milhares de bytes. A razão para isso é normal texto XML codifica dados binários usando Base64, que requer quatro caracteres para todos os três bytes e aumenta o tamanho dos dados em um terceiro. MTOM é capaz de transmitir dados binários como bytes brutos, economizando tempo de codificação/decodificação e resultante é mensagens menores. O limite de alguns milhares de bytes é pequeno em comparação com os documentos de negócios atuais e fotos digitais.  
+ A finalidade para usar o MTOM é otimizar a transmissão de grandes cargas de binárias. Enviando uma mensagem SOAP usando MTOM tem uma sobrecarga considerável para transferências binárias pequenas, mas se torna uma grande economia quando elas aumentarem ao longo de alguns milhares de bytes. A razão para isso é que o texto normal XML codifica dados binários usando Base64, que requer quatro caracteres para todos os três bytes e aumenta o tamanho dos dados em um terço. MTOM é capaz de transmitir dados binários como bytes brutos, economizando o tempo de codificação/decodificação e resultante é mensagens menores. O limite de alguns milhares de bytes é pequeno em comparação com os documentos de negócios de hoje e fotografias digitais.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -74,9 +74,9 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

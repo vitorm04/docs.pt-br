@@ -1,5 +1,5 @@
 ---
-title: '#Diretiva de região'
+title: '#Diretiva de região (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d25871140ef0674c013fc70d1306b2b4d0858556
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588429"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385366"
 ---
 # <a name="region-directive"></a>Diretiva #Region
 Recolhe e oculta seções de código em arquivos do Visual Basic.  
@@ -31,7 +31,7 @@ Recolhe e oculta seções de código em arquivos do Visual Basic.
   
 |Termo|Definição|  
 |---|---|  
-|`identifier_string`|Necessário. Cadeia de caracteres que atua como o título de uma região quando ele estiver recolhido. Regiões estão recolhidas por padrão.|  
+|`identifier_string`|Necessário. Cadeia de caracteres que atua como o título de uma região quando ele estiver recolhido. Regiões recolhidas por padrão.|  
 |`#End Region`|Encerra o `#Region` bloco.|  
   
 ## <a name="remarks"></a>Comentários  
