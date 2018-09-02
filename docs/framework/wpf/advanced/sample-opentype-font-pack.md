@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: bec890f7937965c314ccf16b4142905c52ceff49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546930"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455738"
 ---
 # <a name="sample-opentype-font-pack"></a>Pacote de fontes OpenType de amostra
 Este tópico fornece uma visão geral das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de exemplo que são distribuídas com o [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. O suporte de fontes de exemplo estendeu os recursos [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] que podem ser usados por aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -34,10 +34,10 @@ Este tópico fornece uma visão geral das fontes [!INCLUDE[TLA#tla_opentype](../
   
  A ilustração a seguir mostra a aparência das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de exemplo.  
   
- ![Lista de nomes de fontes no pacote de fonte do exemplo](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
+ ![Lista de nomes de fontes no pacote de fontes de exemplo](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
 Fontes no pacote de fontes OpenType  
   
- As fontes de exemplo são fornecidas sob licença da Ascender Corporation. Ascender é um provedor de produtos avançados de fontes. Para licenciar versões estendidas ou personalizadas das fontes de exemplo, consulte [Site de Web da Ascender Corporation](http://go.microsoft.com/fwlink/?LinkId=182627).  
+ As fontes de exemplo são fornecidas sob licença da Ascender Corporation. Ascender é um provedor de produtos avançados de fontes. Para licenciar versões estendidas ou personalizadas das fontes de exemplo, consulte [Site de Web da Ascender Corporation](https://go.microsoft.com/fwlink/?LinkId=182627).  
   
 > [!NOTE]
 >  Como desenvolvedor, é sua responsabilidade verificar se você tem os direitos de licença necessários de qualquer fonte inserida em um aplicativo ou redistribuída de outra forma.  

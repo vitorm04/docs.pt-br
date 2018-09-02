@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bc68f49326818f0e6687c06a38e5e51fd6960c9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b857a608c6b485c384956e55247b6e02c49a8564
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474728"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465933"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Ponto de extremidade: falhas de autenticação e validação de segurança por segundo
 Nome do contador: validação de segurança e autenticação de falhas por segundo  
@@ -27,10 +27,10 @@ Nome do contador: validação de segurança e autenticação de falhas por segun
   
 -   Ocorreu uma falha de descriptografia.  
   
--   Alguns necessários faltam elementos (por exemplo, timestamp ausente ou bloquear os dados criptografados) da mensagem.  
+-   Alguns necessários elementos (por exemplo, carimbo de hora ausente ou bloquear os dados criptografados) estão ausentes da mensagem.  
   
 -   Ocorreram erros durante o handshake TLSNEGO/SPNEGO.  
   
- Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir:  
+ Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir:  
   
  (N1-N0)/((D1-D0)/F)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 5ab634994e3d229ae9d107bd89b667465d252056
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538484"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470886"
 ---
 # <a name="toolstrippanel-control-overview"></a>Visão geral do controle ToolStripPanel
-Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área de posicionamento e rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles pilha vertical ou horizontalmente, dependendo do <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> do <xref:System.Windows.Forms.ToolStripPanel>.  
+Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área para posicionamento e reposicionamento <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.StatusStrip> controles. Vários <xref:System.Windows.Forms.ToolStrip> controles de pilha vertical ou horizontalmente, dependendo do <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> da <xref:System.Windows.Forms.ToolStripPanel>.  
   
 ### <a name="important-toolstrippanel-members"></a>Membros importantes ToolStripPanel  
   
@@ -24,11 +24,11 @@ Um <xref:System.Windows.Forms.ToolStripPanel> fornece uma única área de posici
 |<xref:System.Windows.Forms.ToolStripPanel.Orientation%2A>|Obtém ou define um valor que indica a orientação horizontal ou vertical do <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Renderer%2A>|Obtém ou define um <xref:System.Windows.Forms.ToolStripRenderer> usado para personalizar a aparência de um <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.RenderMode%2A>|Obtém ou define os estilos de pintura a serem aplicados ao <xref:System.Windows.Forms.ToolStripPanel>.|  
-|<xref:System.Windows.Forms.ToolStripPanel.RowMargin%2A>|Obtém ou define o espaçamento, em pixels, entre a <xref:System.Windows.Forms.ToolStripPanelRow> e <xref:System.Windows.Forms.ToolStripPanel>.|  
-|<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|Obtém o <xref:System.Windows.Forms.ToolStripPanelRow> neste <xref:System.Windows.Forms.ToolStripPanel>.|  
+|<xref:System.Windows.Forms.ToolStripPanel.RowMargin%2A>|Obtém ou define o espaçamento, em pixels, entre a <xref:System.Windows.Forms.ToolStripPanelRow> e o <xref:System.Windows.Forms.ToolStripPanel>.|  
+|<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|Obtém o <xref:System.Windows.Forms.ToolStripPanelRow> desta <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|Adiciona um <xref:System.Windows.Forms.ToolStrip> a um <xref:System.Windows.Forms.ToolStripPanel>.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.ToolStripContainer>  
  <xref:System.Windows.Forms.ToolStripContentPanel>  
- [Exemplo de ToolStrip](http://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+ [Exemplo de ToolStrip](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

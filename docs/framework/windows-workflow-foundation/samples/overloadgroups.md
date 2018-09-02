@@ -2,12 +2,12 @@
 title: OverloadGroups
 ms.date: 03/30/2017
 ms.assetid: d1d547d2-f5fb-4de3-a959-ee6139a4f1ad
-ms.openlocfilehash: 489d27e05c96d3b3893052254a879d1c9d75788c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0773e76d36b25ad5485cc8912c7012815412de9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515617"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469863"
 ---
 # <a name="overloadgroups"></a>OverloadGroups
 Esse exemplo consiste em uma atividade (`CreateLocation`), que tem duas características interessantes:  
@@ -26,7 +26,7 @@ Esse exemplo consiste em uma atividade (`CreateLocation`), que tem duas caracter
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Abra o **OverloadGroups.sln** solução de exemplo [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Abra o **Overloadgroups** solução de exemplo [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
 2.  Criar e executar a solução.  
   
@@ -35,6 +35,6 @@ Esse exemplo consiste em uma atividade (`CreateLocation`), que tem duas caracter
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`

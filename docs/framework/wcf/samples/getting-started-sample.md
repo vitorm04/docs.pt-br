@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505763"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469902"
 ---
 # <a name="getting-started-sample"></a>Exemplo de introdução
-O guia de Introdução demonstra como implementar um serviço típico e um cliente típico usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básico.  
+Guia de Introdução do exemplo demonstra como implementar um serviço típico e um cliente típico usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básica.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
- O serviço descreve as operações que ele executa em um contrato de serviço que expõe publicamente como metadados. O serviço também contém o código para implementar as operações.  
+ O serviço descreve as operações que ele executa em um contrato de serviço que ele expõe publicamente como metadados. O serviço também contém o código para implementar as operações.  
   
- O cliente contém uma definição de contrato de serviço e uma classe de proxy para acessar o serviço. O código de proxy é gerado a partir de metadados de serviço usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ O cliente contém uma definição de contrato de serviço e uma classe de proxy para acessar o serviço. O código de proxy é gerado a partir de metadados de serviço usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
- Em [!INCLUDE[wv](../../../../includes/wv-md.md)], o serviço está hospedado no serviço de ativação do Windows (WAS). Em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ele é hospedado pelo Internet Information Services (IIS) e ASP.NET. Hospedar um serviço em IIS ou do WAS permite que o serviço seja ativado automaticamente quando ele é acessado pela primeira vez.  
+ Em [!INCLUDE[wv](../../../../includes/wv-md.md)], o serviço está hospedado no Windows Activation Service (WAS). Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ele é hospedado pelo Internet Information Services (IIS) e ASP.NET. Hospedar um serviço no IIS ou WAS permite que o serviço seja ativado automaticamente quando ele é acessado pela primeira vez.  
   
 > [!NOTE]
->  Se você prefere começar com um exemplo que hospeda o serviço em um aplicativo de console, em vez de IIS, consulte o [auto-host](../../../../docs/framework/wcf/samples/self-host.md) exemplo.  
+>  Se você preferir começar com um exemplo que hospeda o serviço em um aplicativo de console, em vez de IIS, consulte a [auto-hospedar](../../../../docs/framework/wcf/samples/self-host.md) exemplo.  
   
- O serviço e o cliente especificam detalhes de acesso no arquivo de configuração, que fornecem flexibilidade no momento da implantação. Isso inclui uma definição de ponto de extremidade que especifica um endereço, associação e contrato. A associação especifica os detalhes de transporte e segurança para como o serviço deve ser acessado.  
+ O serviço e o cliente especificam detalhes de acesso no arquivo de configuração, que fornecem flexibilidade no momento da implantação. Isso inclui uma definição de ponto de extremidade que especifica um endereço, ligação e contrato. A associação especifica os detalhes de transporte e segurança para como o serviço deve ser acessado.  
   
- O serviço define um comportamento de tempo de execução para publicar seus metadados.  
+ O serviço configura um comportamento de tempo de execução para publicar seus metadados.  
   
- O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pelo `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir). O cliente faz solicitações para uma operação matemática determinado e as respostas do serviço com o resultado. O serviço implementa uma `ICalculator` contrato que é definido no código a seguir.  
+ O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir). O cliente faz solicitações para uma operação matemática determinado e as respostas de serviço com o resultado. O serviço implementa um `ICalculator` contrato que é definido no código a seguir.  
   
 ```vb  
 ' Define a service contract.  
@@ -122,7 +122,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- O serviço expõe um ponto de extremidade de comunicação com o serviço, definido usando um arquivo de configuração (Web. config), conforme mostrado no seguinte exemplo de configuração.  
+ O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web. config), conforme mostrado no seguinte exemplo de configuração.  
   
 ```xaml  
 <services>  
@@ -139,11 +139,11 @@ public class CalculatorService : ICalculator
 </services>  
 ```  
   
- O serviço expõe o ponto de extremidade no endereço base fornecido pelo host do IIS ou do WAS. A associação está configurada com um padrão <xref:System.ServiceModel.WSHttpBinding>, que fornece comunicação HTTP e protocolos padrão do serviço da Web para endereçamento e segurança. O contrato é o `ICalculator` implementados pelo serviço.  
+ O serviço expõe o ponto de extremidade no endereço base fornecido pelo host do IIS ou WAS. A associação está configurada com um padrão <xref:System.ServiceModel.WSHttpBinding>, que fornece comunicação HTTP e protocolos padrão do serviço da Web para endereçamento e segurança. O contrato é o `ICalculator` implementadas pelo serviço.  
   
- Conforme configurado, o serviço pode ser acessado em http://localhost/servicemodelsamples/service.svc por um cliente no mesmo computador. Para clientes de acesso remoto computersto o serviço, um nome de domínio totalmente qualificado deve ser especificado em vez de localhost.  
+ Conforme configurado, o serviço pode ser acessado em http://localhost/servicemodelsamples/service.svc por um cliente no mesmo computador. Para clientes de acesso remoto computersto o serviço, um nome de domínio totalmente qualificado deve ser especificado em vez do localhost.  
   
- A estrutura não expõem metadados por padrão. Como tal, o serviço ativa o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e expõe um ponto de extremidade do exchange (MEX) de metadados em http://localhost/servicemodelsamples/service.svc/mex. A configuração a seguir demonstra isso.  
+ A estrutura não expõem metadados por padrão. Como tal, ativa o serviço do <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e expõe um ponto de extremidade do exchange (MEX) de metadados em http://localhost/servicemodelsamples/service.svc/mex. A configuração a seguir demonstra isso.  
   
 ```xaml  
 <system.serviceModel>  
@@ -173,19 +173,19 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- O cliente se comunica usando um tipo de dado contrato usando uma classe cliente gerada pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Esse cliente gerado está contido no arquivo generatedClient.cs ou generatedClient.vb. Esse utilitário recupera metadados para um determinado serviço e gera um cliente para uso pelo aplicativo cliente para se comunicar usando um tipo de dado contrato. O serviço hospedado deve estar disponível para gerar o código de cliente, porque o serviço é usado para recuperar os metadados atualizados.  
+ O cliente se comunica usando um tipo de contrato fornecida por meio de uma classe de cliente que é gerada pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Esse cliente gerado está contido no arquivo generatedClient.cs ou generatedClient.vb. Esse utilitário recupera metadados para um determinado serviço e gera um cliente para uso pelo aplicativo cliente para se comunicar usando um tipo de contrato indicado. O serviço hospedado deve estar disponível para gerar o código do cliente, porque o serviço é usado para recuperar os metadados atualizados.  
   
- Execute o seguinte comando no prompt de comando do SDK no diretório do cliente para gerar o proxy do tipo:  
+ Execute o seguinte comando no prompt de comando do SDK no diretório do cliente para gerar o proxy tipado:  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
 ```  
   
- Para gerar o cliente no Visual Basic digite o seguinte no prompt de comando do SDK:  
+ Para gerar o cliente no tipo de Visual Basic a seguir no prompt de comando do SDK:  
   
  `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`  
   
- Usando o cliente gerado, o cliente pode acessar um ponto de extremidade do serviço em questão, configurando o endereço apropriado e associação. Como o serviço, o cliente usa um arquivo de configuração (App. config) para especificar o ponto de extremidade com o qual deseja se comunicar. A configuração do ponto de extremidade cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato, conforme mostrado no exemplo a seguir.  
+ Usando o cliente gerado, o cliente pode acessar um ponto de extremidade de serviço em questão, configurando o endereço apropriado e associação. Como o serviço, o cliente usa um arquivo de configuração (App. config) para especificar o ponto de extremidade com o qual deseja se comunicar. A configuração do ponto de extremidade cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e contrato, conforme mostrado no exemplo a seguir.  
   
 ```xaml  
 <client>  
@@ -196,7 +196,7 @@ svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
 </client>  
 ```  
   
- A implementação do cliente cria uma instância do cliente e usa a interface do tipo para começar a se comunicar com o serviço, conforme mostrado no código de exemplo a seguir.  
+ A implementação do cliente cria uma instância de cliente e usa a interface digitada para começar a se comunicar com o serviço, conforme mostrado no código de exemplo a seguir.  
   
 ```vb  
 ' Create a client  
@@ -261,7 +261,7 @@ Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 client.Close();  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -272,13 +272,13 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- O exemplo de introdução mostra o modo padrão para criar um serviço e cliente. O outro [básica](../../../../docs/framework/wcf/samples/basic-sample.md) criar este exemplo para demonstrar os recursos de produto específico.  
+ O exemplo de introdução mostra o modo padrão para criar um serviço e cliente. A outra [básica](../../../../docs/framework/wcf/samples/basic-sample.md) expandir esse exemplo para demonstrar os recursos de produto específico.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

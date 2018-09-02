@@ -1,13 +1,13 @@
 ---
 title: Referência de símbolos e operadores (F#)
-description: 'Saiba mais sobre os símbolos e operadores que são usados em F # linguagem de programação.'
+description: 'Saiba mais sobre os símbolos e operadores que são usados na linguagem de programação F #.'
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566698"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457194"
 ---
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores
 
@@ -29,7 +29,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`$`|Não há mais informações disponíveis.|<ul><li>Usado internamente para determinados nomes de variáveis e de funções gerados pelo compilador.<br /></li><ul/>|
 |`%`|[Operadores Aritméticos](arithmetic-operators.md)<br /><br />[Citações de Código](../code-quotations.md)|<ul><li>Calcula o resto inteiro.<br /></li><li>Usado para união de expressões em cotações de códigos digitados.<br /></li><ul/>|
 |`%%`|[Citações de Código](../code-quotations.md)|<ul><li>Usado para união de expressões em cotações de códigos não digitados.<br /></li><ul/>|
-|`%?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula o resto inteiro, quando o lado direito é um tipo anulável.<br /></li><ul/>|
+|`%?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula o resto inteiro, quando o lado direito for um tipo anulável.<br /></li><ul/>|
 |`&`|[Expressões Match](../match-expressions.md)|<ul><li>Calcula o endereço de um valor mutável, para uso ao interoperar com outros idiomas.<br /></li><li>Usado em padrões AND.<br /></li><ul/>|
 |`&&`|[Operadores Boolianos](boolean-operators.md)|<ul><li>Calcula a operação AND booleana.<br /></li><ul/>|
 |`&&&`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Calcula a operação AND bit a bit.<br /></li><ul/>|
@@ -82,10 +82,10 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`=?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "igual", quando o lado direito for um tipo que permite valor nulo.<br /></li><ul/>|
 |`==`|Não aplicável.|<ul><li>Não é usada em F#. Use `=` para operações de igualdade.<br /></li><ul/>|
 |`>`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo for maior que o lado direito; caso contrário, retorna `false`.<br /></li><ul/>|
-|`>?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior que", quando o lado direito for um tipo que permite valor nulo.<br /></li><ul/>|
+|`>?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior que" quando o lado direito for um tipo anulável.<br /></li><ul/>|
 |`>>`|[Funções](../functions/index.md)|<ul><li>Compõe duas funções (operador de composição direta).<br /></li><ul/>|
 |`>>>`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Desloca bits na quantidade no lado esquerdo para a direita pelo número de casas especificado no lado direito.<br /></li><ul/>|
-|`>=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo é maior que ou igual à direita; caso contrário, retornará `false`.<br /></li><ul/>|
+|`>=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo for maior que ou igual ao lado direito; caso contrário, retornará `false`.<br /></li><ul/>|
 |`>=?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior ou igual a", quando o lado direito for um tipo que permite valor nulo.<br /></li><ul/>|
 |`?`|[Parâmetros e Argumentos](../parameters-and-arguments.md)|<ul><li>Especifica um argumento opcional.<br /></li><li>Usado como um operador de chamadas de método e propriedade dinâmicas. Você deve fornecer sua própria implementação.<br /></li><ul/>|
 |`? ... <- ...`|Não há mais informações disponíveis.|<ul><li>Usado como um operador de propriedades de configuração dinâmica. Você deve fornecer sua própria implementação.<br /></li><ul/>|
@@ -139,7 +139,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`*`*op*, `/`*op*, `%`*op*|Esquerda|
 |`**`*op*|Direita|
 |`f x` (aplicativo de função)|Esquerda|
-|<code>&#124;</code> (correspondência de padrão)|Direita|
+|<code>&#124;</code> (correspondência padrão)|Direita|
 |operadores de prefixo (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Esquerda|
 |`.`|Esquerda |
 |`f(x)`|Esquerda|

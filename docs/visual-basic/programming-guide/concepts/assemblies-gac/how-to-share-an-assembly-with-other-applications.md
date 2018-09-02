@@ -2,12 +2,12 @@
 title: 'Como: compartilhar um Assembly com outros aplicativos (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: 3a6a04a3aef5430eb65d0c1a7eb37f6afb9e5c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642827"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466470"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Como: compartilhar um Assembly com outros aplicativos (Visual Basic)
 Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria dos programas simples consistem em um assembly particular porque eles não se destinam a serem usados por outros aplicativos.  
@@ -24,7 +24,7 @@ Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria d
   
 4.  Adicione o assembly no cache de assembly global. Para obter mais informações, consulte [Como instalar um assembly no cache de assembly global](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Acesse, de outros aplicativos, os tipos contidos no assembly. Para obter mais informações, consulte [Como referenciar um assembly de nome forte](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Acesse, de outros aplicativos, os tipos contidos no assembly. Para obter mais informações, consulte [Como referenciar um assembly de nome forte](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos de programação](../../../../visual-basic/programming-guide/concepts/index.md) [Assemblies e Cache de Assembly Global (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  

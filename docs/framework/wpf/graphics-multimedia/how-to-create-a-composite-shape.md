@@ -9,15 +9,15 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-ms.openlocfilehash: 6bb2a8a32938682af52343b971b840dbed16bcef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9892120d13a067586dbf6472a6873b6a52c2d8b4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559959"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457077"
 ---
 # <a name="how-to-create-a-composite-shape"></a>Como criar uma forma composta
-Este exemplo mostra como criar formas compostas utilizando <xref:System.Windows.Media.Geometry> objetos e exibi-los usando um <xref:System.Windows.Shapes.Path> elemento. No exemplo a seguir, uma <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>e um <xref:System.Windows.Media.RectangleGeometry> são usados com um <xref:System.Windows.Media.GeometryGroup> para criar uma forma de composição. As geometrias são então desenhadas utilizando um <xref:System.Windows.Shapes.Path> elemento.  
+Este exemplo mostra como criar formas compostas usando <xref:System.Windows.Media.Geometry> objetos e exibi-los usando um <xref:System.Windows.Shapes.Path> elemento. No exemplo a seguir, uma <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.EllipseGeometry>e um <xref:System.Windows.Media.RectangleGeometry> são usados com um <xref:System.Windows.Media.GeometryGroup> para criar uma forma composta. As geometrias são desenhadas usando um <xref:System.Windows.Shapes.Path> elemento.  
   
 ## <a name="example"></a>Exemplo  
  [!code-xaml[GeometrySample#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/combininggeometriesexample.xaml#19)]  
@@ -30,6 +30,6 @@ Este exemplo mostra como criar formas compostas utilizando <xref:System.Windows.
  ![Uma geometria composta criada com um GeometryGroup](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-compositegeometryexample1.jpg "wcpsdk_graphicsmm_compositegeometryexample1")  
 Geometria composta  
   
- Formas mais complexas, como polígonos e formas com segmentos curvos, podem ser criadas utilizando um <xref:System.Windows.Media.PathGeometry>. Para obter um exemplo mostrando como criar uma forma usando uma <xref:System.Windows.Media.PathGeometry>, consulte [criar uma forma usando um PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  Embora este exemplo renderize uma forma na tela utilizando um <xref:System.Windows.Shapes.Path> elemento <xref:System.Windows.Media.Geometry> objetos também podem ser usados para descrever o conteúdo de um <xref:System.Windows.Media.GeometryDrawing> ou <xref:System.Windows.Media.DrawingContext>. Eles também podem ser usados para recortes e testes de clique.  
+ Formas mais complexas, como polígonos e formas com segmentos curvos, podem ser criadas usando um <xref:System.Windows.Media.PathGeometry>. Para obter um exemplo que mostra como criar uma forma usando um <xref:System.Windows.Media.PathGeometry>, consulte [criar uma forma usando um PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  Embora este exemplo renderize uma forma para a tela usando um <xref:System.Windows.Shapes.Path> elemento, <xref:System.Windows.Media.Geometry> objetos também podem ser usados para descrever o conteúdo de um <xref:System.Windows.Media.GeometryDrawing> ou um <xref:System.Windows.Media.DrawingContext>. Eles também podem ser usados para recortes e testes de clique.  
   
- Este exemplo faz parte de um exemplo maior; para ver o exemplo completo, confira o [Exemplo de geometrias](http://go.microsoft.com/fwlink/?LinkID=159989).
+ Este exemplo faz parte de um exemplo maior; para ver o exemplo completo, confira o [Exemplo de geometrias](https://go.microsoft.com/fwlink/?LinkID=159989).

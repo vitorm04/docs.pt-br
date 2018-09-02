@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c517fe7736fd19fd93926d79ae5709b049adad1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747939"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465610"
 ---
 # <a name="runtime-settings-schema"></a>Esquema de configurações do tempo de execução
 As configurações de tempo de execução são usadas pelo Common Language Runtime para configurar os aplicativos direcionados ao .NET Framework.  
@@ -133,5 +133,5 @@ As configurações de tempo de execução são usadas pelo Common Language Runti
   
 ## <a name="see-also"></a>Consulte também  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Como: desabilitar a coleta de lixo simultânea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Como: desabilitar a coleta de lixo simultânea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

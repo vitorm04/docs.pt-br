@@ -2,15 +2,15 @@
 title: 'Passo a passo: Geração SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766316"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472066"
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
-Este tópico ilustra como geração SQL ocorre no [provedor exemplo](http://go.microsoft.com/fwlink/?LinkId=180616). A seguinte consulta SQL Entity usa o modelo que está incluído com o provedor exemplo:  
+Este tópico ilustra como a geração de SQL ocorre na [provedor de exemplo](https://go.microsoft.com/fwlink/?LinkId=180616). A seguinte consulta SQL Entity usa o modelo que está incluído com o provedor exemplo:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -112,7 +112,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Quando o nó de projeto é visitado, VisitInputExpression é chamado sobre sua entrada (Join4), que causa a visitar de Join4 pelo método VisitJoinExpression. Porque este é um nível superior, se associa os retornos de IsParentAJoin e falsos um novo SqlSelectStatement (SelectStatement0) é criado e empurrado na pilha da declaração SELECT. Além disso, um novo escopo (scope0) é inserido na tabela de símbolo. Antes que a primeira entrada (deixada) do join foi visitada, “true” é empurrado na pilha de IsParentAJoin. Right before Join1, que é a entrada esquerda de Join4, é visitado, o estado do visitante é conforme mostrado na figura a seguir.  
   
- ![Diagrama de](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
+ ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/406d4f5f-6166-44ea-8e74-c5001d5d5d79.gif "406d4f5f-6166-44ea-8e74-c5001d5d5d79")  
   
  Quando o método de visita de associação é chamado sobre Join4, IsParentAJoin é true, então reutiliza a instrução select SelectStatement0 atuais. Um novo escopo é inserido (scope1). Antes de visitar seu filho esquerdo, Extent1, outro verdadeiro é empurrado na pilha de IsParentAJoin.  
   
@@ -126,7 +126,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- “False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. O Var (Extenent1) é resolvido <para symbol_Extent1> após pesquisa na tabela de símbolo. Porque a instância é resolvida para um símbolo simple, como resultado do processamento Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"será retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.  
+ “False” seguir é empurrado na pilha de IsParentAJoin e == o Var de Var de condição de adição (Extent1) .CategoryID (Extent2) .CategoryID é processado. O Var (Extenent1) é resolvido <para symbol_Extent1> após pesquisa na tabela de símbolo. Porque a instância é resolvida para um símbolo simples, como resultado de processar Var(Extent1). CategoryID, um SqlBuilder com \<symbol1 >. " CategoryID"é retornado. O outro lado de comparação é processado mesma forma, e o resultado de visitar a condição de associação é acrescentado à cláusula de SelectStatement1 e o valor “false” é aparecido a pilha de IsParentAJoin.  
   
  Com isso, Join1 foi processado completamente, e um escopo é aparecido da tabela de símbolo.  
   
@@ -150,7 +150,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Considere como “Var (Join2). Extent4.OrderID” é visitado. Primeiro, a propriedade “Var de instância (Join2). Extent4” é visitado, que é um outro DbPropertyExpression e está visitando seu instância Var Join2 (“”). Na parte superior a maioria de escopo na tabela de símbolo, “Join2” resolve <a joinSymbol_join2>. No método de visita para o processamento “Var de DbPropertyExpression (Join2). ” Aviso Extent4 que um símbolo do join foi retornada a visitar a instância e para ajuste é necessário.  
   
- Desde que está aninhado joins, nós pesquisamos a propriedade “Extent4” no dicionário de NameToExtent de símbolo de adição, resolvê-lo a <symbol_Extent4> e retornar um novo SymbolPair(<joinSymbol_join2>, <symbol_Extent4>). Como um par de símbolo é retornado de processamento de instância de “Var (Join2). Extent4.OrderID”, a propriedade “OrderID” é resolvido de ColumnPart do controle do símbolo (<symbol_Extent4>), que tenha uma lista de colunas de extensão que representa. Assim, “Var (Join2). Extent4.OrderID” é resolvido { <joinSymbol_Join2>, “. ”, <symbol_OrderID>}.  
+ Desde que está aninhado joins, nós pesquisamos a propriedade “Extent4” no dicionário de NameToExtent de símbolo de adição, resolvê-lo <a> symbol_Extent4 e retornar um novo SymbolPair (<joinSymbol_join2>, <symbol_Extent4>). Como um par de símbolo é retornado de processamento de instância de “Var (Join2). Extent4.OrderID”, a propriedade “OrderID” é resolvido de ColumnPart do controle do símbolo (<symbol_Extent4>), que tenha uma lista de colunas de extensão que representa. Assim, “Var (Join2). Extent4.OrderID” é resolvido { <joinSymbol_Join2>, “. ”, <symbol_OrderID>}.  
   
  A condição de adição de Join4 é processada da mesma forma. O controle retorna para o método de VisitInputExpression que processou a parte superior a maioria de projeto. Examinando o FromExtents de SelectStatement0 retornado, a entrada é identificada como uma união, e remove as extensões originais e substituir-las com uma nova extensão com apenas o símbolo do join. A tabela de símbolo é atualizada e também a parte da projeção de Projeto é processada em seguida. Resolver propriedades e ajuste das extensões do join são como descrito anteriormente.  
   

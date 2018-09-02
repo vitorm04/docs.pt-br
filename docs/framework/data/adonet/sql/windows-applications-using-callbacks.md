@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457015"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicativos do Windows usando retornos de chamada
-Na maioria dos cenários de processamento assíncrono, que você deseja iniciar uma operação de banco de dados e continuar a outros processos em execução sem aguardar a conclusão da operação de banco de dados. No entanto, muitos cenários exigem fazer alguma coisa depois que a operação de banco de dados foi encerrada. Em um aplicativo do Windows, por exemplo, você talvez queira delegar a operação de longa execução a um thread em segundo plano enquanto permite que o thread de interface do usuário continuar responsiva. No entanto, quando a operação de banco de dados for concluída, você deseja usar os resultados para preencher o formulário. Esse tipo de cenário é implementado da melhor forma com um retorno de chamada.  
+Na maioria dos cenários de processamento assíncrono, você deseja iniciar uma operação de banco de dados e continuar a outros processos em execução sem aguardar a conclusão da operação de banco de dados. No entanto, muitos cenários exigem fazendo algo depois que a operação de banco de dados foi encerrada. Em um aplicativo do Windows, por exemplo, você talvez queira delegar a operação de longa execução a um thread em segundo plano, permitindo que o thread da interface do usuário continuar responsiva. No entanto, quando a operação de banco de dados for concluída, você deseja usar os resultados para preencher o formulário. Esse tipo de cenário é implementado da melhor forma com um retorno de chamada.  
   
- Você define um retorno de chamada, especificando um <xref:System.AsyncCallback> delegar no <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, ou <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> método. O representante é chamado quando a operação for concluída. Você pode passar uma referência para o representante a <xref:System.Data.SqlClient.SqlCommand> em si, tornando fácil acesso a <xref:System.Data.SqlClient.SqlCommand> de objeto e chamar o `End` método sem precisar usar uma variável global.  
+ Definir um retorno de chamada, especificando um <xref:System.AsyncCallback> delegada na <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, ou <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> método. O delegado é chamado quando a operação for concluída. Você pode passar uma referência para o delegado a <xref:System.Data.SqlClient.SqlCommand> propriamente dito, facilitando o acesso a <xref:System.Data.SqlClient.SqlCommand> do objeto e chamar o `End` método sem precisar usar uma variável global.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo de Windows a seguir demonstra o uso do <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> método, executar uma instrução Transact-SQL que inclui um atraso de alguns segundos (emulando um comando de execução longa).  
+ O aplicativo Windows a seguir demonstra o uso do <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> método, executando uma instrução Transact-SQL que inclui um atraso de alguns segundos (emulando um comando de execução longa).  
   
- Este exemplo demonstra várias técnicas importantes, incluindo chamando um método que interage com o formulário de um thread separado. Além disso, este exemplo demonstra como você deve impedir que usuários simultaneamente executando um comando várias vezes, e como você deve garantir que o formulário não fechado antes do procedimento de retorno de chamada é chamado.  
+ Este exemplo demonstra várias técnicas importantes, inclusive chamar um método que interage com o formulário de um thread separado. Além disso, este exemplo demonstra como você deve impedir que os usuários ao mesmo tempo executando um comando várias vezes, e como você deve garantir que o formulário não fecha antes do procedimento de retorno de chamada é chamado.  
   
  Para configurar este exemplo, crie um novo aplicativo do Windows. Coloque um <xref:System.Windows.Forms.Button> controle e dois <xref:System.Windows.Forms.Label> controles no formulário (aceitar o nome padrão para cada controle). Adicione o seguinte código à classe do formulário, modificando a cadeia de caracteres de conexão conforme necessário para seu ambiente.  
   
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Consulte também  
  [Operações assíncronas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

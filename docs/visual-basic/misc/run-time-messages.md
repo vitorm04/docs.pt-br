@@ -5,12 +5,12 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: de291aebe3bef156dab414635c3cb2c00a2300f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce61401dec875ac1dea01e1e5a892d06974a3d36
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644453"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463500"
 ---
 # <a name="visual-basic-run-time-messages"></a>Mensagens de tempo de execução do Visual Basic
 Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo de execução.  
@@ -27,7 +27,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Não foi especificado um formulário de inicialização](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
- [Acesso negado a '\<nome >'](../../visual-basic/misc/access-denied-to-name.md)  
+ [Acesso negado para '\<nome >'](../../visual-basic/misc/access-denied-to-name.md)  
   
  [Falha na adição. Valor de chave duplicado fornecido](../../visual-basic/misc/add-failed-duplicate-key-value-supplied.md)  
   
@@ -75,9 +75,9 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Argumento '\<argumentname >' deve estar no intervalo de -32768 a 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [Argumento '\<argumentname >' deve estar no intervalo de 0 a 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [Argumento '\<argumentname >' deve estar dentro do intervalo de 0 a 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Argumento '\<argumentname >' deve estar no intervalo de 1 a 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [Argumento '\<argumentname >' deve estar dentro do intervalo de 1 a 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
  [Argumento '\<argumentname1 >' deve ser menor ou igual o comprimento do argumento '\<argumentname2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
@@ -145,7 +145,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Não é possível converter o valor inicial do tipo '\<type1 >' e o incremento do tipo '\<type2 >' em um tipo comum](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Não é possível converter o valor inicial do tipo '\<type1 >', valor limite de '\<type2 >' e incremento de '\<Tipo3 >' em um tipo comum](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [Não é possível converter o valor inicial do tipo '\<type1 >', valor limite de '\<type2 >' e o valor de step de '\<type3 >' em um tipo comum](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [Não é possível criar o componente ActiveX](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -165,7 +165,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Converter do tipo '\<typename1 >' no tipo '\<typename2 >' não é válido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [Classe\<classname >' não implementa a interface Collections](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ [Classe\<classname >' não implementa a interface System.Collections.ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
  [A classe não dá suporte à automação ou à interface esperada](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
@@ -211,7 +211,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [O número do erro deve estar entre o intervalo 0-65535](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [Expressão '\<nome >' não é um procedimento, mas ocorre como o destino de uma chamada de procedimento](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [Expressão '\<nome >' não é um procedimento, mas ocorre quando o destino de uma chamada de procedimento](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
  [Expressão muito complexa](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
@@ -221,7 +221,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Arquivo '\<filename >' não pode ser excluído porque ele está aberto](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [Arquivo '\<filename >' é protegido contra gravação](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [Arquivo '\<filename >' está protegido contra gravação](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
  [Arquivo '\<filename >' não encontrado](../../visual-basic/misc/file-filename-not-found.md)  
   
@@ -241,7 +241,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [O arquivo é muito grande para ser lido em um array de bytes](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [Nome de arquivo ou classe não encontrado durante operação de automação (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [Nome do arquivo ou nome de classe não encontrado durante a operação de automação (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [Arquivo não localizado (erro em tempo de execução do Visual Basic)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -269,7 +269,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Erro interno (Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [Erro interno ocorreu em \<local >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [Erro interno ocorrido em \<local >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Erro interno no tempo de execução do Microsoft Visual Basic](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -281,13 +281,13 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Comprimento do argumento '\<argumentname >' deve ser maior que zero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [Linha \<número > não pode ser analisada usando Delimiters atuais](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [Linha \<número > não pode ser analisada usando os Delimiters atuais](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
  [Linha \<número > não pode ser analisada usando FieldWidths atual](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [Linha \<número > não pode ser lido porque ele excede o tamanho máximo da linha.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [Linha \<número > não pode ser lido porque excede o tamanho máximo da linha.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
- [ID de localidade '\<nome >' não tem suporte neste sistema](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
+ [Identificação de localidade '\<nome >' não tem suporte neste sistema](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
  [Variável de controle de loop do tipo '\<typename >' não implementa a interface 'System. IComparable'](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
@@ -309,9 +309,9 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Índice da matriz de propriedade necessário](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão de restrição](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão redutora](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão de restrição: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão redutora: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
  [Não acessível '\<methodname >' pode ser chamado com estes argumentos sem uma conversão de ampliação: \<lista >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
@@ -355,7 +355,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Sem memória (erro em tempo de execução do Visual Basic)](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
- [Sem espaço de pilha (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
+ [Sem espaço na pilha (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
  [Sem espaço de cadeia de caracteres (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
@@ -365,7 +365,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Demarcador não localizado](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
- [Erro de acesso caminho/arquivo](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
+ [Erro de acesso do caminho/arquivo](../../visual-basic/language-reference/error-messages/path-file-access-error.md)  
   
  [Permissão negada (Visual Basic)](../../visual-basic/language-reference/error-messages/permission-denied.md)  
   
@@ -375,7 +375,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [Chamada de procedimento ou argumento não é válido (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [Processo\<processname >' não foi encontrado](../../visual-basic/misc/process-processname-was-not-found.md)  
+ [Processo de\<processname >' não foi encontrado](../../visual-basic/misc/process-processname-was-not-found.md)  
   
  [Propriedade \<propertyname > não pode ser definido como uma cadeia de caracteres vazia ou Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
@@ -453,7 +453,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [TargetFilePath especifica uma pasta existente](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
   
- [TextFieldParser não dá suporte a símbolos de comentário que contêm espaço em branco](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
+ [TextFieldParser não dá suporte a tokens de comentário que contêm espaços em branco](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
   
  [TextFieldParser não dá suporte a delimitadores que contenham caracteres de final de linha](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
@@ -489,7 +489,7 @@ Esta seção contém as mensagens de erro do Visual Basic que ocorrem em tempo d
   
  [O valor de \<argumentname > deve ser maior que ou igual a 1000](../../visual-basic/misc/the-value-of-argumentname-must-be-greater-than-or-equal-to-1000.md)  
   
- [Esta matriz é fixa ou está temporariamente bloqueada (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
+ [Essa matriz é fixa ou está temporariamente bloqueada (Visual Basic)](../../visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md)  
   
  [Esta chave já está associada a um elemento desta coleção](../../visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md)  
   

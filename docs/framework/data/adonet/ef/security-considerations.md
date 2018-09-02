@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 337424395186532969734e0977ea111d8995a154
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766615"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456838"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -27,7 +27,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  Durante a operação de logon, as informações baseadas na senha do usuário são passadas para o servidor através das bibliotecas de rede da fonte de dados subjacente. Um provedor mal-intencionado pode roubar credenciais do usuário, gerar consultas mal-intencionadas ou violar o conjunto de resultados.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Criptografe sua conexão para proteger dados confidenciais.  
- O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não trata diretamente da criptografia de dados. Se os usuários acessam dados por uma rede pública, seu aplicativo deve estabelecer uma conexão criptografada com a fonte de dados para aumentar a segurança. Para obter mais informações, consulte a documentação relacionada à segurança da sua fonte de dados. Para uma fonte de dados do SQL Server, consulte [criptografando conexões com o SQL Server](http://go.microsoft.com/fwlink/?LinkId=119544).  
+ O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não trata diretamente da criptografia de dados. Se os usuários acessam dados por uma rede pública, seu aplicativo deve estabelecer uma conexão criptografada com a fonte de dados para aumentar a segurança. Para obter mais informações, consulte a documentação relacionada à segurança da sua fonte de dados. Para uma fonte de dados do SQL Server, consulte [criptografando conexões com o SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
 #### <a name="secure-the-connection-string"></a>Proteja a cadeia de conexão.  
  A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão é potencialmente vulnerável caso não esteja protegida ou se tiver sido construída incorretamente. Quando você armazena informações de conexão em texto sem formatação ou persiste essas informações na memória, corre o risco de comprometer seu sistema inteiro. Os seguintes métodos são recomendados para proteger cadeias de conexão:  
@@ -38,7 +38,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
 -   Criptografar seções de arquivos de configuração usando configuração protegida.  
   
-     O ASP.NET fornece um recurso chamado configuração protegida que permite criptografar informações confidenciais em um arquivo de configuração. Embora esse recurso tenha sido basicamente projetado para ASP.NET, você também pode usá-lo para criptografar seções de arquivos de configuração em aplicativos do Windows. Para obter uma descrição detalhada dos novos recursos de configuração protegida, consulte [Criptografando informações de configuração usando configuração protegida](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     O ASP.NET fornece um recurso chamado configuração protegida que permite criptografar informações confidenciais em um arquivo de configuração. Embora esse recurso tenha sido basicamente projetado para ASP.NET, você também pode usá-lo para criptografar seções de arquivos de configuração em aplicativos do Windows. Para obter uma descrição detalhada dos novos recursos de configuração protegida, consulte [Criptografando informações de configuração usando configuração protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
   
 -   Armazenar cadeias de conexão em arquivos de configuração protegida.  
   
@@ -46,7 +46,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
 -   Usar construtores de cadeias de conexão para criar conexões dinamicamente.  
   
-     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, consulte [como: criar uma cadeia de caracteres de Conexão EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Também use a classe do construtor de cadeia de caracteres apropriada para construir a cadeia de conexão de fonte de dados que faz parte do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadeia de caracteres de conexão. Para obter informações sobre os construtores de cadeia de conexão para os provedores ADO.NET, consulte [construtores de cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, consulte [como: criar uma cadeia de caracteres de Conexão EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Também usar a classe de construtor de cadeia de caracteres apropriada para construir a cadeia de conexão de fonte de dados que faz parte do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadeia de caracteres de conexão. Para obter informações sobre construtores de cadeia de caracteres de conexão para provedores ADO.NET, consulte [construtores de cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Para obter mais informações, consulte [Protegendo informações de conexão](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -73,7 +73,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> para serializar exceções usando a interface <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Permissão para abrir uma conexão de banco de dados e executar comandos no banco de dados, como <xref:System.Data.SqlClient.SqlClientPermission> para um banco de dados do SQL Server.  
+-   Permissão para abrir uma conexão de banco de dados e executar comandos no banco de dados, tais como <xref:System.Data.SqlClient.SqlClientPermission> para um banco de dados do SQL Server.  
   
  Para obter mais informações, consulte [Segurança de acesso do código e ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -81,7 +81,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não impõe permissões de segurança e invoca qualquer código de objeto de dados fornecido pelo usuário no processo, independentemente de ser ou não confiável. Verifique se a autenticação e a autorização do cliente são executadas pelo repositório de dados e por seu aplicativo.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Restrinja o acesso a todos os arquivos de configuração.  
- Um administrador deve restringir o acesso de gravação a todos os arquivos que especificam a configuração de um aplicativo, incluindo Enterprisesec, config, machine.conf, e o arquivo de configuração do aplicativo \< *aplicativo* >. exe.  
+ Um administrador deve restringir o acesso de gravação para o arquivo de configuração de aplicativo e de todos os arquivos que especificam a configuração de um aplicativo, incluindo Enterprisesec. config, Security. config, Machine. conf \< *aplicativo* >. exe.  
   
  O nome invariável do provedor pode ser modificado no arquivo app.config. O aplicativo cliente deve assumir a responsabilidade de acessar o provedor subjacente por meio do modelo padrão de fábrica do provedor usando um nome forte.  
   
@@ -98,11 +98,11 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
      Os ataques de injeção de SQL podem ser executados em [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornecendo entrada mal-intencionada para valores que são usados em um predicado de consulta e em nomes de parâmetro. Para evitar o risco de injeção de SQL, você nunca deve combinar a entrada do usuário com o texto de comando de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas em vez de literais insira de um agente externo diretamente na consulta. Você também deve considerar usando métodos do construtor de consulta para construir com segurança [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     As consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceitam parâmetros em todas as partes onde literais são aceitos. Você deve usar consultas parametrizadas, em vez de injetar literais de um agente externo diretamente na consulta. Você também deve considerar usar métodos do construtor de consulta para construir com segurança [Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Ataques de injeção de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
   
-     Embora a composição de consulta é possível no [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], ela é realizada por meio da API do modelo de objeto. Ao contrário de [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] consultas não são compostas por meio de manipulação de cadeia de caracteres ou concatenação, e não são suscetíveis a ataques de injeção de SQL tradicionais.  
+     Embora a composição de consultas seja possível em [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], ela é executada por meio da API de modelo de objeto. Diferentemente [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] consultas não são compostas por meio da manipulação de cadeia de caracteres ou concatenação, e eles não são suscetíveis a tradicionais ataques de injeção de SQL.  
   
 #### <a name="prevent-very-large-result-sets"></a>Evite conjuntos de resultados muito grandes.  
  Um conjunto de resultados muito grande pode fazer com que o sistema cliente seja desligado se o cliente estiver executando operações que consomem recursos proporcionais ao tamanho do conjunto de resultados. Conjuntos de resultados inesperadamente grandes podem ocorrer nas seguintes condições:  
@@ -113,7 +113,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
 -   Em consultas [!INCLUDE[esql](../../../../../includes/esql-md.md)] aninhadas.  
   
- Ao aceitar a entrada do usuário, verifique se a entrada não pode fazer com que os conjuntos de resultados se tornem maiores do que o sistema pode manipular. Você também pode usar o <xref:System.Linq.Queryable.Take%2A> método [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ou [limite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operador em [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar o tamanho do conjunto de resultados.  
+ Ao aceitar a entrada do usuário, verifique se a entrada não pode fazer com que os conjuntos de resultados se tornem maiores do que o sistema pode manipular. Você também pode usar o <xref:System.Linq.Queryable.Take%2A> método no [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ou o [limite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operador em [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar o tamanho do conjunto de resultados.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Evite retornar resultados IQueryable ao expor métodos a chamadores potencialmente não confiáveis.  
  Evite retornar tipos <xref:System.Linq.IQueryable%601> de métodos expostos a chamadores potencialmente não confiáveis pelos seguintes motivos:  
@@ -132,7 +132,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  As considerações de segurança a seguir se aplicam ao gerar e trabalhar com tipos de entidade.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Não compartilhe um ObjectContext entre domínios do aplicativo.  
- O compartilhamento de um <xref:System.Data.Objects.ObjectContext> com mais de um domínio do aplicativo pode expor informações na cadeia de conexão. Em vez disso, transfira objetos serializados ou grafos de objetos para o outro domínio do aplicativo e depois anexe esses objetos a um <xref:System.Data.Objects.ObjectContext> nesse domínio do aplicativo. Para obter mais informações, consulte [serializar objetos](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ O compartilhamento de um <xref:System.Data.Objects.ObjectContext> com mais de um domínio do aplicativo pode expor informações na cadeia de conexão. Em vez disso, transfira objetos serializados ou grafos de objetos para o outro domínio do aplicativo e depois anexe esses objetos a um <xref:System.Data.Objects.ObjectContext> nesse domínio do aplicativo. Para obter mais informações, consulte [serializar objetos](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Evite violações de segurança de tipos.  
  Se a segurança de tipo for violada, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não poderá garantir a integridade dos dados em objetos. As violações de segurança de tipo podem ocorrer se você permitir que aplicativos não confiáveis sejam executados com segurança de acesso do código de confiança total.  
@@ -144,7 +144,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  O tópico a seguir deve ser considerado quando você trabalha com caminhos em aplicativos [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Confira se o host executa verificações de caminho.  
- Quando a cadeia de caracteres de substituição `|DataDirectory|` (delimitada por símbolos de pipe) é usada, o [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] verifica se há suporte para o caminho resolvido. Por exemplo, ".." não é permitido atrás de `DataDirectory`. A mesma verificação para resolver o operador raiz do aplicativo Web (`~`) é executada pelo processo que hospeda [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]. O IIS executa essa verificação; No entanto, os hosts que não seja o IIS não podem verificar se o caminho resolvido tem suporte. Você deve conhecer o comportamento do host no qual implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Quando a cadeia de caracteres de substituição `|DataDirectory|` (delimitada por símbolos de pipe) é usada, o [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] verifica se há suporte para o caminho resolvido. Por exemplo, ".." não é permitido atrás de `DataDirectory`. A mesma verificação para resolver o operador raiz do aplicativo Web (`~`) é executada pelo processo que hospeda [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]. O IIS executa essa verificação; No entanto, os hosts que não seja o IIS não podem verificar que o caminho resolvido é suportado. Você deve conhecer o comportamento do host no qual implantar um aplicativo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Não faça suposições sobre nomes de caminho resolvidos.  
  Embora os valores para os quais o operador raiz (`~`) e a cadeia de caracteres de substituição `DataDirectory` são resolvidos devam permanecer constantes durante o tempo de execução do aplicativo, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] não impede que o host modifique esses valores.  

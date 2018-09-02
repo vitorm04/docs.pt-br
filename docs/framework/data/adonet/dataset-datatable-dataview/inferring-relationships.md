@@ -1,16 +1,16 @@
 ---
-title: Inferência de relações
+title: Inferindo relações
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 9833966fa5a16bef70a6ae2b9ca618fde0e05fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759030"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470808"
 ---
-# <a name="inferring-relationships"></a>Inferência de relações
-Se um elemento que é inferido como uma tabela tem um elemento filho que também é inferido como uma tabela, um <xref:System.Data.DataRelation> será criada entre as duas tabelas. Uma nova coluna com um nome de **ParentTableName_Id** será adicionada à tabela criada para o elemento pai e a tabela criada para o elemento filho. O **ColumnMapping** definirá a propriedade desta coluna de identidade **MappingType.Hidden**. A coluna será uma chave primária de incremento automático para a tabela pai e será usada para o **DataRelation** entre as duas tabelas. O tipo de dados da coluna de identidade adicional será **System. Int32**, ao contrário do tipo de dados de todas as outras colunas deduzidos, que é **System. String**. Um <xref:System.Data.ForeignKeyConstraint> com **DeleteRule** = **Cascade** também será criado usando a nova coluna nas tabelas pai e filho.  
+# <a name="inferring-relationships"></a>Inferindo relações
+Se um elemento que é inferido como uma tabela tem um elemento filho que também é inferido como uma tabela, um <xref:System.Data.DataRelation> será criada entre as duas tabelas. Uma nova coluna com um nome de **ParentTableName_Id** será adicionado para a tabela criada para o elemento pai e a tabela criada para o elemento filho. O **ColumnMapping** propriedade desta coluna de identidade será definida como **MappingType.Hidden**. A coluna será uma chave primária de incremento automático para a tabela pai e será usada para o **DataRelation** entre as duas tabelas. O tipo de dados da coluna de identidade adicionado estará **System.Int32**, ao contrário do tipo de dados de todas as outras colunas inferidos, que é **System. String**. Um <xref:System.Data.ForeignKeyConstraint> com **DeleteRule** = **Cascade** também será criado usando a nova coluna nas tabelas pai e filho.  
   
  Por exemplo, considere o seguinte XML:  
   
@@ -25,9 +25,9 @@ Se um elemento que é inferido como uma tabela tem um elemento filho que também
   
  O processo de inferência produzirá duas tabelas: **Element1** e **ChildElement1**.  
   
- O **Element1** tabela terá duas colunas: **Element1_Id** e **ChildElement2**. O **ColumnMapping** propriedade o **Element1_Id** coluna será definida como **MappingType.Hidden**. O **ColumnMapping** propriedade o **ChildElement2** coluna será definida como **MappingType.Element**. O **Element1_Id** coluna será definida como a chave primária do **Element1** tabela.  
+ O **Element1** tabela terá duas colunas: **Element1_Id** e **ChildElement2**. O **ColumnMapping** propriedade da **Element1_Id** coluna será definida como **MappingType.Hidden**. O **ColumnMapping** propriedade da **ChildElement2** coluna será definida como **MappingType.Element**. O **Element1_Id** coluna será definida como a chave primária da **Element1** tabela.  
   
- O **ChildElement1** tabela terá três colunas: **attr1**, **attr2** e **Element1_Id**. O **ColumnMapping** propriedade para o **attr1** e **attr2** colunas serão definidas como **MappingType.Attribute**. O **ColumnMapping** propriedade o **Element1_Id** coluna será definida como **MappingType.Hidden**.  
+ O **ChildElement1** tabela terá três colunas: **attr1**, **attr2** e **Element1_Id**. O **ColumnMapping** propriedade para o **attr1** e **attr2** colunas serão definidas como **MappingType.Attribute**. O **ColumnMapping** propriedade da **Element1_Id** coluna será definida como **MappingType.Hidden**.  
   
  Um **DataRelation** e **ForeignKeyConstraint** será criado usando o **Element1_Id** colunas de ambas as tabelas.  
   
@@ -65,7 +65,7 @@ Se um elemento que é inferido como uma tabela tem um elemento filho que também
   
  **ChildTable:** ChildElement1  
   
- **DeleteRule:** em cascata  
+ **DeleteRule:** Cascade  
   
  **AcceptRejectRule:** None  
   
@@ -76,4 +76,4 @@ Se um elemento que é inferido como uma tabela tem um elemento filho que também
  [Aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

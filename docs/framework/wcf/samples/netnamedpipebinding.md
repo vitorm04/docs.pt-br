@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d07350dc8b999dfeb47dc1f61049d90a3faf874b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: d69d647b4fe4c38a0b2b355ae72cedfee6894f4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207284"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474358"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunicação entre processos no mesmo computador. Pipes nomeados não funcionam em computadores. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) serviço da Calculadora.  
+Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunicação entre processos no mesmo computador. Pipes nomeados não funcionam em computadores. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) serviço da Calculadora.  
   
- Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console.  
+ Neste exemplo, o serviço é hospedado internamente. O cliente e o serviço são aplicativos de console.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação é especificado no `binding` atributo do [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento conforme mostrado no exemplo de configuração:  
+ A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado na `binding` atributo do [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, conforme mostrado no seguinte exemplo de configuração:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -27,7 +27,7 @@ Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunic
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O exemplo anterior mostra como configurar um ponto de extremidade para usar o `netNamedPipeBinding` associação com as configurações padrão. Se você deseja configurar o `netNamedPipeBinding` de associação e alterar algumas de suas configurações, você deve definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação por nome com um `bindingConfiguration` atributo.  
+ O exemplo anterior mostra como configurar um ponto de extremidade para usar o `netNamedPipeBinding` associação com as configurações padrão. Se você quiser configurar o `netNamedPipeBinding` de associação e alterar algumas de suas configurações, você deve definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação por nome com um `bindingConfiguration` atributo.  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -36,7 +36,7 @@ Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunic
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Neste exemplo, a configuração de associação é denominada `Binding1` e tem a seguinte definição:  
+ Neste exemplo, a configuração de associação é chamada `Binding1` e tem a seguinte definição:  
   
 ```xml  
 <bindings>  
@@ -66,7 +66,7 @@ Este exemplo demonstra o `netNamedPipeBinding` associação, que fornece comunic
 </bindings>  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -79,9 +79,9 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -90,7 +90,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
   

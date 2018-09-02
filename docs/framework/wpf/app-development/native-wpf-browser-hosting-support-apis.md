@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: bff2b51fbc8fec6e7cd2b24700d1c4dc38c007f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550014"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464941"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>APIs de suporte à hospedagem de navegador do WPF nativa
 A hospedagem de aplicações [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] em navegadores da Web é facilitada por um servidor de documento ativo (também conhecido como DocObject) registrado no host WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pode ativar e integrar diretamente com um documento ativo. Para hospedar documentos XBAPs e XAML Flexível em navegadores Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] fornece um plug-in NPAPI, que oferece um ambiente de hospedagem semelhante ao [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documento ativo como faz o [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Entretanto, a maneira mais fácil de hospedar documentos XBAPs e XAML em outros navegadores e aplicativos independentes é através do controle do navegador da Web do Internet Explorer. O controle do Navegador da Web fornece o complexo ambiente de hospedagem do servidor de documento ativo, mas permite que seu próprio host personalize e amplie esse ambiente e se comunique diretamente com o servidor de documento ativo atual.  
   
- O [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documento ativo implementa várias interfaces de hospedagem comuns, incluindo [IOleObject](http://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](http://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](http://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](http://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047). Quando hospedada no controle do navegador da Web, essas interfaces podem ser consultas do objeto retornadas pela propriedade [IWebBrowser2::Document](http://go.microsoft.com/fwlink/?LinkId=162048).  
+ O [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documento ativo implementa várias interfaces de hospedagem comuns, incluindo [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Quando hospedada no controle do navegador da Web, essas interfaces podem ser consultas do objeto retornadas pela propriedade [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048).  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- A implementação do [IOleCommandTarget](http://go.microsoft.com/fwlink/?LinkId=162047) do servidor de documento ativo do WPF dá suporte a vários comandos relacionados à navegação e ao navegador do grupo de comandos OLE padrão (com um GUID de grupo de comandos nulo). Além disso, reconhece um grupo de comando personalizado chamado CGID_PresentationHost. Atualmente, só há um comando definido neste grupo.  
+ A implementação do [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) do servidor de documento ativo do WPF dá suporte a vários comandos relacionados à navegação e ao navegador do grupo de comandos OLE padrão (com um GUID de grupo de comandos nulo). Além disso, reconhece um grupo de comando personalizado chamado CGID_PresentationHost. Atualmente, só há um comando definido neste grupo.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

@@ -7,30 +7,30 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808046"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474084"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
-Este documento fornece uma visão geral da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço WCF e o cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender a programação de WCF, consulte [básicas de programação WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
+Este documento fornece uma visão geral da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço WCF e um cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender a programação de WCF, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Princípios básicos do WCF  
- O WCF é um tempo de execução e um conjunto de APIs para criar sistemas que enviam mensagens entre clientes e serviços. A mesma infraestrutura e APIs são usados para criar aplicativos que se comunicam com outros aplicativos no mesmo sistema de computador ou em um sistema que reside em outra empresa e é acessado pela Internet.  
+ WCF é um tempo de execução e um conjunto de APIs para a criação de sistemas que enviam mensagens entre serviços e clientes. A mesma infraestrutura e APIs são usados para criar aplicativos que se comunicam com outros aplicativos no mesmo sistema de computador ou em um sistema que reside em outra empresa e é acessado pela Internet.  
   
 ### <a name="messaging-and-endpoints"></a>Mensagem e pontos de extremidade  
- WCF baseia-se a noção de comunicação baseada em mensagem e tudo o que pode ser modelada como uma mensagem (por exemplo, uma solicitação HTTP ou uma mensagem de enfileiramento de mensagens (também conhecido como MSMQ)) pode ser representada de maneira uniforme no modelo de programação. Isso permite uma API unificada em mecanismos de transporte diferentes.  
+ WCF baseia-se na noção de comunicação baseada em mensagem e qualquer coisa que pode ser modelada como uma mensagem (por exemplo, uma solicitação HTTP ou uma mensagem de enfileiramento de mensagens (também conhecido como MSMQ)) pode ser representada de maneira uniforme no modelo de programação. Isso permite uma API unificada em mecanismos de transporte diferentes.  
   
- O modelo faz distinção entre *clientes*, que são aplicativos que iniciam a comunicação, e *serviços*, que são aplicativos que esperar para que os clientes se comunicam com eles e responder ao comunicação. Um único aplicativo pode atuar como um cliente e um serviço. Para obter exemplos, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md) e [rede ponto a ponto](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ O modelo faz distinção entre *clientes*, que são aplicativos que iniciam a comunicação, e *services*, que são aplicativos que esperam que os clientes para se comunicar com eles e responder a que comunicação. Um único aplicativo pode atuar como um cliente e um serviço. Para obter exemplos, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md) e [Peer-to-Peer Networking](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
- As mensagens são enviadas entre pontos de extremidade. *Pontos de extremidade* são locais onde as mensagens são enviadas ou recebidas (ou ambos), e eles definem todas as informações necessárias para a troca de mensagens. Um serviço expõe um ou mais pontos de extremidade do aplicativo (assim como zero ou mais pontos de extremidade de infraestrutura) e o cliente gera um ponto de extremidade que é compatível com um dos pontos de extremidade do serviço.  
+ As mensagens são enviadas entre pontos de extremidade. *Pontos de extremidade* são locais onde as mensagens são enviadas ou recebidas (ou ambos) e definem todas as informações necessárias para a troca de mensagens. Um serviço expõe um ou mais pontos de extremidade do aplicativo (assim como zero ou mais pontos de extremidade de infraestrutura) e o cliente gera um ponto de extremidade que é compatível com um dos pontos de extremidade do serviço.  
   
- Um *ponto de extremidade* descreve de forma baseado em padrão onde as mensagens devem ser enviadas, como eles devem ser enviados e o que devem ser a aparência de mensagens. Um serviço pode expor essas informações como metadados que os clientes podem processar para gerar apropriados clientes do WCF e comunicação *pilhas*.  
+ Uma *ponto de extremidade* descreve de maneira baseado em padrões onde as mensagens devem ser enviadas, como deve ser enviadas e o que devem ser a aparência de mensagens. Um serviço pode expor essas informações como metadados que os clientes podem processar para gerar clientes apropriados do WCF e comunicação *pilhas*.  
   
 ### <a name="communication-protocols"></a>Protocolos de comunicação  
- Um elemento necessário da pilha de comunicação está a *protocolo de transporte*. As mensagens podem ser enviados pela Internet e por intranets usando transportes comuns, como HTTP e TCP. Estão incluídos outros transportes que dão suporte à comunicação com aplicativos de Enfileiramento de Mensagens e nós em uma malha de rede par. Mais mecanismos de transporte podem ser adicionados usando os pontos de extensão interna do WCF.  
+ Um elemento necessário da pilha de comunicação é o *protocolo de transporte*. As mensagens podem ser enviados pela Internet e por intranets usando transportes comuns, como HTTP e TCP. Estão incluídos outros transportes que dão suporte à comunicação com aplicativos de Enfileiramento de Mensagens e nós em uma malha de rede par. Mais mecanismos de transporte podem ser adicionados usando os pontos de extensão internos do WCF.  
   
  Outro elemento necessário na pilha de comunicação é a codificação que especifica como qualquer mensagem determinada é formatada. O WCF fornece as seguintes codificações:  
   
@@ -40,10 +40,10 @@ Este documento fornece uma visão geral da arquitetura do Windows Communication 
   
 -   Codificação binária para a transferência eficiente.  
   
- Codificação mais mecanismos (por exemplo, uma compactação codificação) podem ser adicionados usando os pontos de extensão interna do WCF.  
+ Mais mecanismos de codificação (por exemplo, uma codificação de compactação) podem ser adicionados usando os pontos de extensão internos do WCF.  
   
 ### <a name="message-patterns"></a>Padrões de mensagem  
- O WCF dá suporte a vários padrões de mensagens, incluindo a solicitação-resposta, unidirecional e comunicação duplex. Os transportes diferentes dão suporte a padrões diferentes de mensagem e, portanto, afetam os tipos de interações que eles suportam. As APIs do WCF e o tempo de execução também ajudam a enviar mensagens de forma segura e confiável.  
+ O WCF oferece suporte a vários padrões de mensagens, incluindo a solicitação-resposta, unidirecional e comunicação duplex. Os transportes diferentes dão suporte a padrões diferentes de mensagem e, portanto, afetam os tipos de interações que eles suportam. As APIs do WCF e o tempo de execução também ajudarão-lo para enviar mensagens de maneira segura e confiável.  
   
 ## <a name="wcf-terms"></a>Termos do WCF  
  Outros conceitos e termos usados na documentação do WCF incluem o seguinte.  
@@ -128,23 +128,23 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Cliente de WCF  
  Uma construção de aplicativo cliente que expõe as operações de serviço como métodos (na linguagem de programação de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de sua escolha, como Visual Basic ou Visual C#). Qualquer aplicativo pode hospedar um cliente de WCF, incluindo um aplicativo que hospeda um serviço. Portanto, é possível criar um serviço que inclui clientes de WCF de outros serviços.  
   
- Um cliente WCF pode ser gerado automaticamente usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e apontá-lo em um serviço em execução que publica os metadados.  
+ Um cliente WCF pode ser automaticamente gerado usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) e apontá-lo em um serviço em execução que publica metadados.  
   
  metadados  
- Em um serviço, descreve as características do serviço que uma entidade externa precisa entender para se comunicar com o serviço. Metadados podem ser consumidos pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF e a configuração de acompanhamento que um aplicativo cliente pode usar para interagir com o serviço.  
+ Em um serviço, descreve as características do serviço que uma entidade externa precisa entender para se comunicar com o serviço. Os metadados podem ser consumidos pela [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar um cliente WCF e a configuração de rastreamento que um aplicativo cliente pode usar para interagir com o serviço.  
   
  Os metadados expostos pelo serviço incluem os documentos XML do esquema, que definem o contrato de dados do serviço, e os documentos WSDL, que descrevem os métodos do serviço.  
   
  Quando ativados, os metadados para o serviço são gerados automaticamente pela inspecionando o serviço e seus pontos de extremidade. Para publicar metadados de um serviço, você deverá explicitamente ativar o comportamento dos metadados.  
   
  segurança  
- No WCF, inclui confidencialidade (criptografia de mensagens para evitar a espionagem), integridade (os meios para detecção de adulteração com a mensagem), (os meios para validação de servidores e clientes) de autenticação e autorização (o controle de acesso a recursos). Essas funções são fornecidas aproveitando os mecanismos de segurança existentes, como TLS sobre HTTP (também conhecido como HTTPS), ou implementando uma ou mais das várias especificações de segurança de WS-*.  
+ No WCF, inclui confidencialidade (criptografia de mensagens para evitar bisbilhotar), integridade (os meios para detecção de violação da mensagem), (os meios para validação de servidores e clientes) de autenticação e autorização (o controle de acesso a recursos). Essas funções são fornecidas aproveitando os mecanismos de segurança existentes, como TLS sobre HTTP (também conhecido como HTTPS), ou implementando uma ou mais das várias especificações de segurança de WS-*.  
   
  modo de segurança de transporte  
  Especifica que a confidencialidade, a integridade e a autenticação são fornecidas pelos mecanismos da camada de transporte (como HTTPS). Ao usar um transporte como HTTPS, esse modo tem a vantagem de ser eficiente no desempenho, além de bem-compreendido devido à sua predominância na Internet. A desvantagem é que esse tipo de segurança é aplicado separadamente em cada salto no caminho de comunicação, tornando a comunicação suscetível a um ataque de intermediários.  
   
  modo de segurança de mensagem  
- Especifica que a segurança é fornecida com a implementação de uma ou mais das especificações de segurança, como a especificação denominado [Web Services Security: segurança de mensagens SOAP](http://go.microsoft.com/fwlink/?LinkId=94684). Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se torna parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (esses são chamados de *declarações*). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.  
+ Especifica que a segurança é fornecida implementando uma ou mais das especificações de segurança, como a especificação denominada [Web Services Security: segurança de mensagem SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se tornam parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (elas são denominadas *declarações*). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.  
   
  transporte com modo de segurança de credencial de mensagem  
  Especifica o uso da camada de transporte para fornecer confidencialidade, autenticação e integridade de mensagens, embora cada uma das mensagens possa conter várias credenciais (reivindicações) exigidas pelos destinatários da mensagem.  
@@ -155,4 +155,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Consulte também  
  [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Arquitetura do Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
- [Arquitetura de segurança](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Arquitetura de segurança](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

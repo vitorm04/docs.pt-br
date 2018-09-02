@@ -7,19 +7,19 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adc1bf7c51eeef715e98bb67c5f6a2e44e09b35f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498596"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466604"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Segurança de transporte com autenticação do Windows
-O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o cliente do Windows Communication Foundation (WCF). Para obter mais informações sobre programação, consulte [como: proteger um serviço com as credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o cliente do Windows Communication Foundation (WCF). Para obter mais informações sobre a programação, consulte [como: proteger um serviço com credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
- Um serviço Web de intranet exibe informações de recursos humanos. O cliente é um aplicativo Windows Form. O aplicativo é implantado em um domínio com um controlador de Kerberos, protegendo o domínio.  
+ Um serviço Web de intranet exibe informações de recursos humanos. O cliente é um aplicativo de formulário do Windows. O aplicativo é implantado em um domínio com um controlador de Kerberos a proteção do domínio.  
   
- ![Segurança com autenticação do Windows de transporte](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![Segurança com a autenticação do Windows de transporte](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
@@ -36,10 +36,10 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto de extremidade de serviço que usa a segurança do Windows.  
+ O código a seguir mostra como criar um ponto de extremidade de serviço que usa uma segurança do Windows.  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
@@ -122,4 +122,4 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Como proteger um serviço com credenciais Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

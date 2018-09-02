@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 9591c3556bf38d1af288c2c3c4a465af2c0722eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69257099338ae2d50c5ea184c0800d0057e020f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502676"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471988"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding com segurança de transporte
-Este exemplo demonstra o uso da segurança de transporte SSL com a associação básica. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo.  
+Este exemplo demonstra o uso da segurança de transporte SSL com a associação básica. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Por padrão, a associação básica oferece suporte à comunicação HTTP. O exemplo mostra como habilitar a segurança de transporte para a associação básica. Antes de executar o exemplo, você deve criar um certificado e atribuí-lo usando o Assistente de certificado de servidor Web.  
+ Por padrão, a associação básica oferece suporte à comunicação HTTP. O exemplo mostra como habilitar a segurança de transporte para a associação básica. Antes de executar o exemplo, você deve criar um certificado e atribuí-lo usando o Assistente de certificado do servidor Web.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- O código do programa no exemplo é idêntico do [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) serviço. A definição de ponto de extremidade e a definição de associação nas configurações do arquivo de configuração são modificados para habilitar a comunicação segura, conforme mostrado no exemplo de configuração.  
+ O código do programa de exemplo é idêntico do [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) service. A definição de ponto de extremidade e a definição de associação em que o arquivo de configuração são modificados para permitir a comunicação segura, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <system.serviceModel>  
@@ -56,7 +56,7 @@ Este exemplo demonstra o uso da segurança de transporte SSL com a associação 
 </system.serviceModel>  
 ```  
   
- Como o certificado usado neste exemplo é um certificado de teste criado com o Makecert.exe, um alerta de segurança é exibida quando você tentar acessar um HTTPS: endereço no navegador, como https://localhost/servicemodelsamples/service.svc. Para permitir que o cliente do Windows Communication Foundation (WCF) para trabalhar com um certificado de teste, um código adicional é adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanha, não é necessário ao usar certificados reais.  
+ Como o certificado usado neste exemplo é um certificado de teste criado com Makecert.exe, um alerta de segurança é exibida quando você tenta acessar um HTTPS: endereço no seu navegador, tais como https://localhost/servicemodelsamples/service.svc. Para permitir que o cliente do Windows Communication Foundation (WCF) para trabalhar com um certificado de teste, o código adicional é adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que acompanha este artigo, não é necessário ao usar certificados real.  
 
 ```csharp
 // This code is required only for test certificates such as those   
@@ -64,7 +64,7 @@ Este exemplo demonstra o uso da segurança de transporte SSL com a associação 
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
 
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -83,11 +83,11 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Certifique-se de que você executou o [instruções de instalação do certificado de servidor de serviços de informações da Internet (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3.  Certifique-se de que você tenha executado o [instruções de instalação do certificado de servidor de serviços de informações da Internet (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
-4.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 5.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
-ms.openlocfilehash: dd96caa03d04371d4f930bb311decd7672b342fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396825"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464967"
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  
@@ -48,20 +48,20 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
  As classes de cache do namespace <xref:System.Runtime.Caching> fornecem funcionalidade de armazenamento de dados em cache no ASP.NET.  
   
 > [!NOTE]
->  Se o aplicativo for direcionado para o [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ou anterior, você deverá usar as classes de cache definidas no namespace <xref:System.Web.Caching>. Para obter mais informações, consulte [Visão geral do cache do ASP.NET](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
+>  Se o aplicativo for direcionado para o [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ou anterior, você deverá usar as classes de cache definidas no namespace <xref:System.Web.Caching>. Para obter mais informações, consulte [Visão geral do cache do ASP.NET](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).  
   
 > [!NOTE]
->  Ao desenvolver novos aplicativos, recomendamos o uso da classe <xref:System.Runtime.Caching.MemoryCache>. A API fornecida no namespace <xref:System.Runtime.Caching> é como a API fornecida no namespace <xref:System.Web.Caching.Cache>. Portanto, a API será familiar se você usou o cache em versões anteriores do ASP.NET. Para obter um exemplo de como usar o cache em aplicativos ASP.NET, consulte [Passo a passo: Armazenando dados de aplicativo em cache no ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
+>  Ao desenvolver novos aplicativos, recomendamos o uso da classe <xref:System.Runtime.Caching.MemoryCache>. A API fornecida no namespace <xref:System.Runtime.Caching> é como a API fornecida no namespace <xref:System.Web.Caching.Cache>. Portanto, a API será familiar se você usou o cache em versões anteriores do ASP.NET. Para obter um exemplo de como usar o cache em aplicativos ASP.NET, consulte [Passo a passo: Armazenando dados de aplicativo em cache no ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Cache de saída  
- Para armazenar dados de aplicativo em cache manualmente, use a classe <xref:System.Runtime.Caching.MemoryCache> no ASP.NET. O ASP.NET também dá suporte ao cache de saída, que armazena a saída gerada de páginas, controles e respostas HTTP na memória. É possível configurar o cache de saída de forma declarativa em uma página da Web ASP.NET ou usando as configurações do arquivo Web.config. Para obter mais informações, consulte [Elemento outputCache para armazenar em cache (esquema de configurações do ASP.NET)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Para armazenar dados de aplicativo em cache manualmente, use a classe <xref:System.Runtime.Caching.MemoryCache> no ASP.NET. O ASP.NET também dá suporte ao cache de saída, que armazena a saída gerada de páginas, controles e respostas HTTP na memória. É possível configurar o cache de saída de forma declarativa em uma página da Web ASP.NET ou usando as configurações do arquivo Web.config. Para obter mais informações, consulte [Elemento outputCache para armazenar em cache (esquema de configurações do ASP.NET)](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
  O ASP.NET permite estender o cache de saída criando provedores de cache de saída personalizados. Usando provedores personalizados, você pode armazenar o conteúdo armazenado em cache usando outros dispositivos de armazenamento, como discos, armazenamento em nuvem e mecanismos de cache distribuído. Para criar um provedor de cache de saída personalizado, crie uma classe que é derivada da classe <xref:System.Web.Caching.OutputCacheProvider> e configure o aplicativo para usar o provedor de cache de saída personalizado.  
   
 ## <a name="caching-in-wcf-rest-services"></a>Armazenando em cache nos serviços REST do WCF  
  Para os serviços REST do WCF, o .NET Framework permite aproveitar o cache de saída declarativo disponível no ASP.NET. Isso permite armazenar em cache as respostas das operações de serviço REST do WCF. Quando um usuário envia uma solicitação HTTP GET para um serviço que está configurado para armazenar em cache, o ASP.NET envia a resposta armazenada em cache novamente e o método de serviço não é chamado. Depois que o cache expirar, na próxima vez que um usuário enviar uma solicitação HTTP GET, o método de serviço será chamado e a resposta será armazenada em cache novamente.  
   
- O .NET Framework também permite implementar o cache de HTTP GET condicional. Em cenários REST, uma solicitação de HTTP GET condicional é geralmente usada pelos serviços para implementar o cache inteligente de HTTP, conforme descrito na [Especificação de HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). Para obter mais informações, consulte [Suporte ao cache em serviços Web HTTP do WCF](http://go.microsoft.com/fwlink/?LinkId=184598).  
+ O .NET Framework também permite implementar o cache de HTTP GET condicional. Em cenários REST, uma solicitação de HTTP GET condicional é geralmente usada pelos serviços para implementar o cache inteligente de HTTP, conforme descrito na [Especificação de HTTP](https://go.microsoft.com/fwlink/?LinkId=165800). Para obter mais informações, consulte [Suporte ao cache em serviços Web HTTP do WCF](https://go.microsoft.com/fwlink/?LinkId=184598).  
   
 ## <a name="extending-caching-in-the-net-framework"></a>Estendendo o cache no .NET Framework  
  O cache do .NET Framework foi projetado para ser extensível. A classe <xref:System.Runtime.Caching.ObjectCache> permite criar uma implementação personalizada de cache. Essa classe fornece os membros que estão disponíveis para todos os aplicativos gerenciados, incluindo o Windows Forms, o WPF (Windows Presentation Foundation) e o WCF (Windows Communications Foundation). Você pode fazer isso para criar uma classe de cache que usa outro mecanismo de armazenamento ou se desejar ter um controle granular sobre as operações de cache.  
@@ -70,14 +70,14 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
   
 -   Crie uma classe personalizada que é derivada da classe <xref:System.Runtime.Caching.ObjectCache> e, em seguida, forneça uma implementação personalizada de cache na classe derivada.  
   
--   Crie uma classe que é derivada da classe <xref:System.Runtime.Caching.MemoryCache> e personalize ou estenda a classe derivada. Para obter um exemplo de como fazer isso, consulte [Armazenando dados de aplicativo em cache usando vários objetos de cache em um aplicativo ASP.NET](http://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
+-   Crie uma classe que é derivada da classe <xref:System.Runtime.Caching.MemoryCache> e personalize ou estenda a classe derivada. Para obter um exemplo de como fazer isso, consulte [Armazenando dados de aplicativo em cache usando vários objetos de cache em um aplicativo ASP.NET](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).  
   
 -   Crie uma classe que é derivada da classe <xref:System.Web.Caching.OutputCacheProvider> e configure o aplicativo para usar o provedor de cache de saída personalizado.  
   
- Para obter mais informações, consulte a entrada [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](http://go.microsoft.com/fwlink/?LinkId=185772) (Cache de saída extensível com o ASP.NET 4 [VS 2010 e Série do .NET 4.0]) no blog de Scott Guthrie.  
+ Para obter mais informações, consulte a entrada [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772) (Cache de saída extensível com o ASP.NET 4 [VS 2010 e Série do .NET 4.0]) no blog de Scott Guthrie.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.Caching.ObjectCache>  
  <xref:System.Runtime.Caching.MemoryCache>  
  [Passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
- [Passo a passo: Armazenando dados de aplicativo em cache no ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+ [Passo a passo: Armazenando dados de aplicativo em cache no ASP.NET](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)

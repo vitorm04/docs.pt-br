@@ -2,20 +2,20 @@
 title: Endereçando
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502232"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468359"
 ---
 # <a name="addressing"></a>Endereçando
-O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é hospedado automaticamente. O cliente e o serviço são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidade relativas e absolutas.  
+O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é hospedado internamente. O serviço e o cliente são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidade relativas e absolutas.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- O arquivo de configuração de serviço Especifica um endereço base e quatro pontos de extremidade. O endereço base é especificado usando o elemento de adicionar, em serviço/host/baseAddresses conforme demonstrado no exemplo de configuração.  
+ O arquivo de configuração de serviço Especifica um endereço básico e quatro pontos de extremidade. O endereço base é especificado usando o elemento de adicionar, sob o serviço/host/baseAddresses conforme demonstrado no exemplo de configuração.  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -28,7 +28,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
 </service>  
 ```  
   
- A primeira definição de ponto de extremidade mostrada no exemplo de configuração especifica um endereço relativo, o que significa que o endereço do ponto de extremidade é uma combinação do endereço base e o endereço relativo seguindo as regras de composição de URI.  
+ A primeira definição de ponto de extremidade mostrada na configuração de exemplo a seguir especifica um endereço relativo, o que significa que o endereço do ponto de extremidade é uma combinação do endereço base e o endereço relativo a seguir as regras de composição do URI.  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -40,9 +40,9 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço base. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service.  
+ Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço básico. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service.  
   
- A segunda definição de ponto de extremidade também especifica um endereço relativo, conforme mostrado no exemplo de configuração.  
+ A definição de ponto de extremidade segundo também especifica um endereço relativo, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <!-- The relative address specified: use the base address -->  
@@ -53,9 +53,9 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço relativo, "teste", é acrescentada ao endereço base. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service/test.  
+ O endereço relativo, "teste", é acrescentado ao endereço básico. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service/test.  
   
- A definição de ponto de extremidade terceira Especifica um endereço absoluto, conforme mostrado no exemplo de configuração.  
+ A definição de ponto de extremidade a terceira Especifica um endereço absoluto, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -63,9 +63,9 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é http://localhost:8001/hello/servicemodelsamples.  
+ O endereço básico não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é http://localhost:8001/hello/servicemodelsamples.  
   
- O quarto endereço de ponto de extremidade Especifica um endereço absoluto e um transporte diferente — TCP. O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é net.tcp://localhost: servicemodelsamples/9000/serviço.  
+ O quarto endereço do ponto de extremidade Especifica um endereço absoluto e um transporte diferente — TCP. O endereço básico não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é baseaddress="NET.TCP://localhost:6080/vmmhelperservice/: 9000/servicemodelsamples/serviço.  
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -79,9 +79,9 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
 </service>  
 ```  
   
- O cliente acessa apenas um dos pontos de extremidade de quatro serviço, mas todos os quatro são definidos no seu arquivo de configuração. O cliente seleciona um ponto de extremidade quando ele cria o `CalculatorProxy` objeto. Alterando o nome da configuração de `CalculatorEndpoint1` por meio de `CalculatorEndpoint4`, você pode exercer cada ponto de extremidade.  
+ O cliente acessa apenas um dos pontos de extremidade de serviço de quatro, mas todos os quatro são definidos em seu arquivo de configuração. O cliente seleciona um ponto de extremidade quando ele cria o `CalculatorProxy` objeto. Alterando o nome da configuração do `CalculatorEndpoint1` por meio de `CalculatorEndpoint4`, você pode utilizar cada um dos pontos de extremidade.  
   
- Quando você executar o exemplo, o serviço enumera o endereço, o nome e o nome do contrato para cada um dos seus pontos de extremidade de associação. O ponto de extremidade do exchange (MEX) de metadados é apenas outro ponto de extremidade do ponto de vista do ServiceHost para que ele é exibido na lista.  
+ Quando você executar o exemplo, o serviço enumera o endereço, nome e o nome do contrato para cada um dos seus pontos de extremidade de associação. O ponto de extremidade do exchange (MEX) de metadados é apenas outro ponto de extremidade da perspectiva do ServiceHost, portanto, ele aparece na lista.  
   
 ```  
 Service endpoints:  
@@ -105,7 +105,7 @@ The service is ready.
 Press <ENTER> to terminate service.  
 ```  
   
- Quando você executa o cliente, as respostas e solicitações de operação são exibidas em janelas do console de serviço e o cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
+ Quando você executa o cliente, as respostas e solicitações de operação são exibidas nas janelas do console de serviço e cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -118,21 +118,21 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Se você usar o Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
+    >  Se você usar Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

@@ -3,11 +3,11 @@ title: Controle de acesso (F#)
 description: 'Saiba como controlar o acesso aos elementos de programação, como tipos, métodos e funções, na linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6b13ac03d2a4a6c53b53d4c790760f5d51b334ee
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332233"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456338"
 ---
 # <a name="access-control"></a>Controle de acesso
 

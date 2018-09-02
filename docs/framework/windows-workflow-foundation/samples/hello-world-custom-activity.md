@@ -2,22 +2,22 @@
 title: Hello atividade personalizado
 ms.date: 03/30/2017
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
-ms.openlocfilehash: 35ae5933515b3280b0d8d95157c8dd5f40f7b320
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fde745fae7470ec763b6b5030a60436a6525e3c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515831"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470769"
 ---
 # <a name="hello-world-custom-activity"></a>Hello atividade personalizado
-Este exemplo demonstra vários recursos importantes do Windows Workflow Foundation (WF), incluindo como criar uma atividade personalizada simple. Alguns dos recursos demonstrados nesse exemplo são criando uma atividade personalizado em C# e estão usando `in` e argumentos de `out` (<xref:System.Activities.InArgument> e <xref:System.Activities.OutArgument>).  
+Este exemplo demonstra vários recursos importantes do Windows Workflow Foundation (WF), incluindo como criar uma atividade personalizado simples. Alguns dos recursos demonstrados nesse exemplo são criando uma atividade personalizado em C# e estão usando `in` e argumentos de `out` (<xref:System.Activities.InArgument> e <xref:System.Activities.OutArgument>).  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\HelloWorld`  
   
@@ -33,7 +33,7 @@ Este exemplo demonstra vários recursos importantes do Windows Workflow Foundati
  Os seguintes arquivos são incluídos no projeto.  
   
  AppendString.cs  
- A atividade personalizado que acrescenta cadeias de caracteres juntos. Ele usa uma cadeia de caracteres e a combina com uma cadeia de caracteres de texto literal "hello world diz" para formar uma mensagem completa como saída.  
+ A atividade personalizado que acrescenta cadeias de caracteres juntos. Ele usa uma cadeia de caracteres e combina com uma cadeia de caracteres de texto literal "digamos hello world" para formar uma mensagem completa como saída.  
   
  PrependString.cs  
  Esta atividade prefixar uma cadeia de caracteres predefinida a uma cadeia de caracteres de entrada.  

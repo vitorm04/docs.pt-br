@@ -2,12 +2,12 @@
 title: Consultas de agregação
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e4d5e0a9dc1ffb0bf1857fee788d46947f3901d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358837"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464147"
 ---
 # <a name="aggregate-queries"></a>Consultas de agregação
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte aos operadores de agregação `Average`, `Count`, `Max`, `Min` e `Sum`. Observe as seguintes características dos operadores de agregação no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,11 +18,11 @@ O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
   
 -   As consultas de agregação geralmente retornam um número em vez de uma coleção.  
   
-     Para obter mais informações, consulte [operações de agregação](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Para obter mais informações, consulte [operações de agregação](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
   
 -   Você não pode chamar agregações em tipos anônimos.  
   
- Os exemplos nos seguintes tópicos derivam do banco de dados de exemplo Northwind. Para obter mais informações, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Os exemplos nos seguintes tópicos derivam do banco de dados de exemplo Northwind. Para obter mais informações, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Retornar o valor médio de uma sequência numérica](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  

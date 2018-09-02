@@ -2,15 +2,15 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 9e44ddcc3a3e983abe6e36d4b6095c5c4a67529f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349877"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467595"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
-Especifica as definições de configuração de rede. TCP porta de serviço de compartilhamento, que permite que vários processos compartilhem a mesma porta TCP.  
+Especifica as definições de configuração para a rede. TCP porta de serviço de compartilhamento, que permite que vários processos compartilhem a mesma porta TCP.  
   
  \<system.serviceModel.activation>  
 \<net.tcp>  
@@ -52,11 +52,11 @@ Especifica as definições de configuração de rede. TCP porta de serviço de c
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`listenBacklog`|Um inteiro que especifica o máximo de conexões pendente que é aceitas da conexão compartilhada, mas ainda não foram expedido para serviços do Windows Communication Foundation (WCF). O padrão é 10.|  
-|`maxPendingAccepts`|Um inteiro que especifica o máximo threads de aceitação simultâneas pendentes no ponto de extremidade escutando para o serviço de compartilhamento. O padrão é 2.|  
-|`MaxPendingConnections`|O número máximo de conexões que o ouvinte pode ter aguardando para serem aceitas pelo aplicativo. Quando esse valor de cota for ultrapassada, novas conexões de entrada são descartadas em vez de esperar ser aceito. Recursos de Conexão, como segurança de mensagem podem causar um cliente abrir mais de uma conexão. Os administradores de serviço devem levar em consideração para essas conexões adicionais ao definir esse valor de cota. O padrão é 10.|  
-|`receiveTimeout`|Um `TimeSpan` que especifica o tempo limite para ler os dados de enquadramento e executar a expedição de conexão das conexões sublinhado. O padrão é "00: 00:10".|  
-|`teredoEnabled`|Um valor booliano que indica se o serviço de compartilhamento de porta usa o serviço Teredo da Microsoft para escutar em portas TCP em nome de serviços do WCF. O padrão é `false`.|  
+|`listenBacklog`|Um inteiro que especifica o máximo de conexões pendentes que serão aceitas da conexão compartilhada, mas ainda não foram expedido para serviços Windows Communication Foundation (WCF). O padrão é 10.|  
+|`maxPendingAccepts`|Um inteiro que especifica o máximo threads de aceitação simultâneo pendentes no ponto de extremidade escutando para o serviço de compartilhamento. O padrão é 2.|  
+|`MaxPendingConnections`|O número máximo de conexões que o ouvinte pode ter aguardando para serem aceitas pelo aplicativo. Quando esse valor de cota for excedida, novas conexões de entrada são descartadas em vez de esperar para ser aceito. Recursos de Conexão, como segurança de mensagem podem fazer com que um cliente abrir mais de uma conexão. Os administradores de serviço devem levar em consideração para essas conexões adicionais ao definir esse valor de cota. O padrão é 10.|  
+|`receiveTimeout`|Um `TimeSpan` que especifica o tempo limite para ler os dados de enquadramento e execução de expedição de conexão das conexões subjacentes. O padrão é "00: 00:10".|  
+|`teredoEnabled`|Um valor booliano que indica se o serviço de compartilhamento de porta usa o serviço Teredo da Microsoft para escutar em portas TCP em nome dos serviços WCF. O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -68,12 +68,12 @@ Especifica as definições de configuração de rede. TCP porta de serviço de c
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo do ouvinte SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo de escuta SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o compartilhamento de porta, consulte [compartilhamento de porta NET. TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Para entender como configurar a serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta NET. TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Para obter mais informações sobre o compartilhamento de porta, consulte [compartilhamento de porta NET. TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Para entender como configurar a serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta NET. TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Compartilhamento de porta do NET.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [Configurando o serviço de compartilhamento de porta NET.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Compartilhamento de porta do NET.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Configurando o serviço de compartilhamento de porta NET.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

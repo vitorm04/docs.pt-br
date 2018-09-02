@@ -2,12 +2,12 @@
 title: Guia de introdução (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 8b35f155996d7d7035b2bfdeb1a4c360b6bc0c14
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a9c49edfcc43b1862745240ca4e4607bbe27f21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765341"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466978"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Guia de introdução (LINQ to DataSet)
 Esta seção fornece informações introdutórias sobre a programação com o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -33,6 +33,6 @@ Esta seção fornece informações introdutórias sobre a programação com o [!
  <xref:System.Data.DataTableExtensions>  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [Introdução ao LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+ [LINQ to ADO.NET](https://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [Introdução ao LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

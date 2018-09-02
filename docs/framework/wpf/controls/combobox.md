@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551185"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466350"
 ---
 # <a name="combobox"></a>ComboBox
-O <xref:System.Windows.Controls.ComboBox> controle apresenta aos usuários uma lista de opções. A lista é mostrada e oculta o controle expande e recolhe. Em seu estado padrão, a lista é recolhida, exibindo somente uma opção. O usuário clica no botão para ver a lista completa de opções.  
+O <xref:System.Windows.Controls.ComboBox> controle apresenta aos usuários uma lista de opções. A lista for exibida e ocultada conforme o controle se expande e recolhe. Em seu estado padrão, a lista estiver recolhida, exibindo somente uma opção. O usuário clica em um botão para ver a lista completa de opções.  
   
  A ilustração a seguir mostra um <xref:System.Windows.Controls.ComboBox> em diferentes estados.  
   
- ![Caixa de combinação caixas padrão e pressionado estados](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
-Recolhidos e expandidos  
+ ![Combinação caixas em default e pressionado estados](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+Expandida e recolhida  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: obter um ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Como: obter um ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.ComboBox>

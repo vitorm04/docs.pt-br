@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408626"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463189"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Como depurar serviços e aplicativos baseados em declarações usando o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -77,14 +77,14 @@ ms.locfileid: "33408626"
     </system.diagnostics>  
     ```  
   
-3.  A configuração acima instrui o WIF a gerar eventos de rastreamento detalhados e registrá-los no arquivo *WIFTrace.e2e*. Para obter uma lista completa de valores para a opção **switchValue**, consulte a tabela Nível de rastreamento encontrada no seguinte tópico: [Configurando o rastreamento](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  A configuração acima instrui o WIF a gerar eventos de rastreamento detalhados e registrá-los no arquivo *WIFTrace.e2e*. Para obter uma lista completa de valores para a opção **switchValue**, consulte a tabela Nível de rastreamento encontrada no seguinte tópico: [Configurando o rastreamento](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Etapa 2 – Analisar arquivos de rastreamento do WIF usando a ferramenta Visualizador de Rastreamento  
  Nesta etapa, você usará a ferramenta Visualizador de Rastreamento (SvcTraceViewer.exe) para analisar os logs de rastreamento do WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Para analisar os logs de rastreamento do WIF usando a ferramenta Visualizador de Rastreamento (SvcTraceViewer.exe)  
   
-1.  A ferramenta Visualizador de Rastreamento (SvcTraceViewer.exe) é fornecida como parte do SDK do Windows. Se você ainda não instalou o SDK do Windows, baixe-o aqui: [SDK do Windows](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  A ferramenta Visualizador de Rastreamento (SvcTraceViewer.exe) é fornecida como parte do SDK do Windows. Se você ainda não instalou o SDK do Windows, baixe-o aqui: [SDK do Windows](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2.  Execute a ferramenta Visualizador de Rastreamento (SvcTraceViewer.exe). Normalmente, ele está disponível na pasta **Bin** do caminho de instalação.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408626"
   
 |**ID de erro**|**Mensagem de erro**|**Ação necessária para corrigir o erro**|  
 |-|-|-|  
-|ID4175|O emissor do token de segurança não foi reconhecido pelo IssuerNameRegistry.  Para aceitar tokens de segurança desse emissor, configure o IssuerNameRegistry para retornar um nome válido para esse emissor.|Esse erro pode ser causado pela ação de copiar uma impressão digital do snap-in do MMC e colá-la no arquivo *Web.config*. Especificamente, você pode obter um caractere extra não imprimível na cadeia de texto ao copiar da janela de propriedades do certificado. Esse caractere extra faz a correspondência de impressão digital falha. O procedimento para copiar corretamente a impressão digital pode ser encontrado aqui: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|O emissor do token de segurança não foi reconhecido pelo IssuerNameRegistry.  Para aceitar tokens de segurança desse emissor, configure o IssuerNameRegistry para retornar um nome válido para esse emissor.|Esse erro pode ser causado pela ação de copiar uma impressão digital do snap-in do MMC e colá-la no arquivo *Web.config*. Especificamente, você pode obter um caractere extra não imprimível na cadeia de texto ao copiar da janela de propriedades do certificado. Esse caractere extra faz com que a correspondência da impressão digital falhe. O procedimento para copiar corretamente a impressão digital pode ser encontrado aqui: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Itens relacionados  
   
--   [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

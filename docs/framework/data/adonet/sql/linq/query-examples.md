@@ -2,18 +2,18 @@
 title: Exemplos de consulta
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362621"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464348"
 ---
 # <a name="query-examples"></a>Exemplos de consulta
-Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores usando o Visual Studio podem localizar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consultas. Os desenvolvedores que usam o Visual Studio podem encontrar muitos outros exemplos em uma solução de exemplo disponível na seção de exemplos. Para obter mais informações, consulte [exemplos](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *banco de dados* geralmente é usado em exemplos de código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação. *banco de dados* deve para ser uma instância de um *Northwind* classe que herda de <xref:System.Data.Linq.DataContext>.  
+>  *BD* geralmente é usado em exemplos de código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação. *BD* será considerado como uma instância de um *Northwind* classe que herda de <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Consultas agregadas](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,10 +62,10 @@ Esta seção fornece exemplos de Visual Basic e c# de típico [!INCLUDE[vbtecdli
  Fornece exemplos de uso de navegação de chave estrangeira nas cláusulas `from`, `where` e `select`.  
   
  [Formular projeções](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- Fornece exemplos de combinação `select` com outros recursos (por exemplo, *tipos anônimos*) para projeções de consulta do formulário.  
+ Fornece exemplos de combinação `select` com outros recursos (por exemplo, *tipos anônimos*) para formar projeções de consulta.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Visão Geral de Operadores de Consulta Padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Visão Geral de Operadores de Consulta Padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  Explica o conceito de operadores de consulta padrão.  
   
  [Conceitos de consulta](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

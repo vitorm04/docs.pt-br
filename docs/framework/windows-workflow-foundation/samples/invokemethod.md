@@ -2,12 +2,12 @@
 title: InvokeMethod
 ms.date: 03/30/2017
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-ms.openlocfilehash: 12d028515c34c0e3593c90b81a5589fb05f36b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 861e0cf160aec9814abcf8c27c37ce13a5d88b2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517732"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457175"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 Este exemplo mostra as diferentes maneiras de usar a atividade de <xref:System.Activities.Statements.InvokeMethod> para chamar métodos de uma classe.  
@@ -42,7 +42,7 @@ Este exemplo mostra as diferentes maneiras de usar a atividade de <xref:System.A
 12. Recuperar um valor de uma instância de um objeto.  
   
 ## <a name="to-use-this-sample"></a>Para usar este exemplo  
- Este exemplo é fornecido em duas versões. A primeira versão deste exemplo demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> por meio do c# de código usando o modelo de programação do Windows Workflow Foundation (WF) e pode ser encontrado na pasta CodedWorkflow\CS. A segunda versão demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> usando XAML e pode ser encontrada na pasta de DesignerWorkflow \ CS.  
+ Este exemplo é fornecido em duas versões. A primeira versão deste exemplo demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> por meio do c# o código usando o modelo de programação do Windows Workflow Foundation (WF) e pode ser encontrado na pasta de codedworkflow \ CS. A segunda versão demonstra o uso de <xref:System.Activities.Statements.InvokeMethod> usando XAML e pode ser encontrada na pasta de DesignerWorkflow \ CS.  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>Para executar o exemplo codificado de fluxo de trabalho  
   
@@ -65,6 +65,6 @@ Este exemplo mostra as diferentes maneiras de usar a atividade de <xref:System.A
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

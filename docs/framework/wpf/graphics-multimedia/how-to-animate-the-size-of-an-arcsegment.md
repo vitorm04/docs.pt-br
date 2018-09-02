@@ -9,23 +9,23 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: b7c7ebcfcb9dd23f6472472be3d693740c910f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21d9e773dc03a42e2cfba0bbe47d9831d93d5c69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560832"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470743"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>Como animar o tamanho de um ArcSegment
 Este exemplo mostra como animar a <xref:System.Windows.Media.ArcSegment.Size%2A> propriedade de um <xref:System.Windows.Media.ArcSegment>.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria um <xref:System.Windows.Media.ArcSegment> que anima seu <xref:System.Windows.Media.ArcSegment.Size%2A> quando ele é carregado na tela.  
+ O exemplo a seguir cria uma <xref:System.Windows.Media.ArcSegment> que anima seu <xref:System.Windows.Media.ArcSegment.Size%2A> quando ele é carregado na tela.  
   
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- Para geometria adicional e exemplos de animação, consulte o [geometrias exemplo](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Para geometria adicional e exemplos de animação, consulte o [exemplo de geometrias](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Media.ArcSegment.Size%2A>  
@@ -33,5 +33,5 @@ Este exemplo mostra como animar a <xref:System.Windows.Media.ArcSegment.Size%2A>
  [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
- [Animação e temporização](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Animação e tempo](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

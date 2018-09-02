@@ -2,12 +2,12 @@
 title: Arquitetura do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759862"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472105"
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  
@@ -27,7 +27,7 @@ Antigamente, o processamento de dados dependia basicamente de um modelo de duas 
 Arquitetura do ADO.NET  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Escolhendo um DataReader ou um DataSet  
- Ao decidir se seu aplicativo deve usar um `DataReader` (consulte [recuperando dados usando um DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) ou um `DataSet` (consulte [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), considere o tipo de funcionalidade que seu aplicativo requer. Use um `DataSet` para fazer o seguinte:  
+ Quando você decidir se seu aplicativo deve usar um `DataReader` (consulte [recuperando dados usando um DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) ou uma `DataSet` (consulte [DataSets, DataTables e DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), considere o tipo de funcionalidade de que seu aplicativo requer. Use um `DataSet` para fazer o seguinte:  
   
 -   Armazenar dados em cache localmente no aplicativo para que você possa manipulá-lo. Se você precisar ler somente os resultados de uma consulta, o `DataReader` será a melhor opção.  
   
@@ -37,7 +37,7 @@ Arquitetura do ADO.NET
   
 -   Executar um processamento extensivo nos dados sem precisar de uma conexão aberta com a fonte de dados, o que libera a conexão a ser usada por outros clientes.  
   
- Se você não precisar da funcionalidade fornecida pelo `DataSet`, poderá melhorar o desempenho do aplicativo usando o `DataReader` para retornar os dados apenas para encaminhamento e somente leitura. Embora o `DataAdapter` usa o `DataReader` para preencher o conteúdo de um `DataSet` (consulte [preenchendo um DataSet de um DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), usando o `DataReader`, pode melhorar o desempenho porque você salvará a memória que poderia ser consumido pelo `DataSet`e evitar o processamento que é necessário para criar e preencher o conteúdo a `DataSet`.  
+ Se você não precisar da funcionalidade fornecida pelo `DataSet`, poderá melhorar o desempenho do aplicativo usando o `DataReader` para retornar os dados apenas para encaminhamento e somente leitura. Embora o `DataAdapter` usa o `DataReader` para preencher o conteúdo de um `DataSet` (consulte [populando um DataSet a partir de um DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), usando o `DataReader`, você pode melhorar o desempenho porque economizará a memória que poderia ser consumido pela `DataSet`e evitar o processamento que é necessário para criar e preencher o conteúdo do `DataSet`.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  O LINQ to DataSet fornece recursos de consulta e verificação de tipo em tempo de compilação nos dados armazenados em cache em um objeto DataSet. Ele permite que você grave consultas em uma das linguagens de desenvolvimento do .NET Framework, como C# ou Visual Basic. Para obter mais informações, consulte [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
@@ -58,4 +58,4 @@ Arquitetura do ADO.NET
   
 ## <a name="see-also"></a>Consulte também  
  [ADO.NET Overview](../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

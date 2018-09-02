@@ -24,12 +24,12 @@ ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b227ba343db7996d38d5a485b54629a1f4ed28bd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7aebbfd0d25f6c5a9266857816a1723cb0c660e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744103"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466578"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de arquivos de configuração para o .NET Framework
 
@@ -78,10 +78,10 @@ Para obter informações sobre os tipos, o formato e o local dos arquivos de con
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Esquema de configurações remotas](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Descreve os elementos que configuram aplicativos clientes e para servidores que implementam a comunicação remota.
+[Esquema de configurações remotas](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) Descreve os elementos que configuram aplicativos clientes e para servidores que implementam a comunicação remota.
 
-[Esquema de configurações do ASP.NET](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) Descreve os elementos que controlam o comportamento de aplicativos Web do ASP.NET.
+[Esquema de configurações do ASP.NET](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) Descreve os elementos que controlam o comportamento de aplicativos Web do ASP.NET.
 
-[Esquema de configurações de serviços Web](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Descreve os elementos que controlam o comportamento dos serviços Web do ASP.NET e de seus clientes.
+[Esquema de configurações de serviços Web](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Descreve os elementos que controlam o comportamento dos serviços Web do ASP.NET e de seus clientes.
 
-[Configurando aplicativos do .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Descreve como configurar a segurança, associação de assembly e a comunicação remota no .NET Framework.
+[Configurando aplicativos do .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Descreve como configurar a segurança, associação de assembly e a comunicação remota no .NET Framework.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: f94a965f724e85fb63ed9c98ebddba40938eb9b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271652fe9e98f9a381da5655bd313e12f8ee917d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545552"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465662"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Como invocar uma caixa de diálogo Imprimir
 Para fornecer a capacidade de imprimir a partir de seu aplicativo, você pode simplesmente criar e abrir um <xref:System.Windows.Controls.PrintDialog> objeto.  
@@ -24,15 +24,15 @@ Para fornecer a capacidade de imprimir a partir de seu aplicativo, você pode si
  [!code-csharp[printdialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  
   
- Uma vez que a caixa de diálogo estiver aberta, os usuários poderão selecionar as impressoras instaladas em seu computador. Eles também terão a possibilidade de selecionar [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319) para criar um arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ao invés de imprimir.  
+ Uma vez que a caixa de diálogo estiver aberta, os usuários poderão selecionar as impressoras instaladas em seu computador. Eles também terão a possibilidade de selecionar [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319) para criar um arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ao invés de imprimir.  
   
 > [!NOTE]
->  O <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> controle de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], que é discutido neste tópico, não deve ser confundido com o <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> componente de formulários do Windows.  
+>  O <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> controle de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], que é discutido neste tópico, não deve ser confundido com o <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> componente dos Windows Forms.  
   
- Estritamente falando, você pode usar o <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> método sem abrir a caixa de diálogo. Assim, o controle pode ser utilizado como um componente de impressão não visto. Mas por motivos de desempenho, é melhor usar tanto o <xref:System.Printing.PrintQueue.AddJob%2A> método ou um dos muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>. Para saber mais, consulte [Impressão Programada de Arquivos XPS](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md).  
+ Estritamente falando, você pode usar o <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> método sem abrir a caixa de diálogo. Assim, o controle pode ser utilizado como um componente de impressão não visto. Mas por motivos de desempenho, seria melhor usar tanto a <xref:System.Printing.PrintQueue.AddJob%2A> método ou um dos muitos <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> e <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> métodos do <xref:System.Windows.Xps.XpsDocumentWriter>. Para saber mais, consulte [Impressão Programada de Arquivos XPS](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Controls.PrintDialog>  
  [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)
