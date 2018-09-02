@@ -2,17 +2,17 @@
 title: Resumo de tipo de rastreamento
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: e3bc66753dd44e1dc4c7417caf593820300f69a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486029"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403837"
 ---
 # <a name="trace-type-summary"></a>Resumo de tipo de rastreamento
-[Níveis de origem](http://go.microsoft.com/fwlink/?LinkID=94943) define vários níveis de rastreamento: crítico, erro, aviso, informações e detalhado, bem como fornece descrição do `ActivityTracing` sinalizador, que alterna a saída de rastreamento de eventos de transferência de limite e a atividade.  
+[Níveis de origem](https://go.microsoft.com/fwlink/?LinkID=94943) define vários níveis de rastreamento: crítico, erro, aviso, informações e detalhado, bem como fornece a descrição do `ActivityTracing` sinalizador, que alterna a saída de rastreamento de eventos de transferência de limite e a atividade.  
   
- Você também pode analisar [TraceEventType](http://go.microsoft.com/fwlink/?LinkId=95169) para os tipos de rastreamentos que podem ser emitidos a partir de <xref:System.Diagnostics>.  
+ Você também pode examinar [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) para os tipos de rastreamentos que podem ser emitidos de <xref:System.Diagnostics>.  
   
  A tabela a seguir lista os mais importantes.  
   
@@ -26,24 +26,24 @@ ms.locfileid: "33486029"
 |Início|Início de uma unidade lógica de processamento.|  
 |Suspender|Suspensão de uma unidade lógica de processamento.|  
 |Resume|Continuação de uma unidade lógica de processamento.|  
-|Stop|Interrupção de uma unidade lógica de processamento.|  
+|Stop|Parada de uma unidade lógica de processamento.|  
 |Transferir|Alteração da identidade de correlação.|  
   
- Uma atividade é definida como uma combinação de tipos de rastreamento acima.  
+ Uma atividade é definida como uma combinação dos tipos de rastreamento acima.  
   
- O exemplo a seguir é uma expressão regular que define uma atividade ideal em um escopo local (origem do rastreamento),  
+ O exemplo a seguir é uma expressão regular que define uma atividade ideal em um escopo local (origem de rastreamento),  
   
  `R = Start (Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop`  
   
  Isso significa que uma atividade deve satisfazer as condições a seguir.  
   
--   Ele deve iniciar e parar respectivamente, um iniciar e parar rastreamentos  
+-   Ele deve iniciar e parar, respectivamente, rastreamentos de início e parada  
   
--   Ele deve ter um rastreamento de transferência imediatamente anteriores a um rastreamento de suspensão ou retomada  
+-   Ele deve ter um rastreamento de transferência imediatamente anterior a um rastreamento de suspensão ou retomada  
   
--   Ele não deve ter qualquer rastreamentos entre os rastreamentos de suspender e retomar se existirem rastreamentos  
+-   Ele não deve ter os rastreamentos entre os rastreamentos de suspender e continuar se existirem tais rastreamentos  
   
--   Ele pode ter qualquer e a quantidade de crítico/erro/aviso/informação/detalhado/transferência rastreamentos, desde que as condições anteriores são observadas  
+-   Ele pode ter qualquer e a quantidade de rastreamentos de crítico/erro/aviso / / detalhado/transferência de informações, desde que as condições anteriores forem observadas  
   
  O exemplo a seguir é uma expressão regular que define uma atividade ideal no escopo global,  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33486029"
 R+   
 ```  
   
- com R sendo a expressão regular para uma atividade no escopo local. Isso se traduz em,  
+ com o R que é a expressão regular para uma atividade no escopo local. Isso se traduz em,  
   
 ```  
 [R+ = Start ( Critical | Error | Warning | Information | Verbose | Transfer | (Transfer Suspend Transfer Resume) )* Stop]+  

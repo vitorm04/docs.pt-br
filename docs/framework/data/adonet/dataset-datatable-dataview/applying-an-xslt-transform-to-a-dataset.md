@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 05894431f819b968877a4a971027850efe37126a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abcb3231aa92bd62edefc7f7341da5fcb3321e4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756547"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405742"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>Aplicando uma transformação XSLT a um conjunto de dados
-O **WriteXml** método o <xref:System.Data.DataSet> permite gravar o conteúdo de um **conjunto de dados** como dados XML. Uma tarefa comum é, em seguida, transformar esse XML em outro formato usando transformações de XSL (XSLT). No entanto, sincronizando um **conjunto de dados** com um <xref:System.Xml.XmlDataDocument> permite que você aplique uma folha de estilo XSLT para o conteúdo de um **conjunto de dados** sem precisar primeiro escrever o conteúdo do  **Conjunto de dados** como dados XML usando **WriteXml**.  
+O **WriteXml** método o <xref:System.Data.DataSet> permite que você escreva o conteúdo de um **conjunto de dados** como dados XML. Uma tarefa comum é, em seguida, transformar esse XML em outro formato usando transformações XSL (XSLT). No entanto, sincronizando um **conjunto de dados** com um <xref:System.Xml.XmlDataDocument> permite que você aplique uma folha de estilos XSLT ao conteúdo de uma **conjunto de dados** sem precisar primeiro escrever o conteúdo do  **Conjunto de dados** como dados XML usando **WriteXml**.  
   
  O exemplo a seguir preenche um **DataSet** com tabelas e relações, sincroniza o **DataSet** com um **XmlDataDocument**e grava uma parte do  **Conjunto de dados** como uma marca HTML de arquivos usando uma folha de estilos XSLT. Este é o conteúdo da folha de estilos XSLT.  
   
@@ -56,10 +56,10 @@ O **WriteXml** método o <xref:System.Data.DataSet> permite gravar o conteúdo d
 </xsl:stylesheet>  
 ```  
   
- O código a seguir preenchimentos a **DataSet** e se aplica a folha de estilos XSLT.  
+ O código a seguir preenche o **conjunto de dados** e aplica-se a folha de estilos XSLT.  
   
 > [!NOTE]
->  Se você estiver aplicando uma folha de estilo XSLT para um **conjunto de dados** que contém relações, obter o melhor desempenho se você definir o **aninhadas** propriedade o <xref:System.Data.DataRelation> para **true**para cada relação de aninhados. Isso permite usar folhas de estilo XSLT que implementam natural de cima para baixo o processamento navegar na hierarquia e transformar os dados, em vez de usar XPath local eixos de alto desempenho (por exemplo, irmão anterior e irmão seguinte no estilo folha nó expressões de teste) para navegar por ele. Para obter mais informações sobre relações aninhadas, consulte [aninhamento DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+>  Se você estiver aplicando uma folha de estilos XSLT a um **conjunto de dados** que contém relações, obter o melhor desempenho se você definir o **Nested** propriedade do <xref:System.Data.DataRelation> para **true**para cada relação de aninhados. Isso permite usar folhas de estilos XSLT que implementam natural de cima para baixo o processamento navegar na hierarquia e transformar os dados, em vez de usar eixos de localização de XPath de alto desempenho (por exemplo, irmão anterior e irmão seguinte no estilo folha nó expressões de teste) para navegar por ele. Para obter mais informações sobre relações aninhadas, consulte [aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,4 +125,4 @@ writer.Close();
   
 ## <a name="see-also"></a>Consulte também  
  [Sincronização de DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

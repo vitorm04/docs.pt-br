@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874589"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406490"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -124,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Funções de aplicativo e pool de conexões  
- Depois de ativada uma função de aplicativo do SQL Server ao chamar o procedimento armazenado do sistema `sp_setapprole`, o contexto de segurança dessa conexão não pode ser redefinido. Entretanto, se o pool estiver habilitado, a conexão será retornada a ele e ocorrerá um erro quando a conexão agrupada for reutilizada. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento, "[erros de função de aplicativo do SQL com o pool de recursos OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Depois de ativada uma função de aplicativo do SQL Server ao chamar o procedimento armazenado do sistema `sp_setapprole`, o contexto de segurança dessa conexão não pode ser redefinido. Entretanto, se o pool estiver habilitado, a conexão será retornada a ele e ocorrerá um erro quando a conexão agrupada for reutilizada. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento, "[erros de função de aplicativo do SQL com o pool de recursos OLE DB](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Alternativas a funções de aplicativo  
  Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
@@ -133,4 +133,4 @@ using (SqlConnection connection = new SqlConnection(
  [Pooling de Conexão](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server and ADO.NET](../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
  [Contadores de desempenho](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

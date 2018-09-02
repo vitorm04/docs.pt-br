@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f6078baba86868fa03f37873731c39e73ac81f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494775"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401870"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
-Este cenário mostra um cliente do Windows Communication Foundation (WCF) e um servidor protegido pelo modo de segurança de mensagem. O cliente e o serviço são autenticados usando credenciais do Windows.  
+Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e o servidor protegido pelo modo de segurança de mensagem. O cliente e o serviço são autenticados usando credenciais do Windows.  
   
- ![Segurança com um cliente do Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Segurança com um cliente do Windows da mensagem](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
@@ -25,8 +25,8 @@ Este cenário mostra um cliente do Windows Communication Foundation (WCF) e um s
 |Interoperabilidade|Somente o WCF|  
 |Autenticação (servidor)|Autenticação mútua do servidor e cliente|  
 |Autenticação (cliente)|Autenticação mútua do servidor e cliente|  
-|Integridade|Sim, usando o contexto de segurança compartilhada|  
-|Confidencialidade|Sim, usando o contexto de segurança compartilhada|  
+|Integridade|Sim, usando o contexto de segurança compartilhado|  
+|Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
 |Transporte|NET. TCP|  
 |Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -35,10 +35,10 @@ Este cenário mostra um cliente do Windows Communication Foundation (WCF) e um s
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto de seguro com um computador Windows.  
+ O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto de seguro com uma máquina Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
@@ -91,7 +91,7 @@ Este cenário mostra um cliente do Windows Communication Foundation (WCF) e um s
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
 ### <a name="configuration"></a>Configuração  
- A configuração a seguir é usada para definir propriedades de cliente.  
+ A configuração a seguir é usada para definir as propriedades de cliente.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -120,4 +120,4 @@ Este cenário mostra um cliente do Windows Communication Foundation (WCF) e um s
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

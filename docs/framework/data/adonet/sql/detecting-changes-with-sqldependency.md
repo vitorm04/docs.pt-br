@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: a25afbe0124f7870df886a1e26e0df2a0716b205
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360184"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405428"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Detectando alterações com SqlDependency
 Um objeto <xref:System.Data.SqlClient.SqlDependency> pode ser associado a um <xref:System.Data.SqlClient.SqlCommand> para detectar quando resultados de consulta diferem daqueles recuperados originalmente. Você também pode atribuir um delegado para o evento `OnChange`, que será disparado quando os resultados forem alterados para um comando associado. Você deve associar o <xref:System.Data.SqlClient.SqlDependency> ao comando antes de executá-lo. A propriedade `HasChanges` do <xref:System.Data.SqlClient.SqlDependency> também pode ser usada para determinar se os resultados da consulta foram alterados desde a primeira recuperação dos dados.  
   
 ## <a name="security-considerations"></a>Considerações sobre segurança  
- A infraestrutura de dependência se baseia em um <xref:System.Data.SqlClient.SqlConnection> que é aberto quando <xref:System.Data.SqlClient.SqlDependency.Start%2A> é chamado para receber notificações de que os dados subjacentes foram alterados para determinado comando. A capacidade de um cliente iniciar a chamada para `SqlDependency.Start` é controlada pelo uso de <xref:System.Data.SqlClient.SqlClientPermission> e por atributos de segurança de acesso a código. Para obter mais informações, consulte [habilitar notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) e [Code Access Security e ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ A infraestrutura de dependência se baseia em um <xref:System.Data.SqlClient.SqlConnection> que é aberto quando <xref:System.Data.SqlClient.SqlDependency.Start%2A> é chamado para receber notificações de que os dados subjacentes foram alterados para determinado comando. A capacidade de um cliente iniciar a chamada para `SqlDependency.Start` é controlada pelo uso de <xref:System.Data.SqlClient.SqlClientPermission> e por atributos de segurança de acesso a código. Para obter mais informações, consulte [habilitando notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) e [Code Access Security e o ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
 ### <a name="example"></a>Exemplo  
  As seguintes etapas ilustram como declarar uma dependência, executar um comando e receber uma notificação quando o conjunto de resultados é alterado:  
@@ -94,7 +94,7 @@ void SomeMethod()
   
         // Create a dependency and associate it with the SqlCommand.  
         SqlDependency dependency=new SqlDependency(command);  
-        // Maintain the refence in a class member.  
+        // Maintain the reference in a class member.  
   
         // Subscribe to the SqlDependency event.  
         dependency.OnChange+=new  
@@ -124,4 +124,4 @@ void Termination()
   
 ## <a name="see-also"></a>Consulte também  
  [Notificações de consulta no SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

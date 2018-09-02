@@ -2,12 +2,12 @@
 title: '&lt;transporte&gt; de &lt;netPeerTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: c94336413424542f6fc6c0ef5b400b10ae715cd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750694"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405658"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;transporte&gt; de &lt;netPeerTcpBinding&gt;
 Especifica as configurações de segurança em nível de transporte ao usar o [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
@@ -32,7 +32,7 @@ Especifica as configurações de segurança em nível de transporte ao usar o [ 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos pai de atributos e elementos filho  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -44,7 +44,7 @@ Especifica as configurações de segurança em nível de transporte ao usar o [ 
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|certificado|A autenticação do transporte de canal par requer um certificado X509.|  
+|Certificado|A autenticação do transporte de canal par requer um certificado X509.|  
 |Senha|A autenticação do transporte de canal par requer uma senha correta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -64,5 +64,5 @@ Especifica as configurações de segurança em nível de transporte ao usar o [ 
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

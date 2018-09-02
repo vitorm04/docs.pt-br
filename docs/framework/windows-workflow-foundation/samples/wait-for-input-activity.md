@@ -2,15 +2,15 @@
 title: Espera para atividades de entrada
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-ms.openlocfilehash: 750a217699abe8b2eb2eaaa364002137d335a41a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518984"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401203"
 ---
 # <a name="wait-for-input-activity"></a>Espera para atividades de entrada
-Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. Windows Workflow Foundation (WF) não fornece uma atividade para a criação de indicador declarativa. Portanto, quando você deseja criar um indexador no fluxo de trabalho, você deve escrever uma atividade personalizado que o criar. A atividade de `WaitForInput` definida neste exemplo fornece essa funcionalidade, de modo que os usuários podem criar indicadores declarativamente dentro de um fluxo de trabalho.  
+Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. Windows Workflow Foundation (WF) não fornece uma atividade para criar declarativa do indexador. Portanto, quando você deseja criar um indexador no fluxo de trabalho, você deve escrever uma atividade personalizado que o criar. A atividade de `WaitForInput` definida neste exemplo fornece essa funcionalidade, de modo que os usuários podem criar indicadores declarativamente dentro de um fluxo de trabalho.  
   
 ## <a name="projects-in-this-sample"></a>Projetos nisso exemplo  
   
@@ -42,7 +42,7 @@ Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. 
   
  O gráfico a seguir mostra o designer de `WaitForInput` . Porque, a atividade de `WaitForInput` é muito básica, o designer permite definir os argumentos diretamente na superfície de designer.  
   
- ![Designer de atividade WaitForInput](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputdesigner.jpg "WaitForInputDesigner")  
+ ![Designer de atividade de WaitForInput](../../../../docs/framework/windows-workflow-foundation/samples/media/waitforinputdesigner.jpg "WaitForInputDesigner")  
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
@@ -57,6 +57,6 @@ Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\WaitForInput`

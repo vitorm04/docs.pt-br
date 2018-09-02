@@ -2,21 +2,21 @@
 title: Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495477"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408253"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
-Este tópico explica como criar um serviço do Windows Communication Foundation (WCF) podem ser descobertos. Ele se baseia o [auto-host](http://go.microsoft.com/fwlink/?LinkId=145523) exemplo.  
+Este tópico explica como criar um serviço do Windows Communication Foundation (WCF) podem ser descobertos. Ele se baseia a [auto-hospedar](https://go.microsoft.com/fwlink/?LinkId=145523) exemplo.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar a amostra existente do serviço de hospedagem interna para descoberta  
   
 1.  Abra a solução de hospedagem interna em [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. O exemplo está localizado no diretório TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Adicione uma referência a `System.ServiceModel.Discovery.dll` para o projeto de serviço. Você verá uma mensagem de erro dizendo "System. ServiceModel.Discovery.dll ou uma de suas dependências exige uma versão posterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] àquela especificada no projeto... " Se você vir essa mensagem, clique com botão direito no projeto no Gerenciador de soluções e escolha **propriedades**. No **propriedades do projeto** janela, verifique se o **Framework de destino** é [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2.  Adicione uma referência ao `System.ServiceModel.Discovery.dll` ao projeto de serviço. Você poderá ver uma mensagem de erro dizendo "System. ServiceModel.Discovery.dll ou uma de suas dependências requer uma versão posterior do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] daquele especificado no projeto... " Se você vir essa mensagem, clique com botão direito no projeto no Gerenciador de soluções e escolha **propriedades**. No **propriedades do projeto** janela, certifique-se de que o **estrutura de destino** é [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3.  Abra o arquivo Service.cs e adicione o seguinte `using` instrução.  
   
@@ -24,7 +24,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  No `Main()` método, dentro de `using` instrução, adicione um <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instância para o host de serviço.  
+4.  No `Main()` método, dentro de `using` instrução, adicionar um <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instância ao host de serviço.  
   
     ```csharp  
     public static void Main()  
@@ -40,7 +40,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     }  
     ```  
   
-     O <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> Especifica que o serviço será aplicada a é detectável.  
+     O <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> Especifica que o serviço for aplicado a é detectável.  
   
 5.  Adicionar um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> para o host de serviço logo após o código que adiciona o <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
@@ -52,15 +52,15 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
     ```  
   
-     Esse código especifica que as mensagens de descoberta devem ser enviadas ao ponto de extremidade de descoberta UDP padrão.  
+     Esse código especifica que as mensagens de descoberta devem ser enviadas para o ponto de extremidade de descoberta UDP padrão.  
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Para criar um aplicativo cliente que usa a descoberta para chamar o serviço  
   
-1.  Adicionar um novo aplicativo de console para a solução chamado `DiscoveryClientApp`.  
+1.  Adicionar um novo aplicativo de console à solução chamado `DiscoveryClientApp`.  
   
 2.  Adicione uma referência ao `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
   
-3.  Copie os arquivos GeneratedClient.cs e App. config do projeto de cliente existente para o novo projeto DiscoveryClientApp. Para fazer isso, clique com botão direito os arquivos a **Solution Explorer**, selecione **cópia**e, em seguida, selecione o **DiscoveryClientApp** do projeto, clique com botão direito e selecione **Colar**.  
+3.  Copie os arquivos GeneratedClient.cs e App. config do projeto de cliente existentes para o novo projeto DiscoveryClientApp. Para fazer isso, clique com botão direito os arquivos a **Gerenciador de soluções**, selecione **cópia**e, em seguida, selecione o **DiscoveryClientApp** do projeto, clique com botão direito e selecione **Colar**.  
   
 4.  Abra Module.vb.  
   
@@ -72,7 +72,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  Adicionar um método estático chamado `FindCalculatorServiceAddress()` para o `Program` classe.  
+6.  Adicione um método estático chamado `FindCalculatorServiceAddress()` para o `Program` classe.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -92,7 +92,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     }  
     ```  
   
-     Isso informa ao WCF que o <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve usar o ponto de extremidade de descoberta padrão UDP para enviar e receber mensagens de descoberta.  
+     Isso informa ao WCF que o <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve usar o ponto de extremidade de descoberta UDP padrão para enviar e receber mensagens de descoberta.  
   
 8.  Na próxima linha, chame o <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> método e especifique um <xref:System.ServiceModel.Discovery.FindCriteria> instância que contém o contrato de serviço que você deseja pesquisar. Nesse caso, especifique `ICalculator`.  
   
@@ -101,7 +101,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
-9. Após a chamada a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, verifique se há pelo menos um serviço correspondente e retornar o <xref:System.ServiceModel.EndpointAddress> do primeiro serviço correspondente. Caso contrário, retornará `null`.  
+9. Após a chamada para <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, verifique se há pelo menos um serviço correspondente e retornar o <xref:System.ServiceModel.EndpointAddress> do primeiro serviço correspondente. Caso contrário, retornará `null`.  
   
     ```csharp  
     if (findResponse.Endpoints.Count > 0)  
@@ -122,23 +122,23 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     }  
     ```  
   
-     Esse método usa o endereço de ponto de extremidade retornado de `FindCalculatorServiceAddress` para chamar o serviço da Calculadora.  
+     Esse método usa o endereço do ponto de extremidade que retornado de `FindCalculatorServiceAddress` para chamar o serviço da Calculadora.  
   
-11. Dentro de `InvokeCalculatorService` método, crie uma instância do `CalculatorServiceClient` classe. Essa classe é definida pelo [auto-host](http://go.microsoft.com/fwlink/?LinkId=145523) exemplo. Ele foi gerado usando Svcutil.exe.  
+11. Dentro de `InvokeCalculatorService` método, crie uma instância da `CalculatorServiceClient` classe. Essa classe é definida pelo [auto-hospedar](https://go.microsoft.com/fwlink/?LinkId=145523) exemplo. Ele foi gerado usando Svcutil.exe.  
   
     ```csharp  
     // Create a client  
     CalculatorClient client = new CalculatorClient();  
     ```  
   
-12. Na próxima linha, defina o endereço do ponto de extremidade do cliente para o endereço de ponto de extremidade retornado de `FindCalculatorServiceAddress()`.  
+12. Na próxima linha, defina o endereço do ponto de extremidade do cliente para o endereço do ponto de extremidade retornado de `FindCalculatorServiceAddress()`.  
   
     ```csharp  
     // Connect to the discovered service endpoint  
     client.Endpoint.Address = endpointAddress;  
     ```  
   
-13. Imediatamente após o código para a etapa anterior, chame os métodos expostos pelo serviço do cálculo.  
+13. Imediatamente após o código para a etapa anterior, chame os métodos expostos pelo serviço de calculadora.  
   
     ```csharp  
     Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress);  
@@ -167,7 +167,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     client.Close();  
     ```  
   
-14. Adicione código para o `Main()` método o `Program` classe chamar `FindCalculatorServiceAddress`.  
+14. Adicione código para o `Main()` método na `Program` classe chamar `FindCalculatorServiceAddress`.  
   
     ```csharp  
     public static void Main()  
@@ -176,7 +176,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     }  
     ```  
   
-15. Na próxima linha, chame o `InvokeCalculatorService()` e passar o endereço de ponto de extremidade retornado de `FindCalculatorServiceAddress()`.  
+15. Na próxima linha, chame o `InvokeCalculatorService()` e passar o endereço do ponto de extremidade que retornado de `FindCalculatorServiceAddress()`.  
   
     ```csharp  
     if (endpointAddress != null)  
@@ -194,7 +194,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
   
 2.  Abra um prompt de comando e execute Discoveryclientapp.exe.  
   
-3.  A saída de service.exe deve parecer com a saída a seguir.  
+3.  A saída do service.exe deve parecer com a saída a seguir.  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     Return: 6.25390869293308  
     ```  
   
-4.  A saída de Discoveryclientapp.exe deve parecer com a saída a seguir.  
+4.  A saída do Discoveryclientapp.exe deve parecer com a saída a seguir.  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -220,7 +220,7 @@ Este tópico explica como criar um serviço do Windows Communication Foundation 
     ```  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma listagem de código para este exemplo. Como esse código é baseado no [auto-host](http://go.microsoft.com/fwlink/?LinkId=145523) exemplo, são listados somente os arquivos que são alterados. Para obter mais informações sobre o próprio Host de exemplo, consulte [instruções de instalação](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ A seguir está uma listagem do código para este exemplo. Como esse código é baseado na [auto-hospedar](https://go.microsoft.com/fwlink/?LinkId=145523) exemplo, somente os arquivos que são alterados são listados. Para obter mais informações sobre o exemplo de hospedagem interna, consulte [instruções de instalação](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

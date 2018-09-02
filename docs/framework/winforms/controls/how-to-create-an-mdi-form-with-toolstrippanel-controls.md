@@ -12,20 +12,20 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 1f7da5bfea9a9864f11a32a589798dfd8a7844a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d4b92ffd37a5d9ce1552fa590357ec55cc6df5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530449"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406333"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Como criar um formulário MDI com controles ToolStripPanel
-Você pode criar um formulário de interface MDI vários documentos que tenha <xref:System.Windows.Forms.ToolStrip> controles de enquadramento-lo em todos os quatro lados.  
+Você pode criar um formulário de MDI (interface MDI) de vários documentos que tem <xref:System.Windows.Forms.ToolStrip> controles de delimitação de quadros nos quatro lados.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como usar encaixada <xref:System.Windows.Forms.ToolStripPanel> controles para exibir uma janela MDI com quatro <xref:System.Windows.Forms.ToolStrip> controles.  
+ O exemplo de código a seguir demonstra como usar encaixado <xref:System.Windows.Forms.ToolStripPanel> controles a uma janela MDI com quatro de quadro <xref:System.Windows.Forms.ToolStrip> controles.  
   
- No exemplo, o <xref:System.Windows.Forms.ToolStripPanel.Join%2A> método anexa o <xref:System.Windows.Forms.ToolStrip> controles para o correspondente <xref:System.Windows.Forms.ToolStripPanel> controles.  
+ No exemplo, o <xref:System.Windows.Forms.ToolStripPanel.Join%2A> método anexa o <xref:System.Windows.Forms.ToolStrip> controles para os respectivos <xref:System.Windows.Forms.ToolStripPanel> controles.  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
@@ -37,7 +37,7 @@ Você pode criar um formulário de interface MDI vários documentos que tenha <x
   
 -   Referências aos assemblies System.Drawing e System.Windows.Forms.  
   
- Para obter informações sobre como criar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [Compilando a partir da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.ToolStrip>  

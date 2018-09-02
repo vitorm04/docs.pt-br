@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: e21b31805eb0b840866313f16cc85ea33c84e515
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537119"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400843"
 ---
 # <a name="toolbar-control-windows-forms"></a>Controle ToolBar (Windows Forms)
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "33537119"
  O controle `ToolBar` dos Windows Forms é usado em formulários como uma barra de controle que exibe uma linha de menus suspensos e botões de bitmap que ativam comandos. Portanto, clicar em um botão de barra de ferramentas é equivalente a escolher um comando de menu. Os botões podem ser configurados para parecer e se comportar como botões de push, menus suspensos ou separadores. Normalmente, uma barra de ferramentas contém botões e menus que correspondem aos itens na estrutura do menu do aplicativo, fornecendo acesso rápido a funções e comandos usados com mais frequência do aplicativo.  
   
 > [!NOTE]
->  O `ToolBar` do controle <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> propriedade tem uma instância do <xref:System.Windows.Forms.ContextMenu> classe como uma referência. Considere cuidadosamente a referência de passar ao implementar esse tipo de botão na barra de ferramentas em seu aplicativo, como a propriedade aceitará qualquer objeto que herda de <xref:System.Windows.Forms.Menu> classe.  
+>  O `ToolBar` do controle <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> propriedade usa uma instância do <xref:System.Windows.Forms.ContextMenu> classe como uma referência. Considere cuidadosamente a referência passada ao implementar esse tipo de botão em barras de ferramentas em seu aplicativo, como a propriedade aceitará qualquer objeto que herda o <xref:System.Windows.Forms.Menu> classe.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do controle de barra de ferramentas](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "33537119"
  [Como disparar eventos de menu para botões da barra de ferramentas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Fornece instruções sobre como escrever o código para interpretar em qual botão o usuário clica em um controle `ToolBar`.  
   
- Consulte também [Como definir um ícone para um botão de barra de ferramentas usando o Designer](http://msdn.microsoft.com/library/ms233659\(v=vs.110\)), [Como adicionar botões a um controle de barra de ferramentas usando o Designer](http://msdn.microsoft.com/library/ms233650\(v=vs.110\)).  
+ Consulte também [Como definir um ícone para um botão de barra de ferramentas usando o Designer](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [Como adicionar botões a um controle de barra de ferramentas usando o Designer](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.ToolBar>  

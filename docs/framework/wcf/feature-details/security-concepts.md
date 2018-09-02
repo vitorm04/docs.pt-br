@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2379c009cacf4cd2adac0aeebbade437e8483af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497393"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402483"
 ---
 # <a name="security-concepts"></a>Conceitos de segurança
-Esta seção explica os conceitos associados à segurança do Windows Communication Foundation (WCF).  
+Esta seção explica resumidamente os conceitos associados com a segurança do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conceitos de segurança utilizados no WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
@@ -22,7 +22,7 @@ Esta seção explica os conceitos associados à segurança do Windows Communicat
  Uma visão geral de como o WCF fornece segurança na topografia de aplicativo distribuído.  
   
  [Terminologia de segurança](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
- Um glossário de termos usados ao abordar a segurança do WCF.  
+ Um glossário de termos usados ao falar sobre segurança do WCF.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  
@@ -41,4 +41,4 @@ Esta seção explica os conceitos associados à segurança do Windows Communicat
 ## <a name="see-also"></a>Consulte também  
  [Segurança](../../../../docs/framework/wcf/feature-details/security.md)  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

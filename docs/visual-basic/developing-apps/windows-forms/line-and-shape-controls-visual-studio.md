@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Shape control [Visual Basic]
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
-ms.openlocfilehash: 6baffe826fa20e17a763b3a5e6fa8476dcb6c220
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585548"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404193"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Controles de linha e forma (Visual Studio)
-Os controles do Visual Basic Power Packs linha e forma são controles de gráficos que permitem que você desenhar linhas horizontais, verticais e diagonais, retângulos, quadrados, ovais, círculos e retângulos e quadrados com cantos arredondados em um formulário ou o contêiner.  
+Os controles do Visual Basic Power Packs linha e forma são controles gráficos que lhe permitem desenhar linhas horizontais, verticais e diagonais, retângulos, quadrados, elipses e círculos, retângulos e quadrados com cantos arredondados em um formulário ou contêiner.  
   
- Os controles PowerPack não estão mais incluídos no Visual Studio, mas você pode baixá-los no [Centro de Download](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Os controles PowerPack não estão mais incluídos no Visual Studio, mas você pode baixá-los na [Centro de Download](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução aos controles de linha e forma](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
  Apresenta e discute os controles de linha e forma e descreve o modelo de objeto.  
   
  [Como desenhar linhas com o controle LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)  
- Demonstra como usar o <xref:Microsoft.VisualBasic.PowerPacks.LineShape> controle para desenhar linhas em tempo de design e em tempo de execução.  
+ Demonstra como usar o <xref:Microsoft.VisualBasic.PowerPacks.LineShape> controle para desenhar linhas em tempo de design e tempo de execução.  
   
  [Como desenhar formas com os controles OvalShape e RectangleShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)  
- Demonstra como usar o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> e <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controles para desenhar formas em tempo de design e em tempo de execução.  
+ Demonstra como usar o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> e <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controles para desenhar formas em tempo de design e tempo de execução.  
   
  [Como habilitar tabulações entre formas](../../../visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)  
  Demonstra como habilitar usuários a se mover entre as formas usando o teclado.  

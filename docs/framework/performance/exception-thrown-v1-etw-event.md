@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dafa5846f779276ab81e8e30e7c7a50b9fbff853
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393849"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400816"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Evento ETW Exception Thrown_V1
 Esse evento captura informações sobre as exceções geradas.  
@@ -36,8 +36,8 @@ Esse evento captura informações sobre as exceções geradas.
 |Tipo de exceção|win:UnicodeString|Tipo da exceção; por exemplo, `System.NullReferenceException`.|  
 |Mensagem de exceção|win:UnicodeString|A mensagem de exceção real.|  
 |EIPCodeThrow|win:Pointer|Ponteiro de instrução em que ocorreu a exceção.|  
-|ExceptionHR|win:UInt32|Exceção [HRESULT](http://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (consulte [Eventos CLR ETW](../../../docs/framework/performance/clr-etw-events.md) na documentação do Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que o estado do processo está corrompido; consulte [Tratando exceções de estado corrompido](http://go.microsoft.com/fwlink/?LinkId=179681) no MSDN).<br /><br /> 0x10: IsCLSCompliant (uma exceção que é derivada de <xref:System.Exception> está em conformidade com CLS; caso contrário, ela não está em conformidade com CLS).|  
+|ExceptionHR|win:UInt32|Exceção [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (consulte [Eventos CLR ETW](../../../docs/framework/performance/clr-etw-events.md) na documentação do Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que o estado do processo está corrompido; consulte [Tratando exceções de estado corrompido](https://go.microsoft.com/fwlink/?LinkId=179681) no MSDN).<br /><br /> 0x10: IsCLSCompliant (uma exceção que é derivada de <xref:System.Exception> está em conformidade com CLS; caso contrário, ela não está em conformidade com CLS).|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 ## <a name="see-also"></a>Consulte também  

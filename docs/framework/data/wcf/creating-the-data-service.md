@@ -1,106 +1,106 @@
 ---
-title: Criando o serviço de dados
-ms.date: 03/30/2017
+title: Criar um serviço de dados do WCF no Visual Studio
+ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: bb6e2f7c1160fa51cd897cc953ad0ed721559294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417821"
 ---
-# <a name="creating-the-data-service"></a>Criando o serviço de dados
-Nesta tarefa, você criará um serviço de dados de exemplo que usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para expor um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed com base no banco de dados de exemplo Northwind. A tarefa envolve as seguintes etapas básicas:  
-  
-1.  Criar um aplicativo Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
-  
-2.  Definir o modelo de dados usando as ferramentas do [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)].  
-  
-3.  Adicionar o serviço de dados para o aplicativo Web.  
-  
-4.  Habilitar o acesso ao serviço de dados.  
-  
-> [!NOTE]
->  O [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Web que você criar quando você concluir essa tarefa é executada [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server fornecidos pelo Visual Studio. O Servidor de Desenvolvimento do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] somente dá suporte a acesso do computador local. Para facilitar o teste e a solução de problemas do serviço de dados durante o desenvolvimento, execute o aplicativo que hospeda o serviço de dados usando o IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [como: desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
-  
-### <a name="to-create-the-aspnet-web-application"></a>Para criar o aplicativo Web do ASP.NET  
-  
-1.  No Visual Studio, no **arquivo** menu, selecione **novo**e, em seguida, selecione **projeto**.  
-  
-2.  No **novo projeto** caixa de diálogo, em Visual Basic ou Visual c#, selecione a **Web** modelo e selecione **aplicativo Web ASP.NET**.  
-  
-    > [!NOTE]
-    >  Se você usar o Visual Studio Web Developer, você deve criar um novo site em vez de um novo aplicativo Web.  
-  
-3.  Tipo `NorthwindService` como o nome do projeto.  
-  
-4.  Clique em **OK**.  
-  
-5.  (Opcional) Especifique um número de porta específica para seu aplicativo Web. Observação: o número da porta `12345` é usado no restante do início rápido.  
-  
-    1.  Em **Solution Explorer**, clique no nome do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto a que você acabou de criado e, em seguida, clique em **propriedades**.  
-  
-    2.  Selecione o **Web** guia e defina o valor da **porta específica** caixa de texto `12345`.  
-  
-### <a name="to-define-the-data-model"></a>Para definir o modelo de dados  
-  
-1.  Em **Solution Explorer**, clique no nome do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] do projeto e, em seguida, clique em **Adicionar Novo Item.**  
-  
-2.  No **Adicionar Novo Item** caixa de diálogo, clique o **dados** modelo e selecione **modelo de dados de entidade ADO.NET**.  
-  
-3.  Para o nome do modelo de dados, digite `Northwind.edmx`.  
-  
-4.  No [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] assistente, selecione **gerar do banco de dados**e, em seguida, clique em **próximo**.  
-  
-5.  Conecte o modelo de dados para o banco de dados seguindo um destes procedimentos e, em seguida, clique em **próximo**:  
-  
-    -   Se você não tiver uma conexão de banco de dados já configurado, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, consulte [como: criar conexões com bancos de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). Esta instância do SQL Server deve ter o banco de dados de exemplo e anexado.  
-  
-         \- ou -  
-  
-    -   Se você tiver uma conexão de banco de dados já configurada para se conectar ao banco de dados Northwind, selecione a conexão da lista de conexões.  
-  
-6.  Na página final do assistente, selecione as caixas de seleção para todas as tabelas no banco de dados e desmarque as caixas de seleção para exibições e procedimentos armazenados.  
-  
-7.  Clique em **concluir** para fechar o assistente.  
-  
-    > [!NOTE]
-    >  Esse modelo de dados gerado expõe as propriedades de chave estrangeira em tipos de entidade. Os modelos de dados criados por meio do Visual Studio 2008 não incluem essas propriedades de chave estrangeira. Por isso, você deverá atualizar as classes de serviço de dados do cliente de todos os aplicativos cliente que foram criados para acessar o serviço de dados Northwind criado por meio do Visual Studio 2008 antes de tentar acessar essa versão do serviço de dados Northwind.  
-  
-### <a name="to-create-the-data-service"></a>Para criar o serviço de dados  
-  
-1.  Em **Solution Explorer**, clique no nome do seu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] do projeto e, em seguida, clique em **Adicionar Novo Item**.  
-  
-2.  No **Adicionar Novo Item** caixa de diálogo, selecione **WCF Data Service**.  
-  
-3.  Para o nome do serviço, digite `Northwind`.  
-  
-     O Visual StudioVisual Studio cria os arquivos de marcação e o código XML para o novo serviço. Por padrão, a janela do editor de códigos é aberta. Em **Solution Explorer**, o serviço terá o nome do Northwind, com a extensão. svc.cs ou. svc.vb.  
-  
-4.  No código do serviço de dados, substitua o comentário `/* TODO: put your data source class name here */` na definição da classe que define o serviço de dados pelo tipo que é o contêiner de entidade do modelo de dados, que, neste caso, é `NorthwindEntities`. A definição da classe deve ter a seguinte aparência:  
-  
+# <a name="create-the-data-service"></a>Criar o serviço de dados
+
+Neste tópico, você cria um serviço de dados de exemplo que usa o WCF Data Services para expor um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed com base no banco de dados de exemplo Northwind. A tarefa envolve as seguintes etapas básicas:
+
+1. Crie um aplicativo Web ASP.NET.
+
+2. Defina o modelo de dados usando as ferramentas do modelo de dados de entidade.
+
+3. Adicionar o serviço de dados para o aplicativo Web.
+
+4. Habilitar o acesso ao serviço de dados.
+
+## <a name="create-the-aspnet-web-app"></a>Criar o aplicativo web ASP.NET
+
+1. No Visual Studio, sobre o **arquivo** menu, selecione **New** > **projeto**.
+
+1. No **novo projeto** caixa de diálogo, em Visual Basic ou Visual c#, selecione a **Web** categoria e, em seguida, selecione **aplicativo Web ASP.NET**.
+
+1. Insira `NorthwindService` como o nome do projeto e, em seguida, selecione **Okey**.
+
+1. No **novo aplicativo Web ASP.NET** caixa de diálogo, selecione **vazia** e, em seguida, selecione **Okey**.
+
+1. (Opcional) Especifique um número de porta específica para seu aplicativo Web. Observação: o número da porta `12345` é usado nesta série de tópicos do guia de início rápido.
+
+    1. Na **Gerenciador de soluções**, clique com botão direito no projeto ASP.NET que você acabou de criar e, em seguida, escolha **propriedades**.
+
+    2. Selecione o **Web** guia e defina o valor da **porta específica** caixa de texto para `12345`.
+
+## <a name="define-the-data-model"></a>Definir o modelo de dados
+
+1. Na **Gerenciador de soluções**, clique no nome do projeto ASP.NET e, em seguida, clique em **Add** > **Novo Item**.
+
+2. No **Adicionar Novo Item** caixa de diálogo, selecione o **dados** categoria e, em seguida, selecione **modelo de dados de entidade ADO.NET**.
+
+3. Para o nome do modelo de dados, digite `Northwind.edmx`.
+
+4. No **Assistente de modelo de dados de entidade**, selecione **EF Designer do banco de dados**e, em seguida, clique em **próxima**.
+
+5. Conectar-se o modelo de dados no banco de dados de uma das seguintes etapas e, em seguida, clique em **próxima**:
+
+    -   Se você não tiver uma conexão de banco de dados já configurada, clique em **nova Conexão** e criar uma nova conexão. Para obter mais informações, consulte [como: criar conexões com bancos de dados do SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instância do SQL Server deve ter o banco de dados de exemplo Northwind anexado.
+
+         \- ou -
+
+    -   Se você tiver uma conexão de banco de dados já configurada para se conectar ao banco de dados Northwind, selecione a conexão da lista de conexões.
+
+6. Na página final do assistente, selecione as caixas de seleção para todas as tabelas no banco de dados e desmarque as caixas de seleção para exibições e procedimentos armazenados.
+
+7. Clique em **concluir** para fechar o assistente.
+
+## <a name="create-the-wcf-data-service"></a>Criar o serviço de dados do WCF
+
+1. Na **Gerenciador de soluções**, clique com botão direito no projeto do ASP.NET e, em seguida, escolha **Add** > **Novo Item**.
+
+2. No **Adicionar Novo Item** caixa de diálogo, selecione o **WCF Data Service** modelo de item dos **Web** categoria.
+
+   ![Modelo de item do WCF Data Service no Visual Studio 2015](media/wcf-data-service-item-template.png)
+
+   > [!NOTE]
+   > O **WCF Data Service** modelo estará disponível no Visual Studio 2015, mas não no Visual Studio 2017.
+
+3. Para o nome do serviço, digite `Northwind`.
+
+     O Visual Studio cria a marcação XML e os arquivos de código do novo serviço. Por padrão, a janela do editor de códigos é aberta. Na **Gerenciador de soluções**, o serviço tem o nome Northwind com a extensão *. svc.cs* ou *. svc*.
+
+4. No código do serviço de dados, substitua o comentário `/* TODO: put your data source class name here */` na definição da classe que define o serviço de dados pelo tipo que é o contêiner de entidade do modelo de dados, que, neste caso, é `NorthwindEntities`. A definição da classe deve ter a seguinte aparência:
+
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
-  
-### <a name="to-enable-access-to-data-service-resources"></a>Para restringir o acesso a recursos do serviço de dados  
-  
-1.  No código para o serviço de dados, substitua o código de espaço reservado na função `InitializeService` pelo seguinte:  
-  
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+
+## <a name="enable-access-to-data-service-resources"></a>Habilitar o acesso aos recursos do serviço de dados
+
+1. No código para o serviço de dados, substitua o código de espaço reservado na função `InitializeService` pelo seguinte:
+
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#allreadconfig)]
-     [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#allreadconfig)]  
-  
-     Isso permite que clientes autorizados tenham acesso de leitura e gravação aos recursos para os conjuntos de entidades especificados.  
-  
+     [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#allreadconfig)]
+
+     Isso permite que clientes autorizados tenham acesso de leitura e gravação aos recursos para os conjuntos de entidades especificados.
+
     > [!NOTE]
-    >  Qualquer cliente que possa acessar o aplicativo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] também poderá acessar os recursos expostos pelo serviço de dados. Em um serviço de dados de produção, para impedir o acesso não autorizado a recursos, você também deverá proteger o próprio aplicativo. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
-  
-## <a name="next-steps"></a>Próximas etapas  
- Você criou com êxito um novo serviço de dados que expõe um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed baseado no banco de dados de exemplo Northwind e você tiver habilitado o acesso ao feed para clientes que têm permissões no [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo Web. Em seguida, você iniciará o serviço de dados do Visual Studio e terão acesso a [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed enviando solicitações HTTP GET por meio de um navegador da Web:  
-  
- [Acessando o serviço de um navegador da Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) (Ferramentas de modelo de dados de entidade do ADO.NET)
+    > Qualquer cliente que pode acessar o aplicativo ASP.NET também pode acessar os recursos expostos pelo serviço de dados. Em um serviço de dados de produção, para impedir o acesso não autorizado a recursos, você também deverá proteger o próprio aplicativo. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).
+
+## <a name="next-steps"></a>Próximas etapas
+
+Você criou com êxito um novo serviço de dados que expõe um feed de OData com base no banco de dados de exemplo Northwind, e você tiver habilitado o acesso a feed para clientes que têm permissões no aplicativo Web do ASP.NET. Em seguida, inicie o serviço de dados do Visual Studio e acessar o feed enviando solicitações HTTP GET por meio de um navegador da Web OData:
+
+> [!div class="nextstepaction"]
+> [Acessar o serviço de um navegador da web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+
+## <a name="see-also"></a>Consulte também
+
+- [Ferramentas de modelo de dados de entidade ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

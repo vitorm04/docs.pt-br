@@ -2,15 +2,15 @@
 title: Filas transacionadas
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519675"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408809"
 ---
 # <a name="transacted-queues"></a>Filas transacionadas
-Este exemplo mostra como integrar a filas e transações no Windows Workflow Foundation (WF) para criar serviços escalonáveis e confiáveis. Um <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` é usado no fluxo de trabalho cliente para enviar a mensagem para uma fila em uma transação usando o <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> é usado no servidor para receber mensagens de fila e para atualizar o estado de fluxo de trabalho na mesma transação.  
+Este exemplo mostra como integrar filas e transações no Windows Workflow Foundation (WF) para criar serviços confiáveis e escalonáveis. Um <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` é usado no fluxo de trabalho do cliente para enviar a mensagem para uma fila em uma transação usando o <xref:System.ServiceModel.NetMsmqBinding>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> é usado no servidor para receber mensagens de fila e para atualizar o estado de fluxo de trabalho na mesma transação.  
   
 ## <a name="demonstrates"></a>Demonstra  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive>, e correlação conteudo base.  
@@ -24,7 +24,7 @@ Este exemplo mostra como integrar a filas e transações no Windows Workflow Fou
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Instalar e configurar MSMQ. Consulte [instalar o serviço de enfileiramento](http://go.microsoft.com/fwlink/?LinkId=178526) para obter detalhes.  
+1.  Instalar e configurar MSMQ. Ver [instalando o serviço de enfileiramento](https://go.microsoft.com/fwlink/?LinkId=178526) para obter detalhes.  
   
 2.  Certifique-se de que MSDTC está executando executando o comando a seguir na linha de comando. `net start msdtc`  
   
@@ -35,6 +35,6 @@ Este exemplo mostra como integrar a filas e transações no Windows Workflow Fou
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

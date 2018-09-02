@@ -2,12 +2,12 @@
 title: Práticas recomendadas de persistência
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 68164cc937c1c718df39c96c3d6ac490ab025fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520182"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404684"
 ---
 # <a name="persistence-best-practices"></a>Práticas recomendadas de persistência
 Este documento aborda as práticas recomendadas para o design e a configuração de fluxo de trabalho relacionados à persistência de fluxo de trabalho.  
@@ -21,7 +21,7 @@ Este documento aborda as práticas recomendadas para o design e a configuração
   
  Se seu fluxo de trabalho é muito ocupado por tempo, recomendamos que você persistir a instância de fluxo de trabalho regularmente ao longo do seu período ocupado. Você pode fazer isso adicionando atividades de <xref:System.Activities.Statements.Persist> durante a sequência de atividades que mantém a instância de fluxo de trabalho ocupado. Assim, reciclagem do domínio de aplicativo, falhas host, ou falhas do computador não causam o sistema a ser rolado de volta para o início do período ocupado. Esteja ciente que adicionar atividades de <xref:System.Activities.Statements.Persist> ao fluxo de trabalho pode levar a uma degradação de desempenho.  
   
- A tela de aplicativo Windows Server simplifica bastante a configuração e uso de persistência. Para obter mais informações, consulte [persistência de malha de aplicativo do Windows Server](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ A tela de aplicativo Windows Server simplifica bastante a configuração e uso de persistência. Para obter mais informações, consulte [persistência da tela de aplicativo do Windows Server](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuração de parâmetros de escalabilidade  
  Os requisitos de escalabilidade e desempenho determinam as configurações dos seguintes parâmetros:  

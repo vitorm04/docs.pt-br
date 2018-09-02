@@ -2,12 +2,12 @@
 title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908140"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406914"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço em tempo de execução através de um provedor de instrumentação de gerenciamento do Windows (WMI) do WCF.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
  Essa entrada de configuração expõe uma interface WMI. Aplicativos de gerenciamento agora podem se conectar por meio dessa interface e acessar a instrumentação de gerenciamento do aplicativo.  
   
 ## <a name="accessing-wmi-data"></a>Acessando dados do WMI  
- Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos do Visual Basic, aplicativos de C++ e o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [WMI usando](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ Dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece as APIs do WMI para scripts, aplicativos do Visual Basic, aplicativos de C++ e o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [WMI usando](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Se você usar o .NET Framework ofereceu métodos para acessar programaticamente os dados do WMI, você deve estar ciente de que esses métodos podem gerar exceções quando a conexão é estabelecida. A conexão não for estabelecida durante a construção do <xref:System.Management.ManagementObject> instância, mas, na primeira solicitação que envolve a troca de dados real. Portanto, você deve usar um `try..catch` bloco para capturar possíveis exceções.  
@@ -147,13 +147,13 @@ Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço
 Whoami /user  
 ```  
   
- Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) ferramenta da [Windows 2000 Resource Kit Tools para tarefas administrativas](http://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio) e como um lado efeito imprime os dois SIDs à linha de comando. Para obter mais informações, consulte [SIDs bem conhecidos](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Isso fornece o SID do usuário atual, mas esse método não pode ser usado para obter o SID em qualquer usuário arbitrário. Outro método para obter o SID é usar o [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467) ferramenta da [Windows 2000 Resource Kit Tools para tarefas administrativas](https://go.microsoft.com/fwlink/?LinkId=178660). Essa ferramenta compara o SID de dois usuários (local ou domínio) e como um lado efeito imprime os dois SIDs à linha de comando. Para obter mais informações, consulte [SIDs bem conhecidos](https://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Acessando instâncias de objeto WMI remoto  
  Se você precisar acessar instâncias do WMI do WCF em um computador remoto, você deve habilitar privacidade de pacote nas ferramentas de que você usa para acesso. A seção a seguir descreve como conseguir isto usando o CIM Studio WMI, o Testador de instrumentação de gerenciamento do Windows, bem como os SDK do .NET 2.0.  
   
 ### <a name="wmi-cim-studio"></a>CIM Studio do WMI  
- Se você tiver instalado [ferramentas administrativas do WMI](http://go.microsoft.com/fwlink/?LinkId=95185), você pode usar o CIM Studio WMI para acessar instâncias do WMI. As ferramentas estão na seguinte pasta  
+ Se você tiver instalado [ferramentas administrativas do WMI](https://go.microsoft.com/fwlink/?LinkId=95185), você pode usar o CIM Studio WMI para acessar instâncias do WMI. As ferramentas estão na seguinte pasta  
   
  **Ferramentas de Files\WMI %Windir%\Program\\**  
   

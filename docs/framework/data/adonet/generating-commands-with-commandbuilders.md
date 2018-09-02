@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 752cccc9e10dd3056817945d1f9f5f3cf7d84227
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766277"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415757"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Gerando comandos com CommandBuilders
 Quando a propriedade `SelectCommand` é especificada dinamicamente em tempo de execução, como através de uma ferramenta de consulta que usa um comando textual do usuário, você não poderá especificar o `InsertCommand`, `UpdateCommand` ou `DeleteCommand` apropriado em tempo de design. Se seu <xref:System.Data.DataTable> mapear para ou for gerado a partir de uma única tabela do banco de dados, você poderá aproveitar o objeto <xref:System.Data.Common.DbCommandBuilder> para gerar automaticamente o `DeleteCommand`, `InsertCommand` e `UpdateCommand` do <xref:System.Data.Common.DbDataAdapter>.  
@@ -23,9 +23,9 @@ Quando a propriedade `SelectCommand` é especificada dinamicamente em tempo de e
   
  Quando estiver associado com um `DataAdapter`, o <xref:System.Data.Common.DbCommandBuilder> gera automaticamente as propriedades `InsertCommand`, `UpdateCommand` e `DeleteCommand` do `DataAdapter` se forem referências nulas. Se um `Command` já existir para uma propriedade, o `Command` existente será usado.  
   
- As exibições de banco de dados que são criadas juntando duas ou mais tabelas não são consideradas uma única tabela de banco de dados. Nesse caso, você não pode usar o <xref:System.Data.Common.DbCommandBuilder> para gerar comandos automaticamente; você deve especificar seus comandos explicitamente. Para obter informações sobre como definir explicitamente os comandos para resolver as atualizações para um `DataSet` volta para a fonte de dados, consulte [Atualizar fontes de dados com DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+ As exibições de banco de dados que são criadas juntando duas ou mais tabelas não são consideradas uma única tabela de banco de dados. Nesse caso, você não pode usar o <xref:System.Data.Common.DbCommandBuilder> para gerar comandos automaticamente; você deve especificar seus comandos explicitamente. Para obter informações sobre como definir comandos explicitamente para resolver atualizações para um `DataSet` volta para a fonte de dados, consulte [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
- Você pode desejar mapear parâmetros de saída de volta para a linha atualizada de um `DataSet`. Uma tarefa comum é recuperar o valor de um campo de identidade ou um carimbo de data/hora gerado automaticamente da fonte de dados. O <xref:System.Data.Common.DbCommandBuilder> não mapeará parâmetros de saída para colunas em uma linha atualizada por padrão. Nesse caso, você deve especificar explicitamente o comando. Para obter um exemplo de mapeamento de um campo de identidade gerado automaticamente para uma coluna de uma linha inserida, consulte [recuperando identidade ou valores de Autonumber](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
+ Você pode desejar mapear parâmetros de saída de volta para a linha atualizada de um `DataSet`. Uma tarefa comum é recuperar o valor de um campo de identidade ou um carimbo de data/hora gerado automaticamente da fonte de dados. O <xref:System.Data.Common.DbCommandBuilder> não mapeará parâmetros de saída para colunas em uma linha atualizada por padrão. Nesse caso, você deve especificar explicitamente o comando. Para obter um exemplo de como mapear um campo de identidade gerado automaticamente para uma coluna de uma linha inserida, consulte [recuperando identidade ou valores de Autonumber](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).  
   
 ## <a name="rules-for-automatically-generated-commands"></a>Regras comandos gerados automaticamente  
  A tabela a seguir mostra as regras para como os comandos gerados automaticamente são gerados.  
@@ -37,7 +37,7 @@ Quando a propriedade `SelectCommand` é especificada dinamicamente em tempo de e
 |`DeleteCommand`|Exclui linhas na fonte de dados para todas as linhas na tabela com um `RowState` de <xref:System.Data.DataRowState.Deleted>. Exclui todas as linhas onde os valores de coluna correspondem aos valores de coluna de chave primária da linha, e onde as colunas restantes na fonte de dados correspondem aos valores originais da linha. Para obter mais informações, consulte “Modelo de simultaneidade otimista para atualizações e exclusões”, posteriormente neste tópico.|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>Modelo de simultaneidade otimista para atualizações e exclusões  
- A lógica para gerar comandos automaticamente para instruções UPDATE e DELETE baseia-se em *simultaneidade otimista*– ou seja, os registros não estiverem bloqueados para edição e pode ser modificados por outros usuários ou processos a qualquer momento. Como um registro pode ter sido modificado após ter sido retornado da instrução SELECT, mas antes de a instrução UPDATE ou DELETE ser emitida, a instrução UPDATE ou DELETE gerada automaticamente contém uma cláusula WHERE, especificando que uma linha estará atualizada apenas se contiver todos os valores originais e não tiver sido excluída da fonte de dados. Isso é feito para evitar sobrescrever novos dados. Onde uma atualização gerada automaticamente tentar atualizar uma linha que foi excluída ou que não contém os valores originais localizados no <xref:System.Data.DataSet>, o comando não afetará nenhum registro e uma <xref:System.Data.DBConcurrencyException> será gerada.  
+ A lógica para gerar automaticamente comandos para instruções UPDATE e DELETE se baseia *simultaneidade otimista*– ou seja, os registros não são bloqueados para edição e pode ser modificados por outros usuários ou processos a qualquer momento. Como um registro pode ter sido modificado após ter sido retornado da instrução SELECT, mas antes de a instrução UPDATE ou DELETE ser emitida, a instrução UPDATE ou DELETE gerada automaticamente contém uma cláusula WHERE, especificando que uma linha estará atualizada apenas se contiver todos os valores originais e não tiver sido excluída da fonte de dados. Isso é feito para evitar sobrescrever novos dados. Onde uma atualização gerada automaticamente tentar atualizar uma linha que foi excluída ou que não contém os valores originais localizados no <xref:System.Data.DataSet>, o comando não afetará nenhum registro e uma <xref:System.Data.DBConcurrencyException> será gerada.  
   
  Se você desejar que a instrução UPDATE ou DELETE seja concluída independentemente dos valores originais, você deverá definir explicitamente o `UpdateCommand` para o `DataAdapter` e não depender da geração de comando automática.  
   
@@ -112,4 +112,4 @@ adapter.Fill(custDS, "Customers");
  [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Executar um comando](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [DbConnection, DbCommand e DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 57ed6045ca0ea9f9579640839e8198716cf79fe0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760876"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408078"
 ---
 # <a name="finding-rows"></a>Localizando linhas
-Você pode procurar linhas de acordo com seus valores de chave de classificação usando o <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> métodos do <xref:System.Data.DataView>. A diferenciação de maiusculas e minúsculas da pesquisa de valores no **localizar** e **FindRows** métodos é determinado pelo **CaseSensitive** propriedade subjacente <xref:System.Data.DataTable>. Valores de pesquisa devem corresponder a valores de chave de classificação existentes em sua totalidade para retornar um resultado.  
+Você pode procurar por linhas de acordo com seus valores de chave de classificação usando o <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> métodos do <xref:System.Data.DataView>. Valores de maiusculas e minúsculas da pesquisa na **encontrar** e **FindRows** métodos é determinado pelo **CaseSensitive** propriedade subjacente <xref:System.Data.DataTable>. Valores de pesquisa devem corresponder a valores de chave de classificação existentes em sua totalidade para retornar um resultado.  
   
- O **localizar** método retorna um inteiro com o índice da <xref:System.Data.DataRowView> que corresponde aos critérios de pesquisa. Se mais de uma linha corresponde aos critérios de pesquisa, apenas o índice da primeira correspondência **DataRowView** é retornado. Se nenhuma correspondência for encontrada, **localizar** retornará -1.  
+ O **encontrar** método retorna um inteiro com o índice do <xref:System.Data.DataRowView> que corresponde aos critérios de pesquisa. Se mais de uma linha corresponde aos critérios de pesquisa, apenas o índice da correspondência de primeira **DataRowView** é retornado. Se nenhuma correspondência for encontrada, **localizar** retornará -1.  
   
- Para retornar os resultados de pesquisa que correspondam a várias linhas, use o **FindRows** método. **FindRows** funciona como o **localizar** método, exceto que ela retorna um **DataRowView** matriz que faz referência a todas as linhas correspondentes no **DataView**. Se nenhuma correspondência for encontrada, o **DataRowView** matriz estará vazia.  
+ Para retornar os resultados de pesquisa que correspondam a várias linhas, use o **FindRows** método. **FindRows** funciona como o **encontrar** método, exceto que ele retorna um **DataRowView** que faz referência a todas as linhas correspondentes na matriz a **DataView**. Se nenhuma correspondência for encontrada, o **DataRowView** matriz estará vazia.  
   
- Para usar o **localizar** ou **FindRows** métodos que você deve especificar uma classificação ordem definindo **ApplyDefaultSort** para **true** ou usando o **Classificação** propriedade. Se nenhuma ordem de classificação for especificado, uma exceção será lançada.  
+ Para usar o **encontrar** ou **FindRows** métodos que você deve especificar uma classificação ordem definindo **ApplyDefaultSort** para **true** ou usando o **Classificação** propriedade. Se nenhuma ordem de classificação for especificada, uma exceção é lançada.  
   
- O **localizar** e **FindRows** métodos aceitam uma matriz de valores como entrada cujo tamanho corresponde ao número de colunas na ordem de classificação. No caso de uma classificação em uma única coluna, você pode passar um único valor. Para ordens de classificação que contém várias colunas, você passar uma matriz de objetos. Observe que, para uma classificação em várias colunas, os valores na matriz de objetos devem corresponder à ordem das colunas especificadas no **classificação** propriedade o **DataView**.  
+ O **encontrar** e **FindRows** métodos aceitam uma matriz de valores como entrada cujo tamanho corresponde ao número de colunas na ordem de classificação. No caso de uma classificação em uma única coluna, você pode passar um único valor. Para ordens de classificação que contém várias colunas, você passa uma matriz de objetos. Observe que para uma classificação em várias colunas, os valores na matriz de objetos devem corresponder à ordem das colunas especificadas na **Sort** propriedade da **DataView**.  
   
- O seguinte exemplo de código mostra o **localizar** método ser chamado em um **DataView** com uma ordem de classificação de coluna única.  
+ O seguinte exemplo de código mostra a **encontrar** método sendo chamado em um **DataView** com uma ordem de classificação de coluna única.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Se seu **classificação** propriedade especifica várias colunas, você deve passar uma matriz de objetos com os valores de pesquisa para cada coluna na ordem especificada pelo **classificação** propriedade, como no exemplo de código a seguir.  
+ Se sua **Sort** propriedade especifica várias colunas, você deve passar uma matriz de objetos com os valores de pesquisa para cada coluna na ordem especificada pela **classificação** propriedade, como no exemplo de código a seguir.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -97,4 +97,4 @@ else
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

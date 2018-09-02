@@ -2,12 +2,12 @@
 title: Funções de servidor e banco de dados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925459"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403138"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Funções de servidor e banco de dados no SQL Server
 Todas as versões do SQL Server usam segurança baseada em função, o que permite que você atribua permissões para uma função ou grupo de usuários, em vez de usuários individuais. O servidor fixo e as funções de banco de dados fixas têm um conjunto fixo de permissões atribuídas a eles.  
@@ -27,8 +27,8 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Funções de nível de servidor](/sql/relational-databases/security/authentication-access/server-level-roles) e [permissões de funções de servidor fixas](http://msdn.microsoft.com/library/ms175892.aspx) nos Manuais Online do SQL Server|Descreve as funções de servidor fixas e as permissões associadas a eles no SQL Server.|  
-|[Funções de nível de banco de dados](/sql/relational-databases/security/authentication-access/database-level-roles) e [permissões de funções de banco de dados fixa](http://msdn.microsoft.com/library/ms189612.aspx) nos Manuais Online do SQL Server|Descreve funções de banco de dados fixas e as permissões associadas a elas|  
+|[Funções de nível de servidor](/sql/relational-databases/security/authentication-access/server-level-roles) e [permissões de funções de servidor fixas](https://msdn.microsoft.com/library/ms175892.aspx) nos Manuais Online do SQL Server|Descreve as funções de servidor fixas e as permissões associadas a eles no SQL Server.|  
+|[Funções de nível de banco de dados](/sql/relational-databases/security/authentication-access/database-level-roles) e [permissões de funções de banco de dados fixa](https://msdn.microsoft.com/library/ms189612.aspx) nos Manuais Online do SQL Server|Descreve funções de banco de dados fixas e as permissões associadas a elas|  
   
 ## <a name="database-roles-and-users"></a>Funções e usuários do banco de dados  
  Os logons devem ser mapeados para contas de usuário do banco de dados para funcionar com objetos de banco de dados. Os usuários do banco de dados podem então ser adicionados às funções de banco de dados, herdando todos os conjuntos de permissões associados a essas funções. Todas as permissões podem ser concedidas.  
@@ -58,7 +58,7 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Controle de acesso e identidade](http://msdn.microsoft.com/library/bb510418.aspx) nos Manuais Online do SQL Server|Contém links para tópicos que descrevem entidades de segurança, funções, credenciais, protegíveis e permissões.|  
+|[Controle de acesso e identidade](https://msdn.microsoft.com/library/bb510418.aspx) nos Manuais Online do SQL Server|Contém links para tópicos que descrevem entidades de segurança, funções, credenciais, protegíveis e permissões.|  
 |[Entidades de segurança](/sql/relational-databases/security/authentication-access/principals-database-engine) nos Manuais Online do SQL Server|Descreve as entidades de segurança e contém links para tópicos que descrevem funções de servidor e banco de dados.|  
   
 ## <a name="see-also"></a>Consulte também  
@@ -67,4 +67,4 @@ Todas as versões do SQL Server usam segurança baseada em função, o que permi
  [Autenticação no SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Propriedade e separação do esquema de usuário no SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [Autorização e permissões no SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -2,12 +2,12 @@
 title: Atraso durável
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516016"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406570"
 ---
 # <a name="durable-delay"></a>Atraso durável
 Este exemplo demonstra como usar um atraso durável, que é um atraso que persiste o fluxo de trabalho para um dispositivo durável durante o atraso. O fluxo de trabalho de exemplo contém duas mensagens ao console que são separadas por um atraso. Quando o atraso é disparado, o trabalho são descarregados e esperam 5 segundos no armazenamento de instância de trabalho antes de ser recarregado na memória.  
@@ -35,7 +35,7 @@ Este exemplo demonstra como usar um atraso durável, que é um atraso que persis
   
     2.  Navegue até o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] diretório (C:\Windows\Microsoft.NET\Framework\v4. X\\).  
   
-    3.  Edite o arquivo WorkflowManagementService.exe.config e adicione a seguinte cadeia de conexão dentro de <`database`> elemento.  
+    3.  Edite o arquivo de Workflowmanagementservice e adicione a seguinte cadeia de conexão dentro de <`database`> elemento.  
   
         ```xml  
         <database connectionString="Data Source=localhost\SQLEXPRESS;Initial Catalog=DefaultSampleStore;Integrated Security=True;Asynchronous Processing=True" />  
@@ -45,7 +45,7 @@ Este exemplo demonstra como usar um atraso durável, que é um atraso que persis
   
     5.  Executar Setup.cmd.  
   
-2.  Executar [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] usando permissões elevadas clicando com o [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ícone e selecionando **executar como administrador**.  
+2.  Execute [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] usando permissões elevadas clicando com o [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ícone e selecionando **executar como administrador**.  
   
 3.  Abra o arquivo de solução de Delay.sln.  
   
@@ -66,6 +66,6 @@ Este exemplo demonstra como usar um atraso durável, que é um atraso que persis
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

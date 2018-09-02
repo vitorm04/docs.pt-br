@@ -2,12 +2,12 @@
 title: Geração de alteração SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071946"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417241"
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.  
@@ -25,11 +25,11 @@ Esta seção discute como desenvolver um módulo de geração SQL de alteração
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree e suas implementações que são produzidas pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] representar sempre uma operação de única linha. Esta seção descreve esses tipos com as restrições no .NET Framework versão 3.5.  
+ DbModificationCommandTree e suas implementações que são produzidas pelo [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sempre representam uma operação única linha. Esta seção descreve esses tipos com as restrições no .NET Framework versão 3.5.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree tem uma propriedade de destino que representa o destino definido para a operação de alteração. A propriedade da expressão de destino, que define o conjunto de entrada é sempre DbScanExpression.  Um DbScanExpression pode representar uma tabela ou exibição, ou um conjunto de dados definido com uma consulta se a propriedade de metadados "Definição de consulta" de seu destino for não nulo.  
+ DbModificationCommandTree tem uma propriedade de destino que representa o destino definido para a operação de alteração. A propriedade da expressão de destino, que define o conjunto de entrada é sempre DbScanExpression.  Um DbScanExpression pode representar uma tabela ou exibição, ou um conjunto de dados definidos com uma consulta se a propriedade de metadados "Que define a consulta" do seu destino for não nulo.  
   
  Um DbScanExpression que representa uma consulta somente poderia alcançar um provedor como um destino de alteração se o dataset foi definido usando uma consulta de definição no modelo mas em nenhuma função foi fornecido para a operação correspondente de alteração. Os provedores não podem ser capaz de suportar esse cenário (SqlClient, por exemplo, não faz).  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Geração SQL alteração no provedor exemplo  
- O [provedor do Entity Framework exemplo](http://go.microsoft.com/fwlink/?LinkId=180616) demonstra os componentes de provedores de dados ADO.NET que dão suporte a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tem como alvo um base de dados do SQL Server 2005 e é implementado como um wrapper sobre o provedor de dados do ADO.NET .NET 2.0.  
+ O [provedor de exemplo do Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) demonstra os componentes de provedores de dados ADO.NET que dão suporte a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tem como alvo um base de dados do SQL Server 2005 e é implementado como um wrapper sobre o provedor de dados do ADO.NET .NET 2.0.  
   
  O módulo de geração SQL de alteração do provedor de exemplo (localizado na geração SQL do arquivo DmlSqlGenerator.cs \) usa uma entrada DbModificationCommandTree e gerencia uma única instrução SQL de alteração seguida possivelmente por uma instrução select para retornar um leitor se especificado pelo DbModificationCommandTree. Observe que a forma de comandos gerados é afetada por base de dados SQL Server de destino.  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Gerando um comando SQL de inserção  
  Para um DbInsertCommandTree determinado no provedor de exemplo, o comando gerado de inserção segue um dos dois modelos de inserção abaixo.  
   
- O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento predicado "\@ @ROWCOUNT > 0" é true se uma linha foi inserida. O elemento predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" assume a forma "keyMemberI = SCOPE_IDENTITY ()" somente se keyMemeberI é uma chave gerada pelo repositório, pois SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna gerada pelo repositório).  
+ O primeiro modelo tem um comando executar a inserção dados os valores na lista de SetClauses, e uma instrução SELECT para retornar as propriedades especificadas na propriedade retornando para a linha inserida se a propriedade retornando não era nula. O elemento de predicado "\@ @ROWCOUNT > 0" é verdadeiro se uma linha foi inserida. O elemento de predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" leva a forma "keyMemberI = SCOPE_IDENTITY ()" apenas se o keyMemeberI é uma chave store-gerado, porque SCOPE_IDENTITY () retorna o último valor de identidade inserido em uma identidade ( coluna Store-gerado).  
   
 ```  
 -- first insert Template  
@@ -199,7 +199,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- A cláusula set tem a cláusula set falso ("@i =" 0") somente não se for especificadas nenhuma cláusulas set. Este é garantir que todas as colunas Store- computadas recalculados.  
+ A cláusula set tem a cláusula set falso ("@i = 0") somente se nenhum conjunto de cláusulas forem especificado. Este é garantir que todas as colunas Store- computadas recalculados.  
   
  Somente se a propriedade retornando não é nulo, uma instrução SELECT é gerada para retornar as propriedades especificadas na propriedade retornando.  
   

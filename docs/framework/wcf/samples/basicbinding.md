@@ -2,15 +2,15 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 91ebef7ec985d3da6dc563ddbaa277d25f3172cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54c31bab1182bbd812992f3897e001cdae85f56
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500188"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405018"
 ---
 # <a name="basicbinding"></a>BasicBinding
-Este exemplo demonstra o uso de `basicHttpBinding` que fornece interoperabilidade de comunicação e o máximo HTTP com o primeiro - e second - generation serviços da Web.  
+Este exemplo demonstra o uso de `basicHttpBinding` que fornece interoperabilidade de comunicação e o máximo HTTP com o primeiro – e second - generation serviços da Web.  
   
 > [!NOTE]
 >  Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
@@ -20,14 +20,14 @@ Este exemplo demonstra o uso de `basicHttpBinding` que fornece interoperabilidad
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de cálculo.  
+ Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
   
- Para usar a associação básica com o comportamento padrão, somente o nome da seção de associação é necessário. Se você quiser configurar a associação básica e alterar algumas de suas configurações, é necessário definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação por nome usando o `bindingConfiguration` atributo do <`endpoint`> elemento, conforme mostrado no código de exemplo a seguir.  
+ Para usar a associação básica com o comportamento padrão, somente o nome da seção de associação é necessário. Se você quiser configurar a associação básica e alterar algumas de suas configurações, é necessário definir uma configuração de associação. O ponto de extremidade deve fazer referência a configuração de associação por nome usando o `bindingConfiguration` atributo da <`endpoint`> elemento, conforme mostrado no código de exemplo a seguir.  
   
 ```xml  
 <services>  
@@ -42,7 +42,7 @@ Este exemplo demonstra o uso de `basicHttpBinding` que fornece interoperabilidad
 </services>  
 ```  
   
- Neste exemplo, a configuração de associação é denominada `"Binding1"` e é definido como mostrado no exemplo de código a seguir.  
+ Neste exemplo, a configuração de associação é chamada `"Binding1"` e é definido como mostrado no exemplo de código a seguir.  
   
 ```xml  
 <bindings>  
@@ -67,9 +67,9 @@ Este exemplo demonstra o uso de `basicHttpBinding` que fornece interoperabilidad
 </bindings>  
 ```  
   
- O elemento de associação fornece atributos para definir o modo de comparação de nome de host, tamanho máximo da mensagem, as opções de proxy, tempos limite, codificação de mensagens e outras opções.  
+ O elemento de associação fornece atributos para definir o modo de comparação de nome de host, tamanho máximo da mensagem, as opções de proxy, tempos limite, codificação de mensagem e outras opções.  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -88,9 +88,9 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

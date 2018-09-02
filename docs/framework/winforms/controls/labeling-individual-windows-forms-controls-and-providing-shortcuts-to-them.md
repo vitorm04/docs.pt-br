@@ -7,31 +7,31 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535509"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409014"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles
-Os controles adicionados ao Windows Forms têm propriedades e métodos que são usados para especializar ainda mais o usuário experiência. Personalizando a interface do usuário para atender às necessidades do usuário é extremamente importante para aplicativos do Windows bem projetados.  
+Controles adicionados a formulários do Windows têm propriedades e métodos que são usados para especializar ainda mais o usuário enfrentar. Personalizando sua interface do usuário para atender às necessidades do usuário é extremamente importante para aplicativos do Windows bem projetados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como definir o texto exibido por um controle dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- Descreve como atribuir um rótulo de texto para um controle.  
+ Descreve como atribuir um rótulo de texto a um controle.  
   
  [Como definir a imagem exibida por um controle dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
  Explica como configurar um controle para exibir imagens.  
   
  [Como criar teclas de acesso para controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- Fornece informações sobre a criação de atalhos de teclado predefinidos.  
+ Fornece informações sobre como criar atalhos de teclado predefinidos.  
   
  [Fornecendo informações de acessibilidade para controles em um Windows Form](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Fornece informações sobre como habilitar os controles para trabalhar com os recursos de acessibilidade.  
+ Fornece informações sobre como habilitar os controles trabalhar com os recursos de acessibilidade.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
- Links para outras ações básicas que você pode fazer com os controles.  
+ Links para outras coisas básicas que você pode fazer com os controles.  
   
- Consulte também [Como criar chaves de acesso para controles dos Windows Forms usando o Designer](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [Como definir o texto exibido por um controle dos Windows Forms usando o Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [Como definir a imagem exibida por um controle dos Windows Forms usando o Designer](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).
+ Consulte também [Como criar chaves de acesso para controles dos Windows Forms usando o Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Como definir o texto exibido por um controle dos Windows Forms usando o Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Como definir a imagem exibida por um controle dos Windows Forms usando o Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

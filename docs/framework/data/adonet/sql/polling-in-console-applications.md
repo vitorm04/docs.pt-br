@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 4fc9a787aa03af311ed219f0831a4d0e41544be8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363387"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416702"
 ---
 # <a name="polling-in-console-applications"></a>Sondagem em aplicativos de Console
-Operações assíncronas no ADO.NET permitem que você inicie operações de banco de dados demorada em um thread durante a execução de outras tarefas em outro thread. Na maioria dos cenários, no entanto, você eventualmente o atingirá um ponto em que o aplicativo não continuará até que a operação de banco de dados seja concluída. Nesses casos, é útil sondar a operação assíncrona para determinar se a operação foi concluída ou não.  
+Operações assíncronas no ADO.NET permitem que você inicie operações demoradas de banco de dados em um thread durante a execução de outras tarefas em outro thread. Na maioria dos cenários, no entanto, você eventualmente atingirá um ponto em que o aplicativo não continuará até que a operação de banco de dados seja concluída. Para tais casos, é útil sondar a operação assíncrona para determinar se a operação foi concluída ou não.  
   
  Você pode usar o <xref:System.IAsyncResult.IsCompleted%2A> propriedade para descobrir se a operação foi concluída.  
   
 ## <a name="example"></a>Exemplo  
- O aplicativo de console a seguir atualiza os dados dentro de **AdventureWorks** banco de dados de exemplo, fazer seu trabalho de forma assíncrona. Para emular um processo de execução longa, este exemplo insere uma instrução WAITFOR no texto do comando. Normalmente, não deve tentar fazer com que seus comandos fique mais lento, mas isso neste caso torna mais fácil demonstrar o comportamento assíncrono.  
+ O aplicativo de console a seguir atualiza os dados dentro de **AdventureWorks** banco de dados de exemplo, fazendo seu trabalho de forma assíncrona. Para emular um processo de execução longa, este exemplo insere uma instrução WAITFOR no texto do comando. Normalmente, você não tentar tornar os comandos são executados mais lentamente, mas fazer isso nesse caso, torna mais fácil demonstrar o comportamento assíncrono.  
   
 ```vb  
 Imports System  
@@ -192,4 +192,4 @@ class Class1
   
 ## <a name="see-also"></a>Consulte também  
  [Operações assíncronas](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925472"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404561"
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um identificador de URI (Uniform Resource), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no modelo de programação pelo Windows Communication Foundation (WCF) a <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocar mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP exigidos para alcançar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
@@ -119,7 +119,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   No código, crie os cabeçalhos de endereço personalizado usando o <xref:System.ServiceModel.Channels.AddressHeader> de classe e, em seguida, usada na construção de um <xref:System.ServiceModel.EndpointAddress>.  
   
--   Na configuração, personalizada [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) são especificados como filhos do [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   Na configuração, personalizada [ \<cabeçalhos >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) são especificados como filhos do [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
  Configuração, geralmente é preferível ao código, pois permite que você altere os cabeçalhos após a implantação.  
   
@@ -130,7 +130,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   No código, especifique um endereço de escutando personalizado adicionando um <xref:System.ServiceModel.Description.ClientViaBehavior> classe à coleção de comportamentos do ponto de extremidade.  
   
--   Em configuração, especifique um endereço de escutando personalizado com o `ListenUri` atributo do serviço [ \<ponto de extremidade >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
+-   Em configuração, especifique um endereço de escutando personalizado com o `ListenUri` atributo do serviço [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
 ### <a name="custom-soap-address-filter"></a>Filtro de endereço SOAP personalizado  
  O <xref:System.ServiceModel.EndpointAddress.Uri%2A> é usado em conjunto com qualquer <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedade para definir o filtro de endereço SOAP de um ponto de extremidade (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Por padrão, esse filtro verifica se uma mensagem de entrada tem um `To` cabeçalho da mensagem que corresponde ao ponto de extremidade do URI e se todos os cabeçalhos de ponto de extremidade necessários estão presentes na mensagem.  

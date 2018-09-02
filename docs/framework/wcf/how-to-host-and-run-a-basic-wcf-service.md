@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753494"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404665"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Como hospedar e executar um serviço básico do Windows Communication Foundation
 Esta é a terceira de seis tarefas necessárias para criação de um aplicativo do WCF (Windows Communication Foundation). Para obter uma visão geral de todas as seis tarefas, confira o tópico [Tutorial de introdução](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -151,7 +151,7 @@ Esta é a terceira de seis tarefas necessárias para criação de um aplicativo 
   
     2.  Etapa 2 - Cria uma instância da classe <xref:System.ServiceModel.ServiceHost> para hospedar o serviço. O construtor aceita dois parâmetros, o tipo da classe que implementa o contrato de serviço e o endereço básico do serviço.  
   
-    3.  Etapa 3 – Cria uma instância de <xref:System.ServiceModel.Description.ServiceEndpoint>. Um ponto de extremidade de serviço é composto de um endereço, uma associação e um contrato de serviço. O construtor <xref:System.ServiceModel.Description.ServiceEndpoint> portanto utiliza o tipo de interface do contrato de serviço, uma associação e um endereço. O contrato de serviço é `ICalculator`, que você definiu e implementou no tipo de serviço. A associação usada nesse exemplo é <xref:System.ServiceModel.WSHttpBinding>, que é uma associação interna usada para conectar-se a pontos de extremidade que atendem às especificações de WS-*. Para obter mais informações sobre as associações WCF, confira [Visão geral das associações WCF](../../../docs/framework/wcf/bindings-overview.md). O endereço é adicionado ao endereço básico para identificar o ponto de extremidade. O endereço especificado nesse código é "CalculatorService" e, portanto, o endereço totalmente qualificado do ponto de extremidade é `"http://localhost:8000/GettingStarted/CalculatorService"`. A adição de um ponto de extremidade de serviço é opcional ao usar o .NET Framework 4.0 ou posterior. Nessas versões, se nenhum ponto final for adicionado no código ou na configuração, o WCF adicionará um ponto de extremidade padrão para cada combinação de endereço básico e contrato implementada pelo serviço. Para obter mais informações sobre pontos de extremidade padrão, confira [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Etapa 3 – Cria uma instância de <xref:System.ServiceModel.Description.ServiceEndpoint>. Um ponto de extremidade de serviço é composto de um endereço, uma associação e um contrato de serviço. O construtor <xref:System.ServiceModel.Description.ServiceEndpoint> portanto utiliza o tipo de interface do contrato de serviço, uma associação e um endereço. O contrato de serviço é `ICalculator`, que você definiu e implementou no tipo de serviço. A associação usada nesse exemplo é <xref:System.ServiceModel.WSHttpBinding>, que é uma associação interna usada para conectar-se a pontos de extremidade que atendem às especificações de WS-*. Para obter mais informações sobre as associações WCF, confira [Visão geral das associações WCF](../../../docs/framework/wcf/bindings-overview.md). O endereço é adicionado ao endereço básico para identificar o ponto de extremidade. O endereço especificado nesse código é "CalculatorService", portanto, o endereço totalmente qualificado para o ponto de extremidade é `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
         >  Adicionar um ponto de extremidade de serviço é opcional ao usar o .NET Framework 4 ou posterior. Nessas versões, se nenhum ponto final for adicionado no código ou na configuração, o WCF adicionará um ponto de extremidade padrão para cada combinação de endereço básico e contrato implementada pelo serviço. Para obter mais informações sobre pontos de extremidade padrão, confira [Especificando um endereço do ponto de extremidade](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -160,6 +160,12 @@ Esta é a terceira de seis tarefas necessárias para criação de um aplicativo 
   
     5.  Etapa 5 – Abra o <xref:System.ServiceModel.ServiceHost> para escutar as mensagens de entrada. Observe que o código aguarda o usuário pressionar ENTER. Se você não fizer isso, o aplicativo será fechado imediatamente e o serviço será encerrado. Observe também que um bloco try/catch foi usado. Após o <xref:System.ServiceModel.ServiceHost> ter sido instanciado, todos os outros códigos serão colocados em um bloco try/catch. Para obter mais informações sobre a captura segura de exceções geradas por <xref:System.ServiceModel.ServiceHost>, confira [Evitando problemas com a instrução using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
+> [!IMPORTANT]
+> Edite App. config em GettingStartedLib para refletir as alterações feitas no código: 
+> 1. Altere a linha 14 para `<service name="GettingStartedLib.CalculatorService">`
+> 2. Altere a linha 17 para `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Altere a linha 22 para `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>Para verificar se o serviço está funcionando  
   
 1.  Execute o aplicativo de console GettingStartedHost de dentro do [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Ao executar em [!INCLUDE[wv](../../../includes/wv-md.md)] e em sistemas operacionais posteriores, o serviço deverá ser executado com privilégios de administrador. Como o Visual Studio foi executado com privilégios de Administrador, GettingStartedHost também é executado com privilégios de Administrador. Você também pode iniciar um novo prompt de comando executando-o com privilégios de administrador e execute service.exe dentro dele.  

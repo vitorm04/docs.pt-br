@@ -2,19 +2,19 @@
 title: Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759602"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417198"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivando a estrutura relacional do DataSet do esquema XML (XSD)
-Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, uma tabela é gerada no `DataSet`. A estrutura da tabela é determinada pela definição do tipo complexo. Tabelas são criadas no `DataSet` para elementos de nível superior no esquema. No entanto, uma tabela é criada somente para um nível superior `complexType` elemento quando o `complexType` elemento está aninhado em outro `complexType` aninhada de caso de elemento, no qual `complexType` elemento é mapeado para um `DataTable` dentro de `DataSet`.  
+Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, em que uma tabela é gerada a `DataSet`. A estrutura da tabela é determinada pela definição do tipo complexo. Tabelas são criadas no `DataSet` para elementos de nível superior no esquema. No entanto, uma tabela só é criada para um nível superior `complexType` elemento quando o `complexType` elemento está aninhado em outro `complexType` elemento, nesse caso, aninhada `complexType` elemento é mapeado para um `DataTable` dentro a `DataSet`.  
   
- Para obter mais informações sobre o XSD, consulte a parte de esquema XML do World Wide Web Consortium (W3C) 0: Primer recomendação, o esquema de XML parte 1: estruturas de recomendação e o esquema XML parte 2: recomendação de tipos de dados, localizado em [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Para obter mais informações sobre o XSD, consulte a parte de esquema XML do World Wide Web Consortium (W3C) 0: recomendação elementar, o esquema XML parte 1: recomendação de estruturas e esquema XML parte 2: recomendação de tipos de dados, localizado em [ http://www.w3.org/ ](http://www.w3.org/TR/).  
   
- O exemplo a seguir demonstra um esquema XML onde `customers` é o elemento filho do `MyDataSet` elemento, que é um **DataSet** elemento.  
+ O exemplo a seguir demonstra um esquema XML no qual `customers` é o elemento filho do `MyDataSet` elemento, que é um **conjunto de dados** elemento.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -50,9 +50,9 @@ Customers (CustomerID , CompanyName, Phone)
  O tipo de dados de cada coluna na tabela é derivado do tipo do Esquema XML do elemento ou atributo correspondente especificado.  
   
 > [!NOTE]
->  Se o elemento `customers` é um tipo de dados de esquema XML simples, como **inteiro**, nenhuma tabela é gerada. As tabelas são criadas apenas para os elementos de nível superior que são tipos complexos.  
+>  Se o elemento `customers` é um tipo de dados de esquema XML simples, como **inteiro**, nenhuma tabela será gerada. As tabelas são criadas apenas para os elementos de nível superior que são tipos complexos.  
   
- No esquema XML a seguir, o **esquema** elemento tem dois filhos do elemento, `InStateCustomers` e `OutOfStateCustomers`.  
+ No esquema XML a seguir, o **esquema** elemento tem dois elementos filho, `InStateCustomers` e `OutOfStateCustomers`.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -75,7 +75,7 @@ Customers (CustomerID , CompanyName, Phone)
  </xs:schema>  
 ```  
   
- Os elementos filho `InStateCustomers` e `OutOfStateCustomers` são ambos elementos de tipo complexo (`customerType`). Portanto, o processo de mapeamento gera duas tabelas a seguir idênticas no `DataSet`.  
+ Os elementos filho `InStateCustomers` e `OutOfStateCustomers` são ambos elementos de tipo complexo (`customerType`). Portanto, o processo de mapeamento gera as seguintes duas tabelas idênticas no `DataSet`.  
   
 ```  
 InStateCustomers (CustomerID , CompanyName, Phone)  
@@ -90,11 +90,11 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  Descreve os elementos de esquema XML usados para criar relações entre colunas da tabela em um `DataSet`.  
   
  [Relações e restrições de esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
- Descreve como relações são criadas implicitamente ao usar elementos de esquema XML para criar restrições em um `DataSet`.  
+ Descreve como as relações são criadas implicitamente ao usar elementos de esquema XML para criar restrições em um `DataSet`.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
  Descreve como carregar e manter a estrutura relacional e os dados em um `DataSet` como dados XML.  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

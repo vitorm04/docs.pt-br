@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934945"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416954"
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
 <a name="top"></a> Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de runtime (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens de e enviam mensagens para o CLR usando a API de criação de perfil. A DLL do criador de perfil é carregada pelo CLR no tempo de execução.  
@@ -209,7 +209,7 @@ Arquitetura de criação de perfil
 ### <a name="stack-snapshot"></a>Instantâneo de pilha  
  Um instantâneo de pilha é um rastreamento de pilha de um thread em um momento no tempo. A API de criação de perfil oferece suporte o rastreamento de funções gerenciadas na pilha, mas deixa o rastreamento de funções não gerenciadas para o caminhador de pilha do profiler.  
   
- Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte o [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método neste conjunto de documentação, e [movimentação de pilhas do Profiler no .NET Framework 2.0: Noções básicas e além](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte o [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método neste conjunto de documentação, e [movimentação de pilhas do Profiler no .NET Framework 2.0: Noções básicas e além](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Pilha de sombra  
  Usando o método de instantâneo com muita frequência pode criar rapidamente um problema de desempenho. Se você quiser fazer rastreamentos de pilha com frequência, seu criador de perfil em vez disso, deve criar uma pilha de sombra usando o [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) retornos de chamada de exceção. A pilha de sombra está sempre atualizada e pode ser copiada rapidamente para o armazenamento sempre que um instantâneo de pilha é necessário.  

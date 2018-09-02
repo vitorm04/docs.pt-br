@@ -2,12 +2,12 @@
 title: 'Introdução ao F # no Visual Studio'
 description: 'Saiba como usar o F # com o Visual Studio.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874709"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415728"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introdução ao F # no Visual Studio
 
@@ -47,7 +47,7 @@ Outra função, `main`, é definido, que é decorado com o `EntryPoint` atributo
 
 ## <a name="running-your-code"></a>Execução do código
 
-Você pode executar o código e ver resultados pressionando **ctrl-f5**.  Isso executará o programa sem depuração e permite que você veja os resultados.  Como alternativa, você pode escolher o **Debug** menu de nível superior do item no Visual Studio e escolha **Start Without Debugging**.
+Você pode executar o código e ver resultados pressionando **Ctrl**+**F5**.  Isso executa o programa sem depuração e permite que você veja os resultados.  Como alternativa, você pode escolher o **Debug** menu de nível superior do item no Visual Studio e escolha **Start Without Debugging**.
 
 Agora, você verá o seguinte mostrado na janela de console que surge do Visual Studio:
 
@@ -62,4 +62,8 @@ Parabéns!  Criou seu primeiro projeto F # no Visual Studio, escrito que uma fun
 Se você ainda não fez isso, confira a [Tour do F #](../tour.md), que aborda alguns dos principais recursos da linguagem F #.  Ele lhe dá uma visão geral de alguns dos recursos da linguagem F # e fornecem exemplos de código amplo que você pode copiar para o Visual Studio e executar.  Também existem alguns ótimos recursos externos, você pode usar, foi apresentada na [guia de F #](../index.md).
 
 ## <a name="see-also"></a>Consulte também
- [Tour do F #](../tour.md) [referência da linguagem F #](../language-reference/index.md) [inferência de tipo](../language-reference/type-inference.md) [símbolo e o operador de referência](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Tour do F#](../tour.md)
+- [Referência da linguagem F #](../language-reference/index.md)
+- [Inferência de tipo](../language-reference/type-inference.md)
+- [Referência de símbolo e o operador](../language-reference/symbol-and-operator-reference/index.md)

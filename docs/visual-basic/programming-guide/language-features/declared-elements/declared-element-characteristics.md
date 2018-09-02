@@ -13,17 +13,17 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650888"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407364"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Características do elemento declarado (Visual Basic)
-Um *característica* de um elemento declarado é um aspecto do elemento que afeta como o código pode interagir com ele. Cada elemento declarado tem um ou mais das seguintes características associadas a ela:  
+Um *característica* de um elemento declarado é um aspecto do elemento que afeta como o código pode interagir com ele. Cada elemento declarado tem um ou mais das seguintes características associadas a ele:  
   
--   *Tipo de dados* — os valores de elemento pode armazenar e como ele armazena esses valores. Para obter mais informações, consulte [tipos de dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+-   *Tipo de dados* — os valores de elemento pode conter e como ela armazena esses valores. Para obter mais informações, veja [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md).  
   
 -   *Tempo de vida* — o período de tempo de execução durante o qual o elemento está disponível para uso. Para obter mais informações, consulte [tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
@@ -48,8 +48,8 @@ Um *característica* de um elemento declarado é um aspecto do elemento que afet
 |Operador|Sim|Não|Sim|Sim|  
 |Interface|Não|Não|Sim|Sim|  
 |Classe|Não|Não|Sim|Sim|  
-|Evento|Não|Não|Sim|Sim|  
-|Representante|Não|Não|Sim|Sim|  
+|evento|Não|Não|Sim|Sim|  
+|delegado|Não|Não|Sim|Sim|  
   
  <sup>1</sup> escopo às vezes é conhecido como *visibilidade*.  
   

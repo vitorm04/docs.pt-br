@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 73475f8521b4112929339cc7f1116e36ffebedb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d86095586af273f62980fcf8ddf10804b1cfa5a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358962"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406804"
 ---
 # <a name="paging-through-a-query-result"></a>Paginação por meio de um resultado de consulta
-Paginação por meio de um resultado de consulta é o processo de retornar os resultados de uma consulta em subconjuntos menores de dados ou páginas. Essa é uma prática comum para exibir os resultados para um usuário em partes pequenas, fácil de gerenciar.  
+Paginação por meio de um resultado de consulta é o processo de retornar os resultados de uma consulta em subconjuntos menores de dados ou páginas. Essa é uma prática comum para exibir os resultados a um usuário em partes de pequeno e fácil de gerenciar.  
   
- O **DataAdapter** fornece um recurso para retornar apenas uma página de dados, por meio de sobrecargas do **preencher** método. No entanto, isso pode não ser a melhor escolha para paginação resultados de consultas grandes porque, embora o **DataAdapter** preenche o destino <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> com apenas os registros solicitados, os recursos para retornar o toda consulta ainda são usados. Para retornar uma página de dados de uma fonte de dados sem o uso de recursos para retornar a consulta inteira, especifica critérios adicionais para a consulta que reduzem as linhas retornadas a apenas aqueles necessários.  
+ O **DataAdapter** fornece um recurso para retornar apenas uma página de dados, por meio de sobrecargas da **preencher** método. No entanto, isso pode não ser a melhor opção para paginação de resultados de consultas grandes, porque, embora o **DataAdapter** preenche o destino <xref:System.Data.DataTable> ou <xref:System.Data.DataSet> com apenas os registros solicitados, os recursos para retornar o toda consulta ainda são usados. Para retornar uma página de dados de uma fonte de dados sem o uso de recursos para retornar a consulta inteira, especifica critérios adicionais para sua consulta, o que reduz as linhas retornadas a apenas aqueles necessários.  
   
- Para usar o **preencher** método para retornar uma página de dados, especifique um **startRecord** parâmetro para o primeiro registro na página de dados e um **maxRecords** parâmetro para o número de registros na página de dados.  
+ Para usar o **preencher** método para retornar uma página de dados, especifique um **startRecord** parâmetro para o primeiro registro na página de dados e uma **maxRecords** parâmetro, o número de registros na página de dados.  
   
  O exemplo de código a seguir mostra como usar o **preencher** método para retornar a primeira página de um resultado de consulta em que o tamanho da página é cinco registros.  
   
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- No exemplo anterior, o **DataSet** só é preenchida com cinco registros, mas toda a **pedidos** tabela é retornada. Para preencher o **DataSet** com os mesmos registros de cinco, mas somente retorno cinco registros, usar a parte superior e cláusulas WHERE na instrução SQL, como no exemplo de código a seguir.  
+ No exemplo anterior, o **DataSet** só é preenchido com cinco registros, mas toda a **pedidos** tabela é retornada. Para preencher a **conjunto de dados** com esses mesmos cinco registros, mas retornam apenas cinco registros, usar a parte superior e cláusulas WHERE na instrução SQL, como no exemplo de código a seguir.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -71,7 +71,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
- Observe que, quando a paginação pelos resultados da consulta, dessa forma, você deve preservar o identificador exclusivo que ordena as linhas, para passar a ID exclusiva para o comando para retornar a próxima página de registros, conforme mostrado no exemplo de código a seguir.  
+ Observe que, quando a paginação por meio dos resultados de consulta dessa forma, você deve manter o identificador exclusivo que ordena as linhas, para passar a ID exclusiva para o comando para retornar a próxima página de registros, conforme mostrado no exemplo de código a seguir.  
   
 ```vb  
 Dim lastRecord As String = _  
@@ -83,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- Para retornar a próxima página de registros usando a sobrecarga do **preencher** método que utiliza o **startRecord** e **maxRecords** parâmetros, incrementar o índice atual do registro pelo o tamanho da página e o preenchimento de tabela. Lembre-se de que o servidor de banco de dados retorna os resultados de consulta inteira, embora apenas uma página de registros é adicionada para o **conjunto de dados**. No exemplo de código a seguir, as linhas da tabela são limpos antes que eles são preenchidos com a próxima página de dados. Deseja preservar um determinado número de linhas retornadas em um cache local para reduzir viagens ao banco de dados.  
+ Para retornar a próxima página de registros usando a sobrecarga da **preencher** método que usa o **startRecord** e **maxRecords** parâmetros, incremente o índice atual do registro pelo o tamanho da página e o preenchimento de tabela. Lembre-se de que o servidor de banco de dados retorna os resultados de consulta inteira, embora apenas uma página de registros é adicionada para o **conjunto de dados**. No exemplo de código a seguir, as linhas da tabela são apagadas para que eles são preenchidos com a próxima página de dados. Você talvez queira preservar um determinado número de linhas retornadas em um cache local para reduzir as viagens ao servidor de banco de dados.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -101,7 +101,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- Para retornar a próxima página de registros sem ter que o servidor de banco de dados retornar a consulta inteira, especifique critérios restritivos a instrução SELECT. Como o exemplo anterior preservadas o último registro retornado, você pode usá-lo na cláusula WHERE para especificar um ponto de partida para a consulta, conforme mostrado no exemplo de código a seguir.  
+ Para retornar a próxima página de registros sem a necessidade de retornar toda a consulta o servidor de banco de dados, especifica critérios restritivos para a instrução SELECT. Como o exemplo anterior preservadas o último registro retornado, você pode usá-lo na cláusula WHERE para especificar um ponto de partida para a consulta, conforme mostrado no exemplo de código a seguir.  
   
 ```vb  
 orderSQL = "SELECT TOP " & pageSize & _  
@@ -125,4 +125,4 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>Consulte também  
  [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

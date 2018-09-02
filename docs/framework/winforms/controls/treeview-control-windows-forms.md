@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
-ms.openlocfilehash: ee6c5583718f871c96929d659fe4a681528b27ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b4db06eedc0ada7c34f3ba6f6c80b783866bed2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538230"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404151"
 ---
 # <a name="treeview-control-windows-forms"></a>Controle TreeView (Windows Forms)
 O controle `TreeView` dos Windows Forms exibe uma hierarquia de nós, como a forma como arquivos e pastas são exibidos no painel esquerdo do recurso Windows Explorer em sistemas operacionais Windows.  
@@ -38,8 +38,8 @@ O controle `TreeView` dos Windows Forms exibe uma hierarquia de nós, como a for
   
  [Como anexar um menu de atalho a um nó TreeView](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
  Demonstra como adicionar um menu de atalho a um nó do modo de exibição de árvore.  
-  
- Consulte também [Como adicionar e remover nós com o controle TreeView dos Windows Forms usando o Designer](http://msdn.microsoft.com/library/ms233651\(v=vs.110\)), [Como anexar um menu de atalho a um TreeNode usando o designer](http://msdn.microsoft.com/library/ms171708\(v=vs.110\)).  
+
+Consulte também [como: adicionar e remover nós com o Windows TreeView controle Forms usando o Designer](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md), e [como: anexar um Menu de atalho a um TreeNode usando o Designer](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md).  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.TreeView>  

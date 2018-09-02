@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4461667bdb47d410c857b4ac2c9dd268438a02f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 21ab18cded2b9a16fe2520547287198d3cfe6b74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744012"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416768"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; elemento
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.  
@@ -42,7 +42,7 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`false`|Coleta de lixo não oferece suporte a vários grupos de CPU. Esse é o padrão.|  
-|`true`|Coleta de lixo oferece suporte a vários grupos de CPU, se a coleta de lixo do servidor está habilitada.|  
+|`true`|Coleta de lixo dá suporte a vários grupos de CPU, se a coleta de lixo do servidor estiver habilitada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,10 +55,10 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando um computador tiver vários grupos de CPU e coleta de lixo do servidor está habilitada (consulte o [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), permitindo que esse elemento estende a coleta de lixo em todos os grupos de CPU e usa todos os núcleos em conta durante a criação e balanceamento heaps.  
+ Quando um computador tiver vários grupos de CPU e coleta de lixo do servidor está habilitada (consulte a [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), permitindo que esse elemento se estende a coleta de lixo em todos os grupos de CPU e usa todos os núcleos em conta durante a criação e heaps de balanceamento.  
   
 > [!NOTE]
->  Esse elemento só se aplica a threads de coleta de lixo. Para habilitar o tempo de execução distribuir os threads de usuário em todos os grupos de CPU, você também deve habilitar o [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.  
+>  Esse elemento só se aplica a threads de coleta de lixo. Para habilitar o tempo de execução distribui threads de usuário em todos os grupos de CPU, você deve habilitar também a [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como habilitar a coleta de lixo para vários grupos de CPU.  
@@ -75,5 +75,5 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 ## <a name="see-also"></a>Consulte também  
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Como: desabilitar a coleta de lixo simultânea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Como: desabilitar a coleta de lixo simultânea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Coleta de lixo de estação de trabalho ou de servidor](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

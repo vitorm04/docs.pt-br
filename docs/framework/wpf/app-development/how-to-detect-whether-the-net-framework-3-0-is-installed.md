@@ -6,18 +6,18 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 09de427980ecfb515b8d341d0d7833b878140286
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546485"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401843"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Como detectar se o .NET Framework 3.0 está instalado
 Antes dos administradores podem implantar aplicativos do Microsoft .NET Framework em um sistema, eles devem primeiro confirmar que o tempo de execução do .NET Framework está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework está presente em um sistema.  
   
 > [!NOTE]
->  Para obter mais informações sobre como instalar, implantar e detectar o Microsoft .NET Framework, consulte a discussão na [Implantando o Microsoft .NET Framework versão 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
+>  Para obter mais informações sobre como instalar, implantar e detectar o Microsoft .NET Framework, consulte a discussão na [Implantando o Microsoft .NET Framework versão 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Detectar a cadeia de caracteres de agente de usuário ".NET CLR"  

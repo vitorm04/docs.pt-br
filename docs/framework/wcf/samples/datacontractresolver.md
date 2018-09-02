@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 0aba43524dba99b8ae2f63dca9babbb8c3438f4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54f1de5fbd750e5a102f3876210b302c69aaeacd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503230"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403367"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 Este exemplo demonstra como os processos de serialização e desserialização podem ser personalizados usando o <xref:System.Runtime.Serialization.DataContractResolver> classe. Este exemplo mostra como usar um DataContractResolver para mapear tipos CLR para e de uma representação de xsi: Type durante a serialização e desserialização.  
@@ -47,13 +47,13 @@ namespace Types
 }  
 ```  
   
- O exemplo carrega o assembly, extrai cada um desses tipos e, em seguida, serializa e desserializa-los. O <xref:System.Runtime.Serialization.DataContractResolver> está conectado ao processo de serialização, passando uma instância do <xref:System.Runtime.Serialization.DataContractResolver>-derivado da classe para o <xref:System.Runtime.Serialization.DataContractSerializer> construtor, conforme mostrado no exemplo a seguir.  
+ O exemplo carrega o assembly, extrai a cada um desses tipos e, em seguida, serializa e desserializa-los. O <xref:System.Runtime.Serialization.DataContractResolver> está conectado ao processo de serialização, passando uma instância das <xref:System.Runtime.Serialization.DataContractResolver>-derivado da classe para o <xref:System.Runtime.Serialization.DataContractSerializer> construtor, conforme mostrado no exemplo a seguir.  
   
 ```csharp  
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));  
 ```  
   
- O exemplo, em seguida, serializa os tipos CLR, conforme mostrado no exemplo de código a seguir.  
+ O exemplo, em seguida, serializa os tipos de CLR, conforme mostrado no exemplo de código a seguir.  
   
 ```csharp  
 Assembly assembly = Assembly.Load(new AssemblyName("Types"));  
@@ -97,9 +97,9 @@ public void deserialize(Type type)
 }  
 ```  
   
- Desde personalizado <xref:System.Runtime.Serialization.DataContractResolver> é passada para o <xref:System.Runtime.Serialization.DataContractSerializer> construtor, o <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> é chamado durante a serialização para mapear um tipo CLR para um equivalente `xsi:type`. Da mesma forma a <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> é chamado durante a desserialização para mapear o `xsi:type` para um tipo CLR equivalente. Neste exemplo, o <xref:System.Runtime.Serialization.DataContractResolver> é definido como mostrado no exemplo a seguir.  
+ Desde o personalizado <xref:System.Runtime.Serialization.DataContractResolver> é passada para o <xref:System.Runtime.Serialization.DataContractSerializer> construtor, o <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> é chamado durante a serialização para mapear um tipo CLR para um equivalente `xsi:type`. Da mesma forma a <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> é chamado durante a desserialização para mapear o `xsi:type` para um tipo CLR equivalente. Neste exemplo, o <xref:System.Runtime.Serialization.DataContractResolver> é definida conforme mostrado no exemplo a seguir.  
   
- O exemplo de código a seguir é uma classe derivando de <xref:System.Runtime.Serialization.DataContractResolver>.  
+ O exemplo de código a seguir é uma classe derivada da <xref:System.Runtime.Serialization.DataContractResolver>.  
   
 ```  
 class MyDataContractResolver : DataContractResolver  
@@ -152,7 +152,7 @@ class MyDataContractResolver : DataContractResolver
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Usando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra o arquivo de solução de DCRSample.sln.  
+1.  Usando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra o arquivo de solução DCRSample.sln.  
   
 2.  Para executar a solução, pressione F5  
   
@@ -161,7 +161,7 @@ class MyDataContractResolver : DataContractResolver
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   

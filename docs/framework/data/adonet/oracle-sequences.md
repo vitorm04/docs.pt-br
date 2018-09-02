@@ -2,12 +2,12 @@
 title: Sequências da Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 9f89234168351191c63d81fd4f3b68b01bfac2da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c1829cc3f9506b0317e6638fd2760a91c7d19d6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403965"
 ---
 # <a name="oracle-sequences"></a>Sequências da Oracle
 O provedor de dados .NET Framework para Oracle fornece suporte para recuperar os principais valores do Oracle Sequence gerados pelo servidor depois de executar inserções usando o <xref:System.Data.OracleClient.OracleDataAdapter>.  
@@ -20,7 +20,7 @@ O provedor de dados .NET Framework para Oracle fornece suporte para recuperar os
   
  Quando você cria uma sequência em um banco de dados Oracle, pode definir seu valor inicial e o incremento entre seus valores. Você também pode consultar a sequência para novos valores antes de enviar novas linhas. Isso significa que seu código pode reconhecer os principais valores para novas linhas antes de inseri-los no banco de dados.  
   
- Para obter mais informações sobre como criar colunas de incremento automático usando o SQL Server e ADO.NET, consulte [recuperando identidade ou valores de Autonumber](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) e [criar colunas de incremento automático](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ Para obter mais informações sobre como criar colunas de incremento automático usando o SQL Server e ADO.NET, consulte [recuperando identidade ou valores de Autonumber](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) e [criando colunas de incremento automático](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo C# a seguir demonstra como você pode recuperar novos valores de sequência no banco de dados Oracle. O exemplo faz referência à sequência na consulta INSERT INTO usada para enviar as novas linhas e, em seguida, retorna o valor da sequência gerado usando a cláusula RETURNING introduzida no Oracle10g. O exemplo adiciona uma série de novas linhas pendentes em um <xref:System.Data.DataTable> usando a funcionalidade de incremento automático do ADO.NET para gerar valores de chave primária de “espaço reservado”. Observe que o valor de incremento gerado pelo ADO.NET para a nova linha é apenas um "espaço reservado". Isso significa que o banco de dados pode gerar valores diferentes dos que o ADO.NET produz.  
@@ -100,4 +100,4 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>Consulte também  
  [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

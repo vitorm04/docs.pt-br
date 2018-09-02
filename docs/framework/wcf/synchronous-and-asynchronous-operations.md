@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728346"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404210"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- A operação SampleMethodTaskAsync retorna Task\<string> porque a operação lógica retorna uma cadeia de caracteres. Para saber mais sobre o padrão assíncrono baseado em tarefas, confira [O padrão assíncrono baseado em tarefas](http://go.microsoft.com/fwlink/?LinkId=232504).  
+ A operação SampleMethodTaskAsync retorna Task\<string> porque a operação lógica retorna uma cadeia de caracteres. Para saber mais sobre o padrão assíncrono baseado em tarefas, confira [O padrão assíncrono baseado em tarefas](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
 >  Ao usar o padrão assíncrono baseado em tarefas, uma T: System.AggregateException pode ser gerada se uma exceção ocorrer ao aguardar a conclusão da operação. Esta exceção pode ocorrer no cliente ou nos serviços  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- Para saber mais sobre o padrão assíncrono baseado em eventos, confira [O padrão assíncrono baseado em eventos](http://go.microsoft.com/fwlink/?LinkId=232515).  
+ Para saber mais sobre o padrão assíncrono baseado em eventos, confira [O padrão assíncrono baseado em eventos](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>O padrão assíncrono IAsyncResult  
  Uma operação de serviço pode ser implementada de uma forma assíncrona usando o padrão e a marcação de programação assíncrona do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] e marcando o método `<Begin>` com a propriedade <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> definida como `true`. Nesse caso, a operação assíncrona é exposta nos metadados no mesmo formulário que uma operação síncrona: é exposta como única operação com uma mensagem de solicitação e uma mensagem de resposta correlacionada. Os modelos de programação do cliente têm uma opção. Podem representar esse padrão como uma operação síncrona ou assíncrona, desde que, quando o serviço for chamado, ocorra uma troca de mensagens de solicitação de resposta.  

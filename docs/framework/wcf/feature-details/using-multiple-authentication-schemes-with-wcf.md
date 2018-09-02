@@ -2,18 +2,18 @@
 title: Using Multiple Authentication Schemes with WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498440"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408967"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Using Multiple Authentication Schemes with WCF
-WCF agora permite que você especifique vários esquemas de autenticação em um único ponto de extremidade. Além disso serviços da web hospedado podem herdar as configurações de autenticação diretamente no IIS. Serviços de hospedagem interna podem especificar qual autenticação esquemas podem ser usadas. Para obter mais informações sobre como definir configurações de autenticação no IIS, consulte [autenticação IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  
+O WCF agora permite que você especifique vários esquemas de autenticação em um único ponto de extremidade. Além disso serviços da web hospedado podem herdar as configurações de autenticação diretamente do IIS. Serviços de hospedagem interna podem especificar qual autenticação esquemas podem ser usados. Para obter mais informações sobre como definir as configurações de autenticação no IIS, consulte [autenticação IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>Serviços hospedados no IIS  
- Para serviços hospedados no IIS, defina os esquemas de autenticação que você deseja usar no IIS. Em seguida, no arquivo de Web. config do seu serviço, em sua configuração de associação especifica tipo clientCredential como "InheritedFromHost" conforme mostrado no seguinte trecho de XML:  
+ Para serviços hospedados no IIS, defina os esquemas de autenticação que você deseja usar no IIS. Em seguida, no arquivo de Web. config do seu serviço, em sua configuração de associação especifique clientCredential tipo como "InheritedFromHost" conforme mostrado no trecho XML a seguir:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF agora permite que você especifique vários esquemas de autenticação em um
     </bindings>  
 ```  
   
- Você pode especificar que você deseja que apenas um subconjunto dos esquemas de autenticação a ser usado com o serviço usando o ServiceAuthenticationBehavior ou o \<serviceAuthenticationManager > elemento. Quando essa configuração no código use o ServiceAuthenticationBehavior, conforme mostrado no seguinte trecho de código.  
+ Você pode especificar que você deseja apenas um subconjunto dos esquemas de autenticação a ser usado com seu serviço usando o ServiceAuthenticationBehavior ou o \<serviceAuthenticationManager > elemento. Ao configurar isso no código use a ServiceAuthenticationBehavior conforme mostrado no trecho de código a seguir.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Quando essa configuração em um arquivo de configuração, use o \<serviceAuthenticationManager > elemento conforme mostrado no seguinte trecho de XML.  
+ Ao configurar isso em um arquivo de configuração, use o \<serviceAuthenticationManager > elemento, conforme mostrado no seguinte trecho XML.  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- Isso irá garantir que apenas um subconjunto dos esquemas de autenticação listados aqui será considerado para a aplicação do ponto de extremidade de serviço, dependendo do que está selecionado no IIS. Isso significa que um desenvolvedor pode excluir diga a autenticação básica da lista ao omiti-lo da listagem serviceAuthenticationManager e mesmo que ele esteja habilitado no IIS, ela não será aplicada no ponto de extremidade de serviço  
+ Isso garantirá que apenas um subconjunto dos esquemas de autenticação listadas aqui será considerado para a aplicação do ponto de extremidade de serviço, dependendo do que está selecionado no IIS. Isso significa que um desenvolvedor pode excluir digamos que a autenticação básica na lista ao omiti-lo na listagem serviceAuthenticationManager e mesmo se ela estiver habilitada no IIS, ela não será aplicada no ponto de extremidade de serviço  
   
 ## <a name="self-hosted-services"></a>Serviços de hospedagem interna  
- Serviços de hospedagem interna são configurados de forma um pouco diferente porque não há nenhum IIS para herdar as definições de. Aqui você vai usar o \<serviceAuthenticationManager > elemento ou ServiceAuthenticationBehavior para especificar as configurações de autenticação que serão herdadas. No código que fique assim:  
+ Serviços são hospedados são configurados de forma um pouco diferente, pois não há nenhum IIS para herdar as definições de. Aqui você vai usar o \<serviceAuthenticationManager > elemento ou ServiceAuthenticationBehavior para especificar as configurações de autenticação que serão herdadas. No código, ele parece com isto:  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- Na configuração, ele fica assim:  
+ Na configuração, ela fica assim:  
   
 ```xml  
 <behaviors>  
@@ -96,7 +96,7 @@ else
     </behaviors>  
 ```  
   
- E, em seguida, você pode especificar InheritFromHost em suas configurações de associação, conforme mostrado no seguinte trecho de XML.  
+ E, em seguida, você pode especificar InheritFromHost em suas configurações de associação, conforme mostrado no seguinte trecho XML.  
   
 ```xml  
 <bindings>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- Como alternativa, você pode especificar os esquemas de autenticação em uma associação personalizada, definindo os esquemas de autenticação HTTP transporte elemento de associação, conforme mostrado no seguinte trecho de configuração.  
+ Como alternativa, você pode especificar os esquemas de autenticação em uma associação personalizada, definindo os esquemas de autenticação em HTTP transportar o elemento de associação, conforme mostrado no seguinte trecho de config.  
   
 ```xml  
 <binding name="multipleBinding">  

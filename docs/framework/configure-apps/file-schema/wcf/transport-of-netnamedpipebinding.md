@@ -2,12 +2,12 @@
 title: '&lt;transporte&gt; de &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 9116532c8b4aae2f7539706b97d564444195c79d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0006be71ee67d5f274d8af8087f2d111cddb12b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753138"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407249"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transporte&gt; de &lt;netNamedPipeBinding&gt;
 Define as configurações de segurança de transporte para um pipe nomeado.  
@@ -38,7 +38,7 @@ Define as configurações de segurança de transporte para um pipe nomeado.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|protectionLevel|Define o nível de proteção de pipe nomeado. Assinatura de mensagens reduz o risco de um terceiro que viole a mensagem enquanto eles estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Sem proteção.<br />-Sign: Mensagens são assinadas.<br />-EncryptAndSign: Mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
+|protectionLevel|Define o nível de proteção de pipe nomeado. Assinar mensagens minimiza o risco de um terceiro violação da mensagem enquanto estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -57,5 +57,5 @@ Define as configurações de segurança de transporte para um pipe nomeado.
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

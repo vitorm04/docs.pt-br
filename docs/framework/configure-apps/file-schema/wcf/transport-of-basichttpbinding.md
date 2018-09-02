@@ -2,12 +2,12 @@
 title: '&lt;transporte&gt; de &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 0111a1f0b7697caa584cd7fc45ad6347207100ea
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3f9ad2c8b587a87abea7dc22abb98fdfb6ea77e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751263"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415995"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transporte&gt; de &lt;basicHttpBinding&gt;
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
@@ -47,19 +47,19 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |clientCredentialType|-Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente usando a autenticação HTTP.  O padrão é `None`. Esse atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente de dentro de um domínio usando um proxy via HTTP. Esse atributo é aplicável somente quando o `mode` atributo do pai `security` elemento `Transport` ou `TransportCredentialsOnly`. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|território|Uma cadeia de caracteres que especifica o domínio que é usado pelo esquema de autenticação de HTTP para autenticação básica ou digest. O padrão é uma cadeia de caracteres vazia.|  
-|policyenforcement definida como|Esta enumeração Especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> devem ser impostas.<br /><br /> 1.  Nunca – a política é aplicada nunca (proteção estendida é desabilitada).<br />2.  WhenSupported – a política será aplicada somente se o cliente oferece suporte à proteção estendida.<br />3.  Sempre – a política sempre é aplicada. Os clientes que não oferecem suporte a proteção estendida falhará ao autenticar.|  
-|protectionScenario|Esta enumeração Especifica o cenário de proteção aplicado pela política.|  
+|proxyCredentialType|-Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente de dentro de um domínio usando um proxy por meio de HTTP. Esse atributo é aplicável somente quando o `mode` atributo do pai `security` elemento é `Transport` ou `TransportCredentialsOnly`. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|território|Uma cadeia de caracteres que especifica o realm que é usado pelo esquema de autenticação de HTTP para a autenticação básica ou digest. O padrão é uma cadeia de caracteres vazia.|  
+|policyenforcement definido como|Esta enumeração Especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser imposta.<br /><br /> 1.  Nunca – a política de nunca é aplicada (proteção estendida é desabilitada).<br />2.  WhenSupported – a política é aplicada somente se o cliente oferece suporte à proteção estendida.<br />3.  Sempre – a política sempre é aplicada. Os clientes que não dão suporte a proteção estendida falharão ao autenticar.|  
+|protectionScenario|Esta enumeração Especifica o cenário de proteção imposto pela política.|  
   
-## <a name="clientcredentialtype-attribute"></a>clientCredentialType atributo  
+## <a name="clientcredentialtype-attribute"></a>clientCredentialType de atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Nenhum|As mensagens não são protegidas durante a transferência.|  
+|Nenhum|Mensagens não são protegidas durante a transferência.|  
 |Basic|Especifica autenticação básica.|  
 |Digest|Especifica a autenticação Digest.|  
-|NTLM|Especifica a autenticação NTLM quando possível, e se a falha de autenticação do Windows.|  
+|NTLM|Especifica a autenticação NTLM quando possível, e se a autenticação do Windows falhar.|  
 |Windows|Especifica a autenticação integrada do Windows.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType atributo  
@@ -67,11 +67,11 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|-Mensagens não são protegidas durante a transferência.|  
-|Basic|Especifica a autenticação básica, conforme definido por RFC 2617 – autenticação HTTP: Basic e a autenticação Digest.|  
-|Digest|Especifica a autenticação digest, conforme definido por RFC 2617 – autenticação HTTP: Basic e a autenticação Digest.|  
-|NTLM|Especifica a autenticação NTLM quando possível, e se a falha de autenticação do Windows.|  
+|Basic|Especifica autenticação básica, conforme definido pelo RFC 2617 – autenticação HTTP: autenticação básica e Digest.|  
+|Digest|Especifica a autenticação digest, conforme definido pelo RFC 2617 – autenticação HTTP: autenticação básica e Digest.|  
+|NTLM|Especifica a autenticação NTLM quando possível, e se a autenticação do Windows falhar.|  
 |Windows|Especifica a autenticação integrada do Windows.|  
-|certificado|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o `Mode` atributo do pai `security` elemento é definido como transporte e não funcionará se ele está definido como TransportCredentialOnly.|  
+|Certificado|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o `Mode` atributo do pai `security` elemento é definido como transporte e não funcionará se ele for definido como TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -125,5 +125,5 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: Serviço da caixa de ferramentas
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406456"
 ---
 # <a name="toolbox-service"></a>Serviço da caixa de ferramentas
 Este exemplo demonstra como atualizar as atividades da caixa de ferramentas de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] com base no contexto de fluxo de trabalho. O exemplo contém um fluxo de trabalho que modifica o conteúdo da caixa de ferramentas com base em se uma atividade personalizado está selecionada.  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  Abra o arquivo de Workflow.xaml.  
   
-4.  Adicionar um **CustomActivity** arrastando e soltando-o na caixa de ferramentas. Observe que a chamada de uma categoria de caixa de ferramentas adicional: **nova categoria de WF** com uma atividade adicional **atribuir**.  
+4.  Adicionar um **CustomActivity** arrastando e soltando-os na caixa de ferramentas. Observe que a chamada de uma categoria de caixa de ferramentas adicional: **nova categoria de WF** com uma atividade adicional **atribuir**.  
   
-5.  Desmarque agora o **CustomActivity** arrastando outra atividade nela.  
+5.  Agora o **CustomActivity** arrastando outra atividade nele.  
   
-6.  O item **atribuir** na categoria **nova categoria de WF** na caixa de ferramentas é removido. Além disso, porque não há mais item deixado na categoria, a categoria é removida também.  
+6.  O item **atribua** na categoria **nova categoria de WF** na caixa de ferramentas agora será removido. Além disso, porque não há mais item deixado na categoria, a categoria é removida também.  
   
-7.  Selecione o **CustomActivity** novamente e a categoria e **atribuir** atividade é adicionada novamente.  
+7.  Selecione o **CustomActivity** novamente e a categoria e **atribuir** atividade é adicionada de volta.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

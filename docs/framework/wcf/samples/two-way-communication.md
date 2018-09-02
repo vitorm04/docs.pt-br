@@ -2,26 +2,26 @@
 title: Comunicação bidirecional
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 319b63ff1eefdab4c23932294c3f1970f204601e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508339"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416750"
 ---
 # <a name="two-way-communication"></a>Comunicação bidirecional
-Este exemplo demonstra como executar transacionado uma comunicação bidirecional em fila em relação ao MSMQ. Este exemplo usa o `netMsmqBinding` associação. Nesse caso, o serviço é um aplicativo de console auto-hospedado que permite que você observe o serviço de recebimento de mensagens na fila.  
+Este exemplo demonstra como executar transacionado uma comunicação bidirecional em fila em relação ao MSMQ. Este exemplo usa o `netMsmqBinding` associação. Nesse caso, o serviço é um aplicativo de console auto-hospedado que permite que você observe o recebimento de mensagens na fila de serviço.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Este exemplo se baseia o [transacionado associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ Este exemplo se baseia a [transacionada de associação de MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
- Comunicação em fila, o cliente se comunica com o serviço usando uma fila. O cliente envia mensagens a uma fila e o serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisa estar em execução ao mesmo tempo para se comunicar usando uma fila.  
+ Comunicação em fila, o cliente se comunica com o serviço usando uma fila. O cliente envia mensagens para uma fila e o serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisa estar em execução ao mesmo tempo para se comunicar usando uma fila.  
   
- Este exemplo demonstra a comunicação de 2 vias usando filas. O cliente envia ordens de compra para a fila de dentro do escopo de uma transação. O serviço recebe as ordens de, processa o pedido e, em seguida, chama novamente o cliente com o status do pedido da fila de dentro do escopo de uma transação. Para facilitar a comunicação bidirecional o cliente e o serviço usam filas para enfileirar as ordens de compra e o status do pedido.  
+ Este exemplo demonstra o uso de filas de comunicação de 2 vias. O cliente envia ordens de compra para a fila de dentro do escopo de uma transação. O serviço recebe as ordens, processa o pedido e, em seguida, chama de volta o cliente com o status da ordem da fila de dentro do escopo de uma transação. Para facilitar a comunicação bidirecional o cliente e o serviço usam filas para enfileirar as ordens de compra e o status do pedido.  
   
- O contrato de serviço `IOrderProcessor` define as operações de serviço unidirecional que atendem o uso de enfileiramento de mensagens. A operação de serviço inclui o ponto de extremidade para usar para enviar os status da ordem de resposta. O ponto de extremidade de resposta é o URI da fila para enviar o status do pedido para o cliente. Aplicativo de processamento de pedidos implementa esse contrato.  
+ O contrato de serviço `IOrderProcessor` define as operações de serviço unidirecional que acordo com o uso de enfileiramento de mensagens. A operação de serviço inclui o ponto de extremidade a usar para enviar os status da ordem de resposta. O ponto de extremidade de resposta é o URI da fila para enviar o status do pedido para o cliente. Aplicativo de processamento de pedidos implementa esse contrato.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
   
- O contrato de resposta para enviar o status do pedido é especificado pelo cliente. O cliente implementa o contrato de status de ordem. O serviço usa o proxy gerado deste contrato para enviar o status do pedido para o cliente.  
+ O contrato de resposta para enviar o status do pedido é especificado pelo cliente. O cliente implementa o contrato de status do pedido. O serviço usa o proxy gerado deste contrato para enviar o status da ordem de volta ao cliente.  
 
 ```csharp
 [ServiceContract]  
@@ -44,9 +44,9 @@ public interface IOrderStatus
 }  
 ```
 
- A operação de serviço processa o pedido de compra enviado. O <xref:System.ServiceModel.OperationBehaviorAttribute> é aplicada à operação de serviço para especificar a inscrição automática em uma transação que é usada para receber a mensagem da fila e o preenchimento automático de transações após a conclusão da operação de serviço. O `Orders` classe encapsula a funcionalidade de ordem de processamento. Nesse caso, ele adiciona o pedido de compra para um dicionário. A transação que a operação de serviço inscrita em está disponível para as operações de `Orders` classe.  
+ A operação de serviço processa a ordem de compra enviado. O <xref:System.ServiceModel.OperationBehaviorAttribute> é aplicada à operação de serviço para especificar a inscrição automática em uma transação que é usada para receber a mensagem da fila e o preenchimento automático de transações após a conclusão da operação de serviço. O `Orders` classe encapsula a funcionalidade de ordem de processamento. Nesse caso, ele adiciona a ordem de compra em um dicionário. A transação que a operação de serviço inscrita em está disponível para operações no `Orders` classe.  
   
- A operação de serviço, além de processamento de ordem de compra enviado, responde ao cliente o status do pedido.  
+ A operação de serviço, além de processamento de ordem de compra enviado, respostas de volta para o cliente sobre o status do pedido.  
 
 ```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
@@ -73,9 +73,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. ServiceModel do arquivo de configuração.  
   
 > [!NOTE]
->  O endereço de nome e o ponto de extremidade de fila MSMQ usam convenções de endereçamento ligeiramente diferentes. O nome da fila MSMQ usa um ponto (.) para os separadores de máquina e barra invertida locais em seu caminho. O endereço de ponto de extremidade do Windows Communication Foundation (WCF) especifica um NET. MSMQ: esquema, use "localhost" para a máquina local e usa barras em seu caminho. Para ler de uma fila que está hospedada no computador remoto, substitua o "." e "localhost" como o nome do computador remoto.  
+>  O endereço de ponto de extremidade e o nome da fila MSMQ usar convenções de endereçamento ligeiramente diferentes. O nome da fila MSMQ usa um ponto (.) para que os separadores de máquina e a barra invertida locais em seu caminho. O endereço de ponto de extremidade do Windows Communication Foundation (WCF) especifica um NET. MSMQ: esquema, usa "localhost" para o computador local e usa barras "/" em seu caminho. Para ler de uma fila que está hospedada no computador remoto, substitua o "." e "localhost" para o nome do computador remoto.  
   
- O serviço é auto-hospedado. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço verifica a existência da fila e cria, se necessário. O nome da fila é lida do arquivo de configuração. O endereço base é usado pelo [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.  
+ O serviço é auto-hospedado. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço verifica a existência da fila e cria-lo, se necessário. O nome da fila é lido do arquivo de configuração. O endereço base é usado pelas [ferramenta Utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para gerar o proxy para o serviço.  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -103,7 +103,7 @@ public static void Main()
 }  
 ```
 
- O cliente cria uma transação. Comunicação com a fila ocorre dentro do escopo da transação, fazendo com que ele será tratado como uma unidade atômica, onde todas as mensagens de êxito ou falha.  
+ O cliente cria uma transação. A comunicação com a fila ocorre dentro do escopo da transação, fazendo com que ele será tratado como uma unidade atômica em que todas as mensagens de êxito ou falha.  
 
 ```csharp
 // Create a ServiceHost for the OrderStatus service type.  
@@ -143,7 +143,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
 }  
 ```
 
- O código do cliente implementa a `IOrderStatus` contrato receber o status do pedido do serviço. Nesse caso, exibe o status do pedido.  
+ O código do cliente implementa o `IOrderStatus` de contrato para receber o status do pedido do serviço. Nesse caso, ele imprime o status do pedido.  
 
 ```csharp
 [ServiceBehavior]  
@@ -159,7 +159,7 @@ public class OrderStatusService : IOrderStatus
 }  
 ```
 
- A fila de status de ordem é criada no `Main` método. A configuração do cliente inclui a configuração de serviço de status de ordem para hospedar o serviço de status de ordem, conforme mostrado no exemplo de configuração.  
+ A fila de status do pedido é criada no `Main` método. A configuração do cliente inclui a configuração de serviço de status do pedido para hospedar o serviço de status do pedido, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <appSettings>  
@@ -190,9 +190,9 @@ public class OrderStatusService : IOrderStatus
 </system.serviceModel>  
 ```  
   
- Quando você executar o exemplo, as atividades do cliente e de serviço são exibidas em janelas do console de serviço e o cliente. Você pode ver as mensagens de recebimento de serviço do cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
+ Quando você executar o exemplo, as atividades do cliente e o serviço são exibidas nas janelas do console de serviço e cliente. Você pode ver as mensagens de recebimento do serviço do cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente.  
   
- O serviço exibe as informações de ordem de compra e indica que ele está retornando o status do pedido para a fila de status de ordem.  
+ O serviço exibe as informações de ordem de compra e indica que ele está enviando novamente o status do pedido para a fila de status do pedido.  
   
 ```  
 The service is ready.  
@@ -209,7 +209,7 @@ Processing Purchase Order: 124a1f69-3699-4b16-9bcc-43147a8756fc
 Sending back order status information  
 ```  
   
- O cliente exibe as informações de status de ordem enviadas pelo serviço.  
+ O cliente exibe as informações de status do pedido enviadas pelo serviço.  
   
 ```  
 Press <ENTER> to terminate client.  
@@ -218,20 +218,20 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Se você usar o Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar os nomes de ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
+    >  Se você usar Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar os nomes de ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
   
- Por padrão, com o <xref:System.ServiceModel.NetMsmqBinding>, segurança de transporte está habilitada. Há duas propriedades relevantes para a segurança de transporte MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para o MSMQ fornecer a autenticação e o recurso de assinatura, ele deve ser parte de um domínio e a opção de integração do active directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atendam a esses critérios, você receberá um erro.  
+ Por padrão com o <xref:System.ServiceModel.NetMsmqBinding>, segurança de transporte está habilitada. Há duas propriedades relevantes para a segurança do transporte MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para o MSMQ fornecer a autenticação e o recurso de assinatura, ele deve ser parte de um domínio e a opção de integração do active directory para o MSMQ deve estar instalada. Se você executar esse exemplo em um computador que não atendem a esses critérios, você receberá um erro.  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para executar o exemplo em um computador associado a um grupo de trabalho ou sem a integração do active directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para executar o exemplo em um computador associado a um grupo de trabalho ou sem a integração do Active Directory  
   
-1.  Se o computador não faz parte de um domínio ou não tem integração do active directory instalada, desativar a segurança de transporte, definindo o nível de proteção e o modo de autenticação para `None` conforme mostrado no exemplo de configuração:  
+1.  Se o computador não fizer parte de um domínio ou não tem integração do Active Directory instalada, desative a segurança de transporte, definindo o nível de proteção e o modo de autenticação para `None` conforme mostrado no seguinte exemplo de configuração:  
   
     ```xml  
     <configuration>  
@@ -266,7 +266,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-2.  Desativar a segurança para uma configuração de cliente gera o seguinte:  
+2.  Desativação da segurança para uma configuração de cliente gera o seguinte:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -310,7 +310,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3.  O serviço para este exemplo cria uma associação no `OrderProcessorService`. Adicionar uma linha de código após a associação é instanciada para definir o modo de segurança para `None`.  
+3.  O serviço para este exemplo cria uma associação no `OrderProcessorService`. Adicionar uma linha de código depois que a associação é instanciada para definir o modo de segurança para `None`.  
   
     ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
@@ -320,14 +320,14 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 4.  Certifique-se de que você altera a configuração no servidor e o cliente antes de executar o exemplo.  
   
     > [!NOTE]
-    >  Configuração `security mode` para `None` é equivalente à configuração <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> ou `Message` segurança `None`.  
+    >  Definindo `security mode` à `None` é equivalente à configuração <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> ou `Message` security `None`.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

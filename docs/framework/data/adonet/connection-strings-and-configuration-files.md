@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 629d08b60330125a7bb491a58499b5e2bc7d2091
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805679"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405969"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadeias de conexão e arquivos de configuração
 Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulnerabilidades de segurança e problemas de manutenção. As cadeias de conexão não criptografadas compiladas no código-fonte de um aplicativo podem ser exibidas com a ferramenta [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). Além disso, se a cadeia de conexão for alterada, seu aplicativo deverá ser recompilado. Por esses motivos, recomendamos armazenar cadeias de conexão em um arquivo de configuração do aplicativo.  
@@ -70,11 +70,11 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  A partir do .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> é usado ao trabalhar com arquivos de configuração no computador local, substituindo o <xref:System.Configuration.ConfigurationSettings> obsoleto. <xref:System.Web.Configuration.WebConfigurationManager> é usado para trabalhar com arquivos de configuração do ASP.NET. Ele foi criado para trabalhar com arquivos de configuração em um servidor Web e permite o acesso programático a seções do arquivo de configuração como **system.web**.  
   
 > [!NOTE]
->  Acessar arquivos de configuração em tempo de execução exige a concessão de permissões para o chamador; as permissões necessárias dependem do tipo de aplicativo, do arquivo de configuração e do local. Para obter mais informações, confira [Usando as classes de configuração](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc), <xref:System.Web.Configuration.WebConfigurationManager> para aplicativos ASP.NET e <xref:System.Configuration.ConfigurationManager> para aplicativos do Windows.  
+>  Acessar arquivos de configuração em tempo de execução exige a concessão de permissões para o chamador; as permissões necessárias dependem do tipo de aplicativo, do arquivo de configuração e do local. Para obter mais informações, confira [Usando as classes de configuração](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc), <xref:System.Web.Configuration.WebConfigurationManager> para aplicativos ASP.NET e <xref:System.Configuration.ConfigurationManager> para aplicativos do Windows.  
   
  Você pode usar <xref:System.Configuration.ConnectionStringSettingsCollection> para recuperar cadeias de conexão de arquivos de configuração do aplicativo. Ele contém uma coleção de objetos <xref:System.Configuration.ConnectionStringSettings>, cada um deles representando uma única entrada na seção **connectionStrings**. Suas propriedades mapeiam para atributos de cadeia de conexão, permitindo que você recupere uma cadeia de conexão especificando o nome ou o nome do provedor.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|O nome da cadeia de conexão. Mapeado para o atributo **name**.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|O nome do provedor totalmente qualificado. Mapeado para o atributo **providerName**.|  
@@ -102,7 +102,7 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Criptografando seções do arquivo de configuração usando configuração protegida  
- O ASP.NET 2.0 introduziu uma nova funcionalidade, chamada *configuração protegida*, que permite criptografar informações confidenciais em um arquivo de configuração. Embora tenha sido projetado principalmente para ASP.NET, a configuração protegida também pode ser usada para criptografar seções do arquivo de configuração em aplicativos do Windows. Para obter uma descrição detalhada das funcionalidades da configuração protegida, confira [Criptografando informações de configuração usando a configuração protegida](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+ O ASP.NET 2.0 introduziu uma nova funcionalidade, chamada *configuração protegida*, que permite criptografar informações confidenciais em um arquivo de configuração. Embora tenha sido projetado principalmente para ASP.NET, a configuração protegida também pode ser usada para criptografar seções do arquivo de configuração em aplicativos do Windows. Para obter uma descrição detalhada das funcionalidades da configuração protegida, confira [Criptografando informações de configuração usando a configuração protegida](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
   
  O fragmento do arquivo de configuração a seguir mostra a seção **connectionStrings** depois de ser criptografada. O **configProtectionProvider** especifica o provedor de configuração protegida usado para criptografar e descriptografar as cadeias de conexão. A seção **EncryptedData** contém o texto de criptografia.  
   
@@ -136,16 +136,16 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
   
 |Provider|Descrição|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Usa o algoritmo de criptografia RSA para criptografar e descriptografar dados. O algoritmo RSA pode ser usado para criptografia de chave pública e assinaturas digitais. Também é conhecido como “chave pública” ou criptografia assimétrica porque emprega duas chaves diferentes. Use a [Ferramenta de Registro do IIS do ASP.NET (Aspnet_regiis.exe)](http://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) para criptografar as seções em um arquivo Web.config e gerenciar as chaves de criptografia. O ASP.NET descriptografa o arquivo de configuração quando processa o arquivo. A identidade do aplicativo do ASP.NET deve ter acesso de leitura para a chave de criptografia que é usada para criptografar e descriptografar as seções criptografadas.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Usa o algoritmo de criptografia RSA para criptografar e descriptografar dados. O algoritmo RSA pode ser usado para criptografia de chave pública e assinaturas digitais. Também é conhecido como “chave pública” ou criptografia assimétrica porque emprega duas chaves diferentes. Use a [Ferramenta de Registro do IIS do ASP.NET (Aspnet_regiis.exe)](https://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) para criptografar as seções em um arquivo Web.config e gerenciar as chaves de criptografia. O ASP.NET descriptografa o arquivo de configuração quando processa o arquivo. A identidade do aplicativo do ASP.NET deve ter acesso de leitura para a chave de criptografia que é usada para criptografar e descriptografar as seções criptografadas.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Usa a API de Proteção aos Dados do Windows (DPAPI) para criptografar seções de configuração. Usa os serviços de criptografia internos do Windows e pode ser configurado para proteção específica de computador ou da conta do usuário. A proteção específica do computador é útil para vários aplicativos no mesmo servidor que precisam compartilhar informações. A proteção específica da conta do usuário pode ser usada com serviços que são executados com uma identidade de usuário específica, como um ambiente de hospedagem compartilhado. Cada aplicativo é executado em uma identidade separada que restringe o acesso a recursos como arquivos e bancos de dados.|  
   
- Os dois provedores oferecem criptografia de dados forte. Entretanto, se você estiver planejando usar o mesmo arquivo de configuração criptografado em vários servidores, como uma Web farm, apenas o `RsaProtectedConfigurationProvider` permite que você exporte as chaves de criptografia usadas para criptografar os dados e importá-los em outro servidor. Para obter mais informações, confira [Importando e exportando contêineres de chave RSA da configuração protegida](http://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).  
+ Os dois provedores oferecem criptografia de dados forte. Entretanto, se você estiver planejando usar o mesmo arquivo de configuração criptografado em vários servidores, como uma Web farm, apenas o `RsaProtectedConfigurationProvider` permite que você exporte as chaves de criptografia usadas para criptografar os dados e importá-los em outro servidor. Para obter mais informações, confira [Importando e exportando contêineres de chave RSA da configuração protegida](https://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).  
   
 ### <a name="using-the-configuration-classes"></a>Usando as classes de configuração  
  O namespace <xref:System.Configuration> fornece classes para trabalhar com parâmetros de configuração programaticamente. A classe <xref:System.Configuration.ConfigurationManager> fornece acesso a arquivos de computador, aplicativo e configuração do usuário. Caso você esteja criando um aplicativo ASP.NET, use a classe <xref:System.Web.Configuration.WebConfigurationManager>, que fornece a mesma funcionalidade, permitindo também o acesso a configurações que são exclusivas aos aplicativos ASP.NET, como aquelas encontradas em **\<system.web>**.  
   
 > [!NOTE]
->  O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [Serviços Criptográficos](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  O namespace <xref:System.Security.Cryptography> contém classes que oferecem opções adicionais para criptografar e descriptografar dados. Use essas classes se você precisar de serviços de criptografia que não estão disponíveis usando a configuração protegida. Algumas dessas classes são wrappers da Microsoft CryptoAPI não gerenciada, enquanto outras são implementações puramente gerenciadas. Para obter mais informações, consulte [Serviços Criptográficos](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
   
 ### <a name="appconfig-example"></a>Exemplo de App.config  
  Este exemplo demonstra como ativar/desativar a criptografia da seção **connectionStrings** em um arquivo **app.config** para um aplicativo do Windows. Nesse exemplo, o procedimento utiliza o nome do aplicativo como um argumento, por exemplo, “MyApplication.exe”. O arquivo **app.config** será então criptografado e copiado para a pasta que contém o executável com o nome "MyApplication.exe.config".  
@@ -167,12 +167,12 @@ Inserir cadeias de conexão no código do seu aplicativo pode resultar em vulner
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Para obter mais informações sobre como proteger aplicativos ASP.NET, confira [NIB: Segurança do ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) e [Visão rápida das práticas de segurança do ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=59997) no Centro de Desenvolvedores do ASP.NET.  
+ Para obter mais informações sobre como proteger aplicativos ASP.NET, confira [NIB: Segurança do ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) e [Visão rápida das práticas de segurança do ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=59997) no Centro de Desenvolvedores do ASP.NET.  
   
 ## <a name="see-also"></a>Consulte também  
  [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [Protegendo informações de conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Usando as classes de configuração](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [Usando as classes de configuração](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
  [Configurando aplicativos](../../../../docs/framework/configure-apps/index.md)  
- [Administração de site ASP.NET](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [Administração de site ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

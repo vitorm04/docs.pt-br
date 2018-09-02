@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c10a680f1caffd583097b16c046729fe10b140
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458641"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415388"
 ---
 # <a name="qualifiersetget-function"></a>Função QualifierSet_Get
 Obtém o qualificador nomeado especificado.  
@@ -47,23 +47,23 @@ HRESULT QualifierSet_Get (
 [in] Esse parâmetro é usado.
 
 `ptr`   
-[in] Um ponteiro para um [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instância.
+[in] Um ponteiro para um [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instância.
 
 `wszName`   
-[in] O nome do qualificador de cujo valor é solicitado.
+[in] O nome do qualificador cujo valor é solicitado.
 
 `lFlags`   
 [in] Reservado. Esse parâmetro deve ser 0.
 
 `pVal`   
-[out] Quando obtiver êxito, o tipo correto e o valor do qualificador. Se a função falhar, o `VARIANT` apontada pelo `pVal` não é modificado. Se esse parâmetro for `null`, o parâmetro será ignorado.
+[out] Quando obtiver êxito, o tipo correto e o valor do qualificador. Se a função falhar, o `VARIANT` apontado por `pVal` não será modificado. Se esse parâmetro for `null`, o parâmetro é ignorado.
 
 `plFlavor`   
-[out] Um ponteiro para um longo que recebe os bits de tipo de qualificador para o qualificador solicitado. Se as informações de tipo não for desejadas, esse parâmetro pode ser `null`. 
+[out] Um ponteiro para um longo que recebe os bits de flavor qualificador para o qualificador solicitado. Se as informações de tipo não for desejadas, esse parâmetro pode ser `null`. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -73,14 +73,14 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

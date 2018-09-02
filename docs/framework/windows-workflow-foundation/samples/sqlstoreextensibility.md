@@ -2,12 +2,12 @@
 title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518480"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408759"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Este exemplo demonstra o uso e configuração de propriedades elevadas no armazenamento de instância de fluxo de trabalho SQL. O armazenamento de instância de fluxo de trabalho do SQL é uma implementação SQL- base de um armazenamento de instância. Permite que uma instância salve o estado e carrega o estado para e de um base de dados SQL Server ou do SQL Server Express. O recurso de extensibilidade de armazenamento permite que o usuário defina as propriedades que são armazenadas no armazenamento de instância. Essas propriedades são exibidas em uma exibição promovida propriedades que permite que o usuário possa ver para eles.  
@@ -48,19 +48,19 @@ Este exemplo demonstra o uso e configuração de propriedades elevadas no armaze
     > [!WARNING]
     >  Se você instalou o base de dados em uma instância não padrão do SQL Server, atualizar a cadeia de conexão no código antes de criar a solução.  
   
-3.  Executar o exemplo com privilégios de administrador, navegue até o diretório do projeto bin (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) em [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], clicando duas vezes SqlStoreExtensibility.exe e selecionando **executar como Administrador**.  
+3.  Executar o exemplo com privilégios de administrador, navegando até o diretório do projeto bin (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) no [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], o botão direito do mouse SqlStoreExtensibility.exe e selecionando **executar como Administrador**.  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Para verificar o exemplo está funcionando corretamente  
   
-1.  Use o SQL Server Management Studio para exibir o conteúdo da tabela de instância selecionando **bancos de dados**, **InstanceStore**e, em seguida,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** no Pesquisador de objetos, clique com botão direito **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selecione  **Selecione os primeiros 1.000 linhas**. Para obter mais informações sobre o SQL Server Management Studio, consulte [apresentando o SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Use o SQL Server Management Studio para exibir o conteúdo da tabela de instância, selecionando **bancos de dados**, **InstanceStore**e, em seguida,  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** no Pesquisador de objetos, clique com botão direito **System.ServiceModel.Activities.DurableInstancing.InstanceTable** e selecione  **Selecionar as primeiras 1000 linhas**. Para obter mais informações sobre o SQL Server Management Studio, consulte [apresentando o SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Observe as instâncias de fluxo de trabalho listadas.  
   
 3.  Em um prompt de comando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] , execute o script de QueryInstanceStore.cmd localizado no diretório de exemplo (\ \ WF básico \ \ SqlStoreExtensibility persistência).  
   
-4.  Observe o valor do contador exibido em **CountStatus**.  
+4.  Observe o valor do contador exibido sob **CountStatus**.  
   
-5.  Execute o script algumas vezes para ver o **CountStats** alteração de valor.  
+5.  Execute o script algumas vezes para ver a **CountStats** alteração do valor.  
   
 6.  Pressione ENTER para encerrar o aplicativo de fluxo de trabalho.  
   
@@ -73,11 +73,11 @@ Este exemplo demonstra o uso e configuração de propriedades elevadas no armaze
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Exemplos de persistência e hospedagem de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

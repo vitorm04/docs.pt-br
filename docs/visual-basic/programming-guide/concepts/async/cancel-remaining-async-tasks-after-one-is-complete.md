@@ -1,15 +1,15 @@
 ---
-title: Cancelar as demais tarefas assíncronas após um completo (Visual Basic)
+title: Cancelar as demais tarefas assíncronas depois que um é concluída (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: baf18ed4c2a4693f0765358d9f9a56842991cf29
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728333"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402251"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as demais tarefas assíncronas após um completo (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as demais tarefas assíncronas depois que um é concluída (Visual Basic)
 Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  
   
  Este exemplo demonstra como usar um token de cancelamento em conjunto com `WhenAny` para aguardar na primeira tarefa que for finalizada na coleção de tarefas e para cancelar as tarefas restantes. Cada tarefa baixa o conteúdo de um site. O exemplo exibe o comprimento do conteúdo do primeiro download que é concluído e cancela os outros downloads.  
@@ -24,7 +24,7 @@ Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=na
   
 2.  Na barra de menus, escolha **Arquivo**, **Abrir**, **Projeto/Solução**.  
   
-3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo é descompactado e, em seguida, abra o arquivo de solução (. sln) AsyncFineTuningVB.  
+3.  No **Abrir projeto** caixa de diálogo, abra a pasta que contém o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (. sln) para AsyncFineTuningVB.  
   
 4.  No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterOneTask** e, em seguida, escolha **Definir como Projeto de Inicialização**.  
   
@@ -34,14 +34,14 @@ Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=na
   
 6.  Execute o programa várias vezes para verificar que diferentes downloads são concluídos em primeiro.  
   
- Se você não quiser baixar o projeto, você pode examinar o arquivo MainWindow.xaml.vb no final deste tópico.  
+ Se você não quiser baixar o projeto, você pode examinar o arquivo. XAML. vb no final deste tópico.  
   
 ## <a name="building-the-example"></a>Compilando o Exemplo  
- O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas](http://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.  
+ O exemplo neste tópico adiciona ao projeto que é desenvolvido no [cancelar uma tarefa assíncrona ou uma lista de tarefas](https://msdn.microsoft.com/library/d6e4e801-df64-4705-98fc-df725a577fb0) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.  
   
  Para compilar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAListOfTasks** como o **Projeto de Inicialização**. Adicione as alterações deste tópico ao projeto.  
   
- No arquivo de MainWindow.xaml.vb o **CancelAListOfTasks** projeto, inicie a transição, movendo as etapas de processamento para cada site de loop no `AccessTheWebAsync` para o seguinte método assíncrono.  
+ No arquivo. XAML. vb do **CancelAListOfTasks** do projeto, inicie a transição movendo as etapas de processamento para cada site do loop em `AccessTheWebAsync` para o seguinte método assíncrono.  
   
 ```vb  
 ' ***Bundle the processing steps for a website into one async method.  
@@ -103,7 +103,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
  Execute o programa várias vezes para verificar que diferentes downloads são concluídos em primeiro.  
   
 ## <a name="complete-example"></a>Exemplo completo  
- O código a seguir é o arquivo MainWindow.xaml.vb ou MainWindow.xaml.cs completo para o exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo.  
+ O código a seguir é o arquivo completo de XAML. vb ou MainWindow.xaml.cs do exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo.  
   
  Observe que você deve adicionar uma referência para <xref:System.Net.Http>.  
   

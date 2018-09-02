@@ -11,20 +11,20 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 4b2d968aff157ac83b21823d546c052e140607a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540258"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401713"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Instruções passo a passo: atualizando informações da barra de status em tempo de execução
 > [!IMPORTANT]
->  O <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controles substituir e adiciona a funcionalidade para o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controla; no entanto, o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controles são mantidos para compatibilidade com versões anteriores e o uso futuro, se você Escolha.  
+>  O <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controles substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controla; no entanto, o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controles sejam mantidos para compatibilidade com versões anteriores e uso futuro, se você Escolha.  
   
  Geralmente, um programa solicitará que você atualize o conteúdo dos painéis da barra de status dinamicamente no tempo de execução, dependendo das alterações de estado do aplicativo ou outra interação do usuário. Essa é uma maneira comum de indicar aos usuários que teclas como CAPS LOCK, NUM LOCK ou SCROLL LOCK estão habilitadas ou de fornecer uma data ou um relógio como uma referência conveniente.  
   
- O exemplo a seguir, você usará uma instância do <xref:System.Windows.Forms.StatusBarPanel> classe para hospedar um relógio.  
+ O exemplo a seguir, você usará uma instância da <xref:System.Windows.Forms.StatusBarPanel> classe para hospedar um relógio.  
   
 ### <a name="to-get-the-status-bar-ready-for-updating"></a>Preparar a barra de status para atualização  
   
@@ -32,21 +32,21 @@ ms.locfileid: "33540258"
   
 2.  Adicione um controle <xref:System.Windows.Forms.StatusBar> ao seu formulário. Para ver mais detalhes, consulte [Como adicionar controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
-3.  Adicionar um painel da barra de status para o <xref:System.Windows.Forms.StatusBar> controle. Para ver mais detalhes, consulte [Como adicionar painéis a um controle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
+3.  Adicionar um painel da barra de status para sua <xref:System.Windows.Forms.StatusBar> controle. Para ver mais detalhes, consulte [Como adicionar painéis a um controle StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md).  
   
-4.  Para o <xref:System.Windows.Forms.StatusBar> controle adicionado ao formulário, defina o <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade `true`.  
+4.  Para o <xref:System.Windows.Forms.StatusBar> controle adicionado ao formulário, defina a <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propriedade `true`.  
   
 5.  Adicione um Windows Forms <xref:System.Windows.Forms.Timer> componente para o formulário.  
   
     > [!NOTE]
-    >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> componente é criado para um ambiente de Windows Forms. Se você precisar de um temporizador que seja adequado para um ambiente de servidor, consulte [Introdução a temporizadores baseados em servidor](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+    >  Os formulários do Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> componente é projetado para um ambiente do Windows Forms. Se você precisar de um temporizador que seja adequado para um ambiente de servidor, consulte [Introdução a temporizadores baseados em servidor](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
 6.  Defina a propriedade <xref:System.Windows.Forms.Timer.Enabled%2A> como `true`.  
   
-7.  Definir o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade o <xref:System.Windows.Forms.Timer> como 30000.  
+7.  Defina as <xref:System.Windows.Forms.Timer.Interval%2A> propriedade do <xref:System.Windows.Forms.Timer> como 30000.  
   
     > [!NOTE]
-    >  O <xref:System.Windows.Forms.Timer.Interval%2A> propriedade o <xref:System.Windows.Forms.Timer> componente é definido como 30 segundos (30.000 milissegundos) para garantir que precisa do tempo é refletida no horário exibido.  
+    >  O <xref:System.Windows.Forms.Timer.Interval%2A> propriedade do <xref:System.Windows.Forms.Timer> componente é definido como 30 segundos (30.000 milissegundos) para garantir que a hora correta seja refletida no horário exibido.  
   
 ### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Implementar o temporizador para atualizar a barra de status  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33540258"
 1.  Depure o aplicativo e pressione F5 para executá-lo. Para ver mais detalhes sobre depuração, consulte [Depuração no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
     > [!NOTE]
-    >  Levará cerca de 30 segundos para o relógio aparecer na barra de status. Isso serve para obter a hora mais precisa possível. Por outro lado, para fazer com que o relógio apareça antes, você pode reduzir o valor de <xref:System.Windows.Forms.Timer.Interval%2A> propriedade definida na etapa 7 no procedimento anterior.  
+    >  Levará cerca de 30 segundos para o relógio aparecer na barra de status. Isso serve para obter a hora mais precisa possível. Por outro lado, para fazer com que o relógio apareça antes, você pode reduzir o valor da <xref:System.Windows.Forms.Timer.Interval%2A> propriedade definida na etapa 7 no procedimento anterior.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.StatusBar>  
