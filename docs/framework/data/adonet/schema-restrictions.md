@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: c62f934561fa4a6c352ff84b8c1201461c42de39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357251"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417076"
 ---
 # <a name="schema-restrictions"></a>Restrições de esquema
-O segundo parâmetro opcional do **GetSchema** método é retornado as restrições que são usadas para limitar a quantidade de informações de esquema e ela é passada para o **GetSchema** método como uma matriz de cadeias de caracteres . A posição na matriz determina os valores que você pode passar, e isso é equivalente ao número de restrição.  
+O segundo parâmetro opcional do **GetSchema** método é retornado das restrições que são usadas para limitar a quantidade de informações de esquema, e ele é passado para o **GetSchema** método como uma matriz de cadeias de caracteres . A posição na matriz determina os valores que você pode passar, e isso é equivalente ao número de restrição.  
   
- Por exemplo, a tabela a seguir descreve as restrições que a coleção de esquemas "Tabelas" usando o .NET Framework Data Provider para SQL Server com suporte. Restrições adicionais para coleções de esquema do SQL Server são listadas no final deste tópico.  
+ Por exemplo, a tabela a seguir descreve as restrições com suporte pela coleção de esquemas "Tabelas" usando o .NET Framework Data Provider para SQL Server. Restrições adicionais para coleções de esquemas do SQL Server são listadas no final deste tópico.  
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -25,18 +25,18 @@ O segundo parâmetro opcional do **GetSchema** método é retornado as restriç�
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Especificando valores de restrição  
- Para usar uma das restrições da coleção de esquemas "Tabelas", basta criar uma matriz de cadeias de caracteres com quatro elementos e colocar um valor no elemento que corresponde ao número de restrição. Por exemplo restringir as tabelas retornadas pelo **GetSchema** método apenas as tabelas no esquema de "Vendas", defina o segundo elemento da matriz para "Vendas" antes de passá-lo para o **GetSchema** método.  
+ Para usar uma das restrições da coleção de esquemas "Tabelas", simplesmente criar uma matriz de cadeias de caracteres com quatro elementos e, em seguida, coloca um valor no elemento que corresponde ao número de restrição. Por exemplo restringir as tabelas retornadas pela **GetSchema** método somente para essas tabelas no esquema de "Vendas", defina o segundo elemento da matriz a ser "Vendas" antes de passá-lo para o **GetSchema** método.  
   
 > [!NOTE]
->  As coleções de restrições de `SqlClient` e `OracleClient` ter adicional `ParameterName` coluna. A coluna de restrição padrão ainda está lá para versões anteriores compatibilidade, mas é ignorada atualmente. Consultas parametrizadas em vez de substituição de cadeia de caracteres deve ser usada para minimizar o risco de um ataque de injeção de SQL ao especificar valores de restrição.  
+>  As coleções de restrições para `SqlClient` e `OracleClient` ter adicional `ParameterName` coluna. A coluna de restrição padrão é ainda está lá para fins de compatibilidade, mas é ignorada atualmente. Consultas parametrizadas em vez de substituição de cadeia de caracteres deve ser usada para minimizar o risco de um ataque de injeção de SQL ao especificar valores de restrição.  
   
 > [!NOTE]
->  O número de elementos na matriz deve ser menor ou igual ao número de restrições com suporte para a coleção de esquema especificado mais de um <xref:System.ArgumentException> será lançada. Pode haver menos do que o número máximo de restrições. As restrições ausentes devem para ser null (ilimitado).  
+>  O número de elementos na matriz deve ser menor ou igual ao número de restrições com suporte para a coleção de esquema especificado mais de um <xref:System.ArgumentException> será lançada. Pode haver menos do que o número máximo de restrições. As restrições ausentes devem para ser null (irrestrito).  
   
- Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de restrições com suporte ao chamar o **GetSchema** método com o nome da coleção de esquema para restrições, que é "Restrições". Isso retornará um <xref:System.Data.DataTable> com uma lista de nomes de coleção, os nomes de restrição, os valores de restrição padrão e os números de restrição.  
+ Você pode consultar um provedor gerenciado do .NET Framework para determinar a lista de restrições com suporte por meio da chamada a **GetSchema** método com o nome da coleção de esquema restrições, que é "Restrições". Isso retornará um <xref:System.Data.DataTable> com uma lista de nomes de coleção, os nomes de restrição, os valores de restrição padrão e os números de restrição.  
   
 ### <a name="example"></a>Exemplo  
- Os exemplos a seguir demonstram como usar o <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> método do .NET Framework Data Provider para SQL Server <xref:System.Data.SqlClient.SqlConnection> classe para recuperar informações de esquema sobre todas as tabelas contidas no **AdventureWorks**banco de dados de exemplo e restringir as informações retornadas somente as tabelas no esquema de "Vendas":  
+ Os exemplos a seguir demonstram como usar o <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> método do provedor de dados .NET Framework para SQL Server <xref:System.Data.SqlClient.SqlConnection> classe a recuperar informações de esquema sobre todas as tabelas contidas no **AdventureWorks**banco de dados de exemplo e restringir as informações retornadas somente as tabelas no esquema de "Vendas":  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -131,7 +131,7 @@ class Program
 ```  
   
 ## <a name="sql-server-schema-restrictions"></a>Restrições de esquema do SQL Server  
- As tabelas a seguir listam as restrições para coleções de esquema do SQL Server.  
+ As tabelas a seguir listam as restrições para coleções de esquemas do SQL Server.  
   
 ### <a name="users"></a>Usuários  
   
@@ -232,7 +232,7 @@ class Program
 |assembly_name|@AssemblyName|assemblies.name|1|  
 |udt_name|@UDTName|Types.assembly_class|2|  
   
-### <a name="foreignkeys"></a>Chaves externas  
+### <a name="foreignkeys"></a>ForeignKeys  
   
 |Nome da restrição|Nome do Parâmetro|Restrição padrão|Número de restrição|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -242,7 +242,7 @@ class Program
 |Nome|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 Schema Restrictions  
- As tabelas a seguir listam as restrições para coleções de esquema do SQL Server 2008. Essas restrições são válida começando com a versão 3.5 SP1 do .NET Framework e do SQL Server 2008. Eles não têm suporte em versões anteriores do .NET Framework e do SQL Server.  
+ As tabelas a seguir listam as restrições para coleções de esquemas do SQL Server 2008. Essas restrições são válida começando com a versão 3.5 SP1 do .NET Framework e do SQL Server 2008. Eles não têm suporte em versões anteriores do .NET Framework e do SQL Server.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
   
@@ -262,4 +262,4 @@ class Program
 |Column|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

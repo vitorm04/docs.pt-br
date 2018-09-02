@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418123"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Serviço e cliente de internet desprotegido
-A ilustração a seguir mostra um exemplo de um público, não segura cliente Windows Communication Foundation (WCF) e serviço.  
+A ilustração a seguir mostra um exemplo de um público, não segura cliente do Windows Communication Foundation (WCF) e serviço.  
   
  ![Não seguro da Internet inseguro e cenário de serviço](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
@@ -24,7 +24,7 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente Wi
 |Modo de segurança|Nenhum|  
 |Transporte|HTTP|  
 |Associação|<xref:System.ServiceModel.BasicHttpBinding> no código, ou o [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento na configuração.|  
-|Interoperabilidade|Com os serviços e clientes de serviço da Web existentes|  
+|Interoperabilidade|Com os serviços e clientes de serviço Web existentes|  
 |Autenticação|Nenhum|  
 |Integridade|Nenhum|  
 |Confidencialidade|Nenhum|  
@@ -34,7 +34,7 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente Wi
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade sem segurança. Por padrão, o <xref:System.ServiceModel.BasicHttpBinding> tem o modo de segurança definido como <xref:System.ServiceModel.BasicHttpSecurityMode.None>.  
@@ -114,4 +114,4 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente Wi
 ## <a name="see-also"></a>Consulte também  
  [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
