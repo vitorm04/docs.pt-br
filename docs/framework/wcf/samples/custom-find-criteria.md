@@ -2,17 +2,17 @@
 title: Critérios de localização personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 6c9363add13e38ded75685e4115a5084629d6505
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503204"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421444"
 ---
 # <a name="custom-find-criteria"></a>Critérios de localização personalizados
-Este exemplo demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizado. Os clientes usam a funcionalidade de correspondência de escopo personalizado para refinar e tê ainda mais a funcionalidade de localização fornecida pelo sistema de descoberta do WCF. O cenário que abrange a este exemplo é o seguinte:  
+Este exemplo demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizada. Clientes usam a funcionalidade de correspondência de escopo personalizado para refinar e se baseiam ainda mais a funcionalidade de localização fornecidos pelo sistema de descoberta do WCF. O cenário que abrange esse exemplo é da seguinte maneira:  
   
-1.  Um cliente está procurando por um serviço de cálculo.  
+1.  Um cliente está procurando por um serviço de calculadora.  
   
 2.  Para refinar sua pesquisa, o cliente deve usar um regra de correspondência de escopo personalizado.  
   
@@ -20,12 +20,12 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
   
 ## <a name="demonstrates"></a>Demonstra  
   
--   Criando um serviço de descoberta personalizado.  
+-   Criando um serviço de descoberta personalizada.  
   
 -   Implementando uma correspondência de escopo personalizado pelo algoritmo.  
   
 ## <a name="discussion"></a>Discussão  
- O cliente está procurando por tipo de "Ou" critérios de correspondência. Um serviço responde novamente se os escopos em seus pontos de extremidade correspondem a nenhum dos escopos fornecidos pelo cliente. Nesse caso, o cliente está procurando por um serviço de cálculo que tenha qualquer um dos escopos da lista a seguir:  
+ O cliente está procurando por tipo de "Ou" critérios de correspondência. Um serviço responde novamente se os escopos em seus pontos de extremidade correspondem a nenhum dos escopos fornecidos pelo cliente. Nesse caso, o cliente está procurando um serviço de calculadora que tenha qualquer um dos escopos na lista a seguir:  
   
 1.  `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -33,23 +33,23 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
   
 3.  `net.tcp://Microsoft.Samples.Discovery/PortlandLocation`  
   
- Para fazer isso, o cliente direciona os serviços para usar um regra de correspondência, passando uma correspondência de escopo personalizado pelo URI de escopo personalizado. Para facilitar a correspondência de escopo personalizado, o serviço deve usar um serviço de detecção personalizada que compreende a regra de correspondência de escopo personalizado e implementa a lógica de correspondência associada.  
+ Para fazer isso, o cliente direciona os serviços para usar um regra de correspondência, passando uma correspondência de escopo personalizado pelo URI de escopo personalizado. Para facilitar a correspondência de escopo personalizado, o serviço deve usar um serviço de descoberta personalizados que compreende a regra de correspondência de escopo personalizado e implementa a lógica de correspondência associada.  
   
- No projeto do cliente, abra o arquivo Program.cs. Observe que o `ScopeMatchBy` campo o `FindCriteria` objeto é definido como um URI específico. Esse identificador é enviado para o serviço. Se o serviço não entender a essa regra, ele ignora a solicitação do cliente localizar.  
+ No projeto do cliente, abra o arquivo Program.cs. Observe que o `ScopeMatchBy` campo do `FindCriteria` objeto é definido como um URI específico. Esse identificador é enviado para o serviço. Se o serviço não entender essa regra, ele ignora a solicitação de localização do cliente.  
   
- Abra o projeto de serviço. Três arquivos são usados para implementar o serviço de detecção personalizada:  
+ Abra o projeto de serviço. Três arquivos são usados para implementar o serviço de descoberta personalizado:  
   
 1.  **AsyncResult.cs**: esta é a implementação do `AsyncResult` que é exigido pelos métodos de descoberta.  
   
-2.  **CustomDiscoveryService.cs**: este arquivo implementa o serviço de descoberta personalizado. A implementação estende o <xref:System.ServiceModel.Discovery.DiscoveryService> classe e substitui os métodos necessários. Observe a implementação de <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> método. O método verifica se a correspondência de escopo personalizado pela regra foi especificada pelo cliente. Este é o mesmo URI personalizado que o cliente especificado anteriormente. Se a regra personalizada for especificada, o caminho do código que implementa a lógica de correspondência de "OR" é seguido.  
+2.  **CustomDiscoveryService.cs**: esse arquivo implementa o serviço de descoberta personalizada. Estende a implementação de <xref:System.ServiceModel.Discovery.DiscoveryService> de classe e substitui os métodos necessários. Observe a implementação do <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> método. O método verifica se a correspondência de escopo personalizado pela regra foi especificada pelo cliente. Isso é o mesmo URI personalizado que o cliente especificou anteriormente. Se a regra personalizada for especificada, o caminho do código que implementa a lógica de correspondência de "Ou" será seguido.  
   
-     Essa lógica personalizada passa por todos os escopos em cada um dos pontos de extremidade que tem o serviço. Se qualquer um dos escopos do ponto de extremidade corresponder a qualquer um dos escopos fornecidos pelo cliente, o serviço de descoberta adiciona o ponto de extremidade para a resposta que é enviada de volta ao cliente.  
+     Essa lógica personalizada passa por todos os escopos em cada um dos pontos de extremidade que tem o serviço. Se qualquer um dos escopos do ponto de extremidade corresponde a nenhum dos escopos fornecidos pelo cliente, o serviço de descoberta adiciona o ponto de extremidade à resposta que é enviada de volta ao cliente.  
   
-3.  **CustomDiscoveryExtension.cs**: é a última etapa na implementação do serviço de descoberta para se conectar a esta implementação personalizado descobrir o serviço para o host de serviço. A classe auxiliar usada aqui é o `CustomDiscoveryExtension` classe. Essa classe estende a <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> classe. O usuário deve substituir o <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> método. Nesse caso, o método retorna uma instância do serviço de descoberta personalizado que foi criado antes. `PublishedEndpoints` é um <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contém todos os pontos de extremidade de aplicativo que são adicionados para o <xref:System.ServiceModel.ServiceHost>. O serviço de descoberta personalizado usa isso para preencher sua lista interna. Um usuário pode para adicionar outros metadados do ponto de extremidade também.  
+3.  **CustomDiscoveryExtension.cs**: A última etapa na implementação do serviço de descoberta é para se conectar a essa implementação do personalizado descobrir serviço ao host de serviço. A classe auxiliar usada aqui é o `CustomDiscoveryExtension` classe. Essa classe estende a <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> classe. O usuário deve substituir o <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> método. Nesse caso, o método retorna uma instância do serviço de descoberta personalizada que foi criado antes. `PublishedEndpoints` é um <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contém todos os pontos de extremidade do aplicativo que são adicionados para o <xref:System.ServiceModel.ServiceHost>. O serviço de descoberta personalizado usa isso para preencher sua lista interna. Um usuário pode para adicionar outros metadados do ponto de extremidade também.  
   
- Por fim, abra Program.cs. Observe que tanto o <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e `CustomDiscoveryExtension` são adicionados ao host. Quando isso é feito e o host tem um ponto de extremidade através da qual receber mensagens de descoberta, o aplicativo pode usar o serviço de descoberta personalizado.  
+ Por fim, abra Program.cs. Observe que tanto a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> e `CustomDiscoveryExtension` são adicionados ao host. Depois que isso é feito e o host tem um ponto de extremidade ao longo do qual deseja receber mensagens de descoberta, o aplicativo pode usar o serviço de descoberta personalizada.  
   
- Observe que o cliente é capaz de encontrar o serviço sem saber o endereço.  
+ Observe que o cliente é capaz de encontrar o serviço sem saber seu endereço.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -66,6 +66,6 @@ Este exemplo demonstra como criar uma correspondência de escopo personalizado u
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

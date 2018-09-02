@@ -6,18 +6,18 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: d174492e380130ad35fbc20693e18416c48a50f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77246aaf2fdaa79ad986366e39ff98a9d0f5fb50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533829"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420147"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Como reatribuir controles existentes a um pai diferente
-Você pode atribuir controles que existem em seu formulário para um novo controle de contêiner.  
+Você pode atribuir controles existentes em seu formulário para um novo controle de contêiner.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>Para reatribuir controles existentes a um pai diferente  
   
@@ -27,11 +27,11 @@ Você pode atribuir controles que existem em seu formulário para um novo contro
   
 2.  No **caixa de ferramentas**, clique no <xref:System.Windows.Forms.FlowLayoutPanel> ícone do controle.  
   
-     Não arraste o ícone para o formulário.  
+     Arraste o ícone para o formulário.  
   
 3.  Mova o ponteiro do mouse perto de três <xref:System.Windows.Forms.Button> controles.  
   
-     O ponteiro mudar para uma cruz com o <xref:System.Windows.Forms.FlowLayoutPanel> ícone de controle.  
+     O ponteiro muda para uma mira com o <xref:System.Windows.Forms.FlowLayoutPanel> ícone do controle anexado.  
   
 4.  Clique e mantenha o botão do mouse pressionado.  
   
@@ -41,7 +41,7 @@ Você pode atribuir controles que existem em seu formulário para um novo contro
   
 7.  Solte o botão do mouse.  
   
-     Os três <xref:System.Windows.Forms.Button> controles agora são inseridos a <xref:System.Windows.Forms.FlowLayoutPanel> controle.  
+     Os três <xref:System.Windows.Forms.Button> controles agora são inseridos no <xref:System.Windows.Forms.FlowLayoutPanel> controle.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

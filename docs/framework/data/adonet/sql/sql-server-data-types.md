@@ -2,12 +2,12 @@
 title: Tipos de dados do SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: da98ac72fab0bc3934cef79aeec9b12d003b6888
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363496"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424347"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de dados do SQL Server e ADO.NET
 O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o que pode resultar em potencial perda de dados. Para preservar a integridade dos dados, o provedor de dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) fornece métodos tipados acessadores para trabalhar com dados do SQL Server. É possível usar enumerações nas classes <xref:System.Data.SqlDbType> para especificar tipos de dados <xref:System.Data.SqlClient.SqlParameter>.  
@@ -20,7 +20,7 @@ O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o 
   
  **SQL Server Books Online** (Guias online do SQL Server)  
   
-1.  [Tipos de dados (mecanismo de banco de dados)](http://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [Tipos de dados (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [SqlTypes e DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
@@ -59,4 +59,4 @@ O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o 
  [Configurando parâmetros e tipos de dados de parâmetro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Parâmetros com valor de tabela](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

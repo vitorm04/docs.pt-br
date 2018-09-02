@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445306"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418649"
 ---
 # <a name="loadlibraryshim-function"></a>Função LoadLibraryShim
 Carrega uma versão especificada de uma DLL que está incluída no pacote redistribuível do .NET Framework.  
   
- Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use o [Iclrruntimeinfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método em vez disso.  
+ Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use o [iclrruntimeinfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,37 +42,37 @@ HRESULT LoadLibraryShim (
   
 #### <a name="parameters"></a>Parâmetros  
  `szDllName`  
- [in] Uma cadeia terminada em zero que representa o nome da DLL seja carregado da biblioteca do .NET Framework.  
+ [in] Uma cadeia terminada em zero que representa o nome da DLL a ser carregado na biblioteca do .NET Framework.  
   
  `szVersion`  
- [in] Uma cadeia terminada em zero que representa a versão da DLL a ser carregado. Se `szVersion` for null, a versão selecionada para carregamento é a versão mais recente da DLL especificado que é inferior à versão 4. Ou seja, todas as versões iguais ou maiores que a versão 4 são ignoradas se `szVersion` for null, e se nenhuma versão inferior a versão 4 está instalado, a DLL Falha ao carregar. Isso é para garantir a instalação do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] não afeta os aplicativos já existentes ou componentes. Consulte a entrada [SxS em processo e o início rápido da migração](http://go.microsoft.com/fwlink/?LinkId=200329) no blog da equipe do CLR.  
+ [in] Uma cadeia terminada em zero que representa a versão da DLL a ser carregado. Se `szVersion` for nula, a versão selecionada para o carregamento é a versão mais recente da DLL especificado que é inferior à versão 4. Ou seja, todas as versões iguais ou maiores que a versão 4 são ignoradas se `szVersion` for nulo, e se nenhuma versão menor do que a versão 4 está instalado, a DLL não será carregada. Isso é para garantir a instalação do [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] não afeta componentes ou aplicativos já existentes. Consulte a entrada [in-proc SxS e o início rápido da migração](https://go.microsoft.com/fwlink/?LinkId=200329) no blog da equipe do CLR.  
   
  `pvReserved`  
  Reservado para uso futuro.  
   
  `phModDll`  
- [out] Um ponteiro para o identificador do módulo.  
+ [out] Um ponteiro para a alça do módulo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro do modelo de objeto de componente (COM) padrão, conforme definido no Winerror. H, além dos valores a seguir.  
+ Esse método retorna códigos de erro padrão (COM Component Object Model), conforme definido em Winerror. H, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
 |S_OK|O método foi concluído com êxito.|  
-|CLR_E_SHIM_RUNTIMELOAD|Carregando `szDllName` requer o carregamento não não possível carregar o common language runtime (CLR) e a versão necessária do CLR.|  
+|CLR_E_SHIM_RUNTIMELOAD|Carregando `szDllName` requer o carregamento, o common language runtime (CLR) e a versão necessária do CLR não podem ser carregado.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é usada para carregar DLLs que são incluídos no pacote redistribuível do .NET Framework. Ele não carregar DLLs geradas pelo usuário.  
+ Essa função é usada para carregar as DLLs que são incluídas no pacote redistribuível do .NET Framework. Ele não carrega DLLs gerados pelo usuário.  
   
 > [!NOTE]
 >  Começando com o .NET Framework versão 2.0, carregar Fusion faz com que o CLR a ser carregado. Isso ocorre porque as funções em Fusion agora são wrappers cujas implementações são fornecidas pelo tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** mscoree. H  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

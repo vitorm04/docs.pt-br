@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: d4a86abeca19a0c634d362c1a8a41f5be7346ed7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a60499674f0192bb7589f227bffb6f907f682d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765783"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452574"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "32765783"
   
  Esta seção descreve os recursos e os comportamentos que são específicos ao Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle.  
   
- O Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle fornece acesso a um banco de dados Oracle usando a interface OCI (Oracle Call Interface), fornecida pelo software cliente Oracle. A funcionalidade do provedor de dados é projetada para ser semelhante do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedores de dados do SQL Server, OLE DB e ODBC.  
+ O Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle fornece acesso a um banco de dados Oracle usando a interface OCI (Oracle Call Interface), fornecida pelo software cliente Oracle. A funcionalidade do provedor de dados foi projetada para ser semelhante do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedores de dados do SQL Server, OLE DB e ODBC.  
   
  Para usar o Provedor de Dados [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para Oracle, um aplicativo deve fazer referência ao namespace <xref:System.Data.OracleClient> como a seguir:  
   
@@ -79,4 +79,4 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="see-also"></a>Consulte também  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

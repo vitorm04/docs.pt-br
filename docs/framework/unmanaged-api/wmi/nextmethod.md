@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461137"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43451617"
 ---
 # <a name="nextmethod-function"></a>Função NextMethod
 Recupera o próximo método em uma enumeração que começa com uma chamada para [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -47,7 +47,7 @@ HRESULT NextMethod (
 [in] Esse parâmetro é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
+[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
 `lFlags`  
 [in] Reservado. Esse parâmetro deve ser 0.
@@ -56,37 +56,37 @@ HRESULT NextMethod (
 [out] Um ponteiro que aponta para `null` antes da chamada. Quando a função retornar, o endereço de um novo `BSTR` que contém o nome do método. 
 
 `ppSignatureIn`  
-[out] Um ponteiro que recebe um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) que contém o `in` parâmetros do método. 
+[out] Um ponteiro que recebe um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contém o `in` parâmetros para o método. 
 
 `ppSignatureOut`  
-[out] Um ponteiro que recebe um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) que contém o `out` parâmetros do método. 
+[out] Um ponteiro que recebe um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que contém o `out` parâmetros para o método. 
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Não houve nenhuma chamada para o [ `BeginEnumeration` ](beginenumeration.md) função. |
 | `WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | Não há nenhuma propriedade mais na enumeração. |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | Não há nenhum mais propriedades na enumeração. |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) método.
 
-O chamador começa a sequência de enumeração chamando o [BeginMethodEnumeration](beginmethodenumeration.md) de função e, em seguida, chama a função [NextMethod] até que a função retornará `WBEM_S_NO_MORE_DATA`. Opcionalmente, o chamador conclui a sequência chamando [EndMethodEnumeration](endmethodenumeration.md). O chamador pode encerrar a enumeração antecipada chamando [EndMethodEnumeration](endmethodenumeration.md) a qualquer momento.
+O chamador inicia a sequência de enumeração por meio da chamada a [BeginMethodEnumeration](beginmethodenumeration.md) de função e, em seguida, chama a função [NextMethod] até que a função retorna `WBEM_S_NO_MORE_DATA`. Opcionalmente, o chamador conclui a sequência chamando [EndMethodEnumeration](endmethodenumeration.md). O chamador pode encerrar a enumeração no início, chamando [EndMethodEnumeration](endmethodenumeration.md) a qualquer momento.
 
 ## <a name="example"></a>Exemplo
 
-Para obter um exemplo de C++, consulte o [IWbemClassObject::NextMethod](https://msdn.microsoft.com/library/aa391454(v=vs.85).aspx) método.
+Para obter um exemplo de C++, consulte a [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

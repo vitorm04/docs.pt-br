@@ -2,12 +2,12 @@
 title: Usando o escopo de edição
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 67b79ebe558578ca612d59d48eb7ee291a6db501
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517385"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419978"
 ---
 # <a name="using-editing-scope"></a>Usando o escopo de edição
 Este exemplo demonstra como em lotes um conjunto de alterações de modo que eles possam ser desfeitos em uma única unidade atômica. Por padrão, as ações executadas por um autor do designer de atividade automaticamente são integradas desfazer/refazem o sistema.  
@@ -26,19 +26,19 @@ Este exemplo demonstra como em lotes um conjunto de alterações de modo que ele
   
 1.  Compilar e executar o exemplo, e depois use os botões à esquerda para alterar o fluxo de trabalho.  
   
-2.  Clique em **abrir Editar escopo**.  
+2.  Clique em **abrir o escopo de edição**.  
   
     1.  Este comando chama <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> que cria um escopo e envia de edição ele na pilha de edição.  
   
     2.  Três atividades são adicionadas a <xref:System.Activities.Presentation.Model.ModelItem>selecionado. Observe que se o escopo de edição não tivesse sido aberto com <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, três novas atividades apareceriam na tela de designer. Porque esta operação ainda está pendente dentro de <xref:System.Activities.Presentation.Model.EditingScope>, o designer não é atualizada ainda.  
   
-3.  Pressione **escopo de edição fechar** para confirmar o escopo de edição. Três atividades aparecem no designer.  
+3.  Pressione **próximo escopo de edição** para confirmar o escopo de edição. Três atividades aparecem no designer.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

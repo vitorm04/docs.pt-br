@@ -2,18 +2,18 @@
 title: Propriedade e separação do esquema do usuário no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358401"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421571"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriedade e separação do esquema do usuário no SQL Server
 Um conceito central de segurança do SQL Server é que os proprietários de objetos têm permissões irrevogáveis administrá-los. Você não pode remover os privilégios de um proprietário de objeto e não pode eliminar usuários de um banco de dados se eles possuírem objetos nele.  
   
 ## <a name="user-schema-separation"></a>Separação do esquema do usuário  
- A separação do esquema do usuário permite maior flexibilidade em gerenciar permissões do objeto de banco de dados. Um *esquema* é um contêiner nomeado para objetos de banco de dados, que permite aos objetos de grupo em namespaces separados. Por exemplo, o banco de dados de exemplo AdventureWorks contém esquemas para Production, Sales e HumanResources.  
+ A separação do esquema do usuário permite maior flexibilidade em gerenciar permissões do objeto de banco de dados. Um *esquema* é um contêiner denominado para objetos de banco de dados, que lhe permite agrupar objetos em namespaces separados. Por exemplo, o banco de dados de exemplo AdventureWorks contém esquemas para Production, Sales e HumanResources.  
   
  A sintaxe de nomeação de quatro partes para referir-se a objetos especifica o nome do esquema.  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Separação do esquema de usuário](http://msdn.microsoft.com/library/ms190387.aspx) nos Manuais Online do SQL Server|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
+|[Separação do esquema de usuário](https://msdn.microsoft.com/library/ms190387.aspx) nos Manuais Online do SQL Server|Descreve as alterações introduzidas pela separação do esquema do usuário. Inclui o novo comportamento, o seu impacto na propriedade, as exibições do catálogo e as permissões.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [Autenticação no SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Servidor e funções de banco de dados no SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Autorização e permissões no SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

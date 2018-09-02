@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3eb5ce6f-f304-4f87-8e81-0f25092f5ad4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a31a1246fe311c36e7457327c79aeeef30e7813
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5805c2c16cd23a18a0fe5bb587a3c106b307092f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568830"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423352"
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Passando um URI para o Windows Runtime
-Os métodos de Tempo de Execução do Windows só aceitam URIs absolutos. Se você apresentar um URI relativo a um método [!INCLUDE[wrt](../../../includes/wrt-md.md)], será lançada uma exceção <xref:System.ArgumentException>. Eis o porquê: quando você usa o [!INCLUDE[wrt](../../../includes/wrt-md.md)] no código do .NET Framework, o <xref:Windows.Foundation.Uri?displayProperty=nameWithType> classe aparece como <xref:System.Uri?displayProperty=nameWithType> no Intellisense. O <xref:System.Uri?displayProperty=nameWithType> classe permite que os URIs relativos, mas o <xref:Windows.Foundation.Uri?displayProperty=nameWithType> classe não. Isso também vale para métodos expostos nos componentes do [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Se seu componente expõe um método que usa um URI, a assinatura presente no código inclui <xref:System.Uri?displayProperty=nameWithType>. No entanto, para os usuários do seu componente, a assinatura inclui <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Os URIs enviados aos seus componentes devem ser absolutos.  
+Os métodos de Tempo de Execução do Windows só aceitam URIs absolutos. Se você apresentar um URI relativo a um método [!INCLUDE[wrt](../../../includes/wrt-md.md)], será lançada uma exceção <xref:System.ArgumentException>. Eis o porquê: quando você usa o [!INCLUDE[wrt](../../../includes/wrt-md.md)] no código do .NET Framework, o <xref:Windows.Foundation.Uri?displayProperty=nameWithType> classe aparece como <xref:System.Uri?displayProperty=nameWithType> no Intellisense. O <xref:System.Uri?displayProperty=nameWithType> classe permite que os URIs relativos, mas o <xref:Windows.Foundation.Uri?displayProperty=nameWithType> classe não faz. Isso também vale para métodos expostos nos componentes do [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Se seu componente expõe um método que usa um URI, a assinatura presente no código inclui <xref:System.Uri?displayProperty=nameWithType>. No entanto, para os usuários do seu componente, a assinatura inclui <xref:Windows.Foundation.Uri?displayProperty=nameWithType>. Os URIs enviados aos seus componentes devem ser absolutos.  
   
  Este tópico mostra como detectar URIs absolutos e como criar um URI desse tipo ao fazer referência a um recurso do pacote do aplicativo.  
   
@@ -29,13 +29,13 @@ Os métodos de Tempo de Execução do Windows só aceitam URIs absolutos. Se voc
 ## <a name="using-an-absolute-uri-for-a-resource-in-the-app-package"></a>Usando um URI absoluto para um recurso no pacote do aplicativo  
  Se quiser especificar um URI para um recurso presente no pacote do aplicativo, você pode usar o esquema `ms-appx` ou `ms-appx-web` para criar um URI absoluto.  
   
- O exemplo a seguir mostra como definir o [fonte](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) propriedade para um [WebView](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) controle e o [fonte](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.source.aspx) propriedade para um [imagem](http://msdn.microsoft.com/library/windows/apps/br242752.aspx) controle para recursos que estão contidos em uma pasta denominada páginas usando XAML e código.  
+ O exemplo a seguir mostra como definir a [fonte](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.source.aspx) propriedade para um [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.webview.aspx) controle e o [origem](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.image.source.aspx) propriedade para um [imagem](https://msdn.microsoft.com/library/windows/apps/br242752.aspx) controle para recursos que estão contidos em uma pasta chamada páginas usando XAML e código.  
   
  [!code-xaml[System.URIToWindowsURI#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.uritowindowsuri/cs/mainpage.xaml#1)]  
 [!code-csharp[System.URIToWindowsURI#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.uritowindowsuri/cs/mainpage.xaml.cs#2)]
 [!code-vb[System.URIToWindowsURI#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uritowindowsuri/vb/mainpage.xaml.vb#2)]  
   
- Para obter mais informações sobre esses esquemas, consulte [esquemas URI](http://msdn.microsoft.com/library/windows/apps/jj655406.aspx) no Centro de desenvolvimento do Windows.  
+ Para obter mais informações sobre esses esquemas, consulte [esquemas URI](https://msdn.microsoft.com/library/windows/apps/jj655406.aspx) no Centro de desenvolvimento do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

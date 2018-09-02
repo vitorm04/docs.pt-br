@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932793"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43453045"
 ---
 # <a name="execnotificationquerywmi-function"></a>Função ExecNotificationQueryWmi
 Executa uma consulta para receber eventos. A chamada retorna imediatamente, e o chamador pode sondar o enumerador retornado para eventos à medida que eles chegam. Liberar enumerador retornado cancela a consulta.  

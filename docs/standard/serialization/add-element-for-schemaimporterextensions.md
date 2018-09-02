@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
 ms.openlocfilehash: 3d3c72fd64042032d44c49ebde867d111ce03b94
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936593"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43453083"
 ---
 # <a name="ltaddgt-element-for-ltschemaimporterextensionsgt"></a>&lt;Adicione&gt; elemento para &lt;schemaImporterExtensions&gt;
 Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  

@@ -12,21 +12,21 @@ ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dc60887aaf21db996ad12dade2cece794bffd37b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb239adc6dfb11c83fb983a41ea40ad8bf714038
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403651"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418854"
 ---
 # <a name="move-a-ui-automation-element"></a>Mover um elemento de automação de interface do usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
  Este exemplo demonstra como mover um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elemento para um local especificado na tela.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o <xref:System.Windows.Automation.WindowPattern> e <xref:System.Windows.Automation.TransformPattern> controlar padrões para mover programaticamente um [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] do aplicativo para locais distintos na tela de destino e controlar o <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent>.  
+ O exemplo a seguir usa o <xref:System.Windows.Automation.WindowPattern> e <xref:System.Windows.Automation.TransformPattern> padrões para mover de forma programática de controle um [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] aplicativo em locais distintos na tela de destino e acompanhar os <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent>.  
   
  [!code-csharp[WindowMove#1301](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1301)]
  [!code-vb[WindowMove#1301](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1301)]  
@@ -34,4 +34,4 @@ ms.locfileid: "33403651"
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de WindowPattern](http://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)
+ [Exemplo de WindowPattern](https://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)

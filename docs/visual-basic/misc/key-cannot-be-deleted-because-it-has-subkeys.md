@@ -1,16 +1,16 @@
 ---
-title: Chave não pode ser excluída porque ela possui subchaves
+title: Chave não pode ser excluída porque contém subchaves
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-ms.openlocfilehash: a6ebf050453b599710c696920d8c4bcd2c92ad92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33638894"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418998"
 ---
-# <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Chave não pode ser excluída porque ela possui subchaves
-A chave não pode ser excluída porque ele tem subchaves.  
+# <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Chave não pode ser excluída porque contém subchaves
+A chave não pode ser excluída porque ela tem subchaves.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
@@ -19,5 +19,5 @@ A chave não pode ser excluída porque ele tem subchaves.
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
  [Como Excluir uma Chave do Registro](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- [Lendo e gravando no registro usando My (Visual Basic)](http://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)  
- [Solução de problemas: Manipulando o registro (Visual Basic)](http://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)
+ [Lendo e gravando no registro usando My (Visual Basic)](https://msdn.microsoft.com/library/1309ad05-5bef-401f-970a-2f6455873b79)  
+ [Solução de problemas: Manipular o registro (Visual Basic)](https://msdn.microsoft.com/library/6ca24f55-3697-4017-b687-9de45858af4c)

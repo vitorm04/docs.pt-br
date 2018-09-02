@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7d1f7ba1a0384ed93932733f12aa3306e16b790
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393913"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423479"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW no CLR
 Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para Windows). Cada evento tem uma palavra-chave e um nível associados, que são descritos no tópico [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). O CLR tem dois provedores para os eventos:  
@@ -62,8 +62,8 @@ Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para
  Captura informações que são usadas com outros eventos para gerar rastreamentos de pilha depois que um evento é acionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Melhorar a depuração e ajuste de desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkId=179696)  
- [Blog de desempenho do Windows](http://go.microsoft.com/fwlink/?LinkId=179509)  
+ [Melhorar a depuração e ajuste de desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=179696)  
+ [Blog de desempenho do Windows](https://go.microsoft.com/fwlink/?LinkId=179509)  
  [Controlando o log no .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  [Provedores CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)  
  [Palavras-chave e níveis CLR ETW](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  

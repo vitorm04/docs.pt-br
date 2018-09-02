@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484563"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420826"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Preocupações de segurança e dicas úteis para rastreamento
-Este tópico descreve como proteger informações confidenciais sejam expostas, bem como dicas úteis ao usar WebHost.  
+Este tópico descreve como você pode proteger informações confidenciais sejam expostas, bem como dicas úteis ao usar o WebHost.  
   
-## <a name="using-a-custom-trace-listener-with-webhost"></a>Usando um ouvinte de rastreamento personalizada com WebHost  
- Se você estiver escrevendo seu próprio ouvinte de rastreamento, você deve estar atento a possibilidade de que os rastreamentos podem ser perdidos no caso de um serviço hospedado na Web. Quando se reciclar WebHost, desligar o processo em tempo real enquanto uma duplicata assume. No entanto, os dois processos ainda devem ter acesso ao mesmo recurso por algum tempo, o que é dependente do tipo de ouvinte. Nesse caso, `XmlWriterTraceListener` cria um novo arquivo de rastreamento para o segundo processo; enquanto o rastreamento de eventos do Windows gerencia vários processos dentro da mesma sessão e fornece acesso para o mesmo arquivo. Se o seu próprio ouvinte não fornece funcionalidades semelhantes, os rastreamentos podem ser perdidos quando o arquivo está bloqueado para cima, os dois processos.  
+## <a name="using-a-custom-trace-listener-with-webhost"></a>Usando um ouvinte de rastreamento com o WebHost  
+ Se você estiver escrevendo seu próprio ouvinte de rastreamento, você deve estar ciente da possibilidade de que os rastreamentos podem ser perdidos no caso de um serviço hospedado na Web. Quando se reciclar WebHost, ele desliga o processo ao vivo enquanto uma duplicata assume. No entanto, os dois processos ainda devem ter acesso ao mesmo recurso por algum tempo, o que é dependente do tipo de ouvinte. Nesse caso, `XmlWriterTraceListener` cria um novo arquivo de rastreamento para o segundo processo; enquanto gerencia vários processos dentro da mesma sessão de rastreamento de eventos do Windows e fornece acesso ao mesmo arquivo. Se o seu próprio ouvinte não fornece funcionalidades semelhantes, os rastreamentos podem ser perdidos quando o arquivo está bloqueado para cima por dois processos.  
   
- Você também deve estar ciente de que um ouvinte de rastreamento personalizado pode enviar rastreamentos e mensagens de transmissão, por exemplo, um banco de dados remoto. Como um implantador do aplicativo, você deve configurar ouvintes personalizados com controle de acesso apropriadas. Você também deve aplicar o controle de segurança em todas as informações pessoais que podem ser exibidos no local remoto.  
+ Você também deve estar ciente de que um ouvinte de rastreamento personalizado pode enviar rastreamentos e mensagens na transmissão, por exemplo, para um banco de dados remoto. Como um implantador de aplicativo, você deve configurar os ouvintes personalizados com controle de acesso apropriado. Você também deve aplicar o controle de segurança em todas as informações pessoais que podem ser expostos no local remoto.  
   
-## <a name="logging-sensitive-information"></a>O log de informações confidenciais  
- Quando uma mensagem no escopo, os rastreamentos contêm cabeçalhos de mensagem. Quando o rastreamento está habilitado, as informações pessoais em cabeçalhos específicos do aplicativo, como uma cadeia de caracteres de consulta; e corpo informações, como um número de cartão de crédito, pode se tornar visíveis nos logs. O implantador de aplicativo é responsável por impor o controle de acesso nos arquivos de configuração e o rastreamento. Se você não deseja que esse tipo de informação fique visível, você deve desabilitar o rastreamento ou filtrar a parte dos dados se você quiser compartilhar os logs de rastreamento.  
+## <a name="logging-sensitive-information"></a>Registro em log informações confidenciais  
+ Quando uma mensagem está no escopo os rastreamentos contêm cabeçalhos de mensagem. Quando o rastreamento está habilitado, informações pessoais nos cabeçalhos específicos do aplicativo, por exemplo, uma cadeia de caracteres de consulta; e o corpo de informações, como um número de cartão de crédito, pode se tornar visível nos logs. O implantador de aplicativo é responsável por impor o controle de acesso nos arquivos de configuração e o rastreamento. Se você não quiser esse tipo de informação fique visível, você deve desabilitar o rastreamento ou filtrar a parte dos dados se você quiser compartilhar os logs de rastreamento.  
   
- As dicas a seguir podem ajudar a impedir que o conteúdo de um arquivo de rastreamento seja exposto indesejadamente:  
+ As dicas a seguir podem ajudar você a impedir que o conteúdo de um arquivo de rastreamento seja exposto indesejadamente:  
   
--   Certifique-se de que o log de arquivos estão protegidos pelo controle listas acesso (ACL) no WebHost e cenários de hospedagem interna.  
+-   Certifique-se de que o log de arquivos são protegidos por listas de ACL (Access Control) no host Web e cenários de hospedagem interna.  
   
--   Escolha uma extensão de arquivo não pode ser facilmente exposta com uma solicitação da Web. Por exemplo, a extensão de arquivo. XML não é uma opção segura. Você pode verificar o guia de administração do IIS para ver uma lista de extensões que podem ser usadas.  
+-   Escolha uma extensão de arquivo que não pode ser facilmente exposta com uma solicitação da Web. Por exemplo, a extensão de arquivo. XML não é uma opção segura. Você pode verificar o guia de administração do IIS para ver uma lista de extensões que podem ser atendidas.  
   
--   Especifique um caminho absoluto para o local de arquivo de log, que deve estar fora do diretório público do WebHost vroot para impedir que ele seja acessado por terceiros usando um navegador da Web.  
+-   Especifique um caminho absoluto para o local de arquivo de log, que deve estar fora do diretório público vroot WebHost impedi-lo de que está sendo acessado por terceiros usando um navegador da Web.  
   
- Por padrão, as chaves e informações de identificação pessoal (PII), como nome de usuário e senha não são registradas em rastreamentos e registrado mensagens. No entanto, um administrador de máquina, pode usar o `enableLoggingKnownPII` atributo o `machineSettings` elemento do arquivo Machine. config para permitir que aplicativos em execução no computador para fazer logon conhecidas informações de identificação pessoal (PII) da seguinte maneira:  
+ Por padrão, as chaves e informações de identificação pessoal (PII), como nome de usuário e senha não são registradas em rastreamentos e registrado mensagens. No entanto, um administrador do computador, pode usar o `enableLoggingKnownPII` de atributo no `machineSettings` elemento do arquivo Machine. config para permitir que aplicativos em execução no computador para fazer logon conhecidas informações de identificação pessoal (PII) da seguinte maneira:  
   
 ```xml  
 <configuration>  
@@ -40,7 +40,7 @@ Este tópico descreve como proteger informações confidenciais sejam expostas, 
 </configuration>   
 ```  
   
- Implantador um aplicativo pode usar o `logKnownPii` atributo no arquivo de App. config ou Web. config para habilitar o log de PII da seguinte maneira:  
+ Um implantador de aplicativo, em seguida, pode usar o `logKnownPii` atributo no arquivo App. config ou Web. config para habilitar o log de PII da seguinte maneira:  
   
 ```xml  
 <system.diagnostics>  
@@ -57,9 +57,9 @@ Este tópico descreve como proteger informações confidenciais sejam expostas, 
 </system.diagnostics>  
 ```  
   
- Somente quando as duas configurações são `true` é o log de PII habilitado. A combinação das duas opções permite a flexibilidade fazer logon PII conhecido para cada aplicativo.  
+ Somente quando ambas as configurações forem `true` é o log de PII habilitado. A combinação de dois comutadores permite a flexibilidade fazer logon PII conhecido para cada aplicativo.  
   
- Você deve estar ciente de que, se você especificar dois ou mais fontes personalizadas em um arquivo de configuração, somente os atributos da primeira fonte são lidos. Os outros são ignorados. Isso significa que, para o seguinte App. config, arquivo, PII não é conectado para ambas as fontes, embora o log de PII explicitamente está habilitado para a segunda fonte.  
+ Você deve estar ciente de que, se você especificar duas ou mais fontes personalizadas em um arquivo de configuração, somente os atributos da primeira fonte sejam lidos. Os outros são ignorados. Isso significa que, para seguir App. config, arquivo, PII não está conectado para ambas as fontes, mesmo que o registro em log o PII explicitamente está habilitado para a segunda fonte.  
   
 ```xml  
 <system.diagnostics>  
@@ -86,11 +86,11 @@ Este tópico descreve como proteger informações confidenciais sejam expostas, 
   
  As alterações entrarão em vigor somente quando o aplicativo inicia ou reinicia. Um evento é registrado na inicialização, quando ambos os atributos são definidos como `true`. Também é registrado um evento se `logKnownPii` é definido como `true` mas `enableLoggingKnownPii` é `false`.  
   
- Para obter mais informações sobre o log de PII, consulte [bloqueio de segurança PII](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) exemplo.  
+ Para obter mais informações sobre registro em log o PII, consulte [bloqueio de segurança PII](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) exemplo.  
   
- O administrador da máquina e o implantador de aplicativo deve ter muito cuidado ao usar essas duas opções. Se o log de PII estiver habilitado, as chaves de segurança e informações de identificação pessoal são registradas. Se ele estiver desabilitado, os dados específicos do aplicativo ainda estão conectados em cabeçalhos e corpos. Para obter uma discussão mais completa sobre privacidade e proteção de informações de identificação pessoal sejam expostas, consulte [privacidade do usuário](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ O administrador da máquina e o implantador de aplicativo deve ter muito cuidado ao usar essas duas opções. Se o log de informações de identificação pessoal é habilitado, as chaves de segurança e informações de identificação pessoal são registradas. Se ele estiver desabilitado, os dados confidenciais e específicos do aplicativo ainda estão conectados em corpos e cabeçalhos de mensagem. Para obter uma discussão mais completa sobre privacidade e proteção de PII sejam expostas, consulte [privacidade do usuário](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
- Além disso, o endereço IP do remetente da mensagem é registrado uma vez por conexão de transportes voltados para conexão e uma vez por mensagem enviada caso contrário. Isso é feito sem o consentimento do remetente. No entanto, esse log somente ocorre em níveis de rastreamento informações ou Verbose, que não são o padrão ou recomendado níveis de rastreamento em produção, exceto para depuração dinâmica.  
+ Além disso, o endereço IP do remetente da mensagem é registrado uma vez por conexão para transportes voltados para conexão e, uma vez por mensagem enviada, caso contrário. Isso é feito sem o consentimento do remetente. No entanto, esse registro em log somente ocorre nos níveis de rastreamento informações ou detalhado, que não são o padrão ou recomendado níveis de rastreamento em produção, com exceção de depuração ao vivo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

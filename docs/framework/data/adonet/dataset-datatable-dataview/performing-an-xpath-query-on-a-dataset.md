@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: c785cc69289440918f45974c711ae0b112130c5d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762404"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423697"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Executar uma consulta XPath em um conjunto de dados
-A relação entre um sincronizado <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> permite a você fazer uso do XML serviços, como a consulta XML Path Language (XPath), que acessam o **XmlDataDocument** e podem executar determinadas funcionalidades modo mais conveniente de acessar o **DataSet** diretamente. Por exemplo, em vez de usar o **selecione** método de um <xref:System.Data.DataTable> para navegar em relações com outras tabelas em um **conjunto de dados**, você pode executar uma consulta XPath em um **XmlDataDocument**  que está sincronizado com o **DataSet**, para obter uma lista de elementos XML na forma de um <xref:System.Xml.XmlNodeList>. Nós o **XmlNodeList**, convertido como <xref:System.Xml.XmlElement> nós, pode ser passada para o **GetRowFromElement** método do **XmlDataDocument**para retornar a correspondência <xref:System.Data.DataRow> referências às linhas da tabela na sincronizado **conjunto de dados**.  
+A relação entre um sincronizada <xref:System.Data.DataSet> e <xref:System.Xml.XmlDataDocument> lhe permite fazer uso do XML serviços, como a consulta XML Path Language (XPath), que acessam o **XmlDataDocument** e podem executar determinada funcionalidade modo mais conveniente do que o acesso a **conjunto de dados** diretamente. Por exemplo, em vez de usar o **selecionar** método de um <xref:System.Data.DataTable> navegar em relações com outras tabelas em um **conjunto de dados**, você pode executar uma consulta XPath em um **XmlDataDocument**  que é sincronizado com o **DataSet**, para obter uma lista de elementos XML na forma de um <xref:System.Xml.XmlNodeList>. Os nós na **XmlNodeList**, convertido como <xref:System.Xml.XmlElement> nós, em seguida, pode ser passado para o **GetRowFromElement** método da **XmlDataDocument**, para retornar a correspondência <xref:System.Data.DataRow> referências às linhas da tabela no sincronizado **conjunto de dados**.  
   
- Por exemplo, o exemplo de código a seguir executa uma consulta de XPath "neto". O **DataSet** é preenchido com três tabelas: **clientes**, **pedidos**, e **OrderDetails**. No exemplo, uma relação pai-filho é criada entre o **clientes** e **pedidos** tabelas e entre o **pedidos** e **OrderDetails** tabelas. Uma consulta XPath é executada para retornar um **XmlNodeList** de **clientes** nós onde um neto **OrderDetails** nó tem um **ProductID**nó com o valor de 43. Em essência, o exemplo está usando a consulta XPath para determinar quais clientes solicitou o produto que tem o **ProductID** de 43.  
+ Por exemplo, o exemplo de código a seguir executa uma consulta de XPath "neto". O **DataSet** é preenchida com três tabelas: **clientes**, **pedidos**, e **OrderDetails**. No exemplo, uma relação pai-filho é criada entre o **clientes** e **pedidos** tabelas e entre o **pedidos** e **OrderDetails** tabelas. Uma consulta XPath é executada, em seguida, para retornar um **XmlNodeList** dos **clientes** nós onde um neto **OrderDetails** nó tem um **ProductID**nó com o valor de 43. Em essência, o exemplo está usando a consulta XPath para determinar quais clientes têm solicitou o produto que tem o **ProductID** de 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -103,4 +103,4 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>Consulte também  
  [Sincronização de DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

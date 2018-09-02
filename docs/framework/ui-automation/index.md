@@ -9,16 +9,16 @@ ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 79e67e58e6280d176969f770f91b5ab93d728b95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28686beeb030573ec195f46cea8305688d51c6a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400322"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420883"
 ---
 # <a name="accessibility"></a>Acessibilidade
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
  A [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] é a nova estrutura de acessibilidade do [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Ela atende às necessidades de produtos de tecnologia assistencial e de estruturas de teste automatizado, fornecendo acesso programático a informações sobre a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Além disso, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que os desenvolvedores de controle e de aplicativo disponibilizem seus produtos.  
   

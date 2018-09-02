@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b07318406268023e2d66259b2cb68750d64613e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 72c45e821a59c1e910b5c8422df02978046eb56b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408158"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425218"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::Método GetExceptionContextRecord
-Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de contexto associado ao processo de destino. Por exemplo, para um destino de despejo de memória, isso seria equivalente para o registro de contexto passado por meio de `ExceptionParam` argumento para o [MiniDumpWriteDump](http://msdn.microsoft.com/library/windows/desktop/ms680360\(v=vs.85\).aspx) função na biblioteca do Windows depurar ajuda (DbgHelp).  
+Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de contexto associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de contexto passado por meio de `ExceptionParam` argumento para o [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) função no Windows ajudar a biblioteca de depuração (DbgHelp).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ HRESULT GetExceptionContextRecord(
  [out] Um ponteiro para um tipo `ULONG32` que recebe o número de bytes realmente gravados no buffer.  
   
  `buffer`  
- [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de contexto. O registro de exceção é retornado como um [contexto](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx) tipo.  
+ [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de contexto. O registro de exceção é retornado como um [contexto](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) tipo.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor retornado é `S_OK` em caso de êxito, ou um código de falha `HRESULT` em caso de falha. Os códigos `HRESULT` podem incluir, entre outros:  
@@ -54,18 +54,18 @@ HRESULT GetExceptionContextRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|O tamanho do buffer de entrada não é grande o suficiente para acomodar o registro de contexto.|  
   
 ## <a name="remarks"></a>Comentários  
- [CONTEXTO](http://msdn.microsoft.com/library/windows/desktop/ms679284\(v=vs.85\).aspx) é uma estrutura específica de plataforma definida em cabeçalhos fornecidos pelo SDK do Windows.  
+ [CONTEXTO](/windows/desktop/api/winnt/ns-winnt-_arm64_nt_context) é uma estrutura de específico da plataforma definida nos cabeçalhos fornecidos pelo SDK do Windows.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData.idl, clrdata. H  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[v451_update](../../../../includes/v451-update-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRDataTarget3](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  

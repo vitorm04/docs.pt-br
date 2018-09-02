@@ -2,56 +2,56 @@
 title: Como fazer intercâmbio de mensagens dentro de uma sessão confiável
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 80dea8545e9d813e68e67414151e2c96537db2e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b204749ce86b79bf46b2d5c96be1b00dca9500d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491820"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419464"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como fazer intercâmbio de mensagens dentro de uma sessão confiável
 
-Este tópico descreve as etapas necessárias para habilitar uma sessão confiável usando uma das associações fornecidas pelo sistema que oferecem suporte a uma sessão, mas não por padrão. Habilitar uma sessão confiável imperativa usando código ou declarativamente em seu arquivo de configuração. Este procedimento usa os arquivos de configuração do cliente e de serviço para habilitar a sessão confiável e estipular que as mensagens chegam na mesma ordem em que foram enviadas.
+Este tópico descreve as etapas necessárias para habilitar uma sessão confiável usando uma das associações fornecidas pelo sistema que dão suporte a essa sessão, mas não por padrão. Habilitar uma sessão confiável imperativamente usando código ou de forma declarativa em seu arquivo de configuração. Este procedimento usa os arquivos de configuração do cliente e o serviço para habilitar a sessão confiável e estipulam que as mensagens chegam na mesma ordem em que foram enviadas.
 
-A parte fundamental desse procedimento é que o elemento de configuração de ponto de extremidade contêm um `bindingConfiguration` atributo que faz referência a uma configuração de associação denominada `Binding1`. O [  **\<associação >** ](../../../../docs/framework/misc/binding.md) elemento de configuração faz referência a esse nome para permitir sessões confiáveis, definindo o `enabled` atributo o [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Especifique as garantias de entrega ordenada para a sessão confiável, definindo o `ordered` atributo `true`.
+A parte fundamental desse procedimento é que o elemento de configuração do ponto de extremidade contêm uma `bindingConfiguration` atributo que faz referência a uma configuração de ligação nomeada `Binding1`. O [  **\<associação >** ](../../../../docs/framework/misc/binding.md) elemento de configuração faz referência a esse nome para habilitar sessões confiáveis, definindo o `enabled` atributo do [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elemento `true`. Especifique as garantias de entrega ordenada para a sessão confiável, definindo o `ordered` atributo `true`.
 
 Para a cópia de origem deste exemplo, consulte [sessão confiável de WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
-### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configure o serviço com um WSHttpBinding para usar uma sessão confiável
+### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurar o serviço com um WSHttpBinding para usar uma sessão confiável
 
 1. Defina um contrato de serviço para o tipo de serviço.
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não estão especificadas dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de associação ou o endereço do arquivo de configuração.
+1. Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não estão especificadas dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de informações de associação ou o endereço do arquivo de configuração.
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. Criar um *Web. config* arquivo para configurar um ponto de extremidade para o `CalculatorService` que usa o <xref:System.ServiceModel.WSHttpBinding> com sessão confiável habilitado e a entrega de mensagens necessária ordenada.
+1. Criar uma *Web. config* arquivo para configurar um ponto de extremidade para o `CalculatorService` que usa o <xref:System.ServiceModel.WSHttpBinding> com uma sessão confiável habilitada e a entrega de mensagens necessária ordenada.
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
-1. Criar um *svc* arquivo que contém a linha:
+1. Criar uma *svc* arquivo que contém a linha:
 
    ```
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Coloque o *svc* arquivo no seu diretório virtual dos serviços de informações da Internet (IIS).
+1.  Coloque o *svc* arquivo no seu diretório virtual de serviços de informações da Internet (IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Configurar o cliente com um WSHttpBinding para usar uma sessão confiável
 
-1. Use o [Ferramenta Utilitária de metadados ServiceModel (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar o código de metadados de serviço:
+1. Use o [ferramenta de utilitário de metadados ServiceModel (*Svcutil.exe*)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar o código de metadados de serviço:
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
    ```
 
-1. O cliente gerado contém o `ICalculator` interface que define o contrato de serviço que deve atender a implementação do cliente.
+1. O cliente gerado contém o `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. O aplicativo cliente gerado também contém a implementação de `ClientCalculator`. Observe que as informações de endereço e associação não são especificadas em qualquer lugar dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de associação ou o endereço do arquivo de configuração.
+1. O aplicativo de cliente gerado também contém a implementação do `ClientCalculator`. Observe que as informações de endereço e a associação não são especificadas em qualquer lugar dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de informações de associação ou o endereço do arquivo de configuração.
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
@@ -59,7 +59,7 @@ Para a cópia de origem deste exemplo, consulte [sessão confiável de WS](../..
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
-1. Criar uma instância do `ClientCalculator` em um aplicativo e chamar as operações de serviço.
+1. Criar uma instância das `ClientCalculator` em um aplicativo e chamar as operações de serviço.
 
    [!code-csharp[C_HowTo_UseReliableSession#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1223)]
 
@@ -67,7 +67,7 @@ Para a cópia de origem deste exemplo, consulte [sessão confiável de WS](../..
 
 ## <a name="example"></a>Exemplo
 
-Várias das associações fornecidas pelo sistema suportam a sessões confiáveis por padrão. Elas incluem:
+Várias das associações fornecidas pelo sistema dá suporte a sessões confiáveis por padrão. Elas incluem:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 

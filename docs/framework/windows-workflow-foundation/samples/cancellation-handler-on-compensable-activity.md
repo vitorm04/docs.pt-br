@@ -2,12 +2,12 @@
 title: Manipulador cancelar a atividade compensável
 ms.date: 03/30/2017
 ms.assetid: afd98bee-eccf-47e9-99c9-27cea84ce5ce
-ms.openlocfilehash: ce4d67b26a2b4c6a9b507715b48e75e328c5b100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f32d10e22be7fdd1e84229a214409df06efa918
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514995"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442701"
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>Manipulador cancelar a atividade compensável
 Este exemplo demonstra o uso de um manipulador cancelar em <xref:System.Activities.Statements.CompensableActivity>.  
@@ -83,6 +83,6 @@ Parallel
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CompensationCancellation`

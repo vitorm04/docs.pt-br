@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5b4ef7777c9d45c2d255cc2915f8c4ccdeef4a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432603"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421535"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>Método ICLRStrongName::StrongNameGetBlobFromImage
 Obtém uma representação binária da imagem do assembly no endereço de memória especificado.  
@@ -46,22 +46,22 @@ HRESULT StrongNameGetBlobFromImage (
  [in] O tamanho, em bytes, da imagem no `pbBase`.  
   
  `pbBlob`  
- [in] Um buffer para conter a representação binária da imagem.  
+ [in] Um buffer que conterá a representação binária da imagem.  
   
  `pcbBlob`  
- [out no] O solicitada tamanho máximo, em bytes, da `pbBlob`. No retorno, o tamanho real, em bytes, de `pbBlob`.  
+ [no, out] O solicitada tamanho máximo, em bytes, da `pbBlob`. Após o retorno, o tamanho real, em bytes, do `pbBlob`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+ `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  

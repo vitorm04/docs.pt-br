@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d7cff23fc0b58d316ce19950a982249e84b79ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d06f1c93275cb6adf4f1da02ccd5d889cb06c5d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441946"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422634"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>Método IHostSyncManager::CreateMonitorEvent
 Cria um objeto de evento de redefinição automática monitorado.  
@@ -41,36 +41,36 @@ HRESULT CreateMonitorEvent (
  [in] Um cookie para associar o objeto de evento.  
   
  `ppEvent`  
- [out] Um ponteiro para o endereço de um [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instância ou nulo se não foi possível criar o objeto de evento.  
+ [out] Um ponteiro para o endereço de um [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) da instância ou nulo se não foi possível criar o objeto de evento.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`CreateMonitorEvent` retornou com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
-|HOST_E_TIMEOUT|A chamada foi atingido.|  
-|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`CreateMonitorEvent` retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Quando um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|Não havia memória suficiente disponível para criar o objeto de evento solicitado.|  
   
 ## <a name="remarks"></a>Comentários  
- `CreateMonitorEvent` Retorna um `IHostAutoEvent` que o CLR usa em sua implementação de gerenciado <xref:System.Threading.Monitor?displayProperty=nameWithType> tipo. Esse método reflete o Win32 `CreateEvent` função, com um valor de `false` especificado para o `bManualReset` parâmetro.  
+ `CreateMonitorEvent` Retorna um `IHostAutoEvent` que o CLR usa em sua implementação de gerenciado <xref:System.Threading.Monitor?displayProperty=nameWithType> tipo. Esse método espelha o Win32 `CreateEvent` função, com um valor de `false` especificado para o `bManualReset` parâmetro.  
   
- O host pode usar o cookie para determinar qual tarefa está aguardando o monitor chamando o [Iclrsyncmanager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) método.  
+ O host pode usar o cookie para determinar qual tarefa está aguardando o monitor por meio da chamada a [iclrsyncmanager:: Getmonitorowner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE.h  
+ **Cabeçalho:** mscoree. H  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [Interface IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
  [Interface IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)
+ [Monitores](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528471"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422543"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Como adicionar controles aos Windows Forms
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-draw-a-control-on-a-form"></a>Desenhar um controle em um formulário  
   
-1.  Abra o formulário. Para obter mais informações, consulte [Como exibir Windows Forms no Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra o formulário. Para obter mais informações, consulte [Como exibir Windows Forms no Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Na **Caixa de ferramentas**, clique no controle que você deseja adicionar ao formulário.  
   
@@ -37,7 +37,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
   
 ### <a name="to-drag-a-control-to-a-form"></a>Arrastar um controle para um formulário  
   
-1.  Abra o formulário. Para obter mais informações, consulte [Como exibir Windows Forms no Designer](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Abra o formulário. Para obter mais informações, consulte [Como exibir Windows Forms no Designer](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Na **Caixa de ferramentas**, clique no controle que você deseja e arraste-o para o formulário.  
   

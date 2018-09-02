@@ -4,12 +4,12 @@ description: Este tópico explica como compilar uma solução do .NET Core que i
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314692"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457037"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
@@ -95,7 +95,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
    ![Ícone do dock do painel Testes de Unidade](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Clique no botão **Executar Tudo**.
-   
+
    O teste falhará, o que é o resultado correto. O método de teste afirma que duas instâncias da `inputString`, "Jack", não foram retornadas da cadeia de caracteres "Jack jack" fornecida ao método `GetWordCount`. Como as maiúsculas e minúsculas de palavra foram fatoradas no método `GetWordCount`, duas instâncias retornam. A declaração de que 2 *não é igual a* 2 falha. Esse é o resultado correto, e a lógica de nosso teste está boa.
 
    ![Falha no teste](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
    ```
 
    `CountInstancesCorrectly` verifica se o método `GetWordCount` conta corretamente. `InlineData` fornece uma contagem, uma palavra de pesquisa e uma cadeia de caracteres de entrada para verificação. O método de teste é executado uma vez para cada linha de dados. Observe novamente que você está declarando uma falha primeiro usando `Assert.NotEqual`, mesmo quando você sabe que as contagens dos dados estão corretas e os valores correspondem à contagem retornada pelo método `GetWordCount`. A princípio, a etapa de falhar de propósito no teste parece ser perda de tempo, mas a verificação da lógica do teste gerando uma falha primeiro é uma verificação importante da lógica de seus testes. Quando um método de teste é aprovado apesar de você esperar uma falha, você terá encontrado um bug na lógica do teste. Vale a pena o esforço para executar essa etapa sempre que você criar um método de teste.
-   
+
 1. Salve o arquivo e execute os testes novamente. O teste de maiúsculas e minúsculas é aprovado, mas os três testes de contagem falham. Esse é exatamente o resultado esperado.
 
    ![Falha no teste](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 ## <a name="see-also"></a>Consulte também
 
-[Notas de versão do Visual Studio 2017 para Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Notas de versão do Visual Studio 2017 para Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

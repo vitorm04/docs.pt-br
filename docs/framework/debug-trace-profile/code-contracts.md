@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365872"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425750"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código. As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade. As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado. As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.  
@@ -35,7 +35,7 @@ Os contratos de código fornecem uma maneira de especificar pré-condições, p�
   
  A maioria dos métodos da classe de contrato é compilada condicionalmente; ou seja, o compilador emite chamadas para esses métodos somente quando um símbolo especial, CONTRACTS_FULL, é definido, usando a diretiva `#define`. CONTRACTS_FULL permite escrever contratos no código sem o uso de diretivas `#ifdef`; é possível produzir diferentes builds, alguns com contratos e outras sem eles.  
   
- Para obter ferramentas e instruções detalhadas sobre como usar contratos de código, consulte [Contratos de código](http://go.microsoft.com/fwlink/?LinkId=152461) no site do DevLabs no MSDN.  
+ Para obter ferramentas e instruções detalhadas sobre como usar contratos de código, consulte [Contratos de código](https://go.microsoft.com/fwlink/?LinkId=152461) no site do DevLabs no MSDN.  
   
 ## <a name="preconditions"></a>Pré-condições  
  É possível expressar pré-condições usando o método <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. As pré-condições especificam o estado quando um método é invocado. Geralmente, elas são usadas para especificar valores de parâmetro válidos. Todos os membros mencionados nas pré-condições devem ser, pelo menos, tão acessíveis quanto o próprio método; caso contrário, a pré-condição pode não ser compreendida por todos os chamadores de um método. A condição não deve ter efeitos colaterais. O comportamento em tempo de execução de pré-condições com falha é determinado pelo analisador de tempo de execução.  

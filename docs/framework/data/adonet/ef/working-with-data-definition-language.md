@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c6b3151a95f949100e10e630da848e34ebbf1187
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764392"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423903"
 ---
 # <a name="working-with-data-definition-language"></a>Trabalhando com a linguagem de definição de dados
-Começando com o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versão 4, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] oferece suporte a linguagem de definição de dados (DDL). Isso permite que você crie ou exclua uma instância do banco de dados com base na cadeia de conexão e nos metadados do modelo de armazenamento (SSDL).  
+Começando com o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versão 4, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte à linguagem de definição de dados (DDL). Isso permite que você crie ou exclua uma instância do banco de dados com base na cadeia de conexão e nos metadados do modelo de armazenamento (SSDL).  
   
  Os métodos a seguir no <xref:System.Data.Objects.ObjectContext> usam a cadeia de conexão e o conteúdo SSDL para criar ou excluir o banco de dados, verificar se o banco de dados existe e exibir o script DDL gerado:  
   
@@ -40,11 +40,11 @@ Começando com o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.m
   
 2.  Adicione um modelo existente ao seu aplicativo.  
   
-    1.  Adicionar um modelo vazio chamado `SchoolModel`. Para criar um modelo vazio, consulte o [como: criar um novo arquivo de EDMX](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tópico.  
+    1.  Adicionar um modelo vazio chamado `SchoolModel`. Para criar um modelo vazio, consulte a [como: criar um novo. do EDMX arquivo](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tópico.  
   
      O arquivo SchoolModel.edmx é adicionado ao projeto.  
   
-    1.  Copiar o conceitual, armazenamento e mapeamento de conteúdo para o modelo de escola do [modelo School](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tópico.  
+    1.  Copiar o conceitual, armazenamento e mapeamento de conteúdo para o modelo de escola dos [modelo de escola](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tópico.  
   
     2.  Abra o arquivo SchoolModel.edmx e cole o conteúdo nas marcas `edmx:Runtime`.  
   

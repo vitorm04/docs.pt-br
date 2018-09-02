@@ -7,27 +7,27 @@ dev_langs:
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3acea654cc84ede4b264c2db3ae6e9d042f4f5cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499174"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418377"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Segurança de transporte com um cliente anônimo
-Esse cenário do Windows Communication Foundation (WCF) usa a segurança de transporte (HTTPS) para garantir a integridade e confidencialidade. O servidor deve ser autenticado com um certificado Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. O cliente não foi autenticado por qualquer mecanismo e é, portanto, anônimo.  
+Este cenário do Windows Communication Foundation (WCF) usa a segurança de transporte (HTTPS) para garantir a confidencialidade e integridade. O servidor deve ser autenticado com um certificado Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. O cliente não está autenticado por qualquer mecanismo e é, portanto, anônimo.  
   
- Para um aplicativo de exemplo, consulte [segurança de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). Para obter mais informações sobre a segurança de transporte, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+ Para um aplicativo de exemplo, consulte [segurança de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). Para obter mais informações sobre a segurança de transporte, consulte [visão geral da segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
- Para obter mais informações sobre como usar um certificado com um serviço, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obter mais informações sobre como usar um certificado com um serviço, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  ![Usando a segurança de transporte com um cliente anônimo](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Transporte|  
-|Interoperabilidade|Com clientes e serviços da Web existentes|  
-|Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim<br /><br /> Nível de aplicativo (sem suporte do WCF)|  
+|Interoperabilidade|Com clientes e serviços Web existentes|  
+|Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim<br /><br /> Nível de aplicativo (não há suporte do WCF)|  
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
 |Transporte|HTTPS|  
@@ -38,7 +38,7 @@ Esse cenário do Windows Communication Foundation (WCF) usa a segurança de tran
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade usando a segurança de transporte:  
@@ -47,7 +47,7 @@ Esse cenário do Windows Communication Foundation (WCF) usa a segurança de tran
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
 ### <a name="configuration"></a>Configuração  
- O código a seguir define o mesmo ponto de extremidade usando a configuração. O cliente não foi autenticado por qualquer outro mecanismo e, portanto, anônimo.  
+ O código a seguir define o mesmo ponto de extremidade usando a configuração. O cliente não está autenticado por qualquer mecanismo e, portanto, é anônimo.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -120,4 +120,4 @@ Esse cenário do Windows Communication Foundation (WCF) usa a segurança de tran
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Segurança de transporte de WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
  [Visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

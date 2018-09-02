@@ -2,12 +2,12 @@
 title: Procedimentos armazenados CLR
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: df323e2d1b50dcd1b2087141deefa1c86723b346
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1f8aa6fb9243706d07caa4527af0c4c880aa70a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424328"
 ---
 # <a name="clr-stored-procedures"></a>Procedimentos armazenados CLR
 Os procedimentos armazenados são rotinas que não podem ser usadas em expressões escalares. Eles podem retornar resultados tabulares e mensagens para o cliente, chamar a linguagem DDL e as instruções da linguagem DML, e retornar parâmetros de saída.  
@@ -23,8 +23,8 @@ Para obter mais informações, consulte a versão do [documentação do SQL Serv
   
  **Documentação do SQL Server**
 
-1. [Procedimentos armazenados CLR](http://go.microsoft.com/fwlink/?LinkId=115400)  
+1. [Procedimentos armazenados CLR](https://go.microsoft.com/fwlink/?LinkId=115400)  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando objetos do SQL Server 2005 em código gerenciado](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [Criando objetos do SQL Server 2005 em código gerenciado](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -2,27 +2,27 @@
 title: Cabeçalhos de endereço
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d2e38c674e0a3ea10df2e8363e90f4adf7edc9da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803784"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420551"
 ---
 # <a name="address-headers"></a>Cabeçalhos de endereço
 O exemplo de cabeçalhos de endereço demonstra como os clientes podem passar parâmetros de referência a um serviço usando o Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- A especificação WS-Addressing define a noção de uma referência de ponto de extremidade como uma maneira de abordar um ponto de extremidade de serviço da Web específico. No WCF, referências de ponto de extremidade são modeladas usando o `EndpointAddress` classe - `EndpointAddress` é o tipo de campo de endereço do `ServiceEndpoint` classe.  
+ A especificação de WS-Addressing define a noção de uma referência de ponto de extremidade como uma maneira de resolver um ponto de extremidade de serviço Web específico. No WCF, referências de ponto de extremidade são modeladas usando o `EndpointAddress` classe - `EndpointAddress` é o tipo de campo de endereço do `ServiceEndpoint` classe.  
   
  Parte do modelo de referência de ponto de extremidade é que cada referência pode executar alguns parâmetros de referência que adicionar informações de identificação extra. No WCF, esses parâmetros de referência são modelados como instâncias de `AddressHeader` classe.  
   
- Neste exemplo, o cliente adiciona um parâmetro de referência para o `EndpointAddress` do ponto de extremidade do cliente. O serviço procura esse parâmetro de referência e usa seu valor na lógica de sua operação de serviço "Olá".  
+ Neste exemplo, o cliente adiciona um parâmetro de referência para o `EndpointAddress` do ponto de extremidade de cliente. O serviço procura esse parâmetro de referência e use seu valor na lógica de sua operação de serviço "Hello".  
   
 ## <a name="client"></a>Cliente  
- Para que o cliente envie um parâmetro de referência, ele deve adicionar um `AddressHeader` para o `EndpointAddress` do `ServiceEndpoint`. Porque o `EndpointAddress` classe é imutável, a modificação de um endereço de ponto de extremidade deve ser feita usando o `EndpointAddressBuilder` classe. O código a seguir inicializa o cliente para enviar um parâmetro de referência como parte de sua mensagem.  
+ Para o cliente enviar um parâmetro de referência, ele deve adicionar um `AddressHeader` para o `EndpointAddress` da `ServiceEndpoint`. Porque o `EndpointAddress` classe é imutável, a modificação de um endereço de ponto de extremidade deve ser feita usando o `EndpointAddressBuilder` classe. O código a seguir inicializa o cliente para enviar um parâmetro de referência como parte de sua mensagem.  
   
 ```csharp   
 HelloClient client = new HelloClient();  
@@ -34,7 +34,7 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();  
 ```  
   
- O código cria um `EndpointAddressBuilder` usando original `EndpointAddress` como um valor inicial. Em seguida, adiciona um cabeçalho de endereço recém-criado. a chamada para `CreateAddressHeadercreates` um cabeçalho com um nome específico, um namespace e um valor. Aqui, o valor é "John". Depois que o cabeçalho é adicionado ao construtor, o `ToEndpointAddress()` método converte o construtor (mutável) volta para um endereço de ponto de extremidade (imutáveis), que é atribuído para o campo de endereço do ponto de extremidade de cliente.  
+ O código cria um `EndpointAddressBuilder` usando o original `EndpointAddress` como um valor inicial. Depois, ele adiciona um cabeçalho de endereço recém-criado. a chamada para `CreateAddressHeadercreates` um cabeçalho com um determinado nome, namespace e valor. Aqui, o valor é "John". Depois que o cabeçalho é adicionado ao construtor, o `ToEndpointAddress()` método converte o construtor (mutável) volta para um endereço de ponto de extremidade (imutáveis), que é atribuído de volta ao campo de endereço do ponto de extremidade de cliente.  
   
  Agora quando o cliente chama `Console.WriteLine(client.Hello());`, o serviço é capaz de obter o valor desse parâmetro de endereço, como mostra a saída resultante do cliente.  
   
@@ -64,13 +64,13 @@ for (int i = 0;
 return "Hello, " + id;  
 ```  
   
- O código itera em todos os cabeçalhos de mensagem de entrada, procurando os cabeçalhos que são parâmetros de referência com o nome específico e. Quando o parâmetro for encontrado, ele lê o valor do parâmetro e o armazena na variável "id".  
+ O código itera em todos os cabeçalhos na mensagem de entrada, procurando os cabeçalhos que são parâmetros de referência com o nome específico e. Quando o parâmetro for encontrado, ele lê o valor do parâmetro e o armazena na variável "id".  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -79,7 +79,7 @@ return "Hello, " + id;
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   

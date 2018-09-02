@@ -1,5 +1,5 @@
 ---
-title: Objeto My.Settings
+title: Objeto My. Settings (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MySettingsProperty.Settings
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603026"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442766"
 ---
 # <a name="mysettings-object"></a>Objeto My.Settings
 Fornece propriedades e métodos para acessar as configurações do aplicativo.  
@@ -21,7 +21,7 @@ Fornece propriedades e métodos para acessar as configurações do aplicativo.
  O `My.Settings` objeto fornece acesso às configurações do aplicativo e permite que você armazene dinamicamente e recupere as configurações de propriedade e outras informações para seu aplicativo. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Propriedades  
- As propriedades do objeto `My.Settings` fornecem acesso às configurações do seu aplicativo. Para adicionar ou remover configurações, use o **Settings Designer**.  
+ As propriedades do objeto `My.Settings` fornecem acesso às configurações do seu aplicativo. Para adicionar ou remover configurações, use o **Designer de configurações**.  
   
  Cada configuração tem um **nome**, **tipo**, **escopo**, e **valor**, e essas configurações determinam como a propriedade para acessar cada configuração aparece no `My.Settings` objeto:  
   
@@ -29,7 +29,7 @@ Fornece propriedades e métodos para acessar as configurações do aplicativo.
   
 -   **Tipo** determina o tipo da propriedade.  
   
--   **Escopo** indica se a propriedade é somente leitura. Se o valor for **aplicativo**, a propriedade é somente leitura; se o valor for **usuário**, a propriedade é leitura / gravação.  
+-   **Escopo** indica se a propriedade é somente leitura. Se o valor for **Application**, a propriedade é somente leitura; se o valor estiver **usuário**, a propriedade é leitura / gravação.  
   
 -   **Valor** é o valor padrão da propriedade.  
   
@@ -37,10 +37,10 @@ Fornece propriedades e métodos para acessar as configurações do aplicativo.
   
 |Método|Descrição|  
 |---|---|  
-|`Reload`|Recarrega as configurações de usuário dos últimos valores salvos.|  
+|`Reload`|Recarrega as configurações do usuário dos últimos valores salvos.|  
 |`Save`|Salva as configurações do usuário atual.|  
   
- O `My.Settings` objeto também fornece propriedades avançadas e métodos, herdados do <xref:System.Configuration.ApplicationSettingsBase> classe.  
+ O `My.Settings` objeto também fornece propriedades avançadas e métodos, herdados da <xref:System.Configuration.ApplicationSettingsBase> classe.  
   
 ## <a name="tasks"></a>Tarefas  
  A tabela a seguir lista exemplos de tarefas que envolvem o `My.Settings` objeto.  
@@ -49,8 +49,8 @@ Fornece propriedades e métodos para acessar as configurações do aplicativo.
 |---|---|  
 |Ler uma configuração de aplicativo|[Como ler configurações do aplicativo no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |Alterar uma configuração de usuário|[Como alterar configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Persistir configurações de usuário|[Como persistir configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Criar uma grade de propriedade para configurações de usuário|[Como criar grades de propriedades para configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Persistir configurações do usuário|[Como persistir configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Criar uma grade de propriedade para as configurações do usuário|[Como criar grades de propriedades para configurações do usuário no Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo exibe o valor da configuração `Nickname`.  

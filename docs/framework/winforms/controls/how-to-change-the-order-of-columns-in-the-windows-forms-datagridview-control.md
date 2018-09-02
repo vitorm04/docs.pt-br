@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 75362a2623cfe685f38259b9e581b593b2bd8d17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3b1ddd583f76ab135d13108f8c62775ab894c83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530608"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419172"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>Como alterar a ordem de colunas no controle DataGridView dos Windows Forms
-Quando você usa um <xref:System.Windows.Forms.DataGridView> para exibir dados de uma fonte de dados, as colunas no esquema da fonte de dados, às vezes, não aparecem na ordem em que deseja exibi-los. Você pode alterar a ordem das colunas de exibido usando o <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> propriedade o <xref:System.Windows.Forms.DataGridViewColumn> classe.  
+Quando você usa um <xref:System.Windows.Forms.DataGridView> para exibir dados de uma fonte de dados, as colunas no esquema da fonte de dados, às vezes, não aparecem na ordem em que você gostaria de exibi-los. Você pode alterar a ordem das colunas exibida usando o <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> propriedade do <xref:System.Windows.Forms.DataGridViewColumn> classe.  
   
- O exemplo de código a seguir reposiciona algumas das colunas geradas automaticamente ao se associar à tabela Clientes no banco de dados de exemplo Northwind. Para obter mais informações sobre como associar o <xref:System.Windows.Forms.DataGridView> em uma tabela de banco de dados, consulte [como: associar dados para o controle DataGridView do Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ O exemplo de código a seguir reposiciona algumas das colunas geradas automaticamente ao se associar à tabela Clientes no banco de dados de exemplo Northwind. Para obter mais informações sobre como associar o <xref:System.Windows.Forms.DataGridView> controle a uma tabela de banco de dados, consulte [como: associar dados ao controle DataGridView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
- Há suporte para esta tarefa no Visual Studio.  Veja também [Como alterar a ordem de colunas no controle DataGridView dos Windows Forms usando o designer](http://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))  
+ Há suporte para esta tarefa no Visual Studio.  Veja também [Como alterar a ordem de colunas no controle DataGridView dos Windows Forms usando o designer](https://msdn.microsoft.com/library/hb1dk7ax\(v=vs.110\))  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
@@ -30,9 +30,9 @@ Quando você usa um <xref:System.Windows.Forms.DataGridView> para exibir dados d
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
--   Um <xref:System.Windows.Forms.DataGridView> controle chamado `customersDataGridView` que está associado a uma tabela com os nomes de coluna indicada, como o `Customers` tabela no banco de dados de exemplo Northwind.  
+-   Um <xref:System.Windows.Forms.DataGridView> controle chamado `customersDataGridView` que é associado a uma tabela com os nomes de coluna indicada, como o `Customers` tabela no banco de dados de exemplo Northwind.  
   
--   Referências a <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
+-   Referências para o <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, <xref:System.Data?displayProperty=nameWithType>, e <xref:System.Xml?displayProperty=nameWithType> assemblies.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.DataGridView>  

@@ -6,28 +6,28 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 3acbd17e8e969bb448e6deaf17dec23e44fa3bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527555"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418591"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Como associar controles dos Windows Forms ao componente BindingSource usando o designer
 Depois de adicionar controles ao formulário e determinar a interface do usuário para seu aplicativo, você pode associar os controles a uma fonte de dados, para que os usuários possam alterar e salvar dados relacionados ao aplicativo no tempo de execução.  
   
- Associação de um controle ou uma série de controles em formulários do Windows é feito facilmente usando o <xref:System.Windows.Forms.BindingSource> controle como uma ponte entre os controles no formulário e a fonte de dados.  
+ Associação de um controle ou uma série de controles nos Windows Forms é feito com mais facilidade usando o <xref:System.Windows.Forms.BindingSource> controle como uma ponte entre os controles no formulário e a fonte de dados.  
   
- Um ou mais controles em um formulário podem ser associados aos dados; no procedimento a seguir, um <xref:System.Windows.Forms.TextBox> controle está associado a uma fonte de dados.  
+ Um ou mais controles em um formulário podem ser associados a dados; no procedimento a seguir, um <xref:System.Windows.Forms.TextBox> controle é associado a uma fonte de dados.  
   
  Para concluir o procedimento, presume-se que você associará a uma fonte de dados derivada de um banco de dados. Para obter mais informações sobre como criar fontes de dados de outros armazenamentos de dados, consulte [Adicionar novas fontes de dados](/visualstudio/data-tools/add-new-data-sources).  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-bind-a-control-at-design-time"></a>Associar um controle no tempo de design  
   
-1.  Arraste um <xref:System.Windows.Forms.TextBox> controle no formulário.  
+1.  Arraste um <xref:System.Windows.Forms.TextBox> controle para o formulário.  
   
 2.  Na janela **Propriedades**:  
   
@@ -49,18 +49,18 @@ Depois de adicionar controles ao formulário e determinar a interface do usuári
   
 7.  Selecione **Sim, salvar a conexão** para salvar a cadeia de conexão no arquivo de configuração de aplicativo.  
   
-8.  Selecione os objetos de banco de dados para trazer para o seu aplicativo. Nesse caso, selecione um campo em uma tabela que você deseja que o <xref:System.Windows.Forms.TextBox> para exibir.  
+8.  Selecione os objetos de banco de dados para trazer para o seu aplicativo. Nesse caso, selecione um campo em uma tabela que você gostaria de <xref:System.Windows.Forms.TextBox> para exibir.  
   
 9. Substitua o nome do conjunto de dados padrão, se quiser.  
   
 10. Clique em **Finalizar**.  
   
-11. No **propriedades** janela, clique na seta ao lado de <xref:System.Windows.Forms.TextBox.Text%2A> propriedade novamente. No **DataSource** editor do tipo de interface do usuário, selecione o nome do campo para associar o <xref:System.Windows.Forms.TextBox> para.  
+11. No **propriedades** janela, clique na seta ao lado de <xref:System.Windows.Forms.TextBox.Text%2A> propriedade novamente. No **fonte de dados** editor de tipo de interface do usuário, selecione o nome do campo a ser associado a <xref:System.Windows.Forms.TextBox> para.  
   
-     O **DataSource** editor fecha e o conjunto de dados de tipo da interface do usuário <xref:System.Windows.Forms.BindingSource> e adaptador de tabela específica para que a conexão de dados são adicionados ao seu formulário.  
+     O **fonte de dados** editor fecha e o conjunto de dados de tipo de interface do usuário <xref:System.Windows.Forms.BindingSource> e adaptador de tabela específica para que a conexão de dados são adicionados ao seu formulário.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [Adicionar novas fontes de dados](/visualstudio/data-tools/add-new-data-sources)  
- [Janela Fontes de Dados](http://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)
+ [Janela Fontes de Dados](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)

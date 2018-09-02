@@ -2,12 +2,12 @@
 title: Confirmação
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
-ms.openlocfilehash: 334ac362333565626dd2bb8dcaede27fbab16f33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518839"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419484"
 ---
 # <a name="confirmation"></a>Confirmação
 Este exemplo mostra quatro cenários comuns envolvendo o uso de <xref:System.Activities.Statements.CompensableActivity> e de confirmação. O exemplo é executado quatro fluxos de trabalho para mostrar a confirmação. Este exemplo está disponível em versões declarativas e imperativas.  
@@ -32,13 +32,13 @@ Este exemplo mostra quatro cenários comuns envolvendo o uso de <xref:System.Act
   
 3.  Observe a saída a seguir:  
   
- **Confirmação: início explícita de workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: HandlerEnd de confirmação de workflowCompensableActivity2: confirmação HandlerExplicit compensação: início do workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: HandlerEnd de compensação de workflowCompensableActivity2: confirmação HandlerCustom confirmação: início do manipulador de workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd de workflowCompensableActivity1: HandlerCompensableActivity2 de confirmação: HandlerCompensableActivity3 de confirmação: acesso HandlerVariable de confirmação em um manipulador de confirmação: Início de workflowCompensableActivity1: BodyCompensableActivity1: A soma é: 15CompensableActivity2: BodyCompensableActivity2: adicionando 7 para o sumCompensableActivity2: A soma é agora: 22End de workflowCompensableActivity2: confirmação HandlerCompensableActivity1: Confirmação HandlerCompensableActivity2: A soma é: 22CompensableActivity2: depois da subtração de 12 a soma é agora: 10Press ENTER para sair.**  
+ **Confirmação explícito: início do workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: HandlerEnd de confirmação de workflowCompensableActivity2: confirmação HandlerExplicit compensação: início do workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: HandlerEnd de compensação de workflowCompensableActivity2: confirmação HandlerCustom confirmação: início do manipulador de workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd de workflowCompensableActivity1: confirmação HandlerCompensableActivity2: confirmação HandlerCompensableActivity3: acesso HandlerVariable de confirmação em um manipulador de confirmação: Início do workflowCompensableActivity1: BodyCompensableActivity1: A soma é: 15CompensableActivity2: BodyCompensableActivity2: adicionando 7 para o sumCompensableActivity2: A soma agora é: 22End de workflowCompensableActivity2: confirmação HandlerCompensableActivity1: Confirmação HandlerCompensableActivity2: A soma é: 22CompensableActivity2: depois da subtração de 12 a soma agora é: 10Press ENTER para sair.**  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`

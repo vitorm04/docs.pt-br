@@ -2,16 +2,16 @@
 title: Programação assíncrona
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759901"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425719"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
-Este tópico aborda o suporte para programação assíncrona no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados do SQL Server (SqlClient) incluindo melhorias feitas para dar suporte à funcionalidade de programação assíncrona que foi introduzida no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+Este tópico discute o suporte para programação assíncrona na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provedor de dados para o SQL Server (SqlClient) incluindo os aprimoramentos feitos para dar suporte à funcionalidade de programação assíncrona que foi introduzida no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="legacy-asynchronous-programming"></a>Programação assíncrona herdada  
  Antes do [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], a programação assíncrona com SqlClient foi feita com os seguintes métodos e a propriedade de conexão de `Asynchronous Processing=true`:  
@@ -35,15 +35,15 @@ Este tópico aborda o suporte para programação assíncrona no [!INCLUDE[dnprdn
 
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Usando os métodos assíncronos novo do SqlDataReader no .net 4.5 (parte 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [Usando novos métodos assíncronos do SqlDataReader no .net 4.5 (parte 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [Usando os métodos assíncronos novo do SqlDataReader no .net 4.5 (parte 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [Usando novos métodos assíncronos do SqlDataReader no .net 4.5 (parte 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
  
  Quando sua interface de usuário não tem resposta ou o servidor não escala, é provável que você precise que seu código seja mais assíncrono.  Escrever código assíncrono tradicionalmente envolve instalar um retorno de chamada (também chamado de continuação) para expressar a lógica que ocorre depois que a operação assíncrona é concluída. Isso complica a estrutura de código assíncrona em comparação com o código síncrono.  
   
  Agora você pode chamar os métodos assíncronos sem usar retornos de chamada e sem dividir seu código em vários métodos ou expressões lambda.  
   
- O modificador `async` especifica que um método é assíncrono. Ao chamar um método `async`, uma tarefa é retornada. Quando o `await` operador é aplicado a uma tarefa, o método atual será encerrado imediatamente. Quando a tarefa é concluída, a execução é retomada no mesmo método.
+ O modificador `async` especifica que um método é assíncrono. Ao chamar um método `async`, uma tarefa é retornada. Quando o `await` operador é aplicado a uma tarefa, o método atual sai imediatamente. Quando a tarefa é concluída, a execução é retomada no mesmo método.
   
 > [!WARNING]
 >  As chamadas assíncronas não têm suporte se um aplicativo também usa a palavra-chave da cadeia de conexão `Context Connection`.  
@@ -86,7 +86,7 @@ Este tópico aborda o suporte para programação assíncrona no [!INCLUDE[dnprdn
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- Outros membros assíncronos foram adicionados para oferecer suporte a [SqlClient Streaming oferece suporte a](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+ Outros membros assíncronos foram adicionados para suportar [SqlClient Streaming suportam](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Conexão síncrona para assíncrona aberta  
  Você pode atualizar um aplicativo existente para usar o novo recurso assíncrono. Por exemplo, suponha que um aplicativo tenha um algoritmo síncrono de conexão e bloqueie o thread de interface de usuário sempre que se conecta ao banco de dados e, uma vez conectado, o aplicativo chama um procedimento armazenado que sinaliza outros usuários da pessoa que acabou de se conectar.  
@@ -172,7 +172,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Usando o modelo de provedor base e o novo recurso assíncrono  
  Você pode precisar criar uma ferramenta que seja capaz de se conectar a bancos de dados diferentes e executar consultas. Você pode usar o modelo de provedor base e o novo recurso assíncrono.  
   
- O controlador MSDTC deve ser habilitado no servidor para usar transações distribuídas. Para obter informações sobre como habilitar o MSDTC, consulte [como habilitar o MSDTC em um servidor Web](http://msdn.microsoft.com/library/dd327979.aspx).  
+ O controlador MSDTC deve ser habilitado no servidor para usar transações distribuídas. Para obter informações sobre como habilitar o MSDTC, consulte [como habilitar o MSDTC em um servidor Web](https://msdn.microsoft.com/library/dd327979.aspx).  
   
 ```csharp
 using System;  
@@ -630,7 +630,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  O exemplo abre uma conexão única para o **AdventureWorks** banco de dados. Usando um objeto <xref:System.Data.SqlClient.SqlCommand>, um <xref:System.Data.SqlClient.SqlDataReader> é criado. À medida que o leitor é usado, um segundo <xref:System.Data.SqlClient.SqlDataReader> é aberto, usando dados do primeiro <xref:System.Data.SqlClient.SqlDataReader> como entrada para a cláusula WHERE para o segundo leitor.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+>  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com o SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```csharp
 using System;  
@@ -697,12 +697,12 @@ class Class1 {
 ```  
   
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Lendo e atualizando dados de modo assíncrono com o MARS  
- O MARS permite que uma conexão seja usada para operações de leitura e operações de DML com mais de uma operação pendente. Este recurso elimina a necessidade de um aplicativo tratar erros de conexões ocupadas. Além disso, o MARS pode substituir o usuário de cursores de servidor, que geralmente consome mais recursos. Por fim, porque várias operações podem operar em uma única conexão, eles podem compartilhar o mesmo contexto de transação, eliminando a necessidade de usar **sp_getbindtoken** e **sp_bindsession** armazenado do sistema procedimentos.  
+ O MARS permite que uma conexão seja usada para operações de leitura e operações de DML com mais de uma operação pendente. Este recurso elimina a necessidade de um aplicativo tratar erros de conexões ocupadas. Além disso, o MARS pode substituir o usuário de cursores de servidor, que geralmente consome mais recursos. Por fim, como várias operações podem funcionar em uma única conexão, eles podem compartilhar o mesmo contexto de transação, eliminando a necessidade de usar **sp_getbindtoken** e **sp_bindsession** armazenado do sistema procedimentos.  
   
- O aplicativo de console a seguir demonstra como usar dois objetos <xref:System.Data.SqlClient.SqlDataReader> com três objetos <xref:System.Data.SqlClient.SqlCommand> e um único objeto <xref:System.Data.SqlClient.SqlConnection> com o MARS ativado. O primeiro objeto de comando recupera uma lista de fornecedores cuja avaliação de crédito é 5. O segundo objeto de comando usa a ID do fornecedor fornecido de um <xref:System.Data.SqlClient.SqlDataReader> para carregar o segundo <xref:System.Data.SqlClient.SqlDataReader> com todos os produtos para o fornecedor específico. Cada registro de produto é visitado pelo segundo <xref:System.Data.SqlClient.SqlDataReader>. Um cálculo é executado para determinar qual o novo **OnOrderQty** deve ser. O terceiro objeto de comando, em seguida, é usado para atualizar o **ProductVendor** tabela com o novo valor. Este processo inteiro ocorre em uma única transação, que é revertida no final.  
+ O aplicativo de console a seguir demonstra como usar dois objetos <xref:System.Data.SqlClient.SqlDataReader> com três objetos <xref:System.Data.SqlClient.SqlCommand> e um único objeto <xref:System.Data.SqlClient.SqlConnection> com o MARS ativado. O primeiro objeto de comando recupera uma lista de fornecedores cuja avaliação de crédito é 5. O segundo objeto de comando usa a ID do fornecedor fornecido de um <xref:System.Data.SqlClient.SqlDataReader> para carregar o segundo <xref:System.Data.SqlClient.SqlDataReader> com todos os produtos para o fornecedor específico. Cada registro de produto é visitado pelo segundo <xref:System.Data.SqlClient.SqlDataReader>. Um cálculo é realizado para determinar qual o novo **OnOrderQty** deve ser. O terceiro objeto de comando, em seguida, é usado para atualizar o **ProductVendor** tabela com o novo valor. Este processo inteiro ocorre em uma única transação, que é revertida no final.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+>  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com o SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```csharp
 using System;  

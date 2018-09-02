@@ -1,15 +1,15 @@
 ---
-title: Unir operações (Visual Basic)
+title: Junte-se operações (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7d6592f0dee221eb2f6fb3a2f2c484064364ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645597"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425368"
 ---
-# <a name="join-operations-visual-basic"></a>Unir operações (Visual Basic)
+# <a name="join-operations-visual-basic"></a>Junte-se operações (Visual Basic)
 Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte de dados, com objetos que compartilham um atributo comum em outra fonte de dados.  
   
  A junção é uma operação importante em consultas que têm como destino fontes de dados cujas relações entre si não podem ser seguidas diretamente. Na programação orientada a objeto, isso pode significar uma correlação entre objetos que não são modelados, como a direção retroativa de uma relação unidirecional. Um exemplo de uma relação unidirecional é uma classe Cliente que tem uma propriedade do tipo Cidade, mas a classe Cidade ainda não tem uma propriedade que é uma coleção de objetos Cliente. Se você tem uma lista de objetos Cidade e você quer encontrar todos os clientes em cada cidade, você pode usar uma operação de junção para encontrá-los.  
@@ -31,7 +31,7 @@ Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte
  <xref:System.Linq>  
  [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Formular junções e consultas entre produtos](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Formular junções e consultas entre produtos](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [Cláusula Join](../../../../visual-basic/language-reference/queries/join-clause.md)  
- [Como: associar o conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [Como: unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
  [Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

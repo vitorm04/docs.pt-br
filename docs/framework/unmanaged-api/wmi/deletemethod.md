@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457802"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421783"
 ---
 # <a name="deletemethod-function"></a>Função DeleteMethod
 Exclui o método especificado de uma definição de classe do CIM.
@@ -44,14 +44,14 @@ HRESULT Delete (
 [in] Esse parâmetro é usado.
 
 `ptr`  
-[in] Um ponteiro para um [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instância.
+[in] Um ponteiro para um [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instância.
 
 `wszName`  
-[in] O nome do método para remover da tabela de classe. `wszName` deve ser um ponteiro para um válida `LPCWSTR`.
+[in] O nome do método a ser removido da tabela de classe. `wszName` deve ser um ponteiro para um válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os seguintes valores retornados por essa função são definidos no *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
@@ -61,16 +61,16 @@ Os seguintes valores retornados por essa função são definidos no *WbemCli.h* 
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemClassObject::DeleteMethod](https://msdn.microsoft.com/library/aa391439(v=vs.85).aspx) método.
+Essa função encapsula uma chamada para o [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) método.
 
-Não há suporte para a exclusão do método para [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponteiros que apontam para instâncias CIM.
+Não há suporte para a exclusão do método de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponteiros que apontam para instâncias CIM.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

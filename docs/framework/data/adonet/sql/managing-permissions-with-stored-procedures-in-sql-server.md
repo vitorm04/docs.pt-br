@@ -2,12 +2,12 @@
 title: Gerenciando permissões com procedimentos armazenados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912059"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425192"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gerenciando permissões com procedimentos armazenados no SQL Server
 Um método de criar várias linhas de defesa em torno do banco de dados é implementar todo o acesso a dados usando procedimentos armazenados ou funções definidas pelo usuário. Você revogar ou nega todas as permissões para objetos subjacentes, como tabelas, e concede permissões EXECUTE em procedimentos armazenados. Isso cria efetivamente um perímetro de segurança em torno dos dados e objetos de banco de dados.  
@@ -54,7 +54,7 @@ Um método de criar várias linhas de defesa em torno do banco de dados é imple
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Procedimentos armazenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Injeção de SQL](http://go.microsoft.com/fwlink/?LinkId=98234) nos Manuais Online do SQL Server|Os tópicos descrevem como criar procedimentos armazenados e como a injeção de SQL funciona.|  
+|[Procedimentos armazenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Injeção de SQL](https://go.microsoft.com/fwlink/?LinkId=98234) nos Manuais Online do SQL Server|Os tópicos descrevem como criar procedimentos armazenados e como a injeção de SQL funciona.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
@@ -64,4 +64,4 @@ Um método de criar várias linhas de defesa em torno do banco de dados é imple
  [Assinando procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Modificando dados com procedimentos armazenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

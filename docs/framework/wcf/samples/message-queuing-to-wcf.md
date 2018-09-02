@@ -2,19 +2,19 @@
 title: Enfileiramento de mensagens para o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 983fd2ef7338e24c67e3556849e73c2feaf97a60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807571"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423368"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Enfileiramento de mensagens para o Windows Communication Foundation
-Este exemplo demonstra como um aplicativo de serviço de enfileiramento de mensagens (MSMQ) pode enviar uma mensagem MSMQ a um serviço do Windows Communication Foundation (WCF). O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  
+Este exemplo demonstra como um aplicativo de enfileiramento de mensagens (MSMQ) pode enviar uma mensagem MSMQ a um serviço do Windows Communication Foundation (WCF). O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  
   
- O contrato de serviço é `IOrderProcessor`, que define um serviço unidirecional que é adequado para uso com filas. Uma mensagem MSMQ não tem um cabeçalho de ação, portanto, não é possível mapear mensagens MSMQ diferentes para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação. Se você quiser definir mais de um contrato de operação para o serviço, o aplicativo deve fornecer informações sobre qual o cabeçalho da mensagem do MSMQ (por exemplo, o rótulo ou correlationID) pode ser usado para decidir qual contrato de operação para enviar. Isso é demonstrado no [Demux personalizado](../../../../docs/framework/wcf/samples/custom-demux.md).  
+ O contrato de serviço é `IOrderProcessor`, que define um serviço unidirecional que é adequado para uso com as filas. Uma mensagem MSMQ não tem um cabeçalho de ação, portanto, não é possível mapear diferentes mensagens MSMQ para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação. Se você quiser definir mais de um contrato de operação para o serviço, o aplicativo deve fornecer informações sobre qual cabeçalho da mensagem do MSMQ (por exemplo, o rótulo ou uma correlationID) pode ser usado para decidir qual contrato de operação para o qual expedir. Isso é demonstrado na [Demux personalizado](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
- A mensagem do MSMQ não contém informações sobre qual cabeçalhos são mapeados para os parâmetros diferentes do contrato da operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), que contém a mensagem MSMQ subjacente. O tipo "T" no <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) classe representa os dados que são serializados no corpo da mensagem do MSMQ. Neste exemplo, o `PurchaseOrder` tipo é serializado no corpo da mensagem do MSMQ.  
+ A mensagem do MSMQ não contém informações sobre qual cabeçalhos são mapeados para os parâmetros diferentes do contrato da operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), que contém a mensagem MSMQ subjacente. O tipo "T" no <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) classe representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o `PurchaseOrder` tipo é serializado no corpo da mensagem MSMQ.  
   
  O código de exemplo a seguir mostra o contrato de serviço do serviço de processamento de pedidos.  
 
@@ -29,7 +29,7 @@ public interface IOrderProcessor
 }  
 ```
 
- O serviço é auto-hospedado. Ao usar o MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço verifica a existência da fila e o cria se necessário. O nome da fila é lida do arquivo de configuração.  
+ O serviço é auto-hospedado. Ao usar o MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço verifica a existência da fila e cria-se necessário. O nome da fila é lido do arquivo de configuração.  
 
 ```csharp
 public static void Main()  
@@ -57,10 +57,10 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 }  
 ```
 
- O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração, conforme mostrado no exemplo de configuração.  
+ O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração, conforme mostrado no seguinte exemplo de configuração.  
   
 > [!NOTE]
->  O nome da fila usa um ponto (.) para o computador local e separadores de barra invertida em seu caminho. O endereço de ponto de extremidade do WCF Especifica um esquema FormatName e usa localhost para o computador local. O endereço da fila para cada nome de formato de MSMQ diretrizes de endereçamento segue o esquema FormatName.  
+>  O nome da fila usa um ponto (.) para o computador local e os separadores de barra invertida em seu caminho. O endereço do ponto de extremidade WCF Especifica um esquema FormatName e usa localhost para o computador local. O endereço da fila de cada nome de formato de MSMQ diretrizes de endereçamento segue o esquema FormatName.  
   
 ```xml  
 <appSettings>  
@@ -68,7 +68,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 </appSettings>  
 ```  
   
- O aplicativo cliente é um aplicativo de MSMQ que usa o <xref:System.Messaging.MessageQueue.Send%2A> para enviar uma mensagem durável e transacional à fila, conforme mostrado no código de exemplo a seguir.  
+ O aplicativo cliente é um aplicativo de MSMQ que usa o <xref:System.Messaging.MessageQueue.Send%2A> método para enviar uma mensagem de durável e transacional para a fila, conforme mostrado no código de exemplo a seguir.  
 
 ```csharp
 //Connect to the queue.  
@@ -110,31 +110,31 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();  
 ```
 
- Quando você executar o exemplo, as atividades do cliente e de serviço são exibidas em janelas do console de serviço e o cliente. Você pode ver as mensagens de recebimento de serviço do cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente. Observe que como enfileiramento de mensagens está em uso, o cliente e o serviço não precisa estar em execução ao mesmo tempo. Por exemplo, executar o cliente, desligá-lo e, em seguida, inicie o serviço e ainda receberia suas mensagens.  
+ Quando você executar o exemplo, as atividades do cliente e o serviço são exibidas nas janelas do console de serviço e cliente. Você pode ver as mensagens de recebimento do serviço do cliente. Pressione ENTER em cada janela de console para desligar o serviço e o cliente. Observe que porque o enfileiramento de mensagens está em uso, o cliente e o serviço não precisa estar em execução ao mesmo tempo. Por exemplo, executar o cliente, desligá-lo e, em seguida, inicie o serviço e ainda receberia suas mensagens.  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>A configuração, compilação, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço primeiro para criar a fila, ou você pode criar um por meio do Gerenciador de fila do MSMQ. Siga estas etapas para criar uma fila no Windows 2008.  
+2.  Se o serviço é executado primeiro, ele verificará para garantir que a fila está presente. Se a fila não estiver presente, o serviço criará um. Você pode executar o serviço pela primeira vez para criar a fila, ou você pode criar um por meio do Gerenciador de fila MSMQ. Siga estas etapas para criar uma fila no Windows 2008.  
   
-    1.  Abra o Gerenciador do servidor em [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  Abra o Gerenciador do servidor no [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
     2.  Expanda o **recursos** guia.  
   
-    3.  Clique com botão direito **filas de mensagens privadas**e selecione **novo**, **fila particular**.  
+    3.  Clique com botão direito **filas de mensagens privadas**e selecione **New**, **fila particular**.  
   
-    4.  Verifique o **transacional** caixa.  
+    4.  Verifique as **transacional** caixa.  
   
-    5.  Digite `ServiceModelSamplesTransacted` como o nome da nova fila.  
+    5.  Insira `ServiceModelSamplesTransacted` como o nome da nova fila.  
   
-3.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para executar o exemplo de configuração de um único computador, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
   
-1.  Copie os arquivos de programa do serviço da pasta \service\bin\, sob a pasta de idioma específico, para o computador do serviço.  
+1.  Copie os arquivos de programa de serviço na pasta \service\bin\, sob a pasta de idioma específico, para o computador do serviço.  
   
 2.  Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
   
@@ -142,18 +142,18 @@ Console.ReadLine();
   
 4.  No computador do serviço, inicie Service.exe em um prompt de comando.  
   
-5.  No computador cliente, inicie o Client.exe em um prompt de comando.  
+5.  No computador cliente, inicie Client.exe em um prompt de comando.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>Consulte também  
  [Filas no WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
  [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Enfileiramento de mensagens](http://go.microsoft.com/fwlink/?LinkId=94968)
+ [Enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968)

@@ -3,11 +3,11 @@ title: Mapear relações definidas para elementos aninhados
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
 ms.openlocfilehash: 0346ba04fd8af6b5abc81fe994dd40f9a6a37c1d
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332462"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423855"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Mapear relações definidas para elementos aninhados
 Um esquema pode incluir um **msdata:Relationship** anotação para especificar explicitamente o mapeamento entre dois elementos no esquema. Os dois elementos especificados em **msdata:Relationship** podem ser aninhadas no esquema, mas não precisa ser. Usa o processo de mapeamento **msdata:Relationship** no esquema para gerar a relação de chave estrangeira/chave primária entre as duas colunas.  

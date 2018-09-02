@@ -2,12 +2,12 @@
 title: Mapeamento entre JSON e XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931463"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421717"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapeamento entre JSON e XML
 Os leitores e gravadores produzido pelo <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> fornecem uma API de XML sobre o conteúdo do objeto notação JSON (JavaScript). JSON codifica dados usando um subconjunto dos literais de objeto do JavaScript. Os leitores e gravadores produzidos por essa fábrica também são usados quando o conteúdo do JSON está sendo enviado ou recebido por aplicativos do Windows Communication Foundation (WCF) usando o <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> ou o <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ Os leitores e gravadores produzido pelo <xref:System.Runtime.Serialization.Json.
  Além disso, se a mensagem JSON no exemplo é recebida pelo WCF e conectada, você veria o fragmento XML no log anterior.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Mapeamento entre JSON e XML Infoset  
- Formalmente, o mapeamento é feito entre JSON conforme descrito em [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (exceto com algumas restrições reduzidas e determinadas outras restrições adicionadas) e o XML infoset (e XML não textual) como descrito em [informações XML Definir](http://go.microsoft.com/fwlink/?LinkId=98809) . Consulte este tópico para obter as definições *itens de informações* e campos entre [colchetes].  
+ Formalmente, o mapeamento é feito entre JSON conforme descrito em [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (exceto com algumas restrições reduzidas e determinadas outras restrições adicionadas) e o XML infoset (e XML não textual) como descrito em [informações XML Definir](https://go.microsoft.com/fwlink/?LinkId=98809) . Consulte este tópico para obter as definições *itens de informações* e campos entre [colchetes].  
   
  Um documento JSON em branco é mapeado para um documento XML em branco e um documento XML em branco é mapeado para um documento JSON em branco. No XML para mapeamento de JSON, precedendo o espaço em branco e à direita de espaço em branco após o documento não são permitidas.  
   

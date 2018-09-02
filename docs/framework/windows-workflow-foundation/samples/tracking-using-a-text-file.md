@@ -2,15 +2,15 @@
 title: Controlar usando um arquivo de texto
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805792"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422883"
 ---
 # <a name="tracking-using-a-text-file"></a>Controlar usando um arquivo de texto
-Este exemplo demonstra como estender o controle no Windows Workflow Foundation (WF), criando um participante personalizado de controle. Os participantes de rastreamento são as classes do.NET Framework que recebem registros de rastreamento em tempo de execução que são emitidas. Você pode criar um participante de controle para transmitir os eventos de rastreamento a qualquer destino é necessário para sua situação. Por exemplo, o participante de rastreamento (ETW de rastreamento do Windows) é fornecido como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. O participante de rastreamento neste exemplo grava os registros no formato XML para um arquivo de texto.  
+Este exemplo demonstra como estender o rastreamento do Windows Workflow Foundation (WF), criando um participante personalizado. Os participantes de rastreamento são as classes do.NET Framework que recebem registros de rastreamento em tempo de execução que são emitidas. Você pode criar um participante de controle para transmitir os eventos de rastreamento a qualquer destino é necessário para sua situação. Por exemplo, o participante de rastreamento (ETW de rastreamento do Windows) é fornecido como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. O participante de rastreamento neste exemplo grava os registros no formato XML para um arquivo de texto.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  Para otimizar a utilidade e robustez do seu participante de rastreamento, algumas etapas adicionais devem ser concluídas para conectar corretamente o participante de rastreamento em tempo de execução. A tabela a seguir descreve as classes usadas nesse exemplo para criar um participante de rastreamento que siga as práticas recomendadas.  
@@ -18,7 +18,7 @@ Este exemplo demonstra como estender o controle no Windows Workflow Foundation (
 |Classe|Descrição|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|<xref:System.ServiceModel.Configuration.BehaviorExtensionElement> é usado para definir a seção de configuração usada para configurar o participante de rastreamento do arquivo de texto. Isso permite que os usuários especifiquem o destino do arquivo de log usando arquivos de configuração padrão do .NET Framework.|  
-|`TextFileTrackingBehavior`|Comportamentos no WCF permitem aos usuários inserir extensões no tempo de execução. Esse comportamento adicionar o participante de rastreamento para o serviço quando inicia o serviço.|  
+|`TextFileTrackingBehavior`|Comportamentos do WCF permitem que os usuários injetem extensões em tempo de execução. Esse comportamento adicionar o participante de rastreamento para o serviço quando inicia o serviço.|  
 |`TextFileTrackingParticipant`|O participante de rastreamento que recebe participantes de rastreamento em tempo de execução e os armazena em um arquivo de log como XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Configuração de elementos de extensão do comportamento  
@@ -53,15 +53,15 @@ Este exemplo demonstra como estender o controle no Windows Workflow Foundation (
   
 4.  No navegador, clique StockPriceService.xamlx.  
   
-5.  O navegador exibe o **StockPriceService** página, que contém o endereço de wsdl do serviço local. Copie este endereço.  
+5.  O navegador exibe a **StockPriceService** página, que contém o endereço de wsdl do serviço local. Copie este endereço.  
   
-     Um exemplo do endereço local de serviço wsdl é http://localhost:53797/StockPriceService.xamlx?wsdl.  
+     Um exemplo de endereço de wsdl de serviço local é http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
 6.  Usar [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], vá para a pasta de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] (a pasta de instalação é %SystemDrive% \ program files \ Microsoft Visual Studio 10.0). Localize o Common7 \ IDE \ subfolder.  
   
 7.  Clique duas vezes no arquivo de WcfTestClient.exe para iniciar a Test usuário.  
   
-8.  No cliente de teste do WCF, selecione **Adicionar serviço...** do **arquivo** menu.  
+8.  No cliente de teste do WCF, selecione **Adicionar serviço...** dos **arquivo** menu.  
   
 9. Cole o URL que você copiou apenas na caixa de texto.  
   
@@ -69,9 +69,9 @@ Este exemplo demonstra como estender o controle no Windows Workflow Foundation (
   
 11. Testar o serviço usando a Test usuário.  
   
-    1.  No cliente de teste do WCF, clique duas vezes em **GetStockPrice()** sob o **IStockPriceService** nó.  
+    1.  No cliente de teste do WCF, clique duas vezes em **getstockprice ()** sob o **IStockPriceService** nó.  
   
-         O **GetStockPrice()** método aparece no painel direito, com um parâmetro.  
+         O **getstockprice ()** método aparece no painel direito, com um parâmetro.  
   
     2.  Digite Contoso como o valor para o parâmetro.  
   
@@ -87,9 +87,9 @@ Este exemplo demonstra como estender o controle no Windows Workflow Foundation (
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de monitoramento do AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

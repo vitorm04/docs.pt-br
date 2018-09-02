@@ -6,22 +6,22 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: ec2a369566737ce421f731ae2855f353344496f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2b605a08ea29d1d0a1e92cb2b7e4dc1f2059c26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532708"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421372"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Como dividir uma janela horizontalmente o designer
-Este exemplo torna a divisão que divide o <xref:System.Windows.Forms.SplitContainer> horizontal do controle.  
+Este exemplo faz o separador que divide o <xref:System.Windows.Forms.SplitContainer> horizontal do controle.  
   
 > [!NOTE]
->  O <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade o <xref:System.Windows.Forms.SplitContainer> controle determina a direção do separador, não do próprio controle. As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  O <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade do <xref:System.Windows.Forms.SplitContainer> controle determina a direção do divisor, não do próprio controle. As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-split-a-window-horizontally"></a>Para dividir uma janela horizontalmente  
   
-1.  No **propriedades** janela, defina o <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade do <xref:System.Windows.Forms.SplitContainer> controle <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1.  No **propriedades** janela, defina as <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriedade do <xref:System.Windows.Forms.SplitContainer> o controle para <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.SplitContainer>  

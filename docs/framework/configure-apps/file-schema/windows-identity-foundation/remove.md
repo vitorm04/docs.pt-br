@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 596cab4494ef3ba200fd0a046d7935f648fb7c4f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755065"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422182"
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Remove o manipulador de token de segurança especificado da coleção de manipulador de token.  
@@ -39,7 +39,7 @@ Remove o manipulador de token de segurança especificado da coleção de manipul
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|O nome do tipo CLR do manipulador de token a ser removido. Para obter mais informações sobre como especificar o `type` de atributo, consulte [referências de tipo personalizado](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Necessário.|  
+|tipo|O nome do tipo CLR do manipulador de token a ser removido. Para obter mais informações sobre como especificar o `type` atributo, consulte [referências de tipo personalizado](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Necessário.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -51,7 +51,7 @@ Remove o manipulador de token de segurança especificado da coleção de manipul
 |[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.|  
   
 ## <a name="example"></a>Exemplo  
- O XML a seguir mostra o uso do `<add>` e `<remove>` elementos para substituir o manipulador de token de sessão padrão com um manipulador de token de sessão personalizadas. O XML é obtido o `ClaimsAwareWebFarm` exemplo.  
+ O XML a seguir mostra o uso do `<add>` e `<remove>` elementos para substituir o manipulador de token de sessão padrão por um manipulador de token de sessão personalizadas. O XML é obtido a `ClaimsAwareWebFarm` exemplo.  
   
 ```xml  
 <securityTokenHandlers>  

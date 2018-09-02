@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aad53e9c6d5708bceca9831264c112f885fb889
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494687"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419044"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Segurança da mensagens com um cliente de certificado
-O cenário a seguir mostra um serviço protegido usando o modo de segurança de mensagem e o cliente do Windows Communication Foundation (WCF). O cliente e o serviço são autenticadas com certificados. Para obter mais informações, consulte [segurança de aplicativo distribuído](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
+O cenário a seguir mostra um serviço protegido usando o modo de segurança de mensagem e o cliente do Windows Communication Foundation (WCF). O cliente e o serviço são autenticados com certificados. Para obter mais informações, consulte [segurança do aplicativo distribuído](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
   
  Para um aplicativo de exemplo, consulte [certificado de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-certificate.md).  
   
@@ -26,7 +26,7 @@ O cenário a seguir mostra um serviço protegido usando o modo de segurança de 
 |Modo de segurança|Mensagem|  
 |Interoperabilidade|Somente o WCF|  
 |Autenticação (servidor)|Usando o certificado de serviço|  
-|Autenticação (cliente)|Usando o certificado de cliente|  
+|Autenticação (cliente)|Usando o certificado do cliente|  
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
 |Transporte|HTTP|  
@@ -37,7 +37,7 @@ O cenário a seguir mostra um serviço protegido usando o modo de segurança de 
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto de seguro.  
@@ -103,7 +103,7 @@ O cenário a seguir mostra um serviço protegido usando o modo de segurança de 
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>Configuração  
- A configuração a seguir especifica o certificado de cliente usando o comportamento de um ponto de extremidade. Para obter mais informações sobre certificados, consulte [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) (Trabalhando com certificados). O código também usa um <`identity`> elemento para especificar um domínio nome DNS (sistema) da identidade de servidor esperadas. Para obter mais informações sobre a identidade, consulte [autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ A configuração a seguir especifica o certificado de cliente usando um comportamento de ponto de extremidade. Para obter mais informações sobre certificados, consulte [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) (Trabalhando com certificados). O código também usa um <`identity`> elemento para especificar um domínio nome DNS (sistema) da identidade do servidor esperado. Para obter mais informações sobre identidade, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -149,4 +149,4 @@ O cenário a seguir mostra um serviço protegido usando o modo de segurança de 
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

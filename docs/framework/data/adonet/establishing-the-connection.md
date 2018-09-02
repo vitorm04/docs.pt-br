@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: a416994e5d5a1be5da9571d9f8e7564f0f14f238
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29db884a88f5150cd93571ba8fa7bf72be2b8c69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766134"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423670"
 ---
 # <a name="establishing-the-connection"></a>Estabelecendo a conexão
-Para se conectar ao Microsoft SQL Server, use o objeto <xref:System.Data.SqlClient.SqlConnection> do provedor de dados .NET Framework para SQL Server. Para se conectar a uma fonte de dados OLE DB, use o objeto <xref:System.Data.OleDb.OleDbConnection> do provedor de dados .NET Framework para OLE DB. Para se conectar a uma fonte de dados ODBC, use o objeto <xref:System.Data.Odbc.OdbcConnection> do provedor de dados .NET Framework para ODBC. Para se conectar a uma fonte de dados Oracle, use o objeto <xref:System.Data.OracleClient.OracleConnection> do provedor de dados .NET Framework para Oracle. Para armazenar com segurança e recuperando cadeias de caracteres de conexão, consulte [protegendo informações de Conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+Para se conectar ao Microsoft SQL Server, use o objeto <xref:System.Data.SqlClient.SqlConnection> do provedor de dados .NET Framework para SQL Server. Para se conectar a uma fonte de dados OLE DB, use o objeto <xref:System.Data.OleDb.OleDbConnection> do provedor de dados .NET Framework para OLE DB. Para se conectar a uma fonte de dados ODBC, use o objeto <xref:System.Data.Odbc.OdbcConnection> do provedor de dados .NET Framework para ODBC. Para se conectar a uma fonte de dados Oracle, use o objeto <xref:System.Data.OracleClient.OracleConnection> do provedor de dados .NET Framework para Oracle. Para armazenar com segurança e recuperação de cadeias de conexão, consulte [protegendo informações de Conexão](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
 ## <a name="closing-connections"></a>Fechando conexões  
- É recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão possa ser retornada ao pool. O bloco `Using` no Visual Basic ou C# automaticamente descarta a conexão quando o código sai do bloco, mesmo no caso de uma exceção sem tratamento. Consulte [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) e [instrução Using](~/docs/visual-basic/language-reference/statements/using-statement.md) para obter mais informações.  
+ É recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão possa ser retornada ao pool. O bloco `Using` no Visual Basic ou C# automaticamente descarta a conexão quando o código sai do bloco, mesmo no caso de uma exceção sem tratamento. Ver [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) e [instrução Using](~/docs/visual-basic/language-reference/statements/using-statement.md) para obter mais informações.  
   
- Você também pode usar os métodos `Close` ou `Dispose` do objeto de conexão para o provedor que você está usando. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Por exemplo, uma conexão que sai de escopo, mas que não foi fechada explicitamente será retornada somente para o pool de conexões se o tamanho do máximo tiver sido atingido e a conexão ainda estiver válida. Para obter mais informações, consulte [OLE DB, ODBC e pool de Conexão do Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
+ Você também pode usar os métodos `Close` ou `Dispose` do objeto de conexão para o provedor que você está usando. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Por exemplo, uma conexão que sai de escopo, mas que não foi fechada explicitamente será retornada somente para o pool de conexões se o tamanho do máximo tiver sido atingido e a conexão ainda estiver válida. Para obter mais informações, consulte [Pooling de Conexão do Oracle, ODBC e OLE DB](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
->  Não chame `Close` ou `Dispose` em uma **Conexão**, um **DataReader**, ou qualquer outro objeto gerenciado no `Finalize` método de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../../docs/standard/garbage-collection/index.md).  
+>  Não chame `Close` ou `Dispose` em um **Conexão**, um **DataReader**, ou qualquer outro objeto gerenciado no `Finalize` método de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../../docs/standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  Eventos de logon e logout não serão gerados no servidor quando uma conexão for procurada de ou retornada para o pool de conexões, porque a conexão não é fechada realmente quando é retornada para o pool de conexões. Para obter mais informações, confira [Pooling de conexão do SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="connecting-to-sql-server"></a>Conectando-se ao SQL Server  
- O provedor de dados .NET Framework para SQL Server dá suporte a um formato de cadeia de conexão semelhante ao formato de cadeia de conexão OLE DB (ADO). Para obter nomes e valores válidos de formato de cadeia de caracteres, consulte a propriedade <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> do objeto <xref:System.Data.SqlClient.SqlConnection>. Você também pode usar a classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar cadeias de conexão sintaticamente válidas em tempo de execução. Para obter mais informações, consulte [construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ O provedor de dados .NET Framework para SQL Server dá suporte a um formato de cadeia de conexão semelhante ao formato de cadeia de conexão OLE DB (ADO). Para obter nomes e valores válidos de formato de cadeia de caracteres, consulte a propriedade <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> do objeto <xref:System.Data.SqlClient.SqlConnection>. Você também pode usar a classe <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar cadeias de conexão sintaticamente válidas em tempo de execução. Para obter mais informações, confira [Construtores de cadeias de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  O exemplo de código a seguir demonstra como criar e abrir uma conexão para um banco de dados do SQL Server.  
   
@@ -51,16 +51,16 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Segurança integrada e o ASP.NET  
  A segurança integrada do SQL Server (também conhecida como conexões confiáveis) ajuda a fornecer a proteção ao se conectar com o SQL Server porque ele não expõe uma identificação de usuário e uma senha na cadeia de conexão e é o método recomendado para autenticar uma conexão. A segurança integrada usa a identidade de segurança atual, ou símbolo, do processo em execução. Para aplicativos desktop, isso é geralmente a identidade do usuário conectado no momento.  
   
- A identidade de segurança para aplicativos ASP.NET pode ser definida para uma das várias opções diferentes. Para entender melhor a identidade de segurança que um aplicativo ASP.NET usa ao se conectar ao SQL Server, consulte [representação do ASP.NET](http://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [autenticação ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), e [como: acesso SQL Segurança integrada do servidor usando o Windows](http://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ A identidade de segurança para aplicativos ASP.NET pode ser definida para uma das várias opções diferentes. Para entender melhor a identidade de segurança que um aplicativo ASP.NET usa ao se conectar ao SQL Server, consulte [personificação do ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [autenticação do ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), e [como: SQL de acesso Segurança integrada do servidor usando o Windows](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Conectando-se a uma fonte de dados do OLE DB  
- O provedor de dados .NET Framework para OLE DB fornece conectividade para fontes de dados expostos usando OLE DB (por meio do SQLOLEDB, o provedor OLE DB para SQL Server), usando o **OleDbConnection** objeto.  
+ O .NET Framework Data Provider para OLE DB fornece conectividade a fontes de dados expostas usando OLE DB (por meio de SQLOLEDB, o provedor OLE DB para SQL Server), usando o **OleDbConnection** objeto.  
   
  Para o Provedor de Dados .NET Framework para OLE DB, o formato da cadeia de conexão é idêntico ao formato de cadeia de conexão usada no ADO, com as seguintes exceções:  
   
 -   O **provedor** palavra-chave é necessária.  
   
--   O **URL**, **provedor remoto**, e **servidor remoto** palavras-chave não são suportadas.  
+-   O **URL**, **provedor remoto**, e **servidor remoto** palavras-chave não têm suporte.  
   
  Para obter mais informações sobre cadeias de conexão do OLE DB, consulte o tópico <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>. Você também pode usar <xref:System.Data.OleDb.OleDbConnectionStringBuilder> para criar cadeias de conexão em tempo de execução.  
   
@@ -88,10 +88,10 @@ using (OleDbConnection connection =
 ```  
   
 ## <a name="do-not-use-universal-data-link-files"></a>Não use arquivos UDL (Universal Data Link)  
- É possível fornecer informações de conexão para um **OleDbConnection** em um arquivo de Universal Data Link (UDL); no entanto você deve evitar isso. Os arquivos UDL não são criptografados e expõem as informações da cadeia de conexão em texto não criptografado. Como um arquivo UDL é um recurso externo com base em arquivo para o seu aplicativo, ele não poderá ser protegido usando o .NET Framework.  
+ É possível fornecer informações de conexão para um **OleDbConnection** em um arquivo de Universal Data Link (UDL); no entanto você deve evitar fazer isso. Os arquivos UDL não são criptografados e expõem as informações da cadeia de conexão em texto não criptografado. Como um arquivo UDL é um recurso externo com base em arquivo para o seu aplicativo, ele não poderá ser protegido usando o .NET Framework.  
   
 ## <a name="connecting-to-an-odbc-data-source"></a>Conectando-se a uma fonte de dados do ODBC  
- O .NET Framework Data Provider para ODBC fornece conectividade para fontes de dados expostos usando ODBC usando o **OdbcConnection** objeto.  
+ O .NET Framework Data Provider para ODBC fornece conectividade a fontes de dados expostas usando ODBC usando o **OdbcConnection** objeto.  
   
  Para o provedor de dados .NET Framework para ODBC, o formato de cadeia de conexão é criado para corresponder o máximo possível ao formato de cadeia de conexão ODBC. Você também pode fornecer um nome (DSN) da fonte de dados ODBC. Para obter mais detalhes sobre o **OdbcConnection** , consulte o <xref:System.Data.Odbc.OdbcConnection>.  
   
@@ -116,7 +116,7 @@ using (OdbcConnection connection =
 ```  
   
 ## <a name="connecting-to-an-oracle-data-source"></a>Conectando-se a uma fonte de dados do Oracle  
- O provedor de dados .NET Framework para Oracle fornece conectividade para fontes de dados Oracle usando o **OracleConnection** objeto.  
+ O provedor de dados do .NET Framework para Oracle fornece conectividade a fontes de dados Oracle usando o **OracleConnection** objeto.  
   
  Para o provedor de dados .NET Framework para Oracle, o formato de cadeia de conexão é criado para corresponder o máximo possível ao formato de cadeia de conexão do provedor OLE DB para Oracle (MSDAORA). Para obter mais detalhes sobre o **OracleConnection**, consulte o <xref:System.Data.OracleClient.OracleConnection>.  
   
@@ -146,4 +146,4 @@ nwindConn.Open();
  [Conectando a uma fonte de dados](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Cadeia de Conexão](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Conexão do Oracle, ODBC e OLE DB Pooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

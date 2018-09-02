@@ -1,21 +1,21 @@
 ---
-title: Aninhamento DataRelations
+title: Aninhamento de DataRelations
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761890"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420268"
 ---
-# <a name="nesting-datarelations"></a>Aninhamento DataRelations
-Em uma representação relacional de dados, tabelas individuais contêm linhas que estão relacionadas uns aos outros usando uma coluna ou conjunto de colunas. No ADO.NET <xref:System.Data.DataSet>, a relação entre tabelas é implementada usando um <xref:System.Data.DataRelation>. Quando você cria um **DataRelation**, as relações pai-filho das colunas são gerenciadas por meio de relação. As tabelas e colunas são entidades separadas. Na representação hierárquica de dados que o XML fornece, as relações pai-filho são representadas pelos elementos pai que contêm elementos filho aninhada.  
+# <a name="nesting-datarelations"></a>Aninhamento de DataRelations
+Em uma representação de dados relacional, as tabelas individuais contêm linhas que estão relacionadas entre si usando uma coluna ou conjunto de colunas. No ADO.NET <xref:System.Data.DataSet>, a relação entre tabelas é implementada usando um <xref:System.Data.DataRelation>. Quando você cria um **DataRelation**, as relações pai-filho das colunas são gerenciadas por meio de relação. As tabelas e colunas são entidades separadas. Na representação hierárquica dos dados XML fornece, as relações pai-filho são representadas por elementos pai que contêm elementos filho aninhados.  
   
- Para facilitar o aninhamento de objetos filho quando um **DataSet** está sincronizado com um <xref:System.Xml.XmlDataDocument> ou gravadas como dados XML usando **WriteXml**, o **DataRelation** expõe um **aninhadas** propriedade. Definindo o **aninhadas** propriedade de um **DataRelation** para **true** faz com que o filho linhas de relação ser aninhadas dentro da coluna pai quando gravadas como dados XML ou sincronizado com um **XmlDataDocument**. O **aninhadas** propriedade o **DataRelation** é **false**, por padrão.  
+ Para facilitar o aninhamento de objetos filho quando uma **DataSet** está sincronizado com um <xref:System.Xml.XmlDataDocument> ou gravadas como dados XML usando **WriteXml**, o **DataRelation** expõe um **Nested** propriedade. Definindo o **Nested** propriedade de uma **DataRelation** para **verdadeiro** faz com que o filho linhas de relação ser aninhadas dentro da coluna pai quando gravadas como dados XML ou sincronizado com um **XmlDataDocument**. O **Nested** propriedade da **DataRelation** está **false**, por padrão.  
   
  Por exemplo, considere o seguinte **conjunto de dados**.  
   
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Porque o **aninhadas** propriedade do **DataRelation** objeto não está definido como **true** para este **conjunto de dados**, os objetos filho não estão aninhados dentro de elementos pai quando isso **DataSet** é representado como dados XML. Transformando a representação XML de um **DataSet** que contém relacionados **DataSet**s com relações de dados aninhadas não podem causar lentidão no desempenho. É recomendável que você aninhar as relações de dados. Para fazer isso, defina o **aninhadas** propriedade **true**. Em seguida, escreva o código na folha de estilos XSLT que usa expressões de consulta XPath hierárquicas de cima para baixo para localizar e transformar os dados.  
+ Porque o **Nested** propriedade da **DataRelation** objeto não está definido como **true** para este **DataSet**, os objetos filho não estão aninhados dentro dos elementos pai quando isso **conjunto de dados** é representado como dados XML. Transformando a representação XML de um **DataSet** que contém relacionados **conjunto de dados**s com relações de dados não aninhadas podem causar lentidão no desempenho. É recomendável que você aninhar as relações de dados. Para fazer isso, defina a **Nested** propriedade **verdadeiro**. Em seguida, escreva o código na folha de estilos XSLT que usa expressões de consulta XPath hierárquicas de cima para baixo para localizar e transformar os dados.  
   
- O exemplo de código a seguir mostra o resultado de chamar **WriteXml** no **conjunto de dados**.  
+ O exemplo de código a seguir mostra o resultado de chamar **WriteXml** sobre o **conjunto de dados**.  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Observe que o **clientes** elemento e o **pedidos** elementos são mostrados como elementos irmãos. Se você quisesse o **pedidos** elementos aparecem como filhos dos elementos de seu respectivo pai, o **aninhadas** propriedade do **DataRelation** precisa ser definido como **true** e adicione o seguinte:  
+ Observe que o **clientes** elemento e o **pedidos** elementos são mostrados como elementos irmãos. Se você quisesse a **pedidos** elementos a serem exibidos como filhos de seus elementos do respectivo pai, o **Nested** propriedade do **DataRelation** precisa ser definido como **verdadeira** e adicione o seguinte:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- O código a seguir mostra como a saída resultante seria, com o **pedidos** elementos aninhados dentro de seus elementos pai do respectivos.  
+ O código a seguir mostra a saída resultante seria semelhante, com o **pedidos** elementos aninhados dentro de seus elementos do respectivo pai.  
   
 ```xml  
 <CustomerOrders>  
@@ -135,4 +135,4 @@ customerOrders.Nested = true;
  [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
  [Adding DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md) (Adicionando DataRelations)  
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
