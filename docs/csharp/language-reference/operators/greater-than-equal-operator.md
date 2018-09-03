@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
 ms.openlocfilehash: 8749d1dc0670a5a76bda5ee0d69a4a142671c1e6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000279"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481756"
 ---
 # <a name="gt-operator-c-reference"></a>&gt;Operador = (Referência de C#)
 Todos os tipos numéricos e de enumeração definem um operador relacional "maior ou igual a", `>=`, que retorna `true` se o primeiro operando é maior ou igual ao segundo, `false` caso contrário.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96edfd0f94240d51a224f4522573a450ab027330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409913"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43470834"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas](../../../docs/framework/tools/index.md)  
- [Makecert.exe (Ferramenta de Criação de Certificado)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (Ferramenta de Criação de Certificado)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

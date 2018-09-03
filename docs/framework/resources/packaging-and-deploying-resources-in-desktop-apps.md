@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399685"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485697"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  
@@ -53,7 +53,7 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
 -   Aumenta o custo inicial de um aplicativo de teste, porque você deve testar várias configurações. Observe que a longo prazo será mais fácil e menos dispendioso para testar um aplicativo básico com vários satélites que testar e manter várias versões internacionais paralelas.  
   
 ## <a name="resource-naming-conventions"></a>Convenções de Nomenclatura do Recurso  
- Ao empacotar os recursos de seu aplicativo, você deve nomeá-los usando as convenções de nomenclatura esperadas pelo Common Language Runtime. O tempo de execução identifica um recurso pelo seu nome de cultura. Cada cultura tem um nome exclusivo, que normalmente é uma combinação de um nome de cultura de duas letras minúsculas associado a um idioma e, se necessário, um nome de subcultura de duas letras maiúsculas associado a um país ou região. O nome de subcultura vem depois do nome da cultura, separado por um traço (-). Exemplos incluem ja-JP para japonês falado no Japão, en-US para inglês falado nos Estados Unidos, de-DE para alemão falado na Alemanha, ou de-AT para alemão falado na Áustria. Consulte a [Referência de API de suporte ao idioma nacional (NLS)](http://go.microsoft.com/fwlink/?LinkId=200048) na Central de desenvolvedores Go Global para obter uma lista completa de nomes de cultura.  
+ Ao empacotar os recursos de seu aplicativo, você deve nomeá-los usando as convenções de nomenclatura esperadas pelo Common Language Runtime. O tempo de execução identifica um recurso pelo seu nome de cultura. Cada cultura tem um nome exclusivo, que normalmente é uma combinação de um nome de cultura de duas letras minúsculas associado a um idioma e, se necessário, um nome de subcultura de duas letras maiúsculas associado a um país ou região. O nome de subcultura vem depois do nome da cultura, separado por um traço (-). Exemplos incluem ja-JP para japonês falado no Japão, en-US para inglês falado nos Estados Unidos, de-DE para alemão falado na Alemanha, ou de-AT para alemão falado na Áustria. Consulte a [Referência de API de suporte ao idioma nacional (NLS)](https://go.microsoft.com/fwlink/?LinkId=200048) na Central de desenvolvedores Go Global para obter uma lista completa de nomes de cultura.  
   
 > [!NOTE]
 >  Para obter informações sobre como criar arquivos de recursos, consulte [Criando arquivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) e [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  

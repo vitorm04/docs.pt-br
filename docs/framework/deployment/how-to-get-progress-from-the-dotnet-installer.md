@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393303"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472040"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
 O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e acompanhar seu progresso enquanto mostra o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o inspetor ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -55,13 +55,13 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
 > [!WARNING]
 >  Você deve executar o exemplo como um administrador.  
   
- Você pode baixar a solução completa do Visual Studio para o [.NET Framework 4.5 Chainer Sample](http://go.microsoft.com/fwlink/?LinkId=231345) na Galeria de Exemplos do MSDN.  
+ Você pode baixar a solução completa do Visual Studio para o [.NET Framework 4.5 Chainer Sample](https://go.microsoft.com/fwlink/?LinkId=231345) na Galeria de Exemplos do MSDN.  
   
  As seções a seguir descrevem os arquivos significativos neste exemplo: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
--   O arquivo MMIOChainer.h (consulte o [código completo](http://go.microsoft.com/fwlink/?LinkId=231369)) contém a definição da estrutura de dados e a classe base da qual a classe do encadeador deve ser derivada. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] estende a estrutura de dados MMIO para lidar com os dados que instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] precisa. As alterações na estrutura MMIO têm compatibilidade com versões anteriores, portanto, um encadeador do .NET Framework 4 pode funcionar com a instalação do .NET Framework 4.5 sem a necessidade de recompilação. No entanto, esse cenário não dá suporte ao recurso para reduzir as reinicializações do sistema.  
+-   O arquivo MMIOChainer.h (consulte o [código completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contém a definição da estrutura de dados e a classe base da qual a classe do encadeador deve ser derivada. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] estende a estrutura de dados MMIO para lidar com os dados que instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] precisa. As alterações na estrutura MMIO têm compatibilidade com versões anteriores, portanto, um encadeador do .NET Framework 4 pode funcionar com a instalação do .NET Framework 4.5 sem a necessidade de recompilação. No entanto, esse cenário não dá suporte ao recurso para reduzir as reinicializações do sistema.  
   
      Um campo de versão fornece um meio de identificar as revisões do formato de mensagem e de estrutura.  A instalação do .NET Framework determina a versão da interface do encadeador chamando a função `VirtualQuery` para determinar o tamanho do mapeamento de arquivo.  Se o tamanho for grande o suficiente para acomodar o campo de versão, a instalação do .NET Framework usa o valor especificado. Se o mapeamento de arquivo for muito pequeno para conter um campo de versão, que é o caso com o .NET Framework 4, o processo de instalação assume a versão 0 (4). Se o encadeador não dá suporte à versão da mensagem que o instalador do .NET Framework deseja enviar, a instalação do .NET Framework assume uma resposta de ignorar.  
   
@@ -98,7 +98,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
   
 #### <a name="iprogressobserverh"></a>IProgressObserver.h  
   
--   O arquivo IProgressObserver.h implementa um observador de progresso ([veja o código completo](http://go.microsoft.com/fwlink/?LinkId=231370)). Este observador é notificado sobre o progresso do download e da instalação (especificado como um `char` sem sinal, 0 a 255, que indica 1 a 100% concluído). O observador também é notificado quando o encadeador envia uma mensagem e o observador deve enviar uma resposta.  
+-   O arquivo IProgressObserver.h implementa um observador de progresso ([veja o código completo](https://go.microsoft.com/fwlink/?LinkId=231370)). Este observador é notificado sobre o progresso do download e da instalação (especificado como um `char` sem sinal, 0 a 255, que indica 1 a 100% concluído). O observador também é notificado quando o encadeador envia uma mensagem e o observador deve enviar uma resposta.  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   O arquivo [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) implementa a classe `Server`, que deriva da classe `MmioChainer` e substitui os métodos apropriados para exibir informações sobre o progresso. O MmioChainer cria uma seção com o nome da seção especificado e inicializa o encadeador com o nome do evento especificado. O nome do evento é salvo na estrutura de dados mapeada. Você deve tornar os nomes da seção e do evento exclusivos. A classe `Server` no código a seguir inicia o programa de instalação especificado, monitora o progresso e retorna um código de saída.  
+-   O arquivo [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) implementa a classe `Server`, que deriva da classe `MmioChainer` e substitui os métodos apropriados para exibir informações sobre o progresso. O MmioChainer cria uma seção com o nome da seção especificado e inicializa o encadeador com o nome do evento especificado. O nome do evento é salvo na estrutura de dados mapeada. Você deve tornar os nomes da seção e do evento exclusivos. A classe `Server` no código a seguir inicia o programa de instalação especificado, monitora o progresso e retorna um código de saída.  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  

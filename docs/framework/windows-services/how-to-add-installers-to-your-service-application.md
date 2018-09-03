@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 manager: douge
-ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77f41e696fed3d33282b6437e99129fda9e209e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514354"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472014"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Como adicionar instaladores ao aplicativo de serviço
 O Visual Studio tem componentes de instalação que podem instalar recursos associados com seus aplicativos de serviço. Os componentes de instalação registram um serviço individual no sistema em que ele está sendo instalado e informam o Gerenciador de Controle de Serviços que o serviço existe. Ao trabalhar com um aplicativo de serviço, você pode selecionar um link na janela Propriedades para adicionar automaticamente os instaladores apropriados ao projeto.  
@@ -30,7 +30,7 @@ O Visual Studio tem componentes de instalação que podem instalar recursos asso
  Você não precisa realizar nenhuma codificação especial dentro dos instaladores para fazer com que seus serviços sejam instalados corretamente. No entanto, ocasionalmente, será interessante modificar o conteúdo dos instaladores se você precisar adicionar uma funcionalidade especial ao processo de instalação.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Para adicionar instaladores ao seu aplicativo de serviço  
   

@@ -11,12 +11,12 @@ ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8842bb47ad32ae1e26eaa503398ea91afb7fd1dd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2c9b3b1c647d74444fed01e38b65c1b2fe8364c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003197"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480942"
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo IP versão 6
 O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a camada de rede da Internet. O IPv6 foi projetado para resolver muitos dos problemas da versão atual do pacote de protocolos IP (conhecido como IPv4) relacionados ao o esgotamento de endereços, a segurança, a configuração automática, a necessidade de extensibilidade e outros. O IPv6 expande os recursos da Internet para habilitar novos tipos de aplicativos, inclusive aplicativos móveis e de ponto a ponto. Estes são os principais problemas do protocolo IPv4 atual:  
@@ -58,7 +58,7 @@ O protocolo IP versão 6 (IPv6) é um novo pacote de protocolos padrão para a c
   
 -   RFC 2374, um formato de endereço unicast global agregável IPv6.  
   
- Você também pode encontrar informações relacionadas ao IPv6 na [Área IPv6 na Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
+ Você também pode encontrar informações relacionadas ao IPv6 na [Área IPv6 na Technet](https://go.microsoft.com/fwlink/?LinkID=179658).  
   
 ## <a name="see-also"></a>Consulte também  
  [Amostra de soquetes IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  

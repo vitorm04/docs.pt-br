@@ -3,12 +3,12 @@ title: Executar operações de junção personalizadas (LINQ em C#)
 description: Saiba como executar operações de junção personalizadas de LINQ em C#.
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: 09ed0a202627a07ac8958de6ac46d7dc6c2837d0
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403964"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468104"
 ---
 # <a name="perform-custom-join-operations"></a>Executar operações de junção personalizadas
 
@@ -43,6 +43,6 @@ No exemplo a seguir, a consulta deve unir duas sequências com base nas chaves c
 
 ## <a name="see-also"></a>Consulte também
 
-[LINQ (Consulta Integrada à Linguagem)](index.md)  
-[Cláusula join](../language-reference/keywords/join-clause.md)  
-[Ordenar os resultados de uma cláusula join](order-the-results-of-a-join-clause.md)  
+- [LINQ (Consulta Integrada à Linguagem)](index.md)  
+- [Cláusula join](../language-reference/keywords/join-clause.md)  
+- [Ordenar os resultados de uma cláusula join](order-the-results-of-a-join-clause.md)  

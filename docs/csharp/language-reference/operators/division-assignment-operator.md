@@ -7,12 +7,12 @@ helpviewer_keywords:
 - division assignment operator (/=) [C#]
 - /= (division assignment operator) [C#]
 ms.assetid: 50fc02b0-ee9c-4c3e-b58d-d591282caf1c
-ms.openlocfilehash: c31ff374e6af4c08c329a971fdd8af169e239395
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8fff048cc441181aa3f0e3c0c638d501aaf9de3f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171615"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43477939"
 ---
 # <a name="-operator-c-reference"></a>Operador /= (Referência de C#)
 O operador de atribuição de divisão.  
@@ -37,7 +37,8 @@ x = x / y
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csRefOperators#5](codesnippet/CSharp/division-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Operadores do C#](../../../csharp/language-reference/operators/index.md)

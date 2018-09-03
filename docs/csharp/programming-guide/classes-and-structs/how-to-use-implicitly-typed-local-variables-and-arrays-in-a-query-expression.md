@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: c2bc990f9dda4b91928c176cf7f10bfb349ba343
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef3a411bc51fcc5f644f9d53bde67f7116289678
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319319"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481573"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Como usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta (Guia de Programação em C#)
 Será possível usar variáveis locais de tipo implícito sempre que você desejar que o compilador determine o tipo de uma variável local. É necessário usar variáveis locais de tipo implícito para armazenar tipos anônimos, usados frequentemente em expressões de consulta. Os exemplos a seguir ilustram usos obrigatórios e opcionais de variáveis locais de tipo implícito em consultas.  
@@ -29,6 +29,6 @@ Será possível usar variáveis locais de tipo implícito sempre que você desej
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
  [Métodos de Extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Consulta Integrada à Linguagem)](../../../csharp/linq/index.md)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

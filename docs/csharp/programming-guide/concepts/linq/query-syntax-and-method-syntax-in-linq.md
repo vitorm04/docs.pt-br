@@ -6,11 +6,11 @@ helpviewer_keywords:
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
 ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336346"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465879"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxe de consulta e sintaxe de método em LINQ (C#)
 A maioria das consultas na documentação introdutória da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] (Consulta Integrada à Linguagem) é escrita usando a sintaxe de consulta declarativa da LINQ. No entanto, a sintaxe de consulta deve ser convertida em chamadas de método para o CLR (Common Language Runtime) do .NET quando o código for compilado. Essas chamadas de método invocam os operadores de consulta padrão, que têm nomes como `Where`, `Select`, `GroupBy`, `Join`, `Max` e `Average`. Você pode chamá-los diretamente usando a sintaxe de método em vez da sintaxe de consulta.  

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070948"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464131"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de dados (biblioteca de tarefas paralelas)
 *Paralelismo de dados* refere-se a cenários em que a mesma operação é realizada simultaneamente (ou seja, em paralelo) em elementos em uma matriz ou coleção de origem. Nas operações paralelas de dados, a coleção de origem é particionada de modo que múltiplos threads possam operar em segmentos diferentes simultaneamente.  
   
- A biblioteca de paralelismo de tarefas (TPL) suporta paralelismo de dados por meio da classe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Essa classe fornece implementações paralelas baseadas em métodos dos loops [for](~/docs/csharp/language-reference/keywords/for.md) e [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` e `For Each` no Visual Basic). Você grava a lógica do loop para um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> tanto quanto você gravaria um loop sequencial. Você não precisa criar threads ou listar itens de trabalho. Nos loops básicos, você não precisa usar bloqueios. A TPL manipula todo o trabalho de nível baixo para você. Para obter informações detalhadas sobre o uso do <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e do <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, baixe o documento [Padrões da programação paralela: Noções básicas e aplicação de padrões paralelos, com o .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222). O exemplo de código a seguir mostra um loop `foreach` simples e seu equivalente paralelo.  
+ A biblioteca de paralelismo de tarefas (TPL) suporta paralelismo de dados por meio da classe <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Essa classe fornece implementações paralelas baseadas em métodos dos loops [for](~/docs/csharp/language-reference/keywords/for.md) e [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` e `For Each` no Visual Basic). Você grava a lógica do loop para um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> tanto quanto você gravaria um loop sequencial. Você não precisa criar threads ou listar itens de trabalho. Nos loops básicos, você não precisa usar bloqueios. A TPL manipula todo o trabalho de nível baixo para você. Para obter informações detalhadas sobre o uso do <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e do <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, baixe o documento [Padrões da programação paralela: Noções básicas e aplicação de padrões paralelos, com o .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222). O exemplo de código a seguir mostra um loop `foreach` simples e seu equivalente paralelo.  
   
 > [!NOTE]
 >  Esta documentação usa expressões lambda para definir delegados na TLP. Se você não estiver familiarizado com expressões lambda no C# ou no Visual Basic, veja [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "37070948"
  Quando um loop paralelo é executado, o TPL particiona a fonte de dados para que o loop possa operar em várias partes simultaneamente. Nos bastidores, o Agendador de Tarefas particiona a tarefa com base na carga de trabalho e recursos do sistema. Quando possível, o agendador redistribui o trabalho entre vários threads e processadores se a carga de trabalho ficar desequilibrada.  
   
 > [!NOTE]
->  Você também pode fornecer seu próprio particionador ou agendador personalizado. Para obter mais informações, confira [Particionadores personalizados para PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) e [Agendadores de tarefas](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+>  Você também pode fornecer seu próprio particionador ou agendador personalizado. Para obter mais informações, confira [Particionadores personalizados para PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) e [Agendadores de tarefas](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
   
  Ambos os métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> têm várias sobrecargas que permitem parar ou interromper a execução do loop, monitorar o estado do loop em outros threads, manter o estado local do thread, finalizar os objetos locais do thread, controlar o grau de simultaneidade, e assim por diante. Os tipos auxiliares que permitem essa funcionalidade incluem <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken>, e <xref:System.Threading.CancellationTokenSource>.  
   

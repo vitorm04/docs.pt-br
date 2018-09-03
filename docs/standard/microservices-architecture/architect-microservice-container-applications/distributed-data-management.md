@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998678"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480659"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -43,7 +43,7 @@ No entanto, se o design do aplicativo envolver a agregação constante de inform
 
 Como mencionado anteriormente, os dados pertencentes a cada microsserviço são privados desse microsserviço e só podem ser acessados usando a API desse microsserviço. Portanto, um desafio apresentado é como implementar processos de negócios de ponta a ponta, mantendo a consistência entre vários microsserviços.
 
-Para analisar o problema, vamos examinar um exemplo do [Aplicativo de referência eShopOnContainers](http://aka.ms/eshoponcontainers). O microsserviço de catálogo mantém informações sobre todos os produtos, incluindo o nível de estoque. O microsserviço de pedidos gerencia os pedidos e precisa verificar se um novo pedido não excede o estoque de produtos disponíveis no catálogo. (Ou o cenário poderá envolver uma lógica que abranja produtos pendentes). Em uma versão monolítica hipotética deste aplicativo, o subsistema de pedidos pode simplesmente usar uma transação de ACID (atomicidade, consistência, isolamento, durabilidade) para verificar o estoque disponível, criar o pedido na tabela de pedidos e atualizar o estoque disponível na tabela de produtos.
+Para analisar o problema, vamos examinar um exemplo do [Aplicativo de referência eShopOnContainers](https://aka.ms/eshoponcontainers). O microsserviço de catálogo mantém informações sobre todos os produtos, incluindo o nível de estoque. O microsserviço de pedidos gerencia os pedidos e precisa verificar se um novo pedido não excede o estoque de produtos disponíveis no catálogo. (Ou o cenário poderá envolver uma lógica que abranja produtos pendentes). Em uma versão monolítica hipotética deste aplicativo, o subsistema de pedidos pode simplesmente usar uma transação de ACID (atomicidade, consistência, isolamento, durabilidade) para verificar o estoque disponível, criar o pedido na tabela de pedidos e atualizar o estoque disponível na tabela de produtos.
 
 No entanto, em um aplicativo baseado em microsserviços, as tabelas Pedido e Produto pertencem aos seus respectivos microsserviços. Um microsserviço nunca deve incluir bancos de dados pertencentes a outro microsserviço em suas próprias transações ou consultas, conforme é mostrado na Figura 4-9.
 
@@ -51,7 +51,7 @@ No entanto, em um aplicativo baseado em microsserviços, as tabelas Pedido e Pro
 
 **Figura 4-9**. Um microsserviço não pode acessar diretamente uma tabela em outro microsserviço
 
-O microsserviço de pedidos não deve atualizar a tabela de produtos diretamente, porque a tabela de produtos é de propriedade do microsserviço de catálogo. Para fazer uma atualização no microsserviço de catálogo, o microsserviço de pedidos somente deve usar a comunicação assíncrona, como eventos de integração (comunicação baseada em mensagem e em evento). É assim que o aplicativo de referência [eShopOnContainers](http://aka.ms/eshoponcontainers) executa esse tipo de atualização.
+O microsserviço de pedidos não deve atualizar a tabela de produtos diretamente, porque a tabela de produtos é de propriedade do microsserviço de catálogo. Para fazer uma atualização no microsserviço de catálogo, o microsserviço de pedidos somente deve usar a comunicação assíncrona, como eventos de integração (comunicação baseada em mensagem e em evento). É assim que o aplicativo de referência [eShopOnContainers](https://aka.ms/eshoponcontainers) executa esse tipo de atualização.
 
 Conforme indicado pelo [Teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), é necessário escolher entre a disponibilidade e a coerência forte de ACID. A maioria dos cenários baseados em microsserviço exigem disponibilidade e alta escalabilidade em vez de coerência forte. Os aplicativos críticos precisam permanecer em funcionamento e os desenvolvedores podem contornar a coerência forte usando técnicas para trabalhar com consistência eventual ou fraca. Essa é a abordagem usada pela maioria das arquiteturas baseadas em microsserviço.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: ec25f9c1f2ef943db41bcfa20c8efd1d05866acd
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472819"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474246"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opções do compilador C#)
 
@@ -42,8 +42,9 @@ As opções **-publicsign** e **-delaysign** são mutuamente exclusivas.
 1. Modifique a propriedade **Apenas adiar a assinatura**.
 
 ## <a name="see-also"></a>Consulte também
- [Opção -delaysign do compilador C#](delaysign-compiler-option.md)  
- [Opção -keyfile do compilador C#](keyfile-compiler-option.md)  
- [Opção -keycontainer do compilador C#](keycontainer-compiler-option.md)  
- [Opções do compilador de C#](index.md)  
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opção -delaysign do compilador C#](delaysign-compiler-option.md)  
+- [Opção -keyfile do compilador C#](keyfile-compiler-option.md)  
+- [Opção -keycontainer do compilador C#](keycontainer-compiler-option.md)  
+- [Opções do compilador de C#](index.md)  
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961372"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482503"
 ---
 # <a name="command-line-build-with-cscexe"></a>Build pela linha de comando com csc.exe
 Você pode invocar o compilador do C#, digitando o nome do seu arquivo executável (*csc.exe*) em um prompt de comando.
@@ -96,11 +96,12 @@ csc -target:library -out:Something.xyz *.cs
 Não há arquivos de objeto (*.obj*) criados como resultado da invocação do compilador do C#. Os arquivos de saída são criados diretamente. Como um resultado disso, o compilador do C# não precisa de um vinculador.
 
 ## <a name="see-also"></a>Consulte também
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [Como exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Como acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+- [Opções do compilador de C# listadas por categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+- [Como exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Como acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

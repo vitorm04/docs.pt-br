@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 598acd746949369ffec7d153b6870bebeeafe532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398785"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463559"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflexão no .NET Framework para aplicativos da Windows Store
-Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](http://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  
+Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework inclui um conjunto de membros e tipos de reflexão para uso em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Esses tipos e membros estão disponíveis no .NET Framework completo, bem como no [.NET para aplicativos da Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). Este documento explica as principais diferenças entre eles e seus equivalentes no .NET Framework 4 e em versões anteriores.  
   
  Se você estiver criando um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], deverá usar os membros e tipos de reflexão no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Esses membros e tipos também estão disponíveis, mas não são obrigatórios, para uso em aplicativos da área de trabalho, portanto você pode usar o mesmo código para os dois tipos de aplicativos.  
   
@@ -36,11 +36,11 @@ Desde o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], o .NET Framework i
  Em um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], o acesso a alguns membros e tipos do .NET Framework é restrito. Por exemplo, você não pode chamar os métodos do .NET Framework que não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], usando um objeto <xref:System.Reflection.MethodInfo>. Além disso, determinados tipos e membros que não são considerados seguros dentro do contexto de um aplicativo [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] são bloqueados, como são os membros <xref:System.Runtime.InteropServices.Marshal> e <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal>. Essa restrição afeta apenas os tipos e membros do .NET Framework. Você pode chamar seu código ou o código de terceiros como faria normalmente.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa os tipos e membros de reflexão no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] para recuperar os métodos e propriedades do tipo <xref:System.Globalization.Calendar>, incluindo os métodos e propriedades herdados. Para executar esse código, cole-o no arquivo de código para uma página [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] que contém um controle [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) chamado `textblock1` em um projeto chamado Reflexão. Se você colar esse código dentro de um projeto com um nome diferente, certifique-se de alterar o nome do namespace para corresponder ao seu projeto.  
+ Este exemplo usa os tipos e membros de reflexão no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] para recuperar os métodos e propriedades do tipo <xref:System.Globalization.Calendar>, incluindo os métodos e propriedades herdados. Para executar esse código, cole-o no arquivo de código para uma página [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] que contém um controle [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) chamado `textblock1` em um projeto chamado Reflexão. Se você colar esse código dentro de um projeto com um nome diferente, certifique-se de alterar o nome do namespace para corresponder ao seu projeto.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [.NET para aplicativos da Windows Store – APIs com suporte](http://go.microsoft.com/fwlink/?LinkID=225700)
+ [.NET para aplicativos da Windows Store – APIs com suporte](https://go.microsoft.com/fwlink/?LinkID=225700)

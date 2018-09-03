@@ -8,35 +8,35 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932843"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484747"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
 
 Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#redistributable-packages). Também é possível baixar os pacotes redistribuíveis e os pacotes de idiomas das seguintes páginas do Centro de Download da Microsoft:
 
-- .NET Framework 4.7.2 para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=863262) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=863265))
+- .NET Framework 4.7.2 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=863262) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
-- .NET Framework 4.7.1 para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=852095) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+- .NET Framework 4.7.1 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=852095) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-- .NET Framework 4.7 para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=825299) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+- .NET Framework 4.7 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=825299) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=780597) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=780601))
+- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=780597) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=671729) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=671744))
+- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=671729) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/?LinkId=528222) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=528232))
+- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/?LinkId=528222) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=528232))
 
-- .NET Framework 4.5.2 para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/p/?LinkId=397703) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=397706))
+- .NET Framework 4.5.2 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/p/?LinkId=397703) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=397706))
 
-- .NET Framework 4.5.1 para todos os sistemas operacionais ([instalador da Web](http://go.microsoft.com/fwlink/p/?LinkId=310158) ou [instalador offline](http://go.microsoft.com/fwlink/p/?LinkId=310159))
+- .NET Framework 4.5.1 para todos os sistemas operacionais ([instalador da Web](https://go.microsoft.com/fwlink/p/?LinkId=310158) ou [instalador offline](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
  Observações importantes:
 
@@ -55,9 +55,9 @@ Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#
 
 - A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], seus usuários podem exibir uma lista dos aplicativos .NET Framework em execução durante a instalação e encerrá-los com facilidade. Isso pode ajudar a evitar reinicializações do sistema causadas por instalações do .NET Framework. Consulte [Reduzindo reinicializações do sistema](../../../docs/framework/deployment/reducing-system-restarts.md).
 
-- A desinstalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou de uma de suas versões de ponto também remove arquivos [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] preexistentes. Se quiser voltar para o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], você deverá reinstalá-lo e todas as suas atualizações. (Confira [Instalação do .NET Framework 4](http://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
+- A desinstalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou de uma de suas versões de ponto também remove arquivos [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] preexistentes. Se quiser voltar para o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], você deverá reinstalá-lo e todas as suas atualizações. (Confira [Instalação do .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
 
-- O .NET Framework 4.5 redistribuível foi atualizado em 9 de outubro de 2012 para corrigir um problema relacionado a um carimbo de data/hora incorreto em um certificado digital, que fazia com que a assinatura digital em arquivos produzidos e assinados pela Microsoft expirassem prematuramente. Caso você tenha instalado anteriormente o pacote redistribuível do .NET Framework 4.5 de 16 de agosto de 2012, recomendamos atualizar a cópia com o redistribuível mais recente no [Centro de Download da Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=245484). Para saber mais sobre esse problema, consulte [Comunicado de Segurança da Microsoft 2749655](http://technet.microsoft.com/security/advisory/2749655).
+- O .NET Framework 4.5 redistribuível foi atualizado em 9 de outubro de 2012 para corrigir um problema relacionado a um carimbo de data/hora incorreto em um certificado digital, que fazia com que a assinatura digital em arquivos produzidos e assinados pela Microsoft expirassem prematuramente. Caso você tenha instalado anteriormente o pacote redistribuível do .NET Framework 4.5 de 16 de agosto de 2012, recomendamos atualizar a cópia com o redistribuível mais recente no [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Para saber mais sobre esse problema, consulte [Comunicado de Segurança da Microsoft 2749655](https://technet.microsoft.com/security/advisory/2749655).
 
  Para obter informações sobre como um administrador do sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede, consulte [Guia de implantação para administradores](../../../docs/framework/deployment/guide-for-administrators.md).
 
@@ -75,12 +75,12 @@ Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#
 
 ||Instalador da Web|Instalador offline|
 |-|-------------------|-----------------------|
-|Arquivo de download|.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|Arquivo de download|.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
 |É necessária conexão com a Internet?|Sim|Não|
 |Tamanho do download|Menor (inclui somente o instalador para a plataforma de destino)*|Maior*|
 |Pacotes de idiomas|Inclusos**|Devem ser [instalados separadamente](#chain_langpack), a menos que você use o pacote destinado a todos os sistemas operacionais|
 |Método de implantação|Oferece suporte a todos os métodos:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX (Windows Installer XML)](#wix)<br />- [Instalação manual](#installing_manually)<br />- [Instalação personalizada (encadeamento)](#chaining)|Oferece suporte a todos os métodos:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX (Windows Installer XML)](#wix)<br />- [Instalação manual](#installing_manually)<br />- [Instalação personalizada (encadeamento)](#chaining)|
-|Local do download para implantação do ClickOnce|Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Seu próprio servidor ou o Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Local do download para implantação do ClickOnce|Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Seu próprio servidor ou o Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* O instalador offline é maior porque ele contém os componentes para todas as plataformas de destino. Ao terminar de executar a instalação, o sistema operacional Windows armazena em cache somente o instalador que foi utilizado. Se o instalador offline for excluído após a instalação, o espaço em disco usado será o mesmo que aquele usado pelo instalador da Web. Se a ferramenta usada (por exemplo, [InstallAware](#installaware-deployment) ou [InstallShield](#installshield-deployment)) para criar o programa de instalação do seu aplicativo oferecer uma pasta de arquivo de instalação que é removida após a instalação, o instalador offline poderá ser excluído automaticamente colocando-o na pasta de instalação.
 
@@ -281,23 +281,23 @@ Type: DWORD
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>Encadeando os pacotes de idiomas para a instalação do seu aplicativo
  O .NET Framework oferece um conjunto de arquivos executáveis de pacotes de idiomas independentes que contém recursos localizados para culturas específicas. Os pacotes de idiomas estão disponíveis no Centro de Download da Microsoft:
 
-- [Pacotes de idiomas do .NET Framework 4.7.2](http://go.microsoft.com/fwlink/p/?LinkId=863258)
+- [Pacotes de idiomas do .NET Framework 4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863258)
 
-- [Pacotes de linguagem do .NET Framework 4.7.1](http://go.microsoft.com/fwlink/p/?LinkId=852090)
+- [Pacotes de linguagem do .NET Framework 4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090)
 
-- [Pacotes de idioma do .NET Framework 4.7](http://go.microsoft.com/fwlink/p/?LinkId=825306)
+- [Pacotes de idioma do .NET Framework 4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [Pacotes de idioma do .NET Framework 4.6.2](http://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [Pacotes de idioma do .NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
-- [Pacotes de idioma do .NET Framework 4.6.1](http://go.microsoft.com/fwlink/p/?LinkId=671747)
+- [Pacotes de idioma do .NET Framework 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
-- [Pacotes de idioma do .NET Framework 4.6](http://go.microsoft.com/fwlink/p/?LinkId=528314)
+- [Pacotes de idioma do .NET Framework 4.6](https://go.microsoft.com/fwlink/p/?LinkId=528314)
 
-- [Pacotes de idioma do .NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397701)
+- [Pacotes de idioma do .NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397701)
 
-- [Pacotes de idioma do .NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=322101)
+- [Pacotes de idioma do .NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=322101)
 
-- [Pacotes de idioma do .NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [Pacotes de idioma do .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 > [!IMPORTANT]
 > Os pacotes de idiomas não contêm os componentes do .NET Framework necessários para executar um aplicativo; você deve instalar o .NET Framework usando o instalador da Web ou offline antes de instalar um pacote de idiomas.
@@ -331,18 +331,18 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="download-error-codes"></a>Códigos de erro de download
  Veja o conteúdo a seguir:
 
-- [Códigos de erro do BITS (Serviço de Transferência Inteligente em Segundo Plano)](http://go.microsoft.com/fwlink/?LinkId=180946)
+- [Códigos de erro do BITS (Serviço de Transferência Inteligente em Segundo Plano)](https://go.microsoft.com/fwlink/?LinkId=180946)
 
-- [Códigos de erro do moniker de URL](http://go.microsoft.com/fwlink/?LinkId=180947)
+- [Códigos de erro do moniker de URL](https://go.microsoft.com/fwlink/?LinkId=180947)
 
-- [Códigos de erro WinHttp](http://go.microsoft.com/fwlink/?LinkId=180948)
+- [Códigos de erro WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
 
 #### <a name="other-error-codes"></a>Outros códigos de erro
  Veja o conteúdo a seguir:
 
-- [Códigos de erro do Windows Installer](http://go.microsoft.com/fwlink/?LinkId=180949)
+- [Códigos de erro do Windows Installer](https://go.microsoft.com/fwlink/?LinkId=180949)
 
-- [Códigos de resultado do Windows Update Agent](http://go.microsoft.com/fwlink/?LinkId=180951)
+- [Códigos de resultado do Windows Update Agent](https://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>Desinstalando o .NET Framework
  A partir do [!INCLUDE[win8](../../../includes/win8-md.md)], é possível desinstalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou uma de suas versões de ponto usando **Ativar e desativar recursos do Windows** no Painel de Controle. Em versões mais antigas do Windows, é possível desinstalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou uma de suas versões de ponto usando **Adicionar ou Remover Programas** no Painel de Controle.
@@ -358,11 +358,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |Opção|Descrição|
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
-|**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"**. Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](http://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|
+|**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"**. Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|
 |**/LCID** `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:** use essa opção somente com o instalador da Web.|
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
-|**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se essa opção for usada, o aplicativo de encadeamento precisa capturar o código de retorno e lidar com a reinicialização (consulte [Obtendo informações do progresso de um pacote de instalação](http://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN).|
+|**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se essa opção for usada, o aplicativo de encadeamento precisa capturar o código de retorno e lidar com a reinicialização (consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN).|
 |**/passive**|Define o modo passivo. Exibe a barra de progresso para indicar se a instalação está em progresso, mas não exibe nenhuma solicitação ou mensagem de erro ao usuário. Nesse modo, quando encadeado por um programa de instalação, o pacote de encadeamento deve lidar com [códigos de retorno](#return-codes).|
 |**/pipe**|Cria um canal de comunicação para permitir que um pacote de encadeamento obtenha o progresso.|
 |**/promptrestart**|Somente modo passivo; se o programa de instalação exigir reinicialização, o usuário será avisado. Essa opção exigirá a interação do usuário se uma reinicialização for necessária.|

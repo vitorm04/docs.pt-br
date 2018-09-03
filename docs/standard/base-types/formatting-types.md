@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579841"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484858"
 ---
 # <a name="formatting-types-in-net"></a>Tipos de formatação no .NET
 <a name="Introduction"></a> Formatação é o processo de conversão de uma instância de classe, estrutura ou valor de enumeração em sua representação de cadeia de caracteres, de forma que a cadeia de caracteres resultante possa ser exibida aos usuários ou desserializada para restaurar o tipo de dados original. Essa conversão pode apresentar uma série de desafios:  
@@ -120,7 +120,7 @@ ms.locfileid: "33579841"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  Começando com [!INCLUDE[win81](../../../includes/win81-md.md)], o [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclui uma interface [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) com um único método, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), que fornece suporte a formatação padrão. No entanto, recomendamos que tipos gerenciados não implementem a interface `IStringable`. Para saber mais, veja a seção "A interface [!INCLUDE[wrt](../../../includes/wrt-md.md)] e `IStringable`" na página de referência <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+>  Começando com [!INCLUDE[win81](../../../includes/win81-md.md)], o [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclui uma interface [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) com um único método, [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), que fornece suporte a formatação padrão. No entanto, recomendamos que tipos gerenciados não implementem a interface `IStringable`. Para saber mais, veja a seção "A interface [!INCLUDE[wrt](../../../includes/wrt-md.md)] e `IStringable`" na página de referência <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
   
  Já que todos os tipos, com a exceção das interfaces, são derivados de <xref:System.Object>, essa funcionalidade é fornecida automaticamente para suas estruturas ou classes personalizadas. No entanto, a funcionalidade oferecida pelo método `ToString` padrão é limitada: embora ele identifique o tipo, não fornece nenhuma informação sobre uma instância do tipo. Para fornecer uma representação de cadeia de caracteres de um objeto que fornece informações sobre o objeto, você deve substituir o método `ToString`.  
   

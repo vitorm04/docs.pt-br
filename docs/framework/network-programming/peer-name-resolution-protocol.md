@@ -5,12 +5,12 @@ ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 01e0bd36b35319c90fc46d8f5f97161147852c7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396994"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482337"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
@@ -65,4 +65,4 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
  [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Amostra de tecnologia PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)
+ [Amostra de tecnologia PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

@@ -5,12 +5,12 @@ description: Saiba como instalar o .NET Framework no Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f912013773759c6c8f52734f74bdca867f60e7a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386903"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416448"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalar o .NET Framework no Windows 8 e Windows Server 2012
 
@@ -18,7 +18,7 @@ O .NET Framework é necessário para executar muitos aplicativos no Windows. Use
 
 ![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Há suporte para ele no Windows Server 2012, mas não no Windows 8. Ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Há suporte para ele no Windows Server 2012, mas não no Windows 8. Ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -27,7 +27,7 @@ Essas instruções ajudarão você a instalar as versões do .NET Framework nece
 
 Há suporte para o .NET Framework 4.7.2 no Windows Server 2012. Não há suporte para ele no Windows 8.
 
-O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
+O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

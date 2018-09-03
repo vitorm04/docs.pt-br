@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744376"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468992"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Como instalar um assembly no cache de assemblies global
 Há duas maneiras de instalar um assembly com nome forte no GAC (Cache de Assembly Global):  
@@ -23,7 +23,7 @@ Há duas maneiras de instalar um assembly com nome forte no GAC (Cache de Assemb
 > [!IMPORTANT]
 >  Apenas os assemblies com nome forte podem ser instalados no GAC. Para obter informações sobre como criar um assembly de nome forte, consulte [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
--   Usando o [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).  
+-   Usando o [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
   
      Você faz isso no Visual Studio 2012 e no Visual Studio 2013 ao criar um projeto do InstallShield Limited Edition.  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [Como remover um assembly do cache de assembly global](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [implantação do Windows Installer](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [implantação do Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

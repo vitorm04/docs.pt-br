@@ -3,11 +3,11 @@ title: Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 ms.openlocfilehash: 742b0843e3287bd8de6c7b1f5d3706d66e5d344f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340041"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418260"
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#)
 Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  

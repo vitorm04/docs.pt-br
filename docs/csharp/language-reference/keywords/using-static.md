@@ -7,11 +7,11 @@ ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929672"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43422673"
 ---
 # <a name="using-static-directive-c-reference"></a>Diretiva using static (Referência de C#)
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e54dcb585c06f2bf49c41f763e03e5624a033442
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388902"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43424071"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
-O instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa o [Gerenciador de Reinicialização](http://go.microsoft.com/fwlink/?LinkId=231425) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, consulte [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+O instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa o [Gerenciador de Reinicialização](https://go.microsoft.com/fwlink/?LinkId=231425) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, consulte [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Motivos para uma reinicialização  
  A instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] exigirá uma reinicialização do sistema se um aplicativo do .NET Framework 4 estiver em uso durante a instalação. Isso ocorre porque o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] substitui arquivos do .NET Framework 4 e requer que esses arquivos estejam disponíveis durante a instalação. Em muitos casos, a reinicialização pode ser evitada detectando e fechando preventivamente aplicativos do .NET Framework 4 que estão em uso. No entanto, alguns aplicativos do sistema não devem ser fechados. Nesses casos, a reinicialização não pode ser evitada.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ed0d4752eb42f0bd3df8167d498b99d7af1080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396913"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483821"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Como definir um tipo genérico com a emissão de reflexão
 Este tópico mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições de classe, restrições de interface e restrições especiais aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.  
@@ -137,5 +137,5 @@ Este tópico mostra como criar um tipo genérico simples com dois parâmetros de
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Usando a emissão de reflexão](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Cenários de assemblies dinâmicos para a emissão de reflexão](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Usando a emissão de reflexão](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Cenários de assemblies dinâmicos para a emissão de reflexão](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

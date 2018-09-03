@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f310e5fe45315dfa41d596c92d9412dc6b3bc125
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567556"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43415682"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -39,7 +39,7 @@ Depois de executar a análise, você verá o relatório de portabilidade do .NET
 
 ![Relatório de portabilidade](./media/portability-analyzer/portability-report.png)
 
-Não quer usar o Visual Studio? Também é possível usar o Portability Analyzer no prompt de comando. Basta baixar o [API Portability Analyzer](http://www.microsoft.com/download/details.aspx?id=42678).
+Não quer usar o Visual Studio? Também é possível usar o Portability Analyzer no prompt de comando. Basta baixar o [API Portability Analyzer](https://www.microsoft.com/download/details.aspx?id=42678).
 
 *   Digite o seguinte comando para analisar o diretório atual: `\...\ApiPort.exe analyze -f .`
 *   Para analisar uma lista específica de arquivos. dll, digite o seguinte comando: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`

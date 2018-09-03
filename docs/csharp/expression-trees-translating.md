@@ -3,12 +3,12 @@ title: Movendo árvores de expressão
 description: Aprenda a visitar cada nó em uma árvore de expressão, enquanto estiver criando uma cópia modificada dessa árvore de expressão.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 9483cbe75b4bf5a38dd791633c852eb0b8473944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217110"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463717"
 ---
 # <a name="translating-expression-trees"></a>Movendo árvores de expressão
 
@@ -191,7 +191,7 @@ Embora a resposta final seja a mesma, a forma de percorrer a árvore é completa
 
 ## <a name="learning-more"></a>Aprendendo mais
 
-Este exemplo mostra um pequeno subconjunto do código que você compilaria para percorrer e interpretar os algoritmos representados por uma árvore de expressão. Para obter uma discussão completa a respeito de todo o trabalho necessário para compilar uma biblioteca de finalidade geral que move árvores de expressão para outra linguagem, leia [esta série](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) escrita por Matt Warren. Ele entra em detalhes de como mover qualquer código que você pode encontrar em uma árvore de expressão.
+Este exemplo mostra um pequeno subconjunto do código que você compilaria para percorrer e interpretar os algoritmos representados por uma árvore de expressão. Para obter uma discussão completa a respeito de todo o trabalho necessário para compilar uma biblioteca de finalidade geral que move árvores de expressão para outra linguagem, leia [esta série](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) escrita por Matt Warren. Ele entra em detalhes de como mover qualquer código que você pode encontrar em uma árvore de expressão.
 
 Espero que você tenha visto o verdadeiro poder das árvores de expressão.
 Você pode examinar um conjunto de códigos, fazer as alterações que desejar nesse código e executar a versão modificada. Como as árvores de expressão são imutáveis, você pode criar novas árvores usando os componentes de árvores existentes. Isso minimiza a quantidade de memória necessária para criar árvores de expressão modificadas.

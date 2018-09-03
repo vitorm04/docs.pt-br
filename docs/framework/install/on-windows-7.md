@@ -5,12 +5,12 @@ description: Saiba como instalar o .NET Framework no Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 4f63bed0bad41c31bd28ae63b50440e4144a9bda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387972"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476242"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalar o .NET Framework no Windows 7 SP1 e Windows Server 2008 R2
 
@@ -18,14 +18,14 @@ O .NET Framework é necessário para executar muitos aplicativos no Windows. Use
 
 ![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Há suporte para ele no Windows 7 SP1 e no Windows Server 2008 R2 e ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Há suporte para ele no Windows 7 SP1 e no Windows Server 2008 R2 e ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
 [Baixe o .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
+O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
