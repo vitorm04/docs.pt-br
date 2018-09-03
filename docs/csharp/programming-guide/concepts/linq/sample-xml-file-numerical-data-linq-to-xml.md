@@ -3,16 +3,16 @@ title: 'Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
 ms.openlocfilehash: 6528175407c29a17667c33769643d15502e98f90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327587"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43387309"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="8cd0b-102">Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8cd0b-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="8cd0b-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8cd0b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8cd0b-104">Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.</span><span class="sxs-lookup"><span data-stu-id="8cd0b-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="c4724-102">Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c4724-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="c4724-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c4724-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c4724-104">Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.</span><span class="sxs-lookup"><span data-stu-id="c4724-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="8cd0b-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="8cd0b-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="c4724-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="c4724-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -55,5 +55,5 @@ ms.locfileid: "33327587"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8cd0b-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8cd0b-106">See Also</span></span>  
- [<span data-ttu-id="8cd0b-107">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8cd0b-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c4724-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c4724-106">See Also</span></span>  
+ [<span data-ttu-id="c4724-107">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c4724-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
