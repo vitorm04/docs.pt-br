@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792367"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43452788"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Instruções passo a passo da linguagem Visual Basic
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -47,7 +47,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Implementando a herança com objetos COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Demonstra como usar o Visual Basic 6.0 para criar um objeto COM contendo uma classe e, em seguida, usá-la como uma classe base em Visual Basic.  
   
- [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
+ [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Mostra como criar um aplicativo multi-threaded que pesquisa um arquivo de texto para ocorrências de uma palavra.  
   
  [Determinando onde My.Application.Log grava informações](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
@@ -62,7 +62,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Criando ouvintes de log personalizados](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Demonstra como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.  
   
- [Inserindo tipos de assemblies gerenciados](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Inserindo tipos de assemblies gerenciados](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  Descreve como criar um assembly e um programa cliente que incorpora tipos dele.  
   
  [Validando senhas complexas (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,8 +77,8 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Manipulando arquivos usando métodos do .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Demonstra como usar métodos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para determinar informações sobre um arquivo, pesquisar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  
   
- [Mantendo um objeto no Visual Studio](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Mantendo um objeto no Visual Studio](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  Demonstra como criar um objeto simples e manter seus dados em um arquivo.  
   
- [Suporte test-first com o recurso de geração do uso](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Suporte test-first com o recurso de geração do uso](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  Demonstra como realizar o desenvolvimento de test-first, no qual você primeiro escreve testes de unidade e, em seguida, escreve o código-fonte para fazer os testes terem êxito.

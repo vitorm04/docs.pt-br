@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: e7f6791c56019508406448267237cf0d2d261205
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 008b887e96f077e64b012d224c7c031a9b65027e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753319"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396002"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Alterações significativas do Visual Basic no Visual Studio
-Para obter a documentação mais recente do Visual Studio 2017, consulte a [documentação do Visual Studio 2017](http://docs.microsoft.com/visualstudio/).
+Para obter a documentação mais recente do Visual Studio 2017, consulte a [documentação do Visual Studio 2017](https://docs.microsoft.com/visualstudio/).
 
 Nenhuma alteração do Visual Basic no Visual Studio 2015 impedirá que um aplicativo criado no Visual Basic do Visual Studio 2013 compile ou altere o comportamento de tempo de execução desse aplicativo.  
   
