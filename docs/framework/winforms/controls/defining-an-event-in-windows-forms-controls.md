@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 552f2b8441ae5323f55f236fabb9f50f8f8b5ab0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524027"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466263"
 ---
-# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="704ac-102">Definindo um evento em controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="704ac-102">Defining an Event in Windows Forms Controls</span></span>
-<span data-ttu-id="704ac-103">Para obter detalhes sobre como definir eventos personalizados, consulte [eventos](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="704ac-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="704ac-104">Se você definir um evento que não tenha dados associados, use o tipo de base para dados de eventos, <xref:System.EventArgs> e use <xref:System.EventHandler> como o delegado do evento.</span><span class="sxs-lookup"><span data-stu-id="704ac-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="704ac-105">Tudo o que resta fazer é definir um membro de evento e um protegido `On` *EventName* método que gera o evento.</span><span class="sxs-lookup"><span data-stu-id="704ac-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="bdb9c-102">Definindo um evento em controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bdb9c-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="bdb9c-103">Para obter detalhes sobre como definir eventos personalizados, consulte [eventos](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="bdb9c-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="bdb9c-104">Se você definir um evento que não tenha dados associados, use o tipo de base para dados de eventos, <xref:System.EventArgs> e use <xref:System.EventHandler> como o delegado do evento.</span><span class="sxs-lookup"><span data-stu-id="bdb9c-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="bdb9c-105">Tudo o que resta a fazer é definir um membro de evento e uma planilha protegida `On` *EventName* método que gera o evento.</span><span class="sxs-lookup"><span data-stu-id="bdb9c-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- <span data-ttu-id="704ac-106">O fragmento de código a seguir mostra como o controle personalizado `FlashTrackBar` define um evento personalizado, `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="704ac-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="704ac-107">Para o código completo para o `FlashTrackBar` de exemplo, consulte o [como: criar um Windows Forms que mostra andamento de controle](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="704ac-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
+ <span data-ttu-id="bdb9c-106">O fragmento de código a seguir mostra como o controle personalizado `FlashTrackBar` define um evento personalizado, `ValueChanged`.</span><span class="sxs-lookup"><span data-stu-id="bdb9c-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="bdb9c-107">Para o código completo para o `FlashTrackBar` de exemplo, consulte a [como: criar um Windows Forms controle que mostra o progresso](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="bdb9c-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -69,15 +69,14 @@ public class FlashTrackBar : Control {
    // The protected method that raises the ValueChanged  
    // event when the value has actually   
    // changed. Derived controls can override this method.    
-   protected virtual void OnValueChanged(EventArgs e) {  
-      if (ValueChanged != null) {  
-         ValueChanged(this, e);  
-      }  
+   protected virtual void OnValueChanged(EventArgs e) 
+   {  
+       ValueChanged?.Invoke(this, e);  
    }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="704ac-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="704ac-108">See Also</span></span>  
- [<span data-ttu-id="704ac-109">Eventos em controles do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="704ac-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
- [<span data-ttu-id="704ac-110">Eventos</span><span class="sxs-lookup"><span data-stu-id="704ac-110">Events</span></span>](../../../../docs/standard/events/index.md)  
- [<span data-ttu-id="704ac-111">Eventos</span><span class="sxs-lookup"><span data-stu-id="704ac-111">Events</span></span>](../../../../docs/standard/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="bdb9c-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bdb9c-108">See also</span></span>
+
+- [<span data-ttu-id="bdb9c-109">Eventos em controles do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bdb9c-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+- [<span data-ttu-id="bdb9c-110">Eventos</span><span class="sxs-lookup"><span data-stu-id="bdb9c-110">Events</span></span>](../../../../docs/standard/events/index.md)
