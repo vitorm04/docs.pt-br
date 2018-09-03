@@ -4,12 +4,12 @@ description: Conheça os novos recursos encontrados no .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935573"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392843"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -49,7 +49,7 @@ Várias ferramentas que estavam disponíveis apenas por projeto usando [`DotnetC
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    Observe a opção `--` que precede a opção `--verbose`. Isso delimita as opções passadas diretamente para o comando `dotnet watch` dos argumentos que são passados para o processo `dotnet` filho. Sem isso, a opção `--verbose` se aplica ao comando `dotnet watch`, não ao comando `dotnet build`.
   
    Para saber mais, confira [Desenvolver aplicativos ASP.NET Core usando dotnet watch](/aspnet/core/tutorials/dotnet-watch)
@@ -88,7 +88,7 @@ No SDK do .NET Core 2.1 (v 2.1.300), todas as operações de ferramentas usam o 
 
 ## <a name="roll-forward"></a>Efetuar roll forward
 
-Todos os aplicativos .NET Core iniciados com o .NET Core 2.0 efetuam roll forward automaticamente para a *versão secundária* mais recente instalada em um sistema. 
+Todos os aplicativos .NET Core iniciados com o .NET Core 2.0 efetuam roll forward automaticamente para a *versão secundária* mais recente instalada em um sistema.
 
 A partir do .NET Core 2.0, se a versão do .NET Core com a qual um aplicativo foi criado não estiver presente no tempo de execução, o aplicativo será executado automaticamente com a *versão secundária* do .NET Core instalada mais recente. Em outras palavras, se um aplicativo for criado com o .NET Core 2.0, e o .NET Core 2.0 não estiver presente no sistema do host, mas o .NET Core 2.1 estiver, o aplicativo será executado com o .NET Core 2.1.
 
@@ -233,6 +233,6 @@ No Linux e no macOS, só é possível configurar <xref:System.Net.Http.HttpClien
 
 ## <a name="see-also"></a>Consulte também
 
-[Novidades do .NET Core](index.md)  
-[Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-[Novidades do ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+* [Novidades do .NET Core](index.md)  
+* [Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
+* [Novidades do ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

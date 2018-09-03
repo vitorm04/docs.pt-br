@@ -4,12 +4,12 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: f60a1eaa7b869676dfbb67529e7878ca9b9ca34a
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314871"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43408391"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -120,9 +120,9 @@ Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cl
 
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. 
-The data is anonymous and doesn't include command-line arguments. 
-The data is collected by Microsoft and shared with the community. 
+The .NET Core tools collect usage data in order to help us improve your experience.
+The data is anonymous and doesn't include command-line arguments.
+The data is collected by Microsoft and shared with the community.
 You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>Consulte também
 
-[O que aprendemos com a telemetria do SDK do .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Fonte de referência de telemetria (repositório dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)  
-[Dados de uso do SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)  
+- [O que aprendemos com a telemetria do SDK do .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)
+- [Fonte de referência de telemetria (repositório dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [Dados de uso do SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

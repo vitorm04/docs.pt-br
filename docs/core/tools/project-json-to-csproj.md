@@ -4,12 +4,12 @@ description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: d262792cd6821d35dcaf2f4bb9c05625e1bcd2fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218797"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419409"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -17,8 +17,8 @@ Por [Nate McMaster](https://github.com/natemcmaster)
 
 Durante o desenvolvimento das ferramentas do .NET Core, foi feita uma importante alteração de design para que os arquivos *project.json* não tivessem mais suporte e, em vez disso, os projetos do .NET Core fossem movidos para o formato MSBuild/csproj.
 
-Este artigo mostra como as configurações em *project.json* são representadas no formato MSBuild/csproj para que você saiba como usar o novo formato e entenda as alterações feitas pelas ferramentas de migração ao atualizar o projeto para a última versão da ferramenta. 
- 
+Este artigo mostra como as configurações em *project.json* são representadas no formato MSBuild/csproj para que você saiba como usar o novo formato e entenda as alterações feitas pelas ferramentas de migração ao atualizar o projeto para a última versão da ferramenta.
+
 ## <a name="the-csproj-format"></a>O formato csproj
 
 O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir mostra o nó raiz de um projeto do .NET Core que usa o `Microsoft.NET.Sdk`. Para projetos Web, o SDK usado é `Microsoft.NET.Sdk.Web`.
@@ -32,6 +32,7 @@ O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir most
 ## <a name="common-top-level-properties"></a>Propriedades comuns de nível superior
 
 ### <a name="name"></a>name
+
 ```json
 {
   "name": "MyProjectName"
@@ -40,7 +41,7 @@ O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir most
 
 Não há mais suporte. Em csproj, isso é determinado pelo nome de arquivo do projeto, que é definido como o nome do diretório. Por exemplo, `MyProjectName.csproj`.
 
-Por padrão, o nome de arquivo do projeto também especifica o valor das propriedades `<AssemblyName>` e `<PackageId>`. 
+Por padrão, o nome de arquivo do projeto também especifica o valor das propriedades `<AssemblyName>` e `<PackageId>`.
 
 ```xml
 <PropertyGroup>
@@ -49,7 +50,8 @@ Por padrão, o nome de arquivo do projeto também especifica o valor das proprie
 </PropertyGroup>
 ```
 
-O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `buildOptions\outputName` tiver sido definida em project.json. Para obter mais informações, consulte [Outras opções comuns de build](#other-common-build-options).
+O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `buildOptions\outputName` tiver sido definida em project.json.
+Para obter mais informações, consulte [Outras opções comuns de build](#other-common-build-options).
 
 ### <a name="version"></a>version
 
@@ -58,6 +60,7 @@ O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `b
   "version": "1.0.0-alpha-*"
 }
 ```
+
 Use as propriedades `VersionPrefix` e `VersionSuffix`:
 
 ```xml
@@ -105,6 +108,7 @@ And it's really great!</Description>
 ## <a name="frameworks"></a>estruturas
 
 ### <a name="one-target-framework"></a>Uma estrutura de destino
+
 ```json
 {
   "frameworks": {
@@ -130,7 +134,7 @@ And it's really great!</Description>
 }
 ```
 
-Use a propriedade `TargetFrameworks` para definir a lista de estruturas de destino. Use ponto e vírgula para separar vários valores de estrutura. 
+Use a propriedade `TargetFrameworks` para definir a lista de estruturas de destino. Use ponto e vírgula para separar vários valores de estrutura.
 
 ```xml
 <PropertyGroup>
@@ -141,7 +145,8 @@ Use a propriedade `TargetFrameworks` para definir a lista de estruturas de desti
 ## <a name="dependencies"></a>dependências
 
 > [!IMPORTANT]
-> Se a dependência for um **projeto** e não um pacote, o formato será diferente. Para obter mais informações, consulte a seção [Tipo de dependência](#dependency-type).
+> Se a dependência for um **projeto** e não um pacote, o formato será diferente.
+> Para obter mais informações, consulte a seção [Tipo de dependência](#dependency-type).
 
 ### <a name="netstandardlibrary-metapackage"></a>Metapacote .NETStandard.Library
 
@@ -178,6 +183,7 @@ Use a propriedade `TargetFrameworks` para definir a lista de estruturas de desti
 Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinado pela versão do SDK instalada.
 
 ### <a name="top-level-dependencies"></a>Dependências de nível superior
+
 ```json
 {
   "dependencies": {
@@ -193,6 +199,7 @@ Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinad
 ```
 
 ### <a name="per-framework-dependencies"></a>Dependências por estrutura
+
 ```json
 {
   "framework": {
@@ -250,6 +257,7 @@ Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinad
 ### <a name="dependency-type"></a>tipo de dependência
 
 #### <a name="type-project"></a>tipo: projeto
+
 ```json
 {
   "dependencies": {
@@ -271,8 +279,8 @@ Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinad
 > [!NOTE]
 > Isso detalhará a maneira pela qual o `dotnet pack --version-suffix $suffix` determina a versão de dependência de uma referência de projeto.
 
-
 #### <a name="type-build"></a>tipo: build
+
 ```json
 {
   "dependencies": {
@@ -291,6 +299,7 @@ Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinad
 ```
 
 #### <a name="type-platform"></a>tipo: plataforma
+
 ```json
 {
   "dependencies": {
@@ -302,9 +311,10 @@ Observe que o valor `<RuntimeFrameworkVersion>` do projeto migrado é determinad
 }
 ```
 
-Não há nenhum equivalente em csproj. 
+Não há nenhum equivalente em csproj.
 
 ## <a name="runtimes"></a>runtimes
+
 ```json
 {
   "runtimes": {
@@ -322,6 +332,7 @@ Não há nenhum equivalente em csproj.
 ```
 
 ### <a name="standalone-apps-self-contained-deployment"></a>Aplicativos independentes (implantação independente)
+
 Em project.json, a definição de uma seção `runtimes` significa que o aplicativo era independente durante o build e a publicação.
 No MSBuild, todos os projetos são *portáteis* durante o build, mas podem ser publicados como independentes.
 
@@ -330,6 +341,7 @@ No MSBuild, todos os projetos são *portáteis* durante o build, mas podem ser p
 Para obter mais informações, consulte [SCD (implantações independentes)](../deploying/index.md#self-contained-deployments-scd).
 
 ## <a name="tools"></a>ferramentas
+
 ```json
 {
   "tools": {
@@ -442,7 +454,7 @@ Consulte também [Arquivos](#files).
 
 ```json
 {
-  "packOptions": {    
+  "packOptions": {
     "summary": "numl is a machine learning library intended to ease the use of using standard modeling techniques for both prediction and clustering.",
     "tags": ["machine learning", "framework"],
     "releaseNotes": "Version 0.9.12-beta",
@@ -474,7 +486,8 @@ Consulte também [Arquivos](#files).
 </PropertyGroup>
 ```
 
-Não há nenhum equivalente do elemento `owners` no MSBuild. Para `summary`, é possível usar a propriedade `<Description>` do MSBuild, mesmo que o valor de `summary` não seja migrado automaticamente para essa propriedade, já que ela é mapeada para o elemento [`description`](#-other-common-root-level-options).
+Não há nenhum equivalente do elemento `owners` no MSBuild.
+Para `summary`, é possível usar a propriedade `<Description>` do MSBuild, mesmo que o valor de `summary` não seja migrado automaticamente para essa propriedade, já que ela é mapeada para o elemento [`description`](#-other-common-root-level-options).
 
 ## <a name="scripts"></a>scripts
 
@@ -499,7 +512,6 @@ Seu equivalente no MSBuild são [destinos](/visualstudio/msbuild/msbuild-targets
   <Exec Command="removeTempFiles.cmd" />
 </Target>
 ```
-
 
 ## <a name="runtimeoptions"></a>runtimeOptions
 
@@ -531,6 +543,7 @@ Todas as configurações desse grupo, com exceção da propriedade “System.GC.
 ```
 
 A propriedade “System.GC.Server” é migrada para o arquivo csproj:
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -538,6 +551,7 @@ A propriedade “System.GC.Server” é migrada para o arquivo csproj:
 ```
 
 No entanto, é possível definir todos esses valores em csproj, bem como propriedades do MSBuild:
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -549,13 +563,15 @@ No entanto, é possível definir todos esses valores em csproj, bem como proprie
 ```
 
 ## <a name="shared"></a>shared
+
 ```json
 {
   "shared": "shared/**/*.cs"
 }
 ```
 
-Sem suporte em csproj. Em vez disso, é necessário criar e incluir arquivos de conteúdo no arquivo *.nuspec*. Para obter mais informações, consulte [Incluindo arquivos de conteúdo](/nuget/schema/nuspec#including-content-files).
+Sem suporte em csproj. Em vez disso, é necessário criar e incluir arquivos de conteúdo no arquivo *.nuspec*.
+Para obter mais informações, consulte [Incluindo arquivos de conteúdo](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>arquivos
 
@@ -613,7 +629,8 @@ Todos os elementos `ItemGroup` do MSBuild dão suporte a `Include`, `Exclude` e 
 
 O layout do pacote dentro do .nupkg pode ser modificado com `PackagePath="path"`.
 
-Com exceção de `Content`, a maioria dos grupos de itens exige a adição explícita de `Pack="true"` a ser incluída no pacote. `Content` será colocado na pasta *conteúdo* de um pacote, pois a propriedade `<IncludeContentInPack>` do MSBuild está definida como `true` por padrão. Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuget/schema/msbuild-targets#including-content-in-a-package).
+Com exceção de `Content`, a maioria dos grupos de itens exige a adição explícita de `Pack="true"` a ser incluída no pacote. `Content` será colocado na pasta *conteúdo* de um pacote, pois a propriedade `<IncludeContentInPack>` do MSBuild está definida como `true` por padrão.
+Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
 `PackagePath="%(Identity)"` é uma maneira curta de configurar o caminho do pacote para o caminho do arquivo relativo do projeto.
 
@@ -659,4 +676,4 @@ Com exceção de `Content`, a maioria dos grupos de itens exige a adição expl�
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral de alto nível das alterações na CLI](../tools/cli-msbuild-architecture.md)
+* [Visão geral de alto nível das alterações na CLI](../tools/cli-msbuild-architecture.md)

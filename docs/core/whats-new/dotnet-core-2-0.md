@@ -4,12 +4,12 @@ description: Conheça os novos recursos encontrados no .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566304"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456881"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novidades do .NET Core 2.0
 
@@ -30,7 +30,7 @@ Em versões anteriores do .NET Core, era preciso executar o comando [dotnet rest
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Você também pode desabilitar a invocação automática do `dotnet restore` transmitindo a opção `--no-restore` para os comandos `new`, `run`, `build`, `publish`, `pack` e `test`. 
+Você também pode desabilitar a invocação automática do `dotnet restore` transmitindo a opção `--no-restore` para os comandos `new`, `run`, `build`, `publish`, `pack` e `test`.
 
 ### <a name="retargeting-to-net-core-20"></a>Redirecionar para o .NET Core 2.0
 
@@ -76,7 +76,7 @@ Por exemplo, para criar um aplicativo "Olá, Mundo" do Visual Basic, siga as seg
 
    O comando cria um arquivo de projeto com uma extensão de arquivo `.vbproj`, junto com um arquivo de código-fonte do Visual Basic chamado *Program.vb*. Este arquivo contém o código-fonte para gravar a cadeia de caracteres "Olá, Mundo!" na janela do console.
 
-1.  Insira o comando `dotnet run`. A [CLI do .NET Core](../tools/index.md) compila e executa automaticamente o aplicativo, que exibe a mensagem "Olá, Mundo!" na janela do console.
+1. Insira o comando `dotnet run`. A [CLI do .NET Core](../tools/index.md) compila e executa automaticamente o aplicativo, que exibe a mensagem "Olá, Mundo!" na janela do console.
 
 ### <a name="support-for-c-71"></a>Suporte para C# 7.1
 
@@ -162,4 +162,5 @@ A [Arquitetura do Aplicativo .NET](https://www.microsoft.com/net/learn/architect
 - [Aplicativos que são implantados na Nuvem com o Azure](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>Consulte também
-[Novidades do ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+
+* [Novidades do ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)

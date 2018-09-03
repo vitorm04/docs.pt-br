@@ -4,12 +4,12 @@ description: O comando dotnet tool update atualiza a Ferramenta Global do .NET C
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 35a0bd0f85f0beed06d4250d8f195ce4fe4fcca4
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696683"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389466"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -21,7 +21,7 @@ ms.locfileid: "34696683"
 
 ## <a name="synopsis"></a>Sinopse
 
-```
+```console
 dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <-h|--help>
@@ -83,4 +83,4 @@ Atualiza a Ferramenta Global [dotnetsay](https://www.nuget.org/packages/dotnetsa
 
 ## <a name="see-also"></a>Consulte também
 
-[Ferramentas Globais do .NET Core](global-tools.md)
+* [Ferramentas Globais do .NET Core](global-tools.md)
