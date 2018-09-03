@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0811e32a9483238d1cd15084c19951075c8a36a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399525"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405900"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho de aplicativos gerenciados. Ngen.exe cria imagens nativas, que são arquivos que contém o código de máquina específico do processamento compilado e as instala no cache de imagem nativa do computador local. O tempo de execução pode usar imagens nativas do cache em vez de usar o compilador JIT (Just-In-Time) para compilar o assembly original.  
@@ -48,12 +48,12 @@ O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho
   
 -   Algumas causas da invalidação de imagem são eliminadas.  
   
- No Windows 8, confira [Tarefa de Imagem Nativa](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
+ No Windows 8, confira [Tarefa de Imagem Nativa](#native-image-task).  
   
  Para obter mais informações sobre como usar o Ngen.exe e o serviço de imagem nativa, consulte [Serviço de imagem nativa][Native Image Service].  
   
 > [!NOTE]
->  A sintaxe de Ngen.exe para as versões 1.0 e 1.1 do .NET Framework pode ser encontrada em [Sintaxe herdada do Gerador de Imagens Nativas (Ngen.exe)](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
+>  A sintaxe de Ngen.exe para as versões 1.0 e 1.1 do .NET Framework pode ser encontrada em [Sintaxe herdada do Gerador de Imagens Nativas (Ngen.exe)](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  Para obter exemplos relacionados ao serviço de imagem nativa, consulte [Serviço de imagem nativa][Native Image Service].  
   
 ## <a name="native-image-task"></a>Tarefa de imagem nativa  
- A tarefa de imagem nativa é uma tarefa do Windows que gera e mantém as imagens nativas. A tarefa de imagem nativa gera e recupera automaticamente as imagens nativas para cenários com suporte. (Confira [Criar imagens nativas](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Também permite que os instaladores usem o [Ngen.exe (Gerador de imagens nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para criar e atualizar as imagens nativas em um tempo adiado.  
+ A tarefa de imagem nativa é uma tarefa do Windows que gera e mantém as imagens nativas. A tarefa de imagem nativa gera e recupera automaticamente as imagens nativas para cenários com suporte. (Confira [Criar imagens nativas](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Também permite que os instaladores usem o [Ngen.exe (Gerador de imagens nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) para criar e atualizar as imagens nativas em um tempo adiado.  
   
  A tarefa de imagem nativa é registrada uma vez para cada arquitetura de CPU com suporte em um computador, a fim de permitir a compilação para aplicativos direcionados a cada arquitetura:  
   

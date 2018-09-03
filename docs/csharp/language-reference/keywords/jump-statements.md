@@ -6,11 +6,11 @@ helpviewer_keywords:
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
 ms.openlocfilehash: 1eb72fc599eae85b6c51b5030ffcd5072b7d7cef
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934094"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390351"
 ---
 # <a name="jump-statements-c-reference"></a>Instruções de salto (Referência de C#)
 A ramificação é executada usando instruções de hiperlink, que causam uma transferência imediata do controle do programa. As seguintes palavras-chave são usadas em instruções de hiperlink:  

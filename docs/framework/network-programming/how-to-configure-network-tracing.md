@@ -14,12 +14,12 @@ ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395954"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404321"
 ---
 # <a name="how-to-configure-network-tracing"></a>Como configurar o rastreamento de rede
 O aplicativo ou o arquivo de configuração do computador mantém as configurações que determinam o formato e o conteúdo dos rastreamentos de rede. Antes de executar este procedimento, certifique-se de que o rastreamento está habilitado. Para obter informações sobre como habilitar o rastreamento, consulte [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -103,4 +103,4 @@ O aplicativo ou o arquivo de configuração do computador mantém as configuraç
  [Interpretando o rastreamento de rede](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Rastreamento de rede no .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Habilitando o rastreamento de rede](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Introdução à instrumentação e ao rastreamento](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Introdução à instrumentação e ao rastreamento](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

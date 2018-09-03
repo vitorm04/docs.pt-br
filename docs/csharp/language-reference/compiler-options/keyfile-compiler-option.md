@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: 45ab88609c26dd26a1f8bb3d68d1f579af9d3f77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e5ef095fbb982b0d37d7f44d4d57f27c20a72c1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214007"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400077"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (opções do compilador C#)
 Especifica o nome de arquivo que contém a chave de criptografia.  
@@ -53,6 +53,7 @@ Especifica o nome de arquivo que contém a chave de criptografia.
   
  Você pode acessar programaticamente essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
   
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Consulte também
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

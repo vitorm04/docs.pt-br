@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: ab9b299579f9ab4a854ce7ab220edc87e0c66745
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218839"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470951"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opções do compilador C#)
 A opção **-debug** faz o compilador gerar informações de depuração e colocá-las nos arquivos de saída.  
@@ -64,5 +64,6 @@ csc -debug -pdb:app.pdb test.cs
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

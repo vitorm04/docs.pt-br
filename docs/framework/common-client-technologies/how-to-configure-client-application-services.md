@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: 004798ce8cf429f2a94d856e6b3a55447c2ad5fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744750"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43399232"
 ---
 # <a name="how-to-configure-client-application-services"></a>Como configurar serviços de aplicativo cliente
-Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para habilitar e configurar serviços do aplicativo cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para habilitar e configurar serviços do aplicativo cliente. Você pode usar serviços do aplicativo cliente para validar os usuários e recuperar funções de usuário e configurações de um serviço do aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existente. Após a configuração, você pode acessar os serviços habilitados no código do aplicativo, conforme descrito em [Visão geral dos serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Para obter mais informações sobre os serviços de aplicativos [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Visão geral sobre Serviços de Aplicativos ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Você pode habilitar e configurar serviços de aplicativos cliente na página **Serviços** do **Designer de Projeto**. A página **Serviços** atualiza os valores no arquivo App.config do projeto. Para acessar o **Designer de Projeto**, use o comando **Propriedades** no menu **Projeto**. Para obter mais informações sobre a página **Serviços**, consulte [Página Serviços, Designer de Projeto](https://msdn.microsoft.com/library/bb398109).  
   
@@ -65,7 +65,7 @@ Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para 
   
 2.  Marque ou desmarque **Salvar hash de senha localmente para habilitar o logon offline**. Quando você seleciona essa opção, um formato criptografado da senha do usuário será armazenado em cache localmente. Isso é útil se você implementar o modo offline para o seu aplicativo. Com essa opção selecionada, você pode validar usuários mesmo quando a propriedade <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> tiver sido definida como `true`.  
   
-3.  Marque ou desmarque **Requer que os usuários façam logon novamente sempre que o cookie de servidor expira**. O cookie de autenticação é configurado no serviço remoto e indica quanto tempo o logon do usuário permanecerá ativo. Para obter mais informações sobre como configurar o cookie, consulte o atributo `timeout` no [Elemento forms para autenticação (Esquema de Definições do ASP.NET)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Marque ou desmarque **Requer que os usuários façam logon novamente sempre que o cookie de servidor expira**. O cookie de autenticação é configurado no serviço remoto e indica quanto tempo o logon do usuário permanecerá ativo. Para obter mais informações sobre como configurar o cookie, consulte o atributo `timeout` no [Elemento forms para autenticação (Esquema de Definições do ASP.NET)](https://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Se você selecionar essa opção, tentar acessar as funções remotas ou os serviços de configurações da Web, após o cookie de autenticação ter expirado, irá gerar uma <xref:System.Net.WebException>. Você pode tratar essa exceção e exibir uma caixa de diálogo de logon para revalidar os usuários. Para obter um exemplo desse comportamento, consulte [Instruções passo a passo: usando serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Essa opção é útil para aplicativos implantados em locais públicos, para garantir que os usuários que deixam o aplicativo em execução após o uso não permanecerão autenticados indefinidamente.  
   
@@ -114,7 +114,7 @@ Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para 
 ## <a name="using-custom-providers"></a>Usando provedores personalizados  
  Por padrão, o recurso de serviços do aplicativo cliente usa os provedores no namespace <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType>. Quando você configura seu aplicativo usando a página **Serviços** do **Designer de Projeto**, referências a esses provedores são adicionadas ao seu arquivo App.config. Esses provedores padrão acessam provedores correspondentes no servidor. Os serviços da Web são geralmente configurados para acessar dados do usuário por meio de provedores como <xref:System.Web.Security.SqlMembershipProvider> e <xref:System.Web.Security.SqlRoleProvider>.  
   
- Se desejar usar provedores de serviço personalizado, você normalmente alterará os provedores no lado do servidor para que eles afetem todos os aplicativos cliente que acessam o servidor. No entanto, você tem a opção de usar provedores não padrão no lado do cliente. Você pode especificar provedores de autenticação ou de funções personalizados no arquivo App.config do seu projeto, conforme mostrado no procedimento a seguir. Para obter informações sobre como criar provedores de função e de autenticação personalizada, consulte [Implementando um Provedor de Associação](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementar um provedor de função](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Também é possível usar um provedor de configurações personalizado modificando a classe `Settings` do projeto (acessada como `Properties.Settings.Default` em C# e `My.Settings` em Visual Basic). Para obter mais informações, consulte [Application Settings Architecture](../../../docs/framework/winforms/advanced/application-settings-architecture.md) (Arquitetura das configurações do aplicativo).  
+ Se desejar usar provedores de serviço personalizado, você normalmente alterará os provedores no lado do servidor para que eles afetem todos os aplicativos cliente que acessam o servidor. No entanto, você tem a opção de usar provedores não padrão no lado do cliente. Você pode especificar provedores de autenticação ou de funções personalizados no arquivo App.config do seu projeto, conforme mostrado no procedimento a seguir. Para obter informações sobre como criar provedores de função e de autenticação personalizada, consulte [Implementando um Provedor de Associação](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) e [Implementar um provedor de função](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Também é possível usar um provedor de configurações personalizado modificando a classe `Settings` do projeto (acessada como `Properties.Settings.Default` em C# e `My.Settings` em Visual Basic). Para obter mais informações, consulte [Application Settings Architecture](../../../docs/framework/winforms/advanced/application-settings-architecture.md) (Arquitetura das configurações do aplicativo).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>Para configurar os serviços do aplicativo cliente para usar provedores não padrão  
   
@@ -147,7 +147,7 @@ Este tópico descreve como usar o **Designer de Projeto** do Visual Studio para 
  [Caixa de diálogo Configurações Avançadas para Serviços](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Como implementar login de usuário com serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Instruções passo a passo: usando serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [Implementando um provedor de associação](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
- [Implementando um provedor de função](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
+ [Implementando um provedor de associação](https://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
+ [Implementando um provedor de função](https://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
  [Arquitetura das Configurações do Aplicativo](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

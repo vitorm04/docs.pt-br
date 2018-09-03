@@ -2,12 +2,12 @@
 title: Visão geral de manipulações e inércia
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 7aec2756bfc3a7d4ccd394d54f19428d73b44fcb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401219"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Visão geral de manipulações e inércia
 As *manipulações* permitem aos usuários mover, girar e redimensionar elementos de interface do usuário usando *manipuladores*. Um manipulador representa um mouse ou (em um cenário sensível ao toque) uma caneta ou um dedo.  
@@ -21,15 +21,15 @@ As *manipulações* permitem aos usuários mover, girar e redimensionar elemento
   
  Por exemplo, se você tiver dois manipuladores (1 e 2) na imagem e mover o manipulador 1 em uma direção +Y (para baixo), a alteração da imagem dependerá do que acontece com o manipulador 2. Se o manipulador 2 também move na direção +Y (para baixo), a imagem simplesmente se moverá na direção +Y. Mas se o manipulador 2 não mudar ou se mover em uma direção -Y (para cima), a imagem será reduzida ou girada.  
   
- ![Uma foto virtual que dois dedos estão manipulando. ] (../../../docs/framework/common-client-technologies/media/manipulation-resize.png "Manipulation_Resize")  
+ ![Uma foto virtual que dois dedos estão manipulando. ](../../../docs/framework/common-client-technologies/media/manipulation-resize.png "Manipulation_Resize")  
   
  Uma imagem sendo manipulada por dois manipuladores  
   
- O processamento de manipulação fornece uma estrutura que monitora um subconjunto dos manipuladores e os interpreta como estivessem agindo em conjunto, em vez de independentemente. Você pode criar vários objetos de processador de manipulação ao mesmo tempo, um para cada elemento da interface do usuário a ser manipulado em um aplicativo. Um processador de manipulação é informado de quais dispositivos de entrada observar e ele relata as manipulações por meio de [eventos .NET](http://msdn.microsoft.com/library/17sde2xt.aspx).  
+ O processamento de manipulação fornece uma estrutura que monitora um subconjunto dos manipuladores e os interpreta como estivessem agindo em conjunto, em vez de independentemente. Você pode criar vários objetos de processador de manipulação ao mesmo tempo, um para cada elemento da interface do usuário a ser manipulado em um aplicativo. Um processador de manipulação é informado de quais dispositivos de entrada observar e ele relata as manipulações por meio de [eventos .NET](https://msdn.microsoft.com/library/17sde2xt.aspx).  
   
  Um processador de manipulação não tem informações sobre o elemento específico que está sendo manipulado. Um aplicativo separadamente aplica as alterações a um elemento específico do aplicativo. Por exemplo, um aplicativo aplica transformações a uma imagem ou a redesenha para exibi-la em seu novo local ou com um novo tamanho ou orientação.  
   
- As manipulações são projetadas para [transformações afins](http://msdn.microsoft.com/library/ms533810\(VS.85\).aspx) bidimensionais (2D). Essas transformações incluem mover, girar e ajustar escala.  
+ As manipulações são projetadas para [transformações afins](/windows/desktop/gdiplus/-gdiplus-transformations-use) bidimensionais (2D). Essas transformações incluem mover, girar e ajustar escala.  
   
 ### <a name="parts-of-a-manipulation"></a>Partes de uma manipulação  
  Uma manipulação é uma coleção de objetos <xref:System.Windows.Input.Manipulations.Manipulator2D>. Essa manipulação agregada é representada por um ponto de origem e uma elipse. O ponto de origem é a posição média de todos os manipuladores que estão manipulando um elemento. A elipse tem um raio que é a distância média da origem até cada um dos objetos <xref:System.Windows.Input.Manipulations.Manipulator2D>.  
@@ -41,7 +41,7 @@ As *manipulações* permitem aos usuários mover, girar e redimensionar elemento
  Conforme os manipuladores são adicionados, movidos ou removidos de um elemento de interface do usuário, um aplicativo atualiza o objeto <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> chamando o método <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>. Quando a manipulação começa pela primeira vez, o evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> é gerado.  
   
 > [!NOTE]
->  O processamento de manipulação é mais eficiente quando usado em um ambiente de atualização baseado em quadro. Ao usar o processamento de manipulação em um aplicativo Microsoft XNA, essa não é uma preocupação, pois a estrutura do XNA fornece atualizações baseadas em quadro usando o método [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx). Em outro ambiente (como WinForms), talvez seja necessário fornecer sua própria lógica baseada em quadro para coletar manipulações e enviá-los periodicamente para o método <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> como um lote.  
+>  O processamento de manipulação é mais eficiente quando usado em um ambiente de atualização baseado em quadro. Ao usar o processamento de manipulação em um aplicativo Microsoft XNA, essa não é uma preocupação, pois a estrutura do XNA fornece atualizações baseadas em quadro usando o método [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx). Em outro ambiente (como WinForms), talvez seja necessário fornecer sua própria lógica baseada em quadro para coletar manipulações e enviá-los periodicamente para o método <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> como um lote.  
   
  Conforme o número de manipuladores ou sua posição muda, o evento <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> é gerado. As propriedades do objeto <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> passado para o manipulador de eventos <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> especificam alterações na origem, escala, rotação e translação que ocorreram desde o último evento. A origem da manipulação muda quando os manipuladores se movem e quando os manipuladores são adicionados ou removidos. Os valores de translação especificam quanta movimentação de X ou Y a manipulação inclui.  
   

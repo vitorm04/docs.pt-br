@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935387"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396110"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -326,7 +326,7 @@ Os metadados do Swagger são o que os Aplicativo Lógico do Azure, o PowerApps e
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Como automatizar a geração de metadados do Swagger para a API com o pacote NuGet Swashbuckle
 
-A geração manual de metadados do Swagger (em um arquivo JSON ou YAML) pode ser um trabalho entediante. No entanto, é possível automatizar a descoberta de serviços da API Web ASP.NET usando o [pacote NuGet Swashbuckle](http://aka.ms/swashbuckledotnetcore) para gerar dinamicamente os metadados do Swagger para a API.
+A geração manual de metadados do Swagger (em um arquivo JSON ou YAML) pode ser um trabalho entediante. No entanto, é possível automatizar a descoberta de serviços da API Web ASP.NET usando o [pacote NuGet Swashbuckle](https://aka.ms/swashbuckledotnetcore) para gerar dinamicamente os metadados do Swagger para a API.
 
 O Swashbuckle gera automaticamente os metadados do Swagger para os projetos da API Web ASP.NET. Ele é compatível com projetos da API Web ASP.NET Core, da API Web ASP.NET tradicional e de outros tipos, como os microsserviços de Aplicativo de API do Azure, Aplicativo Móvel Azure, Azure Service Fabric com base no ASP.NET. Ele também é compatível com a API Web simples implantada em contêineres, como no aplicativo de referência.
 

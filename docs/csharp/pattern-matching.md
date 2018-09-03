@@ -3,12 +3,12 @@ title: Correspondência de padrões – Guia de C#
 description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231470"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255335"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão #
 
@@ -21,7 +21,7 @@ Para ilustrar essas novas expressões, vamos trabalhar com estruturas que repres
 Essas técnicas não são possíveis para dados não estruturados em uma hierarquia de classe. Quando os dados e métodos são separados, você precisa de outras ferramentas. Os novos constructos de *correspondência de padrões* permitem uma sintaxe mais clara para examinar dados e manipular o fluxo de controle com base em qualquer condição desses dados. Você já escreve instruções `if` e `switch` que testam o valor da variável. Você escreve instruções `is` que testam o tipo da variável. A *correspondência de padrões* adiciona novos recursos a essas instruções.
 
 Neste tópico, você criará um método que calcula a área de diferentes formas geométricas. Mas fará isso sem recorrer às técnicas orientadas a objeto e sem criar uma hierarquia de classe para as diferentes formas.
-Em vez disso, você usará *correspondência de padrões*. Para enfatizar ainda mais que não estamos usando a herança, você fará de cada forma um `struct` em vez de uma classe. Observe que diferentes tipos `struct` não podem especificar um tipo base definido pelo usuário comum, portanto, a herança não é um design possível.
+Em vez disso, você usará *correspondência de padrões*.
 Conforme percorrer esse exemplo, contraste esse código com como ele seria estruturado em uma hierarquia de objeto. Quando os dados que você deve consultar e manipular não são uma hierarquia de classe, a correspondência de padrões permite designs muito elegantes.
 
 Em vez de iniciar com uma definição de forma abstrata e adicionar classes de forma específicas diferentes, vamos começar com os dados simples, apenas definições de dados para cada uma das formas geométricas:

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273309"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392692"
 ---
 # <a name="operator-keywords-c-reference"></a>Palavras-chave de operador (Referência de C#)
 Utilizada para executar diversas ações, como a criação de objetos, a verificação do tipo de tempo de execução de um objeto, a obtenção do tamanho de um tipo e outras ações. Esta seção apresenta as seguintes palavras-chave:  
@@ -55,8 +55,9 @@ Utilizada para executar diversas ações, como a criação de objetos, a verific
   
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) Especifica o contexto desmarcado.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [Operadores do C#](../../../csharp/language-reference/operators/index.md)

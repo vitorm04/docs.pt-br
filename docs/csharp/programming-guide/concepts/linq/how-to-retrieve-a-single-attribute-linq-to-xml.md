@@ -3,11 +3,11 @@ title: Como recuperar um único atributo (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
 ms.openlocfilehash: 55da36099af72259a4e72205f142ab855f000c4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321282"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252779"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Como recuperar um único atributo (LINQ to XML) (C#)
 Este tópico explica como recuperar um único atributo de um elemento, dado o nome do atributo. Isso é útil para gravar as expressões de consulta onde você deseja localizar um elemento que possui um atributo específico.  

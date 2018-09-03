@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925051"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408240"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 Este artigo passo a passo descreve como um administrador de sistemas pode implantar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas dependências de sistema pela rede usando o Microsoft System Center Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -20,7 +20,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 > [!NOTE]
 >  O software referenciado neste documento, incluindo, sem restrição, o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager e o Active Directory, estão sujeitos aos termos de licença e condições. Essas instruções assumem que esses termos de licença e condições foram examinados e aceitos pelos licenciados apropriados do software. Essas instruções não renunciam nenhum dos termos e condições dos contratos de tal licença.  
 >   
->  Para saber mais sobre suporte ao .NET Framework, confira [Política de ciclo de vida de suporte do Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) no site de Suporte da Microsoft.  
+>  Para saber mais sobre suporte ao .NET Framework, confira [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) no site de Suporte da Microsoft.  
   
  Esse tópico contém as seguintes seções:  
   
@@ -37,16 +37,16 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 ## <a name="the-deployment-process"></a>O processo de implantação  
  Quando a infraestrutura de suporte estiver disponível, use o System Center 2012 Configuration Manager para implantar o pacote .NET Framework redistribuível em computadores na rede. Estabelecer uma infraestrutura envolve criar e definir cinco áreas principais: coleções, um pacote e programa para o software, pontos de distribuição e implantações.  
   
--   **Coleções** são grupos de recursos do Configuration Manager, como usuários, grupos de usuários ou computadores, nos quais o .NET Framework é implantado. Para obter mais informações, consulte [Coleções no Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx) na biblioteca de documentação do Configuration Manager.  
+-   **Coleções** são grupos de recursos do Configuration Manager, como usuários, grupos de usuários ou computadores, nos quais o .NET Framework é implantado. Para obter mais informações, consulte [Coleções no Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) na biblioteca de documentação do Configuration Manager.  
   
--   **Pacotes e programas** geralmente representam aplicativos de software a serem instalados em um computador cliente, mas também podem conter arquivos individuais, atualizações ou até mesmo comandos individuais. Para obter mais informações, consulte [Pacotes e programas no Configuration Manager](http://technet.microsoft.com/library/gg699369.aspx) na biblioteca de documentação do Configuration Manager.  
+-   **Pacotes e programas** geralmente representam aplicativos de software a serem instalados em um computador cliente, mas também podem conter arquivos individuais, atualizações ou até mesmo comandos individuais. Para obter mais informações, consulte [Pacotes e programas no Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) na biblioteca de documentação do Configuration Manager.  
   
--   **Pontos de distribuição** são funções do sistema de sites do Configuration Manager que armazenam os arquivos necessários para que o software seja executado em computadores cliente. Quando o cliente do Configuration Manager recebe e processa uma implantação de software, ele contata um ponto de distribuição para baixar o conteúdo associado ao software e iniciar o processo de instalação. Para obter mais informações, consulte [Introdução ao gerenciamento de conteúdo no Configuration Manager](http://technet.microsoft.com/library/gg682083.aspx) na biblioteca de documentação do Configuration Manager.  
+-   **Pontos de distribuição** são funções do sistema de sites do Configuration Manager que armazenam os arquivos necessários para que o software seja executado em computadores cliente. Quando o cliente do Configuration Manager recebe e processa uma implantação de software, ele contata um ponto de distribuição para baixar o conteúdo associado ao software e iniciar o processo de instalação. Para obter mais informações, consulte [Introdução ao gerenciamento de conteúdo no Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) na biblioteca de documentação do Configuration Manager.  
   
--   **Implantações** instruem os membros aplicáveis da coleção de destino especificada a instalarem o pacote de software. Para obter mais informações, consulte [Como implantar aplicativos no Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx) na biblioteca de documentação do Configuration Manager.  
+-   **Implantações** instruem os membros aplicáveis da coleção de destino especificada a instalarem o pacote de software. Para obter mais informações, consulte [Como implantar aplicativos no Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) na biblioteca de documentação do Configuration Manager.  
   
 > [!IMPORTANT]
->  Os procedimentos neste tópico contém configurações comuns para criar e implantar um pacote e um programa e podem não abranger todas as configurações possíveis. Para obter outras opções de implantação do Configuration Manager, consulte a [Biblioteca de documentação do Configuration Manager](http://technet.microsoft.com/library/gg682041.aspx).  
+>  Os procedimentos neste tópico contém configurações comuns para criar e implantar um pacote e um programa e podem não abranger todas as configurações possíveis. Para obter outras opções de implantação do Configuration Manager, consulte a [Biblioteca de documentação do Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Implantando o .NET Framework  
@@ -62,7 +62,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Crie uma coleção  
- Nesta etapa, você selecionará os computadores nos quais pacote e o programa serão implantados e os agrupará em uma coleção de dispositivos. Para criar uma coleção no Configuration Manager, você pode usar regras de associação diretas (onde você especifica manualmente os membros da coleção) ou regras de consulta (onde o Configuration Manager determina os membros da coleção com base em critérios especificados). Para obter mais informações sobre regras de associação, inclusive regras diretas e de consulta, consulte [Introdução às coleções no Configuration Manager](http://technet.microsoft.com/library/gg682177.aspx) na biblioteca de documentação do Configuration Manager.  
+ Nesta etapa, você selecionará os computadores nos quais pacote e o programa serão implantados e os agrupará em uma coleção de dispositivos. Para criar uma coleção no Configuration Manager, você pode usar regras de associação diretas (onde você especifica manualmente os membros da coleção) ou regras de consulta (onde o Configuration Manager determina os membros da coleção com base em critérios especificados). Para obter mais informações sobre regras de associação, inclusive regras diretas e de consulta, consulte [Introdução às coleções no Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) na biblioteca de documentação do Configuration Manager.  
   
  Para criar uma coleção:  
   
@@ -84,7 +84,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
 9. Na página **Regras de Associação** do **Assistente de Criação de Coleção de Dispositivos**, escolha **Avançar** e conclua o assistente.  
   
- Para obter mais informações sobre coleções, consulte [Coleções no Configuration Manager](http://technet.microsoft.com/library/bb693730.aspx) na biblioteca de documentação do Configuration Manager.  
+ Para obter mais informações sobre coleções, consulte [Coleções no Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) na biblioteca de documentação do Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Crie um pacote e programa para o pacote .NET Framework redistribuível  
@@ -128,9 +128,9 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 |------------|-----------------|  
 |**/q**|Define o modo silencioso. Nenhuma entrada do usuário é necessária e nenhuma saída é mostrada.|  
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o Configuration Manager deverá processar a reinicialização do computador.|  
-|**/chainingpackage** *PackageName*|Especifica o nome do pacote que está fazendo o encadeamento. Essa informação é relatada com outras informações da sessão de instalação para aqueles que se inscreveram no [Programa de Aperfeiçoamento da Experiência do Usuário da Microsoft (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Chaining Product"**.|  
+|**/chainingpackage** *PackageName*|Especifica o nome do pacote que está fazendo o encadeamento. Essa informação é relatada com outras informações da sessão de instalação para aqueles que se inscreveram no [Programa de Aperfeiçoamento da Experiência do Usuário da Microsoft (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Chaining Product"**.|  
   
- Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo de encadeamento precisa capturar o código de retorno e manipular a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo de encadeamento precisa capturar o código de retorno e manipular a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606).  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Selecione um ponto de distribuição  
@@ -154,7 +154,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
 8.  Conclua o assistente.  
   
- O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de você implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição, consulte a seção "Monitorar conteúdo" em [Operações e manutenção para o gerenciamento de conteúdo no Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) na biblioteca de documentação do Configuration Manager.  
+ O pacote agora conterá todas as informações que você precisa para implantar silenciosamente o .NET Framework 4.5. Antes de você implantar o pacote e o programa, verifique se ele foi instalado no ponto de distribuição, consulte a seção "Monitorar conteúdo" em [Operações e manutenção para o gerenciamento de conteúdo no Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) na biblioteca de documentação do Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Implante o pacote  
@@ -179,7 +179,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 9. Na página **Experiência do Usuário** do assistente, use os valores padrão e escolha **Avançar**.  
   
     > [!WARNING]
-    >  O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, consulte [Propriedades de nome de anúncio: guia Agendamento](http://technet.microsoft.com/library/bb694016.aspx) na Biblioteca TechNet.  
+    >  O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, consulte [Propriedades de nome de anúncio: guia Agendamento](https://technet.microsoft.com/library/bb694016.aspx) na Biblioteca TechNet.  
   
 10. Na página **Pontos de Distribuição** do assistente, use os valores padrão e escolha **Avançar**.  
   
@@ -193,27 +193,27 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
  **Active Directory, DNS, DHCP:**  
   
--   [Active Directory Domain Services para Windows Server 2008](http://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory Domain Services para Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
   
--   [Servidor DNS](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [Servidor DNS](https://technet.microsoft.com/library/cc732997.aspx)  
   
--   [Servidor DHCP](http://technet.microsoft.com/library/cc896553.aspx)  
+-   [Servidor DHCP](https://technet.microsoft.com/library/cc896553.aspx)  
   
  **SQL Server 2008:**  
   
--   [Instalando o SQL Server 2008 (vídeo do SQL Server)](http://technet.microsoft.com/library/dd299415.aspx)  
+-   [Instalando o SQL Server 2008 (vídeo do SQL Server)](https://technet.microsoft.com/library/dd299415.aspx)  
   
--   [Visão geral de segurança do SQL Server 2008 para administradores de banco de dados](http://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [Visão geral de segurança do SQL Server 2008 para administradores de banco de dados](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (Ponto de Gerenciamento, Ponto de Distribuição):**  
   
--   [Administração de site do System Center 2012 Configuration Manager](http://technet.microsoft.com/library/gg681983.aspx)  
+-   [Administração de site do System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
   
--   [Planejando e implantando site único do Configuration Manager](http://technet.microsoft.com/library/bb680961.aspx)  
+-   [Planejando e implantando site único do Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Cliente do System Center 2012 Configuration Manager para computadores Windows:**  
   
--   [Implantação de clientes do System Center 2012 Configuration Manager](http://technet.microsoft.com/library/gg699391.aspx)  
+-   [Implantação de clientes do System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Solução de problemas  
@@ -248,17 +248,17 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Códigos de erro de download  
   
--   [Códigos de erro do BITS (Serviço de Transferência Inteligente em Segundo Plano)](http://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Códigos de erro do BITS (Serviço de Transferência Inteligente em Segundo Plano)](https://msdn.microsoft.com/library/aa362823.aspx)  
   
--   [Códigos de erro do moniker de URL](http://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Códigos de erro do moniker de URL](https://msdn.microsoft.com/library/ms775145.aspx)  
   
 -   [Códigos de erro WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Outros códigos de erro:  
   
--   [Códigos de erro do Windows Installer](http://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Códigos de erro do Windows Installer](https://msdn.microsoft.com/library/aa368542.aspx)  
   
--   [Códigos de resultado do Windows Update Agent](http://technet.microsoft.com/library/cc720442.aspx)  
+-   [Códigos de resultado do Windows Update Agent](https://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

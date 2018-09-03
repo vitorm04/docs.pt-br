@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571976"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390562"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construtores diversos em expressões regulares
 As expressões regulares em .NET incluem três constructos diversos de linguagem. Um deles permite habilitar ou desabilitar opções específicas de correspondência no meio de um padrão de expressão regular. Os dois restantes permitem incluir comentários em uma expressão regular.  
@@ -63,7 +63,7 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
 ## <a name="inline-comment"></a>Comentário embutido  
  O constructo `(?#` *comment*`)` permite incluir um comentário embutido em uma expressão regular. O mecanismo de expressões regulares não usa nenhuma parte do comentário na correspondência de padrão, apesar de o comentário estar incluído na cadeia de caracteres que é retornada pelo método <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. O comentário é encerrado no primeiro caractere de fechar parênteses.  
   
- O exemplo a seguir repete o primeiro padrão de expressão regular do exemplo na seção anterior. Ele adiciona dois comentários embutidos na expressão regular para indicar se a comparação diferencia maiúsculas de minúsculas. O padrão de expressão regular, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, é definido da seguinte forma.  
+ O exemplo a seguir repete o primeiro padrão de expressão regular do exemplo na seção anterior. Ele adiciona dois comentários embutidos na expressão regular para indicar se a comparação diferencia maiúsculas de minúsculas. O padrão de expressão regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, é definido da seguinte forma.  
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
@@ -92,7 +92,6 @@ As expressões regulares em .NET incluem três constructos diversos de linguagem
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
 |`(,-*\d+)*`|Corresponder a zero ou a uma ocorrência de vírgula, seguida por um sinal de subtração opcional, seguido por um ou mais dígitos decimais.|  
 |`(\:\w{1,4}?)*`|Corresponder a zero ou a uma ocorrência de dois-pontos, seguido de um a quatro caracteres em branco, mas o mínimo possível.|  
-|`(?#case insensitive comparison)`|Um comentário embutido. Não tem nenhum efeito no comportamento de correspondência de padrão.|  
 |`\}`|Corresponder a uma chave de fechamento.|  
 |`(?x)`|Habilitar a opção de ignorar espaço em branco no padrão para o comentário de final de linha ser reconhecido.|  
 |`# Looks for a composite format item.`|Um comentário de final de linha.|  

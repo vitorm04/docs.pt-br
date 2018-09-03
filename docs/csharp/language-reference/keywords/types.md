@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270419"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463306"
 ---
 # <a name="types-c-reference"></a>Tipos (Referência de C#)
 O sistema de digitação do C# contém as seguintes categorias:  
@@ -29,10 +29,11 @@ O sistema de digitação do C# contém as seguintes categorias:
   
  Os tipos de valor também são anuláveis, o que significa que eles podem armazenar um estado sem valor adicional. Para obter mais informações, consulte [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Transmissões e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Tipos](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Transmissões e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Tipos](../../../csharp/programming-guide/types/index.md)

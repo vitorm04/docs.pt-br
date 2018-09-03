@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591684"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390607"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
-O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O tempo de execução monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) e da invocação de plataforma.  
+O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O tempo de execução monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) e da invocação de plataforma.  
   
  Quando um thread não gerenciado, por exemplo, um COM Callable Wrapper, ingressa no tempo de execução, o sistema verifica o repositório de threads locais do thread em questão para procurar um objeto <xref:System.Threading.Thread> interno gerenciado. Caso o sistema encontre um thread desse tipo, o tempo de execução fica ciente sobre ele. Caso contrário, o tempo de execução compila um novo objeto <xref:System.Threading.Thread> e o instala no repositório de threads locais do thread em questão.  
   
@@ -45,7 +45,7 @@ O gerenciamento de todos os threads, inclusive de threads criados pelo Common La
 |Próximo a **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Threads gerenciados e apartments COM  
- Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) ou um [multithread apartament](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Para obter mais informações sobre a arquitetura de threading COM, confira [Processos, threads e apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartment de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](/windows/desktop/com/single-threaded-apartments) ou um [multithread apartament](/windows/desktop/com/multithreaded-apartments). (Para obter mais informações sobre a arquitetura de threading COM, confira [Processos, threads e apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartment de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Você só pode definir uma propriedade quando o thread estiver no estado <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType>; ela só pode ser definida uma vez por thread.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-ms.openlocfilehash: a07ead99ddd4e230fff8d1452ef81171ed849b29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ab52d541c169850f6ae7ba7e7cfded290f890e7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214926"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43420613"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (opções do compilador C#)
 Use a opção **-nowin32manifest** para instruir o compilador a não inserir nenhum manifesto do aplicativo no arquivo executável.  
@@ -32,5 +32,6 @@ Use a opção **-nowin32manifest** para instruir o compilador a não inserir nen
  Para obter mais informações sobre a criação do manifesto, consulte [-win32manifest (Opções do compilador do C#)](../../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

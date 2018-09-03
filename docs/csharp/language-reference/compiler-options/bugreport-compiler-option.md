@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 5505971ad9a6920124dd4d8c12642a5e4e346322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214086"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331729"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opções do compilador C#)
 Especifica que as informações de depuração devem ser colocadas em um arquivo para análise posterior.  
@@ -54,6 +54,7 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
  Observe que os conteúdos do arquivo gerado expõem o código-fonte, o que pode resultar na divulgação acidental de informações.  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [-errorreport (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [-errorreport (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

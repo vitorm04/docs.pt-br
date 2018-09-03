@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960004"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43403428"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Como analisar cadeias de caracteres usando String.Split (Guia do C#)
 
@@ -32,9 +32,11 @@ Cada instância de um caractere separador produz um valor na matriz retornada. C
 
 Esse comportamento facilita para formatos como arquivos CSV (valores separados por vírgula) que representam dados de tabela. Vírgulas consecutivas representam uma coluna em branco.
 
-Você pode passar um parâmetro <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> opcional para excluir as cadeias de caracteres vazias da matriz retornada. Para um processamento mais complicado da coleção retornada, você pode usar o [LINQ](../programming-guide/concepts/linq/index.md) para manipular a sequência de resultado.    
+Você pode passar um parâmetro <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> opcional para excluir as cadeias de caracteres vazias da matriz retornada. Para um processamento mais complicado da coleção retornada, você pode usar o [LINQ](../programming-guide/concepts/linq/index.md) para manipular a sequência de resultado.
 
-O <xref:System.String.Split%2A?displayProperty=nameWithType> pode usar vários caracteres separadores. O exemplo a seguir utiliza espaços, vírgulas, pontos, dois-pontos e tabulações, todos passados em uma matriz que contém esses caracteres de separação para <xref:System.String.Split%2A>.  O loop, na parte inferior do código, exibe cada uma das palavras na matriz retornada.  
+O <xref:System.String.Split%2A?displayProperty=nameWithType> pode usar vários caracteres separadores.
+O exemplo a seguir utiliza espaços, vírgulas, pontos, dois-pontos e tabulações, todos passados em uma matriz que contém esses caracteres de separação para <xref:System.String.Split%2A>.
+O loop, na parte inferior do código, exibe cada uma das palavras na matriz retornada.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ O <xref:System.String.Split%2A?displayProperty=nameWithType> pode receber uma ma
 
 Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../programming-guide/index.md)  
- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
- [Expressões regulares do .NET](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../programming-guide/index.md)  
+- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
+- [Expressões regulares do .NET](../../standard/base-types/regular-expressions.md)

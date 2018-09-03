@@ -3,11 +3,11 @@ title: 'Arquivo XML de exemplo: ordem de compra típica em um namespace1'
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
 ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337555"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43404224"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Arquivo XML de Exemplo: Ordem de compra típico em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é uma ordem de compra típica. XML é em um namespace.  

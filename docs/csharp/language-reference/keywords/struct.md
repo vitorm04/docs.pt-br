@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: ddea59e76835ccccd07c299f819796336cddada8
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172143"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399012"
 ---
 # <a name="struct-c-reference"></a>struct (Referência de C#)
 O tipo `struct` é um tipo de valor normalmente usado para encapsular pequenos grupos de variáveis relacionadas, tais como coordenadas de um retângulo ou as características de um item em um inventário. O seguinte exemplo mostra uma declaração simples de struct:  
@@ -41,14 +41,15 @@ public struct Book
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  Para obter exemplos, consulte [Usando structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabela de valores padrão](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tipos](../../../csharp/language-reference/keywords/types.md)  
- [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabela de valores padrão](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tipos](../../../csharp/language-reference/keywords/types.md)  
+- [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)

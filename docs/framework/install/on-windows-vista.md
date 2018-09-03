@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 595533b9f7c0dcc766914a1812001772d0ffa247
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397839"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393920"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalar o .NET Framework no Windows Vista e Windows Server 2008
 
@@ -18,7 +18,7 @@ O .NET Framework é necessário para executar muitos aplicativos no Windows. Use
 
 ![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Não há suporte para ele no Windows Vista e Windows Server 2008. Ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Não há suporte para ele no Windows Vista e Windows Server 2008. Ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
@@ -28,7 +28,7 @@ O [.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=
 
 ## <a name="net-framework-35"></a>.NET Framework 3,5
 
-Você pode instalar o [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) no Windows Vista.
+Você pode instalar o [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) no Windows Vista.
 
 O .NET Framework 3.5 dá suporte a aplicativos criados para o .NET Framework 1.0 a 3.5.
 

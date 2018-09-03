@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaa508963bc4920aae65b1d172e2dc15f13451bf
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925110"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390751"
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos do sistema do .NET Framework
 
@@ -73,7 +73,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
 - O .NET Framework 4 também oferece suporte à plataforma IA64.
 
-- Para todas as plataformas, recomendamos que você atualize para o Service Pack mais recente do Windows e instale as atualizações críticas disponíveis no [site Windows Update](http://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança.
+- Para todas as plataformas, recomendamos que você atualize para o Service Pack mais recente do Windows e instale as atualizações críticas disponíveis no [site Windows Update](https://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança.
 
 - Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.
 
@@ -99,7 +99,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
 - Windows Server 2008 SP2, o .NET Framework não tem suporte na Função Server Core.
 
-- Para todas as plataformas, recomendamos que você atualize para o Service Pack e as atualizações críticas disponíveis mais recentes do Windows no [site Windows Update](http://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança. A instalação do Windows Service Pack mais recente pode ser necessária em alguns sistemas operacionais.
+- Para todas as plataformas, recomendamos que você atualize para o Service Pack e as atualizações críticas disponíveis mais recentes do Windows no [site Windows Update](https://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança. A instalação do Windows Service Pack mais recente pode ser necessária em alguns sistemas operacionais.
 
 - Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.
 

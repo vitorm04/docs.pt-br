@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: ea1e2e049a692fb9d86731c8a450b568f275f9a9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924792"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43423933"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -101,7 +101,7 @@ Por fim, observe que, para o objeto criado usando o construtor padrão (`child3`
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de C#](../../../csharp/language-reference/index.md)  
-[Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-[Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-[Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216906"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474288"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabela de formatação de resultados numéricos (Referência de C#)
 Você pode formatar resultados numéricos usando o método <xref:System.String.Format%2A?displayProperty=nameWithType>, por meio dos métodos <xref:System.Console.Write%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> que chamam `String.Format`, ou usando a [interpolação de cadeia de caracteres](../tokens/interpolated.md). O formato é especificado usando cadeias de caracteres de formato. A tabela a seguir contém as cadeias de caracteres de formato padrão com suporte. A cadeia de caracteres de formato usa o seguinte formato: `Axx`, em que `A` é o especificador de formato e `xx` é o especificador de precisão. O especificador de formato controla o tipo de formatação aplicada ao valor numérico e o especificador de precisão controla o número de dígitos significativos ou casas decimais do resultado formatado. O valor do especificador de precisão varia de 0 a 99.  
@@ -29,9 +29,10 @@ Você pode formatar resultados numéricos usando o método <xref:System.String.F
 |"N" ou "n"|Número|Console.Write("{0:N}", 2500000);|2.500.000,00|  
 |"X" ou "x"|Hexadecimal|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)  
- [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [string](../../../csharp/language-reference/keywords/string.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)

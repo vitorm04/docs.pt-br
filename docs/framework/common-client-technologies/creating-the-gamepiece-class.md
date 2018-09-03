@@ -2,12 +2,12 @@
 title: Criando a classe GamePiece
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: 0939da6eca579bd030bfe18b24d8364fbcc4fc82
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744506"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395389"
 ---
 # <a name="creating-the-gamepiece-class"></a>Criando a classe GamePiece
 A classe **GamePiece** encapsula toda a funcionalidade necessária para carregar uma imagem de uma peça do jogo da Microsoft XNA, controlar o estado do mouse em relação à peça do jogo, capturar o mouse, fornecer processamento de inércia e manipulação e fornecer a capacidade de pulo quando a peça do jogo atingir os limites da porta de exibição.  
@@ -25,7 +25,7 @@ A classe **GamePiece** encapsula toda a funcionalidade necessária para carregar
 ## <a name="class-constructor"></a>Construtor de classe  
  O construtor da classe **GamePiece** aceita os seguintes parâmetros:  
   
--   Um tipo [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx). A referência passada aqui é atribuída ao membro particular `spriteBatch` e é usada para acessar o método [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) quando a peça do jogo se renderiza. Além disso, a propriedade [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) é usada para criar o objeto [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) associado à peça do jogo e para obter o tamanho da porta de exibição para detectar quando a peça do jogo encontra um limite de janela para que ela possa pular.  
+-   Um tipo [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx). A referência passada aqui é atribuída ao membro particular `spriteBatch` e é usada para acessar o método [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) quando a peça do jogo se renderiza. Além disso, a propriedade [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) é usada para criar o objeto [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) associado à peça do jogo e para obter o tamanho da porta de exibição para detectar quando a peça do jogo encontra um limite de janela para que ela possa pular.  
   
 -   Uma cadeia de caracteres que especifica o nome do arquivo da imagem a ser usada para a peça do jogo.  
   
@@ -78,11 +78,11 @@ A classe **GamePiece** encapsula toda a funcionalidade necessária para carregar
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- Nenhuma lógica apresentada até agora, na verdade, faz com que extrapolação de inércia ocorra. Isso é feito no método **ProcessInertia**. Esse método, que é chamado repetidamente do loop de atualização do jogo (o método [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)) verifica se o sinalizador *processInertia* está definido como `true` e em caso afirmativo, chama o método <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A>. Chamar esse método causa extrapolação e gera o evento <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta>.  
+ Nenhuma lógica apresentada até agora, na verdade, faz com que extrapolação de inércia ocorra. Isso é feito no método **ProcessInertia**. Esse método, que é chamado repetidamente do loop de atualização do jogo (o método [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)) verifica se o sinalizador *processInertia* está definido como `true` e em caso afirmativo, chama o método <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A>. Chamar esse método causa extrapolação e gera o evento <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta>.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- A peça do jogo não é renderizada realmente até um dos métodos de sobrecarga Draw ser chamado. A primeira sobrecarga desse método é chamada repetidamente do loop de desenho do jogo (o método [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx)). Isso renderiza a peça do jogo com a posição, rotação e fatores de escala atuais.  
+ A peça do jogo não é renderizada realmente até um dos métodos de sobrecarga Draw ser chamado. A primeira sobrecarga desse método é chamada repetidamente do loop de desenho do jogo (o método [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx)). Isso renderiza a peça do jogo com a posição, rotação e fatores de escala atuais.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

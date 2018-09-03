@@ -2,12 +2,12 @@
 title: Sincronização de thread (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338605"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463150"
 ---
 # <a name="thread-synchronization-c"></a>Sincronização de thread (C#)
 As seções a seguir descrevem recursos e classes que podem ser usados para sincronizar o acesso a recursos em aplicativos multi-threaded.  
@@ -160,7 +160,6 @@ class ThreadingExample
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Instrução lock](../../../../csharp/language-reference/keywords/lock-statement.md)  
  [Mutexes](../../../../standard/threading/mutexes.md)  
  [Operações interconectadas](../../../../standard/threading/interlocked-operations.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404947"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390254"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI.exe têm o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Adicionando ou removendo assemblies de um manifesto ou assinando novamente manifestos existente, MageUI.exe não atualiza o manifesto com o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -65,7 +65,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Novo**|Gera um novo .pfx que não é verificável por meio de uma CA (Autoridade de Certificação). Para obter mais informações sobre os tipos de certificados usados na assinatura de implantações de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], consulte [Visão geral sobre implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Senha**|Fornece uma área para digitar a senha usada na assinatura desse certificado. Se não for aplicável, poderá ser deixado em branco.|  
 |**Assinar com certificado armazenado**|Exibe uma lista selecionável de certificados digitais armazenados no repositório de certificados do computador.|  
-|**URI de Carimbo de Data/Hora**|Exibe a URL (Uniform Resource Identifier) de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](http://go.microsoft.com/fwlink/?LinkId=159000) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**URI de Carimbo de Data/Hora**|Exibe a URL (Uniform Resource Identifier) de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](https://go.microsoft.com/fwlink/?LinkId=159000) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**Não Assinar**|Permite salvar o manifesto sem adicionar uma assinatura de um certificado digital.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Descrições da Guia e do Painel  
@@ -127,7 +127,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 |Elemento da Interface do Usuário|Descrição|  
 |----------------|-----------------|  
-|**Permission set type (Tipo do conjunto de permissões)**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, consulte [NIB: conjuntos de permissões nomeadas](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Permission set type (Tipo do conjunto de permissões)**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, consulte [NIB: conjuntos de permissões nomeadas](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Detalhes**|O XML criado para o manifesto do aplicativo para representar o conjunto de permissões. A menos que tenha um bom entendimento do formato XML do manifesto do aplicativo, você não deve editar esse XML manualmente. Para obter mais informações, consulte [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest) (Manifesto do aplicativo ClickOnce).|  
   
 ### <a name="deployment-manifest-tab"></a>Guia Manifesto de Implantação  

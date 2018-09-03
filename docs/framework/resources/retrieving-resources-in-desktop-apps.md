@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40eec7c03de616b22ae7b20c56cd5a05237ec759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399802"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43406588"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
-Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  
+Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperando recursos dos assemblies  
@@ -158,7 +158,7 @@ Estrutura de diretório e convenções de nomenclatura para arquivos .resources
  Depois de ter criado os recursos e colocando-os no diretório apropriado, você cria um objeto <xref:System.Resources.ResourceManager> para usar os recursos chamando o método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29>. O primeiro parâmetro especifica o nome da raiz do arquivo .resources padrão do aplicativo ("strings" para o exemplo na seção anterior). O segundo parâmetro especifica o local dos recursos ("Resources" no exemplo anterior). O terceiro parâmetro especifica a implementação de <xref:System.Resources.ResourceSet> a ser usada. Se o terceiro parâmetro for `null`, o tempo de execução padrão <xref:System.Resources.ResourceSet> será usado.  
   
 > [!NOTE]
->  Não implante aplicativos do ASP.NET usando arquivos .resources autônomos. Isso pode causar problemas de bloqueio e interrompe a implantação de XCOPY. É recomendável que você implante recursos do ASP.NET em assemblies satélites. Para obter mais informações, consulte [Visão geral dos recursos da página da Web do ASP.NET](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+>  Não implante aplicativos do ASP.NET usando arquivos .resources autônomos. Isso pode causar problemas de bloqueio e interrompe a implantação de XCOPY. É recomendável que você implante recursos do ASP.NET em assemblies satélites. Para obter mais informações, consulte [Visão geral dos recursos da página da Web do ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
   
  Depois de criar uma instância do objeto <xref:System.Resources.ResourceManager>, você usará os métodos <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A> e <xref:System.Resources.ResourceManager.GetStream%2A> conforme discutido anteriormente para recuperar os recursos. No entanto, a recuperação de recursos diretamente de arquivos .resources é diferente da recuperação de recursos incorporados em assemblies. Quando você recupera os recursos de arquivos .resources, os métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29> e <xref:System.Resources.ResourceManager.GetStream%28System.String%29> sempre recuperam os recursos da cultura padrão independentemente da cultura atual. Para recuperar os recursos da cultura atual ou de uma cultura específica do aplicativo, você deve chamar o método <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> ou <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> e especificar a cultura cujos recursos devem ser recuperados. Para recuperar os recursos da cultura atual, especifique o valor da propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> como o argumento `culture`. Se o gerenciador de recursos não pode recuperar os recursos de `culture`, ele usa as regras de fallback de recurso padrões para recuperar os recursos apropriados.  
   
@@ -205,4 +205,4 @@ csc Example.cs
  [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)  
  [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Criando e recuperando recursos em aplicativos da Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=241674)
+ [Criando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674)

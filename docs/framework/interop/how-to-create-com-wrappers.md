@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4deb355a7b523437ae31a1d2b9c79e3b8d4f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391219"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400497"
 ---
 # <a name="how-to-create-com-wrappers"></a>Como criar wrappers COM
 Crie wrappers COM (Component Object Model) usando recursos do [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] ou as ferramentas Tlbimp.exe e Regasm.exe do .NET Framework. Ambos os métodos geram dois tipos de wrappers COM:  
@@ -40,7 +40,7 @@ Crie wrappers COM (Component Object Model) usando recursos do [!INCLUDE[vsprvsex
  Agora você pode escrever o código para acessar o objeto COM. Comece declarando o objeto, por exemplo, com uma instrução `Imports` para [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ou uma instrução `Using` para [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
->  Caso deseje programar componentes do Microsoft Office, primeiro instale os [PIAs (Assemblies de Interoperabilidade Primários) do Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) no Centro de Download da Microsoft. Na etapa 4, selecione a última versão da biblioteca de objetos disponível para o produto do Office desejado, como a **Biblioteca de Objetos do Microsoft Word 11.0**.  
+>  Caso deseje programar componentes do Microsoft Office, primeiro instale os [PIAs (Assemblies de Interoperabilidade Primários) do Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) no Centro de Download da Microsoft. Na etapa 4, selecione a última versão da biblioteca de objetos disponível para o produto do Office desejado, como a **Biblioteca de Objetos do Microsoft Word 11.0**.  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Para criar um RCW (Runtime Callable Wrapper) usando ferramentas do .NET Framework  
   

@@ -3,12 +3,12 @@ title: Especificar dinamicamente filtros predicados em tempo de execução (LINQ
 description: Saiba como especificar dinamicamente filtros predicados em tempo de execução usando o LINQ em C#.
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 7051d7c754a0db29771a2e03a3b624c0e434eecd
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404084"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482034"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Especificar filtros predicados dinamicamente em tempo de execução
 
@@ -70,5 +70,5 @@ Em alguns casos, você não sabe até o tempo de execução quantos predicados p
 
 ## <a name="see-also"></a>Consulte também
 
-[LINQ (Consulta Integrada à Linguagem)](index.md)  
-[Cláusula where](../language-reference/keywords/where-clause.md)  
+- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Cláusula where](../language-reference/keywords/where-clause.md)

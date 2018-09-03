@@ -5,12 +5,12 @@ ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619aa1f34b91c1a883f9c76351302880ff453c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397904"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400162"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
 Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que afetam a maneira como a autenticação integrada do Windows é manipulada por <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e por classes relacionadas no namespace System.Net. Essas alterações podem afetar os aplicativos que usam essas classes para fazer solicitações da Web e receber respostas em que a autenticação integrada do Windows baseada no NTLM é usada. Essa alteração pode afetar os servidores Web e aplicativos cliente configurados para usar a autenticação integrada do Windows.  
@@ -51,7 +51,7 @@ Foram feitas alterações de segurança no .NET Framework versão 3.5 SP1 que af
   
  7. Encerre o Editor do Registro e, em seguida, reinicie o serviço IISAdmin e execute IISReset.  
   
- Uma solução alternativa menos segura é desabilitar a verificação de loopback, conforme descrito em [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Isso desabilita a proteção contra ataques de reflexão. Portanto, é melhor restringir o conjunto de nomes alternativos somente àqueles que você espera que sejam usados pelo computador.  
+ Uma solução alternativa menos segura é desabilitar a verificação de loopback, conforme descrito em [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657). Isso desabilita a proteção contra ataques de reflexão. Portanto, é melhor restringir o conjunto de nomes alternativos somente àqueles que você espera que sejam usados pelo computador.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
