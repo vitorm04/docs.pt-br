@@ -2,14 +2,14 @@
 title: Especificação de MSL
 ms.date: 03/30/2017
 ms.assetid: 168c895d-b1d3-43cd-8efa-412dae16da6d
-ms.openlocfilehash: dfd7c9f9617601cd035ea2ac71b120bbd33e84bb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b83d3842a918fe5fe55035f3ab3bfb4e2eb2f2d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763021"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487332"
 ---
-# <a name="msl-specification"></a><span data-ttu-id="abd44-102">Especificação de MSL</span><span class="sxs-lookup"><span data-stu-id="abd44-102">MSL Specification</span></span>
-<span data-ttu-id="abd44-103">O [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site agora é o local principal para o conteúdo do Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="abd44-103">The [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="msl-specification"></a><span data-ttu-id="77889-102">Especificação de MSL</span><span class="sxs-lookup"><span data-stu-id="77889-102">MSL Specification</span></span>
+<span data-ttu-id="77889-103">O [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site agora é o principal local para o conteúdo do Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="77889-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="abd44-104">O conteúdo deste tópico agora está disponível na seguinte página: [especificação de MSL](http://msdn.microsoft.com/data/jj652027).</span><span class="sxs-lookup"><span data-stu-id="abd44-104">The content for this topic is now available on the following page: [MSL Specification](http://msdn.microsoft.com/data/jj652027).</span></span>
+ <span data-ttu-id="77889-104">O conteúdo deste tópico agora está disponível na página a seguir: [especificação de MSL](https://msdn.microsoft.com/data/jj652027).</span><span class="sxs-lookup"><span data-stu-id="77889-104">The content for this topic is now available on the following page: [MSL Specification](https://msdn.microsoft.com/data/jj652027).</span></span>
