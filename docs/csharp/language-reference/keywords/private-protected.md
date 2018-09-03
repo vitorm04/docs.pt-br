@@ -2,75 +2,81 @@
 title: private protected (referência do C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 4a4ee999fe932674e854b1428ab33b33bc71d2ad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961126"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43419528"
 ---
-# <a name="private-protected-c-reference"></a><span data-ttu-id="61d8b-102">private protected (referência do C#)</span><span class="sxs-lookup"><span data-stu-id="61d8b-102">private protected (C# Reference)</span></span>
-<span data-ttu-id="61d8b-103">A combinação de palavras-chave `private protected` é um modificador de acesso de membro.</span><span class="sxs-lookup"><span data-stu-id="61d8b-103">The `private protected` keyword combination is a member access modifier.</span></span> <span data-ttu-id="61d8b-104">Um membro particular protegido é acessível por tipos derivados da classe recipiente, mas apenas dentro de seu assembly recipiente.</span><span class="sxs-lookup"><span data-stu-id="61d8b-104">A private protected member is accessible by types derived from the containing class, but only within its containing assembly.</span></span> <span data-ttu-id="61d8b-105">Para obter uma comparação de `private protected` com os outros modificadores de acesso, consulte [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="61d8b-105">For a comparison of `private protected` with the other access modifiers, see [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md).</span></span> 
+# <a name="private-protected-c-reference"></a><span data-ttu-id="067db-102">private protected (referência do C#)</span><span class="sxs-lookup"><span data-stu-id="067db-102">private protected (C# Reference)</span></span>
+
+<span data-ttu-id="067db-103">A combinação de palavras-chave `private protected` é um modificador de acesso de membro.</span><span class="sxs-lookup"><span data-stu-id="067db-103">The `private protected` keyword combination is a member access modifier.</span></span> <span data-ttu-id="067db-104">Um membro particular protegido é acessível por tipos derivados da classe recipiente, mas apenas dentro de seu assembly recipiente.</span><span class="sxs-lookup"><span data-stu-id="067db-104">A private protected member is accessible by types derived from the containing class, but only within its containing assembly.</span></span> <span data-ttu-id="067db-105">Para obter uma comparação de `private protected` com os outros modificadores de acesso, consulte [Níveis de acessibilidade](accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="067db-105">For a comparison of `private protected` with the other access modifiers, see [Accessibility Levels](accessibility-levels.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="61d8b-106">O modificador de acesso `private protected` é válido no C# versão 7.2 e posterior.</span><span class="sxs-lookup"><span data-stu-id="61d8b-106">The `private protected` access modifier is valid in C# version 7.2 and later.</span></span>
-   
-## <a name="example"></a><span data-ttu-id="61d8b-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="61d8b-107">Example</span></span>  
- <span data-ttu-id="61d8b-108">Um membro particular protegido de uma classe base é acessível de tipos derivados em seu assembly recipiente apenas se o tipo estático da variável é o tipo da classe derivada.</span><span class="sxs-lookup"><span data-stu-id="61d8b-108">A private protected member of a base class is accessible from derived types in its containing assembly only if the static type of the variable is the derived class type.</span></span> <span data-ttu-id="61d8b-109">Por exemplo, considere o seguinte segmento de código:</span><span class="sxs-lookup"><span data-stu-id="61d8b-109">For example, consider the following code segment:</span></span>  
-  
- ```csharp
- // Assembly1.cs  
- // Compile with: /target:library  
- public class BaseClass
- {
-     private protected int myValue = 0;
- }
- 
- public class DerivedClass1 : BaseClass
- {
-     void Access()
-     {
-         BaseClass baseObject = new BaseClass();
- 
-         // Error CS1540, because myValue can only be accessed by
-         // classes derived from BaseClass.
-         // baseObject.myValue = 5;  
- 
-         // OK, accessed through the current derived class instance
-         myValue = 5;
-     }
- }
-```  
-  
-```csharp  
- // Assembly2.cs  
- // Compile with: /reference:Assembly1.dll  
- class DerivedClass2 : BaseClass
- {
-     void Access()
-     {
-         // Error CS0122, because myValue can only be
-         // accessed by types in Assembly1
-         // myValue = 10;
-     }
- }
-```  
- <span data-ttu-id="61d8b-110">Este exemplo contém dois arquivos, `Assembly1.cs` e `Assembly2.cs`.</span><span class="sxs-lookup"><span data-stu-id="61d8b-110">This example contains two files, `Assembly1.cs` and `Assembly2.cs`.</span></span> <span data-ttu-id="61d8b-111">O primeiro arquivo contém uma classe base pública, `BaseClass`, e um tipo derivado dela, `DerivedClass1`.</span><span class="sxs-lookup"><span data-stu-id="61d8b-111">The first file contains a public base class, `BaseClass`, and a type derived from it, `DerivedClass1`.</span></span> <span data-ttu-id="61d8b-112">`BaseClass` tem um membro particular protegido, `myValue`, que `DerivedClass1` tenta acessar de duas maneiras.</span><span class="sxs-lookup"><span data-stu-id="61d8b-112">`BaseClass` owns a private protected member, `myValue`, which `DerivedClass1` tries to access in two ways.</span></span> <span data-ttu-id="61d8b-113">A primeira tentativa de acessar `myValue` por meio de uma instância de `BaseClass` produzirá um erro.</span><span class="sxs-lookup"><span data-stu-id="61d8b-113">The first attempt to access `myValue` through an instance of `BaseClass` will produce an error.</span></span> <span data-ttu-id="61d8b-114">No entanto, a tentativa de usá-lo como um membro herdado em `DerivedClass1` terá êxito.</span><span class="sxs-lookup"><span data-stu-id="61d8b-114">However, the attempt to use it as an inherited member in `DerivedClass1` will succeed.</span></span>
-<span data-ttu-id="61d8b-115">No segundo arquivo, uma tentativa de acessar `myValue` como um membro herdado de `DerivedClass2` produzirá um erro, pois ele é acessível apenas por tipos derivados em Assembly1.</span><span class="sxs-lookup"><span data-stu-id="61d8b-115">In the second file, an attempt to access `myValue` as an inherited member of `DerivedClass2` will produce an error, as it is only accessible by derived types in Assembly1.</span></span> 
+> <span data-ttu-id="067db-106">O modificador de acesso `private protected` é válido no C# versão 7.2 e posterior.</span><span class="sxs-lookup"><span data-stu-id="067db-106">The `private protected` access modifier is valid in C# version 7.2 and later.</span></span>
 
- <span data-ttu-id="61d8b-116">Membros de struct não podem ser `private protected` porque o struct não pode ser herdado.</span><span class="sxs-lookup"><span data-stu-id="61d8b-116">Struct members cannot be `private protected` because the struct cannot be inherited.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="61d8b-117">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="61d8b-117">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="61d8b-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="61d8b-118">See Also</span></span>  
- <span data-ttu-id="61d8b-119">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-119">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
- <span data-ttu-id="61d8b-120">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-120">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
- <span data-ttu-id="61d8b-121">[Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-121">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
- <span data-ttu-id="61d8b-122">[Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-122">[Access Modifiers](../../../csharp/language-reference/keywords/access-modifiers.md) </span></span>  
- <span data-ttu-id="61d8b-123">[Níveis de Acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-123">[Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) </span></span>  
- <span data-ttu-id="61d8b-124">[Modificadores](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-124">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
- <span data-ttu-id="61d8b-125">[public](../../../csharp/language-reference/keywords/public.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-125">[public](../../../csharp/language-reference/keywords/public.md) </span></span>  
- <span data-ttu-id="61d8b-126">[private](../../../csharp/language-reference/keywords/private.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-126">[private](../../../csharp/language-reference/keywords/private.md) </span></span>  
- <span data-ttu-id="61d8b-127">[internal](../../../csharp/language-reference/keywords/internal.md) </span><span class="sxs-lookup"><span data-stu-id="61d8b-127">[internal](../../../csharp/language-reference/keywords/internal.md) </span></span>  
- <span data-ttu-id="61d8b-128">[Questões de segurança de palavras-chave virtuais internas](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))</span><span class="sxs-lookup"><span data-stu-id="61d8b-128">[Security concerns for internal virtual keywords](https://msdn.microsoft.com/library/heyd8kky(v=vs.110))</span></span>
+## <a name="example"></a><span data-ttu-id="067db-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="067db-107">Example</span></span>
+
+<span data-ttu-id="067db-108">Um membro particular protegido de uma classe base é acessível de tipos derivados em seu assembly recipiente apenas se o tipo estático da variável é o tipo da classe derivada.</span><span class="sxs-lookup"><span data-stu-id="067db-108">A private protected member of a base class is accessible from derived types in its containing assembly only if the static type of the variable is the derived class type.</span></span> <span data-ttu-id="067db-109">Por exemplo, considere o seguinte segmento de código:</span><span class="sxs-lookup"><span data-stu-id="067db-109">For example, consider the following code segment:</span></span>  
+
+```csharp
+// Assembly1.cs  
+// Compile with: /target:library  
+public class BaseClass
+{
+    private protected int myValue = 0;
+}
+
+public class DerivedClass1 : BaseClass
+{
+    void Access()
+    {
+        BaseClass baseObject = new BaseClass();
+
+        // Error CS1540, because myValue can only be accessed by
+        // classes derived from BaseClass.
+        // baseObject.myValue = 5;  
+
+        // OK, accessed through the current derived class instance
+        myValue = 5;
+    }
+}
+```
+
+```csharp
+// Assembly2.cs  
+// Compile with: /reference:Assembly1.dll  
+class DerivedClass2 : BaseClass
+{
+    void Access()
+    {
+        // Error CS0122, because myValue can only be
+        // accessed by types in Assembly1
+        // myValue = 10;
+    }
+}
+```
+
+<span data-ttu-id="067db-110">Este exemplo contém dois arquivos, `Assembly1.cs` e `Assembly2.cs`.</span><span class="sxs-lookup"><span data-stu-id="067db-110">This example contains two files, `Assembly1.cs` and `Assembly2.cs`.</span></span>
+<span data-ttu-id="067db-111">O primeiro arquivo contém uma classe base pública, `BaseClass`, e um tipo derivado dela, `DerivedClass1`.</span><span class="sxs-lookup"><span data-stu-id="067db-111">The first file contains a public base class, `BaseClass`, and a type derived from it, `DerivedClass1`.</span></span> <span data-ttu-id="067db-112">`BaseClass` tem um membro particular protegido, `myValue`, que `DerivedClass1` tenta acessar de duas maneiras.</span><span class="sxs-lookup"><span data-stu-id="067db-112">`BaseClass` owns a private protected member, `myValue`, which `DerivedClass1` tries to access in two ways.</span></span> <span data-ttu-id="067db-113">A primeira tentativa de acessar `myValue` por meio de uma instância de `BaseClass` produzirá um erro.</span><span class="sxs-lookup"><span data-stu-id="067db-113">The first attempt to access `myValue` through an instance of `BaseClass` will produce an error.</span></span> <span data-ttu-id="067db-114">No entanto, a tentativa de usá-lo como um membro herdado em `DerivedClass1` terá êxito.</span><span class="sxs-lookup"><span data-stu-id="067db-114">However, the attempt to use it as an inherited member in `DerivedClass1` will succeed.</span></span>
+<span data-ttu-id="067db-115">No segundo arquivo, uma tentativa de acessar `myValue` como um membro herdado de `DerivedClass2` produzirá um erro, pois ele é acessível apenas por tipos derivados em Assembly1.</span><span class="sxs-lookup"><span data-stu-id="067db-115">In the second file, an attempt to access `myValue` as an inherited member of `DerivedClass2` will produce an error, as it is only accessible by derived types in Assembly1.</span></span>
+
+<span data-ttu-id="067db-116">Membros de struct não podem ser `private protected` porque o struct não pode ser herdado.</span><span class="sxs-lookup"><span data-stu-id="067db-116">Struct members cannot be `private protected` because the struct cannot be inherited.</span></span>  
+
+## <a name="c-language-specification"></a><span data-ttu-id="067db-117">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="067db-117">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+## <a name="see-also"></a><span data-ttu-id="067db-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="067db-118">See also</span></span>
+
+- [<span data-ttu-id="067db-119">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="067db-119">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="067db-120">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="067db-120">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="067db-121">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="067db-121">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="067db-122">Modificadores de acesso</span><span class="sxs-lookup"><span data-stu-id="067db-122">Access Modifiers</span></span>](access-modifiers.md)
+- [<span data-ttu-id="067db-123">Níveis de acessibilidade</span><span class="sxs-lookup"><span data-stu-id="067db-123">Accessibility Levels</span></span>](accessibility-levels.md)
+- [<span data-ttu-id="067db-124">Modificadores</span><span class="sxs-lookup"><span data-stu-id="067db-124">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="067db-125">public</span><span class="sxs-lookup"><span data-stu-id="067db-125">public</span></span>](public.md)
+- [<span data-ttu-id="067db-126">private</span><span class="sxs-lookup"><span data-stu-id="067db-126">private</span></span>](private.md)
+- [<span data-ttu-id="067db-127">internal</span><span class="sxs-lookup"><span data-stu-id="067db-127">internal</span></span>](internal.md)
+- <span data-ttu-id="067db-128">[Questões de segurança de palavras-chave virtuais internas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="067db-128">[Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))</span></span>

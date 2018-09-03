@@ -7,26 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 46b3f6b95e3b80ab324267704ead1f0187a56385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d96301e083b5c5340bea8b04943ca90c90e71ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266562"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471894"
 ---
-# <a name="using-c-reference"></a><span data-ttu-id="88aa0-102">using (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="88aa0-102">using (C# Reference)</span></span>
-<span data-ttu-id="88aa0-103">A palavra-chave `using` tem dois usos principais:</span><span class="sxs-lookup"><span data-stu-id="88aa0-103">The `using` keyword has two major uses:</span></span>  
+# <a name="using-c-reference"></a><span data-ttu-id="13f22-102">using (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="13f22-102">using (C# Reference)</span></span>
+<span data-ttu-id="13f22-103">A palavra-chave `using` tem dois usos principais:</span><span class="sxs-lookup"><span data-stu-id="13f22-103">The `using` keyword has two major uses:</span></span>  
   
--   <span data-ttu-id="88aa0-104">Como uma diretiva, quando ela é usada para criar um alias para um namespace ou importar tipos definidos em outros namespaces.</span><span class="sxs-lookup"><span data-stu-id="88aa0-104">As a directive, when it is used to create an alias for a namespace or to import types defined in other namespaces.</span></span> <span data-ttu-id="88aa0-105">Consulte [Diretiva using](../../../csharp/language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="88aa0-105">See [using Directive](../../../csharp/language-reference/keywords/using-directive.md).</span></span>  
+-   <span data-ttu-id="13f22-104">Como uma diretiva, quando ela é usada para criar um alias para um namespace ou importar tipos definidos em outros namespaces.</span><span class="sxs-lookup"><span data-stu-id="13f22-104">As a directive, when it is used to create an alias for a namespace or to import types defined in other namespaces.</span></span> <span data-ttu-id="13f22-105">Consulte [Diretiva using](../../../csharp/language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="13f22-105">See [using Directive](../../../csharp/language-reference/keywords/using-directive.md).</span></span>  
   
--   <span data-ttu-id="88aa0-106">Como uma instrução, quando ela define um escopo no final do qual um objeto será descartado.</span><span class="sxs-lookup"><span data-stu-id="88aa0-106">As a statement, when it defines a scope at the end of which an object will be disposed.</span></span> <span data-ttu-id="88aa0-107">Consulte [Instrução using](../../../csharp/language-reference/keywords/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="88aa0-107">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span>  
+-   <span data-ttu-id="13f22-106">Como uma instrução, quando ela define um escopo no final do qual um objeto será descartado.</span><span class="sxs-lookup"><span data-stu-id="13f22-106">As a statement, when it defines a scope at the end of which an object will be disposed.</span></span> <span data-ttu-id="13f22-107">Consulte [Instrução using](../../../csharp/language-reference/keywords/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="13f22-107">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md).</span></span>  
   
-<span data-ttu-id="88aa0-108">Além disso, a diretiva [using static](using-static.md) permite que você defina um tipo cujos membros podem ser acessados sem especificar um nome de tipo.</span><span class="sxs-lookup"><span data-stu-id="88aa0-108">In addition, the [using static](using-static.md) directive lets you define a type whose static members you can access without specifying a type name.</span></span>
+<span data-ttu-id="13f22-108">Além disso, a diretiva [using static](using-static.md) permite que você defina um tipo cujos membros podem ser acessados sem especificar um nome de tipo.</span><span class="sxs-lookup"><span data-stu-id="13f22-108">In addition, the [using static](using-static.md) directive lets you define a type whose static members you can access without specifying a type name.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="88aa0-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="88aa0-109">See Also</span></span>  
- [<span data-ttu-id="88aa0-110">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="88aa0-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="88aa0-111">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="88aa0-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="88aa0-112">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="88aa0-112">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="88aa0-113">Palavras-chave de namespace</span><span class="sxs-lookup"><span data-stu-id="88aa0-113">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [<span data-ttu-id="88aa0-114">Namespaces</span><span class="sxs-lookup"><span data-stu-id="88aa0-114">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
- [<span data-ttu-id="88aa0-115">extern</span><span class="sxs-lookup"><span data-stu-id="88aa0-115">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a><span data-ttu-id="13f22-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="13f22-109">See Also</span></span>
+
+- [<span data-ttu-id="13f22-110">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="13f22-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="13f22-111">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="13f22-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="13f22-112">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="13f22-112">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="13f22-113">Palavras-chave de namespace</span><span class="sxs-lookup"><span data-stu-id="13f22-113">Namespace Keywords</span></span>](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [<span data-ttu-id="13f22-114">Namespaces</span><span class="sxs-lookup"><span data-stu-id="13f22-114">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
+- [<span data-ttu-id="13f22-115">extern</span><span class="sxs-lookup"><span data-stu-id="13f22-115">extern</span></span>](../../../csharp/language-reference/keywords/extern.md)

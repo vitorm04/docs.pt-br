@@ -3,25 +3,25 @@ title: Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
 ms.openlocfilehash: cd98c1da2f2f8653c5db36f89a63dfdc7a7ab691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333291"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481335"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a><span data-ttu-id="b2331-102">Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b2331-102">How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="b2331-103">O XPath permite que você localize a união de resultados de dois caminhos de local XPath.</span><span class="sxs-lookup"><span data-stu-id="b2331-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a><span data-ttu-id="8fa91-102">Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8fa91-102">How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="8fa91-103">O XPath permite que você localize a união de resultados de dois caminhos de local XPath.</span><span class="sxs-lookup"><span data-stu-id="8fa91-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  
   
- <span data-ttu-id="b2331-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="b2331-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="8fa91-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="8fa91-104">The XPath expression is:</span></span>  
   
  `//Category|//Price`  
   
- <span data-ttu-id="b2331-105">Você pode obter os mesmos resultados usando o operador padrão de consulta de <xref:System.Linq.Enumerable.Concat%2A> .</span><span class="sxs-lookup"><span data-stu-id="b2331-105">You can achieve the same results by using the <xref:System.Linq.Enumerable.Concat%2A> standard query operator.</span></span>  
+ <span data-ttu-id="8fa91-105">Você pode obter os mesmos resultados usando o operador padrão de consulta de <xref:System.Linq.Enumerable.Concat%2A> .</span><span class="sxs-lookup"><span data-stu-id="8fa91-105">You can achieve the same results by using the <xref:System.Linq.Enumerable.Concat%2A> standard query operator.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b2331-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b2331-106">Example</span></span>  
- <span data-ttu-id="b2331-107">Este exemplo localiza os elementos de `Category` e todos os elementos de `Price` , e os concatena em uma única coleção.</span><span class="sxs-lookup"><span data-stu-id="b2331-107">This example finds all of the `Category` elements and all of the `Price` elements, and concatenates them into a single collection.</span></span> <span data-ttu-id="b2331-108">Observe que a consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar os resultados.</span><span class="sxs-lookup"><span data-stu-id="b2331-108">Note that the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to order the results.</span></span> <span data-ttu-id="b2331-109">Os resultados da avaliação de expressão XPath são também em ordem do documento.</span><span class="sxs-lookup"><span data-stu-id="b2331-109">The results of the XPath expression evaluation are also in document order.</span></span>  
+## <a name="example"></a><span data-ttu-id="8fa91-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8fa91-106">Example</span></span>  
+ <span data-ttu-id="8fa91-107">Este exemplo localiza os elementos de `Category` e todos os elementos de `Price` , e os concatena em uma única coleção.</span><span class="sxs-lookup"><span data-stu-id="8fa91-107">This example finds all of the `Category` elements and all of the `Price` elements, and concatenates them into a single collection.</span></span> <span data-ttu-id="8fa91-108">Observe que a consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar os resultados.</span><span class="sxs-lookup"><span data-stu-id="8fa91-108">Note that the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to order the results.</span></span> <span data-ttu-id="8fa91-109">Os resultados da avaliação de expressão XPath são também em ordem do documento.</span><span class="sxs-lookup"><span data-stu-id="8fa91-109">The results of the XPath expression evaluation are also in document order.</span></span>  
   
- <span data-ttu-id="b2331-110">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b2331-110">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="8fa91-110">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8fa91-110">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  
@@ -48,7 +48,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b2331-111">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="b2331-111">This example produces the following output:</span></span>  
+ <span data-ttu-id="8fa91-111">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="8fa91-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -68,5 +68,5 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b2331-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b2331-112">See Also</span></span>  
- [<span data-ttu-id="b2331-113">Usuários do LINQ to XML para XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="b2331-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="8fa91-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8fa91-112">See Also</span></span>  
+ [<span data-ttu-id="8fa91-113">Usuários do LINQ to XML para XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="8fa91-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
