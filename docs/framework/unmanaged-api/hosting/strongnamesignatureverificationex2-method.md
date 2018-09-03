@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2ac3788b68626eb04a6f2cbac995b8e5b4ebf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442576"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483049"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>Método StrongNameSignatureVerificationEx2
-Verifica a assinatura de um assembly de nome forte e fornece um mapeamento da chave ECMA para uma chave real.  
+Verifica a assinatura de um assembly de nome forte e fornece um mapeamento da chave do ECMA para uma chave real.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +40,31 @@ HRESULT StrongNameSignatureVerificationEx (
   
 #### <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
- [in] O caminho para o executável (.exe ou. dll) arquivo portátil para o assembly a ser verificado.  
+ [in] O caminho para o arquivo executável portátil (.exe ou. dll) para o assembly a ser verificado.  
   
  `fForceVerification`  
  [in] `true` para executar a verificação, mesmo se for necessário substituir as configurações do registro; caso contrário, `false`.  
   
  `pbEcmaPublicKey`  
- [in] Um ponteiro para o mapeamento da chave pública ECMA para a chave usada para verificação.  
+ [in] Um ponteiro para o mapeamento da chave pública do ECMA para a chave real usado para verificação.  
   
  `cbEcmaPublicKey`  
- [in] O comprimento da chave pública ECMA real.  
+ [in] O comprimento da chave pública real do ECMA.  
   
  `pfWasVerified`  
- [out] `true` se a assinatura de nome forte foi verificado; caso contrário, `false`. Esse parâmetro também é definido como `false` se a verificação for bem-sucedida devido às configurações do registro.  
+ [out] `true` se a assinatura de nome forte foi verificado; caso contrário, `false`. Esse parâmetro também é definido como `false` se a verificação for bem-sucedida devido a configurações de registro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se a verificação for bem-sucedida; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+ `S_OK` Se a verificação for bem-sucedida; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

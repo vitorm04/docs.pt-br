@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253385"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488073"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Como organizar controles com guias de alinhamento e a grade nos Windows Forms
 Usando os recursos de layout do Visual Studio, você pode direcionar precisamente onde os controles são colocados em um formulário. Controles adicionados a um formulário ou movidos em um formulário podem ser alinhados automaticamente para as linhas e colunas da grade Designer de Formulários do Windows ou você pode alinhar controles usando o recurso de guias de ajuste.  
@@ -25,7 +25,7 @@ Usando os recursos de layout do Visual Studio, você pode direcionar precisament
   
 -   Selecione o modo de layout **SnapToGrid** na caixa de diálogo **Opções** do Designer de Formulários do Windows.  
   
-     Para obter mais informações, consulte [Geral, Designer de Formulários do Windows, Caixa de diálogo Opções](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Todos os controles agora se alinham junto aos pontos na grade.  
+     Para obter mais informações, consulte [Geral, Designer de Formulários do Windows, Caixa de diálogo Opções](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Todos os controles agora se alinham junto aos pontos na grade.  
   
      Você pode encaixar controles individuais na grade bloqueando-os no lugar. No entanto, enquanto eles estiverem bloqueados, não poderão ser movidos ou redimensionados. Para obter mais informações sobre bloqueio de controles, consulte [Como bloquear controles nos Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -36,7 +36,7 @@ Usando os recursos de layout do Visual Studio, você pode direcionar precisament
      Para obter mais informações, consulte [Instruções passo a passo: organizando controles nos Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Agora você pode usar guias de alinhamento para alinhar e organizar controles no formulário.  
   
 ## <a name="see-also"></a>Consulte também  
- [Geral, Designer de formulários do Windows, caixa de diálogo Opções](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Geral, Designer de formulários do Windows, caixa de diálogo Opções](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Controles dos Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Como Adicionar Controles ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

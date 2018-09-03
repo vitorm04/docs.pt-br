@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3b88835cc7836d9d6c323de3c0386b3f4c7c3078
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6dd9ad2a09c7fa587ec82df002d36ed258811fb9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399607"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483915"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Criando meu primeiro serviço WCF baseado em declarações
 ## <a name="applies-to"></a>Aplica-se a  
@@ -33,13 +33,13 @@ ms.locfileid: "33399607"
   
  STS é um serviço que emite tokens após a autenticação bem-sucedida. A Microsoft oferece dois STSs padrão do setor:  
   
--   [Serviços de Federação do Active Directory (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) (http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Serviços de Federação do Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).  
+-   [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O Controle de Acesso do Azure Active Directory (também conhecido como Serviço de Controle de Acesso ou ACS) é um serviço de nuvem, oferecido como parte do Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento Local que faz parte do [ferramenta de identidade e acesso para o Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) que está disponível gratuitamente on-line.  
+ O AD FS 2.0 faz parte do Windows Server R2 e pode ser usado como um STS para cenários locais. O Controle de Acesso do Azure Active Directory (também conhecido como Serviço de Controle de Acesso ou ACS) é um serviço de nuvem, oferecido como parte do Microsoft Azure. Para fins de testes ou educativos, você também pode usar outros STSs para criar seus aplicativos com reconhecimento de reivindicações. Por exemplo, você pode usar o STS de desenvolvimento Local que faz parte do [ferramenta de identidade e acesso para o Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) que está disponível online gratuitamente.  
   
- Para criar seu primeiro serviço WCF com reconhecimento de declaração usando o WIF, consulte [como: habilitar o WIF para um aplicativo de serviço Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Para criar seu primeiro serviço WCF com reconhecimento de declarações usando o WIF, consulte [How To: habilitar o WIF para um aplicativo de serviço Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao WIF](../../../docs/framework/security/getting-started-with-wif.md)

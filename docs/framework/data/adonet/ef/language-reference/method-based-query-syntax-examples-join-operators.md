@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
 ms.openlocfilehash: ee753f5101f525fc7d86a91f2aa3545d257a2be5
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331831"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478111"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Exemplos de sintaxe da consulta com base em método: Adição a operadores
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  

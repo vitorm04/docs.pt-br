@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: 32d9bc19e9112fc9b518a68060f9f84e0e04fa16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f7da963db34434ee2631e9e2c0367abbd628656
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528851"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488216"
 ---
 # <a name="backgroundworker-component-overview"></a>Visão geral do componente BackgroundWorker
 Há muitas operações realizadas com frequência que podem levar muito tempo para serem executadas. Por exemplo:  
@@ -43,7 +43,7 @@ Há muitas operações realizadas com frequência que podem levar muito tempo pa
   
  O componente <xref:System.ComponentModel.BackgroundWorker> possibilita executar operações demoradas de forma assíncrona ("no segundo plano"), em um thread diferente do thread principal da interface do usuário do aplicativo. Para usar um <xref:System.ComponentModel.BackgroundWorker>, basta indicar o método de trabalho demorado que será executado em segundo plano e chamar o método <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. Seu thread de chamada continua a funcionar normalmente enquanto o método de trabalho é executado de forma assíncrona. Quando o método é concluído, o <xref:System.ComponentModel.BackgroundWorker> alerta o thread de chamada disparando o evento <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>, que contém, opcionalmente, os resultados da operação.  
   
- O <xref:System.ComponentModel.BackgroundWorker> componente está disponível no **caixa de ferramentas**, no **componentes** guia. Para adicionar um <xref:System.ComponentModel.BackgroundWorker> ao seu formulário, arraste o componente <xref:System.ComponentModel.BackgroundWorker> para o seu formulário. Ele aparece na bandeja de componentes e suas propriedades aparecem na janela **Propriedades**.  
+ O <xref:System.ComponentModel.BackgroundWorker> componente está disponível em de **caixa de ferramentas**, no **componentes** guia. Para adicionar um <xref:System.ComponentModel.BackgroundWorker> ao seu formulário, arraste o componente <xref:System.ComponentModel.BackgroundWorker> para o seu formulário. Ele aparece na bandeja de componentes e suas propriedades aparecem na janela **Propriedades**.  
   
  Para iniciar a operação assíncrona, use o método <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> usa um parâmetro opcional `object`, que pode ser usado para passar argumentos para o seu método de trabalho. A classe <xref:System.ComponentModel.BackgroundWorker> expõe o evento <xref:System.ComponentModel.BackgroundWorker.DoWork>, ao qual o seu thread de trabalho está anexado por meio de um manipulador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork>.  
   
@@ -58,8 +58,8 @@ Há muitas operações realizadas com frequência que podem levar muito tempo pa
 > [!CAUTION]
 >  O uso de multithreading de qualquer tipo pode expor o computador a bugs muito sérios e complexos. Consulte as [Melhores práticas de threading gerenciado](../../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
   
- Para obter mais informações sobre como usar o <xref:System.ComponentModel.BackgroundWorker> de classe, consulte [como: executar uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Para obter mais informações sobre como usar o <xref:System.ComponentModel.BackgroundWorker> classe, consulte [como: executar uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [NÃO ESTÁ NO BUILD: multithreading no Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
+ [NÃO ESTÁ NO BUILD: multithreading no Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
  [Como implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)

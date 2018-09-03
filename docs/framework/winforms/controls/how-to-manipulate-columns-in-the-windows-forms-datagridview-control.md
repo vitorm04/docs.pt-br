@@ -10,15 +10,15 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: e0becd4a60d4320f15c861c5bb004fb11d350bfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9632a9c339fabd5d17898ca0ab4d3eb3bbb96f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532877"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481015"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Como manipular colunas no controle DataGridView dos Windows Forms
-O exemplo de código a seguir mostra várias maneiras de manipular <xref:System.Windows.Forms.DataGridView> colunas usando as propriedades do <xref:System.Windows.Forms.DataGridViewColumn> classe.  
+O exemplo de código a seguir mostra as várias maneiras de manipular <xref:System.Windows.Forms.DataGridView> colunas usando as propriedades do <xref:System.Windows.Forms.DataGridViewColumn> classe.  
   
 ## <a name="example"></a>Exemplo  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#100](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewColumnDemo.cpp#100)]
@@ -30,7 +30,7 @@ O exemplo de código a seguir mostra várias maneiras de manipular <xref:System.
   
 -   Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
- Para obter informações sobre como criar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [Compilando a partir da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.DataGridView>  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 9ebede03a3a9d2cc6db1cda2537bcaf30afcb2d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2de2be478e81183201cc85e1a6dfd6f1a1833af6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533563"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481937"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Como carregar um som de forma assíncrona dentro de um Windows Form
-O exemplo de código a seguir carrega assincronamente um som de uma URL e é reproduzido em um novo thread.  
+O exemplo de código a seguir carrega um som de forma assíncrona de uma URL e é reproduzido em um novo thread.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.Media.SoundPlayer.LoadAsync#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.LoadAsync/CS/Form1.cs#1)]
@@ -30,18 +30,18 @@ O exemplo de código a seguir carrega assincronamente um som de uma URL e é rep
   
 -   Se você substituir o nome de arquivo `"http://www.tailspintoys.com/sounds/stop.wav"` com um nome de arquivo válido.  
   
- Para obter informações sobre como criar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [Compilando a partir da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Operações de arquivo devem ser incluídas dentro de blocos de tratamento de exceção apropriados.  
   
  As seguintes condições podem causar uma exceção:  
   
--   O nome do caminho está malformado. Por exemplo, ele contém caracteres que não são válidos ou apenas espaços em branco (<xref:System.ArgumentException> classe).  
+-   O nome do caminho está malformado. Por exemplo, ele contém caracteres que não são válidos ou é somente um espaço em branco (<xref:System.ArgumentException> classe).  
   
 -   O caminho é somente leitura (<xref:System.IO.IOException> classe).  
   
--   O nome do caminho é `Nothing` (<xref:System.ArgumentNullException> classe).  
+-   É o nome do caminho `Nothing` (<xref:System.ArgumentNullException> classe).  
   
 -   O nome do caminho é muito longo (<xref:System.IO.PathTooLongException> classe).  
   

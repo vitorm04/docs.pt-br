@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: a827eeeca3f9d2719b4467bd19e66b3a40eb2c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520455"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480412"
 ---
 # <a name="application-settings-overview"></a>Visão geral sobre configurações do aplicativo
 Este tópico discute como criar e armazenar dados de configuração em nome de seu aplicativo e seus usuários.  
@@ -31,21 +31,21 @@ Este tópico discute como criar e armazenar dados de configuração em nome de s
   
  As configurações são armazenadas como fragmentos XML em arquivos de configuração. Configurações com escopo do aplicativo são representadas pelo elemento `<application.Settings>` e geralmente são colocadas em *app*.exe.config, em que *app* é o nome do seu arquivo executável principal. As configurações com escopo do usuário são representadas pelo elemento `<userSettings>` e são colocadas em *usuário*.config, em que *usuário* é o nome de usuário da pessoa que está executando o aplicativo no momento. Você precisa implantar o arquivo *app*.exe.config com seu aplicativo. As configurações de arquitetura criarão os arquivos *usuário*.config sob demanda na primeira vez em que o aplicativo salvar configurações para o usuário. Você também pode definir um bloco `<userSettings>` em *app*.exe.config para fornecer valores padrão para configurações com escopo do usuário.  
   
- Controles personalizados também podem salvar suas próprias configurações implementando a <xref:System.Configuration.IPersistComponentSettings> interface, que expõe o <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> método. Windows Forms <xref:System.Windows.Forms.ToolStrip> controle implementa essa interface para salvar a posição de barras de ferramentas e itens da barra de ferramentas entre as sessões do aplicativo. Para obter mais informações sobre controles personalizados e configurações do aplicativo, consulte [Configurações do aplicativo para controles personalizados](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md).  
+ Controles personalizados também podem salvar suas próprias configurações implementando a <xref:System.Configuration.IPersistComponentSettings> da interface, que expõe o <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> método. Os formulários do Windows <xref:System.Windows.Forms.ToolStrip> controle implementa essa interface para salvar a posição das barras de ferramentas e itens de barra de ferramentas entre as sessões do aplicativo. Para obter mais informações sobre controles personalizados e configurações do aplicativo, consulte [Configurações do aplicativo para controles personalizados](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md).  
   
 ## <a name="limitations-of-application-settings"></a>Limitações das configurações de aplicativo  
  Você não pode usar as configurações de aplicativo em um aplicativo não gerenciado que hospeda o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. As configurações não funcionam em ambientes como suplementos do Visual Studio, C++ para Microsoft Office, hospedagem de controles no Internet Explorer ou projetos e suplementos do Microsoft Outlook.  
   
- Atualmente, não é possível associar a algumas propriedades nos Windows Forms. O exemplo mais notável é o <xref:System.Windows.Forms.Form.ClientSize%2A> propriedade, pois a associação a essa propriedade poderia causar um comportamento imprevisível em tempo de execução. Geralmente, você pode contornar esses problemas salvando e carregando essas configurações programaticamente.  
+ Atualmente, não é possível associar a algumas propriedades nos Windows Forms. O exemplo mais notável é o <xref:System.Windows.Forms.Form.ClientSize%2A> propriedade, como associação a essa propriedade causaria um comportamento imprevisível em tempo de execução. Geralmente, você pode contornar esses problemas salvando e carregando essas configurações programaticamente.  
   
  As configurações de aplicativo não têm nenhum recurso interno para criptografar informações automaticamente. Você nunca deve armazenar informações relacionadas à segurança, como senhas de banco de dados, em texto não criptografado. Se quiser armazenar esse tipo de informações confidenciais, você, como desenvolvedor de aplicativos, será responsável por garantir sua segurança. Se quiser armazenar cadeias de conexão, recomendamos que você use a Segurança Integrada do Windows e não recorra ao hard-coding de senhas na URL. Para obter mais informações, consulte [Segurança de acesso do código e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
 ## <a name="getting-started-with-application-settings"></a>Introdução às Configurações de Aplicativo  
  Se usar o Visual Studio, você poderá definir configurações dentro do Designer de Formulários do Windows usando a propriedade **(ApplicationSettings)** na janela **Propriedades**. Quando você define as configurações dessa forma, o Visual Studio cria automaticamente uma classe wrapper gerenciada personalizada que associa cada configuração a uma propriedade de classe. O Visual Studio também cuida da associação da configuração a uma propriedade em um formulário ou controle, de modo que as configurações do controle sejam restauradas automaticamente quando seu formulário é exibido e sejam salvas automaticamente quando o formulário é fechado.  
   
- Se quiser controlar de forma mais detalhada as configurações, você poderá definir sua própria classe wrapper de configurações de aplicativo personalizada. Isso é feito derivando uma classe de <xref:System.Configuration.ApplicationSettingsBase>, adicionando uma propriedade que corresponda a cada configuração e aplicando atributos especiais a essas propriedades. Para obter detalhes sobre como criar classes wrapper, consulte [Arquitetura das configurações do aplicativo](../../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Se quiser controlar de forma mais detalhada as configurações, você poderá definir sua própria classe wrapper de configurações de aplicativo personalizada. Isso é feito derivando uma classe de <xref:System.Configuration.ApplicationSettingsBase>, adicionando uma propriedade que corresponde a cada configuração e aplicando atributos especiais a essas propriedades. Para obter detalhes sobre como criar classes wrapper, consulte [Arquitetura das configurações do aplicativo](../../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
- Você também pode usar o <xref:System.Windows.Forms.Binding> classe para associar as configurações por meio de programação a propriedades em formulários e controles.  
+ Você também pode usar o <xref:System.Windows.Forms.Binding> classe para associar as configurações programaticamente a propriedades em formulários e controles.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Configuration.ApplicationSettingsBase>  
@@ -53,7 +53,7 @@ Este tópico discute como criar e armazenar dados de configuração em nome de s
  <xref:System.Configuration.LocalFileSettingsProvider>  
  <xref:System.Configuration.IPersistComponentSettings>  
  [Como validar configurações de aplicativo](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [Gerenciando configurações de aplicativo (.NET)](http://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
+ [Gerenciando configurações de aplicativo (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
  [Como Ler Configurações em Tempo de Execução com C#](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
  [Usando configurações do aplicativo e configurações do usuário](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [Arquitetura das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

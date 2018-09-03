@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2f2a25f06aa90dc1cbb63f4f91d6032ef017dab2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 81d0f17971653c3e3ecd27ddde745a65c8b4f26d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749797"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482542"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;segurança&gt; de &lt;wsFederationHttpBinding&gt;
 Define as configurações de segurança de [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -90,12 +90,12 @@ Define as configurações de segurança de [ \<wsFederationHttpBinding >](../../
 |---------------|-----------------|  
 |Modo|Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>Atributo mode  
+## <a name="mode-attribute"></a>modo de atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|A mensagem SOAP não é segura durante a transferência.|  
-|Mensagem|São fornecidos os serviços de integridade, confidencialidade, autenticação de servidor e autenticação de cliente usando a segurança de mensagem SOAP. Por padrão, o corpo é criptografado e assinado. O serviço precisa ser configurado com um certificado. Autenticação de cliente é com base no token emitido para o cliente por um serviço de token de segurança|  
+|Mensagem|São fornecidos os serviços de integridade, confidencialidade, autenticação de servidor e autenticação de cliente usando a segurança de mensagem SOAP. Por padrão, o corpo é criptografado e assinado. O serviço precisa ser configurado com um certificado. Autenticação de cliente baseia-se no token emitido ao cliente por um serviço de token de segurança|  
 |TransportWithMessageCredential|A integridade, a confidencialidade e a autenticação de servidor são fornecidas por HTTPS. O serviço precisa ser configurado com um certificado. A autenticação de cliente é fornecida por meio de segurança de mensagens SOAP e é baseada no token emitido ao cliente por um serviço de token de segurança.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -120,5 +120,5 @@ Define as configurações de segurança de [ \<wsFederationHttpBinding >](../../
  [Selecionando um tipo de credencial](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

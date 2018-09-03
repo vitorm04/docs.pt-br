@@ -2,12 +2,12 @@
 title: Rastreamento de variável e argumento
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: f1938da55d2e1d88c88f83ff75f357e23f1eb81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516978"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481486"
 ---
 # <a name="variable-and-argument-tracking"></a>Rastreamento de variável e argumento
 Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair dados. Isso fornece um contexto extra para acessar uma execução de postagem de registro de rastreamento. Em [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], você pode extrair qualquer variável ou argumento visível no escopo de qualquer atividade em um fluxo de trabalho usando o rastreamento. Controlando os perfis facilitam extrair dados.  
@@ -17,7 +17,7 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
   
 -   Se uma variável é especificado pelo nome de variável, então o rastreamento para a variável dentro da atividade sendo controlada e em atividades pai. A variável é procurada no escopo da atividade atual e o escopo pai.  
   
--   Se as variáveis a ser extraído são especificadas usando nome = "*", em seguida, todas as variáveis dentro da atividade atual que está sendo rastreada são extraídas. Variáveis que estão no escopo mas são definidos em atividades pai não são extraídos nesse caso.  
+-   Se as variáveis a ser extraídos são especificadas usando o nome = "*", em seguida, todas as variáveis dentro da atividade atual que está sendo controlado são extraídas. Variáveis que estão no escopo mas são definidos em atividades pai não são extraídos nesse caso.  
   
  Para extrair argumentos, os argumentos extraídos dependem de estado da atividade. Quando o estado de uma atividade é executado, então somente `InArguments` está disponível para a extração. Para qualquer outro estado da atividade (zipado, criticado, cancelado), todos os argumentos, InArguments e OutArguments, estão disponíveis para a extração.  
   
@@ -47,5 +47,5 @@ Para controlar a execução de um fluxo de trabalho, geralmente é útil extrair
 3.  Para participantes personalizados de rastreamento certifique-se de que o código de WF não divulgue informações sigilosas que é armazenada em variáveis ou nos argumentos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Monitoramento do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitoramento de aplicativos com App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -1,54 +1,42 @@
 ---
-title: Como criar um projeto LINQ to DataSet no Visual Studio
-ms.date: 03/30/2017
+title: Criar um projeto LINQ to DataSet no Visual Studio
+ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758861"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482172"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Como criar um projeto LINQ to DataSet no Visual Studio
-Os diferentes tipos de projetos do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] exigem determinados namespaces importados (Visual Basic) ou diretivas `using` (C#) e referências. O requisito mínimo é uma referência ao System.Core.dll e uma diretiva `using` para <xref:System.Linq>. Por padrão, eles serão fornecidos se você criar um novo projeto [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)]. O [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] também exige uma referência para System.Data.dll e System.Data.DataSetExtensions.dll e uma diretiva `Imports` (Visual Basic) ou `using` (C#).  
-  
- Se você estiver atualizando um projeto de uma versão anterior do Visual Studio, poderá ter que fornecer manualmente essas referências relacionadas a LINQ. Você também pode ter que definir manualmente o projeto para direcionar a versão 3.5 do .NET Framework.  
-  
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Como: criar um projeto LINQ to DataSet no Visual Studio
+
+Os diferentes tipos de projetos LINQ exigem determinados namespaces importados (Visual Basic) e referências de assembly ou [usando](../../../csharp/language-reference/keywords/using-directive.md) diretivas (c#). O requisito mínimo para LINQ é uma referência a *dll* e uma `using` diretiva <xref:System.Linq>.
+
+Esses requisitos são fornecidos por padrão, se você criar um novo console aplicativo projeto c# no Visual Studio 2017. Se você estiver atualizando um projeto de uma versão anterior do Visual Studio, talvez você precise fornecer essas referências relacionadas a LINQ manualmente.
+
+LINQ to DataSet requer duas referências adicionais ao *dll* e *DataSetExtensions. dll*.
+
 > [!NOTE]
->  Se você estiver criando a partir de um prompt de comando, você deve referenciar manualmente as DLLs relacionadas a LINQ em `drive` **:** \Program Files\Reference Assemblies\Microsoft\Framework\v3.5.  
-  
-### <a name="to-target-the-net-framework-35"></a>Para direcionar o .NET Framework 3.5  
-  
-1.  Em [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)], crie um novo projeto do Visual Basic ou c#. Como alternativa, você pode abrir um projeto Visual Basic ou c# que foi criado no Visual Studio 2005 e siga os prompts para convertê-lo para um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projeto.  
-  
-2.  Para um projeto c#, clique o **projeto** menu e clique **propriedades**.  
-  
-    1.  No **aplicativo** página de propriedades, selecione o .NET Framework 3.5 no **Framework de destino** lista suspensa.  
-  
-3.  Para um projeto do Visual Basic, clique o **projeto** menu e clique **propriedades**.  
-  
-    1.  No **compilar** página de propriedades, clique em **opções avançadas de compilação** e, em seguida, selecione o .NET Framework 3.5 no **Framework de destino (todas as configurações)** lista suspensa.  
-  
-4.  No **projeto** menu, clique em **adicionar referência**, clique no **.NET** guia, role para baixo até **Core**, clique nele e, em seguida, clique em  **Okey**.  
-  
-5.  Adicione uma diretiva `using` ou um namespace importado para <xref:System.Linq> ao seu arquivo de código-fonte ou projeto.  
-  
-     Para obter mais informações, consulte [usando diretiva](~/docs/csharp/language-reference/keywords/using-directive.md) ou [como: Adicionar ou remover Namespaces importados (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
-  
-### <a name="to-enable-linq-to-dataset-functionality"></a>Para ativar a funcionalidade LINQ to DataSet  
-  
-1.  Se necessário, siga as etapas anteriores neste tópico para adicionar uma referência para o System.Core.dll e uma diretiva `using` ou o namespace importado para System.Linq.  
-  
-2.  Em c# ou Visual Basic, clique no **projeto** menu e clique **adicionar referência**.  
-  
-3.  No **adicionar referência** caixa de diálogo, clique o **.NET** guia se não estiver na parte superior. Role para baixo até **System. Data** e **System.Data.DataSetExtensions** e clicar neles. Clique o **Okey** botão.  
-  
-4.  Adicione uma diretiva `using` ou um namespace importado para <xref:System.Data> ao seu arquivo de código-fonte ou projeto. Para obter mais informações, consulte [usando diretiva](~/docs/csharp/language-reference/keywords/using-directive.md) ou [como: Adicionar ou remover Namespaces importados (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
-  
-5.  Adicione uma referência ao System.Data.DataSetExtensions.dll para a funcionalidade LINQ to Dataset. Adicione uma referência para System.Data.dll se ainda não existir.  
-  
-6.  Opcionalmente, adicione uma diretiva `using` ou um namespace importado para `System.Data.Common` ou `System.Data.SqlClient`, dependendo de como você se conecta ao banco de dados.  
-  
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
- [Introdução ao LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+> Se você estiver compilando em um prompt de comando, deverá manualmente referenciar as DLLs relacionadas a LINQ no *%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.5*.
+
+## <a name="to-enable-linq-to-dataset-functionality"></a>Para ativar a funcionalidade LINQ to DataSet
+
+Siga estas etapas para habilitar o LINQ para funcionalidade de conjunto de dados em um projeto existente.
+
+1. Adicione referências aos **System. Core**, **System. Data**, e **DataSetExtensions**.
+
+   Na **Gerenciador de soluções**, clique com botão direito no **referências** nó e selecione **Add Reference**. No **Gerenciador de referências** caixa de diálogo, selecione **System. Core**, **System. Data**, e **DataSetExtensions**. Selecione **OK**.
+
+1. Adicione [usando](../../../csharp/language-reference/keywords/using-directive.md) diretivas (ou [instruções Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) no Visual Basic) para **System. Data** e **System. LINQ**.
+
+   ```csharp
+   using System.Data;
+   using System.Linq;
+   ```
+
+1. Opcionalmente, adicione uma `using` diretiva (ou `Imports` instrução) para **Common** ou **System.Data.SqlClient**, dependendo de como você se conecta ao banco de dados.
+
+## <a name="see-also"></a>Consulte também
+
+- [Introdução ao LINQ to DataSet](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

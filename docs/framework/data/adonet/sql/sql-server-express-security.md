@@ -2,12 +2,12 @@
 title: Segurança do SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 7bc0fdf218f8fca1f904505c552df6986c47e4de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364366"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485580"
 ---
 # <a name="sql-server-express-security"></a>Segurança do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) é baseado no Microsoft SQL Server, e dá suporte à maioria dos recursos do mecanismo de banco de dados. Ele foi criado de forma que os recursos insuficientes e a conectividade de rede sejam desativadas por padrão. Isso reduz a área da superfície disponível para ataque por um usuário mal-intencionado.  
@@ -31,13 +31,13 @@ O Microsoft SQL Server Express Edition (SQL Server Express) é baseado no Micros
   
 |||  
 |-|-|  
-|[SQL Server Books Online](http://msdn.microsoft.com/library/bb543165.aspx) (Guias online do SQL Server)|Contém a documentação do SQL Server Express.|  
-|[Conectar-se ao SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) nos Manuais Online do SQL Server|Descreve como usar o SQL Server Express em uma rede.|  
-|[Microsoft SQL Server 2005 Express Edition Manuais Online](http://msdn.microsoft.com/library/ms165706.aspx)|Documentação completa do SQL Server 2005 Express Edition.|  
-|[Instâncias de usuário para não administradores](http://msdn.microsoft.com/library/ms143684.aspx) nos Manuais Online do SQL Server|Descreve como criar e implantar instâncias de usuário.|  
+|[SQL Server Books Online](https://msdn.microsoft.com/library/bb543165.aspx) (Guias online do SQL Server)|Contém a documentação do SQL Server Express.|  
+|[Conectar-se ao SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) nos Manuais Online do SQL Server|Descreve como usar o SQL Server Express em uma rede.|  
+|[Microsoft SQL Server 2005 Express Edition Manuais Online](https://msdn.microsoft.com/library/ms165706.aspx)|Documentação completa do SQL Server 2005 Express Edition.|  
+|[Instâncias de usuário para não administradores](https://msdn.microsoft.com/library/ms143684.aspx) nos Manuais Online do SQL Server|Descreve como criar e implantar instâncias de usuário.|  
 |[Instâncias do usuário do SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Descreve recursos de instância de usuário em um aplicativo do ADO.NET. Fornece informações sobre como habilitar uma instância de usuário, conectar-se a uma instância de usuário usando um <xref:System.Data.SqlClient.SqlConnection>, o tempo de vida da instância de usuário e os cenários de instância de usuário.|  
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server Security](../../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  
  [Instâncias do usuário do SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

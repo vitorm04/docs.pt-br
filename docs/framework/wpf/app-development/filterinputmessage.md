@@ -5,12 +5,12 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: 69bc1e973b690454bcf91487c12dc4ce0ac46a17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a22071696ca012968e042e15cd8a9f4b876fd9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548399"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479965"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 Chamado pelo PresentationHost.exe sempre que uma mensagem é recebida, a menos que E_NOTIMPL seja retornado.  
@@ -43,4 +43,4 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
  O aplicativo hospedado recebe mensagens de entrada não processada registrando com o conjunto de dispositivos de entrada não processada (dispositivos de interface humana) retornado pelo [GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Notificação de WM_INPUT](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)
+ [Notificação de WM_INPUT](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)

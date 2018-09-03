@@ -2,18 +2,18 @@
 title: Coleções de esquema ODBC
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-ms.openlocfilehash: 36d0859b897bfcea33803c219ade14722ed90421
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdedbb11960f02b99dcca6388abf663635238f74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766641"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479974"
 ---
 # <a name="odbc-schema-collections"></a>Coleções de esquema ODBC
 Esta seção discute o suporte de coleção de esquema para os drivers ODBC para Microsoft SQL Server, Oracle e Microsoft Jet.  
   
 ## <a name="microsoft-sql-server-odbc-driver"></a>Driver ODBC do Microsoft SQL Server  
- O Driver ODBC do Microsoft SQL Server suporta as seguintes coleções de esquema específico além das coleções de esquema comuns:  
+ O Driver ODBC do Microsoft SQL Server suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
 -   Tabelas  
   
@@ -49,7 +49,7 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |NON_UNIQUE|Int16|  
 |INDEX_QUALIFIER|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|TIPO DE|Int16|  
+|TIPO|Int16|  
 |ORDINAL_POSITION|Int16|  
 |COLUMN_NAME|Cadeia de Caracteres|  
 |ASC_OR_DESC|Cadeia de Caracteres|  
@@ -153,7 +153,7 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |SS_DATA_TYPE|Byte|  
   
 ## <a name="microsoft-oracle-odbc-driver"></a>Driver ODBC do Microsoft Oracle  
- O Driver ODBC do Microsoft SQL Server Oracle suporta as seguintes coleções de esquema específico além das coleções de esquema comuns:  
+ O Driver ODBC do Microsoft SQL Server Oracle suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
 -   Tabelas  
   
@@ -192,7 +192,7 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
-|BASE|Int16|  
+|RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
 |COMENTÁRIOS|Cadeia de Caracteres|  
 |ORDINAL_POSITION|Int32|  
@@ -224,14 +224,14 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
-|BASE|Int16|  
+|RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
 |COMENTÁRIOS|Cadeia de Caracteres|  
 |SOBRECARGA|Int32|  
 |ORDINAL_POSITION|Int32|  
   
 ## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC Driver  
- O Driver de ODBC do Microsoft Jet suporta as seguintes coleções de esquema específico além das coleções de esquema comuns:  
+ O Driver ODBC do Microsoft Jet suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
 -   Tabelas  
   
@@ -270,7 +270,7 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
-|BASE|Int16|  
+|RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
 |COMENTÁRIOS|Cadeia de Caracteres|  
 |ORDINAL_POSITION|Int32|  
@@ -302,7 +302,7 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |PRECISÃO|Int32|  
 |COMPRIMENTO|Int32|  
 |ESCALA|Int16|  
-|BASE|Int16|  
+|RADIX|Int16|  
 |PERMITE VALOR NULO|Int16|  
 |COMENTÁRIOS|Cadeia de Caracteres|  
 |SOBRECARGA|Int32|  
@@ -333,4 +333,4 @@ Esta seção discute o suporte de coleção de esquema para os drivers ODBC para
 |IS_NULLABLE|Cadeia de Caracteres|  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

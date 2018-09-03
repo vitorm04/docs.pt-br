@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492242"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475888"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente e serviço sem segurança na Intranet
-A ilustração a seguir mostra um simples serviço do Windows Communication Foundation (WCF) desenvolvido para fornecer informações sobre uma rede privada segura para um aplicativo WCF. Segurança não é necessária porque os dados são de baixa prioridade, a rede deve ser segura ou a segurança é fornecida por uma camada abaixo a infra-estrutura do WCF.  
+A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) simples desenvolvido para fornecer informações sobre uma rede privada segura para um aplicativo WCF. Segurança não é necessária porque os dados são de importância baixa, a rede deve ser inerentemente seguro ou a segurança é fornecida por uma camada abaixo a infraestrutura do WCF.  
   
- ![Cliente inseguro de intranet e cenário de serviço](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Cenário de serviço e cliente desprotegido de intranet](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
@@ -34,7 +34,7 @@ A ilustração a seguir mostra um simples serviço do Windows Communication Foun
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade sem segurança:  
@@ -43,7 +43,7 @@ A ilustração a seguir mostra um simples serviço do Windows Communication Foun
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Configuração  
- O código a seguir configura o mesmo ponto de extremidade usando a configuração:  
+ O código a seguir define o mesmo ponto de extremidade usando a configuração:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -89,7 +89,7 @@ A ilustração a seguir mostra um simples serviço do Windows Communication Foun
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Configuração  
- O código de configuração a seguir aplica-se ao cliente:  
+ O código de configuração a seguir aplica-se para o cliente:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -117,4 +117,4 @@ A ilustração a seguir mostra um simples serviço do Windows Communication Foun
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.NetTcpBinding>  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

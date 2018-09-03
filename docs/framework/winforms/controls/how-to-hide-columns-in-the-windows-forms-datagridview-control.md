@@ -9,23 +9,23 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 65228490dd90aaf1f1d76b6a37f9cb9e8a739746
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ddf4b0701ea563465ca3023c73f588f4e0f3a5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533582"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488034"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Como ocultar colunas no controle DataGridView dos Windows Forms
-Às vezes, você desejará exibir somente algumas das colunas que estão disponíveis em um Windows Forms <xref:System.Windows.Forms.DataGridView> controle. Por exemplo, você talvez queira mostrar um funcionário coluna de salário para usuários com credenciais de gerenciamento ao ocultá-lo de outros usuários. Como alternativa, você talvez queira associar o controle a uma fonte de dados que contém várias colunas, que apenas algumas das quais você deseja exibir. Nesse caso, você normalmente removerá as colunas que você não estiver interessado na exibição em vez de ocultá-las.  
+Às vezes você desejará exibir somente algumas das colunas que estão disponíveis em um Windows Forms <xref:System.Windows.Forms.DataGridView> controle. Por exemplo, você talvez queira mostrar um funcionário a coluna de salário para usuários com credenciais de gerenciamento enquanto a oculta de outros usuários. Como alternativa, talvez você queira associar o controle a uma fonte de dados que contém várias colunas, que apenas algumas das quais você deseja exibir. Nesse caso, você normalmente removerá as colunas que você não estiver interessado em Exibir em vez de ocultá-los.  
   
- No <xref:System.Windows.Forms.DataGridView> controle, o <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> valor de propriedade de uma coluna determina se essa coluna é exibida.  
+ No <xref:System.Windows.Forms.DataGridView> controle, o <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> valor da propriedade de uma coluna determina se essa coluna é exibida.  
   
- Há suporte para esta tarefa no Visual Studio.  Consulte também [como: ocultar colunas no Windows Forms DataGridView controle usando o Designer](http://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
+ Há suporte para esta tarefa no Visual Studio.  Consulte também [como: ocultar colunas no Windows Forms DataGridView controle usando o Designer](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
   
 ### <a name="to-hide-a-column-programmatically"></a>Para ocultar uma coluna de forma programática  
   
--   Defina a propriedade <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> como `false`. Para ocultar um `CustomerID` coluna que é gerada automaticamente durante a associação de dados, coloque o seguinte exemplo de código em um <xref:System.Windows.Forms.DataGridView.DataBindingComplete> manipulador de eventos.  
+-   Defina a propriedade <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> como `false`. Para ocultar uma `CustomerID` coluna que é gerada automaticamente durante a associação de dados, coloque o seguinte exemplo de código em um <xref:System.Windows.Forms.DataGridView.DataBindingComplete> manipulador de eventos.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  

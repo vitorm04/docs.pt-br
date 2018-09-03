@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: c8cbc2cb60e4afce4bcb35cf1fe645068a452b1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671138389b471ad9b9c62bd768895832d0324591
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547206"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486549"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Instruções passo a passo: hospedando um controle ActiveX no WPF
 Para permitir uma melhor interação com navegadores, você pode usar controles [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] nos seus aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essa instrução passo a passo demonstra como você pode hospedar o [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como um controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -31,7 +31,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] instalado no computador onde o Visual Studio está instalado.  
+-   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] instalado no computador em que o Visual Studio está instalado.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
@@ -68,7 +68,7 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
   
 2.  Na **Caixa de ferramentas**, adicione o controle do Windows Media Player para a superfície de design.  
   
-3.  Na janela Propriedades, defina o valor do controle do Windows Media Player <xref:System.Windows.Forms.Control.Dock%2A> propriedade <xref:System.Windows.Forms.DockStyle.Fill>.  
+3.  Na janela Propriedades, defina o valor do controle do Windows Media Player <xref:System.Windows.Forms.Control.Dock%2A> propriedade para <xref:System.Windows.Forms.DockStyle.Fill>.  
   
 4.  Compile o projeto de biblioteca do controle WmpAxLib.  
   
@@ -90,15 +90,15 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
   
      [!code-xaml[HostingAxInWpf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]  
   
-6.  No modo de Design ou modo de exibição XAML, selecione o <xref:System.Windows.Window> elemento.  
+6.  No modo de Design ou XAML, selecione o <xref:System.Windows.Window> elemento.  
   
 7.  Na janela Propriedades, clique na guia **Eventos**.  
   
-8.  Clique duas vezes o <xref:System.Windows.FrameworkElement.Loaded> evento.  
+8.  Clique duas vezes o <xref:System.Windows.FrameworkElement.Loaded> eventos.  
   
-9. Insira o seguinte código para manipular o <xref:System.Windows.FrameworkElement.Loaded> evento.  
+9. Insira o seguinte código para manipular o <xref:System.Windows.FrameworkElement.Loaded> eventos.  
   
-     Esse código cria uma instância do <xref:System.Windows.Forms.Integration.WindowsFormsHost> controlar e adiciona uma instância do `AxWindowsMediaPlayer` controle como seu filho.  
+     Esse código cria uma instância das <xref:System.Windows.Forms.Integration.WindowsFormsHost> controlar e adiciona uma instância da `AxWindowsMediaPlayer` controle como seu filho.  
   
      [!code-csharp[HostingAxInWpf#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
@@ -108,6 +108,6 @@ Para permitir uma melhor interação com navegadores, você pode usar controles 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Designer do WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
  [Passo a passo: hospedando um controle composto do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

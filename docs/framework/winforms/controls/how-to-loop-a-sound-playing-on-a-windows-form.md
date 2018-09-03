@@ -10,15 +10,15 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 67e1f8abe6872358a29ab8f6734b58c1c1bc809c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533751"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480111"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Como executar um som em loop em um Windows Form
-O exemplo de código a seguir toca um som repetidamente. Quando o código de `stopPlayingButton_Click` manipulador de eventos é executado, qualquer som no momento será interrompido. Se nenhum som é reproduzido, nada acontecerá.  
+O exemplo de código a seguir toca um som repetidamente. Quando o código a `stopPlayingButton_Click` manipulador de eventos é executado, nenhum som é interrompido em reprodução no momento. Se nenhum som estiver em execução, nada acontece.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
@@ -31,7 +31,7 @@ O exemplo de código a seguir toca um som repetidamente. Quando o código de `st
   
 -   Se você substituir o nome de arquivo `"c:\Windows\Media\chimes.wav"` com um nome de arquivo válido.  
   
- Para obter informações sobre como criar este exemplo da linha de comando para o visual Basic ou Visual c#, consulte [Compilando a partir da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo de linha de comando do visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Operações de arquivo devem ser incluídas dentro de blocos de tratamento de exceção apropriados.  
@@ -42,7 +42,7 @@ O exemplo de código a seguir toca um som repetidamente. Quando o código de `st
   
 -   O caminho é somente leitura (<xref:System.IO.IOException> classe).  
   
--   O nome do caminho é `Nothing` (<xref:System.ArgumentNullException> classe).  
+-   É o nome do caminho `Nothing` (<xref:System.ArgumentNullException> classe).  
   
 -   O nome do caminho é muito longo (<xref:System.IO.PathTooLongException> classe).  
   

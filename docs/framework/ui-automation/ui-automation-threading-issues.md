@@ -8,19 +8,19 @@ ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: a9f49a99db7a4f7d118bd86bbe723a633c1b10ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c02ac48915668443a3c2e75f335b9d4d5636e469
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409388"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486298"
 ---
 # <a name="ui-automation-threading-issues"></a>Problemas de Threading na Automação da Interface do Usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Por causa da forma [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] usa mensagens do Windows, conflitos pode ocorrer quando um aplicativo cliente tenta interagir com seu próprio [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] no [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread. Esses conflitos podem resultar em um desempenho muito lento ou até mesmo fazer com que o aplicativo pare de responder.  
+ Devido à maneira [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] usa mensagens do Windows, conflitos pode ocorrer quando um aplicativo cliente tenta interagir com seu próprio [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sobre o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread. Esses conflitos podem levar a um desempenho muito lento ou até mesmo fazer com que o aplicativo pare de responder.  
   
- Se seu aplicativo cliente se destina a interagir com todos os elementos na área de trabalho, incluindo sua própria [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], você deve fazer todas as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] chama em um thread separado. Isso inclui localizar elementos (por exemplo, usando <xref:System.Windows.Automation.TreeWalker> ou <xref:System.Windows.Automation.AutomationElement.FindAll%2A> método) e usando os padrões de controle.  
+ Se seu aplicativo cliente se destina a interagir com todos os elementos na área de trabalho, incluindo sua própria [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], você deve fazer todas as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] chama em um thread separado. Isso inclui localizar elementos (por exemplo, usando <xref:System.Windows.Automation.TreeWalker> ou o <xref:System.Windows.Automation.AutomationElement.FindAll%2A> método) e usando padrões de controle.  
   
- É seguro fazer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] chamadas dentro de um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] manipulador de eventos, porque o manipulador de eventos é sempre chamado em uma não -[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread. No entanto, ao assinar eventos que podem se originar de seu aplicativo de cliente [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], você deve fazer a chamada para <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>, ou um método relacionado, em não[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread. Remova manipuladores de eventos no mesmo thread.
+ É seguro fazer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] chama dentro de uma [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] manipulador de eventos, porque o manipulador de eventos é sempre chamado em um não -[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread. No entanto, ao assinar eventos que podem ser obtidas de seu aplicativo de cliente [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], você deve fazer a chamada para <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>, ou um método relacionado, em um não -[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] thread. Remova manipuladores de eventos no mesmo thread.

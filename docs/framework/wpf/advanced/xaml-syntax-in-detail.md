@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755045"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485723"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -45,7 +45,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
 ## <a name="the-xaml-language-specification"></a>Especificação da Linguagem XAML  
  A terminologia de sintaxe XAML definida aqui também é definida ou referenciada dentro da especificação da linguagem XAML. XAML é uma linguagem baseada em XML e segue ou expande regras estruturais do XML. Parte da terminologia é compartilhada com ou se baseia na terminologia usada com frequência ao descrever a linguagem XML ou o modelo de objeto do documento XML.  
   
- Para obter mais informações sobre a especificação da linguagem XAML, baixe [\[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525) do Centro de Download da Microsoft.  
+ Para obter mais informações sobre a especificação da linguagem XAML, baixe [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525) do Centro de Download da Microsoft.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML e CLR  

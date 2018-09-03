@@ -5,11 +5,11 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 4a1d880da796aac40da93ca2513b6163200ca3c1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254784"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393518"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Teste de unidade no .NET Core e no .NET Standard
 

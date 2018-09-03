@@ -2,12 +2,12 @@
 title: Atraso absoluto
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518379"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486096"
 ---
 # <a name="absolute-delay"></a>Atraso absoluto
 O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> especificado usando temporizadores duráveis em um aplicativo de fluxo de trabalho. Isso é diferente de usar a atividade interno de <xref:System.Activities.Statements.Delay> porque isso permitirá que você atrasar apenas para <xref:System.TimeSpan> determinado (ou o número de minutos/segundos).  
@@ -39,7 +39,7 @@ O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> es
   
  Este exemplo também demonstra como ativar persistência para <xref:System.Activities.WorkflowApplication>. Para esse exemplo específico, nós estaremos usando timers duráveis em que dados de fluxo de trabalho serão descarregados na base de dados de persistência durante o tempo ocioso enquanto aguarda o timer para expirar. Essa implementação também pode ser usada para outras ações de persistência. Este exemplo mostra como configurar a cadeia de conexão de persistência com SQL Server, e como criar o armazenamento de instância para persistir os dados para o fluxo de trabalho instância. A lógica é fornecida em como proceder o fluxo de trabalho depois que um evento é gerado que faz a instância de fluxo de trabalho viável.  
   
- Como você percorrer este exemplo, você verá a hora em que o atraso interno começa e for concluído, que por sua vez fará com que uma mensagem de email a ser enviada. A partir de aí, a atividade de AbsoluteDelay paralisará até <xref:System.DateTime> especificado (ou os 0 se <xref:System.DateTime> expirou) que por sua vez eles farão com que um email em cima de expiração. Isso mostrará os dois exemplos diferentes de uso da funcionalidade interna de <xref:System.Activities.Statements.Delay> contra o uso de uma atividade de AbsoluteDelay.  
+ Conforme você percorre Este exemplo, você verá a hora em que o atraso interno começa e conclua, que por sua vez fará com que uma mensagem de email a ser enviada. A partir de aí, a atividade de AbsoluteDelay paralisará até <xref:System.DateTime> especificado (ou os 0 se <xref:System.DateTime> expirou) que por sua vez eles farão com que um email em cima de expiração. Isso mostrará os dois exemplos diferentes de uso da funcionalidade interna de <xref:System.Activities.Statements.Delay> contra o uso de uma atividade de AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -58,7 +58,7 @@ O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> es
     > [!NOTE]
     >  Se você não incorpora um host válido SMTP, o aplicativo irá acionar uma exceção SMTP.  
   
-7.  Compile a solução selecionando **criar**, **compilar solução**.  
+7.  Compile a solução selecionando **construir**, **compilar solução**.  
   
 8.  Executar a solução pressionando **F5**.  
   
@@ -67,6 +67,6 @@ O principal cenário para esse exemplo é atrasar até <xref:System.DateTime> es
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

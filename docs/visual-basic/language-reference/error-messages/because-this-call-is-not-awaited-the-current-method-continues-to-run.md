@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 754fc6750e63f6d9f39da94041fc452829bca46d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591428"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480887"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Como esta chamada não é aguardada, o método atual continua sendo executado antes da chamada ser concluída
-Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere a possibilidade de aplicar o operador 'Await' para o resultado da chamada.  
+Como esta chamada não era esperada, a execução do método atual continua antes da chamada ser concluída. Considere aplicar o operador 'Await' ao resultado da chamada.  
   
  O método atual chama um método assíncrono que retorna um <xref:System.Threading.Tasks.Task> ou um <xref:System.Threading.Tasks.Task%601> e não se aplica a [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador para o resultado. A chamada ao método assíncrono inicia uma tarefa assíncrona. No entanto, como nenhum operador `Await` é aplicado, o programa continua sem esperar que a tarefa seja concluída. Na maioria dos casos, esse comportamento não é esperado. Geralmente, os outros aspectos do método de chamada dependem dos resultados da chamada ou, no mínimo, é esperado que o método chamado seja concluído antes de retornar do método que contém a chamada.  
   
- Igualmente importante é o que acontece com as exceções que são geradas no método assíncrono chamado. Uma exceção que é gerada em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> é armazenado na tarefa retornada. Se você não aguardar a tarefa ou verificar explicitamente se há exceções, a exceção será perdida. Se você aguardar a tarefa, a exceção será relançada.  
+ Igualmente importante é o que acontece com as exceções que são geradas no método assíncrono chamado. Uma exceção que é acionada em um método que retorna um <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> é armazenado na tarefa retornada. Se você não aguardar a tarefa ou verificar explicitamente se há exceções, a exceção será perdida. Se você aguardar a tarefa, a exceção será relançada.  
   
  Como uma melhor prática, você sempre deve aguardar a chamada.  
   
@@ -117,9 +117,9 @@ Como esta chamada não era esperada, a execução do método atual continua ante
   
      Uma janela simples, contendo um botão e uma caixa de texto, aparecerá no modo de exibição de **Design** de MainWindow.xaml.  
   
-     Para obter mais informações sobre o Designer XAML, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simples, consulte as seções "Para criar um aplicativo WPF" e "Para criar uma simples MainWindow do WPF" do [Passo a passo: acessando a Web usando async e await](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Para obter mais informações sobre o Designer XAML, consulte [Criando uma interface do usuário usando o Designer XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Para obter informações sobre como criar sua própria interface do usuário simples, consulte as seções "Para criar um aplicativo WPF" e "Para criar uma simples MainWindow do WPF" do [Passo a passo: acessando a Web usando async e await](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
   
-4.  Substitua o código em MainWindow.xaml.vb com o código a seguir.  
+4.  Substitua o código no XAML. vb pelo código a seguir.  
   
     ```vb  
     Class MainWindow   

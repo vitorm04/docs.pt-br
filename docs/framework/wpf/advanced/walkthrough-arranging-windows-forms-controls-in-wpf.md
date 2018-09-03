@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: f2cf82c54724a43a60fb9077c5731d4b4ad2cfd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98b108be518a9fef03ee299d43ed591cf736f68f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549653"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484933"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Instruções passo a passo: organizando controles dos Windows Forms no WPF
 Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recursos de layout para organizar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles em um aplicativo híbrido.  
@@ -48,9 +48,9 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 -   Usando contêineres de layout dinâmico.  
   
- Para uma listagem de código completa das tarefas ilustradas neste passo a passo, consulte [Organizando controles dos Windows Forms no WPF exemplo](http://go.microsoft.com/fwlink/?LinkID=159971).  
+ Para obter uma listagem de código completa das tarefas ilustradas neste passo a passo, consulte [Organizando controles do Windows Forms no WPF de exemplo](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
- Quando tiver terminado, você terá uma compreensão de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] recursos de layout no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-com base em aplicativos.  
+ Quando tiver terminado, você terá um entendimento dos [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] recursos de layout no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-com base em aplicativos.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
@@ -79,7 +79,7 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  No <xref:System.Windows.Controls.Grid> conjunto de elementos de <xref:System.Windows.Controls.Grid.ShowGridLines%2A> propriedade `true` e definir cinco linhas e três colunas.  
+5.  No <xref:System.Windows.Controls.Grid> conjunto de elementos a <xref:System.Windows.Controls.Grid.ShowGridLines%2A> propriedade `true` e defina cinco linhas e três colunas.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
@@ -88,7 +88,7 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 #### <a name="to-use-default-layout-settings"></a>Para usar as configurações padrão de layout  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
@@ -99,29 +99,29 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 #### <a name="to-size-to-content"></a>Para dimensionar para o Conteúdo  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
-2.  Pressione F5 para compilar e executar o aplicativo. Os dois novos controles de botão são dimensionados para exibir a cadeia de caracteres de texto mais longa e maior tamanho da fonte corretamente e o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos são redimensionados para acomodar os controles hospedados.  
+2.  Pressione F5 para compilar e executar o aplicativo. Os dois novos controles de botão são dimensionados para exibir a sequência de texto mais longa e maior tamanho de fonte corretamente e o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos são redimensionados para acomodar os controles hospedados.  
   
 ## <a name="using-absolute-positioning"></a>Usando o posicionamento absoluto  
- Você pode usar o posicionamento absoluto para colocar o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento em qualquer lugar na interface do usuário (IU).  
+ Você pode usar posicionamento absoluto para colocar o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento em qualquer lugar na interface do usuário (IU).  
   
 #### <a name="to-use-absolute-positioning"></a>Para usar posicionamento absoluto  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
-2.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento é colocado 20 pixels, do lado superior da célula da grade e a 20 pixels da esquerda.  
+2.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento é colocado a 20 pixels do lado superior da célula da grade e 20 pixels da esquerda.  
   
 ## <a name="specifying-size-explicitly"></a>Especificando o tamanho explicitamente  
  Você pode especificar o tamanho do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento usando o <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades.  
   
 #### <a name="to-specify-size-explicitly"></a>Para especificar o tamanho explicitamente  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
@@ -130,29 +130,29 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
 ## <a name="setting-layout-properties"></a>Definindo propriedades de layout  
  Sempre defina propriedades relacionadas ao layout no controle hospedado usando as propriedades do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. Definindo propriedades de layout diretamente no controle hospedado produzirá resultados indesejados.  
   
- A definição de propriedades relacionadas ao layout no controle hospedado em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não tem nenhum efeito.  
+ Definição de propriedades relacionadas ao layout no controle hospedado em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não tem nenhum efeito.  
   
 #### <a name="to-see-the-effects-of-setting-properties-on-the-hosted-control"></a>Para ver os efeitos da definição das propriedades no controle hospedado  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
 2.  No Gerenciador de Soluções, clique duas vezes em MainWindow.xaml. Abrir vb ou MainWindow.xaml.cs no Editor de códigos.  
   
-3.  Copie o seguinte código para o `MainWindow` definição da classe.  
+3.  Copie o seguinte código para o `MainWindow` definição de classe.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]  
   
 4.  Pressione F5 para compilar e executar o aplicativo.  
   
-5.  Clique o **clique me** botão. O `button1_Click` conjuntos de manipulador de eventos de <xref:System.Windows.Forms.Control.Top%2A> e <xref:System.Windows.Forms.Control.Left%2A> propriedades no controle hospedado. Isso faz com que o controle hospedado seja reposicionado dentro de <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. O host mantém a mesma área da tela, mas o controle hospedado é cortado. Em vez disso, o controle hospedado sempre deve preencher o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
+5.  Clique o **Click me** botão. O `button1_Click` conjuntos de manipulador de eventos do <xref:System.Windows.Forms.Control.Top%2A> e <xref:System.Windows.Forms.Control.Left%2A> propriedades no controle hospedado. Isso faz com que o controle hospedado seja reposicionado dentro do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. O host mantém a mesma área da tela, mas o controle hospedado é cortado. Em vez disso, o controle hospedado sempre deve preencher o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
 ## <a name="understanding-z-order-limitations"></a>Noções básicas sobre limitações da ordem z  
- Visível <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos sempre são desenhados sobre outros elementos do WPF e eles não são afetados pela ordem z. Para ver esse comportamento de ordem z, faça o seguinte:
+ Visível <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementos sempre são desenhados sobre outros elementos do WPF, e eles não são afetados pela ordem z. Para ver esse comportamento da ordem z, faça o seguinte:
 
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
  
@@ -160,22 +160,22 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
 
 
 ## <a name="docking"></a>Encaixe  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento suporta [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] encaixe. Definir o <xref:System.Windows.Controls.DockPanel.Dock%2A> propriedade anexa para encaixar o controle hospedado em um <xref:System.Windows.Controls.DockPanel> elemento.  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> dá suporte ao elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] encaixe. Defina as <xref:System.Windows.Controls.DockPanel.Dock%2A> propriedade anexada para encaixar o controle hospedado em um <xref:System.Windows.Controls.DockPanel> elemento.  
   
 #### <a name="to-dock-a-hosted-control"></a>Para encaixar o controle hospedado  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]  
   
-2.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> está encaixado à direita do elemento de <xref:System.Windows.Controls.DockPanel> elemento.  
+2.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> é encaixado à direita do elemento a <xref:System.Windows.Controls.DockPanel> elemento.  
   
 ## <a name="setting-visibility"></a>Definindo a visibilidade  
- Você pode tornar seu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle invisível ou recolhê-lo definindo o <xref:System.Windows.UIElement.Visibility%2A> propriedade no <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. Quando um controle estiver invisível, ele não será exibido, mas ocupa espaço de layout. Quando um controle estiver recolhido, ele não será exibido, mas também não ocupa espaço de layout.  
+ Você pode fazer sua [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle invisível ou recolhê-lo definindo o <xref:System.Windows.UIElement.Visibility%2A> propriedade no <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento. Quando um controle estiver invisível, ele não será exibido, mas ocupa espaço de layout. Quando um controle estiver recolhido, ele não será exibido, mas também não ocupa espaço de layout.  
   
 #### <a name="to-set-the-visibility-of-a-hosted-control"></a>Para definir a visibilidade de um controle hospedado  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]  
   
@@ -186,27 +186,27 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
   
 3.  Pressione F5 para compilar e executar o aplicativo.  
   
-4.  Clique o **clique para tornar invisível** botão para fazer o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento invisível.  
+4.  Clique o **clique para tornar invisíveis** botão para fazer o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento invisível.  
   
-5.  Clique o **clique para recolher** botão para ocultar o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento do layout inteiramente. Quando o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] está recolhido, os elementos adjacentes serão reorganizados para ocupar o seu espaço.  
+5.  Clique o **clique para recolher** botão para ocultar o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento do layout completamente. Quando o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle estiver recolhido, os elementos adjacentes serão reorganizados para ocupar o seu espaço.  
   
 ## <a name="hosting-a-control-that-does-not-stretch"></a>Hospedando um controle que não se alonga  
- Alguns [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles têm um tamanho fixo e não ser esticada para preencher o espaço disponível no layout. Por exemplo, o <xref:System.Windows.Forms.MonthCalendar> controle exibe um mês em um espaço fixo.  
+ Alguns [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles têm um tamanho fixo e não se esticam para preencher o espaço disponível no layout. Por exemplo, o <xref:System.Windows.Forms.MonthCalendar> controle exibe um mês em um espaço fixo.  
   
 #### <a name="to-host-a-control-that-does-not-stretch"></a>Para hospedar um controle que não se alonga  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]  
   
-2.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento é centralizado na linha de grade, mas ele não é estendido para preencher o espaço disponível. Se a janela for grande o suficiente, você pode ver dois ou mais meses exibidos pelo hospedado <xref:System.Windows.Forms.MonthCalendar> controle, mas eles são centralizados na linha. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mecanismo de layout centraliza os elementos que não podem ser dimensionados para preencher o espaço disponível.  
+2.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento é centralizado na linha de grade, mas ele não é alongado para preencher o espaço disponível. Se a janela é grande o suficiente, você poderá ver duas ou mais meses exibidos pelo hospedado <xref:System.Windows.Forms.MonthCalendar> controle, mas eles são centralizados na linha. O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mecanismo de layout centraliza os elementos que não podem ser dimensionados para preencher o espaço disponível.  
   
 ## <a name="scaling"></a>Dimensionamento  
  Diferentemente dos elementos do WPF, a maioria dos controles de formulários do Windows não são escalonáveis continuamente. Para fornecer dimensionamento personalizado, você deve substituir o <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> método. 
   
 #### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>Para dimensionar um controle hospedado usando o comportamento padrão  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
@@ -215,11 +215,11 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
 <!-- This could use an example of custom scaling. -->
 
 ## <a name="rotating"></a>Girando  
- Diferentemente dos elementos do WPF, controles de formulários do Windows não oferecem suporte a rotação. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento não gira com outros elementos WPF quando uma transformação de rotação é aplicada. Qualquer valor de rotação diferente de 180 graus gera o <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento.
+ Diferentemente dos elementos do WPF, controles dos Windows Forms não oferecem suporte a rotação. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento não gira com outros elementos do WPF quando uma transformação de rotação é aplicada. Qualquer valor de rotação diferente de 180 graus gera o <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventos.
  
 #### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>Para ver o efeito de rotação em um aplicativo híbrido  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
@@ -227,11 +227,11 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
  
 
 ## <a name="setting-padding-and-margins"></a>Margens e preenchimento de configuração  
- Preenchimento e margens de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout são semelhantes a enchimento e margens em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Basta definir o <xref:System.Windows.Controls.Control.Padding%2A> e <xref:System.Windows.FrameworkElement.Margin%2A> propriedades de <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
+ Preenchimento e margens em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout são semelhantes a preenchimento e margens em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Basta definir a <xref:System.Windows.Controls.Control.Padding%2A> e <xref:System.Windows.FrameworkElement.Margin%2A> propriedades sobre o <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
 #### <a name="to-set-padding-and-margins-for-a-hosted-control"></a>Para definir o preenchimento e margens de um controle hospedado  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]  
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]  
@@ -239,11 +239,11 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
 2.  Pressione F5 para compilar e executar o aplicativo. As configurações de preenchimento e margem são aplicadas para hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles da mesma maneira que seriam aplicadas em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="using-dynamic-layout-containers"></a>Usando contêineres de layout dinâmico  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] fornece dois contêineres de layout dinâmico, <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>. Você também pode usar esses contêineres [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layouts.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] fornece dois contêineres de layout dinâmico <xref:System.Windows.Forms.FlowLayoutPanel> e <xref:System.Windows.Forms.TableLayoutPanel>. Você também pode usar esses contêineres em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layouts.  
   
 #### <a name="to-use-a-dynamic-layout-container"></a>Para usar um contêiner de layout dinâmico  
   
-1.  Copie o XAML a seguir para o <xref:System.Windows.Controls.Grid> elemento.  
+1.  Copie o seguinte XAML para o <xref:System.Windows.Controls.Grid> elemento.  
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]  
   
@@ -252,18 +252,18 @@ Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../in
      [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
      [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]  
   
-3.  Adicionar uma chamada para o `InitializeFlowLayoutPanel` método no construtor.  
+3.  Adicione uma chamada para o `InitializeFlowLayoutPanel` método no construtor.  
   
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
-4.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento preenche o <xref:System.Windows.Controls.DockPanel>, e <xref:System.Windows.Forms.FlowLayoutPanel> organiza seus controles filhos no padrão <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
+4.  Pressione F5 para compilar e executar o aplicativo. O <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento preenche os <xref:System.Windows.Controls.DockPanel>, e <xref:System.Windows.Forms.FlowLayoutPanel> organiza seus controles filho no padrão <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Designer do WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
  [Considerações sobre o layout do elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Organizar janelas controles de formulários no exemplo do WPF](http://go.microsoft.com/fwlink/?LinkID=159971)  
+ [Organizar o Windows Forms a controles no WPF de exemplo](https://go.microsoft.com/fwlink/?LinkID=159971)  
  [Passo a passo: hospedando um controle composto do Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

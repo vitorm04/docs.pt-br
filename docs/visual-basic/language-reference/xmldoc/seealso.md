@@ -1,18 +1,18 @@
 ---
-title: '&lt;Consulte também&gt; (Visual Basic)'
+title: '&lt;seealso&gt; (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: 1d45c0c5fa95de9cfa345c0bdbf496aa227b9af5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a792bbea108bcdf33d430c47773466ef3dccdb0c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604673"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484874"
 ---
-# <a name="ltseealsogt-visual-basic"></a>&lt;Consulte também&gt; (Visual Basic)
+# <a name="ltseealsogt-visual-basic"></a>&lt;seealso&gt; (Visual Basic)
 Especifica um link que aparece na seção Consulte também.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -31,9 +31,9 @@ Especifica um link que aparece na seção Consulte também.
  Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `<seealso>` marca no `DoesRecordExist` seção para se referir a comentários de `UpdateRecord` método.  
+ Este exemplo usa o `<seealso>` marcar na `DoesRecordExist` seção para se referir a comentários de `UpdateRecord` método.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)

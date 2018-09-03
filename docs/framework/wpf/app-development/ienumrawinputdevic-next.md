@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: 3cf3231bd48290c5b6b0ce8eeb6534de564c0c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 329a2cd96346e199ee834856dd6dbfac6175b722
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546400"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481172"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
-Enumera os próximos `celt` [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) estruturas na lista do enumerador, retornando-os no `rgelt` juntamente com o número real de elementos enumerados em `pceltFetched`.  
+Enumera os próximos `celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) estruturas na lista do enumerador, retornando-a no `rgelt` juntamente com o número real de elementos enumerados em `pceltFetched`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +26,7 @@ HRESULT Next(
 #### <a name="parameters"></a>Parâmetros  
  `celt`  
   
- [in] Número de [RAWINPUTDEVICE](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) estruturas retornadas no `rgelt`.  
+ [in] Número de [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) estruturas retornadas no `rgelt`.  
   
  `rgelt`  
   
@@ -34,7 +34,7 @@ HRESULT Next(
   
  `pceltFetched`  
   
- [out] Ponteiro para o número de elementos realmente fornecidos em `rgelt`. O chamador pode passar no `NULL` se `rgelt` é um.  
+ [out] Ponteiro para o número de elementos realmente fornecidos em `rgelt`. Chamador pode passar `NULL` se `rgelt` é um.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno  
  HRESULT: S_OK se o número de elementos fornecido é `celt`; S_FALSE caso contrário.

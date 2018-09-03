@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95fbab459355c237157d43cee0211e42f6d26c62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432619"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480486"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Método ICLRStrongName::GetHashFromAssemblyFile
 Obtém um hash do arquivo de assembly especificado, usando o algoritmo de hash especificado.  
@@ -41,31 +41,31 @@ HRESULT GetHashFromAssemblyFile (
   
 #### <a name="parameters"></a>Parâmetros  
  `szFilePath`  
- [in] O caminho para o arquivo a ser transformado em hash.  
+ [in] O caminho para o arquivo a ser transformada em hash.  
   
  `piHashAlg`  
- [out no] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo de hash padrão.  
+ [no, out] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo de hash padrão.  
   
  `pbHash`  
  [out] O buffer de hash retornado.  
   
  `cchHash`  
- [in] O tamanho máximo solicitado da `pbHash`.  
+ [in] O tamanho máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] O retornou o tamanho, em bytes, de `pbHash`.  
+ [out] O retornado tamanho, em bytes, do `pbHash`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+ `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Método GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  

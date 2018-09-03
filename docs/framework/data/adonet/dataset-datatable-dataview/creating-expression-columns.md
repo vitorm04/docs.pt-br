@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 11bacf436daf2a77a9cf46b4883d282143572e27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756391"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482309"
 ---
 # <a name="creating-expression-columns"></a>Criando colunas de expressão
 Você pode definir uma expressão para uma coluna, permitindo que ela contenha um valor calculado dos valores de outras colunas na mesma linha ou dos valores de coluna de várias linhas na tabela. Para definir a expressão a ser avaliada, use a propriedade <xref:System.Data.DataColumn.Expression%2A> de coluna de destino e use a propriedade <xref:System.Data.DataColumn.ColumnName%2A> para se referir a outras colunas na expressão. O <xref:System.Data.DataColumn.DataType%2A> para a coluna de expressão deve ser apropriado para o valor que a expressão retorna.  
@@ -23,7 +23,7 @@ Você pode definir uma expressão para uma coluna, permitindo que ela contenha u
 |Computação|"UnitPrice * Quantity"|  
 |Agregação|Sum(Price)|  
   
- Você pode definir o **expressão** propriedade em uma **DataColumn** objeto, ou você pode incluir a propriedade como o terceiro argumento passado para o <xref:System.Data.DataColumn> construtor, conforme mostrado no exemplo a seguir.  
+ Você pode definir as **expressão** propriedade em uma existente **DataColumn** objeto, ou você pode incluir a propriedade como o terceiro argumento passado para o <xref:System.Data.DataColumn> construtor, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 workTable.Columns.Add("Total",Type.GetType("System.Double"))  
@@ -36,7 +36,7 @@ workTable.Columns.Add("Total", typeof(Double));
 workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");  
 ```  
   
- As expressões podem referenciar outras colunas de expressão; no entanto, uma referência circular, na qual duas expressões referenciam-se entre si, gerará uma exceção. Para obter regras sobre como escrever expressões, consulte o <xref:System.Data.DataColumn.Expression%2A> propriedade o **DataColumn** classe.  
+ As expressões podem referenciar outras colunas de expressão; no entanto, uma referência circular, na qual duas expressões referenciam-se entre si, gerará uma exceção. Para obter regras sobre como escrever expressões, consulte o <xref:System.Data.DataColumn.Expression%2A> propriedade do **DataColumn** classe.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Data.DataColumn>  
@@ -44,4 +44,4 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  <xref:System.Data.DataTable>  
  [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003080"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481904"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Espelhamento de banco de dados no SQL Server
 O espelhamento de banco de dados no SQL Server permite que você mantenha uma cópia, ou o espelho, de um banco de dados do SQL Server em um servidor em espera. O espelhamento garante que duas cópias separadas dos dados existam o tempo todo, fornecendo a alta disponibilidade e a redundância completa de dados. O provedor de dados .NET para o SQL Server fornece suporte implícito para espelhamento de banco de dados, de modo que o desenvolvedor não precisa realizar nenhuma ação ou gravar código quando tiver sido configurado para um banco de dados do SQL Server. Além disso, o objeto <xref:System.Data.SqlClient.SqlConnection> oferece suporte a um modo de conexão explícita que permite fornecer o nome de um servidor de parceiro de failover no <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -64,4 +64,4 @@ string activeServer = connection.DataSource;
 |[Espelhamento de banco de dados](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Descreve como configurar o espelhamento no SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

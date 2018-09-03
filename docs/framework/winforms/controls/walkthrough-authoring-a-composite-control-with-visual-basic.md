@@ -13,18 +13,18 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: d919112cf1a1462b4a60ef6dbdf60798d72c3e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2265f62092e6fdf43d8647a71d2c441beeefef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541970"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482384"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Instruções passo a passo: criando um controle composto com o Visual Basic
 Os controles de composição fornecem um meio pelo qual as interfaces gráficas personalizadas podem ser criadas e reutilizadas. Basicamente, um controle de composição é um componente com uma representação visual. Assim, ele pode consistir em um ou mais controles, componentes ou blocos de código dos Windows Forms que podem estender a funcionalidade ao validar a entrada do usuário, modificar propriedades de exibição ou executar outras tarefas exigidas pelo autor. Os controles de composição podem ser colocados nos Windows Forms da mesma maneira que outros controles. Na primeira parte deste passo a passo, você cria um controle de composição simples chamado `ctlClock`. Na segunda parte do passo a passo, você estende a funcionalidade de `ctlClock` por meio da herança.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
  Ao criar um novo projeto, você especifica seu nome para definir o namespace raiz, o nome do assembly e o nome do projeto e garante que o componente padrão estará no namespace correto.  
@@ -33,14 +33,14 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 1.  No menu **Arquivo**, aponte para **Novo** e clique em **Projeto** para abrir a caixa de diálogo **Novo Projeto**.  
   
-2.  Na lista de projetos do Visual Basic, selecione o **biblioteca de controle do Windows** modelo de projeto, digite `ctlClockLib` no **nome** caixa e, em seguida, clique em **Okey**.  
+2.  Na lista de projetos do Visual Basic, selecione a **biblioteca de controle do Windows** modelo de projeto, digite `ctlClockLib` no **nome** caixa e, em seguida, clique em **Okey**.  
   
      O nome do projeto, `ctlClockLib`, também é atribuído ao namespace raiz por padrão. O namespace raiz é usado para qualificar os nomes dos componentes no assembly. Por exemplo, se dois assemblies fornecem componentes chamados `ctlClock`, será possível especificar o componente `ctlClock` usando `ctlClockLib.ctlClock.`  
   
 3.  No Gerenciador de Soluções, clique com o botão direito do mouse em **UserControl1.vb** e, em seguida, clique em **Renomear**. Altere o nome de arquivo para `ctlClock.vb`. Clique no botão **Sim** quando solicitado se deseja renomear todas as referências ao elemento de código “UserControl1”.  
   
     > [!NOTE]
-    >  Por padrão, um controle composto herda o <xref:System.Windows.Forms.UserControl> classe fornecida pelo sistema. O <xref:System.Windows.Forms.UserControl> classe fornece funcionalidade requerida por todos os controles compostos e implementa os métodos padrão e propriedades.  
+    >  Por padrão, um controle de composição herda o <xref:System.Windows.Forms.UserControl> classe fornecida pelo sistema. O <xref:System.Windows.Forms.UserControl> classe fornece a funcionalidade requerida por todos os controles compostos e implementa propriedades e métodos padrão.  
   
 4.  No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
   
@@ -53,7 +53,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 2.  Na Caixa de Ferramentas, expanda o nó **Controles Comuns** e clique duas vezes em **Rótulo**.  
   
-     Um <xref:System.Windows.Forms.Label> controle chamado `Label1` é adicionado ao seu controle na superfície do designer.  
+     Um <xref:System.Windows.Forms.Label> controle chamado `Label1` é adicionado ao controle na superfície do designer.  
   
 3.  No designer, clique em **Label1**. Na janela Propriedades, defina as propriedades a seguir.  
   
@@ -68,9 +68,9 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
      Porque um <xref:System.Windows.Forms.Timer> é um componente, ele não tem representação visual em tempo de execução. Portanto, ele não é exibido com os controles na superfície do designer, mas no Designer de Componentes (uma bandeja na parte inferior da superfície do designer).  
   
-5.  No Designer de componente, clique em **Timer1**e, em seguida, defina o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade `1000` e <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade `True`.  
+5.  No Designer de componente, clique em **Timer1**e, em seguida, defina o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade a ser `1000` e o <xref:System.Windows.Forms.Timer.Enabled%2A> propriedade `True`.  
   
-     O <xref:System.Windows.Forms.Timer.Interval%2A> propriedade controla a frequência com que o componente de temporizador tiques. A cada tique de `Timer1`, ele executa o código no evento `Timer1_Tick`. O intervalo representa o número de milissegundos entre os tiques.  
+     O <xref:System.Windows.Forms.Timer.Interval%2A> propriedade controla a frequência de tiques do componente de temporizador. A cada tique de `Timer1`, ele executa o código no evento `Timer1_Tick`. O intervalo representa o número de milissegundos entre os tiques.  
   
 6.  No Designer de Componentes, clique duas vezes em **Timer1** para acessar o evento `Timer1_Tick` de `ctlClock`.  
   
@@ -96,7 +96,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
 9. No menu **Arquivo**, clique em **Salvar Tudo** para salvar o projeto.  
   
 ## <a name="adding-properties-to-the-composite-control"></a>Adicionando propriedades ao controle de composição  
- O controle de relógio agora encapsula uma <xref:System.Windows.Forms.Label> controle e um <xref:System.Windows.Forms.Timer> componente, cada um com seu próprio conjunto de propriedades inerentes. Embora as propriedades individuais desses controles não estejam acessíveis aos próximos usuários do controle, você poderá criar e expor propriedades personalizadas, escrevendo os blocos de código apropriados. No procedimento a seguir, você adicionará propriedades ao controle que permitem ao usuário alterar a cor da tela de fundo e do texto.  
+ O controle do relógio agora encapsula uma <xref:System.Windows.Forms.Label> controle e um <xref:System.Windows.Forms.Timer> componente, cada um com seu próprio conjunto de propriedades inerentes. Embora as propriedades individuais desses controles não estejam acessíveis aos próximos usuários do controle, você poderá criar e expor propriedades personalizadas, escrevendo os blocos de código apropriados. No procedimento a seguir, você adicionará propriedades ao controle que permitem ao usuário alterar a cor da tela de fundo e do texto.  
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>Para adicionar uma propriedade ao controle de composição  
   
@@ -238,7 +238,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
     > [!NOTE]
     >  Se você desejar que os próximos usuários do controle de composição tenham acesso a seus controles internos, declare-os como `Public` ou `Protected`. Isso permitirá definir e modificar as propriedades de controles contidos no controle de composição usando o código apropriado.  
   
-3.  Adicionar um <xref:System.Windows.Forms.Label> controle para o controle composto.  
+3.  Adicionar um <xref:System.Windows.Forms.Label> controle ao controle de composição.  
   
 4.  Usando o mouse, arraste o <xref:System.Windows.Forms.Label> controle imediatamente abaixo da caixa de exibição. Na janela Propriedades, defina as propriedades a seguir.  
   
@@ -350,7 +350,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 8.  Clique duas vezes em **ctlAlarmClock** para adicionar uma instância de `ctlAlarmClock` ao formulário.  
   
-9. No **caixa de ferramentas**, localize e clique duas vezes em **DateTimePicker** para adicionar um <xref:System.Windows.Forms.DateTimePicker> o controle para o formulário e, em seguida, adicione um <xref:System.Windows.Forms.Label> controle clicando duas vezes em **rótulo**.  
+9. No **caixa de ferramentas**, localize e clique duas vezes em **DateTimePicker** para adicionar um <xref:System.Windows.Forms.DateTimePicker> controle ao seu formulário e, em seguida, adicione um <xref:System.Windows.Forms.Label> controle clicando duas vezes em **rótulo**.  
   
 10. Use o mouse para posicionar os controles em um local conveniente do formulário.  
   
@@ -383,7 +383,7 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
   
 15. No menu **Depuração**, clique em **Iniciar Depuração**.  
   
-     O programa de teste é iniciado. Observe que a hora atual é atualizada no `ctlAlarmClock` controle e que a hora de início é mostrada no <xref:System.Windows.Forms.DateTimePicker> controle.  
+     O programa de teste é iniciado. Observe que a hora atual é atualizada na `ctlAlarmClock` controle e que a hora de início é mostrada no <xref:System.Windows.Forms.DateTimePicker> controle.  
   
 16. Clique o <xref:System.Windows.Forms.DateTimePicker> onde os minutos da hora são exibidos.  
   
@@ -399,4 +399,4 @@ Os controles de composição fornecem um meio pelo qual as interfaces gráficas 
  [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [Como criar controles de composição](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Instruções passo a passo para criação de componentes](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [Instruções passo a passo para criação de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

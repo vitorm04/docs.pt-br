@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: fa5246d76e09091350a5d5276f2c06824b9906d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd006f669ab6f0186bbcc7d1c76f9852ab6e8f60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527611"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43476031"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Como adicionar painéis a um controle StatusBar
 > [!IMPORTANT]
->  O <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controles substituir e adiciona a funcionalidade para o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controla; no entanto, o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controles são mantidos para compatibilidade com versões anteriores e o uso futuro, se você Escolha.  
+>  O <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controles substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controla; no entanto, o <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controles sejam mantidos para compatibilidade com versões anteriores e uso futuro, se você Escolha.  
   
- A área programável dentro de um [controle StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) controle consiste em instâncias do <xref:System.Windows.Forms.StatusBarPanel> classe. Eles são adicionados por meio da adição de <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe.  
+ A área programável em um [controle StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) consiste em instâncias da <xref:System.Windows.Forms.StatusBarPanel> classe. Elas são adicionadas por meio de adições para o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> classe.  
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Para adicionar painéis a uma barra de status  
   
-1.  Em um procedimento, criar painéis da barra de status ao adicioná-los para o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Especifique as configurações de propriedade para painéis individuais usando seu índice passado a <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade.  
+1.  Em um procedimento, crie painéis da barra de status adicionando-os para o <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Especifique as configurações de propriedade para painéis individuais usando seu índice passado por meio de <xref:System.Windows.Forms.StatusBar.Panels%2A> propriedade.  
   
-     No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir exige um formulário com um <xref:System.Windows.Forms.StatusBar> controle já foi adicionado.  
+     No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir exige um formulário com um <xref:System.Windows.Forms.StatusBar> controle já adicionado.  
   
     > [!NOTE]
-    >  O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> é uma coleção com base em zero, portanto o código deve continuar adequadamente.  
+    >  O <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection> é uma coleção com base em zero, portanto, o código continue adequadamente.  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -123,7 +123,7 @@ ms.locfileid: "33527611"
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.StatusBar>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Caixa de diálogo Editor de coleção](http://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
+ [Caixa de diálogo Editor de coleção](https://msdn.microsoft.com/library/53fb3aad-bffa-4da5-ac89-8438e6fc803c)  
  [Como definir o tamanho de painéis da barra de status](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
  [Passo a passo: atualizando informações da barra de status em tempo de execução](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
  [Como determinar qual painel no controle StatusBar dos Windows Forms foi clicado](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  

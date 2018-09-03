@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 1f7cfa17ce763ff84eeb052a4ea1a3a900970782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2ea15703b09cd722f5c7fd01f8112482f3c04f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528626"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488190"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  
@@ -47,7 +47,7 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
  Um loop de mensagem do aplicativo é um loop interno do programa que recupera mensagens da fila de mensagens do thread, converte-as e envia-as para o aplicativo para serem processadas. O loop de mensagem para um Windows Form não tem a mesma arquitetura que loops de mensagem que aplicativos anteriores, como aplicativos do Visual Basic 6.0 e do MFC, forneciam. As mensagens de janela que são lançadas para o loop de mensagem podem ser processadas de maneira diferente daquela que o Formulário do Windows espera. Portanto, pode ocorrer um comportamento inesperado. Algumas combinações de teclas e atividades do mouse podem não funcionar ou alguns eventos podem não ser gerados como o esperado.  
   
 ## <a name="resolving-interoperability-issues"></a>Resolvendo problemas de interoperabilidade  
- Você pode resolver esses problemas, exibindo o formulário em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] loop de mensagem, que é criado usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
+ Você pode resolver esses problemas exibindo o formulário em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] loop de mensagem, que é criado usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
   
  Para fazer um Formulário do Windows funcionar corretamente em um aplicativo cliente COM, execute-o em um loop de mensagem do Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
   
@@ -59,7 +59,7 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
  [Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Interoperabilidade COM em Aplicativos .NET Framework](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [Exemplos de interoperabilidade COM](http://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
+ [Exemplos de interoperabilidade COM](https://msdn.microsoft.com/library/09c38567-6380-4d70-848a-e896a4ca05f4)  
  [Aximp.exe (Importador de Controle ActiveX do Windows Forms)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  [Expondo componentes do .NET Framework ao COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Empacotando um assembly para COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  

@@ -2,20 +2,20 @@
 title: Relações e restrições de esquema XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 4b62b6bafa9ceeafd250e722314c4bd6c594bf82
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759836"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479991"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Relações e restrições de esquema XML
-Em um esquema de linguagem XSD de definição de esquema XML, você pode especificar restrições (exclusivos, restrições de chave e keyref) e relações (usando o **msdata:Relationship** anotação). Este tópico explica como as restrições e relações especificadas em um esquema XML são interpretadas para gerar o <xref:System.Data.DataSet>.  
+Em um esquema XSD (linguagem) de definição de esquema XML, você pode especificar restrições (exclusivos, restrições de chave e keyref) e relacionamentos (usando o **msdata:Relationship** anotação). Este tópico explica como as restrições e relações especificadas em um esquema XML são interpretadas para gerar o <xref:System.Data.DataSet>.  
   
- Em geral, em um esquema XML, especifique o **msdata:Relationship** anotação se desejar gerar somente os relacionamentos no **conjunto de dados**. Para obter mais informações, consulte [gerar relações de conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Você especifica restrições (exclusivo, chave e keyref) se você deseja gerar restrições no **conjunto de dados**. Observe que as restrições de chave e keyref também são usadas para gerar relações, conforme explicado mais adiante neste tópico.  
+ Em geral, em um esquema XML, especifique o **msdata:Relationship** anotação se você quiser gerar somente os relacionamentos na **conjunto de dados**. Para obter mais informações, consulte [gerando relações de conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Você especifica restrições (exclusiva, chave e keyref) se você quiser gerar restrições na **conjunto de dados**. Observe que as restrições de chave e keyref também são usadas para gerar relações, conforme explicado mais adiante neste tópico.  
   
-## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Gerando uma relação de chave e keyref restrições  
- Em vez de especificar o **msdata:Relationship** anotação, você pode especificar restrições de chave e keyref, que são usadas durante o processo de mapeamento de esquema XML para gerar o nãoapenasasrestrições,mastambémarelação **Conjunto de dados**. No entanto, se você especificar `msdata:ConstraintOnly="true"` no **keyref** elemento, o **DataSet** incluirá somente as restrições e não incluirá a relação.  
+## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Gerando uma relação de chave e as restrições de keyref  
+ Em vez de especificar o **msdata:Relationship** anotação, você pode especificar restrições de chave e keyref, que são usadas durante o processo de mapeamento de esquema XML para gerar não apenas as restrições, mas também a relação em que o  **Conjunto de dados**. No entanto, se você especificar `msdata:ConstraintOnly="true"` no **keyref** elemento, o **conjunto de dados** incluirá somente as restrições e não incluirá a relação.  
   
  O exemplo a seguir mostra um esquema XML que inclui **ordem** e **OrderDetail** elementos, que não estão aninhados. O esquema também especifica as restrições de chave e keyref.  
   
@@ -59,7 +59,7 @@ Em um esquema de linguagem XSD de definição de esquema XML, você pode especif
 </xs:schema>  
 ```  
   
- O **DataSet** que é gerado durante o esquema XML que inclui o processo de mapeamento de **ordem** e **OrderDetail** tabelas. Além disso, o **DataSet** inclui relações e restrições. O exemplo a seguir mostra essas relações e restrições. Observe que o esquema não especificar o **msdata:Relationship** anotação; em vez disso, as restrições de chave e keyref são usadas para gerar a relação.  
+ O **DataSet** que é gerado durante o esquema XML que inclui o processo de mapeamento a **ordem** e **OrderDetail** tabelas. Além disso, o **conjunto de dados** inclui relações e restrições. O exemplo a seguir mostra essas relações e restrições. Observe que o esquema não especificar o **msdata:Relationship** anotação; em vez disso, as restrições de chave e keyref são usadas para gerar a relação.  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -85,7 +85,7 @@ Em um esquema de linguagem XSD de definição de esquema XML, você pode especif
 ..Nested: False  
 ```  
   
- No exemplo anterior de esquema, o **ordem** e **OrderDetail** elementos não estão aninhados. No exemplo de esquema a seguir, esses elementos são aninhados. No entanto, nenhuma **msdata:Relationship** anotação é especificada; portanto, uma relação implícita é assumida. Para obter mais informações, consulte [implícita relações entre aninhados esquema elementos do mapa](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md). O esquema também especifica as restrições de chave e keyref.  
+ No exemplo anterior do esquema, o **ordem** e **OrderDetail** elementos não estão aninhados. No exemplo de esquema a seguir, esses elementos são aninhados. No entanto, não há **msdata:Relationship** anotação é especificada; portanto, uma relação implícita é assumida. Para obter mais informações, consulte [implícita relações entre aninhados esquema elementos do mapa](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md). O esquema também especifica as restrições de chave e keyref.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -129,14 +129,14 @@ Em um esquema de linguagem XSD de definição de esquema XML, você pode especif
 </xs:schema>  
 ```  
   
- O **DataSet** resultante do processo de mapeamento de esquema XML inclui duas tabelas:  
+ O **conjunto de dados** resultante do processo de mapeamento de esquema XML inclui duas tabelas:  
   
 ```  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- O **DataSet** também inclui duas relações (uma baseada no **msdata:relationship** anotação e o outro com base nas restrições de chave e keyref) e várias restrições. O exemplo a seguir mostra as relações e restrições.  
+ O **DataSet** também inclui as duas relações (com base na **msdata:relationship** anotação e o outro com base nas restrições de chave e keyref) e várias restrições. O exemplo a seguir mostra as relações e restrições.  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -184,8 +184,8 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- Se uma restrição keyref que faz referência a uma tabela aninhada contém o **msdata:IsNested = "true"** anotação, o **DataSet** criará uma relação aninhada único com base na restrição keyref e o restrição de chave exclusiva/relacionada.  
+ Se uma restrição de keyref referente a uma tabela aninhada contém o **msdata:IsNested = "true"** anotação, o **conjunto de dados** criará uma relação aninhada com base na restrição keyref e o restrição de chave exclusiva/relacionada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

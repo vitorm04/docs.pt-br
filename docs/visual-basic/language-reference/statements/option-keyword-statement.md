@@ -1,23 +1,23 @@
 ---
-title: Opção &lt;palavra-chave&gt; instrução
+title: Opção &lt;palavra-chave&gt; Statement (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: c5a53faec01b8c10de5802eccb21d66350193696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598190"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484521"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Opção &lt;palavra-chave&gt; instrução
-Apresenta uma declaração que especifica uma opção de compilador que se aplica ao arquivo de origem inteiro.  
+Apresenta uma declaração que especifica uma opção de compilador que se aplica ao arquivo de origem inteira.  
   
 ## <a name="remarks"></a>Comentários  
- As opções de compilador podem controlar se todas as variáveis devem ser declaradas explicitamente, se o tipo conversões de estreitamento devem ser explícita ou se cadeias de caracteres devem ser comparadas como texto ou quantidades binárias.  
+ As opções do compilador podem controlar se todas as variáveis devem ser declaradas explicitamente, se a reduzir conversões de tipo deve ser explícita ou se cadeias de caracteres devem ser comparadas como texto ou binárias quantidades.  
   
  O `Option` palavra-chave pode ser usada nesses contextos:  
   

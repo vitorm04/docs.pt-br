@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 4cda3ce3bcae7741df66496c87ba6654e0bbfe6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356001"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480536"
 ---
 # <a name="enabling-query-notifications"></a>Habilitando notificações de consulta
 Os aplicativos que consomem notificações de consulta têm um conjunto comum de requisitos. Sua fonte de dados deve ser configurada corretamente para dar suporte a notificações de consulta SQL e o usuário deve ter as permissões corretas de cliente e servidor.  
@@ -30,26 +30,26 @@ Os aplicativos que consomem notificações de consulta têm um conjunto comum de
   
  **SQL Server Books Online** (Guias online do SQL Server)  
   
--   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Criando uma consulta para notificação](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Considerações de segurança para o Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Considerações de segurança para o Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
   
--   [Segurança e proteção (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Segurança e proteção (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
   
--   [Considerações de segurança para serviços de notificações](http://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Considerações de segurança para serviços de notificações](https://msdn.microsoft.com/library/ms172604.aspx)  
   
--   [Permissões de notificação de consulta](http://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Permissões de notificação de consulta](https://msdn.microsoft.com/library/ms188311.aspx)  
   
--   [Considerações internacionais para o Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Considerações internacionais para Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
   
--   [Considerações de Design de solução (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Considerações de Design de solução (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
   
--   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [InfoCenter do desenvolvedor do Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [Guia do desenvolvedor (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Guia do desenvolvedor (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Habilitando notificações de consulta para executar código de exemplo  
- Para habilitar o Service Broker no **AdventureWorks** banco de dados usando o SQL Server Management Studio, execute a seguinte instrução Transact-SQL:  
+ Para habilitar o Service Broker na **AdventureWorks** banco de dados usando o SQL Server Management Studio, execute a seguinte instrução Transact-SQL:  
   
  `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
   
@@ -86,4 +86,4 @@ CREATE SERVICE ContactChangeNotifications
   
 ## <a name="see-also"></a>Consulte também  
  [Notificações de consulta no SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

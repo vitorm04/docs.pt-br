@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2bef9e1671b8487a6702cce71106c84a2984317
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a32f68566fc6fe53020c4e9b13482355b62ed21
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436154"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485948"
 ---
 # <a name="hosting-interfaces"></a>Interfaces de hospedagem
 Esta seção descreve as interfaces não gerenciadas hosts podem usar para integrar o common language runtime (CLR) em seus aplicativos.  
   
- As interfaces de hospedagem do .NET Framework versão 2.0 substituem as interfaces do .NET Framework versão 1.0 e 1.1. Há diferenças significativas entre os dois conjuntos de interfaces. Mesclando-los pode causar um comportamento inesperado e não é recomendado.  
+ As interfaces de hospedagem do .NET Framework versão 2.0 substituem as interfaces do .NET Framework versão 1.0 e 1.1. Há diferenças significativas entre os dois conjuntos de interfaces. Combinando-las pode causar um comportamento inesperado e não é recomendado.  
   
  As versões do .NET Framework 3.0 e 3.5 usam as interfaces de hospedagem do .NET Framework versão 2.0 e não apresenta os recursos de hospedagem.  
   
@@ -45,4 +45,4 @@ Esta seção descreve as interfaces não gerenciadas hosts podem usar para integ
   
  [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   
- [Hosts de tempo de execução](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+ [Hosts de tempo de execução](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)

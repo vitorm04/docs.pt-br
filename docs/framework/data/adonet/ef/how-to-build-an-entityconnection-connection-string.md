@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: 0ff1e2b00895232b9310ea44ffd1b100b7b9cfc3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759953"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480760"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Como compilar uma cadeia de conexão EntityConnection
 Este tópico fornece um exemplo de como criar um <xref:System.Data.EntityClient.EntityConnection>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para executar o código nesse exemplo  
   
-1.  Adicionar o [modelo de vendas do AdventureWorks](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) ao seu projeto e configurar seu projeto para usar o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obter mais informações, consulte [como: usar o Assistente de modelo de dados de entidade](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+1.  Adicione a [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) ao seu projeto e configurar seu projeto para usar o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Para obter mais informações, consulte [como: usar o Assistente de modelo de dados de entidade](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 2.  Na página de código do seu aplicativo, adicione as seguintes instruções `using` (`Imports` no Visual Basic):  
   
@@ -31,5 +31,5 @@ Este tópico fornece um exemplo de como criar um <xref:System.Data.EntityClient.
  [!code-vb[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#buildingconnectionstringwithentitycommand)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Como: usar EntityConnection com um contexto de objeto](http://msdn.microsoft.com/library/2140fe7b-b88b-47c8-a749-d7f142eb1080)  
+ [Como: usar o EntityConnection com um contexto de objeto](https://msdn.microsoft.com/library/2140fe7b-b88b-47c8-a749-d7f142eb1080)  
  [Provedor EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

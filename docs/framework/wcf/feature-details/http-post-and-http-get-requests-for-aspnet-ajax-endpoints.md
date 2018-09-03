@@ -3,11 +3,11 @@ title: Como escolher entre solicitações HTTP POST e HTTP GET para pontos de ex
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
 ms.openlocfilehash: 079bbd98b3fc3d5538f87cad39a4a83a0dc1e242
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998476"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481836"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Como escolher entre solicitações HTTP POST e HTTP GET para pontos de extremidade AJAX ASP.NET
 Windows Communication Foundation (WCF) permite que você crie um serviço que expõe um ponto de extremidade habilitados para AJAX ASP.NET que pode ser chamado do JavaScript em um site do cliente. Os procedimentos básicos para a criação de tais serviços é discutida [como: usar a configuração para adicionar um ponto de extremidade do ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) e [como: adicionar um ASP.NET AJAX ponto de extremidade sem usando configuração](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  

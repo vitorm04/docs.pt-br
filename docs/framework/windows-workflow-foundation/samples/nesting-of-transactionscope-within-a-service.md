@@ -2,12 +2,12 @@
 title: Aninhamento de TransactionScope em um serviço
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-ms.openlocfilehash: 9c556df417548ab348d1dd5bc642928ae68d8878
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518263"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482898"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Aninhamento de TransactionScope em um serviço
 Este exemplo consiste de dois cenários que executam a visualização como manipular instâncias de atividade de <xref:System.Activities.Statements.TransactionScope> em um serviço. A transação é iniciada primeiro usando a atividade de <xref:System.Activities.Statements.TransactionScope> para criar uma nova transação no cliente e em <xref:System.ServiceModel.Activities.TransactedReceiveScope> para receber e escopo o tempo de vida de transação no servidor. O primeiro cenário dentro do serviço executa uma atividade new de <xref:System.Activities.Statements.TransactionScope> para demonstrar aninhamento de atividades de <xref:System.Activities.Statements.TransactionScope> dentro do serviço. O segundo cenário mostra como os intervalos são respeitados dentro das atividades aninhados de <xref:System.Activities.Statements.TransactionScope> .  
@@ -22,17 +22,17 @@ Este exemplo consiste de dois cenários que executam a visualização como manip
   
 1.  Abra a solução de TransactionServiceExample.sln em [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Para criar a solução, pressione CTRL + SHIFT + B ou selecione **compilar solução** do **criar** menu.  
+2.  Para criar a solução, pressione CTRL + SHIFT + B ou selecione **compilar solução** da **Build** menu.  
   
-3.  Depois que a compilação foi bem-sucedida, a solução e selecione **definir projetos de inicialização**. Na caixa de diálogo, selecione **vários projetos de inicialização** e certifique-se de que a ação de ambos os projetos é **iniciar**.  
+3.  Depois que a compilação foi bem-sucedida, a solução com o botão direito e selecione **definir projetos de inicialização**. Na caixa de diálogo, selecione **vários projetos de inicialização** e verifique se a ação para ambos os projetos é **iniciar**.  
   
-4.  Pressione F5 ou selecione **iniciar depuração** do **depurar** menu. Como alternativa, você pode pressionar CTRL + F5 ou selecionar **Start Without Debugging** do **depurar** menu para executar sem depuração.  
+4.  Pressione F5 ou selecione **iniciar depuração** da **depurar** menu. Como alternativa, você pode pressionar CTRL + F5 ou selecione **Start Without Debugging** da **depurar** menu para executar sem depuração.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

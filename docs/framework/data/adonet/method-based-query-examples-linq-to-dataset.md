@@ -2,15 +2,15 @@
 title: Exemplos de consulta com base em método (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 0700711ece5cd8dda4688862e0ff19a3a63effdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765900"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482529"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Exemplos de consulta com base em método (LINQ to DataSet)
-Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programa que os exemplos na sintaxe da consulta com base em método que usam os operadores de consulta padrão. O <xref:System.Data.DataSet> usado nesses exemplos é populada com o `FillDataSet` método, que é especificado em [carregar dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programa que os exemplos na sintaxe da consulta com base em método que usam os operadores de consulta padrão. O <xref:System.Data.DataSet> usado nesses exemplos é preenchido usando o `FillDataSet` método, que é especificado em [Carregando dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Projeção](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  

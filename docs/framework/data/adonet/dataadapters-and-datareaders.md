@@ -2,15 +2,15 @@
 title: DataAdapters e DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758094"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476216"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters e DataReaders
-Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados somente leitura, somente encaminhamento de um banco de dados. Os resultados são retornados como a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicita usando o **leitura** método o **DataReader**. Usando o **DataReader** pode aumentar o desempenho do aplicativo ao recuperar dados assim que ele está disponível e (por padrão) armazenar apenas uma linha por vez na memória, reduzindo a sobrecarga do sistema.  
+Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados somente leitura, somente encaminhamento de um banco de dados. Os resultados são retornados como a consulta é executada e são armazenados no buffer de rede no cliente até que você os solicite usando o **leitura** método o **DataReader**. Usando o **DataReader** pode aumentar o desempenho do aplicativo recuperando dados assim que ele está disponível e (por padrão) armazenando apenas uma linha por vez na memória, reduzindo a sobrecarga do sistema.  
   
  Um <xref:System.Data.Common.DataAdapter> é usado para recuperar dados de uma fonte de dados e para popular tabelas em um <xref:System.Data.DataSet>. O `DataAdapter` também resolve as alterações feitas no `DataSet` de volta para a fonte de dados. O `DataAdapter` usa o objeto `Connection` do provedor de dados .NET Framework para se conectar a uma fonte de dados e usa objetos de `Command` para recuperar dados e para resolver alterações na fonte de dados.  
   
@@ -49,4 +49,4 @@ Você pode usar o ADO.NET **DataReader** para recuperar um fluxo de dados soment
  [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [DataSets, DataTables, and DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5adf39c37fce92d4caf1d85e2a6a12e9e6b59b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408054"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486503"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Como habilitar a detecção de reprodução de tokens
 ## <a name="applies-to"></a>Aplica-se a  
@@ -19,7 +19,7 @@ ms.locfileid: "33408054"
 -   Web Forms do ASP.NET®  
   
 ## <a name="summary"></a>Resumo  
- Estas instruções fornecem procedimentos passo a passo detalhados para habilitar a detecção de reprodução de token em um aplicativo ASP.NET que usa o WIF. Ele também fornece instruções sobre como testar o aplicativo para verificar se a detecção de reprodução de token está habilitada. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. O download pode ser feito na seguinte localização: [Ferramenta de Identidade e Acesso](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ Estas instruções fornecem procedimentos passo a passo detalhados para habilitar a detecção de reprodução de token em um aplicativo ASP.NET que usa o WIF. Ele também fornece instruções sobre como testar o aplicativo para verificar se a detecção de reprodução de token está habilitada. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. O download pode ser feito na seguinte localização: [Ferramenta de Identidade e Acesso](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Conteúdo  
   

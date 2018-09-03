@@ -2,20 +2,20 @@
 title: '&lt;httpDigest&gt; Element'
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 8ea4597dbfc704f669a514b0d6c5976c80c5c3a6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748887"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43477952"
 ---
 # <a name="lthttpdigestgt-element"></a>&lt;httpDigest&gt; Element
-Especifica um resumo de tipo de credencial usada na autenticação do cliente para um serviço.  
+Especifica um resumo de tipo de credencial usada para autenticar o cliente a um serviço.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento >  
+\<comportamento de >  
 \<clientCredentials>  
 \<httpDigest >  
   
@@ -32,7 +32,7 @@ Especifica um resumo de tipo de credencial usada na autenticação do cliente pa
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`impersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem o seguinte:<br /><br /> -Identificação: O servidor pode obter a identidade e os privilégios do cliente, mas não é possível representar o cliente.<br />-Representação: O servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegação: O servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônima: O servidor não pode representar ou identificar o cliente.<br />-Nenhum: Um nível de representação não está atribuído.<br /><br /> O padrão é a identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem o seguinte:<br /><br /> -Identificação: O servidor pode obter a identidade e os privilégios do cliente, mas não pode representar o cliente.<br />-Representação: O servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegação: O servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônima: O servidor não pode representar ou identificar o cliente.<br />-None: Um nível de representação não está atribuído.<br /><br /> O padrão é a identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -44,9 +44,9 @@ Especifica um resumo de tipo de credencial usada na autenticação do cliente pa
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- Um resumo é um hash determinado por meio de um algoritmo e um conjunto de entradas. O autenticador e o autenticado concorde com um algoritmo e os dados usados como entradas do exchange. O cliente pode calcular o hash e enviá-lo para o serviço. O serviço também calcula o hash e compara os valores. Uma correspondência valida o cliente.  
+ Um resumo é um hash determinado por meio de um algoritmo e um conjunto de entradas. O autenticador e o autenticado concordem com um algoritmo e os dados usados como entradas do exchange. O cliente pode calcular o hash e enviá-lo para o serviço. O serviço também calcula o hash e compara os valores. Uma correspondência valida o cliente.  
   
- Esse recurso deve ser habilitado com o Active Directory no Windows e serviços de informações da Internet (IIS). Para obter mais informações, consulte [a autenticação Digest no IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88443).  
+ Esse recurso deve ser habilitado com o Active Directory no Windows e serviços de informações da Internet (IIS). Para obter mais informações, consulte [a autenticação Digest no IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

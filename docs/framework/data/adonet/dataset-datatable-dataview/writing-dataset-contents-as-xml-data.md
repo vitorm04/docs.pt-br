@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: 44afa79d715ef62bcbd1c242a533876d911345c8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ff63c63be9bbfab7c3a9600f259abdea81be4260
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761903"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482255"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Gravando o conteúdo do DataSet como dados XML
 No ADO.NET, você pode gravar a representação XML de um <xref:System.Data.DataSet>, com ou sem seu esquema. Se as informações de esquema forem embutidas no XML embutido, elas serão gravadas através da linguagem de definição de esquema XML (XSD). O esquema contém as definições de tabela do <xref:System.Data.DataSet>, bem como as definições de relação e de restrição.  
@@ -27,9 +27,9 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml** retorna a representação XML do <xref:System.Data.DataSet> sem informações de esquema. Para gravar as informações de esquema de <xref:System.Data.DataSet> (como um esquema XML) em uma cadeia de caracteres, use **GetXmlSchema**.  
+ **GetXml** retorna a representação XML do <xref:System.Data.DataSet> sem informações de esquema. Para gravar as informações do esquema de <xref:System.Data.DataSet> (como um esquema XML) em uma cadeia de caracteres, use **GetXmlSchema**.  
   
- Para gravar um <xref:System.Data.DataSet> para um arquivo, fluxo, ou **XmlWriter**, use o **WriteXml** método. O primeiro parâmetro transmitido **WriteXml** é o destino da saída XML. Por exemplo, passar uma cadeia de caracteres que contém um nome de arquivo, uma **TextWriter** objeto e assim por diante. Você pode passar um segundo parâmetro opcional de um **XmlWriteMode** para especificar como a saída XML a ser gravado.  
+ Para gravar uma <xref:System.Data.DataSet> em um arquivo, fluxo, ou **XmlWriter**, use o **WriteXml** método. O primeiro parâmetro passado para **WriteXml** é o destino da saída XML. Por exemplo, passar uma cadeia de caracteres que contém um nome de arquivo, uma **TextWriter** objeto e assim por diante. Você pode passar um segundo parâmetro opcional de um **XmlWriteMode** para especificar como a saída XML a ser gravado.  
   
  A tabela a seguir mostra as opções para **XmlWriteMode**.  
   
@@ -39,9 +39,9 @@ string xmlDS = custDS.GetXml();
 |**WriteSchema**|Grava o conteúdo atual do <xref:System.Data.DataSet> como dados XML com a estrutura relacional como um esquema XML embutido.|  
 |**DiffGram**|Grava todo o <xref:System.Data.DataSet> como um DiffGram, incluindo valores originais e atuais. Para obter mais informações, consulte [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
   
- Ao escrever uma representação XML de um <xref:System.Data.DataSet> que contém **DataRelation** objetos, provavelmente você desejará que o XML resultante para que as linhas filho de cada relação aninhada dentro de seus elementos pai relacionado. Para fazer isso, defina o **aninhadas** propriedade o **DataRelation** para **true** quando você adiciona o **DataRelation** para o <xref:System.Data.DataSet>. Para obter mais informações, consulte [aninhamento DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ Ao escrever uma representação XML de um <xref:System.Data.DataSet> que contém **DataRelation** objetos, você provavelmente desejará o XML resultante para ter as linhas filho de cada relação aninhada dentro de seus elementos pai relacionados. Para fazer isso, defina a **Nested** propriedade da **DataRelation** para **verdadeiro** quando você adiciona o **DataRelation** para o <xref:System.Data.DataSet>. Para obter mais informações, consulte [aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
- A seguir, há dois exemplos de como gravar a representação XML de um <xref:System.Data.DataSet> em um arquivo. O primeiro exemplo passa o nome de arquivo para o XML resultante como uma cadeia de caracteres **WriteXml**. O segundo exemplo passa um **System.IO.StreamWriter** objeto.  
+ A seguir, há dois exemplos de como gravar a representação XML de um <xref:System.Data.DataSet> em um arquivo. O primeiro exemplo passa o nome do arquivo para o XML resultante como uma cadeia de caracteres **WriteXml**. O segundo exemplo passa um **StreamWriter** objeto.  
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -64,7 +64,7 @@ xmlSW.Close();
 ```  
   
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Mapeando colunas para elementos XML, atributos e texto  
- Você pode especificar como uma coluna de uma tabela é representada em XML usando o **ColumnMapping** propriedade o **DataColumn** objeto. A tabela a seguir mostra os diferentes **MappingType** valores para o **ColumnMapping** propriedade de uma coluna de tabela e o XML resultante.  
+ Você pode especificar como uma coluna de uma tabela é representada em XML usando o **ColumnMapping** propriedade da **DataColumn** objeto. A tabela a seguir mostra os diferentes **MappingType** os valores para o **ColumnMapping** propriedade de uma coluna de tabela e o XML resultante.  
   
 |Valor de MappingType|Descrição|  
 |-----------------------|-----------------|  
@@ -79,4 +79,4 @@ xmlSW.Close();
  [Aninhamento de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Gravando informações de esquema de conjunto de dados como XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
  [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527781"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480929"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Erros de tempo de design no Designer de Formulários do Windows
 Este tópico explica o significado e o uso da lista de erros de tempo de design que aparece no Microsoft Visual Studio quando o carregamento do Designer de Formulários do Windows falha. Se essa lista de erros aparecer, não a interprete como um bug do designer, mas como um auxílio para a correção de erros no código.  
@@ -45,15 +45,15 @@ Este tópico explica o significado e o uso da lista de erros de tempo de design 
 ### <a name="forum-posts-about-this-error"></a>Postagens do fórum sobre este erro  
  A ajuda adicional incluirá um link para postagens no fórum do MSDN relacionadas ao erro. Os fóruns são pesquisados com base na cadeia de caracteres da mensagem de erro. Também é possível tentar pesquisar os fóruns a seguir:  
   
--   [Fórum do Designer de Formulários do Windows](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Fórum do Designer de Formulários do Windows](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Fóruns do Windows Forms](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Fóruns do Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Ignorar e Continuar  
  É possível ignorar a condição de erro e continuar o carregamento do designer. Escolher esta ação pode resultar em comportamento inesperado. Por exemplo, os controles podem não aparecer na superfície de design.  
   
 ## <a name="see-also"></a>Consulte também  
- [Desenvolvimento de tempo de Design de solução de problemas](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [Solucionando problemas de desenvolvimento de tempo de Design](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [Solução de problemas de criação de controle e de componente](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [Desenvolvendo controles dos Windows Forms em tempo de design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Mensagens de erro do Designer de Formulários do Windows](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+ [Mensagens de erro do Designer de Formulários do Windows](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

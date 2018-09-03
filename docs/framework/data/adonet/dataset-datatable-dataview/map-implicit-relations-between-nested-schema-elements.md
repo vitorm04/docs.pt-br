@@ -1,28 +1,28 @@
 ---
-title: Mapear relações implícita entre elementos de esquema aninhada
+title: Mapear relações implícita entre elementos de esquema aninhados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763622"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485567"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapear relações implícita entre elementos de esquema aninhada
-Um esquema de linguagem XSD de definição de esquema XML pode ter tipos complexos aninhados dentro de uma outra. Nesse caso, o processo de mapeamento aplica-se o mapeamento padrão e cria o seguinte o <xref:System.Data.DataSet>:  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapear relações implícita entre elementos de esquema aninhados
+Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexos aninhados dentro uma da outra. Nesse caso, o processo de mapeamento se aplica o mapeamento padrão e cria o seguinte no <xref:System.Data.DataSet>:  
   
 -   Uma tabela para cada um dos tipos complexos (pai e filho).  
   
--   Não se existir nenhuma restrição exclusiva no pai, a coluna de chave primária adicional um por definição da tabela denominada *TableName*ID onde *TableName* é o nome da tabela pai.  
+-   Não se existir nenhuma restrição exclusiva no pai, a coluna de chave primária adicional um acordo com a definição de tabela denominada *TableName*ID onde *TableName* é o nome da tabela pai.  
   
--   Uma restrição de chave primária na tabela pai que identifica a coluna adicional, como a chave primária (definindo o **IsPrimaryKey** propriedade **True**). A restrição é nomeada restrição*#* onde *#* é 1, 2, 3 e assim por diante. Por exemplo, o nome padrão para a primeira restrição é Constraint1.  
+-   Uma restrição de chave primária na tabela pai que identifica a coluna adicional, como a chave primária (definindo o **IsPrimaryKey** propriedade **verdadeiro**). A restrição é denominada restrição*#* onde *#* é 1, 2, 3 e assim por diante. Por exemplo, o nome padrão para a primeira restrição é Constraint1.  
   
--   Uma restrição de chave estrangeira na tabela filho que identifica a coluna adicional de chave estrangeira que faz referência à chave primária da tabela pai. A restrição é nomeada *ParentTable_ChildTable* onde *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.  
+-   Uma restrição de chave estrangeira na tabela filho que identifica a coluna adicional, como a chave estrangeira referindo-se para a chave primária da tabela pai. A restrição é nomeada *ParentTable_ChildTable* onde *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.  
   
 -   Uma relação de dados entre as tabelas pai e filho.  
   
- O exemplo a seguir mostra um esquema onde **OrderDetail** é um elemento filho do **ordem**.  
+ O exemplo a seguir mostra um esquema no qual **OrderDetail** é um elemento filho do **ordem**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ Um esquema de linguagem XSD de definição de esquema XML pode ter tipos complex
 </xs:schema>  
 ```  
   
- O processo de mapeamento de esquema XML cria o seguinte o **DataSet**:  
+ O processo de mapeamento de esquema XML cria o seguinte a **conjunto de dados**:  
   
--   Um **ordem** e um **OrderDetail** tabela.  
+-   Uma **ordem** e uma **OrderDetail** tabela.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Uma restrição exclusiva no **ordem** tabela. Observe que o **IsPrimaryKey** está definida como **True**.  
+-   Uma restrição exclusiva na **ordem** tabela. Observe que o **IsPrimaryKey** estiver definida como **verdadeiro**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Um esquema de linguagem XSD de definição de esquema XML pode ter tipos complex
     IsPrimaryKey: True  
     ```  
   
--   Uma restrição de chave estrangeira no **OrderDetail** tabela.  
+-   Uma restrição de chave estrangeira na **OrderDetail** tabela.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Um esquema de linguagem XSD de definição de esquema XML pode ter tipos complex
     RelatedColumns: Order_Id   
     ```  
   
--   Uma relação entre o **ordem** e **OrderDetail** tabelas. O **aninhadas** para essa relação é definida como **True** porque o **ordem** e **OrderDetail** elementos estão aninhados no esquema .  
+-   Uma relação entre o **ordem** e **OrderDetail** tabelas. O **Nested** propriedade para essa relação é definida como **verdadeiro** porque o **ordem** e **OrderDetail** elementos são aninhados no esquema .  
   
     ```  
     ParentTable: Order  
@@ -100,4 +100,4 @@ Um esquema de linguagem XSD de definição de esquema XML pode ter tipos complex
 ## <a name="see-also"></a>Consulte também  
  [Gerando relações de conjunto de dados do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
