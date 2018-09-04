@@ -9,11 +9,11 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480412"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503591"
 ---
 # <a name="application-settings-overview"></a>Visão geral sobre configurações do aplicativo
 Este tópico discute como criar e armazenar dados de configuração em nome de seu aplicativo e seus usuários.  

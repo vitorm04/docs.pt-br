@@ -3,11 +3,11 @@ title: Atraso durável
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
 ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507627"
 ---
 # <a name="durable-delay"></a>Atraso durável
 Este exemplo demonstra como usar um atraso durável, que é um atraso que persiste o fluxo de trabalho para um dispositivo durável durante o atraso. O fluxo de trabalho de exemplo contém duas mensagens ao console que são separadas por um atraso. Quando o atraso é disparado, o trabalho são descarregados e esperam 5 segundos no armazenamento de instância de trabalho antes de ser recarregado na memória.  

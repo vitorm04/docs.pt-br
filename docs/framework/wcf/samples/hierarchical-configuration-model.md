@@ -2,12 +2,12 @@
 title: Modelo de configuração hierárquica
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 8ca9b01eb022e2e2ab940866a6230e8227ceb2dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000095"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499335"
 ---
 # <a name="hierarchical-configuration-model"></a>Modelo de configuração hierárquica
 Este exemplo demonstra como implementar uma hierarquia de arquivos de configuração para serviços. Ele também mostra como associações, comportamentos de serviço e comportamentos de ponto de extremidade são herdados de níveis mais altos na hierarquia.  
@@ -69,9 +69,9 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de gerenciamento do AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [Exemplos de gerenciamento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193960)

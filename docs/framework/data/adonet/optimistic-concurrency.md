@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911994"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507599"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidade otimista
 Em um ambiente multiusuário, há dois modelos para atualizar dados em um banco de dados: simultaneidade otimista e simultaneidade pessimista. O objeto <xref:System.Data.DataSet> é criado para incentivar o uso da simultaneidade otimista para atividades de execução longa, como a comunicação remota de dados e a interação com dados.  
@@ -211,4 +211,4 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
  [Updating Data Sources with DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
  [Informações de erro de linha](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
