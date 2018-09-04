@@ -11,16 +11,16 @@ ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408b71bf38427d12418e05f8b509fe841bc95ef1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395228"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563670"
 ---
-# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="227a4-102">Função _AxlGetIssuerPublicKeyHash</span><span class="sxs-lookup"><span data-stu-id="227a4-102">_AxlGetIssuerPublicKeyHash Function</span></span>
-<span data-ttu-id="227a4-103">Recupera o hash SHA-1 da chave pública associada à chave privada usada para assinar o certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="227a4-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
+# <a name="axlgetissuerpublickeyhash-function"></a><span data-ttu-id="83190-102">Função _AxlGetIssuerPublicKeyHash</span><span class="sxs-lookup"><span data-stu-id="83190-102">_AxlGetIssuerPublicKeyHash Function</span></span>
+<span data-ttu-id="83190-103">Recupera o hash SHA-1 da chave pública associada à chave privada usada para assinar o certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="83190-103">Retrieves the SHA-1 hash of the public key associated with the private key that is used to sign the specified certificate.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="227a4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="227a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83190-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="83190-104">Syntax</span></span>  
   
 ```  
 HRESULT _AxlGetIssuerPublicKeyHash (  
@@ -29,15 +29,15 @@ HRESULT _AxlGetIssuerPublicKeyHash (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="227a4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="227a4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="83190-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="83190-105">Parameters</span></span>  
  `pChainContext`  
- <span data-ttu-id="227a4-106">[in] O blob da chave pública CSP.</span><span class="sxs-lookup"><span data-stu-id="227a4-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="227a4-107">Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.</span><span class="sxs-lookup"><span data-stu-id="227a4-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="83190-106">[in] O blob da chave pública CSP.</span><span class="sxs-lookup"><span data-stu-id="83190-106">[in] The CSP public key blob.</span></span> <span data-ttu-id="83190-107">Consulte a [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) estrutura.</span><span class="sxs-lookup"><span data-stu-id="83190-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `ppwszPublicKeyHash`  
- <span data-ttu-id="227a4-108">[out] Um ponteiro para WCHAR \* para receber o token de chave pública com codificação hexadecimal.</span><span class="sxs-lookup"><span data-stu-id="227a4-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
+ <span data-ttu-id="83190-108">[out] Um ponteiro para WCHAR \* para receber o token de chave pública com codificação hexadecimal.</span><span class="sxs-lookup"><span data-stu-id="83190-108">[out] A pointer to WCHAR \* to receive the hex-encoded public key token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="227a4-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="227a4-109">Return Value</span></span>  
- <span data-ttu-id="227a4-110">`S_OK` se a função for bem-sucedida; caso contrário, `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="227a4-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="83190-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="83190-109">Return Value</span></span>  
+ <span data-ttu-id="83190-110">`S_OK` se a função for bem-sucedida; caso contrário, `S_FALSE`.</span><span class="sxs-lookup"><span data-stu-id="83190-110">`S_OK` if the function succeeds; otherwise `S_FALSE`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="227a4-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="227a4-111">See Also</span></span>  
- [<span data-ttu-id="227a4-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="227a4-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a><span data-ttu-id="83190-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="83190-111">See Also</span></span>  
+ [<span data-ttu-id="83190-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="83190-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
