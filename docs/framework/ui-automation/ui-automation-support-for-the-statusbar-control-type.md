@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 4fb586b9ef34781eafbbe2deb66efdefff0eee19
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416844"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554835"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle StatusBar
 > [!NOTE]

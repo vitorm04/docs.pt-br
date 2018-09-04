@@ -3,11 +3,11 @@ title: Validação das relações de atividades
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
 ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556158"
 ---
 # <a name="activity-relationships-validation"></a>Validação das relações de atividades
 Esse exemplo consiste em três atividades, `CreateCity`, `CreateState`, e `CreateCountry`. `CreateCity` deve ser dentro de uma atividade de `CreateState` , e `CreateState` deve ser dentro de uma atividade de `CreateCountry` . Com o propósito deste exemplo, a lógica de validação está no código para atividades de `CreateState` , e XAML para atividades de `CreateCity` . Ambos tem o mesmo comportamento.  

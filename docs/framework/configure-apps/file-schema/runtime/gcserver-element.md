@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 027176bdff644a6ff3314df7484ed88ace93001b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8bfe0db3d6fcbdbbcfb90ff488ab19cdbfaab75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658802"
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; Element
 Especifica se o Common Language Runtime executa a coleta de lixo do servidor.  
@@ -44,7 +44,7 @@ Especifica se o Common Language Runtime executa a coleta de lixo do servidor.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não é executada a coleta de lixo do servidor. Esse é o padrão.|  
+|`false`|Não é executado a coleta de lixo do servidor. Esse é o padrão.|  
 |`true`|Executa a coleta de lixo do servidor.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -58,14 +58,14 @@ Especifica se o Common Language Runtime executa a coleta de lixo do servidor.
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- O common language runtime (CLR) dá suporte a dois tipos de coleta de lixo: coleta de lixo da estação de trabalho, que está disponível em todos os sistemas, e coleta de lixo do servidor, que está disponível em sistemas com vários processadores. Você usa o `<gcServer>` elemento para controlar o tipo de coleta de lixo CLR executa. Use o <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> propriedade para determinar se a coleta de lixo do servidor está habilitada.  
+ O common language runtime (CLR) dá suporte a dois tipos de coleta de lixo: coleta de lixo de estação de trabalho, que está disponível em todos os sistemas, e coleta de lixo do servidor, que está disponível em sistemas multiprocessadores. Você usa o `<gcServer>` elemento para controlar o tipo de coleta de lixo do CLR executa. Use o <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> propriedade para determinar se a coleta de lixo do servidor está habilitada.  
   
- Para computadores com processador único, a coleta de lixo de estação de trabalho padrão deve ser a opção mais rápida. Estação de trabalho ou servidor pode ser usado para o processador de dois computadores. Coleta de lixo do servidor deve ser a opção mais rápida para mais de dois processadores.  
+ Para computadores com processador único, a coleta de lixo de estação de trabalho padrão deve ser a opção mais rápida. Estação de trabalho ou servidor pode ser usado para computadores com dois processadores. Coleta de lixo do servidor deve ser a opção mais rápida para mais de dois processadores.  
   
- Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo; ele será ignorado se for no arquivo de configuração da máquina.  
+ Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo; ele será ignorado se for no arquivo de configuração do computador.  
   
 > [!NOTE]
->  No .NET Framework 4 e versões anteriores, coleta de lixo simultânea não está disponível quando a coleta de lixo do servidor está habilitada. Começando com o [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], coleta de lixo do servidor é simultânea. Para usar a coleta de lixo não simultânea server, defina a `<gcServer>` elemento `true` e [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) para `false`.  
+>  No .NET Framework 4 e versões anteriores, coleta de lixo simultânea não está disponível quando a coleta de lixo do servidor está habilitada. Começando com o [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], coleta de lixo do servidor é simultânea. Para usar a coleta de lixo não simultânea server, defina as `<gcServer>` elemento a ser `true` e o [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) para `false`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir habilita a coleta de lixo de servidor.  
@@ -82,4 +82,4 @@ Especifica se o Common Language Runtime executa a coleta de lixo do servidor.
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Como: desabilitar a coleta de lixo simultânea](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [Como: desabilitar a coleta de lixo simultânea](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

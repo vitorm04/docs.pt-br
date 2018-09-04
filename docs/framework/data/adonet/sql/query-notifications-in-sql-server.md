@@ -2,12 +2,12 @@
 title: Notificações de consulta no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563652"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificações de consulta no SQL Server
 Criado utilizando a infraestrutura de Service Broker, as notificações de consulta permitem que os aplicativos sejam notificados quando os dados tiverem sido alterados. Esse recurso é especialmente útil para aplicativos que fornecem um cache de informações de um banco de dados, como um aplicativo Web, e precisam ser notificados quando os dados de origem são alterados.  
@@ -24,19 +24,19 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
   
  Você pode configurar notificações para as instruções SELECT e EXECUTE. Ao usar uma instrução EXECUTE, o SQL Server registra uma notificação para o comando executado em vez da própria instrução EXECUTE. O comando deve atender aos requisitos e limitações para uma instrução SELECT. Quando um comando que registra uma notificação contém mais de uma declaração, o Mecanismo de Banco de Dados cria uma notificação para cada instrução no lote.  
   
- Se você estiver desenvolvendo um aplicativo em que você precisa notificações de subsegundos confiável quando dados são alterados, examine as seções **Planejando uma estratégia de notificações de consulta eficiente** e **alternativas para notificações de consulta** no [planejando notificações](http://go.microsoft.com/fwlink/?LinkId=211984) tópico nos Manuais Online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, consulte os seguintes links para tópicos nos Manuais Online do SQL Server.  
+ Se você estiver desenvolvendo um aplicativo em que você precisa receber notificações confiáveis quando dados são alterados, examine as seções **Planejando uma estratégia de notificações de consulta eficiente** e **alternativas para consulta Notificações** no [planejando notificações](https://go.microsoft.com/fwlink/?LinkId=211984) tópico nos Manuais Online do SQL Server. Para obter mais informações sobre as notificações de consulta e o SQL Server Service Broker, consulte os seguintes links para tópicos nos Manuais Online do SQL Server.  
   
  **SQL Server Books Online** (Guias online do SQL Server)  
   
--   [Usando notificações de consulta](http://msdn.microsoft.com/library/ms175110.aspx)  
+-   [Usando notificações de consulta](https://msdn.microsoft.com/library/ms175110.aspx)  
   
--   [Criando uma consulta para notificação](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Criando uma consulta para notificação](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [O Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
+-   [O Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [InfoCenter do desenvolvedor do Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [InfoCenter do desenvolvedor do Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [Desenvolvimento (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Desenvolvimento (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Habilitando notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -63,4 +63,4 @@ Criado utilizando a infraestrutura de Service Broker, as notificações de consu
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd571255f924c9f3878c00a2bc01397d63e6d777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394440"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556511"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>Elemento &lt;Directives&gt; (.NET Nativo)
-O elemento raiz em todos os arquivos de diretivas de tempo de execução para [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET nativo.  
   
- **\<Diretivas xmlns = "http://schemas.microsoft.com/netfx/2013/01/metadata" >**  
+ `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-      <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <!-- child elements -->   
 </Directives>  
 ```  

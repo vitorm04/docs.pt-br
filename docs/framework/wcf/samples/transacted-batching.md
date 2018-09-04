@@ -3,11 +3,11 @@ title: Envio em lote transacionado
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
 ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416642"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558502"
 ---
 # <a name="transacted-batching"></a>Envio em lote transacionado
 Este exemplo demonstra como enviar em lote transacionadas leituras usando o serviço de enfileiramento de mensagens (MSMQ). Envio em lote transacionado é um recurso de otimização de desempenho para leituras transacionadas em comunicação em fila.  

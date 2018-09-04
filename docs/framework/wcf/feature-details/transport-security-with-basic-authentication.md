@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65d076a9fef716fca4fe87df6bc5c7773e2dda0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f29087b01dbd55f936462d3c4ee2a26bbfe97b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558959"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Segurança de transporte com autenticação básica
-A ilustração a seguir mostra um serviço do Windows Communication Foundation (WCF) e o cliente. O servidor precisa de um certificado x. 509 válido que pode ser usado para Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. Além disso, o serviço Web já tem uma implementação de SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Internet Information Services (IIS), consulte [ http://go.microsoft.com/fwlink/?LinkId=83822 ](http://go.microsoft.com/fwlink/?LinkId=83822).  
+A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) e um cliente. O servidor precisa de um certificado X.509 válido que pode ser usado para Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. Além disso, o serviço Web já tem uma implementação de SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Internet Information Services (IIS), consulte [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
   
- ![Segurança com a autenticação básica de transporte](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
+ ![Com a autenticação básica de segurança do transporte](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Transporte|  
-|Interoperabilidade|Com os serviços e clientes de serviço da Web existentes|  
+|Interoperabilidade|Com os serviços e clientes de serviço Web existentes|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando HTTPS)<br /><br /> Sim (por meio do nome de usuário/senha)|  
 |Integridade|Sim|  
 |Confidencialidade|Sim|  
@@ -34,10 +34,10 @@ A ilustração a seguir mostra um serviço do Windows Communication Foundation (
   
 -   Crie um serviço autônomo usando o código sem nenhuma configuração.  
   
--   Criar um serviço usando a configuração fornecida, mas não pode definir pontos de extremidade.  
+-   Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto de extremidade de serviço que usa um nome de usuário de domínio do Windows e uma senha para a segurança de transferência. Observe que o serviço requer um certificado x. 509 para autenticar o cliente. Para obter mais informações, consulte [trabalhar com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ O código a seguir mostra como criar um ponto de extremidade de serviço que usa um nome de usuário de domínio do Windows e uma senha para segurança de transferência. Observe que o serviço requer um certificado x. 509 para autenticar o cliente. Para obter mais informações, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [como: configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -74,10 +74,10 @@ A ilustração a seguir mostra um serviço do Windows Communication Foundation (
 ## <a name="client"></a>Cliente  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra o código de cliente que inclui o nome de usuário e senha. Observe que o usuário deve fornecer um nome de usuário do Windows e senha válidas. O código para retornar o nome de usuário e a senha não é mostrado aqui. Use uma caixa de diálogo ou outra interface para consultar as informações do usuário.  
+ O código a seguir mostra o código do cliente que inclui o nome de usuário e senha. Observe que o usuário deve fornecer um nome de usuário do Windows e uma senha válida. O código para retornar o nome de usuário e a senha não é mostrado aqui. Use uma caixa de diálogo ou outra interface para consultar as informações do usuário.  
   
 > [!NOTE]
->  Nome de usuário e senha só podem ser definidas usando código.  
+>  Nome de usuário e senha só podem ser definidos usando código.  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
@@ -119,4 +119,4 @@ A ilustração a seguir mostra um serviço do Windows Communication Foundation (
  [Como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
- [Modelo de segurança para o Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

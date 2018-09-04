@@ -2,15 +2,15 @@
 title: Operadores de consulta padrão em consultas LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238557"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560482"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta padrão em consultas LINQ to Entities
-Em uma consulta, você especifica as informações que deseja recuperar da fonte de dados. Uma consulta também pode especificar como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. A sintaxe de consulta LINQ fornece um conjunto de métodos de consulta padrão que você pode usar em uma consulta. A maioria desses métodos opera em sequências; Nesse contexto, uma sequência é um objeto cujo tipo implementa a <xref:System.Collections.Generic.IEnumerable%601> interface ou o <xref:System.Linq.IQueryable%601> interface. A funcionalidade de consulta de operadores de consulta padrão inclui filtragem, projeção, agregação, classificação, agrupamento, paginação e muito mais. Alguns dos operadores de consulta padrão mais usados possuem sintaxe de palavra-chave dedicada para que possam ser chamados por meio da sintaxe da expressão de consulta. Uma expressão de consulta é uma maneira diferente e mais legível de expressar uma consulta do que o equivalente baseado em método. As cláusulas de expressão de consulta são convertidas em chamadas para os métodos de consulta em tempo de compilação. Para obter uma lista de operadores de consulta padrão que têm cláusulas de expressão de consulta equivalente, consulte [visão geral de operadores de consulta padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Em uma consulta, você especifica as informações que deseja recuperar da fonte de dados. Uma consulta também pode especificar como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. A sintaxe de consulta LINQ fornece um conjunto de métodos de consulta padrão que você pode usar em uma consulta. A maioria desses métodos opera em sequências; Nesse contexto, uma sequência é um objeto cujo tipo implementa a <xref:System.Collections.Generic.IEnumerable%601> interface ou o <xref:System.Linq.IQueryable%601> interface. A funcionalidade de consulta de operadores de consulta padrão inclui filtragem, projeção, agregação, classificação, agrupamento, paginação e muito mais. Alguns dos operadores de consulta padrão mais usados possuem sintaxe de palavra-chave dedicada para que possam ser chamados por meio da sintaxe da expressão de consulta. Uma expressão de consulta é uma maneira diferente e mais legível de expressar uma consulta do que o equivalente baseado em método. As cláusulas de expressão de consulta são convertidas em chamadas para os métodos de consulta em tempo de compilação. Para obter uma lista de operadores de consulta padrão que têm cláusulas de expressão de consulta equivalente, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
  Nem todos os operadores de consulta padrão têm suporte em consultas [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obter mais informações, consulte [com suporte e os métodos LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Este tópico fornece informações sobre os operadores de consulta padrão que são específicas para [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obter mais informações sobre problemas conhecidos [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, consulte [problemas conhecidos e considerações no LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -67,7 +67,7 @@ Em uma consulta, você especifica as informações que deseja recuperar da fonte
 |`Sum`|Retorna um valor nulo.|Retorna um valor nulo.|Retorna a soma do valor não nulo em uma sequência.|Computa a soma de uma sequência de valores numéricos.|  
   
 ## <a name="type-methods"></a>Métodos de tipo  
- Há suporte para os dois métodos LINQ que tratam da conversão e do teste de tipos no contexto do [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Isso significa que os únicos tipos com suporte são aqueles que mapeiam para o tipo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] apropriado. Para obter uma lista desses tipos, consulte [tipos de modelo conceituais (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Os métodos de tipo são `Convert` e `OfType`.  
+ Há suporte para os dois métodos LINQ que tratam da conversão e do teste de tipos no contexto do [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Isso significa que os únicos tipos com suporte são aqueles que mapeiam para o tipo [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] apropriado. Para obter uma lista desses tipos, consulte [tipos de modelo conceituais (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Os métodos de tipo são `Convert` e `OfType`.  
   
  Há suporte para `OfType` em tipos de entidade. Há suporte para `Convert` em tipos primitivos de modelo conceitual.  Também há suporte para os métodos C# `is` e `as`.  
   
@@ -78,4 +78,4 @@ Em uma consulta, você especifica as informações que deseja recuperar da fonte
   
 ## <a name="see-also"></a>Consulte também  
  [Métodos LINQ com e sem suporte (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
- [Visão Geral de Operadores de Consulta Padrão](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Visão Geral de Operadores de Consulta Padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

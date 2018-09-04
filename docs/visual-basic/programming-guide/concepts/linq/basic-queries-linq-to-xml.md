@@ -3,11 +3,11 @@ title: Consultas básicas (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
 ms.openlocfilehash: 25f0e49e57f03cbde190125ca2d24a01f208fda6
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754041"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564585"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>Consultas básicas (LINQ to XML) (Visual Basic)
 Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] básicas.  

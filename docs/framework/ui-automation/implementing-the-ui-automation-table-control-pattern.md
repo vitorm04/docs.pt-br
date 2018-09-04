@@ -9,40 +9,40 @@ ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 955d9f005a45ab805012dd43cbef27877a9dfdb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7466a7cc25ac742483e21fc1ee4a631bd43bc5a3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398574"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660281"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementando o padrão de controle de tabela de automação de interface de usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
  Este tópico apresenta diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.ITableProvider>, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listadas no final da visão geral.  
   
- O <xref:System.Windows.Automation.TablePattern> padrão de controle é usado para oferecer suporte aos controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.ITableItemProvider> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido por linha e coluna. Esse padrão de controle é análogo a <xref:System.Windows.Automation.Provider.IGridProvider>, com a diferença que qualquer controle implementando <xref:System.Windows.Automation.Provider.ITableProvider> também deve expor uma relação de cabeçalho de coluna e/ou linha para cada elemento filho. Para obter exemplos de controles que implementam este padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.TablePattern> padrão de controle é usado para dar suporte a controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.ITableItemProvider> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido por linha e coluna. Esse padrão de controle é análogo à <xref:System.Windows.Automation.Provider.IGridProvider>, com a diferença que qualquer controle implementando <xref:System.Windows.Automation.Provider.ITableProvider> também deve expor uma relação de cabeçalho de coluna e/ou linha para cada elemento filho. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Convenções e diretrizes de implementação  
+## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de tabela, observe as seguintes diretrizes e convenções:  
   
--   Acesso ao conteúdo das células individuais é por meio de um sistema de coordenadas bidimensional lógico ou matriz fornecida pela implementação simultânea necessária de <xref:System.Windows.Automation.Provider.IGridProvider>.  
+-   Acesso ao conteúdo das células individuais é por meio de um sistema de coordenadas lógico bidimensional ou matriz fornecida pela implementação simultânea necessária de <xref:System.Windows.Automation.Provider.IGridProvider>.  
   
--   Um cabeçalho de coluna ou linha pode estar contido em um objeto de tabela ou ser um objeto separado de cabeçalho que está associado um objeto de tabela.  
+-   Um cabeçalho de coluna ou linha pode estar contido em um objeto de tabela ou ser um objeto de cabeçalho separado que está associado um objeto de tabela.  
   
 -   Cabeçalhos de coluna e linha podem incluir um cabeçalho principal, bem como os cabeçalhos de suporte.  
   
 > [!NOTE]
->  Esse conceito fica evidente em uma [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] planilha em que um usuário tenha definido uma coluna "Nome". Esta coluna agora tem dois cabeçalhos — o cabeçalho de "Nome" definido pelo usuário e a designação alfanumérica para aquela coluna atribuída pelo aplicativo.  
+>  Esse conceito fica evidente em um [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] planilha em que um usuário tenha definido uma coluna "First name". Esta coluna agora tem dois cabeçalhos — o cabeçalho de "First name" definido pelo usuário e a designação alfanumérica para aquela coluna atribuída pelo aplicativo.  
   
--   Consulte [Implementando o padrão de controle Grid de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) para a funcionalidade de grade relacionados.  
+-   Ver [Implementando o padrão de controle Grid de automação de interface do usuário](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) para a funcionalidade de grade relacionados.  
   
- ![Tabela com itens de cabeçalho complexos. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
+ ![Tabela com itens de cabeçalho complexos. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Exemplo de uma tabela com cabeçalhos de coluna complexa  
   
- ![Tabela com RowOrColumnMajor ambíguas. ] (../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
+ ![Tabela com RowOrColumnMajor ambíguas. ](../../../docs/framework/ui-automation/media/uia-tablepattern-roworcolumnmajorproperty.PNG "UIA_TablePattern_RowOrColumnMajorProperty")  
 Exemplo de uma tabela com RowOrColumnMajor ambíguas  
   
 <a name="Required_Members_for_ITableProvider"></a>   
@@ -55,7 +55,7 @@ Exemplo de uma tabela com RowOrColumnMajor ambíguas
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Método|Nenhum|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Método|Nenhum|  
   
- Esse padrão de controle não possui eventos associados.  
+ Esse padrão de controle não tem eventos associados.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  

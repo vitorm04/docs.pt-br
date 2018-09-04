@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365977"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553758"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estatísticas do provedor para SQL Server
 A partir da versão 2.0 do .NET Framework, o provedor de dados do .NET Framework para SQL Server dá suporte a estatísticas de tempo de execução. Você deve habilitar estatísticas definindo a propriedade <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> do objeto de <xref:System.Data.SqlClient.SqlConnection> para `True` depois de criar um objeto de conexão válido. Depois que as estatísticas forem habilitadas, você poderá examiná-las como um "instantâneo no tempo" recuperando uma referência do <xref:System.Collections.IDictionary> pelo método <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> do objeto <xref:System.Data.SqlClient.SqlConnection>. Enumere por meio da lista como um conjunto de entradas no dicionário de pares de nome/valor. Esses pares de nome/valor não são ordenados. A qualquer momento, você pode chamar o método <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> do objeto <xref:System.Data.SqlClient.SqlConnection> para redefinir os contadores. Se a coleta de estatísticas não estiver habilitada, uma exceção não será gerada. Além disso, se <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> for chamado sem <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ter sido chamado primeiro, os valores recuperados serão os valores iniciais para cada entrada. Se você habilitar estatísticas, execute o aplicativo por um tempo e, em seguida, desabilite as estatísticas. Os valores recuperados refletirão os valores coletados até o ponto em que as estatísticas foram desabilitadas. Todos os valores estatísticos são coletados a cada conexão.  
   
 ## <a name="statistical-values-available"></a>Valores estatísticos disponíveis  
- No momento, há 18 itens diferentes disponíveis do provedor do Microsoft SQL Server. O número de itens disponíveis pode ser acessado por meio de **contagem** propriedade do <xref:System.Collections.IDictionary> referência retornada pela interface <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Todos os contadores de estatísticas de provedor usam o common language runtime <xref:System.Int64> tipo (**longo** em c# e Visual Basic), que é de 64 bits de largura. O valor máximo de **int64** tipo de dados, conforme definido pelo **int64. MaxValue** campo, ((2^63)-1)). Quando os valores para os contadores atingirem esse valor máximo, eles não deverão ser considerados precisos. Isso significa que **int64. MaxValue**-1((2^63)-2) é efetivamente o maior valor válido para qualquer estatística.  
+ No momento, há 18 itens diferentes disponíveis do provedor do Microsoft SQL Server. O número de itens disponíveis pode ser acessado por meio de **contagem** propriedade da <xref:System.Collections.IDictionary> referência retornada pela interface <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Todos os contadores para estatísticas do provedor usam o common language runtime <xref:System.Int64> tipo (**longo** em c# e Visual Basic), que é de 64 bits de largura. O valor máximo do **int64** tipo de dados, conforme definido pelo **int64. MaxValue** campo, ((2^63)-1)). Quando os valores para os contadores atingirem esse valor máximo, eles não deverão ser considerados precisos. Isso significa que **int64. MaxValue**-1((2^63)-2) é efetivamente o maior valor válido para qualquer estatística.  
   
 > [!NOTE]
 >  Um dicionário é usado retornar estatísticas do provedor porque o número, os nomes e a ordem das estatísticas retornadas podem ser alteradas no futuro. Os aplicativos não devem confiar em um valor específico localizado no dicionário, mas devem verificar se o valor está lá e está ramificado adequadamente.  
@@ -48,7 +48,7 @@ A partir da versão 2.0 do .NET Framework, o provedor de dados do .NET Framework
  O aplicativo de console seguir mostra como habilitar estatísticas em uma conexão, recuperar quatro valores de estatística individual e gravá-los na janela do console.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+>  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com o SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  O aplicativo de console seguir mostra como habilitar estatísticas em uma conexão, recuperar todos os valores de estatística disponíveis usando o enumerador, e gravá-los na janela do console.  
   
 > [!NOTE]
->  O exemplo a seguir usa o exemplo **AdventureWorks** incluído com o SQL Server do banco de dados. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
+>  O exemplo a seguir usa o exemplo **AdventureWorks** banco de dados incluído com o SQL Server. A cadeia de conexão fornecida no código de exemplo presume que o banco de dados esteja instalado e disponível no computador local. Modifique a cadeia de conexão conforme o necessário para seu ambiente.  
   
 ```vb  
 Option Strict On  
@@ -340,4 +340,4 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

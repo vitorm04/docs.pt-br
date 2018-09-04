@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97d4a6bfd7a8a7aa257ad2f52d005ccc5bcd6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560329"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Método ICLRStrongName::GetHashFromHandle
-Gera um hash com base no conteúdo do arquivo que tem o identificador de arquivo especificado, usando o algoritmo de hash especificado.  
+Gera um hash sobre o conteúdo do arquivo que tem o identificador de arquivo especificado, usando o algoritmo de hash especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,31 +42,31 @@ HRESULT GetHashFromHandle (
   
 #### <a name="parameters"></a>Parâmetros  
  `hFile`  
- [in] O identificador do arquivo a ser transformado em hash.  
+ [in] O identificador do arquivo a ser transformada em hash.  
   
  `piHashAlg`  
- [out no] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.  
+ [no, out] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo padrão.  
   
  `pbHash`  
  [out] O buffer de hash retornado.  
   
  `cchHash`  
- [in] O tamanho máximo solicitado da `pbHash`.  
+ [in] O tamanho máximo solicitado de `pbHash`.  
   
  `pchHash`  
  [out] O tamanho, em bytes, do retornado `pbHash`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](http://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
+ `S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

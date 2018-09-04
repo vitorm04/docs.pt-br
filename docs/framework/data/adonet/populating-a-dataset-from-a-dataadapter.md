@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 ms.openlocfilehash: d865f76b1a3e1ef72717fe790d3f1bc8895f8f58
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401127"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557916"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Populando um DataSet a partir de um DataAdapter
 O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> é uma representação de dados residentes na memória que fornecem um modelo de programação relacional, consistente e independente da fonte de dados. O `DataSet` representa um conjunto completo de dados, que inclui tabelas, restrições e relações entre as tabelas. Como `DataSet` é independente da fonte de dados, um `DataSet` pode incluir o local de dados para o aplicativo, e os dados de várias fontes de dados. A interação com fontes de dados existente é controlada com o `DataAdapter`.  

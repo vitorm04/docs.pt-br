@@ -3,11 +3,11 @@ title: Guia de introdução (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
 ms.openlocfilehash: 8a9c49edfcc43b1862745240ca4e4607bbe27f21
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466978"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560370"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Guia de introdução (LINQ to DataSet)
 Esta seção fornece informações introdutórias sobre a programação com o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  

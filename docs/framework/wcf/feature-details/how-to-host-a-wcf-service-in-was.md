@@ -2,38 +2,38 @@
 title: Como hospedar um serviço do WCF em WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492662"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560289"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Como hospedar um serviço do WCF em WAS
-Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processo do Windows (também conhecido como WAS) hospedado serviço Windows Communication Foundation (WCF). FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. WCF usa o adaptador de escuta para comunicar as solicitações de ativação nos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens recebidas.  
+Este tópico descreve as etapas básicas necessárias para criar um serviços de ativação de processo do Windows (também conhecido como WAS) hospedado o serviço Windows Communication Foundation (WCF). FOI é o novo serviço de ativação de processo é uma generalização dos recursos de serviços de informações da Internet (IIS) que funcionam com protocolos de transporte não HTTP. O WCF usa o adaptador de escuta para comunicar as solicitações de ativação recebidas pelos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens.  
   
- Essa opção de hospedagem requer que os componentes de ativação do WAS são instalados e configurados corretamente, mas não exige qualquer código de hospedagem para ser gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurar o WAS, consulte [como: instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
+ Essa opção de hospedagem requer que os componentes de ativação do WAS são instalados e configurados corretamente, mas ele não requer nenhum código de hospedagem a ser gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurando o WAS, consulte [como: instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
->  Não foi oferece suporte à ativação se o pipeline de processamento de solicitação do servidor web está definido para o modo clássico. Pipeline de processamento de solicitação do servidor web deve ser definido para o modo integrado se a ativação do WAS será usado.  
+>  Não era oferece suporte à ativação se o pipeline de processamento de solicitação do servidor web está definido para o modo clássico. Pipeline de processamento de solicitação do servidor web deve ser definido para o modo integrado se a ativação do WAS deve ser usada.  
   
- Quando um serviço WCF é hospedado no WAS, as associações padrão são usadas como de costume. No entanto, ao usar o <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> para configurar um serviço hospedado do WAS, uma restrição deve ser atendida. Quando diferentes pontos de extremidade usam o mesmo transporte, as configurações de associação tem que corresponder as sete propriedades a seguir:  
+ Quando um serviço WCF é hospedado no WAS, as ligações padrão são usadas como de costume. No entanto, ao usar o <xref:System.ServiceModel.NetTcpBinding> e o <xref:System.ServiceModel.NetNamedPipeBinding> para configurar um serviço hospedado do WAS, uma restrição deve ser atendida. Quando diferentes pontos de extremidade usam o mesmo transporte, as configurações de ligação tem que corresponder as sete propriedades a seguir:  
   
 -   connectionBufferSize  
   
--   ChannelInitializationTimeout  
+-   channelInitializationTimeout  
   
--   MaxPendingConnections  
+-   maxPendingConnections  
   
 -   maxOutputDelay  
   
--   MaxPendingAccepts  
+-   maxPendingAccepts  
   
 -   ConnectionPoolSettings.IdleTimeout  
   
 -   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
- Caso contrário, o ponto de extremidade é inicializado pela primeira vez sempre determina os valores dessas propriedades e pontos de extremidade adicionados posteriormente lançam um <xref:System.ServiceModel.ServiceActivationException> se elas não corresponderem a essas configurações.  
+ Caso contrário, o ponto de extremidade que é inicializado pela primeira vez sempre determina os valores dessas propriedades e os pontos de extremidade adicionados posteriormente lançar um <xref:System.ServiceModel.ServiceActivationException> se eles não corresponderem a essas configurações.  
   
  Para a cópia de origem deste exemplo, consulte [ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
   
@@ -43,11 +43,11 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de endereço e associação não são especificadas dentro da implementação do serviço. Além disso, o código não tem a ser gravado para recuperar informações do arquivo de configuração.  
+2.  Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não são especificadas dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Criar um arquivo Web. config para definir o <xref:System.ServiceModel.NetTcpBinding> associação a ser usado pelo `CalculatorService` pontos de extremidade.  
+3.  Crie um arquivo Web. config para definir a <xref:System.ServiceModel.NetTcpBinding> associação a ser usada pelo `CalculatorService` pontos de extremidade.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,35 +64,35 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
     </configuration>  
     ```  
   
-4.  Crie um arquivo SVC que contém o código a seguir.  
+4.  Crie um arquivo Service SVC que contém o código a seguir.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  Coloque o arquivo svc no diretório virtual do IIS.  
+5.  Coloque o arquivo Service svc no diretório virtual IIS.  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Para criar um cliente para usar o serviço  
   
-1.  Use [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar o código de metadados de serviço.  
+1.  Use [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) da linha de comando para gerar o código de metadados de serviço.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  O cliente que é gerado contém o `ICalculator` interface que define o contrato de serviço que deve atender a implementação do cliente.  
+2.  O cliente que é gerado contém o `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  O aplicativo cliente gerado também contém a implementação de `ClientCalculator`. Observe que as informações de endereço e associação não são especificadas em qualquer lugar dentro da implementação do serviço. Além disso, o código não tem a ser gravado para recuperar informações do arquivo de configuração.  
+3.  O aplicativo de cliente gerado também contém a implementação do `ClientCalculator`. Observe que as informações de endereço e a associação não são especificadas em qualquer lugar dentro da implementação do serviço. Além disso, código não precisa ser escrita para recuperar essas informações do arquivo de configuração.  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  A configuração do cliente que usa o <xref:System.ServiceModel.NetTcpBinding> também é gerado pelo Svcutil.exe. Este arquivo deve ser nomeado no arquivo App. config quando usando o Visual Studio.  
+4.  A configuração do cliente que usa o <xref:System.ServiceModel.NetTcpBinding> também é gerado pelo Svcutil.exe. Este arquivo deve ser nomeado no arquivo App. config ao usar o Visual Studio.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  Criar uma instância do `ClientCalculator` em um aplicativo e, em seguida, chamar as operações de serviço.  
+5.  Criar uma instância das `ClientCalculator` em um aplicativo e, em seguida, chamar as operações de serviço.  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
@@ -100,4 +100,4 @@ Este tópico descreve as etapas básicas necessárias para criar um serviços de
   
 ## <a name="see-also"></a>Consulte também  
  [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

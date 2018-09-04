@@ -2,12 +2,12 @@
 title: Assinando procedimentos armazenados no SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555158"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Assinando procedimentos armazenados no SQL Server
  Uma assinatura digital é um resumo dos dados criptografados com a chave privada do assinante. A chave privada garante que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar assemblies, gatilhos, procedimentos armazenados e funções (exceto funções com valor de tabela do embutidas).  
@@ -51,7 +51,7 @@ Se o módulo precisa de permissões de nível de servidor adicionais:
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[A assinatura de módulo](http://go.microsoft.com/fwlink/?LinkId=98590) nos Manuais Online do SQL Server|Descreve a assinatura do módulo, fornecendo um cenário de exemplo e links para tópicos relevantes do Transact-SQL.|  
+|[A assinatura de módulo](https://go.microsoft.com/fwlink/?LinkId=98590) nos Manuais Online do SQL Server|Descreve a assinatura do módulo, fornecendo um cenário de exemplo e links para tópicos relevantes do Transact-SQL.|  
 |[Assinando procedimentos armazenados com um certificado](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) nos Manuais Online do SQL Server|Fornece um tutorial para assinar um procedimento armazenado com um certificado.|  
   
 ## <a name="see-also"></a>Consulte também  
@@ -62,4 +62,4 @@ Se o módulo precisa de permissões de nível de servidor adicionais:
  [Escrevendo SQL dinâmico seguro no SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Modificando dados com procedimentos armazenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

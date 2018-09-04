@@ -9,11 +9,11 @@ ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bb3e382a93f28ea99c66268e6e402ea275961047
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387189"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555283"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT foi introduzido no .NET Framework versão 2.0. O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] retorna esse HRESULT em dois cenários:  

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759537"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659383"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurando parâmetros e tipos de dados de parâmetro
 Objetos de comando usam parâmetros para passar valores para instruções SQL ou procedimentos armazenados, fornecendo verificação de tipo e validação. Diferentemente do texto de comando, o parâmetro de entrada é tratado como um valor literal, não como código executável. Isso ajuda a proteger contra ataques de "Injeção de SQL", em que um invasor insere um comando que compromete a segurança no servidor em uma instrução SQL.  
   
- Os comandos parametrizados também podem melhorar o desempenho de execução da consulta, porque ajudam o servidor de banco de dados a corresponder exatamente ao comando de entrada com um plano de consulta em cache apropriado. Para obter mais informações, consulte [cache de plano de execução e reutilização](http://go.microsoft.com/fwlink/?LinkId=120424) e [parâmetros e reutilizar o plano de execução](http://go.microsoft.com/fwlink/?LinkId=120423) nos Manuais Online do SQL Server. Além dos benefícios de segurança e desempenho, os comandos parametrizados fornecem um método conveniente para organizar os valores passados para uma fonte de dados.  
+ Os comandos parametrizados também podem melhorar o desempenho de execução da consulta, porque ajudam o servidor de banco de dados a corresponder exatamente ao comando de entrada com um plano de consulta em cache apropriado. Para obter mais informações, consulte [cache de plano de execução e reutilização](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) e [parâmetros e reutilização de plano de execução](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Além dos benefícios de segurança e desempenho, os comandos parametrizados fornecem um método conveniente para organizar os valores passados para uma fonte de dados.  
   
  Um objeto <xref:System.Data.Common.DbParameter> pode ser criado usando o construtor ou adicionando-o ao <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> chamando o método `Add` da coleção <xref:System.Data.Common.DbParameterCollection>. O método `Add` utilizará como entrada argumentos de construtor ou um objeto de parâmetro existente, dependendo do provedor de dados.  
   
@@ -34,10 +34,10 @@ Objetos de comando usam parâmetros para passar valores para instruções SQL ou
   
 |Provedor de dados|Sintaxe de nomeação de parâmetro|  
 |-------------------|-----------------------------|  
-|<xref:System.Data.SqlClient>|Usa parâmetros nomeados em formato `@` *parametername*.|  
+|<xref:System.Data.SqlClient>|Usa parâmetros nomeados no formato `@` *parametername*.|  
 |<xref:System.Data.OleDb>|Usa os marcadores de parâmetros posicionais indicados por um ponto de interrogação (`?`).|  
 |<xref:System.Data.Odbc>|Usa os marcadores de parâmetros posicionais indicados por um ponto de interrogação (`?`).|  
-|<xref:System.Data.OracleClient>|Usa parâmetros nomeados em formato `:` *parmname* (ou *parmname*).|  
+|<xref:System.Data.OracleClient>|Usa parâmetros nomeados no formato `:` *parmname* (ou *parmname*).|  
   
 ## <a name="specifying-parameter-data-types"></a>Especificando tipos de dados do parâmetro  
  O tipo de dados de um parâmetro é específico para o provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Especificar o tipo converte o valor do `Parameter` para o tipo de provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] antes de passar o valor para a fonte de dados. Você também pode especificar o tipo de um `Parameter` genericamente definindo a propriedade `DbType` de um objeto `Parameter` para um <xref:System.Data.DbType> específico.  
@@ -48,7 +48,7 @@ Objetos de comando usam parâmetros para passar valores para instruções SQL ou
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Bit|Boolean|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|Binário|VarBinary`.` essa conversão implícita falhará se a matriz de bytes for maior que o tamanho máximo de um VarBinary, que é de 8000 bytes. Para matrizes de bytes maiores que 8000 bytes, defina explicitamente o <xref:System.Data.SqlDbType>.|VarBinary|Binário|Raw|  
+|byte[]|Binário|VarBinary`.` essa conversão implícita falhará se a matriz de bytes for maior que o tamanho máximo de um VarBinary, que é de 8000 bytes. Para matrizes de byte maiores que 8000 bytes, defina explicitamente o <xref:System.Data.SqlDbType>.|VarBinary|Binário|Raw|  
 |<xref:System.Char>|``|Inferir um <xref:System.Data.SqlDbType> do char não tem suporte.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset no SQL Server 2008. Inferir um <xref:System.Data.SqlDbType> de DateTimeOffset não tem suporte em versões do SQL Server anteriores ao SQL Server 2008.|||DateTime|  
@@ -56,7 +56,7 @@ Objetos de comando usam parâmetros para passar valores para instruções SQL ou
 |<xref:System.Double>|Duplo|Float|Duplo|Duplo|Duplo|  
 |<xref:System.Single>|Simples|Real|Simples|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|int|int|int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Número|  
 |<xref:System.Object>|Objeto|Variante|Variante|Inferir um OdbcType de objeto não tem suporte.|Blob|  
@@ -79,21 +79,21 @@ Objetos de comando usam parâmetros para passar valores para instruções SQL ou
 >  Conversões de decimal para outros tipos são conversões de limitação que arredondam o valor decimal para o valor inteiro mais próximo de zero. Se o resultado da conversão não for representável no tipo de destino, um <xref:System.OverflowException> será gerado.  
   
 > [!NOTE]
->  Quando você envia um valor de parâmetro nulo para o servidor, você deve especificar <xref:System.DBNull>, não `null` (`Nothing` no Visual Basic). O valor nulo no sistema é um objeto vazio que não tem nenhum valor. <xref:System.DBNull> é usado para representar valores nulos. Para obter mais informações sobre valores nulos de banco de dados, consulte [tratar valores nulos](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Quando você envia um valor de parâmetro nulo para o servidor, você deve especificar <xref:System.DBNull>, e não `null` (`Nothing` no Visual Basic). O valor nulo no sistema é um objeto vazio que não tem nenhum valor. <xref:System.DBNull> é usado para representar valores nulos. Para obter mais informações sobre valores nulos de banco de dados, consulte [manipulando valores nulos](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Derivando informações de parâmetro  
- Os parâmetros também podem ser derivados de um procedimento armazenado usando a classe `DbCommandBuilder`. As classes `SqlCommandBuilder` e `OleDbCommandBuilder` fornecem um método estático, `DeriveParameters`, que preenche automaticamente a coleção de parâmetros de um objeto de comando que usa informações de parâmetro de um procedimento armazenado. Observe que `DeriveParameters` substitui quaisquer informações de parâmetro existente para o comando.  
+ Os parâmetros também podem ser derivados de um procedimento armazenado usando a classe `DbCommandBuilder`. As classes `SqlCommandBuilder` e `OleDbCommandBuilder` fornecem um método estático, `DeriveParameters`, que preenche automaticamente a coleção de parâmetros de um objeto de comando que usa informações de parâmetro de um procedimento armazenado. Observe que `DeriveParameters` substitui qualquer informação de parâmetro existente para o comando.  
   
 > [!NOTE]
 >  Derivar informações de parâmetro provoca uma penalidade de desempenho porque exige ida e volta adicional à fonte de dados para recuperar as informações. Se as informações de parâmetro forem conhecidas em tempo de design, você poderá melhorar o desempenho do seu aplicativo definindo os parâmetros explicitamente.  
   
- Para obter mais informações, consulte [gerar comandos com CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Para obter mais informações, consulte [Gerando comandos com CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Usando parâmetros com um SqlCommand e um procedimento armazenado  
- Os procedimentos armazenados oferecem várias vantagens em aplicativos orientados a dados. Ao usar procedimentos armazenados, as operações de banco de dados podem ser encapsuladas em um único comando, otimizadas para melhor desempenho e aprimoradas com segurança adicional. Embora um procedimento armazenado pode ser chamado, passando o nome do procedimento armazenado seguido por argumentos de parâmetro como uma instrução SQL, usando o <xref:System.Data.Common.DbCommand.Parameters%2A> coleção do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> objeto permite que você definir explicitamente mais armazenado parâmetros de procedimento e para acessar parâmetros de saída e valores de retorno.  
+ Os procedimentos armazenados oferecem várias vantagens em aplicativos orientados a dados. Ao usar procedimentos armazenados, as operações de banco de dados podem ser encapsuladas em um único comando, otimizadas para melhor desempenho e aprimoradas com segurança adicional. Embora um procedimento armazenado pode ser chamado, passando o nome do procedimento armazenado seguido por argumentos de parâmetro como uma instrução SQL, usando o <xref:System.Data.Common.DbCommand.Parameters%2A> coleção do [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> objeto permite que você definir mais explicitamente armazenado os parâmetros de procedimento e para acessar parâmetros de saída e valores de retorno.  
   
 > [!NOTE]
->  As instruções parametrizadas são executadas no servidor usando `sp_executesql,` que permite a reutilização do plano de consulta. Os cursores locais ou variáveis no lote `sp_executesql` não são visíveis para os lotes que chamam `sp_executesql`. As alterações no contexto de banco de dados duram somente até o final da instrução `sp_executesql`. Para obter mais informações, consulte os Manuais Online do SQL Server.  
+> As instruções parametrizadas são executadas no servidor usando `sp_executesql,` que permite a reutilização do plano de consulta. Os cursores locais ou variáveis no lote `sp_executesql` não são visíveis para os lotes que chamam `sp_executesql`. As alterações no contexto de banco de dados duram somente até o final da instrução `sp_executesql`. Para obter mais informações, consulte [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
   
  Ao usar parâmetros com um <xref:System.Data.SqlClient.SqlCommand> para executar um procedimento armazenado do SQL Server, os nomes dos parâmetros adicionados à coleção de <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> devem coincidir com os nomes dos marcadores de parâmetros no procedimento armazenado. O provedor de dados do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para o SQL Server não oferece suporte ao espaço reservado de ponto de interrogação (?) para passar parâmetros para uma instrução SQL ou procedimento armazenado. Ele trata parâmetros no procedimento armazenado como parâmetros nomeados e procura marcadores de parâmetro compatíveis. Por exemplo, o procedimento armazenado `CustOrderHist` é definido usando um parâmetro chamado `@CustomerID`. Quando o código executar o procedimento armazenado, também deverá usar um parâmetro chamado `@CustomerID`.  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [Comandos e parâmetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parâmetros DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
