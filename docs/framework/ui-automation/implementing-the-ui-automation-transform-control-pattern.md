@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 6f193380619d5e75eaacebe00f602a3716d91ddf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564306"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementando o Padrão de Controle de Transformação de Automação de IU
 > [!NOTE]

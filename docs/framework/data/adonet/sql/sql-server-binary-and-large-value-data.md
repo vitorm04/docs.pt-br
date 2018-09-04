@@ -3,11 +3,11 @@ title: SQL Server Data binário e de valor grande
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 ms.openlocfilehash: 9ebbe23dfbcac7825ce449dd40f62b921d13ab4a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466192"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564877"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server Data binário e de valor grande
 O SQL Server fornece as `max` especificador, que expande a capacidade de armazenamento do `varchar`, `nvarchar`, e `varbinary` tipos de dados. `varchar(max)`, `nvarchar(max)`, e `varbinary(max)` são coletivamente chamados *tipos de dados de valor grande*. Você pode usar os tipos de dados de valor grande para armazenar até 2 ^ 31-1 bytes de dados.  

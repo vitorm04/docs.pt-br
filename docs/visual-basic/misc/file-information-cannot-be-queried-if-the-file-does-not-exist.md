@@ -3,11 +3,11 @@ title: Não não possível consultar informações do arquivo se o arquivo não 
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
 ms.openlocfilehash: 698d5ee08d470d846e2d13b3793be62a3699f807
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403199"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561728"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Não não possível consultar informações do arquivo se o arquivo não existe
 Foi feita uma tentativa para consultar um <xref:System.IO.FileInfo> objeto para obter informações sobre um arquivo que não existe. Normalmente, isso ocorre devido a um erro ao fornecer o nome do arquivo.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398977"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564711"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Como habilitar o WIF para um aplicativo de serviço Web WCF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -19,7 +19,7 @@ ms.locfileid: "33398977"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Resumo  
- Estas instruções fornecem procedimentos passo a passo detalhados para habilitar o WIF em um serviço Web WCF. Também fornecem explicações sobre como testar o aplicativo para verificar se o serviço Web está apresentando declarações corretamente quando o aplicativo é executado. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. O download pode ser feito na seguinte localização: [Ferramenta de Identidade e Acesso](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ Estas instruções fornecem procedimentos passo a passo detalhados para habilitar o WIF em um serviço Web WCF. Também fornecem explicações sobre como testar o aplicativo para verificar se o serviço Web está apresentando declarações corretamente quando o aplicativo é executado. Essas instruções não têm tópicos de explicações detalhados para criar um STS (Serviço de Token de Segurança), e usa o STS de Desenvolvimento que vem com a Ferramenta de Identidade e Acesso. O STS de Desenvolvimento não efetua a autenticação real e destina-se somente a testes. Você precisará instalar a Ferramenta de Identidade e Acesso para concluir estas instruções. O download pode ser feito na seguinte localização: [Ferramenta de Identidade e Acesso](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Conteúdo  
   

@@ -2,12 +2,12 @@
 title: Diretiva simples
 ms.date: 03/30/2017
 ms.assetid: 6a94c834-2e32-4bed-9f47-ae5845eef6ff
-ms.openlocfilehash: dff3979d75fdeb5a45be3940af3568c26f5e8f98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f189e4d1811cb0b7dd9138b944bfd0552481690
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515890"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561258"
 ---
 # <a name="simple-policy"></a>Diretiva simples
 Este exemplo mostra como usar uma atividade de <xref:System.Workflow.Activities.PolicyActivity> em um fluxo de trabalho.  
@@ -31,7 +31,7 @@ Este exemplo mostra como usar uma atividade de <xref:System.Workflow.Activities.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está no seguinte diretório:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\SimplePolicy`  
   

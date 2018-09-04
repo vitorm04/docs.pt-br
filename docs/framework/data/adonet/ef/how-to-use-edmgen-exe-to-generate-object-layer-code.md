@@ -3,11 +3,11 @@ title: 'Como: Use EdmGen.exe para gerar código de objetos camada'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
 ms.openlocfilehash: c15ceec66ad5b1c9ef414c3e57e3b6e49c372e7a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561346"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Como: Use EdmGen.exe para gerar código de objetos camada
 Este tópico mostra como usar o [gerador de EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) ferramenta para gerar o código da camada de objeto com base em arquivo. CSDL.  

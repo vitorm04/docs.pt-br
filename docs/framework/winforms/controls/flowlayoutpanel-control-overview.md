@@ -10,11 +10,11 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
 ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425498"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563806"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>Visão geral do controle FlowLayoutPanel
 O <xref:System.Windows.Forms.FlowLayoutPanel> controle organiza seu conteúdo em uma direção de fluxo horizontal ou vertical. Você pode encapsular o conteúdo do controle de uma linha para outra ou de uma coluna para a próxima. Como alternativa, você pode recortar, em vez de encapsular seu conteúdo.  

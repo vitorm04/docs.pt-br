@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397343"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565426"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Atualizando fontes de dados com DataAdapters
 O método `Update` do <xref:System.Data.Common.DataAdapter> é chamado para resolver alterações de um <xref:System.Data.DataSet> de volta para a fonte de dados. O método `Update`, como o método de `Fill`, utiliza como argumentos uma instância do `DataSet` e um objeto <xref:System.Data.DataTable> opcional ou um nome de `DataTable`. A instância do `DataSet` é o `DataSet` que contém as alterações que foram feitas, e o `DataTable` identifica a tabela da qual recuperar as alterações. Se nenhum `DataTable` for especificado, o primeiro `DataTable` no `DataSet` será usado.  

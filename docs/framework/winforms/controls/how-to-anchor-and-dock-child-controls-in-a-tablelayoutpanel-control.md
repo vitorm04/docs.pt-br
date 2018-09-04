@@ -13,11 +13,11 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
 ms.openlocfilehash: ad09c30b2118a08f4249433c4f531e5bcef4acd5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418946"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561847"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Como ancorar e encaixar controles filho em um controle TableLayoutPanel
 O <xref:System.Windows.Forms.TableLayoutPanel> controlar dá suporte a <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> propriedades em seus controles filho.  

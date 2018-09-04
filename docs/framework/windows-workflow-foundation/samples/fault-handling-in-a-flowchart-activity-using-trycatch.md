@@ -3,11 +3,11 @@ title: Tratamento de falha em uma atividade do fluxograma usando TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
 ms.openlocfilehash: e89c80ecfa8ec93fdde82b5638c504ded681a4fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487017"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562292"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Tratamento de falha em uma atividade do fluxograma usando TryCatch
 Este exemplo mostra como a atividade de <xref:System.Activities.Statements.TryCatch> pode ser usada dentro de uma atividade complexa de fluxo de controle.  

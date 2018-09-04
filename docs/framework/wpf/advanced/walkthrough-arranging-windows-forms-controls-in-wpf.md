@@ -9,11 +9,11 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 98b108be518a9fef03ee299d43ed591cf736f68f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484933"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564268"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Instruções passo a passo: organizando controles dos Windows Forms no WPF
 Este passo a passo mostra como usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recursos de layout para organizar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles em um aplicativo híbrido.  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: a84b51679969f38955dd6a72ffe94ec8ca70b3df
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393038"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564070"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Instruções passo a passo: criando um formulário MDI com mesclagem de menu e controles ToolStrip
 O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace oferece suporte a vários aplicativos MDI (interface MDI) de documento e o <xref:System.Windows.Forms.MenuStrip> controle dá suporte à mesclagem de menu. Formulários MDI também podem <xref:System.Windows.Forms.ToolStrip> controles.  
