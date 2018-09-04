@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 4486b5be42f4a356b2017fe8629bc96f6ad47eda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650963"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661146"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentários no código (Visual Basic)
-À medida que você lê os exemplos de código, você encontra geralmente o símbolo de comentário (`'`). Este símbolo informa ao compilador do Visual Basic para ignorar o texto a seguir, ou o *comentário*. Os comentários são uma breve explicação e/ou anotações adicionadas ao código para o benefício de quem os lê.  
+À medida que você lê os exemplos de código, você encontra geralmente o símbolo de comentário (`'`). Esse símbolo diz ao compilador do Visual Basic para ignorar o texto a seguir, ou o *comentário*. Os comentários são uma breve explicação e/ou anotações adicionadas ao código para o benefício de quem os lê.  
   
  É uma prática de programação recomendável iniciar todos os procedimentos com um breve comentário descrevendo as características do procedimento e sua funcionalidade (o que ele faz). Isso é um benefício para o programador e é vantajoso para qualquer pessoa que examinar o código. Você deve separar os detalhes de implementação (como o procedimento faz isso) dos comentários que descrevem as características funcionais. Quando você incluir detalhes da implementação na descrição, lembre-se de atualizá-los quando você atualizar a função.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "33650963"
   
 -   Os comentários não podem seguir uma sequência de continuação de linha na mesma linha.  
   
- Você pode adicionar ou remover símbolos de comentário de um bloco de código, selecionando uma ou mais linhas de código e escolhendo o **comentário** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) e **Uncomment** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) botões de **editar**  barra de ferramentas.  
+ Você pode adicionar ou remover símbolos de comentário de um bloco de código, selecionando uma ou mais linhas de código e escolhendo a **comentário** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) e **Uncomment** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) botões de **editar**  barra de ferramentas.  
   
 > [!NOTE]
->  Você também pode adicionar comentários ao código precedendo o texto com a palavra-chave `REM`. No entanto, o `'` símbolo e o **comentário**/**Uncomment** botões são mais fáceis de usar e exigem menos espaço e memória.  
+>  Você também pode adicionar comentários ao código precedendo o texto com a palavra-chave `REM`. No entanto, o `'` símbolo e o **comentário**/**Remover comentário** botões são mais fáceis de usar e exigem menos espaço e memória.  
   
 ## <a name="see-also"></a>Consulte também  
- [Documentando o código com comentários XML](http://msdn.microsoft.com/magazine/dd722812.aspx)  
+ [Documentando seu código com comentários XML](https://msdn.microsoft.com/magazine/dd722812.aspx)  
  [Como criar documentação XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md)  
  [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [Instrução REM](../../../visual-basic/language-reference/statements/rem-statement.md)

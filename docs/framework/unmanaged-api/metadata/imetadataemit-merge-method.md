@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 899f2ca5ef1b987687f5c065ad3e1965e142d103
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466107"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564747"
 ---
 # <a name="imetadataemitmerge-method"></a>Método IMetaDataEmit::Merge
 Adiciona o escopo importado especificado à lista de escopos a serem mesclados.  

@@ -8,11 +8,11 @@ ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0dbc06afd4695b85f426fad2859b4c6d4b6684d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661068"
 ---
 # <a name="distributed-application-security"></a>Segurança de aplicativos distribuídos
 Segurança do Windows Communication Foundation (WCF) é dividida em três áreas funcionais principais: segurança, controle de acesso e auditoria de transferência. Segurança de transferência fornece integridade, confidencialidade e autenticação. Segurança de transferência é fornecida por um dos seguintes: segurança, segurança de mensagem de transporte ou `TransportWithMessageCredential`.  

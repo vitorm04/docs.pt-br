@@ -2,12 +2,12 @@
 title: Extensibliity grade de propriedade
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 50fb2fce2fa8c52942a221401f88523c7b407dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660250"
 ---
 # <a name="property-grid-extensibliity"></a>Extensibliity grade de propriedade
 Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando uma determinada atividade é selecionada no designer. Isso pode ser feito para criar uma experiência rica de edição. Este exemplo mostra como isso pode ser feito.  
@@ -20,7 +20,7 @@ Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
@@ -89,7 +89,7 @@ Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando 
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  Substitui o <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` método no tipo de designer para lidar com a exibição da caixa de diálogo. Nesse exemplo, <xref:System.Windows.Forms.FileDialog> básico é mostrado.  
+4.  Substitui o <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` método no tipo de designer para manipular a exibição da caixa de diálogo. Nesse exemplo, <xref:System.Windows.Forms.FileDialog> básico é mostrado.  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -118,15 +118,15 @@ Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando 
   
 1.  Crie a solução, e abra Workflow1.xaml.  
   
-2.  Arraste um **SimpleCodeActivity** da caixa de ferramentas para a tela do designer.  
+2.  Arraste uma **SimpleCodeActivity** Toolbox para a tela do designer.  
   
-3.  Clique o **SimpleCodeActivity** e, em seguida, abra a grade de propriedades em que há um controle deslizante e um arquivo de controle de separação.  
+3.  Clique o **SimpleCodeActivity** e, em seguida, abra a grade propriedade onde há um controle deslizante e um arquivo de controle de separação.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

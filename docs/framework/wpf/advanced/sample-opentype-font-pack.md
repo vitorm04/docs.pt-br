@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43455738"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661967"
 ---
 # <a name="sample-opentype-font-pack"></a>Pacote de fontes OpenType de amostra
 Este tópico fornece uma visão geral das fontes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de exemplo que são distribuídas com o [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. O suporte de fontes de exemplo estendeu os recursos [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] que podem ser usados por aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
