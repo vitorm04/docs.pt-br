@@ -2,27 +2,27 @@
 title: Fornecedor de token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.openlocfilehash: 509469404e2c3866c26b5e1817a819519203c175
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808774"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418033"
 ---
 # <a name="saml-token-provider"></a>Fornecedor de token SAML
-Este exemplo demonstra como implementar um provedor de token SAML de cliente personalizadas. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriada credenciais para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também apresenta um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
+Este exemplo demonstra como implementar uma provedor de token SAML personalizadas do cliente. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e problemas apropriado as credenciais para que a infraestrutura de segurança pode proteger a mensagem. O WCF é fornecido com o provedor de Token do Gerenciador de credenciais padrão. O WCF também é fornecido com um [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provedor de token. Provedores de token personalizados são úteis nos seguintes casos:  
   
 -   Se você tiver um repositório de credenciais que esses provedores de token não podem operar com.  
   
--   Se desejar fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando a estrutura do cliente WCF usa as credenciais.  
+-   Se você quiser fornecer seu próprio mecanismo personalizado para transformar as credenciais do ponto quando o usuário fornece os detalhes para quando a estrutura do cliente WCF usa as credenciais.  
   
 -   Se você estiver criando um token personalizado.  
   
- Este exemplo mostra como criar um provedor de token personalizado que permite que um token SAML obtido fora a estrutura do cliente WCF a ser usado.  
+ Este exemplo mostra como criar um provedor de token personalizado que permite que um token SAML obtido fora da estrutura de cliente do WCF a ser usado.  
   
  Para resumir, este exemplo demonstra o seguinte:  
   
--   Como um cliente pode ser configurado com um provedor do token.  
+-   Como um cliente pode ser configurado com um provedor de token personalizado.  
   
 -   Como um token SAML pode ser passado para as credenciais de cliente personalizadas.  
   
@@ -30,7 +30,7 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 -   Como o servidor é autenticado pelo cliente usando o certificado do servidor x. 509.  
   
- O serviço expõe dois pontos de extremidade de comunicação com o serviço, definido usando o arquivo de configuração App. config. Cada ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsFederationHttpBinding`, que usa segurança de mensagem. Um ponto de extremidade espera que o cliente para autenticar com um token SAML que usa uma chave de prova simétrica enquanto o outro espera que o cliente para autenticar com um token SAML que usa uma chave assimétrica de prova. O serviço também configura o certificado de serviço usando `serviceCredentials` comportamento. O `serviceCredentials` comportamento permite que você configure um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir faz referência ao certificado de "localhost" instalado durante a configuração de exemplo, conforme descrito nas instruções de instalação no final deste tópico. O `serviceCredentials` comportamento também permite que você configure os certificados que são confiáveis para autenticar os tokens SAML. A configuração a seguir faz referência ao certificado de 'Alice' instalado durante a amostragem.  
+ O serviço expõe dois pontos de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração App. config. Cada ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsFederationHttpBinding`, que usa segurança de mensagem. Um ponto de extremidade espera que o cliente para autenticar com um token SAML que usa uma chave de prova simétrica, enquanto a outra espera que o cliente para autenticar com um token SAML que usa uma chave de prova assimétrica. O serviço também configura o certificado de serviço usando `serviceCredentials` comportamento. O `serviceCredentials` comportamento permite que você configure um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir faz referência a "localhost" certificado instalado durante a configuração de exemplo conforme descrito nas instruções de instalação no final deste tópico. O `serviceCredentials` comportamento também permite que você configure os certificados que são confiáveis para assinar tokens SAML. A configuração a seguir referencia o certificado de 'Alice' instalado durante a amostragem.  
   
 ```xml  
 <system.serviceModel>  
@@ -111,13 +111,13 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
 </system.serviceModel>  
 ```  
   
- As etapas a seguir mostram como desenvolver um provedor do token SAML e integrá-lo com o WCF: estrutura de segurança:  
+ As etapas a seguir mostram como desenvolver um provedor de token SAML personalizado e integrá-lo com o WCF: estrutura de segurança:  
   
-1.  Grave um provedor do token SAML.  
+1.  Escreva um provedor de token SAML personalizado.  
   
-     O exemplo implementa um provedor de token de SAML personalizado que retorna um token de segurança com base em uma asserção SAML que é fornecida no tempo de construção.  
+     O exemplo implementa um provedor de token de SAML personalizado que retorna um token de segurança com base em uma declaração SAML que é fornecida no momento da construção.  
   
-     Para executar essa tarefa, o provedor do token é derivado do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe e substituições de <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> método. Esse método cria e retorna um novo `SecurityToken`.  
+     Para executar essa tarefa, o provedor de token personalizado é derivado do <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe e substitui o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> método. Esse método cria e retorna um novo `SecurityToken`.  
   
     ```  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -156,9 +156,9 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
     }  
     ```  
   
-2.  Grave o Gerenciador de token de segurança personalizada.  
+2.  Escreva um Gerenciador de token de segurança personalizada.  
   
-     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe é usada para criar <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para determinado <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> que é passado para ele no `CreateSecurityTokenProvider` método. Um Gerenciador de token de segurança também é usado para criar o serializador de token e autenticadores de token, mas aqueles não são cobertas por este exemplo. Neste exemplo de segurança personalizada herda do Gerenciador de token o <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe e substituições de `CreateSecurityTokenProvider` método para retornar o provedor do token SAML quando os requisitos de token passados indicam que o token SAML é solicitado. Se a classe de credenciais de cliente (consulte a etapa 3) não tiver especificado uma asserção, o Gerenciador de token de segurança cria uma instância apropriada.  
+     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> classe é usada para criar <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para determinado <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> que é passado para ele no `CreateSecurityTokenProvider` método. Um Gerenciador de token de segurança também é usado para criar os autenticadores de token e serializador de token, mas esses não são cobertos por este exemplo. Nesse exemplo, a segurança personalizada que herda do Gerenciador de token a <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe e substitui o `CreateSecurityTokenProvider` método para retornar o provedor do token SAML quando os requisitos de token passados indicam que o token SAML é solicitado. Se a classe de credenciais do cliente (consulte a etapa 3) não tiver especificado uma asserção, o Gerenciador de token de segurança cria uma instância apropriada.  
   
     ```  
     public class SamlSecurityTokenManager :  
@@ -230,7 +230,7 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 3.  Grave uma credencial de cliente personalizadas.  
   
-     Classe de credenciais de cliente é usado para representar as credenciais que são configuradas para o proxy de cliente e cria o Gerenciador de token que é usado para obter o serializador de token, provedores de token e autenticadores de token de segurança.  
+     Classe de credenciais do cliente é usado para representar as credenciais que são configuradas para o proxy de cliente e cria uma segurança Gerenciador de token é usado para obter os autenticadores de token, provedores de token e serializador de token.  
   
     ```  
     public class SamlClientCredentials : ClientCredentials  
@@ -296,16 +296,16 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);  
     ```  
   
- Sobre o serviço, as declarações associadas ao chamador são exibidas. Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ No serviço, as declarações associadas com o chamador são exibidas. Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ## <a name="setup-batch-file"></a>Arquivo de lote  
- Arquivo em lotes bat incluído com este exemplo permite que você configure o servidor com o certificado apropriado para executar um aplicativo auto-hospedado que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para trabalhar em um caso não hospedado.  
+ O arquivo em lotes de Setup. bat incluído com este exemplo permite que você configure o servidor com o certificado apropriado para executar um aplicativo hospedado internamente que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para trabalhar em um caso de não hospedados.  
   
- O exemplo a seguir fornece uma visão geral das seções diferentes dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.  
+ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.  
   
 -   Criando o certificado do servidor:  
   
-     As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão, esse arquivo em lotes é localhost.  
+     As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão nesse arquivo em lotes é localhost.  
   
      O certificado é armazenado no repositório My (pessoal) em um local de repositório LocalMachine.  
   
@@ -321,7 +321,7 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 -   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente:  
   
-     Armazenam as linhas a seguir na cópia de arquivo de lote o certificado do servidor bat para as pessoas confiáveis do cliente. Esta etapa é necessária porque os certificados gerados pela Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preenchimento do repositório de certificados de cliente com o certificado do servidor não é necessária.  
+     As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople  
@@ -329,9 +329,9 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 -   Criando o certificado do emissor.  
   
-     As seguintes linhas do arquivo em lotes bat criam o certificado do emissor a ser usado. O `%USER_NAME%` variável Especifica o nome do emissor. Altere essa variável para especificar seu próprio nome de emissor. O valor padrão, esse arquivo em lotes é Alice.  
+     As seguintes linhas do arquivo em lotes bat criam o certificado do emissor a ser usado. O `%USER_NAME%` variável Especifica o nome do emissor. Altere essa variável para especificar seu próprio nome de emissor. O valor padrão nesse arquivo em lotes é Alice.  
   
-     O certificado é armazenado no meu repositório no local de armazenamento CurrentUser.  
+     O certificado é armazenado em meu repositório sob o local do repositório CurrentUser.  
   
     ```  
     echo ************  
@@ -345,45 +345,45 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 -   Instalando o certificado do emissor no repositório de certificados confiáveis do servidor.  
   
-     Armazenam as linhas a seguir na cópia de arquivo de lote o certificado do servidor bat para as pessoas confiáveis do cliente. Esta etapa é necessária porque os certificados gerados pela Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preenchimento do repositório de certificados do servidor com o certificado do emissor não é necessária.  
+     As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado emitido Microsoft — essa etapa de preencher o repositório de certificados do servidor com o certificado do emissor não é necessária.  
   
     ```  
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople  
     ```  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Para configurar e criar o exemplo  
+#### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para criar a solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 > [!NOTE]
->  Se você usar o Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
+>  Se você usar Svcutil.exe para gerar novamente a configuração para este exemplo, certifique-se de modificar o nome do ponto de extremidade na configuração do cliente para coincidir com o código do cliente.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador  
   
-1.  Execute bat da pasta de instalação de exemplo dentro de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando executado com privilégios de administrador. Isso instala todos os certificados necessários para executar o exemplo.  
+1.  Execute Setup. bat da pasta de instalação de exemplo dentro de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando executado com privilégios de administrador. Essa opção instala todos os certificados necessários para executar o exemplo.  
   
     > [!NOTE]
-    >  O arquivo em lotes bat é projetado para ser executado de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando. Definir a variável de ambiente PATH dentro de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando aponta para o diretório que contém os executáveis exigido pelo script bat.  
+    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando. A variável de ambiente PATH definido dentro de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando aponta para o diretório que contém executáveis exigido pelo script de Setup. bat.  
   
-2.  Inicie Service.exe de service\bin.  
+2.  Inicie o Service.exe no service\bin.  
   
-3.  Inicie Client.exe de \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3.  Inicie o Client.exe no \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
   
-1.  Crie um diretório no computador de serviço para os binários de serviço.  
+1.  Crie um diretório no computador do serviço para os binários de serviço.  
   
-2.  Copie os arquivos de programa do serviço para o diretório de serviço no computador de serviço. Também copie os arquivos. bat e Cleanup.bat para o computador do serviço.  
+2.  Copie os arquivos de programa de serviço para o diretório de serviço no computador do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador do serviço.  
   
-3.  Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo Service.exe.config deve ser atualizado para refletir o novo nome de certificado. Você pode criar o certificado do servidor, modificando o arquivo em lotes bat. Observe que o arquivo bat deve ser executado em uma janela de prompt de comando do Visual Studio aberta com privilégios de administrador. Você deve definir o `%SERVER_NAME%` variável para o nome de host totalmente qualificado do computador que é usado para hospedar o serviço.  
+3.  Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo Service.exe.config deve ser atualizado para refletir o novo nome de certificado. Você pode criar o certificado do servidor, modificando o arquivo em lotes de Setup. bat. Observe que o arquivo Setup. bat deve ser executado em uma janela de prompt de comando do Visual Studio aberta com privilégios de administrador. Você deve definir o `%SERVER_NAME%` variável ao nome de host totalmente qualificado do computador que é usado para hospedar o serviço.  
   
-4.  Copie o certificado do servidor para o armazenamento CurrentUser TrustedPeople do cliente. Essa etapa não é necessária quando o certificado do servidor é emitido por um emissor confiável do cliente.  
+4.  Copie o certificado do servidor para o repositório CurrentUser TrustedPeople do cliente. Essa etapa não é necessária quando o certificado do servidor é emitido por um emissor confiável do cliente.  
   
-5.  No arquivo Service.exe.config no computador de serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
+5.  No arquivo Service.exe.config no computador do serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez do localhost.  
   
 6.  No computador do serviço, execute Service.exe em um prompt de comando.  
   
@@ -391,12 +391,12 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
   
 8.  No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
   
-9. No computador cliente, inicie o `Client.exe` em uma janela de prompt de comando.  
+9. No computador cliente, inicie o `Client.exe` em uma janela do prompt de comando.  
   
-10. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>A limpeza após a amostra  
+#### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
-1.  Execute Cleanup.bat na pasta exemplos depois de terminar a execução do exemplo.  
+1.  Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
 ## <a name="see-also"></a>Consulte também

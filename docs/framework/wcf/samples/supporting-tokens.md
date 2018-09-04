@@ -2,30 +2,30 @@
 title: Tokens com suporte
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: 8d8ff3cf4d5a060d135cbcf40c043681ce72b6e0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.openlocfilehash: 14f1cbf628e0666f0a8e96123cafe29ba300ea78
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808790"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470860"
 ---
 # <a name="supporting-tokens"></a>Tokens com suporte
-O suporte a Tokens demonstra como adicionar tokens adicionais para uma mensagem que usa o WS-Security. O exemplo adiciona um token de segurança binário x. 509 além de um token de segurança do nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e a parte da mensagem está assinado com a chave privada associada com o token de segurança x. 509 para provar a posse do certificado x. 509 para o receptor. Isso é útil no caso, quando há uma necessidade de ter várias declarações associadas a uma mensagem para autenticar ou autorizar o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
+O que dão suporte a Tokens que demonstra como adicionar tokens adicionais a uma mensagem que usa WS-Security. O exemplo adiciona um token de segurança binário X.509, além de um token de segurança do nome de usuário. O token é passado em um cabeçalho de mensagem do WS-Security do cliente para o serviço e parte da mensagem é assinado com a chave privada associada ao token de segurança x. 509 para provar a posse do certificado X.509 para o receptor. Isso é útil no caso de quando há um requisito de ter várias declarações associadas com uma mensagem para autentica ou autoriza o remetente. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
   
 ## <a name="demonstrates"></a>Demonstra  
  O exemplo demonstra:  
   
 -   Como um cliente pode passar tokens de segurança adicionais para um serviço.  
   
--   Como o servidor possa acessar as declarações associadas com os tokens de segurança adicional.  
+-   Como o servidor possa acessar declarações associadas com tokens de segurança adicionais.  
   
--   Como o certificado do servidor x. 509 é usado para proteger a chave simétrica usada para assinatura e criptografia de mensagem.  
+-   Como o certificado X.509 do servidor é usado para proteger a chave simétrica usada para assinatura e criptografia de mensagem.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
-## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Cliente autentica com o Token de nome de usuário e o Token de segurança x. 509 de suporte  
- O serviço expõe um ponto de extremidade de comunicação que é criado por meio de programação usando o `BindingHelper` e `EchoServiceHost` classes. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com uma associação personalizada usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement`. Este exemplo define o `SymmetricSecurityBindingElement` para usar um certificado x. 509 de serviço para proteger a chave simétrica durante a transmissão e passar uma `UserNameToken` juntamente com o suporte `X509SecurityToken` em um cabeçalho de mensagem do WS-Security. A chave simétrica é usada para criptografar o corpo da mensagem e o token de segurança do nome de usuário. O token de suporte é passado como um token de segurança binário adicionais no cabeçalho da mensagem WS-Security. A autenticidade do token de suporte é comprovada inscrevendo-se parte da mensagem com a chave privada associada com a segurança x. 509 suporte token.  
+## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Cliente autentica com o Token de nome de usuário e dar suporte a Token de segurança X.509  
+ O serviço expõe um ponto de extremidade para se comunicar por meio de programação criado usando o `BindingHelper` e `EchoServiceHost` classes. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com uma ligação personalizada usando `SymmetricSecurityBindingElement` e `HttpTransportBindingElement`. Este exemplo define o `SymmetricSecurityBindingElement` usar um certificado de serviço x. 509 para proteger a chave simétrica durante a transmissão e passar uma `UserNameToken` juntamente com o suporte a `X509SecurityToken` em um cabeçalho de mensagem do WS-Security. A chave simétrica é usada para criptografar o corpo da mensagem e o token de segurança do nome de usuário. O token de suporte é passado como um token de segurança binário adicional no cabeçalho da mensagem do WS-Security. A autenticidade do token de suporte foi comprovada por parte da mensagem de assinatura com a chave privada associada com a segurança X.509 suporte token.  
   
 ```  
 public static Binding CreateMultiFactorAuthenticationBinding()  
@@ -53,7 +53,7 @@ public static Binding CreateMultiFactorAuthenticationBinding()
 }  
 ```  
   
- O comportamento Especifica as credenciais de serviço a ser usado para autenticação de cliente e também informações sobre o certificado x. 509 de serviço. O exemplo usa `CN=localhost` como um nome de assunto no certificado x. 509 de serviço.  
+ O comportamento Especifica as credenciais de serviço que devem ser usados para autenticação de cliente e também informações sobre o certificado X.509 de serviço. O exemplo usa `CN=localhost` como um nome de assunto no certificado X.509 de serviço.  
   
 ```  
 override protected void InitializeRuntime()  
@@ -172,7 +172,7 @@ public class EchoService : IEchoService
 }   
 ```  
   
- O ponto de extremidade do cliente é configurado de maneira semelhante para o ponto de extremidade de serviço. O cliente usa o mesmo `BindingHelper` classe para criar uma associação. O restante do programa de instalação está localizado em `Client` classe. O cliente define as informações sobre o token de segurança do nome de usuário, o token de segurança x. 509 suporte e informações sobre o certificado x. 509 de serviço no código do programa de instalação para a coleção de comportamentos de ponto de extremidade do cliente.  
+ O ponto de extremidade do cliente é configurado de forma semelhante ao ponto de extremidade de serviço. O cliente usa o mesmo `BindingHelper` classe para criar uma associação. O restante da instalação está localizado em `Client` classe. O cliente define informações sobre o token de segurança de nome de usuário, o token de segurança X.509 suporte e informações sobre o certificado X.509 de serviço no código do programa de instalação para a coleção de comportamentos de ponto de extremidade do cliente.  
   
 ```  
  static void Main()  
@@ -282,7 +282,7 @@ public class EchoService : IEchoService
 }  
 ```  
   
-## <a name="displaying-callers-information"></a>Exibindo informações dos chamadores  
+## <a name="displaying-callers-information"></a>Exibindo informações de chamadores  
  Para exibir informações do chamador, você pode usar o `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` conforme mostrado no código a seguir. O `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contém declarações de autorização associadas ao chamador atual. Essas declarações são fornecidas automaticamente pelo Windows Communication Foundation (WCF) para cada token recebido na mensagem.  
   
 ```  
@@ -345,16 +345,16 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 }  
 ```  
   
-## <a name="running-the-sample"></a>Executando o exemplo  
- Quando você executar o exemplo, o cliente primeiro solicita que você forneça o nome de usuário e senha para o token de nome de usuário. Certifique-se de fornecer valores corretos para sua conta do sistema, como WCF no serviço mapeia os valores fornecidos no token de nome de usuário para a identidade fornecida pelo sistema. Depois disso, o cliente exibe a resposta do serviço. Pressione ENTER na janela do cliente para desligar o cliente.  
+## <a name="running-the-sample"></a>A execução do exemplo  
+ Quando você executar o exemplo, o cliente primeiro solicita que você forneça o nome de usuário e senha para o token de nome de usuário. Certifique-se de fornecer valores corretos para sua conta do sistema, pois o WCF no serviço mapeia os valores fornecidos no token de nome de usuário para a identidade fornecida pelo sistema. Depois disso, o cliente exibe a resposta do serviço. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ## <a name="setup-batch-file"></a>Arquivo de lote  
- Arquivo em lotes bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar o aplicativo de serviços de informações da Internet (IIS) hospedado que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre máquinas ou trabalhar em um caso não hospedado.  
+ O arquivo em lotes de Setup. bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar o aplicativo de serviços de informações da Internet (IIS) hospedado que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em máquinas ou para trabalhar em um caso de não hospedados.  
   
  O exemplo a seguir fornece uma visão geral das seções diferentes dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.  
   
-### <a name="creating-the-client-certificate"></a>Criando o certificado de cliente  
- As seguintes linhas do arquivo em lotes bat criam o certificado de cliente a ser usado. O `%CLIENT_NAME%` variável Especifica o assunto do certificado do cliente. Este exemplo usa "client.com" como o nome da entidade.  
+### <a name="creating-the-client-certificate"></a>Criando o certificado do cliente  
+ As seguintes linhas do arquivo em lotes bat criam o certificado do cliente a ser usado. O `%CLIENT_NAME%` variável Especifica o assunto do certificado do cliente. Este exemplo usa "client.com" como o nome da entidade.  
   
  O certificado é armazenado no repositório My (pessoal) sob o `CurrentUser` local do repositório.  
   
@@ -365,8 +365,8 @@ echo ************
 makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
 ```  
   
-### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Instalando o certificado de cliente para o armazenamento do servidor confiável  
- A seguinte linha no arquivo em lotes bat copia o certificado de cliente no armazenamento de pessoas confiáveis do servidor. Esta etapa é necessária porque certificados gerados pela Makecert.exe não são implicitamente confiáveis do sistema. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preenchimento do repositório de certificados de cliente com o certificado do servidor não é necessária.  
+### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Instalação do certificado de cliente na Store de confiáveis do servidor  
+ A seguinte linha no arquivo em lotes bat copia o certificado do cliente para o armazenamento de pessoas confiáveis do servidor. Esta etapa é necessária porque os certificados gerados pelo Makecert.exe não são implicitamente confiáveis do sistema do servidor. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.  
   
 ```  
 echo ************  
@@ -376,9 +376,9 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```  
   
 ### <a name="creating-the-server-certificate"></a>Criando o certificado do servidor  
- As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão, esse arquivo em lotes é localhost.  
+ As seguintes linhas do arquivo em lotes bat criam o certificado do servidor a ser usado. O `%SERVER_NAME%` variável Especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão nesse arquivo em lotes é localhost.  
   
- O certificado é armazenado no repositório My (pessoal) em um local de repositório LocalMachine. O certificado é armazenado no repositório de LocalMachine para os serviços hospedados no IIS. Para serviços de hospedagem interna, você deve modificar o arquivo em lotes para armazenar o certificado do servidor no local de armazenamento CurrentUser, substituindo a cadeia de caracteres LocalMachine por CurrentUser.  
+ O certificado é armazenado no repositório My (pessoal) em um local de repositório LocalMachine. O certificado é armazenado no repositório de LocalMachine para os serviços hospedados no IIS. Para serviços de hospedagem interna, você deve modificar o arquivo em lotes para armazenar o certificado do servidor no local de repositório CurrentUser, substituindo a cadeia de caracteres LocalMachine por CurrentUser.  
   
 ```  
 echo ************  
@@ -390,8 +390,8 @@ echo ************
 makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
 ```  
   
-### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Instalar o certificado do servidor no repositório de certificados confiáveis do cliente  
- Armazenam as linhas a seguir na cópia de arquivo de lote o certificado do servidor bat para as pessoas confiáveis do cliente. Esta etapa é necessária porque os certificados gerados pela Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preenchimento do repositório de certificados de cliente com o certificado do servidor não é necessária.  
+### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Instalar o certificado do servidor em Store de certificado confiável do cliente  
+ As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.  
   
 ```  
 echo ************  
@@ -399,8 +399,8 @@ echo copying server cert to client's TrustedPeople store
 echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
 ```  
   
-### <a name="enabling-access-to-the-certificates-private-key"></a>Habilitando o acesso à chave privada de certificado  
- Para habilitar o acesso à chave privada de certificado do serviço hospedado no IIS, a conta de usuário sob a qual o processo de hospedados no IIS é executado deve ter permissões apropriadas para a chave privada. Isso é feito por último etapas no script bat.  
+### <a name="enabling-access-to-the-certificates-private-key"></a>Habilitando o acesso à chave privada do certificado  
+ Para habilitar o acesso à chave privada do certificado do serviço hospedado no IIS, a conta de usuário sob a qual o processo hospedados no IIS está em execução deve ser concedida permissões apropriadas para a chave privada. Isso é realizado pelas últimas etapas no script de Setup. bat.  
   
 ```  
 echo ************  
@@ -415,56 +415,56 @@ iisreset
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para criar a solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para executar o exemplo em uma configuração ou entre computadores, use as instruções a seguir.  
+3.  Para executar o exemplo em uma configuração ou entre máquinas, use as instruções a seguir.  
   
-##### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo no mesmo computador  
+##### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo na mesma máquina  
   
-1.  Execute bat da pasta de instalação de exemplo dentro de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando executado com privilégios de administrador. Isso instala todos os certificados necessários para executar o exemplo.  
+1.  Execute Setup. bat da pasta de instalação de exemplo dentro de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando executado com privilégios de administrador. Essa opção instala todos os certificados necessários para executar o exemplo.  
   
     > [!NOTE]
-    >  O arquivo em lotes bat é projetado para ser executado de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando. Definir a variável de ambiente PATH dentro de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando aponta para o diretório que contém os executáveis exigido pelo script bat. Certifique-se de remover os certificados executando Cleanup.bat quando terminar com o exemplo. Outros exemplos de segurança usam os mesmos certificados.  
+    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando. A variável de ambiente PATH definido dentro de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando aponta para o diretório que contém executáveis exigido pelo script de Setup. bat. Certifique-se de remover os certificados com a execução CleanUp quando terminar com o exemplo. Outros exemplos de segurança usam os mesmos certificados.  
   
-2.  Inicie Client.exe de \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+2.  Inicie o Client.exe no \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-3.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-##### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo em computadores  
+##### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre máquinas  
   
 1.  Crie um diretório no computador do serviço. Crie um aplicativo virtual denominado servicemodelsamples para este diretório usando a ferramenta de gerenciamento de serviços de informações da Internet (IIS).  
   
-2.  Copie os arquivos de programa do serviço de \inetpub\wwwroot\servicemodelsamples para o diretório virtual na máquina do serviço. Certifique-se de que você copiar os arquivos no subdiretório \bin. Também copie os arquivos. bat, Cleanup.bat e ImportClientCert.bat para a máquina de serviço.  
+2.  Copie os arquivos de programa do serviço de \inetpub\wwwroot\servicemodelsamples para o diretório virtual na máquina do serviço. Certifique-se de que você copiar os arquivos no subdiretório \bin. Também copie os arquivos Setup. bat, CleanUp e ImportClientCert.bat para o computador de serviço.  
   
 3.  Crie um diretório no computador cliente para os binários do cliente.  
   
-4.  Copie os arquivos de programa do cliente para o diretório de cliente no computador cliente. Também copie os arquivos. bat, Cleanup.bat e ImportServiceCert.bat ao cliente.  
+4.  Copie os arquivos de programa do cliente para o diretório do cliente no computador cliente. Também copie os arquivos Setup. bat, CleanUp e ImportServiceCert.bat ao cliente.  
   
-5.  No servidor, execute `setup.bat service` em um prompt de comando do Visual Studio aberto com privilégios de administrador. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
+5.  No servidor, execute `setup.bat service` em um prompt de comando do Visual Studio aberta com privilégios de administrador. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
   
-6.  Editar o Web. config para refletir o novo nome de certificado (no `findValue` atributo o [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que é o mesmo que o nome de domínio totalmente qualificado da máquina.  
+6.  Editar o Web. config para refletir o novo nome do certificado (na `findValue` de atributo no [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que é igual ao nome de domínio totalmente qualificado da máquina.  
   
 7.  Copie o arquivo de Service.cer do diretório de serviço para o diretório do cliente no computador cliente.  
   
-8.  No cliente, execute `setup.bat client` em um prompt de comando do Visual Studio aberto com privilégios de administrador. Executando `setup.bat` com o `client` argumento cria um certificado de cliente chamado client.com e exporta o certificado de cliente para um arquivo chamado cer.  
+8.  No cliente, execute `setup.bat client` em um prompt de comando do Visual Studio aberta com privilégios de administrador. Executando `setup.bat` com o `client` argumento cria um certificado de cliente chamado client.com e exporta o certificado de cliente para um arquivo chamado da CER.  
   
-9. No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço. Faça isso substituindo localhost com o nome de domínio totalmente qualificado do servidor.  
+9. No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço. Fazer isso, substitua localhost pelo nome de domínio totalmente qualificado do servidor.  
   
-10. Copie o arquivo CER do diretório do cliente para o diretório de serviço no servidor.  
+10. Copie o arquivo de Client. cer do diretório do cliente para o diretório de serviço no servidor.  
   
-11. No cliente, execute ImportServiceCert.bat. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople repositório.  
+11. No cliente, execute ImportServiceCert.bat. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
   
-12. No servidor, execute ImportClientCert.bat, isso importa o certificado de cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
+12. No servidor, execute ImportClientCert.bat, isso importa o certificado do cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
   
-13. No computador cliente, inicie Client.exe em uma janela de prompt de comando. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. No computador cliente, inicie Client.exe em uma janela do prompt de comando. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-##### <a name="to-clean-up-after-the-sample"></a>A limpeza após a amostra  
+##### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
--   Execute Cleanup.bat na pasta exemplos depois de terminar a execução do exemplo.  
+-   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
 > [!NOTE]
->  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre máquinas. Se você executou os exemplos do WCF que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados em CurrentUser - TrustedPeople repositório. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre máquinas. Se você executou os exemplos do WCF que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Consulte também
