@@ -7,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: acc82ca370a71a0469fc543d042da9c279d69fb2
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 6a98cd9f2ff6f40a200a9e30fc65de717b6e788e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42907742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503627"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexadores (Guia de Programação em C#)
 
@@ -66,6 +66,7 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)

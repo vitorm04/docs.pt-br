@@ -10,12 +10,12 @@ ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: efecd4f2858843a2401e3d69538d87f92475b816
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4ed8fa218e97f4a6b06bd1c8a06d9b300b16119
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397891"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557173"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programação de rede no .NET Framework
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Os aplicativos de rede podem compilar em protocolos conectáveis para usufruir automaticamente de novos protocolos da Internet ou podem usar uma implementação gerenciada da interface de soquete do Windows para trabalhar com a rede a nível de soquete.  
@@ -142,5 +142,5 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Práticas recomendadas do protocolo TLS com o .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Tópicos de instruções de programação de rede](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Exemplos de rede do .NET na Galeria de Códigos do MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [Amostra de HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Exemplos de rede do .NET na Galeria de Códigos do MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
+ [Amostra de HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 5b844b20ac62b4cbc2a73931eecab95f22b4b1de
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 03c2ffc37bc6c2e820b8e28599f415cde1be9be5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521951"
 ---
 # <a name="events-c-programming-guide"></a>Eventos (Guia de Programação em C#)
 Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
@@ -58,9 +58,9 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
   
  [Delegados e eventos](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) em [Learning C# 3.0: Master the fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.EventHandler>  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
- [Criando manipuladores de eventos no Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Programação multi-threaded com o padrão assíncrono baseado em evento](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.EventHandler>  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)  
+- [Criando manipuladores de eventos no Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  

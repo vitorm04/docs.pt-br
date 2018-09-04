@@ -2,12 +2,12 @@
 title: Programação assíncrona com async e await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529157"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programação assíncrona com async e await (C#)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
@@ -333,8 +333,9 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)  
- [Programação assíncrona](../../../../csharp/async.md)  
- [Visão geral da assincronia](../../../../standard/async.md)  
+## <a name="see-also"></a>Consulte também
+
+- [async](../../../../csharp/language-reference/keywords/async.md)  
+- [await](../../../../csharp/language-reference/keywords/await.md)  
+- [Programação assíncrona](../../../../csharp/async.md)  
+- [Visão geral da assincronia](../../../../standard/async.md)  

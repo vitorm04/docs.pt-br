@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 8f412366072c81b8aaca94829e0aa214f356200d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506075"
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guia de Programação em C#)
 Genéricos foram adicionados à versão 2.0 da linguagem C# e o common language runtime (CLR). Genéricos apresentam ao .NET Framework o conceito de parâmetros de tipo, que possibilitam a criação de classes e métodos que adiam a especificação de um ou mais tipos até que a classe ou método seja declarado e instanciado pelo código do cliente. Por exemplo, ao usar um parâmetro de tipo genérico T, você pode escrever uma única classe que outro código de cliente pode usar sem incorrer o custo ou corre o risco de conversões de tempo de execução ou operações de conversão boxing, conforme mostrado aqui:  
@@ -59,10 +59,11 @@ Genéricos foram adicionados à versão 2.0 da linguagem C# e o common language 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  Para obter mais informações, consulte a [Especificação da linguagem C#](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic>  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Tipos](../../../csharp/programming-guide/types/index.md)  
- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
- [Genéricos no .NET](../../../standard/generics/index.md)  
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Collections.Generic>  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Tipos](../../../csharp/programming-guide/types/index.md)  
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+- [Genéricos no .NET](../../../standard/generics/index.md)  

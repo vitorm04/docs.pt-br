@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936005"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510632"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrizes (Guia de Programação em C#)
+
 Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados de matriz. Você pode declarar uma matriz especificando o tipo de seus elementos.  
   
  `type[] arrayName;`  
@@ -21,7 +22,8 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
   
  [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a>Visão geral de matriz  
+## <a name="array-overview"></a>Visão geral de matriz
+
  Uma matriz tem as seguintes propriedades:  
   
 -   Uma matriz pode ser [Unidimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [Multidimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) ou [Denteada](../../../csharp/programming-guide/arrays/jagged-arrays.md).  
@@ -48,10 +50,12 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
   
 -   [Passando matrizes com o uso de ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Tipo de coleção Array](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Coleções](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [Tipo de coleção Array](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

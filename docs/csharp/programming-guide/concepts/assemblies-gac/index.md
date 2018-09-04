@@ -2,12 +2,12 @@
 title: Assemblies e o cache de assembly global (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408912"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534317"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblies e o cache de assembly global (C#)
 Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo baseado em .NET Framework. Os assemblies tomam a forma de um arquivo executável (.exe) ou de biblioteca de link dinâmico (.dll) e são os blocos de construção do .NET Framework. Eles oferecem ao Common Language Runtime as informações de que ele precisa para estar ciente das implementações de tipo. Você pode pensar em um assembly como uma coleção de tipos e recursos que formam uma unidade lógica de funcionalidade e são criados para trabalharem juntos.  
@@ -50,13 +50,14 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
 > [!NOTE]
 >  Para criar um assembly no Visual Studio, no menu **Compilar**, escolha **Compilar**.  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
- [Assemblies no Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Assemblies Amigáveis (C#)](friend-assemblies.md)  
- [Como compartilhar um assembly com outros aplicativos (C#)](how-to-share-an-assembly-with-other-applications.md)  
- [Como carregar e descarregar assemblies (C#)](how-to-load-and-unload-assemblies.md)  
- [Como determinar se um arquivo é um Assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
- [Como criar e usar assemblies utilizando a linha de comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+- [Assemblies no Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Assemblies Amigáveis (C#)](friend-assemblies.md)  
+- [Como compartilhar um assembly com outros aplicativos (C#)](how-to-share-an-assembly-with-other-applications.md)  
+- [Como carregar e descarregar assemblies (C#)](how-to-load-and-unload-assemblies.md)  
+- [Como determinar se um arquivo é um Assembly (C#)](how-to-determine-if-a-file-is-an-assembly.md)  
+- [Como criar e usar assemblies utilizando a linha de comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8ef6d73aa6cd044cf6808878bf6142a735d015c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3796e3e79112b14d45bb410e63656a81d474c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391242"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526714"
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Guia de migração para o .NET Framework 4.7, 4.6 e 4.5 
 Se seu aplicativo foi criado usando uma versão anterior do .NET Framework, normalmente, você poderá atualizá-lo com facilidade para o .NET Framework 4.5 e suas versões de correção (4.5.1 e 4.5.2), o .NET Framework 4.6 e suas versões de correção (4.6.1 e 4.6.2) ou o .NET Framework 4.7 e suas versões de correção (4.7.1 e 4.7.2). Abra seu projeto no Visual Studio. Se o seu projeto tiver sido criado em uma versão anterior do Visual Studio, a caixa de diálogo **Compatibilidade do Projeto** abrirá automaticamente. Para saber mais sobre como atualizar um projeto no Visual Studio, veja [Portar, migrar e atualizar projetos do Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) e [Direcionamento e compatibilidade da plataforma Visual Studio 2017](/visualstudio/productinfo/vs2017-compatibility-vs).  
@@ -39,5 +39,5 @@ Se seu aplicativo foi criado usando uma versão anterior do .NET Framework, norm
  [Como configurar um aplicativo para oferecer suporte ao .NET Framework 4 ou 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
  [Novidades](../../../docs/framework/whats-new/index.md)  
  [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Versão do .NET Framework e informações de Assembly](http://go.microsoft.com/fwlink/?LinkId=201701)  
- [Política de ciclo de vida de suporte do Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) [Problemas de migração do .NET Framework 4](net-framework-4-migration-issues.md)
+ [Versão do .NET Framework e informações de Assembly](https://go.microsoft.com/fwlink/?LinkId=201701)  
+ [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) [Problemas de migração do .NET Framework 4](net-framework-4-migration-issues.md)
