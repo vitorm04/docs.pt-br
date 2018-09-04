@@ -4,12 +4,12 @@ description: Saiba como definir e usar os valores ref return e ref local
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33339612"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510559"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -124,5 +124,5 @@ Essa segunda versão é mais eficiente, com sequências mais longas em cenários
 
 ## <a name="see-also"></a>Consulte também
 
-[ref keyword](../../language-reference/keywords/ref.md)  
-[Semântica de referência com Tipos de valor](../../../csharp/reference-semantics-with-value-types.md)
+- [ref keyword](../../language-reference/keywords/ref.md)  
+- [Semântica de referência com Tipos de valor](../../../csharp/reference-semantics-with-value-types.md)
