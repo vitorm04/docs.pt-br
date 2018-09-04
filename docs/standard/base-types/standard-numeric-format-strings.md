@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
-ms.translationtype: HT
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753598"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403183"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
@@ -33,8 +33,10 @@ As cadeias de caracteres de formato numérico padrão são usadas para formatar 
   
 -   `xx` é um inteiro opcional chamado *especificador de precisão*. O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Quando o *especificador de precisão* controla o número de dígitos fracionários na cadeia de caracteres de resultado, as cadeias de caracteres de resultado refletem números que são arredondados para cima (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
-  
+    Quando o *especificador de precisão* controla o número de dígitos fracionários na cadeia de caracteres de resultado, ela reflete um número que será arredondado para um resultado representável mais próximo do resultado infinitamente preciso. Se houver dois resultados representáveis igualmente próximos:
+    - **No .NET Framework e .NET Core até o .NET Core 2.0**, o tempo de execução selecionará o resultado com o dígito menos significativo maior (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **No .NET Core 2.1 e versões posteriores**, o tempo de execução selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  O especificador de precisão determina o número de dígitos na cadeia de caracteres de resultado. Para acrescentar espaços à direita ou à esquerda em uma cadeia de caracteres de resultado, use o recurso [formatação de composição](../../../docs/standard/base-types/composite-formatting.md) e defina um *componente de alinhamento* no item de formato.  
   

@@ -1,8 +1,9 @@
 ---
-title: Recursos em aplicativos de área de trabalho
-ms.date: 03/30/2017
+title: Recursos em Aplicativos .NET
+ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
 - application resources
 - resource files
 - satellite assemblies
@@ -12,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bc91f5f3872ee5f4a55f3e3cd9e0e9de9bcc422
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399244"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408279"
 ---
-# <a name="resources-in-desktop-apps"></a>Recursos em aplicativos de área de trabalho
+# <a name="resources-in-net-apps"></a>Recursos em Aplicativos .NET
 Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um recurso é qualquer dado não executável que está implantado de modo lógico com um aplicativo. Um recurso pode ser exibido em um aplicativo como mensagens de erro ou como parte da interface do usuário. Os recursos podem conter dados em vários formatos, incluindo cadeias de caracteres, imagens e objetos persistentes. (Para gravar objetos persistentes em um arquivo de recurso, os objetos devem ser serializáveis.) Armazenar dados em um arquivo de recurso permite alterar os dados sem recompilar todo o aplicativo. Também é possível armazenar dados em um único local e eliminar a necessidade de depender de dados embutidos em código que são armazenados em vários locais.  
   
- O .NET Framework fornece suporte abrangente para a criação e a localização de recursos em aplicativos da área de trabalho. Além disso, o .NET Framework dá suporte a um modelo simples de empacotamento e implantação desses recursos localizados em aplicativos da área de trabalho.  
+ O .NET Framework e o .NET Core fornecem suporte abrangente para a criação e a localização de recursos. Além disso, o .NET dá suporte a um modelo simples de empacotamento e implantação de recursos localizados.  
   
- Para saber mais sobre recursos no ASP.NET, confira [Visão geral sobre recursos de página da Web ASP.NET](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd) na Central de Desenvolvedores do Internet Explorer.  
+ Para saber mais sobre recursos no ASP.NET, confira [Visão Geral sobre Recursos de Página da Web ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
   
- Os aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] usam um modelo de recurso diferente dos aplicativos da área de trabalho e armazenam seus recursos em um único arquivo PRI (índice de recurso do pacote). Para saber mais sobre recursos em aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], confira [Criando e recuperando recursos em aplicativos de Tempo de Execução do Windows](http://go.microsoft.com/fwlink/p/?LinkId=241674) no Centro de Desenvolvimento do Windows.  
-  
-## <a name="creating-and-localizing-resources"></a>Criando e localizando recursos  
+ ## <a name="creating-and-localizing-resources"></a>Criando e localizando recursos  
  Em um aplicativo não localizado, você pode usar arquivos de recurso como um repositório para dados de aplicativo, especialmente para cadeias de caracteres que poderiam ser de alguma forma embutidas em código em vários locais no código-fonte. Normalmente, você cria recursos como arquivos de texto (.txt) ou XML (.resx) e usa [Resgen.exe (Gerador de Arquivo de Recurso)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilá-los em arquivos de recursos binários. Esses arquivos podem ser inseridos no arquivo executável do aplicativo por um compilador de linguagem. Para saber mais sobre como criar recursos, confira [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  Você também pode localizar os recursos do seu aplicativo para culturas específicas. Isso permite que criar versões localizadas (traduzidas) dos aplicativos. Ao desenvolver um aplicativo que usa recursos localizados, você designa uma cultura que atua como a cultura neutra ou de fallback cujos recursos serão usados se não houver recursos adequados disponíveis. Normalmente, os recursos da cultura neutra são armazenados no executável do aplicativo. Os demais recursos para culturas localizadas individuais são armazenados nos assemblies satélite autônomos. Para saber mais, confira [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
@@ -47,11 +46,11 @@ Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um
   
 -   Se não houver uma cultura explicitamente designada, recuperando a cultura padrão da interface do usuário do thread pela propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local chamando a função `GetUserDefaultUILanguage` do Windows.  
+-   Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local. Implementações do .NET em execução no Windows fazem isso ao chamar a função do Windows [ `GetUserDefaultUILanguage` ](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage).  
   
  Para saber mais sobre a configuração da cultura da interface do usuário atual, confira as páginas de referência <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos nos aplicativos da área de trabalho, o namespace <xref:System.Resources?displayProperty=nameWithType> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:  
+ Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos, o namespace <xref:System.Resources?displayProperty=nameWithType> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:  
   
 -   A classe <xref:System.Resources.ResourceReader>, que permite enumerar recursos inseridos em um assembly ou armazenados em um arquivo de recurso binário autônomo. Ela é útil quando você desconhece os nomes exatos dos recursos que estão disponíveis no tempo de execução.  
   
