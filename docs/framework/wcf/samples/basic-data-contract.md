@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
 ms.openlocfilehash: a170423a5ae132c70710e22b5d61f57c46fdfc28
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523758"
 ---
-# <a name="basic-data-contract"></a><span data-ttu-id="fce3e-102">Contrato de dados básicos</span><span class="sxs-lookup"><span data-stu-id="fce3e-102">Basic Data Contract</span></span>
-<span data-ttu-id="fce3e-103">Este exemplo demonstra como implementar um contrato de dados.</span><span class="sxs-lookup"><span data-stu-id="fce3e-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="fce3e-104">Contratos de dados permitem que você passe dados estruturados para e de serviços.</span><span class="sxs-lookup"><span data-stu-id="fce3e-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="fce3e-105">Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) , mas usa números complexos, em vez de tipos numéricos básicos.</span><span class="sxs-lookup"><span data-stu-id="fce3e-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  
+# <a name="basic-data-contract"></a><span data-ttu-id="258fa-102">Contrato de dados básicos</span><span class="sxs-lookup"><span data-stu-id="258fa-102">Basic Data Contract</span></span>
+<span data-ttu-id="258fa-103">Este exemplo demonstra como implementar um contrato de dados.</span><span class="sxs-lookup"><span data-stu-id="258fa-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="258fa-104">Contratos de dados permitem que você passe dados estruturados para e de serviços.</span><span class="sxs-lookup"><span data-stu-id="258fa-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="258fa-105">Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) , mas usa números complexos, em vez de tipos numéricos básicos.</span><span class="sxs-lookup"><span data-stu-id="258fa-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  
   
- <span data-ttu-id="fce3e-106">Neste exemplo, o serviço é hospedado pelo Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).</span><span class="sxs-lookup"><span data-stu-id="fce3e-106">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
+ <span data-ttu-id="258fa-106">Neste exemplo, o serviço é hospedado pelo Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).</span><span class="sxs-lookup"><span data-stu-id="258fa-106">In this sample, the service is hosted by Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="fce3e-107">As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="fce3e-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="258fa-107">As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="258fa-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="fce3e-108">O contrato de serviço para esse serviço usa números complexos, conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="fce3e-108">The service contract for this service uses complex numbers, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="258fa-108">O contrato de serviço para esse serviço usa números complexos, conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="258fa-108">The service contract for this service uses complex numbers, as shown in the following sample code.</span></span>  
   
 ```  
 // Define a service contract.  
@@ -37,7 +37,7 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="fce3e-109">O <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos foram aplicados à definição do `ComplexNumber` classe para indicar quais campos da classe podem ser passados durante a transmissão entre o cliente e o serviço, conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="fce3e-109">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes have been applied to the definition of the `ComplexNumber` class to indicate which fields of the class can be passed over the wire between the client and the service, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="258fa-109">O <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos foram aplicados à definição do `ComplexNumber` classe para indicar quais campos da classe podem ser passados durante a transmissão entre o cliente e o serviço, conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="258fa-109">The <xref:System.Runtime.Serialization.DataContractAttribute> and <xref:System.Runtime.Serialization.DataMemberAttribute> attributes have been applied to the definition of the `ComplexNumber` class to indicate which fields of the class can be passed over the wire between the client and the service, as shown in the following sample code.</span></span>  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -56,7 +56,7 @@ public class ComplexNumber
 }  
 ```  
   
- <span data-ttu-id="fce3e-110">A implementação do serviço calcula e retorna o resultado apropriado, aceitando e retornando os números das `ComplexNumber` tipo.</span><span class="sxs-lookup"><span data-stu-id="fce3e-110">The service implementation calculates and returns the appropriate result, accepting and returning numbers of the `ComplexNumber` type.</span></span>  
+ <span data-ttu-id="258fa-110">A implementação do serviço calcula e retorna o resultado apropriado, aceitando e retornando os números das `ComplexNumber` tipo.</span><span class="sxs-lookup"><span data-stu-id="258fa-110">The service implementation calculates and returns the appropriate result, accepting and returning numbers of the `ComplexNumber` type.</span></span>  
   
 ```  
 // This is the service class that implements the service contract.  
@@ -95,7 +95,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- <span data-ttu-id="fce3e-111">A implementação do cliente também usa números complexos.</span><span class="sxs-lookup"><span data-stu-id="fce3e-111">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="fce3e-112">O contrato de serviço e o contrato de dados são definidos no generatedClient.cs de arquivo de origem, que é gerado pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço.</span><span class="sxs-lookup"><span data-stu-id="fce3e-112">Both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span>  
+ <span data-ttu-id="258fa-111">A implementação do cliente também usa números complexos.</span><span class="sxs-lookup"><span data-stu-id="258fa-111">The client implementation also uses complex numbers.</span></span> <span data-ttu-id="258fa-112">O contrato de serviço e o contrato de dados são definidos no generatedClient.cs de arquivo de origem, que é gerado pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço.</span><span class="sxs-lookup"><span data-stu-id="258fa-112">Both the service contract and the data contract are defined in the source file generatedClient.cs, which is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) from service metadata.</span></span>  
   
 ```  
 // Create a client.  
@@ -115,7 +115,7 @@ Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",
 }  
 ```  
   
- <span data-ttu-id="fce3e-113">Quando você executar o exemplo, as solicitações e respostas da operação são exibidas na janela do console de cliente.</span><span class="sxs-lookup"><span data-stu-id="fce3e-113">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="fce3e-114">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="fce3e-114">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="258fa-113">Quando você executar o exemplo, as solicitações e respostas da operação são exibidas na janela do console de cliente.</span><span class="sxs-lookup"><span data-stu-id="258fa-113">When you run the sample, the requests and responses of the operation are displayed in the client console window.</span></span> <span data-ttu-id="258fa-114">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="258fa-114">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -126,21 +126,21 @@ Divide(3 + 7i, 5 + -2i) = 0.0344827586206897 + 41i
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="fce3e-115">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="fce3e-115">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="258fa-115">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="258fa-115">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="fce3e-116">Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="fce3e-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="258fa-116">Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="258fa-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="fce3e-117">Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="fce3e-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="258fa-117">Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="258fa-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="fce3e-118">Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="fce3e-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="258fa-118">Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="258fa-118">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="fce3e-119">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="fce3e-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="fce3e-120">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="fce3e-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="258fa-119">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="258fa-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="258fa-120">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="258fa-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="fce3e-121">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="fce3e-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="fce3e-122">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="fce3e-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="258fa-121">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="258fa-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="258fa-122">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="258fa-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## <a name="see-also"></a><span data-ttu-id="fce3e-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fce3e-123">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="258fa-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="258fa-123">See Also</span></span>

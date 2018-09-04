@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 32fd7b7b952ebbc853e41c0a8276d1ab487e619f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514795"
 ---
-# <a name="xamlname-grammar"></a><span data-ttu-id="21c27-102">Gramática XamlName</span><span class="sxs-lookup"><span data-stu-id="21c27-102">XamlName Grammar</span></span>
-<span data-ttu-id="21c27-103">Gramática XamlName é uma gramática específica que está definida na especificação de linguagem XAML [MS-XAML], que é reproduzida aqui por conveniência.</span><span class="sxs-lookup"><span data-stu-id="21c27-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
+# <a name="xamlname-grammar"></a><span data-ttu-id="939df-102">Gramática XamlName</span><span class="sxs-lookup"><span data-stu-id="939df-102">XamlName Grammar</span></span>
+<span data-ttu-id="939df-103">Gramática XamlName é uma gramática específica que é definida na especificação de linguagem XAML [MS-XAML], que é reproduzida aqui para sua conveniência.</span><span class="sxs-lookup"><span data-stu-id="939df-103">XamlName Grammar is a specific grammar that is defined in the XAML language specification [MS-XAML], which is reproduced here for convenience.</span></span>  
   
-## <a name="from-the-xaml-specification"></a><span data-ttu-id="21c27-104">Da especificação XAML.</span><span class="sxs-lookup"><span data-stu-id="21c27-104">From the XAML Specification</span></span>  
- <span data-ttu-id="21c27-105">A especificação de [MS-XAML] define a gramática XamlName para identificar o conjunto de identificadores simbólicos legais utilizados para tipos e propriedades.</span><span class="sxs-lookup"><span data-stu-id="21c27-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
+## <a name="from-the-xaml-specification"></a><span data-ttu-id="939df-104">Da especificação XAML</span><span class="sxs-lookup"><span data-stu-id="939df-104">From the XAML Specification</span></span>  
+ <span data-ttu-id="939df-105">A especificação [MS-XAML] define a gramática XamlName para identificar o conjunto de identificadores simbólicos legais utilizados para tipos e propriedades.</span><span class="sxs-lookup"><span data-stu-id="939df-105">The [MS-XAML] specification defines the grammar XamlName to identify the set of legal symbolic identifiers used for types and properties.</span></span>  
   
- <span data-ttu-id="21c27-106">Cadeia de caracteres valores que são do tipo XamlName deve estar de acordo com a gramática a seguir:</span><span class="sxs-lookup"><span data-stu-id="21c27-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="939df-106">Cadeia de caracteres valores que são do tipo XamlName deve estar de acordo com a gramática a seguir:</span><span class="sxs-lookup"><span data-stu-id="939df-106">String values that are of type XamlName must conform to the following grammar:</span></span>  
   
 ```  
 XamlName ::= NameStartChar ( NameChar )*   
@@ -32,7 +32,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- <span data-ttu-id="21c27-107">Que assume os seguintes valores de categoria geral, conforme definido no banco de dados de caractere Unicode</span><span class="sxs-lookup"><span data-stu-id="21c27-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
+ <span data-ttu-id="939df-107">Que pressupõe os seguintes valores de categoria geral, conforme definido no banco de dados de caractere Unicode</span><span class="sxs-lookup"><span data-stu-id="939df-107">Which assumes the following general category values as defined in the Unicode Character Database</span></span>  
   
 ```  
 Lu  
@@ -55,13 +55,13 @@ Nl
 Number, Letter  
 ```  
   
- <span data-ttu-id="21c27-108">XAML define uma segunda gramática, DottedXamlName, que é usado para a propriedade e evento referências qualificadas e também membros anexos.</span><span class="sxs-lookup"><span data-stu-id="21c27-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="21c27-109">Para obter mais informações, consulte <xref:System.Windows.DependencyProperty> e [visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="21c27-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span>  
+ <span data-ttu-id="939df-108">XAML define uma segunda gramática, DottedXamlName, que é usado para a propriedade e evento referências qualificadas e também membros anexos.</span><span class="sxs-lookup"><span data-stu-id="939df-108">XAML defines a second grammar, DottedXamlName, that is used for property and event qualified references, and also for attached members.</span></span> <span data-ttu-id="939df-109">Para obter mais informações, consulte <xref:System.Windows.DependencyProperty> e [visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="939df-109">For more information, see <xref:System.Windows.DependencyProperty> and [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
- <span data-ttu-id="21c27-110">Cadeia de caracteres valores que são do tipo XamlName deve estar de acordo com a gramática a seguir:</span><span class="sxs-lookup"><span data-stu-id="21c27-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
+ <span data-ttu-id="939df-110">Cadeia de caracteres valores que são do tipo XamlName deve estar de acordo com a gramática a seguir:</span><span class="sxs-lookup"><span data-stu-id="939df-110">String values that are of type DottedXamlName must conform to the following grammar:</span></span>  
   
 ```  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="21c27-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="21c27-111">Remarks</span></span>  
- <span data-ttu-id="21c27-112">Para a especificação completa, consulte [ \[XAML MS\]](http://go.microsoft.com/fwlink/?LinkId=114525).</span><span class="sxs-lookup"><span data-stu-id="21c27-112">For the complete specification, see [\[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
+## <a name="remarks"></a><span data-ttu-id="939df-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="939df-111">Remarks</span></span>  
+ <span data-ttu-id="939df-112">Para a especificação completa, consulte [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span><span class="sxs-lookup"><span data-stu-id="939df-112">For the complete specification, see [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).</span></span>
