@@ -2,12 +2,12 @@
 title: Usando representantes de atividades
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518946"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489910"
 ---
 # <a name="using-activity-delegates"></a>Usando representantes de atividades
 Os representantes de atividade permitem autores de atividade para expor retornos de chamada com assinaturas específicas, para que os usuários de atividade podem fornecer manipuladores atividades base. Dois tipos de representantes de atividade estão disponíveis: <xref:System.Activities.ActivityAction%601> é usado para definir os representantes de atividade que não têm um valor de retorno, e <xref:System.Activities.ActivityFunc%601> é usado para definir os representantes de atividade que têm um valor de retorno.  
@@ -27,9 +27,9 @@ Os exemplos deste tópico usam sintaxe de inicialização de objeto. A sintaxe d
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- Para obter mais informações sobre os inicializadores de objeto, consulte [como: inicializar objetos sem chamar um construtor (c# Programming Guide)](http://go.microsoft.com/fwlink/?LinkId=161015) e [como: declarar um objeto usando um inicializador de objeto](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Para obter mais informações sobre inicializadores de objeto, consulte [como: inicializar objetos sem chamar um construtor (guia de programação em C#)](https://go.microsoft.com/fwlink/?LinkId=161015) e [como: declarar um objeto usando um inicializador de objeto](https://go.microsoft.com/fwlink/?LinkId=161016).  
   
- No exemplo a seguir, uma atividade de <xref:System.Activities.Statements.TryCatch> é usada em um fluxo de trabalho. <xref:System.ApplicationException> é gerada pelo fluxo de trabalho, e tratado por uma atividade de <xref:System.Activities.Statements.Catch%601> . O manipulador para o <xref:System.Activities.Statements.Catch%601> ação de atividade da atividade é uma <xref:System.Activities.Statements.WriteLine> atividade e os detalhes da exceção flui através de usando o `ex` <xref:System.Activities.DelegateInArgument%601>.  
+ No exemplo a seguir, uma atividade de <xref:System.Activities.Statements.TryCatch> é usada em um fluxo de trabalho. <xref:System.ApplicationException> é gerada pelo fluxo de trabalho, e tratado por uma atividade de <xref:System.Activities.Statements.Catch%601> . O manipulador para o <xref:System.Activities.Statements.Catch%601> ação de atividade da atividade é um <xref:System.Activities.Statements.WriteLine> atividade e os detalhes de exceção é corrido por que usar o `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   
