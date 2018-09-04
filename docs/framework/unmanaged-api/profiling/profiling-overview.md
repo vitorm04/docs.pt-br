@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416954"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554022"
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
 <a name="top"></a> Um criador de perfil é uma ferramenta que monitora a execução de outro aplicativo. Um criador de perfil de runtime (CLR) de linguagem comum é uma biblioteca de vínculo dinâmico (DLL) que consiste em funções que recebem mensagens de e enviam mensagens para o CLR usando a API de criação de perfil. A DLL do criador de perfil é carregada pelo CLR no tempo de execução.  

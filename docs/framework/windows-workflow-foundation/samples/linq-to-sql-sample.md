@@ -2,22 +2,22 @@
 title: LINQ to SQL de exemplo
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806712"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515362"
 ---
 # <a name="linq-to-sql-sample"></a>LINQ to SQL de exemplo
 Este exemplo demonstra como criar uma atividade para usar entidades de consulta LINQ to SQL das tabelas em bases de dados SQL Server.  
   
 > [!IMPORTANT]
->  Os exemplos WCF podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
+>  Os exemplos do WCF podem já estar instalados em seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Se este diretório não existe, clique no link de exemplo de download na parte superior da página. Observe que este link baixa e instala o [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, e [!INCLUDE[infocard](../../../../includes/infocard-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existe, clique no link de exemplo de download na parte superior da página. Observe que este link baixa e instala todos os [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, e [!INCLUDE[infocard](../../../../includes/infocard-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
@@ -84,10 +84,10 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>Consulte também  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [Guia de Introdução (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [Guia de Introdução (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

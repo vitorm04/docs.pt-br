@@ -1,24 +1,26 @@
 ---
-title: '&lt;ProtocolMapping&gt;'
+title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525000"
 ---
-# <a name="ltprotocolmappinggt"></a>&lt;ProtocolMapping&gt;
-Representa uma seção de configuração para definir um conjunto de mapeamento de padrão de protocolo entre esquemas de protocolo de transporte (por exemplo, http, net.tcp, NET. pipe, etc.) e as associações do WCF. Durante a criação de pontos de extremidade padrão em tempo de execução, o Windows Communication Foundation (WCF) examina os mapeamentos configurados e decide em qual associação a ser usado para um determinado com base em endereço.  
+# <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
+Representa uma seção de configuração para definir um conjunto padrão de mapeamento de protocolo entre esquemas de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e associações do WCF. Durante a criação de pontos de extremidade padrão em tempo de execução, o Windows Communication Foundation (WCF) analisa os mapeamentos configurados e decide em qual associação a ser usado para um determinado endereço de base.  
   
- \<system.serviceModel>  
-\<protocolMapping >  
+[**\<System. ServiceModel >**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml
-   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+<protocolMapping>
+   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
+</protocolMapping>  
 ```
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -31,16 +33,16 @@ Representa uma seção de configuração para definir um conjunto de mapeamento 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Filtros >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Contém um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, net.tcp, NET. pipe, etc.) e uma associação WCF.|  
+|[\<Filtros >](filters-of-routing.md)|Contém um mapeamento de protocolo padrão entre um esquema de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e uma associação do WCF.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|sistema.ServiceModel|O elemento raiz de todos os elementos de configuração do WCF.|  
+|[\<system.serviceModel>](system-servicemodel.md)|O elemento raiz de todos os elementos de configuração do WCF.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de configuração a seguir mostra o mapeamento de padrão de protocolo no arquivo Machine. config. Você pode substituir esse mapeamento padrão no nível do computador, modificando o arquivo Machine. config. Ou, se você apenas deseja substituí-la dentro do escopo de um aplicativo, você pode substituir esta seção dentro de seu arquivo de configuração do aplicativo e alterar o mapeamento para esquemas de protocolo individual.  
+ O exemplo de configuração a seguir mostra o mapeamento de protocolo padrão no arquivo Machine. config. Você pode substituir esse mapeamento padrão no nível do computador, modificando o arquivo Machine. config. Ou, se você quiser apenas substituí-la dentro do escopo de um aplicativo, você pode substituir essa seção dentro de seu arquivo de configuração de aplicativo e alterar o mapeamento para esquemas de protocolo individual.  
   
 ```xml  
 <protocolMapping>  

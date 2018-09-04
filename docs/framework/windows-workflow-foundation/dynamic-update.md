@@ -3,11 +3,11 @@ title: Atualização dinâmica
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
 ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43455764"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536213"
 ---
 # <a name="dynamic-update"></a>Atualização dinâmica
 A atualização dinâmica fornece um mecanismo para que os desenvolvedores de aplicativos de fluxo de trabalho atualizem a definição de fluxo de trabalho de uma instância do fluxo de trabalho persistida. Isso pode ser implementar uma correção de bug, novos requisitos ou acomodar alterações inesperadas. Este tópico fornece uma visão geral da funcionalidade de atualização dinâmica introduzida no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

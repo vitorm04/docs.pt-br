@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF content [Windows Forms], hosting in Windows Forms
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-ms.openlocfilehash: d17273f52d0cef118b79fef03af72522f6677073
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529815"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535636"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Instruções passo a passo: alterando propriedades de um elemento WPF hospedado no tempo de design
 Este passo a passo mostra como alterar os valores de propriedade de um controle WPF (Windows Presentation Foundation) hospedado em um formulário do Windows Form.  
@@ -28,7 +28,7 @@ Este passo a passo mostra como alterar os valores de propriedade de um controle 
 -   Use o WPF Designer do Visual Studio para alterar valores de propriedade.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
@@ -57,7 +57,7 @@ Este passo a passo mostra como alterar os valores de propriedade de um controle 
 3.  Compile o projeto.  
   
 ## <a name="changing-property-values-on-the-wpf-control"></a>Alterando os valores de propriedade no controle do WPF  
- O <xref:System.Windows.Forms.Integration.ElementHost> marca inteligente torna mais fácil alterar as propriedades de WPF hospedado conteúdo usando o Designer do WPF.  
+ O <xref:System.Windows.Forms.Integration.ElementHost> marca inteligente torna mais fácil alterar as propriedades do WPF hospedado conteúdo usando o WPF Designer.  
   
 #### <a name="to-host-a-wpf-control"></a>Para hospedar um controle WPF  
   
@@ -65,7 +65,7 @@ Este passo a passo mostra como alterar os valores de propriedade de um controle 
   
 2.  Na **Caixa de ferramentas**, na guia **Controles de usuário do WPF**, clique duas vezes em `UserControl1` para criar uma instância de `UserControl1` no formulário.  
   
-     A instância do `UserControl1` está hospedada em um novo <xref:System.Windows.Forms.Integration.ElementHost> controle chamado `elementHost1`.  
+     A instância do `UserControl1` é hospedado em uma nova <xref:System.Windows.Forms.Integration.ElementHost> controle chamado `elementHost1`.  
   
 3.  No painel de smart tag **ElementHost Tasks**, selecione **Editar conteúdo hospedado**.  
   
@@ -87,4 +87,4 @@ Este passo a passo mostra como alterar os valores de propriedade de um controle 
  [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Designer do WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

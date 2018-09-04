@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
 ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394634"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526811"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerações sobre o LINQ (WCF Data Services)
 Este tópico fornece informações sobre a maneira como as consultas LINQ são compostas e executadas quando você está usando o cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] e as limitações de uso do LINQ para consultar um serviço de dados que implementa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Para obter mais informações sobre como compor e executar consultas em um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-com base em serviço de dados, consulte [consultando o Data Service](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

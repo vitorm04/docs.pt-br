@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398600"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515976"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Carregando informações do esquema de DataSet do XML
 O esquema de um <xref:System.Data.DataSet> (suas tabelas, colunas, relações e restrições) podem ser definidas programaticamente, criado pelo **preencher** ou **FillSchema** métodos de um <xref:System.Data.Common.DataAdapter>, ou carregados de um Documento XML. Para carregar **DataSet** informações de esquema de um documento XML, você pode usar o **ReadXmlSchema** ou o **InferXmlSchema** o método da **doconjuntodedados**. **{1&gt;readxmlschema&lt;1** permite que você carregue ou Deduza **conjunto de dados** informações de esquema do documento que contém o esquema de (XSD) de linguagem de definição de esquema XML ou um documento XML com esquema XML embutido. **{1&gt;inferxmlschema&lt;1** permite que você inferir o esquema do documento XML ignorando determinados namespaces XML que você especificar.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243822"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533636"
 ---
 # <a name="imports-statement-xml-namespace"></a>Instrução Imports (namespace XML)
 Importa os prefixos de namespace XML para uso em literais XML e propriedades de eixo XML.  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>Comentários  
  Você pode usar o `Imports` instrução para definir os namespaces XML globais que você pode usar com literais XML e propriedades de eixo XML, ou como parâmetros passados para o `GetXmlNamespace` operador. (Para obter informações sobre como usar o `Imports` instrução para importar um alias que pode ser usado onde os nomes de tipo são usados em seu código, consulte [instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) A sintaxe para declarar um namespace de XML usando o `Imports` instrução é idêntica à sintaxe usada em XML. Portanto, você pode copiar uma declaração de namespace de um arquivo XML e usá-lo em um `Imports` instrução.  
   
- Prefixos de namespace XML são úteis quando você deseja criar repetidamente elementos XML que são do mesmo namespace. O prefixo de namespace XML declarado com o `Imports` instrução é global no sentido de que ele esteja disponível para todo o código no arquivo. Você pode usá-lo quando você cria literais de elemento XML e acessar propriedades do eixo XML. Para obter mais informações, consulte [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) e [propriedades do eixo XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ Prefixos de namespace XML são úteis quando você deseja criar repetidamente elementos XML que são do mesmo namespace. O prefixo de namespace XML declarado com o `Imports` instrução é global no sentido de que ele esteja disponível para todo o código no arquivo. Você pode usá-lo quando você cria literais de elemento XML e acessar propriedades do eixo XML. Para obter mais informações, consulte [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) e [propriedades do eixo XML](../../../visual-basic/language-reference/xml-axis/index.md).  
   
  Se você definir um namespace XML global sem um prefixo de namespace (por exemplo, `Imports <xmlns="http://SomeNameSpace>"`), esse namespace é considerado o namespace XML padrão. O namespace XML padrão é usado para qualquer literais de elemento XML ou propriedades de eixo de atributo XML que não especificam explicitamente um namespace. O namespace padrão também é usado se o namespace especificado for o namespace vazio (ou seja, `xmlns=""`). O namespace XML padrão não se aplica aos atributos XML em literais XML ou propriedades de eixo de atributo XML que não têm um namespace.  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>Consulte também  
  [Literal do Elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Nomes de Elementos e Atributos XML Declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [Operador GetXmlNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

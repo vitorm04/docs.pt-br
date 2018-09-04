@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: ae73ab92ebf3089eebf51f40b0c144f3dbea44da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dcdaa0d101ce45ba24226e0aba81b812d5b88da
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549325"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518300"
 ---
 # <a name="how-to-localize-an-application"></a>Como localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -28,7 +28,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>Requisitos  
- No decorrer desta discussão, você usará [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], que é um compilador que é executado na linha de comando.  
+ Ao longo desta discussão, você usará [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], que é um compilador que é executado a partir da linha de comando.  
   
  Além disso, você será instruído a usar um arquivo de projeto. Para obter instruções sobre como usar [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] e arquivos de projeto, consulte [compilar e implantar](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
   
@@ -36,19 +36,19 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Criar um aplicativo de exemplo  
- Nesta etapa, você preparará seu aplicativo para a localização. No [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] exemplos, um HelloApp de exemplo é fornecido que será usado para os exemplos de código nesta discussão. Se você quiser usar esse exemplo, baixe o [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arquivos do [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+ Nesta etapa, você preparará seu aplicativo para a localização. No [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] exemplos, um HelloApp de exemplo é fornecido que será usado para os exemplos de código nesta discussão. Se você quiser usar esse exemplo, baixe o [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arquivos do [ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
 1.  Desenvolva seu aplicativo até o ponto em que você deseja iniciar a localização.  
   
-2.  Especifique o idioma de desenvolvimento no arquivo de projeto para que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] gera um assembly principal e um assembly satélite (um arquivo com o. Resources extensão) para conter os recursos de idioma neutro. O arquivo de projeto no exemplo HelloApp é o HelloApp.csproj. Nesse arquivo, você encontrará a linguagem de desenvolvimento identificada da seguinte maneira:  
+2.  Especifique a linguagem de desenvolvimento no arquivo de projeto, de modo que [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] gera um assembly principal e um assembly satélite (um arquivo com o. Resources extensão) para conter os recursos de idioma neutro. O arquivo de projeto no exemplo HelloApp é o HelloApp.csproj. Nesse arquivo, você encontrará a linguagem de desenvolvimento identificada da seguinte maneira:  
   
      `<UICulture>en-US</UICulture>`  
   
-3.  Adicione Uids a sua [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos. Os Uids são usados para controlar as alterações nos arquivos e para identificar os itens que devem ser traduzidos. Para adicionar Uids em seus arquivos, execute **updateuid** em seu arquivo de projeto:  
+3.  Adicione Uids aos seus [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos. Os Uids são usados para controlar as alterações nos arquivos e para identificar os itens que devem ser traduzidos. Para adicionar Uids em seus arquivos, execute **updateuid** em seu arquivo de projeto:  
   
      **msbuild /t:updateuid helloapp.csproj**  
   
-     Para verificar se estão ausentes ou duplicados Uids, execute **checkuid**:  
+     Para verificar se você tem ausentes ou duplicados Uids, execute **checkuid**:  
   
      **msbuild /t:checkuid helloapp.csproj**  
   
@@ -66,7 +66,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Criar o assembly satélite de recursos de idioma neutro  
  Depois que o aplicativo está configurado para gerar um assembly satélite de recursos de idioma neutro, você compila o aplicativo. Isso gera o assembly principal do aplicativo, bem como o assembly satélite de recursos de idioma neutro exigido pela LocBaml para a localização. Para compilar o aplicativo:  
   
-1.  Compile HelloApp para criar um [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1.  Compile o HelloApp para criar um [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
      **msbuild helloapp.csproj**  
   
@@ -81,7 +81,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilar a ferramenta LocBaml  
   
-1.  Todos os arquivos necessários para compilar LocBaml estão localizados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exemplos. Baixar os arquivos do c# o [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Todos os arquivos necessários para compilar a LocBaml estão localizados no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exemplos. Baixar os arquivos do c# a [ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Na linha de comando, execute o arquivo de projeto (locbaml.csproj) para compilar a ferramenta:  
   
@@ -91,15 +91,15 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 4.  As opções que você pode especificar ao executar a LocBaml são as seguintes:  
   
-    -   **Analisar** ou **-p:** Baml analisa, recursos, ou [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] arquivos para gerar um arquivo. csv ou. txt.  
+    -   **Analisar** ou **-p** analisa Baml, recursos, ou [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] arquivos para gerar um arquivo. csv ou. txt.  
   
-    -   **Gerar** ou **-g** gera um arquivo binário localizado usando um arquivo traduzido.  
+    -   **Gerar** ou **-g:** gera um arquivo binário localizado usando um arquivo traduzido.  
   
-    -   **out** ou **-o** {*filedirectory*] **:** nome do arquivo de saída.  
+    -   **-out** ou **-o** {*filedirectory*] **:** nome do arquivo de saída.  
   
     -   **cultura** ou **- cul** {*cultura*] **:** localidade dos assemblies de saída.  
   
-    -   **tradução** ou **- trans** {*tradução. csv*] **:** arquivo traduzido ou localizado.  
+    -   **tradução** ou **- trans** {*Translation*] **:** arquivo traduzido ou localizado.  
   
     -   **asmpath** ou **- asmpath:** {*filedirectory*] **:** se seu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] código contém controles personalizados, você deve fornecer o  **asmpath** para o assembly de controle personalizado.  
   
@@ -108,7 +108,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
     -   **verbose:** exibe informações de modo detalhado.  
   
     > [!NOTE]
-    >  Se precisar de uma lista de opções quando você estiver executando a ferramenta, digite **LocBaml.exe** e pressione ENTER.  
+    >  Se você precisar obter uma lista das opções quando você estiver executando a ferramenta, digite **LocBaml.exe** e pressione ENTER.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>Usar LocBaml para analisar um arquivo  
@@ -137,13 +137,13 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
    2.  **Chave de recurso**. O identificador do recurso localizado.  
   
-   3.  **Categoria**. O tipo de valor. Consulte [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   3.  **Categoria**. O tipo de valor. Ver [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
-   4.  **Legibilidade**. Se o valor pode ser lido por um localizador. Consulte [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   4.  **Legibilidade**. Se o valor pode ser lido por um localizador. Ver [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
-   5.  **Modificabilidade**. Se o valor pode ser modificado por um localizador. Consulte [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  **Modificabilidade**. Se o valor pode ser modificado por um localizador. Ver [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
-   6.  **Comentários**. Descrição adicional do valor para ajudar a determinar como um valor é localizado. Consulte [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  **Comentários**. Descrição adicional do valor para ajudar a determinar como um valor é localizado. Ver [atributos de localização e comentários](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
    7.  **Valor**. O valor de texto a traduzir para a cultura desejada.  
   
@@ -155,13 +155,13 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
    |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Hello World|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Goodbye World|
   
-   Observe que todos os valores para o **comentários** campo não contêm nenhum valor; se um campo não tiver um valor, ele está vazio. Observe também que o item na primeira linha não é legível nem modificável e tem "Ignore" como seu **categoria** valor, que indica que o valor não é localizável.  
+   Observe que todos os valores para o **comentários** campo não contêm nenhum valor; se um campo não tem um valor, ele está vazio. Observe também que o item na primeira linha não é legível nem modificável e tem "Ignore" como seu **categoria** valor, que indica que o valor não é localizável.  
   
-4.  Para facilitar a descoberta de itens localizáveis em arquivos analisados, especialmente em grandes arquivos, você pode classificar ou filtrar itens por **categoria**, **legibilidade**, e **modificação**. Por exemplo, você pode filtrar valores e ilegíveis e não modificáveis.  
+4.  Para facilitar a descoberta de itens localizáveis em arquivos analisados, especialmente em grandes arquivos, você pode classificar ou filtrar os itens por **categoria**, **legibilidade**, e **Modificabilidade**. Por exemplo, você pode filtrar valores e ilegíveis e não modificáveis.  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Traduzir o conteúdo localizável  
- Use qualquer ferramenta que você tiver disponível para traduzir o conteúdo extraído. Uma boa maneira de fazer isso é gravar arquivo de recursos para um arquivo. csv e exibi-las no [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], fazer conversão muda para a última coluna (valor).  
+ Use qualquer ferramenta que você tiver disponível para traduzir o conteúdo extraído. Uma boa maneira de fazer isso é gravar arquivo de recursos para um arquivo. csv e exibi-las no [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], tornando a tradução é alterado para a última coluna (valor).  
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Usar a LocBaml para gerar um novo arquivo .resources.dll  
@@ -188,7 +188,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 7.  Para testar o novo assembly satélite, você precisa alterar a cultura na qual o aplicativo será executado. Você pode fazer isso de duas maneiras:  
   
-    -   Alterar as configurações regionais do seu sistema operacional (**iniciar** &#124; **painel de controle** &#124; **opções regionais e idiomas**).  
+    -   Alterar as configurações regionais do seu sistema operacional (**inicie** &#124; **painel de controle** &#124; **opções regionais e idiomas**).  
   
     -   Em seu aplicativo, adicione o seguinte código em App.xaml.cs:  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: ee2eddf0ad0818658920aff19919c4b5fef807b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511402"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Instruções passo a passo: criando o primeiro aplicativo sensível ao toque
 O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possibilita que os aplicativos respondam ao toque. Por exemplo, você pode interagir com um aplicativo usando um ou mais dedos em um dispositivo sensível ao toque, como uma tela sensível ao toque. Este passo a passo cria um aplicativo que possibilita ao usuário mover, redimensionar ou girar um único objeto usando toque.  

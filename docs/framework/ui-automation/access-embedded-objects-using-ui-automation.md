@@ -12,32 +12,32 @@ ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dc6426276d354dc3334013235cda45df8e7bb383
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05f9359aa055019b517abb1b7c86ca386d630e41
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408727"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534743"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Acessar objetos inseridos usando automação de interface de usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Este tópico mostra como [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pode ser usada para expor objetos inseridos dentro do conteúdo de um controle de texto.  
+ Este tópico mostra como [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pode ser usado para expor objetos inseridos dentro do conteúdo de um controle de texto.  
   
 > [!NOTE]
 >  Objetos inseridos podem incluir imagens, hiperlinks, botões, tabelas ou controles ActiveX.  
   
- Objetos inseridos são considerados filhos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedor de texto. Isso permite que eles sejam expostos pela estrutura de árvore de automação de interface do usuário como todos os outros [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos. Funcionalidade, por sua vez, é exposta através de padrões de controle normalmente pelo tipo de controle de objetos inseridos (por exemplo, como os hiperlinks são baseados em texto, suportarão <xref:System.Windows.Automation.TextPattern>).  
+ Objetos inseridos são considerados filhos do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedor de texto. Isso permite que eles sejam expostos por meio da mesma estrutura de árvore de automação de interface do usuário que todos os outros [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elementos. Funcionalidade, por sua vez, é exposta por meio de padrões de controle normalmente pelo tipo de controle de objetos inseridos (por exemplo, uma vez que os hiperlinks são baseados em texto que aceitarão <xref:System.Windows.Automation.TextPattern>).  
   
- ![Objetos inseridos em um contêiner de texto. ] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+ ![Objetos inseridos em um contêiner de texto. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
 Um documento de exemplo com conteúdo textual ("Você sabia?" ...) e dois objetos inseridos (uma imagem de um baleia e um hiperlink de texto), usados como um destino para os exemplos de código.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como recuperar uma coleção de objetos inseridos de dentro um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedor de texto. O documento de exemplo fornecido na introdução, dois objetos seriam retornados (um elemento de imagem e um elemento de texto).  
   
 > [!NOTE]
->  O elemento de imagem deve ter algum texto intrínseco associado a ele que descreva a imagem, normalmente em seu <xref:System.Windows.Automation.AutomationElement.NameProperty> (por exemplo, "Uma baleia azul."). No entanto, quando um intervalo de texto abrangendo o objeto de imagem é obtido, nem a imagem nem esse texto descritivo é retornado no fluxo de texto.  
+>  O elemento de imagem deve ter algum texto intrínseco associado a ele que descreve a imagem, normalmente em seu <xref:System.Windows.Automation.AutomationElement.NameProperty> (por exemplo, "Uma baleia azul."). No entanto, quando um intervalo de texto que abrangem o objeto de imagem é obtido, a imagem nem esse texto descritivo é retornado no fluxo de texto.  
   
  [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
  [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -47,10 +47,10 @@ Um documento de exemplo com conteúdo textual ("Você sabia?" ...) e dois objeto
 [!code-vb[FindText#GetChildren](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#getchildren)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como obter um intervalo de texto de um objeto inserido em um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedor de texto. O intervalo de texto recuperado é um intervalo vazio onde o ponto de extremidade inicial segue "... oceano. (espaço) "e o ponto de extremidade final precede o". "que representa o hiperlink inserido (como mostrado pela imagem exibida na Introdução). Embora esse seja um intervalo vazio, ele não é considerado um intervalo degenerado porque ele tem uma extensão diferente de zero.  
+ O exemplo de código a seguir demonstra como obter um intervalo de texto de um objeto inserido dentro de um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] provedor de texto. O intervalo de texto recuperado é um intervalo vazio, onde o ponto de extremidade inicial segue "... oceano. (espaço) "e o ponto de extremidade final precede o". "que representa o hiperlink inserido (como mostrado pela imagem exibida na Introdução). Embora esse seja um intervalo vazio, ele não é considerado um intervalo de degeneração porque ele tem um intervalo diferente de zero.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> pode recuperar um objeto inserido baseado em texto, como um hiperlink; No entanto, um secundário <xref:System.Windows.Automation.TextPattern> terá que ser obtido a partir do objeto inserido para expor sua funcionalidade completa.  
+>  <xref:System.Windows.Automation.TextPattern> pode recuperar um objeto inserido baseado em texto, como um hiperlink; No entanto, um secundário <xref:System.Windows.Automation.TextPattern> terão que ser obtido a partir do objeto incorporado para expor sua funcionalidade completa.  
   
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  

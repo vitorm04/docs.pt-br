@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d08cfbde82f74dcf88ddadd844854bdfeb403935
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754256"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538025"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt; elemento
 Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.  
@@ -56,12 +56,12 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> método usando nomes de assembly parcial faz com que o common language runtime procurar o assembly apenas no diretório base do aplicativo. Use o  **\<qualifyAssembly >** elemento no arquivo de configuração de aplicativo para fornecer as informações de assembly completo (nome, versão, token de chave pública e cultura) e fazer com que o common language runtime a ser pesquisado para o assembly no cache de assembly global.  
+ Chamar o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> método usando nomes de assembly parciais faz com que o common language runtime procurar o assembly apenas no diretório base do aplicativo. Use o  **\<qualifyAssembly >** elemento no arquivo de configuração de aplicativo para fornecer as informações de assembly completa (nome, versão, token de chave pública e cultura) e fazer com que o common language runtime pesquisar para o assembly no cache de assembly global.  
   
- O **fullName** atributo deve incluir os quatro campos de identidade de assembly: nome, versão, token de chave pública e cultura. O **partialName** atributo parcialmente deve fazer referência a um assembly. Você deve especificar pelo menos o nome do assembly texto (o caso mais comum), mas você também pode incluir a versão, token de chave pública, ou cultura (ou qualquer combinação de quatro, mas não todos os quatro). O **partialName** deve corresponder ao nome especificado na chamada. Por exemplo, você não pode especificar `"math"` como o **partialName** atributo em seu arquivo de configuração e a chamada `Assembly.Load("math, Version=3.3.3.3")` em seu código.  
+ O **fullName** atributo deve incluir os quatro campos de identidade do assembly: nome, versão, token de chave pública e cultura. O **partialName** atributo parcialmente deve fazer referência a um assembly. Você deve especificar pelo menos o nome do assembly texto (o caso mais comum), mas você também pode incluir a versão, token de chave pública ou cultura (ou qualquer combinação de quatro, mas não todos os quatro). O **partialName** deve corresponder ao nome especificado em sua chamada. Por exemplo, você não pode especificar `"math"` como o **partialName** atributo em seu arquivo de configuração e chame `Assembly.Load("math, Version=3.3.3.3")` em seu código.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ativa logicamente a chamada `Assembly.Load("math")` em `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
+ O exemplo a seguir ativa a chamada a logicamente `Assembly.Load("math")` em `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
 ## <a name="see-also"></a>Consulte também  
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: Referências de Assembly parcial](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: Referências de Assembly parcial](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)

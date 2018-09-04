@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540080"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
-Você pode usar o Visual Studio para criar aplicativos do Windows que dão suporte ao espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos de <xref:System.Windows.Forms.Control> namespace.  
+Você pode usar o Visual Studio para criar aplicativos baseados no Windows que dão suporte a espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos no <xref:System.Windows.Forms.Control> namespace.  
   
 ## <a name="culture-support"></a>Suporte a cultura  
- Configurações de cultura e da interface do usuário determinam como um aplicativo funciona com datas, horas, moeda e outras informações. Suporte para a cultura e cultura da interface do usuário é o mesmo para idiomas bidirecionais, assim como para outros idiomas.   Consulte também [Classes específicas de cultura para Global Windows Forms e Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) ou [Classes específicas de cultura para Global Windows Forms e Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+ Configurações de cultura e da interface do usuário determinam como um aplicativo funciona com datas, horas, moeda e outras informações. Suporte para a cultura e cultura da interface do usuário é o mesmo para idiomas bidirecionais, assim como para outros idiomas.   Consulte também [Classes específicas de cultura para Global Windows Forms e Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) ou [Classes específicas de cultura para Global Windows Forms e Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Propriedades RightToLeft e RightToLeftLayout  
- A base de <xref:System.Windows.Forms.Control> classe, da qual os formulários derivam, inclui uma <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade que você pode definir para alterar a ordem de leitura de um formulário e seus controles. Se você definir o formulário <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade, por controles padrão no formulário herdam essa configuração. No entanto, você também pode definir o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade individualmente na maioria dos controles. Também consultar [Como exibir texto da direita para a esquerda nos Windows Forms para globalização](http://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ A base <xref:System.Windows.Forms.Control> classe, da qual os formulários derivam, inclui um <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade que você pode definir para alterar a ordem de leitura de um formulário e seus controles. Se você definir o formulário <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade, por controles padrão no formulário herdarão essa configuração. No entanto, você também pode definir o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade individualmente na maioria dos controles. Também consultar [Como exibir texto da direita para a esquerda nos Windows Forms para globalização](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
- O efeito de <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade pode diferir de um controle para outro. Em alguns controles a propriedade somente define a ordem de leitura, como no <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ToolTip> controles. Em outros controles, o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade altera a ordem de leitura e de layout. Isso inclui o <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.CheckBox> controles. Outros controles exigem que o <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedade seja aplicada para espelhar o seu layout da direita para a esquerda. A tabela a seguir fornece detalhes sobre como o <xref:System.Windows.Forms.Control.RightToLeft%2A> e <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedades afetam os controles de Windows Forms individuais.  
+ O efeito do <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade pode diferir de um controle para outro. Em alguns controles a propriedade somente define a ordem de leitura, como mostra a <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ToolTip> controles. Em outros controles, o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade altera a ordem de leitura e de layout. Isso inclui o <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.CheckBox> controles. Outros controles exigem que o <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedade ser aplicada para espelhar o seu layout da direita para esquerda. A tabela a seguir fornece detalhes sobre como o <xref:System.Windows.Forms.Control.RightToLeft%2A> e <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedades afetam controles individuais dos Windows Forms.  
   
 |Controle/componente|Propriedade RightToLeft|Efeito da propriedade RightToLeftLayout|Exige espelhamento?|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
@@ -42,7 +42,7 @@ Você pode usar o Visual Studio para criar aplicativos do Windows que dão supor
 |<xref:System.Windows.Forms.ErrorProvider>|Sem suporte|Sem efeito|Não|  
 |<xref:System.Windows.Forms.FontDialog>|Depende do idioma do sistema operacional|Sem efeito|Não|  
 |<xref:System.Windows.Forms.Form>|Define o sentido da leitura RTL e inverte as barras de rolagem|Espelha o formulário|Sim|  
-|<xref:System.Windows.Forms.GroupBox>|A legenda é exibida alinhada à direita. Controles filho podem herdar esta propriedade.|Use um <xref:System.Windows.Forms.TableLayoutPanel> dentro do controle para a direita para esquerda espelhamento suporte|Não|  
+|<xref:System.Windows.Forms.GroupBox>|A legenda é exibida alinhada à direita. Controles filho podem herdar esta propriedade.|Use um <xref:System.Windows.Forms.TableLayoutPanel> dentro do controle para o espelhamento da direita para esquerda suporte|Não|  
 |<xref:System.Windows.Forms.HScrollBar>|Começa com a caixa de rolagem (thumb) alinhada à direita|Sem efeito|Não|  
 |<xref:System.Windows.Forms.ImageList>|Não necessário|Sem efeito|Não|  
 |<xref:System.Windows.Forms.Label>|Exibido alinhado à direita. Inverte <xref:System.Windows.Forms.Label.TextAlign%2A> e <xref:System.Windows.Forms.Label.ImageAlign%2A>|Sem efeito|Não|  
@@ -54,9 +54,9 @@ Você pode usar o Visual Studio para criar aplicativos do Windows que dão supor
 |<xref:System.Windows.Forms.MonthCalendar>|Não é afetado; depende do idioma do sistema operacional|Espelha o controle|Sim|  
 |<xref:System.Windows.Forms.NotifyIcon>|Sem suporte|Sem suporte|Não|  
 |<xref:System.Windows.Forms.NumericUpDown>|Botões para cima e para baixo são alinhados à esquerda|Sem efeito|Não|  
-|<xref:System.Windows.Forms.OpenFileDialog>|Em sistemas operacionais da direita para esquerda, o formulário que contém a configuração <xref:System.Windows.Forms.Control.RightToLeft> propriedade <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localiza a caixa de diálogo |Sem efeito|Não|  
+|<xref:System.Windows.Forms.OpenFileDialog>|Em sistemas operacionais da direita para esquerda, a configuração do formulário que contém <xref:System.Windows.Forms.Control.RightToLeft> propriedade para <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localiza a caixa de diálogo |Sem efeito|Não|  
 |<xref:System.Windows.Forms.PageSetupDialog>|Não é afetado; depende do idioma do sistema operacional|Sem efeito|Não|  
-|<xref:System.Windows.Forms.Panel>|Controles filho podem herdar esta propriedade|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro do controle de suporte|Sim|  
+|<xref:System.Windows.Forms.Panel>|Controles filho podem herdar esta propriedade|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro do controle para suporte|Sim|  
 |<xref:System.Windows.Forms.PictureBox>|Sem suporte|Sem efeito|Não|  
 |<xref:System.Windows.Forms.PrintDialog>|Não é afetado; depende do idioma do sistema operacional|Sem efeito|Não|  
 |<xref:System.Drawing.Printing.PrintDocument>|A barra de rolagem vertical torna-se alinhada à esquerda e a barra de rolagem horizontal começa da esquerda|Sem efeito|Não|  
@@ -75,14 +75,14 @@ Você pode usar o Visual Studio para criar aplicativos do Windows que dão supor
 |<xref:System.Windows.Forms.ToolTip>|Define o sentido da leitura RTL|Sem efeito|Não|  
 |<xref:System.Windows.Forms.TrackBar>|A rolagem ou rastreamento começa da direita; Quando <xref:System.Windows.Forms.TrackBar.Orientation%2A> é vertical, a marcação ocorre da direita|Sem efeito|Não|  
 |<xref:System.Windows.Forms.TreeView>|Define somente sentido da leitura RTL|Espelha o controle|Sim|  
-|<xref:System.Windows.Forms.UserControl>|Barra de rolagem vertical aparece à esquerda; barra de rolagem horizontal tem o ícone à direita|Não há suporte direto; Use um <xref:System.Windows.Forms.TableLayoutPanel>|Não|  
+|<xref:System.Windows.Forms.UserControl>|Barra de rolagem vertical aparece à esquerda; barra de rolagem horizontal tem o ícone à direita|Não há suporte direto; usar um <xref:System.Windows.Forms.TableLayoutPanel>|Não|  
 |<xref:System.Windows.Forms.VScrollBar>|Exibido no lado esquerdo em vez do lado direito de controles roláveis|Sem efeito|Não|  
   
 ## <a name="encoding"></a>Codificando  
  Windows Forms oferece suporte a Unicode, para que você possa incluir qualquer caractere definido quando você cria seus aplicativos bi-direcionais. No entanto, nem todos os controles dos Windows Forms oferecem suporte a Unicode em todas as plataformas. Para obter mais informações, consulte [Codificação e Globalização dos Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- Você pode usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar texto com sentido da leitura da direita para a esquerda. O <xref:System.Drawing.Graphics.DrawString%2A> dá suporte ao método, que é usado para desenhar o texto, um `StringFormat` parâmetro que pode ser definido como o <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> membro do <xref:System.Drawing.StringFormatFlags> enumeração para inverter o ponto de origem do texto.  
+ Você pode usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar texto com sentido da leitura da direita para a esquerda. O <xref:System.Drawing.Graphics.DrawString%2A> dá suporte ao método, que é usado para desenhar o texto, uma `StringFormat` parâmetro que pode ser definido para o <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> membro do <xref:System.Drawing.StringFormatFlags> enumeração para inverter o ponto de origem do texto.  
   
 ## <a name="common-dialog-boxes"></a>Caixas de diálogo comuns  
  Ferramentas do sistema, como a caixa de diálogo Abrir arquivo estão sob o controle do Windows. Elas herdam os elementos de linguagem do sistema operacional. Se você estiver usando uma versão do Windows com as configurações de idioma correto, essas caixas de diálogo funcionarão corretamente com idiomas bidirecionais.  
@@ -90,14 +90,14 @@ Você pode usar o Visual Studio para criar aplicativos do Windows que dão supor
  Da mesma forma, caixas de mensagem passam pelo sistema operacional e fornecem suporte a texto bidirecional. As legendas nos botões da caixa de mensagem baseiam-se na configuração de idioma atual. Por padrão, as caixas de mensagens não use sentido da leitura da direita para a esquerda, mas você pode especificar um parâmetro para alterar o sentido da leitura quando as caixas de mensagem são exibidas.  
   
 ## <a name="righttoleft-scrollbars-and-scrollablecontrol"></a>RightToLeft, Scrollbars e ScrollableControl  
- Atualmente, há uma limitação no Windows Forms que impede que todas as classes derivadas de <xref:System.Windows.Forms.ScrollableControl> funcione corretamente quando ambos <xref:System.Windows.Forms.Control.RightToLeft%2A> está habilitado e <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> é definido como <xref:System.Windows.Forms.RightToLeft.Yes>. Por exemplo, digamos que você coloque um controle como <xref:System.Windows.Forms.Panel>— ou derivado de uma classe de contêiner <xref:System.Windows.Forms.Panel> (como <xref:System.Windows.Forms.FlowLayoutPanel> ou <xref:System.Windows.Forms.TableLayoutPanel>) — em seu formulário. Se você definir <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> no contêiner para <xref:System.Windows.Forms.RightToLeft.Yes> e, em seguida, defina o <xref:System.Windows.Forms.Control.Anchor%2A> propriedade em um ou mais dos controles dentro do contêiner para <xref:System.Windows.Forms.AnchorStyles.Right>, em seguida, nenhuma barra de rolagem aparecerá. A classe derivada de <xref:System.Windows.Forms.ScrollableControl> age como se <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> foram definidos como <xref:System.Windows.Forms.RightToLeft.No>.  
+ Atualmente, há uma limitação nos Windows Forms que impede que todas as classes derivadas <xref:System.Windows.Forms.ScrollableControl> funcione corretamente quando ambos <xref:System.Windows.Forms.Control.RightToLeft%2A> está habilitado e <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> é definido como <xref:System.Windows.Forms.RightToLeft.Yes>. Por exemplo, digamos que você coloque um controle, como <xref:System.Windows.Forms.Panel>— ou uma classe de contêiner derivado <xref:System.Windows.Forms.Panel> (como <xref:System.Windows.Forms.FlowLayoutPanel> ou <xref:System.Windows.Forms.TableLayoutPanel>) — em seu formulário. Se você definir <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> no contêiner para <xref:System.Windows.Forms.RightToLeft.Yes> e, em seguida, defina as <xref:System.Windows.Forms.Control.Anchor%2A> propriedade em um ou mais dos controles dentro do contêiner para <xref:System.Windows.Forms.AnchorStyles.Right>, então nenhuma barra de rolagem aparecerá. A classe derivada de <xref:System.Windows.Forms.ScrollableControl> age como se <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> foram definidos como <xref:System.Windows.Forms.RightToLeft.No>.  
   
- Atualmente, a única solução alternativa é aninhar o <xref:System.Windows.Forms.ScrollableControl> dentro de outro <xref:System.Windows.Forms.ScrollableControl>. Por exemplo, se você precisar <xref:System.Windows.Forms.TableLayoutPanel> para trabalhar nessa situação, você pode colocá-lo dentro de um <xref:System.Windows.Forms.Panel> controle e defina <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> no <xref:System.Windows.Forms.Panel> para <xref:System.Windows.Forms.RightToLeft.Yes>.  
+ Atualmente, a única solução alternativa é aninhar os <xref:System.Windows.Forms.ScrollableControl> dentro de outro <xref:System.Windows.Forms.ScrollableControl>. Por exemplo, se você precisar <xref:System.Windows.Forms.TableLayoutPanel> para trabalhar nessa situação, você pode colocá-lo dentro de um <xref:System.Windows.Forms.Panel> controle e defina <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> sobre o <xref:System.Windows.Forms.Panel> para <xref:System.Windows.Forms.RightToLeft.Yes>.  
   
 ## <a name="mirroring"></a>Espelhamento  
  *Espelhamento* refere-se a inverter o layout dos elementos de interface do usuário para que eles fluam da direita para a esquerda. No Windows Form espelhado, por exemplo, os botões minimizar, maximizar e fechar aparecem mais à esquerda na barra de título, não mais à direita.  
   
- Definindo um formulário ou controle <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade `true` inverte a ordem de leitura de elementos em um formulário, mas essa configuração inverte o layout para a direita para esquerda — ou seja, não causam espelhamento. Por exemplo, a configuração dessa propriedade não move os botões **minimizar**, **maximizar** e **fechar** na barra de título do formulário para o lado esquerdo do formulário. Da mesma forma, alguns controles, como o <xref:System.Windows.Forms.TreeView> , requerem espelhamento para alterar sua exibição para ser apropriado para árabe ou hebraico. Você pode espelhar estes controles pelas configurações de <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedade.  
+ Configurar um formulário ou do controle <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade para `true` inverte a ordem de leitura de elementos em um formulário, mas essa configuração não inverte o layout para direita para esquerda — isto é, não causa espelhamento. Por exemplo, a configuração dessa propriedade não move os botões **minimizar**, **maximizar** e **fechar** na barra de título do formulário para o lado esquerdo do formulário. Da mesma forma, alguns controles, como o <xref:System.Windows.Forms.TreeView> , requerem espelhamento para alterar sua exibição para ser apropriado para árabe ou hebraico. Você pode espelhar estes controles Configurando a <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedade.  
   
  Você pode criar versões espelhadas dos seguintes controles:  
   
@@ -119,5 +119,5 @@ Você pode usar o Visual Studio para criar aplicativos do Windows que dão supor
   
 ## <a name="see-also"></a>Consulte também
 
-[Suporte bidirecional para aplicativos Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[Globalizando aplicativos do Windows Forms](globalizing-windows-forms.md)
+[Suporte bidirecional para aplicativos Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Globalizando aplicativos dos Windows Forms](globalizing-windows-forms.md)

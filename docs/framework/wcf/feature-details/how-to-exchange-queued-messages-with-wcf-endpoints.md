@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 185bcb64522115d0c60ae90ee22a73610139c8c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494651"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536628"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Como fazer intercâmbio de mensagens em fila com pontos de extremidade do WCF
-Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre um cliente e um serviço Windows Communication Foundation (WCF), mesmo se o serviço não está disponível no momento da comunicação. Os procedimentos a seguir mostram como garantir a comunicação durável entre um cliente e um serviço usando o padrão na fila associação ao implementar o serviço WCF.  
+Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre um cliente e um serviço Windows Communication Foundation (WCF), mesmo se o serviço não está disponível no momento da comunicação. Os procedimentos a seguir mostram como garantir a comunicação durável entre um cliente e um serviço usando o padrão na fila de vinculação ao implementar o serviço do WCF.  
   
  Esta seção explica como usar <xref:System.ServiceModel.NetMsmqBinding> para comunicação em fila entre um cliente WCF e um serviço WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Para usar o enfileiramento de mensagens em um serviço WCF  
   
-1.  Definir um contrato de serviço usando uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute>. Marcar as operações na interface que fazem parte do contrato de serviço com o <xref:System.ServiceModel.OperationContractAttribute> e especificá-los como unidirecional porque nenhuma resposta para o método é retornada. O código a seguir fornece um contrato de serviço de exemplo e sua definição de operação.  
+1.  Definir um contrato de serviço usando uma interface marcada com o <xref:System.ServiceModel.ServiceContractAttribute>. Marcar as operações na interface que fazem parte do contrato de serviço com o <xref:System.ServiceModel.OperationContractAttribute> e especificá-los como unidirecional, porque não há resposta para o método é retornada. O código a seguir fornece um contrato de serviço de exemplo e sua definição de operação.  
   
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  Quando o contrato de serviço passa tipos definidos pelo usuário, você deve definir os contratos de dados para esses tipos. O código a seguir mostra dois contratos de dados, `PurchaseOrder` e `PurchaseOrderLineItem`. Esses dois tipos definem os dados que são enviados para o serviço. (Observe que as classes que definem esse contrato de dados também definem um número de métodos. Esses métodos não são considerados parte do contrato de dados. Somente os membros que são declarados com o `DataMember` atributo fazem parte do contrato de dados.)  
+2.  Quando o contrato de serviço passa tipos definidos pelo usuário, você deve definir contratos de dados para esses tipos. O código a seguir mostra dois contratos de dados, `PurchaseOrder` e `PurchaseOrderLineItem`. Esses dois tipos definem os dados que são enviados para o serviço. (Observe que as classes que definem esse contrato de dados também definem uma série de métodos. Esses métodos não são considerados parte do contrato de dados. Somente os membros que são declarados com o `DataMember` atributo fazem parte do contrato de dados.)  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  
@@ -34,31 +34,31 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
      [!code-csharp[S_Msmq_Transacted#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#3)]
      [!code-vb[S_Msmq_Transacted#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#3)]  
   
-     Observe o <xref:System.ServiceModel.OperationBehaviorAttribute> colocadas no `SubmitPurchaseOrder` método. Especifica que esta operação deve ser chamada dentro de uma transação e que a transação seja concluída automaticamente quando o método é concluído.  
+     Observe que o <xref:System.ServiceModel.OperationBehaviorAttribute> colocado no `SubmitPurchaseOrder` método. Isso especifica que esta operação deve ser chamada dentro de uma transação e que a transação é concluída automaticamente quando o método for concluído.  
   
-4.  Criar uma fila transacional usando <xref:System.Messaging>. Você pode optar por criar a fila usando o Microsoft Management Console (MMC) do serviço de enfileiramento de mensagens da Microsoft (MSMQ) em vez disso. Nesse caso, certifique-se de que criar uma fila transacional.  
+4.  Criar uma fila transacional usando <xref:System.Messaging>. Você pode optar por criar a fila usando o Microsoft Management Console (MMC) do Microsoft Message Queuing (MSMQ) em vez disso. Nesse caso, certifique-se de que criar uma fila transacional.  
   
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço do serviço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação. Para obter mais informações sobre como usar a configuração do WCF, consulte [Configurando o Windows Communication Foundation aplicativos](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço do serviço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação. Para obter mais informações sobre como usar a configuração do WCF, consulte [Configurando o Windows Communication Foundation aplicativos](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
-6.  Criar um host para o `OrderProcessing` serviço usando <xref:System.ServiceModel.ServiceHost> que lê mensagens da fila e processa-os. Abra o host de serviço para disponibilizar o serviço. Exiba uma mensagem que informa o usuário pressione qualquer tecla para encerrar o serviço. Chamar `ReadLine` de espera para a chave a ser pressionado e, em seguida, feche o serviço.  
+6.  Criar um host para o `OrderProcessing` usando <xref:System.ServiceModel.ServiceHost> que lê as mensagens da fila e processa-os. Abra o host de serviço para disponibilizar o serviço. Exiba uma mensagem que informa o usuário pressione qualquer tecla para encerrar o serviço. Chamar `ReadLine` espera para a chave para ser pressionado e, em seguida, feche o serviço.  
   
      [!code-csharp[S_Msmq_Transacted#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#6)]
      [!code-vb[S_Msmq_Transacted#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#6)]  
   
-### <a name="to-create-a-client-for-the-queued-service"></a>Para criar um cliente para o serviço na fila  
+### <a name="to-create-a-client-for-the-queued-service"></a>Para criar um cliente para o serviço em fila  
   
-1.  O exemplo a seguir mostra como executar o aplicativo de hospedagem e usar a ferramenta Svcutil.exe para criar o cliente do WCF.  
+1.  O exemplo a seguir mostra como executar o aplicativo de hospedagem e use a ferramenta de Svcutil.exe para criar o cliente do WCF.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
     ```  
   
-2.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> associação, conforme mostrado no exemplo a seguir.  
+2.  Definir um <xref:System.ServiceModel.Description.ServiceEndpoint> na configuração que especifica o endereço e usa o padrão de <xref:System.ServiceModel.NetMsmqBinding> de associação, conforme mostrado no exemplo a seguir.  
   
   
   
@@ -68,7 +68,7 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
   
 ## <a name="example"></a>Exemplo  
- Os exemplos a seguir mostram o código de serviço, aplicativo de hospedagem, arquivo App. config e incluídos neste exemplo de código do cliente.  
+ Os exemplos a seguir mostram o código de serviço, aplicativo de hospedagem, arquivo App. config e incluídas neste exemplo de código do cliente.  
   
  [!code-csharp[S_Msmq_Transacted#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#9)]
  [!code-vb[S_Msmq_Transacted#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#9)]  
@@ -90,6 +90,6 @@ Filas Certifique-se de que o sistema de mensagens confiável pode ocorrer entre 
  [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Exemplos de associação de integração de serviço de enfileiramento de mensagem](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Exemplos de associação de integração de enfileiramento de mensagem](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

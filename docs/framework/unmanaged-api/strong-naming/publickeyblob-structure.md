@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd7a4b19613ea771a055af7dd91ec368859ee191
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43475966"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529128"
 ---
 # <a name="publickeyblob-structure"></a>Estrutura PublicKeyBlob
 Representa, em formato binário, a chave pública de um par de chaves pública/privada.  

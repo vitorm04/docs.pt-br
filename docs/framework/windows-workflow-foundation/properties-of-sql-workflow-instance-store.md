@@ -2,12 +2,12 @@
 title: Propriedades de instância Store de fluxo de trabalho do SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-ms.openlocfilehash: 575a46a6f261a7666263fb8bdc67fd94a56c50ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514431"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539244"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Propriedades de instância Store de fluxo de trabalho do SQL
 Os tópicos nesta seção fornecem detalhes sobre propriedades de instância Store de fluxo de trabalho SQL.  
@@ -27,5 +27,5 @@ Os tópicos nesta seção fornecem detalhes sobre propriedades de instância Sto
 -   [Cadeia de conexão e nome de cadeia de conexão](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Windows Server App Fabric instância Store](http://go.microsoft.com/fwlink/?LinkId=201201)  
- [Banco de dados de persistência do malha de aplicativos SQL Server](http://go.microsoft.com/fwlink/?LinkId=201202)
+ [Store de instância do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201201)  
+ [Banco de dados de persistência do App Fabric SQL Server](https://go.microsoft.com/fwlink/?LinkId=201202)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462513"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534601"
 ---
 # <a name="group-by-clause-visual-basic"></a>Cláusula Group By (Visual Basic)
 Agrupa os elementos de um resultado de consulta. Também pode ser usado para aplicar funções de agregação a cada grupo. A operação de agrupamento se baseia em uma ou mais chaves.  

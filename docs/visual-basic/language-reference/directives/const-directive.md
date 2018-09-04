@@ -1,5 +1,5 @@
 ---
-title: '#Diretiva const'
+title: '#Diretiva const (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588061"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541608"
 ---
 # <a name="const-directive"></a>Diretiva #Const
 Define constantes condicionais de compilador do Visual Basic.  
@@ -33,13 +33,13 @@ Define constantes condicionais de compilador do Visual Basic.
   
 ## <a name="parts"></a>Partes  
  `constname`  
- Necessário. Nome da constante sendo definida.  
+ Necessário. Nome da constante que está sendo definido.  
   
  `expression`  
  Necessário. Literal, outra constante condicional de compilador ou qualquer combinação que inclua qualquer ou todos os operadores aritméticos ou lógicos exceto `Is`.  
   
 ## <a name="remarks"></a>Comentários  
- Constantes condicionais de compilador são sempre privadas para o arquivo em que aparecem. Você não pode criar constantes de compilador públicas usando o `#Const` diretiva; você pode criá-los apenas na interface do usuário ou com o `/define` opção de compilador.  
+ Constantes condicionais de compilador são sempre privadas ao arquivo em que aparecem. Não é possível criar constantes de compilador públicas usando o `#Const` diretiva; você pode criá-los apenas na interface do usuário ou com o `/define` opção de compilador.  
   
  Você pode usar apenas constantes condicionais de compilador e literais em `expression`. Usar uma condição padrão definida com `Const` causa um erro. Por outro lado, você pode usar constantes definidas com o `#Const` palavra-chave para compilação condicional. Constantes também podem ser indefinidas, caso em que eles têm um valor de `Nothing`.  
   

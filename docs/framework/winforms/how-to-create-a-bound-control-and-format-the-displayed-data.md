@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466857"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533730"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Como criar um controle associado e formatar os dados exibidos
 Com a associação de dados do Windows Forms, você pode formatar os dados exibidos em um controle associado a dados usando a caixa de diálogo **Formatação e associação avançada**.  

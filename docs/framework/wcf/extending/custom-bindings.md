@@ -5,30 +5,30 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540199"
 ---
 # <a name="custom-bindings"></a>Associações personalizadas
-Você pode usar o <xref:System.ServiceModel.Channels.CustomBinding> classe quando uma das associações fornecidas pelo sistema não atende aos requisitos de seu serviço. Todas as associações são construídas a partir de um conjunto ordenado de elementos de associação. Associações personalizadas podem ser criadas a partir de um conjunto de elementos de associação fornecida pelo sistema ou podem incluir elementos de associação personalizada definida pelo usuário. Você pode usar elementos de associação personalizada, por exemplo, para habilitar o uso de novos transportes ou codificadores em um ponto de extremidade de serviço. Para obter exemplos de funcionamento, consulte [amostras de associação personalizado](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Para obter mais informações, consulte [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+Você pode usar o <xref:System.ServiceModel.Channels.CustomBinding> classe quando uma das associações fornecidas pelo sistema não atende aos requisitos do seu serviço. Todas as associações são construídas a partir de um conjunto ordenado de elementos de associação. Associações personalizadas podem ser criadas a partir de um conjunto de elementos de associação fornecida pelo sistema ou podem incluir elementos de associação personalizado definido pelo usuário. Você pode usar elementos de associação personalizado, por exemplo, para habilitar o uso de novos transportes ou codificadores em um ponto de extremidade de serviço. Para obter exemplos de funcionamento, consulte [exemplos de associação personalizado](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Para obter mais informações, consulte [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ## <a name="construction-of-a-custom-binding"></a>Construção de uma associação personalizada  
- Uma associação personalizada é criada usando o <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> construtor de uma coleção de elementos que estão "empilhados" em uma ordem específica de associação:  
+ Uma associação personalizada é criada usando o <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> construtor de uma coleção de elementos de associação que são "empilhados" em uma ordem específica:  
   
 -   Na parte superior é um recurso opcional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> classe que permite que o fluxo de transações.  
   
--   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> classe que fornece uma sessão e mecanismos de ordenação, conforme definido na especificação WS-ReliableMessaging. Uma sessão pode cruzar com intermediários SOAP e transporte.  
+-   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> classe que fornece uma sessão e mecanismos de ordenação, conforme definido na especificação WS-ReliableMessaging. Uma sessão pode cruzar intermediários SOAP e transporte.  
   
 -   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.SecurityBindingElement> classe que fornece recursos de segurança como autenticação, autorização, proteção e confidencialidade.  
   
--   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> classe que fornece a capacidade de ter dois comunicação duplex forma com um protocolo de transporte que não oferecem suporte à comunicação duplex nativamente, como HTTP.  
+-   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> classe que fornece a capacidade de ter dois comunicação duplex forma com um protocolo de transporte que não dão suporte à comunicação duplex nativamente, como HTTP.  
   
 -   Em seguida, é um recurso opcional <xref:System.ServiceModel.Channels.OneWayBindingElement>) classe que fornece comunicação unidirecional.  
   
--   Em seguida, é um elemento de associação de segurança de fluxo opcional que pode ser um destes procedimentos.  
+-   Em seguida, é um elemento de associação de segurança de fluxo opcional que pode ser um dos procedimentos a seguir.  
   
     -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
@@ -42,7 +42,7 @@ Você pode usar o <xref:System.ServiceModel.Channels.CustomBinding> classe quand
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- Na parte inferior é um elemento de transporte necessário. Você pode usar seu próprio transporte ou um dos seguintes elementos de associação de transporte Windows Communication Foundation (WCF) fornece:  
+ Na parte inferior é um elemento de transporte obrigatório. Você pode usar seu próprio transporte ou um dos seguintes elementos de associação de transporte fornece Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -67,10 +67,10 @@ Você pode usar o <xref:System.ServiceModel.Channels.CustomBinding> classe quand
 |Transações|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Não|  
 |Confiabilidade|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Não|  
 |Segurança|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Não|  
-|Codificando|Texto, personalizada de binário, mensagem de transmissão de otimização do mecanismo (MTOM)|Sim|  
+|Codificando|Texto, personalizada de binário, MTOM Message Transmission Optimization Mechanism (),|Sim|  
 |Transporte|TCP, HTTP, HTTPS, chamado pipes (também conhecido como IPC), ponto a ponto (P2P), o serviço de enfileiramento de mensagens (também conhecido como MSMQ), personalizado|Sim|  
   
- Além disso, você pode definir seus próprios elementos de associação e inseri-los entre qualquer uma das camadas de definido anteriores.  
+ Além disso, você pode definir seus próprios elementos de associação e inseri-los entre qualquer uma das camadas anteriores definidas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)  

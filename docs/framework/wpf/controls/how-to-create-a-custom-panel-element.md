@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: 2d1581ef1d0130a6952becf36d668e6a198e1ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bca8900ccb3c31a78066a43709a5e9334bc09eab
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552394"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531778"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>Como criar um elemento de painel personalizado
 ## <a name="example"></a>Exemplo  
- Este exemplo mostra como substituir o comportamento de layout padrão de <xref:System.Windows.Controls.Panel> elemento e criar elementos de layout personalizados que são derivados de <xref:System.Windows.Controls.Panel>.  
+ Este exemplo mostra como substituir o comportamento de layout de padrão para o <xref:System.Windows.Controls.Panel> elemento e criar elementos de layout personalizados que são derivados de <xref:System.Windows.Controls.Panel>.  
   
- O exemplo define um personalizado simple <xref:System.Windows.Controls.Panel> elemento chamado `PlotPanel`, que posiciona elementos filho acordo com dois embutido coordenadas x e y-. Neste exemplo, `x` e `y` são definidos como `50`; portanto, todos os elementos filho são posicionados naquele local em x e y eixos.  
+ O exemplo define um personalizado simple <xref:System.Windows.Controls.Panel> elemento chamado `PlotPanel`, que posiciona elementos filho acordo com dois embutidos coordenadas x e y-. Neste exemplo, `x` e `y` são definidos como `50`; portanto, todos os elementos filho são posicionados nesse local nos x e y eixos.  
   
  Para implementar personalizado <xref:System.Windows.Controls.Panel> comportamentos, o exemplo usa o <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> métodos. Cada método retorna o <xref:System.Windows.Size> dados que são necessários para posicionar e renderizar elementos filho.  
   
@@ -31,4 +31,4 @@ ms.locfileid: "33552394"
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Controls.Panel>  
  [Visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Criar um exemplo de painel de disposição de conteúdo personalizado](http://go.microsoft.com/fwlink/?LinkID=159979)
+ [Criar uma amostra de painel de encapsulamento com conteúdo personalizado](https://go.microsoft.com/fwlink/?LinkID=159979)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533385"
 ---
 # <a name="xml-value-property-visual-basic"></a>Propriedade do valor XML (Visual Basic)
 Fornece acesso ao valor do primeiro elemento de uma coleção de <xref:System.Xml.Linq.XElement> objetos.  
@@ -38,21 +38,21 @@ object.Value
  O <xref:System.Xml.Linq.XElement.Value%2A> propriedade torna mais fácil acessar o valor do primeiro elemento em uma coleção de <xref:System.Xml.Linq.XElement> objetos. Essa propriedade primeiro verifica se a coleção contém pelo menos um objeto. Se a coleção está vazia, essa propriedade retornará `Nothing`. Caso contrário, essa propriedade retorna o valor da <xref:System.Xml.Linq.XElement.Value%2A> propriedade do primeiro elemento na coleção.  
   
 > [!NOTE]
->  Quando você acessar o valor de um atributo XML usando o '\@' identificador, o valor do atributo é retornado como um `String` e você não precisa especificar explicitamente o <xref:System.Xml.Linq.XAttribute.Value%2A> propriedade.  
+>  Quando você acessa o valor de um atributo XML usando o '\@' identificador, o valor do atributo é retornado como um `String` e você não precisa especificar explicitamente o <xref:System.Xml.Linq.XAttribute.Value%2A> propriedade.  
   
  Para acessar outros elementos em uma coleção, você pode usar a propriedade do indexador de extensão XML. Para obter mais informações, consulte [propriedade do indexador de extensão](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
 ## <a name="inheritance"></a>Herança  
  A maioria dos usuários não precisará implementar <xref:System.Collections.Generic.IEnumerable%601>e, portanto, pode ignorar esta seção.  
   
- O <xref:System.Xml.Linq.XElement.Value%2A> propriedade é uma propriedade de extensão para tipos que implementam `IEnumerable(Of XElement)`. A associação dessa propriedade de extensão é como a associação de métodos de extensão: se um tipo implementa uma das interfaces e define uma propriedade que tem o nome "Valor", essa propriedade tem precedência sobre a propriedade de extensão. Em outras palavras, isso <xref:System.Xml.Linq.XElement.Value%2A> propriedade pode ser substituída ao definir uma nova propriedade em uma classe que implementa `IEnumerable(Of XElement)`.  
+ O <xref:System.Xml.Linq.XElement.Value%2A> propriedade é uma propriedade de extensão para tipos que implementam `IEnumerable(Of XElement)`. A associação dessa propriedade de extensão é como a associação de métodos de extensão: se um tipo implementa uma das interfaces e define uma propriedade que tem o nome "Valor", essa propriedade tem precedência sobre a propriedade de extensão. Em outras palavras, isso <xref:System.Xml.Linq.XElement.Value%2A> propriedade pode ser substituída, definindo uma nova propriedade em uma classe que implementa `IEnumerable(Of XElement)`.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o <xref:System.Xml.Linq.XElement.Value%2A> propriedade para acessar o primeiro nó em uma coleção de <xref:System.Xml.Linq.XElement> objetos. O exemplo usa a propriedade de eixo filho para obter a coleção de todos os nós filho denominado `phone` no `contact` objeto.  
+ O exemplo a seguir mostra como usar o <xref:System.Xml.Linq.XElement.Value%2A> propriedade para acessar o primeiro nó em uma coleção de <xref:System.Xml.Linq.XElement> objetos. O exemplo usa a propriedade de eixo filho para obter a coleção de todos os nós filho denominado `phone` que estão no `contact` objeto.  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
- Este código exibe o seguinte texto:  
+ Esse código exibe o texto a seguir:  
   
  `Phone number: 206-555-0144`  
   
@@ -61,7 +61,7 @@ object.Value
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
- Este código exibe o seguinte texto:  
+ Esse código exibe o texto a seguir:  
   
  `home`  
   
@@ -70,7 +70,7 @@ object.Value
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Linq.XElement>  
  <xref:System.Collections.Generic.IEnumerable%601>  
- [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Literais XML](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Criando XML no Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [Métodos de Extensão](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  

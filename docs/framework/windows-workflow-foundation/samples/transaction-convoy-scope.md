@@ -2,12 +2,12 @@
 title: Escopo de trem de transação
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536085"
 ---
 # <a name="transaction-convoy-scope"></a>Escopo de trem de transação
 Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem de trem em conjunto com <xref:System.ServiceModel.Activities.TransactedReceiveScope> para modelar um protocolo onde um número de operações podem ocorrer em qualquer ordem todo na mesma transação. Este exemplo também demonstra como <xref:System.ServiceModel.Activities.TransactedReceiveScope> automaticamente cria uma nova quando uma transação não é fluído para o servidor, portanto o cliente não usa nenhuma transações.  
@@ -24,9 +24,9 @@ Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem d
   
 3.  Certifique-se de que ambos os projetos estão definidos iniciar.  
   
-    1.  Em **Solution Explorer**, a solução e selecione **definir projetos de inicialização**.  
+    1.  Na **Gerenciador de soluções**, a solução com o botão direito e selecione **definir projetos de inicialização**.  
   
-    2.  Selecione **vários projetos de inicialização** e certifique-se de que a ação para os dois projetos é definida como **iniciar**.  
+    2.  Selecione **vários projetos de inicialização** e verifique se a ação para ambos os projetos é definida como **iniciar**.  
   
 4.  Para executar a solução, pressione CTRL+F5.  
   
@@ -39,6 +39,6 @@ Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

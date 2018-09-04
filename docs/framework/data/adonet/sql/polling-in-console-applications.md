@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416702"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537213"
 ---
 # <a name="polling-in-console-applications"></a>Sondagem em aplicativos de Console
 Operações assíncronas no ADO.NET permitem que você inicie operações demoradas de banco de dados em um thread durante a execução de outras tarefas em outro thread. Na maioria dos cenários, no entanto, você eventualmente atingirá um ponto em que o aplicativo não continuará até que a operação de banco de dados seja concluída. Para tais casos, é útil sondar a operação assíncrona para determinar se a operação foi concluída ou não.  

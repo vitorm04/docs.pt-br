@@ -3,11 +3,11 @@ title: Removendo o estado de exibição o designer adiciona a um Arquivo XAML
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524946"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Removendo o estado de exibição o designer adiciona a um Arquivo XAML
 Este exemplo demonstra como criar uma classe que deriva de <xref:System.Windows.Markup.XamlWriter> e se remova o modo estado de um arquivo XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] grava informações no documento XAML, que é conhecido como o estado de exibição. O estado de exibição se refere à informação que é necessária em tempo de design, como o posicionamento de layout, que não é necessário em tempo de execução. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] insere essas informações no documento XAML que é editado. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] grava o estado de exibição no arquivo XAML com o atributo de `mc:Ignorable` , o que essa informação não é carregada quando o tempo de execução carrega o arquivo XAML. Este exemplo demonstra como criar uma classe que remove essas informações de estado de exibição ao processar nós XAML.  

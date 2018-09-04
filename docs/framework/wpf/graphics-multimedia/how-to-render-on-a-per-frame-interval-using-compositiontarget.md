@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473912"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526435"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Como renderizar em um intervalo por quadro usando CompositionTarget
 O mecanismo de animação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece vários recursos para criar animações baseadas em quadros. No entanto, há cenários de aplicativo em que é necessário um controle mais refinado da renderização por quadro. O <xref:System.Windows.Media.CompositionTarget> objeto fornece a capacidade de criar animações personalizadas com base em um retorno de chamada por quadro.  

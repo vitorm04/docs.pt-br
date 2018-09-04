@@ -8,18 +8,18 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 32fd7b7b952ebbc853e41c0a8276d1ab487e619f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561885"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514795"
 ---
 # <a name="xamlname-grammar"></a>Gramática XamlName
-Gramática XamlName é uma gramática específica que está definida na especificação de linguagem XAML [MS-XAML], que é reproduzida aqui por conveniência.  
+Gramática XamlName é uma gramática específica que é definida na especificação de linguagem XAML [MS-XAML], que é reproduzida aqui para sua conveniência.  
   
-## <a name="from-the-xaml-specification"></a>Da especificação XAML.  
- A especificação de [MS-XAML] define a gramática XamlName para identificar o conjunto de identificadores simbólicos legais utilizados para tipos e propriedades.  
+## <a name="from-the-xaml-specification"></a>Da especificação XAML  
+ A especificação [MS-XAML] define a gramática XamlName para identificar o conjunto de identificadores simbólicos legais utilizados para tipos e propriedades.  
   
  Cadeia de caracteres valores que são do tipo XamlName deve estar de acordo com a gramática a seguir:  
   
@@ -32,7 +32,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- Que assume os seguintes valores de categoria geral, conforme definido no banco de dados de caractere Unicode  
+ Que pressupõe os seguintes valores de categoria geral, conforme definido no banco de dados de caractere Unicode  
   
 ```  
 Lu  
@@ -64,4 +64,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Para a especificação completa, consulte [ \[XAML MS\]](http://go.microsoft.com/fwlink/?LinkId=114525).
+ Para a especificação completa, consulte [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).

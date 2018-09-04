@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
 ms.openlocfilehash: 8f3b65bdfe96efdc57c6b8d30991439d3bdb0bc5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404430"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506209"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Como substituir o método OnRender do painel
 Este exemplo mostra como substituir a <xref:System.Windows.Controls.Panel.OnRender%2A> método de <xref:System.Windows.Controls.Panel> para adicionar efeitos gráficos personalizados a um elemento de layout.  

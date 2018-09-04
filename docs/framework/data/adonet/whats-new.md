@@ -3,11 +3,11 @@ title: O que&#39;novo no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385428"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511797"
 ---
 # <a name="what39s-new-in-adonet"></a>O que&#39;novo no ADO.NET
 Os recursos a seguir são novos no [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  

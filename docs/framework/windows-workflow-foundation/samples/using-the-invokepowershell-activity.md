@@ -2,12 +2,12 @@
 title: Usando a atividade de InvokePowerShell
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538861"
 ---
 # <a name="using-the-invokepowershell-activity"></a>Usando a atividade de InvokePowerShell
 O exemplo de InvokePowerShell demonstra como chamar comandos do Windows PowerShell que usam a atividade de `InvokePowerShell` .  
@@ -25,7 +25,7 @@ O exemplo de InvokePowerShell demonstra como chamar comandos do Windows PowerShe
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -34,9 +34,9 @@ O exemplo de InvokePowerShell demonstra como chamar comandos do Windows PowerShe
   
 |Nome do projeto|Descrição|Arquivos de chave|  
 |------------------|-----------------|----------------|  
-|CodedClient|Um aplicativo cliente de exemplo que use a atividade de PowerShell.|-   **Program.CS**: cria programaticamente um sequência de fluxo de trabalho que chama a atividade de InvokePowerShell.|  
-|DesignerClient|Um conjunto de atividades personalizados que contêm a atividade personalizado de `InvokePowerShell` e outras atividades personalizados diversos, e um fluxo de trabalho que os usa.|<ul><li>Atividades:<br /><br /> <ul><li>**PrintCollection.cs**: uma atividade de auxiliar que imprime todos os itens em uma coleção para o console.</li><li>**ReadLine.cs**: uma atividade de auxiliar para leitura de entrada do console.</li></ul></li><li>O sistema de arquivos:<br /><br /> <ul><li>**Copy.XAML**: uma atividade que copia um arquivo.</li><li>**CreateFile.xaml**: uma atividade que cria um arquivo.</li><li>**DeleteFile.xaml**: uma atividade que exclui um arquivo.</li><li>**MakeDir.xaml**: uma atividade que cria um diretório.</li><li>**Move.XAML**: uma atividade que move um arquivo.</li><li>**ReadFile.xaml**: uma atividade que lê um arquivo e retorna seu conteúdo.</li><li>**TestPath.xaml**: uma atividade que verifica a existência de um caminho.</li></ul></li><li>Processo:<br /><br /> <ul><li>**GetProcess.xaml**: uma atividade que obtém uma lista de processos em execução.</li><li>**StopProcess.xaml**: uma atividade que impede que um processo específico.</li></ul></li><li>**Program.CS**: chama o fluxo de trabalho Sequence1.</li><li>**Sequence1.XAML**: um fluxo de trabalho com base em sequência.</li></ul>|  
-|PowerShell|A atividade de `InvokePowerShell` e seus criadores associados.|Arquivos de atividade<br /><br /> -   **ExecutePowerShell.cs**: lógica de execução principal da atividade.<br />-   **InvokePowerShell.cs**: O wrapper em torno de lógica de execução principal, que contém uma versão genérica (valor de retorno) e uma versão não genérico (valor de retorno não). Esta é a interface pública para atividades.<br />-   **NoPersistZone.cs**: esta atividade impede que todas as atividades filho persistentes. Essa classe é usada dentro da implementação de atividade de `InvokePowerShell` para impedir que a atividade é mid de- execução persistentes.<br /><br /> Arquivos de designer:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: caixa de diálogo de um Windows que permite que o usuário edite os argumentos do `InvokePowerShell` atividade.<br />2.  **GenericInvokePowerShellDesigner.xaml** e **GenericInvokePowerShellDesigner.xaml.cs**: define a aparência de genérica `InvokePowerShell` atividade em [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** e **InvokePowerShellDesigner.cs**: define a aparência de não-genérica `InvokePowerShell` atividade em [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
+|CodedClient|Um aplicativo cliente de exemplo que use a atividade de PowerShell.|-   **Program.CS**: cria programaticamente um fluxo de trabalho baseado sequência-que chama a atividade de InvokePowerShell.|  
+|DesignerClient|Um conjunto de atividades personalizados que contêm a atividade personalizado de `InvokePowerShell` e outras atividades personalizados diversos, e um fluxo de trabalho que os usa.|<ul><li>Atividades:<br /><br /> <ul><li>**{1&gt;printcollection.CS&lt;1**: uma atividade auxiliar que imprime todos os itens em uma coleção no console.</li><li>**{1&gt;ReadLine.CS&lt;1**: uma atividade auxiliar para ler a entrada do console.</li></ul></li><li>O sistema de arquivos:<br /><br /> <ul><li>**{1&gt;Copy.XAML&lt;1**: uma atividade que copia um arquivo.</li><li>**{1&gt;CreateFile.XAML&lt;1**: uma atividade que cria um arquivo.</li><li>**{1&gt;DeleteFile.XAML&lt;1**: uma atividade que exclui um arquivo.</li><li>**{1&gt;makedir.XAML&lt;1**: uma atividade que cria um diretório.</li><li>**{1&gt;move.XAML&lt;1**: uma atividade que move um arquivo.</li><li>**{1&gt;ReadFile.XAML&lt;1**: uma atividade que lê um arquivo e retorna seu conteúdo.</li><li>**{1&gt;testpath.XAML&lt;1**: uma atividade que testa a existência de um caminho.</li></ul></li><li>Processo:<br /><br /> <ul><li>**{1&gt;getprocess.XAML&lt;1**: uma atividade que obtém uma lista de processos em execução.</li><li>**{1&gt;stopprocess.XAML&lt;1**: uma atividade que impede que um processo específico.</li></ul></li><li>**Program.CS**: chama o fluxo de trabalho Sequence1.</li><li>**Sequence1.XAML**: um fluxo de trabalho baseado sequência-.</li></ul>|  
+|PowerShell|A atividade de `InvokePowerShell` e seus criadores associados.|Arquivos de atividade<br /><br /> -   **{1&gt;executepowershell.CS&lt;1**: A lógica principal de execução da atividade.<br />-   **{1&gt;invokepowershell.CS&lt;1**: O wrapper em torno de lógica de execução principal, que contém uma versão genérica (valor de retorno) e uma versão não genérica (valor de retorno não). Esta é a interface pública para atividades.<br />-   **{1&gt;nopersistzone.CS&lt;1**: esta atividade impede que todas as atividades filhos persistam. Essa classe é usada dentro da implementação de atividade de `InvokePowerShell` para impedir que a atividade é mid de- execução persistentes.<br /><br /> Arquivos de designer:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: caixa de diálogo de um Windows que permite que o usuário edite os argumentos do `InvokePowerShell` atividade.<br />2.  **Genericinvokepowershelldesigner** e **2&gt;genericinvokepowershelldesigner.XAML.CS&lt;2**: define a aparência dos genéricos `InvokePowerShell` atividade no [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **Invokepowershelldesigner** e **2&gt;invokepowershelldesigner.CS&lt;2**: define a aparência dos não genéricos `InvokePowerShell` atividade no [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
   
  Projetos de cliente são discutidos primeiro, pois é mais fácil compreender que a funcionalidade interna de atividade de PowerShell seu uso é compreendido uma vez.  
   
@@ -166,10 +166,10 @@ new ForEach<PSObject>
     Grid.Row="1" Grid.Column="1" />  
 ```  
   
- A personalização do designer não para com os arquivos .xaml que definem a aparência da atividade na tela de design. As caixas de diálogo usadas para exibir os parâmetros da atividade também podem ser personalizadas. Esses parâmetros e variáveis de PowerShell afetam o comportamento de comandos de PowerShell. A atividade expõe como <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` tipos. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml e PropertyEditorResources.cs definem a caixa de diálogo que permite que você edite esses tipos.  
+ A personalização do designer não para com os arquivos .xaml que definem a aparência da atividade na tela de design. As caixas de diálogo usadas para exibir os parâmetros da atividade também podem ser personalizadas. Esses parâmetros e variáveis de PowerShell afetam o comportamento de comandos de PowerShell. A atividade os expõe como <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` tipos. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml e PropertyEditorResources.cs definem a caixa de diálogo que permite que você edite esses tipos.  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
- Você deve instalar o Windows PowerShell para executar esse exemplo. O Windows PowerShell pode ser instalado neste local: [do Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).  
+ Você deve instalar o Windows PowerShell para executar esse exemplo. Windows PowerShell pode ser instalado neste local: [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383).  
   
 #### <a name="to-run-the-coded-client"></a>Para executar o cliente codificado  
   
@@ -195,7 +195,7 @@ new ForEach<PSObject>
   
 1.  Se fazer referência ao assembly ou projeto de atividade de `InvokePowerShell` de outro projeto resulta em um erro de compilação, você precisará adicionar manualmente o elemento de `<SpecificVersion>True</SpecificVersion>` o arquivo .csproj o novo projeto na linha que referencia `InvokePowerShell`.  
   
-2.  Se o Windows PowerShell não estiver instalado, a seguinte mensagem de erro é exibida no Visual Studio assim que você adicionar um `InvokePowerShell` atividade em um fluxo de trabalho: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Se o Windows PowerShell não estiver instalado, a seguinte mensagem de erro é exibida no Visual Studio, assim que você adicionar um `InvokePowerShell` atividade em um fluxo de trabalho: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  No Windows 2.0, PowerShell programaticamente chamando `$input.MoveNext()` falha e scripts usando o produto de `$input.MoveNext()` erros não intencional e resultados. Para resolver esse problema, considere usar o verbo `foreach` de PowerShell em vez de chamar `MoveNext()` para percorrer uma matriz.  
   
@@ -204,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

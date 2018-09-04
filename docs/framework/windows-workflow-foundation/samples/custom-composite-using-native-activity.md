@@ -3,11 +3,11 @@ title: Atividade nativo de usar composta personalizada
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
 ms.openlocfilehash: d9caa6e950af8f800644793db84aa85cc8255914
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406830"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528680"
 ---
 # <a name="custom-composite-using-native-activity"></a>Atividade nativo de usar composta personalizada
 Este exemplo demonstra como escrever <xref:System.Activities.NativeActivity> que agenda outros objetos de <xref:System.Activities.Activity> para controlar o fluxo de execução de um fluxo de trabalho. Este exemplo usar dois fluxos comuns de controle, e quando sequência, para demonstrar como fazer isso.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481904"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509797"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Espelhamento de banco de dados no SQL Server
 O espelhamento de banco de dados no SQL Server permite que você mantenha uma cópia, ou o espelho, de um banco de dados do SQL Server em um servidor em espera. O espelhamento garante que duas cópias separadas dos dados existam o tempo todo, fornecendo a alta disponibilidade e a redundância completa de dados. O provedor de dados .NET para o SQL Server fornece suporte implícito para espelhamento de banco de dados, de modo que o desenvolvedor não precisa realizar nenhuma ação ou gravar código quando tiver sido configurado para um banco de dados do SQL Server. Além disso, o objeto <xref:System.Data.SqlClient.SqlConnection> oferece suporte a um modo de conexão explícita que permite fornecer o nome de um servidor de parceiro de failover no <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410410"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502723"
 ---
 # <a name="wif-and-web-farms"></a>WIF e Web Farms
 Ao usar o WIF (Windows Identity Foundation) para proteger os recursos de um aplicativo RP (terceira parte confiável) implantado em uma web farm, siga etapas específicas para garantir que o WIF possa processar tokens de instâncias do aplicativo RP em execução em diferentes computadores no farm. Esse processamento inclui validação de assinaturas de token de sessão, criptografia e descriptografia de tokens de sessão, cache de tokens de sessão e detecção de tokens de segurança reproduzidos.  
@@ -56,7 +56,7 @@ Ao usar o WIF (Windows Identity Foundation) para proteger os recursos de um apli
 -   Se o aplicativo detectar tokens reproduzidos, siga uma estratégia de cache distribuído semelhante para o cache de reprodução de token derivando de <xref:System.IdentityModel.Tokens.TokenReplayCache> e apontando para o cache de reprodução de token no serviço de cache do elemento de configuração [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Todos os XML de exemplo e código deste tópico é obtida a [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) exemplo.  
+>  Todos os exemplo de XML e o código deste tópico é obtida a [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) exemplo.  
   
 > [!IMPORTANT]
 >  Os exemplos deste tópico são fornecidos no estado em que se encontram e não se destinam a serem usados no código de produção sem modificação.  

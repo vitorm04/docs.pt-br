@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: 0dc0ddaa1f64b75c0b4ccc1f5e73638576ea3da2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408446"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523476"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerações adicionais sobre Segurança do Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configurações de segurança podem fazer com que seu aplicativo seja executado de forma diferente em um ambiente de confiança parcial que no computador local. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe o acesso a esses recursos locais críticos como o sistema de arquivos, rede e APIs não gerenciadas, entre outras coisas. As configurações de segurança afetam a capacidade de chamar a API do Microsoft Win32 ou outras APIs que não pode ser verificado pelo sistema de segurança. A segurança também afeta outros aspectos do seu aplicativo, incluindo acesso a dados e de arquivo e impressão. Para obter mais informações sobre o acesso a arquivos e dados em um ambiente de confiança parcial, consulte [acesso a dados nos Windows Forms e o arquivo mais seguro](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Para obter mais informações sobre a impressão em um ambiente de confiança parcial, consulte [mais seguro impressão nos Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  

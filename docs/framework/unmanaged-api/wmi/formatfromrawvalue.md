@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460415"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542161"
 ---
 # <a name="formatfromrawvalue-function"></a>Função FormatFromRawValue
-Converte um valor de dados de desempenho bruto para o formato especificado ou dois valores de dados de desempenho bruto se a conversão de formato é baseado no tempo.   
+Converte um valor de dados de desempenho brutos para o formato especificado, ou dois valores de dados de desempenho brutos se a conversão de formato é baseada em tempo.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,10 +44,10 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parâmetros
 
 `dwCounterType`  
-[in] O tipo de contador. Para obter uma lista dos tipos de contador, consulte [tipos de contador de desempenho WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` pode ser qualquer tipo de contador, exceto para `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
+[in] O tipo de contador. Para obter uma lista dos tipos de contador, consulte [tipos de contador de desempenho WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` pode ser qualquer tipo de contador, exceto `PERF_LARGE_RAW_FRACTION` e `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
-[in] O formato no qual converter os dados de desempenho bruto. Pode ser um dos seguintes valores:
+[in] O formato para o qual converter os dados de desempenho bruto. Ele pode ser um dos seguintes valores:
 
 |Constante  |Valor  |Descrição |
 |---------|---------|---------|
@@ -55,15 +55,15 @@ int FormatFromRawValue (
 | `PDH_FMT_LARGE` | 0x00000400 | Retorna o valor calculado como um inteiro de 64 bits. |
 | `PDH_FMT_LONG` | 0x00000100 | Retorna o valor calculado como um inteiro de 32 bits. |
 
-Um dos valores anteriores pode ser ORed com um dos seguintes sinalizadores de dimensionamento:
+Um dos valores anteriores pode estar ORed com um dos seguintes sinalizadores de colocação em escala:
 
 |Constante  |Valor  |Descrição |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Não aplique os fatores de dimensionamento do contador. |
-| `PDH_FMT_1000` | 0x00002000 | Multiplica o valor final por 1.000. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | Não se aplicam os fatores de dimensionamento do contador. |
+| `PDH_FMT_1000` | 0x00002000 | Multiplique o valor final por 1.000. | 
 
 `pTimeBase`  
-[in] Um ponteiro para a base de tempo para a conversão de formato, se necessário. Se as informações de base de tempo não são necessárias para a conversão de formato, o valor desse parâmetro é ignorado.
+[in] Um ponteiro para a base de tempo, se necessário para a conversão de formato. Se as informações de base de tempo não são necessárias para a conversão de formato, o valor desse parâmetro é ignorado.
 
 `pRawValue1` [in] Um ponteiro para um [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) estrutura que representa um valor de desempenho bruto.
 
@@ -77,7 +77,7 @@ Os seguintes valores são retornados por essa função:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | A chamada de função foi bem-sucedida. |
+| `ERROR_SUCCESS` | 0 | A chamada de função for bem-sucedida. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Um argumento necessário está ausente ou incorreto. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | O identificador não é um objeto PDH válido. |
   
@@ -86,11 +86,11 @@ Os seguintes valores são retornados por essa função:
 Essa função encapsula uma chamada para o [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) função.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Biblioteca:** PerfCounter.dll  
+ **Biblioteca:** PerfCounter  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte também  
 [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

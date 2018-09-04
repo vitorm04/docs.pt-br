@@ -2,15 +2,15 @@
 title: Sistema de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 3470ad17ae16e57edbbef13f30186b7e58fd0d2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763846"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534757"
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipo (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a uma variedade de tipos:  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a vários tipos:  
   
 -   A primitiva) tipos simples (como `Int32` e `String.`  
   
@@ -18,7 +18,7 @@ ms.locfileid: "32763846"
   
 -   Tipos anônimos que não são definidos no esquema explicitamente: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, e <xref:System.Data.Metadata.Edm.RefType>.  
   
- Esta seção discute os tipos anônimos que não são definidos no esquema explicitamente mas é suportada por [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obter informações sobre tipos primitivos e nominais, consulte [tipos de modelo conceitual (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
+ Esta seção discute os tipos anônimos que não são definidos no esquema explicitamente mas é suportada por [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obter informações sobre tipos primitivos e nominais, consulte [tipos de modelo conceituais (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
   
 ## <a name="rows"></a>Linhas  
  A estrutura de uma linha depende da sequência de membros tipados e nomeados em que a linha consiste. Um tipo de linha não tem nenhuma identidade e não pode ser herdada de. As instâncias do mesmo tipo de linha são equivalentes se os membros são equivalentes respectivamente. As linhas não têm nenhum comportamento além de sua equivalência estrutural e não têm equivalentes em Common Language Runtime. Consultas podem resultar em estruturas que contêm linhas ou coleções de linhas. API que associação entre as consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e o idioma de host define como as linhas são feitas na consulta que gerou o resultado. Para obter informações sobre como construir uma instância de linha, consulte [construindo tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  

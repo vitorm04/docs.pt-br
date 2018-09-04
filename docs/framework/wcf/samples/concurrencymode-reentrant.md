@@ -2,17 +2,17 @@
 title: ConcurrencyMode Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: d0ecd4b0c39c6a736a176a61490f454c2bab2e20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533445"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
-Este exemplo demonstra a necessidade e implicações de usar Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (como `ConcurencyMode.Single`). Para garantir a segurança do thread, o Windows Communication Foundation (WCF) bloqueia o `InstanceContext` processar uma mensagem para que nenhuma outra mensagem pode ser processada. No caso do modo reentrante, o `InstanceContext` está desbloqueada antes do serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante conforme demonstrado no exemplo) ao obter o bloqueio a próxima vez que se trata para o serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e um cliente podem enviar mensagens entre si usando um contrato duplex.  
+Este exemplo demonstra a necessidade e implicações do uso de Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (análogo ao `ConcurencyMode.Single`). Para garantir acesso thread-safe, o Windows Communication Foundation (WCF) bloqueia o `InstanceContext` processamento de uma mensagem para que nenhuma outra mensagem possa ser processada. No caso de modo reentrante, o `InstanceContext` é desbloqueada imediatamente antes que o serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante, conforme demonstrado no exemplo) para obter o bloqueio a próxima vez em que eles chegam ao serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e o cliente podem enviar mensagens entre si usando um contrato duplex.  
   
- O contrato definido é um contrato duplex com o `Ping` sendo implementado pelo serviço e o método de retorno de chamada de método `Pong` que está sendo implementado pelo cliente. Um cliente invoca o servidor `Ping` iniciando, assim, a chamada de contagem de método com uma escala. O serviço verifica se a contagem em escala não é igual a 0 e, em seguida, invoca os retornos de chamada `Pong` método diminuindo a contagem de tiques. Isso é feito pelo código a seguir no exemplo.  
+ O contrato definido é um contrato duplex com o `Ping` que está sendo implementado pelo serviço e o método de retorno de chamada de método `Pong` que está sendo implementado pelo cliente. Um cliente chama o servidor `Ping` iniciando, assim, a chamada de contagem de método com um tique. O serviço verifica se a contagem de tiques não é igual a 0 e, em seguida, invoca os retornos de chamada `Pong` método durante a diminuição a contagem de tiques. Isso é feito pelo código a seguir no exemplo.  
   
 ```  
 public void Ping(int ticks)  
@@ -26,7 +26,7 @@ public void Ping(int ticks)
 }  
 ```  
   
- O retorno de chamada `Pong` implementação tem a mesma lógica de `Ping` implementação. Ou seja, ele verifica se a contagem de tiques não for zero e, em seguida, invoca o `Ping` método no canal de retorno de chamada (nesse caso, é o canal que foi usado para enviar o original `Ping` mensagem) com a escala contagem diminuiu em 1. No momento em que a contagem de tiques chega a 0, o método retorna, assim, o desempacotamento todas as respostas para a primeira chamada feita pelo cliente que iniciou a chamada. Isso é mostrado na implementação do retorno de chamada.  
+ O retorno de chamada `Pong` implementação tem a mesma lógica que o `Ping` implementação. Ou seja, ele verifica se a contagem de tiques não for zero e, em seguida, invoca o `Ping` método no canal de retorno de chamada (nesse caso, é o canal que foi usado para enviar o original `Ping` mensagem) com a escala contar diminuído em 1. No momento em que a contagem de tiques chega a 0, o método retorna, assim, o desempacotamento todas as respostas de volta para a primeira chamada feita pelo cliente que iniciou a chamada. Isso é mostrado na implementação do retorno de chamada.  
   
 ```  
 public void Pong(int ticks)  
@@ -42,18 +42,18 @@ public void Pong(int ticks)
 }  
 ```  
   
- Tanto o `Ping` e `Pong` métodos são solicitação/resposta, o que significa que a primeira chamada para `Ping` não retornará até que a chamada para `CallbackChannel<T>.Pong()` retorna. No cliente, o `Pong` método não pode retornar até a próxima `Ping` chamar que ele fez retorna. Porque o retorno de chamada e o serviço devem fazer chamadas de solicitação/resposta antes que eles podem responder para a solicitação pendente, ambas as implementações do devem ser marcadas com o comportamento de Reentrant.  
+ Tanto a `Ping` e `Pong` métodos são solicitação/resposta, o que significa que a primeira chamada para `Ping` não retornará até que a chamada para `CallbackChannel<T>.Pong()` retorna. No cliente, o `Pong` método não pode retornar até a próxima `Ping` chamar que ele fez retorna. Porque o retorno de chamada e o serviço devem fazer chamadas de solicitação/resposta antes que eles podem responder para a solicitação pendente, ambas as implementações de devem ser marcadas com o comportamento de Reentrant.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="demonstrates"></a>Demonstra  
- Para executar o exemplo, crie os projetos de cliente e servidor. Em seguida, abra duas janelas de comando e altere os diretórios para o \<exemplo > \CS\Service\bin\debug e \<exemplo > \CS\Client\bin\debug diretórios. Inicie o serviço digitando `service.exe` e, em seguida, chamar o Client.exe com o valor inicial de tiques passado como um argumento de entrada. É mostrado um exemplo de saída de tiques de 10.  
+ Para executar o exemplo, crie os projetos de cliente e servidor. Em seguida, abrir duas janelas de comando e altere os diretórios para o \<amostra > \CS\Service\bin\debug e \<exemplo > \CS\Client\bin\debug diretórios. Em seguida, inicie o serviço digitando `service.exe` e, em seguida, invoque o Client.exe com o valor inicial de tiques passado como um argumento de entrada. É mostrado um exemplo de saída para 10 tiques.  
   
 ```  
 Prompt>Service.exe  
@@ -78,7 +78,7 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   

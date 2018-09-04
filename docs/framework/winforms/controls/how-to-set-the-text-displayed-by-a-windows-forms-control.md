@@ -22,11 +22,11 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399320"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525029"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como definir o texto exibido por um controle dos Windows Forms
 Controles dos Windows Forms normalmente exibem algum texto que está relacionado à função primária do controle. Por exemplo, um <xref:System.Windows.Forms.Button> controle normalmente exibe uma legenda que indica qual ação será executada quando o botão é clicado. Para todos os controles, você pode definir ou retornar o texto usando o <xref:System.Windows.Forms.Control.Text%2A> propriedade. Você pode alterar a fonte usando o <xref:System.Windows.Forms.Control.Font%2A> propriedade. Você também pode definir o texto usando o designer.  Consulte também [Como criar chaves de acesso para controles dos Windows Forms usando o Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Como definir o texto exibido por um controle dos Windows Forms usando o Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Como definir a imagem exibida por um controle dos Windows Forms usando o Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  

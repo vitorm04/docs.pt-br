@@ -3,11 +3,11 @@ title: Referência de palavras-chave (F#)
 description: 'Encontre links para informações sobre todas as palavras-chave F # idioma.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526183"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 

@@ -2,15 +2,15 @@
 title: Manipulando dados em uma DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: f21ac216ed69db99001e324eb34cacf1254fcf6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757636"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521302"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipulando dados em uma DataTable
-Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, você pode executar as mesmas atividades que faria ao usar uma tabela em um banco de dados. Você pode adicionar, exibir, editar e excluir dados na tabela; você pode monitorar erros e eventos; e pode consultar os dados na tabela. Ao modificar dados em um **DataTable**, você também pode verificar se as alterações são precisas e determinam se deseja aceitar ou rejeitar as alterações de programaticamente.  
+Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, você pode executar as mesmas atividades que faria ao usar uma tabela em um banco de dados. Você pode adicionar, exibir, editar e excluir dados na tabela; você pode monitorar erros e eventos; e pode consultar os dados na tabela. Ao modificar dados em um **DataTable**, você também pode verificar se as alterações são precisas e determinam se deseja aceitar ou rejeitar as alterações de forma programática.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Adicionando dados a um DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
@@ -20,7 +20,7 @@ Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, vo
  Descreve como acessar os dados em uma linha, incluindo as versões originais e atuais dos dados.  
   
  [O método Load](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
- Descreve o uso do **carga** método para preencher um **DataTable** com linhas.  
+ Descreve o uso do **Load** método para preencher uma **DataTable** com linhas.  
   
  [Edições de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  Explica como alterar os dados em uma linha, incluindo suspensão das alterações em uma linha até que as alterações propostas sejam verificadas e aceitas.  
@@ -40,4 +40,4 @@ Após criar i, <xref:System.Data.DataTable> em um <xref:System.Data.DataSet>, vo
 ## <a name="see-also"></a>Consulte também  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [Manipulação de eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

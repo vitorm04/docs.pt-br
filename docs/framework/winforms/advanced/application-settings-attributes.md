@@ -7,11 +7,11 @@ helpviewer_keywords:
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
 ms.openlocfilehash: 9ed549cb1e10b22c4fa34d984133a6be11dfab44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481156"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525106"
 ---
 # <a name="application-settings-attributes"></a>Atributos de configurações do aplicativo
 A arquitetura de Configurações de Aplicativo fornece muitos atributos que podem ser aplicados à classe wrapper de configurações de aplicativos ou suas propriedades individuais. Esses atributos são examinados no tempo de execução pela infraestrutura de configurações de aplicativo, geralmente especificamente pelo provedor de configurações, a fim de adaptar seu funcionamento às necessidades declaradas do wrapper personalizado.  

@@ -7,11 +7,11 @@ ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 220795488d6e4bedf40e0764040470c18d3a3b48
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402776"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525818"
 ---
 # <a name="common-security-scenarios"></a>Cenários comuns de segurança
 Os tópicos nesta seção uma série de possíveis clientes e as configurações de segurança do serviço de catálogo. As configurações variam de acordo com uma série de fatores. Por exemplo, se um cliente ou serviço estiver em uma intranet, ou se a segurança é fornecida pelo Windows ou de transporte (como HTTPS).  

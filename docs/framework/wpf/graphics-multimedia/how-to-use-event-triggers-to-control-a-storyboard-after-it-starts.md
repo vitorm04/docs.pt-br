@@ -6,27 +6,27 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: c864668026c4f8bb58a4d6c4c36f96fb07445a9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31b1233f00147fdccde5e0816fa4839ae33d549
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561288"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552238"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Como usar gatilhos de evento para controlar um storyboard depois de ter começado
-Este exemplo mostra como controlar um <xref:System.Windows.Media.Animation.Storyboard> após ele ser iniciado. Para iniciar um <xref:System.Windows.Media.Animation.Storyboard> usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Media.Animation.BeginStoryboard>, que distribui as animações aos objetos e propriedades que ele anima e, em seguida, inicia o storyboard. Se você fornecer <xref:System.Windows.Media.Animation.BeginStoryboard> especificando um nome de seu <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propriedade, você torná-lo um storyboard controlável. Você pode então controlar interativamente o storyboard depois que ele for iniciado.  
+Este exemplo mostra como controlar um <xref:System.Windows.Media.Animation.Storyboard> após ele ser iniciado. Para iniciar um <xref:System.Windows.Media.Animation.Storyboard> por meio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use <xref:System.Windows.Media.Animation.BeginStoryboard>, que distribui as animações aos objetos e propriedades que elas animam e, em seguida, inicia o storyboard. Se você der <xref:System.Windows.Media.Animation.BeginStoryboard> um nome especificando sua <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> propriedade, você tornará um storyboard controlável. Você pode então controlar interativamente o storyboard depois que ele for iniciado.  
   
- Use as seguintes ações de storyboard em conjunto com <xref:System.Windows.EventTrigger> objetos para controlar um storyboard.  
+ Use as seguintes ações de storyboard junto com <xref:System.Windows.EventTrigger> objetos para controlar um storyboard.  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Pausa o storyboard.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Retoma um storyboard pausado.  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Retoma um storyboard em pausa.  
   
 -   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Altera a velocidade do storyboard.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Avança um storyboard até o final do período de preenchimento, se ele tiver um.  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Avança um storyboard até o final do seu período de preenchimento, se ele tiver um.  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>: Para o storyboard.  
+-   <xref:System.Windows.Media.Animation.StopStoryboard>: Interrompe o storyboard.  
   
 -   <xref:System.Windows.Media.Animation.RemoveStoryboard>Remove o storyboard, liberando recursos.  
   
@@ -37,7 +37,7 @@ Este exemplo mostra como controlar um <xref:System.Windows.Media.Animation.Story
   
  [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
- Para obter exemplos adicionais, consulte a [Galeria de exemplos de animação](http://go.microsoft.com/fwlink/?LinkID=159969).  
+ Para obter exemplos adicionais, consulte a [Galeria de exemplos de animação](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Media.Animation.ResumeStoryboard>  

@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7855007c7566d3be0012bbff2cb124ee2681cb6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398047"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536947"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventos ETW no Common Language Runtime
 O CLR (Common Language Runtime) fornece informações úteis de diagnóstico ETW (rastreamento de eventos para Windows) por meio de uma grande variedade de eventos de depuração e criação de perfil. Os eventos CLR ETW aproveitam o sistema de rastreamento ETW do Windows para ampliar o suporte existente de depuração e criação de perfil fornecido pelo Common Language Runtime.  
   
- Mais informações sobre o ETW estão disponíveis no artigo [Melhorar o ajuste de depuração e desempenho com o ETW](http://go.microsoft.com/fwlink/?LinkID=161142) no MSDN. Informações sobre o XPerf podem ser encontradas na entrada [Windows Performance Toolkit – XPerf](http://go.microsoft.com/fwlink/?LinkID=161144) no blog NTDebugging.  
+ Mais informações sobre o ETW estão disponíveis no artigo [Melhorar o ajuste de depuração e desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkID=161142) no MSDN. Informações sobre o XPerf podem ser encontradas na entrada [Windows Performance Toolkit – XPerf](https://go.microsoft.com/fwlink/?LinkID=161144) no blog NTDebugging.  
   
  O [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ou posterior é necessário para todos os eventos descritos nos tópicos de eventos. O sistema operacional Windows Vista é o cliente com suporte mínimo e o Windows Server 2008 é o servidor com suporte mínimo.  
   

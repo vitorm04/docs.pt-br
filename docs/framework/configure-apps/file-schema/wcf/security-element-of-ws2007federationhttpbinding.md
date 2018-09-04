@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5f1a7d0ed1bffe2ca2da9318eef700b1d4924c22
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 87f8f3cf296aeb30cd19c7579887ef94e0992ba7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749875"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541684"
 ---
 # <a name="ltsecuritygt-element-of-ltws2007federationhttpbindinggt"></a>&lt;elemento de&gt; segurança de &lt;ws2007FederationHttpBinding&gt;
 Define as configurações de segurança de [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elemento.  
@@ -46,7 +46,7 @@ Define as configurações de segurança de [ \<ws2007FederationHttpBinding >](..
 |---------------|-----------------|  
 |`mode`|Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>Atributo mode  
+## <a name="mode-attribute"></a>modo de atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -76,5 +76,5 @@ Define as configurações de segurança de [ \<ws2007FederationHttpBinding >](..
  [Selecionando um tipo de credencial](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

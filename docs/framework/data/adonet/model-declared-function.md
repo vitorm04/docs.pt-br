@@ -3,11 +3,11 @@ title: função declarada por modelo
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
 ms.openlocfilehash: f92bdfedaefca7182b5de72abae9852965d83ff7
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332040"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511509"
 ---
 # <a name="model-declared-function"></a>função declarada por modelo
 Um *função declarada modelo* é uma função que é declarada em um modelo conceitual, mas não está definida no modelo conceitual. A função pode ser definida no ambiente de hospedagem ou de armazenamento. Por exemplo, uma função o declarada pode ser mapeada para uma função que está definida em uma base de dados, bem expõe a funcionalidade do lado do modelo conceitual.  

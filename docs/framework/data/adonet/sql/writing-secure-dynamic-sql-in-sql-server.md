@@ -2,12 +2,12 @@
 title: Escrevendo SQL dinâmico seguro no SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753468"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538181"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Escrevendo SQL dinâmico seguro no SQL Server
 A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere instruções Transact-SQL em vez de entrada válida. Se a entrada for passada diretamente para o servidor sem ser validada e se o aplicativo executa inadvertidamente o código injetado, o ataque terá o potencial de danificar ou destruir dados.  
@@ -73,4 +73,4 @@ A Injeção de SQL é o processo pelo qual um usuário mal-intencionado insere i
  [Gerenciando permissões com procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Assinando procedimentos armazenados no SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Personalizando permissões com representação no SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

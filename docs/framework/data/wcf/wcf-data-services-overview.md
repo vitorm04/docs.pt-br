@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
 ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385948"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523131"
 ---
 # <a name="wcf-data-services-overview"></a>Visão geral do WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite a criação e consumo de serviços de dados para a Web ou uma intranet usando o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] permite que você exponha seus dados como recursos endereçáveis por URIs. Isso permite que você acesse e alterar dados usando a semântica de transferência de estado representacional (REST), especificamente os verbos HTTP padrão de GET, PUT, POSTAM e excluir. Este tópico fornece uma visão geral dos padrões e práticas definidas pela [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e também os recursos fornecidos pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aproveitar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em aplicativos baseados no .NET Framework.  

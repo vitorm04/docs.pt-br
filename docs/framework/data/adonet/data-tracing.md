@@ -3,11 +3,11 @@ title: Rastreamento de dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
 ms.openlocfilehash: 037db6f4e5695e00401c81e1490953efe2fc9b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421093"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522414"
 ---
 # <a name="data-tracing-in-adonet"></a>Rastreamento de dados no ADO.NET
 ADO.NET apresenta a funcionalidade de rastreamento de dados internos que há suporte para os provedores de dados .NET para SQL Server, Oracle, OLE DB e ODBC, bem como o ADO.NET <xref:System.Data.DataSet>e os protocolos de rede do SQL Server.  

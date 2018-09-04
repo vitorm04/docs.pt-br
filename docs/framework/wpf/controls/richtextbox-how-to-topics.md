@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541057"
 ---
 # <a name="richtextbox-how-to-topics"></a>Tópicos explicativos RichTextBox
 Esta seção fornece exemplos que demonstram como realizar tarefas comuns usando o <xref:System.Windows.Controls.RichTextBox> controle.  

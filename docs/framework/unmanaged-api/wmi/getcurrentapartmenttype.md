@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463085"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522519"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Função GetCurrentApartmentType
-Recupera o tipo do compartimento em que o chamador está em execução.   
+Recupera o tipo de apartment no qual o chamador está sendo executado.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

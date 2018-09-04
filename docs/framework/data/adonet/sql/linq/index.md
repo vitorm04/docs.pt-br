@@ -3,11 +3,11 @@ title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
 ms.openlocfilehash: 499311f4db9d36f9f95d20c6ef0441ff42f0029b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384647"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529376"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é um componente do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versão 3.5 que fornece uma infraestrutura de tempo de execução para gerenciar dados relacionais como objetos.  

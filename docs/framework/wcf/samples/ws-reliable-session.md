@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526409"
 ---
 # <a name="ws-reliable-session"></a>Sessão confiável de WS
 Este exemplo demonstra o uso de sessões confiáveis. Sessões confiáveis fornecem suporte para o sistema de mensagens confiável e sessões. Sistema de mensagens confiável tenta novamente a comunicação em caso de falha e permite que as garantias de entrega seja especificado, como em ordem chegada de mensagens. Sessões de mantêm o estado dos clientes entre chamadas. O exemplo implementa sessões para manter o estado do cliente e especifica as garantias de entrega em ordem.  

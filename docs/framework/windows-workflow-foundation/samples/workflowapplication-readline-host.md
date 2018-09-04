@@ -3,11 +3,11 @@ title: Host de WorkflowApplication ReadLine
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502929"
 ---
 # <a name="workflowapplication-readline-host"></a>Host de WorkflowApplication ReadLine
 Este exemplo é um host genérica de ReadLine. Você pode carregar e executar qualquer fluxo de trabalho usando a atividade incluída de `ReadLine` (ou outras atividades como ele obtém dados de indexadores continuados com cadeias de caracteres). A saída de atividade ou de qualquer coisa de `WriteLine` gravação para a extensão de <xref:System.Activities.Statements.WriteLine.TextWriter%2A> está direcionada para a janela aeromoça. Quando uma instância estiver ocioso, os indicadores disponíveis para essa instância aparecem em uma caixa de combinação. Selecione um marcador, inserir texto, e pressione o botão do indexador de resumo continuam a execução de fluxo de trabalho. Você também pode cancelar, nulo, ou finalizar um fluxo de trabalho selecionado. Persistência está ativada por padrão – você pode fechar o host e trazer-lhe a voltar, e a lista de instância é preenchida com instâncias armazenadas na base de dados. O rastreamento é usado para produzir <xref:System.Activities.WorkflowApplication>- eventos de nível para o host com a opção adicionar controle detalhado a nível de atividade.  

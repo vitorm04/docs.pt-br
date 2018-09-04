@@ -10,11 +10,11 @@ ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 37827398ffd6041aa841e23381b6b072b297f089
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464214"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515444"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Como criar um fornecedor de token de segurança personalizado
 Este tópico mostra como criar novos tipos de token com um provedor de token de segurança personalizada e como integrar o provedor com um Gerenciador de token de segurança personalizada.  

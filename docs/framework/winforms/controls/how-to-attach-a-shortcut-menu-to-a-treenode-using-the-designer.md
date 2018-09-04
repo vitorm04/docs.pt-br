@@ -5,30 +5,30 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: 2700be06ceb4c20926d6af9c962799db4afc31da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77c4b01100aec2df16d5eb844f73f7a2bfa115aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527830"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534772"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Como anexar um menu de atalho a um TreeNode usando o designer
-Windows Forms <xref:System.Windows.Forms.TreeView> controle exibe uma hierarquia de nós, semelhantes aos arquivos e pastas exibidas no painel esquerdo do recurso Windows Explorer em sistemas operacionais Windows. Definindo o <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> propriedade, você pode fornecer operações sensíveis ao contexto para o usuário quando eles com o botão direito do <xref:System.Windows.Forms.TreeView> controle. Associando um <xref:System.Windows.Forms.ContextMenuStrip> componente com individuais <xref:System.Windows.Forms.TreeNode> itens, você pode adicionar um nível personalizado de funcionalidade do menu de atalho para o <xref:System.Windows.Forms.TreeView> controles.  
+Os formulários do Windows <xref:System.Windows.Forms.TreeView> controle exibe uma hierarquia de nós, semelhantes aos arquivos e pastas exibidas no painel esquerdo do recurso Windows Explorer em sistemas de operacionais do Windows. Definindo o <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> propriedade, você pode fornecer operações sensíveis ao contexto para o usuário quando eles com o botão direito do <xref:System.Windows.Forms.TreeView> controle. Associando um <xref:System.Windows.Forms.ContextMenuStrip> componente com indivíduo <xref:System.Windows.Forms.TreeNode> itens, você pode adicionar um nível personalizado de funcionalidade do menu de atalho para seu <xref:System.Windows.Forms.TreeView> controles.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-associate-a-shortcut-menu-with-a-treenode-at-design-time"></a>Para associar um menu de atalho a um TreeNode em tempo de design  
   
-1.  Adicionar um <xref:System.Windows.Forms.TreeView> o controle para o formulário e, em seguida, adicionar nós a <xref:System.Windows.Forms.TreeView> conforme necessário. Para obter mais informações, veja [Como adicionar e remover nós com o controle TreeView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
+1.  Adicionar um <xref:System.Windows.Forms.TreeView> controlar ao seu formulário e, em seguida, adicionar nós a <xref:System.Windows.Forms.TreeView> conforme necessário. Para obter mais informações, veja [Como adicionar e remover nós com o controle TreeView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
   
-2.  Adicionar uma <xref:System.Windows.Forms.ContextMenuStrip> ao formulário, o componente e, em seguida, adicionar itens de menu ao menu de atalho que representam as operações de nível de nó que você deseja disponibilizar em tempo de execução. Para obter mais informações, veja [Como adicionar itens de menu a um ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md).  
+2.  Adicionar um <xref:System.Windows.Forms.ContextMenuStrip> ao seu formulário e, em seguida, adicionar itens de menu ao menu de atalho que representam as operações de nível de nó que você deseja disponibilizar em tempo de execução. Para obter mais informações, veja [Como adicionar itens de menu a um ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md).  
   
-3.  Reabra o **TreeNodeEditor** caixa de diálogo para o <xref:System.Windows.Forms.TreeView> de controle, selecione o nó para editar e definir seu <xref:System.Windows.Forms.ContextMenuStrip> propriedade para o menu de atalho que você adicionou.  
+3.  Reabra o **TreeNodeEditor** caixa de diálogo para o <xref:System.Windows.Forms.TreeView> de controle, selecione o nó para editar e defina seu <xref:System.Windows.Forms.ContextMenuStrip> propriedade para o menu de atalho que você adicionou.  
   
 4.  Quando essa propriedade for definida, o menu de atalho será exibido quando você clicar no nó com o botão direito do mouse.  
   
-     Além disso, você deve escrever código para manipular o <xref:System.Windows.Forms.ToolStripItem.Click> eventos para esses itens de menu.  
+     Além disso, você vai querer escrever código para manipular o <xref:System.Windows.Forms.ToolStripItem.Click> eventos para esses itens de menu.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controle TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  

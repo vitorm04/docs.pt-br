@@ -3,11 +3,11 @@ title: Associação de dados em um cliente do Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
 ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393855"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514309"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associação de dados em um cliente do Windows Presentation Foundation
 Este exemplo demonstra o uso da ligação de dados em um cliente do Windows Presentation Foundation (WPF). O exemplo usa um serviço do Windows Communication Foundation (WCF) que gera aleatoriamente uma matriz de álbuns para retornar ao cliente. Cada álbum tem um nome, um preço e uma lista de faixas do álbum. As faixas do álbum tem um nome e uma duração. As informações que são retornadas pelo serviço são associadas automaticamente a interface do usuário (IU) fornecida pelo cliente do Windows Presentation Foundation (WPF).  

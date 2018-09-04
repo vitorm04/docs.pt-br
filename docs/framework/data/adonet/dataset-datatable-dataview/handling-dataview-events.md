@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
 ms.openlocfilehash: 2f30a578c5233e8b86a165dd220efd45348c5042
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541088"
 ---
 # <a name="handling-dataview-events"></a>Manipulação de eventos de DataView
 Você pode usar o <xref:System.Data.DataView.ListChanged> eventos do <xref:System.Data.DataView> para determinar se um modo de exibição foi atualizado. As atualizações que acionar o evento incluem adição, exclusão ou modificação de uma linha da tabela subjacente. Adicionar ou excluir uma coluna para o esquema da tabela subjacente; e uma alteração em uma relação de pai ou filho. O **ListChanged** evento também notifica se a lista de linhas que você está exibindo mudou significativamente devido ao aplicativo de uma nova ordem de classificação ou um filtro.  

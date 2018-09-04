@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a96af0c66d85c7eec9a97be3ba8c756b1e91849
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516031"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>Enumeração METAHOST_POLICY_FLAGS
 Fornece diretivas de associação que são comuns a maioria dos hosts de tempo de execução. Essa enumeração é usada pelo [iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) método.  
