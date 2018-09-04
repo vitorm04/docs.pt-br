@@ -3,11 +3,11 @@ title: Calculadora correlacionada
 ms.date: 03/30/2017
 ms.assetid: c365166e-6552-49a4-bf17-9f4e597d4d41
 ms.openlocfilehash: 71cfdd0906ef20ec36b76ef5e508a4551b9fe3fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384665"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517307"
 ---
 # <a name="correlated-calculator"></a>Calculadora correlacionada
 Este exemplo demonstra como usar as atividades de mensagens (<xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>) no designer com correlação conteudo com base em um parâmetro na mensagem. Nesse cenário, o funcionamento da calculadora estão em um trem paralelo. Uma instância e uma correlação (com base em `CalculatorId`) são criadas quando a primeira mensagem é enviada para o fluxo de trabalho, e mensagens subsequentes com a mesma `CalculatorId` são distribuídos a essa instância até que a operação de redefinição é chamada. O cliente é implementado como um aplicativo de WPF que usa um proxy código baseado de cliente para se comunicar com o serviço.  

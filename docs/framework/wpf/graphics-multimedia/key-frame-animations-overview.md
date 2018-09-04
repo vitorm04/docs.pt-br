@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517400"
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  
@@ -22,7 +22,7 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
 <a name="whatisakeyframeanimation"></a>   
 ## <a name="what-is-a-key-frame-animation"></a>O que é uma animação de quadro-chave?  
- Assim como uma animação De/Para/Por, uma animação de quadro-chave anima o valor de uma propriedade de destino. Ele cria uma transição entre seus valores de destino em seu <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. No entanto, enquanto uma animação De/Para/Por cria uma transição entre dois valores, uma única animação de quadro-chave pode criar transições entre qualquer número de valores de destino. Ao contrário de uma animação De/Para/Por, uma animação de quadro-chave não tem nenhuma propriedade De, Para ou Por com a qual seus valores de destino são definidos. Os valores de destino de uma animação de quadro-chave são descritos com o uso de objetos de quadros-chave (daí o termo “animação de quadro-chave”). Para especificar valores de destino da animação, você pode criar objetos de quadro-chave e adicioná-los para a animação <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> coleção. Quando a animação é executada, ela faz a transição entre os quadros especificados.  
+ Assim como uma animação De/Para/Por, uma animação de quadro-chave anima o valor de uma propriedade de destino. Ele cria uma transição entre seus valores de destino por seu <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. No entanto, enquanto uma animação De/Para/Por cria uma transição entre dois valores, uma única animação de quadro-chave pode criar transições entre qualquer número de valores de destino. Ao contrário de uma animação De/Para/Por, uma animação de quadro-chave não tem nenhuma propriedade De, Para ou Por com a qual seus valores de destino são definidos. Os valores de destino de uma animação de quadro-chave são descritos com o uso de objetos de quadros-chave (daí o termo “animação de quadro-chave”). Para especificar valores de destino da animação, você cria objetos de quadro-chave e adicioná-los para a animação <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> coleção. Quando a animação é executada, ela faz a transição entre os quadros especificados.  
   
  Além de dar suporte a vários valores de destino, alguns métodos de quadro-chave até mesmo dão suporte a vários métodos de interpolação. O método de interpolação de uma animação define como ela faz a transição de um valor para o próximo. Há três tipos de interpolações: discreta, linear e spline.  
   
@@ -30,21 +30,21 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
 -   Declare a animação e especifique seu <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, exatamente como você faria para uma animação de/para/por.  
   
--   Para cada valor de destino, crie um quadro chave do tipo apropriado, defina seu valor e <xref:System.Windows.Media.Animation.KeyTime>e adicione-o a animação <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> coleção.  
+-   Para cada valor de destino, crie um quadro-chave do tipo apropriado, defina seu valor e <xref:System.Windows.Media.Animation.KeyTime>e adicioná-lo para a animação <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> coleção.  
   
 -   Associe a animação a uma propriedade, exatamente como você faria com uma animação De/Para/Por. Para obter mais informações sobre como aplicar uma animação a uma propriedade usando um storyboard, consulte [Visão geral dos storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
- O exemplo a seguir usa uma <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> para animar uma <xref:System.Windows.Shapes.Rectangle> elemento para quatro locais diferentes.  
+ O exemplo a seguir usa uma <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> animar uma <xref:System.Windows.Shapes.Rectangle> elemento para quatro locais diferentes.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- Como um de/para/por animação, uma animação de quadro-chave pode ser aplicada a uma propriedade usando um <xref:System.Windows.Media.Animation.Storyboard> na marcação e código ou usando o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método no código. Você também pode usar uma animação de quadro-chave para criar um <xref:System.Windows.Media.Animation.AnimationClock> e aplicá-la a uma ou mais propriedades. Para obter mais informações sobre os diferentes métodos para aplicação de animações, consulte a [Visão geral das técnicas de animação de propriedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Como um de/para/por animação, uma animação de quadro-chave pode ser aplicada a uma propriedade usando um <xref:System.Windows.Media.Animation.Storyboard> na marcação e código ou usando o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método no código. Você também pode usar uma animação de quadro-chave para criar um <xref:System.Windows.Media.Animation.AnimationClock> e aplicá-lo a uma ou mais propriedades. Para obter mais informações sobre os diferentes métodos para aplicação de animações, consulte a [Visão geral das técnicas de animação de propriedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
   
 <a name="animation_types"></a>   
 ## <a name="key-frame-animation-types"></a>Tipos de animação de quadro-chave  
  Como as animações geram valores de propriedade, existem diferentes tipos de animação para diferentes tipos de propriedades. Para animar uma propriedade que utiliza um <xref:System.Double> (como um elemento <xref:System.Windows.FrameworkElement.Width%2A> propriedade), use uma animação que produz <xref:System.Double> valores. Para animar uma propriedade que utiliza um <xref:System.Windows.Point>, use uma animação que produz <xref:System.Windows.Point> valores e assim por diante.  
   
- As classes de animação de quadro chave pertencem ao <xref:System.Windows.Media.Animation> namespace e de acordo com a seguinte convenção de nomenclatura:  
+ As classes de animação de quadro-chave pertencem ao <xref:System.Windows.Media.Animation> namespace e seguem Esta convenção de nomenclatura:  
   
  *\<Type>* `AnimationUsingKeyFrames`  
   
@@ -83,25 +83,25 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
  Em que *\<InterpolationMethod>* é o método de interpolação usado pelo quadro-chave e *\<Type>* é o tipo de valor animado pela classe. Uma animação de quadro-chave que dá suporte aos três métodos de interpolação terá três tipos de quadro-chave que podem ser usados. Por exemplo, você pode usar três tipos de quadro-chave com um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, e <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Os métodos de interpolação são descritos detalhadamente em uma seção posterior.)  
   
- O objetivo principal de um quadro chave é especificar um <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e um <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Cada tipo de quadro-chave fornece essas duas propriedades.  
+ O objetivo principal de um quadro-chave é especificar um <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e um <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>. Cada tipo de quadro-chave fornece essas duas propriedades.  
   
 -   O <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriedade especifica o valor de destino para o quadro chave.  
   
 -   O <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedade especifica quando (dentro da animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) um quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> for atingido.  
   
- Quando uma animação de quadro chave começa, itera por meio de seus quadros chave na ordem definida por suas <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedades.  
+ Quando uma animação de quadro-chave é iniciada, itera por meio de seus quadros chave na ordem definida por seus <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedades.  
   
--   Se não houver nenhum quadro chave no tempo 0, a animação cria uma transição entre o valor atual da propriedade de destino e o <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> do primeiro quadro chave; caso contrário, a saída da animação valor torna-se o valor do primeiro quadro chave.  
+-   Se não houver nenhum quadro-chave no tempo 0, a animação cria uma transição entre o valor atual da propriedade de destino e o <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> do primeiro quadro chave; caso contrário, a saída da animação valor torna-se o valor do primeiro quadro-chave.  
   
--   A animação cria uma transição entre o <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> do primeiro e segundo quadros chave usando o método de interpolação especificado pelo segundo quadro chave. A transição começa com o primeiro quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e termina quando o segundo quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> for atingido.  
+-   A animação cria uma transição entre o <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> primeiro e o segundo quadro chave usando o método de interpolação especificado pelo segundo quadro-chave. A transição começa com o primeiro quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> e termina quando o segundo quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> for atingido.  
   
 -   A animação continua, criando transições entre cada próximo quadro-chave e seu quadro-chave anterior.  
   
--   Por fim, as transições de animação para o valor do quadro chave com o maior momento chave que é igual ou menor do que a animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+-   Por fim, a animação faz a transição para o valor do quadro chave com o maior tempo-chave que é igual ou menor do que a animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- Se a animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A> é <xref:System.Windows.Duration.Automatic%2A> ou seus <xref:System.Windows.Media.Animation.Timeline.Duration%2A> é igual à hora do último quadro chave, a animação termina. Caso contrário, se a animação <xref:System.Windows.Duration> é maior do que o momento chave do último quadro chave, a animação mantém o valor de quadro chave até atinge o final do seu <xref:System.Windows.Duration>. Como todas as animações, uma animação de quadro-chave usa seu <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriedade para determinar se ela mantém o valor final quando atingir o final do seu período ativo. Para obter mais informações, consulte a [Visão geral dos comportamentos de tempo](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
+ Se a animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A> está <xref:System.Windows.Duration.Automatic%2A> ou seu <xref:System.Windows.Media.Animation.Timeline.Duration%2A> é igual à hora do último quadro chave, a animação termina. Caso contrário, se a animação <xref:System.Windows.Duration> é maior que o tempo-chave do último quadro chave, a animação mantém o valor de quadro-chave até que ele atinge o final de seu <xref:System.Windows.Duration>. Assim como todas as animações, uma animação de quadro-chave usa sua <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriedade para determinar se ela manterá o valor final quando atingir o final do seu período ativo. Para obter mais informações, consulte a [Visão geral dos comportamentos de tempo](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
   
- O exemplo a seguir usa o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> objeto definido no exemplo anterior para demonstrar como o <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> e <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedades de trabalho.  
+ O exemplo a seguir usa o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> objeto definido no exemplo anterior para demonstrar como o <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> e <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> das propriedades.  
   
 -   O primeiro quadro-chave define imediatamente o valor de saída da animação como 0.  
   
@@ -111,7 +111,7 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
 -   O quarto quadro-chave é animado de 50 a 200. Ele é iniciado após o término do terceiro quadro-chave (no tempo = 7 segundos) e é reproduzido por 1 segundo, sendo encerrado no tempo = 0:0:8.  
   
--   Porque o <xref:System.Windows.Media.Animation.Timeline.Duration%2A> da animação foi definida como 10 segundos, a animação mantém o valor final por dois segundos antes de terminar no momento = 0:0:10.  
+-   Porque o <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriedade da animação foi definida como 10 segundos, a animação mantém seu valor final por dois segundos antes de terminar no tempo = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -153,15 +153,15 @@ Este tópico apresenta as animações de quadro-chave. As animações de quadro-
   
 <a name="anim_spline"></a>   
 ### <a name="splined-interpolation"></a>Interpolação spline  
- A interpolação spline pode ser usada para obter efeitos de tempo mais realistas. Como as animações costumam ser usadas para imitar efeitos que ocorrem no mundo real, os desenvolvedores podem precisar de um controle refinado sobre a aceleração e desaceleração de objetos e uma manipulação minuciosa dos segmentos de tempo. Os quadros-chave spline permitem realizar animações com interpolação spline. Outros quadros chave, você deve especificar um <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> e <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>. Com um quadro chave spline, você também especificar um <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>. O exemplo a seguir mostra um quadro-chave spline único para um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Observe o <xref:System.Windows.Media.Animation.KeySpline> propriedade; o que faz com que um quadro chave spline diferente de outros tipos de quadros-chave.  
+ A interpolação spline pode ser usada para obter efeitos de tempo mais realistas. Como as animações costumam ser usadas para imitar efeitos que ocorrem no mundo real, os desenvolvedores podem precisar de um controle refinado sobre a aceleração e desaceleração de objetos e uma manipulação minuciosa dos segmentos de tempo. Os quadros-chave spline permitem realizar animações com interpolação spline. Outros quadros chave, você deve especificar uma <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> e <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>. Com um quadro-chave spline, você também especificar um <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>. O exemplo a seguir mostra um quadro-chave spline único para um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Observe que o <xref:System.Windows.Media.Animation.KeySpline> propriedade; o que é o que torna um quadro-chave spline diferente de outros tipos de quadros-chave.  
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- Uma curva de Bézier cúbica é definida por um ponto inicial, um ponto final e dois pontos de controle. O <xref:System.Windows.Media.Animation.KeySpline> propriedade de um quadro chave spline define o ponto de controle de uma curva de Bézier que se estende de (0,0) a (1,1). O primeiro ponto de controle controla o fator de curva da primeira metade da curva de Bézier e o segundo ponto de controle controla o fator de curva da segunda metade do segmento de Bézier. A curva resultante descreve a taxa de alteração desse quadro-chave spline. Quanto mais íngreme for a curva, mais rápido o quadro-chave mudará seus valores. Conforme a curva fica mais plana, o quadro-chave muda seus valores mais lentamente.  
+ Uma curva de Bézier cúbica é definida por um ponto inicial, um ponto final e dois pontos de controle. O <xref:System.Windows.Media.Animation.KeySpline> propriedade de um quadro-chave spline define os dois pontos de controle de uma curva de Bézier que se estende de (0,0) a (1,1). O primeiro ponto de controle controla o fator de curva da primeira metade da curva de Bézier e o segundo ponto de controle controla o fator de curva da segunda metade do segmento de Bézier. A curva resultante descreve a taxa de alteração desse quadro-chave spline. Quanto mais íngreme for a curva, mais rápido o quadro-chave mudará seus valores. Conforme a curva fica mais plana, o quadro-chave muda seus valores mais lentamente.  
   
- Você pode usar <xref:System.Windows.Media.Animation.KeySpline> para simular trajetórias físicas como água caindo ou saltando bolas ou aplicar outras "atenuação" e "Sair" efeitos para animações de movimento. Para efeitos de interação do usuário como esmaecimento da tela de fundo ou reassociação do botão de controle, você poderá aplicar a interpolação spline para acelerar ou diminuir a taxa de alteração de uma animação de uma maneira específica.  
+ Você pode usar <xref:System.Windows.Media.Animation.KeySpline> para simular trajetórias físicas como água caindo ou bolas saltitante ou aplicar outros "facilitar em" e "afastamento" efeitos a animações de movimento. Para efeitos de interação do usuário como esmaecimento da tela de fundo ou reassociação do botão de controle, você poderá aplicar a interpolação spline para acelerar ou diminuir a taxa de alteração de uma animação de uma maneira específica.  
   
- O exemplo a seguir especifica um <xref:System.Windows.Media.Animation.KeySpline> de 0,1 e 1,0, que cria a seguinte curva de Bézier.  
+ O exemplo a seguir especifica um <xref:System.Windows.Media.Animation.KeySpline> de 0,1, 1,0, que cria a curva de Bézier a seguir.  
   
  ![Uma curva de Bézier](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")  
 Um spline-chave com pontos de controle (0,0, 1,0) e (1,0, 0,0)  
@@ -170,7 +170,7 @@ Um spline-chave com pontos de controle (0,0, 1,0) e (1,0, 0,0)
   
  Esse quadro-chave é animado rapidamente quando é iniciado, desacelera e, em seguida, acelera novamente antes de ser encerrado.  
   
- O exemplo a seguir especifica um <xref:System.Windows.Media.Animation.KeySpline> de 0.5,0.25 0.75,1.0, que cria a seguinte curva de Bézier.  
+ O exemplo a seguir especifica um <xref:System.Windows.Media.Animation.KeySpline> de 0.5,0.25 0.75,1.0, que cria a curva de Bézier a seguir.  
   
  ![Uma curva de Bézier](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")  
 Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)  
@@ -179,25 +179,25 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
   
  Como a curvatura da curva de Bézier muda muito pouco, esse quadro-chave é animado a uma taxa quase constante; ele desacelera um pouco quase no final.  
   
- O exemplo a seguir usa um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> para animar a posição do retângulo. Porque o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> usa <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> objetos, a transição entre cada valor de quadro chave usa interpolação por splines.  
+ O exemplo a seguir usa um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> para animar a posição do retângulo. Porque o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> usa <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> objetos, a transição entre cada valor de quadro-chave usa a interpolação spline.  
   
  [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
- A interpolação spline pode ser difícil de entender; pode ser útil testar diferentes configurações. A [Amostra de animação de spline-chave](http://go.microsoft.com/fwlink/?LinkID=160011) permite alterar os valores do spline-chave e ver o resultado na animação.  
+ A interpolação spline pode ser difícil de entender; pode ser útil testar diferentes configurações. A [Amostra de animação de spline-chave](https://go.microsoft.com/fwlink/?LinkID=160011) permite alterar os valores do spline-chave e ver o resultado na animação.  
   
 <a name="combininginterpolationmethods"></a>   
 ### <a name="combining-interpolation-methods"></a>Combinando métodos de interpolação  
  É possível usar quadros-chave com diferentes tipos de interpolação em uma única animação de quadro-chave. Quando duas animações de quadro-chave com diferentes interpolações ocorrem uma após a outra, o método de interpolação do segundo quadro-chave é usado para criar a transição do primeiro valor para o segundo.  
   
- No exemplo a seguir, um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> é criada que usa a interpolação linear, por spline e discreta.  
+ No exemplo a seguir, um <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> é criado que usa a interpolação linear, spline e discreta.  
   
  [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
   
 <a name="keytimes"></a>   
 ## <a name="more-about-duration-and-key-times"></a>Mais informações sobre duração e tempos-chave  
- Assim como outras animações, animações de quadro-chave têm um <xref:System.Windows.Duration> propriedade. Além de especificar a animação <xref:System.Windows.Duration>, você precisa especificar qual parte da duração é fornecida para cada quadro chave. Você faz isso descrevendo um <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> para cada um dos quadros chave da animação. Cada quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> especifica esse quadro chave termina.  
+ Assim como outras animações, animações de quadro-chave têm uma <xref:System.Windows.Duration> propriedade. Além de especificar a animação <xref:System.Windows.Duration>, você precisa especificar qual parte da duração é fornecida para cada quadro-chave. Faça isso descrevendo um <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> para cada um dos quadros-chave da animação. Cada quadro chave <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> especifica esse quadro chave termina.  
   
- O <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedade não especifica quanto tempo o momento chave é reproduzido. O tempo durante o qual um quadro-chave é reproduzido é determinado pelo tempo em que o quadro-chave é encerrado, pelo tempo em que o quadro-chave anterior foi encerrado e pela duração da animação. Momentos chave podem ser especificados como um valor de tempo, uma porcentagem, ou como valores especiais <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ O <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriedade não especifica quanto tempo o tempo-chave é reproduzido. O tempo durante o qual um quadro-chave é reproduzido é determinado pelo tempo em que o quadro-chave é encerrado, pelo tempo em que o quadro-chave anterior foi encerrado e pela duração da animação. Tempos-chave podem ser especificados como um valor de tempo, uma porcentagem ou como os valores especiais <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
   
  A lista a seguir descreve as diferentes maneiras de especificar os tempos-chave.  
   
@@ -228,9 +228,9 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
 ### <a name="special-value-uniform"></a>Valor especial, uniforme  
- Use <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> tempo quando quiser que cada quadro chave tome a mesma quantidade de tempo.  
+ Use <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> de tempo quando desejar que cada quadro-chave Use a mesma quantidade de tempo.  
   
- Um <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> momento chave divide o tempo disponível igualmente pelo número de quadros chave para determinar a hora de término de cada quadro chave. O exemplo a seguir mostra uma animação com uma duração de 10 segundos e quatro quadros chave cujos momentos chave são especificados como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
+ Um <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> tempo-chave divide o tempo disponível igualmente pelo número de quadros-chave para determinar a hora de término de cada quadro chave. O exemplo a seguir mostra uma animação com uma duração de 10 segundos e quatro quadros-chave cujos momentos chave é especificados como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
   
 -   O primeiro quadro-chave é animado do valor base para 100 durante os primeiros 2,5 segundos, sendo encerrado no tempo = 0:0:2.5.  
   
@@ -245,17 +245,17 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
 ### <a name="special-value-paced"></a>Valor especial, personalizado  
  Use <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> quando quiser animar a uma taxa constante de tempo.  
   
- Um <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> momento chave aloca o tempo disponível de acordo com o comprimento de cada quadro chave para determinar a duração de cada quadro.  Isso fornecerá o comportamento em que a velocidade ou o ritmo da animação permanece constante.  O exemplo a seguir mostra uma animação com uma duração de 10 segundos e três quadros chave cujos momentos chave são especificados como <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ Um <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> tempo-chave aloca o tempo disponível de acordo com a duração de cada um dos quadros chave para determinar a duração de cada quadro.  Isso fornecerá o comportamento em que a velocidade ou o ritmo da animação permanece constante.  O exemplo a seguir mostra uma animação com uma duração de 10 segundos e três quadros-chave cujos momentos chave são especificados como <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
   
  [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
- Observe que, se a chave de tempo do último quadro chave é <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, seu momento chave resolvido será definido como 100%. Se o primeiro quadro-chave em uma animação com vários quadros for personalizado, seu tempo-chave resolvido será definido como 0. (Se a coleção de quadros-chave contiver apenas um único quadro-chave e ele for um quadro-chave personalizado, seu tempo-chave resolvido será definido como 100%.)  
+ Observe que, se for de tempo-chave do último quadro chave <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, seu tempo-chave resolvido será definido para 100 por cento. Se o primeiro quadro-chave em uma animação com vários quadros for personalizado, seu tempo-chave resolvido será definido como 0. (Se a coleção de quadros-chave contiver apenas um único quadro-chave e ele for um quadro-chave personalizado, seu tempo-chave resolvido será definido como 100%.)  
   
  Diferentes quadros-chave em uma animação de quadro-chave único podem usar diferentes tipos de tempos-chave.  
   
 <a name="combiningkeytimes"></a>   
 ## <a name="combining-key-times-out-of-order-key-frames"></a>Combinando tempos-chave e quadros-chave fora de ordem  
- Você pode usar a quadros-chave diferentes com <xref:System.Windows.Media.Animation.KeyTime> tipos na mesma animação de valor. E, embora seja recomendável adicionar quadros-chave na ordem em que eles devem ser reproduzidos, isso não é necessário. O sistema de animação e tempo pode resolver quadros-chave fora de ordem. Os quadros-chave com tempos-chave inválidos são ignorados.  
+ Você pode usar quadros-chave com diferentes <xref:System.Windows.Media.Animation.KeyTime> tipos na mesma animação de valor. E, embora seja recomendável adicionar quadros-chave na ordem em que eles devem ser reproduzidos, isso não é necessário. O sistema de animação e tempo pode resolver quadros-chave fora de ordem. Os quadros-chave com tempos-chave inválidos são ignorados.  
   
  A lista a seguir descreve o procedimento pelo qual os tempos-chave são resolvidos para os quadros-chave de uma animação de quadro-chave.  
   
@@ -265,30 +265,30 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
   
     1.  Se a animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A> não é <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, o tempo total de interpolação é o valor da animação <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriedade.  
   
-    2.  Caso contrário, o tempo total de interpolação é o maior <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valor especificado entre seus quadros chave, se existir alguma.  
+    2.  Caso contrário, o tempo total de interpolação será o maior <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valor especificado entre seus quadros chave, se existir alguma.  
   
     3.  Caso contrário, o tempo total de interpolação será de 1 segundo.  
   
-3.  Use o valor do tempo total de interpolação para resolver <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valores.  
+3.  Use o valor de tempo total de interpolação para resolver <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-4.  Resolva o último quadro-chave, caso ele ainda não tenha sido resolvido nas etapas anteriores. Se o <xref:System.Windows.Media.Animation.KeyTime> do último quadro-chave é <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, seu tempo resolvido será igual ao tempo de interpolação total.  
+4.  Resolva o último quadro-chave, caso ele ainda não tenha sido resolvido nas etapas anteriores. Se o <xref:System.Windows.Media.Animation.KeyTime> do último quadro-chave é <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, seu tempo resolvido será igual ao tempo total de interpolação.  
   
-     Se o <xref:System.Windows.Media.Animation.KeyTime> é o primeiro quadro chave <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> e essa animação tem mais de quadros de chave, resolve seu <xref:System.Windows.Media.Animation.KeyTime> valor como zero; se houver apenas um quadro chave e seu <xref:System.Windows.Media.Animation.KeyTime> valor é <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, é resolvido para o total tempo de interpolação, conforme descrito na etapa anterior.  
+     Se o <xref:System.Windows.Media.Animation.KeyTime> é o primeiro quadro-chave <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> e essa animação tiver mais de quadros de chave, resolva seu <xref:System.Windows.Media.Animation.KeyTime> valor como zero; se houver apenas um quadro chave e seu <xref:System.Windows.Media.Animation.KeyTime> valor é <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, é resolvido para o total tempo de interpolação, conforme descrito na etapa anterior.  
   
-5.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores: cada um recebe um pedaço igual do tempo disponível.  Durante esse processo, não resolvido <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores temporariamente são tratados como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores e recebem um momento resolvido temporário.  
+5.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores: cada um recebe uma parte igual do tempo disponível.  Durante esse processo, não resolvido <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores são tratados temporariamente como <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valores e obtenha um momento resolvido temporário.  
   
-6.  Resolver o <xref:System.Windows.Media.Animation.KeyTime> valores de quadros chave com momentos chave não especificados usando os quadros chave declarados mais próximos deles que tenham resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
+6.  Resolver o <xref:System.Windows.Media.Animation.KeyTime> valores de quadros-chave com momentos chave não especificados usando quadros chave declarados mais próximos deles que tenham resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
-7.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Use o <xref:System.Windows.Media.Animation.KeyTime> valores de vizinhos chave quadros para determinar seu tempo resolvido.  O objetivo é garantir que a velocidade da animação é constante em relação ao tempo resolvido desse quadro-chave.  
+7.  Resolve os demais <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valores. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Use o <xref:System.Windows.Media.Animation.KeyTime> valores de vizinhos quadros para determinar seus tempos resolvidos da chave.  O objetivo é garantir que a velocidade da animação é constante em relação ao tempo resolvido desse quadro-chave.  
   
-8.  Classificar os quadros-chave no tempo resolvidos (chave primária) e ordem de declaração (chave secundária), ou seja, usa uma classificação estável com base no quadro chave resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
+8.  Classifique os quadros-chave na ordem de tempo resolvido (chave primária) e ordem de declaração (chave secundária), ou seja, use uma classificação estável com base no quadro-chave resolvido <xref:System.Windows.Media.Animation.KeyTime> valores.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Media.Animation.KeyTime>  
  <xref:System.Windows.Media.Animation.KeySpline>  
  <xref:System.Windows.Media.Animation.Timeline>  
- [Exemplo de animação de chave de Spline](http://go.microsoft.com/fwlink/?LinkID=160011)  
- [Exemplo de animação de quadro-chave](http://go.microsoft.com/fwlink/?LinkID=160012)  
+ [Exemplo de animação de spline-chave](https://go.microsoft.com/fwlink/?LinkID=160011)  
+ [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012)  
  [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Visão geral de storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
  [Tópicos explicativos sobre quadros-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  

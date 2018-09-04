@@ -5,11 +5,11 @@ ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 04c2f4bdfe2a6309fde0821db308ee2a83887323
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456364"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520546"
 ---
 # <a name="wif-session-management"></a>Gerenciamento de sessões do WIF
 Quando um cliente tenta acessar um recurso protegido hospedado por uma terceira parte confiável pela primeira vez, o cliente deve primeiro se autenticar em um STS (serviço de token de segurança) que é de confiança da terceira parte confiável. Em seguida, o STS emite um token de segurança para o cliente. O cliente apresenta esse token para a terceira parte confiável, que, em seguida, concede o acesso do cliente ao recurso protegido. No entanto, você não deseja que o cliente precise se autenticar novamente no STS a cada solicitação, especialmente, porque ele até mesmo pode não estar no mesmo computador ou no mesmo domínio da terceira parte confiável. Em vez disso, o WIF (Windows Identity Foundation) faz com que o cliente e a terceira parte confiável estabeleçam uma sessão em que o cliente usa um token de segurança de sessão para se autenticar na terceira parte confiável para todas as solicitações após a primeira solicitação. A terceira parte confiável pode usar esse token de segurança de sessão, que é armazenado em um cookie, para reconstruir o <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> do cliente.  

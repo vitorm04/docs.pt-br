@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 51f84a1272749b92f8ef4a74771c84e01511a678
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481644"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521320"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Como adicionar e remover guias com o TabControl dos Windows Forms usando o designer
 Quando você coloca um <xref:System.Windows.Forms.TabControl> controle no formulário, ele contém duas guias por padrão. Você pode adicionar ou remover guias usando o designer.  

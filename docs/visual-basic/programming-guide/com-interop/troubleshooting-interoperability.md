@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472001"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516821"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Solucionando problemas de interoperabilidade (Visual Basic)
 Quando você interoperar entre o código gerenciado do e COM o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], você pode encontrar um ou mais dos seguintes problemas comuns.  

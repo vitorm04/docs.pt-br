@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484581"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505411"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 *Representação* é uma técnica comum usada pelos serviços para restringir o acesso para cliente aos recursos de um domínio serviço. Recursos do serviço de domínio podem ser recursos do computador, como arquivos locais (representação), ou um recurso em outro computador, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [representar o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  

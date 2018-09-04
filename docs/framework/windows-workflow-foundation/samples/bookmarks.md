@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387383"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528984"
 ---
 # <a name="bookmarks"></a>Indicadores
 Este exemplo demonstra como escrever uma atividade personalizado que cria um indicador para receber entrada externo. O exemplo também inclui um aplicativo de console básico que usa a atividade personalizado em um fluxo de trabalho e mostra como descobrir e para continuar indexadores associados com um fluxo de trabalho em execução como ouvinte exemplo. Para obter mais informações sobre os indicadores, consulte [indicadores](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

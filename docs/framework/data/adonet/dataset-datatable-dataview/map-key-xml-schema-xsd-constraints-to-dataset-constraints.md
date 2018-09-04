@@ -1,29 +1,29 @@
 ---
-title: Restrições de esquema XML (XSD) às restrições de conjunto de dados de chave de mapa
+title: Mapear restrições de esquema XML (XSD) de chave para restrições de conjunto de dados
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: ad39fd75a3f8872ed2c24a65481209e3c772a638
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fcc2799a929340f68d8a8740512ed061fd51090e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757860"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501451"
 ---
-# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Restrições de esquema XML (XSD) às restrições de conjunto de dados de chave de mapa
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapear restrições de esquema XML (XSD) de chave para restrições de conjunto de dados
 Em um esquema, você pode especificar uma restrição de chave em um elemento ou atributo usando o **chave** elemento. O elemento ou atributo no qual uma restrição de chave for especificada deve ter valores exclusivos em qualquer instância do esquema e não pode ter valores nulos.  
   
- A restrição de chave é semelhante a restrição unique, exceto que a coluna na qual é definida uma restrição de chave não pode ter valores nulos.  
+ A restrição de chave é semelhante a restrição unique, exceto que a coluna na qual uma restrição de chave é definida não é possível ter valores nulos.  
   
  A tabela a seguir descreve o **msdata** atributos que você pode especificar o **chave** elemento.  
   
 |Nome do atributo|Descrição|  
 |--------------------|-----------------|  
 |**msdata:ConstraintName**|Se esse atributo for especificado, seu valor é usado como o nome da restrição. Caso contrário, o **nome** atributo fornece o valor do nome da restrição.|  
-|**msdata:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, o **IsPrimaryKey** restrição está definida como **true**, tornando uma chave primária. O **AllowDBNull** coluna está definida como **false**, porque as chaves primárias não podem ter valores nulos.|  
+|**msdata:PrimaryKey**|Se `PrimaryKey="true"` estiver presente, o **IsPrimaryKey** restrição estiver definida como **true**, tornando-o uma chave primária. O **AllowDBNull** coluna estiver definida como **falso**, porque as chaves primárias não podem ter valores nulos.|  
   
- Na conversão do esquema no qual uma restrição de chave for especificada, o processo de mapeamento cria uma restrição exclusiva na tabela com o **AllowDBNull** propriedade column definida como **false** para cada coluna a restrição. O **IsPrimaryKey** propriedade da restrição unique também é definida como **false** , a menos que você especificou `msdata:PrimaryKey="true"` no **chave** elemento. Isso é idêntico de uma restrição exclusiva no esquema no qual `PrimaryKey="true"`.  
+ Na conversão de esquema no qual uma restrição de chave for especificada, o processo de mapeamento cria uma restrição exclusiva na tabela com o **AllowDBNull** propriedade column definida como **falso** para cada coluna a restrição. O **IsPrimaryKey** propriedade da restrição exclusiva também é definida como **falso** , a menos que você especificou `msdata:PrimaryKey="true"` no **chave** elemento. Isso é idêntico de uma restrição exclusiva no esquema no qual `PrimaryKey="true"`.  
   
- No exemplo de esquema a seguir, o **chave** elemento Especifica a restrição de chave no **CustomerID** elemento.  
+ No exemplo de esquema a seguir, o **chave** elemento Especifica a restrição de chave sobre o **CustomerID** elemento.  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ Em um esquema, você pode especificar uma restrição de chave em um elemento ou
 </xs:schema>   
 ```  
   
- O **chave** elemento Especifica que os valores da **CustomerID** elemento filho do **clientes** elemento deve ter valores exclusivos e não pode ter valores nulos. Converter o esquema de linguagem XSD de definição de esquema XML, o processo de mapeamento cria a tabela a seguir:  
+ O **chave** elemento Especifica que os valores da **CustomerID** elemento filho do **clientes** elemento deve ter valores exclusivos e não pode ter valores nulos. Na conversão do esquema de (XSD) de linguagem de definição de esquema XML, o processo de mapeamento cria a tabela a seguir:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- O mapeamento de esquema XML também cria um **UniqueConstraint** no **CustomerID** coluna, conforme mostrado no exemplo a seguir <xref:System.Data.DataSet>. (Para manter a simplicidade, somente as propriedades relevantes são mostradas.)  
+ O mapeamento de esquema XML também cria uma **UniqueConstraint** na **CustomerID** coluna, conforme mostrado no seguinte <xref:System.Data.DataSet>. (Para simplificar, somente as propriedades relevantes são exibidas.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,11 +74,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- No **conjunto de dados** que é gerado, o **IsPrimaryKey** propriedade o **UniqueConstraint** é definido como **true** porque o esquema Especifica `msdata:PrimaryKey="true"` no **chave** elemento.  
+ No **DataSet** que é gerado, o **IsPrimaryKey** propriedade do **UniqueConstraint** é definido como **true** porque o esquema Especifica `msdata:PrimaryKey="true"` no **chave** elemento.  
   
- O valor da **ConstraintName** propriedade do **UniqueConstraint** no **conjunto de dados** é o valor da **msdata:ConstraintName** o atributo especificado no **chave** elemento no esquema.  
+ O valor da **ConstraintName** propriedade do **UniqueConstraint** no **conjunto de dados** é o valor da **msdata:ConstraintName** atributo especificado na **chave** elemento no esquema.  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  [Gerando relações de conjunto de dados do esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
 ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417544"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508338"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicializadores de coleção (Visual Basic)
 Os *inicializadores de coleção* fornecem uma sintaxe abreviada que permite criar uma coleção e preenchê-la com um conjunto inicial de valores. Os inicializadores de coleção são úteis quando você está criando uma coleção de um conjunto de valores conhecidos, por exemplo, uma lista de opções de menu ou de categorias, um conjunto inicial de valores numéricos, uma lista estática de cadeias de caracteres, como nomes de mês ou de dias, ou localizações geográficas, como uma lista de estados usada para validação.  

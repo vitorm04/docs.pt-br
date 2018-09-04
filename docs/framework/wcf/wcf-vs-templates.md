@@ -3,11 +3,11 @@ title: Modelos do Visual Studio do WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: 73d2645977381602ef028d091675a22fb933d60b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512703"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 Modelos do Visual Studio Windows Communication Foundation (WCF) são predefinidos de projeto e modelos de item, que você pode usar no Visual Studio para criar rapidamente os serviços WCF e aplicativos ao redor.  

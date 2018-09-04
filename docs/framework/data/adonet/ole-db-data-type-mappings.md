@@ -3,11 +3,11 @@ title: Mapeamentos de tipo de dados do OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
 ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43457099"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521361"
 ---
 # <a name="ole-db-data-type-mappings"></a>Mapeamentos de tipo de dados do OLE DB
 A tabela a seguir mostra o inferido [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipo para tipos de dados do .NET Framework Data Provider para ADO e OLE DB (<xref:System.Data.OleDb>). Os métodos de acessador tipado para o <xref:System.Data.OleDb.OleDbDataReader> também são listados.  

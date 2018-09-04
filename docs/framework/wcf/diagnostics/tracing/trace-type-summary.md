@@ -3,11 +3,11 @@ title: Resumo de tipo de rastreamento
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
 ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403837"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512532"
 ---
 # <a name="trace-type-summary"></a>Resumo de tipo de rastreamento
 [Níveis de origem](https://go.microsoft.com/fwlink/?LinkID=94943) define vários níveis de rastreamento: crítico, erro, aviso, informações e detalhado, bem como fornece a descrição do `ActivityTracing` sinalizador, que alterna a saída de rastreamento de eventos de transferência de limite e a atividade.  

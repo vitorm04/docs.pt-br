@@ -2,18 +2,18 @@
 title: Dados de extrair WF usando o rastreamento
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501577"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Dados de extrair WF usando o rastreamento
 Este exemplo demonstra como usar o rastreamento de fluxo de trabalho para extrair variáveis e argumentos de fluxo de trabalho de atividades. Ele também mostra a adição de anotações a acompanhar registros e a extração de carregamento útil dos dados dentro dos registros personalizados de rastreamento. O exemplo usa o rastreamento de evento para o Windows (ETW) que controla o participante para extrair dados de fluxo de trabalho.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Windows Workflow Foundation (WF) fornece controle para obter visibilidade a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Juntamente com os registros de acompanhamento de fluxo de trabalho, os dados dentro de instância de fluxo de trabalho podem ser extraídos de fluxo de trabalho. A lista a seguir detalha os tipos de dados que podem ser extraídos de registros de acompanhamento:  
+ Windows Workflow Foundation (WF) fornece o rastreamento para obter visibilidade sobre a execução de uma instância de fluxo de trabalho. O tempo de execução de rastreamento emite-se registros de acompanhamento de fluxo de trabalho durante a execução de fluxo de trabalho. Juntamente com os registros de acompanhamento de fluxo de trabalho, os dados dentro de instância de fluxo de trabalho podem ser extraídos de fluxo de trabalho. A lista a seguir detalha os tipos de dados que podem ser extraídos de registros de acompanhamento:  
   
 1.  Variáveis de fluxo de trabalho em uma atividade e registros de rastreamento durante a execução da atividade.  
   
@@ -96,21 +96,21 @@ Este exemplo demonstra como usar o rastreamento de fluxo de trabalho para extrai
   
 6.  Antes de chamar o serviço, ligue o visualizador de eventos e certifique-se de que o log de eventos é escutando eventos de rastreamento emissores de serviço de fluxo de trabalho.  
   
-7.  Do **iniciar** menu, selecione **ferramentas administrativas** e **Visualizador de eventos**.  
+7.  Dos **inicie** menu, selecione **ferramentas administrativas** e, em seguida, **Visualizador de eventos**.  
   
-8.  Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, e **Microsoft**. Clique com botão direito **Microsoft** e selecione **exibição** e **Mostrar Logs analíticos e depuração**.  
+8.  Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, e **Microsoft**. Clique com botão direito **Microsoft** e selecione **exibição** e, em seguida, **Mostrar Logs analíticos e depuração**.  
   
      Certifique-se de que o **Mostrar Logs analíticos e depuração** opção estiver marcada.  
   
-9. Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor de aplicativo**. Clique com botão direito **analítico** e selecione **Habilitar Log**.  
+9. Na exibição de árvore no Visualizador de eventos, navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **Habilitar Log**.  
   
 10. Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra o cliente de teste de windows.  
   
-     O cliente de teste do WCF (WcfTestClient.exe) está localizado no \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] pasta de instalação > \Common7\IDE\ pasta.  
+     O cliente de teste do WCF (WcfTestClient.exe) está localizado na \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] pasta de instalação > \Common7\IDE\ pasta.  
   
      A pasta de instalação de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] é C:\Program Files\Microsoft Visual Studio 10,0.  
   
-11. No cliente de teste do WCF, selecione **Adicionar serviço** do **arquivo** menu.  
+11. No cliente de teste do WCF, selecione **Adicionar serviço** da **arquivo** menu.  
   
      Adicione o endereço de WSDL de serviço local você copiou anterior na caixa de entrada.  
   
@@ -120,7 +120,7 @@ Este exemplo demonstra como usar o rastreamento de fluxo de trabalho para extrai
   
 13. Clique em **invocar**.  
   
-14. Retorne ao Visualizador de eventos e navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor de aplicativo**. Clique com botão direito **analítico** e selecione **atualizar**. Os eventos de fluxo de trabalho são em intervalos de identificação de evento 100-199.  
+14. Retorne ao Visualizador de eventos e navegue até **Visualizador de eventos**, **Applications and Services Logs**, **Microsoft**, **Windows**,  **Aplicativos de servidor**. Clique com botão direito **analítico** e selecione **atualizar**. Os eventos de fluxo de trabalho são em intervalos de identificação de evento 100-199.  
   
      Os eventos contêm as anotações, variáveis, os argumentos e os registros personalizados de rastreamento que podem ser exibidos no visualizador de eventos.  
   
@@ -144,16 +144,16 @@ Este exemplo demonstra como usar o rastreamento de fluxo de trabalho para extrai
 >   
 >  `The description for Event ID <id> from source Microsoft-Windows-Application Server-Applications cannot be found. Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.`  
 >   
->  Se você encontrar esse erro, clique em **atualização** no painel Ações. O evento agora deve decodificar corretamente.  
+>  Se você encontrar esse erro, clique em **Refresh** no painel Ações. O evento agora deve decodificar corretamente.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de monitoramento do AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

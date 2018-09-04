@@ -3,11 +3,11 @@ title: Usando variáveis com o.NET Framework 3.5 Ruleset
 ms.date: 03/30/2017
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
 ms.openlocfilehash: 64d47564076e19e152e30b6ab0cb3900ce53cfa1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395148"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512848"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>Usando variáveis com o.NET Framework 3.5 Ruleset
 Este exemplo demonstra como criar um fluxo de trabalho que usa a atividade de <xref:System.Activities.Statements.Interop> para integrar uma atividade personalizado escrito em [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] que use a diretiva e regras. O fluxo de trabalho passar dados personalizado pela atividade variáveis de associação às propriedades de dependência exposta pela atividade personalizado.  

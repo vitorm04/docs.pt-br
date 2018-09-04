@@ -3,11 +3,11 @@ title: Gerenciamento suspenso da instância
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524909"
 ---
 # <a name="suspended-instance-management"></a>Gerenciamento suspenso da instância
 Este exemplo demonstra como gerenciar as instâncias de fluxo de trabalho que foram suspensas.  A ação padrão para <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> é `AbandonAndSuspend`. Isso significa que por padrão, as exceções não tratadas lançadas de uma instância de fluxo de trabalho hospedada em <xref:System.ServiceModel.WorkflowServiceHost> causarão a instância a ser descartado de memória (abandonada) e de bens/versão armazenado de instância a ser marcada como suspendida. Uma instância suspendida de fluxo de trabalho não poderá executar até que estado unsuspended.  

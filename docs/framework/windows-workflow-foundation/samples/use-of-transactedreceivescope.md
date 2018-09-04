@@ -3,11 +3,11 @@ title: Uso de TransactedReceiveScope
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
 ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481465"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501636"
 ---
 # <a name="use-of-transactedreceivescope"></a>Uso de TransactedReceiveScope
 Este exemplo mostra como fluir uma transação de um cliente a um servidor usando <xref:System.Activities.Statements.TransactionScope> para criar uma nova transação no cliente e em <xref:System.ServiceModel.Activities.TransactedReceiveScope> para receber uma mensagem com uma transação fluída e definir o escopo o tempo de vida de transação no servidor. O exemplo consiste de dois projetos que preenchem as funções de cliente e servidor.  

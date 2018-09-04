@@ -2,15 +2,15 @@
 title: Composta consultas aninhadas Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 92e3153350787ef75c48ee52f1b6c68e09e15b4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760850"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528150"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Composta consultas aninhadas Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma linguagem funcional rico. O bloco de construção de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma expressão. Diferentemente do SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] não está limitado a um conjunto de resultados de tabela: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oferece suporte a composição de expressões complexas que podem ter expressões aninhadas, parâmetros ou literais. Um valor na expressão pode ser parametrizado ou composto por alguma outra expressão.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma linguagem funcional rico. O bloco de construção de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] é uma expressão. Ao contrário do SQL convencional, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] não está limitado a um conjunto de resultados tabulares: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] suporta composto expressões complexas que podem ter literais, parâmetros ou expressões aninhadas. Um valor na expressão pode ser parametrizado ou composto de alguma outra expressão.  
   
 ## <a name="nested-expressions"></a>Expressões aninhadas  
  Uma expressão aninhada pode ser colocadas em qualquer lugar um valor de tipo que retorna é aceito. Por exemplo:  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- O exemplo a seguir demonstra como corretamente aninhar expressões em [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [como: ordenar a união de duas consultas](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ O exemplo a seguir demonstra como aninhar expressões corretamente em [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [como: solicitar a união de duas consultas](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Consultas aninhadas na projeção  
  Consultas aninhadas na cláusula de projeto podem obter convertido em consultas de produto cartesiano no servidor. Em alguns servidores backend, incluindo o servidor de SLQ, isso pode fazer com que a tabela de TempDB obtenha muito grande, que pode afetar o desempenho do servidor.  

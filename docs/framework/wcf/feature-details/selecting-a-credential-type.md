@@ -3,11 +3,11 @@ title: Selecionando um tipo de credencial
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396606"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503385"
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 *Credenciais* são os dados que usa o Windows Communication Foundation (WCF) para estabelecer uma identidade reivindicada ou recursos. Por exemplo, o passport é uma credencial que um governo emite para provar cidadania em um país ou região. No WCF, as credenciais podem assumir várias formas, como tokens de nome de usuário e certificados x. 509. Este tópico discute como selecionar o credencial correto para seu aplicativo, como eles são usados no WCF e credenciais.  

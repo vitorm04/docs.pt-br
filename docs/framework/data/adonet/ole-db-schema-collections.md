@@ -1,19 +1,19 @@
 ---
-title: Coleções de esquema de banco de dados OLE
+title: Coleções de esquema OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514483"
 ---
-# <a name="ole-db-schema-collections"></a>Coleções de esquema de banco de dados OLE
+# <a name="ole-db-schema-collections"></a>Coleções de esquema OLE DB
 Esta seção discute o suporte de coleção de esquema para os provedores OLE DB para Microsoft SQL Server, Oracle e Microsoft Jet.  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Provedor Microsoft SQL Server, OLE DB  
- O Microsoft OLE DB Driver do SQL Server suporta as seguintes coleções de esquema específico além das coleções de esquema comuns:  
+ O Microsoft OLE DB Driver do SQL Server suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
 -   Tabelas  
   
@@ -131,10 +131,10 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INDEX_CATALOG|Cadeia de Caracteres|  
 |INDEX_SCHEMA|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|PRIMARY_KEY|Boolean|  
+|PRIMARY_KEY QUE|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
-|TIPO DE|Int32|  
+|TIPO|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -152,7 +152,7 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INTEGRADO|Boolean|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Provedor OLE DB Microsoft Oracle  
- O Microsoft OLE DB Driver Oracle suporta as seguintes coleções de esquema específico além das coleções de esquema comuns:  
+ O Microsoft OLE DB Driver Oracle suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
 -   Tabelas  
   
@@ -274,10 +274,10 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INDEX_CATALOG|Cadeia de Caracteres|  
 |INDEX_SCHEMA|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|PRIMARY_KEY|Boolean|  
+|PRIMARY_KEY QUE|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
-|TIPO DE|Int32|  
+|TIPO|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -294,8 +294,8 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |FILTER_CONDITION|Cadeia de Caracteres|  
 |INTEGRADO|Boolean|  
   
-## <a name="microsoft-jet-ole-db-provider"></a>Provedor do Microsoft Jet OLE DB  
- O Microsoft Jet OLE DB Driver suporta as seguintes coleções de esquema específico além das coleções de esquema comuns:  
+## <a name="microsoft-jet-ole-db-provider"></a>Provedor OLE DB Microsoft Jet  
+ O Microsoft Jet OLE DB Driver suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
   
 -   Tabelas  
   
@@ -391,10 +391,10 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INDEX_CATALOG|Cadeia de Caracteres|  
 |INDEX_SCHEMA|Cadeia de Caracteres|  
 |INDEX_NAME|Cadeia de Caracteres|  
-|PRIMARY_KEY|Boolean|  
+|PRIMARY_KEY QUE|Boolean|  
 |EXCLUSIVO|Boolean|  
 |CLUSTERED|Boolean|  
-|TIPO DE|Int32|  
+|TIPO|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -412,4 +412,4 @@ Esta seção discute o suporte de coleção de esquema para os provedores OLE DB
 |INTEGRADO|Boolean|  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

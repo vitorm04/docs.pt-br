@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480900"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505133"
 ---
 # <a name="tilebrush-overview"></a>Visão geral de TileBrush
 <xref:System.Windows.Media.TileBrush> objetos oferecem uma grande quantidade de controle sobre como uma área é pintada com uma imagem <xref:System.Windows.Media.Drawing>, ou <xref:System.Windows.Media.Visual>. Este tópico descreve como usar <xref:System.Windows.Media.TileBrush> recursos para obter mais controle sobre como uma <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> pinta uma área.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
 ms.openlocfilehash: dff32eb29e9299274cc137a07fe1b080911ab420
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198790"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513735"
 ---
 # <a name="myapplicationinfo-object"></a>Objeto My.Application.Info
 Fornece propriedades para obter informações sobre o aplicativo, como o número de versão, descrição, assemblies carregados e assim por diante.  

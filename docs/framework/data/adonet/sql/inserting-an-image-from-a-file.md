@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387458"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517757"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserindo uma imagem de um arquivo
 Você pode gravar um objeto binário grande (BLOB) em um banco de dados como dados binários ou de caracteres, dependendo do tipo de campo na fonte de dados. BLOB é um termo genérico que faz referência aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.  

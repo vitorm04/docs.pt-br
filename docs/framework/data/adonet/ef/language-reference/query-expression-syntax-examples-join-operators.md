@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
 ms.openlocfilehash: 4db511d74c4cce82bfd010f77cb1580dbb704b41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476018"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501892"
 ---
 # <a name="query-expression-syntax-examples-join-operators"></a>Exemplos de sintaxe de expressão de consulta: operadores de junção
 A junção é uma operação importante em consultas que usam fontes de dados de destino que não têm nenhuma relação navegável entre si, como, por exemplo, as tabelas do banco de dados relacional. Uma junção de duas fontes de dados é a associação de objetos em uma fonte de dados com objetos que compartilham um atributo comum em outra fonte de dados. Para obter mais informações, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

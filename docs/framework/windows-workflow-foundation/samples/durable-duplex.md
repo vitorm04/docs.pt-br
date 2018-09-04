@@ -2,18 +2,18 @@
 title: Frente e verso durável
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 107c617fa4a8ee0279dcaa07e495587c617b866e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809421"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513347"
 ---
 # <a name="durable-duplex"></a>Frente e verso durável
-Este exemplo demonstra como instalar e configurar o exchange mensagem duplex durável usando as atividades de mensagens no Windows Workflow Foundation (WF). Uma troca frente e verso durável de mensagem é uma troca bidirecional de mensagem que ocorra um longo período de tempo. O tempo de vida de troca de mensagem pode ser maior que o tempo de vida do canal de comunicação e o tempo de vida de memória das instâncias de serviço.  
+Este exemplo demonstra como definir e configurar a troca de mensagens duplex durável usando as atividades de mensagem do Windows Workflow Foundation (WF). Uma troca frente e verso durável de mensagem é uma troca bidirecional de mensagem que ocorra um longo período de tempo. O tempo de vida de troca de mensagem pode ser maior que o tempo de vida do canal de comunicação e o tempo de vida de memória das instâncias de serviço.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Neste exemplo, dois serviços do Windows Communication Foundation (WCF) implementados usando o Windows Workflow Foundation são configurados para ter uma troca de mensagens duplex durável. A troca de mensagens duplex durável é composta de duas mensagens unidirecionais enviadas através de MSMQ e correlacionados usando [.NET contexto Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). As mensagens são enviadas usando as atividades de mensagem de <xref:System.ServiceModel.Activities.Send> e de <xref:System.ServiceModel.Activities.Receive> . O contexto - .NET é usado especificar o endereço de retorno de chamada nas mensagens enviadas. Ambos os serviços são hospedados usando serviços de ativação de processo do Windows (WAS) e configurados para ativar persistência de instâncias de serviços.  
+ Neste exemplo, dois serviços do Windows Communication Foundation (WCF) implementados usando o Windows Workflow Foundation são configurados para ter uma troca de mensagens duplex durável. A troca de mensagens duplex durável é composta de duas unidirecionais mensagens enviadas sobre MSMQ e usar correlacionada [troca de contexto do .NET](https://go.microsoft.com/fwlink/?LinkID=166059). As mensagens são enviadas usando as atividades de mensagem de <xref:System.ServiceModel.Activities.Send> e de <xref:System.ServiceModel.Activities.Receive> . O contexto - .NET é usado especificar o endereço de retorno de chamada nas mensagens enviadas. Ambos os serviços são hospedados usando serviços de ativação de processo do Windows (WAS) e configurados para ativar persistência de instâncias de serviços.  
   
  O primeiro serviço (Service1.xamlx) envia uma solicitação para o serviço de enviar (Service2.xamlx) fazer qualquer trabalho. O trabalho é concluído uma vez, envia de Service2.xamlx uma notificação de volta a Service1.xamlx para indicar que o trabalho foi concluído. Um aplicativo de console do fluxo de trabalho configura as filas que os serviços são escuta sobre e envia a mensagem inicial de Início para ativar Service1.xamlx. Uma vez que Service1.xamlx recebe notificação de Service2.xamlx que o aplicativo trabalho foi concluído, Service1.xamlx salva o resultado a um arquivo XML. Enquanto aguarda a mensagem de retorno de chamada, Service1.xamlx mantém o estado da instância que usa <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>padrão. Service2.xamlx mantém o estado da instância como parte de concluir o trabalho solicitado por Service1.xamlx.  
   
@@ -42,7 +42,7 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
 >  A associação usada por este exemplo não é seguro. Para implantar seu aplicativo você deve configurar a associação com base nos requisitos de segurança do seu aplicativo.  
   
 > [!NOTE]
->  Filas usadas neste exemplo não são transacionais. Para obter um exemplo que mostra como configurar o uso de filas de transação trocas de mensagens do WCF, consulte o [ativação MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) exemplo.  
+>  Filas usadas neste exemplo não são transacionais. Para obter um exemplo que mostra como configurar a troca de mensagens do WCF usando filas de transação, consulte o [ativação de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) exemplo.  
   
  A mensagem enviada por Service1.xamlx a Service2.xamlx é enviada usando um ponto final do cliente configurado com o endereço de Service2.xamlx e associação personalizado definido anteriormente. O retorno de chamada de Service2.xamlx a Service1.xamlx é enviado usando um ponto final do cliente sem o endereço explicitamente configurado como o endereço é tirado de contexto de retorno de chamada enviado por Service1.xamlx. O exemplo de código a seguir define os pontos de extremidade de cliente.  
   
@@ -120,7 +120,7 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
         aspnet_regiis -i  
         ```  
   
-    2.  Executar [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] com permissões de administrador clicando com o [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selecionando **executar como administrador**.  
+    2.  Execute [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] com permissões de administrador clicando com o [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e selecionando **executar como administrador**.  
   
     3.  Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de DurableDuplex.sln.  
   
@@ -130,17 +130,17 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
   
     2.  Abra o **gerenciamento do computador** console executando `Compmgmt.msc` em um prompt de comando.  
   
-    3.  Expanda **serviços e aplicativos**, **enfileiramento**. **Filas particulares**.  
+    3.  Expandir **aplicativos e serviços**, **enfileiramento**. **Filas particulares**.  
   
-    4.  As filas de durableduplex/service1.xamlx e durableduplex/service2.xamlx e selecione **propriedades**.  
+    4.  Clique com botão direito as durableduplex/service1.xamlx e filas de durableduplex/service2.xamlx e selecione **propriedades**.  
   
-    5.  Selecione o **segurança** guia e permitir **todos receber mensagem**, **inspecionar mensagem** e **enviar mensagem** permissões para ambas as filas.  
+    5.  Selecione o **segurança** guia e permitir **todos recebe a mensagem**, **inspecionar mensagem** e **enviar mensagem** permissões para ambas as filas.  
   
     6.  Abra o Gerenciador do IIS (Serviços de Informações da Internet).  
   
-    7.  Navegue até **servidor**, **Sites**, **site da Web padrão**, **privada**, **Duplex durável** e selecione **Opções avançadas**.  
+    7.  Navegue até **Server**, **Sites**, **Default Web site**, **privada**, **Duplex durável** e selecione **Opções avançadas**.  
   
-    8.  Alterar o **protocolos habilitados** para **http,net.msmq**.  
+    8.  Alterar o **protocolos habilitados** à **MSMQ**.  
   
 4.  Executar o exemplo.  
   
@@ -160,15 +160,15 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
   
 2.  Remova o aplicativo virtual para os serviços.  
   
-    1.  Abra o Gerenciador de serviços de informações da Internet (IIS) executando `Inetmgr.exe` em um prompt de comando.  
+    1.  Abra o Gerenciador de serviços de informações da Internet (IIS), executando `Inetmgr.exe` em um prompt de comando.  
   
-    2.  Navegue até o site da Web padrão e remover o **privada** diretório virtual.  
+    2.  Navegue até o site padrão e remover as **privada** diretório virtual.  
   
 3.  Remover a configuração das filas para esse exemplo.  
   
     1.  Abra o console de gerenciamento do computador executando `Compmgmt.msc` em um prompt de comando.  
   
-    2.  Expanda **serviços e aplicativos**, **enfileiramento**, **filas particulares**.  
+    2.  Expandir **aplicativos e serviços**, **enfileiramento**, **privativas**.  
   
     3.  Excluir o durableduplex/service1.xamlx e filas de durableduplex/service2.xamlx.  
   
@@ -179,6 +179,6 @@ Este exemplo demonstra como instalar e configurar o exchange mensagem duplex dur
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

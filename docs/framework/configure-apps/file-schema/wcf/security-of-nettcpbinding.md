@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f58dd0ee1b00785e82628e5442c736866ffe7db5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 13aeb3261fdb9689caa1dea1ec7382fdb9d9b1ce
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751227"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516967"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;segurança&gt; de &lt;netTcpBinding&gt;
 Define as configurações de segurança para uma associação.  
@@ -34,7 +34,7 @@ Define as configurações de segurança para uma associação.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos pai de atributos e elementos filho  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -42,14 +42,14 @@ Define as configurações de segurança para uma associação.
 |---------------|-----------------|  
 |modo|Opcional. Especifica o tipo de segurança que é aplicado. Os valores válidos são mostrados abaixo. O valor padrão é `Transport`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
   
-## <a name="mode-attribute"></a>Atributo mode  
+## <a name="mode-attribute"></a>modo de atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|A segurança é desabilitada.|  
-|Transporte|Segurança de transporte é fornecida com o uso de TLS sobre TCP ou SPNego. O serviço precisará ser configurado com certificados SSL. É possível controlar o nível de proteção com esse modo.|  
-|Mensagem|A segurança é fornecida usando a segurança de mensagem SOAP. Por padrão, o corpo SOAP é criptografado e assinado. Esse modo oferece uma variedade de recursos, como se as credenciais de serviço estão disponíveis no cliente fora da banda, o conjunto de algoritmos para usar e o nível de proteção para aplicar ao corpo da mensagem. Autenticação de cliente é executada uma vez por sessão e os resultados de autenticação são armazenados em cache para a duração da sessão.|  
-|TransportWithMessageCredential|Segurança de transporte é associada a segurança de mensagem. Segurança de transporte é fornecida por TLS sobre TCP ou SPNego e garante a integridade, a confidencialidade e a autenticação do servidor. Segurança de mensagens SOAP fornece autenticação de cliente. Por padrão, autenticação de cliente é executada uma vez por sessão e os resultados de autenticação são armazenados em cache para a duração da sessão.|  
+|Transporte|Segurança de transporte é fornecida com o uso de TLS via TCP ou SPNego. O serviço precisará ser configurado com certificados SSL. É possível controlar o nível de proteção com esse modo.|  
+|Mensagem|A segurança é fornecida usando a segurança de mensagem SOAP. Por padrão, o corpo SOAP é criptografado e assinado. Esse modo oferece uma variedade de recursos, como se as credenciais de serviço estão disponíveis no cliente fora da banda, o pacote de algoritmos a ser usado e o nível de proteção a ser aplicado ao corpo da mensagem. Autenticação de cliente é executada uma vez por sessão e os resultados de autenticação são armazenados em cache para a duração da sessão.|  
+|TransportWithMessageCredential|Segurança de transporte está acoplada com segurança de mensagem. Segurança de transporte é fornecida pelo TLS via TCP ou SPNego e garante a integridade, confidencialidade e autenticação de servidor. Segurança de mensagem SOAP fornece autenticação de cliente. Por padrão, autenticação de cliente é executada uma vez por sessão e os resultados de autenticação são armazenados em cache para a duração da sessão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -65,11 +65,11 @@ Define as configurações de segurança para uma associação.
 |associação|O elemento de associação do [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Comentários  
- Cada uma das associações padrão fornece parâmetros para controlar os requisitos de segurança de transferência. Normalmente, esses parâmetros incluem o modo de segurança especificado se a segurança de nível de mensagem ou nível de transporte é usada e a escolha do tipo de credencial de cliente. Com base na escolha das opções esses parâmetros presentes, uma pilha de canais é construído com a segurança apropriada.  
+ Cada uma das associações padrão fornece parâmetros para controlar os requisitos de segurança de transferência. Normalmente, esses parâmetros incluem o modo de segurança especificado se a segurança de nível de mensagem ou o nível de transporte é usada e a escolha do tipo de credencial de cliente. Com base na escolha das opções esses parâmetros estiver presentes, uma pilha de canais é construído com a segurança apropriada.  
   
  As associações fornecidas pelo sistema fornecidas pelo Windows Communication Foundation (WCF) são um conjunto projetado para atender a alguns dos requisitos do cenário mais comuns. Cada uma dessas vinculações permite a especificação dos requisitos de segurança para alguns cenários de destino específicos.  
   
- Este elemento de configuração fornece as especificações de segurança para `netTcpBinding`. Isso é uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação em tempo de execução com suporte a TCP para entrega de mensagens e a segurança do Windows para segurança de mensagem e autenticação, WS-ReliableMessaging de confiabilidade e a codificação de mensagem binária.  
+ Este elemento de configuração fornece as especificações de segurança para `netTcpBinding`. Isso é uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação em tempo de execução que dão suporte a TCP para entrega de mensagens e segurança do Windows para autenticação, WS-ReliableMessaging para confiabilidade e a codificação de mensagem binária e de segurança de mensagem.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.NetTcpSecurity>  
@@ -79,5 +79,5 @@ Define as configurações de segurança para uma associação.
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

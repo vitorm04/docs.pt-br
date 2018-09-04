@@ -2,12 +2,12 @@
 title: Operações de dados do SQL Server no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 45b0e92619732ddaa8c4cc5df163f251c50bcba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c913bffea1be8db0fa5ba2e97714acefe681569
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363445"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528180"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>Operações de dados do SQL Server no ADO.NET
 Esta seção descreve os recursos e a funcionalidade do SQL Server que são específicos ao Provedor de Dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
@@ -28,4 +28,4 @@ Esta seção descreve os recursos e a funcionalidade do SQL Server que são espe
 ## <a name="see-also"></a>Consulte também  
  [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

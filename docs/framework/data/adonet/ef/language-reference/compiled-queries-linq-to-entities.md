@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
 ms.openlocfilehash: 362ba0000c739c8fc216186514a63531e603c637
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502015"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Consultas compiladas (LINQ to Entities)
 Quando um aplicativo executa muitas vezes consultas estruturalmente similares no Entity Framework, geralmente é possível melhorar o desempenho compilando a consulta uma única vez e executando-a várias vezes com parâmetros diferentes. Por exemplo, um aplicativo pode precisar recuperar todos os clientes de uma cidade específica; a cidade é especificada em tempo de execução pelo usuário em um formulário. LINQ to Entities dá suporte ao uso de consultas compiladas para essa finalidade.  

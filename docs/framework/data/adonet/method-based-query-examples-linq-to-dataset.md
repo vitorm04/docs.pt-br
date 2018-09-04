@@ -3,11 +3,11 @@ title: Exemplos de consulta com base em método (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 569292cc03f7cbcbaff2d8625849285ff6e2146e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482529"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500792"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Exemplos de consulta com base em método (LINQ to DataSet)
 Esta seção fornece [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programa que os exemplos na sintaxe da consulta com base em método que usam os operadores de consulta padrão. O <xref:System.Data.DataSet> usado nesses exemplos é preenchido usando o `FillDataSet` método, que é especificado em [Carregando dados em um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obter mais informações, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

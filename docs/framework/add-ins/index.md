@@ -15,11 +15,11 @@ ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482217"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510048"
 ---
 # <a name="add-ins-and-extensibility"></a>Suplementos e extensibilidade
 <a name="top"></a> Suplementos fornecem recursos estendidos ou serviços para um aplicativo host. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fornece um modelo de programação que os desenvolvedores podem usar para desenvolver suplementos e ativá-los em seus aplicativos de host. O modelo realiza isso criando um pipeline de comunicação entre o host e o suplemento. O modelo é implementado usando os tipos na <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, e <xref:System.AddIn.Contract> namespaces.  

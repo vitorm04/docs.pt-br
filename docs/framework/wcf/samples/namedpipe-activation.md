@@ -2,15 +2,15 @@
 title: NamedPipe Activation
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806377"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504266"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Activation
-Este exemplo demonstra como hospedar um serviço que usa o serviço de ativação de processos do Windows (WAS) para ativar um serviço que se comunica por pipes de nomes. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e requer [!INCLUDE[wv](../../../../includes/wv-md.md)] para executar.  
+Este exemplo demonstra como hospedar um serviço que usa o serviço de ativação de processos do Windows (WAS) para ativar um serviço que se comunica por pipes de nomes. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e requer [!INCLUDE[wv](../../../../includes/wv-md.md)] para executar.  
   
 > [!NOTE]
 >  Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
@@ -20,14 +20,14 @@ Este exemplo demonstra como hospedar um serviço que usa o serviço de ativaçã
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- O exemplo consiste em um programa de console de cliente (.exe) e uma biblioteca de serviço (. dll) hospedada em um processo de trabalho ativado por serviços de ativação de processos do Windows (WAS). Atividade do cliente estiver visível na janela do console.  
+ O exemplo consiste em um programa de console de cliente (.exe) e uma biblioteca de serviço (. dll) hospedado em um processo de trabalho ativado, o Windows WAS Process Activation Services (). Atividade do cliente está visível na janela do console.  
   
- O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pelo `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir), conforme mostrado no código de exemplo a seguir.  
+ O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir), conforme mostrado no código de exemplo a seguir.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -44,7 +44,7 @@ public interface ICalculator
 }  
 ```  
   
- O cliente faz solicitações síncronas para uma operação matemática fornecido e a implementação do serviço calcula e retorna o resultado apropriado.  
+ O cliente faz solicitações síncronas para uma operação matemática determinada e a implementação do serviço calcula e retorna o resultado apropriado.  
   
 ```  
 // Service class that implements the service contract.  
@@ -69,9 +69,9 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- O exemplo usa uma modificação `netNamedPipeBinding` associação sem segurança. A associação é especificada nos arquivos de configuração do cliente e do serviço. O tipo de associação para o serviço é especificado no elemento de ponto de extremidade `binding` conforme mostrado no exemplo de configuração do atributo.  
+ O exemplo usa uma modificação `netNamedPipeBinding` associação sem segurança. A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação para o serviço é especificado no elemento de ponto de extremidade `binding` conforme mostrado no seguinte exemplo de configuração do atributo.  
   
- Se você quiser usar uma associação segura de pipe nomeado, altere o modo de segurança do servidor para a configuração de segurança desejado e execute svcutil.exe novamente no cliente para obter o arquivo de configuração de um cliente atualizado.  
+ Se você quiser usar uma associação de pipe nomeado protegida, altere o modo de segurança do servidor para a configuração de segurança desejado e execute svcutil.exe novamente no cliente para obter o arquivo de configuração de um cliente atualizado.  
   
 ```xml  
 <system.serviceModel>  
@@ -144,7 +144,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -159,11 +159,11 @@ Press <ENTER> to terminate client.
   
 1.  Certifique-se de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] está instalado. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] é necessário para a ativação do WAS.  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Verifique se você tiver executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
      Além disso, você deve instalar os componentes de ativação não HTTP do WCF:  
   
-    1.  Do **iniciar** menu, escolha **painel de controle**.  
+    1.  Dos **inicie** menu, escolha **painel de controle**.  
   
     2.  Selecione **programas e recursos**.  
   
@@ -175,7 +175,7 @@ Press <ENTER> to terminate client.
   
      Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado AddNetPipeSiteBinding.cmd localizado no diretório de exemplo.  
   
-    1.  Para dar suporte à ativação do NET. pipe, o site padrão primeiro deve ser associado ao protocolo NET. pipe. Isso pode ser feito usando o appcmd.exe, que é instalado com o conjunto de ferramentas de gerenciamento do IIS 7.0. Em um prompt de comando com privilégios elevados (administrador), execute o seguinte comando.  
+    1.  Para dar suporte à ativação de pipe, o site padrão primeiro deve ser associado ao protocolo NET. pipe. Isso pode ser feito usando appcmd.exe, que é instalado com o conjunto de ferramentas de gerenciamento do IIS 7.0. Em um prompt de comando com privilégios elevados (administrador), execute o comando a seguir.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -185,9 +185,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Esse comando é uma única linha de texto.  
   
-         Este comando adiciona uma associação de site do NET. pipe para o site da Web padrão.  
+         Este comando adiciona uma associação de site do NET. pipe para o site padrão.  
   
-    2.  Embora todos os aplicativos dentro de um site compartilham uma associação de pipe comuns, cada aplicativo pode habilitar o suporte de pipe individualmente. Para habilitar o pipe para o aplicativo /servicemodelsamples, execute o seguinte comando em um prompt de comando com privilégios elevados.  
+    2.  Embora todos os aplicativos dentro de um site compartilham uma associação de pipe comuns, cada aplicativo pode habilitar o suporte do NET. pipe individualmente. Para habilitar o NET. pipe para o aplicativo /servicemodelsamples, execute o seguinte comando em um prompt de comando elevado.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe  
@@ -196,31 +196,31 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Esse comando é uma única linha de texto.  
   
-         Este comando permite que o aplicativo /servicemodelsamples ser acessados usando http://localhost/servicemodelsamples e net.tcp://localhost/servicemodelsamples.  
+         Este comando habilita o aplicativo /servicemodelsamples sejam acessados usando ambos http://localhost/servicemodelsamples e net.tcp://localhost/servicemodelsamples.  
   
-4.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Remova a associação de site do NET. pipe adicionado para este exemplo.  
+5.  Remova a associação de site do NET. pipe que é adicionado para este exemplo.  
   
      Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado RemoveNetPipeSiteBinding.cmd localizado no diretório de exemplo:  
   
-    1.  Remova NET. TCP da lista de protocolos habilitados, executando o seguinte comando em um prompt de comando com privilégios elevados.  
+    1.  Remova o NET. TCP da lista de protocolos habilitados, executando o seguinte comando em um prompt de comando elevado.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
   
         > [!NOTE]
-        >  Este comando deve ser inserido como uma única linha de texto.  
+        >  Esse comando deve ser inserido como uma única linha de texto.  
   
-    2.  Remova a associação de site do NET. TCP, executando o seguinte comando em um prompt de comando com privilégios elevados.  
+    2.  Remova a associação de site do NET. TCP, executando o seguinte comando em um prompt de comando elevado.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']  
         ```  
   
         > [!NOTE]
-        >  Este comando deve ser digitado em uma única linha de texto.  
+        >  Esse comando deve ser digitado como uma única linha de texto.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de persistência e hospedagem de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

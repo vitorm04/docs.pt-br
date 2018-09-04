@@ -3,11 +3,11 @@ title: IGNORAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
 ms.openlocfilehash: 321f6c5ae62ce21249ae4c1081b8e98427bc3df2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425732"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500736"
 ---
 # <a name="skip-entity-sql"></a>IGNORAR (Entity SQL)
 Você pode executar a físico paginação usando a cláusula subpropriedades de SKIP na cláusula GROUP BY. A SKIP não pode ser usada separada de cláusula GROUP BY.  

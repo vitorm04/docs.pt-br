@@ -2,12 +2,12 @@
 title: Guia de programação (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 70fb2d38a055a6b376a711aae28ba69e6c2dd771
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353280"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513364"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Guia de programação (LINQ to DataSet)
 Esta seção fornece informações e exemplos conceituais para a programação com [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -23,9 +23,9 @@ Esta seção fornece informações e exemplos conceituais para a programação c
  Descreve como usar o objeto <xref:System.Data.DataRowComparer> para comparar linhas de dados.  
   
  [Criando um DataTable de uma consulta](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
- Fornece informações sobre como criar um <xref:System.Data.DataTable> de um [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consulta usando o <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> método.  
+ Fornece informações sobre como criar uma <xref:System.Data.DataTable> de um [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consulta usando o <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> método.  
   
- [Como: implementar CopyToDataTable\<T > onde um tipo genérico T não é um DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Como: implementar CopyToDataTable\<T > em que o tipo genérico T não é um DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  Descreve como implementar um método `CopyToDataTable<T>` personalizado, onde o parâmetro genérico T não é do tipo <xref:System.Data.DataRow>.  
   
  [Campo genérico e métodos de SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -52,7 +52,7 @@ Esta seção fornece informações e exemplos conceituais para a programação c
   
  <xref:System.Data.DataView>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
- [NÃO está em compilação: Guia de programação geral em LINQ](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049)  
- [Framework do LINQ](http://msdn.microsoft.com/library/897ea0fc-40db-4694-bbe5-7dd339d5bf94)
+## <a name="see-also"></a>Consulte também
+
+- [LINQ e ADO.NET](linq-and-ado-net.md)  
+- [LINQ (Consulta Integrada à Linguagem)](../../../csharp/programming-guide/concepts/linq/index.md)

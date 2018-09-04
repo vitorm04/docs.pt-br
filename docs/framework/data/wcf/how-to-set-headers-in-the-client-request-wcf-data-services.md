@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
 ms.openlocfilehash: 659bbb81f0ff36d99b5b836b50dfd229b39f2d5c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392331"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505283"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Como: definir os cabeçalhos da solicitação do cliente (WCF Data Services)
 Quando você usa o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cliente para acessar um serviço de dados que oferece suporte a [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], a biblioteca de cliente define automaticamente os cabeçalhos HTTP necessários nas mensagens de solicitação enviadas ao serviço de dados. No entanto, a biblioteca de cliente não sabe para definir os cabeçalhos de mensagem que são necessários em determinados casos, como quando o serviço de dados requer a autenticação baseada em declarações ou cookies. Para obter mais informações, consulte [protegendo o WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). Nesses casos, você deve definir manualmente os cabeçalhos de mensagem na mensagem de solicitação antes de serem enviado. O exemplo neste tópico mostra como tratar o <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> evento para adicionar um novo cabeçalho para a mensagem de solicitação antes de serem enviado ao serviço de dados.  

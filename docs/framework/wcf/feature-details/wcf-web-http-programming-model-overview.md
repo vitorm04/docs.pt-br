@@ -3,11 +3,11 @@ title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417332"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517069"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP fornece os elementos básicos necessários para compilar serviços WEB HTTP com WCF. Serviços WCF WEB HTTP são projetados para ser acessado por mais ampla gama de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  

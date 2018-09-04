@@ -2,35 +2,35 @@
 title: Processo de aprovação de documento
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809486"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508924"
 ---
 # <a name="document-approval-process"></a>Processo de aprovação de documento
-Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (WF) e o Windows Communication Foundation (WCF) juntos. Junto implementam um cenário do processo de aprovação do documento. Um aplicativo cliente pode enviar documentos para a aprovação e aprovar documentos. Um aplicativo do gerenciador de aprovação existe para facilitar comunicação entre clientes e para aplicar as regras do processo de aprovação. O processo de aprovação é um fluxo de trabalho que pode executar vários tipos de aprovação. As atividades existem para obter uma única aprovação, uma aprovação de quorum (uma porcentagem do conjunto de approvers), e um processo de aprovação complexo que consiste em um quorum e em uma única aprovação em uma sequência.  
+Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (WF) e o Windows Communication Foundation (WCF) em conjunto. Junto implementam um cenário do processo de aprovação do documento. Um aplicativo cliente pode enviar documentos para a aprovação e aprovar documentos. Um aplicativo do gerenciador de aprovação existe para facilitar comunicação entre clientes e para aplicar as regras do processo de aprovação. O processo de aprovação é um fluxo de trabalho que pode executar vários tipos de aprovação. As atividades existem para obter uma única aprovação, uma aprovação de quorum (uma porcentagem do conjunto de approvers), e um processo de aprovação complexo que consiste em um quorum e em uma única aprovação em uma sequência.  
   
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O gráfico a seguir demonstra o fluxo de trabalho do processo de aprovação do documento.  
   
- ![Um fluxo de trabalho de processo de aprovação de documento](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Um fluxo de trabalho do processo de aprovação do documento](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
   
  Da perspectiva de cliente, o processo de aprovação funciona como segue:  
   
 1.  Um cliente assina para ser um usuário no sistema do processo de aprovação.  
   
-2.  Envia um cliente WCF para um serviço WCF hospedado pelo aplicativo do Gerenciador de aprovação.  
+2.  Envia um cliente WCF para um serviço WCF hospedado pelo aplicativo Gerenciador da aprovação.  
   
 3.  Um usuário exclusivo - a identificação é retornada para o cliente. O cliente agora pode participar em processos de aprovação.  
   
@@ -48,19 +48,19 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 10. Um cliente pode receber uma solicitação de aprovação e responder à solicitação em qualquer ponto no tempo.  
   
-11. Um serviço WCF hospedado no cliente pode receber uma solicitação de aprovação de aplicativo do Gerenciador de aprovação.  
+11. Um serviço WCF hospedado no cliente pode receber uma solicitação de aprovação do aplicativo Gerenciador da aprovação.  
   
 12. Informações de documento é apresentada no cliente para revisão.  
   
 13. O usuário pode aprovar ou descartar o documento.  
   
-14. Um cliente do WCF é usado para enviar uma resposta de aprovação para o aplicativo do Gerenciador de aprovação.  
+14. Um cliente do WCF é usado para enviar uma resposta de aprovação para o aplicativo Gerenciador da aprovação.  
   
  Do ponto de vista de aplicativo do gerenciador de aprovação, o processo de aprovação funciona como segue:  
   
 1.  Solicitações de cliente participar do sistema do processo de aprovação.  
   
-2.  Um serviço WCF no Gerenciador de aprovação recebe uma solicitação para fazer parte do sistema de processo de aprovação.  
+2.  Um serviço WCF no Gerenciador de aprovação recebe uma solicitação para fazer parte do sistema do processo de aprovação.  
   
 3.  Uma identificação exclusiva é gerada para o cliente. Informações de usuário é armazenado em uma base de dados.  
   
@@ -88,7 +88,7 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 2.  Para criar a solução, pressione CTRL+SHIFT+B.  
   
-3.  Para executar a solução, inicie o aplicativo do gerente de aprovação clicando com o projeto ApprovalManager no **Solution Explorer** e clicando em **depurar**->**iniciar**  nova instância no menu de atalho.  
+3.  Para executar a solução, inicie o aplicativo Gerenciador da aprovação clicando com o projeto de ApprovalManager na **Gerenciador de soluções** e clicando em **Debug**->**iniciar**  nova instância do menu de atalho.  
   
      Espera para que a saída do gerenciador deixem-no saber que estão prontas.  
   
@@ -100,9 +100,9 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 3.  Navegue até a pasta de ApprovalClient \ bin \ debug e executar duas instâncias de ApprovalClient.exe.  
   
-4.  Clique em **descobrir**, aguarde até que o **assinar** botão é habilitado.  
+4.  Clique em **descobrir**, aguarde até que o **assinar** botão está habilitado.  
   
-5.  Digite um nome de usuário e clique em **assinar**. Para um cliente, use `UserType1` e o outro tipo `UserType2`.  
+5.  Digite qualquer nome de usuário e clique em **assinar**. Para um cliente, use `UserType1` e o outro tipo `UserType2`.  
   
 6.  No cliente de `UserType1` , selecione o único tipo de aprovação do menu suspenso e digite um nome e um conteúdo do documento. Clique em **solicitar aprovação**.  
   
@@ -116,9 +116,9 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 3.  Navegue até a pasta de ApprovalClient \ bin \ debug e executar três instâncias de ApprovalClient.exe.  
   
-4.  Clique em **descobrir**, aguarde até que o **assinar** botão é habilitado.  
+4.  Clique em **descobrir**, aguarde até que o **assinar** botão está habilitado.  
   
-5.  Digite um nome de usuário e clique em **assinar**. Para um uso `UserType1` de cliente e outros dois tipo `UserType2`.  
+5.  Digite qualquer nome de usuário e clique em **assinar**. Para um uso `UserType1` de cliente e outros dois tipo `UserType2`.  
   
 6.  No cliente de `UserType1` , selecione o tipo de aprovação de quorum no menu suspenso e digite um nome e um conteúdo do documento. Clique em **solicitar aprovação**. Isso requer que os dois clientes de `UserType2` aprovam ou rejeitam o documento. Quando ambos os clientes de `UserType2` devem responder, somente um cliente deve aprovar o documento para que esteja certo.  
   
@@ -132,9 +132,9 @@ Este exemplo demonstra o uso de muitos recursos do Windows Workflow Foundation (
   
 3.  Navegue até a pasta de ApprovalClient \ bin \ debug e executar quatro instâncias de ApprovalClient.exe.  
   
-4.  Clique em **descobrir**, aguarde até que o **assinar** botão é habilitado.  
+4.  Clique em **descobrir**, aguarde até que o **assinar** botão está habilitado.  
   
-5.  Digite um nome de usuário e clique em **assinar**. Para um cliente, use `UserType1`no tipo `UserType2`de dois usos, e o uso mais recente `UserType3`.  
+5.  Digite qualquer nome de usuário e clique em **assinar**. Para um cliente, use `UserType1`no tipo `UserType2`de dois usos, e o uso mais recente `UserType3`.  
   
 6.  No cliente de `UserType1` , selecione o único tipo de aprovação do menu suspenso e digite um nome e um conteúdo do documento. Clique em **solicitar aprovação**.  
   
