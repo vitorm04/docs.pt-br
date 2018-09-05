@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480486"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673874"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Método ICLRStrongName::GetHashFromAssemblyFile
-Obtém um hash do arquivo de assembly especificado, usando o algoritmo de hash especificado.  
+Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   

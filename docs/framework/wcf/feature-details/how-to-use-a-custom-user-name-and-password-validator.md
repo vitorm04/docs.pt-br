@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
 ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401023"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671221"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Como usar um validador personalizado de nome de usuário e senha
 Por padrão, quando um nome de usuário e senha é usada para autenticação, o Windows Communication Foundation (WCF) usa Windows para validar o nome de usuário e senha. No entanto, WCF permite esquemas de autenticação de nome e a senha da usuário personalizada, também conhecido como *validadores*. Para inserir um validador personalizado de nome de usuário e senha, crie uma classe que deriva de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configure-a.  

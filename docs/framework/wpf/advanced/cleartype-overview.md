@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 1d434fa913d077d72f0f889dc69eccc8a9ed0e9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 236d6dec444c8169c164e9f096c7f81a336fdca4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674372"
 ---
 # <a name="cleartype-overview"></a>Visão geral de ClearType
 Este tópico fornece uma visão geral da tecnologia [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] encontrada no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ Este tópico fornece uma visão geral da tecnologia [!INCLUDE[TLA#tla_ct](../../
   
  Os dois exemplos a seguir mostram como os glifos podem começar em qualquer fronteira subpixel quando o posicionamento de subpixel é usado. O exemplo à esquerda é renderizado utilizando a versão anterior do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], que não utilizava o posicionamento de subpixel. O exemplo à direita é renderizado utilizando a nova versão do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], que usa o posicionamento de subpixel. Observe como cada **e** e **l** na imagem da direita é renderizado de modo ligeiramente diferente porque cada um começa em um subpixel diferente. Ao exibir o texto na tela em seu tamanho normal, essa diferença não é percebida por causa do alto contraste da imagem do glifo. Isso só é possível por causa de filtros de cor sofisticados que são incorporados na [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texto exibido com duas versões de ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Texto exibido com duas versões do ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Texto exibido com versões anteriores e posteriores do ClearType  
   
  Os dois exemplos a seguir comparam a saída do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] anterior com a nova versão do renderizador [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. O posicionamento subpixel, exibido à direita, aumenta muito o espaçamento dos tipos na tela, especialmente em tamanhos pequenos, nos quais a diferença entre um subpixel e um pixel inteiro representa uma parte significativa da largura do glifo. Observe que o espaçamento entre as letras é mais uniforme na segunda imagem. O benefício cumulativo do posicionamento de subpixel na aparência geral de uma tela de texto é muito maior e representa uma evolução significativa na tecnologia [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Texto exibido com a versão anterior de ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Texto exibido com a versão anterior do ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Texto com versões anteriores e posteriores do ClearType  
   
 <a name="y-direction_antialiasing"></a>   
@@ -49,22 +49,22 @@ Texto com bordas irregulares em curvas superficiais
   
  O exemplo a seguir mostra o efeito da suavização da direção y. Nesse caso, as partes superior e inferior da letra mostram uma curva suave.  
   
- ![Texto com y ClearType&#45;direção anti&#45;alias](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Texto com y do ClearType&#45;direção&#45;alias](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Texto com suavização da direção y do ClearType  
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Aceleração de hardware  
  O [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode aproveitar a aceleração de hardware para melhorar o desempenho e reduzir os requisitos de carga de CPU e memória do sistema. Usando os sombreadores de pixel e a memória de vídeo de um cartão gráfico, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] fornece renderização mais rápida de texto, em particular quando a animação é usada.  
   
- O [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em todo o sistema. Desabilitar o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] define a suavização do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para o modo escala de cinza. Além disso, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ O [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] em todo o sistema. Desabilitar o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] define a suavização do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para o modo escala de cinza. Além disso, o [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não modifica as configurações do [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Uma das decisões de design arquitetônico do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é fazer com que o layout de resolução independente dê um suporte melhor para os monitores DPI de resolução mais alta, que estão se tornando mais difundidos. Como consequência, o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] não dá suporte de renderização de texto com alias ou para bitmaps em algumas fontes da Ásia Oriental porque ambos são dependentes de resolução.  
   
 <a name="further_information"></a>   
 ## <a name="further-information"></a>Mais informações  
- [Informações sobre o ClearType](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
+ [Informações sobre o ClearType](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
+ [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurações do Registro ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

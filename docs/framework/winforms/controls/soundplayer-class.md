@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672885"
 ---
 # <a name="soundplayer-class"></a>Classe SoundPlayer
 A classe `SoundPlayer` permite que você inclua facilmente sons em seus aplicativos.  
   
- Você também pode usar o <xref:System.Media.SystemSounds> classe para reproduzir sons do sistema comum, incluindo um bipe.  
+ Você também pode usar o <xref:System.Media.SystemSounds> classe para reproduzir sons comuns do sistema, incluindo um aviso sonoro.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral da classe SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
@@ -51,4 +51,4 @@ A classe `SoundPlayer` permite que você inclua facilmente sons em seus aplicati
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
- Consulte também [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" objeto My. Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) ou [objeto My. Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ Consulte também [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My. Computer Object](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) ou [objeto My. Computer](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

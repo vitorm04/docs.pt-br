@@ -3,11 +3,11 @@ title: Interceptor de mensagem personalizado
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
 ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486734"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670737"
 ---
 # <a name="custom-message-interceptor"></a>Interceptor de mensagem personalizado
 Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de associação personalizado que cria as fábricas de canais e ouvintes de canais para interceptar todas as mensagens de entrada e saídas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e servidor que demonstram o uso dessas fábricas personalizadas.  

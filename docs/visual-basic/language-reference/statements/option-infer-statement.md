@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245785"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672579"
 ---
 # <a name="option-infer-statement"></a>Instrução Option Infer
 Permite o uso de inferência de tipo local ao declarar variáveis.  
@@ -41,12 +41,12 @@ Option Infer { On | Off }
   
  Na ilustração a seguir, `Option Infer` está ativado. A variável na declaração `Dim someVar = 2` é declarada como um inteiro por inferência de tipo.  
   
- ![Modo de exibição do IntelliSense da declaração. ] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![Modo de exibição do IntelliSense da declaração. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 IntelliSense quando o Option Infer está ligado  
   
  Na ilustração a seguir, o `Option Infer` está desativado. A variável na declaração `Dim someVar = 2` é declarada como um `Object` por inferência de tipo. Neste exemplo, o **Option Strict** configuração é definida como **Off** no [página de compilação, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Modo de exibição do IntelliSense da declaração. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![Modo de exibição do IntelliSense da declaração. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 IntelliSense quando o Option Infer está desligado  
   
 > [!NOTE]

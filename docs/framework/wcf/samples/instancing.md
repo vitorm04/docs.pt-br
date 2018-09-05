@@ -5,30 +5,30 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 2fb48ee413c48f481b433f58352c2d0fe38f3972
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d193b0cac56f365a4f0a294145369502754a1b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503879"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672782"
 ---
 # <a name="instancing"></a>Instanciação
-O exemplo de Instancing demonstra a configuração de comportamento de instância, que controla como as instâncias de uma classe de serviço são criadas em resposta a solicitações de cliente. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define um novo contrato, `ICalculatorInstance`, que herda de `ICalculator`. O contrato especificado pelo `ICalculatorInstance` fornece três operações adicionais para inspecionar o estado da instância do serviço. Alterando a configuração de instância, você pode observar a alteração no comportamento executando o cliente.  
+A criação de instâncias que demonstra a configuração de comportamento de instanciação, que controla como as instâncias de uma classe de serviço são criadas em resposta às solicitações do cliente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define um novo contrato, `ICalculatorInstance`, que herda de `ICalculator`. O contrato especificado pelo `ICalculatorInstance` fornece três operações adicionais para inspecionar o estado da instância do serviço. Alterando a configuração de instanciação, você pode observar a alteração no comportamento executando o cliente.  
   
- Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado por serviços de informações da Internet (IIS).  
+ Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS).  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Os seguintes modos de instância estão disponíveis:  
+ Modos de instanciação a seguir estão disponíveis:  
   
 -   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Uma nova instância de serviço é criada para cada solicitação de cliente.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Uma nova instância é criada para cada nova sessão de cliente e mantida pela duração da sessão (requer uma associação que dá suporte à sessão).  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Uma nova instância é criada para cada nova sessão de cliente e mantida pelo tempo de vida da sessão em questão (requer uma associação que dá suporte à sessão).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Uma única instância da classe de serviço manipula todas as solicitações de cliente para o tempo de vida do aplicativo.  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>: Uma única instância da classe de serviço lida com todas as solicitações de cliente para o tempo de vida do aplicativo.  
   
- A classe de serviço Especifica o comportamento de instância com o `[ServiceBehavior(InstanceContextMode=<setting>)]` atributo conforme mostrado no exemplo de código que segue. Alterando as linhas que são comentadas, você pode observar o comportamento de cada um dos modos de instância. Lembre-se recriar o serviço depois de alterar o modo de instanciamento. Há nenhuma configuração de instância relacionados para especificar no cliente.  
+ A classe de serviço Especifica o comportamento de instanciação com o `[ServiceBehavior(InstanceContextMode=<setting>)]` atributo conforme mostrado no exemplo de código que segue. Alterando as linhas que são comentadas, você pode observar o comportamento de cada um dos modos de instância. Lembre-se recriar o serviço depois de alterar o modo de instanciação. Não há nenhuma configuração relacionados à criação de instância para especificar no cliente.  
   
 ```  
 // Enable one of the following instance modes to compare instancing behaviors.  
@@ -120,13 +120,13 @@ static void Main()
 }  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. O serviço está em execução sob o modo de instância é exibido. Depois de cada operação, a contagem de ID e a operação de instância são exibidas para refletir o comportamento do modo de instanciamento. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. O modo de instância que de serviço está sendo executado é exibido. Após cada operação, a contagem de ID e a operação de instâncias são exibidos para refletir o comportamento do modo de instanciação. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -135,7 +135,7 @@ static void Main()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
   

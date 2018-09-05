@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763664"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672255"
 ---
 # <a name="merging-dataset-contents"></a>Mesclando conteúdo do DataSet
 Você pode usar o método <xref:System.Data.DataSet.Merge%2A> para mesclar o conteúdo de uma matriz <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> em um `DataSet` existente. Vários fatores e opções afetam a maneira como os novos dados são mesclados em um `DataSet` existente.  
@@ -84,4 +84,4 @@ Você pode usar o método <xref:System.Data.DataSet.Merge%2A> para mesclar o con
  [DataAdapters e DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  [Recuperando identidade ou valores de Autonumber](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
