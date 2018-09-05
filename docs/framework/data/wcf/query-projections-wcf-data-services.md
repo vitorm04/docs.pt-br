@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526682"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projeções de consulta (WCF Data Services)
 Projeção fornece um mecanismo no [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para reduzir a quantidade de dados no feed retornado por uma consulta, especificando que somente algumas propriedades de uma entidade são retornadas na resposta. Para obter mais informações, consulte [OData: Selecionar opção de consulta do sistema ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
