@@ -2,12 +2,12 @@
 title: Mapeamento de tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365521"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735430"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
@@ -60,7 +60,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
   
 -   O SQL Server pede alguns tipos de dados de maneira diferente dos dados de tipo equivalente no CLR. Por exemplo, os dados do SQL Server do tipo `UNIQUEIDENTIFIER` são pedidos de maneira diferente dos dados CLR de tipo <xref:System.Guid?displayProperty=nameWithType>.  
   
--   O SQL Server manipula algumas operações de comparação de cadeia de caracteres de maneira diferente do que no CLR. No SQL Server, o comportamento de comparação de cadeia de caracteres depende das configurações de agrupamento no servidor. Para obter mais informações, consulte [trabalhando com agrupamentos](http://go.microsoft.com/fwlink/?LinkId=115330) nos Manuais Online do Microsoft SQL Server.  
+-   O SQL Server manipula algumas operações de comparação de cadeia de caracteres de maneira diferente do que no CLR. No SQL Server, o comportamento de comparação de cadeia de caracteres depende das configurações de agrupamento no servidor. Para obter mais informações, consulte [trabalhando com agrupamentos](https://go.microsoft.com/fwlink/?LinkId=115330) nos Manuais Online do Microsoft SQL Server.  
   
 -   O SQL Server pode retornar valores diferentes para algumas funções mapeadas do CLR. Por exemplo, as funções de igualdade serão diferentes porque o SQL Server considera que duas cadeias de caracteres serão iguais se diferirem apenas no espaço em branco à direita, enquanto o CLR não as considera iguais.  
   
@@ -232,11 +232,11 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  O atributo `FILESTREAM` para colunas `VARBINARY(MAX)` está disponível a partir do Microsoft SQL Server 2008; você pode mapeá-lo com o LINQ to SQL a partir do .NET Framework versão 3.5 SP1.  
   
- Embora você possa mapear colunas `VARBINARY(MAX)` com o atributo `FILESTREAM` para objetos <xref:System.Data.Linq.Binary>, o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> não é capaz de criar automaticamente colunas com o atributo `FILESTREAM`. Para obter mais informações sobre `FILESTREAM`, consulte [visão geral do FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) nos Manuais Online do Microsoft SQL Server.  
+ Embora você possa mapear colunas `VARBINARY(MAX)` com o atributo `FILESTREAM` para objetos <xref:System.Data.Linq.Binary>, o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> não é capaz de criar automaticamente colunas com o atributo `FILESTREAM`. Para obter mais informações sobre `FILESTREAM`, consulte [visão geral do FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) nos Manuais Online do Microsoft SQL Server.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Serialização binária  
- Se uma classe implementa a interface <xref:System.Runtime.Serialization.ISerializable>, você poderá serializar um objeto para qualquer campo binário do SQL (`BINARY`, `VARBINARY`, `IMAGE`). O objeto é serializado e desserializado de acordo com a maneira como a interface <xref:System.Runtime.Serialization.ISerializable> é implementada. Para obter mais informações, consulte [serialização binária](http://go.microsoft.com/fwlink/?LinkId=115581).  
+ Se uma classe implementa a interface <xref:System.Runtime.Serialization.ISerializable>, você poderá serializar um objeto para qualquer campo binário do SQL (`BINARY`, `VARBINARY`, `IMAGE`). O objeto é serializado e desserializado de acordo com a maneira como a interface <xref:System.Runtime.Serialization.ISerializable> é implementada. Para obter mais informações, consulte [serialização binária](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Mapeamento variado  
