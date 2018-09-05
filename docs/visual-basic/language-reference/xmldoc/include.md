@@ -6,45 +6,45 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482698"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671948"
 ---
-# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="8f287-102">&lt;incluir&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8f287-102">&lt;include&gt; (Visual Basic)</span></span>
-<span data-ttu-id="8f287-103">Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.</span><span class="sxs-lookup"><span data-stu-id="8f287-103">Refers to another file that describes the types and members in your source code.</span></span>  
+# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="bff90-102">&lt;incluir&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bff90-102">&lt;include&gt; (Visual Basic)</span></span>
+<span data-ttu-id="bff90-103">Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.</span><span class="sxs-lookup"><span data-stu-id="bff90-103">Refers to another file that describes the types and members in your source code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8f287-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8f287-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bff90-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bff90-104">Syntax</span></span>  
   
 ```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8f287-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8f287-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bff90-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bff90-105">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="8f287-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8f287-106">Required.</span></span> <span data-ttu-id="8f287-107">O nome do arquivo que contém a documentação.</span><span class="sxs-lookup"><span data-stu-id="8f287-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="8f287-108">O nome do arquivo pode ser qualificado com um caminho.</span><span class="sxs-lookup"><span data-stu-id="8f287-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="8f287-109">Coloque `filename` entre aspas duplas ("").</span><span class="sxs-lookup"><span data-stu-id="8f287-109">Enclose `filename` in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="bff90-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="bff90-106">Required.</span></span> <span data-ttu-id="bff90-107">O nome do arquivo que contém a documentação.</span><span class="sxs-lookup"><span data-stu-id="bff90-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="bff90-108">O nome do arquivo pode ser qualificado com um caminho.</span><span class="sxs-lookup"><span data-stu-id="bff90-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="bff90-109">Coloque `filename` entre aspas duplas ("").</span><span class="sxs-lookup"><span data-stu-id="bff90-109">Enclose `filename` in double quotation marks (" ").</span></span>  
   
  `tagpath`  
- <span data-ttu-id="8f287-110">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8f287-110">Required.</span></span> <span data-ttu-id="8f287-111">O caminho das marcas em `filename` que leva à marca `name`.</span><span class="sxs-lookup"><span data-stu-id="8f287-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="8f287-112">Coloque o caminho entre aspas duplas ("").</span><span class="sxs-lookup"><span data-stu-id="8f287-112">Enclose the path in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="bff90-110">Necessário.</span><span class="sxs-lookup"><span data-stu-id="bff90-110">Required.</span></span> <span data-ttu-id="bff90-111">O caminho das marcas em `filename` que leva à marca `name`.</span><span class="sxs-lookup"><span data-stu-id="bff90-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="bff90-112">Coloque o caminho entre aspas duplas ("").</span><span class="sxs-lookup"><span data-stu-id="bff90-112">Enclose the path in double quotation marks (" ").</span></span>  
   
  `name`  
- <span data-ttu-id="8f287-113">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8f287-113">Required.</span></span> <span data-ttu-id="8f287-114">O especificador de nome na marca que precede os comentários.</span><span class="sxs-lookup"><span data-stu-id="8f287-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="8f287-115">`Name` terá um `id`.</span><span class="sxs-lookup"><span data-stu-id="8f287-115">`Name` will have an `id`.</span></span>  
+ <span data-ttu-id="bff90-113">Necessário.</span><span class="sxs-lookup"><span data-stu-id="bff90-113">Required.</span></span> <span data-ttu-id="bff90-114">O especificador de nome na marca que precede os comentários.</span><span class="sxs-lookup"><span data-stu-id="bff90-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="bff90-115">`Name` terá um `id`.</span><span class="sxs-lookup"><span data-stu-id="bff90-115">`Name` will have an `id`.</span></span>  
   
  `id`  
- <span data-ttu-id="8f287-116">Necessário.</span><span class="sxs-lookup"><span data-stu-id="8f287-116">Required.</span></span> <span data-ttu-id="8f287-117">A ID da marca que precede os comentários.</span><span class="sxs-lookup"><span data-stu-id="8f287-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="8f287-118">Coloque a ID entre aspas simples (' ').</span><span class="sxs-lookup"><span data-stu-id="8f287-118">Enclose the ID in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="bff90-116">Necessário.</span><span class="sxs-lookup"><span data-stu-id="bff90-116">Required.</span></span> <span data-ttu-id="bff90-117">A ID da marca que precede os comentários.</span><span class="sxs-lookup"><span data-stu-id="bff90-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="bff90-118">Coloque a ID entre aspas simples (' ').</span><span class="sxs-lookup"><span data-stu-id="bff90-118">Enclose the ID in single quotation marks (' ').</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8f287-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="8f287-119">Remarks</span></span>  
- <span data-ttu-id="8f287-120">Use o `<include>` marca para fazer referência a comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte.</span><span class="sxs-lookup"><span data-stu-id="8f287-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="8f287-121">Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.</span><span class="sxs-lookup"><span data-stu-id="8f287-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bff90-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="bff90-119">Remarks</span></span>  
+ <span data-ttu-id="bff90-120">Use o `<include>` marca para fazer referência a comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte.</span><span class="sxs-lookup"><span data-stu-id="bff90-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="bff90-121">Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.</span><span class="sxs-lookup"><span data-stu-id="bff90-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
   
- <span data-ttu-id="8f287-122">O `<include>` marca usa a recomendação do W3C XML Path Language (XPath) versão 1.0.</span><span class="sxs-lookup"><span data-stu-id="8f287-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="8f287-123">Para obter mais informações de maneiras de personalizar seu `<include>` uso está disponível em http://www.w3.org/TR/xpath.</span><span class="sxs-lookup"><span data-stu-id="8f287-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
+ <span data-ttu-id="bff90-122">O `<include>` marca usa a recomendação do W3C XML Path Language (XPath) versão 1.0.</span><span class="sxs-lookup"><span data-stu-id="bff90-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="bff90-123">Para obter mais informações de maneiras de personalizar seu `<include>` uso está disponível em http://www.w3.org/TR/xpath.</span><span class="sxs-lookup"><span data-stu-id="bff90-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f287-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8f287-124">Example</span></span>  
- <span data-ttu-id="8f287-125">Este exemplo usa o `<include>` marca para importar os comentários de documentação do membro de um arquivo chamado `commentFile.xml`.</span><span class="sxs-lookup"><span data-stu-id="8f287-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
+## <a name="example"></a><span data-ttu-id="bff90-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bff90-124">Example</span></span>  
+ <span data-ttu-id="bff90-125">Este exemplo usa o `<include>` marca para importar os comentários de documentação do membro de um arquivo chamado `commentFile.xml`.</span><span class="sxs-lookup"><span data-stu-id="bff90-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- <span data-ttu-id="8f287-126">O formato do `commentFile.xml` é da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="8f287-126">The format of the `commentFile.xml` is as follows.</span></span>  
+ <span data-ttu-id="bff90-126">O formato do `commentFile.xml` é da seguinte maneira.</span><span class="sxs-lookup"><span data-stu-id="bff90-126">The format of the `commentFile.xml` is as follows.</span></span>  
   
 ```xml  
 <Docs>  
@@ -59,5 +59,5 @@ ms.locfileid: "43482698"
 </Docs>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8f287-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8f287-127">See Also</span></span>  
- [<span data-ttu-id="8f287-128">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="8f287-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="bff90-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bff90-127">See Also</span></span>  
+ [<span data-ttu-id="bff90-128">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="bff90-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
