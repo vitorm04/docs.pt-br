@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365404"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658971"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recurso de instância de usuário, que somente está disponível quando é usado o Provedor de Dados .NET Framework para SQL Server (`SqlClient`). Uma instância de usuário é uma instância separada do Mecanismo de Banco de Dados SQL Server Express que é gerado por uma instância pai. As instâncias de usuário permitem que usuários que não são administradores em seus computadores locais anexem e conectem-se aos bancos de dados SQL Server Express. Cada instância é executada no contexto de segurança do usuário individual, uma instância por usuário.  
@@ -24,7 +24,7 @@ O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recur
 >  As instâncias de usuário não são necessárias para os usuários que já são administradores em seus próprios computadores ou para cenários que envolvem vários usuários do banco de dados.  
   
 ## <a name="enabling-user-instances"></a>Habilitando instâncias de usuário  
- Para gerar instâncias de usuário, uma instância pai do SQL Server Express deve estar em execução. Instâncias de usuário são habilitadas por padrão quando o SQL Server Express está instalado, e podem ser explicitamente habilitados ou desabilitados por um administrador de sistema executar o **sp_configure** procedimento armazenado do sistema na instância pai.  
+ Para gerar instâncias de usuário, uma instância pai do SQL Server Express deve estar em execução. Instâncias de usuário são habilitadas por padrão, quando o SQL Server Express é instalado, e eles podem ser explicitamente habilitados ou desabilitados pelo administrador do sistema executando o **sp_configure** procedimento armazenado do sistema na instância pai.  
   
 ```  
 -- Enable user instances.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  O protocolo de rede para instâncias de usuário deve ser o Pipes Nomeados local. Uma instância de usuário não pode ser iniciada em uma instância remota do SQL Server e os logons do SQL Server não são permitidos.  
   
 ## <a name="connecting-to-a-user-instance"></a>Conectando-se a uma instância de usuário  
- O `User Instance` e `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palavras-chave permitem um <xref:System.Data.SqlClient.SqlConnection> para se conectar a uma instância de usuário. As instâncias de usuário também têm o suporte das propriedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` e `AttachDBFilename`.  
+ O `User Instance` e `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palavras-chave permitem que um <xref:System.Data.SqlClient.SqlConnection> para se conectar a uma instância de usuário. As instâncias de usuário também têm o suporte das propriedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` e `AttachDBFilename`.  
   
  Observe o seguinte sobre a cadeia de conexão no exemplo mostrado abaixo:  
   
@@ -72,7 +72,7 @@ AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;
 Initial Catalog=Northwind;  
 ```  
   
- Quando `DataDirectory` é usado, o caminho do arquivo resultante não pode ser mais alto na estrutura de diretórios que o diretório apontado pela cadeia de caracteres de substituição. Por exemplo, se `DataDirectory` totalmente expandido for C:\AppDirectory\app_data, a cadeia de conexão de exemplo mostrada acima funcionará porque está abaixo de c:\AppDirectory. No entanto, tentar especificar `DataDirectory` como `|DataDirectory|\..\data` resultará em erro porque \data não é um subdiretório do \AppDirectory.  
+ Quando `DataDirectory` é usado, o caminho do arquivo resultante não pode ser mais alto na estrutura de diretórios que o diretório apontado pela cadeia de caracteres de substituição. Por exemplo, se `DataDirectory` totalmente expandido for C:\AppDirectory\app_data, a cadeia de conexão de exemplo mostrada acima funcionará porque está abaixo de c:\AppDirectory. No entanto, tentar especificar `DataDirectory` como `|DataDirectory|\..\data` resultará em um erro porque \data não é um subdiretório de \appdirectory.  
   
  Se a cadeia de conexão tiver uma cadeia de caracteres de substituição formatada incorretamente, uma <xref:System.ArgumentException> será gerada.  
   
@@ -119,13 +119,13 @@ private static void OpenSqlConnection()
 >  As instâncias de usuário não têm suporte no código CLR (Common Language Runtime) que está sendo executado dentro do SQL Server. Uma <xref:System.InvalidOperationException> é gerada se `Open` é chamado em um <xref:System.Data.SqlClient.SqlConnection> que tem `User Instance=true` na cadeia de conexão.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>Tempo de vida de uma conexão de instância de usuário  
- Ao contrário das versões do SQL Server que são executadas como um serviço, as instâncias do SQL Server Express não precisam ser iniciadas e interrompidas manualmente. Cada vez que um usuário faz logon e se conecta a uma instância de usuário, a instância do usuário é iniciada se já não estiver em execução. Os bancos de dados de instância de usuário têm a opção `AutoClose` definida de modo que o banco de dados seja fechado automaticamente após um período de inatividade. O processo do sqlservr.exe que é iniciado permanece em execução por um período limitado depois que a última conexão à instância é fechada, para que ele não precisa ser reiniciado se outra conexão for aberta antes de o tempo limite expirar. A instância do usuário será encerrada automaticamente se nenhuma nova conexão for aberta antes de o período de tempo limite expirar. Um administrador de sistema na instância pai pode definir a duração do período de tempo limite para uma instância de usuário usando **sp_configure** para alterar o **tempo limite de instância de usuário** opção. O padrão é 60 minutos.  
+ Ao contrário das versões do SQL Server que são executadas como um serviço, as instâncias do SQL Server Express não precisam ser iniciadas e interrompidas manualmente. Cada vez que um usuário faz logon e se conecta a uma instância de usuário, a instância do usuário é iniciada se já não estiver em execução. Os bancos de dados de instância de usuário têm a opção `AutoClose` definida de modo que o banco de dados seja fechado automaticamente após um período de inatividade. O processo do sqlservr.exe que é iniciado permanece em execução por um período limitado depois que a última conexão à instância é fechada, para que ele não precisa ser reiniciado se outra conexão for aberta antes de o tempo limite expirar. A instância do usuário será encerrada automaticamente se nenhuma nova conexão for aberta antes de o período de tempo limite expirar. Um administrador do sistema na instância pai pode definir a duração do período de tempo limite para uma instância de usuário utilizando **sp_configure** para alterar o **tempo limite de instância de usuário** opção. O padrão é 60 minutos.  
   
 > [!NOTE]
 >  Se `Min Pool Size` for usado na cadeia de conexão com um valor maior que zero, o pooler de conexão sempre manterá algumas conexões abertas e a instância do usuário não será fechada automaticamente.  
   
 ## <a name="how-user-instances-work"></a>Como as instâncias de usuário funcionam  
- Na primeira vez que uma instância de usuário é gerada para cada usuário, o **mestre** e **msdb** bancos de dados do sistema são copiados da pasta de dados de modelo para um caminho no repositório de dados de aplicativo local do usuário diretório para uso exclusivo pela instância de usuário. Esse caminho é normalmente `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Quando uma instância de usuário é inicializado, o **tempdb**, log e rastreamento arquivos também são gravados nesse diretório. Um nome é gerado para a instância, que deve ser exclusiva para cada usuário.  
+ Na primeira vez que uma instância de usuário é gerada para cada usuário, o **mestre** e **msdb** bancos de dados do sistema são copiados da pasta de dados de modelo para um caminho no repositório de dados de aplicativo local do usuário diretório para uso exclusivo da instância de usuário. Esse caminho normalmente é `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Quando uma instância de usuário é inicializado, o **tempdb**, registrar e rastrear arquivos também são gravados nesse diretório. Um nome é gerado para a instância, que deve ser exclusiva para cada usuário.  
   
  Por padrão, todos os membros do grupo Builtin\Users do Windows têm permissões para se conectarem à instância local bem como ler e executar permissões nos binários do SQL Server. Depois de as credenciais do usuário de chamada que hospeda a instância de usuário tiverem sido verificadas, o usuário torna-se `sysadmin` nessa instância. Somente a memória compartilhada é habilitada para instâncias de usuário, o que significa que somente operações no computador local são possíveis.  
   
@@ -146,7 +146,7 @@ private static void OpenSqlConnection()
   
 -   Qualquer aplicativo de usuário único onde compartilhar dados não é necessário.  
   
--   Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) e o SQL Server Express já estiver instalado no computador de destino, o pacote de instalação baixado como resultado de uma ação de ClickOnce poderá ser instalado e usado por usuários não administrativos. Observe que um administrador deve instalar o SQL Server Express se isso for parte da instalação. Para obter mais informações, consulte [ClickOnce implantação para aplicativos do Windows Forms](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Implantação do ClickOnce. Se o .NET Framework 2.0 (ou posterior) e o SQL Server Express já estiver instalado no computador de destino, o pacote de instalação baixado como resultado de uma ação de ClickOnce poderá ser instalado e usado por usuários não administrativos. Observe que um administrador deve instalar o SQL Server Express se isso for parte da instalação. Para obter mais informações, consulte [implantação de ClickOnce para o Windows Forms aplicativos](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   ASP.NET dedicado hospedado usando a Autenticação do Windows. Uma única instância do SQL Server Express pode ser hospedada em uma intranet. O aplicativo conecta-se usando a conta ASPNET do Windows, não usando representação. As instâncias de usuário não devem ser usadas para os cenários de hospedagem compartilhados ou de terceiros onde todos os aplicativos compartilhariam a mesma instância de usuário e não permanecessem isolados entre si.  
   
@@ -154,4 +154,4 @@ private static void OpenSqlConnection()
  [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
  [Cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [Conectando a uma fonte de dados](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -2,37 +2,37 @@
 title: Validador de senha e nome de usuário
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 8fefa1556f853ab1f3a6f7664bdf7ffc5fc79850
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5e99cf1768abbd2ab0472f5d2193a5d5e751fe4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508313"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512317"
 ---
 # <a name="user-name-password-validator"></a>Validador de senha e nome de usuário
-Este exemplo demonstra como implementar um validador UserNamePassword personalizado. Isso é útil em casos em que nenhum dos modos de UserNamePassword validação internos é adequado para os requisitos do aplicativo; Por exemplo, quando os pares de nome de usuário e senha são armazenados em algum armazenamento externo, como um banco de dados. Este exemplo mostra um serviço que tenha um validador personalizado que verifica se há dois pares de nome de usuário/senha específica. O cliente usa esse um par de nome de usuário e senha para autenticar no serviço.  
+Este exemplo demonstra como implementar um validador personalizado de UserNamePassword. Isso é útil em casos em que nenhum dos modos de validação UserNamePassword internos é adequado para os requisitos do aplicativo; Por exemplo, quando os pares de nome de usuário e senha são armazenados em algum armazenamento externo, como um banco de dados. Este exemplo mostra um serviço que tem um validador personalizado que verifica se há dois pares de nome de usuário/senha específica. O cliente usa tal um par de nome de usuário/senha para se autenticar no serviço.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
->  Como qualquer pessoa pode construir uma credencial de nome de usuário que usa os pares de nome de usuário e senha que aceita o validador personalizado, o serviço é menos seguro do que o comportamento padrão fornecido pelo validador UserNamePassword padrão. O validador UserNamePassword padrão tenta mapear o par de nome de usuário/senha fornecida para uma conta do Windows e autenticação falhar se este mapeamento falhar. Personalizado que validador UserNamePassword neste exemplo não devem ser usado no código de produção, é apenas para fins ilustrativos.  
+>  Porque qualquer pessoa pode construir uma credencial de nome de usuário que usa os pares de nome de usuário e senha que aceita o validador personalizado, o serviço é menos seguro do que o comportamento padrão fornecido pelo validador UserNamePassword padrão. O validador UserNamePassword padrão tenta mapear o par de nome de usuário/senha fornecida para uma conta do Windows e autenticação deve falhar caso esse mapeamento não. Personalizado que validador UserNamePassword neste exemplo não devem ser usado no código de produção, é apenas para fins ilustrativos.  
   
  Em resumo Este exemplo demonstra como:  
   
 -   O cliente pode ser autenticado usando um Token de nome de usuário.  
   
--   O servidor valida as credenciais do cliente em relação a um UserNamePasswordValidator personalizado e de como propagar falhas personalizadas da lógica de validação de nome de usuário e senha para o cliente.  
+-   O servidor valida as credenciais do cliente contra um UserNamePasswordValidator personalizado e de como propagar falhas personalizadas da lógica de validação de nome de usuário e senha para o cliente.  
   
 -   O servidor é autenticado usando o certificado do servidor x. 509.  
   
- O serviço expõe um ponto de extremidade de comunicação com o serviço, definido usando o arquivo de configuração App. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding` que foi padronizado para usar autenticação de nome de usuário do WS-Securityand. Especifica o comportamento de serviço a `Custom` modo para validar os pares de nome de usuário e senha do cliente junto com o tipo de classe do validador. O comportamento também especifica o certificado de servidor usando o `serviceCertificate` elemento. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` no [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
+ O serviço expõe um ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração App. config. O ponto de extremidade consiste em um endereço, uma ligação e um contrato. A associação está configurada com um padrão `wsHttpBinding` que assume como padrão usando a autenticação de nome de usuário do WS-Securityand. Especifica o comportamento de serviço a `Custom` modo para validar os pares de nome de usuário e senha do cliente junto com o tipo de classe do validador. O comportamento também especifica o certificado de servidor usando o `serviceCertificate` elemento. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` na [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -88,7 +88,7 @@ Este exemplo demonstra como implementar um validador UserNamePassword personaliz
 </system.serviceModel>  
 ```  
   
- A configuração do ponto de extremidade cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A ligação do cliente é configurado com o modo apropriado e a mensagem `clientCredentialType`.  
+ A configuração do ponto de extremidade cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurado com o modo apropriado e a mensagem `clientCredentialType`.  
   
 ```xml  
 <system.serviceModel>  
@@ -197,7 +197,7 @@ try
 }  
 ```  
   
- Este exemplo usa um UserNamePasswordValidator personalizado para validar os pares de nome de usuário e senha. O exemplo implementa `CustomUserNamePasswordValidator`, derivada de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Consulte a documentação para <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> para obter mais informações. Este exemplo de validador personalizado específico implementa o `Validate` método para aceitar dois pares de nome de usuário/senha específica, conforme mostrado no código a seguir.  
+ Este exemplo usa um UserNamePasswordValidator personalizado para validar os pares de nome de usuário e senha. O exemplo implementa `CustomUserNamePasswordValidator`, derivado do <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Consulte a documentação para <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> para obter mais informações. Este exemplo de validador personalizado específico implementa o `Validate` método para aceitar dois pares de nome de usuário/senha específica, conforme mostrado no código a seguir.  
   
 ```  
 public class CustomUserNameValidator : UserNamePasswordValidator  
@@ -222,7 +222,7 @@ public class CustomUserNameValidator : UserNamePasswordValidator
  }  
 ```  
   
- Depois que o validador é implementado no código de serviço, o host de serviço deve ser informado sobre a instância de validação a ser usado. Isso é feito usando o código a seguir.  
+ Depois que o validador é implementado no código de serviço, o host de serviço deve ser informado sobre a instância do validador para usar. Isso é feito usando o código a seguir.  
   
 ```  
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;  
@@ -247,12 +247,12 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 </behaviors>  
 ```  
   
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. O cliente deve chamar com êxito todos os métodos. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. O cliente deve chamar com êxito todos os métodos. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ## <a name="setup-batch-file"></a>Arquivo de lote  
- Arquivo em lotes bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo auto-hospedado que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre máquinas ou trabalhar em um caso de autoatendimento não hospedados.  
+ O arquivo em lotes de Setup. bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo hospedado internamente que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em máquinas ou para trabalhar em um caso de não auto-hospedado.  
   
- O exemplo a seguir fornece uma visão geral das seções diferentes dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.  
+ O exemplo a seguir fornece uma visão geral das diferentes seções dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada.  
   
 -   Criando o certificado do servidor:  
   
@@ -270,55 +270,55 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 -   Instalando o certificado do servidor no repositório de certificados confiáveis do cliente:  
   
-     Armazenam as linhas a seguir na cópia de arquivo de lote o certificado do servidor bat para as pessoas confiáveis do cliente. Esta etapa é necessária porque os certificados gerados pela Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preenchimento do repositório de certificados de cliente com o certificado do servidor não é necessária.  
+     As seguintes linhas na cópia de arquivo de lote o certificado do servidor Setup. bat as pessoas confiáveis do cliente ao repositório. Esta etapa é necessária porque certificados gerados pelo Makecert.exe não são implicitamente confiáveis pelo sistema do cliente. Se você já tiver um certificado que está enraizado em um certificado de raiz confiável do cliente — por exemplo, um certificado da Microsoft emitido — essa etapa de preencher o repositório de certificados de cliente com o certificado do servidor não é necessária.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-#### <a name="to-set-up-and-build-the-sample"></a>Para configurar e criar o exemplo  
+#### <a name="to-set-up-and-build-the-sample"></a>Para configurar e compilar o exemplo  
   
-1.  Para criar a solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Para executar o exemplo em uma configuração ou entre computadores, use as instruções a seguir.  
+2.  Para executar o exemplo em uma configuração ou entre máquinas, use as instruções a seguir.  
   
-#### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo no mesmo computador  
+#### <a name="to-run-the-sample-on-the-same-machine"></a>Para executar o exemplo na mesma máquina  
   
-1.  Execute bat da pasta de instalação de exemplo dentro de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando. Isso instala todos os certificados necessários para executar o exemplo.  
+1.  Execute Setup. bat da pasta de instalação de exemplo dentro de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando. Essa opção instala todos os certificados necessários para executar o exemplo.  
   
     > [!NOTE]
-    >  O arquivo em lotes bat é projetado para ser executado de um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando. Definir a variável de ambiente PATH dentro de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando aponta para o diretório que contém os executáveis exigido pelo script bat.  
+    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir um [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando. A variável de ambiente PATH definido dentro de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Prompt de comando aponta para o diretório que contém executáveis exigido pelo script de Setup. bat.  
   
-2.  Inicie Service.exe de service\bin.  
+2.  Inicie o Service.exe no service\bin.  
   
-3.  Inicie Client.exe de \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3.  Inicie o Client.exe no \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
-4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo em computadores  
+#### <a name="to-run-the-sample-across-machines"></a>Para executar o exemplo entre máquinas  
   
-1.  Crie um diretório no computador de serviço para os binários de serviço.  
+1.  Crie um diretório na máquina do serviço para os binários de serviço.  
   
-2.  Copie os arquivos de programa do serviço diretório de serviço no computador do serviço. Também copie os arquivos. bat e Cleanup.bat para a máquina de serviço.  
+2.  Copie os arquivos de programa do serviço diretório de serviço na máquina do serviço. Também copie os arquivos Setup. bat e Cleanup para o computador de serviço.  
   
-3.  É necessário um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado da máquina. O arquivo de configuração para o servidor deve ser atualizado para refletir o novo nome de certificado.  
+3.  Você precisa de um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado da máquina. O arquivo de configuração para o servidor deve ser atualizado para refletir o novo nome de certificado.  
   
-4.  Copie o certificado do servidor para o armazenamento CurrentUser TrustedPeople do cliente. Você precisa fazer isso apenas se o certificado do servidor não foi emitido por um emissor confiável.  
+4.  Copie o certificado do servidor para o repositório CurrentUser TrustedPeople do cliente. Você precisa fazer isso apenas se o certificado do servidor não foi emitido por um emissor confiável.  
   
-5.  No arquivo App. config no computador do serviço, altere o valor do endereço base para especificar um nome de computador totalmente qualificado em vez de localhost.  
+5.  No arquivo App. config no computador do serviço, altere o valor do endereço base para especificar um nome de máquina totalmente qualificado em vez do localhost.  
   
-6.  No computador do serviço, inicie Service.exe em uma janela de prompt de comando.  
+6.  No computador do serviço, inicie Service.exe em uma janela do prompt de comando.  
   
-7.  Copie os arquivos de programa do cliente na pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
+7.  Copie os arquivos de programa do cliente da pasta \client\bin\, sob a pasta de idioma específico, para o computador cliente.  
   
 8.  No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
   
-9. No computador cliente, inicie Client.exe em uma janela de prompt de comando.  
+9. No computador cliente, inicie Client.exe em uma janela do prompt de comando.  
   
-10. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### <a name="to-clean-up-after-the-sample"></a>A limpeza após a amostra  
+#### <a name="to-clean-up-after-the-sample"></a>Para limpar após a amostra  
   
-1.  Execute Cleanup.bat na pasta exemplos depois de terminar a execução do exemplo. Isso remove o certificado do servidor do repositório de certificados.  
+1.  Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo. Isso remove o certificado do servidor do repositório de certificados.  
   
 ## <a name="see-also"></a>Consulte também
