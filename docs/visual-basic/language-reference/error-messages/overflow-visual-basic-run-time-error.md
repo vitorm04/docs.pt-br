@@ -5,25 +5,25 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 7546676b85465577b357b7ad0757b4db8d40dbe3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784069"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863345"
 ---
-# <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="4dd38-102">Estouro (erro de tempo de execução do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4dd38-102">Overflow (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="4dd38-103">Um estouro durante a tentativa de uma atribuição que excede os limites do destino da atribuição de resultados.</span><span class="sxs-lookup"><span data-stu-id="4dd38-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
+# <a name="overflow-visual-basic-run-time-error"></a><span data-ttu-id="8d525-102">Estouro (erro de tempo de execução do Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d525-102">Overflow (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="8d525-103">Um estouro durante a tentativa de uma atribuição que excede os limites do destino da atribuição de resultados.</span><span class="sxs-lookup"><span data-stu-id="8d525-103">An overflow results when you attempt an assignment that exceeds the limits of the assignment's target.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4dd38-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="4dd38-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8d525-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="8d525-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="4dd38-105">Certifique-se de que os resultados do tipo de dados, cálculos e atribuições de conversões não são muito grande para ser representado dentro do intervalo de coluna não são permitidos para esse tipo de valor e atribua o valor a uma variável de um tipo que podem conter um intervalo maior de valores , se necessário.</span><span class="sxs-lookup"><span data-stu-id="4dd38-105">Make sure that results of assignments, calculations, and data type conversions are not too large to be represented within the range of variables allowed for that type of value, and assign the value to a variable of a type that can hold a larger range of values, if necessary.</span></span>  
+1.  <span data-ttu-id="8d525-105">Certifique-se de que os resultados do tipo de dados, cálculos e atribuições de conversões não são muito grande para ser representado dentro do intervalo de coluna não são permitidos para esse tipo de valor e atribua o valor a uma variável de um tipo que podem conter um intervalo maior de valores , se necessário.</span><span class="sxs-lookup"><span data-stu-id="8d525-105">Make sure that results of assignments, calculations, and data type conversions are not too large to be represented within the range of variables allowed for that type of value, and assign the value to a variable of a type that can hold a larger range of values, if necessary.</span></span>  
   
-2.  <span data-ttu-id="4dd38-106">Certifique-se de atribuições às propriedades se encaixam no intervalo da propriedade à qual elas são feitas.</span><span class="sxs-lookup"><span data-stu-id="4dd38-106">Make sure assignments to properties fit the range of the property to which they are made.</span></span>  
+2.  <span data-ttu-id="8d525-106">Certifique-se de atribuições às propriedades se encaixam no intervalo da propriedade à qual elas são feitas.</span><span class="sxs-lookup"><span data-stu-id="8d525-106">Make sure assignments to properties fit the range of the property to which they are made.</span></span>  
   
-3.  <span data-ttu-id="4dd38-107">Certifique-se de que números usados em cálculos que são forçados em inteiros não tem resultados maiores do que os inteiros.</span><span class="sxs-lookup"><span data-stu-id="4dd38-107">Make sure that numbers used in calculations that are coerced into integers do not have results larger than integers.</span></span>  
+3.  <span data-ttu-id="8d525-107">Certifique-se de que números usados em cálculos que são forçados em inteiros não tem resultados maiores do que os inteiros.</span><span class="sxs-lookup"><span data-stu-id="8d525-107">Make sure that numbers used in calculations that are coerced into integers do not have results larger than integers.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4dd38-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4dd38-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8d525-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8d525-108">See Also</span></span>  
  <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
  <xref:System.Double.MaxValue?displayProperty=nameWithType>  
- [<span data-ttu-id="4dd38-109">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="4dd38-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)  
- [<span data-ttu-id="4dd38-110">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="4dd38-110">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+ [<span data-ttu-id="8d525-109">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="8d525-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)  
+ [<span data-ttu-id="8d525-110">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="8d525-110">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
