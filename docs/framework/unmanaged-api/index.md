@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442911"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508516"
 ---
 # <a name="unmanaged-api-reference"></a>Referência de API não gerenciada
 Esta seção inclui informações sobre APIs não gerenciadas que podem ser usadas por aplicativos relacionados a código gerenciado, como hosts de tempo de execução, compiladores, desmontadores, ofuscadores, depuradores e criadores de perfis.  
@@ -32,7 +32,7 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  [Constantes](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Descreve as constantes que são definidas em CorSym.idl.  
   
- [Atributos de Interface personalizada](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Atributos de interface personalizada](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  Descreve os atributos de interface personalizada do COM (Component Object Model).  
   
  [Depuração](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -57,7 +57,7 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  Descreve a API de nomenclatura forte, que permite a um cliente administrar assinatura de nome forte para assemblies.  
 
  [WMI e contadores de desempenho](wmi/index.md)  
- Descreve as APIs que envolvem chamadas para bibliotecas do Windows Management Instrumentation (WMI).
+ Descreve as APIs que encapsulam chamadas para bibliotecas da Instrumentação de Gerenciamento do Windows (WMI).
   
  [Funções auxiliares do Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  Descreve as duas funções auxiliares e a interface usada pelo Exportador da Biblioteca de Tipos (Tlbexp.exe) durante o processo de conversão de assembly para biblioteca de tipos.  
@@ -65,4 +65,4 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
 ## <a name="related-sections"></a>Seções relacionadas  
  [Guia de desenvolvimento](../../../docs/framework/development-guide.md)  
   
- [Leitura avançada para o .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Leitura avançada para o .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

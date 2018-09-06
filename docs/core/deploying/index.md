@@ -4,12 +4,12 @@ description: Implantação de um aplicativo .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792420"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562000"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -21,7 +21,7 @@ Você pode criar dois tipos de implantações de aplicativos do .NET Core:
 
 ## <a name="framework-dependent-deployments-fdd"></a>FDD (implantação dependente de estrutura)
 
-Para uma FDD, seu aplicativo é implantado apenas em dependências de terceiros. Você não precisa implantar o .NET Core, pois o aplicativo usará a versão do .NET Core presente no sistema de destino. Este é o modelo de implantação padrão para aplicativos .NET Core.
+Para uma FDD, seu aplicativo é implantado apenas em dependências de terceiros. Você não precisa implantar o .NET Core, pois o aplicativo usará a versão do .NET Core presente no sistema de destino. Esse é o modelo de implantação padrão para aplicativos .NET Core e ASP.NET Core direcionados ao .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Por que criar uma implantação dependente de estrutura?
 
@@ -70,9 +70,9 @@ Para obter exemplos passo a passo de como implantar aplicativos .NET Core com fe
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
 
-# <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
-[Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)   
-[Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)   
-[Pacotes, metapacotes e estruturas](../packages.md)   
-[Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+* [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)
+* [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)
+* [Pacotes, Metapacotes e Estruturas](../packages.md)
+* [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
