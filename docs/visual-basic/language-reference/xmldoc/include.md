@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777357"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876581"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;incluir&gt; (Visual Basic)
 Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.  

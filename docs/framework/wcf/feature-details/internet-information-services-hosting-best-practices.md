@@ -2,12 +2,12 @@
 title: Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 119f14df9d46883a33272903558d83128501b293
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33495756"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865901"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 Este tópico descreve algumas práticas recomendadas para a hospedagem de serviços Windows Communication Foundation (WCF).  
@@ -82,5 +82,5 @@ Este tópico descreve algumas práticas recomendadas para a hospedagem de servi�
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos do serviço de hospedagem](http://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
- [Recursos de hospedagem do Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Exemplos do serviço de hospedagem](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
+ [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

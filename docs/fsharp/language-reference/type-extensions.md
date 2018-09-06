@@ -3,11 +3,11 @@ title: Extensões de tipo (F#)
 description: 'Saiba como o F #, extensões de tipo permitem que você adicionar novos membros a um tipo de objeto definido anteriormente.'
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855055"
+ms.locfileid: "43874973"
 ---
 # <a name="type-extensions"></a>Extensões de tipo
 
