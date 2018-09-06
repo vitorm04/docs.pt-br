@@ -14,11 +14,11 @@ ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561243"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43786434"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
 O desenvolvimento de um [aplicativo pronto para o mundo](https://msdn.microsoft.com/goglobal/bb978433.aspx), incluindo um aplicativo que possa ser localizado em um ou mais idiomas, envolve três etapas: globalização, análise de possibilidade de localização e localização.  

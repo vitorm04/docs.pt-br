@@ -3,11 +3,11 @@ title: Recursos ML.NET
 description: Explore esses recursos ML.NET para auxiliar na criação e na integração de soluções de IA personalizadas em seus aplicativos .NET.
 ms.date: 07/27/2018
 ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485000"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798030"
 ---
 # <a name="mlnet-resources"></a>Recursos ML.NET
 

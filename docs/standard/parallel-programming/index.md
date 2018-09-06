@@ -8,11 +8,11 @@ ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538497"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802297"
 ---
 # <a name="parallel-programming-in-net"></a>Parallel Programming in .NET (Programação paralela no .NET)
 

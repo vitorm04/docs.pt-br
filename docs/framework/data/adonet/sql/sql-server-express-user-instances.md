@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: 31c0efbe953b56304c264444082185b9a9227d60
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658971"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745092"
 ---
 # <a name="sql-server-express-user-instances"></a>Instâncias de usuário do SQL Server Express
 O Microsoft SQL Server Express Edition (SQL Server Express) dá suporte ao recurso de instância de usuário, que somente está disponível quando é usado o Provedor de Dados .NET Framework para SQL Server (`SqlClient`). Uma instância de usuário é uma instância separada do Mecanismo de Banco de Dados SQL Server Express que é gerado por uma instância pai. As instâncias de usuário permitem que usuários que não são administradores em seus computadores locais anexem e conectem-se aos bancos de dados SQL Server Express. Cada instância é executada no contexto de segurança do usuário individual, uma instância por usuário.  

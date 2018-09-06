@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558404"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43805449"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
 Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  

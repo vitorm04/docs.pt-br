@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Porque os projetos de biblioteca de classes portátil destinam-se apenas um subconjunto muito específico de implementações do .NET, nós não recomendamos seu uso em desenvolvimento de novos aplicativos. A substituição recomendada é uma biblioteca .NET Standard, que se destina a todas as implementações do .NET que dão suporte a uma versão específica do .NET Standard. Para obter mais informações, confira [.NET Standard](~/docs/standard/net-standard.md).
