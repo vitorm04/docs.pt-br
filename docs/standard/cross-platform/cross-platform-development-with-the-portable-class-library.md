@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bd5ad69cc661005d20db4c4bcdda762c6432f416
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745402"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886052"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Desenvolvimento entre plataformas com a Biblioteca de Classes Portátil
 O tipo de projeto de Biblioteca de Classes Portátil .NET Framework no Visual Studio ajuda a criar de maneira rápida e fácil aplicativos e bibliotecas de plataforma cruzada para plataformas Microsoft.  
@@ -221,9 +221,10 @@ Exemplo de informações de versão
 </div>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usando a biblioteca de classes portátil com modelo MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [Recursos do aplicativo para bibliotecas direcionadas a várias plataformas](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [Implantação](../../../docs/framework/deployment/net-framework-applications.md)
+## <a name="see-also"></a>Consulte também
+
+- [Usando a biblioteca de classes portátil com modelo MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+- [Recursos do aplicativo para bibliotecas direcionadas a várias plataformas](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+- [.NET portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+- [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+- [Implantação](../../../docs/framework/deployment/net-framework-applications.md)

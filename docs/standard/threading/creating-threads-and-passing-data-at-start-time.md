@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb5d8456885b4fe805ca1bb80f0065b88a09dbb4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 028f8b978a7809fa9ae4710ab85d7dc84e7b04fc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912020"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878617"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Criando threads e passando dados na hora de início
 
@@ -61,9 +61,9 @@ Nenhum dos delegados <xref:System.Threading.ThreadStart> e <xref:System.Threadin
   
 ## <a name="see-also"></a>Consulte também
 
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadStart>  
- <xref:System.Threading.ParameterizedThreadStart>  
- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
- [Threading](index.md)  
- [Usando threads e threading](using-threads-and-threading.md)
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadStart>  
+- <xref:System.Threading.ParameterizedThreadStart>  
+- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
+- [Threading](index.md)  
+- [Usando threads e threading](using-threads-and-threading.md)
