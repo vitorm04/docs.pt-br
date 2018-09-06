@@ -2,12 +2,12 @@
 title: Expressões de computação (F#)
 description: 'Saiba como criar uma sintaxe conveniente para criar cálculos em F # que podem ser sequenciados e combinados usando construções de fluxo de controle e associações.'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207427"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800899"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não estão definidos na classe de construtor de expressão de computação. O corpo da expressão de computação, aqui é denotado como `{| cexpr |}`, é convertida em chamadas envolvendo os métodos da classe de construtor pelas conversões descritas na tabela a seguir. A expressão de cálculo `{| cexpr |}` é definido recursivamente acordo com essas traduções em que `expr` é uma expressão F # e `cexpr` é uma expressão de computação.
 
-
-
 |Expressão|Conversão|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Uma expressão de computação tem um tipo subjacente, que retorna a expressão. O tipo subjacente pode representar um resultado calculado ou uma computação atrasada que pode ser executada ou ela pode fornecer uma maneira para iterar por meio de algum tipo de coleção. No exemplo anterior, o tipo subjacente foi **eventualmente**. Uma expressão de sequência, o tipo subjacente é <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Uma expressão de consulta, o tipo subjacente é <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Para um fluxo de trabalho assíncrono, o tipo subjacente é [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). O `Async` objeto representa o trabalho seja realizado para calcular o resultado. Por exemplo, você chama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para executar um cálculo e retornar o resultado.
 
 ## <a name="custom-operations"></a>Operações personalizadas
+
 Você pode definir uma operação personalizada em uma expressão de computação e usar uma operação personalizada como um operador em uma expressão de computação. Por exemplo, você pode incluir um operador de consulta em uma expressão de consulta. Quando você define uma operação personalizada, você deve definir o rendimento e métodos na expressão de cálculo. Para definir uma operação personalizada, coloque-o em uma classe de construtor para a expressão de cálculo e, em seguida, aplicar a [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Esse atributo usa uma cadeia de caracteres como um argumento, que é o nome a ser usado em uma operação personalizada. Esse nome entra em escopo no início da chave de abertura da expressão de computação. Portanto, você não deve usar identificadores que têm o mesmo nome que uma operação personalizada neste bloco. Por exemplo, evite o uso de identificadores como `all` ou `last` em expressões de consulta.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Estendendo construtores existentes com novas operações personalizadas
+
 Se você já tiver uma classe de construtor, suas operações personalizadas podem ser estendidas de fora dessa classe de construtor. As extensões devem ser declaradas em módulos. Namespaces não podem conter membros de extensão, exceto no mesmo arquivo e o mesmo grupo de declaração de namespace no qual o tipo é definido.
 
 O exemplo a seguir mostra a extensão da existente `Microsoft.FSharp.Linq.QueryBuilder` classe.
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)
-
-[Sequências](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Expressões de Consulta](query-expressions.md)
+- [Referência da Linguagem F#](index.md)
+- [Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)
+- [Sequências](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Expressões de Consulta](query-expressions.md)
