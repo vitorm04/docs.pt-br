@@ -2,12 +2,12 @@
 title: 'Opções de valor (F #)'
 description: 'Saiba mais sobre o tipo de opção de valor de F #, que é uma versão de estrutura do tipo de opção.'
 ms.date: 06/16/2018
-ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527577"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747493"
 ---
 # <a name="value-options"></a>Opções de valor
 
@@ -80,4 +80,4 @@ Neste momento, não há nenhuma outra função do módulo associado para opçõe
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções](options.md)
+- [Opções](options.md)

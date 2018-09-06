@@ -3,11 +3,11 @@ title: Exemplo de anúncios
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534253"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749256"
 ---
 # <a name="announcements-sample"></a>Exemplo de anúncios
 Este exemplo mostra como usar a funcionalidade de lançamento do recurso de descoberta. Anúncios de permitir que os serviços enviar mensagens de anúncio que contêm metadados sobre o serviço. Por padrão, um anúncio hello é enviado quando o serviço é iniciado e um anúncio bye é enviado quando o serviço é desligado. Esses anúncios podem ser multicast ou eles podem ser enviados ponto a ponto. Esse exemplo consiste em cliente e o serviço de dois projetos.  

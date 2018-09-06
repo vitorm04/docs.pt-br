@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b9e729732175b7249e4d3be91996bc5e4050855
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450200"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735183"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>Método IMetaDataTables::GetNextUserString
-Obtém o índice da linha que contém a cadeia de caracteres codificada Avançar na coluna da tabela atual.  
+Obtém o índice da linha que contém a cadeia de caracteres embutidos Avançar na coluna da tabela atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,19 +41,19 @@ HRESULT GetNextUserString (
  [in] Um valor de índice da coluna de cadeia de caracteres atual.  
   
  `pNext`  
- [out] Um ponteiro para o índice de linha da próxima cadeia de caracteres na coluna.  
+ [out] Um ponteiro para o índice da linha da próxima cadeia de caracteres na coluna.  
   
 ## <a name="remarks"></a>Comentários  
- Não recomendamos o uso desse método, porque ele não retorna resultados consistentes. Para obter informações sobre a tabela GUID, consulte a documentação de infra-estrutura de linguagem comum (CLI), especialmente "partição II: metadados definição e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+ Não recomendamos o uso desse método, porque ele não retorna resultados consistentes. Para obter informações sobre a tabela GUID, consulte a documentação do Common Language Infrastructure (CLI), especialmente "partição II: Metadata Definition and Semantics". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  

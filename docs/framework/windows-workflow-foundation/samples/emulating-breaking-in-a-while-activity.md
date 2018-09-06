@@ -3,11 +3,11 @@ title: Emulação quebrando em um tempo a atividade
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
 ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560419"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773916"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Emulação quebrando em um tempo a atividade
 Este exemplo demonstra como dividir o mecanismo de loop das seguintes atividades: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, e <xref:System.Activities.Statements.ParallelForEach%601>.  

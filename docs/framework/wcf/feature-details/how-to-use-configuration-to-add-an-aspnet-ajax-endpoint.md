@@ -3,11 +3,11 @@ title: Como utilizar a configuração para adicionar um ponto de extremidade AJA
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559945"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748272"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Como utilizar a configuração para adicionar um ponto de extremidade AJAX ASP.NET
 Windows Communication Foundation (WCF) permite que você crie um serviço que permite que um ponto de extremidade habilitados para AJAX ASP.NET disponível que podem ser chamados do JavaScript em um site do cliente. Para criar um ponto de extremidade, você pode usar um arquivo de configuração, assim como acontece com todos os outros pontos de extremidade do Windows Communication Foundation (WCF) ou usar um método que não requer quaisquer elementos de configuração. Este tópico demonstra a abordagem de configuração.  

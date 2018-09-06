@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
 ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387735"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776929"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Caixas de diálogo no Windows Forms
 Caixas de diálogo são usadas para interagir com o usuário e recuperar informações. Em termos simples, uma caixa de diálogo é um formulário com suas <xref:System.Windows.Forms.FormBorderStyle> propriedade de enumeração definida como `FixedDialog`. Você pode construir suas próprias caixas de diálogo personalizada usando o Designer de formulários do Windows no Visual Studio. Adicione controles como `Label`, `Textbox` e `Button` para personalizar caixas de diálogo conforme suas necessidades específicas. O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] também inclui caixas de diálogo predefinidas, como **Abrir Arquivo** e caixas de mensagem, que você pode adaptar para seus próprios aplicativos. Para obter mais informações, confira [Controles e componentes da caixa de diálogo](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  

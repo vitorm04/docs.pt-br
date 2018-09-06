@@ -3,11 +3,11 @@ title: Escolhendo um filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558799"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743132"
 ---
 # <a name="choosing-a-filter"></a>Escolhendo um filtro
 Ao configurar o serviço de roteamento, é importante selecionar os filtros de mensagem correta e configurá-los para que você possa fazer as correspondências exatas nas mensagens recebidas. Se os filtros que você seleciona são excessivamente amplas em suas correspondências ou estão configurados incorretamente, mensagens são roteadas incorretamente. Se os filtros são muito restritivos, você não pode ter nenhuma rota válida disponível para algumas de suas mensagens.  

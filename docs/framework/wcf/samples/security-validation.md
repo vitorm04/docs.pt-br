@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: f77b01633f214d3a8c4ad8d7226375c3ed2368fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0aaa88268959561cabe4613d51feb0f219275634
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504378"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746737"
 ---
 # <a name="security-validation"></a>Validação de segurança
-Este exemplo demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos. Neste exemplo, os serviços são validados pelo comportamento personalizado verificação por meio de cada ponto de extremidade do serviço e para verificar se eles contêm elementos de associação de segurança. Este exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Este exemplo demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos. Neste exemplo, os serviços são validados pelo comportamento personalizado de verificação por meio de cada ponto de extremidade no serviço e verificando para ver se eles contêm elementos de associação de segurança. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
-## <a name="endpoint-validation-custom-behavior"></a>Comportamento de validação de ponto de extremidade personalizado  
- Adicionando o código de usuário para o `Validate` método contido o <xref:System.ServiceModel.Description.IServiceBehavior> interface, comportamento personalizado pode ser passado a um serviço ou um ponto de extremidade para executar as ações definidas pelo usuário. O código a seguir é usado para executar um loop através de cada ponto de extremidade contido em um serviço, que pesquisa por meio de suas coleções de associação para associações de seguras.  
+## <a name="endpoint-validation-custom-behavior"></a>Comportamento personalizado de validação de ponto de extremidade  
+ Adicionando o código de usuário para o `Validate` método contido no <xref:System.ServiceModel.Description.IServiceBehavior> interface, comportamento personalizado pode ser fornecido para um serviço ou um ponto de extremidade para executar ações definidas pelo usuário. O código a seguir é usado para executar loop em cada ponto de extremidade contido em um serviço, que procura por meio de suas coleções de associação para associações seguras.  
   
 ```  
 public void Validate(ServiceDescription serviceDescription,   
@@ -49,7 +49,7 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- Adicionando o seguinte código ao arquivo Web. config adiciona o `serviceValidate` extensão de comportamento para o serviço reconheça.  
+ Adicionando o seguinte código ao arquivo Web. config adiciona o `serviceValidate` extensão de comportamento para o serviço reconhecer.  
   
 ```xml  
 <system.serviceModel>  
@@ -74,28 +74,28 @@ public void Validate(ServiceDescription serviceDescription,
 </behaviors>  
 ```  
   
- Aplicam comportamentos e suas extensões que são adicionados ao arquivo Web. config do comportamento a serviços individuais, enquanto quando adicionado ao arquivo Machine. config aplicar o comportamento para cada serviço ativo no computador.  
+ Aplicam comportamentos e suas extensões que são adicionados ao arquivo Web. config do comportamento para serviços individuais, enquanto quando adicionado ao arquivo Machine. config aplicar o comportamento para cada serviço ativo no computador.  
   
 > [!NOTE]
 >  Ao adicionar o comportamento para todos os serviços, é recomendável fazer backup do arquivo Machine. config antes de fazer qualquer alteração.  
   
- Agora execute o cliente fornecido no diretório client\bin deste exemplo. Tem uma exceção ocorre com a seguinte mensagem: "o serviço solicitado, 'http://localhost/servicemodelsamples/service.svc' não pôde ser ativado." Isso é esperado porque um ponto de extremidade é considerado inseguro pelo ponto de extremidade de comportamento de validação e impede que o serviço seja iniciado. O comportamento também gera uma exceção interna que descreve qual ponto de extremidade é não segura e grava uma mensagem no Visualizador de eventos do sistema com a origem de "System. ServiceModel 4.0.0.0" e a categoria "WebHost". Também é possível ativar o rastreamento do serviço neste exemplo. Isso permite que o usuário exibir as exceções geradas pelo comportamento de validação de ponto de extremidade abrindo os rastreamentos resultante do serviço usando a ferramenta do Visualizador de rastreamento de serviço.  
+ Agora execute o cliente fornecido no diretório client\bin deste exemplo. Tem uma exceção ocorre com a seguinte mensagem: "o serviço solicitado, 'http://localhost/servicemodelsamples/service.svc' não pôde ser ativado." Isso é esperado, pois um ponto de extremidade é considerado inseguro pelo ponto de extremidade de validar o comportamento e impede que o serviço seja iniciado. O comportamento também gera uma exceção interna que descreve qual ponto de extremidade não é seguro e grava uma mensagem no Visualizador de eventos do sistema com a origem de "System. ServiceModel 4.0.0.0" e a categoria "WebHost". Também é possível ativar o rastreamento no serviço neste exemplo. Isso permite que o usuário exibir as exceções geradas pelo comportamento de validação de ponto de extremidade, abrindo os rastreamentos resultante do serviço usando a ferramenta Visualizador de rastreamento de serviço.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Para exibir mensagens de exceção de validação de ponto de extremidade no Visualizador de eventos de falha  
   
-1.  Clique o **iniciar** menu e selecione **executar...** .  
+1.  Clique o **inicie** menu e selecione **executar...** .  
   
-2.  Tipo `eventvwr` e clique em **Okey**.  
+2.  Tipo de `eventvwr` e clique em **Okey**.  
   
 3.  Na janela do Visualizador de eventos, clique em **aplicativo**.  
   
-4.  Duas vezes no evento adicionado recentemente "System. ServiceModel 4.0.0.0" sob a categoria "WebHost" no **aplicativo** janela para exibir mensagens de ponto de extremidade insegura.  
+4.  Duas vezes no evento adicionado recentemente "System. ServiceModel 4.0.0.0" sob a categoria "WebHost" na **aplicativo** janela para exibir mensagens de ponto de extremidade inseguro.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -104,9 +104,9 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de monitoramento do AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,13 +1,13 @@
 ---
 title: Computações lentas (F#)
-description: 'Saiba como F # computações lentas podem melhorar o desempenho de aplicativos e bibliotecas.'
+description: 'Saiba como as computações lentas do F # podem melhorar o desempenho de seus aplicativos e bibliotecas.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c4eb6ab247c44a04a9d145185e2de7ec01b8e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563926"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744609"
 ---
 # <a name="lazy-computations"></a>Computações lentas
 
@@ -21,20 +21,19 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Comentários
 
-Na sintaxe anterior, *expressão* é o código que é avaliado somente quando um resultado é necessário, e *identificador* é um valor que armazena o resultado. O valor é do tipo [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), onde o tipo que é usado para `'T` é determinado a partir do resultado da expressão.
+Na sintaxe anterior, *expressão* é o código que é avaliado somente quando um resultado é necessário, e *identificador* é um valor que armazena o resultado. O valor é do tipo [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), em que o valor real de tipo que é usado para `'T` é determinado a partir do resultado da expressão.
 
-Computações lentas permitem melhorar o desempenho, restringindo a execução de um cálculo para somente nas situações em que um resultado é necessária.
+Computações lentas que você possa melhorar o desempenho, restringindo a execução de um cálculo para somente essas situações em que um resultado é necessária.
 
-Para forçar o cálculo a ser executada, você pode chamar o método `Force`. `Force` faz com que a execução seja executada apenas uma vez. As chamadas subsequentes para `Force` retornar o mesmo resultado, mas não executa qualquer código.
+Para forçar o cálculo a ser executada, você chama o método `Force`. `Force` faz com que a execução a ser executada apenas uma vez. As chamadas subsequentes para `Force` retornar o mesmo resultado, mas não execute qualquer código.
 
-O código a seguir ilustra o uso de computação lenta e o uso de `Force`. Nesse código, o tipo de `result` é `Lazy<int>`e o `Force` método retorna um `int`.
+O código a seguir ilustra o uso de computação lenta e o uso de `Force`. Nesse código, o tipo de `result` está `Lazy<int>`e o `Force` método retorna um `int`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-Avaliação lenta, mas não o `Lazy` digite, também é usado para as sequências. Para obter mais informações, consulte [sequências](sequences.md).
+A avaliação lenta, mas não o `Lazy` de tipo, também é usado para as sequências. Para obter mais informações, consulte [sequências](sequences.md).
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da Linguagem F#](index.md)
-
-[Módulo LazyExtensions](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
+- [Referência da Linguagem F#](index.md)
+- [Módulo LazyExtensions](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)

@@ -3,11 +3,11 @@ title: Resumo do processo de inferência de esquema de conjunto de dados
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 ms.openlocfilehash: 1583d5232a3dd483bbe2a6fa0b1bc8a3ae6a659f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536590"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773361"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Resumo do processo de inferência de esquema de conjunto de dados
 O processo de inferência primeiro determina, do documento XML, quais elementos serão inferidos como tabelas. Do XML restante, o processo de inferência determina as colunas para essas tabelas. Para tabelas aninhadas, gera o processo de inferência de tipos aninhados <xref:System.Data.DataRelation> e <xref:System.Data.ForeignKeyConstraint> objetos.  

@@ -3,11 +3,11 @@ title: Extensibliity grade de propriedade
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
 ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660250"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779293"
 ---
 # <a name="property-grid-extensibliity"></a>Extensibliity grade de propriedade
 Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando uma determinada atividade é selecionada no designer. Isso pode ser feito para criar uma experiência rica de edição. Este exemplo mostra como isso pode ser feito.  

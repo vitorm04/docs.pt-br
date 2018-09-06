@@ -16,11 +16,11 @@ helpviewer_keywords:
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 ms.openlocfilehash: 942cb889c595f8caaf86dee1c025a935bd7db1b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671362"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747461"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Como contar, somar ou fazer média de dados usando LINQ (Visual Basic)
 Consulta integrada à linguagem (LINQ) facilita o acesso às informações de banco de dados e executar consultas.  

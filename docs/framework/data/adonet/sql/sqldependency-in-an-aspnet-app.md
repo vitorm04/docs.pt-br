@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 51df8ad695b3e59b368499d35ac76cc7ac0cd6e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5465238e4b9deaa13c76cb35122fcaded7acd7f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363358"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736653"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency em um aplicativo ASP.NET
 O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependency> indiretamente, aproveitando o ASP.NET <xref:System.Web.Caching.SqlCacheDependency> objeto. O <xref:System.Web.Caching.SqlCacheDependency> objeto usa um <xref:System.Data.SqlClient.SqlDependency> para ouvir as notificações e atualizar corretamente o cache.  
   
 > [!NOTE]
->  O exemplo de código pressupõe que você habilitou as notificações de consulta executando os scripts [habilitar notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
+>  O exemplo de código pressupõe que você habilitou as notificações de consulta, executando os scripts [habilitando notificações de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Sobre o aplicativo de exemplo  
- O aplicativo de exemplo usa uma única página da Web do ASP.NET para exibir informações de produto o **AdventureWorks** banco de dados do SQL Server em um <xref:System.Web.UI.WebControls.GridView> controle. Quando a página for carregada, o código grava a hora atual para um <xref:System.Web.UI.WebControls.Label> controle. Em seguida, define um <xref:System.Web.Caching.SqlCacheDependency> de objeto e define as propriedades no <xref:System.Web.Caching.Cache> objeto para armazenar os dados do cache para até três minutos. O código, em seguida, conecta-se ao banco de dados e recupera os dados. Quando a página for carregada e o aplicativo está executando o ASP.NET irá recuperar dados do cache, você pode verificar observando que o tempo na página não é alterado. Se os dados que estão sendo monitorados forem alterados, ASP.NET invalida o cache e preencher novamente o `GridView` controle com dados atualizados, atualizando o horário exibido no `Label` controle.  
+ O aplicativo de exemplo usa uma única página da Web do ASP.NET para exibir informações de produto a **AdventureWorks** banco de dados do SQL Server em um <xref:System.Web.UI.WebControls.GridView> controle. Quando a página for carregada, o código grava a hora atual para um <xref:System.Web.UI.WebControls.Label> controle. Em seguida, ele define uma <xref:System.Web.Caching.SqlCacheDependency> do objeto e define as propriedades no <xref:System.Web.Caching.Cache> objeto para armazenar os dados do cache de até três minutos. O código, em seguida, conecta-se ao banco de dados e recupera os dados. Quando a página é carregada e o aplicativo está executando o ASP.NET irá recuperar os dados do cache, você pode confirmar ao observar que o tempo na página não é alterado. Se os dados que estão sendo monitorados forem alterados, ASP.NET invalida o cache e preencher novamente o `GridView` controle com dados atualizados, atualizando o horário exibido no `Label` controle.  
   
 ## <a name="creating-the-sample-application"></a>Criando o aplicativo de exemplo  
  Siga estas etapas para criar e executar o aplicativo de exemplo:  
   
 1.  Crie um novo site da Web do ASP.NET.  
   
-2.  Adicionar um <xref:System.Web.UI.WebControls.Label> e um <xref:System.Web.UI.WebControls.GridView> controle para a página Default.aspx.  
+2.  Adicionar um <xref:System.Web.UI.WebControls.Label> e um <xref:System.Web.UI.WebControls.GridView> controle para a página Default. aspx.  
   
 3.  Abra o módulo de classe da página e adicione as seguintes diretivas:  
   
@@ -47,16 +47,16 @@ O exemplo nesta seção mostra como usar <xref:System.Data.SqlClient.SqlDependen
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Adicione dois métodos auxiliares, `GetConnectionString` e `GetSQL`. A cadeia de caracteres de conexão definida usa segurança integrada. Você precisará verificar se a conta que você está usando tem as permissões necessárias e se o banco de dados de exemplo, **AdventureWorks**, tem notificações habilitadas. Para obter mais informações, consulte [especiais considerações ao usar notificações de consulta](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  Adicione dois métodos auxiliares, `GetConnectionString` e `GetSQL`. A cadeia de conexão definida usa a segurança integrada. Você precisará verificar se a conta que você está usando tem as permissões de banco de dados necessários e que o banco de dados de exemplo, **AdventureWorks**, tem notificações habilitadas. Para obter mais informações, consulte [especial considerações sobre quando usar notificações de consulta](https://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
   
 ### <a name="testing-the-application"></a>Testando o aplicativo  
- O aplicativo armazena em cache os dados exibidos no formulário da Web e atualiza cada três minutos se não houver nenhuma atividade. Se ocorrer uma alteração no banco de dados, o cache é atualizado imediatamente. Execute o aplicativo do Visual Studio, que carrega a página no navegador. O tempo de atualização do cache exibido indica quando o cache foi atualizada pela última vez. Aguarde três minutos e, em seguida, atualize a página, fazendo com que um evento de postback ocorra. Observe que a hora exibida na página foi alterada. Se você atualizar a página em menos de três minutos, o horário exibido na página permanece o mesmo.  
+ O aplicativo armazena em cache os dados exibidos no formulário da Web e atualiza a cada três minutos se não houver nenhuma atividade. Se ocorrer uma alteração no banco de dados, o cache é atualizado imediatamente. Execute o aplicativo do Visual Studio, que carrega a página no navegador. O tempo de atualização do cache exibido indica quando o cache foi atualizada pela última vez. Aguardar três minutos e, em seguida, atualize a página, fazendo com que um evento de postback ocorra. Observe que a hora exibida na página foi alterado. Se você atualizar a página em menos de três minutos, o horário exibido na página permanece o mesmo.  
   
- Agora, atualize os dados no banco de dados, usando um comando Transact-SQL UPDATE e atualize a página. Agora, a hora exibida indica que o cache foi atualizado com novos dados do banco de dados. Observe que embora o cache é atualizado, o horário exibido na página não se altera até que ocorra um evento de postback.  
+ Agora, atualize os dados no banco de dados, usando um comando UPDATE do Transact-SQL e atualize a página. Agora, a hora exibida indica que o cache foi atualizado com os novos dados do banco de dados. Observe que embora o cache é atualizado, o horário exibido na página não é alterado até que ocorra um evento de postback.  
   
 ## <a name="see-also"></a>Consulte também  
  [Notificações de consulta no SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

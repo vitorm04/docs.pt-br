@@ -3,11 +3,11 @@ title: Exemplos de descoberta com escopos
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: d9adc33d73642a42a8ba948b3c5bf75bd4bc1f5c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398129"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733772"
 ---
 # <a name="discovery-with-scopes-sample"></a>Exemplos de descoberta com escopos
 Este exemplo mostra como usar escopos para categorizar os pontos de extremidade podem ser descobertos como bem como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona para pontos de extremidade. No serviço, este exemplo mostra como personalizar a descoberta para cada ponto de extremidade, adicionando um comportamento de ponto de extremidade de descoberta e usá-lo para adicionar um escopo para o ponto de extremidade bem como controlar a capacidade de descoberta do ponto de extremidade. No cliente, a amostra passa sobre como os clientes podem criar uma <xref:System.ServiceModel.Discovery.DiscoveryClient> e ajustar parâmetros incluir escopos adicionando escopos de pesquisa a <xref:System.ServiceModel.Discovery.FindCriteria>. Este exemplo também mostra como os clientes podem restringir as respostas com a adição de um critério de término.  

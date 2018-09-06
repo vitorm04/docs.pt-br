@@ -1,17 +1,17 @@
 ---
 title: 'A palavra-chave Fixed (F #)'
-description: "Saiba como você pode 'Fixar' um local para a pilha para evitar a coleta da a F # 'fixed' palavra-chave."
+description: "Saiba como você pode \"pin\" um local para a pilha para evitar a coleta com o F # 'fixed' palavra-chave."
 ms.date: 04/24/2017
-ms.openlocfilehash: 913ee4d7b0f6b2437793d4788e53556d6be6c4db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563870"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779208"
 ---
 # <a name="the-fixed-keyword"></a>A palavra-chave Fixed
 
-F # 4.1 apresenta o `fixed` palavra-chave, que permite que você "fixar" em um local para a pilha para impedir que ele seja coletado ou movido durante a coleta de lixo.  Ele é usado para cenários de programação de nível inferior.
+F # 4.1 apresenta o `fixed` palavra-chave, que permite que você "fixar" em um local para a pilha para impedir que ele seja coletado ou movido durante a coleta de lixo.  Ele é usado para cenários de programação de nível baixo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,13 +21,13 @@ use ptr = fixed expression
 
 ## <a name="remarks"></a>Comentários
 
-Isso estende a sintaxe das expressões para permitir que um ponteiro de extração e vinculá-la a um nome que será impedido de ser coletado ou movido durante a coleta de lixo.  
+Isso estende a sintaxe de expressões para permitir a extração de um ponteiro e associá-la a um nome que é impedido de ser coletado ou movido durante a coleta de lixo.  
 
-Um ponteiro de uma expressão é fixa por meio de `fixed` palavra-chave é associada a um identificador por meio de `use` palavra-chave.  A semântica isso é semelhante ao gerenciamento de recursos por meio de `use` palavra-chave.  O ponteiro é fixa enquanto ele está no escopo e, depois que ele está fora do escopo, ela não é fixa.  `fixed` não pode ser usado fora do contexto de um `use` associação.  Você deve associar o ponteiro para um nome com `use`.
+Um ponteiro de uma expressão é corrigido por meio de `fixed` palavra-chave está associado a um identificador por meio do `use` palavra-chave.  A semântica isso é semelhante ao gerenciamento de recursos por meio de `use` palavra-chave.  O ponteiro é fixa enquanto ele está no escopo e, depois que ele está fora do escopo, não é fixo.  `fixed` não pode ser usado fora do contexto de um `use` associação.  Você deve associar o ponteiro para um nome com `use`.
 
-O uso de `fixed` deve ocorrer dentro de uma expressão em uma função ou um método.  Ele não pode ser usado em um escopo de nível de script ou módulo.
+Uso de `fixed` deve ocorrer dentro de uma expressão em uma função ou um método.  Ele não pode ser usado em um escopo de nível de script ou módulo.
 
-Como todo o código de ponteiro, isso é um recurso não seguro e emitirá um aviso quando usado.
+Como todos os códigos de ponteiro, isso é um recurso que não é seguro e emitirá um aviso quando usado.
 
 ## <a name="example"></a>Exemplo
 
@@ -63,4 +63,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>Consulte também
 
-[Módulo NativePtr](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [Módulo NativePtr](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

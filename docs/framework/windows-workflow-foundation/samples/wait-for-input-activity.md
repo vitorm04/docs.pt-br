@@ -3,11 +3,11 @@ title: Espera para atividades de entrada
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
 ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401203"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741166"
 ---
 # <a name="wait-for-input-activity"></a>Espera para atividades de entrada
 Este exemplo demonstra como criar indicadores nomeados em um fluxo de trabalho. Windows Workflow Foundation (WF) não fornece uma atividade para criar declarativa do indexador. Portanto, quando você deseja criar um indexador no fluxo de trabalho, você deve escrever uma atividade personalizado que o criar. A atividade de `WaitForInput` definida neste exemplo fornece essa funcionalidade, de modo que os usuários podem criar indicadores declarativamente dentro de um fluxo de trabalho.  

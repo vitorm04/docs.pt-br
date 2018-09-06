@@ -10,11 +10,11 @@ helpviewer_keywords:
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
 ms.openlocfilehash: 67466bbb5fd7e7a46c312e14666c23048bf43d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552251"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744661"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Como animar um duplo usando quadros-chave
 Este exemplo mostra como animar o valor de uma propriedade que aceita um <xref:System.Double> usando quadros-chave.  

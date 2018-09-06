@@ -9,45 +9,45 @@ ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036680ea908f2cbe58db398dc315fccd997c4148
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409988"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738482"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementando o Padrão de Controle Grid de Automação de Interface de Usuário
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
   
  Este tópico apresenta diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IGridProvider>, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listadas no final da visão geral.  
   
- O <xref:System.Windows.Automation.GridPattern> padrão de controle é usado para oferecer suporte aos controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.IGridItemProvider> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido por linha e coluna. Para obter exemplos de controles que implementam este padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ O <xref:System.Windows.Automation.GridPattern> padrão de controle é usado para dar suporte a controles que atuam como contêineres para uma coleção de elementos filho. Os filhos deste elemento devem implementar <xref:System.Windows.Automation.Provider.IGridItemProvider> e ser organizados em um sistema de coordenadas lógico bidimensional que pode ser percorrido por linha e coluna. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação de interface do usuário](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Convenções e diretrizes de implementação  
+## <a name="implementation-guidelines-and-conventions"></a>As convenções e diretrizes de implementação  
  Ao implementar o padrão de controle de grade, observe as seguintes diretrizes e convenções:  
   
--   Coordenadas da grade são baseadas em zero com o superior esquerda (ou célula superior direita dependendo da localidade) tendo as coordenadas (0, 0).  
+-   Coordenadas de grade são baseadas em zero com o canto superior esquerdo (ou célula superior direita dependendo da localidade) tendo as coordenadas (0, 0).  
   
--   Se uma célula estiver vazia, um elemento de automação de interface do usuário ainda deve ser retornado para oferecer suporte a <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> propriedade daquela célula. Isso é possível quando o layout dos elementos filho na grade é semelhante a uma matriz irregular (veja exemplo abaixo).  
+-   Se uma célula estiver vazia, um elemento de automação de interface do usuário ainda deve ser retornado para oferecer suporte a <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> propriedade para essa célula. Isso é possível quando o layout dos elementos filho na grade é semelhante a uma matriz irregular (veja o exemplo abaixo).  
   
- ![Windows Explorer exibir mostrando desbalanceada layout. ] (../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Windows Explorer exibir mostrando desbalanceada layout. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Exemplo de um controle de grade com coordenadas vazios  
   
--   Uma grade com um único item ainda é necessária para implementar <xref:System.Windows.Automation.Provider.IGridProvider> se ela for considerada logicamente uma grade. O número de itens filhos na grade é irrelevante.  
+-   Uma grade com um único item ainda é necessária para implementar <xref:System.Windows.Automation.Provider.IGridProvider> se ela é considerada como uma grade logicamente. O número de itens filho na grade é irrelevante.  
   
--   Linhas e colunas, dependendo da implementação de provedor, podem ser carregadas no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas no <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas ainda não tiverem sido carregadas, eles não devem ser contados.  
+-   Linhas e colunas, dependendo da implementação do provedor, ocultas podem ser carregadas na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore e, portanto, serão refletidas na <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> e <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> propriedades. Se as linhas e colunas ocultas ainda não tiverem sido carregadas, eles não devem ser contados.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> não habilitam manipulação ativa de uma grade; <xref:System.Windows.Automation.Provider.ITransformProvider> deve ser implementado para habilitar essa funcionalidade.  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> não permite a manipulação ativa de uma grade; <xref:System.Windows.Automation.Provider.ITransformProvider> devem ser implementados para habilitar essa funcionalidade.  
   
--   Use um <xref:System.Windows.Automation.StructureChangedEventHandler> para escutar alterações estruturais ou de layout na grade como células que foram adicionados, removidos ou mesclados.  
+-   Use um <xref:System.Windows.Automation.StructureChangedEventHandler> para escutar alterações estruturais ou de layout para a grade, como as células que foram adicionados, removidos ou mesclados.  
   
 -   Use um <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> para controlar a travessia pelos itens ou células de uma grade.  
   
 <a name="Required_Members_for_IGridProvider"></a>   
 ## <a name="required-members-for-igridprovider"></a>Membros necessários para IGridProvider  
- As propriedades e métodos a seguir são necessários para implementar a interface IGridProvider.  
+ As propriedades e métodos a seguir são necessários para a implementação da interface IGridProvider.  
   
 |Membros necessários|Tipo|Observações|  
 |----------------------|----------|-----------|  
@@ -55,7 +55,7 @@ Exemplo de um controle de grade com coordenadas vazios
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propriedade|Nenhum|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Método|Nenhum|  
   
- Esse padrão de controle não possui eventos associados.  
+ Esse padrão de controle não tem eventos associados.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
@@ -63,7 +63,7 @@ Exemplo de um controle de grade com coordenadas vazios
   
 |Tipo de exceção|Condição|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se a coordenada da linha solicitada é maior do que o <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> ou a coordenada da coluna é maior que o <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se a coordenada da linha solicitada é maior do que o <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> ou a coordenada da coluna é maior do que o <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Se a coluna ou linha solicitada coordenadas é menor que zero.|  
   
 ## <a name="see-also"></a>Consulte também  

@@ -1,18 +1,17 @@
 ---
 title: Parâmetros de tipo resolvidos estaticamente (F#)
-description: 'Saiba como usar uma linguagem F # parâmetro de tipo resolvidos estaticamente, que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.'
+description: 'Saiba como usar F # parâmetro de tipo estaticamente resolvidos, o que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233776"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777854"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parâmetros de tipo resolvidos estaticamente
 
-Um *parâmetro de tipo resolvidos estaticamente* é um parâmetro de tipo que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução. Eles são precedidos por um símbolo de acento circunflexo (^).
-
+Um *parâmetro de tipo estaticamente resolvido* é um parâmetro de tipo que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução. Eles são precedidos por um símbolo de acento circunflexo (^).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,9 +20,10 @@ Um *parâmetro de tipo resolvidos estaticamente* é um parâmetro de tipo que é
 ```
 
 ## <a name="remarks"></a>Comentários
-Na linguagem F #, há dois tipos distintos de parâmetros de tipo. O primeiro tipo é o parâmetro de tipo genérico padrão. Esses são indicadas por um apóstrofo ('), como em `'T` e `'U`. Eles são equivalentes aos parâmetros de tipo genérico em outras linguagens do .NET Framework. O outro tipo é resolvido estaticamente e é indicado por um símbolo de cursor, como em `^T` e `^U`.
 
-Parâmetros de tipo resolvidos estaticamente são útil principalmente em conjunto com as restrições de membro, que são as restrições que permitem que você especifique que um argumento de tipo deve ter um determinado membro ou membros para ser usado. Não há nenhuma maneira de criar esse tipo de restrição usando um parâmetro de tipo genérico regular.
+Na linguagem F #, há dois tipos diferentes de parâmetros de tipo. O primeiro tipo é o parâmetro de tipo genérico padrão. Eles são indicados por um apóstrofo ('), como em `'T` e `'U`. Eles são equivalentes aos parâmetros de tipo genérico em outras linguagens do .NET Framework. O outro tipo é estaticamente resolvido e indicado por um símbolo de acento circunflexo, como em `^T` e `^U`.
+
+Parâmetros de tipo estaticamente resolvidos são úteis principalmente em conjunto com restrições de membro, que são restrições que permitem que você especifique que um argumento de tipo deve ter um determinado membro ou membros para ser usado. Não há nenhuma maneira de criar esse tipo de restrição usando um parâmetro de tipo genérico normal.
 
 A tabela a seguir resume as semelhanças e diferenças entre os dois tipos de parâmetros de tipo.
 
@@ -32,17 +32,17 @@ A tabela a seguir resume as semelhanças e diferenças entre os dois tipos de pa
 |Sintaxe|`'T`, `'U`|`^T`, `^U`|
 |Tempo de resolução|Tempo de execução|Tempo de compilação|
 |Restrições de membro|Não pode ser usado com restrições de membro.|Pode ser usado com restrições de membro.|
-|Geração de código|Um tipo (ou método) com parâmetros de tipo genérico padrão resulta na geração de um único tipo genérico ou método.|Várias instâncias de tipos e métodos são geradas, uma para cada tipo que é necessária.|
+|Geração de código|Um tipo (ou método) com parâmetros de tipo genéricos padrão resulta na geração de um único tipo genérico ou método.|Várias instanciações de tipos e métodos são geradas, uma para cada tipo que é necessária.|
 |Use com tipos|Pode ser usada em tipos.|Não pode ser usada em tipos.|
-|Use com funções embutidas|Nº Uma função embutida não pode ser parametrizada com um parâmetro de tipo genérico padrão.|Sim. Parâmetros de tipo resolvidos estaticamente não podem ser usados em funções ou métodos que não são embutidos.|
+|Use com funções embutidas|Nº Uma função embutida não pode ser parametrizada com um parâmetro de tipo genérico padrão.|Sim. Parâmetros de tipo estaticamente resolvidos não podem ser usados em funções ou métodos que não estejam embutidos.|
 
-Muitos F # principais funções de biblioteca, principalmente operadores, estaticamente resolveu parâmetros de tipo. Esses operadores e funções internas e resultam na geração de código eficiente para cálculos numéricos.
+Muitas F # core funções de biblioteca, principalmente operadores, têm parâmetros de tipo estaticamente resolvidos. Essas funções e operadores são embutidos e resultam na geração de código eficiente para cálculos numéricos.
 
-Métodos embutidos e funções que usam operadores, ou usar outras funções que têm parâmetros de tipo, resolvidos estaticamente também podem usar parâmetros de tipo resolvidos estaticamente próprios. Muitas vezes, a inferência de tipo infere tais funções embutidas para ter parâmetros de tipo resolvidos estaticamente. O exemplo a seguir ilustra uma definição de operador é inferida para ter um parâmetro de tipo resolvidos estaticamente.
+Métodos embutidos e funções que usam operadores ou usam outras funções que resolveram estaticamente os parâmetros de tipo, também podem usar parâmetros de tipo estaticamente resolvidos. Muitas vezes, a inferência de tipo infere tais funções embutidas para parâmetros de tipo estaticamente resolvidos. O exemplo a seguir ilustra uma definição de operador que é inferida para ter um parâmetro de tipo estaticamente resolvidos.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-O tipo resolvido de `(+@)` baseia-se no uso de ambos `(+)` e `(*)`, ambos do que fazer com que a inferência de tipos inferir restrições de membro em parâmetros de tipo resolvidos estaticamente. O tipo resolvido, conforme o interpretador de F #, é o seguinte.
+O tipo resolvido de `(+@)` baseia-se no uso de ambos `(+)` e `(*)`, ambos fazem com que a inferência de tipo infira restrições de membros nos parâmetros de tipo estaticamente resolvidos. O tipo resolvido, conforme mostrado no interpretador da F #, é da seguinte maneira.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ A saída é a seguinte.
 1.500000
 ```
 
-A partir do F # 4.1, você pode também especificar nomes de tipo concreto em assinaturas de parâmetro de tipo resolvidos estaticamente.  Nas versões anteriores do idioma, o nome do tipo, na verdade, pode ser inferido pelo compilador, mas, na verdade, não pôde ser especificado na assinatura.  A partir do F # 4.1, você também pode especificar nomes de tipo concreto em assinaturas de parâmetro de tipo resolvidos estaticamente. Veja um exemplo:
+Começando com o F # 4.1, você pode também especificar nomes de tipo concreto em assinaturas de parâmetro de tipo estaticamente resolvidos.  Nas versões anteriores da linguagem, o nome do tipo, na verdade, poderia ser inferido pelo compilador, mas, na verdade, não pôde ser especificado na assinatura.  A partir do F # 4.1, você também pode especificar nomes de tipo concreto em assinaturas de parâmetro de tipo estaticamente resolvidos. Veja um exemplo:
 
 ```fsharp
 let inline konst x _ = x
@@ -86,12 +86,9 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
 ```
 
 ## <a name="see-also"></a>Consulte também
-[Genéricos](index.md)
 
-[Inferência de Tipos](../type-inference.md)
-
-[Generalização Automática](automatic-generalization.md)
-
-[Restrições](constraints.md)
-
-[Funções Embutidas](../functions/inline-functions.md)
+- [Genéricos](index.md)
+- [Inferência de Tipos](../type-inference.md)
+- [Generalização Automática](automatic-generalization.md)
+- [Restrições](constraints.md)
+- [Funções Embutidas](../functions/inline-functions.md)

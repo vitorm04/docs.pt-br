@@ -3,11 +3,11 @@ title: Sessão confiável de associação personalizada através de HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
 ms.openlocfilehash: fb23dc6e6e2e13d759d29584ed6a990ae769ac8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389888"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736809"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sessão confiável de associação personalizada através de HTTPS
 Este exemplo demonstra o uso da segurança de transporte SSL com sessões confiáveis. Sessões confiáveis implementa o protocolo WS-confiável de mensagens. Você pode ter uma sessão confiável segura pela composição de WS-Security sobre as sessões confiáveis. Mas, às vezes, você pode optar por usar em vez disso, a segurança de transporte HTTP com SSL.  

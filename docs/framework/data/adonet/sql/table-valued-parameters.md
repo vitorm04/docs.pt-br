@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365937"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742509"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros de valores de tabela
-Os parâmetros com valor de tabela fornecem uma maneira fácil de marshaling em várias linhas de dados de um aplicativo cliente para o SQL Server sem exigir várias viagens de ida e volta ou uma lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros de valores de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável da tabela que pode, em seguida, ser operada usando o [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
+Os parâmetros com valor de tabela fornecem uma maneira fácil de empacotar várias linhas de dados de um aplicativo cliente para o SQL Server sem exigir várias viagens de ida e volta ou lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros de valores de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável da tabela que pode, em seguida, ser operada usando o [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
   
  Os valores de coluna em parâmetros de valores de tabela podem ser acessados usando instruções SELECT padrão do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Os parâmetros de valores de tabela são fortemente tipados e sua estrutura é validada automaticamente. O tamanho de parâmetros de valores de tabela é delimitado somente pela memória do servidor.  
   
@@ -24,8 +24,8 @@ Os parâmetros com valor de tabela fornecem uma maneira fácil de marshaling em 
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Parâmetros com valor de tabela (mecanismo de banco de dados)](http://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server|Descreve como criar e usar parâmetros de valores de tabela.|  
-|[Tipos de tabela definidos pelo usuário](http://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server|Descreve os tipos de tabela definidos pelo usuário que são usados para declarar parâmetros de valores de tabela.|  
+|[Parâmetros com valor de tabela (mecanismo de banco de dados)](https://go.microsoft.com/fwlink/?LinkId=98363) nos Manuais Online do SQL Server|Descreve como criar e usar parâmetros de valores de tabela.|  
+|[Tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkId=98364) nos Manuais Online do SQL Server|Descreve os tipos de tabela definidos pelo usuário que são usados para declarar parâmetros de valores de tabela.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passando várias linhas em versões anteriores do SQL Server  
  Antes de parâmetros com valor de tabela foram introduzidos no SQL Server 2008, as opções para passar várias linhas de dados para um procedimento armazenado ou um comando SQL parametrizado eram limitadas. Um desenvolvedor poderia escolher as seguintes opções para passar várias linhas para o servidor:  
@@ -39,7 +39,7 @@ Os parâmetros com valor de tabela fornecem uma maneira fácil de marshaling em 
 -   Use o programa de utilitário do `bcp` ou o objeto de <xref:System.Data.SqlClient.SqlBulkCopy> para carregar várias linhas de dados em uma tabela. Embora essa técnica seja muito eficiente, ela não dá suporte ao processamento do lado do servidor a menos que os dados sejam carregados em uma tabela temporária ou uma variável da tabela.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Criando tipos de parâmetro com valor de tabela  
- Os parâmetros de valores de tabela são baseados em estruturas de tabela fortemente tipadas que são definidas usando as instruções CREATE TYPE do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de usar parâmetros com valor de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](http://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
+ Os parâmetros de valores de tabela são baseados em estruturas de tabela fortemente tipadas que são definidas usando as instruções CREATE TYPE do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Você precisa criar um tipo de tabela e definir a estrutura no SQL Server antes de poder usar parâmetros com valor de tabela em seus aplicativos cliente. Para obter mais informações sobre como criar tipos de tabela, consulte [tipos de tabela definidos pelo usuário](https://go.microsoft.com/fwlink/?LinkID=98364) nos Manuais Online do SQL Server.  
   
  A instrução a seguir cria um tipo de tabela chamado CategoryTableType composto pelas colunas CategoryID e CategoryName:  
   
@@ -77,16 +77,16 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Limitações de parâmetros de valores de tabela  
  Há várias limitações para os parâmetros de valores de tabela:  
   
--   Você não pode passar parâmetros com valor de tabela para [funções CLR definidas pelo usuário](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   Você não pode passar parâmetros com valor de tabela [funções CLR definidas pelo usuário](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
--   Os parâmetros de valores de tabela somente podem ser indexados para oferecer suporte às restrições UNIQUE ou PRIMARY KEY. SQL Server não mantém estatísticas sobre os parâmetros com valor de tabela.  
+-   Os parâmetros de valores de tabela somente podem ser indexados para oferecer suporte às restrições UNIQUE ou PRIMARY KEY. SQL Server não mantém estatísticas sobre parâmetros com valor de tabela.  
   
 -   Os parâmetros com valor de tabela são somente leitura no código do [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]. Você não pode atualizar os valores da coluna nas linhas de um parâmetro com valor de tabela e você não pode inserir ou excluir linhas. Para modificar os dados que são passados para um procedimento armazenado ou instrução parametrizada no parâmetro com valor de tabela, você deverá inserir os dados em uma tabela temporária ou variável da tabela.  
   
 -   Você não pode usar instruções ALTER TABLE para modificar o design de parâmetros de valores de tabela.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Configurando um exemplo de SqlParameter  
- <xref:System.Data.SqlClient> dá suporte a popular parâmetros com valor de tabela do <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> ou <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> objetos. Você deve especificar um nome de tipo para o parâmetro com valor de tabela usando a propriedade <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> de um <xref:System.Data.SqlClient.SqlParameter>. O `TypeName` deve corresponder ao nome de um tipo compatível criado anteriormente no servidor. O fragmento de código a seguir demonstra como configurar o <xref:System.Data.SqlClient.SqlParameter> para inserir dados.  
+ <xref:System.Data.SqlClient> dá suporte ao preenchimento de parâmetros com valor de tabela do <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> ou <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> objetos. Você deve especificar um nome de tipo para o parâmetro com valor de tabela usando a propriedade <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> de um <xref:System.Data.SqlClient.SqlParameter>. O `TypeName` deve corresponder ao nome de um tipo compatível criado anteriormente no servidor. O fragmento de código a seguir demonstra como configurar o <xref:System.Data.SqlClient.SqlParameter> para inserir dados.  
   
 ```csharp  
 // Configure the command and parameter.  
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [Comandos e parâmetros](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Parâmetros DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [SQL Server Data Operations in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md) (Operações de dados do SQL Server no ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
