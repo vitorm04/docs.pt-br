@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 861942ac3ce84d75be61d7b4125ab0e17c6d86e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6419c2157281d00cf79de16d4f494fc52bcee598
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750564"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876726"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;segurança&gt; de &lt;msmqIntegrationBinding&gt;
 Define as configurações de segurança de transporte para o canal de integração de enfileiramento de mensagens (MSMQ).  
@@ -45,7 +45,7 @@ msmqIntegrationBinding
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Especifica o tipo de segurança que controla a integridade, a confidencialidade e a autenticação com o canal de integração de enfileiramento de mensagens. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Isso desabilita a segurança.<br />-Transporte: Autenticação e proteção são oferecidos pelo transporte. Isso se aplica à segurança de mensagem entre os gerenciadores de fila de dois. Não há nenhuma segurança oferecida entre o aplicativo e o Gerenciador de fila. Os aplicativos Msmq existentes são funcionalmente equivalentes com esse tipo de modo de segurança.<br /><br /> O valor padrão é `Transport`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|modo|Especifica o tipo de segurança que controles de integridade, confidencialidade e autenticação com o canal de integração de enfileiramento de mensagens. Os valores válidos incluem o seguinte:<br /><br /> -None: Isso desabilita a segurança.<br />-Transport: Autenticação e proteção são oferecidos pelo transporte. Isso se aplica a segurança de mensagem entre os gerenciadores de fila de dois. Não há nenhuma segurança oferecida entre o aplicativo e o Gerenciador de fila. Aplicativos existentes do Msmq são funcionalmente equivalentes com esse tipo de modo de segurança.<br /><br /> O valor padrão é `Transport`. Esse atributo é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -68,6 +68,6 @@ msmqIntegrationBinding
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)  
  [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

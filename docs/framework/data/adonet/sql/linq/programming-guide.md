@@ -3,11 +3,11 @@ title: Guia de Programação
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
 ms.openlocfilehash: 3a6dad5237c149186a91637ec98efd6f7f315c4d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465506"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799652"
 ---
 # <a name="programming-guide"></a>Guia de Programação
 Esta seção contém informações sobre como criar e usar o modelo de objeto do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Se você estiver usando o Visual Studio, você também pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para executar muitas dessas mesmas tarefas.  

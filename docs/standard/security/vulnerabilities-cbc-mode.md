@@ -1,121 +1,121 @@
 ---
-title: Vulnerabilidades de tempo com a descriptografia simétrica de modo CBC usando preenchimento
-description: Saiba como detectar e reduzir as vulnerabilidades de tempo com a descriptografia simétrica de modo de encadeamento de blocos de codificação (CBC) usando o preenchimento.
+title: Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
+description: Saiba como detectar e atenuar as vulnerabilidades de medição de tempo com a descriptografia simétrica de modo Cipher Block Chaining (CBC) usando o preenchimento.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208679"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881363"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de tempo com a descriptografia simétrica de modo CBC usando preenchimento
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
 
-A Microsoft acredita que não é seguro descriptografar dados criptografados com o encadeamento de blocos de codificação modo CBC () de criptografia simétrica quando preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto codificado, exceto para muito específica circunstâncias. Este julgamento baseia-se a pesquisa de criptografia conhecida no momento. 
+A Microsoft acredita que não é seguro descriptografar dados criptografados com o modo de criptografia simétrica Cipher Block Chaining (CBC) quando o preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto codificado, exceto para muito específica circunstâncias. Essa avaliação baseia-se a pesquisa de criptografia conhecida no momento. 
 
 ## <a name="introduction"></a>Introdução
 
-Um ataque de preenchimento oracle é um tipo de ataque contra os dados criptografados que permite que o invasor descriptografar o conteúdo dos dados, sem conhecer a chave.
+Um ataque de preenchimento oracle é um tipo de ataque contra dados criptografados que permite que o invasor descriptografar o conteúdo dos dados, sem conhecer a chave.
 
-Um oracle se refere a um "dizer" que fornece um invasor saber se a ação que está executando está correta ou não. Imagine um tabuleiro de jogo ou da placa de jogo com um filho. Quando sua face acende com um grande Smiley porque ela acha que ela está prestes a fazer um bom movimento, que é um oracle. Você, como o adversário, pode usar esse oracle para planejar próximo movimento adequadamente.
+Um oracle se refere a um "Diga" que fornece um invasor saber se a ação que está executando está correta ou não. Imagine um tabuleiro de jogo ou de cartão de jogo com um filho. Quando rosto acende com um grande sorriso porque ele acha que ela está prestes a fazer uma boa ideia, o que é um oracle. Você, como o adversário pode usar este oracle para planejar seu próximo passo adequadamente.
 
-O preenchimento é um termo específico de criptografia. Algumas codificações, que são os algoritmos usados para criptografar os dados, trabalhar em blocos de dados onde cada bloco é um tamanho fixo. Se os dados que você deseja criptografar não o tamanho certo para preencher os blocos, seus dados são preenchidos até que ele faz. Muitos formulários de preenchimento exigem que o preenchimento sempre esteja presente, mesmo se a entrada original era do tamanho correto. Isso permite que o preenchimento deve sempre ser removido com segurança após a descriptografia.
+Preenchimento é um termo específico de criptografia. Algumas codificações, que são os algoritmos usados para criptografar seus dados, trabalhar em blocos de dados onde cada bloco é um tamanho fixo. Se os dados que você deseja criptografar não forem o tamanho correto para preencher os blocos, seus dados são preenchidos até que ele faz. Muitos formulários de preenchimento requerem esse preenchimento sempre esteja presente, mesmo se a entrada original era do tamanho certo. Isso permite que o preenchimento para sempre ser removidos com segurança após a descriptografia.
 
-Reunindo os dois pontos, uma implementação de software com um oracle preenchimento revela se dados descriptografados tem preenchimento válido. O oracle pode ser algo simples, como retornar um valor que diz "Preenchimento inválido" ou algo mais complicado como tirar uma hora diferente, para processar um bloco válido em vez de um bloco inválido.
+Juntando as duas coisas, uma implementação de software com um oracle preenchimento revela se os dados descriptografados tem preenchimento válido. A oracle pode ser algo tão simples quanto retornando um valor que diz "Um preenchimento inválido" ou algo mais complicado, como colocar um tempo consideravelmente diferente para processar um bloco válido em vez de um bloco inválido.
 
-Codificações de bloco de outra propriedade, chamada de modo, o que determina a relação de dados no primeiro bloco para os dados no segundo bloco, e assim por diante. Um dos modos mais comumente usados é CBC. CBC apresenta um bloco aleatório inicial, conhecido como o vetor de inicialização (IV) e combina o bloco anterior com o resultado da criptografia estática para torná-lo, de modo que criptografar a mesma mensagem com a mesma chave sempre não produzem a mesma saída criptografada.
+Codificações de bloco de outra propriedade, chamada de modo, que determina a relação de dados no primeiro bloco aos dados no segundo bloco, e assim por diante. Um dos modos mais comumente usados é CBC. CBC apresenta um bloco aleatório inicial, conhecido como o vetor de inicialização (IV) e combina o bloco anterior com o resultado da criptografia estática para torná-lo, de modo que criptografar a mesma mensagem com a mesma chave sempre não produz a mesma saída criptografada.
 
-Um invasor pode usar um oracle preenchimento, em combinação com como CBC dados são estruturados, para enviar mensagens ligeiramente alteradas para o código que expõe o oracle e manter envio de dados até que o oracle informa os dados estão corretos. Dessa resposta, o invasor pode descriptografar a mensagem byte por byte.
+Um invasor pode usar um oracle de preenchimento, em combinação com como CBC dados são estruturados, para enviar mensagens ligeiramente alteradas para o código que expõe o oracle e continuar enviando dados até que o oracle informa os dados estão corretos. Essa resposta, o invasor pode descriptografar a mensagem byte por byte.
 
-Redes de computador modernos são de tal alta qualidade que um invasor pode detectar muito pequenas (menos de 0,1 ms) tempo de diferenças em execução em sistemas remotos. Aplicativos que supondo que uma descriptografia bem-sucedida só pode acontecer quando os dados não foram violados podem ser vulneráveis a ataques de ferramentas que são projetadas para observar as diferenças na descriptografia com e sem êxito. Essa diferença de tempo pode ser mais significativa em alguns idiomas ou bibliotecas do que outras pessoas, agora se acredita que se trata de uma ameaça prática para todos os idiomas e bibliotecas quando a resposta do aplicativo a falha é levada em conta.
+As redes de computador moderno são de tal alta qualidade que um invasor pode detectar muito pequeno (menos de 0,1 ms) tempo de diferenças em execução em sistemas remotos. Aplicativos que são supondo uma descriptografia bem-sucedida só pode acontecer quando os dados não foram adulterados ao podem ser vulneráveis a ataques de ferramentas projetadas para observar as diferenças na descriptografia bem-sucedidas e malsucedida. Embora essa diferença de tempo pode ser mais significativa em alguns idiomas ou bibliotecas que outros, ele agora acredita-se que se trata de uma ameaça prática para todas as linguagens e bibliotecas quando a resposta do aplicativo a falha é levada em conta.
 
-Esse ataque se baseia na capacidade de alterar os dados criptografados e testar o resultado com o oracle. É a única maneira de reduzir totalmente o ataque de detectar alterações aos dados criptografados e recusar executar quaisquer ações sobre ela. O modo padrão para fazer isso é criar uma assinatura para os dados e validar a assinatura antes de todas as operações são executadas. A assinatura deve ser verificada, ele não pode ser criado, o invasor, caso contrário, eles seriam alterar os dados criptografados e uma nova assinatura com base nos dados alterados de computação. Um tipo comum de assinatura apropriada é conhecido como um código de autenticação de mensagem de hash com chave (HMAC). Um HMAC é diferente de uma soma de verificação, que leva a uma chave secreta, conhecida somente para a pessoa que gera o HMAC e para a pessoa validá-lo. Sem posse da chave, você não pode produzir um HMAC correto. Quando você receber seus dados, deve levar os dados criptografados, independentemente de computação o HMAC usando a chave secreta você e o compartilhamento de remetente e a comparação computado o HMAC eles enviado em relação a um. Essa comparação deve ser constante tempo, caso contrário, você adicionou outro oracle detectável, permitindo que um tipo diferente de ataque.
+Esse ataque se baseia na capacidade de alterar os dados criptografados e testar o resultado com o oracle. A única maneira de reduzir totalmente o ataque é detectar alterações aos dados criptografados e se recusar a executar quaisquer ações nele. O modo padrão para fazer isso é criar uma assinatura para os dados e validar a assinatura antes de todas as operações são executadas. A assinatura deve ser verificável, ela não pode ser criada pelo invasor, caso contrário, eles seriam alterar os dados criptografados e calcular uma nova assinatura com base nos dados alterados. Um tipo comum de assinatura apropriado é conhecido como um código de autenticação de mensagem de hash com chave (HMAC). Um HMAC é diferente de uma soma de verificação, ele usa uma chave secreta, conhecido somente a pessoa que está produzindo o HMAC e a pessoa validá-lo. Sem posse da chave, você não pode produzir um HMAC correto. Quando você receber seus dados, seria pegar os dados criptografados, você e o compartilhamento de remetente, compare o HMAC elas enviou em relação a um computado de computação independentemente o HMAC usando a chave secreta. Essa comparação deve ser um tempo constante, caso contrário, você adicionou outro oracle detectável, permitindo que um tipo diferente de ataque.
 
-Em resumo, usar preenchidas CBC codificações em bloco com segurança, você deve combiná-los com um HMAC (ou outra verificação de integridade de dados) que você validar usando uma comparação de tempo constante antes de tentar descriptografar os dados. Desde que todas as mensagens alteradas levam a mesma quantidade de tempo para produzir uma resposta, o ataque é impedido.
+Em resumo, usar preenchida CBC codificações de bloco com segurança, você deve combiná-los com um HMAC (ou outra verificação de integridade de dados) que você validar usando uma comparação de tempo constante antes de tentar descriptografar os dados. Como todas as mensagens alteradas demoram a mesma quantidade de tempo para produzir uma resposta, o ataque é impedido.
 
 ## <a name="who-is-vulnerable"></a>Quem é vulnerável
 
 Essa vulnerabilidade se aplica a aplicativos gerenciados e nativos que estão executando seu próprio criptografia e descriptografia. Isso inclui, por exemplo:
 
-- Um aplicativo que criptografa um cookie para descriptografia mais recente no servidor.
-- Um aplicativo de banco de dados que fornece a capacidade dos usuários inserir dados em uma tabela cujas colunas são descriptografados posteriormente.
+- Um aplicativo que criptografa um cookie para descriptografia posterior no servidor.
+- Um aplicativo de banco de dados que fornece a capacidade dos usuários inserir dados em uma tabela cujas colunas são descriptografados mais tarde.
 - Um aplicativo de transferência de dados que se baseia em criptografia usando uma chave compartilhada para proteger os dados em trânsito.
-- Um aplicativo que criptografa e descriptografa mensagens "internos" o túnel TLS.
+- Um aplicativo que criptografa e descriptografa as mensagens "internos" o túnel TLS.
 
-Observe que usar TLS sozinho pode não proteger você nesses cenários.
+Observe que usando TLS sozinho pode não proteger você nesses cenários.
 
 Um aplicativo vulnerável:
 
-- Descriptografa os dados usando o modo de codificação CBC com um modo de preenchimento verificável, como PKCS #7 ou X.923 ANSI.
-- Executa a descriptografia sem ter executado uma verificação de integridade de dados (por meio de um MAC ou uma assinatura digital assimétrica).
+- Descriptografa os dados usando o modo de criptografia CBC com um modo de preenchimento verificável, como PKCS #7 ou X.923 ANSI.
+- Executa a descriptografia sem ter realizado uma verificação de integridade de dados (por meio de um MAC ou uma assinatura digital assimétrica).
 
-Isso também se aplica a aplicativos criados sobre abstrações sobre esses primitivos, como a estrutura de EnvelopedData sintaxe de mensagem criptografada (PKCS #7/CMS).
+Isso também se aplica a aplicativos criados sobre abstrações ao longo da parte superior desses primitivos, como a estrutura de EnvelopedData sintaxe de mensagem (PKCS #7/CMS).
 
-## <a name="related-areas-of-concern"></a>Relacionados áreas de interesse
+## <a name="related-areas-of-concern"></a>Áreas relacionadas de preocupação
 
-Pesquisa levou Microsoft ainda mais se preocupar com as mensagens de CBC são preenchidas com preenchimento quando a mensagem tem uma estrutura bem conhecido ou previsível rodapé 10126 ISO equivalente. Por exemplo, conteúdo preparado com as regras da sintaxe de criptografia do W3C XML e recomendação de processamento (xmlenc, EncryptedXml). Embora a orientação do W3C para assinar a mensagem, em seguida, criptografar foi considerada apropriada no momento, a Microsoft recomenda agora sempre fazendo logon criptografar, em seguida.
+Research tem levaram a Microsoft a ainda mais se preocupar com as mensagens de CBC são preenchidas com preenchimento quando a mensagem tem uma estrutura de rodapé conhecido ou previsível 10126 ISO equivalentes. Por exemplo, o conteúdo preparado com as regras da sintaxe de criptografia do W3C XML e recomendação de processamento (xmlenc EncryptedXml). Embora as diretrizes do W3C para assinar a mensagem e em seguida, criptografar foi considerada apropriada no momento, a Microsoft recomenda agora fazendo sempre criptografar-then-sign.
 
-Os desenvolvedores de aplicativos devem estar sempre atentos ao verificar a aplicabilidade de uma chave de assinatura assimétrica, pois não há nenhuma relação de confiança inerente entre uma chave assimétrica e uma mensagem arbitrária.
+Os desenvolvedores de aplicativos sempre devem estar atentos verificando a aplicabilidade de uma chave de assinatura assimétrica, pois não há nenhuma relação de confiança inerente entre uma chave assimétrica e uma mensagem arbitrária.
 
 ## <a name="details"></a>Detalhes
 
-Historicamente, tem sido consenso é importante criptografar e autenticar dados importantes, usando meios, como assinaturas HMAC ou RSA. No entanto, houve menos orientação clara sobre como sequenciar as operações de criptografia e autenticação. Devido à vulnerabilidade de detalhadas neste artigo, diretrizes da Microsoft é usar sempre o paradigma "criptografar-then-sign". Ou seja, primeiro criptografar dados usando uma chave simétrica e computa um MAC ou a assinatura assimétrica sobre o texto cifrado (dados criptografados). Quando a descriptografia de dados, execute o inverso. Primeiro, confirme o endereço MAC ou assinatura do texto codificado e descriptografá-lo.
+Historicamente, tem sido um consenso, o que é importante criptografar e autenticar dados importantes, usando meios, como assinaturas HMAC ou RSA. No entanto, tem havido menos orientação clara sobre como sequenciar as operações de criptografia e autenticação. Devido à vulnerabilidade detalhada neste artigo, orientação da Microsoft é sempre usar o paradigma da "criptografar-then-sign". Ou seja, primeiro criptografar dados usando uma chave simétrica e a computação de um MAC ou assinatura assimétrica sobre o texto cifrado (dados criptografados). Quando a descriptografia de dados, execute o inverso. Primeiro, confirme se o MAC ou a assinatura do texto codificado e descriptografá-lo.
 
-Uma classe de vulnerabilidades conhecidas como "preenchimento oracle ataques" comprovadamente existe há mais de 10 anos. Essas vulnerabilidades permitem que um invasor descriptografar dados criptografados por algoritmos de bloco simétrico, como AES e 3DES, usar não mais do que 4096 tentativas por um bloco de dados. Essas vulnerabilidades fazer uso do fato de que bloqueiam as codificações são usados com mais frequência com dados de preenchimento verificável no final. Foi encontrado que, se um invasor pode violar o texto cifrado e descobrir se a violação causou um erro no formato de preenchimento no final, o invasor poderá descriptografar os dados.
+Uma classe de vulnerabilidades conhecidas como "preenchimento de ataques do oracle" conhecido existam para mais de 10 anos. Essas vulnerabilidades permitem que um invasor descriptografar dados criptografados por algoritmos de bloco simétricas, como AES e 3DES, usando as tentativas não mais que 4096 por bloco de dados. Essas vulnerabilidades fazer uso do fato de que as codificações de bloco é mais frequentemente usada com os dados de preenchimento verificável no final. Foi encontrado que, se um invasor pode violar o texto cifrado e descobrir se a violação causou um erro no formato do preenchimento no final, o invasor poderá descriptografar os dados.
 
-Inicialmente, ataques práticos baseadas nos serviços que retornam os códigos de erro diferentes com base em se preenchimento foi válido, como a vulnerabilidade do ASP.NET [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). No entanto, a Microsoft agora acredita que é prático conduzir ataques semelhantes usando apenas as diferenças no intervalo entre processamento preenchimento válido e inválido.
+Inicialmente, ataques práticos eram baseados em serviços que retornam os códigos de erro diferentes com base em se preenchimento foi válido, como a vulnerabilidade do ASP.NET [MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx). No entanto, a Microsoft acredita agora é prático conduzir ataques semelhantes usando apenas as diferenças no tempo entre o processamento de preenchimento válido e inválido.
 
-Contanto que o esquema de criptografia emprega uma assinatura e que a verificação da assinatura é executada com um tempo de execução fixo para um determinado comprimento de dados (independentemente do conteúdo), a integridade dos dados pode ser verificada sem emitir todas as informações para um o invasor por meio de um [canal do lado do](https://en.wikipedia.org/wiki/Side-channel_attack). Desde que a verificação de integridade rejeita qualquer mensagem violada, a ameaça de oracle preenchimento é reduzida.
+Desde que o esquema de criptografia utiliza uma assinatura e que a verificação da assinatura é executada com um tempo de execução fixado para um determinado comprimento de dados (independentemente do conteúdo), a integridade dos dados pode ser verificada sem emitir qualquer informação a um o invasor por meio de um [canal do lado do](https://en.wikipedia.org/wiki/Side-channel_attack). Uma vez que a verificação de integridade rejeita qualquer mensagem violadas, a ameaça do oracle de preenchimento é atenuada.
 
 ## <a name="guidance"></a>Diretrizes
 
-Primeiramente, a Microsoft recomenda que todos os dados que tem a confidencialidade precisam ser transmitidos pela segurança TLS (Transport Layer), o sucessor ao protocolo (SSL).
+Primeiramente, a Microsoft recomenda que todos os dados com confidencialidade precisam ser transmitidos pela segurança TLS (Transport Layer), o sucessor ao protocolo (SSL).
 
-Em seguida, analise seu aplicativo:
+Em seguida, analise o aplicativo para:
 
-- Compreenda precisamente o que estiver executando a criptografia e que a criptografia está sendo fornecida, as plataformas e APIs que você está usando.
-- Ter certeza de que cada uso em cada camada de um simétrica [algoritmo de codificação de bloco](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), como AES e 3DES, no modo CBC incorporar o uso de uma verificação de integridade de dados com a chave secreta (uma assinatura assimétrica, um HMAC, ou para alterar o modo de codificação para um [autenticado criptografia](https://en.wikipedia.org/wiki/Authenticated_encryption) modo (AE) como GCM ou CCM).
+- Compreenda precisamente o que você estiver executando a criptografia e que a criptografia está sendo fornecida pelas plataformas e APIs que você está usando.
+- Ter certeza de que cada uso em cada camada de simétrica [algoritmo de criptografia de bloco](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), como AES e 3DES, no modo CBC incorporar o uso de uma verificação de integridade de dados com chave de segredo (uma assinatura assimétrica, um HMAC, ou para alterar o modo de criptografia para uma [autenticado criptografia](https://en.wikipedia.org/wiki/Authenticated_encryption) modo (AE) como o GCM ou CCM).
 
-Com base na pesquisa atual, acredita-se que, quando as etapas de autenticação e criptografia são executadas de maneira independente para modos de não-AE de criptografia, autenticação do texto cifrado (criptografar-then-entrada) é a melhor opção geral. No entanto, há uma resposta correta se aplicam à criptografia e este generalização não é tão bons quanto direcionado conselhos de um profissional criptógrafo.
+Com base na pesquisa atual, acredita-se que quando as etapas de autenticação e criptografia são executadas de maneira independente para modos de não-AE de criptografia, autenticando o texto cifrado (criptografar-then-sign) é a melhor opção geral. No entanto, há uma resposta correta padronizada à criptografia e essa generalização não é tão bom quanto direcionado conselho de um criptógrafo profissional.
 
-Aplicativos que não é possível alterar o formato de mensagens, mas executar descriptografia de CBC não autenticada são incentivados a tentar incorporar atenuações, como:
+Aplicativos que não é possível alterar seu formato de mensagens, mas executar a descriptografia de CBC não autenticada são incentivados a tentar incorporar atenuações, como:
 
 - Descriptografar sem permitir o descriptografador verificar ou remover preenchimento:
-  - O preenchimento que foi aplicado ainda precisa ser removidos ou ignorados, você está movendo a carga em seu aplicativo.
-  - A vantagem é que a verificação de preenchimento e remoção podem ser incorporadas em outra lógica de verificação de dados de aplicativo. Se a verificação de preenchimento e a verificação de dados podem ser feitos no horário constante, a ameaça é reduzida.
-  - Como a interpretação do preenchimento altera o comprimento da mensagem percebido, pode ainda ser emitidas a partir dessa abordagem de informações de tempo.
+  - Qualquer preenchimento que foi aplicado ainda precisa ser removido ou ignorado, você está movendo a carga em seu aplicativo.
+  - A vantagem é que a verificação de preenchimento e a remoção podem ser incorporadas em outra lógica de verificação de dados do aplicativo. Se a verificação de preenchimento e a verificação de dados podem ser feitos em tempo constante, a ameaça é reduzida.
+  - Uma vez que a interpretação do preenchimento muda o comprimento da mensagem percebido, ainda pode haver informações de tempo emitidas a partir dessa abordagem.
 - Altere o modo de preenchimento de descriptografia para ISO10126:
-  - Preenchimento de descriptografia ISO10126 é compatível com preenchimento de criptografia PKCS7 e ANSIX923 preenchimento de criptografia.
-  - Alterando o modo reduz o conhecimento do oracle de preenchimento de 1 byte, em vez do bloco inteiro. No entanto, se o conteúdo tiver um rodapé conhecido, como um elemento XML de fechamento ataques relacionados podem continuar atacar o resto da mensagem.
-  - Isso também não impede que a recuperação de texto sem formatação em situações em que o invasor pode forçar o mesmo texto não criptografado a serem criptografados várias vezes com um deslocamento de mensagem diferentes.
-- A avaliação de uma chamada de descriptografia para Umedeça o sinal de intervalo de porta:
-  - O cálculo de tempo de espera deve ter no mínimo exceder a quantidade máxima de tempo que a operação de descriptografia seria necessário para nenhum segmento de dados que contém o preenchimento.
-  - Cálculos de tempo devem ser feitos de acordo com as orientações em [adquirir os carimbos de hora de alta resolução](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), não usando <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeito a roll-over/estouro) ou subtraindo duas carimbos de hora do sistema (sujeitos ao ajuste de NTP erros).
-  - Cálculos de tempo devem ser incluindo a operação de descriptografia, incluindo todas as exceções potenciais em gerenciado ou aplicativos do C++, não apenas preenchidos no final.
-  - Se o êxito ou a falha foi determinada ainda, a porta de tempo deve retornar falha quando ela expirar.
-- Serviços que estão executando a descriptografia não autenticada devem ter em vigor para detectar que um fluxo de mensagens "inválidos" ficou por meio de monitoramento.
-  - Tenha em mente que este sinal executa (dados corrompidos de forma legítima) de falsos positivos e falsos negativos (distribuindo o ataque em um tempo longo o suficiente para evitar a detecção).
+  - Preenchimento de descriptografia ISO10126 é compatível com o preenchimento de criptografia PKCS7 e ANSIX923 preenchimento de criptografia.
+  - Alterando o modo reduz o conhecimento do oracle de preenchimento para 1 byte, em vez do bloco inteiro. No entanto, se o conteúdo tiver um rodapé bem conhecido, como um elemento XML, fechamento ataques relacionados podem continuar atacar o resto da mensagem.
+  - Isso também não impede que a recuperação de texto sem formatação em situações em que o invasor pode forçar o mesmo texto não criptografado a ser criptografado várias vezes com um deslocamento de mensagem diferente.
+- Portão de avaliação de uma chamada de descriptografia para Umedeça o sinal de medição de tempo:
+  - O cálculo de tempo de espera deve ter no mínimo que excede a quantidade máxima de tempo que a operação de descriptografia levaria para qualquer segmento de dados que contém o preenchimento.
+  - Cálculos de tempo devem ser feitos de acordo com as diretrizes [adquirindo carimbos de data / hora de alta resolução](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), não usando <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujeito a roll-over/estouro) ou subtrair dois carimbos de hora do sistema (sujeito a ajuste de NTP erros).
+  - Cálculos de tempo devem ser inclui a operação de descriptografia, incluindo todas as exceções potenciais em gerenciado ou aplicativos de C++, não apenas preenchidos no final.
+  - Se o êxito ou falha tiver sido determinada ainda, a porta de medição de tempo precisa retornar falha quando ela expirar.
+- Serviços que estão executando a descriptografia não autenticada devem ter em vigor para detectar que uma inundação de mensagens "inválidas" chegou por meio de monitoramento.
+  - Tenha em mente que esse sinal transporta falsos positivos (dados corrompidos legitimamente) e falsos negativos (espalhamento de ataque em um tempo longo o suficiente para escapar da detecção).
 
-## <a name="finding-vulnerable-code---native-applications"></a>Localizando código vulnerável - aplicativos nativos
+## <a name="finding-vulnerable-code---native-applications"></a>Localizando o código vulnerável - aplicativos nativos
 
-Para programas criados em relação a criptografia do Windows: biblioteca de Next Generation (CNG):
+Para programas criados em relação a criptografia do Windows: biblioteca de próxima geração (CNG):
 
-- A chamada de descriptografia é [BCryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa375391.aspx), especificando o `BCRYPT_BLOCK_PADDING` sinalizador.
-- O identificador de chave foi inicializado chamando [BCryptSetProperty](https://msdn.microsoft.com/library/windows/desktop/aa375504.aspx) com [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) definido como `BCRYPT_CHAIN_MODE_CBC`.
-  - Como `BCRYPT_CHAIN_MODE_CBC` é o padrão, afetado código pode não ter atribuído qualquer valor para `BCRYPT_CHAINING_MODE`.
+- É a chamada de descriptografia [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), especificando o `BCRYPT_BLOCK_PADDING` sinalizador.
+- O identificador de chave foi inicializado chamando [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) com [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) definido como `BCRYPT_CHAIN_MODE_CBC`.
+  - Uma vez que `BCRYPT_CHAIN_MODE_CBC` é o padrão, afetado código pode não ter atribuído qualquer valor para `BCRYPT_CHAINING_MODE`.
 
-Para programas criados com a API de criptografia mais antigas do Windows:
+Para programas criados em relação a API criptográfica do Windows mais antigos:
 
-- A chamada de descriptografia é [CryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa379913.aspx) com `Final=TRUE`.
-- O identificador de chave foi inicializado chamando [CryptSetKeyParam](https://msdn.microsoft.com/library/windows/desktop/aa380272.aspx) com [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) definido como `CRYPT_MODE_CBC`.
-  - Como `CRYPT_MODE_CBC` é o padrão, afetado código pode não ter atribuído qualquer valor para `KP_MODE`.
+- É a chamada de descriptografia [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) com `Final=TRUE`.
+- O identificador de chave foi inicializado chamando [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) com [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) definido como `CRYPT_MODE_CBC`.
+  - Uma vez que `CRYPT_MODE_CBC` é o padrão, afetado código pode não ter atribuído qualquer valor para `KP_MODE`.
 
-## <a name="finding-vulnerable-code---managed-applications"></a>Localizando código vulnerável - de aplicativos gerenciados
+## <a name="finding-vulnerable-code---managed-applications"></a>Código vulnerável localizando - aplicativos gerenciados
 
-- A chamada de descriptografia é o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> ou <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> métodos em <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - Isso inclui os seguintes tipos derivados no .NET, mas também pode incluir tipos de terceiros:
+- A chamada de descriptografia é para o <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> ou <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> métodos em <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
+  - Isso inclui os seguintes tipos derivados dentro do .NET, mas também pode incluir tipos de produtos de terceiros:
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -130,23 +130,23 @@ Para programas criados com a API de criptografia mais antigas do Windows:
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
 - O <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propriedade foi definida como <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, ou <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
-  - Como <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> é o padrão, afetado nunca pode ter atribuído o código de <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propriedade.
+  - Uma vez que <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> é o padrão, afetado código nunca pode ter atribuído o <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propriedade.
 - O <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propriedade foi definida como <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Como <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> é o padrão, afetado nunca pode ter atribuído o código de <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propriedade.
+  - Uma vez que <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> é o padrão, afetado código nunca pode ter atribuído o <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propriedade.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Localizando código vulnerável - sintaxe de mensagem criptografada
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Localizando o código vulnerável - sintaxe de mensagem criptográfica
 
-Uma mensagem não autenticada de CMS EnvelopedData cujo conteúdo criptografado usa o modo de AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), o DES (1.3.14.3.2.7), o 3DES CBC (1.2.840.113549.3.7) ou RC2 (1.2.840.113549.3.2) é vulnerável, bem como mensagens usando outros algoritmos de criptografia de bloco no modo CBC.
+Uma mensagem não autenticada de CMS EnvelopedData cujo conteúdo criptografado usa o modo de AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), o DES (1.3.14.3.2.7), o 3DES CBC (1.2.840.113549.3.7) ou RC2 (1.2.840.113549.3.2) é vulnerável, bem como mensagens usando outros algoritmos de codificação de bloco no modo CBC.
 
-Enquanto codificações de fluxo não são suscetíveis a essa vulnerabilidade em particular, a Microsoft recomenda a autenticação sempre os dados em inspecionando o valor de ContentEncryptionAlgorithm.
+Enquanto as codificações de fluxo não são suscetíveis a essa vulnerabilidade em particular, a Microsoft recomenda sempre autenticar os dados de inspecionar o valor de ContentEncryptionAlgorithm.
 
 Para aplicativos gerenciados, um EnvelopedData CMS blob pode ser detectado como qualquer valor que é passado para <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
 
-Para aplicativos nativos, um blob de CMS EnvelopedData pode ser detectado como qualquer valor fornecido para um identificador CMS via [CryptMsgUpdate](https://msdn.microsoft.com/library/windows/desktop/aa380231.aspx) cujo resultante [CMSG_TYPE_PARAM](https://msdn.microsoft.com/library/windows/desktop/aa380227.aspx) é `CMSG_ENVELOPED` e/ou o identificador CMS é posteriormente, enviados um `CMSG_CTRL_DECRYPT` instrução via [CryptMsgControl](https://msdn.microsoft.com/library/windows/desktop/aa380220.aspx).
+Para aplicativos nativos, um blob de CMS EnvelopedData pode ser detectado como qualquer valor fornecido para um identificador CMS via [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) cuja resultando [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) é `CMSG_ENVELOPED` e/ou o identificador CMS é posteriormente, enviados uma `CMSG_CTRL_DECRYPT` instrução via [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
 
 ## <a name="vulnerable-code-example---managed"></a>Exemplo de código vulnerável - gerenciado
 
-Esse método lê um cookie e descriptografa-a e nenhuma verificação de integridade de dados fica visível. Portanto, o conteúdo de um cookie que é lido por esse método pode ser atacado por usuário que recebeu ou por qualquer invasor obtém o valor do cookie criptografado.
+Esse método lê um cookie e a descriptografa e nenhuma verificação de integridade de dados fica visível. Portanto, o conteúdo de um cookie que é lida por esse método pode ser atacado pelo usuário que a receberam ou por qualquer invasor que obteve o valor do cookie criptografado.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -171,17 +171,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Exemplo a seguir do código práticas - gerenciado
+## <a name="example-code-following-recommended-practices---managed"></a>Exemplo a seguir do código as práticas recomendadas - gerenciadas
 
-O código de exemplo a seguir usa um formato de mensagem não padrão de
+O código de exemplo a seguir usa um formato de mensagem não padrão do
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-onde o `cipher_algorithm_id` e `hmac_algorithm_id` identificadores de algoritmo são representações (não-padrão) de aplicativo local desses algoritmos. Esses identificadores podem fazer sentido em outras partes do seu protocolo de mensagens existente em vez de como um fluxo de bytes concatenado vazio.
+em que o `cipher_algorithm_id` e `hmac_algorithm_id` identificadores de algoritmo são representações de local do aplicativo (não padrão) desses algoritmos. Esses identificadores talvez faça sentido em outras partes do seu protocolo de mensagens existente em vez de como um fluxo de bytes bare concatenado.
 
-Este exemplo também usa uma única chave mestra para derivar uma chave de criptografia e uma chave HMAC. Isso é fornecido como uma conveniência para ativar um aplicativo individualmente organizado em um aplicativo com chave dupla e a fim de incentivar mantendo as duas chaves diferentes como valores. Ela ainda mais garante que a chave HMAC e a chave de criptografia não é possível obter fora de sincronização.
+Este exemplo também usa uma chave mestra única para derivar uma chave de criptografia e uma chave HMAC. Isso é fornecido como uma conveniência para ativar um aplicativo em um aplicativo com chave dupla e incentivar a manter as duas chaves diferentes como valores inseridos individualmente. Ainda mais, ele garante que a chave HMAC e a chave de criptografia não é possível obter fora de sincronização.
 
-Este exemplo não aceita um <xref:System.IO.Stream> para criptografia ou descriptografia. Torna de formato de dados atual um passo criptografar difícil porque o `hmac_tag` valor precede o texto cifrado. No entanto, esse formato foi escolhido porque ele mantém todos os elementos de tamanho fixo no início para manter o analisador mais simples. Com este formato de dados, um passo descriptografar é possível, embora um implementador é evitaram chamar GetHashAndReset e verifique se o resultado antes de chamar TransformFinalBlock. Se a criptografia de streaming for importante, um modo AE diferente pode ser necessário.
+Este exemplo não aceita um <xref:System.IO.Stream> para criptografia ou descriptografia. O torna de formato de dados atual um passo criptografar difícil porque o `hmac_tag` valor precede o texto cifrado. No entanto, esse formato foi escolhido porque mantém todos os elementos de tamanho fixo no início para manter o analisador mais simples. Com este formato de dados, um passo decrypt é possível, embora um implementador é evitaram chamar GetHashAndReset e verificar o resultado antes de chamar TransformFinalBlock. Se a criptografia de streaming for importante, um modo AE diferente pode ser necessário.
 
 ```csharp
 // ==++==

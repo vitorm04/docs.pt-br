@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
 ms.openlocfilehash: e5539d0052d5d5847475b1902b5fc74566883057
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536658"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855368"
 ---
 # <a name="query-expression-syntax-examples-partitioning"></a>Consulte exemplos de sintaxe de expressão: Divisão
 Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de expressão de consulta. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  

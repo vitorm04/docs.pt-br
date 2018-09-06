@@ -1,17 +1,17 @@
 ---
 title: Estruturas (F#)
-description: 'Saiba mais sobre a estrutura F #, um tipo de objeto compact geralmente mais eficiente do que uma classe para tipos com uma pequena quantidade de dados e comportamento simple.'
+description: 'Saiba mais sobre a estrutura F #, um tipo de objeto compacto geralmente mais eficiente do que uma classe para tipos com uma pequena quantidade de dados e comportamento simples.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172458"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799665"
 ---
 # <a name="structures"></a>Estruturas
 
-Um *estrutura* é um tipo de objeto compact que pode ser mais eficiente do que uma classe para tipos que têm uma pequena quantidade de dados e comportamento simple.
+Um *estrutura* é um tipo de objeto compacto que pode ser mais eficiente do que uma classe para tipos que têm uma pequena quantidade de dados e comportamento simples.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,8 @@ type [accessibility-modifier] type-name =
 ```
 
 ## <a name="remarks"></a>Comentários
-Estruturas são *os tipos de valor*, o que significa que eles são armazenados diretamente na pilha ou, quando eles são usados como campos ou tipo de elementos da matriz, embutido no pai. Ao contrário de classes e registros, as estruturas têm semântica de passar-por-valor. Isso significa que elas são úteis principalmente para pequenos agregados de dados que são acessados e copiados com frequência.
+
+Estruturas são *tipos de valor*, que significa que eles são armazenados diretamente na pilha ou, quando eles são usados como campos ou elementos de matriz, embutido no pai de tipo. Ao contrário de classes e registros, as estruturas têm semântica de passar-por-valor. Isso significa que elas são úteis principalmente para pequenos agregados de dados que são acessados e copiados com frequência.
 
 Na sintaxe anterior, duas formas são mostradas. A primeira não é a sintaxe leve, mas ela é usada com frequência, pois quando você usa as palavras-chave `struct` e `end`, é possível omitir o atributo `StructAttribute`, que aparece na segunda forma. É possível abreviar `StructAttribute` como apenas `Struct`.
 
@@ -47,15 +48,13 @@ Os exemplos de código a seguir ilustram definições de estrutura.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
-## <a name="struct-records-and-discriminated-unions"></a>Registros de estrutura e uniões discriminadas
+## <a name="struct-records-and-discriminated-unions"></a>Struct registros e uniões discriminadas
 
-A partir do F # 4.1, você pode representar [registros](records.md) e [uniões discriminada](discriminated-unions.md) como estruturas com o `[<Struct>]` atributo.  Consulte cada artigo para saber mais.
-    
+Começando com o F # 4.1, você pode representar [registros](records.md) e [uniões discriminadas](discriminated-unions.md) como structs com o `[<Struct>]` atributo.  Consulte cada artigo para saber mais.
+
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Classes](classes.md)
-
-[Registros](records.md)
-
-[Membros](members/index.md)
+- [Referência da Linguagem F#](index.md)
+- [Classes](classes.md)
+- [Registros](records.md)
+- [Membros](members/index.md)

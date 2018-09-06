@@ -3,11 +3,11 @@ title: Sincronização de thread (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
 ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406618"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862988"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Sincronização de thread (Visual Basic)
 As seções a seguir descrevem recursos e classes que podem ser usados para sincronizar o acesso a recursos em aplicativos multi-threaded.  

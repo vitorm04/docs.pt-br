@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803660"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804273"
 ---
 # <a name="guidelines-and-best-practices"></a>Diretrizes e práticas recomendadas
 Esta seção contém tópicos que fornecem diretrizes para criação de aplicativos do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Práticas recomendadas: controle de versão de contrato de dados](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- Explica como e quando criar contratos de dados que não são interrompidas quando são criadas versões futuras.  
+ Explica como e quando criar contratos de dados que não são interrompidas quando versões futuras são criadas.  
   
  [Controle de versão de serviço](../../../docs/framework/wcf/service-versioning.md)  
- Explica como considerar o controle de versão no WCF. Após a implantação, serviços (e os pontos de extremidade expõem) talvez precisem ser alterados, por exemplo, para atender a requisitos de negócios ou requisitos de TI, a alteração ou corrigir problemas. Cada alteração introduz uma nova versão do serviço.  
+ Explica como considerar o controle de versão do WCF. Após a implantação, serviços (e os pontos de extremidade que expõem) talvez precisem ser alterada, por exemplo, para atender aos requisitos de negócios ou requisitos de TI, a alteração ou para corrigir problemas. Cada alteração introduz uma nova versão do serviço.  
   
  [Balanceamento de carga](../../../docs/framework/wcf/load-balancing.md)  
  Lista as diretrizes para balanceamento de carga com uma Web farm.  
@@ -32,7 +32,7 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
  Descreve as propriedades que são projetadas para ajudar a evitar o consumo de recursos desnecessários e melhorar a segurança e aponta para obter informações mais completas sobre seu uso.  
   
  [Implantando aplicativos do WCF com ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
- Descreve as considerações a serem feitas ao usar o recurso de ClickOnce.  
+ Descreve as considerações para ser feitas ao usar o recurso do ClickOnce.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  
@@ -46,6 +46,6 @@ Esta seção contém tópicos que fornecem diretrizes para criação de aplicati
   
 ## <a name="see-also"></a>Consulte também  
  [O que é o Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Amostras do Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Amostras do Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Visão geral conceitual](../../../docs/framework/wcf/conceptual-overview.md)  
  [Compilando clientes](../../../docs/framework/wcf/building-clients.md)

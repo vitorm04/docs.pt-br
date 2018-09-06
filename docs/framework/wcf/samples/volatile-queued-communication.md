@@ -3,11 +3,11 @@ title: Comunicação em fila volátil
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560659"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798551"
 ---
 # <a name="volatile-queued-communication"></a>Comunicação em fila volátil
 Este exemplo demonstra como realizar a comunicação em fila volátil por meio do transporte de enfileiramento de mensagens (MSMQ). Este exemplo usa <xref:System.ServiceModel.NetMsmqBinding>. Nesse caso, o serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila.  

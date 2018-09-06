@@ -2,12 +2,12 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 34d9280fb1d4009aa729cb2eba55b817db9fff56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520036"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802905"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
 Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.  
@@ -43,12 +43,12 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descrição do processo  
- Este exemplo mostra uma implementação de um programa do Windows Workflow Foundation (WF) para coletar propostas de fornecedores para uma empresa genérico.  
+ Este exemplo mostra uma implementação de um programa do Windows Workflow Foundation (WF) para reunir as propostas de fornecedores para uma empresa genérico.  
   
 1.  Um funcionário da empresa X cria um aplicativo de propostas (RFP).  
   
@@ -127,7 +127,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
 |Formulário|Descrição|  
 |-|-|  
 |NewRfp|Cria e envia uma nova solicitação para propostas.|  
-|ShowProposals|Mostrar todas as solicitações ativos e concluídas para propostas. **Observação:** você talvez precise clicar no **atualização** botão na interface de usuário para ver as alterações na tela depois de criar ou modificar uma solicitação de proposta.|  
+|ShowProposals|Mostrar todas as solicitações ativos e concluídas para propostas. **Observação:** talvez você precise clicar o **atualizar** botão na interface do usuário para ver as alterações na tela depois de criar ou modificar uma solicitação de proposta.|  
 |SubmitProposal|Obter uma proposta de um fornecedor em uma solicitação concreta para propostas. Essa janela é usada por fornecedores.|  
 |ViewRfp|Mostrar todas as informações sobre uma solicitação para propostas (propostas recebidas, datas, valores, e outras informações.) Essa janela é usada somente pelo criador de solicitação para propostas.|  
   
@@ -145,9 +145,9 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 1.  Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de solução de PurchaseProcess.sln.  
   
-2.  Para executar o projeto de cliente da Web, abra **Solution Explorer** e com o botão direito do **cliente Web** projeto. Selecione **definir como projeto de inicialização**.  
+2.  Para executar o projeto de cliente da Web, abra **Gerenciador de soluções** e clique com botão direito do **cliente Web** projeto. Selecione **definir como projeto de inicialização**.  
   
-3.  Para executar o projeto cliente WinForms, abra **Solution Explorer** e com o botão direito do **WinForms cliente** projeto. Selecione **definir como projeto de inicialização**.  
+3.  Para executar o projeto de cliente de WinForms, abra **Gerenciador de soluções** e clique com botão direito do **cliente de WinForms** projeto. Selecione **definir como projeto de inicialização**.  
   
 4.  Para criar a solução, pressione CTRL+SHIFT+B.  
   
@@ -155,20 +155,20 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 ### <a name="web-client-options"></a>Opções de cliente web  
   
--   **Criar uma novo RFP**: cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
+-   **Criar um novo RFP&lt;1**: cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
   
--   **Atualizar**: atualiza a lista de ativos e RFPs concluído na janela principal.  
+-   **Atualizar**: atualiza a lista de RFPs ativo e concluído na janela principal.  
   
--   **Exibição**: mostra o conteúdo de uma RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
+-   **Modo de exibição**: mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não for concluído.)  
   
--   Exibição como: O usuário pode acessar RFP usando diferentes identidades selecionando o participante desejado a **exibir como** caixa de combinação na grade RFPs ativo.  
+-   Exibir como: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.  
   
 ### <a name="winforms-client-options"></a>Opções de cliente de WinForms  
   
 -   **Criar RFP**: cria uma nova solicitação para propostas (RFP) e inicia um fluxo de trabalho do processo de compra.  
   
--   **Atualizar**: atualiza a lista de ativos e RFPs concluído na janela principal.  
+-   **Atualizar**: atualiza a lista de RFPs ativo e concluído na janela principal.  
   
--   **Exibir RFP**: mostra o conteúdo de uma RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
+-   **Exibir RFP**: mostra o conteúdo de um RFP existente. Fornecedores podem enviar suas propostas (ou convidado se o RFP não é concluído)  
   
--   **Conectar-se como**: O usuário pode acessar RFP usando diferentes identidades selecionando o participante desejado a **exibir como** caixa de combinação na grade RFPs active.
+-   **Conectar-se como**: O usuário pode acessar o RFP usando identidades diferentes selecionando o participante desejado na **exibir como** caixa de combinação na grade ativa de RFPs.

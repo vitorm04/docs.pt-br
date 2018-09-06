@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
 ms.openlocfilehash: 43ebe50497df97511925bd2e413ab5b5988b7f57
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476138"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877198"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Como copiar e colar um controle ElementHost em tempo de design
 Este procedimento mostra como copiar um controle Windows Presentation Foundation (WPF) em um formulário do Windows.  

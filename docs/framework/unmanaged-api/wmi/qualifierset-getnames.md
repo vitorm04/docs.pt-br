@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672116"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877931"
 ---
 # <a name="qualifiersetgetnames-function"></a>Função QualifierSet_GetNames
 Recupera os nomes de todos os qualificadores ou de certas qualificadores que estão disponíveis no objeto atual ou à propriedade. 

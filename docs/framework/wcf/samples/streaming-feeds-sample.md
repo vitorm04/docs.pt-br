@@ -3,11 +3,11 @@ title: Exemplo de Streaming Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
 ms.openlocfilehash: 17639273ece804dc531cbbc3ab9135c814ea632d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486575"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800022"
 ---
 # <a name="streaming-feeds-sample"></a>Exemplo de Streaming Feeds
 Este exemplo demonstra como gerenciar feeds de agregação que contêm um grande número de itens. No servidor, o exemplo demonstra como atrasar a criação de um indivíduo <xref:System.ServiceModel.Syndication.SyndicationItem> objetos dentro do feed até imediatamente antes que o item seja gravado no fluxo de rede.  

@@ -3,11 +3,11 @@ title: Terminologia do Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
 ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538296"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857369"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia do Entity Framework
 Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentação. Os links são fornecidos para tópicos relevantes em que há informações adicionais disponíveis.  

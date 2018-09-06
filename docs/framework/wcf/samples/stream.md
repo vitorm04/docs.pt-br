@@ -3,11 +3,11 @@ title: Fluxo
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388794"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861108"
 ---
 # <a name="stream"></a>Fluxo
 O exemplo de Stream demonstra o uso de fluxo de comunicação de modo de transferência. O serviço expõe diversas operações que enviam e recebem transmissões. Este exemplo é auto-hospedado. O cliente e o serviço são programas de console.  
