@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365054"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735521"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Cenários de aplicativos (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oferece suporte a um conjunto principal de cenários para expor e consumir dados como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Este tópico aponta os tópicos relevantes a esses cenários.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dá suporte a um conjunto principal de cenários para expor e consumir dados como [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Este tópico aponta os tópicos relevantes a esses cenários.  
   
- Expor dados relacionais de um banco de dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.  
+ Exponha dados relacionais de um banco de dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.  
  -   [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) (Início rápido)  
   
 -   [Expondo seus dados como um serviço](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -37,20 +37,20 @@ ms.locfileid: "33365054"
 -   [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)  
   
  Consuma um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em um aplicativo cliente baseado no Silverlight.  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Como: associar o serviço de dados a controles (WCF Data Services/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Como: associar dados do serviço de dados a controles (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Consuma um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em um aplicativo cliente baseado no AJAX.  
  -   [Usando um serviço de dados em um aplicativo cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: Convenções de URI](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: Convenções de URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: Formato objeto JavaScript Notation (JSON)](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: Formato JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
- Criar uma solução de dados de ponta a ponta que usa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] para transferir dados entre o cliente e servidor.  
+ Criar uma solução de dados de ponta a ponta que usa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] para transferir dados entre cliente e servidor.  
  -   [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) (Início rápido)  
   
 -   [Usando um serviço de dados em um aplicativo cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "33365054"
   
 -   [Operações assíncronas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- Expor e consumir um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed com um objeto binário grande é acessado e alterado como um fluxo.  
+ Expor e consumir um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed com um objeto binário grande que seja acessado e alterado como um fluxo.  
  -   [Provedor de streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [Trabalhando com os dados binários](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
- Associar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds a controles em um aplicativo do Windows Presentation Framework (WPF).  
+ Associar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds para controles em um aplicativo do Windows Presentation Framework (WPF).  
  -   [Associando dados a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [How to: Bind Data to Windows Presentation Foundation Elements](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md) (Como associar dados aos elementos do Windows Presentation Foundation)  

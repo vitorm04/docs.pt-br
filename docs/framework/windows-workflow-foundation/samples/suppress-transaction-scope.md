@@ -3,11 +3,11 @@ title: Elimina o escopo de transação
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
 ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385188"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788033"
 ---
 # <a name="suppress-transaction-scope"></a>Elimina o escopo de transação
 O exemplo demonstra como criar uma atividade personalizado de `SuppressTransactionScope` para suprimir a transação ambiente de tempo de execução, se presente.  

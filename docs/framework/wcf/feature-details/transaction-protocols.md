@@ -3,11 +3,11 @@ title: Protocolos de transação
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
 ms.openlocfilehash: 2e4f464d88a63a0aad17982d0329971de4fc5a07
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398814"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788669"
 ---
 # <a name="transaction-protocols"></a>Protocolos de transação
 Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination e de transações de WS-Atomic.  

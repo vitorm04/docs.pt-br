@@ -5,11 +5,11 @@ ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466485"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785538"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais sejam expostas em logs de mensagens, bem como os eventos gerados pelo log de mensagens.  

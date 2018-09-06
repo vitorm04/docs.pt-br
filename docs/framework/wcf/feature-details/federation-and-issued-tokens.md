@@ -7,11 +7,11 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420204"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788098"
 ---
 # <a name="federation-and-issued-tokens"></a>Federação e tokens emitidos
 Com o Windows Communication Foundation (WCF), você pode criar clientes que se comunicam com segurança com os serviços que implementam as especificações de WS-Federation e WS-Trust. As especificações de usarem o XML, SOAP e descrição de linguagem WSDL (Web Services) para fornecer mecanismos que permitem a autenticação e autorização em realms de confiança diferente.  

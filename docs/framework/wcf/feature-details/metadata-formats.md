@@ -3,11 +3,11 @@ title: Formatos de metadados
 ms.date: 03/30/2017
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
 ms.openlocfilehash: 9fa72c70940a49dbc0bf8660d23dfa33fce327e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384935"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732307"
 ---
 # <a name="metadata-formats"></a>Formatos de metadados
 Windows Communication Foundation (WCF) oferece suporte os formatos de metadados na tabela a seguir.  

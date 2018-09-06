@@ -2,12 +2,12 @@
 title: 'Codificador de mensagem personalizado: codificador de compactação'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808735"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735868"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensagem personalizado: codificador de compactação
 Este exemplo demonstra como implementar um codificador personalizado usando a plataforma do Windows Communication Foundation (WCF).  
@@ -17,29 +17,29 @@ Este exemplo demonstra como implementar um codificador personalizado usando a pl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Este exemplo consiste em um programa de console de cliente (.exe), um programa de console de serviço auto-hospedado (.exe) e a biblioteca de compactação do codificador de mensagem (. dll). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pelo `ISampleServer` interface, que expõe as cadeias de caracteres básicas repetir operações (`Echo` e `BigEcho`). O cliente faz solicitações síncronas para uma determinada operação e as respostas do serviço, repetindo a mensagem de volta ao cliente. Atividade de cliente e o serviço é visível nas janelas do console. A intenção deste exemplo é mostrar como escrever um codificador personalizado e demonstrar o impacto da compactação de uma mensagem na conexão. Você pode adicionar a instrumentação para o codificador de mensagem de compactação para calcular o tamanho da mensagem, o tempo de processamento ou ambos.  
+ Esse exemplo consiste em um programa de console de cliente (.exe), um programa de console de serviço auto-hospedado (.exe) e a biblioteca de compactação do codificador de mensagem (. dll). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `ISampleServer` interface, que expõe as cadeias de caracteres básicas ecoar operações (`Echo` e `BigEcho`). O cliente faz solicitações síncronas para uma determinada operação e as respostas de serviço, repetindo a mensagem de volta ao cliente. Atividade de cliente e o serviço está visível nas janelas do console. A intenção deste exemplo é mostrar como escrever um codificador personalizado e demonstrar o impacto da compactação de uma mensagem durante a transmissão. Você pode adicionar instrumentação ao codificador de mensagem de compactação para calcular o tamanho da mensagem, o tempo de processamento ou ambos.  
   
 > [!NOTE]
->  No .NET Framework 4, descompactação automática foi habilitada em um cliente WCF se o servidor está enviando uma resposta compactada (criada com um algoritmo, como GZip ou Deflate). Se o serviço Web hospedado no servidor de informações da Internet (IIS), o IIS pode ser configurado para o serviço enviar uma resposta compactada. Este exemplo pode ser usado se o requisito é fazer a compactação e descompactação no cliente e o serviço ou se o serviço é hospedado automaticamente.  
+>  No .NET Framework 4, descompactação automática foi habilitada em um cliente WCF se o servidor está enviando uma resposta compactada (criada com um algoritmo, como GZip ou Deflate). Se o serviço Web está hospedada no servidor de informações da Internet (IIS), o IIS pode ser configurado para o serviço enviar uma resposta compactada. Este exemplo pode ser usado se o requisito é fazer a compactação e descompactação no cliente e o serviço ou se o serviço for auto-hospedado.  
   
- O exemplo demonstra como criar e integrar um codificador de mensagem personalizada em um aplicativo WCF. A biblioteca GZipEncoder.dll é implantada com o cliente e o serviço. Este exemplo também demonstra o impacto da compactação de mensagens. O código GZipEncoder.dll demonstra o seguinte:  
+ O exemplo demonstra como criar e integrar um codificador de mensagem personalizado em um aplicativo WCF. A biblioteca GZipEncoder.dll é implantada com o cliente e o serviço. Este exemplo também demonstra o impacto da compactação de mensagens. O código GZipEncoder.dll demonstra o seguinte:  
   
--   Criando um codificador personalizado e a fábrica do codificador.  
+-   Criação de um codificador personalizado e a fábrica de codificador.  
   
 -   Desenvolvendo um elemento de associação para um codificador personalizado.  
   
--   Usando a configuração de associação personalizada para a integração de elementos de associação personalizada.  
+-   Usando a configuração de ligação personalizada para a integração de elementos de associação personalizados.  
   
--   Desenvolvendo um manipulador de configuração personalizada para permitir a configuração de arquivo de um elemento de associação personalizada.  
+-   Desenvolvendo um manipulador de configuração personalizadas para permitir a configuração de arquivo de um elemento de associação personalizado.  
   
- Como indicado anteriormente, existem várias camadas que são implementadas em um codificador personalizado. Para ilustrar melhor a relação entre cada uma dessas camadas, uma ordem simplificada de eventos de inicialização do serviço está na lista a seguir:  
+ Como indicado anteriormente, há várias camadas que são implementadas em um codificador personalizado. Para ilustrar melhor a relação entre cada uma dessas camadas, uma ordem simplificada de eventos de inicialização do serviço está na lista a seguir:  
   
-1.  O servidor é iniciado.  
+1.  O servidor for iniciado.  
   
 2.  As informações de configuração é lido.  
   
@@ -47,25 +47,25 @@ Este exemplo demonstra como implementar um codificador personalizado usando a pl
   
     2.  O host de serviço é criado e aberto.  
   
-    3.  O elemento de configuração personalizada cria e retorna o elemento de associação personalizada.  
+    3.  O elemento de configuração personalizada cria e retorna o elemento de associação personalizado.  
   
     4.  O elemento de associação personalizada cria e retorna uma fábrica de codificador de mensagem.  
   
 3.  Uma mensagem é recebida.  
   
-4.  A fábrica de codificador de mensagem retorna um codificador de mensagem para ler a mensagem e gravar a resposta.  
+4.  A fábrica de codificador de mensagem retorna um codificador de mensagem para leitura da mensagem e gravar a resposta.  
   
-5.  A camada de codificador é implementada como uma fábrica de classes. A fábrica de classes codificador deve ser exposta publicamente para o codificador personalizado. O objeto de fábrica é retornado para o elemento de associação quando o <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> objeto é criado. Codificadores de mensagem podem operar em um modo de buffer ou de streaming. Este exemplo demonstra o modo com buffer e modo contínuo.  
+5.  A camada de codificador é implementada como uma fábrica de classes. Somente a fábrica de classes do codificador deve estar publicamente exposta para o codificador personalizado. O objeto de fábrica é retornado pelo elemento de associação quando o <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> objeto é criado. Codificadores de mensagem podem operar em um modo em buffer ou de streaming. Este exemplo demonstra o modo com buffer e modo de streaming.  
   
- Para cada modo não há uma que acompanha `ReadMessage` e `WriteMessage` método abstrata `MessageEncoder` classe. A maioria do trabalho de codificação é feita nesses métodos. O exemplo encapsula o texto existente e codificadores de mensagem binária. Isso permite que o exemplo delegar a leitura e gravação da representação durante a transmissão de mensagens para o codificador interno e permite que o codificador de compactação compactar ou descompactar os resultados. Porque não há nenhum pipeline para codificação de mensagens, este é o modelo somente para o uso de vários codificadores no WCF. Depois que a mensagem tem sido descompactada, a mensagem resultante é passada a pilha para lidar com a pilha de canais. Durante a compactação, a mensagem compactada resultante é gravada diretamente para o fluxo fornecido.  
+ Para cada modo, há um que acompanha `ReadMessage` e `WriteMessage` método em abstrata `MessageEncoder` classe. A maioria do trabalho de codificação ocorre nesses métodos. O exemplo encapsula o texto existente e codificadores de mensagem binária. Isso permite que o exemplo delegar a leitura e gravação da representação de transmissão de mensagens para o codificador interno e permite que o codificador de compactação compactar ou descompactar os resultados. Porque não há nenhum pipeline para codificação de mensagem, isso é o único modelo para usar vários codificadores no WCF. Depois que a mensagem foi descompactada, a mensagem resultante é passada acima da pilha para lidar com a pilha de canais. Durante a compactação, a mensagem compactada resultante é gravada diretamente para o fluxo fornecido.  
   
- Este exemplo usa métodos auxiliares (`CompressBuffer` e `DecompressBuffer`) para executar a conversão de buffers para fluxos para usar o `GZipStream` classe.  
+ Este exemplo usa os métodos auxiliares (`CompressBuffer` e `DecompressBuffer`) para executar conversão dos buffers para fluxos de usar o `GZipStream` classe.  
   
- O buffer `ReadMessage` e `WriteMessage` classes de usar o `BufferManager` classe. O codificador é acessível somente por meio da fábrica de codificador. O resumo `MessageEncoderFactory` classe fornece uma propriedade chamada `Encoder` para acessar o codificador atual e um método chamado `CreateSessionEncoder` para criação de um codificador que oferece suporte a sessões. Tal um codificador pode ser usado no cenário em que o canal dá suporte a sessões, é solicitado e é confiável. Este cenário permite a otimização em cada sessão de gravação de dados para a conexão. Se isso não for desejado, o método base não deve ser sobrecarregado. O `Encoder` propriedade fornece um mecanismo para acessar o codificador sessão menor e a implementação padrão da `CreateSessionEncoder` método retorna o valor da propriedade. Porque o exemplo encapsula um codificador existente para fornecer a compactação, o `MessageEncoderFactory` implementação aceita um `MessageEncoderFactory` que representa a fábrica interna de codificador.  
+ O armazenados em buffer `ReadMessage` e `WriteMessage` classes de usar o `BufferManager` classe. O codificador é acessível somente por meio da fábrica de codificador. Abstrata `MessageEncoderFactory` classe fornece uma propriedade chamada `Encoder` para acessar o codificador atual e um método chamado `CreateSessionEncoder` para criação de um codificador que oferece suporte a sessões. Tal um codificador pode ser usado no cenário em que o canal dá suporte a sessões, é solicitado e é confiável. Esse cenário permite que a otimização em cada sessão dos dados gravados para a transmissão. Se isso não for desejado, o método base não deve ser sobrecarregado. O `Encoder` propriedade fornece um mecanismo para acessar o codificador de menos de sessão e a implementação padrão da `CreateSessionEncoder` método retorna o valor da propriedade. Porque o exemplo encapsula um codificador existente para fornecer a compactação, o `MessageEncoderFactory` implementação aceita um `MessageEncoderFactory` que representa a fábrica de codificador interno.  
   
- Agora que o codificador e a fábrica de codificador são definidas, pode ser usados com um cliente WCF e serviço. No entanto, esses codificadores devem ser adicionados à pilha de canais. Você pode derivar de classes do <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.ChannelFactory%601> classes e substituir o `OnInitialize` métodos para adicionar esta fábrica de codificador manualmente. Você também pode expor o alocador de codificador por meio de um elemento de associação personalizada.  
+ Agora que o codificador e a fábrica de codificador são definidos, pode ser usados com um cliente WCF e serviço. No entanto, esses codificadores devem ser adicionados à pilha de canal. Você pode derivar classes do <xref:System.ServiceModel.ServiceHost> e <xref:System.ServiceModel.ChannelFactory%601> classes e substituir o `OnInitialize` métodos para adicionar essa fábrica de codificador manualmente. Você também pode expor a fábrica de codificador por meio de um elemento de associação personalizado.  
   
- Para criar um novo elemento de associação personalizada, derive uma classe a partir de <xref:System.ServiceModel.Channels.BindingElement> classe. No entanto, há vários tipos de elementos de associação. Para garantir que o elemento de associação personalizada é reconhecido como uma elemento de associação de codificação de mensagens, você também deve implementar o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. O <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> expõe um método para criar uma nova fábrica de codificador de mensagem (`CreateMessageEncoderFactory`), que é implementado para retornar uma instância da fábrica de codificador de mensagem correspondente. Além disso, o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> tem uma propriedade para indicar a versão de endereçamento. Como este exemplo ajusta os codificadores existentes, a implementação de exemplo também ajusta o codificador existente elementos de associação e leva um codificador interno associando o elemento como um parâmetro para o construtor e expõe através de uma propriedade. O código de exemplo a seguir mostra a implementação do `GZipMessageEncodingBindingElement` classe.  
+ Para criar um novo elemento de associação personalizado, derive uma classe do <xref:System.ServiceModel.Channels.BindingElement> classe. No entanto, há vários tipos de elementos de associação. Para garantir que o elemento de associação personalizado é reconhecido como uma elemento de associação de codificação de mensagem, você também deve implementar o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. O <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> expõe um método para criar uma nova fábrica de codificador de mensagem (`CreateMessageEncoderFactory`), que é implementado para retornar uma instância da fábrica de codificador de mensagem correspondente. Além disso, o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> tem uma propriedade para indicar a versão de endereçamento. Como este exemplo encapsula os codificadores existentes, a implementação de exemplo também encapsula o codificador existente, elementos de associação e usa um codificador interno, elemento de associação como um parâmetro para o construtor e expõe por meio de uma propriedade. O código de exemplo a seguir mostra a implementação do `GZipMessageEncodingBindingElement` classe.  
   
 ```  
 public sealed class GZipMessageEncodingBindingElement   
@@ -167,7 +167,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 }  
 ```  
   
- Observe que `GZipMessageEncodingBindingElement` classe implementa o `IPolicyExportExtension` interface, para que esse elemento de associação pode ser exportado como uma política em metadados, como mostrado no exemplo a seguir.  
+ Observe que `GZipMessageEncodingBindingElement` classe implementa o `IPolicyExportExtension` interface, para que esse elemento de associação pode ser exportado como uma política nos metadados, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">  
@@ -181,7 +181,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 </wsp:Policy>  
 ```  
   
- O `GZipMessageEncodingBindingElementImporter` classe implementa o `IPolicyImportExtension` interface, essa classe importa política para `GZipMessageEncodingBindingElement`. Ferramenta svcutil.exe pode ser usada para importar as políticas para o arquivo de configuração, para lidar com `GZipMessageEncodingBindingElement`, o seguinte deve ser adicionado ao Svcutil.exe.config.  
+ O `GZipMessageEncodingBindingElementImporter` classe implementa as `IPolicyImportExtension` interface, essa classe importa a política para `GZipMessageEncodingBindingElement`. Ferramenta de Svcutil.exe pode ser usada para importar as políticas para o arquivo de configuração para lidar com `GZipMessageEncodingBindingElement`, o seguinte deve ser adicionado para svcutil.  
   
 ```xml  
 <configuration>  
@@ -207,7 +207,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 </configuration>  
 ```  
   
- Agora que há um elemento de associação correspondente para o codificador de compactação, ele pode ser programaticamente conectado de serviço ou cliente, criando um novo objeto de associação personalizada e adicionar o elemento de associação personalizada, conforme mostrado no código de exemplo a seguir.  
+ Agora que há um elemento de associação correspondente para o codificador de compactação, ele pode ser programaticamente conectado o serviço ou cliente, criando um novo objeto de associação personalizado e adicionando o elemento de associação personalizado a ele, conforme mostrado no código de exemplo a seguir.  
   
 ```  
 ICollection<BindingElement> bindingElements = new List<BindingElement>();  
@@ -220,9 +220,9 @@ binding.Name = "SampleBinding";
 binding.Namespace = "http://tempuri.org/bindings";  
 ```  
   
- Embora isso possa ser suficiente para a maioria dos cenários de usuário, dando suporte a uma configuração de arquivo é essencial se um serviço deve ser hospedado na Web. Para suportar o cenário hospedado na Web, você deve desenvolver um manipulador de configuração personalizada para permitir que um elemento de associação personalizada a ser configurados em um arquivo.  
+ Embora isso possa ser suficiente para a maioria dos cenários de usuário, que dão suporte a uma configuração de arquivo é essencial se um serviço deve ser hospedado na Web. Para suportar o cenário hospedado na Web, você deve desenvolver um manipulador de configuração personalizadas para permitir que um elemento de associação personalizado ser configurável em um arquivo.  
   
- Você pode criar um manipulador de configuração para o elemento de associação sobre o sistema de configuração fornecido pelo [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. O manipulador de configuração para o elemento de associação deve derivar do <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe. O `BindingElementType` propriedade é usada para informar o sistema de configuração do tipo de elemento de associação para criar para essa seção. Todos os aspectos do `BindingElement` que pode ser conjunto deve ser exposto como propriedades na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe derivada. O <xref:System.Configuration.ConfigurationPropertyAttribute> é usado para auxiliar no mapeamento de atributos de elemento de configuração para as propriedades e definir valores padrão se atributos estão ausentes. Depois que os valores de configuração são carregados e aplicados às propriedades, o <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> método é chamado, que converte as propriedades em uma instância concreta de um elemento de associação. O <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> método é usado para converter as propriedades na <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe derivada para os valores a serem definidos no elemento de associação newlycreated.  
+ Você pode criar um manipulador de configuração para o elemento de associação sobre o sistema de configuração fornecido pelo [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. O manipulador de configuração para o elemento de associação deve derivar de <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe. O `BindingElementType` propriedade é usada para informar o sistema de configuração do tipo de elemento de associação a ser criado para esta seção. Todos os aspectos do `BindingElement` que pode ser conjunto deve ser exposto como propriedades no <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe derivada. O <xref:System.Configuration.ConfigurationPropertyAttribute> é usado para ajudar a mapear os atributos do elemento de configuração para as propriedades e definir valores padrão se atributos estão ausentes. Depois que os valores de configuração são carregados e aplicados a propriedades, o <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> método é chamado, que converte as propriedades em uma instância concreta de um elemento de associação. O <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> método é usado para converter as propriedades no <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> classe derivada para os valores a serem definidos no elemento de associação newlycreated.  
   
  O código de exemplo a seguir mostra a implementação do `GZipMessageEncodingElement`.  
   
@@ -287,13 +287,13 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 }   
 ```  
   
- Este manipulador de configuração é mapeado para a representação seguinte no App. config ou Web. config para o serviço ou cliente.  
+ Esse manipulador de configuração é mapeado para a seguinte representação no App. config ou Web. config para o serviço ou cliente.  
   
 ```xml  
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
 ```  
   
- Para usar este manipulador de configuração, ele deve ser registrado no [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, conforme mostrado no exemplo de configuração.  
+ Para usar esse manipulador de configuração, ele deve ser registrado dentro do [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, conforme mostrado no seguinte exemplo de configuração.  
   
 ```xml  
 <extensions>  
@@ -308,7 +308,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 </extensions>  
 ```  
   
- Quando você executa o servidor, as respostas e solicitações de operação são exibidas na janela do console. Pressione ENTER na janela para desligar o servidor.  
+ Quando você executar o servidor, as respostas e solicitações de operação são exibidas na janela do console. Pressione ENTER na janela para desligar o servidor.  
   
 ```  
 Press Enter key to Exit.  
@@ -340,9 +340,9 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Para criar a solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para criar a solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -351,7 +351,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

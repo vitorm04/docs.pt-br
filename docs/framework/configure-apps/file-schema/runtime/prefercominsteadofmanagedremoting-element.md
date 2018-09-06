@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cac4ebb46fabad49e2e4e6a7d566522ca027094
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745468"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735882"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; elemento
-Especifica se o tempo de execução usará interoperabilidade COM, em vez de comunicação remota para todas as chamadas entre limites de domínio de aplicativo.  
+Especifica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota para todas as chamadas entre limites de domínio de aplicativo.  
   
  \<configuration>  
 \<runtime>  
@@ -34,14 +34,14 @@ Especifica se o tempo de execução usará interoperabilidade COM, em vez de com
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Indica se o tempo de execução usará a interoperabilidade COM, em vez de comunicação remota entre limites de domínio de aplicativo.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Indica se o tempo de execução usará a interoperabilidade COM em vez de comunicação remota entre limites de domínio de aplicativo.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`false`|O tempo de execução usará a comunicação remota entre limites de domínio de aplicativo. Esse é o padrão.|  
-|`true`|O tempo de execução usará a interoperabilidade entre limites de domínio de aplicativo.|  
+|`true`|O tempo de execução usará a interoperabilidade entre os limites de domínio de aplicativo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -56,14 +56,14 @@ Especifica se o tempo de execução usará interoperabilidade COM, em vez de com
 ## <a name="remarks"></a>Comentários  
  Quando você define o `enabled` atributo `true`, o tempo de execução se comporta da seguinte maneira:  
   
--   O tempo de execução não chama [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface quando um [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) interface entra do domínio por meio de uma interface COM. Em vez disso, ele cria um [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) em torno do objeto.  
+-   O tempo de execução não chama [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface quando um [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) interface entra no domínio por meio de uma interface COM. Em vez disso, ele cria um [(Runtime Callable Wrapper)](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) em torno do objeto.  
   
--   O tempo de execução retorna E_NOINTERFACE quando ele recebe um `QueryInterface` pedir um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface para qualquer [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) que foi criado neste domínio.  
+-   O tempo de execução retorna E_NOINTERFACE quando ele recebe um `QueryInterface` chamar para um [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) interface para qualquer [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) que foi criado neste domínio.  
   
- Esses dois comportamentos Certifique-se de que todas as chamadas sobre COM interfaces entre objetos gerenciados em uso de limites de domínio de aplicativo COM e interoperabilidade COM, em vez de comunicação remota.  
+ Esses dois comportamentos Certifique-se de que todas as chamadas sobre COM interfaces entre os objetos gerenciados entre o uso de limites de domínio do aplicativo COM e interoperabilidade de COM em vez de comunicação remota.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar que o tempo de execução deve usar COM interoperabilidade entre limites de isolamento:  
+ O exemplo a seguir mostra como especificar que o tempo de execução deve usar COM interoperabilidade entre os limites de isolamento:  
   
 ```xml  
 <configuration>  

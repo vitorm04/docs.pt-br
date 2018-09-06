@@ -9,21 +9,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: 3698d2fdbd0375d0a154d6ecea3a248b31da2aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa32850b9bcd1a15a93bd6c80b2278278d12c417
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537515"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746539"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Como fornecer um bitmap da caixa de ferramentas para um controle
-Se você deseja ter um ícone especial para o seu controle aparecem no **caixa de ferramentas**, você pode especificar uma imagem específica usando o <xref:System.Drawing.ToolboxBitmapAttribute>. Esta classe é um *atributo*, um tipo especial de classe que você pode anexar a outras classes. Para obter mais informações sobre atributos, consulte [não está em compilação: Visão geral de atributos no Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) do Visual Basic e [atributos](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) para Visual c#.  
+Se você quiser ter um ícone especial para o seu controle apareça na **caixa de ferramentas**, você pode especificar uma imagem específica usando o <xref:System.Drawing.ToolboxBitmapAttribute>. Esta classe é um *atributo*, um tipo especial de classe que você pode anexar a outras classes. Para obter mais informações sobre atributos, consulte [visão geral de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) para o Visual Basic ou [atributos (c#)](../../../csharp/programming-guide/concepts/attributes/index.md) para c#.  
   
- Usando o <xref:System.Drawing.ToolboxBitmapAttribute>, você pode especificar uma cadeia de caracteres que indica o caminho e nome de arquivo para um bitmap de 16 por 16 pixels. O bitmap aparece ao lado de seu controle quando adicionado à **Caixa de ferramentas**. Você também pode especificar um <xref:System.Type>, caso em que o bitmap associado com o tipo é carregado. Se você especificar ambos um <xref:System.Type> e uma cadeia de caracteres, o controle de pesquisa para um recurso de imagem com o nome especificado pelo parâmetro de cadeia de caracteres no assembly que contém o tipo especificado pelo <xref:System.Type> parâmetro.  
+ Usando o <xref:System.Drawing.ToolboxBitmapAttribute>, você pode especificar uma cadeia de caracteres que indica o nome de arquivo e caminho para um bitmap de 16 por 16 pixels. O bitmap aparece ao lado de seu controle quando adicionado à **Caixa de ferramentas**. Você também pode especificar um <xref:System.Type>, caso em que o bitmap associado a esse tipo é carregado. Se você especificar uma <xref:System.Type> e uma cadeia de caracteres, o controle procurará por um recurso de imagem com o nome especificado pelo parâmetro de cadeia de caracteres no assembly que contém o tipo especificado pelo <xref:System.Type> parâmetro.  
   
 ### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Especificar um bitmap da caixa de ferramentas para seu controle  
   
-1.  Adicionar o <xref:System.Drawing.ToolboxBitmapAttribute> à declaração de classe do controle antes do `Class` palavra-chave do visual Basic e acima da declaração de classe para o Visual c#.  
+1.  Adicione a <xref:System.Drawing.ToolboxBitmapAttribute> à declaração de classe do seu controle antes do `Class` palavra-chave para o visual Basic e acima da declaração de classe do Visual c#.  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -63,9 +63,10 @@ Se você deseja ter um ícone especial para o seu controle aparecem no **caixa d
     > [!NOTE]
     >  O bitmap não aparece na caixa de ferramentas para controles e componentes gerados automaticamente. Para ver o bitmap, recarregue o controle usando a caixa de diálogo **Escolher Itens da Caixa de Ferramentas**. Para mais informações, consulte [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.ToolboxBitmapAttribute>  
- [Passo a passo: preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [Desenvolvendo controles dos Windows Forms em tempo de design](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Atributos (Visual Basic)](~/docs/visual-basic/language-reference/attributes.md)  
- [Atributos](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Drawing.ToolboxBitmapAttribute>
+- [Passo a passo: preenchendo automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)
+- [Visão geral de atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

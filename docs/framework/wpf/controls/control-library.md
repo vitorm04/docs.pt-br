@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control library [WPF]
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
-ms.openlocfilehash: f0b5a8873455fff979abd57af3927346cea03d83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555864"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746117"
 ---
 # <a name="control-library"></a>Biblioteca de controles
 A biblioteca de controle do Windows Presentation Foundation (WPF) contém informações sobre os controles fornecidos do Windows Presentation Foundation (WPF), listados em ordem alfabética.  
@@ -50,7 +50,7 @@ A biblioteca de controle do Windows Presentation Foundation (WPF) contém inform
  [PrintDialog](../../../../docs/framework/wpf/controls/printdialog.md)  
  [RadioButton](../../../../docs/framework/wpf/controls/radiobutton.md)  
  [RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [Faixa de opções (WPF)](http://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
+ [Faixa de opções (WPF)](https://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
  [RichTextBox](../../../../docs/framework/wpf/controls/richtextbox.md)  
  [ScrollBar](../../../../docs/framework/wpf/controls/scrollbar.md)  
  [ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer.md)  
