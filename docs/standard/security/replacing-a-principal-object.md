@@ -12,28 +12,29 @@ helpviewer_keywords:
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94391471fecd92aeadec4da39cdd5b6f80bb6949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfcd912fc16aa8d4b89a4f455d65b0294593cead
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581158"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886520"
 ---
-# <a name="replacing-a-principal-object"></a><span data-ttu-id="d74e1-102">Substituindo um objeto Principal</span><span class="sxs-lookup"><span data-stu-id="d74e1-102">Replacing a Principal Object</span></span>
-<span data-ttu-id="d74e1-103">Aplicativos que fornecem serviços de autenticação devem ser capazes de substituir o **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) para um determinado thread.</span><span class="sxs-lookup"><span data-stu-id="d74e1-103">Applications that provide authentication services must be able to replace the **Principal** object (<xref:System.Security.Principal.IPrincipal>) for a given thread.</span></span> <span data-ttu-id="d74e1-104">Além disso, o sistema de segurança deve ajudar a proteger a capacidade de substituir **Principal** objetos porque um maliciosamente anexado incorreto **Principal** comprometa a segurança do seu aplicativo reivindicar uma verdade identidade ou uma função.</span><span class="sxs-lookup"><span data-stu-id="d74e1-104">Furthermore, the security system must help protect the ability to replace **Principal** objects because a maliciously attached, incorrect **Principal** compromises the security of your application by claiming an untrue identity or role.</span></span> <span data-ttu-id="d74e1-105">Portanto, aplicativos que requerem a capacidade de substituir **Principal** objetos devem ser concedidos a <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> objeto de controle principal.</span><span class="sxs-lookup"><span data-stu-id="d74e1-105">Therefore, applications that require the ability to replace **Principal** objects must be granted the <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> object for principal control.</span></span> <span data-ttu-id="d74e1-106">(Observe que essa permissão não é necessária para executar verificações de segurança baseada em função ou para a criação de **Principal** objetos.)</span><span class="sxs-lookup"><span data-stu-id="d74e1-106">(Note that this permission is not required for performing role-based security checks or for creating **Principal** objects.)</span></span>  
+# <a name="replacing-a-principal-object"></a><span data-ttu-id="5fc5b-102">Substituindo um objeto Principal</span><span class="sxs-lookup"><span data-stu-id="5fc5b-102">Replacing a Principal Object</span></span>
+<span data-ttu-id="5fc5b-103">Aplicativos que fornecem serviços de autenticação devem ser capazes de substituir os **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) para um determinado thread.</span><span class="sxs-lookup"><span data-stu-id="5fc5b-103">Applications that provide authentication services must be able to replace the **Principal** object (<xref:System.Security.Principal.IPrincipal>) for a given thread.</span></span> <span data-ttu-id="5fc5b-104">Além disso, o sistema de segurança deve ajudar a proteger a capacidade de substituir **Principal** objetos porque um maliciosamente anexado incorreto **Principal** comprometa a segurança do seu aplicativo por reivindicar uma identidade irreais ou função.</span><span class="sxs-lookup"><span data-stu-id="5fc5b-104">Furthermore, the security system must help protect the ability to replace **Principal** objects because a maliciously attached, incorrect **Principal** compromises the security of your application by claiming an untrue identity or role.</span></span> <span data-ttu-id="5fc5b-105">Portanto, aplicativos que exigem a capacidade de substituir **Principal** objetos devem ser concedidos a <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> objeto para o controle principal.</span><span class="sxs-lookup"><span data-stu-id="5fc5b-105">Therefore, applications that require the ability to replace **Principal** objects must be granted the <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> object for principal control.</span></span> <span data-ttu-id="5fc5b-106">(Observe que essa permissão não é necessária para realizar verificações de segurança baseada em função ou de criação **Principal** objetos.)</span><span class="sxs-lookup"><span data-stu-id="5fc5b-106">(Note that this permission is not required for performing role-based security checks or for creating **Principal** objects.)</span></span>  
   
- <span data-ttu-id="d74e1-107">Atual **Principal** objeto pode ser substituído por executar as seguintes tarefas:</span><span class="sxs-lookup"><span data-stu-id="d74e1-107">The current **Principal** object can be replaced by performing the following tasks:</span></span>  
+ <span data-ttu-id="5fc5b-107">O atual **Principal** objeto pode ser substituído por meio das seguintes tarefas:</span><span class="sxs-lookup"><span data-stu-id="5fc5b-107">The current **Principal** object can be replaced by performing the following tasks:</span></span>  
   
-1.  <span data-ttu-id="d74e1-108">Criar a substituição **Principal** do objeto e associados **identidade** objeto.</span><span class="sxs-lookup"><span data-stu-id="d74e1-108">Create the replacement **Principal** object and associated **Identity** object.</span></span>  
+1.  <span data-ttu-id="5fc5b-108">Criar a substituição **Principal** do objeto e associados **identidade** objeto.</span><span class="sxs-lookup"><span data-stu-id="5fc5b-108">Create the replacement **Principal** object and associated **Identity** object.</span></span>  
   
-2.  <span data-ttu-id="d74e1-109">Anexar o novo **Principal** objeto para o contexto de chamada.</span><span class="sxs-lookup"><span data-stu-id="d74e1-109">Attach the new **Principal** object to the call context.</span></span>  
+2.  <span data-ttu-id="5fc5b-109">Anexar o novo **Principal** objeto para o contexto de chamada.</span><span class="sxs-lookup"><span data-stu-id="5fc5b-109">Attach the new **Principal** object to the call context.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d74e1-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d74e1-110">Example</span></span>  
- <span data-ttu-id="d74e1-111">O exemplo a seguir mostra como criar um objeto principal genérico e usá-lo para definir a entidade de um thread.</span><span class="sxs-lookup"><span data-stu-id="d74e1-111">The following example shows how to create a generic principal object and use it to set the principal of a thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="5fc5b-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5fc5b-110">Example</span></span>  
+ <span data-ttu-id="5fc5b-111">O exemplo a seguir mostra como criar um objeto de entidade genérico e usá-lo para definir a entidade de um thread.</span><span class="sxs-lookup"><span data-stu-id="5fc5b-111">The following example shows how to create a generic principal object and use it to set the principal of a thread.</span></span>  
   
  [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
  [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="d74e1-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d74e1-112">See Also</span></span>  
- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
- [<span data-ttu-id="d74e1-113">Objetos Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="d74e1-113">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a><span data-ttu-id="5fc5b-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5fc5b-112">See also</span></span>
+
+- <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>  
+- [<span data-ttu-id="5fc5b-113">Objetos Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="5fc5b-113">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)
