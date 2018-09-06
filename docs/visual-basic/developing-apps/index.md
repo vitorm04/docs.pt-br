@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584190"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748483"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Desenvolvendo aplicativos com o Visual Basic
 Esta seção aborda documentação conceitual para a linguagem do Visual Basic.  
@@ -28,13 +28,13 @@ Esta seção aborda documentação conceitual para a linguagem do Visual Basic.
  [Criando e usando componentes no Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Define o termo *componente* e discute como e quando criar componentes.  
   
- [Imprimindo e Gerando Relatórios](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
+ [Imprimindo e Gerando Relatórios](../../visual-basic/developing-apps/printing/index.md)  
  Fornece visões gerais e links para a documentação relevante relacionada à impressão e aos relatórios.  
   
- [Noções básicas de Aplicativo do Windows Forms](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
+ [Noções básicas de Aplicativo do Windows Forms](../../visual-basic/developing-apps/windows-forms/index.md)  
  Fornece informações sobre como criar aplicativos do Windows Forms usando o Visual Studio.  
   
- [Personalizando projetos e estendendo My](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
+ [Personalizando projetos e estendendo My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
  Descreve como você pode personalizar modelos de projeto para fornecer mais objetos `My`.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

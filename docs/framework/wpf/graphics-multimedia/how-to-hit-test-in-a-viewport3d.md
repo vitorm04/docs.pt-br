@@ -9,15 +9,15 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: ab097e11490fda7a8e3b23c8749204f091271919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559648"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733375"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Como fazer teste de clique em um Viewport3D
-Este exemplo mostra como testar ocorrências de 3D Visuals em um <xref:System.Windows.Controls.Viewport3D>.  
+Este exemplo mostra como testar ocorrências de elementos visuais 3D em um <xref:System.Windows.Controls.Viewport3D>.  
   
  Porque <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> retorna informações 2D e 3D, é possível iterar os resultados do teste para ler somente os resultados 3D.  
   
@@ -30,4 +30,4 @@ Este exemplo mostra como testar ocorrências de 3D Visuals em um <xref:System.Wi
  [!code-vb[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de teste de ocorrências de 3D](http://go.microsoft.com/fwlink/?LinkID=159959)
+ [Exemplo de teste de ocorrências de 3D](https://go.microsoft.com/fwlink/?LinkID=159959)

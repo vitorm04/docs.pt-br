@@ -3,11 +3,11 @@ title: Como criar um serviço de fluxo de trabalho que chama outro serviço de f
 ms.date: 03/30/2017
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
 ms.openlocfilehash: 1b30da34f7c85cccd98b18cd32b81c83630989b2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452723"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725044"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Como criar um serviço de fluxo de trabalho que chama outro serviço de fluxo de trabalho
 

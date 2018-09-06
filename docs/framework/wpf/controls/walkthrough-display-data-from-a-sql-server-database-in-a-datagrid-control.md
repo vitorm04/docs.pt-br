@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 1421d076ff202ec87a9d861ab2c7d1c1cdcdc1b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408184"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735072"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Instruções passo a passo: exibir dados a partir de um banco de dados do SQL Server em um controle DataGrid
 Neste passo a passo, você pode recuperar dados de um banco de dados do SQL Server e exibi-los em um <xref:System.Windows.Controls.DataGrid> controle. O ADO.NET Entity Framework é usado para criar as classes de entidade que representam os dados e o LINQ é usado para gravar uma consulta que recupera os dados especificados de uma classe de entidade.  

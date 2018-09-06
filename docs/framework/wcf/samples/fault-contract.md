@@ -2,18 +2,18 @@
 title: Contrato de falha
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 37b9d7e3ec2135d60215232fae114baef1b54f36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504153"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724898"
 ---
 # <a name="fault-contract"></a>Contrato de falha
-O contrato de falha demonstra como comunicar informações de erro de um serviço para um cliente. O exemplo se baseia o [Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com um código adicional adicionado para o serviço para converter uma exceção interna para uma falha. O cliente tenta executar divisão por zero para forçar uma condição de erro no serviço.  
+O exemplo de contrato de falha demonstra como se comunicar informações de erro de um serviço para um cliente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com algum código adicional adicionado ao serviço para converter uma exceção interna para uma falha. O cliente tenta executar a divisão por zero para forçar uma condição de erro no serviço.  
   
 > [!NOTE]
->  As instruções de procedimento e a compilação de configuração para este exemplo estão localizadas no final deste tópico.  
+>  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
  O contrato de Calculadora foi modificado para incluir um <xref:System.ServiceModel.FaultContractAttribute> conforme mostrado no código de exemplo a seguir.  
   
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- O <xref:System.ServiceModel.FaultContractAttribute> atributo indica que o `Divide` operação pode retornar uma falha do tipo `MathFault`. Uma falha pode ser de qualquer tipo que pode ser serializado. Nesse caso, o `MathFault` é um contrato de dados, da seguinte maneira:  
+ O <xref:System.ServiceModel.FaultContractAttribute> atributo indica que o `Divide` operação poderá retornar uma falha do tipo `MathFault`. Uma falha pode ser de qualquer tipo que pode ser serializado. Nesse caso, o `MathFault` é um contrato de dados, da seguinte maneira:  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -77,7 +77,7 @@ public int Divide(int n1, int n2)
 }  
 ```  
   
- O código do cliente força um erro ao solicitar uma divisão por zero. Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console do cliente. Você pode ver a divisão por zero, que está sendo relatado como uma falha. Pressione ENTER na janela do cliente para desligar o cliente.  
+ O código do cliente força um erro ao solicitar uma divisão por zero. Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Você pode ver a divisão por zero, que está sendo relatado como uma falha. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```  
 Add(15,3) = 18  
@@ -88,7 +88,7 @@ FaultException<MathFault>: Math fault while doing division. Problem: divide by z
 Press <ENTER> to terminate client.  
 ```  
   
- O cliente faz isso capturando apropriada `FaultException<MathFault>` exceção:  
+ O cliente faz isso capturando apropriado `FaultException<MathFault>` exceção:  
   
 ```  
 catch (FaultException<MathFault> e)  
@@ -98,9 +98,9 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- Por padrão, os detalhes de exceções inesperadas não são enviados ao cliente para impedir que os detalhes da implementação do serviço de escape o limite de seguro do serviço. `FaultContract` Fornece uma maneira de descrever falhas em um contrato e marcar certos tipos de exceções, conforme apropriado para a transmissão para o cliente. `FaultException<T>` fornece o mecanismo de tempo de execução para o envio de falhas para os consumidores.  
+ Por padrão, os detalhes de exceções inesperadas não são enviados ao cliente para impedir que os detalhes da implementação do serviço de escape de limite seguro do serviço. `FaultContract` Fornece uma maneira de descrever as falhas em um contrato e marcar a determinados tipos de exceções, conforme apropriado para a transmissão para o cliente. `FaultException<T>` fornece o mecanismo de tempo de execução para o envio de falhas para consumidores.  
   
- No entanto, é útil ver os detalhes internos de uma falha no serviço durante a depuração. Para desativar o comportamento de seguro descrito anteriormente, você pode indicar que os detalhes de cada exceção sem tratamento no servidor devem ser incluídos na falha que é enviada ao cliente. Isso é feito definindo <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para `true`. Você pode defini-la no código ou na configuração, conforme mostrado no exemplo a seguir.  
+ No entanto, é útil ver os detalhes internos de uma falha de serviço durante a depuração. Para desativar o comportamento seguro descrito anteriormente, você pode indicar que os detalhes de cada exceção sem tratamento no servidor devem ser incluídos na falha que é enviada ao cliente. Isso é feito definindo <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para `true`. Você pode defini-lo no código ou na configuração, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <behaviors>  
@@ -115,15 +115,15 @@ catch (FaultException<MathFault> e)
   
  Além disso, o comportamento deve ser associado ao serviço, definindo o `behaviorConfiguration` atributo do serviço no arquivo de configuração para "CalculatorServiceBehavior".  
   
- Para capturar essas falhas no cliente, não genéricas <xref:System.ServiceModel.FaultException> deve ser capturado.  
+ Para capturar essas falhas no cliente, a não-genérica <xref:System.ServiceModel.FaultException> deve ser capturada.  
   
- Esse comportamento deve ser usado apenas para fins de depuração e nunca deve ser habilitado em produção.  
+ Esse comportamento só deve ser usado para fins de depuração e nunca deve ser habilitado em produção.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1.  Certifique-se de que você executou o [único procedimento de instalação para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar o c# ou Visual Basic .NET edição da solução, siga as instruções em [compilar os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -132,7 +132,7 @@ catch (FaultException<MathFault> e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   

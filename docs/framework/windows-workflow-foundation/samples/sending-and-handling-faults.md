@@ -3,11 +3,11 @@ title: Enviando e manipulando falhas
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
 ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406652"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733359"
 ---
 # <a name="sending-and-handling-faults"></a>Enviando e manipulando falhas
 Este exemplo demonstra como usar as atividades de mensagem de <xref:System.ServiceModel.Activities.SendReply> e de <xref:System.ServiceModel.Activities.ReceiveReply> para enviar e receber falhas previstas e inesperado. Nesse cenário, os primeiros resultados da solicitação de cliente em uma falha esperada que é incluída na sua coleção de <xref:System.ServiceModel.Activities.Send.KnownTypes%2A> . As próximas solicitações de cliente levam a receber falhas inesperados, antes que a solicitação foi bem-sucedida final.  

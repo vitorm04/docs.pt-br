@@ -3,11 +3,11 @@ title: Guia de interoperabilidade de protocolos de serviços
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403638"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739039"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guia de interoperabilidade de protocolos de serviços
 Windows Communication Foundation (WCF) implementa um número de protocolos de serviços da Web. Muitos desses protocolos incluem uma série de opções e os pontos de extensibilidade da esquerda para a critério do implementador. Este tópico fornece uma lista de protocolos de serviços Web que WCF implementa. Outros tópicos dentro desta seção fornecem detalhes de implementação para cada protocolo com suporte.  

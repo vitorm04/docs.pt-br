@@ -8,18 +8,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: 1e9231065369640fa49e04a491b92ebfb1e91912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cad15b8fb89ec17e45b0f6cfed22f3109551fc2c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541503"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740462"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Instruções passo a passo: herdando um controle dos Windows Forms com Visual C# #
-Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode criar controles personalizados avançados por meio da *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará a funcionalidade de formulários do Windows padrão <xref:System.Windows.Forms.Button> controlar e expõe uma propriedade personalizada chamada `ButtonValue`.  
+Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode criar controles personalizados avançados por meio da *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão herdará funcionalidades do formulários padrão do Windows <xref:System.Windows.Forms.Button> controlar e exporá uma propriedade personalizada chamada `ButtonValue`.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
  Quando cria um novo projeto, você especifica seu nome para definir o namespace raiz, o nome do assembly e o nome do projeto e para garantir que o componente padrão estará no namespace correto.  
@@ -36,7 +36,7 @@ Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode 
   
 4.  No **Gerenciador de Soluções**, clique com o botão direito do mouse em **ValueButton.cs** e selecione **Exibir Código**.  
   
-5.  Localize o `class` linha da instrução, `public partial class ValueButton`e alterar o tipo da qual este controle herda do <xref:System.Windows.Forms.UserControl> para <xref:System.Windows.Forms.Button>. Isso permite que o controle herdado herdar toda a funcionalidade do <xref:System.Windows.Forms.Button> controle.  
+5.  Localize o `class` linha de demonstrativo `public partial class ValueButton`e altere o tipo do qual esse controle herda de <xref:System.Windows.Forms.UserControl> para <xref:System.Windows.Forms.Button>. Isso permite que o controle herdado herde toda a funcionalidade do <xref:System.Windows.Forms.Button> controle.  
   
 6.  No **Gerenciador de Soluções**, abra o nó **ValueButton.cs** para exibir o arquivo de código gerado pelo designer, **ValueButton.Designer.cs**. Abra esse arquivo no **Editor de Códigos**.  
   
@@ -45,7 +45,7 @@ Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode 
 8.  No menu **Arquivo**, escolha **Salvar Tudo** para salvar o projeto.  
   
     > [!NOTE]
-    >  Um designer visual não está mais disponível. Porque o <xref:System.Windows.Forms.Button> controle faz sua própria pintura, você não é possível modificar sua aparência no designer. Sua representação visual será exatamente o mesmo que ela herda da classe (ou seja, <xref:System.Windows.Forms.Button>), a menos que modificado no código. Você ainda pode adicionar componentes, que não têm uma interface do usuário, à superfície de design.  
+    >  Um designer visual não está mais disponível. Porque o <xref:System.Windows.Forms.Button> controle faz sua própria pintura, você não conseguir modificar sua aparência no designer. Sua representação visual será exatamente o mesmo que a classe herda de (ou seja, <xref:System.Windows.Forms.Button>), a menos que modificado no código. Você ainda pode adicionar componentes, que não têm uma interface do usuário, à superfície de design.  
   
 ## <a name="adding-a-property-to-your-inherited-control"></a>Adicionando uma propriedade ao controle herdado  
  Um uso possível dos controles herdados dos Windows Forms é a criação de controles que são idênticos em termos de aparência a controles padrão dos Windows Forms, mas que expõem propriedades personalizadas. Nesta seção, você adicionará uma propriedade chamada `ButtonValue` ao controle.  
@@ -117,7 +117,7 @@ Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode 
   
 5.  Defina a propriedade `ButtonValue` como `5`.  
   
-6.  No **todos os Windows Forms** guia do **caixa de ferramentas**, clique duas vezes em **rótulo** para adicionar um <xref:System.Windows.Forms.Label> a seu formulário.  
+6.  No **todos os Windows Forms** guia da **caixa de ferramentas**, clique duas vezes em **rótulo** para adicionar um <xref:System.Windows.Forms.Label> controle ao seu formulário.  
   
 7.  Reposicione o rótulo no centro do formulário.  
   
@@ -142,7 +142,7 @@ Com o [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], você pode 
      O numeral "5" é exibido em `label1`, demonstrando que a propriedade `ButtonValue` de seu controle herdado foi passada para `label1` por meio do método `valueButton1_Click`. Portanto, seu controle `ValueButton` herda todas as funcionalidades do botão padrão dos Windows Forms, mas expõe uma propriedade adicional personalizada.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação com componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [Instruções passo a passo para criação de componentes](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [Programação com componentes](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [Instruções passo a passo para criação de componentes](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
  [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Passo a passo: criando um controle de composição com o Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

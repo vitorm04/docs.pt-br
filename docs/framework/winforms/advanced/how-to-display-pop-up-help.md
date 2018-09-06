@@ -11,20 +11,20 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523868"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725001"
 ---
 # <a name="how-to-display-pop-up-help"></a>Como exibir ajuda pop-up
-É uma maneira de exibir a Ajuda em formulários do Windows por meio do **ajuda** botão, localizado no lado direito da barra de título, acessível por meio de <xref:System.Windows.Forms.Form.HelpButton%2A> propriedade. Esse tipo de exibição de Ajuda é adequado para uso com caixas de diálogo. Caixas de diálogo mostradas modalmente (com o <xref:System.Windows.Forms.Form.ShowDialog%2A> método) tem problemas ao trazer ajuda externa sistemas, como caixas de diálogo modais precisam ser fechadas antes que o foco pode alternar para outra janela. Além disso, usar o botão **Ajuda** requer que não nenhum botão **Minimizar** ou **Maximizar** seja mostrado na barra de título. Isso é uma convenção padrão de caixas de diálogo, enquanto formulários geralmente têm os botões **Minimizar** e **Maximizar**.  
+Uma maneira de exibir a Ajuda no Windows Forms é por meio de **ajuda** botão, localizado no lado direito da barra de título, acessível por meio o <xref:System.Windows.Forms.Form.HelpButton%2A> propriedade. Esse tipo de exibição de Ajuda é adequado para uso com caixas de diálogo. Caixas de diálogo mostradas modalmente (com o <xref:System.Windows.Forms.Form.ShowDialog%2A> método) enfrentam dificuldades ajuda externa sistemas, como caixas de diálogo modais precisam ser fechadas antes que o foco pode alternar para outra janela. Além disso, usar o botão **Ajuda** requer que não nenhum botão **Minimizar** ou **Maximizar** seja mostrado na barra de título. Isso é uma convenção padrão de caixas de diálogo, enquanto formulários geralmente têm os botões **Minimizar** e **Maximizar**.  
   
  Lembre-se de que você também pode usar o <xref:System.Windows.Forms.HelpProvider> componente para vincular controles a arquivos em um sistema de Ajuda, mesmo se você tiver implementado Ajuda pop-up. Para obter mais informações, consulte [Fornecer ajuda em um aplicativo do Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-pop-up-help"></a>Exibir a Ajuda pop-up  
   
@@ -32,9 +32,9 @@ ms.locfileid: "33523868"
   
      Ele ficará na bandeja na parte inferior do Designer de Formulários do Windows.  
   
-2.  Na janela Propriedades, defina o <xref:System.Windows.Forms.Form.HelpButton%2A> propriedade `true`. Isso exibirá um botão com um ponto de interrogação no lado direito da barra de título do formulário.  
+2.  Na janela Propriedades, defina as <xref:System.Windows.Forms.Form.HelpButton%2A> propriedade para `true`. Isso exibirá um botão com um ponto de interrogação no lado direito da barra de título do formulário.  
   
-3.  Para que o <xref:System.Windows.Forms.Form.HelpButton%2A> para exibir o formulário <xref:System.Windows.Forms.Form.MinimizeBox%2A> e <xref:System.Windows.Forms.Form.MaximizeBox%2A> propriedades devem ser definidas como `false`, o <xref:System.Windows.Forms.Form.ControlBox%2A> propriedade definida como `true`e o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> propriedade com um dos seguintes valores: <xref:System.Windows.Forms.FormBorderStyle.FixedSingle> , <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> ou <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
+3.  Para que o <xref:System.Windows.Forms.Form.HelpButton%2A> para exibir o formulário <xref:System.Windows.Forms.Form.MinimizeBox%2A> e <xref:System.Windows.Forms.Form.MaximizeBox%2A> propriedades devem ser definidas como `false`, o <xref:System.Windows.Forms.Form.ControlBox%2A> propriedade definida como `true`e o <xref:System.Windows.Forms.Form.FormBorderStyle%2A> propriedade para um dos seguintes valores: <xref:System.Windows.Forms.FormBorderStyle.FixedSingle> , <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> ou <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
   
 4.  Selecione o controle para o qual você deseja exibir a Ajuda no seu formulário e defina a cadeia de caracteres de Ajuda na janela Propriedades. Esta é a cadeia de texto que será exibida em uma janela similar a uma [ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md).  
   

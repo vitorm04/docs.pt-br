@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 ms.assetid: 1d68934d-a04c-4b12-9e66-c856c6828131
 ms.openlocfilehash: bff484831f9d3624117e9d7d9ab6653bd4724c0c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463808"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723987"
 ---
 # <a name="how-to-automatically-resize-cells-when-content-changes-in-the-windows-forms-datagridview-control"></a>Como redimensionar automaticamente células quando o conteúdo é alterado no controle DataGridView dos Windows Forms
 Você pode configurar o <xref:System.Windows.Forms.DataGridView> de controle para redimensionar suas linhas, colunas e cabeçalhos automaticamente sempre que alterações de conteúdo, para que as células sejam sempre grandes o suficiente para exibir seus valores sem recorte.  

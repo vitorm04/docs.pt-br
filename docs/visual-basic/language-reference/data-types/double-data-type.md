@@ -19,24 +19,24 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590258"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734806"
 ---
 # <a name="double-data-type-visual-basic"></a>Tipo de dados double (Visual Basic)
-Mantém conectado IEEE de 64 bits (8 bytes) de precisão dupla números de ponto flutuante que variam em valor de - 1, 79769313486231570E + 308 a - 4.94065645841246544 e-324 para valores negativos e de 4.94065645841246544 e-324 1.79769313486231570 e + 308 para valores positivos. Números de precisão dupla armazenam uma aproximação de um número real.  
+Mantém conectado IEEE de 64 bits (8 bytes) de precisão dupla números de ponto flutuante que variam em valor de - 1, 79769313486231570E + 308 a - 4.94065645841246544-324 para valores negativos e de 4.94065645841246544-324 1.79769313486231570 + 308 para valores positivos. Números de precisão dupla armazenam uma aproximação de um número real.  
   
 ## <a name="remarks"></a>Comentários  
- O `Double` tipo de dados fornece a maior e menor magnitude possível para um número.  
+ O `Double` tipo de dados fornece o maior e menor magnitude possível para um número.  
   
  O valor padrão de `Double` é 0.  
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
--   **Precisão.** Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [Solucionando problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Precisão.** Quando você trabalha com números de ponto flutuante, lembre-se de que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados em certas operações, como comparação de valor e o `Mod` operador. Para obter mais informações, consulte [solução de problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 -   **Zeros à direita.** Os tipos de dados de ponto flutuante não possuem uma representação interna de zero caracteres à direita. Por exemplo, eles não fazem distinção entre 4,2000 e 4.2. Consequentemente, zero caracteres à direita não aparecem quando você exibe ou valores de ponto flutuante de impressão.  
   
@@ -57,7 +57,7 @@ Mantém conectado IEEE de 64 bits (8 bytes) de precisão dupla números de ponto
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Double?displayProperty=nameWithType>  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)  
  [Tipo de Dados Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Tipo de Dados Simples](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

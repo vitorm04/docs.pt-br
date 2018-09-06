@@ -3,11 +3,11 @@ title: '&lt;transporte&gt; de &lt;netPeerTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
 ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405658"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735313"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;transporte&gt; de &lt;netPeerTcpBinding&gt;
 Especifica as configurações de segurança em nível de transporte ao usar o [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  

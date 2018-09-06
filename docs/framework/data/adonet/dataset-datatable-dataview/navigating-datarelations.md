@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: 1819d468d12c03ce0c4faac11f4b20b8fe0f9c33
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482000"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731268"
 ---
 # <a name="navigating-datarelations"></a>Navegando em DataRelations
 Uma das principais funções de um <xref:System.Data.DataRelation> é permitir a navegação de um <xref:System.Data.DataTable> para outro em um <xref:System.Data.DataSet>. Isso permite que você recupere todos os relacionado <xref:System.Data.DataRow> objetos em um **DataTable** quando receber um único **DataRow** de um relacionados **DataTable**. Por exemplo, depois de estabelecer uma **DataRelation** entre uma tabela de clientes e uma tabela de pedidos, você pode recuperar todas as linhas de pedido para uma linha de cliente específico usando **GetChildRows**.  
