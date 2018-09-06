@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559813"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861982"
 ---
 # <a name="large-udts"></a>UDTs grandes
 Os tipos definidos pelo usuário (UDTs) permitem que um desenvolvedor estenda o sistema de tipo escalar do servidor armazenando objetos CLR em um banco de dados do SQL Server. Os UDTs podem conter vários elementos e podem ter comportamentos, ao contrário dos tipos de dados de alias tradicionais, que consistem em um único tipo de dados do sistema do SQL Server.  

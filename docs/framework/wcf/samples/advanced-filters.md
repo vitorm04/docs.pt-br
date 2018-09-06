@@ -3,11 +3,11 @@ title: Filtros avançados
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
 ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564194"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805436"
 ---
 # <a name="advanced-filters"></a>Filtros avançados
 Este exemplo demonstra um serviço de roteamento do Windows Communication Foundation (WCF). O serviço de roteamento é um componente do WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta a amostragem padrão de Calculadora do WCF para se comunicar usando o serviço de roteamento. Este exemplo mostra como definir a lógica de roteamento baseado em conteúdo com o uso de filtros de mensagem e tabelas de filtro de mensagem.  

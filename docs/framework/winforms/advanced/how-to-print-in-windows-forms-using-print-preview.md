@@ -10,11 +10,11 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: ff113b3abfb8363e65d7ccb101973b6821d97262
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43531726"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868057"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Como imprimir no Windows Forms usando Visualizar Impressão
 É muito comum na programação do Windows Forms oferecer a visualização de impressão além dos serviços de impressão. Uma maneira fácil de adicionar serviços de visualização de impressão ao seu aplicativo é usar um <xref:System.Windows.Forms.PrintPreviewDialog> controle em combinação com o <xref:System.Drawing.Printing.PrintDocument.PrintPage> lógica de manipulação de eventos para imprimir um arquivo.  

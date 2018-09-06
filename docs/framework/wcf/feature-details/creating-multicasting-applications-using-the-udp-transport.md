@@ -3,11 +3,11 @@ title: Criando aplicativos multicasting usando o transporte UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776282"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867914"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Criando aplicativos multicasting usando o transporte UDP
 Aplicativos de difusão seletiva enviam mensagens pequenas para um grande número de destinatários ao mesmo tempo sem a necessidade de estabelecer conexões ponto a ponto. A ênfase tais aplicativos é a velocidade ao longo de confiabilidade. Em outras palavras, é mais importante enviar dados em tempo hábil que assegurar que qualquer mensagem específica é realmente recebida. O WCF agora dá suporte a escrever aplicativos multicasting usando o <xref:System.ServiceModel.UdpBinding>. Esse transporte é útil em cenários em que um serviço precisa para enviar mensagens pequenas para um número de clientes simultaneamente. Um aplicativo de cotação da bolsa é um exemplo de um serviço.  

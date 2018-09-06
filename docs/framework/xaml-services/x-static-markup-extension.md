@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538525"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877983"
 ---
 # <a name="xstatic-markup-extension"></a>Extensão de marcação x:Static
 Faz referência a qualquer entidade de código estático por-valor que é definida em um [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– maneira em conformidade. A propriedade estática que é referenciada pode ser usada para fornecer o valor de uma propriedade em XAML.  

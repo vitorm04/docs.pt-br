@@ -3,11 +3,11 @@ title: Fluxo de trabalho (WF) Exemplos do Windows
 ms.date: 03/30/2017
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: e9b511606c6278e7d2b2fb1bc3cbd9c38b51b000
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564495"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875775"
 ---
 # <a name="windows-workflow-wf-samples"></a>Fluxo de trabalho (WF) Exemplos do Windows
 Estes exemplos fornecem instruções sobre vários aspectos do Windows Workflow Foundation (WF).  

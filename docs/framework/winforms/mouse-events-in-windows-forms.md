@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
 ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785889"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864490"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos do mouse no Windows Forms
 Quando manipula entradas de mouse, você geralmente deseja conhecer a localização do ponteiro do mouse e o estado dos botões do mouse. Este tópico fornece detalhes sobre como obter essas informações de eventos do mouse e explica a ordem em que eventos de clique do mouse são gerados em controles dos Windows Forms. Para obter uma lista e uma descrição de todos os eventos de mouse, consulte [Como a entrada do mouse funciona nos Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Consulte também [Visão geral de manipuladores de eventos (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Visão geral de eventos (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  

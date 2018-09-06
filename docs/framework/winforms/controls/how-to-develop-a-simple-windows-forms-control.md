@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560126"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856662"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Como desenvolver um controle simples dos Windows Forms
 Esta seção explica as etapas principais para a criação de um controle personalizado dos Windows Forms. O controle simples desenvolvido neste passo a passo permite que o alinhamento de seu <xref:System.Windows.Forms.Control.Text%2A> propriedade a ser alterada. Ele não gera ou manipula eventos.  

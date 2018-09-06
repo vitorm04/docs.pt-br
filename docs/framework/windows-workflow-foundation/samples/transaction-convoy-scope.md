@@ -3,11 +3,11 @@ title: Escopo de trem de transação
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536085"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871245"
 ---
 # <a name="transaction-convoy-scope"></a>Escopo de trem de transação
 Este exemplo demonstra como criar um padrão paralelo de atividade de mensagem de trem em conjunto com <xref:System.ServiceModel.Activities.TransactedReceiveScope> para modelar um protocolo onde um número de operações podem ocorrer em qualquer ordem todo na mesma transação. Este exemplo também demonstra como <xref:System.ServiceModel.Activities.TransactedReceiveScope> automaticamente cria uma nova quando uma transação não é fluído para o servidor, portanto o cliente não usa nenhuma transações.  

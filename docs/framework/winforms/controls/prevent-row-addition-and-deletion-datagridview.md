@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
 ms.openlocfilehash: 6263c92e6a981983c19e9d7f2357c581bee5ec07
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660266"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875369"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Como evitar a adição e a exclusão de linha no controle DataGridView dos Windows Forms
 Às vezes, você desejará impedir que usuários insiram novas linhas de dados ou excluam linhas existentes em seu <xref:System.Windows.Forms.DataGridView> controle. O <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> propriedade indica se a linha para novos registros está presente na parte inferior do controle, enquanto o <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> propriedade indica se as linhas podem ser removidas. O exemplo de código a seguir usa essas propriedades e também define o <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> propriedade para tornar o controle totalmente somente leitura.  

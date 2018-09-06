@@ -3,11 +3,11 @@ title: Substituído em Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
 ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658893"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857635"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Substituído em Windows Workflow Foundation
 Em .NET 4 a equipe de fluxo de trabalho liberou qualquer novo mecanismo de fluxo de trabalho no espaço de <xref:System.Activities> . Com o lançamento do .NET Beta 4.5 nós estamos marcando a maioria dos tipos em "WF 3" <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, e <xref:System.Workflow.Runtime> namespaces como obsoleto.  

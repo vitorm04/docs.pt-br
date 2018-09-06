@@ -3,11 +3,11 @@ title: Correlação de consulta de mensagem LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
 ms.openlocfilehash: 7881140f2926bc27073a0be425a63566f313b50c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559073"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855979"
 ---
 # <a name="linq-message-query-correlation"></a>Correlação de consulta de mensagem LINQ
 Este exemplo demonstra como fazer correlação conteudo base que usa uma implementação personalizada de <xref:System.ServiceModel.Dispatcher.MessageQuery> diferentemente de sistema forneceu <xref:System.ServiceModel.XPathMessageQuery>.  

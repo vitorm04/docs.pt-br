@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672255"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872413"
 ---
 # <a name="merging-dataset-contents"></a>Mesclando conteúdo do DataSet
 Você pode usar o método <xref:System.Data.DataSet.Merge%2A> para mesclar o conteúdo de uma matriz <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> em um `DataSet` existente. Vários fatores e opções afetam a maneira como os novos dados são mesclados em um `DataSet` existente.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
 ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539610"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866547"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Como associar a um serviço Web
 Este exemplo mostra como associar a objetos retornados por chamadas de método de serviço Web.  

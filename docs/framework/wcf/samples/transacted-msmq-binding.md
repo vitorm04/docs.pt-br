@@ -3,11 +3,11 @@ title: Associação transacionada do MSMQ
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 381304bcef40245bac882a4fe4ae18a6998665cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558176"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875717"
 ---
 # <a name="transacted-msmq-binding"></a>Associação transacionada do MSMQ
 Este exemplo demonstra como realizar a comunicação em fila transacionada usando o serviço de enfileiramento de mensagens (MSMQ).  

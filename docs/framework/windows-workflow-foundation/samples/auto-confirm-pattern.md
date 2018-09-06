@@ -3,11 +3,11 @@ title: Confirme automaticamente o padrão
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552264"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864048"
 ---
 # <a name="auto-confirm-pattern"></a>Confirme automaticamente o padrão
 Esse exemplo consiste em três situações a execução que ilustra uma atividade personalizado de `AutoConfirmScope` . O primeiro exemplo mostra a execução bem-sucedida de uma sequência de quatro atividades compensáveis onde o segundo e terceiro é aninhado em lugar em `AutoConfirmScope`. O segundo exemplo mostra a mesma sequência com uma exceção que ocorre após a execução do quarto <xref:System.Activities.Statements.CompensableActivity>. O terceiro cenário mostra a mesma sequência com uma exceção que ocorre em `AutoConfirmScope` após segundo <xref:System.Activities.Statements.CompensableActivity> completa.  

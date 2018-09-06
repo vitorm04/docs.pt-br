@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562685"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858906"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Fontes de dados com suporte do Windows Forms
 Tradicionalmente, a associação de dados era usada nos aplicativos para tirar proveito dos dados armazenados em bancos de dados. Com a associação de dados do Windows Forms, você pode acessar dados de bancos de dados, bem como dados em outras estruturas, como matrizes e coleções, desde que certos requisitos mínimos sejam atendidos.  

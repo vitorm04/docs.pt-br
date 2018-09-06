@@ -16,11 +16,11 @@ ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674289"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855277"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Depuração, rastreamento e criação de perfil
 Para depurar um aplicativo do .NET Framework, o compilador e o ambiente de tempo de execução devem ser configurados para habilitar um depurador a anexar ao aplicativo e gerar símbolos e mapas de linha, se possível, para o aplicativo a respectiva MSIL (Microsoft Intermediate Language) correspondente. Após um aplicativo gerenciado ter sido depurado, o perfil dele pode ser criado para aprimorar o desempenho. A criação de perfil avalia e descreve as linhas do código-fonte que geram o código executado com mais frequência e quanto tempo demora para executá-las.  

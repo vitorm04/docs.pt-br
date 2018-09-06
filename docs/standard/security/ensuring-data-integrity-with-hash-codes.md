@@ -16,47 +16,48 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27e4abcd5e8dfe253ba8a7ea1ba5022561ed9ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874986"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Assegurando a integridade dos dados com códigos hash
-Um valor de hash é um valor numérico de comprimento fixo que identifica exclusivamente a dados. Valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que eles são usados com assinaturas digitais. Você pode assinar um valor de hash de forma mais eficiente que o maior valor de assinatura. Valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguras. O valor de hash de dados recebidos pode ser comparado com o valor de hash de dados como ele foi enviado para determinar se os dados foi alterados.  
+Um valor de hash é um valor numérico de comprimento fixo que identifica exclusivamente a dados. Valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que eles são usados com assinaturas digitais. Você pode assinar um valor de hash de forma mais eficiente que o maior valor de assinatura. Valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguros. O valor de hash dos dados recebidos pode ser comparado com o valor de hash de dados como ele foi enviado para determinar se os dados foi alterados.  
   
  Este tópico descreve como gerar e verificar códigos hash usando as classes de <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.  
   
-## <a name="generating-a-hash"></a>Gerando um Hash  
- As classes de hash gerenciado podem hash de uma matriz de bytes ou um objeto de fluxo gerenciados. O exemplo a seguir usa o algoritmo de hash SHA1 para criar um valor de hash para uma cadeia de caracteres. O exemplo usa o <xref:System.Text.UnicodeEncoding> classe para converter a cadeia de caracteres em uma matriz de bytes que são transformadas em hash usando o <xref:System.Security.Cryptography.SHA1Managed> classe. O valor de hash é exibido no console.  
+## <a name="generating-a-hash"></a>Gerar um Hash  
+ As classes de hash gerenciados podem discutir uma matriz de bytes ou um objeto de fluxo gerenciado. O exemplo a seguir usa o algoritmo de hash SHA1 para criar um valor de hash para uma cadeia de caracteres. O exemplo usa o <xref:System.Text.UnicodeEncoding> classe para converter a cadeia de caracteres em uma matriz de bytes que são transformadas em hash usando o <xref:System.Security.Cryptography.SHA1Managed> classe. O valor de hash é exibido no console.  
   
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
   
- Esse código exibirá a seguinte cadeia de caracteres para o console:  
+ Esse código exibirá a seguinte cadeia de caracteres no console:  
   
  `59 4 248 102 77 97 142 201 210 12 224 93 25 41 100 197 213 134 130 135`  
   
 ## <a name="verifying-a-hash"></a>Verificando um Hash  
- Dados podem ser comparados com um valor de hash para determinar sua integridade. Geralmente, dados é transformado em hash em uma determinada hora e o valor de hash é protegido de alguma forma. Em um momento posterior, os dados podem ser misturados novamente e comparados com o valor protegido. Se os valores de hash coincidirem, os dados não foi alterados. Se os valores não coincidirem, os dados foi corrompidos. Para este sistema de trabalho, o hash protegido deve ser criptografado ou mantido em segredo de todas as partes não confiáveis.  
+ Dados podem ser comparados a um valor de hash para determinar sua integridade. Normalmente, os dados é transformado em hash em um determinado momento e o valor de hash é protegido de alguma forma. Em um momento posterior, os dados podem ser transformada em hash novamente e comparado com o valor protegido. Se os valores de hash corresponderem, os dados não foram alterados. Se os valores não corresponderem, os dados foi corrompidos. Para este sistema funcione, o hash protegido deve ser criptografado ou mantido em segredo de todas as partes não confiáveis.  
   
- O exemplo a seguir compara o valor de hash anterior de uma cadeia de caracteres para um novo valor de hash. Este exemplo executa um loop em cada byte de valores de hash e faz uma comparação.  
+ O exemplo a seguir compara o valor de hash anterior de uma cadeia de caracteres para um novo valor de hash. Este exemplo executa um loop em cada byte dos valores de hash e faz uma comparação.  
   
  [!code-csharp[VerifyingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/verifyingahash/cs/program.cs#1)]
  [!code-vb[VerifyingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/verifyingahash/vb/program.vb#1)]  
   
- Se os dois valores de hash coincidirem, este código exibe o seguinte no console:  
+ Se dois valores de hash corresponderem, esse código exibe o seguinte no console:  
   
 ```  
 The hash codes match.  
 ```  
   
- Se eles não coincidirem, o código exibe o seguinte:  
+ Se eles não corresponderem, o código exibe o seguinte:  
   
 ```  
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Consulte também
+
+- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

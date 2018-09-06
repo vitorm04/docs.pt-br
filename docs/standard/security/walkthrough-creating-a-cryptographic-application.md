@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501609"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873767"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Instruções passo a passo: criando um aplicativo criptográfico
 Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os exemplos de código são projetados para um aplicativo Windows Forms. Este aplicativo não demonstram cenários do mundo real, como o uso de cartões inteligentes. Em vez disso, ele demonstra os conceitos básicos de criptografia e descriptografia.  
@@ -210,5 +210,6 @@ Este passo a passo demonstra como criptografar e descriptografar o conteúdo. Os
   
 2.  Clique o `Decrypt File` botão e selecione o arquivo criptografado apenas. Isso será bem-sucedida porque você tem o par de chave completo para descriptografar.  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Consulte também
+
+- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

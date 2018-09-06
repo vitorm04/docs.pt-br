@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 95d383f44d84bb22e6fcc9fca159f8f5efa87434
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673955"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803984"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Clientes de automação de interface do usuário para tópicos de instrução do código gerenciado
 > [!NOTE]

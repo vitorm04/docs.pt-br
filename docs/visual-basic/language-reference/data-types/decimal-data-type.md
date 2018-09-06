@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554926"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860318"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Tipo de dados decimal (Visual Basic)
 Mantém conectado valores (16 bytes) de 128 bits que representa os números de 96 bits (12 bytes) inteiro dimensionados por uma potência variável de 10. O fator de escala especifica o número de dígitos à direita da vírgula decimal. ele varia de 0 a 28. Com uma escala de 0 (sem casas decimais), o maior valor possível é + /-79.228.162.514.264.337.593.543.950.335 (+ /-7 .9228162514264337593543950335E + 28). Com 28 casas decimais, o maior valor é + /-7,9228162514264337593543950335 e o menor valor diferente de zero é + /-0,0000000000000000000000000001 (+ /-1E-28).  

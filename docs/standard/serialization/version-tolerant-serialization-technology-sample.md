@@ -2,12 +2,12 @@
 title: Exemplo de tecnologia de serialização básica tolerante a versões
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 996c041cd85551124fe62086e4894709183798d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34dccc9065c0100a01a7969a1fe762001e2999a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583062"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866417"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Exemplo de tecnologia de serialização básica tolerante a versões
 [Baixar Exemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -45,6 +45,7 @@ ms.locfileid: "33583062"
 > [!NOTE]
 >  O exemplo cria aplicativos de console. Você deve lançá-los e executá-los em uma janela do prompt de comando para exibir sua saída.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
- <xref:System.IO.FileStream>
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.IO.FileStream>

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571391"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871006"
 ---
 # <a name="member-design-guidelines"></a>Diretrizes de Design de membro
-Métodos, propriedades, eventos, construtores e campos são chamados, coletivamente como membros. Os membros são, por fim, o meio pelo qual funcionalidade do framework é exposta aos usuários finais de uma estrutura.  
+Métodos, propriedades, eventos, construtores e campos são coletivamente denominados membros. Os membros são, por fim, o meio pelo qual funcionalidade do framework é exposta aos usuários finais de uma estrutura.  
   
- Membros podem ser virtual ou, concreto ou abstrato, estático ou instância e podem ter vários escopos diferentes de acessibilidade. Todos os essa variedade fornece expressividade incrível mas ao mesmo tempo requer cuidado por parte do designer de estrutura.  
+ Membros podem ser virtual ou não virtual, concreto ou abstrato, estático ou instância e podem ter vários escopos diferentes de acessibilidade. Essa variedade fornece expressividade incrível, mas ao mesmo tempo requer cuidado por parte do designer de estrutura.  
   
  Este capítulo oferece diretrizes básicas que devem ser seguidas durante a criação de membros de qualquer tipo.  
   
@@ -35,7 +35,8 @@ Métodos, propriedades, eventos, construtores e campos são chamados, coletivame
  [Design de parâmetro](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

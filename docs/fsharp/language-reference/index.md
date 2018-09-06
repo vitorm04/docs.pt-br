@@ -2,22 +2,20 @@
 title: Referência da linguagem F#
 description: 'Encontre F # informações de recurso idioma dessa referência a tokens de idioma, conceitos, tipos, expressões e tópicos de construção com suporte do compilador.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937079"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873244"
 ---
 # <a name="f-language-reference"></a>Referência da linguagem F#
 
 Esta seção é uma referência à linguagem F #, uma linguagem de programação de vários paradigma destinados ao .NET. A linguagem F# oferece suporte a modelos de programação imprescindíveis, funcionais e orientados a objeto.
 
-
 ## <a name="f-tokens"></a>Tokens do F#
+
 A tabela a seguir mostra os tópicos de referência que fornecem tabelas de palavras-chave, símbolos e literais usados como tokens no F#.
-
-
 
 |Título|Descrição|
 |-----|-----------|
@@ -26,9 +24,8 @@ A tabela a seguir mostra os tópicos de referência que fornecem tabelas de pala
 |[Literais](literals.md)|Descreve a sintaxe para valores literais no F# e como especificar informações de tipo para literais do F#.|
 
 ## <a name="f-language-concepts"></a>Conceitos da linguagem F#
+
 A tabela a seguir mostra os tópicos de referência disponíveis que descrevem os conceitos de linguagem.
-
-
 
 |Título|Descrição|
 |-----|-----------|
@@ -38,7 +35,7 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Generalização Automática](generics/automatic-generalization.md)|Descreve as construções genéricas no F#.|
 |[Herança](inheritance.md)|Descreve a herança, que é usada para modelar a relação "é um" ou subtipagem na programação orientada a objetos.|
 |[Membros](members/index.md)|Descreve os membros de tipos de objeto do F#.|
-|[Parâmetros e Argumentos ](Parameters-and-Arguments.md)|Descreve o suporte de linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Inclui informações sobre como passar referência.|
+|[Parâmetros e Argumentos](Parameters-and-Arguments.md)|Descreve o suporte de linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Inclui informações sobre como passar referência.|
 |[Sobrecarga de Operador](operator-overloading.md)|Descreve como sobrecarregar operadores aritméticos em uma classe ou tipo de registro e no nível global.|
 |[Conversões Cast e conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
 |[Controle de Acesso](access-control.md)|Descreve o controle de acesso no F#. Controle de acesso significa declarar que os clientes são capazes de usar determinados elementos de programação, como tipos, métodos, funções e assim por diante.|
@@ -56,9 +53,8 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Sintaxe Detalhada](verbose-syntax.md)|Descreve a sintaxe para construções no F# quando a sintaxe leve não está habilitada. A sintaxe detalhada está indicada pela diretiva `#light "off"` na parte superior do arquivo de código.|
 
 ## <a name="f-types"></a>Tipos F#
+
 A tabela a seguir mostra os tópicos de referência disponíveis que descrevem os tipos com suporte pela linguagem F#.
-
-
 
 |Título|Descrição|
 |-----|-----------|
@@ -88,6 +84,7 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Provedores de Tipos](../tutorials/type-providers/index.md)|Descreve provedores de tipo e fornece links para instruções passo a passo sobre como usar os provedores de tipos internos para acessar bancos de dados e serviços da Web.|
 
 ## <a name="f-expressions"></a>Expressões em F#
+
 A tabela a seguir lista os tópicos que descrevem as expressões no F#.
 
 |Título|Descrição|
@@ -105,6 +102,7 @@ A tabela a seguir lista os tópicos que descrevem as expressões no F#.
 |[Expressões de Consulta](query-expressions.md)|Descreve expressões de consulta, um recurso de linguagem que implementa o LINQ para F# e permite escrever consultas em uma fonte de dados ou uma coleção enumerável.|
 
 ## <a name="compiler-supported-constructs"></a>Construções com suporte do compilador
+
 A tabela a seguir lista tópicos que descrevem as construções especiais com suporte do compilador.
 
 |Tópico|Descrição|
@@ -114,4 +112,5 @@ A tabela a seguir lista tópicos que descrevem as construções especiais com su
 |[Identificadores de Linha, Arquivo e Demarcador de Origem](source-line-file-path-identifiers.md)|Descreve os identificadores `__LINE__`, `__SOURCE_DIRECTORY__` e `__SOURCE_FILE__`, que são valores internos que permitem acessar o número da linha de origem, o diretório e o nome do arquivo em seu código.|
 
 ## <a name="see-also"></a>Consulte também
-[Visual F#](../index.md)
+
+- [Visual F#](../index.md)

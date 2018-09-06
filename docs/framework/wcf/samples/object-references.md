@@ -3,11 +3,11 @@ title: Referências de objeto
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
 ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787214"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875116"
 ---
 # <a name="object-references"></a>Referências de objeto
 Este exemplo demonstra como passar objetos por referências entre servidor e cliente. O exemplo usa simulado *redes sociais*. Uma rede social consiste em um `Person` que contém uma lista de amigos no qual cada friend é uma instância da classe a `Person` classe, com sua própria lista de amigos. Isso cria um grafo de objetos. O serviço expõe operações nessas redes sociais.  

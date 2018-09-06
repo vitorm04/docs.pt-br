@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 75c83dc75d1c86c89169fcc54220ced2a195bfbe
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948479"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866852"
 ---
 # <a name="dependency-properties"></a>Propriedades de Dependência
-Uma propriedade de dependência (DP) é uma propriedade que armazena o valor em um repositório de propriedades em vez de fazê-lo em uma variável de tipo (campo), por exemplo.  
+Uma propriedade de dependência (DP) é uma propriedade regular que armazena o valor em um repositório de propriedades em vez de armazená-los em uma variável de tipo (campo), por exemplo.  
   
- Uma propriedade de dependência anexado é um tipo de propriedade de dependência modelada como métodos Get e Set estáticos que representa "propriedades", que descrevem relações entre seus contêineres e objetos (por exemplo, a posição de um `Button` do objeto em um `Panel` contêiner).  
+ Uma propriedade de dependência anexada é um tipo de propriedade de dependência modelado como métodos Get e Set estáticos que representa "propriedades", que descreve as relações entre objetos e seus contêineres (por exemplo, a posição de um `Button` do objeto em um `Panel` contêiner).  
   
  **✓ DO** fornecem as propriedades de dependência, se você precisar que as propriedades para oferecer suporte a recursos do WPF, como o estilo, gatilhos, associação de dados, animações, recursos dinâmicos e herança.  
   
 ## <a name="dependency-property-design"></a>Design de propriedade de dependência  
- **✓ DO** herdam <xref:System.Windows.DependencyObject>, ou um de seus subtipos, ao implementar propriedades de dependência. O tipo fornece uma implementação muito eficiente de um repositório de propriedade e automaticamente dá suporte à associação de dados do WPF.  
+ **✓ DO** herdam <xref:System.Windows.DependencyObject>, ou um de seus subtipos, ao implementar propriedades de dependência. O tipo fornece uma implementação muito eficiente de um repositório de propriedades e automaticamente dá suporte à vinculação de dados do WPF.  
   
  **✓ DO** fornecem uma propriedade CLR e o campo estático público somente leitura armazenar uma instância de <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> para cada propriedade de dependência.  
   
@@ -30,18 +30,18 @@ Uma propriedade de dependência (DP) é uma propriedade que armazena o valor em 
   
  **X DO NOT** definir valores padrão das propriedades de dependência explicitamente no código; defini-las nos metadados.  
   
- Se você definir um padrão de propriedade explicitamente, você pode impedir que essa propriedade sendo definida de alguma maneira implícita, como um estilo.  
+ Se você definir um padrão de propriedade explicitamente, poderá impedir que essa propriedade sendo definida por meios implícitos, como uma definição de estilo.  
   
  **X DO NOT** coloque o código nos acessadores de propriedade que não seja o código padrão para acessar o campo estático.  
   
- Se código não irá executar se a propriedade é definida por meio de implícita, como um estilo, porque o estilo usa o campo estático diretamente.  
+ Que um código não será executado se a propriedade é definida por meios implícitos, como um estilo, porque a definição de estilo usa o campo estático diretamente.  
   
- **X DO NOT** usar propriedades de dependência para armazenar dados seguros. Propriedades de dependência até mesmo podem ser acessadas publicamente.  
+ **X DO NOT** usar propriedades de dependência para armazenar dados seguros. Propriedades de dependência até privados podem ser acessadas publicamente.  
   
-## <a name="attached-dependency-property-design"></a>Design de propriedade de dependência anexado  
- Propriedades de dependência descritas na seção anterior representam propriedades intrínsecas do tipo de declaração; Por exemplo, o `Text` é uma propriedade do `TextButton`, que declara. Um tipo especial de propriedade de dependência é a propriedade de dependência anexado.  
+## <a name="attached-dependency-property-design"></a>Design de propriedade de dependência anexada  
+ Propriedades de dependência descritas na seção anterior representam propriedades intrínsecas do tipo declarativo; Por exemplo, o `Text` é uma propriedade do `TextButton`, que declara-o. Um tipo especial de propriedade de dependência é a propriedade de dependência anexada.  
   
- É um exemplo clássico de uma propriedade anexada a <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> propriedade. A propriedade representa a posição de coluna do botão (não da grade), mas só será relevante se o botão estiver contido em uma grade e, portanto, é "anexado" a botões pela grade.  
+ Um exemplo clássico de uma propriedade anexada é o <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> propriedade. A propriedade representa a posição da coluna do botão (não da grade), mas só é relevante se o botão está contido em uma grade e, portanto, ele é "anexado" a botões por grades.  
   
 ```xaml
 <Grid>  
@@ -55,7 +55,7 @@ Uma propriedade de dependência (DP) é uma propriedade que armazena o valor em 
 </Grid>  
 ```  
   
- A definição de uma propriedade anexada aparência principalmente de uma propriedade de dependência normal, exceto que os acessadores são representados por métodos estáticos Get e Set:  
+ A definição de uma propriedade anexada a aparência principalmente de uma propriedade de dependência normal, exceto que os acessadores são representados por métodos Get e Set estáticos:  
   
 ```csharp
 public class Grid {  
@@ -78,26 +78,27 @@ public class Grid {
 ```  
   
 ## <a name="dependency-property-validation"></a>Validação de propriedade de dependência  
- Propriedades geralmente implementam o que é chamado de validação. Lógica de validação é executada quando é feita uma tentativa de alterar o valor de uma propriedade.  
+ As propriedades geralmente implementam o que chamamos de validação. Lógica de validação é executada quando é feita uma tentativa para alterar o valor de uma propriedade.  
   
- Infelizmente acessadores de propriedade de dependência não podem conter código de validação arbitrária. Em vez disso, lógica de validação de propriedade de dependência deve ser especificado durante o registro de propriedade.  
+ Infelizmente, acessadores de propriedade de dependência não podem conter código de validação arbitrária. Em vez disso, lógica de validação de propriedade de dependência deve ser especificado durante o registro de propriedade.  
   
- **X DO NOT** colocar a lógica de validação de propriedade de dependência em acessadores de propriedade. Em vez disso, passar um retorno de chamada de validação para `DependencyProperty.Register` método.  
+ **X DO NOT** colocar a lógica de validação de propriedade de dependência em acessadores de propriedade. Em vez disso, transmita um retorno de chamada de validação para `DependencyProperty.Register` método.  
   
 ## <a name="dependency-property-change-notifications"></a>Notificações de alteração de propriedade de dependência  
- **X DO NOT** implementar a lógica de notificação de alteração em acessadores de propriedade de dependência. Propriedades de dependência tem um recurso de notificações de alteração interna que deve ser usado, fornecendo um retorno de chamada de notificação de alteração para o <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** implementar a lógica de notificação de alteração em acessadores de propriedade de dependência. Propriedades de dependência têm um recurso de notificações de alterações interno que deve ser usado, fornecendo um retorno de chamada de notificação de alteração para o <xref:System.Windows.PropertyMetadata>.  
   
 ## <a name="dependency-property-value-coercion"></a>Coerção de valor de propriedade de dependência  
- Coerção de propriedade ocorre quando o valor fornecido para um setter de propriedade for modificado pela setter antes que o armazenamento de propriedades, na verdade, é modificado.  
+ Coerção de propriedade ocorre quando o valor fornecido para um setter de propriedade é modificado por setter antes que o armazenamento de propriedades, na verdade, é modificado.  
   
  **X DO NOT** implementar a lógica de coerção em acessadores de propriedade de dependência.  
   
- Propriedades de dependência tem um recurso de coerção interna e ele pode ser usado, fornecendo um retorno de chamada de coerção para o `PropertyMetadata`.  
+ Propriedades de dependência têm um recurso de coerção interna e ele pode ser usado ao fornecer um retorno de chamada de coerção para o `PropertyMetadata`.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
- [Padrões comuns de Design](../../../docs/standard/design-guidelines/common-design-patterns.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Padrões comuns de Design](../../../docs/standard/design-guidelines/common-design-patterns.md)

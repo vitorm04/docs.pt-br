@@ -3,11 +3,11 @@ title: Como tornar arquivos de modelo e mapeamento recursos inseridos
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
 ms.openlocfilehash: 35507f92d0ba9f434156773c8dc5621ed3c423c0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776863"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864275"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Como tornar arquivos de modelo e mapeamento recursos inseridos
 O [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite que você implante o modelo e arquivos de mapeamento como recursos inseridos de um aplicativo. O assembly com o modelo inserido e os arquivos de mapeamento devem ser carregados no mesmo domínio de aplicativo que a conexão de entidade. Para saber mais, confira [Cadeias de conexão](../../../../../docs/framework/data/adonet/ef/connection-strings.md). Por padrão, o [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ferramentas incorporem o modelo e arquivos de mapeamento. Quando você define manualmente o modelo e arquivos de mapeamento, use este procedimento para garantir que os arquivos sejam implantados como recursos inseridos junto com um [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicativo.  

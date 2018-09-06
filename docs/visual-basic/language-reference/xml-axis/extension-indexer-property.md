@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 ms.openlocfilehash: ab9eacc3fb3796139d8ed8382146a4a6c2b28a97
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736614"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803955"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Propriedade do indexador de extensão (Visual Basic)
 Fornece acesso aos elementos individuais em uma coleção.  

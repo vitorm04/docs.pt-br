@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
 ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745267"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871862"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Exemplos de sintaxe da expressão de consulta: Classificação
 Os exemplos neste tópico demonstram como usar o `OrderBy` e `OrderByDescending` métodos para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de expressão de consulta. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  

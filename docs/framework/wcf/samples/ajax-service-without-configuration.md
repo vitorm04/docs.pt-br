@@ -3,11 +3,11 @@ title: Serviço AJAX sem configuração
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: f12b0fad97c9f43397f3b202800943e6d061aa53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43662149"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854912"
 ---
 # <a name="ajax-service-without-configuration"></a>Serviço AJAX sem configuração
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um serviço básico de ASP.NET Asynchronous JavaScript and XML (AJAX) (um serviço que você pode acessar por meio de código JavaScript de um cliente de navegador da Web) sem usar qualquer configuração Configurações. O serviço usa a sintaxe especial no arquivo. svc para habilitar automaticamente um ponto de extremidade do AJAX.  

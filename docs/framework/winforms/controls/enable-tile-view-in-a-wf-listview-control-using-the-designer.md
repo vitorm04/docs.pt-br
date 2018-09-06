@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
 ms.openlocfilehash: 86645396033ca1c3cfb025ba6db42b726f7e7969
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862284"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Como habilitar exibição lado a lado em um controle ListView dos Windows Forms usando o designer
 O recurso de exibição de bloco a <xref:System.Windows.Forms.ListView> controle permite que você fornecer um equilíbrio visual entre informações gráficas e textuais. As informações textuais exibidas para um item na exibição lado a lado são as mesmas que as informações de coluna definidas para exibição de detalhes. Funções de exibição lado a lado em combinação com o agrupamento ou inserção recursos de marca no <xref:System.Windows.Forms.ListView> controle.  

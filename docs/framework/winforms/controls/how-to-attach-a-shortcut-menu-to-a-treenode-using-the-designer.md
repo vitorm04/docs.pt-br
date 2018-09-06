@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
 ms.openlocfilehash: 77c4b01100aec2df16d5eb844f73f7a2bfa115aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785411"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864730"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Como anexar um menu de atalho a um TreeNode usando o designer
 Os formulários do Windows <xref:System.Windows.Forms.TreeView> controle exibe uma hierarquia de nós, semelhantes aos arquivos e pastas exibidas no painel esquerdo do recurso Windows Explorer em sistemas de operacionais do Windows. Definindo o <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> propriedade, você pode fornecer operações sensíveis ao contexto para o usuário quando eles com o botão direito do <xref:System.Windows.Forms.TreeView> controle. Associando um <xref:System.Windows.Forms.ContextMenuStrip> componente com indivíduo <xref:System.Windows.Forms.TreeNode> itens, você pode adicionar um nível personalizado de funcionalidade do menu de atalho para seu <xref:System.Windows.Forms.TreeView> controles.  

@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731687"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804752"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Como: criar um aplicativo do Windows Forms a partir da linha de comando
 Os procedimentos a seguir descrevem as etapas básicas que devem ser concluídas para criar e executar um aplicativo do Windows Forms na linha de comando. Há um suporte abrangente para esses procedimentos no Visual Studio.  Consulte também as [Instruções Passo a Passo: Criando um Formulários Simples do Windows Form](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  

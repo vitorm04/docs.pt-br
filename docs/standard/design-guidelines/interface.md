@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dea5877f952869d5c84d6019617fcdc52d8ee0a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c687d7622e82ee206b2201760818827398f8543b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573033"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863708"
 ---
 # <a name="interface-design"></a>Design de interface
-Embora a maioria das APIs melhor são modelados usando classes e estruturas, há casos em que as interfaces são mais apropriados ou são a única opção.  
+Embora a maioria das APIs melhor são modelados usando classes e structs, há casos em que interfaces são mais apropriados ou são a única opção.  
   
- O CLR não suporta herança múltipla (ou seja, classes CLR não podem herdar de mais de uma classe base), mas permite tipos implementar uma ou mais interfaces além de herdar de uma classe base. Portanto, as interfaces geralmente são usadas para obter o efeito de várias heranças. Por exemplo, <xref:System.IDisposable> é uma interface que permite tipos dar suporte a disposability independente de qualquer outra hierarquia de herança no qual deseja participar.  
+ O CLR não oferece suporte a várias heranças (ou seja, classes CLR não podem herdar de mais de uma classe base), mas isso permite tipos implementar uma ou mais interfaces, além de herdar de uma classe base. Portanto, as interfaces são geralmente usadas para obter o efeito de herança múltipla. Por exemplo, <xref:System.IDisposable> é uma interface que permite que os tipos dar suporte a disposability independente de qualquer hierarquia de herança que eles desejam participar.  
   
- A outra situação em que define uma interface é apropriada está na criação de uma interface comum que pode ser compatível com vários tipos, incluindo alguns tipos de valor. Tipos de valor não podem herdar de tipos diferentes de <xref:System.ValueType>, mas elas podem implementar interfaces, portanto, usar uma interface é a única opção para fornecer um tipo de base comum.  
+ A outra situação na qual definir uma interface é apropriada está na criação de uma interface comum que pode ser compatível com vários tipos, incluindo alguns tipos de valor. Tipos de valor não podem herdar de tipos diferentes de <xref:System.ValueType>, mas podem implementar interfaces, então, usando uma interface é a única opção para fornecer um tipo de base comum.  
   
  **✓ DO** definir uma interface, se você precisar de algum API comuns para serem suportados por um conjunto de tipos que inclui os tipos de valor.  
   
@@ -43,12 +43,13 @@ Embora a maioria das APIs melhor são modelados usando classes e estruturas, há
   
  Isso interrompe implementações da interface. Você deve criar uma nova interface para evitar problemas de controle de versão.  
   
- Exceto situações descritas nessas diretrizes, você deve, em geral, escolher classes em vez de interfaces na criação de bibliotecas reutilizáveis de código gerenciado.  
+ Exceto para as situações descritas nessas diretrizes, você deve, em geral, escolha classes em vez de interfaces na criação de bibliotecas reutilizáveis de código gerenciado.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

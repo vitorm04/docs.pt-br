@@ -12,11 +12,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
 ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564042"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803659"
 ---
 # <a name="group-join-clause-visual-basic"></a>Cláusula Join Group (Visual Basic)
 Combina duas coleções em uma única coleção hierárquica. A operação de junção é baseada em chaves correspondentes.  

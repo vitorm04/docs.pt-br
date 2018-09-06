@@ -2,12 +2,12 @@
 title: Exemplo de configuração
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 26d8c0257f62079fefc8c6571774abf67506bbf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1b98d4afcc4a7bc97a4668ef7d974b27cafed9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506144"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862073"
 ---
 # <a name="configuration-sample"></a>Exemplo de configuração
 Este exemplo demonstra o uso de um arquivo de configuração para tornar um serviço detectável.  
@@ -20,22 +20,22 @@ Este exemplo demonstra o uso de um arquivo de configuração para tornar um serv
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos do Windows Workflow Foundation (WF) para o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Configuração de serviço  
  O arquivo de configuração neste exemplo demonstra dois recursos:  
   
--   Fazer com que o serviço detectável sobre um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+-   Tornando o serviço podem ser descobertos ao longo de um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
 -   Ajustando informações relacionadas a descoberta para o serviço ponto de extremidade do aplicativo e ajustar algumas das configurações relacionadas à descoberta no ponto de extremidade padrão.  
   
  Para habilitar a descoberta, algumas alterações devem ser feitas no arquivo de configuração do aplicativo para o serviço:  
   
--   Um ponto de extremidade de descoberta deve ser adicionado para o `<service>` elemento. Este é um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ponto de extremidade. Este é um ponto de extremidade de sistema que associa o tempo de execução com o serviço de descoberta. O serviço de descoberta escuta mensagens nesse ponto de extremidade.  
+-   Um ponto de extremidade de descoberta deve ser adicionado para o `<service>` elemento. Este é um padrão <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ponto de extremidade. Esse é um ponto de extremidade do sistema que o tempo de execução associa com o serviço de descoberta. O serviço de descoberta escuta as mensagens nesse ponto de extremidade.  
   
--   Um `<serviceDiscovery>` comportamento é adicionado para o `<serviceBehaviors>` seção. Isso permite que o serviço seja descoberto em tempo de execução e usa o ponto de extremidade de descoberta mencionado anteriormente para escutar descoberta `Probe` e `Resolve` mensagens. Com esses dois recursos, o serviço é descoberto no ponto de extremidade de descoberta especificado.  
+-   Um `<serviceDiscovery>` comportamento é adicionado para o `<serviceBehaviors>` seção. Isso permite que o serviço seja descoberto em tempo de execução e usa o ponto de extremidade de descoberta mencionado anteriormente para ouvir de descoberta `Probe` e `Resolve` mensagens. Com essas duas adições, o serviço é detectável no ponto de extremidade de descoberta especificado.  
   
  O trecho de configuração a seguir mostra um serviço com um ponto de extremidade do aplicativo e um ponto de extremidade de descoberta definido:  
   
@@ -53,7 +53,7 @@ Este exemplo demonstra o uso de um arquivo de configuração para tornar um serv
       </services>  
 ```  
   
- Para tirar proveito de anúncios, você precisará adicionar um ponto de extremidade de anúncio. Para fazer isso, modifique o arquivo de configuração, conforme mostrado no código a seguir.  
+ Para tirar proveito dos anúncios, você precisará adicionar um ponto de extremidade de comunicado. Para fazer isso, modifique o arquivo de configuração, conforme mostrado no código a seguir.  
   
 ```xml  
 <serviceDiscovery>  
@@ -63,9 +63,9 @@ Este exemplo demonstra o uso de um arquivo de configuração para tornar um serv
           </serviceDiscovery>  
 ```  
   
- Adicionar um ponto de extremidade de anúncio para o comportamento de serviço de descoberta cria um cliente de anúncio padrão para o serviço. Isso garante que o serviço enviará um anúncio online e offline quando o serviço é aberto e fechado respectivamente.  
+ Adicionar um ponto de extremidade de comunicado para o comportamento de serviço de descoberta cria um cliente de anúncio padrão para o serviço. Isso garante que o serviço enviará um comunicado online e offline quando o serviço é aberto e fechado, respectivamente.  
   
- Esse arquivo de configuração vai além de apenas essas etapas simples modificando comportamentos adicionais. É possível controlar informações relacionadas à descoberta por meio de pontos de extremidade específicos. Ou seja, um usuário pode controlar se um ponto de extremidade pode ser descoberto e o usuário também pode marcar o ponto de extremidade com <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> e metadados XML personalizados. Para fazer isso, o usuário deve adicionar um `behaviorConfiguration` propriedade para o ponto de extremidade do aplicativo. Nesse caso, a propriedade a seguir é adicionada para o ponto de extremidade do aplicativo.  
+ Esse arquivo de configuração vai além apenas essas etapas simples, modificando comportamentos adicionais. É possível controlar informações relacionadas à descoberta por meio de pontos de extremidade específicos. Ou seja, um usuário pode controlar se um ponto de extremidade pode ser descoberto e o usuário também pode marcar o ponto de extremidade com <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> e metadados XML personalizados. Para fazer isso, o usuário deve adicionar um `behaviorConfiguration` propriedade para o ponto de extremidade do aplicativo. Nesse caso, a propriedade a seguir é adicionada para o ponto de extremidade do aplicativo.  
   
 ```  
 behaviorConfiguration="endpointBehaviorConfiguration"  
@@ -89,7 +89,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
  Para obter mais informações sobre escopos, consulte [FindCriteria e descoberta localizar](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
   
- Você também pode controlar os detalhes específicos sobre o ponto de extremidade de descoberta. Isso é feito por meio de <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. Neste exemplo, a versão do protocolo usado é modificada, bem como adicionar um `maxResponseDelay` atributo conforme mostrado no exemplo de código a seguir.  
+ Você também pode controlar os detalhes específicos do ponto de extremidade de descoberta. Isso é feito por meio de <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. Neste exemplo, a versão do protocolo usado é modificada, bem como adicionar um `maxResponseDelay` atributo conforme mostrado no exemplo de código a seguir.  
   
 ```xml  
 <standardEndpoints>  
@@ -157,7 +157,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 ```  
   
 ## <a name="client-configuration"></a>Configuração do cliente  
- No arquivo de configuração do aplicativo para o cliente, um `standardEndpoint` do tipo `dynamicEndpoint` é usado para utilizar descoberta, conforme mostrado no seguinte trecho de configuração.  
+ No arquivo de configuração do aplicativo para o cliente, uma `standardEndpoint` do tipo `dynamicEndpoint` é usado para utilizar descoberta, conforme mostrado no seguinte trecho de config.  
   
 ```xml  
 <client>  
@@ -171,13 +171,13 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </client>  
 ```  
   
- Quando um cliente estiver usando um `dynamicEndpoint`, o tempo de execução executa descoberta automaticamente. Várias configurações são usadas durante a descoberta, como aqueles definidos no `discoveryClientSettings` seção, que especifica o tipo de ponto de extremidade de descoberta para usar:  
+ Quando um cliente estiver usando um `dynamicEndpoint`, o tempo de execução executa a descoberta automaticamente. Várias configurações são usadas durante a descoberta, como aquelas definidas no `discoveryClientSettings` seção, que especifica o tipo de ponto de extremidade de descoberta para usar:  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
 ```  
   
- Os critérios de localização usados para procurar serviços:  
+ Os critérios de localização usados para pesquisar serviços:  
   
 ```xml  
 <!-- Add Scopes, ScopeMatchBy, Extensions and termination criteria in FindCriteria -->  
@@ -192,7 +192,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </findCriteria>  
 ```  
   
- Este exemplo estende esse recurso e modifica o <xref:System.ServiceModel.Discovery.FindCriteria> usado pelo cliente, bem como algumas propriedades do padrão `updDiscoveryEndpoint` usado para a descoberta. O <xref:System.ServiceModel.Discovery.FindCriteria> serão modificadas para usar um escopo e uma determinada `scopeMatchBy` algoritmo, bem como critérios de encerramento personalizado. Além disso, o exemplo também mostra como um cliente pode enviar elementos XML usando `Probe` mensagens. Por fim, algumas alterações são feitas para o <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, como a versão do protocolo usado e as configurações específicas do UDP conforme mostrado no seguinte arquivo de configuração.  
+ Este exemplo amplia esse recurso e modifica o <xref:System.ServiceModel.Discovery.FindCriteria> usado pelo cliente, bem como algumas propriedades do padrão `updDiscoveryEndpoint` usada para descoberta. O <xref:System.ServiceModel.Discovery.FindCriteria> são modificadas para usar um escopo e uma determinada `scopeMatchBy` algoritmo, bem como critérios de encerramento personalizada. Além disso, o exemplo também mostra como um cliente pode enviar os elementos XML usando `Probe` mensagens. Por fim, algumas alterações são feitas para o <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, como a versão do protocolo usado e as configurações de UDP específicas, conforme mostrado no seguinte arquivo de configuração.  
   
 ```xml  
 <udpDiscoveryEndpoint>    
@@ -261,7 +261,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Este exemplo usa pontos de extremidade HTTP e executar este exemplo, adequado ACLs de URL deve ser adicionados consulte [Configurando HTTP e HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes. Executando o seguinte comando em um privilégio elevado deve adicionar as ACLs corretas. Convém substituir seu domínio e nome de usuário para os argumentos a seguir se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Este exemplo usa pontos de extremidade HTTP e executar isso URL de exemplo, apropriado ACLs deve ser adicionado ver [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes. Executando o seguinte comando para um nível de privilégio elevado deve adicionar as ACLs apropriado. Você talvez queira substituir seu domínio e nome de usuário para os argumentos a seguir, se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Compile a solução.  
   

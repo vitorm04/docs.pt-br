@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 2f641d04b53d2e80985defcd6bd9a4882004fd97
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739627"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868005"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Instruções passo a passo: escrevendo consultas em Visual Basic
 Este passo a passo demonstra como você pode usar recursos de linguagem do Visual Basic para escrever [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões de consulta. O passo a passo demonstra como criar consultas em uma lista de objetos do aluno, como executar as consultas e como modificá-los. As consultas incorporam vários recursos, incluindo tipos anônimos, inferência de tipo local e inicializadores de objeto.  

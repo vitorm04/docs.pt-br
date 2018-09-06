@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
 ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731622"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861696"
 ---
 # <a name="annotations-overview"></a>Visão geral de anotações
 Escrever anotações ou comentários em documentos em papel é uma atividade tão comum que quase não valorizamos. Essas anotações ou comentários são "anotações" que adicionamos a um documento para sinalizar informações ou realçar itens de interesse para referência posterior. Embora gravar anotações em documentos impressos seja fácil e um lugar comum, a capacidade de adicionar comentários pessoais aos documentos eletrônicos normalmente é muito limitada, quando sequer está disponível.  

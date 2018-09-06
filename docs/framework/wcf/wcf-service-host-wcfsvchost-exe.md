@@ -3,11 +3,11 @@ title: Host de serviço do WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
 ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565302"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857213"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
 Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite que você iniciar o depurador do Visual Studio (F5) para hospedar automaticamente e testar um serviço que você implementou. Em seguida, você pode testar o serviço usando o cliente de teste do WCF (WcfTestClient.exe) ou seu próprio cliente, para encontrar e corrigir os erros em potencial.  

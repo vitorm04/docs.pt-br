@@ -2,12 +2,12 @@
 title: Referência de palavras-chave (F#)
 description: 'Encontre links para informações sobre todas as palavras-chave F # idioma.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526183"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856018"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -132,8 +132,7 @@ Os seguintes tokens são reservados como palavras-chave para expansão futura da
 * `volatile`
 
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)
-
-[Opções do Compilador](compiler-options.md)
+- [Referência da Linguagem F#](index.md)
+- [Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)
+- [Opções do Compilador](compiler-options.md)

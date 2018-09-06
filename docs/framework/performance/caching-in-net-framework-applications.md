@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 author: tdykstra
 ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558028"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862011"
 ---
 # <a name="caching-in-net-framework-applications"></a>Armazenamento em cache em aplicativos do .NET Framework
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.  

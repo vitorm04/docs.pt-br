@@ -3,11 +3,11 @@ title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
 ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736345"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875675"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Associa a fábrica usada para produzir o host de serviço com o serviço hospedado e outros aspectos de programação necessários para acessar ou compilar o código de hospedagem fornecido no arquivo. svc.  

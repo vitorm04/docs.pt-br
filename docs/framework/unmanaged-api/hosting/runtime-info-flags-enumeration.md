@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43536174"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866154"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>Enumeração RUNTIME_INFO_FLAGS
 Contém valores que indicam quais informações sobre o common language runtime (CLR) devem ser retornadas.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
 ms.openlocfilehash: be7ef4055d809349fe97a3d48e29158c5449576b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562136"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855797"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>Visão geral do controle TableLayoutPanel
 O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo em uma grade. Como o layout é executado tanto em tempo de design quanto em tempo de execução, ele pode ser alterado dinamicamente à medida que o ambiente do aplicativo muda. Assim, os controles no painel têm a capacidade de redimensionar proporcionalmente, portanto ele pode responder a alterações como o redimensionamento do controle pai ou à alteração de comprimento do texto devido à localização.  

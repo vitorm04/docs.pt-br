@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
 ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539401"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858103"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento de transação de serviço
 Este exemplo demonstra o uso de uma transação de coordenadas de cliente e as configurações de ServiceBehaviorAttribute e OperationBehaviorAttribute para controlar o comportamento de transação de serviço. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de Calculadora, mas é estendido para manter um log das operações realizadas em uma tabela de banco de dados e uma soma acumulada para as operações de calculadora com monitoração de estado do servidor. Gravações persistentes para a tabela de log do servidor são dependentes após o resultado de uma transação de coordenadas de cliente - se a transação do cliente não for concluída, a transação de serviço Web garante que as atualizações para o banco de dados não são confirmadas.  

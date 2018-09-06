@@ -3,11 +3,11 @@ title: Arquitetura do ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773390"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870309"
 ---
 # <a name="adonet-architecture"></a>Arquitetura do ADO.NET
 Antigamente, o processamento de dados dependia basicamente de um modelo de duas camadas baseado em conexão. Como o processamento de dados usa cada vez mais arquiteturas de várias camadas, os programadores estão adotando uma abordagem desconectada para fornecer melhor escalabilidade a seus aplicativos.  

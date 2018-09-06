@@ -10,11 +10,11 @@ helpviewer_keywords:
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
 ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735897"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863100"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Como definir a imagem exibida por um controle dos Windows Forms usando o designer
 Vários controles de Windows Forms podem exibir imagens. A imagem pode ser um ícone que esclarece a finalidade do controle, como um ícone de disco em um botão que indica a **salvar** comando. Como alternativa, o ícone pode ser uma imagem de plano de fundo para dar o controle a aparência desejada.  

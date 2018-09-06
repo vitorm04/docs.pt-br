@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554400"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864570"
 ---
 # <a name="transforms-overview"></a>Visão geral de transformações
 Este tópico descreve como usar o [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes para girar, redimensionar, mover (transladar) e distorcer <xref:System.Windows.FrameworkElement> objetos.  

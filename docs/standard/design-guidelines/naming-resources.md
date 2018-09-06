@@ -1,5 +1,5 @@
 ---
-title: Nomenclatura de recursos
+title: Recursos de nomenclatura
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571180"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875103"
 ---
-# <a name="naming-resources"></a>Nomenclatura de recursos
-Como recursos localizáveis podem ser referenciados por meio de determinados objetos, como se fossem propriedades, as diretrizes de nomeação para os recursos são semelhantes às diretrizes de propriedade.  
+# <a name="naming-resources"></a>Recursos de nomenclatura
+Porque os recursos localizáveis podem ser referenciados por meio de determinados objetos, como se fossem propriedades, as diretrizes de nomenclatura para os recursos são semelhantes às diretrizes de propriedade.  
   
  **✓ DO** usar PascalCasing em chaves de recurso.  
   
@@ -39,8 +39,9 @@ Como recursos localizáveis podem ser referenciados por meio de determinados obj
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
- [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

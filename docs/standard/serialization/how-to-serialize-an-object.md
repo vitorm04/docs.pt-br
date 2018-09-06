@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581440"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875743"
 ---
 # <a name="how-to-serialize-an-object"></a>Como serializar um objeto
 Para serializar um objeto, primeiro crie o objeto a ser serializado e defina seus campos e propriedades públicos. Para fazer isso, você deve determinar o formato de transporte em que o fluxo XML deve ser armazenado: como um fluxo ou como um arquivo. Por exemplo, se o fluxo XML precisar ser salvo de uma forma permanente, crie um objeto <xref:System.IO.FileStream>.  
@@ -50,6 +50,7 @@ Para serializar um objeto, primeiro crie o objeto a ser serializado e defina seu
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>Consulte também
+
+- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

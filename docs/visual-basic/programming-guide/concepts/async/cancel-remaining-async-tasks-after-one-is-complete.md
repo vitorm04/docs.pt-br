@@ -3,11 +3,11 @@ title: Cancelar as demais tarefas assíncronas depois que um é concluída (Visu
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 5dab0c4aa14710fe78d2473675aea8b8c8bb73b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562208"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874791"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as demais tarefas assíncronas depois que um é concluída (Visual Basic)
 Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  

@@ -24,11 +24,11 @@ ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532423"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867066"
 ---
 # <a name="integer-data-type-visual-basic"></a>Tipo de dados inteiro (Visual Basic)
 Armazena inteiros de 32 bits (4 bytes) com sinal que variam em valor de -2.147.483.648 a 2.147.483.647.  
