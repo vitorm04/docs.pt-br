@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
 ms.openlocfilehash: 5e1688fb00e6eefa4873284e1ea1ba29536d3227
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723620"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878542"
 ---
 # <a name="how-to-join-toolstrippanels"></a>Como unir ToolStripPanels
 Você pode unir <xref:System.Windows.Forms.ToolStrip> controles a um <xref:System.Windows.Forms.ToolStripPanel> em tempo de execução, que fornece a flexibilidade de aplicativos de interface de documentos múltiplos (MDI).  

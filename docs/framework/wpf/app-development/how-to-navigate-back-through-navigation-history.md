@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
 ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486708"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037406"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Como: navegar para trás no histórico de navegação
 Este exemplo ilustra como navegar até as entradas antigas no histórico de navegação.  

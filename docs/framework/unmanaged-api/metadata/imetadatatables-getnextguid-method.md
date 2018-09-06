@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c3273f89d61314db2ae36c572f2ca520f28e63e3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552868"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878339"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>Método IMetaDataTables::GetNextGuid
 Obtém o índice do próximo valor GUID na coluna da tabela atual.  

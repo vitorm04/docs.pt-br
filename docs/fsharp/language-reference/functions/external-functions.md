@@ -3,11 +3,11 @@ title: Funções externas (F#)
 description: 'Saiba mais sobre o suporte de linguagem F # para chamar funções em código nativo.'
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747376"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037221"
 ---
 # <a name="external-functions"></a>Funções externas
 

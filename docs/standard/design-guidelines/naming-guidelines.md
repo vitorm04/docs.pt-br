@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572964"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031829"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
-Um conjunto de convenções de nomenclatura no desenvolvimento de uma estrutura consistente a seguir pode ser uma contribuição principais a usabilidade do framework. Ele permite que a estrutura a ser usada por muitos desenvolvedores em projetos amplamente separados. Além da consistência do formulário, nomes de elementos do framework devem ser facilmente compreendidos e devem transmitir a função de cada elemento.  
+Um conjunto consistente de convenções de nomenclatura no desenvolvimento de uma estrutura a seguir pode ser uma contribuição importante para facilidade de uso da estrutura. Ele permite que a estrutura a ser usado por muitos desenvolvedores em projetos amplamente separados. Além da consistência do formulário, os nomes de elementos de estrutura devem ser compreendidos com facilidade e devem transmitir a função de cada elemento.  
   
- O objetivo deste capítulo é fornecer um conjunto de convenções de nomenclatura consistente que resulta em nomes que fazem sentido imediato para desenvolvedores.  
+ O objetivo deste capítulo é fornecer um conjunto consistente de convenções de nomenclatura que resulta em nomes que façam sentido imediato para desenvolvedores.  
   
- Embora adotando estas convenções de nomenclatura como diretrizes de desenvolvimento de código geral resultaria na nomeação mais consistente em todo o código, é necessário apenas para aplicá-las a APIs que são expostos publicamente (públicos ou protegidos tipos e membros, e implementado explicitamente interfaces).  
+ Embora a adotar estas convenções de nomenclatura como diretrizes de desenvolvimento de código geral resultaria na nomenclatura mais consistente em todo o código, é necessário apenas aplicá-las às APIs que são expostas publicamente (públicos ou protegidos de tipos e membros, e implementado explicitamente interfaces).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Convenções de maiúsculas e minúsculas](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -38,7 +38,8 @@ Um conjunto de convenções de nomenclatura no desenvolvimento de uma estrutura 
  [Recursos de nomenclatura](../../../docs/standard/design-guidelines/naming-resources.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

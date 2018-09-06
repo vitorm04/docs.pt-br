@@ -3,11 +3,11 @@ title: 'Tutorial: Criar um provedor de tipos (F #)'
 description: 'Saiba como criar seus próprios provedores de tipos F # no F # 3.0 examinando vários provedores de tipo simples para ilustrar os conceitos básicos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745720"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036607"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Criar um provedor de tipo
 

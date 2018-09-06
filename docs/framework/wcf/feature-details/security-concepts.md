@@ -5,11 +5,11 @@ ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 32b05766f82059634e6ad808c75fea6cc9e820e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542901"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877356"
 ---
 # <a name="security-concepts"></a>Conceitos de segurança
 Esta seção explica resumidamente os conceitos associados com a segurança do Windows Communication Foundation (WCF).  

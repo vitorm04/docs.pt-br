@@ -1,5 +1,5 @@
 ---
-title: Design de enum
+title: Design de enumeração
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544f617ca3a352814504125d7a61d70db5a81566
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579243"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891227"
 ---
-# <a name="enum-design"></a>Design de enum
-Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: enums enums e o sinalizador simples.  
+# <a name="enum-design"></a>Design de enumeração
+Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: enums de enums e sinalizador simples.  
   
- Enums simples representam pequenos conjuntos fechados de opções. Um exemplo comum de enum simple é um conjunto de cores.  
+ Enums simples representam conjuntos fechados pequeno de opções. Um exemplo comum de enum simple é um conjunto de cores.  
   
- Enumerações de sinalizador são projetadas para dar suporte a operações bit a bit com os valores de enum. Um exemplo comum de enum de sinalizadores é uma lista de opções.  
+ Enums do sinalizador são projetados para dar suporte a operações bit a bit com os valores de enumeração. Um exemplo comum de enumeração de sinalizadores é uma lista de opções.  
   
  **✓ DO** usar uma enumeração para fortemente tipados parâmetros, propriedades e retornam valores que representam os conjuntos de valores.  
   
@@ -33,70 +33,71 @@ Enumerações são um tipo especial de tipo de valor. Há dois tipos de enums: e
   
  **X DO NOT** fornecer valores de enum reservado que se destinam para uso futuro.  
   
- Você sempre simplesmente pode adicionar valores para a enum existente em um estágio posterior. Consulte [adicionar valores para enumerações](#add_value) para obter mais detalhes sobre como adicionar valores para enums. Valores reservados apenas poluir o conjunto de valores reais e tendem a causar erros de usuário.  
+ Você sempre simplesmente pode adicionar valores para o enum existente em um estágio posterior. Ver [adicionando valores a Enums](#add_value) para obter mais detalhes sobre como adicionar valores a enums. Valores reservados simplesmente poluam o conjunto de valores reais e tendem a levar a erros de usuário.  
   
  **X AVOID** publicamente expondo enums com apenas um valor.  
   
- É uma prática comum para garantir a extensibilidade futura de APIs de C adicionar parâmetros reservados para assinaturas de método. Esses parâmetros reservados podem ser expressados como enums com um valor único padrão. Isso não deve ser feito de APIs gerenciadas. Sobrecarga de método permite a adição de parâmetros em versões futuras.  
+ É uma prática comum para garantir a futura extensibilidade das APIs de C adicionar parâmetros reservados a assinaturas de método. Esses parâmetros reservados podem ser expresso como enums com um valor padrão único. Isso não deve ser feito em APIs gerenciadas. Sobrecarga de método permite a adição de parâmetros em versões futuras.  
   
  **X DO NOT** incluir valores de sentinela em enums.  
   
- Embora, às vezes, elas são úteis para os desenvolvedores do framework, os valores de sentinela são confusos para os usuários do framework. Eles são usados para controlar o estado de enum em vez de ser um dos valores do conjunto de representado por enum.  
+ Embora, às vezes, eles são úteis para desenvolvedores do framework, os valores de sentinela são confusos para os usuários do framework. Eles são usados para controlar o estado de enumeração em vez de ser um dos valores do conjunto representado pela enumeração.  
   
  **✓ DO** fornecer um valor de zero em enumerações simples.  
   
- Considere a possibilidade de chamar o valor algo como "None". Se esse valor não é apropriado para essa enumeração específica, o valor padrão mais comum para a enum deve ser atribuído o valor subjacente do zero.  
+ Considere a possibilidade de chamar o valor de algo como "None". Se esse valor não for apropriado para essa enum específica, o valor padrão mais comum para o enum deve ser atribuído o valor subjacente de zero.  
   
  **✓ CONSIDER** usando <xref:System.Int32> (o padrão na maioria das linguagens de programação) como o tipo subjacente de enum, a menos que qualquer um dos seguintes for verdadeiro:  
   
--   A enumeração é um enum de sinalizadores e você tem mais de 32 sinalizadores ou espera ter mais no futuro.  
+-   Enum é uma enumeração de sinalizadores e você tiver mais de 32 sinalizadores ou pretende ter mais no futuro.  
   
--   O tipo subjacente deve ser diferente de <xref:System.Int32> mais fácil interoperabilidade com código não gerenciado esperando enums de tamanho diferente.  
+-   O tipo subjacente deve ser diferente de <xref:System.Int32> mais fáceis de interoperabilidade com código não gerenciado, esperando enums de tamanho diferente.  
   
--   Um tipo subjacente menores pode resultar em uma economia substancial no espaço. Se você espera que o enum a ser usada principalmente como um argumento para o fluxo de controle, o tamanho faz pouca diferença. A economia de tamanho pode ser significativa se:  
+-   Um tipo subjacente menor poderia resultar em uma economia substancial no espaço. Se você espera que o enum a ser usado principalmente como um argumento para o fluxo de controle, o tamanho torna pouca diferença. A economia de tamanho pode ser significativa se:  
   
-    -   Você espera que o enum a ser usado como um campo em uma classe ou estrutura instanciada com muita frequência.  
+    -   Você espera que o enum a ser usado como um campo em uma classe ou estrutura com muita frequência instanciada.  
   
     -   Você espera que os usuários criem matrizes grandes ou coleções de enumerar instâncias.  
   
-    -   Você espera que um grande número de instâncias do enum a ser serializado.  
+    -   Você espera que um grande número de instâncias de enum deve ser serializada.  
   
- Para uso na memória, esteja ciente de que os objetos gerenciados são sempre `DWORD`-alinhado, portanto, você precisa efetivamente várias enums ou outras estruturas pequenas em uma instância para um enum menor do pacote para fazer a diferença, porque o tamanho de instância total é sempre vai ser arredondado para cima até um `DWORD`.  
+ Para uso na memória, esteja ciente de que os objetos gerenciados são sempre `DWORD`-alinhados, portanto, você precisa efetivamente várias enumerações ou outras estruturas pequenas em uma instância para empacotar um enum menor com para fazer uma diferença, porque o tamanho total de instâncias é sempre vai ser arredondado para um `DWORD`.  
   
  **✓ DO** nome do sinalizador enums com substantivos plurais ou frases nominais e simples enums com substantivos singulares ou frases nominais.  
   
  **X DO NOT** estender <xref:System.Enum?displayProperty=nameWithType> diretamente.  
   
- <xref:System.Enum?displayProperty=nameWithType> é um tipo especial usado pelo CLR para criar enumerações definidas pelo usuário. A maioria das linguagens de programação fornecem um elemento de programação que fornece acesso a essa funcionalidade. Por exemplo, no c# o `enum` palavra-chave é usada para definir uma enumeração.  
+ <xref:System.Enum?displayProperty=nameWithType> é um tipo especial usado pelo CLR para criar enumerações definidas pelo usuário. A maioria das linguagens de programação fornece um elemento de programação que dá acesso a essa funcionalidade. Por exemplo, em c# a `enum` palavra-chave é usada para definir uma enumeração.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Projetando Enums de sinalizador  
- **✓ DO** se aplicam a <xref:System.FlagsAttribute?displayProperty=nameWithType> para enums de sinalizador. Não aplica esse atributo para enums simples.  
+ **✓ DO** se aplicam a <xref:System.FlagsAttribute?displayProperty=nameWithType> para enums de sinalizador. Não aplique esse atributo para enums simples.  
   
  **✓ DO** usar potências de dois para os valores de enumeração de sinalizador, portanto, eles podem ser livremente combinados usando a operação OR bit a bit.  
   
  **✓ CONSIDER** fornecer valores de enum especial para comumente usadas combinações de sinalizadores.  
   
- Operações bit a bit são um conceito avançado e não será necessárias para tarefas simples. <xref:System.IO.FileAccess.ReadWrite> é um exemplo de tal um valor especial.  
+ Operações bit a bit são um conceito avançado e não devem ser necessárias para tarefas simples. <xref:System.IO.FileAccess.ReadWrite> é um exemplo de um valor especial.  
   
  **X AVOID** criando enums sinalizador onde algumas combinações de valores são inválidas.  
   
  **X AVOID** usando o sinalizador valores de enumeração de zero, a menos que o valor representa a "todos os sinalizadores são desmarcados" e é denominado adequadamente, conforme descrito pela seguinte diretriz.  
   
- **✓ DO** o nome do valor zero de sinalizador enums `None`. Para um enum de sinalizador, o valor sempre deve significa "todos os sinalizadores são desmarcados."  
+ **✓ DO** o nome do valor zero de sinalizador enums `None`. Para uma enumeração de sinalizador, o valor sempre deve significar "todos os sinalizadores são desmarcados."  
   
 <a name="add_value"></a>   
 ### <a name="adding-value-to-enums"></a>Adicionando o valor para Enums  
- É muito comum para descobrir o que você precisa adicionar valores a um enum depois que você já o tenha enviado. Há um possível problema de compatibilidade do aplicativo quando o valor recém-adicionado é retornado de uma API existente, como aplicativos mal escritos não podem tratar o novo valor corretamente.  
+ É muito comum para descobrir o que você precisa adicionar valores a uma enum depois que você já tiver enviado ele. Há um problema potencial de compatibilidade do aplicativo quando o valor recém-adicionado é retornado de uma API existente, porque aplicativos mal escritos não podem manipular o novo valor corretamente.  
   
  **✓ CONSIDER** adicionando valores a enums, apesar de um risco de compatibilidade pequeno.  
   
- Se você tiver dados reais sobre incompatibilidades entre aplicativos causados por adições para um enum, considere adicionar uma nova API que retorna os valores novos e antigos e substituir a antiga API, o que deve continuar a retornar apenas os valores antigos. Isso irá garantir que seus aplicativos existentes permanecem compatíveis.  
+ Se você tiver dados reais sobre incompatibilidades de aplicativos causados por adições a uma enum, considere adicionar uma nova API que retorna os valores novos e antigos e substituir a antiga API, o que deve continuar retornando apenas os valores antigos. Isso garantirá que seus aplicativos existentes permanecem compatíveis.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

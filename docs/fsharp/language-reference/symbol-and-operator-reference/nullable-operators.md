@@ -1,23 +1,23 @@
 ---
 title: Operadores anuláveis (F#)
-description: 'Saiba mais sobre os operadores anuláveis que estão disponíveis no F # linguagem de programação.'
+description: 'Saiba mais sobre os operadores que permitem valor nulos que estão disponíveis na linguagem de programação F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566344"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036773"
 ---
 # <a name="nullable-operators"></a>Operadores anuláveis
 
-Operadores anuláveis são operadores de comparação ou aritmética binários que funcionam com tipos aritméticos permitem valor nulo em um ou ambos os lados. Tipos anuláveis surgem com frequência quando você trabalha com dados de origens como bancos de dados que permitem valores nulos no lugar de valores reais. Operadores anuláveis costumam ser usadas em expressões de consulta. Além anuláveis operadores de aritmética e de comparação, os operadores de conversão podem ser usados para converter entre tipos anuláveis. Também há versões anuláveis de determinados operadores de consulta.
+Operadores anuláveis são operadores binários de comparação ou aritmética que funcionam com tipos aritméticos que permitem valor nulos em um ou ambos os lados. Tipos anuláveis surgem com frequência quando você trabalha com dados de fontes, como bancos de dados que permitem valores nulos no lugar de valores reais. Operadores anuláveis costumam ser usadas em expressões de consulta. Além dos operadores que permitem valor nulos para comparação e aritméticos, operadores de conversão podem ser usados para converter entre tipos anuláveis. Também há versões anuláveis de determinados operadores de consulta.
 
+## <a name="table-of-nullable-operators"></a>Tabela de operadores que permitem valor nulos
 
-## <a name="table-of-nullable-operators"></a>Tabela de operadores anuláveis
-A tabela a seguir lista os operadores anuláveis suportados na linguagem F #.
+A tabela a seguir lista os operadores que permitem valor nulos tem suportados na linguagem F #.
 
-|Nullable esquerda|Nullable direita|Ambos os lados anuláveis|
+|Permite valor nulo à esquerda|Permite valor nulo à direita|Ambos os lados que permitem valor nulos|
 |---|---|---|
 |[?>=](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[>=?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[?>=?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
 |[?>](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[?>?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
@@ -32,11 +32,12 @@ A tabela a seguir lista os operadores anuláveis suportados na linguagem F #.
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>Comentários
-Os operadores anuláveis são incluídos no [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) módulo no namespace [FSharp](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). O tipo de dados anuláveis é `System.Nullable<'T>`.
 
-Em expressões de consulta, tipos anuláveis surgirem ao selecionar os dados de uma fonte de dados que permite valores nulos em vez de valores. Em um banco de dados do SQL Server, cada coluna de dados em uma tabela tem um atributo que indica se valores nulos são permitidos. Se valores nulos são permitidos, os dados retornados do banco de dados podem conter nulos não podem ser representados por um tipo de dados primitivos como `int`, `float`e assim por diante. Portanto, os dados são retornados como um `System.Nullable<int>` em vez de `int`, e `System.Nullable<float>` em vez de `float`. O valor real pode ser obtido um `System.Nullable<'T>` objeto usando o `Value` propriedade e você pode determinar se um `System.Nullable<'T>` objeto tem um valor ao chamar o `HasValue` método. Outro método útil é o `System.Nullable<'T>.GetValueOrDefault` método, que permite que você obtenha o valor ou um valor padrão do tipo apropriado. O valor padrão é de alguma forma de "zero" valor, como 0, 0,0, ou `false`.
+Os operadores que permitem valor nulos são incluídos na [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) módulo no namespace [FSharp](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). O tipo de dados que permitem valor nulos é `System.Nullable<'T>`.
 
-Tipos anuláveis podem ser convertidos não anuláveis tipos primitivos, usando os operadores de conversão normal como `int` ou `float`. Também é possível converter de um tipo anulável em outro tipo anulável usando os operadores de conversão para tipos anuláveis. Os operadores de conversão apropriada têm o mesmo nome como padrões, mas eles estão em um módulo separado, o [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) módulo o [FSharp](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) namespace. Normalmente, você abrir esse espaço para nome quando se trabalha com expressões de consulta. Nesse caso, você pode usar os operadores de conversão nulo ao adicionar o prefixo `Nullable.` para o operador de conversão apropriada, conforme mostrado no código a seguir.
+Em expressões de consulta, tipos anuláveis, podem surgir ao selecionar os dados de uma fonte de dados que permite valores nulos em vez de valores. Em um banco de dados do SQL Server, cada coluna de dados em uma tabela tem um atributo que indica se valores nulos são permitidos. Se valores nulos são permitidos, os dados retornados do banco de dados podem conter valores nulos que não podem ser representados por um tipo de dados primitivos como `int`, `float`e assim por diante. Portanto, os dados são retornados como uma `System.Nullable<int>` em vez de `int`, e `System.Nullable<float>` em vez de `float`. O valor real pode ser obtido de um `System.Nullable<'T>` objeto usando o `Value` propriedade e você pode determinar se um `System.Nullable<'T>` objeto tem um valor chamando o `HasValue` método. Outro método útil é o `System.Nullable<'T>.GetValueOrDefault` método, que permite que você obtenha o valor ou um valor padrão do tipo apropriado. O valor padrão é de alguma forma de valor de "zero", como 0, 0,0, ou `false`.
+
+Tipos anuláveis podem ser convertidos para tipos primitivos não anuláveis, usando os operadores de conversão usuais, como `int` ou `float`. Também é possível converter de um tipo que permite valor nulo em outro tipo anulável, usando os operadores de conversão para tipos anuláveis. Os operadores de conversão apropriada têm o mesmo nome como padrão, mas eles estão em um módulo separado, o [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) módulo na [FSharp](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) namespace. Normalmente, você abrir esse espaço para nome ao trabalhar com expressões de consulta. Nesse caso, você pode usar os operadores de conversão que permitem valor nulo, adicionando o prefixo `Nullable.` para o operador de conversão apropriada, conforme mostrado no código a seguir.
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 A saída é `10.000000`.
 
-Consulta em campos de dados anulável, tais como `sumByNullable`, também existem para uso em expressões de consulta. Os operadores de consulta para tipos não anuláveis não são tipo compatível com tipos anuláveis, você deve usar a versão anulável do operador de consulta apropriada quando você estiver trabalhando com valores de dados permite valor nulo. Para obter mais informações, consulte [expressões de consulta](../query-expressions.md).
+Consulta operadores nos campos de dados que permite valor nulo, tais como `sumByNullable`, também existem para uso em expressões de consulta. Os operadores de consulta para tipos não anuláveis não são tipo compatível com tipos anuláveis, então você deve usar a versão que permite valor nula do operador de consulta apropriado quando você estiver trabalhando com valores de dados que permite valor nulo. Para obter mais informações, consulte [expressões de consulta](../query-expressions.md).
 
-O exemplo a seguir mostra o uso de operadores permite valor nulos em uma expressão de consulta do F #. A primeira consulta mostra como você escreve uma consulta sem um operador nulo; a segunda consulta mostra uma consulta equivalente que usa um operador de valor nulo. Para o contexto completo, incluindo como configurar o banco de dados para usar esse código de exemplo, consulte [passo a passo: acessando um banco de dados SQL usando provedores de tipos](../../tutorials/type-providers/accessing-a-sql-database.md).
+O exemplo a seguir mostra o uso de operadores que permitem valor nulos em uma expressão de consulta do F #. A primeira consulta mostra como você escreveria uma consulta sem um operador que permite valor nulo; a segunda consulta mostra uma consulta equivalente que usa um operador que permite valor nulo. Para o contexto completo, incluindo como configurar o banco de dados para usar esse código de exemplo, consulte [instruções passo a passo: acessando um banco de dados SQL usando provedores de tipos](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>Consulte também
 
-[Provedores de Tipos](../../tutorials/type-providers/index.md)
-
-[Expressões de Consulta](../query-expressions.md)
+- [Provedores de Tipos](../../tutorials/type-providers/index.md)
+- [Expressões de Consulta](../query-expressions.md)

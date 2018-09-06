@@ -3,11 +3,11 @@ title: Imprimindo e gerando relatórios (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 ms.openlocfilehash: 926526a64cd0b70db4864329454fbc42f3e34b1e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787112"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032057"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Imprimindo e gerando relatórios (Visual Basic)
 Visual Basic oferece várias opções de impressão e relatórios. Os tópicos a seguir fornecem visões gerais e links para a documentação relevante relacionada à impressão e relatórios.  

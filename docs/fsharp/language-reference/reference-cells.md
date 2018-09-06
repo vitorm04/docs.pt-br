@@ -1,17 +1,17 @@
 ---
 title: Células de referência (F#)
-description: 'Saiba como células de referência do F # são locais de armazenamento permitem criar valores mutáveis com semântica de referência.'
+description: 'Saiba como células de referência em F # são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149056"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892409"
 ---
 # <a name="reference-cells"></a>Células de referência
 
-*Fazer referência a células* são locais de armazenamento permitem criar valores mutáveis com semântica de referência.
+*Células de referência* são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -20,6 +20,7 @@ ref expression
 ```
 
 ## <a name="remarks"></a>Comentários
+
 Você usa o operador `ref` antes de um valor para criar uma nova célula de referência que encapsule o valor. Em seguida, é possível alterar o valor subjacente porque ele é mutável.
 
 Uma célula de referência mantém um valor real. Não é apenas um endereço. Ao criar uma célula de referência usando o operador `ref`, você cria uma cópia do valor subjacente como um valor mutável encapsulado.
@@ -73,23 +74,23 @@ A saída é a seguinte.
 
 O campo `contents` é fornecido para compatibilidade com outras versões do ML e produzirá um aviso durante a compilação. Para desabilitar o aviso, use a opção do compilador `--mlcompatibility`. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).
 
-O código a seguir ilustra o uso das células de referência na passagem de parâmetro. O tipo de Incrementor tem um método de incremento que aceita um parâmetro que inclui o tipo de parâmetro byref. O tipo de parâmetro byref indica que os chamadores deverá passar uma célula de referência ou o endereço de uma variável típico do tipo especificado, esse int. caso O código restante ilustra como chamar incremento com ambos os tipos de argumentos e mostra o uso do operador ref em uma variável para criar uma célula de referência (ref myDelta1). Em seguida, ele mostra o uso do operador address-of (&amp;) para gerar um argumento apropriado. Por fim, o método de incremento é chamado novamente por meio de uma célula de referência que é declarada usando uma associação let. A linha final do código demonstra o uso de! operador para cancelar a célula de referência para impressão.
+O código a seguir ilustra o uso das células de referência na passagem de parâmetro. O tipo de Incrementor tem um método de incremento que utiliza um parâmetro que inclui o tipo de parâmetro byref. No tipo de parâmetro byref indica que os chamadores devem passar o endereço de uma variável típica do tipo especificado, ou de uma célula de referência neste int ' case. O restante do código ilustra como chamar o incremento com ambos os tipos de argumentos e mostra o uso do operador ref em uma variável para criar uma célula de referência (ref myDelta1). Em seguida, ele mostra o uso do operador address-of (&amp;) para gerar um argumento apropriado. Por fim, o método de incremento é chamado novamente por meio de uma célula de referência é declarada usando uma associação let. A linha final do código demonstra o uso do! operador para desreferenciar a célula de referência para impressão.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
 Para obter mais informações sobre como passar por referência, consulte [parâmetros e argumentos](parameters-and-arguments.md).
 
 >[!NOTE]
-Os programadores c# devem saber que ref funciona de forma diferente em F # do que no c#. Por exemplo, o uso de ref quando você passar um argumento não tem o mesmo efeito em F # como faz em c#.
+Programadores de c# devem saber que ref funciona de forma diferente no F # do que no c#. Por exemplo, o uso de ref ao passar um argumento não tem o mesmo efeito no F # como faz no c#.
 
 >[!NOTE]
-`mutable` variáveis podem ser promovidas automaticamente a `'a ref` se capturados por um fechamento; consulte [valores](values/index.md).
+`mutable` as variáveis podem ser promovidas automaticamente para `'a ref` se capturados por um fechamento; consulte [valores](values/index.md).
 
 ## <a name="consuming-c-ref-returns"></a>Consumindo c# `ref` retorna
 
-A partir do F # 4.1, você pode consumir `ref` retorna gerado em c#.  O resultado de tal chamada é um `byref<_>` ponteiro.
+Começando com o F # 4.1, você pode consumir `ref` retorna gerado em c#.  O resultado de tal chamada é um `byref<_>` ponteiro.
 
-O seguinte método em c#:
+O seguinte método c#:
 
 ```csharp
 namespace RefReturns
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-Pode ser transparente chamado por F # com nenhuma sintaxe especial:
+Pode ser transparente chamado pelo F # com nenhuma sintaxe especial:
 
 ```fsharp
 open RefReturns
@@ -122,19 +123,17 @@ let consumeRefReturn() =
     ()
 ```
 
-Também é possível declarar funções que poderiam levar um `ref` retornar como entrada, por exemplo:
+Você também pode declarar funções que poderiam levar um `ref` retornar como entrada, por exemplo:
 
 ```fsharp
 let f (x: byref<int>) = &x
 ```
 
-Atualmente, não há nenhuma maneira de gerar um `ref` retorno em F #, que pode ser consumido em c#.
+Atualmente, não há nenhuma maneira de gerar um `ref` retorno em F #, que poderia ser consumida em c#.
 
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Parâmetros e Argumentos](parameters-and-arguments.md)
-
-[Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)
-
-[Valores](values/index.md)
+- [Referência da Linguagem F#](index.md)
+- [Parâmetros e Argumentos](parameters-and-arguments.md)
+- [Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)
+- [Valores](values/index.md)

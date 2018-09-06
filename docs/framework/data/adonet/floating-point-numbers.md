@@ -3,11 +3,11 @@ title: Números de ponto flutuante
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466085"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042326"
 ---
 # <a name="floating-point-numbers"></a>Números de ponto flutuante
 Este tópico descreve alguns dos problemas que os desenvolvedores geralmente encontram ao trabalhar com números de ponto flutuantes em [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Esses problemas são causados pela maneira como que os computadores armazenam números de ponto flutuante e não são específicas para um provedor específico, como <xref:System.Data.SqlClient> ou <xref:System.Data.OracleClient>.  

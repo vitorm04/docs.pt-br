@@ -2,12 +2,12 @@
 title: Padrões ativos (F#)
 description: 'Saiba como usar padrões ativos para definir partições nomeadas que subdividem os dados de entrada a linguagem de programação F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786474"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881870"
 ---
 # <a name="active-patterns"></a>Padrões ativos
 
@@ -44,7 +44,7 @@ A saída desse programa é da seguinte maneira:
 
 Outro uso dos padrões ativos é decompor os tipos de dados de várias maneiras, como quando os mesmos dados subjacentes tem diversas representações possíveis. Por exemplo, um `Color` objeto pode ser decomposto em uma representação de RGB ou uma representação HSB.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 A saída do programa acima é da seguinte maneira:
 
@@ -72,9 +72,9 @@ As expressões de correspondência de padrão resultante habilitar dados a serem
 
 ## <a name="partial-active-patterns"></a>Padrões ativos parciais
 
-Às vezes, você precisa apenas parte do espaço de entrada de partição. Nesse caso, você escrever um conjunto de parciais padrões que corresponder algumas entradas, mas não corresponde a outras entradas. Padrões ativos que não produzem um valor sempre são chamados *parciais padrões ativos*; eles têm um valor de retorno é um tipo de opção. Para definir um padrão ativo parcial, você pode usar um caractere curinga (_) no final da lista de padrões de dentro do pipe. O código a seguir ilustra o uso de um padrão ativo parcial.
+Às vezes, você precisa apenas parte do espaço de entrada de partição. Nesse caso, você escrever um conjunto de parciais padrões que corresponder algumas entradas, mas não corresponde a outras entradas. Padrões ativos que não produzem um valor sempre são chamados *parciais padrões ativos*; eles têm um valor de retorno é um tipo de opção. Para definir um padrão ativo parcial, você pode usar um caractere curinga (\_) no final da lista de padrões de dentro do pipe. O código a seguir ilustra o uso de um padrão ativo parcial.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 A saída do exemplo anterior é da seguinte maneira:
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 Ao usar padrões ativos parciais, às vezes, as opções individuais podem ser contíguos ou mutuamente exclusivos, mas eles não precisam ser. No exemplo a seguir, o quadrado do padrão e o padrão de cubo não são não contíguos, porque alguns números são quadrados e cubos, como 64. O programa a seguir imprime todos os inteiros até 1000000 quadrados e cubos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 A saída é a seguinte:
 
@@ -109,7 +109,7 @@ A saída é a seguinte:
 
 Padrões ativos sempre têm pelo menos um argumento para o item que está sendo correspondido, mas eles podem levar argumentos adicionais, bem, nesse caso, o nome *com parâmetros padrão ativo* se aplica. Argumentos adicionais permitem que um padrão geral ser especializados. Por exemplo, os padrões ativos que usam expressões regulares para analisar cadeias de caracteres geralmente incluem a expressão regular como um parâmetro extra, como no código a seguir, que também usa o padrão ativo parcial `Integer` definido no exemplo de código anterior. Neste exemplo, cadeias de caracteres que usam expressões regulares para vários formatos de data são fornecidas para personalizar o padrão do Active Directory de ParseRegex geral. O padrão do Active Directory de inteiro é usado para converter as cadeias de caracteres correspondentes em números inteiros que podem ser passados ao construtor DateTime.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 A saída do código anterior é da seguinte maneira:
 
@@ -119,7 +119,7 @@ A saída do código anterior é da seguinte maneira:
 
 Padrões ativos não são restritos apenas a expressões de correspondência padrão, você também pode usá-los em associações permitem.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 A saída do código anterior é da seguinte maneira:
 

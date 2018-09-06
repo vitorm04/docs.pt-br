@@ -3,11 +3,11 @@ title: 'Arquivos de assinatura (F #)'
 description: 'Saiba como usar arquivos de assinatura do F # para manter informações sobre as assinaturas públicas de um conjunto de F # elementos do programa, como tipos, namespaces e módulos.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745964"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036477"
 ---
 # <a name="signatures"></a>Assinaturas
 

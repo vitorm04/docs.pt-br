@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757899"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885088"
 ---
 # <a name="managing-dataviews"></a>Gerenciando DataViews
 Você pode usar um <xref:System.Data.DataViewManager> para gerenciar as configurações de exibição para todas as tabelas em um <xref:System.Data.DataView>. Se você tiver um controle que você deseja associar a várias tabelas, como uma grade que navega relações, uma **DataViewManager** é ideal.  
   
- O **DataViewManager** contém uma coleção de <xref:System.Data.DataViewSetting> objetos que são usados para definir a configuração de exibição das tabelas de <xref:System.Data.DataSet>. O <xref:System.Data.DataViewSettingCollection> contém um <xref:System.Data.DataViewSetting> objeto para cada tabela em uma **conjunto de dados**. Você pode definir o padrão **ApplyDefaultSort**, **classificação**, **RowFilter**, e **RowStateFilter** propriedades da tabela referenciada por usando seu **DataViewSetting**. Você pode fazer referência a **DataViewSetting** para uma tabela específica por nome ou referência ordinal, ou ao passar uma referência a esse objeto de tabela específica. Você pode acessar a coleção de **DataViewSetting** objetos em um **DataViewManager** usando o **DataViewSettings** propriedade.  
+ O **DataViewManager** contém uma coleção de <xref:System.Data.DataViewSetting> objetos que são usados para definir a configuração do modo de exibição das tabelas no <xref:System.Data.DataSet>. O <xref:System.Data.DataViewSettingCollection> contém um <xref:System.Data.DataViewSetting> objeto para cada tabela em um **conjunto de dados**. Você pode definir o padrão **ApplyDefaultSort**, **classificação**, **RowFilter**, e **RowStateFilter** propriedades da tabela referenciada por usando seu **DataViewSetting**. Você pode fazer referência a **DataViewSetting** para uma tabela específica por nome ou a referência ordinal, ou passando uma referência a esse objeto de tabela específica. Você pode acessar a coleção de **DataViewSetting** objetos em um **DataViewManager** usando o **DataViewSettings** propriedade.  
   
- Preencher do exemplo de código a seguir um **DataSet** com o SQL Server **Northwind** tabelas de banco de dados **clientes**, **pedidos**e  **Detalhes da ordem**, cria as relações entre as tabelas, usa um **DataViewManager** definir padrão **DataView** configurações e associa um **DataGrid**  para o **DataViewManager**. O exemplo define o padrão **DataView** as configurações de todas as tabelas de **conjunto de dados** para classificar a chave primária da tabela (**ApplyDefaultSort**  =  **true**) e, em seguida, modifica a ordem de classificação de **clientes** tabela para classificar por **CompanyName**.  
+ Preenchimentos de exemplo de código a seguir uma **DataSet** com o SQL Server **Northwind** tabelas de banco de dados **clientes**, **pedidos**e  **Detalhes da ordem**, cria as relações entre as tabelas, que usa um **DataViewManager** definir padrão **DataView** configurações e associa um **DataGrid**  para o **DataViewManager**. O exemplo define o padrão **DataView** as configurações para todas as tabelas na **DataSet** para classificar pela chave primária da tabela (**ApplyDefaultSort**  =  **verdadeira**) e, em seguida, modifica a ordem de classificação a **clientes** tabela para classificar por **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,4 +125,4 @@ grid.SetDataBinding(viewManager, "Customers");
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

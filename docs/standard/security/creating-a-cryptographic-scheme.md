@@ -8,29 +8,30 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1635276465dd58028c8a5e4b7e69a307664a4c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580751"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031689"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Criando um esquema criptográfico
 Os componentes de criptografia do .NET Framework podem ser combinados para criar esquemas diferentes para criptografar e descriptografar dados.  
   
- Um simple esquema de criptografia para criptografar e descriptografar dados pode especificar as seguintes etapas:  
+ Um esquema simple de criptografia para criptografar e descriptografar dados pode especificar as seguintes etapas:  
   
 1.  Cada parte gera um par de chaves pública/privada.  
   
 2.  As partes trocam suas chaves públicas.  
   
-3.  Cada parte gera uma chave secreta de criptografia TripleDES, por exemplo e criptografa a chave recém-criada usando a chave pública do outro.  
+3.  Cada parte gera uma chave secreta de criptografia TripleDES, por exemplo e criptografa a chave criada recentemente usando a chave pública do outro.  
   
-4.  Cada parte envia os dados para outro e combina a chave secreta do outro com seu próprio, em uma determinada ordem, para criar uma nova chave secreta.  
+4.  Cada parte envia os dados para outro e combina a chave secreta do outro com por conta própria, em uma determinada ordem, para criar uma nova chave secreta.  
   
 5.  As partes, em seguida, iniciam uma conversa usando a criptografia simétrica.  
   
- Criando um esquema de criptografia não é uma tarefa fácil. Para obter mais informações sobre o uso de criptografia, consulte o tópico de criptografia na documentação do SDK da plataforma em http://msdn.microsoft.com/library.  
+ Criando um esquema de criptografia não é uma tarefa trivial. Para obter mais informações sobre como usar criptografia, consulte o tópico de criptografia na documentação do SDK da plataforma em http://msdn.microsoft.com/library.  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Consulte também
+
+- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

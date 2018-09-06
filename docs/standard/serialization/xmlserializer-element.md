@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: f80d41701f3e0d62e89a056701bde6fd69ef9ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583247"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031508"
 ---
 # <a name="ltxmlserializergt-element"></a>Elemento &lt;xmlSerializer&gt;
 Especifica se uma verificação adicional de progresso do <xref:System.Xml.Serialization.XmlSerializer> é feita.  
@@ -60,7 +60,8 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

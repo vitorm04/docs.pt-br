@@ -2,17 +2,16 @@
 title: Enumerações (F#)
 description: 'Saiba como usar F # enumerações no lugar de literais para tornar seu código mais legível e sustentável.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518831"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891636"
 ---
 # <a name="enumerations"></a>Enumerações
 
 *Enumerações*, também conhecido como *enums*, são tipos integrais onde os rótulos são atribuídos a um subconjunto dos valores. Você pode usá-los no lugar de literais para tornar o código mais legível e fácil de manter.
-
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Comentários
+
 Uma enumeração se parece muito com uma união discriminada que tem valores simples, exceto que os valores podem ser especificados. Normalmente, os valores são inteiros que começam em 0 ou 1, ou inteiros que representam as posições de bit. Se uma enumeração destina-se para representar as posições de bit, você também deve usar o [sinalizadores](xref:System.FlagsAttribute) atributo.
 
 O tipo subjacente da enumeração é determinado de literal que é usado, para que, por exemplo, você pode usar literais com um sufixo, tal como `1u`, `2u`e assim por diante, para um inteiro sem sinal (`uint32`) tipo.
@@ -49,8 +49,8 @@ O padrão `enum` função funciona com o tipo `int32`. Portanto, ele não pode s
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 Além disso, casos para enums sempre são emitidos como `public`. Isso é para que eles se alinham com c# e o restante da plataforma .NET.
-    
-## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Conversões Cast e conversões](casting-and-conversions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência da Linguagem F#](index.md)
+- [Conversões Cast e conversões](casting-and-conversions.md)

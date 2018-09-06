@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40fef0ccbdf73580c5662fc76ed4335e587b9fbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582168"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891740"
 ---
 # <a name="impersonating-and-reverting"></a>Representando e revertendo
-Às vezes, você precisará obter um token de conta do Windows para representar uma conta do Windows. Por exemplo, seu aplicativo baseado no ASP.NET talvez precise atuar em nome de vários usuários em momentos diferentes. Seu aplicativo pode aceitar um token que representa um administrador de serviços de informações da Internet (IIS), representar o usuário, executar uma operação e reverter para a identidade anterior. Em seguida, ele pode aceitar um token do IIS que representa um usuário com direitos de menos, executar alguma operação e reverter novamente.  
+Às vezes, talvez seja necessário obter um token de conta do Windows para representar uma conta do Windows. Por exemplo, seu aplicativo baseado no ASP.NET pode ter que atuar em nome de vários usuários em momentos diferentes. Seu aplicativo pode aceitar um token que representa um administrador de serviços de informações da Internet (IIS), representar o usuário, executar uma operação e reverter para a identidade anterior. Em seguida, ele pode aceitar um token do IIS que representa um usuário com poucos direitos, executar alguma operação e reverter novamente.  
   
- Em situações em que seu aplicativo deve representar uma conta do Windows que não tenha sido anexada ao segmento atual pelo IIS, você deve recuperar o token da conta e usá-la para ativar a conta. Você pode fazer isso executando as seguintes tarefas:  
+ Em situações em que seu aplicativo deve representar uma conta do Windows que não foi anexada ao thread atual pelo IIS, você deve recuperar o token dessa conta e usá-lo para ativar a conta. Você pode fazer isso executando as seguintes tarefas:  
   
-1.  Recuperar um token de conta para um usuário específico, fazendo uma chamada de gerenciado para não gerenciado **LogonUser** método. Este método não está na biblioteca de classe base do .NET Framework, mas está localizado no não gerenciado **Advapi32**. Acessar os métodos no código não gerenciado é uma operação avançada e está além do escopo desta discussão. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../docs/framework/interop/index.md). Para obter mais informações sobre o **LogonUser** método e **Advapi32**, consulte a documentação do SDK da plataforma.  
+1.  Recuperar um token de conta para um usuário específico, fazendo uma chamada não gerenciado **LogonUser** método. Esse método não está na biblioteca de classes base do .NET Framework, mas está localizado no não gerenciado **advapi32.dll**. Acessando os métodos no código não gerenciado é uma operação avançada e está além do escopo desta discussão. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../docs/framework/interop/index.md). Para obter mais informações sobre o **LogonUser** método e **advapi32.dll**, consulte a documentação do SDK da plataforma.  
   
-2.  Criar uma nova instância do **WindowsIdentity** classe, passando o token. O código a seguir demonstra essa chamada, onde `hToken` representa um token do Windows.  
+2.  Criar uma nova instância dos **WindowsIdentity** classe, passando o token. O código a seguir demonstra essa chamada, onde `hToken` representa um token do Windows.  
   
     ```csharp  
     WindowsIdentity ImpersonatedIdentity = new WindowsIdentity(hToken);  
@@ -36,7 +36,7 @@ ms.locfileid: "33582168"
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Começar a representação, criando uma nova instância do <xref:System.Security.Principal.WindowsImpersonationContext> classe e inicializá-la com o <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> método da classe inicializado, conforme mostrado no código a seguir.  
+3.  Comece a criar uma nova instância da representação de <xref:System.Security.Principal.WindowsImpersonationContext> classe e inicializá-la com o <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> método da classe inicializada, conforme mostrado no código a seguir.  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
@@ -56,12 +56,13 @@ ms.locfileid: "33582168"
     MyImpersonation.Undo()  
     ```  
   
- Se confiável código já anexou um <xref:System.Security.Principal.WindowsPrincipal> do objeto para o thread, você pode chamar o método de instância **representar**, que não tem um token de conta. Observe que isso é útil somente quando o **WindowsPrincipal** objeto no thread representa um usuário diferente em que o processo está em execução atualmente. Por exemplo, você pode encontrar essa situação usando ASP.NET com autenticação do Windows ativado e desativado de representação. Nesse caso, o processo é executado sob uma conta configurada em serviços de informações da Internet (IIS), enquanto o servidor principal atual representa o usuário do Windows que está acessando a página.  
+ Se confiável código já anexou um <xref:System.Security.Principal.WindowsPrincipal> do objeto para o thread, você pode chamar o método de instância **Impersonate**, que não utilize um token de conta. Observe que isso é útil somente quando o **WindowsPrincipal** objeto no thread representa um usuário diferente em que o processo está em execução atualmente. Por exemplo, você pode encontrar essa situação usando o ASP.NET com autenticação de Windows ativado e desativado de representação. Nesse caso, o processo está em execução em uma conta configurada em serviços de informações da Internet (IIS), enquanto a entidade atual representa o usuário do Windows que está acessando a página.  
   
- Observe que nem **representar** nem **desfazer** alterações a **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) associado ao contexto atual de chamada. Em vez disso, representação e alteração de reverter o token associado ao processo do sistema operacional atual.  
+ Observe que nem **Impersonate** nem **desfazer** alterações a **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) associado com o contexto de chamada atual. Em vez disso, representação e alteração Revertendo o token associado com o processo de sistema operacional atual...  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.Security.Principal.WindowsImpersonationContext>  
- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Security.Principal.WindowsIdentity>  
+- <xref:System.Security.Principal.WindowsImpersonationContext>  
+- [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
+- [Interoperação com código não gerenciado](../../../docs/framework/interop/index.md)

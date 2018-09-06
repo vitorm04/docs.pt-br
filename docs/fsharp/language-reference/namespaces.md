@@ -1,18 +1,17 @@
 ---
 title: Namespaces (F#)
-description: 'Saiba como um namespace do F # permite organizar o código em áreas de funcionalidades relacionadas, permitindo que você anexar um nome a um grupo de elementos do programa.'
+description: 'Saiba como um namespace do F # permite que você organize o código em áreas de funcionalidade relacionada, permitindo que você anexe um nome para um agrupamento de elementos do programa.'
 ms.date: 04/24/2017
-ms.openlocfilehash: 151079864f18fff79dac108889b68b3acf1566a1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957756"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881883"
 ---
 # <a name="namespaces"></a>Namespaces
 
 Um namespace permite organizar o código em áreas de funcionalidade relacionada ao permitir que você anexe um nome a um agrupamento de elementos de programação.
-
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,15 +20,16 @@ namespace [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Comentários
-Se você deseja colocar o código em um namespace, a primeira declaração no arquivo deve declarar o namespace. O conteúdo de todo o arquivo se tornam parte do namespace.
 
-Namespaces diretamente não podem conter valores e funções. Em vez disso, valores e funções devem ser incluídas em módulos e módulos estão incluídos nos namespaces. Namespaces pode conter tipos de módulos.
+Se você quiser colocar código em um namespace, a primeira declaração no arquivo deve declarar o namespace. O conteúdo do arquivo inteiro se tornam parte do namespace.
 
-Namespaces podem ser declarados explicitamente com a palavra-chave do namespace, ou implicitamente ao declarar um módulo. Para declarar um namespace explicitamente, use a palavra-chave namespace seguida do nome de namespace. O exemplo a seguir mostra um arquivo de código que declara um namespace Widgets com um tipo e um módulo incluídos naquele namespace.
+Namespaces diretamente não pode conter valores e funções. Em vez disso, valores e funções devem ser incluídas em módulos e os módulos são incluídos em namespaces. Namespaces pode conter tipos de módulos.
+
+Namespaces podem ser declarados explicitamente com a palavra-chave de namespace, ou implicitamente ao declarar um módulo. Para declarar um namespace explicitamente, use a palavra-chave namespace seguida pelo nome do namespace. O exemplo a seguir mostra um arquivo de código que declara um namespace de Widgets com um tipo e um módulo incluído nesse namespace.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-Se todo o conteúdo do arquivo está em um módulo, você pode também declarar namespaces implicitamente, usando o `module` palavra-chave e fornecendo o novo nome de namespace no nome do módulo totalmente qualificado. O exemplo a seguir mostra um arquivo de código que declara um namespace `Widgets` e um módulo `WidgetsModule`, que contém uma função.
+Se todo o conteúdo do arquivo estiver em um módulo, você também pode declarar namespaces implicitamente, usando o `module` palavra-chave e fornecendo o novo nome de namespace no nome do módulo totalmente qualificado. O exemplo a seguir mostra um arquivo de código que declara um namespace `Widgets` e um módulo `WidgetsModule`, que contém uma função.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
@@ -37,11 +37,11 @@ O código a seguir é equivalente ao código anterior, mas o módulo é uma decl
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-Se for necessário mais de um módulo no mesmo arquivo em um ou mais namespaces, você deve usar declarações de módulo local. Quando você usar declarações de módulo local, você não pode usar o namespace qualificado nas declarações de módulo. O código a seguir mostra um arquivo que tem uma declaração de namespace e duas declarações de módulo local. Nesse caso, os módulos estão contidos diretamente no namespace; Não há nenhum módulo criado implicitamente que tem o mesmo nome do arquivo. Qualquer outro código no arquivo, como um `do` de associação, está no namespace, mas não nos módulos internos, para que seja necessário qualificar o membro de módulo `widgetFunction` usando o nome do módulo.
+Se mais de um módulo é necessária no mesmo arquivo em um ou mais namespaces, você deve usar declarações de módulo local. Quando você usa as declarações de módulo local, você não pode usar o namespace qualificado nas declarações de módulo. O código a seguir mostra um arquivo que tem uma declaração de namespace e duas declarações de módulo local. Nesse caso, os módulos estão contidos diretamente no namespace; Não há nenhum módulo criado implicitamente que tem o mesmo nome do arquivo. Qualquer outro código no arquivo, como um `do` associação, está no namespace, mas não nos módulos internos, portanto, você precisa qualificar o membro de módulo `widgetFunction` usando o nome do módulo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
-A saída deste exemplo é o seguinte.
+A saída deste exemplo é da seguinte maneira.
 
 ```fsharp
 Module1 10 20
@@ -51,18 +51,20 @@ Module2 5 6
 Para obter mais informações, consulte [módulos](modules.md).
 
 ## <a name="nested-namespaces"></a>Namespaces aninhados
-Quando você cria um namespace aninhado, você deve qualificá-lo totalmente. Caso contrário, você pode criar um novo namespace de nível superior. Recuo é ignorado em declarações de namespace.
+
+Quando você cria um namespace aninhado, você deve qualificá-la totalmente. Caso contrário, você pode criar um novo namespace de nível superior. Recuo é ignorado em declarações de namespace.
 
 O exemplo a seguir mostra como declarar um namespace aninhado.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
 ## <a name="namespaces-in-files-and-assemblies"></a>Namespaces em arquivos e Assemblies
-Namespaces podem abranger vários arquivos em um único projeto ou compilação. O termo *fragmento namespace* descreve a parte de um namespace que é incluído em um arquivo. Namespaces também pode abranger vários assemblies. Por exemplo, o `System` namespace inclui o .NET Framework inteiro, que abrange vários assemblies e contém vários namespaces aninhados.
 
+Namespaces podem abranger vários arquivos em um único projeto ou compilação. O termo *fragmento de namespace* descreve a parte de um namespace que está incluído em um arquivo. Namespaces também podem abranger vários assemblies. Por exemplo, o `System` namespace inclui o .NET Framework inteiro, que abrange muitos assemblies e contém muitos namespaces aninhados.
 
 ## <a name="global-namespace"></a>Namespace global
-Você usa o namespace predefinido `global` para colocar os nomes do namespace de nível superior do .NET.
+
+Você usa o namespace predefinido `global` para colocar os nomes no namespace de nível superior de .NET.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
@@ -70,9 +72,9 @@ Você também pode usar global para referenciar o namespace .NET de nível super
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-## <a name="recursive-namespaces"></a>Espaços de nomes recursivos
+## <a name="recursive-namespaces"></a>Namespaces recursiva
 
-4.1 F # introduz a noção de namespaces que permitem que todo o código independente ser mutuamente recursivas.  Isso é feito por meio de `namespace rec`.  O uso de `namespace rec` pode aliviar alguns problemas de não conseguir gravar código mutuamente referencial entre módulos e tipos.  Este é um exemplo disso:
+F # 4.1 introduz a noção de namespaces que permitem para todo o código contido ser mutuamente recursivas.  Isso é feito por meio de `namespace rec`.  Uso de `namespace rec` podem aliviar alguns problemas ao não ser capaz de escrever código mutuamente referencial entre módulos e tipos.  Este é um exemplo disso:
 
 ```fsharp
 namespace rec MutualReferences
@@ -113,13 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Observe que a exceção `DontSqueezeTheBananaException` e a classe `Banana` ambos referem-se entre si.  Além disso, o módulo `BananaHelpers` e a classe `Banana` também fazer referência uns aos outros.  Isso não seria possível expressar em F #, se você tiver removido o `rec` palavra-chave do `MutualReferences` namespace.
+Observe que a exceção `DontSqueezeTheBananaException` e a classe `Banana` fazem referência entre si.  Além disso, o módulo `BananaHelpers` e a classe `Banana` também fazer referência uns aos outros.  Isso não seria possível expressar em F #, se você tiver removido o `rec` palavra-chave do `MutualReferences` namespace.
 
 Esse recurso também está disponível para o nível superior [módulos](modules.md) em F # 4.1 ou superior.
 
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Módulos](modules.md)
-
-[F # RFC FS-1009 - permitir tipos mutuamente referenciais e módulos em escopos maiores em arquivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [Referência da Linguagem F#](index.md)
+- [Módulos](modules.md)
+- [FS-1009 do F # RFC - permitir mutuamente referenciais tipos e módulos em escopos maiores dentro de arquivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
