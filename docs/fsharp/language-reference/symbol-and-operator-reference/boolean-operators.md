@@ -1,33 +1,32 @@
 ---
 title: Operadores boolianos (F#)
-description: 'Saiba mais sobre os operadores booleanos que estão disponíveis no F # linguagem de programação.'
+description: 'Saiba mais sobre os operadores boolianos que estão disponíveis na linguagem de programação F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: f8516ceb531907400f98dc4226d2985d3119e9e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563422"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784508"
 ---
 # <a name="boolean-operators"></a>Operadores boolianos
 
 Este tópico descreve o suporte para operadores boolianos na linguagem F #.
 
-
 ## <a name="summary-of-boolean-operators"></a>Resumo de operadores boolianos
-A tabela a seguir resume os operadores booleanos que estão disponíveis na linguagem F #. O único tipo com suporte desses operadores é o `bool` tipo.
+
+A tabela a seguir resume os operadores boolianos que estão disponíveis na linguagem F #. O único tipo com suporte desses operadores é o `bool` tipo.
 
 |Operador|Descrição|
 |--------|-----------|
 |`not`|Boleana|
 |<code>&#124;&#124;</code>|Booliano OR|
-|`&&`|Boolean e|
+|`&&`|Booliano AND|
 
-Executam o Boolean e e/ou operadores *avaliação de curto-circuito*, ou seja, elas avaliam a expressão à direita do operador somente quando é necessário determinar o resultado geral da expressão. A segunda expressão do `&&` operador é avaliado apenas se a primeira expressão for avaliada como `true`; a segunda expressão do `||` operador é avaliado apenas se a primeira expressão for avaliada como `false`.
+Executam o booliano e e/ou operadores *avaliação curto-circuito*, ou seja, eles avaliar a expressão à direita do operador somente quando for necessário determinar o resultado geral da expressão. A segunda expressão do `&&` operador é avaliado somente se a primeira expressão é avaliada como `true`; a segunda expressão do `||` operador é avaliado somente se a primeira expressão é avaliada como `false`.
 
 ## <a name="see-also"></a>Consulte também
-[Operadores Bit a Bit](bitwise-operators.md)
 
-[Operadores Aritméticos](arithmetic-operators.md)
-
-[Referência de Símbolos e Operadores](index.md)
+- [Operadores Bit a Bit](bitwise-operators.md)
+- [Operadores Aritméticos](arithmetic-operators.md)
+- [Referência de Símbolos e Operadores](index.md)

@@ -2,61 +2,61 @@
 title: Documentação XML (F#)
 description: 'Saiba mais sobre o suporte em F # para gerar a documentação de comentários.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 8bdea89ac810851af07d3aedbbb17d5d90a92ff8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566370"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746019"
 ---
 # <a name="xml-documentation"></a>Documentação XML
 
-Você pode gerar a documentação do triple-barra (/ / /) código comentários em F #. Comentários XML podem preceder declarações em arquivos de código (. FS) ou arquivos de assinatura (. FSI).
-
+Você pode gerar documentação de barra tripla (/ / /) comentários em F # de código. Comentários XML podem preceder declarações em arquivos de código (. FS) ou arquivos de assinatura (. FSI).
 
 ## <a name="generating-documentation-from-comments"></a>Gerando a documentação de comentários
-O suporte em F # para gerar a documentação de comentários é a mesma que em outras linguagens do .NET Framework. Como em outras linguagens .NET Framework, o [-opção de compilador doc](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) permite a criação de um arquivo XML que contém informações que você pode converter em documentação usando uma ferramenta como Sandcastle. A documentação gerada por ferramentas que são projetadas para uso com os assemblies que são escritos em outras linguagens .NET Framework geralmente produzem uma exibição das APIs que se baseia a forma compilada de construções de linguagem F #. A menos que as ferramentas dão suporte especificamente às F #, documentação gerada por essas ferramentas não coincide com a exibição de uma API F #.
 
-Para obter mais informações sobre como gerar a documentação do XML, consulte [comentários de documentação XML &#40;C&#35; guia de programação&#41;](https://msdn.microsoft.com/library/b2s063f7).
+O suporte em F # para gerar a documentação de comentários é o mesmo que em outras linguagens do .NET Framework. Como em outras linguagens do .NET Framework, o [-opção de compilador doc](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) permite que você produza um arquivo XML que contém informações que você pode converter em documentação usando uma ferramenta como o Sandcastle. A documentação gerada usando as ferramentas que são projetadas para uso com assemblies que são escritos em outras linguagens do .NET Framework em geral produzir uma exibição das APIs que se baseia a forma compilada de construções no F #. A menos que especificamente suporte a ferramentas F #, documentação gerada por essas ferramentas não coincide com a exibição do F # de uma API.
 
+Para obter mais informações sobre como gerar a documentação de XML, consulte [comentários da documentação XML &#40;C&#35; guia de programação&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
-## <a name="recommended-tags"></a>Marcas recomendadas
-Há duas maneiras para escrever comentários de documentação XML. Uma é apenas escrever a documentação diretamente em um comentário de barra tripla, sem o uso de marcas XML. Se você fizer isso, o texto de comentário inteiro será interpretado como a documentação de resumida para a construção de código que segue imediatamente. Use esse método quando desejar gravar um breve resumo para cada construção. O outro método é usar marcas XML para fornecer mais documentação estruturada. O segundo método permite que você especifique notas separadas para um breve resumo e uma descrição do valor de retorno, documentação para cada parâmetro e o parâmetro de tipo e exceções geradas e comentários adicionais. A tabela a seguir descreve as marcas XML que são reconhecidas em comentários de código XML do F #.
+## <a name="recommended-tags"></a>Marcações recomendadas
 
-
+Há duas maneiras para escrever comentários de documentação XML. Uma é simplesmente escrever a documentação diretamente em um comentário de barra tripla, sem o uso de marcas XML. Se você fizer isso, o texto de comentário inteiro será interpretado como a documentação de resumida para a construção de código que segue imediatamente. Use esse método quando quiser escrever um breve resumo para cada constructo. O outro método é usar as marcas XML para fornecer mais documentação estruturada. O segundo método permite que você especifique notas separadas para um breve resumo, comentários adicionais, a documentação para cada parâmetro e o parâmetro de tipo e as exceções geradas e uma descrição do valor de retorno. A tabela a seguir descreve as marcas XML que são reconhecidas em comentários de código XML do F #.
 
 |Sintaxe de marca|Descrição|
 |----------|-----------|
-|**&lt;c&gt;***texto***&lt;/c&gt;**|Especifica que *texto* código. Essa marca pode ser usada pelos geradores de documentação para exibir o texto em uma fonte que é apropriada para o código.|
-|**&lt;Resumo&gt;***texto***&lt;resumo&gt;**|Especifica que *texto* uma breve descrição do elemento do programa. A descrição é geralmente uma ou duas frases.|
-|**&lt;comentários&gt;***texto*** &lt; /remarks&gt;**|Especifica que *texto* contém informações suplementares sobre o elemento do programa.|
-|**&lt;nome do parâmetro = "***nome***"&gt;***descrição***&lt;/param&gt;**|Especifica o nome e descrição para um parâmetro de função ou método.|
-|**&lt;typeparam name = "***nome***"&gt;***descrição***&lt;/typeparam&gt;**|Especifica o nome e descrição para um parâmetro de tipo.|
-|**&lt;Retorna&gt;***texto*** &lt; /retorna&gt;**|Especifica que *texto* descreve o valor de retorno de uma função ou método.|
+|**&lt;c&gt;***texto***&lt;/c&gt;**|Especifica que *texto* é o código. Essa marca pode ser usada por geradores de documentação para exibir texto em uma fonte que é apropriada para o código.|
+|**&lt;Resumo&gt;***texto*** &lt; /summary&gt;**|Especifica que *texto* é uma breve descrição do elemento de programa. A descrição é geralmente uma ou duas sentenças.|
+|**&lt;comentários&gt;***texto*** &lt; /remarks&gt;**|Especifica que *texto* contém informações suplementares sobre o elemento de programa.|
+|**&lt;nome do parâmetro = "***nome***"&gt;***descrição***&lt;/param&gt;**|Especifica o nome e descrição para um parâmetro de método ou função.|
+|**&lt;typeparam nome = "***nome***"&gt;***descrição***&lt;/typeparam&gt;**|Especifica o nome e uma descrição para um parâmetro de tipo.|
+|**&lt;Retorna&gt;***texto*** &lt; /returns&gt;**|Especifica que *texto* descreve o valor de retorno de uma função ou método.|
 |**&lt;exceção cref = "***tipo***"&gt;***descrição***&lt;/exception&gt;**|Especifica o tipo de exceção que pode ser gerada e as circunstâncias sob as quais ela é gerada.|
-|**&lt;Consulte cref = "***referência***"&gt;***texto*** &lt; /consulte&gt;**|Especifica um link embutido para outro elemento do programa. O *referência* é o nome como ele aparece no arquivo de documentação XML. O *texto* é o texto mostrado no link.|
-|**&lt;Consulte também cref = "***referência***" /&gt;**|Especifica um link também consulte a documentação para outro tipo. O *referência* é o nome como ele aparece no arquivo de documentação XML. Consulte também geralmente aparecem na parte inferior de uma página de documentação de links.|
-|**&lt;para&gt;***texto***&lt;/para&gt;**|Especifica um parágrafo de texto. Isso é usado para separar o texto dentro de **comentários** marca.|
+|**&lt;Consulte cref = "***referência***"&gt;***texto*** &lt; /see&gt;**|Especifica um link embutido para outro elemento de programa. O *referência* é o nome como ele aparece no arquivo de documentação XML. O *texto* é o texto mostrado no link.|
+|**&lt;seealso cref = "***referência***" /&gt;**|Especifica um link também consulte a documentação para outro tipo. O *referência* é o nome como ele aparece no arquivo de documentação XML. Consulte também geralmente aparecem na parte inferior de uma página de documentação de links.|
+|**&lt;parágrafo&gt;***texto***&lt;/para&gt;**|Especifica um parágrafo de texto. Isso é usado para separar o texto dentro de **comentários** marca.|
 
 ## <a name="example"></a>Exemplo
 
 ### <a name="description"></a>Descrição
+
 Este é um comentário de documentação XML típico em um arquivo de assinatura.
 
-
 ### <a name="code"></a>Código
+
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7101.fs)]
-    
+
 ## <a name="example"></a>Exemplo
 
 ### <a name="description"></a>Descrição
-O exemplo a seguir mostra o método alternativo, sem marcas XML. Neste exemplo, todo o texto do comentário é considerado um resumo. Observe que se você não especificar explicitamente uma marca de resumida, você não deve especificar outras marcas, como **param** ou **retorna** marcas.
 
+O exemplo a seguir mostra o método alternativo, sem as marcas XML. Neste exemplo, todo o texto do comentário é considerado um resumo. Observe que se você não especificar explicitamente uma marca de resumida, você deve especificar outras marcas, como **param** ou **retorna** marcas.
 
 ### <a name="code"></a>Código
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
-    
-## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Opções do Compilador](compiler-options.md)
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
+
+## <a name="see-also"></a>Consulte também
+
+- [Referência da Linguagem F#](index.md)
+- [Opções do Compilador](compiler-options.md)

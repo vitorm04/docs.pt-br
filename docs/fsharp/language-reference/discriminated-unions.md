@@ -2,12 +2,12 @@
 title: Uniões discriminadas (F#)
 description: 'Saiba como usar F # uniões discriminadas.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3340933ac8e2b6fe0215c684691d216a28b64787
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537591"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788117"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -167,4 +167,4 @@ Os seguintes atributos são geralmente vistos em uniões discriminadas:
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da Linguagem F#](index.md)
+- [Referência da Linguagem F#](index.md)

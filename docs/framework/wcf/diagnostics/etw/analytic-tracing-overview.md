@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401175"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788007"
 ---
 # <a name="analytic-tracing-overview"></a>Visão geral de rastreamento analítico
 Rastreamento analítico em [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] é um alto desempenho e o recurso de rastreamento de baixo nível de detalhes definida sobre rastreamento de eventos para Windows (ETW). ETW é executado no nível do kernel para reduzir significativamente a sobrecarga de operações de rastreamento. Com eficiência ele armazena em buffer os eventos de modo de usuário e kernel e permite habilitando dinâmico de registro em log sem a necessidade de reinicialização do serviço. Os dados de rastreamento estão disponíveis no caso de logs depois que ele foi emitido e recebidas.  

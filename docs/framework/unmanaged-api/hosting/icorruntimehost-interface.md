@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471949"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784770"
 ---
 # <a name="icorruntimehost-interface"></a>Interface ICorRuntimeHost
 Fornece métodos que permitem que o host iniciar e parar o common language runtime (CLR) explicitamente, para criar e configurar domínios do aplicativo, para acessar o domínio padrão e para enumerar todos os domínios em execução no processo.  
@@ -65,6 +65,6 @@ Fornece métodos que permitem que o host iniciar e parar o common language runti
  <xref:System.AppDomain>  
  [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)  
  [Interface ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [Hosts de tempo de execução](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [Hosts de Tempo de Execução](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [Coclass CorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

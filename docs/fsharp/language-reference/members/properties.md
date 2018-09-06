@@ -1,18 +1,17 @@
 ---
 title: Propriedades (F#)
-description: 'Saiba mais sobre F # propriedades, que são membros que representam os valores associados a um objeto.'
+description: 'Saiba mais sobre propriedades F #, que são membros que representam os valores associados a um objeto.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7aa71b1801b44fedcb420b824078004c6c240dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566149"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784888"
 ---
 # <a name="properties"></a>Propriedades
 
-*Propriedades* membros que representam os valores associados a um objeto.
-
+*Propriedades* são membros que representam os valores associados a um objeto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,17 +56,18 @@ with set parameter =
 ```
 
 ## <a name="remarks"></a>Comentários
-Representa propriedades de "tem um" relação em programação orientada a objeto, que representa os dados associados com instâncias de objeto ou, para propriedades estáticas, com o tipo.
 
-Você pode declarar propriedades de duas maneiras, dependendo se você deseja especificar explicitamente o valor subjacente (também chamado de armazenamento de backup) para a propriedade, ou se você deseja permitir que o compilador gerar automaticamente o repositório de backup para você. Em geral, você deve usar a forma mais explícita se a propriedade tem uma implementação não trivial e o modo automático quando a propriedade é apenas um wrapper simple para um valor ou uma variável. Para declarar explicitamente uma propriedade, use o `member` palavra-chave. Essa sintaxe declarativa é seguido pela sintaxe que especifica o `get` e `set` métodos, também denominados *acessadores*. As várias formas da sintaxe explícita mostrado na seção de sintaxe são usadas para propriedades somente leitura e gravação de leitura/gravação. Propriedades somente leitura, você define apenas um `get` método; propriedades somente gravação, defina apenas um `set` método. Observe que, quando uma propriedade com ambos `get` e `set` acessadores, a sintaxe alternativa permite que você especifique atributos e os modificadores de acessibilidade que são diferentes para cada acessador, conforme é mostrado no código a seguir.
+Propriedades representam o "tem um" relação na programação orientada a objeto, que representa os dados que está associados com instâncias de objeto ou, para propriedades estáticas, com o tipo.
+
+Você pode declarar propriedades de duas maneiras, dependendo se você deseja especificar explicitamente o valor subjacente (também chamado de repositório de backup) para a propriedade, ou se você deseja permitir que o compilador gerar automaticamente o repositório de backup para você. Em geral, você deve usar a maneira mais explícita, se a propriedade tem uma implementação não triviais e forma automática quando a propriedade é apenas um wrapper simples para um valor ou uma variável. Para declarar uma propriedade explicitamente, use o `member` palavra-chave. Essa sintaxe declarativa é seguido pela sintaxe que especifica o `get` e `set` métodos, também denominados *acessadores*. As várias formas da sintaxe explícita mostrado na seção de sintaxe são usadas para propriedades de leitura/gravação, somente leitura e somente gravação. Para propriedades somente leitura, você define apenas um `get` método; para propriedades somente gravação, defina apenas um `set` método. Observe que, quando uma propriedade tiver tanto `get` e `set` acessadores, a sintaxe alternativa permite que você especifique atributos e modificadores de acessibilidade que são diferentes para cada acessador, conforme mostrado no código a seguir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
-Para propriedades de leitura/gravação, que têm ambos um `get` e `set` método, a ordem de `get` e `set` podem ser revertidas. Como alternativa, você pode fornecer a sintaxe mostrada para `get` apenas e a sintaxe mostrada para `set` somente, em vez de usar a sintaxe combinada. Isso torna mais fácil para comentar o indivíduo `get` ou `set` método, se isso é algo que você pode precisar fazer. Essa alternativa usando a sintaxe combinada é mostrada no código a seguir.
+Para propriedades de leitura/gravação, que têm ambas uma `get` e `set` método, a ordem dos `get` e `set` pode ser revertida. Como alternativa, você pode fornecer a sintaxe mostrada para `get` apenas e a sintaxe mostrada para `set` somente, em vez de usar a sintaxe combinada. Isso torna mais fácil para comentar o indivíduo `get` ou `set` método, se isso é algo que talvez você precise fazer. Essa alternativa usando a sintaxe combinada é mostrada no código a seguir.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Privada que espera que os dados para as propriedades são chamados de valores *armazenamentos de backup*. Para fazer com que o compilador cria automaticamente o repositório de backup, use as palavras-chave `member val`, omita o identificador interno e forneça uma expressão para inicializar a propriedade. Se a propriedade é ser mutável, incluir `with get, set`. Por exemplo, o seguinte tipo de classe inclui duas propriedades implementadas automaticamente. `Property1` é somente leitura e é inicializado para o argumento fornecido para o construtor primário, e `Property2` é uma propriedade definível inicializada para uma cadeia de caracteres vazia:
+Privada valores que espera que os dados para as propriedades são chamados *repositório de backup*. Para fazer com que o compilador criar automaticamente o repositório de backup, use as palavras-chave `member val`, omitir o identificador de Self e, em seguida, forneça uma expressão para inicializar a propriedade. Se a propriedade deve ser mutáveis, incluir `with get, set`. Por exemplo, o seguinte tipo de classe inclui duas propriedades implementadas automaticamente. `Property1` é somente leitura e é inicializada para o argumento fornecido para o construtor primário, e `Property2` é uma propriedade configurável, inicializada como uma cadeia de caracteres vazia:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -75,7 +75,7 @@ member val Property1 = property1
 member val Property2 = "" with get, set
 ```
 
-Propriedades implementadas automaticamente fazem parte da inicialização de um tipo, elas devem ser incluídas antes de quaisquer outras definições de membro, como `let` associações e `do` associações em uma definição de tipo. Observe que a expressão que inicializa uma propriedade implementada automaticamente é avaliada apenas na inicialização e não toda vez que a propriedade for acessada. Esse comportamento é diferente do comportamento de uma propriedade implementada explicitamente. O que isso significa é que o código para inicializar a essas propriedades é adicionado ao construtor de uma classe. Considere o seguinte código que mostra essa diferença:
+Propriedades implementadas automaticamente fazem parte da inicialização de um tipo, portanto, eles devem ser incluídos antes das outras definições de membro, assim como `let` associações e `do` ligações em uma definição de tipo. Observe que a expressão que inicializa uma propriedade implementada automaticamente é avaliada apenas na inicialização e não sempre que a propriedade é acessada. Esse comportamento é diferente do comportamento de uma propriedade implementada explicitamente. Isso efetivamente significa que o código para inicializar essas propriedades é adicionado ao construtor de uma classe. Considere o seguinte código que mostra essa diferença:
 
 ```fsharp
 type MyClass() =
@@ -100,50 +100,50 @@ class1.ExplicitProperty = 978922705
 class1.ExplicitProperty = 1131210765
 ```
 
-A saída do código anterior mostra que o valor de AutoProperty é alterado quando chamado repetidamente, enquanto o ExplicitProperty mudará sempre que ele é chamado. Isso demonstra que a expressão para uma propriedade implementada automaticamente não é avaliada toda vez que é o método de getter da propriedade explícita.
-
+A saída do código anterior mostra que o valor de AutoProperty é inalterado quando chamado várias vezes, enquanto o ExplicitProperty muda sempre que ele é chamado. Isso demonstra que a expressão para uma propriedade implementada automaticamente não é avaliada a cada vez, pois é o método de getter da propriedade explícita.
 
 >[!WARNING]
 Há algumas bibliotecas, como o Entity Framework (`System.Data.Entity`) que executam operações personalizadas em construtores de classe base que não funcionam bem com a inicialização de propriedades implementadas automaticamente. Nesses casos, tente usar propriedades explícitas.
 
 Propriedades podem ser membros de classes, estruturas, uniões discriminadas, registros, interfaces e extensões de tipo e também podem ser definidas em expressões de objeto.
 
-Atributos podem ser aplicados às propriedades. Para aplicar um atributo a uma propriedade, grave o atributo em uma linha separada antes da propriedade. Para obter mais informações, consulte [Atributos](../attributes.md).
+Atributos podem ser aplicados às propriedades. Para aplicar um atributo a uma propriedade, gravar o atributo em uma linha separada antes da propriedade. Para obter mais informações, consulte [Atributos](../attributes.md).
 
-Por padrão, as propriedades são públicas. Modificadores de acessibilidade também podem ser aplicadas às propriedades. Para aplicar um modificador de acessibilidade, adicione-o imediatamente antes do nome da propriedade se ele deve se aplicam a ambos os `get` e `set` métodos; adicioná-lo antes do `get` e `set` palavras-chave se acessibilidade diferente é necessário para cada acessador. O *modificador de acessibilidade* pode ser um dos seguintes: `public`, `private`, `internal`. Para saber mais, veja [Controle de acesso](../access-control.md).
+Por padrão, as propriedades são públicas. Modificadores de acessibilidade também podem ser aplicados a propriedades. Para aplicar um modificador de acessibilidade, adicioná-lo imediatamente antes do nome da propriedade caso ele deva ser aplicado a ambas as `get` e `set` métodos; adicioná-lo antes do `get` e `set` palavras-chave se for de acessibilidade diferente necessário para cada acessador. O *modificador de acessibilidade* pode ser uma das seguintes opções: `public`, `private`, `internal`. Para saber mais, veja [Controle de acesso](../access-control.md).
 
 Implementações de propriedade são executadas sempre que uma propriedade é acessada.
 
+## <a name="static-and-instance-properties"></a>Estáticos e propriedades da instância
 
-## <a name="static-and-instance-properties"></a>Estático e propriedades da instância
-Propriedades podem ser estáticos ou propriedades da instância. Propriedades estáticas podem ser chamadas sem uma instância e são usadas para valores associados com o tipo, não com objetos individuais. Para propriedades estáticas, omita o identificador interno. O identificador interno é necessário para as propriedades de instância.
+As propriedades podem ser estáticos ou propriedades da instância. Propriedades podem ser chamadas sem uma instância e estáticos são usadas para valores associados com o tipo, não com objetos individuais. Para propriedades estáticas, omita o identificador de Self. O identificador de Self é necessário para as propriedades de instância.
 
-A seguinte definição de propriedade estática baseia-se em um cenário em que você tenha um campo estático `myStaticValue` que é o repositório de backup para a propriedade.
+A seguinte definição de propriedade estática é baseada em um cenário em que você tenha um campo estático `myStaticValue` que é o repositório de backup para a propriedade.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
 
-Propriedades também podem ser tipo de matriz, caso em que eles são chamados *propriedades indexadas*. Para obter mais informações, consulte [propriedades indexadas](indexed-properties.md).
-
+As propriedades também podem ser de tipo de matriz, nesse caso, eles são chamados *propriedades indexadas*. Para obter mais informações, consulte [as propriedades indexadas](indexed-properties.md).
 
 ## <a name="type-annotation-for-properties"></a>Anotação de tipo para propriedades
-Em muitos casos, o compilador não tem informações suficientes para inferir o tipo de uma propriedade do tipo de armazenamento de backup, mas você pode definir o tipo explicitamente adicionando uma anotação de tipo.
+
+Em muitos casos, o compilador tem informações suficientes para inferir o tipo de uma propriedade do tipo de repositório de backup, mas você pode definir o tipo explicitamente adicionando uma anotação de tipo.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
 
-## <a name="using-property-set-accessors"></a>Usando a propriedade acessadores definidos
+## <a name="using-property-set-accessors"></a>Usando a propriedade definir acessadores
+
 Você pode definir propriedades que fornecem `set` acessadores usando o `<-` operador.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
 
 A saída é **20**.
 
-
 ## <a name="abstract-properties"></a>Propriedades abstratas
-Propriedades podem ser abstratas. Como com métodos, `abstract` apenas significa que há um despacho virtual associado à propriedade. Propriedades abstratas podem ser realmente abstratas, ou seja, sem uma definição na mesma classe. A classe que contém essa propriedade, portanto, é uma classe abstrata. Como alternativa, abstrato apenas pode significar que uma propriedade é virtual e, nesse caso, uma definição deve estar presente na mesma classe. Observe que propriedades abstratas não devem ser privadas, e se um acessador é abstrato, o outro também deverá ser abstrato. Para obter mais informações sobre classes abstratas, consulte [Classes abstratas](../abstract-classes.md).
+
+As propriedades podem ser abstratas. Assim como acontece com métodos, `abstract` apenas significa que há uma expedição virtual associada à propriedade. Propriedades abstratas podem ser realmente abstratas, ou seja, sem uma definição na mesma classe. Portanto, a classe que contém essa propriedade é uma classe abstrata. Como alternativa, abstrata apenas pode significar que uma propriedade é virtual e, nesse caso, uma definição deve estar presente na mesma classe. Observe que propriedades abstratas não devem ser particulares e, se um acessador é abstrato, o outro também deverá ser abstrato. Para obter mais informações sobre classes abstratas, consulte [Classes abstratas](../abstract-classes.md).
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
 ## <a name="see-also"></a>Consulte também
-[Membros](index.md)
 
-[Métodos](methods.md)
+- [Membros](index.md)
+- [Métodos](methods.md)

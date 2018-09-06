@@ -5,11 +5,11 @@ f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
 ms.openlocfilehash: be44556bf3213c99a0f9c06c2161a2fd0998e8e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564986"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786379"
 ---
 # <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Não é possível converter o valor inicial do tipo &#39; &lt;type1&gt; &#39; e o incremento do tipo &#39; &lt;type2&gt; &#39; em um tipo comum
 Especificado `For...Next` valores de controle têm tipos diferentes e, portanto, não são válidos porque eles não podem ser convertidos em um tipo comum.  

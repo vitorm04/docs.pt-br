@@ -1,13 +1,13 @@
 ---
 title: 'Resultados (F #)'
-description: "Saiba como usar o tipo F # 'Resultado' para ajudá-lo a escrever código tolerante a erros."
+description: "Saiba como usar o F # 'Resultado' tipo para ajudar você a escrever código tolerante a erros."
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563002"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749243"
 ---
 # <a name="results"></a>Resultados
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Comentários
 
-Observe que o tipo de resultado é um [struct discriminada union](discriminated-unions.md#struct-discriminated-unions), que é outro recurso introduzido no F # 4.1.  Semântica de igualdade estrutural se aplicam aqui.
+Observe que o tipo de resultado é um [união discriminada de struct](discriminated-unions.md#struct-discriminated-unions), que é outro recurso introduzido no F # 4.1.  Semântica de igualdade estrutural se aplicam aqui.
 
-O `Result` tipo é usado normalmente em monadic tratamento de erros, que é conhecido como [programação orientada a estrada de ferro](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro da comunidade do F #.  O exemplo simples a seguir demonstra essa abordagem.
+O `Result` tipo normalmente é usado em monadic tratamento de erros, que geralmente é conhecido como [programação orientada a ferrovia](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro da comunidade do F #.  O exemplo simples a seguir demonstra essa abordagem.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-Como você pode ver, é muito fácil unir várias funções de validação se você forçá-los todos para retornar um `Result`.  Isso permite que você dividir a funcionalidade desta em pequenas partes que são como Combinável conforme necessário para ser.  Isso também tem o valor agregado do *impondo* o uso de [correspondência de padrões](pattern-matching.md) no final de uma sessão de validação, que por sua vez impõe um grau maior de correção do programa.
+Como você pode ver, é muito fácil encadear várias funções de validação se você forçá-los para retornar um `Result`.  Isso permite a você dividir a funcionalidade como este em pequenas partes que são tão Combinável sempre que precisar ser.  Isso também tem o valor agregado do *impondo* o uso de [correspondência de padrões](pattern-matching.md) no final de uma rodada de validação, que impõe um grau maior de correção do programa.
 
 ## <a name="see-also"></a>Consulte também
 
-[Uniões Discriminadas](discriminated-unions.md)
-
-[Correspondência Padrão](pattern-matching.md)
+- [Uniões Discriminadas](discriminated-unions.md)
+- [Correspondência Padrão](pattern-matching.md)

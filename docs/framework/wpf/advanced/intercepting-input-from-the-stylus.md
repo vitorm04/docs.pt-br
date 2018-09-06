@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43725027"
+ms.locfileid: "43788159"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interceptando entrada a partir da caneta
 O <xref:System.Windows.Input.StylusPlugIns> arquitetura fornece um mecanismo para implementar o controle de baixo nível sobre <xref:System.Windows.Input.Stylus> de entrada e a criação de tinta digital <xref:System.Windows.Ink.Stroke> objetos. O <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornece um mecanismo para que você possa implementar comportamento personalizado e aplicá-lo para o fluxo de dados provenientes do dispositivo de caneta para o desempenho ideal.  

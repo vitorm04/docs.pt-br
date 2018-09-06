@@ -2,12 +2,12 @@
 title: 'Tutorial: Criar um provedor de tipos (F #)'
 description: 'Saiba como criar seus próprios provedores de tipos F # no F # 3.0 examinando vários provedores de tipo simples para ilustrar os conceitos básicos.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499322"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745720"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Criar um provedor de tipo
 
@@ -24,7 +24,6 @@ O ecossistema de F # contém uma variedade de provedores de tipos para serviços
 - [Typeproviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) é um conjunto mais antigo de provedores de tipos para uso apenas com a programação do .NET Framework para acessar os serviços de dados SQL, Entity Framework, OData e WSDL.
 
 Onde for necessário, você pode criar provedores de tipos personalizados, ou você pode fazer referência a provedores de tipos criados por outros usuários. Por exemplo, sua organização pode ter um serviço de dados que fornece um grande e crescente número de conjuntos de dados nomeados, cada um com seu próprio esquema de dados estáveis. Você pode criar um provedor de tipo que lê os esquemas e apresenta os conjuntos de dados atuais para o programador de uma forma fortemente tipada.
-
 
 ## <a name="before-you-start"></a>Antes de começar
 
@@ -51,7 +50,6 @@ Antes de começar, você pode fazer as perguntas a seguir:
 - Ele será alterado durante a execução do programa?
 
 Provedores de tipos são mais adequados para situações em que o esquema é estável no tempo de execução e durante o tempo de vida do código compilado.
-
 
 ## <a name="a-simple-type-provider"></a>Um provedor de tipo simples
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Observe que o conjunto de tipos e membros fornecidos é conhecido estaticamente. Este exemplo não aproveita a capacidade de provedores fornecem tipos que dependem de um esquema. A implementação do provedor de tipo é descrita no código a seguir, e os detalhes são abordados nas seções posteriores deste tópico.
 
-
->[!WARNING] 
+>[!WARNING]
 Pode haver diferenças entre esse código e os exemplos on-line.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 Como alternativa, abra o Visual Studio, abra o menu de depuração, escolha `Debug/Attach to process…`e anexar para outro `devenv` processo no qual você está editando o script. Usando esse método, você pode direcionar mais facilmente a lógica específica no provedor de tipos digitando interativamente expressões na segunda instância (com suporte total ao IntelliSense e outros recursos).
 
 Você pode desabilitar apenas meu código de depuração para identificar melhor os erros no código gerado. Para obter informações sobre como habilitar ou desabilitar esse recurso, consulte [navegar pelo código com o depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Além disso, você também pode definir exceções de primeira chance capturando abrindo o `Debug` menu e, em seguida, escolhendo `Exceptions` ou escolhendo as teclas Ctrl + Alt + E para abrir o `Exceptions` caixa de diálogo. Na caixa de diálogo, sob `Common Language Runtime Exceptions`, selecione o `Thrown` caixa de seleção.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Implementação do provedor de tipo
 
@@ -376,7 +372,6 @@ O exemplo nesta seção só fornece *apagados tipos fornecidos*, que são partic
 
 Neste exemplo, cada um fornecido tipo for apagado para digitar `obj`, e todos os usos do tipo serão exibido como tipo `obj` no código compilado. Na verdade, os objetos subjacentes nesses exemplos são cadeias de caracteres, mas o tipo será exibido como `System.Object` no .NET de código compilado. Como com todos os usos de eliminação de tipo, você pode usar a conversão boxing explícita, conversão unboxing e de conversão subverter apagados tipos. Nesse caso, uma exceção de conversão não é válida pode resultar quando o objeto é usado. Um provedor de tempo de execução pode definir seu próprio tipo de representação privada para se proteger contra representações falsos. Você não pode definir tipos apagados em F # em si. Somente os tipos fornecidos podem ser apagados. Você deve compreender as ramificações, ambos os práticos e apagado tipos apagados para seu provedor de tipo ou um provedor que fornece semântica, usando um tipos. Um tipo apagado não tem nenhum tipo .NET real. Portanto, não é possível fazer o reflexo preciso sobre o tipo e você pode subverter tipos apagados se você usar conversões de tempo de execução e outras técnicas que dependem de semântica de tipo de tempo de execução exato. O Subversion dos tipos apagados frequentemente resulta em exceções de conversão de tipo em tempo de execução.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Escolher representações para apagados tipos fornecidos
 
 Para alguns usos de tipos fornecidos apagados, nenhuma representação é necessária. Por exemplo, o apagados fornecido tipo pode conter somente propriedades estáticas e membros e nenhum construtor, e não há métodos ou propriedades retornaria uma instância do tipo. Se você pode acessar instâncias de um apagados fornecido do tipo, você deve considerar as seguintes perguntas:
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 A seção anterior explicou como criar um provedor de tipo de apagamento simples que fornece uma variedade de tipos, propriedades e métodos. Esta seção também explicou o conceito de eliminação de tipo, incluindo algumas das vantagens e desvantagens do fornecimento de tipos apagados de um provedor de tipo e discutido representações de tipos apagados.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Um provedor de tipo que usa parâmetros estáticos
 
 A capacidade de parametrizar os provedores de tipos por dados estáticos permite muitos cenários interessantes, até mesmo em casos em que o provedor não precisa acessar os dados locais ou remotos. Nesta seção, você aprenderá algumas técnicas básicas para reunir-se de que esse provedor.
-
 
 ### <a name="type-checked-regex-provider"></a>Tipo verificado provedor Regex
 
@@ -737,16 +730,13 @@ do ()
 
 Esta seção explicou como criar um provedor de tipos que opera em seus parâmetros estáticos. O provedor verifica o parâmetro static e fornece operações com base em seu valor.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Um provedor de tipo que é apoiado por dados locais
 
 Com frequência, convém provedores de tipos para apresentar as APIs com base em não apenas parâmetros estáticos, mas também informações de sistemas locais ou remotos. Esta seção discute os provedores de tipos se baseiam em dados locais, como arquivos de dados local.
 
-
 ### <a name="simple-csv-file-provider"></a>Provedor de arquivo CSV simples
 
 Como um exemplo simples, considere um provedor de tipos para acessar dados científicos; dados no formato de valor separados por vírgulas (CSV). Esta seção pressupõe que os arquivos CSV contêm uma linha de cabeçalho seguida pelos dados de ponto flutuante, como mostra a tabela a seguir:
-
 
 |Distância (medidor)|Tempo (segundos)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Observe os seguintes pontos sobre a implementação:
 
 Esta seção explicou como criar um provedor de tipo para uma fonte de dados local com um esquema simples que está contido na fonte de dados em si.
 
-
 ## <a name="going-further"></a>Indo mais além
 
 As seções a seguir incluem sugestões para estudar em mais detalhes.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Examinar o código compilado para tipos apagados
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Como mostra o exemplo, todos os menções do tipo `Type1` e o `InstanceProperty` propriedade foram apagados, deixando apenas as operações nos tipos de tempo de execução envolvidos.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Design e convenções de nomenclatura para provedores de tipos
+
 Observe as convenções a seguir ao criar provedores de tipos.
 
 **Provedores para protocolos de conectividade** em geral, nomes de provedor a maioria das DLLs para protocolos de conectividade de dados e o serviço, como conexões do OData ou SQL, devem terminar com `TypeProvider` ou `TypeProviders`. Por exemplo, use um nome DLL que se parece com a cadeia de caracteres a seguir:
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Para obter mais informações, consulte o `GetConnection` projetar convenção que é descrita posteriormente neste tópico.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Padrões de design para provedores de tipos
 
 As seções a seguir descrevem padrões de design, que você pode usar ao criar provedores de tipos.
 
-
 #### <a name="the-getconnection-design-pattern"></a>O padrão de Design GetConnection
+
 A maioria dos provedores de tipo deve ser escrito para usar o `GetConnection` padrão que é usado pelos provedores de tipo em FSharp.Data.TypeProviders.dll, como mostra o exemplo a seguir:
 
 ```fsharp
@@ -1147,10 +1134,7 @@ Muitas vezes você pode depurar provedores de tipos com mais facilidade usando f
 
   Você pode usar o log de impressão para stdout.
 
-
 ## <a name="see-also"></a>Consulte também
 
-* [Provedores de Tipos](index.md)
-
-* [O SDK do provedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Provedores de Tipos](index.md)
+- [O SDK do provedor de tipo](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 3b215c0eead8c5fc28b477b81f75c39b5c946302
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7edfbeb9a3cddcdcd81d9c87e5e85bfc947339
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546155"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785008"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Instruções passo a passo: hospedando conteúdo de Direct3D9 no WPF
 Esta instrução passo a passo mostra como hospedar o conteúdo Direct3D9 em um aplicativo do Windows Presentation Foundation (WPF).  
@@ -21,7 +21,7 @@ Esta instrução passo a passo mostra como hospedar o conteúdo Direct3D9 em um 
   
 -   Importe o conteúdo Direct3D9.  
   
--   Exibir o conteúdo de Direct3D9 usando o <xref:System.Windows.Interop.D3DImage> classe.  
+-   Exibir o conteúdo de Direct3D9 usando a <xref:System.Windows.Interop.D3DImage> classe.  
   
  Quando tiver terminado, você saberá como hospedar conteúdo Direct3D9 em um aplicativo WPF.  
   
@@ -39,7 +39,7 @@ Esta instrução passo a passo mostra como hospedar o conteúdo Direct3D9 em um 
   
 #### <a name="to-create-the-wpf-project"></a>Para criar o projeto WPF  
   
--   Crie um novo projeto de aplicativo do WPF no Visual C#, chamado `D3DHost`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+-   Crie um novo projeto de aplicativo do WPF no Visual C#, chamado `D3DHost`. Para obter mais informações, consulte [Como criar um novo projeto de aplicativo do WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
      MainWindow.xaml é aberto no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   

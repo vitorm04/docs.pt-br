@@ -3,11 +3,11 @@ title: Consumir feeds de OData de um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
 ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562474"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785512"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Consumir feeds de OData de um fluxo de trabalho
 
