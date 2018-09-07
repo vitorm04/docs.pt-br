@@ -3,11 +3,11 @@ title: Threading (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555780"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861940"
 ---
 # <a name="threading-visual-basic"></a>Threading (Visual Basic)
 O threading permite que seu programa do Visual Basic execute processamento simultâneo para que você possa fazer mais de uma operação de cada vez. Por exemplo, você pode usar o threading para monitorar a entrada do usuário, executar tarefas em segundo plano e lidar com fluxos simultâneos de entrada.  

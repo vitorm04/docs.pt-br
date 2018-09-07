@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0064aaf2e67eb3fb40e4c58995ce8678321d21aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25a2fb441269508402263e103a6c6e1be2635406
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583325"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869514"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Como descriptografar elementos XML com certificados X.509
-Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar e descriptografar um elemento em um documento XML.  Criptografia XML é uma maneira padrão para trocar ou armazenar dados criptografados do XML, sem se preocupar com os dados que estão sendo lidos facilmente.  Para obter mais informações sobre o padrão de criptografia XML, consulte a especificação de World Wide Web Consortium (W3C) para criptografia XML localizado em http://www.w3.org/TR/xmldsig-core/.  
+Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar e descriptografar um elemento dentro de um documento XML.  Criptografia de XML é uma maneira padrão para trocar ou armazenar dados XML criptografados, sem se preocupar com os dados que está sendo lidos com facilidade.  Para obter mais informações sobre o padrão de criptografia de XML, consulte a especificação do World Wide Web Consortium (W3C) para criptografia XML localizado em http://www.w3.org/TR/xmldsig-core/.  
   
- Este exemplo descriptografa um elemento XML que foi criptografado usando os métodos descritos em: [como: criptografar elementos XML com certificados x. 509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Encontrar um <`EncryptedData`> elemento, descriptografa o elemento e, em seguida, substitui o elemento com o elemento XML de texto sem formatação original.  
+ Este exemplo descriptografa um elemento XML que foi criptografado usando os métodos descritos em: [como: criptografar a elementos XML com certificados x. 509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Ele encontra um <`EncryptedData`> elemento, descriptografa o elemento e, em seguida, substitui o elemento por elemento XML de texto sem formatação original.  
   
- O exemplo de código neste procedimento descriptografa um elemento XML usando um certificado x. 509 do repositório de certificados local da conta do usuário atual.  O exemplo usa o <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> método para recuperar o certificado x. 509 e descriptografar a chave armazenada em uma sessão de automaticamente o <`EncryptedKey`> elemento do <`EncryptedData`> elemento.  O <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> método, em seguida, usa automaticamente a chave de sessão para descriptografar o elemento XML.  
+ O exemplo de código neste procedimento descriptografa um elemento XML usando um certificado X.509 do repositório de certificados local da conta de usuário atual.  O exemplo usa o <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> método para recuperar o certificado x. 509 automaticamente e descriptografar a chave armazenada em uma sessão das <`EncryptedKey`> elemento da <`EncryptedData`> elemento.  O <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> método, em seguida, usa automaticamente a chave de sessão para descriptografar o elemento XML.  
   
- Este exemplo é apropriado para situações em que vários aplicativos precisam compartilhar dados criptografados ou onde um aplicativo precisa salvar os dados criptografados entre os horários em que ele é executado.  
+ Este exemplo é apropriado para situações em que vários aplicativos precisam compartilhar os dados criptografados ou qual o aplicativo precisa para salvar os dados criptografados entre os horários em que ele é executado.  
   
 ### <a name="to-decrypt-an-xml-element-with-an-x509-certificate"></a>Para descriptografar um elemento XML com um certificado X.509  
   
-1.  Criar um <xref:System.Xml.XmlDocument> objeto carregando um arquivo XML do disco.  O <xref:System.Xml.XmlDocument> objeto contém o elemento XML para descriptografar.  
+1.  Criar um <xref:System.Xml.XmlDocument> objeto carregando um arquivo XML do disco.  O <xref:System.Xml.XmlDocument> objeto contém o elemento XML ao descriptografar.  
   
      [!code-csharp[HowToDecryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#2)]  
   
-2.  Criar um novo <xref:System.Security.Cryptography.Xml.EncryptedXml> objeto passando o <xref:System.Xml.XmlDocument> objeto para o construtor.  
+2.  Criar um novo <xref:System.Security.Cryptography.Xml.EncryptedXml> objeto, passando o <xref:System.Xml.XmlDocument> objeto para o construtor.  
   
      [!code-csharp[HowToDecryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#3)]  
@@ -54,7 +54,7 @@ Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace 
      [!code-vb[HowToDecryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementX509/vb/sample.vb#5)]  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo assume que um arquivo chamado `"test.xml"` existe no mesmo diretório que o programa compilado.  Ele também pressupõe que `"test.xml"` contém um `"creditcard"` elemento.  Você pode colocar o XML a seguir em um arquivo chamado `test.xml` e usá-lo com este exemplo.  
+ Este exemplo supõe que um arquivo chamado `"test.xml"` existe no mesmo diretório que o programa compilado.  Ele também pressupõe que `"test.xml"` contém um `"creditcard"` elemento.  Você pode colocar o XML a seguir em um arquivo chamado `test.xml` e usá-lo com este exemplo.  
   
 ```xml  
 <root>  
@@ -70,13 +70,14 @@ Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Para compilar este exemplo, você precisa incluir uma referência a `System.Security.dll`.  
+-   Para compilar este exemplo, você precisa incluir uma referência ao `System.Security.dll`.  
   
 -   Inclua os seguintes namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, e <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- O certificado x. 509 usado neste exemplo é apenas a fins de teste.  Aplicativos devem usar um certificado x. 509 gerado por uma autoridade de certificação confiável ou usar um certificado gerado pelo servidor de certificado do Microsoft Windows.  
+ O certificado x. 509 usado neste exemplo é apenas a fins de teste.  Aplicativos devem usar um certificado X.509 gerado por uma autoridade de certificação confiável ou usar um certificado gerado pelo servidor de certificado do Microsoft Windows.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Cryptography.Xml>  
- [Como criptografar elementos XML com certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Como criptografar elementos XML com certificados X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

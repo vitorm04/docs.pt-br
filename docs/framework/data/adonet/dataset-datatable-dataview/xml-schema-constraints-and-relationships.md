@@ -3,11 +3,11 @@ title: Relações e restrições de esquema XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785606"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872329"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Relações e restrições de esquema XML
 Em um esquema XSD (linguagem) de definição de esquema XML, você pode especificar restrições (exclusivos, restrições de chave e keyref) e relacionamentos (usando o **msdata:Relationship** anotação). Este tópico explica como as restrições e relações especificadas em um esquema XML são interpretadas para gerar o <xref:System.Data.DataSet>.  
