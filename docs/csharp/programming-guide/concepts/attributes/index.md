@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956066"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892380"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -75,7 +75,7 @@ A lista de possíveis valores `target` é mostrada na tabela a seguir.
 |`event`|evento|
 |`method`|Método ou acessadores de propriedade `get` e `set`|
 |`param`|Parâmetros de método ou parâmetros de acessador de propriedade `set`|
-|`property`|propriedade|
+|`property`|Propriedade|
 |`return`|Valor retornado de um método, indexador de propriedade ou acessador de propriedade `get`|
 |`type`|Struct, classe, interface, enum ou delegado|
 
@@ -125,7 +125,7 @@ Para obter mais informações, consulte:
 
 ## <a name="see-also"></a>Consulte também
 
- [Guia de Programação em C#](../../index.md)  
- [Reflexão (C#)](../reflection.md)  
- [Atributos](../../../../standard/attributes/index.md)  
- [Usando atributos em C#](../../../tutorials/attributes.md)  
+- [Guia de Programação em C#](../../index.md)  
+- [Reflexão (C#)](../reflection.md)  
+- [Atributos](../../../../standard/attributes/index.md)  
+- [Usando atributos em C#](../../../tutorials/attributes.md)  
