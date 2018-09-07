@@ -1,23 +1,21 @@
 ---
 title: Sintaxe detalhada (F#)
-description: 'Saber a diferença entre a sintaxe detalhada e leve em F # linguagem de programação.'
+description: 'Aprenda a diferença entre a sintaxe detalhada e leve na linguagem de programação F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563778"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063112"
 ---
 # <a name="verbose-syntax"></a>Sintaxe detalhada
 
-Há duas formas de sintaxe disponíveis para muitas construções de linguagem F #: *sintaxe detalhada* e *sintaxe leve*. A sintaxe detalhada não é mais comumente usada, mas tem a vantagem de ser menos confidencial para recuo. A sintaxe simples é mais curta e usa o recuo para sinalizar o início e fim do construções, em vez de palavras-chave adicionais, como `begin`, `end`, `in`e assim por diante. A sintaxe padrão é a sintaxe leve. Este tópico descreve a sintaxe para construções de linguagem F # quando sintaxe leve não está habilitado. Sintaxe detalhada está sempre habilitada, portanto, mesmo se você habilitar a sintaxe leve, você ainda pode usar sintaxe detalhada para algumas construções. Você pode desabilitar a sintaxe simples usando o `#light "off"` diretiva.
+Há duas formas de sintaxe disponíveis para muitas construções de linguagem F #: *sintaxe detalhada* e *sintaxe leve*. A sintaxe detalhada como normalmente não é usado, mas tem a vantagem de ser menos confidencial para recuo. A sintaxe leve é mais curta e usa o recuo para sinalizar o início e fim de construções, em vez de palavras-chave adicionais como `begin`, `end`, `in`e assim por diante. A sintaxe padrão é a sintaxe leve. Este tópico descreve a sintaxe para construções no F # quando sintaxe leve não está habilitado. Sintaxe detalhada está sempre habilitado, portanto, mesmo se você habilita a sintaxe leve, você ainda pode usar sintaxe detalhada para algumas construções. Você pode desabilitar a sintaxe simples usando o `#light "off"` diretiva.
 
+## <a name="table-of-constructs"></a>Tabela das construções
 
-## <a name="table-of-constructs"></a>Tabela de construções
-A tabela a seguir mostra a sintaxe leve e detalhada para construções de linguagem F # em contextos que não há uma diferença entre as duas formas. Nessa tabela, ângulo colchetes (&lt;&gt;) coloque elementos de sintaxe fornecida pelo usuário. Consulte a documentação de cada construção de linguagem para obter mais informações sobre a sintaxe usada dentro dessas construções.
-
-
+A tabela a seguir mostra a sintaxe leve e detalhada para construções de linguagem F # em contextos em que há uma diferença entre as duas formas. Nesta tabela, ângulo colchetes (&lt;&gt;) coloque os elementos de sintaxe fornecida pelo usuário. Consulte a documentação para cada constructo de linguagem para obter mais informações sobre a sintaxe usada dentro dessas construções.
 
 <table>
 <tr>
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
 
-[Diretivas de Compilador](compiler-directives.md)
-
-[Diretrizes de Formatação de Código](code-formatting-guidelines.md)
+- [Referência da Linguagem F#](index.md)
+- [Diretivas de Compilador](compiler-directives.md)
+- [Diretrizes de Formatação de Código](code-formatting-guidelines.md)

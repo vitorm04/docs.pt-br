@@ -21,11 +21,11 @@ ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05aac9109e49897d1c4dbbad60d807eb3e47798d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798629"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081944"
 ---
 # <a name="ifthenelse-directives"></a>Diretivas #If...Then...#Else
 Compila condicionalmente blocos de código do Visual Basic selecionados.  

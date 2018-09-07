@@ -17,36 +17,36 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588850"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061199"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Como armazenar chaves assimétricas em um contêiner de chave
-As chaves privadas assimétricas nunca devem ser armazenadas no formato textual nem como texto sem formatação no computador local. Se precisar armazenar uma chave privada, você deverá usar um contêiner de chave. Para obter mais informações sobre contêineres de chave, consulte [Noções básicas sobre nível de máquina e recipientes de chave RSA nível de usuário](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
+As chaves privadas assimétricas nunca devem ser armazenadas no formato textual nem como texto sem formatação no computador local. Se precisar armazenar uma chave privada, você deverá usar um contêiner de chave. Para obter mais informações sobre contêineres de chave, consulte [Noções básicas sobre nível de máquina e contêineres de chave RSA de nível de usuário](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Para criar uma chave assimétrica e salvá-la em um contêiner de chaves  
   
-1.  Criar uma nova instância de um <xref:System.Security.Cryptography.CspParameters> classe e passe o nome que você deseja chamar o contêiner de chave para o <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
+1.  Criar uma nova instância de um <xref:System.Security.Cryptography.CspParameters> de classe e passe o nome que você deseja chamar o contêiner de chaves a <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> campo.  
   
-2.  Criar uma nova instância de uma classe que deriva de <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (geralmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passar criado anteriormente  **CspParameters** objeto para o construtor.  
+2.  Criar uma nova instância de uma classe que deriva de <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe (normalmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passe criado anteriormente  **CspParameters** objeto para seu construtor.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Para excluir uma chave de um contêiner de chaves  
   
-1.  Criar uma nova instância de um **CspParameters** classe e passe o nome que você deseja chamar o contêiner de chave para o **CspParameters.KeyContainerName** campo.  
+1.  Criar uma nova instância de um **CspParameters** de classe e passe o nome que você deseja chamar o contêiner de chave para o **KeyContainerName** campo.  
   
-2.  Criar uma nova instância de uma classe que deriva de **AsymmetricAlgorithm** classe (geralmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passar o criado anteriormente **CspParameters** objeto para o construtor.  
+2.  Criar uma nova instância de uma classe que deriva de **AsymmetricAlgorithm** classe (geralmente **RSACryptoServiceProvider** ou **DSACryptoServiceProvider**) e passar o criado anteriormente **CspParameters** objeto para seu construtor.  
   
-3.  Definir o **PersistKeyInCSP** propriedade da classe que deriva de **AsymmetricAlgorithm** para **false** (**False** no Visual Basic).  
+3.  Defina as **PersistKeyInCSP** propriedade da classe que deriva **AsymmetricAlgorithm** para **false** (**False** no Visual Basic).  
   
-4.  Chamar o **limpar** método da classe que deriva de **AsymmetricAlgorithm**. Esse método libera todos os recursos da classe e limpa o contêiner de chaves.  
+4.  Chame o **clara** método da classe que deriva **AsymmetricAlgorithm**. Esse método libera todos os recursos da classe e limpa o contêiner de chaves.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como criar uma chave assimétrica, salvá-la em um contêiner de chaves, recuperar a chave posteriormente e excluir a chave do contêiner.  
   
- Observe que o código no `GenKey_SaveInContainer` método e o `GetKeyFromContainer` método é semelhante.  Quando você especifica o nome do contêiner de chaves para um objeto <xref:System.Security.Cryptography.CspParameters> e o informa a um objeto <xref:System.Security.Cryptography.AsymmetricAlgorithm> com a propriedade <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> ou <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> definida como true, acontece o seguinte:  se o contêiner de chaves com o nome especificado não existir, ele será criado e a chave persistirá.  Se o contêiner de chaves com o nome especificado existir, a chave será carregada automaticamente no objeto <xref:System.Security.Cryptography.AsymmetricAlgorithm> atual.  Assim, o método `GenKey_SaveInContainer` persiste na chave porque ele é executado primeiro. Enquanto isso, o código do método `GetKeyFromContainer` carrega a chave porque ele é executado na sequência.  
+ Observe no código a `GenKey_SaveInContainer` método e o `GetKeyFromContainer` método é semelhante.  Quando você especifica o nome do contêiner de chaves para um objeto <xref:System.Security.Cryptography.CspParameters> e o informa a um objeto <xref:System.Security.Cryptography.AsymmetricAlgorithm> com a propriedade <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp%2A> ou <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp%2A> definida como true, acontece o seguinte:  se o contêiner de chaves com o nome especificado não existir, ele será criado e a chave persistirá.  Se o contêiner de chaves com o nome especificado existir, a chave será carregada automaticamente no objeto <xref:System.Security.Cryptography.AsymmetricAlgorithm> atual.  Assim, o método `GenKey_SaveInContainer` persiste na chave porque ele é executado primeiro. Enquanto isso, o código do método `GetKeyFromContainer` carrega a chave porque ele é executado na sequência.  
   
 ```vb  
 Imports System  
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Geração de chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Criptografando dados](../../../docs/standard/security/encrypting-data.md)  
- [Descriptografando dados](../../../docs/standard/security/decrypting-data.md)  
- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Consulte também
+
+- [Geração de chaves para criptografia e descriptografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Criptografando dados](../../../docs/standard/security/encrypting-data.md)  
+- [Descriptografando dados](../../../docs/standard/security/decrypting-data.md)  
+- [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

@@ -3,11 +3,11 @@ title: Rastreamento visual de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
 ms.openlocfilehash: 7433d2497b9a9993093e13e88e073fb40403e3b6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803869"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085722"
 ---
 # <a name="visual-workflow-tracking"></a>Rastreamento visual de fluxo de trabalho
 Este exemplo demonstra como escrever um aplicativo visual de acompanhamento de fluxo de trabalho usando a funcionalidade de depuração disponível com [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  

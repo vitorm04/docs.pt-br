@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: 9e31d22cd7502ffd405af23bd1fabe8685190221
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 89d360e5caa3cdb0dd1ecb985ea7ba727e5a6d9d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518120"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080147"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Referências e a instrução Imports (Visual Basic)
 Você pode disponibilizar objetos externos ao seu projeto, escolhendo a **adicionar referência** comando as **projeto** menu. As referências no Visual Basic podem apontar para assemblies, que são como as bibliotecas de tipos, mas contêm mais informações.  
@@ -48,11 +48,11 @@ Você pode disponibilizar objetos externos ao seu projeto, escolhendo a **adicio
   
  Se um `Imports` instrução não incluir um nome de alias, elementos definidos no namespace importado podem ser usados no módulo sem qualificação. Se o nome do alias for especificado, ele deve ser usado como um qualificador para nomes contidos dentro desse namespace.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.ControlChars>  
- <xref:Microsoft.VisualBasic>  
-   
- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Assemblies e o Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Como criar e usar assemblies usando a linha de comando](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)  
- [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:Microsoft.VisualBasic.ControlChars>
+- <xref:Microsoft.VisualBasic>
+- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+- [Assemblies e o Cache de Assembly Global](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Como criar e usar assemblies usando a linha de comando](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
+- [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

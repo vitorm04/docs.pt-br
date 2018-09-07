@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198812"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098531"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Acessando dados em aplicativos do Visual Basic
 O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de aplicativos que acessam dados. Formulários de associação de dados para aplicativos do Windows são criados arrastando itens da janela [Fontes de Dados](/visualstudio/data-tools/add-new-data-sources) para um formulário. Associe controles a dados arrastando itens da janela **Fontes de Dados** para os controles existentes.  
@@ -55,5 +55,4 @@ O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de a
  [ADO.NET](../../framework/data/adonet/index.md)  
  Descreve as classes ADO.NET, que expõem serviços de acesso a dados ao programador do .NET Framework.
 
- [Dados em soluções do Office](https://msdn.microsoft.com/library/xx069ybh)  
- Contém links para páginas que explicam como os dados funcionam em soluções do Office, incluindo informações sobre programação orientada a esquemas, cache de dados e acesso a dados no lado do servidor.
+ [Dados em soluções do Office](/visualstudio/vsto/data-in-office-solutions) contém links para páginas que explicam como dados funcionam em soluções do Office, incluindo informações sobre programação orientada a esquema, caching de dados e acesso a dados do lado do servidor.

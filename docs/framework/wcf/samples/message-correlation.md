@@ -3,11 +3,11 @@ title: Correlação de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798460"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061150"
 ---
 # <a name="message-correlation"></a>Correlação de mensagem
 Este exemplo demonstra como um aplicativo de enfileiramento de mensagens (MSMQ) pode enviar uma mensagem MSMQ a um serviço do Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre remetente e destinatário aplicativos em um cenário de solicitação/resposta. Este exemplo usa a associação msmqIntegrationBinding. Nesse caso, o serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço que recebe de mensagens na fila. K  

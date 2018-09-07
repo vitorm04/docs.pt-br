@@ -2,12 +2,12 @@
 title: Células de referência (F#)
 description: 'Saiba como células de referência em F # são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892409"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079290"
 ---
 # <a name="reference-cells"></a>Células de referência
 
@@ -74,62 +74,9 @@ A saída é a seguinte.
 
 O campo `contents` é fornecido para compatibilidade com outras versões do ML e produzirá um aviso durante a compilação. Para desabilitar o aviso, use a opção do compilador `--mlcompatibility`. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).
 
-O código a seguir ilustra o uso das células de referência na passagem de parâmetro. O tipo de Incrementor tem um método de incremento que utiliza um parâmetro que inclui o tipo de parâmetro byref. No tipo de parâmetro byref indica que os chamadores devem passar o endereço de uma variável típica do tipo especificado, ou de uma célula de referência neste int ' case. O restante do código ilustra como chamar o incremento com ambos os tipos de argumentos e mostra o uso do operador ref em uma variável para criar uma célula de referência (ref myDelta1). Em seguida, ele mostra o uso do operador address-of (&amp;) para gerar um argumento apropriado. Por fim, o método de incremento é chamado novamente por meio de uma célula de referência é declarada usando uma associação let. A linha final do código demonstra o uso do! operador para desreferenciar a célula de referência para impressão.
+Programadores de c# devem saber que `ref` em c# não é a mesma coisa que `ref` em F #. As construções equivalentes em F # são [byrefs](byrefs.md), que são um conceito diferente das células de referência.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
-
-Para obter mais informações sobre como passar por referência, consulte [parâmetros e argumentos](parameters-and-arguments.md).
-
->[!NOTE]
-Programadores de c# devem saber que ref funciona de forma diferente no F # do que no c#. Por exemplo, o uso de ref ao passar um argumento não tem o mesmo efeito no F # como faz no c#.
-
->[!NOTE]
-`mutable` as variáveis podem ser promovidas automaticamente para `'a ref` se capturados por um fechamento; consulte [valores](values/index.md).
-
-## <a name="consuming-c-ref-returns"></a>Consumindo c# `ref` retorna
-
-Começando com o F # 4.1, você pode consumir `ref` retorna gerado em c#.  O resultado de tal chamada é um `byref<_>` ponteiro.
-
-O seguinte método c#:
-
-```csharp
-namespace RefReturns
-{
-    public static class RefClass
-    {
-        public static ref int Find(int val, int[] vals)
-        {
-            for (int i = 0; i < vals.Length; i++)
-            {
-                if (vals[i] == val)
-                {
-                    return ref numbers[i]; // Returns the location, not the value
-                }
-            }
-
-            throw new IndexOutOfRangeException($"{nameof(number)} not found");
-        }
-    }
-}
-```
-
-Pode ser transparente chamado pelo F # com nenhuma sintaxe especial:
-
-```fsharp
-open RefReturns
-
-let consumeRefReturn() =
-    let result = RefClass.Find(3, [| 1; 2; 3; 4; 5 |]) // 'result' is of type 'byref<int>'.
-    ()
-```
-
-Você também pode declarar funções que poderiam levar um `ref` retornar como entrada, por exemplo:
-
-```fsharp
-let f (x: byref<int>) = &x
-```
-
-Atualmente, não há nenhuma maneira de gerar um `ref` retorno em F #, que poderia ser consumida em c#.
+Valores marcados como `mutable`pode ser elevada automaticamente a `'a ref` se capturados por um fechamento; veja [valores](values/index.md).
 
 ## <a name="see-also"></a>Consulte também
 

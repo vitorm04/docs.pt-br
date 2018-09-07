@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e0b6c5ac60474cfe984b3802e880eb58b017722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576426"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097003"
 ---
 # <a name="names-of-namespaces"></a>Nomes de Namespaces
-Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está criando clareza suficiente para o programador usando a estrutura imediatamente saber o que é provavelmente o conteúdo do namespace. O modelo a seguir especifica a regra geral para nomear namespaces:  
+Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é criando clareza suficiente para o programador usando a estrutura de saber imediatamente qual o conteúdo do namespace é provavelmente será. O modelo a seguir especifica a regra geral para a nomeação de namespaces:  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
   
@@ -33,7 +33,7 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
   
  **X DO NOT** usar hierarquias organizacionais como a base para nomes em hierarquias de namespace, como nomes de grupo em corporações tendem a ter vida curta. Organize a hierarquia de namespaces em torno de grupos de tecnologias relacionadas.  
   
- **✓ DO** usar PascalCasing e componentes do namespace separado com pontos (por exemplo, `Microsoft.Office.PowerPoint`). Se a marca emprega maiusculas e minúsculas não tradicional, você deve seguir o uso de maiusculas e minúsculas definido por sua marca, mesmo se ele tiver um desvio de maiusculas e minúsculas do namespace normal.  
+ **✓ DO** usar PascalCasing e componentes do namespace separado com pontos (por exemplo, `Microsoft.Office.PowerPoint`). Se a sua marca emprega maiusculas e minúsculas não tradicional, você deve seguir as maiusculas e minúsculas definida pela sua marca, mesmo se ele tiver um desvio do uso de maiusculas e minúsculas do namespace normal.  
   
  **✓ CONSIDER** usando nomes de namespace no plural quando apropriado.  
   
@@ -41,18 +41,18 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
   
  **X DO NOT** usar o mesmo nome de um namespace e um tipo no namespace.  
   
- Por exemplo, não use `Debug` como um namespace do nome e, em seguida, também fornecem uma classe denominada `Debug` no mesmo namespace. Alguns compiladores exigem tipos totalmente qualificados.  
+ Por exemplo, não use `Debug` como um namespace Nomeie e, em seguida, forneça também uma classe chamada `Debug` no mesmo namespace. Os diversos compiladores exigem tais tipos totalmente qualificados.  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>Namespaces e conflitos de nome de tipo  
  **X DO NOT** apresentar nomes de tipo genérico como `Element`, `Node`, `Log`, e `Message`.  
   
  Há uma probabilidade muito alta que fazer isso levará para o nome de tipo está em conflito em comum cenários. Você deve qualificar os nomes de tipo genérico (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
- Há instruções específicas para evitar conflitos de nome de tipo para categorias diferentes de namespaces.  
+ Há diretrizes específicas para evitar conflitos de nome de tipo para categorias diferentes de namespaces.  
   
--   **Namespaces do modelo de aplicativo**  
+-   **Namespaces de modelos de aplicativo**  
   
-     Namespaces que pertencem a um modelo de aplicativo único com muita frequência, são usados juntos, mas quase nunca são usadas com namespaces de outros modelos de aplicativo. Por exemplo, o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace muito raramente é usado junto com o <xref:System.Web.UI?displayProperty=nameWithType> namespace. A seguir está uma lista de grupos de namespace do modelo de aplicativo conhecidas:  
+     Os namespaces que pertencem a um modelo de aplicativo único muito geralmente são usados juntos, mas quase nunca são usadas com namespaces de outros modelos de aplicativo. Por exemplo, o <xref:System.Windows.Forms?displayProperty=nameWithType> namespace muito raramente é usado junto com o <xref:System.Web.UI?displayProperty=nameWithType> namespace. A seguir está uma lista de grupos de namespace do modelo de aplicativo bem conhecido:  
   
      `System.Windows*`   
      `System.Web.UI*`  
@@ -63,19 +63,19 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
   
 -   **Namespaces de infraestrutura**  
   
-     Esse grupo contém namespaces que raramente são importados durante o desenvolvimento de aplicativos comuns. Por exemplo, `.Design` namespaces são usados principalmente quando as ferramentas de desenvolvimento de programação. Evitando conflitos com os tipos nesses namespaces, não é crítico.  
+     Esse grupo contém os namespaces que raramente são importados durante o desenvolvimento de aplicativos comuns. Por exemplo, `.Design` namespaces são usados principalmente das ferramentas de desenvolvimento de programação. Evitando conflitos com os tipos nesses namespaces não é crítica.  
   
--   **Namespaces de núcleo**  
+-   **Namespaces básicos**  
   
-     Namespaces básicos incluem todos os `System` namespaces, excluindo espaços para nome dos modelos de aplicativo e os namespaces de infraestrutura. Namespaces básicos incluem, entre outros, `System`, `System.IO`, `System.Xml`, e `System.Net`.  
+     Namespaces básicos incluem todas `System` namespaces, exceto os namespaces dos modelos de aplicativo e os namespaces de infraestrutura. Namespaces básicos incluem, entre outros, `System`, `System.IO`, `System.Xml`, e `System.Net`.  
   
      **X DO NOT** fornecem tipos de nomes que entraria em conflito com qualquer tipo nos namespaces Core.  
   
      Por exemplo, nunca use `Stream` como um nome de tipo. Ela entraria em conflito com <xref:System.IO.Stream?displayProperty=nameWithType>, um tipo muito usados.  
   
--   **Grupos de espaço para nome de tecnologia**  
+-   **Grupos de namespace de tecnologia**  
   
-     Essa categoria inclui todos os namespaces com os dois primeiros nós de namespace mesmo `(<Company>.<Technology>*`), como `Microsoft.Build.Utilities` e `Microsoft.Build.Tasks`. É importante que tipos que pertencem a uma única tecnologia não entrem em conflito entre si.  
+     Essa categoria inclui todos os namespaces com os dois primeiros nós de namespace mesmo `(<Company>.<Technology>*`), como `Microsoft.Build.Utilities` e `Microsoft.Build.Tasks`. É importante que os tipos que pertencem a uma única tecnologia não entrem em conflito umas com as outras.  
   
      **X DO NOT** atribuir nomes de tipo que entraria em conflito com outros tipos em uma única tecnologia.  
   
@@ -83,8 +83,9 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces está cr
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
- [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

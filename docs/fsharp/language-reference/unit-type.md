@@ -3,11 +3,11 @@ title: Tipo unit (F#)
 description: "Saiba como o tipo de 'unidade' F # geralmente é usado para manter o lugar onde um valor é exigido pela sintaxe de linguagem quando nenhum valor é necessário ou desejado."
 ms.date: 05/16/2016
 ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773416"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44097146"
 ---
 # <a name="unit-type"></a>Tipo unit
 

@@ -3,11 +3,11 @@ title: '&lt;certificado&gt; de &lt;par&gt;'
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
 ms.openlocfilehash: 59aaee5549aae5df173174651ee3a520a0ac10fb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883929"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084008"
 ---
 # <a name="ltcertificategt-of-ltpeergt"></a>&lt;certificado&gt; de &lt;par&gt;
 Especifica um certificado usado por um par.  

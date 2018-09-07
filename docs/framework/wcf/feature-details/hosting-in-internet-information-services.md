@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
 ms.openlocfilehash: e9d0e5a165eb2eabae95da9fd1e744a9bd1c201b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786967"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085102"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedagem no Internet Information Services
 É uma opção para hospedar os serviços do Windows Communication Foundation (WCF) dentro de um aplicativo de serviços de informações da Internet (IIS). Esse modelo de hospedagem é semelhante ao modelo usado pelo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e serviços Web (ASMX) de serviços Web do ASP.NET.  

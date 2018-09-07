@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754148"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061644"
 ---
 # <a name="mid-statement"></a>Instrução Mid
 Substitui um número especificado de caracteres em um `String` variável com caracteres de outra cadeia de caracteres.  

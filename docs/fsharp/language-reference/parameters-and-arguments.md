@@ -2,25 +2,25 @@
 title: Parâmetros e argumentos (F#)
 description: 'Saiba mais sobre o suporte de linguagem F # para definir parâmetros e passar argumentos para funções, métodos e propriedades.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471975"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062631"
 ---
 # <a name="parameters-and-arguments"></a>Parâmetros e argumentos
 
 Este tópico descreve o suporte de linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Ele inclui informações sobre como passar por referência e como definir e usar os métodos que podem aproveitar um número variável de argumentos.
 
-
 ## <a name="parameters-and-arguments"></a>Parâmetros e argumentos
+
 O termo *parâmetro* é usado para descrever os nomes para os valores que devem ser fornecidos. O termo *argumento* é usado para os valores fornecidos para cada parâmetro.
 
 Parâmetros podem ser especificados na tupla ou formulário na forma curried ou em alguma combinação dos dois. Você pode passar argumentos usando um nome de parâmetro explícito. Parâmetros de métodos podem ser especificados como opcionais e recebe um valor padrão.
 
-
 ## <a name="parameter-patterns"></a>Padrões de parâmetro
+
 Parâmetros fornecidos para funções e métodos são, em geral, padrões, separados por espaços. Isso significa que, em princípio, qualquer um dos padrões descritos em [expressões de correspondência](match-expressions.md) pode ser usado em uma lista de parâmetros para uma função ou um membro.
 
 Métodos geralmente usam o formulário de tupla de passagem de argumentos. Isso proporciona um resultado mais claro da perspectiva de outras linguagens .NET como o formulário de tupla corresponde a maneira como os argumentos são passados em métodos do .NET.
@@ -90,6 +90,7 @@ Ocasionalmente, padrões que envolvem incompletas correspondências são úteis,
 O uso de padrões que têm uma correspondência incompleta melhor é reservado para prototipagem rápida e outros usos temporários. O compilador emitirá um aviso para esse tipo de código. Esses padrões não podem abranger o caso geral de todas as entradas possíveis e, portanto, não são adequados para as APIs do componente.
 
 ## <a name="named-arguments"></a>Argumentos nomeados
+
 Argumentos para métodos que podem ser especificados por posição em uma lista de argumentos separados por vírgulas, ou eles poderão ser passados para um método explicitamente fornecendo o nome, seguido por um sinal de igual e o valor a ser passado em. Se especificado, fornecendo o nome, eles podem aparecer em uma ordem diferente daquele usado na declaração.
 
 Argumentos nomeados podem tornar código mais legível e mais adaptável a determinados tipos de alterações na API, como um reordenação de parâmetros de método.
@@ -107,6 +108,7 @@ Em uma chamada para um construtor de classe, você pode definir os valores das p
 Para obter mais informações, consulte [construtores (F #)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parâmetros opcionais
+
 Você pode especificar um parâmetro opcional para um método por meio de um ponto de interrogação na frente do nome do parâmetro. Parâmetros opcionais são interpretados como o tipo de opção F #, portanto, você pode consultá-los da maneira normal, tipos de opção são consultados, usando um `match` expressão com `Some` e `None`. Parâmetros opcionais são permitidos apenas em membros, não em funções criadas com `let` associações.
 
 Você também pode usar uma função `defaultArg`, que define um valor padrão de um argumento opcional. O `defaultArg` função usa o parâmetro opcional como o primeiro argumento e o valor padrão como o segundo.
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Passagem por referência
+
 Um valor de F # a passagem por referência envolve o `byref` palavra-chave, que especifica que o parâmetro é, na verdade, um ponteiro para o valor passado por referência. Qualquer valor passado para um método com um `byref` como o argumento deve ser `mutable`.
 
 Como o parâmetro é um ponteiro e o valor é mutável, quaisquer alterações no valor são mantidas após a execução da função.
@@ -139,6 +142,7 @@ Você pode usar uma tupla como um valor de retorno para armazenar as `out` parâ
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Matrizes de parâmetros
+
 Ocasionalmente, é necessário definir uma função que usa um número arbitrário de parâmetros de tipo heterogêneo. Não seria prático criar todos os métodos sobrecarregados possíveis para levar em conta todos os tipos que podem ser usados. As implementações do .NET oferecem suporte para esses métodos por meio do recurso de matriz de parâmetro. Um método que usa uma matriz de parâmetros na sua assinatura pode ser fornecido com um número arbitrário de parâmetros. Os parâmetros são colocados em uma matriz. O tipo dos elementos da matriz determina os tipos de parâmetro que podem ser passados para a função. Se você definir a matriz de parâmetros com `System.Object` como o tipo de elemento, em seguida, código do cliente pode passar valores de qualquer tipo.
 
 No F #, matrizes de parâmetros só podem ser definidas nos métodos. Eles não podem ser usados em funções autônomas ou funções que são definidas em módulos.
@@ -162,4 +166,5 @@ true
 ```
 
 ## <a name="see-also"></a>Consulte também
-[Membros](members/index.md)
+
+- [Membros](members/index.md)

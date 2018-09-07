@@ -3,11 +3,11 @@ title: Consultas LINQ to DataSet de depuração
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892659"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085998"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Consultas LINQ to DataSet de depuração
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] oferece suporte a depuração de código de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] . No entanto, há algumas diferenças entre depurar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] código e não-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] código gerenciado. A maioria dos recursos de depuração funcionam com [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instruções, incluindo a depuração, definindo pontos de interrupção e exibir os resultados que são mostrados nas janelas do depurador. No entanto, adiada execução em tem alguns efeitos colaterais que devem ser consideradas durante a depuração de consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] de código e há algumas limitações ao usar Editar e continuar. Este tópico aborda aspectos de depuração que são exclusivos [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] comparado a não -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] código gerenciado.  

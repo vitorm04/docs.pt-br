@@ -23,11 +23,11 @@ ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869987"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086090"
 ---
 # <a name="cryptographic-signatures"></a>Assinaturas criptográficas
 <a name="top"></a> As assinaturas digitais de criptografia usam algoritmos de chave pública para fornecer integridade de dados. Quando você assina dados com uma assinatura digital, alguém pode verificar a assinatura e pode provar que os dados origem de você e não foi alterados depois que você assinou. Para obter mais informações sobre assinaturas digitais, consulte [serviços de criptografia](../../../docs/standard/security/cryptographic-services.md).  
