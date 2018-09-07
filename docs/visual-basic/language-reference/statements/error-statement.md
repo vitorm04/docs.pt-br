@@ -11,61 +11,61 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885663"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44099026"
 ---
-# <a name="error-statement"></a><span data-ttu-id="4a0dd-102">Instrução Error</span><span class="sxs-lookup"><span data-stu-id="4a0dd-102">Error Statement</span></span>
-<span data-ttu-id="4a0dd-103">Simula a ocorrência de um erro.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-103">Simulates the occurrence of an error.</span></span>  
+# <a name="error-statement"></a><span data-ttu-id="7be5d-102">Instrução Error</span><span class="sxs-lookup"><span data-stu-id="7be5d-102">Error Statement</span></span>
+<span data-ttu-id="7be5d-103">Simula a ocorrência de um erro.</span><span class="sxs-lookup"><span data-stu-id="7be5d-103">Simulates the occurrence of an error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a0dd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4a0dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7be5d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7be5d-104">Syntax</span></span>  
   
 ```  
 Error errornumber  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="4a0dd-105">Partes</span><span class="sxs-lookup"><span data-stu-id="4a0dd-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="7be5d-105">Partes</span><span class="sxs-lookup"><span data-stu-id="7be5d-105">Parts</span></span>  
  `errornumber`  
- <span data-ttu-id="4a0dd-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-106">Required.</span></span> <span data-ttu-id="4a0dd-107">Pode ser qualquer número de erro válido.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-107">Can be any valid error number.</span></span>  
+ <span data-ttu-id="7be5d-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7be5d-106">Required.</span></span> <span data-ttu-id="7be5d-107">Pode ser qualquer número de erro válido.</span><span class="sxs-lookup"><span data-stu-id="7be5d-107">Can be any valid error number.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4a0dd-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="4a0dd-108">Remarks</span></span>  
- <span data-ttu-id="4a0dd-109">O `Error` instrução é suportada para compatibilidade com versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-109">The `Error` statement is supported for backward compatibility.</span></span> <span data-ttu-id="4a0dd-110">No novo código, especialmente ao criar objetos, use o `Err` do objeto `Raise` método para gerar erros de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-110">In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7be5d-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="7be5d-108">Remarks</span></span>  
+ <span data-ttu-id="7be5d-109">O `Error` instrução é suportada para compatibilidade com versões anteriores.</span><span class="sxs-lookup"><span data-stu-id="7be5d-109">The `Error` statement is supported for backward compatibility.</span></span> <span data-ttu-id="7be5d-110">No novo código, especialmente ao criar objetos, use o `Err` do objeto `Raise` método para gerar erros de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="7be5d-110">In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.</span></span>  
   
- <span data-ttu-id="4a0dd-111">Se `errornumber` for definido, o `Error` instrução chama o manipulador de erro após as propriedades do `Err` objeto são atribuídos os seguintes valores padrão:</span><span class="sxs-lookup"><span data-stu-id="4a0dd-111">If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:</span></span>  
+ <span data-ttu-id="7be5d-111">Se `errornumber` for definido, o `Error` instrução chama o manipulador de erro após as propriedades do `Err` objeto são atribuídos os seguintes valores padrão:</span><span class="sxs-lookup"><span data-stu-id="7be5d-111">If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:</span></span>  
   
-|<span data-ttu-id="4a0dd-112">Propriedade</span><span class="sxs-lookup"><span data-stu-id="4a0dd-112">Property</span></span>|<span data-ttu-id="4a0dd-113">Valor</span><span class="sxs-lookup"><span data-stu-id="4a0dd-113">Value</span></span>|  
+|<span data-ttu-id="7be5d-112">Propriedade</span><span class="sxs-lookup"><span data-stu-id="7be5d-112">Property</span></span>|<span data-ttu-id="7be5d-113">Valor</span><span class="sxs-lookup"><span data-stu-id="7be5d-113">Value</span></span>|  
 |--------------|-----------|  
-|`Number`|<span data-ttu-id="4a0dd-114">Valor especificado como argumento para `Error` instrução.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-114">Value specified as argument to `Error` statement.</span></span> <span data-ttu-id="4a0dd-115">Pode ser qualquer número de erro válido.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-115">Can be any valid error number.</span></span>|  
-|`Source`|<span data-ttu-id="4a0dd-116">Nome do projeto atual do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-116">Name of the current Visual Basic project.</span></span>|  
-|`Description`|<span data-ttu-id="4a0dd-117">Expressão correspondente para o valor de retorno de cadeia de caracteres a `Error` função especificado `Number`, se essa cadeia de caracteres não existir.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-117">String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists.</span></span> <span data-ttu-id="4a0dd-118">Se a cadeia de caracteres não existir, `Description` contém uma cadeia de caracteres de comprimento zero ("").</span><span class="sxs-lookup"><span data-stu-id="4a0dd-118">If the string does not exist, `Description` contains a zero-length string ("").</span></span>|  
-|`HelpFile`|<span data-ttu-id="4a0dd-119">A unidade totalmente qualificada, o caminho e o nome do arquivo do arquivo de Ajuda do Visual Basic apropriado.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-119">The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.</span></span>|  
-|`HelpContext`|<span data-ttu-id="4a0dd-120">ID de contexto para o erro correspondente de arquivos de ajuda Visual Basic a `Number` propriedade.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-120">The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.</span></span>|  
-|`LastDLLError`|<span data-ttu-id="4a0dd-121">Zero.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-121">Zero.</span></span>|  
+|`Number`|<span data-ttu-id="7be5d-114">Valor especificado como argumento para `Error` instrução.</span><span class="sxs-lookup"><span data-stu-id="7be5d-114">Value specified as argument to `Error` statement.</span></span> <span data-ttu-id="7be5d-115">Pode ser qualquer número de erro válido.</span><span class="sxs-lookup"><span data-stu-id="7be5d-115">Can be any valid error number.</span></span>|  
+|`Source`|<span data-ttu-id="7be5d-116">Nome do projeto atual do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="7be5d-116">Name of the current Visual Basic project.</span></span>|  
+|`Description`|<span data-ttu-id="7be5d-117">Expressão correspondente para o valor de retorno de cadeia de caracteres a `Error` função especificado `Number`, se essa cadeia de caracteres não existir.</span><span class="sxs-lookup"><span data-stu-id="7be5d-117">String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists.</span></span> <span data-ttu-id="7be5d-118">Se a cadeia de caracteres não existir, `Description` contém uma cadeia de caracteres de comprimento zero ("").</span><span class="sxs-lookup"><span data-stu-id="7be5d-118">If the string does not exist, `Description` contains a zero-length string ("").</span></span>|  
+|`HelpFile`|<span data-ttu-id="7be5d-119">A unidade totalmente qualificada, o caminho e o nome do arquivo do arquivo de Ajuda do Visual Basic apropriado.</span><span class="sxs-lookup"><span data-stu-id="7be5d-119">The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.</span></span>|  
+|`HelpContext`|<span data-ttu-id="7be5d-120">ID de contexto para o erro correspondente de arquivos de ajuda Visual Basic a `Number` propriedade.</span><span class="sxs-lookup"><span data-stu-id="7be5d-120">The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.</span></span>|  
+|`LastDLLError`|<span data-ttu-id="7be5d-121">Zero.</span><span class="sxs-lookup"><span data-stu-id="7be5d-121">Zero.</span></span>|  
   
- <span data-ttu-id="4a0dd-122">Se nenhum manipulador de erro existe, ou se nenhum estiver habilitado, uma mensagem de erro é criada e exibida do `Err` propriedades do objeto.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-122">If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.</span></span>  
+ <span data-ttu-id="7be5d-122">Se nenhum manipulador de erro existe, ou se nenhum estiver habilitado, uma mensagem de erro é criada e exibida do `Err` propriedades do objeto.</span><span class="sxs-lookup"><span data-stu-id="7be5d-122">If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4a0dd-123">Alguns aplicativos de host do Visual Basic não é possível criar objetos.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-123">Some Visual Basic host applications cannot create objects.</span></span> <span data-ttu-id="4a0dd-124">Consulte a documentação do seu aplicativo de host para determinar se ele pode criar classes e objetos.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-124">See your host application's documentation to determine whether it can create classes and objects.</span></span>  
+>  <span data-ttu-id="7be5d-123">Alguns aplicativos de host do Visual Basic não é possível criar objetos.</span><span class="sxs-lookup"><span data-stu-id="7be5d-123">Some Visual Basic host applications cannot create objects.</span></span> <span data-ttu-id="7be5d-124">Consulte a documentação do seu aplicativo de host para determinar se ele pode criar classes e objetos.</span><span class="sxs-lookup"><span data-stu-id="7be5d-124">See your host application's documentation to determine whether it can create classes and objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4a0dd-125">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4a0dd-125">Example</span></span>  
- <span data-ttu-id="4a0dd-126">Este exemplo usa o `Error` instrução para gerar o erro número 11.</span><span class="sxs-lookup"><span data-stu-id="4a0dd-126">This example uses the `Error` statement to generate error number 11.</span></span>  
+## <a name="example"></a><span data-ttu-id="7be5d-125">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7be5d-125">Example</span></span>  
+ <span data-ttu-id="7be5d-126">Este exemplo usa o `Error` instrução para gerar o erro número 11.</span><span class="sxs-lookup"><span data-stu-id="7be5d-126">This example uses the `Error` statement to generate error number 11.</span></span>  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="4a0dd-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4a0dd-127">Requirements</span></span>  
- <span data-ttu-id="4a0dd-128">**Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="4a0dd-128">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7be5d-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7be5d-127">Requirements</span></span>  
+ <span data-ttu-id="7be5d-128">**Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="7be5d-128">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="4a0dd-129">**Assembly:** biblioteca de tempo de execução do Visual Basic (em VisualBasic)</span><span class="sxs-lookup"><span data-stu-id="4a0dd-129">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="7be5d-129">**Assembly:** biblioteca de tempo de execução do Visual Basic (em VisualBasic)</span><span class="sxs-lookup"><span data-stu-id="7be5d-129">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4a0dd-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4a0dd-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7be5d-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7be5d-130">See Also</span></span>  
  <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [<span data-ttu-id="4a0dd-131">Instrução On Error</span><span class="sxs-lookup"><span data-stu-id="4a0dd-131">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [<span data-ttu-id="4a0dd-132">Instrução Resume</span><span class="sxs-lookup"><span data-stu-id="4a0dd-132">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [<span data-ttu-id="4a0dd-133">Mensagens de Erro</span><span class="sxs-lookup"><span data-stu-id="4a0dd-133">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)
+ [<span data-ttu-id="7be5d-131">Instrução On Error</span><span class="sxs-lookup"><span data-stu-id="7be5d-131">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [<span data-ttu-id="7be5d-132">Instrução Resume</span><span class="sxs-lookup"><span data-stu-id="7be5d-132">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [<span data-ttu-id="7be5d-133">Mensagens de Erro</span><span class="sxs-lookup"><span data-stu-id="7be5d-133">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)
