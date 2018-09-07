@@ -2,28 +2,28 @@
 title: 'Informações do chamador (F #)'
 description: Descreve como usar atributos de argumento de informações do chamador para obter informações do chamador de um método.
 ms.date: 04/25/2017
-ms.openlocfilehash: 6fd80213cdaf2c4662fd4c2ed9eaf8949e397efe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564748"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048672"
 ---
 # <a name="caller-information"></a>Informações do chamador
 
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.
 
-Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no [CompilerServices](/dotnet/api/system.runtime.compilerservices) namespace:
+Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos na [CompilerServices](/dotnet/api/system.runtime.compilerservices) namespace:
 
 |Atributo|Descrição|Tipo|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|O caminho completo do arquivo de origem que contém o chamador. Esse é o caminho do arquivo no momento da compilação.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Número da linha no arquivo fonte no qual o método é chamado.|`Integer`|
-|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Nome do método ou da propriedade do chamador. Consulte a seção de nomes de membro neste tópico.|`String`|
+|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Nome do método ou da propriedade do chamador. Consulte a seção de nomes de membros mais adiante neste tópico.|`String`|
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como você pode usar esses atributos para um chamador de rastreamento.
+O exemplo a seguir mostra como você pode usar esses atributos para rastrear um chamador.
 
 ```fsharp
 open System.Diagnostics
@@ -45,15 +45,15 @@ type Tracer() =
 
 ## <a name="remarks"></a>Comentários
 
-Atributos de informações do chamador só podem ser aplicados a parâmetros opcionais. Você deve fornecer um valor explícito para cada parâmetro opcional. Os atributos de informações do chamador com que o compilador gravar o valor apropriado para cada parâmetro opcional decorado com um atributo de informações do chamador.
+Atributos de informações do chamador só podem ser aplicados aos parâmetros opcionais. Você deve fornecer um valor explícito para cada parâmetro opcional. Os atributos de informações do chamador com que o compilador gravar o valor apropriado para cada parâmetro opcional decorado com um atributo de informações do chamador.
 
-Os valores de informações do chamador são emitidos como literais em linguagem intermediária (IL) em tempo de compilação. Diferentemente de resultados do [StackTrace](/dotnet/api/system.diagnostics.stacktrace) propriedade para exceções, os resultados não são afetadas por ofuscação.
+Os valores de informações do chamador são emitidos como literais em linguagem intermediária (IL) em tempo de compilação. Ao contrário dos resultados do [StackTrace](/dotnet/api/system.diagnostics.stacktrace) propriedade para exceções, os resultados não são afetados por ofuscação.
 
 Você pode fornecer explicitamente os argumentos opcionais para controlar as informações do chamador ou ocultá-las.
 
-## <a name="member-names"></a>Nomes de membros
+## <a name="member-names"></a>Nomes de membro
 
-Você pode usar o [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar o nome do membro como um `String` argumento para o método chamado. Usando essa técnica, você evitar o problema de refatoração Renomear não altera o `String` valores. Esse benefício é especialmente útil para as seguintes tarefas:
+Você pode usar o [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar o nome do membro como um `String` argumento para o método chamado. Ao usar essa técnica, você evita que o problema que refatoração de renomeação não altera o `String` valores. Esse benefício é especialmente útil para as seguintes tarefas:
 
 * Usar rotinas de rastreamento e diagnóstico.
 * Implementando o [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) interface quando a associação de dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, você deve especificar o nome da propriedade como um literal.
@@ -71,6 +71,7 @@ O gráfico a seguir mostra o membro nomes que são retornados quando você usa o
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|
 
 ## <a name="see-also"></a>Consulte também
- [Atributos](attributes.md)  
- [Argumentos nomeados](parameters-and-arguments.md#named-arguments)  
- [Parâmetros opcionais](parameters-and-arguments.md#optional-parameters)  
+
+- [Atributos](attributes.md)  
+- [Argumentos nomeados](parameters-and-arguments.md#named-arguments)  
+- [Parâmetros opcionais](parameters-and-arguments.md#optional-parameters)  

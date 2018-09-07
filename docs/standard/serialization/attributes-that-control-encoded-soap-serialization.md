@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 07c4c1e9b9a9da2e9a585efdcac644c616012078
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778559"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065648"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Atributos que controlam a serialização SOAP codificada
 
@@ -34,10 +34,10 @@ Para obter mais informações sobre atributos, consulte [Atributos](../../../doc
 
 ## <a name="see-also"></a>Consulte também
 
-[Serialização XML e SOAP](xml-and-soap-serialization.md)  
-[Como serializar um objeto como um fluxo XML codificado para SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-[Como substituir a serialização XML de SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)  
-[Atributos](../../../docs/standard/attributes/index.md)  
-<xref:System.Xml.Serialization.XmlSerializer>  
-[Como serializar um objeto](how-to-serialize-an-object.md)  
-[Como desserializar um objeto](how-to-deserialize-an-object.md)
+- [Serialização XML e SOAP](xml-and-soap-serialization.md)  
+- [Como serializar um objeto como um fluxo XML codificado para SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+- [Como substituir a serialização XML de SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)  
+- [Atributos](../../../docs/standard/attributes/index.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [Como serializar um objeto](how-to-serialize-an-object.md)  
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)

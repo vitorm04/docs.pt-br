@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d97798dd44e9661e82a303023e041f5af2f43711
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501772"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048332"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlando a serialização XML usando atributos
 
@@ -317,10 +317,10 @@ Pode haver situações quando uma propriedade pública ou um campo não precisam
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)  
-[Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)  
-[Apresentando a serialização XML](introducing-xml-serialization.md)  
-[Exemplos de serialização XML](examples-of-xml-serialization.md)  
-[Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-[Como serializar um objeto](how-to-serialize-an-object.md)  
-[Como desserializar um objeto](how-to-deserialize-an-object.md)  
+- [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)  
+- [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)  
+- [Apresentando a serialização XML](introducing-xml-serialization.md)  
+- [Exemplos de serialização XML](examples-of-xml-serialization.md)  
+- [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+- [Como serializar um objeto](how-to-serialize-an-object.md)  
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)  

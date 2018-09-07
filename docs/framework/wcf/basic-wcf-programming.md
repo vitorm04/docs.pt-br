@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
 ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060509"
 ---
 # <a name="basic-wcf-programming"></a>Programação de WCF básica
 Esta seção apresenta os conceitos básicos para a criação de aplicativos do Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ Esta seção apresenta os conceitos básicos para a criação de aplicativos do 
  [Início rápido de solução de problemas do WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  Descreve alguns dos problemas mais comuns que ocorrem, o que você pode fazer para resolvê-los e onde localizar mais informações sobre o problema.  
   
- [WCF e API Web ASP.NET](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ [WCF e ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
  Discutir as duas tecnologias, como elas se relacionam e quando usá-las.  
   
 ## <a name="reference"></a>Referência  

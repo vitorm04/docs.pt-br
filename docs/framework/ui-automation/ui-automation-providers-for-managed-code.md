@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 14e00caf666186e2ad25c746334afaff7ae5f664
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745990"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072253"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>Provedores de automação de interface de usuário para Código Gerenciado
 > [!NOTE]

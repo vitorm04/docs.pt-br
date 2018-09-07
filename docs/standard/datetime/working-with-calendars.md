@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a37ec8a5d62e4a4eb7cfcd22f684821cfd204945
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fca25786096ebeb97c133d306129f33f2bb4580
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579880"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065335"
 ---
 # <a name="working-with-calendars"></a>Trabalhando com calendários
 
-Embora um valor de data e hora representem um momento, sua representação de cadeia de caracteres depende da cultura e também das convenções usadas para exibir valores de data e hora por uma cultura específica e do calendário usado por essa cultura. Este tópico explora o suporte para calendários no .NET e aborda o uso das classes de calendário ao trabalhar com valores de data.
+Embora um valor de data e hora representem um momento, sua representação de cadeia de caracteres depende da cultura e também das convenções usadas para exibir valores de data e hora por uma cultura específica e do calendário usado por essa cultura. Este tópico explora o suporte para os calendários no .NET e discute o uso das classes de calendário ao trabalhar com valores de data.
 
 ## <a name="calendars-in-net"></a>Calendários no .NET
 
-Todos os calendários no .NET derivam de <xref:System.Globalization.Calendar?displayProperty=nameWithType> classe, que fornece a implementação de calendário base. Uma das classes que herda da classe <xref:System.Globalization.Calendar> é a classe <xref:System.Globalization.EastAsianLunisolarCalendar>, a qual é a classe base para todos os calendários lunissolares. .NET inclui as seguintes implementações de calendário:
+Todos os calendários no .NET derivam o <xref:System.Globalization.Calendar?displayProperty=nameWithType> classe, que fornece a implementação do calendário base. Uma das classes que herda da classe <xref:System.Globalization.Calendar> é a classe <xref:System.Globalization.EastAsianLunisolarCalendar>, a qual é a classe base para todos os calendários lunissolares. O .NET inclui as seguintes implementações de calendar:
 
 * <xref:System.Globalization.ChineseLunisolarCalendar>, que representa o calendário lunissolar chinês.
 
@@ -82,7 +82,7 @@ O exemplo a seguir altera o calendário usado pela cultura Árabe (Arábia Saudi
 [!code-csharp[Conceptual.Calendars#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/changecalendar2.cs#2)]
 [!code-vb[Conceptual.Calendars#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/changecalendar2.vb#2)]
 
-## <a name="dates-and-calendars"></a>Calendários e datas
+## <a name="dates-and-calendars"></a>Datas e calendários
 
 Com exceção dos construtores que incluem um parâmetro de tipo <xref:System.Globalization.Calendar> e permitem que os elementos de uma data (ou seja, mês, dia e ano), reflitam valores em um calendário designado, os valores de <xref:System.DateTime> e <xref:System.DateTimeOffset> sempre são baseados no calendário gregoriano. Isso significa, por exemplo, que a propriedade <xref:System.DateTime.Year%2A?displayProperty=nameWithType> retorna o ano no calendário gregoriano e que a propriedade <xref:System.DateTime.Day%2A?displayProperty=nameWithType> retorna o dia do mês no calendário gregoriano.
 
@@ -94,7 +94,7 @@ O exemplo a seguir ilustra a diferença entre as propriedades <xref:System.DateT
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
 
-### <a name="instantiating-dates-based-on-a-calendar"></a>Criando datas com base em um calendário
+### <a name="instantiating-dates-based-on-a-calendar"></a>Criando instâncias datas com base em um calendário
 
 Como os valores <xref:System.DateTime> e <xref:System.DateTimeOffset> baseiam-se no calendário gregoriano, você deve chamar um construtor sobrecarregado que inclua um parâmetro do tipo <xref:System.Globalization.Calendar> para criar uma instância de um valor de data se você quiser usar os valores de dia, mês ou ano em um calendário diferente. Você também pode chamar uma das sobrecargas do método <xref:System.Globalization.Calendar.ToDateTime%2A?displayProperty=nameWithType> de um calendário específico para criar uma instância de um objeto <xref:System.DateTime> com base nos valores de um calendário específico.
 
@@ -103,7 +103,7 @@ O exemplo a seguir cria uma instância de um valor de <xref:System.DateTime> ao 
 [!code-csharp[Conceptual.Calendars#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatehcdate1.cs#4)]
 [!code-vb[Conceptual.Calendars#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatehcdate1.vb#4)]
 
-### <a name="representing-dates-in-the-current-calendar"></a>Que representa as datas do calendário atual
+### <a name="representing-dates-in-the-current-calendar"></a>Representando datas no calendário atual
 
 Os métodos de formatação de data e hora sempre usam o calendário atual ao converter datas em cadeias de caracteres. Isso significa que a representação de cadeia de caracteres do ano, mês e dia do mês reflete o calendário atual, e não necessariamente o calendário gregoriano.
 
@@ -112,7 +112,7 @@ O exemplo a seguir mostra como o calendário atual afeta a representação de ca
 [!code-csharp[Conceptual.Calendars#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/currentcalendar1.cs#5)]
 [!code-vb[Conceptual.Calendars#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/currentcalendar1.vb#5)]
 
-### <a name="representing-dates-in-a-non-current-calendar"></a>Que representam datas em um calendário não atual
+### <a name="representing-dates-in-a-non-current-calendar"></a>Representando datas em um calendário diferente do atual
 
 Para representar uma data usando um calendário que não é o calendário atual de uma cultura específica, você deve chamar métodos do objeto <xref:System.Globalization.Calendar>. Por exemplo, os métodos <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>, <xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType> e <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> convertem o ano, o mês e o dia para valores que refletem um calendário específico.
 
@@ -126,20 +126,20 @@ O exemplo a seguir usa um objeto <xref:System.Globalization.JulianCalendar> para
 
 ### <a name="calendars-and-date-ranges"></a>Calendários e intervalos de datas
 
-A data mais antiga suportada por um calendário é indicada pela propriedade <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> desse calendário. Para a classe <xref:System.Globalization.GregorianCalendar>, essa data é 1º de janeiro de 0001. C.E. A maioria dos outros calendários no .NET oferecem suporte a uma data posterior. Tentar trabalhar com um valor de data e hora que antecedem a data com suporte mais antiga de um calendário gerará uma exceção <xref:System.ArgumentOutOfRangeException>.
+A data mais antiga suportada por um calendário é indicada pela propriedade <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> desse calendário. Para a classe <xref:System.Globalization.GregorianCalendar>, essa data é 1º de janeiro de 0001. C.E. A maioria dos outros calendários no .NET dão suporte a uma data posterior. Tentar trabalhar com um valor de data e hora que antecedem a data com suporte mais antiga de um calendário gerará uma exceção <xref:System.ArgumentOutOfRangeException>.
 
-Porém, há uma exceção importante. O valor padrão (não inicializado) de um objeto <xref:System.DateTime> e um objeto <xref:System.DateTimeOffset> é igual ao valor de <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType>. Se você tentar formatar essa data em um calendário que não oferece suporte a 1 de janeiro de 0001 C.E. e você não fornecer um especificador de formato, o método de formatação usa o especificador de formato "s" (padrão de data/hora classificável) em vez do especificador de formato "G" (padrão geral de data/hora). Como resultado, a operação de formatação não gerará uma exceção <xref:System.ArgumentOutOfRangeException>. Em vez disso, retornará uma data sem suporte. Isso é ilustrado no exemplo a seguir, que exibe o valor de <xref:System.DateTime.MinValue?displayProperty=nameWithType> quando a cultura atual é configurada para Japonês (Japão) com o calendário japonês, e para Árabe (Egito) com o calendário Um Al Qura. Ela também define a cultura atual como Inglês (Estados Unidos) e chama o método <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> com cada um desses objetos <xref:System.Globalization.CultureInfo>. Em cada caso, a data é exibida usando o padrão classificável de data/hora.
+Porém, há uma exceção importante. O valor padrão (não inicializado) de um objeto <xref:System.DateTime> e um objeto <xref:System.DateTimeOffset> é igual ao valor de <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType>. Se você tentar formatar essa data em um calendário que não oferece suporte a 1 de janeiro de 0001. C.E. e você não fornecer um especificador de formato, o método de formatação usa o especificador de formato "s" (padrão de data/hora classificável) em vez do especificador de formato "G" (padrão de data/hora geral). Como resultado, a operação de formatação não gerará uma exceção <xref:System.ArgumentOutOfRangeException>. Em vez disso, retornará uma data sem suporte. Isso é ilustrado no exemplo a seguir, que exibe o valor de <xref:System.DateTime.MinValue?displayProperty=nameWithType> quando a cultura atual é configurada para Japonês (Japão) com o calendário japonês, e para Árabe (Egito) com o calendário Um Al Qura. Ela também define a cultura atual como Inglês (Estados Unidos) e chama o método <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> com cada um desses objetos <xref:System.Globalization.CultureInfo>. Em cada caso, a data é exibida usando o padrão classificável de data/hora.
 
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
 ## <a name="working-with-eras"></a>Trabalhando com eras
 
-Os calendários normalmente dividem as datas em eras. No entanto, o <xref:System.Globalization.Calendar> classes no .NET não oferecem suporte a cada era definido por um calendário e a maioria do <xref:System.Globalization.Calendar> classes dão suporte a apenas uma única era. Somente as classes <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> oferecem suporte a várias eras.
+Os calendários normalmente dividem as datas em eras. No entanto, o <xref:System.Globalization.Calendar> classes no .NET não dão suporte a cada era definida por um calendário e a maioria do <xref:System.Globalization.Calendar> classes dão suporte a uma única era. Somente as classes <xref:System.Globalization.JapaneseCalendar> e <xref:System.Globalization.JapaneseLunisolarCalendar> oferecem suporte a várias eras.
 
-### <a name="eras-and-era-names"></a>Nomes de era e eras
+### <a name="eras-and-era-names"></a>Eras e nomes de eras
 
-No .NET, inteiros que representam os eras suportados por uma implementação de calendário específico são armazenados na ordem inversa na <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> matriz. A era atual está no índice zero. Para classes <xref:System.Globalization.Calendar> que oferecem suporte a várias eras, cada índice sucessivo reflete a era anterior. A propriedade estática <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> define o índice de era atual na matriz <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; ela é uma constante cujo valor é sempre zero. As classes <xref:System.Globalization.Calendar> individuais também incluem os campos estáticos que retornam o valor da era atual. Elas são listadas na tabela a seguir.
+No .NET, inteiros que representam as eras com suporte por uma implementação específica do calendário são armazenados em ordem inversa no <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> matriz. A era atual está no índice zero. Para classes <xref:System.Globalization.Calendar> que oferecem suporte a várias eras, cada índice sucessivo reflete a era anterior. A propriedade estática <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> define o índice de era atual na matriz <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; ela é uma constante cujo valor é sempre zero. As classes <xref:System.Globalization.Calendar> individuais também incluem os campos estáticos que retornam o valor da era atual. Elas são listadas na tabela a seguir.
 
 | Classe do calendário                                        | Campo de era atual                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -160,9 +160,9 @@ O nome que corresponde a um número de era específico não pode ser recuperado 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
 
-Além disso, a cadeia de caracteres de formato de data e hora personalizado "g" inclui o nome da era na representação de cadeia de caracteres de uma data e hora. Para obter mais informações, consulte [cadeias de caracteres de formato personalizado de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
+Além disso, a cadeia de caracteres de formato de data e hora personalizado "g" inclui o nome da era na representação de cadeia de caracteres de uma data e hora. Para obter mais informações, consulte [cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
-### <a name="instantiating-a-date-with-an-era"></a>Criando uma data com uma época
+### <a name="instantiating-a-date-with-an-era"></a>Criando uma instância de uma data com uma época
 
 Para as duas classes <xref:System.Globalization.Calendar> que oferecem suporte a várias eras, uma data que consiste em um determinado valor de ano, mês, dia e dia do mês pode ser ambígua. Por exemplo, todas as quatro eras do <xref:System.Globalization.JapaneseCalendar> têm os anos numerados de 1 a 15. Normalmente, se uma era não é especificada, os métodos de data e hora e calendário assumem que os valores pertencem à era atual. Para especificar explicitamente a era ao criar uma instância de uma data para uma classe <xref:System.Globalization.Calendar> que oferece suporte a várias eras, você pode chamar o método <xref:System.Globalization.Calendar.ToDateTime%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29?displayProperty=nameWithType>. Esse método permite especificar explicitamente uma era junto com o ano, mês, dia, hora, minuto, segundo e milissegundo do calendário.
 
@@ -171,7 +171,7 @@ O exemplo a seguir usa o método <xref:System.Globalization.Calendar.ToDateTime%
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
 
-### <a name="representing-dates-in-calendars-with-eras"></a>Que representam datas em calendários com eras
+### <a name="representing-dates-in-calendars-with-eras"></a>Representando datas em calendários com eras
 
 Se um objeto <xref:System.Globalization.Calendar> oferece suporte a eras e é o calendário atual de um objeto <xref:System.Globalization.CultureInfo>, a era está incluída na representação de cadeia de caracteres de um valor de data e hora para os padrões de data e hora completa, data completa e data abreviada. O exemplo a seguir exibe esses padrões de data quando a cultura atual é Japão (japanese) e o calendário atual é o calendário japonês.
 
@@ -179,7 +179,7 @@ Se um objeto <xref:System.Globalization.Calendar> oferece suporte a eras e é o 
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]
 
 > [!WARNING]
-> O <xref:System.Globalization.JapaneseCalendar> classe é a única classe de calendário no .NET que ambas as datas suporta em mais de um era e que pode ser o calendário atual de um <xref:System.Globalization.CultureInfo> objeto - especificamente, de um <xref:System.Globalization.CultureInfo> objeto que representa a cultura japonês (Japão).
+> O <xref:System.Globalization.JapaneseCalendar> classe é a única classe de calendário no .NET que ambos os oferece suporte a datas em mais de uma era e que pode ser o calendário atual de um <xref:System.Globalization.CultureInfo> objeto – especificamente, de um <xref:System.Globalization.CultureInfo> objeto que representa a cultura japonês (Japão).
 
 Para todos os calendários, o especificador de formato personalizado “g” inclui a era na cadeia de caracteres de resultado. O exemplo a seguir usa a cadeia de caracteres de formato personalizado "MM-dd-aaaa g" para incluir a era na cadeia de caracteres de resultado quando o calendário atual é o calendário gregoriano.
 
@@ -193,5 +193,5 @@ Em casos em que a representação de cadeia de caracteres de uma data é express
 
 ## <a name="see-also"></a>Consulte também
 
-[Como: exibir datas em calendários não gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-[exemplo: utilitário de intervalo de semana de calendário](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [Como: exibir datas em calendários não gregorianos](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [Exemplo: Utilitário de intervalo de semana de calendário](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
