@@ -3,11 +3,11 @@ title: Informações do arquivo não podem ser consultadas ao abrir para gravaç
 ms.date: 07/20/2015
 ms.assetid: 2198af10-f128-4b1d-baba-a251e1369146
 ms.openlocfilehash: 1df1630eecc688dbe61400398838c7edaf75a7b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886377"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087125"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>Informações do arquivo não podem ser consultadas ao abrir para gravação
 Foi feita uma tentativa para obter informações sobre um arquivo que está atualmente aberto para gravação.  
