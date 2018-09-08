@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080875"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179354"
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 <a name="Top"></a> Por padrão, a comparação de uma cadeia de caracteres de entrada com quaisquer caracteres literais em um padrão de expressão regular diferencia maiúsculas e minúsculas; o espaço em branco em um padrão de expressão regular é interpretado como caracteres de espaço em branco literais e os grupos de captura em uma expressão regular são nomeados implícita e explicitamente. É possível modificar esses e vários outros aspectos do comportamento de expressão regular especificando opções de expressões regulares. Essas opções, que estão listadas na tabela a seguir, podem ser incluídas embutidas como parte do padrão de expressão regular, ou podem ser fornecidas a um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método de correspondência padrão estático como um valor de enumeração <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
