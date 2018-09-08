@@ -2,12 +2,12 @@
 title: 'Passo a passo: Inserindo informações de tipo de Assemblies do Microsoft Office no Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244040"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188651"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Passo a passo: Inserindo informações de tipo de Assemblies do Microsoft Office no Visual Studio (Visual Basic)
 Se inserir informações de tipo em um aplicativo que faz referência a objetos COM, você poderá eliminar a necessidade de um PIA (assembly de interoperabilidade primário). Além disso, as informações de tipo inseridas permitem que você conquiste a independência de versão para seu aplicativo. Isto é, seu programa pode ser escrito para usar tipos de várias versões de uma biblioteca COM sem precisar especificar um PIA específico para cada versão. Esse é um cenário comum para aplicativos que usam objetos de bibliotecas do Microsoft Office. Inserir informações de tipo possibilita que a mesma build de um programa funcione com diferentes versões do Microsoft Office em diferentes computadores sem precisar reimplantar o programa ou o PIA para cada versão do Microsoft Office.  
@@ -101,7 +101,7 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
   
 1.  Abra o projeto criado por este passo a passo no Visual Studio.  
   
-2.  No menu **Build**, escolha **Publicar CreateExcelWorkbook**. Siga as etapas do Assistente de Publicação para criar uma versão instalável do aplicativo. Para obter mais informações, consulte [Assistente de Publicação (desenvolvimento do Office no Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  No menu **Build**, escolha **Publicar CreateExcelWorkbook**. Siga as etapas do Assistente de Publicação para criar uma versão instalável do aplicativo. Para obter mais informações, consulte [Assistente de Publicação (desenvolvimento do Office no Visual Studio)](/visualstudio/vsto/publish-wizard-office-development-in-visual-studio).  
   
 3.  Instale o aplicativo em um computador em que o .NET Framework 4 ou superior e uma versão diferente do Excel estejam instalados.  
   
@@ -109,6 +109,7 @@ Se inserir informações de tipo em um aplicativo que faz referência a objetos 
   
 5.  Verifique se uma pasta de trabalho do Excel foi criada no local especificado no código de amostra: C:\SampleFolder\SampleWorkbook.xls.  
   
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+## <a name="see-also"></a>Consulte também
+
+- [Passo a passo: Inserindo tipos de Assemblies gerenciados no Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

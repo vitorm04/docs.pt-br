@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43804526"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207519"
 ---
 # <a name="path-markup-syntax"></a>Sintaxe de marcação do caminho
 Caminhos são discutidos [formas e desenho básico no WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e o [visão geral de geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), no entanto, este tópico descreve em detalhes a poderosa e complexa mini-linguagem você pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

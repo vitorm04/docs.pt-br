@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdbf2126d3da152ce68b6dbb47f5772e3b13d2c6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068684"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179338"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>Método ICLRStrongName::StrongNameSignatureVerificationFromImage
 Verifica se um assembly, que já foi mapeado para a memória, é válido para a chave pública associada.  

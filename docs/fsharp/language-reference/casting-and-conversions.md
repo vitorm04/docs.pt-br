@@ -3,11 +3,11 @@ title: Conversões cast e conversões (F#)
 description: 'Saiba como a linguagem de programação F # fornece os operadores de conversão para conversões aritméticas entre vários tipos primitivos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784537"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188482"
 ---
 # <a name="casting-and-conversions-f"></a>Conversões cast e conversões (F#)
 

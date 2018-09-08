@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
 ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075527"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183048"
 ---
 # <a name="nesting-datarelations"></a>Aninhamento de DataRelations
 Em uma representação de dados relacional, as tabelas individuais contêm linhas que estão relacionadas entre si usando uma coluna ou conjunto de colunas. No ADO.NET <xref:System.Data.DataSet>, a relação entre tabelas é implementada usando um <xref:System.Data.DataRelation>. Quando você cria um **DataRelation**, as relações pai-filho das colunas são gerenciadas por meio de relação. As tabelas e colunas são entidades separadas. Na representação hierárquica dos dados XML fornece, as relações pai-filho são representadas por elementos pai que contêm elementos filho aninhados.  

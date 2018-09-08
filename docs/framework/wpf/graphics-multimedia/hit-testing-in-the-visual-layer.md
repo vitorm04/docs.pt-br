@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874999"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44176666"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Teste de clique na camada visual
 Este tópico fornece uma visão geral da funcionalidade de teste de clique fornecida pela camada visual. Suporte a teste de clique permite que você determine se um valor de geometria ou de ponto está dentro do conteúdo renderizado de um <xref:System.Windows.Media.Visual>, permitindo que você implemente o comportamento de interface do usuário, como um retângulo de seleção para selecionar vários objetos.  

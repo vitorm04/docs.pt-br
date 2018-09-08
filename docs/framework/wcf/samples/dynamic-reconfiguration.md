@@ -3,11 +3,11 @@ title: Reconfiguração dinâmica
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881966"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189917"
 ---
 # <a name="dynamic-reconfiguration"></a>Reconfiguração dinâmica
 Este exemplo demonstra o serviço de roteamento do Windows Communication Foundation (WCF). O serviço de roteamento é um componente do WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo se adapta a amostragem de calculadora padrão do WCF para se comunicar usando o serviço de roteamento. Este exemplo mostra como o serviço de roteamento pode ser reconfigurado dinamicamente durante o tempo de execução.  

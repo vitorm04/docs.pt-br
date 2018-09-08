@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562803"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188664"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
 Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
@@ -147,15 +147,16 @@ Chave de fenda definido como uma ferramenta genérica
   
 -   *Tipo construído*. Uma classe, estrutura, interface, procedimento ou delegado declarado de um tipo genérico, fornecendo argumentos de tipo para seus parâmetros de tipo.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Covariância e Contravariância](../../concepts/covariance-contravariance/index.md)  
- [Iteradores](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a>Consulte também
+
+- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+- [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+- [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)  
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
+- [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+- [Covariância e Contravariância](../../concepts/covariance-contravariance/index.md)  
+- [Iteradores](../../../../visual-basic/programming-guide/concepts/iterators.md)

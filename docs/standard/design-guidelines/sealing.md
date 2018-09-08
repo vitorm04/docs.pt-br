@@ -11,11 +11,11 @@ ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885529"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199915"
 ---
 # <a name="sealing"></a>Lacrar
 Um dos recursos das estruturas orientada a objeto é que os desenvolvedores podem estender e personalizá-los de maneiras não previstas pelos designers do framework. Isso é a potência e o perigo de design extensível. Quando você projeta sua estrutura, ele é, portanto, muito importante para projetar cuidadosamente para extensibilidade quando ele for desejado e para limitar a extensibilidade quando é perigoso.  

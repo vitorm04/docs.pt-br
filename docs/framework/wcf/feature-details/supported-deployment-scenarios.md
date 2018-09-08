@@ -3,11 +3,11 @@ title: Cenários de desempenho com suporte
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44074651"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183373"
 ---
 # <a name="supported-deployment-scenarios"></a>Cenários de desempenho com suporte
 O subconjunto de recursos do Windows Communication Foundation (WCF) tem suportada para uso em aplicativos parcialmente confiáveis foi projetado para atender aos requisitos de algumas, mas nem todos os cenários para uso do WCF. No servidor, o WCF atende aos requisitos de escala da Internet compartilhada provedores de hospedagem que executam aplicativos de terceiros no [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de segurança de permissões de confiança média. No cliente, o suporte de confiança parcial do WCF foi projetado para atender aos requisitos de tecnologias de implantação, como [a implantação do ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]da tecnologia de aplicativo de navegador XAML, que permitem que direta e segura implantação de aplicativos da área de trabalho de sites não confiáveis.  

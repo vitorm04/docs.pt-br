@@ -14,11 +14,11 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128808"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183844"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acesso mais seguro a arquivos e dados no Windows Forms
 O [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] usa permissões para ajudar a proteger recursos e dados. Onde seu aplicativo pode ler ou gravar dados depende das permissões concedidas ao aplicativo. Quando seu aplicativo é executado em um ambiente de confiança parcial, talvez você não tenha acesso aos seus dados ou talvez você precise alterar a maneira como você acessa os dados.  

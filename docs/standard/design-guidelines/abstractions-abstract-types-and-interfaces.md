@@ -11,11 +11,11 @@ ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44135062"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182116"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrações (tipos e Interfaces abstratos)
 Uma abstração é um tipo que descreve um contrato, mas não fornece uma implementação completa do contrato. Abstrações geralmente são implementadas como classes abstratas ou interfaces, e entram com um conjunto bem definido de documentação de referência que descreve a semântica necessária dos tipos de implementação do contrato. Algumas das abstrações mais importantes no .NET Framework incluem <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, e <xref:System.Object>.  

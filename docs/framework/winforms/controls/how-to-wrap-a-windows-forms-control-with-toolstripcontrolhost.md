@@ -10,15 +10,15 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: 09509705fc8e23b1b5e4fd8c67c12d0be84fc17a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b502890fcad051d2393bb175bb0795acee2df613
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538298"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209965"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Como encapsular um controle dos Windows Forms com ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost> foi projetado para permitir a hospedagem de controles de Windows Forms arbitrários usando o <xref:System.Windows.Forms.ToolStripControlHost> construtor ou estendendo <xref:System.Windows.Forms.ToolStripControlHost> em si. É mais fácil ajustar o controle estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando propriedades e métodos que expõem frequentemente usadas propriedades e métodos do controle. Você também pode expor os eventos para o controle de <xref:System.Windows.Forms.ToolStripControlHost> nível.  
+<xref:System.Windows.Forms.ToolStripControlHost> foi projetado para habilitar a hospedagem de controles de Windows Forms arbitrários, usando o <xref:System.Windows.Forms.ToolStripControlHost> construtor ou estendendo <xref:System.Windows.Forms.ToolStripControlHost> em si. É mais fácil encapsular o controle estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementar métodos e propriedades que expõem frequentemente usadas propriedades e métodos do controle. Você também pode expor eventos de controle no <xref:System.Windows.Forms.ToolStripControlHost> nível.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Para hospedar um controle em um ToolStripControlHost por derivação  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33538298"
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#12)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#12)]  
   
-4.  Opcionalmente, substituir o <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, e <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> métodos e adicione os eventos de controle que você deseja expor.  
+4.  Opcionalmente, substituir os <xref:System.Windows.Forms.ToolStripControlHost.OnSubscribeControlEvents%2A>, e <xref:System.Windows.Forms.ToolStripControlHost.OnUnsubscribeControlEvents%2A> métodos e adicionar os eventos de controle que você deseja expor.  
   
      [!code-cpp[System.Windows.Forms.ToolStripControlHost#16](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#16)]
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#16](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#16)]
@@ -63,7 +63,7 @@ ms.locfileid: "33538298"
   
 -   Referências aos assemblies Sistema e System.Windows.Forms.  
   
- Para obter informações sobre como criar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [Compilando a partir da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para obter informações sobre como compilar este exemplo da linha de comando para o Visual Basic ou Visual c#, consulte [compilando da linha de comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [criação de linha de comando com csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Você também pode criar este exemplo no Visual Studio colando o código em um novo projeto.  Consulte também [Como compilar e executar um exemplo completo de código do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.ToolStripControlHost>  

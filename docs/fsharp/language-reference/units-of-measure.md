@@ -3,11 +3,11 @@ title: Unidades de medida (F#)
 description: 'Saiba como flutuante ponto e valores de inteiro com sinal em F # podem ter associadas a unidades de medida, que normalmente são usadas para indicar o comprimento, volume e em massa.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44131254"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187881"
 ---
 # <a name="units-of-measure"></a>Unidades de medida
 

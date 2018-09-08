@@ -3,11 +3,11 @@ title: Amostra do elemento de associação de descoberta
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877593"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177530"
 ---
 # <a name="discovery-binding-element-sample"></a>Amostra do elemento de associação de descoberta
 Este exemplo demonstra como usar o elemento de associação de cliente de descoberta para descobrir um serviço. Esse recurso permite aos desenvolvedores adicionar um canal de cliente de descoberta para sua pilha de canais de cliente existente, tornando o modelo de programação muito intuitiva. Quando o canal associado é aberto, o endereço do serviço é resolvido usando a descoberta. Esse exemplo consiste em projetos a seguir:  

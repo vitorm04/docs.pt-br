@@ -13,11 +13,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4d39dc28082fbed932a60228ac216f2f700c2e9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860176"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185539"
 ---
 # <a name="ltstartupgt-element"></a>&lt;inicialização&gt; elemento
 Especifica informações de inicialização de tempo de execução de linguagem comum.  

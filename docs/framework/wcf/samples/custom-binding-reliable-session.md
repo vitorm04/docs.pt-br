@@ -3,11 +3,11 @@ title: Sessão confiável de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
 ms.openlocfilehash: 55ffdd741bf26c1a906c7b09dfa05839b25f1645
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036270"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189177"
 ---
 # <a name="custom-binding-reliable-session"></a>Sessão confiável de associação personalizada
 Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos. Este exemplo demonstra como configurar uma associação personalizada com vários transporte e de mensagem que codifica elementos, especialmente habilitar sessões confiáveis.  

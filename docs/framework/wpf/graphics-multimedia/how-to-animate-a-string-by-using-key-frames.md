@@ -7,11 +7,11 @@ helpviewer_keywords:
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
 ms.openlocfilehash: 1b55afd5938073a326789e67b66fec9cfce12015
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868517"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189245"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>Como animar uma cadeia de caracteres usando quadros-chave
 Este exemplo mostra como animar uma cadeia de caracteres, que neste exemplo é o <xref:System.Windows.Controls.ContentControl.Content%2A> propriedade de um <xref:System.Windows.Controls.Button> controle usando quadros-chave.  

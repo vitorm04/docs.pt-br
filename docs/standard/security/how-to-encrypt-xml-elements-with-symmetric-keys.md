@@ -19,11 +19,11 @@ ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097506"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177190"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Como criptografar elementos XML com chaves simétricas
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar um elemento em um documento XML.  Criptografia XML permite armazenar ou transportar XML confidencial, sem se preocupar com os dados que está sendo lidos com facilidade.  Esse procedimento descriptografa um elemento XML usando o algoritmo de criptografia AES (padrão avançado), também conhecido como Rijndael.  

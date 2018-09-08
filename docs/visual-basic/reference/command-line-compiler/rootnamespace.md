@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60cd661fe321c7bc3346f4d20e373240d6c35b5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13bce09ca9fd1ae9ebb919a9245d8ccf87fbde1d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653154"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174153"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 Especifica um namespace para todas as declarações de tipo.  
@@ -31,25 +31,26 @@ Especifica um namespace para todas as declarações de tipo.
   
 |Termo|Definição|  
 |---|---|  
-|`namespace`|O nome do namespace no qual colocar todas as declarações de tipo para o projeto atual.|  
+|`namespace`|O nome do namespace no qual Circunscrever todas as declarações de tipo para o projeto atual.|  
   
 ## <a name="remarks"></a>Comentários  
- Se você usar o arquivo executável do Visual Studio (Devenv.exe) para compilar um projeto criado no ambiente de desenvolvimento integrado do Visual Studio, use `-rootnamespace` para especificar o valor da <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> propriedade. Consulte [opções de linha de comando Devenv](/visualstudio/ide/reference/devenv-command-line-switches) para obter mais informações.  
+ Se você usar o arquivo executável (Devenv.exe) do Visual Studio para compilar um projeto criado no ambiente de desenvolvimento integrado do Visual Studio, use `-rootnamespace` para especificar o valor da <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> propriedade. Ver [opções de linha de comando Devenv](/visualstudio/ide/reference/devenv-command-line-switches) para obter mais informações.  
   
  Use o common language runtime MSIL Disassembler (`Ildasm.exe`) para exibir os nomes de namespace em seu arquivo de saída.  
   
-|Para definir - rootnamespace no ambiente de desenvolvimento integrado do Visual Studio|  
+|Definir - rootnamespace no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Aplicativo**.<br />3.  Modificar o valor de **Namespace raiz** caixa.|  
+|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Aplicativo**.<br />3.  Modificar o valor de **Namespace de raiz** caixa.|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `In.vb` e inclui todas as declarações de tipo no namespace `mynamespace`.  
+ O seguinte código compila `In.vb` e inclui todas as declarações de tipo no namespace `mynamespace`.  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1)  
- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Consulte também
+
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)  
+- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

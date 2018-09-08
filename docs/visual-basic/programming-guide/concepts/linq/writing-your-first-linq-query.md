@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068944"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184305"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escrevendo a primeira consulta LINQ (Visual Basic)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas são expressas em uma linguagem de consulta dedicado. Ao longo do tempo, diferentes linguagens foram desenvolvidas para diferentes tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e o XQuery para XML. Isso torna necessária para o desenvolvedor do aplicativo aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados com suporte.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os diversos provedores do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Para obter uma lista desses provedores, consulte [LINQ (consulta integrada à linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) A regra básica é simple: uma [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fonte de dados é qualquer objeto que dá suporte a genéricos <xref:System.Collections.Generic.IEnumerable%601> interface ou uma interface que herda dela.  
+ Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os diversos provedores do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Para obter uma lista desses provedores, consulte [LINQ (consulta integrada à linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) A regra básica é simple: uma [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fonte de dados é qualquer objeto que dá suporte a genéricos <xref:System.Collections.Generic.IEnumerable%601> interface ou uma interface que herda dela.  
   
 > [!NOTE]
 >  Tipos, como <xref:System.Collections.ArrayList> que dão suporte a não genérica <xref:System.Collections.IEnumerable> interface também pode ser usado como [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fontes de dados. Para obter um exemplo que usa um <xref:System.Collections.ArrayList>, consulte [como: consultar um ArrayList com LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Você também pode causar uma consulta a ser executada usando um `IEnumerable` método, como o <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> método.  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao LINQ no Visual Basic](getting-started-with-linq.md)  
- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)  
- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Introdução ao LINQ no Visual Basic](getting-started-with-linq.md)  
+- [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)  
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)

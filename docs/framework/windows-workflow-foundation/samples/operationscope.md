@@ -3,11 +3,11 @@ title: OperationScope
 ms.date: 03/30/2017
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
 ms.openlocfilehash: 562fd9c8ff964cb997012d49600bce73d4441465
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075625"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177108"
 ---
 # <a name="operationscope"></a>OperationScope
 Este exemplo demonstra como as atividades, <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply> de mensagens podem ser usados para expor uma atividade personalizado existente como uma operação em um serviço de fluxo de trabalho. Este exemplo inclui uma nova atividade personalizado chamada `OperationScope`. Se destina a tornar o desenvolvimento de um serviço de fluxo de trabalho permitir que os usuários criarem o corpo das operações separadamente como atividades personalizados e então facilmente expostos como as operações de serviço usando a atividade de `OperationScope` . Por exemplo, uma atividade personalizado de `Add` que aceita dois argumentos e retornos de `in` um argumento de `out` pode ser exposta como uma operação de `Add` no serviço de fluxo de trabalho soltando na `OperationScope`.  

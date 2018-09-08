@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b1e5784de277d59c7bc945cbe7b605653eec7bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571011"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185630"
 ---
 # <a name="equality-operators"></a>Operadores de igualdade
 Esta seção discute a sobrecarga de operadores de igualdade e refere-se ao `operator==` e `operator!=` como operadores de igualdade.  
@@ -25,11 +25,11 @@ Esta seção discute a sobrecarga de operadores de igualdade e refere-se ao `ope
   
  **✓ DO** Certifique-se de que <xref:System.Object.Equals%2A?displayProperty=nameWithType> e os operadores de igualdade têm exatamente a mesma semântica e as características de desempenho semelhante.  
   
- Isso geralmente significa que `Object.Equals` precisa ser substituído quando os operadores de igualdade estão sobrecarregados.  
+ Isso significa que muitas vezes `Object.Equals` precisa ser substituído quando os operadores de igualdade são sobrecarregados.  
   
  **X AVOID** Lançando exceções de operadores de igualdade.  
   
- Por exemplo, retornará false se um dos argumentos for nulo, em vez de gerar `NullReferenceException`.  
+ Por exemplo, retornar false se um dos argumentos for nulo em vez de gerar `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Operadores de igualdade em tipos de valor  
  **✓ DO** sobrecarregar os operadores de igualdade em tipos de valor, se a igualdade é significativa.  
@@ -39,16 +39,17 @@ Esta seção discute a sobrecarga de operadores de igualdade e refere-se ao `ope
 ## <a name="equality-operators-on-reference-types"></a>Operadores de igualdade em tipos de referência  
  **X AVOID** sobrecarregar os operadores de igualdade em tipos de referência mutável.  
   
- Muitos idiomas tem operadores de igualdade internos para tipos de referência. Os operadores internos geralmente implementam a igualdade de referência e muitos desenvolvedores estão surpresos quando o comportamento padrão é alterado para a igualdade de valor.  
+ Muitos idiomas têm operadores de igualdade interna para tipos de referência. Os operadores internos geralmente implementam a igualdade de referência, e muitos desenvolvedores estão surpresos quando o comportamento padrão é alterado para a igualdade de valor.  
   
- Esse problema é reduzido para tipos de referência imutável porque imutabilidade torna muito mais difícil observar a diferença entre a igualdade de referência e de igualdade de valor.  
+ Esse problema é reduzido para tipos de referência imutável porque imutabilidade torna muito difícil observar a diferença entre a igualdade de referência e de igualdade de valor.  
   
  **X AVOID** sobrecarregar os operadores de igualdade em tipos de referência, se a implementação seria significativamente mais lenta do que o de igualdade de referência.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
- [Diretrizes de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

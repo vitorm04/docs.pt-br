@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
 ms.openlocfilehash: e6e81a6e0819ba3eb39a1c568e6872414e671544
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43860612"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183386"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Como especificar uma posição de pop-up personalizada
 Este exemplo mostra como especificar uma posição personalizada para um <xref:System.Windows.Controls.Primitives.Popup> controlar quando o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> estiver definida como <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  

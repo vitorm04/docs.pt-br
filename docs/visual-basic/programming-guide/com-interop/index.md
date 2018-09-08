@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871053"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183165"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidade COM (Visual Basic)
 O COM (Component Object Model) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Atualmente, a maioria dos softwares incluem objetos COM. Embora os assemblies .NET sejam a melhor opção para novos aplicativos, algumas vezes será preciso empregar objetos COM. Esta seção aborda alguns dos problemas associados com a criação e uso de objetos COM o Visual Basic.  
@@ -50,10 +50,10 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
  [Interoperação com código não gerenciado](../../../framework/interop/index.md)  
  Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.  
   
- [Expondo componentes do COM ao .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Expondo componentes do COM ao .NET Framework](../../../framework/interop/exposing-com-components.md)  
  Descreve o processo de chamada de tipos COM por meio da interoperabilidade COM.  
   
- [Expondo componentes do .NET Framework ao COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Expondo componentes do .NET Framework ao COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Descreve a preparação e o uso de tipos gerenciados do COM.  
   
  [Aplicando atributos de interoperabilidade](../../../framework/interop/applying-interop-attributes.md)  
