@@ -3,19 +3,19 @@ title: Somente os oito primeiros caracteres de um nome de log personalizado são
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064271"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185171"
 ---
-# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="852fa-102">Somente os oito primeiros caracteres de um nome de log personalizado são significativos</span><span class="sxs-lookup"><span data-stu-id="852fa-102">Only the first eight characters of a custom log name are significant</span></span>
-<span data-ttu-id="852fa-103">Ao verificar os nomes de log de eventos para exclusividade, somente os oito primeiros caracteres são considerados.</span><span class="sxs-lookup"><span data-stu-id="852fa-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="852fa-104">Um conflito pode resultar de logs de eventos que compartilham seus primeiros oito caracteres.</span><span class="sxs-lookup"><span data-stu-id="852fa-104">A conflict may result from event logs that share their first eight characters.</span></span>  
+# <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a><span data-ttu-id="e8007-102">Somente os oito primeiros caracteres de um nome de log personalizado são significativos</span><span class="sxs-lookup"><span data-stu-id="e8007-102">Only the first eight characters of a custom log name are significant</span></span>
+<span data-ttu-id="e8007-103">Ao verificar os nomes de log de eventos para exclusividade, somente os oito primeiros caracteres são considerados.</span><span class="sxs-lookup"><span data-stu-id="e8007-103">When checking event log names for uniqueness, only the first eight characters are considered.</span></span> <span data-ttu-id="e8007-104">Um conflito pode resultar de logs de eventos que compartilham seus primeiros oito caracteres.</span><span class="sxs-lookup"><span data-stu-id="e8007-104">A conflict may result from event logs that share their first eight characters.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="852fa-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="852fa-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e8007-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="e8007-105">To correct this error</span></span>  
   
--   <span data-ttu-id="852fa-106">Nomeie o log de eventos nos quais os oito primeiros caracteres são exclusivos.</span><span class="sxs-lookup"><span data-stu-id="852fa-106">Give the event log a name in which the first eight characters are unique.</span></span>  
+-   <span data-ttu-id="e8007-106">Nomeie o log de eventos nos quais os oito primeiros caracteres são exclusivos.</span><span class="sxs-lookup"><span data-stu-id="e8007-106">Give the event log a name in which the first eight characters are unique.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="852fa-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="852fa-107">See Also</span></span>  
- [<span data-ttu-id="852fa-108">Como: criar e remover os Logs de eventos personalizados</span><span class="sxs-lookup"><span data-stu-id="852fa-108">How to: Create and Remove Custom Event Logs</span></span>](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
- [<span data-ttu-id="852fa-109">Administrando os Logs de eventos</span><span class="sxs-lookup"><span data-stu-id="852fa-109">Administering Event Logs</span></span>](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
+## <a name="see-also"></a><span data-ttu-id="e8007-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e8007-107">See Also</span></span>  
+ [<span data-ttu-id="e8007-108">Como: criar e remover os Logs de eventos personalizados</span><span class="sxs-lookup"><span data-stu-id="e8007-108">How to: Create and Remove Custom Event Logs</span></span>](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
+ [<span data-ttu-id="e8007-109">Administrando os Logs de eventos</span><span class="sxs-lookup"><span data-stu-id="e8007-109">Administering Event Logs</span></span>](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)

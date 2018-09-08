@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866969"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180326"
 ---
-# <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="a8f04-102">Opção &lt;palavra-chave&gt; instrução</span><span class="sxs-lookup"><span data-stu-id="a8f04-102">Option &lt;keyword&gt; Statement</span></span>
-<span data-ttu-id="a8f04-103">Apresenta uma declaração que especifica uma opção de compilador que se aplica ao arquivo de origem inteira.</span><span class="sxs-lookup"><span data-stu-id="a8f04-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
+# <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="70d5b-102">Opção &lt;palavra-chave&gt; instrução</span><span class="sxs-lookup"><span data-stu-id="70d5b-102">Option &lt;keyword&gt; Statement</span></span>
+<span data-ttu-id="70d5b-103">Apresenta uma declaração que especifica uma opção de compilador que se aplica ao arquivo de origem inteira.</span><span class="sxs-lookup"><span data-stu-id="70d5b-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a8f04-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="a8f04-104">Remarks</span></span>  
- <span data-ttu-id="a8f04-105">As opções do compilador podem controlar se todas as variáveis devem ser declaradas explicitamente, se a reduzir conversões de tipo deve ser explícita ou se cadeias de caracteres devem ser comparadas como texto ou binárias quantidades.</span><span class="sxs-lookup"><span data-stu-id="a8f04-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="70d5b-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="70d5b-104">Remarks</span></span>  
+ <span data-ttu-id="70d5b-105">As opções do compilador podem controlar se todas as variáveis devem ser declaradas explicitamente, se a reduzir conversões de tipo deve ser explícita ou se cadeias de caracteres devem ser comparadas como texto ou binárias quantidades.</span><span class="sxs-lookup"><span data-stu-id="70d5b-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
   
- <span data-ttu-id="a8f04-106">O `Option` palavra-chave pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="a8f04-106">The `Option` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="70d5b-106">O `Option` palavra-chave pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="70d5b-106">The `Option` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="a8f04-107">Instrução Option Compare</span><span class="sxs-lookup"><span data-stu-id="a8f04-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="70d5b-107">Instrução Option Compare</span><span class="sxs-lookup"><span data-stu-id="70d5b-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
- [<span data-ttu-id="a8f04-108">Instrução Option Explicit</span><span class="sxs-lookup"><span data-stu-id="a8f04-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="70d5b-108">Instrução Option Explicit</span><span class="sxs-lookup"><span data-stu-id="70d5b-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="a8f04-109">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="a8f04-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="70d5b-109">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="70d5b-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [<span data-ttu-id="a8f04-110">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="a8f04-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="70d5b-110">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="70d5b-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a8f04-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a8f04-111">See Also</span></span>  
- [<span data-ttu-id="a8f04-112">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="a8f04-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="70d5b-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="70d5b-111">See Also</span></span>  
+ [<span data-ttu-id="70d5b-112">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="70d5b-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
