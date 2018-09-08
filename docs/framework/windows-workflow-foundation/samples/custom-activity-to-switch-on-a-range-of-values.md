@@ -3,11 +3,11 @@ title: Atividade personalizado para iniciar um intervalo de valores
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133237"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195300"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Atividade personalizado para iniciar um intervalo de valores
 Este exemplo demonstra como criar uma atividade personalizado que estende o uso de <xref:System.Activities.Statements.Switch%601>. Uma declaração convencional de <xref:System.Activities.Statements.Switch%601> permite alternar baseado em um único valor. Mas, há situações onde comerciais uma atividade deve alternar baseado em um intervalo de valores. Por exemplo, uma atividade pode executar uma ação quando o valor que está sendo alternado na está entre 1 e 5, outra ação quando o valor está entre 6 e 10, e uma ação padrão para todos os outros valores. Esta atividade personalizado permite exatamente esse cenário.  

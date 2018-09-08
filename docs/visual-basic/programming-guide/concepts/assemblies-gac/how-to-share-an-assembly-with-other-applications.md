@@ -2,12 +2,12 @@
 title: 'Como: compartilhar um Assembly com outros aplicativos (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062891"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200136"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Como: compartilhar um Assembly com outros aplicativos (Visual Basic)
 Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria dos programas simples consistem em um assembly particular porque eles não se destinam a serem usados por outros aplicativos.  
@@ -24,8 +24,10 @@ Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria d
   
 4.  Adicione o assembly no cache de assembly global. Para obter mais informações, consulte [Como instalar um assembly no cache de assembly global](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Acesse, de outros aplicativos, os tipos contidos no assembly. Para obter mais informações, consulte [Como referenciar um assembly de nome forte](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Acesse, de outros aplicativos, os tipos contidos no assembly. Para obter mais informações, consulte [Como referenciar um assembly de nome forte](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Conceitos de programação](../../../../visual-basic/programming-guide/concepts/index.md) [Assemblies e Cache de Assembly Global (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a>Consulte também
+
+- [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Assemblies e o cache de assembly global (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)

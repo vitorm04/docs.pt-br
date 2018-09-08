@@ -5,58 +5,49 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ca495c23b30144013b8efe22b7bf6f3cf38b16cd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524359"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195693"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como criar certificados temporários para uso durante o desenvolvimento
-Ao desenvolver um serviço seguro ou o cliente usando o Windows Communication Foundation (WCF), muitas vezes é necessário fornecer um certificado X.509 a ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente na autoridade raiz é de sua organização ou a unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico explica as etapas para criar esses dois certificados usando o [ferramenta de criação de certificado (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185), que é fornecido pelo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
+Ao desenvolver um serviço seguro ou o cliente usando o Windows Communication Foundation (WCF), muitas vezes é necessário fornecer um certificado X.509 a ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrado no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você definir o escopo de um conjunto de certificados onde normalmente na autoridade raiz é de sua organização ou a unidade de negócios. Para emular isso em tempo de desenvolvimento, você pode criar dois certificados para satisfazer os requisitos de segurança. A primeira é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis, e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do Local do computador local ou o repositório pessoal das Local do usuário atual. Este tópico explica as etapas para criar esses dois certificados usando o Powershell [New-SelfSignedCertificate)](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) cmdlet.  
   
 > [!IMPORTANT]
->  Os certificados que gera a ferramenta de criação de certificação são fornecidos somente para testes. Ao implantar um serviço ou cliente, certifique-se de usar um certificado apropriado fornecido por uma autoridade de certificação. Isso pode ser de um [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] certificado de servidor em sua organização ou por terceiros.  
+>  Os certificados que o cmdlet New-SelfSignedCertificate gera são fornecidos somente para testes. Ao implantar um serviço ou cliente, certifique-se de usar um certificado apropriado fornecido por uma autoridade de certificação. Isso pode ser de um servidor de certificados do Windows Server em sua organização ou por terceiros.  
 >   
->  Por padrão, o [Makecert.exe (Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) cria certificados de autoridade cuja raiz é chamada "agência raiz **."** Como a agência"raiz" não está no repositório de autoridades de certificação raiz confiáveis, assim, esses certificados inseguro. Criando um certificado autoassinado que é colocado em autoridades de certificação raiz confiáveis store permite que você crie um ambiente de desenvolvimento que mais de perto simula o ambiente de implantação.  
+>  Por padrão, o [New-SelfSignedCertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) cmdlet cria certificados autoassinados e esses certificados são inseguros. Colocando os certificados autoassinados em autoridades de certificação raiz confiáveis store permite que você crie um ambiente de desenvolvimento que mais de perto simula o ambiente de implantação.  
   
  Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Para obter mais informações sobre como usar um certificado como uma credencial, consulte [protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Para obter um tutorial sobre como usar a tecnologia Microsoft Authenticode, consulte [visões gerais de Authenticode e tutoriais](https://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para criar um certificado de autoridade raiz autoassinado e exportar a chave privada  
   
-1.  Use a ferramenta de MakeCert.exe com as seguintes opções:  
-  
-    1.  `-n` `subjectName`. Especifica o nome da entidade. A convenção é prefixar o nome da entidade com "CN =" de "Common Name".  
-  
-    2.  `-r`. Especifica que o certificado autoassinado.  
-  
-    3.  `-sv` `privateKeyFile`. Especifica o arquivo que contém o contêiner de chave privada.  
-  
-     Por exemplo, o comando a seguir cria um certificado autoassinado com o nome da entidade "CN = TempCA."  
-  
-    ```  
-    makecert -n "CN=TempCA" -r -sv TempCA.pvk TempCA.cer  
-    ```  
-  
-     Você será solicitado a fornecer uma senha para proteger a chave privada. Esta senha é necessária quando a criação de um certificado assinado por esse certificado raiz.  
-  
+O comando a seguir cria um certificado autoassinado com o nome da entidade "RootCA" no repositório pessoal do usuário atual. 
+```
+PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+```
+É necessário exportar o certificado para um arquivo PFX para que ele possa ser importado para onde são necessários em uma etapa posterior. Ao exportar um certificado com a chave privada, é necessária uma senha para protegê-lo. Vamos salvar a senha em um `SecureString` e usar o [Export-PfxCertificate](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps) cmdlet para exportar o certificado com a chave privada associada a um arquivo PFX. Podemos também salvar apenas o certificado público em um arquivo de CRT usando o [certificado de exportação](https://docs.microsoft.com/en-us/powershell/module/pkiclient/export-certificate?view=win10-ps) cmdlet.
+```
+PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+```
+
 ### <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Para criar um novo certificado assinado por um certificado de autoridade raiz  
   
-1.  Use a ferramenta de MakeCert.exe com as seguintes opções:  
-  
-    1.  `-sk` `subjectKey`. O local do contêiner de chave da entidade que contém a chave privada. Se um contêiner de chave não existir, ele é criado. Se nenhuma das opções de sk - ou - VA for usada, um contêiner de chave chamado JoeSoft é criado por padrão.  
-  
-    2.  `-n` `subjectName`. Especifica o nome da entidade. A convenção é prefixar o nome da entidade com "CN =" de "Common Name".  
-  
-    3.  `-iv` `issuerKeyFile`. Especifica o arquivo de chave privada do emissor.  
-  
-    4.  `-ic` `issuerCertFile`. Especifica o local do certificado do emissor.  
-  
-     Por exemplo, o comando a seguir cria um certificado assinado pela `TempCA` certificado de autoridade raiz com um nome de entidade `"CN=SignedByCA"` usando a chave privada do emissor.  
-  
-    ```  
-    makecert -sk SignedByCA -iv TempCA.pvk -n "CN=SignedByCA" -ic TempCA.cer SignedByCA.cer -sr currentuser -ss My  
-    ```  
+O comando a seguir cria um certificado assinado pelo `RootCA` com um nome de assunto de "SignedByRootCA" usando a chave privada do emissor.
+```
+PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert 
+```
+Da mesma forma, salvamos o certificado assinado com a chave privada em um arquivo PFX e a chave pública em um arquivo de CRT.
+```
+PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword 
+PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt        
+```
   
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Instalação de um certificado de Store de autoridades de certificação raiz confiável  
  Depois de criar um certificado autoassinado, você pode instalá-lo no repositório de autoridades de certificação raiz confiáveis. Todos os certificados são assinados com o certificado no momento são confiáveis para o computador. Por esse motivo, exclua o certificado do armazenamento assim que você não precisa mais dela. Quando você excluir este certificado de autoridade raiz, todos os outros certificados assinados com ela se tornou não autorizados. Certificados de autoridade raiz são simplesmente um mecanismo pelo qual um grupo de certificados pode ser definido conforme o necessário. Por exemplo, em aplicativos ponto a ponto, há geralmente sem a necessidade de uma autoridade raiz porque você simplesmente confia na identidade de um indivíduo por seu certificado fornecido.  

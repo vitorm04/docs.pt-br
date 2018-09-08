@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870205"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198927"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -85,12 +85,12 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
  Ao criar um autenticador personalizado, o método mais importante para substituição é o método <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Para obter um exemplo de autenticação personalizada, confira a amostra [Validador de certificado X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Para obter mais informações, confira [Credencial personalizada e validação de credenciais](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Usando Makecert.exe para criar uma cadeia de certificado  
- A ferramenta de criação de certificado (Makecert.exe) cria certificados X.509 e pares de chave privada/chave pública. Você pode salvar a chave privada no disco e, em seguida, usá-la para emitir e assinar novos certificados, simulando uma hierarquia de certificados encadeados. A ferramenta é destinada para uso somente como uma ajuda ao desenvolver serviços e nunca deve ser usada para criar certificados para implantação real. Ao desenvolver um serviço WCF, use as etapas a seguir para criar uma cadeia de confiança com Makecert.exe.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Usando o Cmdlet do Powershell New-SelfSignedCertificate para criar uma cadeia de certificados  
+ O cmdlet New-SelfSignedCertificate do Powershell cria certificados X.509 e pares de chaves de chave pública/privados. Você pode salvar a chave privada no disco e, em seguida, usá-la para emitir e assinar novos certificados, simulando uma hierarquia de certificados encadeados. O cmdlet destina para uso somente como uma ajuda ao desenvolver serviços e nunca deve ser usado para criar certificados para implantação real. Ao desenvolver um serviço WCF, use as seguintes etapas para criar uma cadeia de confiança com o cmdlet New-SelfSignedCertificate.  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Para criar uma cadeia de confiança com Makecert.exe  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Para criar uma cadeia de confiança com o cmdlet New-SelfSignedCertificate  
   
-1.  Crie um certificado temporário de autoridade (autoassinado) usando a ferramenta MakeCert.exe. Salve a chave privada no disco.  
+1.  Crie um certificado (autoassinado) da autoridade de raiz temporário usando o cmdlet New-SelfSignedCertificate. Salve a chave privada no disco.  
   
 2.  Use o novo certificado para emitir outro certificado que contém a chave pública.  
   

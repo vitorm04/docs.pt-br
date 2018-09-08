@@ -3,11 +3,11 @@ title: Computações lentas (F#)
 description: 'Saiba como as computações lentas do F # podem melhorar o desempenho de seus aplicativos e bibliotecas.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037062"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201616"
 ---
 # <a name="lazy-computations"></a>Computações lentas
 

@@ -3,11 +3,11 @@ title: Sistema de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 270b0981214e674d220025ad52c7c94ee3a66224
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878215"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196927"
 ---
 # <a name="type-system-entity-sql"></a>Sistema de tipo (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] dá suporte a vários tipos:  
@@ -39,7 +39,7 @@ ms.locfileid: "43878215"
   
 -   [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
   
- Você pode navegar com uma referência usando o operador de acesso a membro (ponto) (`.`). O trecho de código a seguir na propriedade id (ordem) para navegar através da propriedade de r (referência).  
+ Você pode navegar com uma referência usando o operador de acesso a membro (ponto) (`.`). O snippet a seguir na propriedade id (ordem) para navegar através da propriedade de r (referência).  
   
 ```  
 select o2.r.Id   

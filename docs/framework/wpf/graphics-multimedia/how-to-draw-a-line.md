@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
 ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870179"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198615"
 ---
 # <a name="how-to-draw-a-line"></a>Como desenhar uma linha
 Este exemplo mostra como desenhar linhas, usando o <xref:System.Windows.Shapes.Line> elemento.  

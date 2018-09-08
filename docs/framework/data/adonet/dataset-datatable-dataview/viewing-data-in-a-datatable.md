@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874687"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202135"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Exibindo dados em uma DataTable
 Você pode acessar o conteúdo de um <xref:System.Data.DataTable> usando o **linhas** e **colunas** coleções do **DataTable**. Você também pode usar o <xref:System.Data.DataTable.Select%2A> método para retornar subconjuntos de dados em um **DataTable** acordo com critérios, incluindo os critérios de pesquisa, ordem de classificação e estado de linha. Além disso, você pode usar o <xref:System.Data.DataRowCollection.Find%2A> método da **DataRowCollection** ao pesquisar por uma linha específica usando um valor de chave primária.  

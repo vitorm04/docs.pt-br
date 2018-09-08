@@ -3,11 +3,11 @@ title: Atividade de política no .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
 ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44048062"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208699"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Atividade de política no .NET Framework 4.5
 A atividade Policy4 permite que o Windows Workflow Foundation no [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> objetos para serem usados no Windows Workflow Foundation no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (4,5 WCF) diretamente usando o mecanismo de regras que é enviado em WF 3,5. Usando esta atividade, você pode criar e executar um WF 3,5 <xref:System.Workflow.Activities.Rules.RuleSet>. Para obter mais informações sobre o mecanismo de regras WF 3,5 incluído como parte do Windows Workflow Foundation, leia a introdução ao mecanismo de regras do Windows Workflow Foundation. Para obter mais informações sobre migração regras WF na [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], leia [orientação de migração](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

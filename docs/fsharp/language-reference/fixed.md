@@ -3,11 +3,11 @@ title: 'A palavra-chave Fixed (F #)'
 description: "Saiba como você pode \"pin\" um local para a pilha para evitar a coleta com o F # 'fixed' palavra-chave."
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039271"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201407"
 ---
 # <a name="the-fixed-keyword"></a>A palavra-chave Fixed
 

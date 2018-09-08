@@ -1,6 +1,6 @@
 ---
 title: Contratos de código
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080602"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222117"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código. As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade. As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado. As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- As invariáveis são definidas condicionalmente pelo símbolo do pré-processador CONTRACTS_FULL. Durante a verificação em tempo de execução, as invariáveis são verificadas ao final de cada método público. Se uma invariável mencionar um método público na mesma classe, a verificação de invariáveis que normalmente ocorre ao final do método público será desabilitada. Em vez disso, a verificação ocorrerá somente ao final da chamada de método externa para essa classe. Isso também ocorrerá se a classe for inserida novamente devido a uma chamada a um método em outra classe. As invariáveis não são verificadas quanto aos finalizadores de objeto ou quantos a métodos que implementam o método <xref:System.IDisposable.Dispose%2A>.  
+ As invariáveis são definidas condicionalmente pelo símbolo do pré-processador CONTRACTS_FULL. Durante a verificação em tempo de execução, as invariáveis são verificadas ao final de cada método público. Se uma invariável mencionar um método público na mesma classe, a verificação de invariáveis que normalmente ocorre ao final do método público será desabilitada. Em vez disso, a verificação ocorrerá somente ao final da chamada de método externa para essa classe. Isso também ocorrerá se a classe for inserida novamente devido a uma chamada a um método em outra classe. As invariáveis não são verificadas para um finalizador do objeto e um <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Diretrizes de uso  
