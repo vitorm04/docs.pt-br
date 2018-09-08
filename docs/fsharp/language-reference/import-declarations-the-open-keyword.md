@@ -3,11 +3,11 @@ title: 'Declarações de importação: a palavra-chave open (F#)'
 description: 'Saiba mais sobre declarações de importação do F # e como elas especificam um módulo ou namespace cujos elementos que você pode referenciar sem usar um nome totalmente qualificado.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130179"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191984"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Declarações de importação: A `open` palavra-chave
 

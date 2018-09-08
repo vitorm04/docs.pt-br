@@ -3,11 +3,11 @@ title: Dados grandes e streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079754"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192568"
 ---
 # <a name="large-data-and-streaming"></a>Dados grandes e streaming
 Windows Communication Foundation (WCF) é uma infra-estrutura de comunicações baseadas em XML. Porque os dados XML geralmente são codificados no formato de texto padrão definido na [especificação XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)e conectadas arquitetos e desenvolvedores de sistemas normalmente estão preocupados a superfície eletrônica (ou tamanho) de mensagens enviadas entre a rede e a codificação baseada em texto do XML apresenta desafios para a transferência eficiente de dados binários.  

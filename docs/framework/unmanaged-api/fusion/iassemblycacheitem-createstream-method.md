@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079156"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193634"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>Método IAssemblyCacheItem::CreateStream
 Cria um fluxo com o nome especificado e o formato.  

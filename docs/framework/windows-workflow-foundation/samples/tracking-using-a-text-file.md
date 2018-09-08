@@ -3,11 +3,11 @@ title: Controlar usando um arquivo de texto
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
 ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081584"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191281"
 ---
 # <a name="tracking-using-a-text-file"></a>Controlar usando um arquivo de texto
 Este exemplo demonstra como estender o rastreamento do Windows Workflow Foundation (WF), criando um participante personalizado. Os participantes de rastreamento são as classes do.NET Framework que recebem registros de rastreamento em tempo de execução que são emitidas. Você pode criar um participante de controle para transmitir os eventos de rastreamento a qualquer destino é necessário para sua situação. Por exemplo, o participante de rastreamento (ETW de rastreamento do Windows) é fornecido como parte de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. O participante de rastreamento neste exemplo grava os registros no formato XML para um arquivo de texto.  
