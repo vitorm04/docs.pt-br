@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067637"
+ms.locfileid: "44131575"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Solucionando problemas de criação do controle e do componente
 Este tópico lista os seguintes problemas comuns que podem surgir ao desenvolver componentes e controles. Para obter mais informações, consulte [Programando com componentes](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: 10cdf5b8cf475c95e086b447b36a569da2173fa9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802629"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44141029"
 ---
 # <a name="imaging-overview"></a>Visão geral da geração de imagens
 Este tópico é uma introdução ao [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. O [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite aos desenvolvedores exibir, transformar e formatar imagens.  

@@ -11,11 +11,11 @@ ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046769"
+ms.locfileid: "44139950"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Segurança e geração de código durante a execução
 Algumas bibliotecas operam por geração de código e executá-lo para executar alguma operação para o chamador. O problema básico é a geração de código em nome do código de confiança menor e executá-lo em uma relação de confiança mais alto. O problema piora quando o chamador pode influenciar a geração de código, portanto, você deve garantir que somente o código que você considerar seguros é gerado.  

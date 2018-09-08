@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066448"
+ms.locfileid: "44138364"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Como criar um controle associado simples em um Windows Form
 Com a *associação simples*, é possível exibir um elemento de dados simples, como um valor de coluna de uma tabela de dados em um controle. Você pode associar de maneira simples qualquer propriedade de um controle a um valor de dados.  

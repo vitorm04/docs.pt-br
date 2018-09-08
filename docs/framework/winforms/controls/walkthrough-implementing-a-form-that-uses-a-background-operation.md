@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777984"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135881"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Instruções passo a passo: implementando um formulário que usa uma operação em segundo plano
 Se você tiver uma operação que levará muito tempo para ser concluída, e não desejar sua interface do usuário (UI) para parar de responder ou "parada", você pode usar o <xref:System.ComponentModel.BackgroundWorker> classe para executar a operação em outro thread.  
@@ -163,11 +163,12 @@ Se você tiver uma operação que levará muito tempo para ser concluída, e nã
     > [!CAUTION]
     >  O uso de multithreading de qualquer tipo pode expor o computador a bugs muito sérios e complexos. Consulte as [Melhores práticas de threading gerenciado](../../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Práticas recomendadas de threading gerenciado](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [Multithreading em componentes](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [NÃO ESTÁ NO BUILD: multithreading no Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Como implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Passo a passo: executando uma operação em segundo plano](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [Componente BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- [Threading gerenciado](../../../../docs/standard/threading/index.md)
+- [Práticas recomendadas de threading gerenciado](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [Visão Geral do Padrão Assíncrono Baseado em Evento](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Como implementar um formulário que usa uma operação em segundo plano](how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [Passo a passo: executando uma operação em segundo plano](walkthrough-running-an-operation-in-the-background.md)
+- [Componente BackgroundWorker](backgroundworker-component.md)

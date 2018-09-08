@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59f8ceaf7981aebf3ae64e10d253004780f47e50
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062995"
+ms.locfileid: "44133841"
 ---
 # <a name="net-framework-performance"></a>Desempenho do .NET Framework
 Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o desempenho da mesma forma como projetaria qualquer outro recurso do aplicativo. É possível usar as ferramentas fornecidas pela Microsoft para medir o desempenho do aplicativo e, se necessário, fazer melhorias no uso da memória, na produtividade de código e na capacidade de resposta. Este tópico lista as ferramentas de análise de desempenho que a Microsoft fornece, além de fornecer links a outros tópicos que abordam o desempenho em áreas específicas do desenvolvimento de aplicativo.  

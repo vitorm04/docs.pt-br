@@ -3,11 +3,11 @@ title: 'Ponto de extremidade: sessões de transmissão de mensagens confiáveis 
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
 ms.openlocfilehash: f6b48ec4c37c28588dd874a5bfa94a01a2f43b0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037640"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135673"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a>Ponto de extremidade: sessões de transmissão de mensagens confiáveis com falha por segundo
 Nome do contador: Sessões de Reliable Messaging com falha por segundo.  

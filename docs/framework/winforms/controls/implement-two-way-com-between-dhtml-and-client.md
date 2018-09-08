@@ -15,11 +15,11 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749646"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129028"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente
 Você pode usar o <xref:System.Windows.Forms.WebBrowser> controle para adicionar o código do aplicativo Web do DHTML (HTML) dinâmico existente para seus aplicativos de cliente do Windows Forms. Isso é útil quando você tiver investido tempo de desenvolvimento significativo na criação de controles com base em DHTML e quiser aproveitar os recursos de interface do usuário avançada dos Windows Forms sem reescrever o código existente.  

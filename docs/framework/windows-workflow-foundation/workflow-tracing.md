@@ -3,11 +3,11 @@ title: Rastreamento de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43799246"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129543"
 ---
 # <a name="workflow-tracing"></a>Rastreamento de fluxo de trabalho
 Oferece de rastreamento de fluxo de trabalho uma maneira para capturar informações de diagnóstico usando os ouvintes de rastreamento do .NET Framework. O rastreamento podem ser ativado se é um problema detectado com o aplicativo e desativado novamente o problema é resolvido uma vez. Há duas maneiras que você pode ativar o rastreamento de depuração para fluxos de trabalho. Você poderá configurá-lo usando o visualizador de rastreamento do evento ou você pode usar <xref:System.Diagnostics> para enviar os eventos de rastreamento em um arquivo.  

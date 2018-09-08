@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c77f08cd573dc40083718b783ae01233ca00766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573549"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129796"
 ---
 # <a name="member-overloading"></a>Sobrecarga de membro
-Membro sobrecarga significa criar dois ou mais membros do mesmo tipo que diferem apenas o número ou tipo de parâmetros, mas que têm o mesmo nome. Por exemplo, em seguida, o `WriteLine` método está sobrecarregado:  
+Sobrecarga de membro significa criar dois ou mais membros no mesmo tipo que diferem somente no número ou tipo de parâmetros, mas que têm o mesmo nome. Por exemplo, em seguida, o `WriteLine` método está sobrecarregado:  
   
 ```  
 public static class Console {  
@@ -30,21 +30,21 @@ public static class Console {
 }  
 ```  
   
- Como somente métodos, construtores e propriedades indexadas podem ter parâmetros, somente os membros podem ser sobrecarregados.  
+ Como apenas métodos, construtores e propriedades indexadas podem ter parâmetros, somente os membros podem ser sobrecarregados.  
   
- Sobrecarga é uma das técnicas mais importantes para melhorar a legibilidade de bibliotecas reutilizáveis, produtividade e usabilidade. Sobrecarga no número de parâmetros torna possível fornecer versões mais simples de construtores e métodos. Sobrecarga no tipo de parâmetro torna possível usar o mesmo nome de membro para executar operações idênticas em um conjunto selecionado de tipos diferentes de membros.  
+ Sobrecarga é uma das técnicas mais importantes para melhorar a usabilidade, a produtividade e facilitar a leitura de bibliotecas reutilizáveis. Sobrecarregando o número de parâmetros torna possível fornecer versões mais simples dos construtores e métodos. Sobrecarga no tipo de parâmetro torna possível usar o mesmo nome de membro para executar operações idêntico em um conjunto selecionado de diferentes tipos de membros.  
   
  **✓ DO** tente usar nomes de parâmetro descritivo para indicar o padrão usado por sobrecargas mais curto.  
   
  **X AVOID** arbitrariamente diversos nomes de parâmetro em sobrecargas. Se um parâmetro em uma sobrecarga representa a mesma entrada como um parâmetro em outra sobrecarga, os parâmetros devem ter o mesmo nome.  
   
- **X AVOID** inconsistentes na ordem de parâmetros na sobrecarga membros. Parâmetros com o mesmo nome devem aparecer na mesma posição em todas as sobrecargas.  
+ **X AVOID** inconsistentes na ordem de parâmetros na sobrecarga membros. Parâmetros com o mesmo nome deverá aparecer na mesma posição em todas as sobrecargas.  
   
- **✓ DO** fazer somente a maior sobrecarga virtual (se extensibilidade é necessária). Sobrecargas menores devem simplesmente chamar por meio de uma sobrecarga maior.  
+ **✓ DO** fazer somente a maior sobrecarga virtual (se extensibilidade é necessária). Sobrecargas mais curtas devem simplesmente chamar por meio de uma sobrecarga maior.  
   
  **X DO NOT** usar `ref` ou `out` modificadores para sobrecarregar membros.  
   
- Alguns idiomas não é possível resolver chamadas para sobrecargas assim. Além disso, essas sobrecargas geralmente tem semântica completamente diferente e provavelmente não devem ser sobrecargas mas dois métodos separados em vez disso.  
+ Alguns idiomas não podem resolver chamadas para sobrecargas assim. Além disso, essas sobrecargas geralmente têm semânticas completamente diferentes e provavelmente não devem ser sobrecargas, mas dois métodos separados em vez disso.  
   
  **X DO NOT** têm sobrecargas com parâmetros na mesma posição e tipos semelhantes, mas com semânticas diferentes.  
   
@@ -52,12 +52,13 @@ public static class Console {
   
  **✓ DO** usar membro sobrecarga em vez de definir membros com argumentos padrão.  
   
- Argumentos padrão não são compatível com CLS.  
+ Argumentos padrão não estão em conformidade com CLS.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpressas pela permissão de Pearson educação, Inc. de [diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008, Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

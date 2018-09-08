@@ -13,11 +13,11 @@ ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068970"
+ms.locfileid: "44140938"
 ---
 # <a name="protected-members"></a>Membros protegidos
 Membros protegidos por si só não fornecem todos extensibilidade, mas eles podem tornar mais poderosa extensibilidade por meio de subclasse. Eles podem ser usados para expor as opções avançadas de personalização sem complicar desnecessariamente a principal interface pública.  

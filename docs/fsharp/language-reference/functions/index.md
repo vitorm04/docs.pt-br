@@ -2,12 +2,12 @@
 title: Funções (F#)
 description: 'Saiba mais sobre funções em F # e como F # oferece suporte a construções de programação funcionais comuns.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803906"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140912"
 ---
 # <a name="functions"></a>Funções
 
@@ -112,7 +112,7 @@ Em seguida, você forneceria o argumento adicional, conforme o necessário, para
 
 ## <a name="recursive-functions"></a>Funções Recursivas
 
-As *funções recursivas* são funções que chamam a si próprias. Eles exigem que você especifique a palavra-chave **rec** logo após a palavra-chave **let**. Invoque a função recursiva de dentro do corpo da função, exatamente como você invocaria qualquer chamada de função. A função recursiva a seguir calcula o *enésimo* número de Fibonacci. A sequência numérica de Fibonacci é conhecida desde a antiguidade e é uma sequência na qual cada número sucessivo é a soma dos dois números anteriores na sequência.
+As *funções recursivas* são funções que chamam a si próprias. Eles exigem que você especifique a palavra-chave **rec** logo após a palavra-chave **let**. Invoque a função recursiva de dentro do corpo da função, exatamente como você invocaria qualquer chamada de função. A função recursiva a seguir calcula a *n*<sup>th</sup> número Fibonacci. A sequência numérica de Fibonacci é conhecida desde a antiguidade e é uma sequência na qual cada número sucessivo é a soma dos dois números anteriores na sequência.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

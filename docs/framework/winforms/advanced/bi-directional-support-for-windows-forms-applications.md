@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872397"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131955"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
 Você pode usar o Visual Studio para criar aplicativos baseados no Windows que dão suporte a espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos no <xref:System.Windows.Forms.Control> namespace.  

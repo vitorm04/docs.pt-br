@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44066510"
+ms.locfileid: "44127739"
 ---
 # <a name="security-and-user-input"></a>Segurança e entrada do usuário
 Dados de usuário, que é qualquer tipo de entrada (dados de uma solicitação da Web ou URL de entrada para controles de um aplicativo do Microsoft Windows Forms e assim por diante), negativamente pode influenciar o código porque frequentemente esses dados são usados diretamente como parâmetros para chamar outro código. Essa situação é análoga ao código malicioso chame seu código com parâmetros estranhos e as mesmas precauções devem ser tomadas. Entrada do usuário é, na verdade, mais difícil tornar segura porque não há nenhum quadro de pilha para rastrear a presença de dados potencialmente não confiáveis.  

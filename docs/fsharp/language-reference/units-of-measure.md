@@ -2,17 +2,16 @@
 title: Unidades de medida (F#)
 description: 'Saiba como flutuante ponto e valores de inteiro com sinal em F # podem ter associadas a unidades de medida, que normalmente são usadas para indicar o comprimento, volume e em massa.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 6075742ec80d9510be51d4565e3397931c9f68c7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517420"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131254"
 ---
 # <a name="units-of-measure"></a>Unidades de medida
 
 Flutuante ponto e valores de inteiro com sinal em F # pode ter associadas unidades de medida, que normalmente são usadas para indicar o comprimento, volume, em massa, e assim por diante. Ao usar as quantidades com unidades, você habilita o compilador verificar se o aritméticas relações tem as unidades corretas, que ajuda a evitar erros de programação.
-
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,6 +20,7 @@ Flutuante ponto e valores de inteiro com sinal em F # pode ter associadas unidad
 ```
 
 ## <a name="remarks"></a>Comentários
+
 A sintaxe anterior define *nome da unidade* como uma unidade de medida. A parte opcional é usada para definir uma nova medida em termos de unidades definidas anteriormente. Por exemplo, a linha a seguir define a medida `cm` (centímetro).
 
 ```fsharp
@@ -72,7 +72,7 @@ Unidades de medida podem ser aplicadas a qualquer tipo, não apenas tipos de pon
 O exemplo a seguir ilustra o uso de unidades de medida.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
-    
+
 O exemplo de código a seguir ilustra como converter de um número de ponto flutuante sem dimensão em um valor de ponto flutuante dimensionadas. Você apenas multiplicar por 1,0, aplicando as dimensões para a 1.0. Você pode abstrair isso em uma função como `degreesFahrenheit`.
 
 Além disso, quando você passa valores dimensionadas para funções que esperam sem dimensão números de ponto flutuante, você deve cancelar a unidades ou convertido para `float` usando o `float` operador. Neste exemplo, dividir por `1.0<degC>` para os argumentos a serem `printf` porque `printf` espera que as quantidades sem dimensão.
@@ -88,20 +88,23 @@ That temperature in degrees Celsius is    32.22.
 ```
 
 ## <a name="using-generic-units"></a>Usando unidades genéricas
+
 Você pode escrever funções genéricas que operam nos dados que tem uma unidade de medida associada. Fazer isso especificando um tipo junto com uma unidade genérico como um parâmetro de tipo, conforme mostrado no exemplo de código a seguir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
-    
+
 ## <a name="creating-aggregate-types-with-generic-units"></a>Criar tipos de agregação com unidades genéricas
+
 O código a seguir mostra como criar um tipo de agregação que consiste em individuais valores de ponto flutuante que têm unidades que são genéricas. Isso permite que um único tipo a ser criado que funciona com uma variedade de unidades. Além disso, unidades genéricas preservam a segurança de tipos, garantindo que um tipo genérico que tem um conjunto de unidades é um tipo diferente do mesmo tipo genérico com um conjunto diferente de unidades. A base dessa técnica é que o `Measure` atributo pode ser aplicado ao parâmetro de tipo.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
-    
+
 ## <a name="units-at-runtime"></a>Unidades em tempo de execução
+
 Unidades de medida são usadas para verificação de tipo estático. Quando valores de ponto flutuante são compiladas, as unidades de medida são eliminadas, para que as unidades sejam perdidas em tempo de execução. Portanto, qualquer tentativa para implementar a funcionalidade que depende de verificando as unidades de tempo de execução não é possível. Por exemplo, Implementando um `ToString` função para imprimir as unidades não é possível.
 
-
 ## <a name="conversions"></a>Conversões
+
 Para converter um tipo que tem as unidades (por exemplo, `float<'u>`) para um tipo que não tem unidades, você pode usar a função de conversão padrão. Por exemplo, você pode usar `float` para converter em um `float` valor que não tem unidades, conforme mostrado no código a seguir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
@@ -109,10 +112,11 @@ Para converter um tipo que tem as unidades (por exemplo, `float<'u>`) para um ti
 Para converter um valor sem unidade em um valor que tem as unidades, você pode multiplicar por um valor de 1 ou 1.0 é anotado com as unidades apropriadas. No entanto, para gravar as camadas de interoperabilidade, também há algumas funções explícita que você pode usar para converter valores sem unidade em valores com as unidades. Eles estão na [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) módulo. Por exemplo, para converter de um sem unidade `float` para um `float<cm>`, use [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), conforme mostrado no código a seguir.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
-    
+
 ## <a name="units-of-measure-in-the-f-core-library"></a>Unidades de medida na biblioteca do F # Core
+
 Uma biblioteca de unidade está disponível no `FSharp.Data.UnitSystems.SI` namespace. Ele inclui as unidades de SI em sua forma do símbolo (como `m` de medidor) na `UnitSymbols` namespace secundário e seu nome completo (como `meter` de medidor) na `UnitNames` namespace secundário.
 
-
 ## <a name="see-also"></a>Consulte também
-[Referência da Linguagem F#](index.md)
+
+- [Referência da Linguagem F#](index.md)

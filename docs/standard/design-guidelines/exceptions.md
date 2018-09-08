@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876629"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140951"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Diretrizes de design para exceções
 Manipulação de exceção tem muitas vantagens sobre o relatório de erros com base no valor de retorno. Design de boa estrutura ajuda o desenvolvedor do aplicativo perceber os benefícios de exceções. Esta seção aborda os benefícios de exceções e apresenta diretrizes para usá-los com eficiência.  

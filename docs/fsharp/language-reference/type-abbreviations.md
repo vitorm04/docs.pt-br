@@ -3,11 +3,11 @@ title: Abreviações de tipo (F#)
 description: 'Saiba mais sobre as abreviações de tipo F # para dar um nome mais significativo de um tipo para facilitar a leitura do código.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44065429"
+ms.locfileid: "44132890"
 ---
 # <a name="type-abbreviations"></a>Abreviações de tipo
 

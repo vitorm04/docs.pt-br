@@ -2,29 +2,29 @@
 title: Tratando a reentrada em aplicativos assíncronos (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fa1bfcc5cfaf4a3ba1f5116be7b3f1851ce293af
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868096"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129715"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Tratando a reentrada em aplicativos assíncronos (Visual Basic)
 Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possivelmente, evitar a reentrância, que se refere à reinserção de uma operação assíncrona antes de ela ser concluída. Se você não identificar e tratar as possibilidades de reentrância, isso poderá causar resultados inesperados.  
   
  **Neste tópico**  
   
--   [Reconhecendo a reentrância](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Reconhecendo a reentrância](#BKMK_RecognizingReentrancy)  
   
--   [Tratando a reentrância](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Tratando a reentrância](#BKMK_HandlingReentrancy)  
   
-    -   [Desabilitar o botão Iniciar](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton)  
   
-    -   [Cancelar e reiniciar a operação](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart)  
   
-    -   [Executar várias operações e colocar a saída na fila](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Executar várias operações e colocar a saída na fila](#BKMK_RunMultipleOperations)  
   
--   [Examinar e executar o aplicativo de exemplo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Você pode examinar o código que produz esta saída fazendo a rolagem até o final deste tópico. Você pode fazer experimentos com o código baixando a solução em seu computador local e, em seguida, executar o projeto WebsiteDownload ou usar o código no final deste tópico para criar seu próprio projeto. Para obter mais informações e instruções, consulte [Examinar e executar o aplicativo de exemplo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Você pode examinar o código que produz esta saída fazendo a rolagem até o final deste tópico. Você pode fazer experimentos com o código baixando a solução em seu computador local e, em seguida, executar o projeto WebsiteDownload ou usar o código no final deste tópico para criar seu próprio projeto. Para obter mais informações e instruções, consulte [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Tratando a reentrância  
  É possível tratar a reentrância de várias maneiras, dependendo do que você deseja que seu aplicativo faça. Este tópico apresenta os exemplos a seguir:  
   
--   [Desabilitar o botão Iniciar](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton)  
   
      Desabilitar o botão **Iniciar** enquanto a operação estiver em execução para que o usuário não possa interrompê-la.  
   
--   [Cancelar e reiniciar a operação](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart)  
   
      Cancelar qualquer operação que ainda estiver em execução quando o usuário escolher o botão **Iniciar** novamente e, em seguida, permitir que a operação solicitada mais recentemente continue.  
   
--   [Executar várias operações e colocar a saída na fila](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Executar várias operações e colocar a saída na fila](#BKMK_RunMultipleOperations)  
   
      Permitir que todas as operações solicitadas sejam executadas de forma assíncrona, mas coordenar a exibição da saída, de forma que os resultados de cada operação apareçam juntos e em ordem.  
   
@@ -134,7 +134,7 @@ End Sub
   
  Para obter mais informações sobre cancelamento, consulte [ajuste fino de seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.  
+ Para configurar esse cenário, faça as seguintes alterações no código básico que é fornecido em [Examinar e executar o aplicativo de exemplo](#BKMD_SettingUpTheExample). Você também pode baixar o aplicativo finalizado de [Exemplos assíncronos: reentrância em aplicativos de área de trabalho do .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). O nome do projeto é CancelAndRestart.  
   
 1.  Declare uma variável <xref:System.Threading.CancellationTokenSource>, `cts`, que está no escopo para todos os métodos.  
   
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  Para eliminar as listas parciais, remova a marca de comentário da primeira linha de código em `StartButton_Click`, para limpar a caixa de texto sempre que o usuário reiniciar a operação.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> Executar várias operações e colocar a saída na fila  
- Este terceiro exemplo é mais complicado pois o aplicativo iniciará outra operação assíncrona a cada vez que o usuário escolher o botão **Iniciar** e todas as operações serão executadas até a conclusão. Todas as operações solicitadas baixam sites da lista de maneira assíncrona, mas a saída das operações será apresentada sequencialmente. Ou seja, a atividade de download real é intercalada, conforme mostrado na saída em [Reconhecendo a reentrância](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), mas a lista de resultados para cada grupo é apresentada separadamente.  
+ Este terceiro exemplo é mais complicado pois o aplicativo iniciará outra operação assíncrona a cada vez que o usuário escolher o botão **Iniciar** e todas as operações serão executadas até a conclusão. Todas as operações solicitadas baixam sites da lista de maneira assíncrona, mas a saída das operações será apresentada sequencialmente. Ou seja, a atividade de download real é intercalada, conforme mostrado na saída em [Reconhecendo a reentrância](#BKMK_RecognizingReentrancy), mas a lista de resultados para cada grupo é apresentada separadamente.  
   
  As operações compartilham uma <xref:System.Threading.Tasks.Task> global, `pendingWork`, que serve como um gatekeeper para o processo de exibição.  
   
- Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou pode seguir as instruções em [Baixando o aplicativo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e executar o projeto QueueResults.  
+ Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](#BKMK_BuildingTheApp) ou pode seguir as instruções em [Baixando o aplicativo](#BKMK_DownloadingTheApp) para baixar o exemplo e executar o projeto QueueResults.  
   
  A saída a seguir mostra o resultado, caso o usuário escolha o botão **Iniciar** apenas uma vez. O rótulo de letra A indica que o resultado é da primeira vez que o botão **Iniciar** foi escolhido. Os números mostram a ordem das URLs na lista de destinos de download.  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou pode seguir as instruções em [Baixando o aplicativo](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para baixar o exemplo e executar o projeto QueueResults.  
+ Você pode executar esse exemplo, colando as alterações no código em [Compilando o aplicativo](#BKMK_BuildingTheApp) ou pode seguir as instruções em [Baixando o aplicativo](#BKMK_DownloadingTheApp) para baixar o exemplo e executar o projeto QueueResults.  
   
 #### <a name="points-of-interest"></a>Pontos de Interesse  
  As linhas de informações que começam com um sinal de jogo da velha (#) na saída esclarecem o funcionamento deste exemplo.  
@@ -674,8 +674,9 @@ End Function
   
 11. Escolha a tecla CTRL+F5 para executar o programa e, em seguida, escolha o botão **Iniciar** várias vezes.  
   
-12. Faça as alterações de [Desabilitar o botão Iniciar](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Cancelar e reiniciar a operação](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) ou [Executar várias operações e colocar a saída em fila](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) para tratar a reentrância.  
+12. Faça as alterações de [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton), [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart) ou [Executar várias operações e colocar a saída em fila](#BKMK_RunMultipleOperations) para tratar a reentrância.  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

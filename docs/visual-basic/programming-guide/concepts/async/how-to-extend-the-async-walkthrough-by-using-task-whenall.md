@@ -2,12 +2,12 @@
 title: 'Como: estender o passo a passo assíncronas usando Task. WhenAll (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 650b96926cf66810a93b003b1ebc09ca16212b00
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 09496f7044a0be86a3fdb37085b09069086750ce
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064927"
+ms.locfileid: "44129067"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Como: estender o passo a passo assíncronas usando Task. WhenAll (Visual Basic)
 Você pode melhorar o desempenho da solução async no [instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) usando o <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> método. Esse método aguarda de maneira assíncrona várias operações assíncronas, que são representadas como uma coleção de tarefas.  
@@ -62,7 +62,7 @@ Você pode melhorar o desempenho da solução async no [instruções passo a pas
     'Next  
     ```  
   
-3.  Crie uma coleção de tarefas. O código a seguir define uma [consulta](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.  
+3.  Crie uma coleção de tarefas. O código a seguir define uma [consulta](../../../../visual-basic/programming-guide/concepts/linq/index.md) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.  
   
      Adicione o seguinte código ao método `SumPageSizesAsync` depois da declaração da `urlList`.  
   
@@ -135,7 +135,7 @@ Você pode melhorar o desempenho da solução async no [instruções passo a pas
     'Next  
     ```  
   
-3.  Defina uma [consulta](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.  
+3.  Defina uma [consulta](../../../../visual-basic/programming-guide/concepts/linq/index.md) que, quando executada pelo método <xref:System.Linq.Enumerable.ToArray%2A>, cria uma coleção de tarefas que baixa o conteúdo de cada site. As tarefas são iniciadas quando a consulta é avaliada.  
   
      Adicione o seguinte código ao método `SumPageSizesAsync` depois da declaração de `client` e `urlList`.  
   
@@ -419,6 +419,7 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+- [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

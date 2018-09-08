@@ -7,11 +7,11 @@ helpviewer_keywords:
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 436caa9b93467dcf2a0763bcc0962a2beb722315
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071116"
+ms.locfileid: "44131864"
 ---
 # <a name="xfactorymethod-directive"></a>Diretiva x:FactoryMethod
 Especifica um método que não seja um construtor que um processador XAML deve usar para inicializar um objeto depois de resolver o seu tipo de backup.  

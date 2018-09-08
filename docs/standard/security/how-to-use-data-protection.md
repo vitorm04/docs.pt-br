@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061020"
+ms.locfileid: "44140328"
 ---
 # <a name="how-to-use-data-protection"></a>Como usar proteção de dados
 O .NET Framework fornece acesso para a proteção de dados DPAPI (API), que lhe permite criptografar dados usando as informações de conta de usuário atual ou do computador.  Quando você usa a DPAPI, você aliviar o problema difícil de explicitamente gerar e armazenar uma chave de criptografia.  

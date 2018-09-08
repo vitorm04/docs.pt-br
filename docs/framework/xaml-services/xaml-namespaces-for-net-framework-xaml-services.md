@@ -3,11 +3,11 @@ title: Namespaces XAML para serviços XAML do .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046964"
+ms.locfileid: "44137454"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Namespaces XAML para serviços XAML do .NET Framework
 Um namespace XAML é um conceito que se expande na definição de um namespace de XML. Semelhante a um namespace de XML, você pode definir um namespace XAML usando um `xmlns` atributo na marcação. Namespaces XAML também estão representados no fluxo de nó XAML e outras APIs de serviços de XAML. Este tópico define o conceito de namespace XAML e descreve como namespaces XAML podem ser definidas e usadas por contextos de esquema XAML e outros aspectos dos serviços de XAML do .NET Framework.  

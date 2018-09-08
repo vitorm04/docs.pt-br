@@ -13,11 +13,11 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891740"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137441"
 ---
 # <a name="impersonating-and-reverting"></a>Representando e revertendo
 Às vezes, talvez seja necessário obter um token de conta do Windows para representar uma conta do Windows. Por exemplo, seu aplicativo baseado no ASP.NET pode ter que atuar em nome de vários usuários em momentos diferentes. Seu aplicativo pode aceitar um token que representa um administrador de serviços de informações da Internet (IIS), representar o usuário, executar uma operação e reverter para a identidade anterior. Em seguida, ele pode aceitar um token do IIS que representa um usuário com poucos direitos, executar alguma operação e reverter novamente.  

@@ -2,12 +2,12 @@
 title: 'Como: reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 7d385473c461540c81d35d42d664ef0a8b7c054b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f9322ac9601deffd110c962a9ed8b502a02092ee
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527883"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129226"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Como: reordenar os campos de um arquivo delimitado (LINQ) (Visual Basic)
 Um CSV (arquivo de valores separados por vírgula) é um arquivo de texto que é frequentemente usado para armazenar dados de planilha ou outros dados de tabela que são representados por linhas e colunas. Ao usar o método <xref:System.String.Split%2A> para separar os campos, é muito fácil consultar e manipular arquivos CSV usando LINQ. Na verdade, a mesma técnica pode ser usada para reordenar as partes de qualquer linha estruturada de texto. Ela não é limitada a arquivos CSV.  
@@ -76,7 +76,8 @@ End Class
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Como gerar um XML de arquivos CSV](https://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+## <a name="see-also"></a>Consulte também
+
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [Como gerar um XML de arquivos CSV](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

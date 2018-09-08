@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
 ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44046834"
+ms.locfileid: "44138572"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Porque o carregamento e a serialização de dados binários grandes dessa maneira podem afetar o desempenho, o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] define um mecanismo para recuperar dados binários independentes da entidade à qual ele pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.  

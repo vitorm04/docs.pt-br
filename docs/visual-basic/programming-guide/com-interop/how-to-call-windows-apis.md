@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 739516e86917ac24a81cd6387af5576c512ecbc2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081f4242ef5883a8b25b8819ba3aff835b1e6ac7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515911"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129689"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Como chamar APIs do Windows (Visual Basic)
 Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida, passa uma cadeia de caracteres para ele.  
@@ -34,10 +34,11 @@ Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida
   
 -   O tipo recipiente foi criado anteriormente usando `CreateType`. (<xref:System.InvalidOperationException>)  
   
-## <a name="see-also"></a>Consulte também  
- [Um olhar detalhado sobre invocação de plataforma](https://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
- [Exemplos de invocação de plataforma](../../../framework/interop/platform-invoke-examples.md)  
- [Consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
- [Emissão de definição de um método com reflexão](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
- [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Um olhar detalhado sobre invocação de plataforma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [Exemplos de invocação de plataforma](../../../framework/interop/platform-invoke-examples.md)  
+- [Consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
+- [Emissão de definição de um método com reflexão](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
+- [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
+- [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
 ms.openlocfilehash: 4db60418512080d6bf13ef00b1c6e7dce797a16b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067046"
+ms.locfileid: "44138849"
 ---
 # <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Tutorial: hospedando objetos visuais em um aplicativo Win32
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial em [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] código, ele pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código. Para fornecer suporte para [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] subsistemas de elementos gráficos usados simultaneamente em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um mecanismo para hospedar objetos em um [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] janela.  

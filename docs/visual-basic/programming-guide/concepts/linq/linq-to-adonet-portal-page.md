@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (página do portal)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 424a4639677d6066fa5cac74e370ca76ebcaea60
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6e37a1ffdef3dd2299c2c534345ba7c6dc610471
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803854"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128479"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (página do portal)
 O [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] permite que você realize consultas em qualquer objeto enumerável em [!INCLUDE[vstecado](~/includes/vstecado-md.md)] usando o modelo de programação [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
 > [!NOTE]
->  A documentação do [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] está localizada na seção ADO.NET do SDK do .NET Framework: [LINQ e o ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).  
+>  A documentação do [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] está localizada na seção ADO.NET do SDK do .NET Framework: [LINQ e o ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
  Há três tecnologias separadas do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] do ADO.NET: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] e [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. O [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] fornece consultas mais sofisticadas e otimizadas do que o <xref:System.Data.DataSet>, o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] permite que você consulte diretamente os esquemas de banco de dados do SQL Server e o [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] permite que você consulte um [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)].  
   
@@ -34,6 +34,7 @@ O [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] permite que você realiz
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  Por meio do [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)], os dados relacionais são expostos como objetos no ambiente .NET. Isso torna a camada do objeto um destino ideal para o suporte do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] permitindo que os desenvolvedores formulem consultas no banco de dados na linguagem usada para criar a lógica de negócios. Esse recurso é conhecido como [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. Consulte [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md) para obter mais informações.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e ADO.NET](https://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)  
- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [LINQ e ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)  
+- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

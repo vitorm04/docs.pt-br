@@ -2,12 +2,12 @@
 title: Ferramenta geradora de serializador de XML (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 54afa99af3365c3be8a9662905467fbcaf4e8aa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589173"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136986"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Ferramenta geradora de serializador de XML (Sgen.exe)
 O Gerador de Serializador de XML cria um assembly de serialização de XML para tipos em um assembly especificado para aprimorar o desempenho de inicialização de um <xref:System.Xml.Serialization.XmlSerializer> quando ele serializa ou desserializa objetos dos tipos especificados.  
@@ -29,16 +29,16 @@ sgen [options]
 |**/help ou /?**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/k**[**eep**]|Suprime a exclusão dos arquivos de origem gerados e outros arquivos temporários depois que tiverem sido compilados no assembly de serialização. Isso pode ser usado para determinar se a ferramenta está gerando o código de serialização para um tipo específico.|  
 |**/n**[**ologo**]|Suprime a exibição do banner de inicialização da Microsoft.|  
-|**/o**[**ut**] **: * caminho*|Especifica o diretório no qual salvar o assembly gerado. **Observação:** o nome do assembly gerado é composto pelo nome do assembly de entrada mais “xmlSerializers.dll”.|  
+|**/o**[**ut**] **: * * * caminho*|Especifica o diretório no qual salvar o assembly gerado. **Observação:** o nome do assembly gerado é composto pelo nome do assembly de entrada mais “xmlSerializers.dll”.|  
 |**/p**[**roxytypes**]|Gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
-|**/r**[**eference**] **: * assemblyfiles*|Especifica os assemblies que são referenciados pelos tipos que exigem a serialização de XML. Aceita vários arquivos de assembly separados por vírgulas.|  
+|**/r**[**eference**] **: * * * assemblyfiles*|Especifica os assemblies que são referenciados pelos tipos que exigem a serialização de XML. Aceita vários arquivos de assembly separados por vírgulas.|  
 |**/s**[**ilent**]|Suprime a exibição de mensagens de sucesso.|  
-|**/t**[**IPO**] **: * tipo*|Gera o código de serialização somente para o tipo especificado.|  
+|**/t**[**IPO**] **: * * * tipo*|Gera o código de serialização somente para o tipo especificado.|  
 |**/v**[**erbose**]|Exibe a saída detalhada para depuração. Lista os tipos do assembly de destino que não podem ser serializados com o <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando o Gerador do Serializador do XML não é usado, um <xref:System.Xml.Serialization.XmlSerializer> gera o código de serialização e um assembly de serialização para cada tipo toda vez que um aplicativo é executado. Para melhorar o desempenho de inicialização de serialização de XML, use a ferramenta de Sgen.exe para gerar os assemblies com antecedência. Esses assemblies podem então ser implantados com o aplicativo.  
+ Quando o Gerador do Serializador do XML não é usado, um <xref:System.Xml.Serialization.XmlSerializer> gera o código de serialização e um assembly de serialização para cada tipo toda vez que um aplicativo é executado. Para melhorar o desempenho de inicialização da serialização XML, use a ferramenta Sgen.exe para gerar com antecedência esses assemblies. Esses assemblies podem então ser implantados com o aplicativo.  
   
  O Gerador do Serializador do XML também pode aprimorar o desempenho de clientes que usam proxies de serviço Web XML para se comunicarem com servidores porque o processo de serialização não incorrerá em um acerto de desempenho quando o tipo for carregado pela primeira vez.  
   
@@ -55,7 +55,8 @@ sgen Data.dll
   
  O assembly Data.XmlSerializers.dll pode ser referenciado do código que precisa serializar e desserializar os tipos no Data.dll.  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)  
- [Visão geral do XML Web Services](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Consulte também
+
+- [Ferramentas](../../../docs/framework/tools/index.md)  
+- [Visão geral do XML Web Services](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

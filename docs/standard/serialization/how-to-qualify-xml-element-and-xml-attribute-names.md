@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785486"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133276"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Como qualificar elementos XML e nomes de atributos XML
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>Consulte também
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[A ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md)
-[apresentando a serialização XML](introducing-xml-serialization.md)
-[classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
- [Atributos que controlam a serialização de XML](attributes-that-control-xml-serialization.md)
-[como: especificar um nome de elemento alternativo para um Stream do XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[como: serializar um objeto](how-to-serialize-an-object.md) 
- [Como: desserializar um objeto](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [A ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Apresentando a serialização XML](introducing-xml-serialization.md)
+- [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
+- [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)

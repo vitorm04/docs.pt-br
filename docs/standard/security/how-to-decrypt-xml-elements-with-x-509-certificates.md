@@ -16,11 +16,11 @@ ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 25a2fb441269508402263e103a6c6e1be2635406
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869514"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140730"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Como descriptografar elementos XML com certificados X.509
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para criptografar e descriptografar um elemento dentro de um documento XML.  Criptografia de XML é uma maneira padrão para trocar ou armazenar dados XML criptografados, sem se preocupar com os dados que está sendo lidos com facilidade.  Para obter mais informações sobre o padrão de criptografia de XML, consulte a especificação do World Wide Web Consortium (W3C) para criptografia XML localizado em http://www.w3.org/TR/xmldsig-core/.  
