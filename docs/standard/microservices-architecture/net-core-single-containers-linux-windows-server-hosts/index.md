@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
 ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777990"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197349"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Implantando aplicativos Web .NET Core baseados em um único contêiner em hosts do Linux ou do Windows Nano Server
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510632"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181596"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrizes (Guia de Programação em C#)
 
@@ -48,8 +48,6 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
   
 -   [Passando matrizes como argumentos](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
--   [Passando matrizes com o uso de ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
-  
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -57,5 +55,5 @@ Você pode armazenar diversas variáveis do mesmo tipo em uma estrutura de dados
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Coleções](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [Coleções](../../../csharp/programming-guide/concepts/collections.md)  
 - [Tipo de coleção Array](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

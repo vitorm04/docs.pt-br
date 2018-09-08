@@ -2,11 +2,11 @@
 title: Atributos (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892380"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127940"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
