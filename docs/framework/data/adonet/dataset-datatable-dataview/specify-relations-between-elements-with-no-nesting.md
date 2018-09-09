@@ -3,16 +3,16 @@ title: Especificar as relações entre elementos sem nenhum aninhamento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080092"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251739"
 ---
-# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="fc7ba-102">Especificar as relações entre elementos sem nenhum aninhamento</span><span class="sxs-lookup"><span data-stu-id="fc7ba-102">Specify Relations Between Elements with No Nesting</span></span>
-<span data-ttu-id="fc7ba-103">Quando os elementos não estão aninhados, não há relações implícita são criadas.</span><span class="sxs-lookup"><span data-stu-id="fc7ba-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="fc7ba-104">No entanto, você pode especificam explicitamente as relações entre os elementos que não estão aninhados usando o **msdata:Relationship** anotação.</span><span class="sxs-lookup"><span data-stu-id="fc7ba-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="7d96e-102">Especificar as relações entre elementos sem nenhum aninhamento</span><span class="sxs-lookup"><span data-stu-id="7d96e-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="7d96e-103">Quando os elementos não estão aninhados, não há relações implícita são criadas.</span><span class="sxs-lookup"><span data-stu-id="7d96e-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="7d96e-104">No entanto, você pode especificam explicitamente as relações entre os elementos que não estão aninhados usando o **msdata:Relationship** anotação.</span><span class="sxs-lookup"><span data-stu-id="7d96e-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- <span data-ttu-id="fc7ba-105">O exemplo a seguir mostra um esquema XML no qual o **msdata:Relationship** anotação é especificada entre a **ordem** e **OrderDetail** elementos, que não são aninhados.</span><span class="sxs-lookup"><span data-stu-id="fc7ba-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="fc7ba-106">O **msdata:Relationship** anotação é especificada como o elemento filho a **esquema** elemento.</span><span class="sxs-lookup"><span data-stu-id="fc7ba-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
+ <span data-ttu-id="7d96e-105">O exemplo a seguir mostra um esquema XML no qual o **msdata:Relationship** anotação é especificada entre a **ordem** e **OrderDetail** elementos, que não são aninhados.</span><span class="sxs-lookup"><span data-stu-id="7d96e-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="7d96e-106">O **msdata:Relationship** anotação é especificada como o elemento filho a **esquema** elemento.</span><span class="sxs-lookup"><span data-stu-id="7d96e-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ ms.locfileid: "44080092"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="fc7ba-107">O processo de mapeamento de esquema de linguagem XSD do esquema XML definição cria uma <xref:System.Data.DataSet> com **ordem** e **OrderDetail** tabelas e uma relação especificada entre essas duas tabelas, conforme mostrado abaixo.</span><span class="sxs-lookup"><span data-stu-id="fc7ba-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
+ <span data-ttu-id="7d96e-107">O processo de mapeamento de esquema de linguagem XSD do esquema XML definição cria uma <xref:System.Data.DataSet> com **ordem** e **OrderDetail** tabelas e uma relação especificada entre essas duas tabelas, conforme mostrado abaixo.</span><span class="sxs-lookup"><span data-stu-id="7d96e-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -64,7 +64,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fc7ba-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fc7ba-108">See Also</span></span>  
- [<span data-ttu-id="fc7ba-109">Gerando relações de conjunto de dados do esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="fc7ba-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="fc7ba-110">Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="fc7ba-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- <span data-ttu-id="fc7ba-111">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="fc7ba-111">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d96e-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7d96e-108">See Also</span></span>  
+ [<span data-ttu-id="7d96e-109">Gerando relações de conjunto de dados do esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="7d96e-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="7d96e-110">Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="7d96e-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="7d96e-111">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="7d96e-111">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
