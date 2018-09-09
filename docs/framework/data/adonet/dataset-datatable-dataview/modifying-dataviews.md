@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870426"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225640"
 ---
 # <a name="modifying-dataviews"></a>Modificando DataViews
 Você pode usar o <xref:System.Data.DataView> para adicionar, excluir ou modificar linhas de dados na tabela subjacente. A capacidade de usar o **DataView** modificar os dados na tabela subjacente é controlado pela configuração de uma das três propriedades Boolianas da **DataView**. Essas propriedades são <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, e <xref:System.Data.DataView.AllowDelete%2A>. Eles são definidos como **verdadeira** por padrão.  

@@ -17,11 +17,11 @@ ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061670"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252058"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Como assinar documento XML com assinaturas digitais
 Você pode usar as classes de <xref:System.Security.Cryptography.Xml> namespace para assinar um documento XML ou parte de um documento XML com uma assinatura digital.  As assinaturas digitais XML (XMLDSIG) permitem que você verifique se que os dados não foi alterados depois que ele foi assinado.  Para obter mais informações sobre o padrão XMLDSIG, consulte a recomendação do World Wide Web Consortium (W3C) [sintaxe de assinatura XML e o processamento](https://www.w3.org/TR/xmldsig-core/).  

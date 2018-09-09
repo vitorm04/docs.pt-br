@@ -3,11 +3,11 @@ title: 'Ponto de extremidade: fluxo de transações por segundo'
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44175011"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227136"
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>Ponto de extremidade: fluxo de transações por segundo
 Nome do contador: Fluxo de transações por segundo.  

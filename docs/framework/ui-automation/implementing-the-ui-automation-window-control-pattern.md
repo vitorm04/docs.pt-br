@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 551e4ac5dc8917931e41d7aaa7dca1f8613852bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079195"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252110"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementando o Padrão Controle de Window de Automação de Interface de Usuário
 > [!NOTE]
@@ -53,9 +53,9 @@ ms.locfileid: "44079195"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Método|Nenhum|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Método|Nenhum|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Método|Nenhum|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|evento|Nenhum|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|evento|Nenhum|  
-|<xref:System.Windows.Automation.WindowInteractionState>|evento|Não é garantido para ser <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Evento|Nenhum|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Evento|Nenhum|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Evento|Não é garantido para ser <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  

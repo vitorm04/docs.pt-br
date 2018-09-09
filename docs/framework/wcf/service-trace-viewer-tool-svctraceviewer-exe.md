@@ -3,11 +3,11 @@ title: Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048345"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251778"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Ferramenta Visualizador de Rastreamento de Serviço (SvcTraceViewer.exe)
 Ferramenta de Visualizador de rastreamento de serviço do Windows Communication Foundation (WCF) ajuda você a analisar rastreamentos de diagnóstico que são gerados pelo WCF. Visualizador de rastreamento de serviço fornece uma maneira de mesclar facilmente, exibir e filtrar as mensagens de rastreamento no log de forma que você possa diagnosticar, reparar e verificar problemas de serviço do WCF.  
@@ -42,11 +42,11 @@ Ferramenta de Visualizador de rastreamento de serviço do Windows Communication 
   
 |Nível de rastreamento:|Descrição|  
 |-----------------|-----------------|  
-|Crítico|-Registra em log entradas Fail-Fast e Log de eventos e informações de correlação de rastreamento. A seguir estão alguns exemplos de quando você poderá usar o nível Crítico:<br />-O AppDomain foi desativado devido a uma exceção sem tratamento.<br />-Seu aplicativo falha ao iniciar.<br />-A mensagem que causou a falha do processo MyApp.exe foi originada.|  
+|Critical|-Registra em log entradas Fail-Fast e Log de eventos e informações de correlação de rastreamento. A seguir estão alguns exemplos de quando você poderá usar o nível Crítico:<br />-O AppDomain foi desativado devido a uma exceção sem tratamento.<br />-Seu aplicativo falha ao iniciar.<br />-A mensagem que causou a falha do processo MyApp.exe foi originada.|  
 |Erro|-Registra em log todas as exceções. Você pode usar o nível Erro nas seguintes situações:<br />-Seu código falhou devido a uma exceção de conversão inválido.<br />-Uma exceção "Falha ao criar o ponto de extremidade" está causando a falha na inicialização do seu aplicativo.|  
 |Aviso|-Existe uma condição que poderá resultar em um erro ou falha crítica. Você pode usar este nível nas seguintes situações:<br />-O aplicativo está recebendo mais solicitações que permite que suas configurações de limitação.<br />-A fila de recebimento está com 98% de sua capacidade configurada.|  
 |Informações|-Mensagens úteis para monitorar e diagnosticar o status do sistema, medir o desempenho ou criação de perfil são geradas. É possível utilizar essas informações para o planejamento de capacidade e o gerenciamento de desempenho. Você pode usar este nível nas seguintes situações:<br />-Falha depois que a mensagem chegou ao AppDomain e foi desserializada.<br />-Uma falha ocorreu enquanto a associação HTTP estava sendo criada.|  
-|Detalhado|Nível de depuração de rastreamento de código de usuário e de manutenção. Defina este nível quando:<br />-Você não tiver certeza qual método em seu código foi chamado quando a falha ocorreu.<br />-Você tem um ponto de extremidade incorreto configurado e o serviço falhou ao iniciar porque a entrada no repositório de reserva está bloqueada.|  
+|Modo detalhado|Nível de depuração de rastreamento de código de usuário e de manutenção. Defina este nível quando:<br />-Você não tiver certeza qual método em seu código foi chamado quando a falha ocorreu.<br />-Você tem um ponto de extremidade incorreto configurado e o serviço falhou ao iniciar porque a entrada no repositório de reserva está bloqueada.|  
 |ActivityTracing|Eventos de fluxo entre atividades de processamento e componentes.<br /><br /> Este nível permite que os administradores e desenvolvedores correlacionem aplicativos no mesmo domínio de aplicativos.<br /><br /> -Rastreamentos de limites de atividades: iniciar/parar.<br />-Rastreamentos de transferências.|  
   
  Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Na configuração de exemplo, o ouvinte é chamado de `sdt` e o ouvinte de rastreamento do .NET Framework padrão (`System.Diagnostics.XmlWriterTraceListener`) é adicionado como o tipo. Use `initializeData` para definir o nome do arquivo de log para esse ouvinte. Além disso, é possível substituir um nome de arquivo simples por um caminho totalmente qualificado.  

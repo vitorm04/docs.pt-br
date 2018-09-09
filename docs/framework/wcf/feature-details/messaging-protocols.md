@@ -3,18 +3,18 @@ title: Protocolos de mensagens
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138598"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253059"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 A pilha de canais do Windows Communication Foundation (WCF) emprega canais de transporte e de codificação para transformar a representação interna de mensagem em seu formato de transmissão e enviá-lo por meio de um transporte particular. O transporte mais comuns usado para a interoperabilidade de serviços da Web é HTTP, e as codificações mais comuns usadas pelos serviços da Web são baseados em XML SOAP 1.1, SOAP 1.2 e MTOM Message Transmission Optimization Mechanism ().  
   
  Este tópico abrange detalhes de implementação de WCF para os seguintes protocolos utilizados por <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.  
   
-|Especificação/documento|Link|  
+|Especificação/documento|Vincular|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
 |Ligação de SOAP 1.1 HTTP|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Seção 7|  
@@ -22,7 +22,7 @@ A pilha de canais do Windows Communication Foundation (WCF) emprega canais de tr
   
  Este tópico abrange detalhes de implementação de WCF para os seguintes protocolos <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> empregar.  
   
-|Especificação/documento|Link|  
+|Especificação/documento|Vincular|  
 |-----------------------------|----------|  
 |XML|http://www.w3.org/TR/REC-xml|  
 |SOAP 1.1|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/|  
@@ -37,7 +37,7 @@ A pilha de canais do Windows Communication Foundation (WCF) emprega canais de tr
   
  Este tópico abrange detalhes de implementação de WCF para protocolos a seguir <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> emprega.  
   
-|Especificação/documento|Link|  
+|Especificação/documento|Vincular|  
 |-----------------------------|----------|  
 |XOP|http://www.w3.org/TR/xop10/|  
 |MTOM + SOAP 1.2 de associação|http://www.w3.org/TR/soap12-mtom/|  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44132325"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252045"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Criando um DataTable de um DataView
 Depois de recuperar dados de uma fonte de dados e preencher um <xref:System.Data.DataTable> com os dados, talvez você queira classificar, filtrar ou limitar os dados retornados de outra maneira sem recuperá-los novamente. O <xref:System.Data.DataView> classe torna isso possível. Além disso, se você precisar criar um novo <xref:System.Data.DataTable> do <xref:System.Data.DataView>, você pode usar o <xref:System.Data.DataView.ToTable%2A> método para copiar todas as linhas e colunas ou um subconjunto dos dados em um novo <xref:System.Data.DataTable>. O <xref:System.Data.DataView.ToTable%2A> método fornece sobrecargas para:  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
 ms.openlocfilehash: 805813506b957afb326c71ee4bbb15837726e4e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076313"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253137"
 ---
 # <a name="implements-statement"></a>Instrução Implements
 Especifica um ou mais interfaces, ou membros de interface, que devem ser implementados na classe ou definição de estrutura na qual ele aparece.  
@@ -29,10 +29,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Partes  
  `interfacename`  
- Necessário. Uma interface cujas propriedades, procedimentos e eventos devem ser implementados por membros correspondentes na classe ou estrutura.  
+ Obrigatório. Uma interface cujas propriedades, procedimentos e eventos devem ser implementados por membros correspondentes na classe ou estrutura.  
   
  `interfacemember`  
- Necessário. O membro de uma interface que está sendo implementado.  
+ Obrigatório. O membro de uma interface que está sendo implementado.  
   
 ## <a name="remarks"></a>Comentários  
  Uma interface é uma coleção de protótipos que representam os membros (propriedades, procedimentos e eventos) encapsula a interface. Interfaces contêm apenas as declarações de membros; classes e estruturas implementam esses membros. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  

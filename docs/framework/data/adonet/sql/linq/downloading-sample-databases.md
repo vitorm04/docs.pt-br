@@ -3,11 +3,11 @@ title: Baixando bancos de dados de exemplo
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039128"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225263"
 ---
 # <a name="downloading-sample-databases"></a>Baixando bancos de dados de exemplo
 Diversos exemplos e tutoriais passo a passo na documentação do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usam o banco de dados de exemplo Northwind e o SQL Server Express edition. Você pode baixar esses produtos gratuitamente no site de download da Microsoft.  

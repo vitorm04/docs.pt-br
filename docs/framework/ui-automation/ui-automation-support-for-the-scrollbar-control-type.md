@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 5c2f1ae77585576c8ad1c83b37e6ec530dd31598
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063216"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227825"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ScrollBar
 > [!NOTE]
@@ -53,8 +53,8 @@ ms.locfileid: "44063216"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ScrollBar|Esse valor é o mesmo para todas as estruturas. As barras de rolagem que funcionam como controles deslizantes devem usar o tipo de controle deslizante.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"barra de rolagem"|Cadeia de caracteres localizada que corresponde ao tipo de controle de botão.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|O controle de barra de rolagem nunca é um elemento de conteúdo. Se a barra de rolagem é um controle autônomo, ele deve cumprir o tipo de controle deslizante e retornar `ControlType.Slider` para o `ControlType` propriedade.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|A barra de rolagem sempre deve ser um controle.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|verdadeiro|O controle de barra de rolagem sempre deve expor sua orientação horizontal ou vertical.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|A barra de rolagem sempre deve ser um controle.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|True|O controle de barra de rolagem sempre deve expor sua orientação horizontal ou vertical.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Padrões de controle de automação de interface do usuário necessária  
@@ -71,9 +71,9 @@ ms.locfileid: "44063216"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Evento|Suporte/valor|Observações|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de propriedade alterada.|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de propriedade alterada.|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de propriedade alterada.|Necessária|Nenhum|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de propriedade alterada.|Obrigatório|Nenhum|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de propriedade alterada.|Obrigatório|Nenhum|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de propriedade alterada.|Obrigatório|Nenhum|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de propriedade alterada.|Nunca|Nenhum|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de propriedade alterada.|Nunca|Nenhum|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de propriedade alterada.|Nunca|Nenhum|  
@@ -81,8 +81,8 @@ ms.locfileid: "44063216"
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de propriedade alterada.|Nunca|Nenhum|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de propriedade alterada.|Nunca|Nenhum|  
 |<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> evento de propriedade alterada.|Depende|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessária|Nenhum|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obrigatório|Nenhum|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obrigatório|Nenhum|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Automation.ControlType.ScrollBar>  
