@@ -4,11 +4,11 @@ description: Como retornar uma consulta.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
 ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510781"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Como retornar uma consulta de um método (Guia de Programação em C#)
 Este exemplo mostra como retornar uma consulta de um método como o valor retornado e como um parâmetro `out`.  

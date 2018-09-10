@@ -2,12 +2,12 @@
 title: Como escrever consultas com filtragem complexa (C#)
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: 72c34f8ef8bebb3584e00cf040cfcdc35dfc3701
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8eef2f75e45212b3493aa1b6f813c52beb7665
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508827"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>Como escrever consultas com filtragem complexa (C#)
 Muitas vezes, você deseja escrever consultas LINQ to XML com filtros complexos. Por exemplo, você pode ter que localizar todos os elementos que têm um elemento filho com um nome e um valor específicos. Este tópico dá um exemplo de como escrever uma consulta com filtragem complexa.  
@@ -69,9 +69,10 @@ foreach (XElement el in purchaseOrders)
 99505  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Linq.XElement.Attribute%2A>  
- <xref:System.Xml.Linq.XContainer.Elements%2A>  
- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
- [Operações de projeção (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
- [Operações de quantificador (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Xml.Linq.XElement.Attribute%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+- [Operações de projeção (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
+- [Operações de quantificador (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)

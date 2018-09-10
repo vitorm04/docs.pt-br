@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 298ee915bbe11313f3b33ea7dae9353ef956a231
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549449"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509529"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Usando foreach com matrizes (Guia de Programação em C#)
 
@@ -26,10 +26,11 @@ Em matrizes multidimensionais, os elementos são percorridos de modo a que os í
 
 No entanto, com matrizes multidimensionais, usar um loop aninhado [for](../../language-reference/keywords/for.md) oferece mais controle sobre a ordem na qual processar os elementos da matriz.
 
-## <a name="see-also"></a>Consulte também  
- <xref:System.Array>  
- [Guia de Programação em C#](../index.md)  
- [Matrizes](index.md)  
- [Matrizes unidimensionais](single-dimensional-arrays.md)  
- [Matrizes multidimensionais](multidimensional-arrays.md)  
- [Matrizes denteadas](jagged-arrays.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Array>  
+- [Guia de Programação em C#](../index.md)  
+- [Matrizes](index.md)  
+- [Matrizes unidimensionais](single-dimensional-arrays.md)  
+- [Matrizes multidimensionais](multidimensional-arrays.md)  
+- [Matrizes denteadas](jagged-arrays.md)

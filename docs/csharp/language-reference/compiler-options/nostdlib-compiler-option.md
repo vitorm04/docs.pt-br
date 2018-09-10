@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 ms.openlocfilehash: 70007c74efe9a41bdfc15e8fa7daf3c8fc0221ed
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484129"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506689"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opções do compilador C#)
 

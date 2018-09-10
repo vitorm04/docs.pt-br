@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: b19676b2549bbb54af7fb1d72ff0e98352c61383
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172310"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529014"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Usando construtores (Guia de Programação em C#)
 Quando uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criado, seu construtor é chamado. Os construtores têm o mesmo nome que a classe ou struct e eles geralmente inicializam os membros de dados do novo objeto.  
@@ -90,8 +90,9 @@ Console.WriteLine("{0}, {1}", a, b);
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)

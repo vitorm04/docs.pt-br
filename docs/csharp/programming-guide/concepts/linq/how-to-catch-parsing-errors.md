@@ -2,12 +2,12 @@
 title: Como capturar erros de análise (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 037e490fa7b0600b906ec310201e5d33c2f55baa
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198465"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503919"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Como capturar erros de análise (C#)
 Este tópico mostra como detectar XML mal formado ou inválido.  
@@ -42,5 +42,6 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
  Para obter informações sobre as exceções que você pode esperar <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, e métodos de <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> lançar, consulte a documentação de <xref:System.Xml.XmlReader> .  
   
-## <a name="see-also"></a>Consulte também  
- [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

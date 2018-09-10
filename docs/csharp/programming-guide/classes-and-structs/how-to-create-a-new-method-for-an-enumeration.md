@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 8de44cbddf26af45245709d0e28d2d157256ce59
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 3e153dbbe80ed850705ddaea4a9a3d5aba570fe0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932209"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508941"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Como criar um novo método para uma enumeração (Guia de Programação em C#)
 Você pode usar métodos de extensão para adicionar funcionalidades específica para um tipo de enumeração específico.  
@@ -26,6 +26,7 @@ Você pode usar métodos de extensão para adicionar funcionalidades específica
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para executar esse código, copie e cole-o em um projeto de aplicativo de console do Visual C# que foi criado no Visual Studio. Por padrão, esse projeto é direcionado para a versão 3.5 do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e ele tem uma referência ao System.Core.dll e uma diretriz `using` para System.Linq. Se um ou mais desses requisitos estiverem ausentes no projeto, você poderá adicioná-los manualmente.  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Métodos de Extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Métodos de Extensão](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

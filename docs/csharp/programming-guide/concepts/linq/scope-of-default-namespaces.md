@@ -2,12 +2,12 @@
 title: Escopo de namespace padrão em C#1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 37b10c43071d4f6a9fb2a25d68ab2c100c27dde9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb0e111bfded0769c498b116f828711003036e33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330090"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510433"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Escopo de namespace padrão em C#
 Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas. Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.  
@@ -88,5 +88,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Consulte também
+
+- [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

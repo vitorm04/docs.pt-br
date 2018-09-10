@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f253f31a7376bf0429784a031188b91cc070df
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269655"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515821"
 ---
 # <a name="statement-keywords-c-reference"></a>Palavras-chave de instrução (Referência de C#)
 As instruções são instruções do programa. Exceto conforme descrito nos tópicos referenciados na tabela a seguir, as instruções são executadas em sequência. A tabela a seguir lista as palavras-chave da instrução C#. Para obter mais informações sobre instruções que não são expressos com qualquer palavra-chave, consulte [Instruções](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
@@ -25,7 +25,8 @@ As instruções são instruções do programa. Exceto conforme descrito nos tóp
 [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
 |[Instrução lock](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Instruções](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Instruções](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)

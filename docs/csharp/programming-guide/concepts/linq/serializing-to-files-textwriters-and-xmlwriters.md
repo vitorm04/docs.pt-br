@@ -2,12 +2,12 @@
 title: Serializando arquivos, o TextWriters e o XmlWriters1
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 903e6f5b6a8cd88c140e6759136301a6305cee2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 011e32054e39ee0f7f70baf9867f7cab6fe34540
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506999"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializando arquivos, o TextWriters, e o XmlWriters
 Você pode serializar árvores XML a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, ou a <xref:System.Xml.XmlWriter>.  
@@ -30,5 +30,6 @@ Você pode serializar árvores XML a <xref:System.IO.File>, a <xref:System.IO.Te
   
  Para exemplos, consulte o tópico de referência apropriado.  
   
-## <a name="see-also"></a>Consulte também  
- [Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Consulte também
+
+- [Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

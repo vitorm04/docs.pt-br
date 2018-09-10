@@ -3,11 +3,11 @@ title: Novidades no C# 7.3
 description: Uma visão geral dos novos recursos no C# 7.3
 ms.date: 05/16/2018
 ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907728"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511605"
 ---
 # <a name="whats-new-in-c-73"></a>Novidades no C# 7.3
 

@@ -2,12 +2,12 @@
 title: Usando variação em delegações (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 46c09da9adac7ed47c32b1fed4311dfedbf5764e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5be4f786d2e1b8a0ead3fd58fe056e188faa916a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326053"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501718"
 ---
 # <a name="using-variance-in-delegates-c"></a>Usando variação em delegações (C#)
 Quando você atribui um método a um delegado, a *covariância* e a *contravariância* fornece flexibilidade para corresponder um tipo de delegado a uma assinatura de método. A covariância permite que um método tenha o tipo de retorno mais derivado do que o definido no delegado. A contravariância permite que um método que tem tipos de parâmetro menos derivados do que no tipo delegado.  
@@ -20,8 +20,8 @@ Quando você atribui um método a um delegado, a *covariância* e a *contravari�
 ### <a name="code"></a>Código  
   
 ```csharp  
-class Mammals{}  
-class Dogs : Mammals{}  
+class Mammals {}  
+class Dogs : Mammals {}  
   
 class Program  
 {  
@@ -77,6 +77,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Variação em delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
- [Usando variação para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Consulte também
+
+- [Variação em delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+- [Usando variação para delegados genéricos Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

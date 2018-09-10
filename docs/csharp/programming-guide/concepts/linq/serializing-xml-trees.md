@@ -2,12 +2,12 @@
 title: Serializando árvores XML (C#)
 ms.date: 07/20/2015
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-ms.openlocfilehash: 8f372a05bd69b801085cba9d9a3b11ae01841a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9bcf049eb6cfe129971923657f5d70a833209cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338345"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500474"
 ---
 # <a name="serializing-xml-trees-c"></a>Serializando árvores XML (C#)
 Serializar uma árvore XML significa gerar o XML a partir da árvore XML. Você pode fazer a serialização para um arquivo, para uma implementação concreta da classe <xref:System.IO.TextWriter> ou a uma implementação concreta de um <xref:System.Xml.XmlWriter>.  
@@ -23,5 +23,6 @@ Serializar uma árvore XML significa gerar o XML a partir da árvore XML. Você 
 |[Serializando arquivos, o TextWriters, e o XmlWriters](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Descreve como serializar um documento para um <xref:System.IO.File>, um <xref:System.IO.TextWriter> ou um <xref:System.Xml.XmlWriter>.|  
 |[Serializando para um XmlReader (invocando XSLT) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Descreve como criar um <xref:System.Xml.XmlReader> que permita que outro módulo leia o conteúdo de uma árvore XML.|  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
