@@ -4,12 +4,12 @@ description: Saiba como criar um modelo personalizado para o comando dotnet new 
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: fee2709f54395b9926dae904a448cb92aafb5172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516647"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Criar um modelo personalizado para dotnet new
 
@@ -63,7 +63,7 @@ O modelo foi concluído. Neste momento, você tem duas opções para a distribui
 1. Crie uma pasta para o pacote NuGet. Para o tutorial, o nome da pasta *GarciaSoftware.ConsoleTemplate.CSharp* é usado e a pasta é criada dentro de uma pasta *Documents\NuGetTemplates* no perfil do usuário. Crie uma pasta chamada *conteúdo* dentro da nova pasta de modelo para guardar os arquivos de projeto.
 1. Copie o conteúdo da pasta do seu projeto, juntamente com seu arquivo *.template.config/template.json* para a pasta *conteúdo* criada.
 1. Ao lado da pasta *conteúdo*, adicione um arquivo [*nuspec*](/nuget/create-packages/creating-a-package). O arquivo nuspec é um arquivo de manifesto XML que descreve o conteúdo de um pacote e orienta o processo de criação do pacote NuGet.
-   
+
    ![Estrutura de diretórios que mostra o layout do pacote NuGet](./media/create-custom-template/nugetdirectorylayout.png)
 
 1. Dentro de um elemento **\<packageTypes>** no arquivo *nuspec*, inclua um elemento **\<packageType>** com um valor de atributo `name` de `Template`. Tanto a pasta *conteúdo* quanto o arquivo *nuspec* devem residir no mesmo diretório. A tabela mostra os elementos mínimos do arquivo *nuspec* necessários para produzir um modelo como um pacote NuGet.
@@ -158,7 +158,7 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp
 
 > [!NOTE]
 > O exemplo tem fins apenas demonstrativos. Não há um pacote NuGet `GarciaSoftware.ConsoleTemplate.CSharp` em nuget.org ou instalado com o SDK do .NET Core. Se você executar o comando, nenhum pacote/modelo será desinstalado e você receberá a seguinte exceção:
-> 
+>
 > > Não foi possível encontrar algo para desinstalar o 'GarciaSoftware.ConsoleTemplate.CSharp' chamado.
 
 Se você tiver instalado o [modelo NUnit 3 para dotnet-new](https://www.nuget.org/packages/NUnit3.DotNetNew.Template/) e desejar desinstalá-lo, use o seguinte comando:
@@ -209,7 +209,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ## <a name="see-also"></a>Consulte também
 
-[Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)  
-[Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-[Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-[Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)  
+* [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)  
+* [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
+* [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)  

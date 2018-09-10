@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 6cfc389a1ee526d8dc4383c5efd6fb3299eb08d8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: efeb12eb43539b0a85168b1162e0f8b94ad67e90
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105596"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213826"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>C# de teste de unidade com MSTest e .NET Core
 
@@ -144,7 +144,7 @@ No diretório *unit-testing-using-mstest*, execute `dotnet test` novamente. O co
 
 Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0, -1. Você pode adicionar novos testes com o atributo `[TestMethod]`, mas isso se torna entediante rapidamente. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um atributo `[DataTestMethod]` representa um pacote de testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `[DataRow]` para especificar valores para essas entradas.
 
-Em vez de criar novos testes, aplique esses dois atributos para criar um único teste orientado a dados. O teste orientado a dados é um método que testa vários valores inferiores a dois, que é o número primo mais baixo:
+Em vez de criar novos testes, aplique esses dois atributos para criar um único teste orientado a dados. O teste controlado por dados é um método que testa vários valores menores que dois, que é o menor número primo:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 

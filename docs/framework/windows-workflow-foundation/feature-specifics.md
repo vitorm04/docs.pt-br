@@ -3,11 +3,11 @@ title: Específicos de funcionalidade do Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140873"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205069"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de funcionalidade do Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] adiciona um número de recursos a Windows Workflow Foundation. Este documento descreve um número de recursos novos, e fornece detalhes sobre cenários em que podem ser úteis.  

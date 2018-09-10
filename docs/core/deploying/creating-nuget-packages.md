@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: 6be94c2e2cef443f69b2d6df7c2d490cb1fb629d
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207755"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205049"
 ---
 # <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Como criar um pacote NuGet com várias Ferramentas de Plataforma Cruzada
 
