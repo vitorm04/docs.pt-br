@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 758ce84390c9ba47e3eb56e1feb293a4cf0408a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570520"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188131"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Removendo os atributos de um nó no elemento DOM
 Há várias maneiras para remover os atributos. Uma técnica é removê-los de coleção de atributo. Para fazer isso, as seguintes etapas são executadas:  
@@ -39,5 +39,6 @@ Há várias maneiras para remover os atributos. Uma técnica é removê-los de c
   
  Quando chamado com <xref:System.Xml.XmlAttribute>, o método de <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> define o valor do atributo para String.Empty, como um atributo não pode existir sem um valor.  
   
-## <a name="see-also"></a>Consulte também  
- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Consulte também
+
+- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

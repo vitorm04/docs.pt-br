@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591306"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199759"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
 A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa um sinal com nome (em todo o sistema) ou local. É um wrapper fino em torno do objeto de sinal Win32. Sinais do Win32 são contagem de sinais que podem ser usadas para controlar o acesso a um pool de recursos.  
@@ -46,7 +46,8 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
   
  Use a segurança de controle de acesso para proteger um objeto <xref:System.Threading.Semaphore> que representa um sinal com nome, preferencialmente usando um construtor que especifica um objeto <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Também é possível aplicar a segurança de controle de acesso usando o método <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, mas isso deixa uma janela de vulnerabilidade entre o momento em que o sinal é criado e o momento em que ele é protegido. Proteger sinais com a segurança de controle de acesso ajuda a impedir ataques mal-intencionados, mas não resolve o problema de colisão de nome não intencional.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)

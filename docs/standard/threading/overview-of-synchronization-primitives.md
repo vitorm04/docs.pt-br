@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592009"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485528"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Visão geral dos primitivos de sincronização
 <a name="top"></a>O .NET Framework fornece uma variedade de primitivos de sincronização para controlar as interações de threads e evitar condições de corrida. Eles podem ser divididos em três categorias: operações interliconectadas, sinalização e bloqueio.  
@@ -40,7 +40,7 @@ ms.locfileid: "33592009"
  Bloqueios oferecem controle de um recurso para um thread por vez, ou para um número especificado de threads. Um thread que solicita um bloqueio exclusivo quando o bloqueio está sendo usado permanece bloqueado até o bloqueio ficar disponível.  
   
 ### <a name="exclusive-locks"></a>Bloqueios exclusivos  
- A forma mais simples de bloqueio é a instrução `lock` em C# e a instrução `SyncLock` no Visual Basic, que controla o acesso a um bloco de código. Tal bloco é normalmente chamado de seção crítica. A instrução `lock` é implementada usando os métodos <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, e usa o bloco `try…catch…finally` para garantir que o bloqueio será liberado.  
+ A forma mais simples de bloqueio é a instrução `lock` em C# e a instrução `SyncLock` no Visual Basic, que controla o acesso a um bloco de código. Tal bloco é normalmente chamado de seção crítica. A instrução `lock` é implementada usando os métodos <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> e <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, e usa um bloco `try…finally` para garantir que o bloqueio será liberado.  
   
  Em geral, usar a instrução `lock` ou `SyncLock` para proteger pequenos blocos de código, sem nunca abranger mais de um único método, é a melhor maneira de usar a classe <xref:System.Threading.Monitor>. Embora poderosa, a classe <xref:System.Threading.Monitor> é propensa a deadlocks e a bloqueios órfãos.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592009"
   
  A classe <xref:System.Threading.Monitor> não está instanciada. Seus métodos são estáticos (`Shared` no Visual Basic) e afetam um objeto de bloqueio que pode ser instanciado.  
   
- Para obter uma visão conceitual, consulte [Monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Para obter uma visão conceitual, consulte [Monitores](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 #### <a name="mutex-class"></a>Classe Mutex  
  Os threads solicitam um <xref:System.Threading.Mutex> chamando uma sobrecarga de seu método <xref:System.Threading.WaitHandle.WaitOne%2A>. Sobrecargas com tempos limite são fornecidas para permitir que os threads desistam da espera. Ao contrário da classe <xref:System.Threading.Monitor>, um mutex pode ser local ou global. Global mutexes, também chamados de mutexes nomeados, são visíveis em todo o sistema operacional e podem ser usados para sincronizar threads em vários domínios de aplicativos ou processos. Os mutexes locais derivam de <xref:System.MarshalByRefObject> e podem ser usados nos limites do domínio de aplicativo.  
@@ -109,7 +109,7 @@ ms.locfileid: "33592009"
   
  Os threads bloqueiam os identificadores de espera chamando o método de instância <xref:System.Threading.WaitHandle.WaitOne%2A> ou um dos métodos estáticos <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> ou <xref:System.Threading.WaitHandle.SignalAndWait%2A>. Como eles são liberados depende de qual método foi chamado e do tipo de identificadores de espera.  
   
- Para obter uma visão conceitual, consulte [Identificadores de espera](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
+ Para obter uma visão conceitual, consulte [Identificadores de espera](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
   
 #### <a name="event-wait-handles"></a>Identificadores de espera de eventos  
  Os identificadores de espera de eventos incluem a classe <xref:System.Threading.EventWaitHandle> e suas classes derivadas, <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent>. Os threads são liberados de um identificador de espera de eventos quando ele é sinalizado, chamando seu método <xref:System.Threading.EventWaitHandle.Set%2A> ou usando o método <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
@@ -167,11 +167,11 @@ ms.locfileid: "33592009"
   
 ## <a name="see-also"></a>Consulte também  
  [Sincronizando dados para multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [Monitores](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutexes](../../../docs/standard/threading/mutexes.md)  
  [Semaphore e SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Identificadores de espera](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [Identificadores de espera](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [Operações interconectadas](../../../docs/standard/threading/interlocked-operations.md)  
  [Bloqueios de leitor-gravador](../../../docs/standard/threading/reader-writer-locks.md)  
  [Barreira](../../../docs/standard/threading/barrier.md)  

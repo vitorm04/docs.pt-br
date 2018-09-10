@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73ec2d2fb73ee95b39a15307d136c35542578c41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591710"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863001"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Armadilhas em potencial com PLINQ
 Em muitos casos, o PLINQ pode fornecer melhorias de desempenho significativas em relação a consultas sequenciais do LINQ to Objects. No entanto, o trabalho de paralelizar a execução da consulta apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a evitar ao escrever consultas PLINQ.  
@@ -29,7 +29,7 @@ Em muitos casos, o PLINQ pode fornecer melhorias de desempenho significativas em
 ## <a name="avoid-over-parallelization"></a>Evite o excesso de paralelização  
  Ao usar o operador `AsParallel`, você incorre em custos indiretos de particionar a coleção de origem e sincronizar os threads de trabalho. Os benefícios da paralelização ainda estão limitados pelo número de processadores no computador. Não há nenhum aumento de velocidade a ser obtido executando vários threads vinculados à computação em apenas um processador. Portanto, você deve ter cuidado para não paralelizar excessivamente uma consulta.  
   
- O cenário mais comum em que a paralelização excessiva pode ocorrer é em consultas aninhadas, como mostrado no seguinte trecho de código.  
+ O cenário mais comum em que a paralelização excessiva pode ocorrer é em consultas aninhadas, como mostrado no seguinte snippet.  
   
  [!code-csharp[PLINQ#20](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
  [!code-vb[PLINQ#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]  
@@ -119,5 +119,6 @@ ManualResetEventSlim mre = new ManualResetEventSlim();
   
  Em particular, uma iteração de um loop paralelo nunca deve aguardar outra iteração do loop para progredir. Se o loop paralelo decidir agendar as iterações sequencialmente, mas em ordem oposta, ocorrerá um deadlock.  
   
-## <a name="see-also"></a>Consulte também  
- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Consulte também
+
+- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

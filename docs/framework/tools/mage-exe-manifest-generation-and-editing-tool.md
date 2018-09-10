@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754986"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856173"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
 
@@ -63,7 +63,7 @@ A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Upd
 |**-pu,** **-ProviderURL** `url`||Manifestos de implantação.|Especifica a URL que o ClickOnce examinará em busca de atualizações de aplicativo.|
 |**-pub, -Publisher** `publisherName`||Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|Adiciona o nome do editor ao elemento de descrição do manifesto de implantação ou de aplicativo. Quando usado em um manifesto do aplicativo, **-UseManifestForTrust** também deve ser especificado com um valor "true" ou "t", do contrário, esse parâmetro gerará um erro.|
 |**-s, -SupportURL**  `url`||Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|Especifica o link exibido em Adicionar ou Remover Programas do aplicativo ClickOnce.|
-|**-ti, -TimestampUri** `uri`||Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|A URL de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](http://go.microsoft.com/fwlink/?LinkId=159000).|
+|**-ti, -TimestampUri** `uri`||Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|A URL de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](https://go.microsoft.com/fwlink/?LinkId=159000).|
 |**-t, -ToFile** `filePath`|– New:<br />– Implantação: deploy.application<br />– Aplicativo: application.exe.manifest<br />– Update:<br />– O arquivo de entrada.|Todos os tipos de arquivo.|Especifica o caminho de saída do arquivo que foi criado ou modificado.<br /><br /> Se **-ToFile** não for fornecido quando você usar **-New**, a saída será gravada no diretório de trabalho atual. Se **-ToFile** não for fornecido quando você usar **-Update**, o *Mage.exe* gravará o arquivo novamente no arquivo de entrada.|
 |**-tr, -TrustLevel** `level`|Com base na zona em que reside a URL do aplicativo.|Manifestos de aplicativo.|O nível de confiança a ser concedido ao aplicativo em computadores cliente. Entre os valores estão "Internet", "Intranet" e "FullTrust".|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|Manifestos de aplicativo.|Especifica se a assinatura digital do manifesto de aplicativo será usada para na tomada de decisões de confiança quando o aplicativo é executado no cliente. A especificação de "true" ou "t" indica que o manifesto do aplicativo será usado em decisões de confiança. A especificação de "false" ou "f" indica que a assinatura do manifesto de implantação será usada.|

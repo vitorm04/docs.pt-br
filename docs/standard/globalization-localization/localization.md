@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fc995843c1e2f5977acbfe2158457d30ac355ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573907"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185042"
 ---
 # <a name="localization"></a>Localização
 Localização é o processo de traduzir os recursos do aplicativo em versões localizadas para cada cultura à qual o aplicativo dará suporte. Você deve prosseguir para a etapa de localização somente após concluir a etapa de [Revisão de Capacidade de Localização](../../../docs/standard/globalization-localization/localizability-review.md) para verificar se o aplicativo globalizado está pronto para a localização.  
@@ -32,8 +32,9 @@ Localização é o processo de traduzir os recursos do aplicativo em versões lo
   
  O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] fornece o Windows Forms Resource Editor (Winres.exe), que permite que você localize rapidamente Windows Forms para culturas de destino. Para saber mais sobre como usar essa ferramenta, confira [Winres.exe (Windows Forms Resource Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
- [Análise de possibilidade de localização](../../../docs/standard/globalization-localization/localizability-review.md)  
- [Globalização](../../../docs/standard/globalization-localization/globalization.md)  
- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
+- [Análise de possibilidade de localização](../../../docs/standard/globalization-localization/localizability-review.md)  
+- [Globalização](../../../docs/standard/globalization-localization/globalization.md)  
+- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)

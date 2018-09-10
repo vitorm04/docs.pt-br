@@ -3,11 +3,11 @@ title: Criando a classe GamePiece
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
 ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43395389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857895"
 ---
 # <a name="creating-the-gamepiece-class"></a>Criando a classe GamePiece
 A classe **GamePiece** encapsula toda a funcionalidade necessária para carregar uma imagem de uma peça do jogo da Microsoft XNA, controlar o estado do mouse em relação à peça do jogo, capturar o mouse, fornecer processamento de inércia e manipulação e fornecer a capacidade de pulo quando a peça do jogo atingir os limites da porta de exibição.  

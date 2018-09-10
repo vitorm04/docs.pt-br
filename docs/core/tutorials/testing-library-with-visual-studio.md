@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 8ea958ad5d3eba394eb914da81111a0eaf707cf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483467"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43398872"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
 
@@ -38,11 +38,11 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
    O código-fonte criado pelo modelo de teste de unidade faz o seguinte:
 
-   * Ele importa o namespace [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), que contém os tipos usados para testes de unidade.
+   * Ele importa o namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contém os tipos usados para o teste de unidade.
 
-   * Ele aplica o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] é executado automaticamente quando o teste de unidade é executado.
+   * Ele aplica o atributo<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] é executado automaticamente quando o teste de unidade é executado.
 
-   * Ele aplica o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
+   * Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto **StringLibraryTest** e selecione **Adicionar Referência** no menu de contexto.
 
@@ -67,11 +67,11 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
    O código-fonte criado pelo modelo de teste de unidade faz o seguinte:
 
-   * Ele importa o namespace [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), que contém os tipos usados para testes de unidade.
+   * Ele importa o namespace [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, que contém os tipos usados para o teste de unidade.
 
-   * Ele aplica o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] é executado automaticamente quando o teste de unidade é executado.
+   * Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> é executado automaticamente quando o teste de unidade é executado.
 
-   * Ele aplica o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
+   * Ele aplica o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto **StringLibraryTest** e selecione **Adicionar Referência** no menu de contexto.
 
@@ -84,9 +84,9 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
 ## <a name="adding-and-running-unit-test-methods"></a>Adicionar e executar métodos de teste de unidade
 
-Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) em uma classe de teste de unidade, a classe à qual o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) é aplicado. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método têm êxito.
+Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> em uma classe de teste de unidade, a classe à qual o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> é aplicado. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método têm êxito.
 
-Os testes mais comuns chamam membros da classe [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx). Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns de seus métodos chamados com mais frequência são mostrados na tabela abaixo.
+Os testes mais comuns chamam membros da classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns de seus métodos chamados com mais frequência são mostrados na tabela abaixo.
 
 Métodos assert | Função
 --- | ---
@@ -95,13 +95,13 @@ Métodos assert | Função
 `Assert.IsFalse` | Verifica se uma condição é `false`. O assert falhará se a condição for `true`.
 `Assert.IsNotNull` | Verifica se um objeto não é `null`. A assert falhará se o objeto for `null`.
 
-Também é possível aplicar o atributo [\[ExpectedException\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx) a um método de teste. Ele indica o tipo de exceção que um método de teste deve gerar. O teste falhará se a exceção especificada não for lançada.
+Também é possível aplicar o atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> a um método de teste. Ele indica o tipo de exceção que um método de teste deve gerar. O teste falhará se a exceção especificada não for lançada.
 
-Ao testar o método `StringLibrary.StartsWithUpper`, você quer fornecer um número de cadeias de caracteres que comecem com um caractere maiúsculo. Você espera que o método retorne `true` nesses casos, então pode chamar o método [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx). Da mesma forma, você deseja fornecer um número de cadeias de caracteres que comecem com algo diferente de um caractere maiúsculo. Você espera que o método retorne `false` nesses casos, então pode chamar o método [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx).
+Ao testar o método `StringLibrary.StartsWithUpper`, você quer fornecer um número de cadeias de caracteres que comecem com um caractere maiúsculo. Você espera que o método retorne `true` nesses casos, para que possa chamar o método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A>. Da mesma forma, você deseja fornecer um número de cadeias de caracteres que comecem com algo diferente de um caractere maiúsculo. Você espera que o método retorne `false` nesses casos, para que possa chamar o método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A>.
 
 Como seu método de biblioteca lida com cadeias de caracteres, convém ter certeza de que ele manipulará com êxito uma [cadeia de caracteres vazia (`String.Empty`)](xref:System.String.Empty), uma cadeia de caracteres válida sem caracteres e cujo <xref:System.String.Length> é 0 e uma cadeia de caracteres `null` que não foi inicializada. Se `StartsWithUpper` for chamado como um método de extensão em uma instância de <xref:System.String>, ele não poderá receber uma cadeia de caracteres `null`. No entanto, você também pode chamá-lo diretamente como um método estático e passa um único argumento <xref:System.String>.
 
-Você definirá três métodos, cada um deles chamará seu método [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) repetidamente para cada elemento em uma matriz de cadeia de caracteres. Como o método de teste falha assim que encontra a primeira falha, você chamará uma sobrecarga de método que permite passar uma cadeia de caracteres que indica o valor da cadeia de caracteres usado na chamada do método.
+Você definirá três métodos, cada um deles chamará seu método <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> repetidamente para cada elemento em uma matriz de cadeia de caracteres. Como o método de teste falha assim que encontra a primeira falha, você chamará uma sobrecarga de método que permite passar uma cadeia de caracteres que indica o valor da cadeia de caracteres usado na chamada do método.
 
 Para criar os métodos de teste:
 

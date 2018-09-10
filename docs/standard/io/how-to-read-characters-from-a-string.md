@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2e128f1011b6daa5c0e8b62252c8adc3175586c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13a57f8ea7db91e5357ecfb20c4e907f2706f78d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572769"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44194962"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>Como ler caracteres de uma cadeia de caracteres
 Os exemplos de código a seguir mostram como ler caracteres de forma síncrona e assíncrona de uma cadeia de caracteres.  
@@ -38,14 +38,15 @@ Os exemplos de código a seguir mostram como ler caracteres de forma síncrona e
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StringReader>  
- <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
- [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [NIB: Como criar uma listagem de diretório](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
- [Como gravar caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.IO.StringReader>  
+- <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
+- [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [NIB: Como criar uma listagem de diretório](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [Como gravar caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)

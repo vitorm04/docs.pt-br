@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79005c69e8c125e78573a44f34740632676faf59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568804"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261964"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilando aplicativos de console no .NET Framework
 Os aplicativos do .NET Framework podem usar a classe <xref:System.Console?displayProperty=nameWithType> para ler e gravar caracteres no console. Os dados do console são lidos a partir do fluxo de entrada padrão, os dados para o console são gravados no fluxo de saída padrão e os dados de erro do console são gravados no fluxo de saída de erro padrão. Esses fluxos são automaticamente associados ao console quando o aplicativo é iniciado e são apresentados como as propriedades <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> e <xref:System.Console.Error%2A>, respectivamente.  
@@ -32,6 +32,7 @@ Os aplicativos do .NET Framework podem usar a classe <xref:System.Console?displa
   
  A classe **System.Console** tem métodos que podem ler caracteres individuais ou linhas inteiras do console. Outros métodos convertem dados e cadeias de formato e gravam as cadeias formatadas no console. Para mais informações sobre cadeias de caracteres de formatação, consulte [Tipos de formatação](../../docs/standard/base-types/formatting-types.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Console?displayProperty=nameWithType>  
- [Formatando Tipos](../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Console?displayProperty=nameWithType>  
+- [Formatando Tipos](../../docs/standard/base-types/formatting-types.md)

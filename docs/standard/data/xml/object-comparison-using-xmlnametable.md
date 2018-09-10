@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09f717cb4c09c1e35b9472b7b549f1d3edf0dd15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814f5434dd0473b3b1dd613a2eba14a828c464d9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569272"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862772"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Comparação de objeto usando XmlNameTable
 **XmlDocuments**, quando criado, possui uma tabela de nome especificamente projetada para esse documento. Quando XML é carregado no documento, ou novos elementos ou atributos são criados, os nomes de atributo e de elemento são colocados em **XmlNameTable**. Você também pode criar **XmlDocument** usando **NameTable** existente de outro documento. Quando **XmlDocuments** é criado com o constructo que aceita um parâmetro **XmlNameTable**, o documento tem acesso aos nomes de nó, namespaces e prefixos já armazenados em **XmlNameTable**. Independentemente de como a tabela de nome é carregada com nomes, uma vez que os nomes são armazenados na tabela, os nomes podem ser comparados rapidamente usando a comparação de objeto em vez de comparação de cadeia de caracteres. As cadeias de caracteres também podem ser adicionadas à tabela de nome usando o <xref:System.Xml.NameTable.Add%2A>. O exemplo de código a seguir mostra uma tabela de nome que está sendo criada e a cadeia de caracteres **MyString** sendo adicionada à tabela. Em seguida, um **XmlDocument** é criado usando a tabela e os nomes de elementos e atributos de **Myfile.xml** serão adicionados à tabela de nome existente.  
@@ -53,5 +53,6 @@ if (((object)node1.Name) == ((object)node2.Name))
   
  A situação acima de uma tabela de nome transmitida entre dois documentos é típico quando o mesmo tipo de documento está sendo processado repetidamente, como documentos de ordem em um site de comércio eletrônico, que atendem a um esquema de linguagem de definição de esquema XML (XSD) ou Document type definition (DTD) e as mesmas cadeias de caracteres são repetidas. Usar a mesma tabela de nome fornece uma melhoria de desempenho, porque o mesmo nome de elemento ocorre em vários documentos.  
   
-## <a name="see-also"></a>Consulte também  
- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Consulte também
+
+- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

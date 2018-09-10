@@ -2,12 +2,12 @@
 title: Como compartilhar um assembly com outros aplicativos (C#)
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: beadd6adb176c3fd4e6dde94d95194aea790a2fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324116"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266463"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Como compartilhar um assembly com outros aplicativos (C#)
 Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria dos programas simples consistem em um assembly particular porque eles não se destinam a serem usados por outros aplicativos.  
@@ -24,8 +24,9 @@ Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria d
   
 4.  Adicione o assembly no cache de assembly global. Para obter mais informações, consulte [Como instalar um assembly no cache de assembly global](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Acesse, de outros aplicativos, os tipos contidos no assembly. Para obter mais informações, consulte [Como referenciar um assembly de nome forte](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Acesse, de outros aplicativos, os tipos contidos no assembly. Para obter mais informações, consulte [Como referenciar um assembly de nome forte](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+- [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)

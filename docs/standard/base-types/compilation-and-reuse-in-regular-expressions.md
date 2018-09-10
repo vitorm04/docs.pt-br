@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568752"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877725"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilação e reutilização em expressões regulares
 Você pode otimizar o desempenho de aplicativos que fazem uso intensivo de expressões regulares compreendendo como o mecanismo de expressões regulares compila expressões e como as expressões regulares são armazenadas em cache. Este tópico discute a compilação e o cache.  
@@ -46,5 +46,6 @@ No entanto, a MSIL gerada não pode ser descarregada. A única maneira de descar
   
  Devido à sobrecarga da instanciação de objetos e à compilação da expressão regular, criar e destruir rapidamente vários objetos <xref:System.Text.RegularExpressions.Regex> é um processo muito caro. Para aplicativos que usam um grande número de expressões regulares diferentes, você pode otimizar o desempenho usando chamadas para métodos `Regex` estáticos e, possivelmente, aumentando o tamanho do cache de expressão regular.  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)

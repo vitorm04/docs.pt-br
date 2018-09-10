@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571430"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208576"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificando nós, conteúdo e valores em documentos XML
 Existem várias maneiras de modificar os nós e o conteúdo de um documento. Você pode:  
@@ -46,5 +46,6 @@ Existem várias maneiras de modificar os nós e o conteúdo de um documento. Voc
   
  É válido adicionar ou remover um filho somente leitura de um nó que pode ser editado. No entanto, tentativas de modificar o próprio nó somente leitura geram uma <xref:System.InvalidOperationException>. Um exemplo disso é modificar os filhos de um nó <xref:System.Xml.XmlEntityReference>. Os filhos são somente leitura e não podem ser modificados. Qualquer tentativa de modificá-los gera uma <xref:System.InvalidOperationException>.  
   
-## <a name="see-also"></a>Consulte também  
- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Consulte também
+
+- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

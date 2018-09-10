@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571908"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204949"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Como converter em números as entradas numéricas do usuário em controles da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuários podem inserir dados numéricos em um controle de <xref:System.Web.UI.WebControls.TextBox> em um número quase ilimitado de formatos. Como resultado, é muito importante determinar a localidade e a cultura do usuário da página da Web. Quando você analisa a entrada do usuário, pode aplicar as convenções de formatação definidas pela localidade e a cultura do usuário.  
@@ -71,6 +71,7 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, os usuário
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para impedir que um usuário insira script no fluxo de HTML, a entrada do usuário nunca deve ser ecoada diretamente de volta na resposta do servidor. Em vez disso, ela deve ser codificada usando o método <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Analisando cadeias de caracteres numéricas](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a>Consulte também
+
+- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Analisando cadeias de caracteres numéricas](../../../docs/standard/base-types/parsing-numeric.md)

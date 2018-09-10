@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409809"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197453"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  
@@ -97,7 +97,7 @@ signtool [command] [options] [file_name | ...]
 |`/u`  *Usage*|Especifica o EKU (uso avançado de chave) que deve estar presente no certificado de assinatura. O valor de uso pode ser especificado por OID ou por cadeia de caracteres. O uso padrão é "Assinatura de Código" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Especifica o uso da "Verificação do Componente do Sistema Windows" (1.3.6.1.4.1.311.10.3.6).|  
   
- Para obter exemplos de uso, consulte [Using SignTool to Sign a File](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx) (Usando a SignTool para assinar um arquivo).  
+ Para obter exemplos de uso, consulte [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file) (Usando a SignTool para assinar um arquivo).  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>Opções de Comando TimeStamp  
@@ -111,7 +111,7 @@ signtool [command] [options] [file_name | ...]
 |`/tp` *index*|Marca com o carimbo de data/hora a assinatura em *index*.|  
 |`/tr`  *URL*|Especifica a URL do servidor do carimbo de data/hora RFC 3161. O arquivo com carimbo de data/hora assinado anteriormente. A opção `/tr` ou `/t` é obrigatória.|  
   
- Para obter um exemplo de uso, consulte [Adding Time Stamps to Previously Signed Files](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx) (Adicionar carimbos de data/hora aos arquivos assinados anteriormente).  
+ Para obter um exemplo de uso, consulte [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files) (Adicionar carimbos de data/hora aos arquivos assinados anteriormente).  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Verificar Opções de Comando  
@@ -128,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|Verifica a assinatura em uma posição especificada.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica um algoritmo de hash opcional a ser usado durante a procura de um arquivo em um catálogo.|  
 |`/kp`|Especifica se a verificação deve ser realizada com a política de assinatura do driver do modo kernel.|  
-|`/ms`|Usa várias semânticas de verificação. Esse é o comportamento padrão de uma chamada [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) no [!INCLUDE[win8](../../../includes/win8-md.md)] e superior.|  
+|`/ms`|Usa várias semânticas de verificação. Esse é o comportamento padrão de uma chamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) no [!INCLUDE[win8](../../../includes/win8-md.md)] e superior.|  
 |`/o` *Version*|Verifica o arquivo pela versão do sistema operacional. *Version* tem o seguinte formato: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa o valor subjacente de um membro de enumeração <xref:System.PlatformID>. **Importante:** o uso da opção `/o` é recomendado. Se `/o` não for especificado, SignTool.exe poderá retornar resultados inesperados. Por exemplo, se você não incluir a opção `/o`, os catálogos do sistema validados corretamente em um sistema operacional anterior poderá não ser validado corretamente em um sistema operacional mais novo.|  
 |`/p7`|Verifica arquivos PKCS #7. Nenhuma política existente é usada na validação de PKCS #7. A assinatura é verificada e uma cadeia é compilada para o certificado de assinatura.|  
 |`/pa`|Especifica se a Política de Verificação de Authenticode Padrão deve ser usada. Se a opção `/pa` não for especificada, a Ferramenta de Assinatura usará a Política de Verificação de Driver do Windows. Essa opção não pode ser usada com as opções `catdb`.|  
@@ -137,7 +137,7 @@ signtool [command] [options] [file_name | ...]
 |`/r` *RootSubjectName*|Especifica o nome do assunto do certificado raiz em que o certificado de assinatura deve ser encadeado. Esse valor pode ser uma subcadeia de caracteres do nome da entidade inteiro do certificado raiz.|  
 |`/tw`|Especifica se um aviso deverá ser gerado se a assinatura não receber carimbo de data/hora.|  
   
- Para obter exemplos de uso, consulte [Using SignTool to Verify a File Signature](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx) (Usando SignTool para verificar a assinatura de um arquivo).  
+ Para obter exemplos de uso, consulte [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature) (Usando SignTool para verificar a assinatura de um arquivo).  
   
 ## <a name="return-value"></a>Valor retornado  
  A Ferramenta de Assinatura retorna um dos códigos de saída a seguir quando é encerrada.  

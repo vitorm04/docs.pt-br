@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569968"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207220"
 ---
 # <a name="load-data-from-a-reader"></a>Carregando dados de um leitor
 Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.Load%2A> e um parâmetro de <xref:System.Xml.XmlReader>, existem diferenças no comportamento que ocorre quando comparado ao comportamento de dados de carregamento de outro formata. Se o leitor está no estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consome todo o conteúdo do leitor e compila o modelo de objeto (DOM) de documento de todos os dados no leitor.  
@@ -29,5 +29,6 @@ Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.L
   
  Por padrão, <xref:System.Xml.XmlDocument.Load%2A> não verifica se o XML é válida usando o Document type definition (DTD) ou validação de esquema. Verifica somente se está XML bem formado. Para que a validação ocorre, você precisa criar <xref:System.Xml.XmlReader> usando a classe de <xref:System.Xml.XmlReaderSettings> . A classe <xref:System.Xml.XmlReader> pode impor a validação usando um esquema da linguagem XSD ou DTD. A propriedade de <xref:System.Xml.ValidationType> na classe de <xref:System.Xml.XmlReaderSettings> determina se a instância de <xref:System.Xml.XmlReader> aplica a validação. Para obter mais informações sobre a validação de dados XML, consulte a seção comentários da página de referência <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>Consulte também  
- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Consulte também
+
+- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

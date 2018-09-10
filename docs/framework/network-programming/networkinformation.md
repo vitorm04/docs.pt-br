@@ -7,12 +7,12 @@ ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 964e76a008e1c18fe9f609f1dd63bce565e95d44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b39b5ae01ec5b22044dde82ba0f802c1a50ca9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396309"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526746"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 O namespace <xref:System.Net.NetworkInformation> permite que você colete informações sobre eventos, alterações, estatísticas e propriedades de rede. Você também pode determinar se um host remoto está acessível usando a classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -28,6 +28,6 @@ O namespace <xref:System.Net.NetworkInformation> permite que você colete inform
   
 ## <a name="see-also"></a>Consulte também  
  [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Amostra de tecnologia da informação de rede](http://go.microsoft.com/fwlink/?LinkID=179564)  
- [Amostra de tecnologia de ferramenta NetStat](http://go.microsoft.com/fwlink/?LinkID=179562)  
- [Amostra de tecnologia de cliente de ping](http://go.microsoft.com/fwlink/?LinkID=179565)
+ [Amostra de tecnologia da informação de rede](https://go.microsoft.com/fwlink/?LinkID=179564)  
+ [Amostra de tecnologia de ferramenta NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)  
+ [Amostra de tecnologia de cliente de ping](https://go.microsoft.com/fwlink/?LinkID=179565)

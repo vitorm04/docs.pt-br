@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105428"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238410"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Arquitetura lógica versus arquitetura física
 
@@ -31,7 +31,7 @@ Como mostra a Figura 4-8, o microsserviço de negócios de catálogo pode ser co
 
 **Figura 4-8**. Microsserviço de negócios com vários serviços físicos
 
-Os serviços no exemplo compartilham o mesmo modelo de dados, porque o serviço de API Web tem como alvo os mesmos dados que o Serviço de Pesquisa. Portanto, na implementação física do microsserviço de negócios, você está dividindo essa funcionalidade para poder escalar ou reduzir verticalmente cada um desses serviços internos, conforme necessário. Talvez o serviço de API Web geralmente precise de mais instâncias do que o Serviço de Pesquisa ou vice-versa.)
+Os serviços no exemplo compartilham o mesmo modelo de dados, porque o serviço de API Web tem como alvo os mesmos dados que o Serviço de Pesquisa. Portanto, na implementação física do microsserviço de negócios, você está dividindo essa funcionalidade para poder escalar ou reduzir verticalmente cada um desses serviços internos, conforme necessário. Talvez o serviço de API Web geralmente precise de mais instâncias do que o Serviço de Pesquisa ou vice-versa.
 
 Em resumo, a arquitetura lógica de microsserviços nem sempre precisa coincidir com a arquitetura de implantação física. Neste guia, sempre que mencionamos um microsserviço, queremos dizer um microsserviço lógico ou de negócios que pôde mapear para um ou mais serviços. Na maioria dos casos, esse será um único serviço, mas pode ser mais.
 

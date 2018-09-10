@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
 ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512110"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -55,7 +55,7 @@ Depois de criar o projeto, você poderá implementar os controladores de MVC com
 
 O Entity Framework (EF) Core é uma versão de multiplaforma leve, extensível e de plataforma cruzada da popular tecnologia de acesso a dados do Entity Framework. O EF Core é um ORM (mapeador relacional de objeto) que permite que os desenvolvedores do .NET trabalhem com um banco de dados usando objetos .NET.
 
-O microsserviço de catálogo usa o EF e o provedor do SQL Server porque seu banco de dados está em execução em um contêiner com o SQL Server para a imagem do Docker do Linux. No entanto, o banco de dados poderia ser implantado em qualquer SQL Server, como o Windows local ou o BD SQL do Azure. A única coisa que você precisaria alterar seria a cadeia de conexão no microsserviço da API Web ASP.NET.
+O microsserviço de catálogo usa o EF e o provedor do SQL Server porque seu banco de dados está em execução em um contêiner com o SQL Server para a imagem do Docker do Linux. No entanto, o banco de dados poderia ser implantado em qualquer SQL Server, como o Windows local ou o BD SQL do Azure. A única coisa que você precisaria alterar seria a cadeia de conexão no microsserviço do ASP.NET Web API.
 
 
 #### <a name="the-data-model"></a>O modelo de dados
@@ -326,9 +326,9 @@ Os metadados do Swagger são o que os Aplicativo Lógico do Azure, o PowerApps e
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Como automatizar a geração de metadados do Swagger para a API com o pacote NuGet Swashbuckle
 
-A geração manual de metadados do Swagger (em um arquivo JSON ou YAML) pode ser um trabalho entediante. No entanto, é possível automatizar a descoberta de serviços da API Web ASP.NET usando o [pacote NuGet Swashbuckle](https://aka.ms/swashbuckledotnetcore) para gerar dinamicamente os metadados do Swagger para a API.
+A geração manual de metadados do Swagger (em um arquivo JSON ou YAML) pode ser um trabalho entediante. No entanto, é possível automatizar a descoberta de serviços do ASP.NET Web API usando o [pacote NuGet Swashbuckle](https://aka.ms/swashbuckledotnetcore) para gerar dinamicamente os metadados do Swagger para a API.
 
-O Swashbuckle gera automaticamente os metadados do Swagger para os projetos da API Web ASP.NET. Ele é compatível com projetos da API Web ASP.NET Core, da API Web ASP.NET tradicional e de outros tipos, como os microsserviços de Aplicativo de API do Azure, Aplicativo Móvel Azure, Azure Service Fabric com base no ASP.NET. Ele também é compatível com a API Web simples implantada em contêineres, como no aplicativo de referência.
+O Swashbuckle gera automaticamente os metadados do Swagger para os projetos do ASP.NET Web API. Ele é compatível com projetos da API Web ASP.NET Core, do ASP.NET Web API tradicional e de outros tipos, como os microsserviços de Aplicativo de API do Azure, Aplicativo Móvel Azure, Azure Service Fabric com base no ASP.NET. Ele também é compatível com a API Web simples implantada em contêineres, como no aplicativo de referência.
 
 O Swashbuckle combina o Gerenciador de API e o Swagger ou o [swagger-ui](https://github.com/swagger-api/swagger-ui) para fornecer uma experiência avançada de descoberta e de documentação aos consumidores da API. Além do mecanismo gerador de metadados do Swagger, o Swashbuckle também contém uma versão incorporada do swagger-ui, que ele oferecerá automaticamente quando for instalado.
 
@@ -409,7 +409,7 @@ A Figura 8-10 mostra os metadados JSON do Swagger gerados por meio do microsserv
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Páginas de Ajuda da API Web ASP.NET usando o Swagger**
+-   **Páginas de Ajuda do ASP.NET Web API usando o Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

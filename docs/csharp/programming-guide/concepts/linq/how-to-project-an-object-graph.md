@@ -2,12 +2,12 @@
 title: Como projetar um gráfico de objeto (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 8a1eef77e1e4cb25ffed489c49311dd40f7c9b58
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932986"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261519"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Como projetar um gráfico de objeto (C#)
 Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.  
@@ -256,7 +256,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq.Enumerable.Select%2A>  
- <xref:System.Linq.Enumerable.ToList%2A>  
- [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Linq.Enumerable.Select%2A>  
+- <xref:System.Linq.Enumerable.ToList%2A>  
+- [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

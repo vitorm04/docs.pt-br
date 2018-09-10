@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106665"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388899"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Capacidade de endereçamento de microsserviços e o Registro do serviço
 
@@ -19,7 +19,7 @@ O [padrão de Registro de serviço](https://microservices.io/patterns/service-re
 
 Em alguns ambientes de implantação de microsserviço (chamados clusters, a serem abordados em uma seção posterior), a descoberta de serviço é interna. Por exemplo, em um ambiente do Serviço de Contêiner do Azure, o Kubernetes e o DC/SO com Marathon podem manipular o registro e o cancelamento de registro da instância de serviço. Eles também executam um proxy em cada host de cluster que desempenha a função de roteador de descoberta do servidor. Outro exemplo é o Azure Service Fabric, que também fornece um Registro de serviço por meio de seu Serviço de nomenclatura pronto para uso.
 
-Observe que há determinada sobreposição entre o Registro de serviço e o padrão de gateway de API, que ajuda a resolver esse problema também. Por exemplo, o [Proxy Reverso do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) é um tipo de implementação de um Gateway de API baseado no Serviço de nomenclatura do Service Fabric e que ajuda a resolver a resolução de endereço para os serviços internos.
+Observe que há determinada sobreposição entre o Registro de serviço e o padrão de gateway de API, que ajuda a resolver esse problema também. Por exemplo, o [Proxy Reverso do Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) é um tipo de implementação de um Gateway de API baseado no Serviço de Nomenclatura do Service Fabric e que ajuda a resolver a resolução de endereço para os serviços internos.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

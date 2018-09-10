@@ -20,19 +20,19 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391167"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484974"
 ---
 # <a name="managing-connections"></a>Gerenciando conexões
 Aplicativos que usam HTTP para se conectar aos recursos de dados podem usar as classes <xref:System.Net.ServicePoint> e <xref:System.Net.ServicePointManager> do .NET Framework para gerenciar conexões com a Internet e para ajudá-las a obter a melhor escala e desempenho.  
   
  A classe **ServicePoint** fornece um aplicativo com um ponto de extremidade ao qual o aplicativo pode se conectar para acessar recursos da Internet. Cada **ServicePoint** contém informações que ajudam a otimizar a conexões com um servidor de Internet compartilhando informações de otimização entre as conexões para melhorar o desempenho.  
   
- Cada **ServicePoint** é identificado por um URI (identificador de recurso uniforme) e é categorizado de acordo com o identificador do esquema e os fragmentos de host do URI. Por exemplo, a mesma instância de **ServicePoint** oferece solicitações para os URIs http://www.contoso.com/index.htm e http://www.contoso.com/news.htm?date=today, já que eles têm o mesmo identificador de esquema (http) e fragmentos de host (www.contoso.com). Se o aplicativo já tem uma conexão persistente para o servidor www.contoso.com, ele usa essa conexão para recuperar as solicitações, evitando a necessidade de criar duas conexões.  
+ Cada **ServicePoint** é identificado por um URI (identificador de recurso uniforme) e é categorizado de acordo com o identificador do esquema e os fragmentos de host do URI. Por exemplo, a mesma instância de **ServicePoint** oferece solicitações para os URIs `http://www.contoso.com/index.htm` e `http://www.contoso.com/news.htm?date=today`, já que eles têm o mesmo identificador de esquema (http) e fragmentos de host (`www.contoso.com`). Se o aplicativo já tem uma conexão persistente para o servidor `www.contoso.com`, ele usa essa conexão para recuperar as solicitações, evitando a necessidade de criar duas conexões.  
   
  **ServicePointManager** é uma classe estática que gerencia a criação e destruição de instâncias de **ServicePoint**. O **ServicePointManager** cria um **ServicePoint** quando o aplicativo solicita um recurso de Internet que não está na coleção de instâncias **ServicePoint** existentes. As instâncias **ServicePoint** são destruídas quando ultrapassaram o tempo ocioso máximo ou quando o número de instâncias **ServicePoint** existentes excede o número máximo de instâncias **ServicePoint** para o aplicativo. Você pode controlar o tempo ocioso máximo padrão e o número máximo de instâncias **ServicePoint** definindo as propriedades <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> e <xref:System.Net.ServicePointManager.MaxServicePoints%2A> no **ServicePointManager**.  
   
@@ -53,7 +53,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- Alterar a propriedade **ServicePointManager.DefaultConnectionLimit** não afeta instâncias de **ServicePoint** inicializadas anteriormente. O código a seguir demonstra como alterar o limite de conexão em um **ServicePoint** existente para o servidor http://www.contoso.com para o valor armazenado em `newLimit`.  
+ Alterar a propriedade **ServicePointManager.DefaultConnectionLimit** não afeta instâncias de **ServicePoint** inicializadas anteriormente. O código a seguir demonstra como alterar o limite de conexão em um **ServicePoint** existente para o servidor `http://www.contoso.com` para o valor armazenado em `newLimit`.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

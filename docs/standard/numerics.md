@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588691"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209469"
 ---
 # <a name="numerics-in-the-net-framework"></a>Numéricos no  .NET Framework
 O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de ponto flutuante, bem como <xref:System.Numerics.BigInteger>, um tipo integral sem limite teórico superior ou inferior <xref:System.Numerics.Complex>, um tipo que representa números complexos e um conjunto de tipos de vetores habilitados por SIMD no namespace <xref:System.Numerics>.  
@@ -77,5 +77,6 @@ O .NET Core dá suporte aos integrais numéricos padrão e aos primitivos de pon
   
  O SIMD também pode ser baixado como um [pacote do NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  O pacote NutGET também inclui uma estrutura <xref:System.Numerics.Vector%601> genérica que permite a criação de um vetor de qualquer tipo numérico primitivo. (Os tipos numéricos primitivos incluem todos os tipos numéricos no namespace <xref:System>, exceto para <xref:System.Decimal>.) Além disso, a estrutura <xref:System.Numerics.Vector%601> fornece uma biblioteca de métodos de conveniência que você pode chamar ao trabalhar com vetores.  
   
-## <a name="see-also"></a>Consulte também  
- [Fundamentos do aplicativo](../../docs/standard/application-essentials.md)
+## <a name="see-also"></a>Consulte também
+
+- [Fundamentos do aplicativo](../../docs/standard/application-essentials.md)

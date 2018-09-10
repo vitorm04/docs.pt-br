@@ -1,5 +1,5 @@
 ---
-title: public (Referência de C#)
+title: Palavra-chave public (Referência em C#)
 ms.date: 07/20/2015
 f1_keywords:
 - public
@@ -7,46 +7,49 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 853f9c9ebe36345a897337d4e793d3c88059e068
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 84a3bc49b6eea047d518edc01dab7f2301854b6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998721"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484151"
 ---
 # <a name="public-c-reference"></a>public (Referência de C#)
-A palavra-chave `public` é um modificador de acesso para tipos e membros de tipo. Acesso público é o nível de acesso mais permissivo. Não há nenhuma restrição quanto ao acesso a membros públicos, como neste exemplo:  
-  
-```csharp  
-class SampleClass  
-{  
-    public int x; // No access restrictions.  
-}  
-```  
-  
- Consulte [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) e [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md) para obter mais informações.  
-  
-## <a name="example"></a>Exemplo  
- No exemplo a seguir, duas classes são declaradas, `PointTest` e `MainClass`. Os membros públicos `x` e `y` de `PointTest` são acessados diretamente de `MainClass`.  
-  
- [!code-csharp[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
-  
- Se alterar o nível de acesso de `public` para [particular](../../../csharp/language-reference/keywords/private.md) ou [protegido](../../../csharp/language-reference/keywords/protected.md), você receberá a mensagem de erro:  
-  
- 'PointTest.y' é inacessível devido ao seu nível de proteção.  
-  
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+A palavra-chave `public` é um modificador de acesso para tipos e membros de tipo. Acesso público é o nível de acesso mais permissivo. Não há nenhuma restrição quanto ao acesso a membros públicos, como neste exemplo:
+
+```csharp
+class SampleClass
+{
+    public int x; // No access restrictions.
+}
+```
+
+Consulte [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md) e [Níveis de acessibilidade](accessibility-levels.md) para obter mais informações.
+
+## <a name="example"></a>Exemplo
+
+No exemplo a seguir, duas classes são declaradas, `PointTest` e `MainClass`. Os membros públicos `x` e `y` de `PointTest` são acessados diretamente de `MainClass`.
+
+[!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
+
+Se alterar o nível de acesso de `public` para [particular](private.md) ou [protegido](protected.md), você receberá a mensagem de erro:
+
+'PointTest.y' é inacessível devido ao seu nível de proteção.
+
+## <a name="c-language-specification"></a>especificação da linguagem C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-- [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [Níveis de acessibilidade](../../../csharp/language-reference/keywords/accessibility-levels.md)  
-- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [Palavras-chave do C#](index.md)
+- [Modificadores de acesso](access-modifiers.md)
+- [Níveis de acessibilidade](accessibility-levels.md)
+- [Modificadores](modifiers.md)
+- [private](private.md)
+- [protected](protected.md)
+- [internal](internal.md)

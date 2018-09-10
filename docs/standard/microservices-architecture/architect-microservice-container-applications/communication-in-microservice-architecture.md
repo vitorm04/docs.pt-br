@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 827d28adda90403d866e7bc13d9eae99fe47c137
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106006"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804101"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicação em uma arquitetura de microsserviço
 
@@ -61,7 +61,7 @@ Se seu microsserviço precisar gerar uma ação adicional em outro microsserviç
 
 E, finalmente, (e este é o momento em que maioria dos problemas surgem ao criar microsserviços), se o microsserviço inicial precisar de dados que sejam originalmente pertencentes a outros microsserviços, não confie em fazer solicitações síncronas para esses dados. Nesse caso, replique ou propague esses dados (somente os atributos necessários) para o banco de dados do serviço inicial usando consistência eventual (normalmente com eventos de integração, conforme será explicado nas próximas seções).
 
-Conforme observado anteriormente na seção [Identificando limites de modelo de domínio para cada microsserviço](#identifying-domain-model-boundaries-for-each-microservice), a duplicação de alguns dados entre vários microsserviços não é um design errado, ao contrário, ao fazer isso, é possível converter os dados na linguagem específica ou nos termos desse domínio adicional ou do Contexto Limitado. Por exemplo, no aplicativo [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) há um microsserviço chamado identity.api que é responsável pela maioria dos dados do usuário com uma entidade chamada Usuário. No entanto, quando for necessário armazenar dados sobre o usuário dentro do microsserviço de pedidos, armazene-os como uma entidade diferente chamada Comprador. A entidade Comprador compartilha a mesma identidade com a entidade Usuário original, mas pode ter apenas alguns atributos necessários para o domínio de pedidos e não o perfil do usuário completo.
+Conforme observado anteriormente na seção [Identificando limites de modelo de domínio para cada microsserviço](#identifying-domain-model-boundaries-for-each-microservice), a duplicação de alguns dados entre vários microsserviços não é um design errado, ao contrário, ao fazer isso, é possível converter os dados na linguagem específica ou nos termos desse domínio adicional ou do Contexto Limitado. Por exemplo, no aplicativo [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) há um microsserviço chamado identity.api que é responsável pela maioria dos dados do usuário com uma entidade chamada Usuário. No entanto, quando for necessário armazenar dados sobre o usuário dentro do microsserviço de pedidos, armazene-os como uma entidade diferente chamada Comprador. A entidade Comprador compartilha a mesma identidade com a entidade Usuário original, mas pode ter apenas alguns atributos necessários para o domínio de pedidos e não o perfil do usuário completo.
 
 Você pode usar qualquer protocolo para comunicar e propagar dados de forma assíncrona entre os microsserviços para garantir a consistência eventual. Conforme mencionado, você pode usar eventos de integração com um barramento de evento, com um agente de mensagem ou até mesmo com sondagem HTTP dos outros serviços. Isso não importa. A regra importante é não criar dependências síncronas entre os microsserviços.
 

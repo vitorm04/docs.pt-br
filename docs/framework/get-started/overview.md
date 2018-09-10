@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c844a81da036c5e96c2c619e3a3aae85f70f8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522085"
 ---
 # <a name="overview-of-the-net-framework"></a>Visão geral do .NET Framework
 
@@ -87,7 +87,7 @@ Como você esperaria de uma biblioteca de classes orientada a objeto, os tipos d
 
 - Aplicativos orientados a serviço usando o WCF (Windows Communication Foundation). Confira [Aplicativos orientados a serviço com WCF](../../../docs/framework/wcf/index.md).
 
-- Aplicativos habilitados para fluxo de trabalho usando o Windows Workflow Foundation (WF). Confira [Compilação de fluxos de trabalho no .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Aplicativos habilitados para fluxo de trabalho usando o Windows Workflow Foundation (WF). Confira [Compilação de fluxos de trabalho no .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 As classes Windows Forms são um conjunto abrangente de tipos reutilizáveis que simplificam muito o desenvolvimento de GUI Windows. Se criar um aplicativo Web Form do ASP.NET, você poderá usar as classes Web Forms.
 
@@ -97,5 +97,5 @@ As classes Windows Forms são um conjunto abrangente de tipos reutilizáveis que
 [Guia de instalação](../../../docs/framework/install/index.md)   
 [Guia de desenvolvimento](../../../docs/framework/development-guide.md)   
 [ Ferramentas](../../../docs/framework/tools/index.md)   
-[Exemplos do .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)
+[Exemplos do .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[Biblioteca de classes .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

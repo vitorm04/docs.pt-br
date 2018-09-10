@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70b2d04f381fdbc1ae47b1c90649df045e111afa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484773"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180625"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Como gravar texto em um arquivo
 Este tópico mostra diferentes maneiras de gravar texto em um arquivo para aplicativos .NET Framework ou aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. As classes e métodos seguintes normalmente são usados para gravar texto em um arquivo:  
@@ -86,12 +86,13 @@ Este tópico mostra diferentes maneiras de gravar texto em um arquivo para aplic
  [!code-csharp[OpenFileWindowsStore#Code](../../../samples/snippets/csharp/VS_Snippets_CLR/openfilewindowsstore/cs/mainpage.xaml.cs#code)]
  [!code-vb[OpenFileWindowsStore#Code](../../../samples/snippets/visualbasic/VS_Snippets_CLR/openfilewindowsstore/vb/mainpage.xaml.vb#code)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamWriter>  
- <xref:System.IO.Path>  
- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
- [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
- [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.IO.StreamWriter>  
+- <xref:System.IO.Path>  
+- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
+- [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [Como ler e gravar em um arquivo de dados recém-criado](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)

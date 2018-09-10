@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58f32dcb76246bed1030f3d0a45db2541f381877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 70e13893cf350a193411f1833e2e3b21c9b64182
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43390722"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269261"
 ---
 # <a name="extending-the-dom"></a>Estendendo os DOM
 
@@ -255,4 +255,4 @@ Se você está substituindo o método de <xref:System.Xml.XmlDocument.CreateElem
 
 ## <a name="see-also"></a>Consulte também
 
-[DOM (Modelo de Objeto do Documento) de XML](xml-document-object-model-dom.md)  
+- [DOM (Modelo de Objeto do Documento) de XML](xml-document-object-model-dom.md)  

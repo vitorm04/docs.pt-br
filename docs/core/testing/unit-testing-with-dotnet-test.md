@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213324"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404289"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>C# de teste de unidade no .NET Core usando dotnet test e xUnit
 
@@ -134,7 +134,7 @@ namespace Prime.UnitTests.Services
 
 O atributo `[Fact]` indica um método de teste que é executado pelo executor de teste. Na pasta *PrimeService.Tests*, execute [`dotnet test`](../tools/dotnet-test.md) para compilar os testes e a biblioteca de classes e execute os testes. O executor de teste do xUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
-O teste falha. Você ainda não criou a implementação. Faça esse teste gravando o código mais simples na classe `PrimeService` que funciona. Substitua a implementação de método `IsPrime` pelo código a seguir:
+O teste falha. Você ainda não criou a implementação. Faça esse teste ser aprovado escrevendo o código mais simples na classe `PrimeService` que funciona. Substitua a implementação de método `IsPrime` pelo código a seguir:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -171,4 +171,4 @@ Continue iterando adicionando mais testes, mais teorias e mais código na biblio
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-[Lógica do controlador de teste no ASP.NET Core](/aspnet/core/mvc/controllers/testing)
+- [Lógica do controlador de teste no ASP.NET Core](/aspnet/core/mvc/controllers/testing)

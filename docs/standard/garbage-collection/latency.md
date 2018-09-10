@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573894"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883716"
 ---
 # <a name="latency-modes"></a>Modos de latência
 Para recuperar objetos, o coletor de lixo deve interromper todos os threads em execução em um aplicativo. Em algumas situações, como quando um aplicativo recupera dados ou exibe conteúdo, uma coleta de lixo completa pode ocorrer em um momento crítico e impedir o desempenho. Você pode ajustar a intrusão do coletor de lixo, definindo a propriedade <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> como um dos valores <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -54,7 +54,8 @@ Para recuperar objetos, o coletor de lixo deve interromper todos os threads em e
   
 -   Você pode forçar coletas da geração 2 durante um período de baixa latência ao chamar o método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.GC?displayProperty=nameWithType>  
- [Coletas Induzidas](../../../docs/standard/garbage-collection/induced.md)  
- [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [Coletas Induzidas](../../../docs/standard/garbage-collection/induced.md)  
+- [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)

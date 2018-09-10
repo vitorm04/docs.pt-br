@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579815"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041594"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -168,7 +168,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |-------------|-----------------|  
 |`\D+`|Corresponder a um ou mais caracteres de dígito não decimal.|  
 |`(?<digit>\d+)`|Corresponder a um ou mais caracteres de dígito decimal. Atribuir a correspondência ao grupo chamado `digit`.|  
-|\D+|Corresponder a um ou mais caracteres de dígito não decimal.|  
+|`\D+`|Corresponder a um ou mais caracteres de dígito não decimal.|  
 |`(?<digit>\d+)?`|Faz a correspondência de zero ou uma ocorrência de um período seguido por um ou mais caracteres de dígito decimal. Atribuir a correspondência ao grupo chamado `digit`.|  
   
 <a name="balancing_group_definition"></a>   
@@ -470,6 +470,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  O primeiro grupo de captura corresponde a cada palavra da sentença. O segundo grupo de captura corresponde a cada palavras com a pontuação ou o espaço em branco que segue a palavra em questão. O objeto <xref:System.Text.RegularExpressions.Group>, cujo índice é 2, fornece informações sobre o texto correspondente ao segundo grupo de captura. O conjunto completo de palavras capturadas pelo grupo de captura está disponível no objeto <xref:System.Text.RegularExpressions.CaptureCollection>, retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

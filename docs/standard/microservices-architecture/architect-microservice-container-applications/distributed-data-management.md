@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480659"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268845"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -79,7 +79,7 @@ Na verdade, se os microsserviços internos estiverem se comunicando por meio da 
 
 Portanto, para impor a autonomia do microsserviço e melhorar a resiliência, você deve minimizar o uso de cadeias de comunicação de solicitação/resposta entre os microsserviços. É recomendável usar somente a interação assíncrona para a comunicação entre os microsserviços, seja usando a comunicação assíncrona baseada em evento e em mensagem ou usando a sondagem de HTTP, independentemente do ciclo de solicitação/resposta HTTP original.
 
-O uso da comunicação assíncrona será explicado em detalhes mais adiante neste guia nas seções [A integração assíncrona dos microsserviços impõe a autonomia do microsserviço](#asynchronous-microservice-integration-enforce-microservices-autonomy) e [Comunicação assíncrona baseada em mensagem](#asynchronous-message-based-communication).
+O uso da comunicação assíncrona será explicado em detalhes mais adiante neste guia nas seções [A integração assíncrona dos microsserviços impõe a autonomia do microsserviço](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) e [Comunicação assíncrona baseada em mensagem](asynchronous-message-based-communication.md).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579581"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262601"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -320,7 +320,8 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 -   Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
-## <a name="see-also"></a>Consulte também  
- [Navegador de API do .NET](/dotnet/api)  
- [Common Language Runtime](../../../docs/standard/clr.md)  
- [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Consulte também
+
+- [Navegador de API do .NET](/dotnet/api)  
+- [Common Language Runtime](../../../docs/standard/clr.md)  
+- [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)

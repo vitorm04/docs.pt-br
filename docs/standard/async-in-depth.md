@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577415"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385690"
 ---
 # <a name="async-in-depth"></a>Assincronia detalhada
 
@@ -114,7 +114,7 @@ Mais importante, como o trabalho vinculado à E/S passa praticamente nenhum temp
 
 Além disso, distribuir o trabalho para o thread de interface do usuário (como atualizar uma interface do usuário) é muito simples com os métodos `async` e não requer trabalho extra (como chamar um delegado thread-safe).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Aprofundamento em Task e Task<T> para uma operação vinculada à CPU
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Aprofundamento em Task e Task&lt;T&gt; para uma operação vinculada à CPU
 
 O código `async` vinculado à CPU é um pouco diferente do código `async` vinculado à E/S.  Como o trabalho é feito na CPU, não há como contornar a dedicação de um thread à computação.  O uso de `async` e `await` fornece uma maneira simples de interagir com thread em segundo plano e manter o chamador do método assíncrono responsivo.  Observe que isso não fornece nenhuma proteção para dados compartilhados.  Se você estiver usando dados compartilhados, ainda precisará aplicar uma estratégia de sincronização apropriada.
 

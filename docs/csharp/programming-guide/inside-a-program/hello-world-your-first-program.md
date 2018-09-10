@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43463111"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213839"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
 O procedimento a seguir cria uma versão de C# do programa tradicional "Hello World!" programa. O programa exibe a cadeia de caracteres `Hello World!`  
@@ -78,7 +78,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
  O parâmetro do método `Main`, `args`, é um matriz `string` que contém os argumentos de linha de comando usados para invocar o programa. Ao contrário do C++, a matriz não inclui o nome do arquivo executável (exe).  
   
- Para obter mais informações sobre como usar argumentos de linha de comando, consulte os exemplos em [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Como criar e usar assemblies usando a linha de comando](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Para obter mais informações sobre como usar argumentos de linha de comando, consulte os exemplos em [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Como criar e usar assemblies usando a linha de comando](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
  A chamada para <xref:System.Console.ReadKey%2A> ao final do método `Main` impede que a janela de console seja fechada antes que você tenha a oportunidade de ler a saída, ao executar o programa no modo de depuração, pressionando F5.  
   
@@ -126,11 +126,12 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
  Para obter mais informações sobre o compilador do C# e suas opções, consulte [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md).
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Por dentro de um programa em C#](../../../csharp/programming-guide/inside-a-program/index.md)  
- [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)  
- [\<Aplicativos de exemplo do paveover>C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Por dentro de um programa em C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)  
+- [\<Aplicativos de exemplo do paveover>C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591290"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877801"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de tarefas paralelas)
 As exceções sem tratamento que são lançadas pelo código de usuário que está sendo executado dentro de uma tarefa são propagadas de volta para o thread de chamada, exceto em certos cenários que são descritos mais adiante neste tópico. As exceções são propagadas quando você usa um dos métodos estáticos ou de instância de <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait`, e você lida com eles ao incluir a chamada em uma instrução `try` / `catch`. Se uma tarefa é o pai das tarefas filho anexadas, ou se você está esperando várias tarefas, várias exceções podem ser lançadas.  
@@ -91,5 +91,6 @@ As exceções sem tratamento que são lançadas pelo código de usuário que est
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException  
  Em alguns cenários, como ao hospedar plug-ins não confiáveis, exceções benignas podem ser comuns, e pode ser muito difícil observar todas manualmente. Nesses casos, você pode lidar com o evento <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. A instância do <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> que é passada para seu manipulador pode ser usada para evitar que a exceção não observada seja propagada de volta para o thread de junção.  
   
-## <a name="see-also"></a>Consulte também  
- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Consulte também
+
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

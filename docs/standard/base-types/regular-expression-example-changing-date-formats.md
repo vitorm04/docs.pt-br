@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d2d5bf67368e445123fce43afe07065a31b1f30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568063"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262666"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Exemplo de expressão regular: Alterando formatos de data
 O exemplo de código a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para substituir datas com o formato *mm*/*dd*/*aa* por datas com o formato *dd*-*mm*-*aa*.  
@@ -57,5 +57,6 @@ O exemplo de código a seguir usa o método <xref:System.Text.RegularExpressions
 |`-`|Adicionar um hífen.|  
 |`$(year)`|Adicionar a cadeia de caracteres capturada pelo grupo de captura `year`.|  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)

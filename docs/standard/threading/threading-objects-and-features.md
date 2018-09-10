@@ -1,6 +1,6 @@
 ---
-title: Threading de objetos e funcionalidades
-ms.date: 03/30/2017
+title: Objetos e recursos de threading
+ms.date: 08/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], features
@@ -8,68 +8,39 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874781"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483652"
 ---
-# <a name="threading-objects-and-features"></a>Threading de objetos e funcionalidades
-O .NET Framework fornece uma série de objetos que ajudam você a criar e gerenciar aplicativos multi-thread. Os threads gerenciados são representados pela classe <xref:System.Threading.Thread>. A classe <xref:System.Threading.ThreadPool> oferece fácil criação e gerenciamento de tarefas em segundo plano multi-thread. A classe <xref:System.ComponentModel.BackgroundWorker> faz o mesmo para tarefas que interagem com a interface do usuário. A classe <xref:System.Threading.Timer> executa tarefas em segundo plano em intervalos regulares.  
-  
- Além disso, há uma série de classes que sincronizam atividades de threads, incluindo as classes <xref:System.Threading.Semaphore> e <xref:System.Threading.EventWaitHandle> apresentadas no .NET Framework versão 2.0. Os recursos dessas classes são comparados na [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [O pool de threads gerenciados](../../../docs/standard/threading/the-managed-thread-pool.md)  
- Explica a classe **ThreadPool**, que permite que você solicite um thread para executar uma tarefa sem ter que fazer qualquer gerenciamento de thread por conta própria.  
-  
- [Temporizadores](../../../docs/standard/threading/timers.md)  
- Descreve os temporizadores que podem ser usados em um ambiente multi-threaded.  
-  
- [Monitores](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- Explica como usar a classe **Monitor** para sincronizar o acesso a um membro ou criar seus próprios tipos de gerenciamento de threads.  
-  
- [Identificadores de espera](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- Descreve a classe <xref:System.Threading.WaitHandle>, a classe base abstrata para identificadores de espera de eventos, exclusões mútuas e sinais, o que permite a espera de vários eventos de sincronização.  
-  
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- Descreve os identificadores de espera de eventos gerenciados, que são usados para sincronizar atividades de thread, sinalizando e aguardando sinais.  
-  
- [Mutexes](../../../docs/standard/threading/mutexes.md)  
- Explica como usar um <xref:System.Threading.Mutex> para sincronizar o acesso a um objeto ou criar seus próprios mecanismos de sincronização.  
-  
- [Operações interconectadas](../../../docs/standard/threading/interlocked-operations.md)  
- Explica como usar a classe <xref:System.Threading.Interlocked> para incrementar ou diminuir um valor e armazenar o valor em uma única operação atômica.  
-  
- [Bloqueios de leitor-gravador](../../../docs/standard/threading/reader-writer-locks.md)  
- Define um bloqueio que implementa a semântica de único gravador/vários leitores.  
-  
- [Semaphore e SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- Descreve objetos <xref:System.Threading.Semaphore> e explica como usá-los para controlar o acesso a recursos limitados.  
-  
- [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- Compara os recursos das classes .NET Framework fornecidas para bloquear e sincronizar threads gerenciados.  
-  
- [Barreira](../../../docs/standard/threading/barrier.md)  
- Descreve objetos <xref:System.Threading.Barrier> que implementam o padrão de barreira para coordenação de threads em operações em fases.  
-  
- [SpinLock](../../../docs/standard/threading/spinlock.md)  
- Descreve <xref:System.Threading.SpinLock>, uma alternativa leve para a classe Monitor para certos cenários de nível baixo.  
-  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- Descreve <xref:System.Threading.SpinWait>, um primitivo de sincronização de nível baixo que executa a rotação ocupada antes de iniciar uma espera baseada no kernel.  
-  
-## <a name="reference"></a>Referência  
- <xref:System.Threading.Thread>  
- Fornece documentação de referência para a classe **Thread**, que representa um thread gerenciado, seja ele proveniente de código não gerenciado ou criado em um aplicativo gerenciado.  
-  
- <xref:System.ComponentModel.BackgroundWorker>  
- Permite tarefas em segundo plano que interagem com a interface do usuário, comunicando-se através de eventos criados no thread da interface do usuário.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)  
- Descreve como as portas de conclusão assíncronas de E/S usam o pool de threads para requerer o processamento somente quando uma operação de entrada/saída é concluída.  
-  
- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- Descreve a abordagem recomendada para a programação multi-thread no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] e posterior.
+# <a name="threading-objects-and-features"></a>Objetos e recursos de threading
+
+Juntamente com a classe <xref:System.Threading.Thread?displayProperty=nameWithType>, o .NET fornece várias classes que ajudam você a desenvolver aplicativos multithread. Os artigos a seguir fornecem uma visão geral dessas classes:
+
+|Título|Descrição|  
+|-----------|-----------------|  
+|[O pool de threads gerenciados](the-managed-thread-pool.md)|Descreve a classe <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, que fornece um pool de threads de trabalho que são gerenciados pelo .NET.|  
+|[Temporizadores](timers.md)|Descreve os temporizadores que podem ser usados em um ambiente multi-threaded.|
+|[Visão geral dos primitivos de sincronização](overview-of-synchronization-primitives.md)|Descreve classes que podem ser usadas para sincronizar o acesso a dados ou controlar a interação de thread.|
+|[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Descreve os identificadores de espera de eventos gerenciados, que são usados para sincronizar atividades de thread, sinalizando e aguardando sinais.|
+|[Mutexes](mutexes.md)|Descreve como usar um <xref:System.Threading.Mutex?displayProperty=nameWithType> para sincronizar o acesso a um objeto ou compilar seus próprios mecanismos de sincronização.|
+|[Operações interconectadas](interlocked-operations.md)|Descreve a classe <xref:System.Threading.Interlocked?displayProperty=nameWithType>, que fornece operações atômicas para variáveis que são compartilhadas por vários threads.|
+|[Bloqueios de leitor-gravador](reader-writer-locks.md)|Descreve a classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, que fornece a semântica de único gravador/vários leitores.|
+|[Semaphore e SemaphoreSlim](semaphore-and-semaphoreslim.md)|Descreve a classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> e explica como usá-la para controlar o acesso a recursos limitados.|
+|[Barreira](barrier.md)|Descreve a classe <xref:System.Threading.Barrier?displayProperty=nameWithType> que implementa o padrão de barreira para coordenação de threads em operações em fases.|
+|[SpinLock](spinlock.md)|Descreve a classe <xref:System.Threading.SpinLock?displayProperty=nameWithType>, que é uma alternativa leve para a classe <xref:System.Threading.Monitor?displayProperty=nameWithType> para certos cenários de nível baixo.|
+|[SpinWait](spinwait.md)|Descreve a classe <xref:System.Threading.SpinWait?displayProperty=nameWithType>, que é um primitivo de sincronização de nível baixo que executa a rotação ocupada antes de iniciar uma espera baseada no kernel.|
+
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- [Usando threads e threading](using-threads-and-threading.md)
+- [E/S de arquivo assíncrona](../io/asynchronous-file-i-o.md)
+- [Programação paralela](../parallel-programming/index.md)
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../parallel-programming/task-parallel-library-tpl.md)

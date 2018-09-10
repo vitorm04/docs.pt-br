@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297362"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261662"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrizes denteadas (Guia de Programação em C#)
+
 Uma matriz denteada é uma matriz cujos elementos são matrizes. Os elementos de uma matriz denteada podem ter diferentes dimensões e tamanhos. Às vezes, uma matriz denteada é chamada de uma "matriz de matrizes." Os exemplos a seguir mostram como declarar, inicializar e acessar matrizes denteadas.  
   
  A seguir, há uma declaração de uma matriz unidimensional que tem três elementos, cada um do qual é uma matriz de dimensão única de inteiros:  
@@ -57,14 +58,16 @@ Uma matriz denteada é uma matriz cujos elementos são matrizes. Os elementos de
   
  retorna um valor de 3.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Exemplo
+
  Este exemplo cria uma matriz cujos elementos são matrizes. Cada um dos elementos da matriz tem um tamanho diferente.  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Array>  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
- [Matrizes unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Matrizes multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Array>  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrizes unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Matrizes multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

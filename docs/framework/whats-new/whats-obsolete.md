@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514444"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855329"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes .NET Framework
 O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos tipos e membros de tipo que oferecem uma nova funcionalidade. Tipos existentes e seus membros também mudam com o passar do tempo. Por exemplo, alguns tipos se tornam menos importantes conforme a tecnologia compatível é substituída por uma nova tecnologia e alguns métodos são substituídos por métodos mais novos que sejam mais práticos ou mais repletos de recursos.  
@@ -73,13 +73,13 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
  [Membros obsoletos](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Listas obsoletas de versões anteriores  
- [Tipos obsoletos no .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Tipos obsoletos no .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Membros obsoletos no .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Membros obsoletos no .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Lista obsoleta do .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Lista obsoleta do .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Lista obsoleta do .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Lista obsoleta do .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Consulte também  
  Elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

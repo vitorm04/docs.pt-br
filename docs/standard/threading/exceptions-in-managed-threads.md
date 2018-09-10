@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865173"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
 A partir do .NET Framework versão 2.0, o common language runtime permite que a maioria das exceções sem tratamento em threads prossiga naturalmente. Na maioria dos casos, isso significa que a exceção sem tratamento causa o encerramento do aplicativo.  
@@ -78,5 +78,6 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
 ## <a name="host-override"></a>Substituição do host  
  No .NET Framework versão 2.0, um host não gerenciado pode usar a interface [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) na API de hospedagem para substituir a política de exceções sem tratamento padrão do common language runtime. A função [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) é usada para definir a política para exceções sem tratamento.  
   
-## <a name="see-also"></a>Consulte também  
- [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Consulte também
+
+- [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)

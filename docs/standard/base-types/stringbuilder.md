@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072950"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197308"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso da classe StringBuilder no .NET
 O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na classe <xref:System.String?displayProperty=nameWithType>, você cria um novo objeto de cadeia de caracteres na memória, o que requer uma nova alocação de espaço para esse novo objeto. Em situações em que você precisa realizar repetidas modificações em uma cadeia de caracteres, a sobrecarga associada à criação de um novo objeto <xref:System.String> pode ser dispendiosa. A classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> pode ser usada quando você deseja modificar uma cadeia de caracteres sem criar um novo objeto. Por exemplo, o uso da classe <xref:System.Text.StringBuilder> pode melhorar o desempenho ao concatenar várias cadeias de caracteres em um loop.  
@@ -111,7 +111,8 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
+- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)

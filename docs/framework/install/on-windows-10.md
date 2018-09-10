@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270442"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857187"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalar o .NET Framework no Windows 10 e no Windows Server 2016
 
-O .NET Framework é necessário para executar muitos aplicativos no Windows. As instruções neste artigo devem ajudá-lo a instalar as versões do .NET Framework que você precisa. O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) é a última versão disponível.
+O .NET Framework é necessário para executar muitos aplicativos no Windows. As instruções neste artigo devem ajudá-lo a instalar as versões do .NET Framework que você precisa. O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) é a última versão disponível.
 
 Você pode ter chegado nesta página depois de tentar executar um aplicativo e ver uma caixa de diálogo em seu computador semelhante à seguinte:
 
@@ -29,9 +29,9 @@ O .NET Framework 4.7.2 está incluído na:
 > [!div class="button"]
 [Baixe o .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-O [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para as versões 4.0 a 4.7.1 do .NET Framework.
+O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) pode ser usado para executar aplicativos criados para as versões 4.0 a 4.7.1 do .NET Framework.
 
-Instale o [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) no:
+Instale o [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) no:
 
 * Windows 10 Fall Creators Update (versão 1709)
 * No Windows 10 Creators Update (versão 1703)

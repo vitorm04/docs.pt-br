@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579386"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195042"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Práticas recomendadas para o padrão de design do observador
 No .NET Framework, o padrão de design de observador é implementado como um conjunto de interfaces. A interface <xref:System.IObservable%601?displayProperty=nameWithType> representa o provedor de dados, que também é responsável por fornecer uma implementação <xref:System.IDisposable> que permite que os observadores cancelem a assinatura de notificações. A interface <xref:System.IObserver%601?displayProperty=nameWithType> representa o observador. Este tópico descreve as práticas recomendadas que os desenvolvedores devem seguir ao implementar o padrão de design de observador usando essas interfaces.  
@@ -53,7 +53,8 @@ No .NET Framework, o padrão de design de observador é implementado como um con
   
  Embora seja possível anexar um observador para vários provedores, o padrão recomendado é anexar uma <xref:System.IObserver%601> instância a uma única instância <xref:System.IObservable%601>.  
   
-## <a name="see-also"></a>Consulte também  
- [Padrão de design do observador](../../../docs/standard/events/observer-design-pattern.md)  
- [Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Como implementar um provedor](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>Consulte também
+
+- [Padrão de design do observador](../../../docs/standard/events/observer-design-pattern.md)  
+- [Como implementar um observador](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Como implementar um provedor](../../../docs/standard/events/how-to-implement-a-provider.md)

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104563"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395670"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validação do lado do cliente (validação nas camadas de apresentação)
 
@@ -23,7 +23,7 @@ Mesmo ao usar a validação do lado do cliente, você sempre deve validar seus c
 
 Portanto, no código do lado do cliente você normalmente valida os ViewModels. Você também pode validar os DTOs ou comandos de saída do cliente antes de enviá-los aos serviços.
 
-A implementação de validação do lado do cliente depende de qual tipo de aplicativo cliente você está criando. Será diferente se você estiver validando dados em um aplicativo Web MVC da Web com a maioria do código em .NET, um aplicativo Web SPA com a validação sendo codificada em JavaScript ou TypeScript ou um aplicativo móvel codificado com Xamarin e C\#.
+A implementação de validação do lado do cliente depende de qual tipo de aplicativo cliente você está criando. Será diferente se você estiver validando dados em um aplicativo Web MVC da Web com a maioria do código em .NET, um aplicativo Web SPA com a validação sendo codificada em JavaScript ou TypeScript ou um aplicativo móvel codificado com Xamarin e C#.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
@@ -42,8 +42,8 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validação em aplicativos Web SPA (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Validação de formulário angular 2** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Validação de formulário angular 2**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Validação de formulário**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 Em resumo, estes são os conceitos mais importantes no que diz respeito à validação:
 
--   Entidades e agregações devem impor sua própria consistência e serem "sempre válidas". Raízes agregadas são responsáveis pela consistência de várias entidades dentro da mesma agregação.
+- Entidades e agregações devem impor sua própria consistência e serem "sempre válidas". Raízes agregadas são responsáveis pela consistência de várias entidades dentro da mesma agregação.
 
--   Se você acha que uma entidade precisa entrar em um estado inválido, considere usar um modelo de objeto diferente – por exemplo, usar um DTO temporário até criar a entidade de domínio definitiva.
+- Se você acha que uma entidade precisa entrar em um estado inválido, considere usar um modelo de objeto diferente – por exemplo, usar um DTO temporário até criar a entidade de domínio definitiva.
 
--   Se precisar criar vários objetos relacionados, como uma agregação, e eles apenas forem válidos depois que todos tiverem sido criados, considere usar o padrão de fábrica.
+- Se precisar criar vários objetos relacionados, como uma agregação, e eles apenas forem válidos depois que todos tiverem sido criados, considere usar o padrão de fábrica.
 
--   Estruturas de validação são mais bem usadas em camadas específicas, como a camada de apresentação ou a camada de serviço/do aplicativo, mas geralmente não na camada de modelo de domínio, porque você precisaria usar uma dependência de alta segurança em uma estrutura de infraestrutura.
+- Estruturas de validação são mais bem usadas em camadas específicas, como a camada de apresentação ou a camada de serviço/do aplicativo, mas geralmente não na camada de modelo de domínio, porque você precisaria usar uma dependência de alta segurança em uma estrutura de infraestrutura.
 
--   Na maioria dos casos, ter validação redundante no lado do cliente é bom, porque o aplicativo pode ser proativo.
-
+- Na maioria dos casos, ter validação redundante no lado do cliente é bom, porque o aplicativo pode ser proativo.
 
 >[!div class="step-by-step"]
 [Anterior](domain-model-layer-validations.md)

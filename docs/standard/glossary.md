@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 195fbb799432b9d01a5faf301c9f8f2d1edfa1ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579399"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188677"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -268,9 +268,8 @@ Uma implementação do .NET que é usada para criar aplicativos do Windows moder
 
 ## <a name="see-also"></a>Consulte também
 
-[Guia do .NET](index.md)  
-[Guia do .NET Framework](../framework/index.md)  
-[.NET Core](../core/index.md)  
-[Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)  
-[Visão geral do ASP.NET Core](/aspnet/index#pivot=core)  
-
+- [Guia do .NET](index.md)  
+- [Guia do .NET Framework](../framework/index.md)  
+- [.NET Core](../core/index.md)  
+- [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)  
+- [Visão geral do ASP.NET Core](/aspnet/index#pivot=core)  

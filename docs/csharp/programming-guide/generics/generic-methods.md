@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 04bc59d41eb7883e08138382b396bc737c7f11bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fb5267e6324d3dffd1ad5a72ef3718c8cdd08b8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329862"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251476"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Métodos genéricos (Guia de Programação em C#)
 Um método genérico é um método declarado com parâmetros de tipo, da seguinte maneira:  
@@ -45,8 +45,9 @@ Um método genérico é um método declarado com parâmetros de tipo, da seguint
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  Para obter mais informações, consulte a [Especificação da linguagem C#](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic>  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Collections.Generic>  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)

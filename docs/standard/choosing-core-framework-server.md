@@ -4,12 +4,12 @@ description: Um guia sobre qual implementação de .NET você deve considerar ao
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934527"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864956"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
@@ -103,8 +103,10 @@ Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Co
 
 ## <a name="see-also"></a>Consulte também
 
- [Escolher entre o ASP.NET e o ASP.NET Core](/aspnet/core/choose-aspnet-framework) [Estruturas de destino](frameworks.md) [Guia do .NET Core](../core/index.md)  
- [Portabilidade do .NET Framework para .NET Core](../core/porting/index.md)  
- [.NET Framework no Guia do Docker](../framework/docker/index.md)  
- [Visão Geral dos Componentes .NET](components.md)  
- [Microsserviços .NET. Arquitetura para aplicativos .NET em contêineres](microservices-architecture/index.md)
+* [Escolher entre o ASP.NET e o ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+* [Estruturas de destino](frameworks.md)
+* [Guia do .NET Core](../core/index.md)  
+* [Portabilidade do .NET Framework para .NET Core](../core/porting/index.md)  
+* [.NET Framework no Guia do Docker](../framework/docker/index.md)  
+* [Visão Geral dos Componentes .NET](components.md)  
+* [Microsserviços .NET. Arquitetura para aplicativos .NET em contêineres](microservices-architecture/index.md)

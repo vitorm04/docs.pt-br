@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0627a61e910b1d278fd2e604dd8de7021fdb0fed
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b7115530c44321dc2a10be3996c14429591b611f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106211"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401974"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -35,7 +35,7 @@ Um aplicativo é composto de seus próprios serviços e de bibliotecas adicionai
 
 Neste guia, todo esse processo será detalhado e cada etapa principal será explicada com base em um ambiente do Visual Studio.
 
-Ao usar uma abordagem de desenvolvimento de editor/CLI (por exemplo, Visual Studio Code com CLI do Docker no macOS ou no Windows), você precisará conhecer cada etapa e, na maioria das vezes, com mais detalhes do que ao usar o Visual Studio. Para obter mais detalhes sobre como trabalhar em um ambiente de CLI, consulte o livro eletrônico [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](http://aka.ms/dockerlifecycleebook/) (Ciclo de vida de aplicativo do Docker em contêineres com ferramentas e plataformas da Microsoft).
+Ao usar uma abordagem de desenvolvimento de editor/CLI (por exemplo, Visual Studio Code com CLI do Docker no macOS ou no Windows), você precisará conhecer cada etapa e, na maioria das vezes, com mais detalhes do que ao usar o Visual Studio. Para obter mais detalhes sobre como trabalhar em um ambiente de CLI, consulte o livro eletrônico [Containerized Docker Application lifecycle with Microsoft Platforms and Tools](https://aka.ms/dockerlifecycleebook/) (Ciclo de vida de aplicativo do Docker em contêineres com ferramentas e plataformas da Microsoft).
 
 Ao usar o Visual Studio 2015 ou Visual Studio 2017, muitas dessas etapas serão controladas para você, melhorando significativamente a produtividade. Isso é especialmente verdadeiro quando você usa o Visual Studio 2017 e tem aplicativos de vários contêineres como destino. Por exemplo, com apenas um clique do mouse, o Visual Studio adiciona o Dockerfile e o arquivo docker-compose.yml aos seus projetos com a configuração correta para o seu aplicativo. Ao executar o aplicativo no Visual Studio, ele cria a imagem do Docker e executa o aplicativo de vários contêineres diretamente no Docker; e até mesmo permite que você depure vários contêineres de uma só vez. Esses recursos vão acelerar sua velocidade de desenvolvimento.
 
@@ -248,7 +248,7 @@ services:
 
 Observe que esse arquivo docker-compose.yml é uma versão simplificada e mesclada. Ele contém dados de configuração estática para cada contêiner (como o nome da imagem personalizada), o que é sempre aplicável, além das informações de configuração que dependerão do ambiente de implantação, como a cadeia de conexão. Nas próximas seções, você aprenderá como dividir a configuração do docker-compose.yml em vários arquivos e valores de substituição de docker-compose, dependendo do ambiente e do tipo de execução (depuração ou lançamento).
 
-O arquivo docker-compose.yml de exemplo define cinco serviços: o serviço webmvc (um aplicativo Web), dois microsserviços (catalog.api e ordering.api) e um contêiner de fonte de dados, sql.data, com base no SQL Server para Linux, em execução como um contêiner. Cada serviço é implantado como um contêiner, assim, é necessário uma imagem do Docker para cada serviço.
+O arquivo docker-compose.yml de exemplo define quatro serviços: o serviço webmvc (um aplicativo Web), dois microsserviços (catalog.api e ordering.api) e um contêiner de fonte de dados, sql.data, com base no SQL Server para Linux, em execução como um contêiner. Cada serviço é implantado como um contêiner, assim, é necessário uma imagem do Docker para cada serviço.
 
 O arquivo docker-compose.yml não apenas especifica quais contêineres estão sendo usados, mas também como eles são configurados individualmente. Por exemplo, a definição de contêiner do webmvc, no arquivo .yml:
 

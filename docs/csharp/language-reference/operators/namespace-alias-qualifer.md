@@ -8,18 +8,25 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 480ed224d1994dac926dfc78d59e227c8d1e8f36
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 077d5835b372897cbe797385271effc5d00bf6e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934989"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43473967"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (Referência de C#)
 O qualificador alias de namespace (`::`) é usado para pesquisar identificadores. Ele sempre está posicionado entre dois identificadores, como neste exemplo:  
   
  [!code-csharp[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
-  
+
+O operador `::` também pode ser usado com uma *diretiva alias de uso*:
+
+```csharp
+// using Col=System.Collections.Generic;
+var numbers = new Col::List<int> { 1, 2, 3 };
+```
+
 ## <a name="remarks"></a>Comentários  
  O qualificador alias de namespace pode ser `global`. Isso invoca uma pesquisa no namespace global, em vez de um namespace com alias.  
   

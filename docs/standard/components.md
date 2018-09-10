@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574801"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262239"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -68,11 +68,11 @@ Para saber mais sobre a UWP, consulte [Introdução à Plataforma Universal do W
 ## <a name="net-runtimes"></a>Tempos de execução do .NET
 
 Um tempo de execução é o ambiente de execução de um programa gerenciado. O SO faz parte do ambiente do tempo de execução, mas não faz parte do tempo de execução do .NET. Aqui estão alguns exemplos de tempos de execução do .NET:
- 
- - CLR (Common Language Runtime) para o .NET Framework
- - Core Common Language Runtime (CoreCLR) para o .NET Core
- - .NET Native para a Plataforma Universal do Windows 
- - O tempo de execução Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
+
+- CLR (Common Language Runtime) para o .NET Framework
+- Core Common Language Runtime (CoreCLR) para o .NET Core
+- .NET Native para a Plataforma Universal do Windows 
+- O tempo de execução Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Ferramentas do .NET e infraestrutura comum
 
@@ -85,11 +85,11 @@ Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrut
 - Ferramentas de orquestração de build em software livre, como [CAKE](https://cakebuild.net/) e [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Consulte também
-[Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[Guia do .NET Core](../core/index.md)  
-[Guia do .NET Framework](../framework/index.md)  
-[Guia do C#](../csharp/index.md)  
-[Guia do F#](../fsharp/index.md)  
-[Guia do VB.NET](../visual-basic/index.md)  
 
+- [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [Guia do .NET Core](../core/index.md)  
+- [Guia do .NET Framework](../framework/index.md)  
+- [Guia do C#](../csharp/index.md)  
+- [Guia do F#](../fsharp/index.md)  
+- [Guia do VB.NET](../visual-basic/index.md)  

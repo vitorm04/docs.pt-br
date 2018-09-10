@@ -4,12 +4,12 @@ description: Aprenda a implantação de aplicativos .NET Core com o Visual Studi
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218671"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407443"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implantando aplicativos .NET Core com o Visual Studio
 
@@ -72,11 +72,11 @@ Implantar uma implantação dependente de estrutura com uma ou mais dependência
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
-Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Tempo de Execução)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
+Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Tempo de Execução)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
 
 ## <a name="simpleSelf"></a> Implantação autocontida sem dependências de terceiros
 
-Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, a modificação do arquivo *csproj*, a compilação, os testes e a publicação do aplicativo. Um exemplo simples criado em C# ilustra o processo. 
+Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, a modificação do arquivo *csproj*, a compilação, os testes e a publicação do aplicativo. Um exemplo simples criado em C# ilustra o processo.
 
 1. Crie o projeto.
 
@@ -92,7 +92,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    1. Clique com o botão direito do mouse no projeto (e não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj**.
 
-   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. 
+   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução.
 
    Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
@@ -101,6 +101,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    Observe que o elemento `<RuntimeIdentifiers>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo *csproj*. Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
 
 1. Crie um build de depuração do seu aplicativo.
@@ -115,7 +116,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
       1. Altere a configuração da solução de **Depuração** para **Lançamento** na barra de ferramentas para compilar uma versão de lançamento (em vez de uma de depuração) do aplicativo.
 
-      1. Clique com o botão direito do mouse no projeto (e não na solução) no **Gerenciador de Soluções** e selecione **Publicar**. 
+      1. Clique com o botão direito do mouse no projeto (e não na solução) no **Gerenciador de Soluções** e selecione **Publicar**.
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
@@ -180,6 +181,7 @@ Quando você implanta seu aplicativo, todas as dependências de terceiros usadas
 
 Observe que você só pode implantar uma implantação autocontida com uma biblioteca de terceiros para plataformas compatíveis com essa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
-# <a name="see-also"></a>Consulte também
-[Implantação de aplicativos .NET Core](index.md)   
-[Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)   
+## <a name="see-also"></a>Consulte também
+
+* [Implantação de aplicativos do .NET Core](index.md)
+* [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)

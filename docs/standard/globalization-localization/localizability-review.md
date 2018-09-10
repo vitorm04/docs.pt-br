@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1907841694cde82cebada4a9e73b8ce703208611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576123"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206056"
 ---
 # <a name="localizability-review"></a>Revisão de localização
 A revisão de localização é uma etapa intermediária no desenvolvimento de um aplicativo pronto para o mundo. Ela verifica se um aplicativo globalizado está pronto para a localização e identifica qualquer código ou aspecto da interface do usuário que exija tratamento especial. Esta etapa também ajuda a garantir que o processo de localização não apresente qualquer defeito funcionais em seu aplicativo. Quando todos os problemas levantados pela revisão de localização forem resolvidos, o aplicativo estará pronto para a localização. Se a revisão de localização estiver concluída, você não precisará modificar qualquer código-fonte durante o processo de localização.  
@@ -73,8 +73,9 @@ A revisão de localização é uma etapa intermediária no desenvolvimento de um
   
  Se você tiver seguido as recomendações de globalização ao desenvolver seu aplicativo, sendo tratadas corretamente, tratado os recursos sensíveis à cultura e identificado e resolvido os problemas de localização que surgiram durante o teste, você poderá prosseguir para a próxima etapa, [Localização](../../../docs/standard/globalization-localization/localization.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
- [Localização](../../../docs/standard/globalization-localization/localization.md)  
- [Globalização](../../../docs/standard/globalization-localization/globalization.md)  
- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
+- [Localização](../../../docs/standard/globalization-localization/localization.md)  
+- [Globalização](../../../docs/standard/globalization-localization/globalization.md)  
+- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)

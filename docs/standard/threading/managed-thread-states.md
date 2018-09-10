@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4266aea9bf206d127e2837955dcc00cc23f4119b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587717"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207324"
 ---
 # <a name="managed-thread-states"></a>Estados de thread gerenciado
 A propriedade <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> fornece uma máscara de bits que indica o estado atual do thread. Um thread está sempre em pelo menos um dos estados possíveis na enumeração <xref:System.Threading.ThreadState> e pode estar em vários estados ao mesmo tempo.  
@@ -48,8 +48,9 @@ if ((state & (Unstarted | Stopped)) == 0)   // implies Running
   
  Depois que um thread sair do estado <xref:System.Threading.ThreadState.Unstarted> devido a uma chamada para <xref:System.Threading.Thread.Start%2A>, ele nunca poderá retornar para o estado <xref:System.Threading.ThreadState.Unstarted>. Um thread nunca pode deixar o estado <xref:System.Threading.ThreadState.Stopped>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadState>  
- [Threading](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadState>  
+- [Threading](../../../docs/standard/threading/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90bf9d6dbfebf8f7c1aa22e5844cf4e30b89b8d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572795"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192230"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>Como criar exceções definidas pelo usuário
 
@@ -33,5 +33,6 @@ Ao criar suas próprias exceções, encerre o nome de classe de exceção defini
 > [!NOTE]
 > Em situações nas quais você está usando a comunicação remota, você deve garantir que os metadados para todas as exceções definidas pelo usuário estejam disponíveis no servidor (computador chamado) e para o cliente (o objeto de proxy ou chamador). Para obter mais informações, consulte [Práticas recomendadas para exceções](best-practices-for-exceptions.md).
 
-## <a name="see-also"></a>Consulte também  
-[Exceções](index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Exceções](index.md)

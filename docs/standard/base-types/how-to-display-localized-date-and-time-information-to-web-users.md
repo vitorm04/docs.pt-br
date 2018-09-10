@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578151"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085219"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Como exibir informações localizadas de data e hora para usuários da Web
 Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações que analisam e formatam valores de data e hora não devem depender de um formato padrão (que geralmente é o formato da cultura local do servidor Web) ao interagir com o usuário. Em vez disso, formulários da Web que lidam com cadeias de caracteres de data e hora inseridas pelo usuário devem analisar as cadeias de caracteres usando a cultura preferencial do usuário. Da mesma forma, os dados de data e hora devem ser exibidos para o usuário em um formato compatível com a respectiva cultura. Este tópico mostra como fazer isso.  
@@ -108,8 +108,9 @@ Como uma página da Web pode ser exibida em qualquer lugar no mundo, operações
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Para impedir que um usuário insira script no fluxo de HTML, a entrada do usuário nunca deve ser ecoada diretamente de volta na resposta do servidor. Em vez disso, ela deve ser codificada usando o método <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Analisando cadeias de caracteres de data e hora](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a>Consulte também
+
+- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Analisando cadeias de caracteres de data e hora](../../../docs/standard/base-types/parsing-datetime.md)

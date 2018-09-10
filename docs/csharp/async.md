@@ -4,12 +4,12 @@ description: Saiba mais sobre o modelo de programação assíncrona em nível li
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312060"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484961"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -118,7 +118,7 @@ Os exemplos a seguir demonstram várias maneiras para escrever código assíncro
 
 ### <a name="extracting-data-from-a-network"></a>Extrair dados de uma rede
 
-Este trecho de código baixa o HTML de www.dotnetfoundation.org e conta o número de vezes que a cadeia de caracteres ".NET" ocorre no HTML.  Ele usa o ASP.NET MVC para definir um método do controlador da Web que realiza essa tarefa, retornando o número.
+Este snippet de código baixa o HTML da página inicial em [www.dotnetfoundation.org](https://www.dotnetfoundation.org) e conta o número de vezes que a cadeia de caracteres ".NET" ocorre no HTML.  Ele usa o ASP.NET MVC para definir um método do controlador da Web que realiza essa tarefa, retornando o número.
 
 > [!NOTE]
 > Se você pretende fazer análise de HTML no código de produção, não use expressões regulares. Use uma biblioteca de análise.

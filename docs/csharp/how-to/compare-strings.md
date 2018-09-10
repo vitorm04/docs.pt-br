@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961294"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484096"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C# #
+# <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C\#
 
 Você compara cadeias de caracteres para responder uma dessas duas perguntas: "Essas duas cadeias de caracteres são iguais?" ou "Em que ordem essas cadeias de caracteres devem ser colocadas ao classificá-las?"
 
-Essas duas perguntas são complicadas devido a fatores que afetam as comparações de cadeia de caracteres: 
+Essas duas perguntas são complicadas devido a fatores que afetam as comparações de cadeia de caracteres:
+
 - Você pode escolher uma comparação ordinal ou linguística.
 - Você pode escolher se o uso de maiúsculas faz diferença.
 - Você pode escolher comparações específicas de cultura.
@@ -36,14 +37,15 @@ As comparações ordinais não consideram regras linguísticas ao comparar cadei
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparações ordinais que não diferenciam maiúsculas de minúsculas
 
-O método <xref:System.String.Equals%2A?displayProperty=nameWithType> permite que você especifique um valor <xref:System.StringComparison> de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para especificar uma comparação que não diferencia maiúsculas de minúsculas. Também há um método <xref:System.String.Compare%2A> estático que inclui um argumento booliano para especificar comparações que não diferenciam maiúsculas de minúsculas. Eles são mostrados no código a seguir:
+O método <xref:System.String.Equals%2A?displayProperty=nameWithType> permite que você especifique um valor <xref:System.StringComparison> de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+para especificar uma comparação que não diferencia maiúsculas de minúsculas. Também há um método <xref:System.String.Compare%2A> estático que inclui um argumento booliano para especificar comparações que não diferenciam maiúsculas de minúsculas. Eles são mostrados no código a seguir:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>Comparações linguísticas
 
 As cadeias de caracteres também podem ser ordenadas usando regras linguísticas para a cultura atual.
-Às vezes, isso é conhecido como "ordem de classificação de palavra". Quando você executa uma comparação linguística, alguns caracteres Unicode não alfanuméricos podem ter pesos especiais atribuídos. Por exemplo, o hífen "-" pode ter um peso muito pequeno atribuído, de modo que "co-op" e "coop" apareçam próximos um do outro na ordem de classificação. Além disso, alguns caracteres Unicode podem ser equivalentes a uma sequência de caracteres alfanuméricos. O exemplo a seguir usa a frase "They dance in the street." em alemão com o "ss" e 'ß'. Linguisticamente (no Windows), "ss" é igual ao eszett alemão: caractere 'ß' nas culturas "en-US" e "de-DE". 
+Às vezes, isso é conhecido como "ordem de classificação de palavra". Quando você executa uma comparação linguística, alguns caracteres Unicode não alfanuméricos podem ter pesos especiais atribuídos. Por exemplo, o hífen "-" pode ter um peso muito pequeno atribuído, de modo que "co-op" e "coop" apareçam próximos um do outro na ordem de classificação. Além disso, alguns caracteres Unicode podem ser equivalentes a uma sequência de caracteres alfanuméricos. O exemplo a seguir usa a frase "They dance in the street." em alemão com o "ss" e 'ß'. Linguisticamente (no Windows), "ss" é igual ao eszett alemão: caractere 'ß' nas culturas "en-US" e "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ As comparações linguísticas dependem da cultura atual e são dependentes do S
 
 Os exemplos a seguir mostram como classificar e pesquisar cadeias de caracteres em uma matriz usando uma comparação linguística que depende da cultura atual. Use os métodos <xref:System.Array> estáticos que aceitam um parâmetro <xref:System.StringComparer?displayProperty=nameWithType>.
 
-Este exemplo mostra como classificar uma matriz de cadeias de caracteres usando a cultura atual: 
+Este exemplo mostra como classificar uma matriz de cadeias de caracteres usando a cultura atual:
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ Uma vez classificada, a lista de cadeias de caracteres pode ser pesquisada usand
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Use sempre o mesmo tipo de comparação para classificação e pesquisa. O uso de tipos diferentes de comparação para classificação e pesquisa produz resultados inesperados. 
+Use sempre o mesmo tipo de comparação para classificação e pesquisa. O uso de tipos diferentes de comparação para classificação e pesquisa produz resultados inesperados.
 
 Classes de coleção como <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> e <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> têm construtores que usam um parâmetro <xref:System.StringComparer?displayProperty=nameWithType> quando o tipo dos elementos ou chaves é `string`. Em geral, você deve usar esses construtores sempre que possível e especificar <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
@@ -118,8 +120,9 @@ Nenhum dos exemplos usou <xref:System.Object.ReferenceEquals%2A>. Este método d
 > Quando você testa cadeias de caracteres quanto a igualdade, é necessário usar os métodos que especificam explicitamente o tipo de comparação que você pretende executar. O código fica muito mais legível e fácil de manter. Use as sobrecargas dos métodos das classes <xref:System.String?displayProperty=nameWithType> e <xref:System.Array?displayProperty=nameWithType> que aceitam um parâmetro de enumeração <xref:System.StringComparison>. Você especifica o tipo de comparação a ser executado. Evite usar os operadores `==` e `!=` ao testar a igualdade. Os métodos de instância <xref:System.String.CompareTo%2A?displayProperty=nameWithType> sempre executam uma comparação ordinal que diferencia maiúsculas de minúsculas. Basicamente, eles são adequados para colocar cadeias de caracteres em ordem alfabética.
 
 ## <a name="see-also"></a>Consulte também
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
- [Comparação de cadeias de caracteres](../../standard/base-types/comparing.md)  
- [Globalizando e localizando aplicativos](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
+- [Comparação de cadeias de caracteres](../../standard/base-types/comparing.md)  
+- [Globalizando e localizando aplicativos](/visualstudio/ide/globalizing-and-localizing-applications)

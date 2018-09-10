@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33592412"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268754"
 ---
 # <a name="the-managed-thread-pool"></a>O pool de threads gerenciados
 
@@ -87,12 +87,12 @@ Há várias situações nas quais é apropriado criar e gerenciar seus próprios
   
 ## <a name="see-also"></a>Consulte também
 
- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [TPL (Biblioteca de Paralelismo de Tarefas)](../parallel-programming/task-parallel-library-tpl.md)  
- [Como retornar um valor de uma tarefa](../parallel-programming/how-to-return-a-value-from-a-task.md)  
- [Objetos e recursos de threading](threading-objects-and-features.md)  
- [Threads e threading](threads-and-threading.md)  
- [E/S de arquivo assíncrona](../io/asynchronous-file-i-o.md)  
- [Temporizadores](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../parallel-programming/task-parallel-library-tpl.md)  
+- [Como retornar um valor de uma tarefa](../parallel-programming/how-to-return-a-value-from-a-task.md)  
+- [Objetos e recursos de threading](threading-objects-and-features.md)  
+- [Threads e threading](threads-and-threading.md)  
+- [E/S de arquivo assíncrona](../io/asynchronous-file-i-o.md)  
+- [Temporizadores](timers.md)  

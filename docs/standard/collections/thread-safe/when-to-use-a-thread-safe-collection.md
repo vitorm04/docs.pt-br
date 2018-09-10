@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574833"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209952"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando usar uma coleção thread-safe
 O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] apresenta cinco novos tipos de coleção especialmente projetados para dar suporte a operações multithread de adicionar e remover. Para obter o acesso thread-safe, esses novos tipos usam vários tipos de mecanismos de sincronização de bloqueio e sem bloqueio. A sincronização adiciona sobrecarga a uma operação. A quantidade de sobrecarga depende do tipo de sincronização usado, os tipos de operações que são executadas e outros fatores, como o número de threads que estão tentando acessar a coleção simultaneamente.  
@@ -62,7 +62,8 @@ O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] apresenta ci
 ## <a name="blockingcollection"></a>BlockingCollection  
  Quando forem necessárias semânticas de delimitação e bloqueio, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> provavelmente funcionará mais rápido do que qualquer implementação personalizada. Ele também dá suporte ao cancelamento, enumeração e tratamento de exceções avançados.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)  
- [Programação paralela](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)  
+- [Programação paralela](../../../../docs/standard/parallel-programming/index.md)

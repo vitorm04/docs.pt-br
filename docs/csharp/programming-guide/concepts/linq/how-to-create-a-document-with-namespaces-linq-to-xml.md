@@ -2,12 +2,12 @@
 title: Como criar um documento com namespaces (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330685"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478020"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ to XML)
 Este tópico mostra como criar documentos com namespaces.  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a criação de um documento que contém dois namespaces. Um é o namespace padrão. O outro é um namespace com um prefixo.  
   
- Com a inclusão de atributos de namespace no elemento raiz, os namespaces são serializados, de modo que http://www.adventure-works.com seja o namespace padrão e www.fourthcoffee.com seja serializado com o prefixo "fc". Para criar um atributo que declare um namespace padrão, você cria um atributo com o nome "xmlns", sem um namespace. O valor do atributo é o URI padrão do namespace.  
+ Com a inclusão de atributos de namespace no elemento raiz, os namespaces são serializados, de modo que `http://www.adventure-works.com` seja o namespace padrão e `www.fourthcoffee.com` seja serializado com o prefixo "fc". Para criar um atributo que declare um namespace padrão, você cria um atributo com o nome "xmlns", sem um namespace. O valor do atributo é o URI padrão do namespace.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

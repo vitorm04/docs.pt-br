@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 2df02200578979f9a613f43dc92cc9e7b0cb430e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f3c9daf98bfe77ea9462c8126f7a8368016875c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212414"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468859"
 ---
 # <a name="-main-c-compiler-options"></a>-main (opções do compilador C#)
 Esta opção especifica a classe que contém o ponto de entrada para o programa, se mais de uma classe contiver um método **Main**.  
@@ -27,6 +27,7 @@ Esta opção especifica a classe que contém o ponto de entrada para o programa,
 ## <a name="arguments"></a>Arguments  
  `class`  
  O tipo que contém o método **Main**.  
+ O nome de classe informado deve ser totalmente qualificado. Ele deve incluir o namespace completo que contém a classe, seguido do nome de classe. Por exemplo, quando o método `Main` é localizado dentro da classe `Program` no namespace `MyApplication.Core`, a opção do compilador deve ser `-main:MyApplication.Core.Program`.
   
 ## <a name="remarks"></a>Comentários  
  Se sua compilação incluir mais de um tipo com um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md), você poderá especificar qual tipo contém o método **Main** que deseja usar como o ponto de entrada para o programa.  
@@ -50,6 +51,7 @@ Esta opção especifica a classe que contém o ponto de entrada para o programa,
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Consulte também
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

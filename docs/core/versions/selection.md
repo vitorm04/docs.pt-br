@@ -4,18 +4,18 @@ description: Saiba como o .NET Core localiza e escolhe versões de tempo de exec
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874464"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395111"
 ---
 # <a name="net-core-version-selection"></a>Seleção de versão do .NET Core
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-Este artigo explica as políticas usadas pelas ferramentas do .NET Core, pelo SDK e pelo tempo de execução para a seleção de versões. Essas políticas fornecem um equilíbrio entre a execução de aplicativos usando as versões especificadas e a possibilidade de fácil atualização dos computadores de desenvolvedores e usuários finais. Essas políticas executam o seguinte:
+Este artigo explica as políticas usadas pelas ferramentas do .NET Core, pelo SDK e pelo tempo de execução para a seleção de versões. Essas políticas fornecem um equilíbrio entre a execução de aplicativos usando as versões especificadas e a possibilidade de fácil atualização dos computadores de desenvolvedores e usuários finais. Essas políticas executam as seguintes ações:
 
 - Implantação fácil e eficiente do .NET Core, incluindo atualizações de segurança e de confiabilidade.
 - Uso das ferramentas e dos comandos mais recentes independentes do tempo de execução de destino.
@@ -31,11 +31,11 @@ O restante deste documento examina esses quatro cenários.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>O SDK usa a versão mais recente instalada
 
-Os comandos do SDK incluem `dotnet new`, `dotnet build` ou `dotnet run`. A CLI `dotnet` precisa escolher uma versão do SDK para qualquer comando. A CLI do .NET Core usa o SDK mais recente instalado no computador por padrão. Você usará o SDK do .NET Core v2.1.301 quando ele estiver instalado, mesmo se o projeto que você estiver trabalhando seja direcionado ao tempo de execução do .NET Core 2.0. Observe que isso ocorre para as versões prévias e também para as versões lançadas. Você pode aproveitar os recursos e as melhorias mais recentes do SDK mesmo ao direcionar a versões anteriores de tempo de execução do .NET Core. Você pode direcionar a várias versões de tempo de execução do .NET Core em projetos diferentes, usando as mesmas ferramentas do SDK para todos os projetos.
+Os comandos do SDK incluem `dotnet new` ou `dotnet run`. A CLI `dotnet` precisa escolher uma versão do SDK para qualquer comando. A CLI do .NET Core usa o SDK mais recente instalado no computador por padrão. Você usará o SDK do .NET Core v2.1.301 quando ele estiver instalado, mesmo se o projeto que você estiver trabalhando seja direcionado ao tempo de execução do .NET Core 2.0. Você usará as versões prévias mais recentes e também para as versões lançadas. Você pode aproveitar os recursos e as melhorias mais recentes do SDK mesmo ao direcionar a versões anteriores de tempo de execução do .NET Core. Você pode direcionar a várias versões de tempo de execução do .NET Core em projetos diferentes, usando as mesmas ferramentas do SDK para todos os projetos.
 
 Em raras ocasiões, talvez você precise usar uma versão anterior do SDK. Nesse caso, especifique essa versão em um [arquivo *global. JSON*](../tools/global-json.md). A política "usar versão mais recente" significa usar o *global.json* somente para especificar uma versão do SDK do .NET Core anterior à versão mais recente instalada.
 
-O *global.json* pode ser colocado em qualquer lugar na hierarquia de arquivos. A CLI procura no diretório do projeto em diante até encontrar o primeiro *global.json*. Você controla a quais projetos um determinado *global.json* se aplica a pelo seu lugar no sistema de arquivos. A CLI do .NET procura um arquivo *global.json* navegando iterativamente do caminho do diretório de trabalho atual em diante. O primeiro arquivo *global.json* encontrado especifica a versão usada. Se essa versão estiver instalada, ela será usada. Se o SDK especificado na *global.json* não for encontrado, a CLI do .NET efetuará roll forward para o SDK mais recente instalado. Esse é o mesmo que o comportamento padrão, quando não é encontrado nenhum arquivo *global.json*.
+O *global.json* pode ser colocado em qualquer lugar na hierarquia de arquivos. A CLI procura no diretório do projeto em diante até encontrar o primeiro *global.json*. Você controla a quais projetos um determinado *global.json* se aplica a pelo seu lugar no sistema de arquivos. A CLI do .NET procura um arquivo *global.json* navegando iterativamente do caminho do diretório de trabalho atual em diante. O primeiro arquivo *global.json* encontrado especifica a versão usada. Se essa versão estiver instalada, ela será usada. Se o SDK especificado na *global.json* não for encontrado, a CLI do .NET efetuará roll forward para o SDK mais recente instalado. Efetuar roll forward é o mesmo que o comportamento padrão, quando não é encontrado nenhum arquivo *global.json*.
 
 O exemplo a seguir mostra a sintaxe *global.json*:
 
@@ -53,7 +53,7 @@ O processo para selecionar uma versão do SDK é:
 1. O `dotnet` usa o SDK especificado no primeiro *global.json* encontrado.
 1. O `dotnet` usará a versão mais recente do SDK instalada se nenhum *global.json* for encontrado.
 
-Saiba mais sobre como selecionar uma versão do SDK na seção [regras de correspondência](../tools/global-json.md) do tópico sobre o *global.json*.
+Saiba mais sobre como selecionar uma versão do SDK na seção [Regras de correspondência](../tools/global-json.md#matching-rules) do artigo sobre o *global.json*.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>Os Monikers da Estrutura de Destino definem as APIs de tempo de build
 

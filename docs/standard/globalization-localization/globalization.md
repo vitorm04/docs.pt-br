@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579561"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221903"
 ---
 # <a name="globalization"></a>Globalização
 A globalização envolve projetar e desenvolver um aplicativo preparado para o mundo que dá suporte a interfaces localizadas e dados regionais para usuários em várias culturas. Antes de iniciar a fase de design, você deve determinar a quais culturas seu aplicativo dará suporte. Embora um aplicativo seja direcionado para uma única cultura ou região por padrão, você pode projetá-lo e gravá-lo para que ele possa ser facilmente estendido para usuários em outras culturas ou regiões.  
@@ -116,7 +116,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
  Algumas vezes, as comparações de igualdade envolvem pesquisas ou comparações de subcadeias de caracteres em vez de chamadas para o método <xref:System.String.Equals%2A?displayProperty=nameWithType>. Em alguns casos, você pode usar uma subsequência de pesquisa para determinar se aquela subcadeia de caracteres é igual a uma outra cadeia de caracteres. Se a finalidade desta comparação é não linguística, a pesquisa também deve ser ordinal em vez de com diferenciação entre culturas.  
   
- O exemplo a seguir ilustra o perigo de uma pesquisa com diferenciação entre culturas em dados não linguísticos. O método `AccessesFileSystem` é projetado para proibir o acesso de URIs que começam com a subcadeia de caracteres "FILE" ao sistema de arquivos. Para fazer isso, ele executa uma comparação com diferenciação entre culturas mas sem diferenciação de maiúsculas e minúsculas do início da URI com a cadeia de caracteres "FILE". Já que um URI que acessa o sistema de arquivos pode começar com "FILE:" ou "file:", a suposição implícita é que esse "i" (U+0069) é sempre o equivalente em minúsculas de "I" (U+0049). No entanto, em turco e azerbaidjano, a versão maiúscula de "i" é "İ" (U+0130). Devido a essa discrepância, a comparação com diferenciação entre culturas permite o acesso ao sistema de arquivos quando ele deve ser proibido.  
+ O exemplo a seguir ilustra o perigo de uma pesquisa com diferenciação entre culturas em dados não linguísticos. O método `AccessesFileSystem` é projetado para proibir o acesso de URIs que começam com a subcadeia de caracteres "FILE" ao sistema de arquivos. Para fazer isso, ele executa uma comparação com diferenciação entre culturas mas sem diferenciação de maiúsculas e minúsculas do início da URI com a cadeia de caracteres "FILE". Já que um URI que acessa o sistema de arquivos pode começar com "FILE:" ou "file:", a suposição implícita é que esse "i" (U+0069) é sempre o equivalente em minúsculas de "I" (U+0049). No entanto, em turco e azerbaijano, a versão maiúscula de "i" é "İ" (U+0130). Devido a essa discrepância, a comparação com diferenciação entre culturas permite o acesso ao sistema de arquivos quando ele deve ser proibido.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  
@@ -369,6 +369,7 @@ A globalização envolve projetar e desenvolver um aplicativo preparado para o m
   
 -   O usuário pode personalizar configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que sejam apresentados ao usuário dados em um formato que ele espera.  
   
-## <a name="see-also"></a>Consulte também  
- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
- [Melhores práticas para o uso de cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>Consulte também
+
+- [Globalização e localização](../../../docs/standard/globalization-localization/index.md)  
+- [Melhores práticas para o uso de cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md)

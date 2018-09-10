@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00c91daf2811ecba01b77d51a74740027ced5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581580"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227617"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Como: Usar JoinBlock para ler dados de várias fontes
 Este documento explica como usar a classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> para executar uma operação quando os dados estão disponíveis em várias fontes. Ele também demonstra como usar o modo não greedy para habilitar vários blocos de junção para compartilhar uma fonte de dados com mais eficiência.
@@ -46,5 +46,6 @@ Este documento explica como usar a classe <xref:System.Threading.Tasks.Dataflow.
 ## <a name="robust-programming"></a>Programação robusta  
  O uso de junções não greedy também pode ajudar a evitar deadlocks em seu aplicativo. Em um aplicativo de software, o *deadlock* ocorre quando cada um dos dois ou mais processos mantiver um recurso e mutuamente aguardar até que outro processo libere algum outro recurso. Considere um aplicativo que define dois objetos <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Os dois objetos leem dados de dois blocos de origem compartilhados. No modo greedy, se um bloco de junção ler da primeira fonte e o segundo bloco de junção ler da segunda fonte, o aplicativo poderá causar o deadlock já que ambos os blocos de junção mutuamente aguardam que o outro libere seus recursos. No modo não greedy, cada bloco de junção lê de suas fontes somente quando todos os dados estão disponíveis e, portanto, o risco de deadlock é eliminado.  
   
-## <a name="see-also"></a>Consulte também  
- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Consulte também
+
+- [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

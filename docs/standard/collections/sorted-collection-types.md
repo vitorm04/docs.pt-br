@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b40167be4f2760eb7c88155e1733266e34d11d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83efda175b7e5cef8c7042682827d2fe0562c207
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569815"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260078"
 ---
 # <a name="sorted-collection-types"></a>Tipos de coleção Sorted
 A classe <xref:System.Collections.SortedList?displayProperty=nameWithType>, a classe genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> e a classe genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> são semelhantes à classe <xref:System.Collections.Hashtable> e à classe genérica <xref:System.Collections.Generic.Dictionary%602>, pois elas implementam a interface <xref:System.Collections.IDictionary>, mas mantêm seus elementos em ordem de classificação por chave e não têm a inserção de O(1) nem a característica de recuperação das tabelas de hash. As três classes têm várias funcionalidades em comum:  
@@ -48,8 +48,9 @@ A classe <xref:System.Collections.SortedList?displayProperty=nameWithType>, a cl
   
  A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a classe <xref:System.Collections.Generic.SortedSet%601> fornece uma árvore de balanceamento automático que mantém os dados na ordem classificada após inserções, exclusões e pesquisas. Essa classe e a classe <xref:System.Collections.Generic.HashSet%601> implementam a interface <xref:System.Collections.Generic.ISet%601>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
- [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
+- [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)

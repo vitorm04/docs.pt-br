@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745364"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788922"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Instruções passo a passo: usando serviços de aplicativo cliente
 Este tópico descreve como criar um aplicativo do Windows que usa serviços de aplicativo cliente para autenticar usuários e recuperar funções de usuário e configurações.  
@@ -69,7 +69,7 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
  Neste ponto, o aplicativo está configurado para acessar todos os três serviços do mesmo host. Na próxima seção, você criará o host como um aplicativo simples de serviço Web, permitindo que você teste a configuração do cliente.  
   
 ## <a name="creating-the-application-services-host"></a>Criação do host dos serviços de aplicativo  
- Nesta seção, você criará um aplicativo simples de serviço Web que acessa dados do usuário de um arquivo de banco de dados local do SQL Server Compact. Em seguida, você preencherá o banco de dados usando a [ferramenta de Administração de Site do ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Esta configuração simples permite que você teste rapidamente o aplicativo cliente. Como alternativa, você pode configurar o host de serviço Web para acessar dados do usuário de um banco de dados completo do SQL Server ou por meio das classes personalizadas <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider>. Para saber mais, confira [Criação e configuração do banco de dados de serviços de aplicativo para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ Nesta seção, você criará um aplicativo simples de serviço Web que acessa dados do usuário de um arquivo de banco de dados local do SQL Server Compact. Em seguida, você preencherá o banco de dados usando a [ferramenta de Administração de Site do ASP.NET](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Esta configuração simples permite que você teste rapidamente o aplicativo cliente. Como alternativa, você pode configurar o host de serviço Web para acessar dados do usuário de um banco de dados completo do SQL Server ou por meio das classes personalizadas <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider>. Para saber mais, confira [Criação e configuração do banco de dados de serviços de aplicativo para o SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  No procedimento a seguir, você criará e configurará o serviço Web AppServices.  
   
@@ -105,7 +105,7 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
      Os elementos `authenticationService`, `profileService` e `roleService` nessa marcação habilitam e configuram os serviços de aplicativo. Para fins de teste, o atributo `requireSSL` do elemento `authenticationService` é definido como "false". Os atributos `readAccessProperties` e `writeAccessProperties` do elemento `profileService` indicam que a propriedade `WebSettingsTestText` é leitura/gravação.  
   
     > [!NOTE]
-    >  No código de produção, você sempre deve acessar o serviço de autenticação sobre o SSL (usando o protocolo HTTPS). Para saber mais sobre como configurar o SSL, confira [Configuração do SSL (Guia de Operações do IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=91844).  
+    >  No código de produção, você sempre deve acessar o serviço de autenticação sobre o SSL (usando o protocolo HTTPS). Para saber mais sobre como configurar o SSL, confira [Configuração do SSL (Guia de Operações do IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=91844).  
   
     ```xml  
     <system.web.extensions>  
@@ -364,7 +364,7 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
   
 3.  Na janela **Propriedades**, defina as seguintes propriedades para o botão.  
   
-  	|propriedade|Valor|  
+  	|Propriedade|Valor|  
   	|--------------|-----------|  
   	|**(Nome)**|managerOnlyButton|  
   	|**Texto**|&Manager task|  
@@ -538,6 +538,6 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
  [Serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Visão geral dos serviços de aplicativos cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Como configurar serviços de aplicativo cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Ferramenta de Administração de Site ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [Instruções passo a passo: uso de serviços de aplicativo do ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [Ferramenta de Administração de Site ASP.NET](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Criando e configurando o banco de dados dos serviços de aplicativos para o SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [Instruções passo a passo: uso de serviços de aplicativo do ASP.NET](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

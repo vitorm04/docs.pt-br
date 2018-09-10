@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdc464234871fc07feeeb8dd02635ebdd151d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573112"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216536"
 ---
 # <a name="exception-class-and-properties"></a>Classe e propriedades da exceção
 
@@ -41,5 +41,6 @@ A maioria das classes que herdam de <xref:System.Exception> não implementa memb
 
 É recomendável gerar e capturar apenas objetos que derivam de <xref:System.Exception>, mas é possível gerar como uma exceção qualquer objeto que derive da classe <xref:System.Object>. Observe que nem todas as linguagens dão suporte à geração e captura de objetos que não derivam de <xref:System.Exception>.
   
-## <a name="see-also"></a>Consulte também  
-[Exceções](index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Exceções](index.md)

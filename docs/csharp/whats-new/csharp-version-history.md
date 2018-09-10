@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752170"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391242"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -34,6 +34,10 @@ Os principais recursos do C# 1.0 incluíam:
 - [Instruções](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
 - Literais
+
+## <a name="c-version-12"></a>C# versão 1.2
+
+C# versão 1.2 fornecido com o Visual Studio 2003. Ele continha algumas pequenas melhorias na linguagem. Muito notável é que, a partir desta versão, o código gerado em um loop `foreach` chamou <xref:System.IDisposable.Dispose%2A>, em um <xref:System.Collections.IEnumerator>, quando o <xref:System.Collections.IEnumerator> implementou <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# versão 2.0
 

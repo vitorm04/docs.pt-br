@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591749"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225588"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
 O .NET Framework fornece os dois padrões a seguir para executar operações assíncronas vinculadas a E/S e a computação:  
@@ -119,5 +119,6 @@ O .NET Framework fornece os dois padrões a seguir para executar operações ass
 ## <a name="using-the-streamextensions-sample-code"></a>Usando o Código de Exemplo StreamExtensions  
  O arquivo Streamextensions.cs, em [Amostras para programação paralela com o .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples), contém várias implementações de referência que usam objetos de Tarefa para arquivos assíncronos e E/S de rede.  
   
-## <a name="see-also"></a>Consulte também  
- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Consulte também
+
+- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

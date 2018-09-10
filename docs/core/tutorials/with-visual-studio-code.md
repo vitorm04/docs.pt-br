@@ -4,12 +4,12 @@ description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# 
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213609"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484662"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao Visual Studio Code e C#
 
@@ -50,7 +50,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 4. Execute o programa "Olá, Mundo":
 
-    * Digite `dotnet run`. 
+    * Digite `dotnet run`.
 
       ![O comando de execução dotnet](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Abra o arquivo Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. O Visual Studio Code solicitará que você adicione os ativos ausentes para compilar e depurar seu projeto. Selecione **Sim** na barra superior. 
+2. O Visual Studio Code solicitará que você adicione os ativos ausentes para compilar e depurar seu projeto. Selecione **Sim** na barra superior.
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Seleção do .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Adicione um ponto de interrupção ao seu código. Para isso, clique no **editor de margem** logo à esquerda dos números de linha no editor. Para este exemplo, faça isso na linha 9.
+5. Adicione um ponto de interrupção ao seu projeto. Para isso, clique na **margem do editor** logo à esquerda dos números de linha no editor, próximo à linha 9, ou mova o cursor do texto na linha 9 no editor e pressione <kbd>F9</kbd>.
 
     ![Definindo um ponto de interrupção](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
 7. Selecione a seta verde na parte superior para continuar a depuração ou escolha o quadrado vermelho na parte superior para interrompê-la.
 
-> [!TIP] 
+> [!TIP]
 > Para obter mais informações e dicas sobre solução de problemas de depuração do .NET Core com o OmniSharp no Visual Studio Code, consulte [Instruções para configurar o depurador .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
+## <a name="faq"></a>Perguntas Frequentes
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Faltam os ativos necessários para compilar e depurar C# no Visual Studio Code. Meu depurador diz: "Nenhuma configuração".
+
+A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar para você. O Visual Studio Code solicita que você gere esses ativos ao abrir um projeto C# pela primeira vez. Se você não gerar os ativos em seguida, você ainda poderá executar esse comando abrindo a paleta de comandos (**Exibição > Paleta de comandos**) e digitando">.NET: Generate Assets for Build and Debug". Selecionar isso gera os arquivos de configuração. vscode, launch.json e tasks.json que você precisa.
+
 ## <a name="see-also"></a>Consulte também
-[Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+
+* [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+* [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575356"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198251"
 ---
 # <a name="traversing-xml-schemas"></a>Percorrer esquemas XML
 Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece acesso aos elementos, a atributos, e tipos armazenados no SOM. Percorrer um esquema XML carregado no SOM também é a primeira etapa em editar um esquema XML usando o SOM API.  
@@ -22,7 +22,7 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
 ## <a name="traversing-an-xml-schema"></a>Percorrer um esquema XML  
  As seguintes propriedades da classe de <xref:System.Xml.Schema.XmlSchema> fornecem acesso à coleção de todos os itens globais adicionados ao esquema XML.  
   
-|propriedade|Tipo de objeto armazenado na coleção ou na matriz|  
+|Propriedade|Tipo de objeto armazenado na coleção ou na matriz|  
 |--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
@@ -67,11 +67,12 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
   
  O exemplo de código no tópico [Criação de esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) usou a coleção <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> para adicionar o atributo `CustomerId` para o elemento `Customer`. Esta é uma propriedade de pre-esquema- compilação. A propriedade correspondente de POST-Esquema- compilação - Infoset é a coleção de <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> , que contém todos os atributos do tipo complexo, incluindo aqueles que são herdadas com a derivação de tipo.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Consulte também
+
+- [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e752b9997301fcb3140539255fc32572bfd6e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573614"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262133"
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> é uma classe de coleção thread-safe que fornece os seguintes recursos:  
@@ -80,7 +80,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>Usando vários BlockingCollections como um  
  Para cenários em que um consumidor precisa remover itens de várias coleções simultaneamente, é possível criar matrizes de <xref:System.Collections.Concurrent.BlockingCollection%601> e usar os métodos estáticos como <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> que adicionarão ou retirarão de qualquer uma das coleções na matriz. Se uma coleção for de bloqueio, o método imediatamente tenta outra até encontrar uma que possa realizar a operação. Para obter mais informações, confira [Como usar matrizes de coleções Blocking em um pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Coleções e Estruturas de Dados](../../../../docs/standard/collections/index.md)  
- [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Coleções e Estruturas de Dados](../../../../docs/standard/collections/index.md)  
+- [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)

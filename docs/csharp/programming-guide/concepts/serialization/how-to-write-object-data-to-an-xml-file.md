@@ -2,12 +2,12 @@
 title: Como gravar dados de objeto em um arquivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320542"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259750"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Como gravar dados de objeto em um arquivo XML (C#)
 Este exemplo grava o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,7 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, ele precisará de acesso `Create` para a pasta. Se o arquivo já existe, o aplicativo precisa apenas de acesso `Write`, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso `Read` a um único arquivo, em vez de acesso `Create` a uma pasta.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO.StreamWriter>  
- [Como ler dados de objeto de um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.IO.StreamWriter>  
+- [Como ler dados de objeto de um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- [Serialização (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

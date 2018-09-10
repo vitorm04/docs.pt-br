@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 829ef35d2e26f67ea956a0838d93b9667ad58df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576614"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265085"
 ---
 # <a name="generic-collections-in-net"></a>Coleções genéricas no .NET
 
@@ -50,9 +50,10 @@ ms.locfileid: "33576614"
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
  [!code-vb[Conceptual.Generics.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source2.vb#7)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Genéricos](../../../docs/standard/generics/index.md)  
- [Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Interfaces genéricas](../../../docs/standard/generics/interfaces.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Genéricos](../../../docs/standard/generics/index.md)  
+- [Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [Interfaces genéricas](../../../docs/standard/generics/interfaces.md)

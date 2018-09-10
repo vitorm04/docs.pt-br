@@ -2,12 +2,12 @@
 title: Como localizar o elemento raiz (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: a7c15c8eb688f70b2d1633fc5c094b02cc97031c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421016"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261076"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Como localizar o elemento raiz (XPath-LINQ to XML) (C#)
 Este tópico mostra como obter o elemento raiz com XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -44,5 +44,6 @@ Results are identical
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Consulte também
+
+- [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

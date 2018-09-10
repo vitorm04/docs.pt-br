@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e09828b827b12645ebbf37d62a346c8877bfba05
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572834"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865729"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Entradas para a classe de XslCompiledTransform
 O método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> aceita três tipos de entrada para o documento de origem: um objeto que implementa a interface de <xref:System.Xml.XPath.IXPathNavigable> , um objeto de <xref:System.Xml.XmlReader> que lê o documento de origem, ou URI de uma cadeia de caracteres.  
@@ -54,5 +54,6 @@ O método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> aceita trê
   
  Para saber mais, confira [Resolvendo recursos externos durante o processamento de XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Consulte também
+
+- [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

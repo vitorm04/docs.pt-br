@@ -4,12 +4,12 @@ description: Este tutorial explica como organizar e testar projetos do .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960977"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400277"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
 
@@ -162,7 +162,7 @@ public class PetTests
 Exercício opcional: se você adicionou um tipo `Bird` anteriormente que produz um `Tweet!` para o proprietário, adicione um método de teste ao arquivo *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, para verificar se o método `TalkToOwner` funciona corretamente para o tipo `Bird`.
 
 > [!NOTE]
-> Embora você espere que os valores `expected` e `actual` sejam iguais, as asserções inicias com as verificações `Assert.NotEqual` especificam que eles *não são iguais*. Sempre crie inicialmente os testes para falhar uma vez para verificar a lógica dos testes. Essa é uma etapa importante na metodologia TDD (design orientado a testes). Depois de confirmar que os testes falham, ajuste as asserções para permitir que eles sejam aprovados.
+> Embora você espere que os valores `expected` e `actual` sejam iguais, uma declaração inicial com a verificação `Assert.NotEqual` especifica que esses valores *não são iguais*. Sempre crie inicialmente os testes para falhar para verificar a lógica do teste. Depois de confirmar que o teste falhou, ajuste a declaração para permitir que o teste seja aprovado.
 
 O código a seguir mostra a estrutura do projeto completo:
 

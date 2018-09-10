@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576097"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207610"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisando Cadeias de Caracteres de Data e Hora no .NET
 
@@ -87,9 +87,10 @@ No exemplo a seguir, o método <xref:System.DateTime.ParseExact%2A?displayProper
 
 Cada sobrecarga dos métodos <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.ParseExact%2A> também tem um parâmetro <xref:System.IFormatProvider> que oferece informações específicas da cultura sobre a formatação da cadeia de caracteres. Esse objeto <xref:System.IFormatProvider> é um objeto <xref:System.Globalization.CultureInfo> que representa uma cultura padrão ou um objeto <xref:System.Globalization.DateTimeFormatInfo> que é retornado pela propriedade <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  O <xref:System.DateTime.ParseExact%2A> também usa uma cadeia de caracteres adicional ou um argumento de matriz de cadeia de caracteres que define um ou mais formatos de data e hora personalizados.  
 
-## <a name="see-also"></a>Consulte também  
- [Análise de cadeias de caracteres](parsing-strings.md)  
- [Formatando Tipos](formatting-types.md)  
- [Conversão de tipo no .NET](type-conversion.md)  
- [Formatos de data e hora padrão](standard-date-and-time-format-strings.md)  
- [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>Consulte também
+
+- [Análise de cadeias de caracteres](parsing-strings.md)  
+- [Formatando Tipos](formatting-types.md)  
+- [Conversão de tipo no .NET](type-conversion.md)  
+- [Formatos de data e hora padrão](standard-date-and-time-format-strings.md)  
+- [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)

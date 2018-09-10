@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 173efcf485d5eb019b22a329a9d96b5cbe6a2f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592295"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879748"
 ---
 # <a name="introduction-to-plinq"></a>Introdução ao PLINQ
 ## <a name="what-is-a-parallel-query"></a>O que é uma Consulta Paralela?  
@@ -62,7 +62,7 @@ ms.locfileid: "33592295"
  Por padrão, a PLINQ é conservadora. Em tempo de execução, a infraestrutura da PLINQ analisa a estrutura geral da consulta. Se for provável que a consulta produza aumentos de velocidade por paralelização, a PLINQ particionará a sequência de origem em tarefas que podem ser executadas simultaneamente. Se não for seguro a paralelização de uma consulta, a PLINQ apenas executa a consulta em sequência. Se a PLINQ tiver a opção de escolher entre um algoritmo paralelo potencialmente caro ou um algoritmo sequencial barato, ela escolherá o algoritmo sequencial, por padrão. Você pode usar o método <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> e a enumeração <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> para instruir o PLINQ a selecionar o algoritmo em paralelo. Isso é útil quando você sabe por meio de testes e medidas que uma determinada consulta é executada mais rapidamente em paralelo. Para saber mais, veja [Como especificar o modo de execução em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
 ## <a name="degree-of-parallelism"></a>Grau de Paralelismo  
- Por padrão, o PLINQ utiliza a todos os processadores no computador host. Você pode instruir o PLINQ a não usar mais do que um número especificado de processadores usando o método <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A>. Isso é útil quando você deseja certificar-se de que outros processos em execução no computador receberão um determinado período de tempo de CPU. O trecho a seguir limita a consulta ao utilizar no máximo dois processadores.  
+ Por padrão, o PLINQ utiliza a todos os processadores no computador host. Você pode instruir o PLINQ a não usar mais do que um número especificado de processadores usando o método <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A>. Isso é útil quando você deseja certificar-se de que outros processos em execução no computador receberão um determinado período de tempo de CPU. O snippet a seguir limita a consulta ao utilizar no máximo dois processadores.  
   
  [!code-csharp[PLINQ#5](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#5)]
  [!code-vb[PLINQ#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#5)]  
@@ -120,6 +120,7 @@ ms.locfileid: "33592295"
 ## <a name="measuring-plinq-performance"></a>Medindo Desempenho PLINQ  
  Em muitos casos, uma consulta pode ser paralelizada, mas a sobrecarga de configuração de consulta paralela supera o benefício de desempenho obtido. Se uma consulta não gerar muita computação ou se a fonte de dados for pequena, uma consulta PLINQ poderá ser mais lenta do que uma consulta sequencial LINQ to Objects. Você pode usar o Analisador de Desempenho Paralelo no Visual Studio Team Server para comparar o desempenho de várias consultas, para localizar gargalos de processamento e para determinar se a consulta está em execução em paralelo ou sequencialmente. Para saber mais, veja [Visualizador de Simultaneidade](/visualstudio/profiling/concurrency-visualizer) e [Como medir o Desempenho da Consulta PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
-## <a name="see-also"></a>Consulte também  
- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+## <a name="see-also"></a>Consulte também
+
+- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
