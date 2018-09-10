@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-ms.openlocfilehash: 8ee19688ff0a6687bcf761857958aa2022fdb0c8
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: e75abf8ac356eaed6c54dd0309316fb6755bf635
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027805"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858298"
 ---
 # <a name="uint-c-reference"></a>uint (Referência de C#)
 
@@ -87,12 +87,13 @@ uint y = (uint)3.0;
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.UInt32>  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.UInt32>  
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tabela de tipos internos](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

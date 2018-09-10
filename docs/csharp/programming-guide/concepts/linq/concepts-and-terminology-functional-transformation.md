@@ -2,12 +2,12 @@
 title: Conceitos e terminologia (transformação funcional) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339284"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526989"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceitos e terminologia (transformação funcional) (C#)
 Este tópico apresenta os conceitos e a terminologia de transformações e puras. A abordagem funcional de transformação a transformação passa de dados codificação que geralmente é mais rápido, mais programar completo expressive, e mais fácil depurar e manter que a programação mais tradicional, mais imperativa.  
@@ -71,6 +71,7 @@ Este tópico apresenta os conceitos e a terminologia de transformações e puras
   
  Esses recursos de idioma serão usados em exemplos de código em todo esta seção.  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Programação funcional versus Programação obrigatória (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Consulte também
+
+- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Programação funcional versus Programação obrigatória (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

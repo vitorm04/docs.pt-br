@@ -4,11 +4,11 @@ description: Saiba como especificar dinamicamente filtros predicados em tempo de
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482034"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512570"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Especificar filtros predicados dinamicamente em tempo de execução
 

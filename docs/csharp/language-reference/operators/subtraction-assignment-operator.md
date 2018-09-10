@@ -7,11 +7,12 @@ helpviewer_keywords:
 - subtraction assignment operator (-=) [C#]
 - -= operator (subtraction assignment ) [C#]
 ms.assetid: 05c7d68a-423f-4de8-891b-cf24e8fb6ed7
-ms.openlocfilehash: 2f37bfa303fb523840b15e896ee3b4a967eb5b2b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7cade0811536d836480f80a56cf8c4d09e089a0b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43773975"
 ---
 # <a name="--operator-c-reference"></a>Operador -= (Referência de C#)
 O operador de atribuição de subtração.  
@@ -38,7 +39,8 @@ x = x - y
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Operadores do C#](../../../csharp/language-reference/operators/index.md)

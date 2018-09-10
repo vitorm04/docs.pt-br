@@ -8,11 +8,11 @@ helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
 ms.openlocfilehash: 54ec003683953b53dedf8885a41350daf5338f83
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399436"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523355"
 ---
 # <a name="internal-c-reference"></a>internal (Referência de C#)
 A palavra-chave `internal` é um [modificador de acesso](../../../csharp/language-reference/keywords/access-modifiers.md) para tipos e membros de tipo. 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: aa0baf50b9e4aabf0bb5dfa229ecd245db391a8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 21350c28f5fcce812f47742bebe07f5bcdf842f1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484022"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521163"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 É possível dividir a definição de uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md), uma [interface](../../../csharp/language-reference/keywords/interface.md) ou um método em dois ou mais arquivos de origem. Cada arquivo de origem contém uma seção da definição de tipo ou método e todas as partes são combinadas quando o aplicativo é compilado.  
@@ -160,9 +160,10 @@ partial void onNameChanged()
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
- [(partial (tipo)](../../../csharp/language-reference/keywords/partial-type.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
+- [(partial (tipo)](../../../csharp/language-reference/keywords/partial-type.md)

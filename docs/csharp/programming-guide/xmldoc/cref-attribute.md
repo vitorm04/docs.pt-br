@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: a89c7170de956bae65f7018130ba27e61c076376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9e14cf4e7051e52df20e899e9070e5b728321e5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337019"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514597"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Atributo cref (Guia de Programação em C#)
 O atributo `cref` em uma marca de documentação XML significa “referência de código”. Ele especifica que o texto interno da marca é um elemento de código, como um tipo, método ou propriedade. Ferramentas de documentação, como o [Sandcastle](https://github.com/EWSoftware/SHFB), usam os atributos `cref` para gerar automaticamente os hiperlinks para a página em que o tipo ou membro está documentado.  
@@ -118,6 +118,7 @@ O atributo `cref` em uma marca de documentação XML significa “referência de
 </doc>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Consulte também
+
+- [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

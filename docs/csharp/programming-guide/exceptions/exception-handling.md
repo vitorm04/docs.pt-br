@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: bbe9db48ab5cc1313c18fce66312f4334b40b9c5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f6cc48843518a5d8791b6eda3e82a9f140039ceb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43402789"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514036"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Manipulação de exceções (Guia de Programação em C#)
 Um bloco [try](../../../csharp/language-reference/keywords/try-catch.md) é usado por programadores de C# para particionar o código que pode ser afetado por uma exceção. Os blocos [catch](../../../csharp/language-reference/keywords/try-catch.md) associados são usados para tratar qualquer exceção resultante. Um bloco [finally](../../../csharp/language-reference/keywords/try-finally.md) contém código que será executado independentemente de uma exceção ser ou não ser lançada no bloco `try`, como a liberação de recursos que estão alocados no bloco `try`. Um bloco `try` exige um ou mais blocos `catch` associados ou um bloco `finally` ou ambos.  
@@ -54,11 +54,12 @@ Um bloco [try](../../../csharp/language-reference/keywords/try-catch.md) é usad
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+- [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 ms.openlocfilehash: 66edb32d24dd1dc543097b98ff3744f0aa0a7145
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389683"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511866"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (opções do compilador C#)
 Esta opção especifica qual página de código deve ser usada durante a compilação caso a página necessária não seja a página de código padrão atual do sistema.  

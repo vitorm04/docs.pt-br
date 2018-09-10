@@ -2,12 +2,12 @@
 title: Como carregar XML de um arquivo (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: b276359c9bfd0a45775cf5ecf1e821f776825309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8322863ad33f8116e26d98467490b9114339553
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319982"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43746649"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Como carregar XML de um arquivo (C#)
 Este tópico mostra como carregar XML de um URI usando o método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
@@ -48,5 +48,6 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

@@ -3,12 +3,12 @@ title: Ordenar os resultados de uma cláusula join (LINQ em C#)
 description: Saiba como ordenar os resultados de uma cláusula join de LINQ em C#.
 ms.date: 12/1/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.openlocfilehash: e4a12b6f9b4a99decb1f64524ebe67a196084a04
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 13cd6cb202cf67def17310db6d98e368ce837646
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404730"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516980"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Ordenar os resultados de uma cláusula join
 
@@ -22,6 +22,6 @@ Esta consulta cria uma junção de grupos e classifica os grupos com base no ele
 
 ## <a name="see-also"></a>Consulte também
 
-[LINQ (Consulta Integrada à Linguagem)](index.md)  
-[Cláusula orderby](../language-reference/keywords/orderby-clause.md)  
-[Cláusula join](../language-reference/keywords/join-clause.md)  
+- [LINQ (Consulta Integrada à Linguagem)](index.md)  
+- [Cláusula orderby](../language-reference/keywords/orderby-clause.md)  
+- [Cláusula join](../language-reference/keywords/join-clause.md)  

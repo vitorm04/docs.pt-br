@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 88932ad30e30d53312e6d76f70415969b9e86675
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43468222"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517973"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opções do compilador C#)
 Use a opção **-win32manifest** para especificar um arquivo de manifesto do aplicativo Win32 definido pelo usuário para ser inserido em um arquivo PE do projeto.  

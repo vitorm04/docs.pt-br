@@ -2,12 +2,12 @@
 title: Como consultar um ArrayList com LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 8aaf90843fa85cf20a92a40644f085769404aa85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cf804bc86dc6f8378e62e01ba373bb82821de52
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323229"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43740228"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Como consultar um ArrayList com LINQ (C#)
 Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver um <xref:System.Collections.ArrayList> de objetos `Student`, sua [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md) deverá ter uma aparência semelhante a esta:  
@@ -83,5 +83,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Consulte também
+
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

@@ -2,12 +2,12 @@
 title: Visão geral da classe XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 49b3b81276a598d003efa98337dd945576d802ca
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc571eac2af824d02ce34b018cfd51fb186f8bf6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925097"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527478"
 ---
 # <a name="xelement-class-overview-c"></a>Visão geral da classe XElement (C#)
 A classe <xref:System.Xml.Linq.XElement> é uma das classes fundamentais no [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Representa um elemento XML. Você pode usar essa classe para criar elementos; alterar o conteúdo do elemento; adicionar, alterar ou excluir elementos filho; adicionar atributos a um elemento; ou serializar o conteúdo de um elemento no formulário de texto. Você também pode interoperar com outras classes no <xref:System.Xml?displayProperty=nameWithType>, como <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> e <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -96,5 +96,6 @@ Console.WriteLine(xmlTree);
   
  Para obter mais informações, consulte [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Consulte também
+
+- [Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

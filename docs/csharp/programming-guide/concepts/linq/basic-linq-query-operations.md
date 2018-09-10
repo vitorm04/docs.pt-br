@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 2825b79c9638fff050522da43184a8d95a3fe02f
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42752047"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522614"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operações de consulta LINQ básica (C#)
 Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
@@ -99,9 +99,10 @@ from order in Customer.Orders...
 ## <a name="selecting-projections"></a>Selecionando (Projeções)  
  A cláusula `select` produz os resultados da consulta e especifica a "forma" ou o tipo de cada elemento retornado. Por exemplo, você pode especificar se os resultados consistirão em objetos `Customer` completos, apenas um membro, um subconjunto de membros ou algum tipo de resultado completamente diferente com base em um cálculo ou na criação de um novo objeto. Quando a cláusula `select` produz algo diferente de uma cópia do elemento de origem, a operação é chamada de *projeção*. O uso de projeções para transformar dados é uma funcionalidade poderosa das expressões de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, consulte [Transformações de dados com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) e [Cláusula select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
- [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+## <a name="see-also"></a>Consulte também
+
+- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+- [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)  
+- [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

@@ -2,12 +2,12 @@
 title: -subsystemversion (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: 25391dd504fb8a2b9458fd9495477258fc23d81a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001387"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44098873"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opções do compilador C#)
 Especifica a versão mínima do subsistema no qual o arquivo executável gerado pode ser executado, determinando assim as versões do Windows em que o arquivo executável pode ser executado. Normalmente, essa opção garante que o arquivo executável possa tirar proveito de determinados recursos de segurança que não estão disponíveis com versões mais antigas do Windows.  
@@ -59,4 +59,5 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
  Para definir a opção do compilador **-subsystemversion** no Visual Studio, você precisa abrir o arquivo .csproj e especificar um valor para a propriedade `SubsystemVersion` no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

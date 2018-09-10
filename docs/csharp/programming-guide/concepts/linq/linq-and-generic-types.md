@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: f9bb4ec21685d21d0975529c7460944b5f0f9fc6
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 45bc5cbbdd1c0721797aed38636892e731c2883f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513880"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ e tipos genéricos (C#)
 As consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são baseadas em tipos genéricos, que foram introduzidos na versão 2.0 do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Não é necessário um conhecimento profundo sobre os genéricos antes de começar a escrever consultas. No entanto, convém entender dois conceitos básicos:  
@@ -36,6 +36,7 @@ As consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são baseadas em 
   
  A palavra-chave `var` é útil quando o tipo da variável for óbvio ou quando não é tão importante especificar explicitamente os tipos genéricos aninhados, como aqueles que são produzidos por consultas de grupo. É recomendável que você note que o código poderá se tornar mais difícil de ser lido por outras pessoas, caso você use a `var`. Para obter mais informações, consulte [Variáveis locais de tipo implícito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Genéricos](../../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Genéricos](../../../../csharp/programming-guide/generics/index.md)

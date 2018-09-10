@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43390400"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511199"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opções do compilador C#)
 A opção **-lib** especifica o local dos assemblies referenciados por meio da opção [-reference (Opções do Compilador do C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
