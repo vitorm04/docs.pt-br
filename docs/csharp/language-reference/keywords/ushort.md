@@ -7,50 +7,50 @@ f1_keywords:
 helpviewer_keywords:
 - ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-ms.openlocfilehash: 706fb36e687976a2cb8704658856023296131d63
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 2f038378e1af85520cea13d914da69dfcb054ac0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027870"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857291"
 ---
-# <a name="ushort-c-reference"></a><span data-ttu-id="ce4e4-102">ushort (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="ce4e4-102">ushort (C# Reference)</span></span>
+# <a name="ushort-c-reference"></a><span data-ttu-id="3da29-102">ushort (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="3da29-102">ushort (C# Reference)</span></span>
 
-<span data-ttu-id="ce4e4-103">A palavra-chave `ushort` indica um tipo de dados integrais que armazena valores de acordo com o tamanho e o intervalo mostrados na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-103">The `ushort` keyword indicates an integral data type that stores values according to the size and range shown in the following table.</span></span>  
+<span data-ttu-id="3da29-103">A palavra-chave `ushort` indica um tipo de dados integrais que armazena valores de acordo com o tamanho e o intervalo mostrados na tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="3da29-103">The `ushort` keyword indicates an integral data type that stores values according to the size and range shown in the following table.</span></span>  
   
-|<span data-ttu-id="ce4e4-104">Tipo</span><span class="sxs-lookup"><span data-stu-id="ce4e4-104">Type</span></span>|<span data-ttu-id="ce4e4-105">Intervalo</span><span class="sxs-lookup"><span data-stu-id="ce4e4-105">Range</span></span>|<span data-ttu-id="ce4e4-106">Tamanho</span><span class="sxs-lookup"><span data-stu-id="ce4e4-106">Size</span></span>|<span data-ttu-id="ce4e4-107">Tipo .NET</span><span class="sxs-lookup"><span data-stu-id="ce4e4-107">.NET type</span></span>|  
+|<span data-ttu-id="3da29-104">Tipo</span><span class="sxs-lookup"><span data-stu-id="3da29-104">Type</span></span>|<span data-ttu-id="3da29-105">Intervalo</span><span class="sxs-lookup"><span data-stu-id="3da29-105">Range</span></span>|<span data-ttu-id="3da29-106">Tamanho</span><span class="sxs-lookup"><span data-stu-id="3da29-106">Size</span></span>|<span data-ttu-id="3da29-107">Tipo .NET</span><span class="sxs-lookup"><span data-stu-id="3da29-107">.NET type</span></span>|  
 |----------|-----------|----------|-------------------------|  
-|`ushort`|<span data-ttu-id="ce4e4-108">0 a 65.535</span><span class="sxs-lookup"><span data-stu-id="ce4e4-108">0 to 65,535</span></span>|<span data-ttu-id="ce4e4-109">Inteiro de 16 bits sem sinal</span><span class="sxs-lookup"><span data-stu-id="ce4e4-109">Unsigned 16-bit integer</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|  
+|`ushort`|<span data-ttu-id="3da29-108">0 a 65.535</span><span class="sxs-lookup"><span data-stu-id="3da29-108">0 to 65,535</span></span>|<span data-ttu-id="3da29-109">Inteiro de 16 bits sem sinal</span><span class="sxs-lookup"><span data-stu-id="3da29-109">Unsigned 16-bit integer</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|  
   
-## <a name="literals"></a><span data-ttu-id="ce4e4-110">Literais</span><span class="sxs-lookup"><span data-stu-id="ce4e4-110">Literals</span></span>  
+## <a name="literals"></a><span data-ttu-id="3da29-110">Literais</span><span class="sxs-lookup"><span data-stu-id="3da29-110">Literals</span></span>  
 
-<span data-ttu-id="ce4e4-111">Você pode declarar e inicializar uma variável `ushort` atribuindo a ela um literal decimal, um literal hexadecimal ou (começando com o C# 7.0) um literal binário.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-111">You can declare and initialize a `ushort` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="ce4e4-112">Se o literal inteiro estiver fora do intervalo de `ushort` (ou seja, se for menor que <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou maior que <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), ocorrerá um erro de compilação.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-112">If the integer literal is outside the range of `ushort` (that is, if it is less than <xref:System.UInt16.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
+<span data-ttu-id="3da29-111">Você pode declarar e inicializar uma variável `ushort` atribuindo a ela um literal decimal, um literal hexadecimal ou (começando com o C# 7.0) um literal binário.</span><span class="sxs-lookup"><span data-stu-id="3da29-111">You can declare and initialize a `ushort` variable by assigning a decimal literal, a hexadecimal literal, or (starting with C# 7.0) a binary literal to it.</span></span> <span data-ttu-id="3da29-112">Se o literal inteiro estiver fora do intervalo de `ushort` (ou seja, se for menor que <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou maior que <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), ocorrerá um erro de compilação.</span><span class="sxs-lookup"><span data-stu-id="3da29-112">If the integer literal is outside the range of `ushort` (that is, if it is less than <xref:System.UInt16.MinValue?displayProperty=nameWithType> or greater than <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), a compilation error occurs.</span></span>
 
-<span data-ttu-id="ce4e4-113">No exemplo a seguir, inteiros iguais a 65.034 representados como literais decimais, hexadecimais e binários são implicitamente convertidos de valores [int](../../../csharp/language-reference/keywords/int.md) para `ushort`.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-113">In the following example, integers equal to 65,034 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `ushort` values.</span></span>    
+<span data-ttu-id="3da29-113">No exemplo a seguir, inteiros iguais a 65.034 representados como literais decimais, hexadecimais e binários são implicitamente convertidos de valores [int](../../../csharp/language-reference/keywords/int.md) para `ushort`.</span><span class="sxs-lookup"><span data-stu-id="3da29-113">In the following example, integers equal to 65,034 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [int](../../../csharp/language-reference/keywords/int.md) to `ushort` values.</span></span>    
   
 [!code-csharp[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
 
 > [!NOTE] 
-> <span data-ttu-id="ce4e4-114">Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="ce4e4-115">Literais decimais não têm nenhum prefixo.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-115">Decimal literals have no prefix.</span></span>
+> <span data-ttu-id="3da29-114">Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário.</span><span class="sxs-lookup"><span data-stu-id="3da29-114">You use the prefix `0x` or `0X` to denote a hexadecimal literal and the prefix `0b` or `0B` to denote a binary literal.</span></span> <span data-ttu-id="3da29-115">Literais decimais não têm nenhum prefixo.</span><span class="sxs-lookup"><span data-stu-id="3da29-115">Decimal literals have no prefix.</span></span>
 
-<span data-ttu-id="ce4e4-116">Começando com o C# 7.0, alguns recursos foram adicionados para melhorar a legibilidade.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
- - <span data-ttu-id="ce4e4-117">O C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
- - <span data-ttu-id="ce4e4-118">O C# 7.2 permite que `_` seja usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="ce4e4-119">Um literal decimal não pode ter um sublinhado à esquerda.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
+<span data-ttu-id="3da29-116">Começando com o C# 7.0, alguns recursos foram adicionados para melhorar a legibilidade.</span><span class="sxs-lookup"><span data-stu-id="3da29-116">Starting with C# 7.0, a couple of features have been added to enhance readability.</span></span> 
+ - <span data-ttu-id="3da29-117">O C# 7.0 permite o uso do caractere de sublinhado, `_`, como um separador de dígito.</span><span class="sxs-lookup"><span data-stu-id="3da29-117">C# 7.0 allows the usage of the underscore character, `_`, as a digit separator.</span></span>
+ - <span data-ttu-id="3da29-118">O C# 7.2 permite que `_` seja usado como separador de dígito de um literal binário ou hexadecimal, após o prefixo.</span><span class="sxs-lookup"><span data-stu-id="3da29-118">C# 7.2 allows `_` to be used as a digit separator for a binary or hexadecimal literal, after the prefix.</span></span> <span data-ttu-id="3da29-119">Um literal decimal não pode ter um sublinhado à esquerda.</span><span class="sxs-lookup"><span data-stu-id="3da29-119">A decimal literal isn't permitted to have a leading underscore.</span></span>
 
-<span data-ttu-id="ce4e4-120">Alguns exemplos são mostrados abaixo.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-120">Some examples are shown below.</span></span>
+<span data-ttu-id="3da29-120">Alguns exemplos são mostrados abaixo.</span><span class="sxs-lookup"><span data-stu-id="3da29-120">Some examples are shown below.</span></span>
 
 [!code-csharp[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
  
-## <a name="compiler-overload-resolution"></a><span data-ttu-id="ce4e4-121">Resolução de sobrecarga do compilador</span><span class="sxs-lookup"><span data-stu-id="ce4e4-121">Compiler overload resolution</span></span>
+## <a name="compiler-overload-resolution"></a><span data-ttu-id="3da29-121">Resolução de sobrecarga do compilador</span><span class="sxs-lookup"><span data-stu-id="3da29-121">Compiler overload resolution</span></span>
   
- <span data-ttu-id="ce4e4-122">Uma conversão deve ser usada ao chamar métodos sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-122">A cast must be used when you call overloaded methods.</span></span> <span data-ttu-id="ce4e4-123">Considere, por exemplo, os seguintes métodos sobrecarregados que usam os parâmetros `ushort` e [int](../../../csharp/language-reference/keywords/int.md):</span><span class="sxs-lookup"><span data-stu-id="ce4e4-123">Consider, for example, the following overloaded methods that use `ushort` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
+ <span data-ttu-id="3da29-122">Uma conversão deve ser usada ao chamar métodos sobrecarregados.</span><span class="sxs-lookup"><span data-stu-id="3da29-122">A cast must be used when you call overloaded methods.</span></span> <span data-ttu-id="3da29-123">Considere, por exemplo, os seguintes métodos sobrecarregados que usam os parâmetros `ushort` e [int](../../../csharp/language-reference/keywords/int.md):</span><span class="sxs-lookup"><span data-stu-id="3da29-123">Consider, for example, the following overloaded methods that use `ushort` and [int](../../../csharp/language-reference/keywords/int.md) parameters:</span></span>  
   
 ```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
  
- <span data-ttu-id="ce4e4-124">O uso da conversão `ushort` garante que o tipo correto será chamado, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="ce4e4-124">Using the `ushort` cast guarantees that the correct type is called, for example:</span></span>  
+ <span data-ttu-id="3da29-124">O uso da conversão `ushort` garante que o tipo correto será chamado, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="3da29-124">Using the `ushort` cast guarantees that the correct type is called, for example:</span></span>  
   
 ```csharp  
 // Calls the method with the int parameter:  
@@ -59,35 +59,35 @@ SampleMethod(5);
 SampleMethod((ushort)5);    
 ```  
   
-## <a name="conversions"></a><span data-ttu-id="ce4e4-125">Conversões</span><span class="sxs-lookup"><span data-stu-id="ce4e4-125">Conversions</span></span>  
- <span data-ttu-id="ce4e4-126">Há uma conversão implícita predefinida de `ushort` para [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="ce4e4-126">There is a predefined implicit conversion from `ushort` to [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
+## <a name="conversions"></a><span data-ttu-id="3da29-125">Conversões</span><span class="sxs-lookup"><span data-stu-id="3da29-125">Conversions</span></span>  
+ <span data-ttu-id="3da29-126">Há uma conversão implícita predefinida de `ushort` para [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="3da29-126">There is a predefined implicit conversion from `ushort` to [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), or [decimal](../../../csharp/language-reference/keywords/decimal.md).</span></span>  
   
- <span data-ttu-id="ce4e4-127">Há uma conversão implícita predefinida de [byte](../../../csharp/language-reference/keywords/byte.md) ou [char](../../../csharp/language-reference/keywords/char.md) para `ushort`.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-127">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md) or [char](../../../csharp/language-reference/keywords/char.md) to `ushort`.</span></span> <span data-ttu-id="ce4e4-128">Caso contrário, uma conversão deve ser usada para executar uma conversão explícita.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-128">Otherwise a cast must be used to perform an explicit conversion.</span></span> <span data-ttu-id="ce4e4-129">Considere, por exemplo, as duas variáveis `ushort` `x` e `y` a seguir:</span><span class="sxs-lookup"><span data-stu-id="ce4e4-129">Consider, for example, the following two `ushort` variables `x` and `y`:</span></span>  
+ <span data-ttu-id="3da29-127">Há uma conversão implícita predefinida de [byte](../../../csharp/language-reference/keywords/byte.md) ou [char](../../../csharp/language-reference/keywords/char.md) para `ushort`.</span><span class="sxs-lookup"><span data-stu-id="3da29-127">There is a predefined implicit conversion from [byte](../../../csharp/language-reference/keywords/byte.md) or [char](../../../csharp/language-reference/keywords/char.md) to `ushort`.</span></span> <span data-ttu-id="3da29-128">Caso contrário, uma conversão deve ser usada para executar uma conversão explícita.</span><span class="sxs-lookup"><span data-stu-id="3da29-128">Otherwise a cast must be used to perform an explicit conversion.</span></span> <span data-ttu-id="3da29-129">Considere, por exemplo, as duas variáveis `ushort` `x` e `y` a seguir:</span><span class="sxs-lookup"><span data-stu-id="3da29-129">Consider, for example, the following two `ushort` variables `x` and `y`:</span></span>  
   
 ```csharp 
 ushort x = 5, y = 12;  
 ```  
   
- <span data-ttu-id="ce4e4-130">A seguinte instrução de atribuição produzirá um erro de compilação, porque a expressão aritmética no lado direito do operador de atribuição é avaliada como `int` por padrão.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-130">The following assignment statement will produce a compilation error, because the arithmetic expression on the right side of the assignment operator evaluates to `int` by default.</span></span>  
+ <span data-ttu-id="3da29-130">A seguinte instrução de atribuição produzirá um erro de compilação, porque a expressão aritmética no lado direito do operador de atribuição é avaliada como `int` por padrão.</span><span class="sxs-lookup"><span data-stu-id="3da29-130">The following assignment statement will produce a compilation error, because the arithmetic expression on the right side of the assignment operator evaluates to `int` by default.</span></span>  
   
 ```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
- <span data-ttu-id="ce4e4-131">Para corrigir esse problema, use uma conversão:</span><span class="sxs-lookup"><span data-stu-id="ce4e4-131">To fix this problem, use a cast:</span></span>  
+ <span data-ttu-id="3da29-131">Para corrigir esse problema, use uma conversão:</span><span class="sxs-lookup"><span data-stu-id="3da29-131">To fix this problem, use a cast:</span></span>  
   
 ```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
- <span data-ttu-id="ce4e4-132">No entanto, é possível usar as instruções a seguir, em que a variável de destino tem o mesmo tamanho de armazenamento ou um tamanho de armazenamento maior:</span><span class="sxs-lookup"><span data-stu-id="ce4e4-132">It is possible though to use the following statements, where the destination variable has the same storage size or a larger storage size:</span></span>  
+ <span data-ttu-id="3da29-132">No entanto, é possível usar as instruções a seguir, em que a variável de destino tem o mesmo tamanho de armazenamento ou um tamanho de armazenamento maior:</span><span class="sxs-lookup"><span data-stu-id="3da29-132">It is possible though to use the following statements, where the destination variable has the same storage size or a larger storage size:</span></span>  
   
 ```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
- <span data-ttu-id="ce4e4-133">Observe também que não há conversão implícita de tipos de ponto flutuante em `ushort`.</span><span class="sxs-lookup"><span data-stu-id="ce4e4-133">Notice also that there is no implicit conversion from floating-point types to `ushort`.</span></span> <span data-ttu-id="ce4e4-134">Por exemplo, a instrução a seguir gerará um erro de compilador, a menos que uma conversão explícita seja usada:</span><span class="sxs-lookup"><span data-stu-id="ce4e4-134">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
+ <span data-ttu-id="3da29-133">Observe também que não há conversão implícita de tipos de ponto flutuante em `ushort`.</span><span class="sxs-lookup"><span data-stu-id="3da29-133">Notice also that there is no implicit conversion from floating-point types to `ushort`.</span></span> <span data-ttu-id="3da29-134">Por exemplo, a instrução a seguir gerará um erro de compilador, a menos que uma conversão explícita seja usada:</span><span class="sxs-lookup"><span data-stu-id="3da29-134">For example, the following statement generates a compiler error unless an explicit cast is used:</span></span>  
   
 ```csharp  
 // Error -- no implicit conversion from double:  
@@ -96,19 +96,20 @@ ushort x = 3.0;
 ushort y = (ushort)3.0;  
 ```  
   
- <span data-ttu-id="ce4e4-135">Para obter informações sobre expressões aritméticas com tipos de ponto flutuante mistos e tipos integrais, consulte [float](../../../csharp/language-reference/keywords/float.md) e [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="ce4e4-135">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
+ <span data-ttu-id="3da29-135">Para obter informações sobre expressões aritméticas com tipos de ponto flutuante mistos e tipos integrais, consulte [float](../../../csharp/language-reference/keywords/float.md) e [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="3da29-135">For information about arithmetic expressions with mixed floating-point types and integral types, see [float](../../../csharp/language-reference/keywords/float.md) and [double](../../../csharp/language-reference/keywords/double.md).</span></span>  
   
- <span data-ttu-id="ce4e4-136">Para obter mais informações sobre as regras de conversão numérica implícita, consulte a [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="ce4e4-136">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
+ <span data-ttu-id="3da29-136">Para obter mais informações sobre as regras de conversão numérica implícita, consulte a [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span><span class="sxs-lookup"><span data-stu-id="3da29-136">For more information about implicit numeric conversion rules, see the [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="ce4e4-137">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="ce4e4-137">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="3da29-137">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="3da29-137">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ce4e4-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ce4e4-138">See Also</span></span>  
- <xref:System.UInt16>  
- [<span data-ttu-id="ce4e4-139">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="ce4e4-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="ce4e4-140">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="ce4e4-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="ce4e4-141">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="ce4e4-141">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="ce4e4-142">Tabela de tipos integrais</span><span class="sxs-lookup"><span data-stu-id="ce4e4-142">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [<span data-ttu-id="ce4e4-143">Tabela de tipos internos</span><span class="sxs-lookup"><span data-stu-id="ce4e4-143">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [<span data-ttu-id="ce4e4-144">Tabela de conversões numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="ce4e4-144">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [<span data-ttu-id="ce4e4-145">Tabela de conversões numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="ce4e4-145">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+## <a name="see-also"></a><span data-ttu-id="3da29-138">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3da29-138">See Also</span></span>
+
+- <xref:System.UInt16>  
+- [<span data-ttu-id="3da29-139">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="3da29-139">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="3da29-140">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="3da29-140">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="3da29-141">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="3da29-141">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="3da29-142">Tabela de tipos integrais</span><span class="sxs-lookup"><span data-stu-id="3da29-142">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [<span data-ttu-id="3da29-143">Tabela de tipos internos</span><span class="sxs-lookup"><span data-stu-id="3da29-143">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [<span data-ttu-id="3da29-144">Tabela de conversões numéricas implícitas</span><span class="sxs-lookup"><span data-stu-id="3da29-144">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="3da29-145">Tabela de conversões numéricas explícitas</span><span class="sxs-lookup"><span data-stu-id="3da29-145">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

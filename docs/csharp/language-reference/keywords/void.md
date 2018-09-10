@@ -8,16 +8,16 @@ helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
 ms.openlocfilehash: 223db893dd42181c234d9a07c1a1c00af26f0c30
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397081"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213920"
 ---
-# <a name="void-c-reference"></a><span data-ttu-id="f7b67-102">void (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="f7b67-102">void (C# Reference)</span></span>
-<span data-ttu-id="f7b67-103">Quando usado como o tipo de retorno para um método, `void` especifica que o método não retorna um valor.</span><span class="sxs-lookup"><span data-stu-id="f7b67-103">When used as the return type for a method, `void` specifies that the method doesn't return a value.</span></span>
+# <a name="void-c-reference"></a><span data-ttu-id="a5f11-102">void (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="a5f11-102">void (C# Reference)</span></span>
+<span data-ttu-id="a5f11-103">Quando usado como o tipo de retorno para um método, `void` especifica que o método não retorna um valor.</span><span class="sxs-lookup"><span data-stu-id="a5f11-103">When used as the return type for a method, `void` specifies that the method doesn't return a value.</span></span>
 
-<span data-ttu-id="f7b67-104">`void` não é permitido na lista de parâmetros de um método.</span><span class="sxs-lookup"><span data-stu-id="f7b67-104">`void` isn't allowed in the parameter list of a method.</span></span> <span data-ttu-id="f7b67-105">Um método que não usa parâmetros e não retorna nenhum valor é declarado da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="f7b67-105">A method that takes no parameters and returns no value is declared as follows:</span></span>
+<span data-ttu-id="a5f11-104">`void` não é permitido na lista de parâmetros de um método.</span><span class="sxs-lookup"><span data-stu-id="a5f11-104">`void` isn't allowed in the parameter list of a method.</span></span> <span data-ttu-id="a5f11-105">Um método que não usa parâmetros e não retorna nenhum valor é declarado da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="a5f11-105">A method that takes no parameters and returns no value is declared as follows:</span></span>
 
 ```csharp
 public void SampleMethod()
@@ -26,19 +26,19 @@ public void SampleMethod()
 }
 ```
 
-<span data-ttu-id="f7b67-106">`void` também é usado em um contexto desprotegido para declarar um ponteiro para um tipo desconhecido.</span><span class="sxs-lookup"><span data-stu-id="f7b67-106">`void` is also used in an unsafe context to declare a pointer to an unknown type.</span></span> <span data-ttu-id="f7b67-107">Para obter mais informações, consulte [Tipos de ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span><span class="sxs-lookup"><span data-stu-id="f7b67-107">For more information, see [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>
+<span data-ttu-id="a5f11-106">`void` também é usado em um contexto desprotegido para declarar um ponteiro para um tipo desconhecido.</span><span class="sxs-lookup"><span data-stu-id="a5f11-106">`void` is also used in an unsafe context to declare a pointer to an unknown type.</span></span> <span data-ttu-id="a5f11-107">Para obter mais informações, consulte [Tipos de ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span><span class="sxs-lookup"><span data-stu-id="a5f11-107">For more information, see [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>
 
-<span data-ttu-id="f7b67-108">`void` é um alias para o tipo <xref:System.Void?displayProperty=nameWithType> do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f7b67-108">`void` is an alias for the .NET Framework <xref:System.Void?displayProperty=nameWithType> type.</span></span>
+<span data-ttu-id="a5f11-108">`void` é um alias para o tipo <xref:System.Void?displayProperty=nameWithType> do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a5f11-108">`void` is an alias for the .NET Framework <xref:System.Void?displayProperty=nameWithType> type.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="f7b67-109">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="f7b67-109">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="a5f11-109">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="a5f11-109">C# Language Specification</span></span>
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f7b67-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7b67-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5f11-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a5f11-110">See also</span></span>
 
-- [<span data-ttu-id="f7b67-111">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="f7b67-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="f7b67-112">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="f7b67-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f7b67-113">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="f7b67-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="f7b67-114">Tipos de referência</span><span class="sxs-lookup"><span data-stu-id="f7b67-114">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
-- [<span data-ttu-id="f7b67-115">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="f7b67-115">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
-- [<span data-ttu-id="f7b67-116">Métodos</span><span class="sxs-lookup"><span data-stu-id="f7b67-116">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [<span data-ttu-id="f7b67-117">Código não seguro e ponteiros</span><span class="sxs-lookup"><span data-stu-id="f7b67-117">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [<span data-ttu-id="a5f11-111">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="a5f11-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="a5f11-112">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="a5f11-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="a5f11-113">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="a5f11-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="a5f11-114">Tipos de referência</span><span class="sxs-lookup"><span data-stu-id="a5f11-114">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
+- [<span data-ttu-id="a5f11-115">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="a5f11-115">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)  
+- [<span data-ttu-id="a5f11-116">Métodos</span><span class="sxs-lookup"><span data-stu-id="a5f11-116">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [<span data-ttu-id="a5f11-117">Código não seguro e ponteiros</span><span class="sxs-lookup"><span data-stu-id="a5f11-117">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
