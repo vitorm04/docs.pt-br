@@ -3,11 +3,11 @@ title: Windows Communication Foundation para enfileiramento de mensagens
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777516"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069178"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation para enfileiramento de mensagens
 Este exemplo demonstra como um aplicativo do Windows Communication Foundation (WCF) pode enviar uma mensagem a um aplicativo de enfileiramento de mensagens (MSMQ). O serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço de recebimento de mensagens na fila. O serviço e o cliente não precisa estar em execução ao mesmo tempo.  
