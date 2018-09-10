@@ -4,11 +4,11 @@ description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188404"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276769"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
