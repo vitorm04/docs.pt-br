@@ -2,12 +2,12 @@
 title: Criando árvores XML em C# (LINQ para XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 41da4de20558508844b56a492b603f947ae04b81
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 98bad6bfc3b563b39f9e58eadbff673f202646c1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43399245"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502278"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Criando árvores XML em C# (LINQ to XML)
 Esta seção fornece informações sobre a criação de árvores XML em C#.  

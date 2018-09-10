@@ -5,11 +5,11 @@ helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 9a17aaec20b03325abadfcc168f7ac4653f300df
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179475"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272053"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Como publicar eventos em conformidade com as diretrizes do .NET Framework (Guia de Programação em C#)
 O procedimento a seguir demonstra como adicionar eventos que seguem o padrão do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para classes e structs. Todos os eventos na biblioteca de classes do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] se baseiam no delegado <xref:System.EventHandler>, que é definido da seguinte maneira:  

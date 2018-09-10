@@ -4,18 +4,18 @@ description: Saiba mais sobre o modelo de programação assíncrona em nível li
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484961"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865144"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
 Se você tiver qualquer necessidade vinculada à E/S (como a solicitação de dados de uma rede ou o acesso a um banco de dados), você desejará usar a programação assíncrona.  Você também pode ter código vinculado à CPU, como a execução de um cálculo dispendioso, que também é um bom cenário para escrever código assíncrono.
 
-O C# tem um modelo de programação assíncrono em nível de linguagem que permite escrever facilmente o código assíncrono sem precisar manipular retornos de chamada ou estar em conformidade com uma biblioteca que dá suporte à assincronia. Ele segue o que é conhecido como [TAP (Padrão assíncrono baseado em tarefa)](https://msdn.microsoft.com/library/hh873175.aspx).
+O C# tem um modelo de programação assíncrono em nível de linguagem que permite escrever facilmente o código assíncrono sem precisar manipular retornos de chamada ou estar em conformidade com uma biblioteca que dá suporte à assincronia. Ele segue o que é conhecido como [TAP (Padrão assíncrono baseado em tarefa)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Visão geral básica do modelo assíncrono
 

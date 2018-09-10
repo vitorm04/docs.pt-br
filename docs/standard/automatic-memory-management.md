@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572067"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275298"
 ---
 # <a name="automatic-memory-management"></a>Gerenciamento automático de memória
 O gerenciamento automático de memória é um dos serviços que o Common Language Runtime fornece durante a [Execução gerenciada](../../docs/standard/managed-execution-process.md). O coletor de lixo do Common Language Runtime gerencia a alocação e a liberação de memória para um aplicativo. Para desenvolvedores, isso significa que você não tem que escrever código para executar tarefas de gerenciamento de memória quando desenvolver aplicativos gerenciados. O gerenciamento automático de memória pode eliminar problemas comuns, como esquecer de liberar um objeto e causar um vazamento de memória ou tentar acessar a memória de um objeto que já tinha sido liberado. Esta seção descreve como o coletor de lixo aloca e libera memória.  
@@ -51,7 +51,8 @@ O gerenciamento automático de memória é um dos serviços que o Common Languag
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Liberando memória para recursos não gerenciados  
  Para a maioria dos objetos que seu aplicativo cria, você pode confiar no coletor de lixo para executar automaticamente as tarefas de gerenciamento de memória necessárias. Entretanto, recursos não gerenciados requerem limpeza explícita. O tipo mais comum de recursos não gerenciados é um objeto que encapsula um recurso do sistema operacional, como um identificador de arquivo, um identificador de janela ou uma conexão de rede. Embora o coletor de lixo seja capaz de acompanhar o tempo de vida de um objeto gerenciado que encapsule um recurso não gerenciado, ele não tem conhecimento específico sobre como limpar o recurso. Quando você cria um objeto que encapsula um recurso não gerenciado, é recomendável fornecer o código necessário para limpar o recurso não gerenciado em um método público **Dispose**. Ao fornecer um método **Dispose**, você permite que usuários do seu objeto liberem, explicitamente, sua memória quando terminarem com o objeto. Quando usa um objeto que encapsula um recurso não gerenciado, você deve estar ciente de **Dispose** e chamá-lo conforme necessário. Para obter mais informações sobre a limpeza de recursos não gerenciados e um exemplo de um padrão de design para implementar **Dispose**, consulte [Coleta de lixo](../../docs/standard/garbage-collection/index.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.GC>  
- [Coleta de lixo](../../docs/standard/garbage-collection/index.md)  
- [Processo de execução gerenciada](../../docs/standard/managed-execution-process.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.GC>  
+- [Coleta de lixo](../../docs/standard/garbage-collection/index.md)  
+- [Processo de execução gerenciada](../../docs/standard/managed-execution-process.md)

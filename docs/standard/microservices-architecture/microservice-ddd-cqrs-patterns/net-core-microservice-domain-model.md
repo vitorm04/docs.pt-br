@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
 ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43420921"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201212"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementando um modelo de domínio de microsserviço com o .NET Core 
 
@@ -132,7 +132,7 @@ Além disso, coleções na entidade (como os itens do pedido) devem ser propried
 
 Como você pode ver no código para a raiz de agregação de ordem, todos os setters devem ser privados ou, pelo menos, somente leitura externamente, de modo que qualquer operação contra os dados da entidade ou entidades seu filho deve ser executada por meio dos métodos na classe de entidade. Isso mantém a consistência de maneira controlada e orientada a objeto, em vez de implementar o código de script transacional.
 
-O trecho de código a seguir mostra a maneira adequada de codificar a tarefa de adicionar um objeto OrderItem para a agregação de ordem de código.
+O snippet de código a seguir mostra a maneira adequada de codificar a tarefa de adicionar um objeto OrderItem para a agregação de ordem de código.
 
 ```csharp
 // RIGHT ACCORDING TO DDD--CODE AT THE APPLICATION LAYER OR COMMAND HANDLERS
@@ -146,7 +146,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 //...
 ```
 
-Neste trecho de código, a maioria das validações ou da lógica relacionada à criação de um objeto OrderItem estará sob o controle da raiz de agregação de Ordem (no método AddOrderItem), especialmente validações e lógica relacionadas a outros elementos no agregado. Por exemplo, você pode obter o mesmo item de produto como resultado de várias chamadas para AddOrderItem. Nesse método, você pode examinar os itens de produto e consolidar os mesmos itens de produto em um único objeto OrderItem com várias unidades. Além disso, se houver valores de desconto diferentes, mas a ID do produto (product ID) for a mesma, você provavelmente aplicará o desconto maior. Esse princípio se aplica a qualquer outra lógica do domínio para o objeto OrderItem.
+Neste snippet, a maioria das validações ou da lógica relacionada à criação de um objeto OrderItem estará sob o controle da raiz de agregação de Ordem (no método AddOrderItem), especialmente validações e lógica relacionadas a outros elementos no agregado. Por exemplo, você pode obter o mesmo item de produto como resultado de várias chamadas para AddOrderItem. Nesse método, você pode examinar os itens de produto e consolidar os mesmos itens de produto em um único objeto OrderItem com várias unidades. Além disso, se houver valores de desconto diferentes, mas a ID do produto (product ID) for a mesma, você provavelmente aplicará o desconto maior. Esse princípio se aplica a qualquer outra lógica do domínio para o objeto OrderItem.
 
 Além disso, a nova operação OrderItem(params) também será controlada e executada pelo método AddOrderItem da raiz de agregação de Ordem. Portanto, a maioria da lógica ou das validações relacionadas àquela operação (especialmente tudo o que afeta a consistência entre outras entidades filho) estará em um único lugar na raiz da agregação. Esta é a principal finalidade do padrão de raiz de agregação.
 

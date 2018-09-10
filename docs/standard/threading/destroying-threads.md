@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385013"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205965"
 ---
 # <a name="destroying-threads"></a>Destruindo threads
 O método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> é usado para interromper um thread gerenciado permanentemente. Quando você chama <xref:System.Threading.Thread.Abort%2A>, o CLR lança um <xref:System.Threading.ThreadAbortException> no thread de destino, que o thread de destino pode capturar. Para obter mais informações, consulte <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
@@ -66,7 +66,8 @@ catch (ThreadAbortException ex)
   
  Você pode impedir que o sistema relance a exceção chamando o método <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. No entanto, você deve fazer isso apenas se seu próprio código tiver causado a <xref:System.Threading.ThreadAbortException>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- [Usando threads e threading](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- [Usando threads e threading](../../../docs/standard/threading/using-threads-and-threading.md)

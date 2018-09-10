@@ -6,11 +6,11 @@ ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
 ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43252954"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43778463"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 

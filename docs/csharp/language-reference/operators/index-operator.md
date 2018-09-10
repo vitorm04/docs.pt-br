@@ -10,11 +10,11 @@ helpviewer_keywords:
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
 ms.openlocfilehash: 19283a795f8cfc444dfcb186dcecc0ea86eb27fd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467426"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500446"
 ---
 # <a name="-operator-c-reference"></a>Operador [] (Referência de C#)
 Os colchetes (`[]`) são usados para matrizes, indexadores e atributos. Eles também podem ser usados com ponteiros.  

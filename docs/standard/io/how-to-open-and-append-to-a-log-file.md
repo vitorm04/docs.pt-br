@@ -14,11 +14,11 @@ ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249056"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271709"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Como abrir um arquivo de log e acrescentar dados a ele
 <xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> gravam caracteres e leem caracteres de fluxos. O código a seguir exemplo abre o arquivo `log.txt` para a entrada ou cria o arquivo, se ele ainda não existe, e acrescenta informações ao fim do arquivo. O conteúdo do arquivo é gravado para a saída padrão para exibição. Como alternativa para esse exemplo, as informações podem ser armazenadas como uma única cadeia de caracteres ou uma matriz de cadeia de caracteres, e o método <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> pode ser usado para obter a mesma funcionalidade.  

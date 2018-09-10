@@ -2,12 +2,12 @@
 title: Coleções (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549614"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273288"
 ---
 # <a name="collections-c"></a>Coleções (C#)
 Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos relacionados. Há duas maneiras de agrupar objetos: criando matrizes de objetos e criando coleções de objetos.  
@@ -575,14 +575,15 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)  
- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [Coleções e Estruturas de Dados](../../../standard/collections/index.md)  
- [Criando e manipulando coleções](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)  
- [Comparações e Classificações Dentro de Coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [Quando Usar Coleções Genéricas](../../../standard/collections/when-to-use-generic-collections.md)  
+## <a name="see-also"></a>Consulte também
+
+- [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)  
+- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [Coleções e Estruturas de Dados](../../../standard/collections/index.md)  
+- [Criando e manipulando coleções](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)  
+- [Comparações e Classificações Dentro de Coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Quando Usar Coleções Genéricas](../../../standard/collections/when-to-use-generic-collections.md)  

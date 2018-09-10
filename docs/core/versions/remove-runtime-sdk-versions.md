@@ -5,11 +5,11 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409137"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204910"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Como remover o SDK e o Tempo de Execução do .NET Core
 

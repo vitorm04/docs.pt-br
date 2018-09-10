@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3cfaf4cf22bba445d774c653ff7797d535bcde2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398959"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087473"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Como converter entre fluxos do .NET Framework e do Windows Runtime 
 
@@ -79,6 +79,6 @@ Os fluxos do .NET Framework não oferecem suporte a clonagem, mesmo após a conv
 
 ## <a name="see-also"></a>Consulte também
 
-[Guia de Início Rápido: Lendo e gravando arquivos (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-[Visão geral dos aplicativos .NET para Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-[.NET para aplicativos da Windows Store – APIs com suporte](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Guia de Início Rápido: Lendo e gravando arquivos (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+- [Visão geral dos aplicativos .NET para Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+- [.NET para aplicativos da Windows Store – APIs com suporte](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: 077d5835b372897cbe797385271effc5d00bf6e3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43473967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525650"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (Referência de C#)
 O qualificador alias de namespace (`::`) é usado para pesquisar identificadores. Ele sempre está posicionado entre dois identificadores, como neste exemplo:  

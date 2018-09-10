@@ -9,11 +9,11 @@ ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190982"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272443"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrar da classe XslTransform
 A arquitetura XSLT foi reprojetada na versão [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. A classe de <xref:System.Xml.Xsl.XslTransform> foi substituída pela classe de <xref:System.Xml.Xsl.XslCompiledTransform> .  

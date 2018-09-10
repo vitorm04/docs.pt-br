@@ -6,11 +6,11 @@ ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249160"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271228"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
