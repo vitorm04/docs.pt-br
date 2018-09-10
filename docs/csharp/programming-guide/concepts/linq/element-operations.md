@@ -2,14 +2,15 @@
 title: Operações de elemento (C#)
 ms.date: 07/20/2015
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 5c10603d9e074faf891d41fa6b39614fcc167c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317441"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856884"
 ---
 # <a name="element-operations-c"></a>Operações de elemento (C#)
+
 Operações de elemento retornam um único elemento específico de uma sequência.  
   
  Os métodos de operador de consulta padrão que executam operações de elemento estão listados na seção a seguir.  
@@ -27,7 +28,8 @@ Operações de elemento retornam um único elemento específico de uma sequênci
 |Simples|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição. Retorna um valor padrão se esse elemento não existir ou se a coleção não contiver exatamente um elemento.|Não aplicável.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>  
- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Linq>  
+- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

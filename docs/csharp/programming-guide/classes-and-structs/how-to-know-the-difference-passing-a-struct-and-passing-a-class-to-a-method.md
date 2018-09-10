@@ -6,12 +6,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: a6dae35d31cf1553bdca8ebf0345c49b120ae13b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315653"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190826"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Como saber a diferença entre passar um struct e passar uma referência de classe para um método (Guia de Programação em C#)
 O exemplo a seguir demonstra como passar um [struct](../../../csharp/language-reference/keywords/struct.md) para um método difere de passar uma instância de [classe](../../../csharp/language-reference/keywords/class.md) para um método. No exemplo, ambos os argumentos (struct e instância de classe) são passados por valor e ambos os métodos alteram o valor de um campo do argumento. No entanto, os resultados dos dois métodos não são os mesmos, pois o que é passado ao passar um struct é diferente do que é passado ao passar uma instância de uma classe.  
@@ -25,8 +25,9 @@ O exemplo a seguir demonstra como passar um [struct](../../../csharp/language-re
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [Passando parâmetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Estruturas](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Passando parâmetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

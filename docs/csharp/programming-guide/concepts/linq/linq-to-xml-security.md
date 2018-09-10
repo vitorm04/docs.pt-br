@@ -2,12 +2,12 @@
 title: Segurança do LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: f51c256091d503a34caadbdf46d08e05c3122238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c4ee8df85d6e5c6f84947dcaaeb6875bbd687de
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335427"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43881756"
 ---
 # <a name="linq-to-xml-security-c"></a>Segurança do LINQ to XML (C#)
 Este tópico descreve problemas de segurança associadas LINQ to XML. Além disso, fornece alguma orientação para a exposição de segurança de abrandamento.  
@@ -99,5 +99,6 @@ Este tópico descreve problemas de segurança associadas LINQ to XML. Além diss
   
  Qualquer segurança é fornecida pelo Common Language Runtime (CLR). Por exemplo, um componente que não inclui uma classe privada não pode acessar as anotações fechadas pela classe. No entanto, as anotações podem ser excluídas por componentes que não podem ler os. Isso pode ser usado como um ataque violação.  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

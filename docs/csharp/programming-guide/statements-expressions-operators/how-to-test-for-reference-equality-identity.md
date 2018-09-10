@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 78a6bf1f5d4a93bd561faada91b4a11f52692dbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322335"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084563"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Como testar a igualdade de referência (identidade) (Guia de Programação em C#)
 Não é necessário implementar qualquer lógica personalizada para dar suporte a comparações de igualdade de referência em seus tipos. Essa funcionalidade é fornecida para todos os tipos pelo método estático <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>.  
@@ -26,5 +26,6 @@ Não é necessário implementar qualquer lógica personalizada para dar suporte 
   
  Cadeias de caracteres constantes dentro do mesmo assembly sempre são internalizadas pelo tempo de execução. Ou seja, apenas uma instância de cada cadeia de caracteres literal única é mantida. No entanto, o tempo de execução não garante que cadeias de caracteres criadas em tempo de execução sejam internalizadas nem garante que duas de cadeias de caracteres constantes iguais em diferentes assemblies sejam internalizadas.  
   
-## <a name="see-also"></a>Consulte também  
- [Comparações de igualdade](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+## <a name="see-also"></a>Consulte também
+
+- [Comparações de igualdade](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)

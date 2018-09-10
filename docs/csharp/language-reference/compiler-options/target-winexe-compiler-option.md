@@ -9,11 +9,11 @@ helpviewer_keywords:
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
 ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468833"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195027"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opções do compilador C#)
 A opção **-target:winexe** faz com que o compilador crie um programa do Windows executável (EXE).  

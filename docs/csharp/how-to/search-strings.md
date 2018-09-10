@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961213"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857148"
 ---
 # <a name="how-to-search-strings"></a>Como pesquisar cadeias de caracteres
 
@@ -68,7 +68,6 @@ O código a seguir usa expressões regulares para validar o formato de cada cade
 | \d{4}    | corresponde a exatamente 4 caracteres de dígitos  |
 | $        | corresponde ao final da cadeia de caracteres       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Este padrão de pesquisa único corresponde a várias cadeias de caracteres válidas. Expressões regulares são melhores para pesquisar por ou validar mediante um padrão, em vez de uma única cadeia de caracteres de texto.
@@ -77,10 +76,10 @@ Você pode experimentar estes exemplos examinando o código em nosso [repositór
 
 ## <a name="see-also"></a>Consulte também  
 
- [Guia de Programação em C#](../programming-guide/index.md)  
- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
- [LINQ e Cadeias de Caracteres](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)   
- [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Práticas recomendadas para o uso de cadeias de caracteres no .NET](../../standard/base-types/best-practices-strings.md)  
+- [Guia de Programação em C#](../programming-guide/index.md)  
+- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
+- [LINQ e Cadeias de Caracteres](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Práticas recomendadas para o uso de cadeias de caracteres no .NET](../../standard/base-types/best-practices-strings.md)  

@@ -3,12 +3,12 @@ title: Structs – Guia de C#
 description: Saiba mais sobre os tipos de struct e como criá-los
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349763"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513080"
 ---
 # <a name="structs"></a>Structs
 Um *struct* é um tipo de valor. Quando um struct é criado, a variável à qual o struct é atribuído contém os dados reais do struct. Quando o struct é atribuído a uma nova variável, ele é copiado. A nova variável e a variável original, portanto, contêm duas cópias separadas dos mesmos dados. As alterações feitas em uma cópia não afetam a outra cópia.
@@ -66,6 +66,6 @@ O segundo demonstra *literais binários*, que permitem especificar os padrões d
 Os tipos comuns de valor não podem ter valor [nulo](./language-reference/keywords/null.md). No entanto, você pode criar tipos de valor que permitem valor nulo afixando um **?** após o tipo. Por exemplo, **int?** é um tipo **int** que também pode ter o valor [nulo](./language-reference/keywords/null.md). No CTS, os tipos anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos que permitem valor nulo são especialmente úteis quando você está passando dados entre bancos de dados nos quais os valores numéricos podem ser nulos. Para obter mais informações, consulte [Tipos que permitem valor nulo (Guia de programação em C#)](./programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Consulte também
-[Classes](classes.md)
 
-[Tipos Básicos](basic-types.md)
+- [Classes](classes.md)
+- [Tipos Básicos](basic-types.md)

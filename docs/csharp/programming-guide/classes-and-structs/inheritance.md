@@ -9,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6620562a9500885f31d1343664919f09af33861
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323596"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855888"
 ---
 # <a name="inheritance-c-programming-guide"></a>Herança (Guia de Programação em C#)
 
@@ -53,8 +53,9 @@ Herança de classe
 ## <a name="derived-class-hiding-of-base-class-members"></a>Ocultação de membros da classe base pela classe derivada  
  Uma classe derivada pode ocultar membros da classe base declarando membros com mesmo nome e assinatura. O modificador [new](../../../csharp/language-reference/keywords/new.md) pode ser usado para indicar explicitamente que o membro não pretende ser uma substituição do membro base. O uso de [new](../../../csharp/language-reference/keywords/new.md) não é obrigatório, mas um aviso do compilador será gerado se [new](../../../csharp/language-reference/keywords/new.md) não for usado. Para obter mais informações, consulte [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) e [Quando usar as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)

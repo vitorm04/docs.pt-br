@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39245577"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43885042"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que permitem valor nulo (Guia de Programação em C#)
 
@@ -38,7 +38,7 @@ Os tipos que permitem valor nulo têm as seguintes características:
   
 - Também é possível usar os operadores `==` e `!=` com um tipo que permite valor nulo, conforme mostrado no exemplo a seguir: `if (x != null) y = x.Value;`. Se `a` e `b` forem ambos nulos, `a == b` será avaliado como `true`.  
 
-- Começando com C# 7.0, é possível usar a correspondência de padrões para examinar e obter um valor de um tipo que permite valor nulo: `if (x is int xValue) y = xValue;`.
+- A partir do C# 7.0, você pode usar [correspondência de padrões](../../pattern-matching.md#the-is-type-pattern-expression) para examinar e obter um valor de um tipo que permite valor nulo: `if (x is int valueOfX) y = valueOfX;`.
   
 - O valor padrão de `T?` é uma instância cuja propriedade <xref:System.Nullable%601.HasValue%2A> retorna `false`.  
 
@@ -56,10 +56,10 @@ Para obter mais informações, consulte os tópicos [Usando tipos que permitem v
   
 ## <a name="see-also"></a>Consulte também
 
- <xref:System.Nullable%601?displayProperty=nameWithType>  
- <xref:System.Nullable?displayProperty=nameWithType>  
- [Operador ??](../../language-reference/operators/null-coalescing-operator.md)  
- [Guia de Programação em C#](../index.md)  
- [Guia do C#](../../index.md)  
- [Referência de C#](../../language-reference/index.md)  
- [Tipos de valor que permitem valor nulo (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>  
+- <xref:System.Nullable?displayProperty=nameWithType>  
+- [Operador ??](../../language-reference/operators/null-coalescing-operator.md)  
+- [Guia de Programação em C#](../index.md)  
+- [Guia do C#](../../index.md)  
+- [Referência de C#](../../language-reference/index.md)  
+- [Tipos de valor que permitem valor nulo (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

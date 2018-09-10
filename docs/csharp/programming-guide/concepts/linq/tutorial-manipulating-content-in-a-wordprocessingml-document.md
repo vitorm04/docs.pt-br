@@ -2,12 +2,12 @@
 title: 'Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 948363fcf3392a6258bb05e448dfb4ee37549304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340106"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514776"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)
 Este tutorial mostra como aplicar a abordagem transformacional funcional e o LINQ to XML para manipular documentos XML. Os exemplos de C# consultam e manipulam informações em documentos do Office Open XML WordprocessingML que são salvos pelo Microsoft Word.  
@@ -29,6 +29,7 @@ Este tutorial mostra como aplicar a abordagem transformacional funcional e o LIN
 |[Localizando texto em documentos do Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Usa as consultas anteriores para localizar uma cadeia de caracteres de texto especificado em um documento.|  
 |[Detalhes de documentos do Office Open XML WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Fornece alguns detalhes de documentos do Office Open XML WordprocessingML.|  
   
-## <a name="see-also"></a>Consulte também  
- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+## <a name="see-also"></a>Consulte também
+
+- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

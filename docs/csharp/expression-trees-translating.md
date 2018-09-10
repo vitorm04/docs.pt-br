@@ -4,11 +4,11 @@ description: Aprenda a visitar cada nó em uma árvore de expressão, enquanto e
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
 ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262328"
 ---
 # <a name="translating-expression-trees"></a>Movendo árvores de expressão
 

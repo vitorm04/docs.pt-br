@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 7cc0e48a7a4a3ec3f28c89e80fadf6aa7e1130f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43393120"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865056"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (opções do compilador C#)
 Essa opção faz com que o compilador não gere um manifesto do assembly.  

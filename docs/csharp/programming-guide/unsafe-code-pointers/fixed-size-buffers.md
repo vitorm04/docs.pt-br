@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 310c5eed5507f75239efc78b6132fbc91211d29e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339586"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506895"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 
@@ -50,7 +50,7 @@ Buffers não seguros diferem de matrizes regulares das seguintes maneiras:
 
 ## <a name="see-also"></a>Consulte também
 
-[Guia de Programação em C#](../index.md)  
-[Código não seguro e ponteiros](index.md)  
-[Instrução fixed](../../language-reference/keywords/fixed-statement.md)  
-[Interoperabilidade](../interop/index.md)
+- [Guia de Programação em C#](../index.md)  
+- [Código não seguro e ponteiros](index.md)  
+- [Instrução fixed](../../language-reference/keywords/fixed-statement.md)  
+- [Interoperabilidade](../interop/index.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313947"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128544"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrizes unidimensionais (Guia de Programação em C#)
+
 É possível declarar uma matriz unidimensional de cinco inteiros, conforme mostrado no exemplo a seguir:  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ ms.locfileid: "33313947"
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Inicialização de Matriz  
+## <a name="array-initialization"></a>Inicialização de Matriz
+
  É possível inicializar uma matriz na declaração. Nesse caso, o especificador de classificação não é necessário, porque ele já é fornecido pelo número de elementos na lista de inicialização. Por exemplo:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ ms.locfileid: "33313947"
   
  O C# 3.0 introduz matrizes de tipo implícito. Para obter mais informações, consulte [Matrizes de tipo implícito](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
-## <a name="value-type-and-reference-type-arrays"></a>Matrizes de tipo de valor e de tipo de referência  
+## <a name="value-type-and-reference-type-arrays"></a>Matrizes de tipo de valor e de tipo de referência
+
  Considere a seguinte declaração de matriz:  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ ms.locfileid: "33313947"
   
  Para obter mais informações sobre tipos de valor e de referência, consulte [Tipos](../../../csharp/language-reference/keywords/types.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Array>  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
- [Matrizes multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Array>  
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
+- [Matrizes multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)

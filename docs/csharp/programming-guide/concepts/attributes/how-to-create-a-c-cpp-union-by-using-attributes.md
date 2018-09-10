@@ -2,12 +2,12 @@
 title: Como criar uma união do C/C++ usando atributos (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315835"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798503"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Como criar uma união do C-C++ usando atributos (C#)
 Usando atributos, você pode personalizar como structs são dispostos na memória. Por exemplo, você pode criar o que é conhecido como uma união no C/C++ usando os atributos `StructLayout(LayoutKind.Explicit)` e `FieldOffset`.  
@@ -66,12 +66,13 @@ Usando atributos, você pode personalizar como structs são dispostos na memóri
   
  Os dois campos inteiros, `i1` e `i2`, compartilham os mesmos locais de memória que `lg`. Esse tipo de controle sobre o layout do struct é útil ao usar a invocação de plataforma.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
- [Atributos](../../../../../docs/standard/attributes/index.md)  
- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Criando atributos personalizados (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
+- [Atributos](../../../../../docs/standard/attributes/index.md)  
+- [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Criando atributos personalizados (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

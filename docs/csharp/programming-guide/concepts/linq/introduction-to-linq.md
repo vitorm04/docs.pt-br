@@ -2,12 +2,12 @@
 title: Introdução ao LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: 3c32c20efec55568a668c5dba55baf8f3ebbee7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 990a47d6ecfe38d9efa7d505eb3c23a28c05f58c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323310"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43740241"
 ---
 # <a name="introduction-to-linq-c"></a>Introdução ao LINQ (C#)
 O LINQ (consulta integrada à linguagem) é uma inovação introduzida no .NET Framework versão 3.5 que preenche a lacuna entre o mundo dos objetos e o mundo dos dados.  
@@ -33,5 +33,6 @@ O LINQ (consulta integrada à linguagem) é uma inovação introduzida no .NET F
   
 -   Coleções do .NET, arquivos, cadeias de caracteres etc.: [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

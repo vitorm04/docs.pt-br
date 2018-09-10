@@ -2,12 +2,12 @@
 title: Introdução às transformações funcionais puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329095"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183178"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introdução às transformações funcionais puras (C#)
 Esta seção apresenta transformações funcionais, incluindo os conceitos fundamentais e as compilações de linguagem de suporte. Contrasta as abordagens orientados a objeto e funcionais de transformação para programação, incluindo conselhos sobre como fazer a transição para último. Embora as transformações e podem ser usadas em muitos cenários de programação, a transformação XML é usado aqui como um exemplo concrete.  
@@ -22,5 +22,6 @@ Esta seção apresenta transformações funcionais, incluindo os conceitos funda
 |[Aplicabilidade da transformação funcional (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Descreve cenários típicos para transformações funcionais.|  
 |[Transformação funcional de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Descreve transformações e no contexto de transformar árvores XML.|  
   
-## <a name="see-also"></a>Consulte também  
- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

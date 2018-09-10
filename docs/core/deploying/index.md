@@ -3,13 +3,13 @@ title: Implantação do .NET Core Application
 description: Implantação de um aplicativo .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562000"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891305"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -41,7 +41,9 @@ Contudo, também há algumas desvantagens:
 
 ## <a name="self-contained-deployments-scd"></a>SCD (implantação autocontida)
 
-No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. A criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) de várias plataformas, por isso elas devem estar presentes antes de executar o aplicativo. Para obter mais informações sobre associação de versão em tempo de execução, confira o artigo sobre [associação de versão no .NET Core](../versions/selection.md)
+No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. A criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) de várias plataformas, por isso elas devem estar presentes antes de executar o aplicativo. Para saber mais sobre associação de versão em tempo de execução, confira o artigo sobre [associação de versão no .NET Core](../versions/selection.md).
+
+Começando com o SDK do .NET Core 2.1 (versão 2.1.300), o .NET Core é compatível com *roll forward da versão de patch*. Ao criar uma implantação autocontida, as ferramentas do .NET Core incluem automaticamente o tempo de execução de manutenção mais recente da versão do .NET Core que seu aplicativo utiliza. (O tempo de execução de manutenção mais recente inclui patches de segurança e outras correções de bug.) O tempo de execução de manutenção não precisa estar presente em seu sistema de compilação; ele é baixado automaticamente do NuGet.org. Para saber mais, incluindo instruções sobre como recusar o roll-forward da versão de patch, confira [Roll forward de tempo de execução de implantação autocontida](runtime-patch-selection.md).
 
 Implantações FDD e SCD usam executáveis de host separadas, para que você possa assinar um executável de host para um SCD com sua assinatura do publicador.
 
@@ -58,6 +60,8 @@ Ela também apresenta algumas desvantagens:
 - Como o .NET Core é incluído no seu pacote de implantação, você deve selecionar previamente as plataformas de destino para as quais você criará pacotes de implantação.
 
 - O tamanho do seu pacote de implantação é relativamente grande, visto que você precisa incluir o .NET Core, bem como seu aplicativo e suas dependências de terceiros.
+
+  A partir do .NET Core 2.0, você pode reduzir o tamanho da sua implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) do .NET Core. Normalmente, o .NET Core no Linux se baseia nas [bibliotecas de ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) para suporte à globalização. No modo invariável, as bibliotecas não são incluídas na implantação e todas as culturas se comportam como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Implantar vários aplicativos .NET Core autocontidos em um sistema pode consumir um volume significativo de espaço em disco, visto que cada aplicativo duplica os arquivos do .NET Core.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9216cf61b6b9368112f769d952457df4aab4297
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288220"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183295"
 ---
 # <a name="gt-operator-c-reference"></a>Operador =&gt; (Referência de C#)
 
@@ -110,8 +110,9 @@ public override string ToString()
 ```
 Para obter informações mais detalhadas sobre definições de corpo da expressão, confira [Membros com corpo da expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
-## <a name="see-also"></a>Consulte também  
-[Referência de C#](../../../csharp/language-reference/index.md)   
-[Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
-[Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[Membros com corpo da expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
+## <a name="see-also"></a>Consulte também
+
+- [Referência de C#](../../../csharp/language-reference/index.md)   
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+- [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
+- [Membros com corpo da expressão](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).

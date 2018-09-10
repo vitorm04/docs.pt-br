@@ -2,12 +2,12 @@
 title: Como modificar um documento do Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 94304d506218117469d9abd213e6a844c1fb3be3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a85341ee64c71a3f57b71b3db82889aee667040
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321646"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517622"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Como modificar um documento do Office Open XML (C#)
 Este tópico apresenta um exemplo que abre um documento do Office Open XML, modifica-o e salva-o.  
@@ -147,5 +147,6 @@ class Program
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Técnicas avançadas de consulta (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: Programação funcional versus procedural (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 16d78e967fd5379940ac93c82e3bb59c60941e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 888c360e1b868c79d378f2fc46a26c152121300f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328208"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181518"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Programação funcional versus procedural (LINQ to XML) (C#)
 Há vários tipos de aplicativos XML:  
@@ -40,5 +40,6 @@ Há vários tipos de aplicativos XML:
   
  Para obter um tutorial sobre como escrever transformações funcionais, consulte [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>Consulte também
+
+- [Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
