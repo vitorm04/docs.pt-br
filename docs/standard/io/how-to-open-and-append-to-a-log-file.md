@@ -13,33 +13,34 @@ helpviewer_keywords:
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd2d13a49d9b696541ac278b9f1847c8e4a48cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571937"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249056"
 ---
-# <a name="how-to-open-and-append-to-a-log-file"></a><span data-ttu-id="9a7a4-102">Como abrir um arquivo de log e acrescentar dados a ele</span><span class="sxs-lookup"><span data-stu-id="9a7a4-102">How to: Open and Append to a Log File</span></span>
-<span data-ttu-id="9a7a4-103"><xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> gravam caracteres e leem caracteres de fluxos.</span><span class="sxs-lookup"><span data-stu-id="9a7a4-103"><xref:System.IO.StreamWriter> and <xref:System.IO.StreamReader> write characters to and read characters from streams.</span></span> <span data-ttu-id="9a7a4-104">O código a seguir exemplo abre o arquivo `log.txt` para a entrada ou cria o arquivo, se ele ainda não existe, e acrescenta informações ao fim do arquivo.</span><span class="sxs-lookup"><span data-stu-id="9a7a4-104">The following code example opens the `log.txt` file for input, or creates the file if it does not already exist, and appends information to the end of the file.</span></span> <span data-ttu-id="9a7a4-105">O conteúdo do arquivo é gravado para a saída padrão para exibição.</span><span class="sxs-lookup"><span data-stu-id="9a7a4-105">The contents of the file are then written to standard output for display.</span></span> <span data-ttu-id="9a7a4-106">Como alternativa para esse exemplo, as informações podem ser armazenadas como uma única cadeia de caracteres ou uma matriz de cadeia de caracteres, e o método <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> pode ser usado para obter a mesma funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="9a7a4-106">As an alternative to this example, the information could be stored as a single string or string array, and the <xref:System.IO.File.WriteAllText%2A> or <xref:System.IO.File.WriteAllLines%2A> method could be used to achieve the same functionality.</span></span>  
+# <a name="how-to-open-and-append-to-a-log-file"></a><span data-ttu-id="c6911-102">Como abrir um arquivo de log e acrescentar dados a ele</span><span class="sxs-lookup"><span data-stu-id="c6911-102">How to: Open and Append to a Log File</span></span>
+<span data-ttu-id="c6911-103"><xref:System.IO.StreamWriter> e <xref:System.IO.StreamReader> gravam caracteres e leem caracteres de fluxos.</span><span class="sxs-lookup"><span data-stu-id="c6911-103"><xref:System.IO.StreamWriter> and <xref:System.IO.StreamReader> write characters to and read characters from streams.</span></span> <span data-ttu-id="c6911-104">O código a seguir exemplo abre o arquivo `log.txt` para a entrada ou cria o arquivo, se ele ainda não existe, e acrescenta informações ao fim do arquivo.</span><span class="sxs-lookup"><span data-stu-id="c6911-104">The following code example opens the `log.txt` file for input, or creates the file if it does not already exist, and appends information to the end of the file.</span></span> <span data-ttu-id="c6911-105">O conteúdo do arquivo é gravado para a saída padrão para exibição.</span><span class="sxs-lookup"><span data-stu-id="c6911-105">The contents of the file are then written to standard output for display.</span></span> <span data-ttu-id="c6911-106">Como alternativa para esse exemplo, as informações podem ser armazenadas como uma única cadeia de caracteres ou uma matriz de cadeia de caracteres, e o método <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> pode ser usado para obter a mesma funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="c6911-106">As an alternative to this example, the information could be stored as a single string or string array, and the <xref:System.IO.File.WriteAllText%2A> or <xref:System.IO.File.WriteAllLines%2A> method could be used to achieve the same functionality.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9a7a4-107">Os usuários do Visual Basic podem optar por usar os métodos e propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.Logging.Log> ou pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem> para criar ou gravar em arquivos de log.</span><span class="sxs-lookup"><span data-stu-id="9a7a4-107">Visual Basic users may choose to use the methods and properties provided by the <xref:Microsoft.VisualBasic.Logging.Log> class or <xref:Microsoft.VisualBasic.FileIO.FileSystem> class for creating or writing to log files.</span></span>  
+>  <span data-ttu-id="c6911-107">Os usuários do Visual Basic podem optar por usar os métodos e propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.Logging.Log> ou pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem> para criar ou gravar em arquivos de log.</span><span class="sxs-lookup"><span data-stu-id="c6911-107">Visual Basic users may choose to use the methods and properties provided by the <xref:Microsoft.VisualBasic.Logging.Log> class or <xref:Microsoft.VisualBasic.FileIO.FileSystem> class for creating or writing to log files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a7a4-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9a7a4-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c6911-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c6911-108">Example</span></span>  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]
  [!code-vb[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="9a7a4-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9a7a4-109">See Also</span></span>  
- <xref:System.IO.StreamWriter>  
- <xref:System.IO.StreamReader>  
- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="9a7a4-110">Como enumerar diretórios e arquivos</span><span class="sxs-lookup"><span data-stu-id="9a7a4-110">How to: Enumerate Directories and Files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
- [<span data-ttu-id="9a7a4-111">Como ler e gravar em um arquivo de dados recém-criado</span><span class="sxs-lookup"><span data-stu-id="9a7a4-111">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [<span data-ttu-id="9a7a4-112">Como ler texto de um arquivo</span><span class="sxs-lookup"><span data-stu-id="9a7a4-112">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [<span data-ttu-id="9a7a4-113">Como gravar texto em um arquivo</span><span class="sxs-lookup"><span data-stu-id="9a7a4-113">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
- [<span data-ttu-id="9a7a4-114">Como ler caracteres de uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="9a7a4-114">How to: Read Characters from a String</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
- [<span data-ttu-id="9a7a4-115">Como gravar caracteres em uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="9a7a4-115">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [<span data-ttu-id="9a7a4-116">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="9a7a4-116">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
+## <a name="see-also"></a><span data-ttu-id="c6911-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6911-109">See also</span></span>
+
+- <xref:System.IO.StreamWriter>  
+- <xref:System.IO.StreamReader>  
+- <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>  
+- <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
+- [<span data-ttu-id="c6911-110">Como enumerar diretórios e arquivos</span><span class="sxs-lookup"><span data-stu-id="c6911-110">How to: Enumerate Directories and Files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [<span data-ttu-id="c6911-111">Como ler e gravar em um arquivo de dados recém-criado</span><span class="sxs-lookup"><span data-stu-id="c6911-111">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [<span data-ttu-id="c6911-112">Como ler texto de um arquivo</span><span class="sxs-lookup"><span data-stu-id="c6911-112">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [<span data-ttu-id="c6911-113">Como gravar texto em um arquivo</span><span class="sxs-lookup"><span data-stu-id="c6911-113">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [<span data-ttu-id="c6911-114">Como ler caracteres de uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c6911-114">How to: Read Characters from a String</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
+- [<span data-ttu-id="c6911-115">Como gravar caracteres em uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="c6911-115">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+- [<span data-ttu-id="c6911-116">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="c6911-116">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)

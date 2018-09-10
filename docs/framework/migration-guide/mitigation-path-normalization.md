@@ -5,46 +5,46 @@ ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa31641cc325f15b9afe677038deb33c57e77fd1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43388346"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508807"
 ---
-# <a name="mitigation-path-normalization"></a><span data-ttu-id="ea7e0-102">Mitigação: normalização do caminho</span><span class="sxs-lookup"><span data-stu-id="ea7e0-102">Mitigation: Path Normalization</span></span>
-<span data-ttu-id="ea7e0-103">Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho no .NET Framework foi alterada.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  
+# <a name="mitigation-path-normalization"></a><span data-ttu-id="e9bb6-102">Mitigação: normalização do caminho</span><span class="sxs-lookup"><span data-stu-id="e9bb6-102">Mitigation: Path Normalization</span></span>
+<span data-ttu-id="e9bb6-103">Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho no .NET Framework foi alterada.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-103">Starting with apps the target  the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization in the .NET Framework has changed.</span></span>  
   
-## <a name="what-is-path-normalization"></a><span data-ttu-id="ea7e0-104">O que é normalização do caminho?</span><span class="sxs-lookup"><span data-stu-id="ea7e0-104">What is path normalization?</span></span>  
- <span data-ttu-id="ea7e0-105">Normalizar um caminho envolve modificar a cadeia de caracteres que identifica um caminho ou arquivo para que ele esteja em conformidade com um caminho válido no sistema operacional de destino.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="ea7e0-106">Normalmente, a normalização envolve:</span><span class="sxs-lookup"><span data-stu-id="ea7e0-106">Normalization typically involves:</span></span>  
+## <a name="what-is-path-normalization"></a><span data-ttu-id="e9bb6-104">O que é normalização do caminho?</span><span class="sxs-lookup"><span data-stu-id="e9bb6-104">What is path normalization?</span></span>  
+ <span data-ttu-id="e9bb6-105">Normalizar um caminho envolve modificar a cadeia de caracteres que identifica um caminho ou arquivo para que ele esteja em conformidade com um caminho válido no sistema operacional de destino.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-105">Normalizing a path involves modifying the string that identifies a path or file so that it conforms to a valid path on the target operating system.</span></span> <span data-ttu-id="e9bb6-106">Normalmente, a normalização envolve:</span><span class="sxs-lookup"><span data-stu-id="e9bb6-106">Normalization typically involves:</span></span>  
   
--   <span data-ttu-id="ea7e0-107">Padronização de separadores de diretório e componente.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-107">Canonicalizing component and directory separators.</span></span>  
+-   <span data-ttu-id="e9bb6-107">Padronização de separadores de diretório e componente.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-107">Canonicalizing component and directory separators.</span></span>  
   
--   <span data-ttu-id="ea7e0-108">Aplicação do diretório atual a um caminho relativo.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-108">Applying the current directory to a relative path.</span></span>  
+-   <span data-ttu-id="e9bb6-108">Aplicação do diretório atual a um caminho relativo.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-108">Applying the current directory to a relative path.</span></span>  
   
--   <span data-ttu-id="ea7e0-109">Avaliação do diretório relativo (`.`) ou do diretório pai (`..`) em um caminho.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
+-   <span data-ttu-id="e9bb6-109">Avaliação do diretório relativo (`.`) ou do diretório pai (`..`) em um caminho.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-109">Evaluating the relative directory (`.`) or the parent directory (`..`) in a path.</span></span>  
   
--   <span data-ttu-id="ea7e0-110">Remoção de determinados caracteres.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-110">Trimming specified characters.</span></span>  
+-   <span data-ttu-id="e9bb6-110">Remoção de determinados caracteres.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-110">Trimming specified characters.</span></span>  
   
-## <a name="the-changes"></a><span data-ttu-id="ea7e0-111">As alterações</span><span class="sxs-lookup"><span data-stu-id="ea7e0-111">The changes</span></span>  
- <span data-ttu-id="ea7e0-112">Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho foi alterada nos seguintes aspectos:</span><span class="sxs-lookup"><span data-stu-id="ea7e0-112">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization has changed in the following ways:</span></span>  
+## <a name="the-changes"></a><span data-ttu-id="e9bb6-111">As alterações</span><span class="sxs-lookup"><span data-stu-id="e9bb6-111">The changes</span></span>  
+ <span data-ttu-id="e9bb6-112">Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a normalização do caminho foi alterada nos seguintes aspectos:</span><span class="sxs-lookup"><span data-stu-id="e9bb6-112">Starting with apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], path normalization has changed in the following ways:</span></span>  
   
--   <span data-ttu-id="ea7e0-113">O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-113">The runtime defers to the operating system's [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) function to normalize paths.</span></span>  
+-   <span data-ttu-id="e9bb6-113">O tempo de execução atende à função [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) do sistema operacional para normalizar caminhos.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-113">The runtime defers to the operating system's [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) function to normalize paths.</span></span>  
   
--   <span data-ttu-id="ea7e0-114">A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).</span><span class="sxs-lookup"><span data-stu-id="ea7e0-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
+-   <span data-ttu-id="e9bb6-114">A normalização não envolve mais a remoção do fim dos segmentos do diretório (como um espaço no fim do nome de um diretório).</span><span class="sxs-lookup"><span data-stu-id="e9bb6-114">Normalization no longer involves trimming the end of directory segments (such as a space at the end of a directory name).</span></span>  
   
--   <span data-ttu-id="ea7e0-115">Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
+-   <span data-ttu-id="e9bb6-115">Suporte à sintaxe do caminho do dispositivo em confiança total, incluindo `\\.\` e, para APIs de E/S de arquivo em mscorlib.dll, `\\?\`.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-115">Support for device path syntax in full trust, including  `\\.\` and, for file I/O APIs   in mscorlib.dll, `\\?\`.</span></span>  
   
--   <span data-ttu-id="ea7e0-116">O tempo de execução não valida caminhos de sintaxe do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-116">The runtime does not validate device syntax paths.</span></span>  
+-   <span data-ttu-id="e9bb6-116">O tempo de execução não valida caminhos de sintaxe do dispositivo.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-116">The runtime does not validate device syntax paths.</span></span>  
   
--   <span data-ttu-id="ea7e0-117">Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-117">The use of device syntax to access alternate data streams is supported.</span></span>  
+-   <span data-ttu-id="e9bb6-117">Há suporte ao uso da sintaxe de dispositivo para acessar fluxos de dados alternados.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-117">The use of device syntax to access alternate data streams is supported.</span></span>  
   
-## <a name="impact"></a><span data-ttu-id="ea7e0-118">Impacto</span><span class="sxs-lookup"><span data-stu-id="ea7e0-118">Impact</span></span>  
- <span data-ttu-id="ea7e0-119">Para os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, essas alterações estão ativadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-119">For apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later, these changes are on  by default.</span></span> <span data-ttu-id="ea7e0-120">Elas devem melhorar o desempenho e ao mesmo tempo permitir que os métodos acessem caminhos anteriormente inacessíveis.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
+## <a name="impact"></a><span data-ttu-id="e9bb6-118">Impacto</span><span class="sxs-lookup"><span data-stu-id="e9bb6-118">Impact</span></span>  
+ <span data-ttu-id="e9bb6-119">Para os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, essas alterações estão ativadas por padrão.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-119">For apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later, these changes are on  by default.</span></span> <span data-ttu-id="e9bb6-120">Elas devem melhorar o desempenho e ao mesmo tempo permitir que os métodos acessem caminhos anteriormente inacessíveis.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-120">They should improve performance while allowing methods to access previously inaccessible paths.</span></span>  
   
- <span data-ttu-id="ea7e0-121">Os aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versões anteriores, mas que são executados no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, não são afetados por essa alteração.</span><span class="sxs-lookup"><span data-stu-id="ea7e0-121">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and earlier versions but are running under the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later are unaffected by this change.</span></span>  
+ <span data-ttu-id="e9bb6-121">Os aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versões anteriores, mas que são executados no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, não são afetados por essa alteração.</span><span class="sxs-lookup"><span data-stu-id="e9bb6-121">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] and earlier versions but are running under the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later are unaffected by this change.</span></span>  
   
-## <a name="mitigation"></a><span data-ttu-id="ea7e0-122">Redução</span><span class="sxs-lookup"><span data-stu-id="ea7e0-122">Mitigation</span></span>  
- <span data-ttu-id="ea7e0-123">Os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores podem recusar essa alteração e usar a normalização herdada adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="ea7e0-123">Apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
+## <a name="mitigation"></a><span data-ttu-id="e9bb6-122">Redução</span><span class="sxs-lookup"><span data-stu-id="e9bb6-122">Mitigation</span></span>  
+ <span data-ttu-id="e9bb6-123">Os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores podem recusar essa alteração e usar a normalização herdada adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="e9bb6-123">Apps that target the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can opt out of this change and use legacy normalization by adding the following to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -52,7 +52,7 @@ ms.locfileid: "43388346"
 </runtime>  
 ```  
   
- <span data-ttu-id="ea7e0-124">Os aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ou anteriores, mas que são executados no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, podem habilitar essas alterações para normalização do caminho adicionando a seguinte linha à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="ea7e0-124">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] or earlier but are running on the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
+ <span data-ttu-id="e9bb6-124">Os aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ou anteriores, mas que são executados no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou posteriores, podem habilitar essas alterações para normalização do caminho adicionando a seguinte linha à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="e9bb6-124">Apps that target the [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] or earlier but are running on the [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] or later can enable the changes to path normalization by adding the following line to the [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of the application .configuration file:</span></span>  
   
 ```xml  
 <runtime>  
@@ -60,5 +60,5 @@ ms.locfileid: "43388346"
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ea7e0-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ea7e0-125">See Also</span></span>  
- [<span data-ttu-id="ea7e0-126">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="ea7e0-126">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+## <a name="see-also"></a><span data-ttu-id="e9bb6-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e9bb6-125">See Also</span></span>  
+ [<span data-ttu-id="e9bb6-126">Alterações de redirecionamento</span><span class="sxs-lookup"><span data-stu-id="e9bb6-126">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
