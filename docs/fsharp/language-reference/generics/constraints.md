@@ -2,17 +2,16 @@
 title: Restrições (F#)
 description: 'Saiba mais sobre restrições de F # que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525599"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867823"
 ---
 # <a name="constraints"></a>Restrições
 
 Este tópico descreve as restrições que você pode aplicar a genérica parâmetros para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função de tipo.
-
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Comentários
+
 Há várias restrições diferentes que você pode aplicar para limitar os tipos que podem ser usados em um tipo genérico. A tabela a seguir lista e descreve essas restrições.
 
 |Restrição|Sintaxe|Descrição|
 |----------|------|-----------|
 |Restrição de tipo|*parâmetro de tipo* :&gt; *tipo*|O tipo fornecido deve ser igual ou derivada do tipo especificado ou, se o tipo é uma interface, o tipo fornecido deve implementar a interface.|
 |Restrição de nulos|*parâmetro de tipo* : nulo|O tipo fornecido deve suportar o literal nulo. Isso inclui todos os tipos de objeto do .NET, mas não F # lista, tupla, função, classe, registro ou tipos de união.|
-|Restrição de membro explícito|[()]*parâmetro de tipo* [ou... ou *parâmetro de tipo*)]: (*assinatura do membro*)|Pelo menos um dos argumentos de tipo fornecidos deve ter um membro que tem a assinatura especificada; não se destina para uso comum. Membros devem ser seja explicitamente definidos no tipo ou parte de uma extensão de tipo implícito alvos válidos de uma restrição explícita do membro.|
+|Restrição de membro explícito|[(]*parâmetro de tipo* [ou... ou *parâmetro de tipo*)]: (*assinatura do membro*)|Pelo menos um dos argumentos de tipo fornecidos deve ter um membro que tem a assinatura especificada; não se destina para uso comum. Membros devem ser seja explicitamente definidos no tipo ou parte de uma extensão de tipo implícito alvos válidos de uma restrição explícita do membro.|
 |Restrição de construtor|*parâmetro de tipo* : (novo: unidade -&gt; ' um)|O tipo fornecido deve ter um construtor padrão.|
 |Restrição de tipo de valor|: struct|O tipo fornecido deve ser um tipo de valor do .NET.|
 |Restrição de tipo de referência|: não struct|O tipo fornecido deve ser um tipo de referência do .NET.|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>Consulte também
-[Genéricos](index.md)
 
-[Restrições](constraints.md)
+- [Genéricos](index.md)
+- [Restrições](constraints.md)

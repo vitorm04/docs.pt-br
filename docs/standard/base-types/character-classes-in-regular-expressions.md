@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43405080"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180144"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 <a name="Top"></a> Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais pode ocorrer em uma cadeia de caracteres de entrada para que uma correspondência seja bem-sucedida. A linguagem de expressões regulares no .NET dá suporte às seguintes classes de caracteres:  
@@ -590,7 +590,8 @@ ms.locfileid: "43405080"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Char.GetUnicodeCategory%2A>  
- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Char.GetUnicodeCategory%2A>  
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)

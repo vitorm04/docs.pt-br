@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071858"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039495"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
 <a name="top"></a> O retrocesso ocorre quando um padrão de expressão regular contém [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) opcionais ou [constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) e o mecanismo de expressões regulares retorna a um estado salvo anterior para retomar sua pesquisa por uma correspondência. O retrocesso é indispensável para o poder das expressões regulares, ele permite que as expressões sejam poderosas e flexíveis e correspondam a padrões muito complexos. No entanto, todo esse poder tem um custo. O retrocesso muitas vezes é o fator individual que mais afeta o desempenho do mecanismo de expressões regulares. Felizmente, o desenvolvedor tem controle sobre o comportamento do mecanismo de expressões regulares e como ele usa o retrocesso. Este tópico explica como o retrocesso funciona e como ele pode ser controlado.  
@@ -215,9 +215,10 @@ ms.locfileid: "37071858"
   
  [Voltar ao início](#top)  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [Constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [Agrupando constructos](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- [Constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Agrupando constructos](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

@@ -3,11 +3,11 @@ title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: e54f79046113e5f1a1a1cc065606fd5b706b49ac
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197070"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272521"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
 Este exemplo demonstra como implementar um validador personalizado de certificado x. 509. Isso é útil em casos em que nenhum dos modos de validação do certificado x. 509 internos é adequado para os requisitos do aplicativo. Este exemplo mostra um serviço que tem um validador personalizado que aceita os certificados emitidos por conta própria. O cliente usa esse certificado para autenticar o serviço.  

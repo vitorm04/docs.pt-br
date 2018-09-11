@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579087"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192245"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
@@ -115,7 +115,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
 |`\b`|Terminar em um limite de palavra.|  
   
 ### <a name="match-at-least-n-times-n"></a>Corresponder a pelo menos n vezes: {n,}  
- O quantificador `{`*n*`,}` corresponde ao elemento anterior pelo menos *n* vezes, em que *n* é qualquer inteiro. `{`*n*`,}` é um quantificador Greedy cujo equivalente lento é `{`*n*`}?`.  
+ O quantificador `{`*n*`,}` corresponde ao elemento anterior pelo menos *n* vezes, em que *n* é qualquer inteiro. `{`*n*`,}` é um quantificador Greedy cujo equivalente lento é `{`*n*`,}?`.  
   
  Por exemplo, a expressão regular `\b\d{2,}\b\D+` tenta corresponder a um limite de palavra seguido por pelo menos dois dígitos seguidos por um limite de palavra e um caractere não dígito. O exemplo a seguir ilustra essa expressão regular. A expressão regular não corresponde à frase `"7 days"` porque contém apenas um dígito decimal, mas corresponde com êxito às frases `"10 weeks and 300 years"`.  
   
@@ -271,6 +271,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Consulte também  
- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Consulte também
+
+- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
