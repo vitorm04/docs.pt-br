@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198927"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361596"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -55,7 +55,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
  Os repositórios são protegidos por listas de controle de acesso (ACLs), como pastas em um computador. Ao criar um serviço hospedado pelos Serviços de Informações da Internet (IIS), o processo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] é executado sob a conta do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Essa conta deve ter acesso ao repositório que contém os certificados que um serviço usa. Cada um dos principais repositórios é protegido por uma lista de acesso padrão, mas as listas podem ser modificadas. Se você criar uma função separada para acessar um repositório, deverá conceder permissão de acesso a essa função. Para saber como modificar a lista de acesso usando a ferramenta WinHttpCertConfig.exe, confira [Como criar certificados temporários para uso durante o desenvolvimento](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obter mais informações sobre como usar certificados do cliente com o IIS, confira [Como chamar um serviço Web usando um certificado do cliente para autenticação em um aplicativo Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Confiança de cadeia e autoridades de certificado  
- Os certificados são criados em uma hierarquia onde cada certificado individual está vinculado à CA que emitiu o certificado. Este é o link para o certificado da CA. O certificado da CA em seguida vincula à CA que emitiu o certificado da CA original. Esse processo é repetido até que o certificado da CA seja alcançado. O certificado da CA é inerentemente de confiança.  
+ Os certificados são criados em uma hierarquia onde cada certificado individual está vinculado à CA que emitiu o certificado. Este é o link para o certificado da CA. A autoridade de certificação do certificado, em seguida, links para a autoridade de certificação que emitiu o certificado da CA original. Esse processo é repetido até que o certificado da CA seja alcançado. O certificado da CA é inerentemente de confiança.  
   
  Os certificados digitais são usados para autenticar uma entidade confiando nessa hierarquia, também chamada de *cadeia de confiança*. Exiba uma cadeia de certificado usando o snap-in do MMC clicando duas vezes no certificado e, em seguida, clicando na guia **Caminho do Certificado**. Para obter mais informações sobre como importar cadeias de certificados para uma Autoridade de certificação, confira [Como especificar a cadeia de certificados da autoridade de certificação usada para verificar assinaturas](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874870"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361557"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -81,7 +81,7 @@ public class SampleService:ISampleService
 #### <a name="event-based-asynchronous-pattern"></a>O padrão assíncrono baseado em eventos  
  Um serviço que dá suporte ao padrão assíncrono baseada em eventos terá uma ou mais operações chamadas MethodNameAsync. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento MethodNameCompleted e pode ter um método MethodNameAsyncCancel (ou simplesmente CancelAsync). Um cliente que deseja chamar a operação definirá um manipulador de eventos para ser chamado quando a operação for concluída,  
   
- O trecho de código a seguir ilustra como declarar operações assíncronas usando o padrão assíncrono baseado em eventos.  
+ O snippet de código a seguir ilustra como declarar operações assíncronas usando o padrão assíncrono baseado em eventos.  
   
 ```csharp  
 public class AsyncExample  
@@ -160,7 +160,7 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
 ### <a name="client-side-asynchronous-invocations"></a>Chamadas assíncronas do lado do cliente  
  Um aplicativo cliente do WCF pode usar qualquer um dos três modelos de chamada assíncrona descritos anteriormente  
   
- Ao usar o modelo baseado em tarefas, basta chamar a operação usando a palavra-chave de espera conforme mostrado no trecho de código a seguir.  
+ Ao usar o modelo baseado em tarefas, basta chamar a operação usando a palavra-chave de espera conforme mostrado no snippet de código a seguir.  
   
 ```  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  

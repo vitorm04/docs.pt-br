@@ -3,11 +3,11 @@ title: 'Loops: expressão while...do (F#)'
 description: Veja como o while... Faça expressão é usada para uma execução iterativa (loop) enquanto uma condição de teste especificado é true.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208491"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44352551"
 ---
 # <a name="loops-whiledo-expression"></a>Loops: expressão while...do
 

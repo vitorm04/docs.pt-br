@@ -12,11 +12,11 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
 ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264042"
+ms.locfileid: "44342355"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Visão geral dos controles HScrollBar e VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> controles são usados para fornecer uma navegação fácil por meio de uma longa lista de itens ou uma grande quantidade de informações ao rolar horizontal ou verticalmente dentro de um aplicativo ou controle. Barras de rolagem são um elemento comum da interface do Windows, portanto, o <xref:System.Windows.Forms.ScrollBar> controle é frequentemente usado com controles que não derivam de <xref:System.Windows.Forms.ScrollableControl> classe. Da mesma forma, muitos desenvolvedores optam por incorporar o <xref:System.Windows.Forms.ScrollBar> controlar ao criar seus próprios controles de usuário.  

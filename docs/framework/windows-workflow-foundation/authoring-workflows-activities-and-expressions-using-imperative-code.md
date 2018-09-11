@@ -3,11 +3,11 @@ title: Criando fluxos de trabalho, atividades e expressões de design usando o c
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265124"
+ms.locfileid: "44342622"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório
 Uma definição de fluxo de trabalho é uma árvore de objetos de atividade configurados. Essa árvore de atividades pode ser definida de muitas maneiras, incluindo pela edição manual do XAML ou usando o Designer de Fluxo de Trabalho para gerar XAML. O uso de XAML, porém, não é um requisito. As definições de fluxo de trabalho também podem ser criadas programaticamente. Este tópico fornece uma visão geral de como criar definições, atividades e expressões de fluxo de trabalho usando código. Para obter exemplos de como trabalhar com fluxos de trabalho XAML usando código, consulte [serializar fluxos de trabalho e atividades de XAML e](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

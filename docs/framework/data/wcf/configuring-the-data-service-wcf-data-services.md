@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338929"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361664"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
 Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode criar serviços de dados que expõem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds. Os dados nesses feeds podem vir de uma variedade de fontes de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa provedores de dados para expor esses dados como um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Esses provedores incluem um provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], um provedor de reflexão e um conjunto de interfaces personalizadas de provedor de serviços de dados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
