@@ -3,11 +3,11 @@ title: Usando o controle para solucionar problemas de aplicativos
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179228"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44263772"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usando o controle para solucionar problemas de aplicativos
 Windows Workflow Foundation (WF) permite que você rastrear informações relacionadas ao fluxo de trabalho para fornecer detalhes de execução de um aplicativo do Windows Workflow Foundation ou o serviço. Hosts do Windows Workflow Foundation são capazes de capturar eventos de fluxo de trabalho durante a execução de uma instância de fluxo de trabalho. Se seu fluxo de trabalho gerencia falhas ou exceções, você pode usar o Windows Workflow Foundation acompanha detalhes a solucionar seu processamento.  

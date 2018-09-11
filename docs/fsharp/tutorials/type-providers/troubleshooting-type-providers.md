@@ -3,11 +3,11 @@ title: Solução de problemas de provedores de tipos
 description: 'Descobrir as possíveis soluções para problemas que você têm maior probabilidade de encontrar ao usar provedores de tipos em F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192919"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261439"
 ---
 # <a name="troubleshooting-type-providers"></a>Solução de problemas de provedores de tipos
 

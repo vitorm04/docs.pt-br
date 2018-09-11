@@ -3,11 +3,11 @@ title: WebContentTypeMapper Sample
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
 ms.openlocfilehash: 91e5cca478521a343f7528f878f114b85eff2d08
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214661"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262484"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper Sample
 Este exemplo demonstra como mapear os novos tipos de conteúdo para formatos de corpo de mensagem do Windows Communication Foundation (WCF).  

@@ -12,11 +12,11 @@ ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128807"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275542"
 ---
 # <a name="parameter-design"></a>Design de parâmetro
 Esta seção fornece diretrizes amplas sobre design de parâmetro, incluindo seções com as diretrizes para a verificação de argumentos. Além disso, você deve consultar as diretrizes descritas em [parâmetros de nomeação](../../../docs/standard/design-guidelines/naming-parameters.md).  
