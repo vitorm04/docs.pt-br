@@ -8,16 +8,16 @@ helpviewer_keywords:
 - animation [WPF], decelerating
 ms.assetid: 4f383b2c-f94d-4a4e-9a06-f56f5dae95f9
 ms.openlocfilehash: b1649f27fc8ff850516eef2086dbce732915406b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180430"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272938"
 ---
-# <a name="how-to-accelerate-or-decelerate-an-animation"></a><span data-ttu-id="9606c-102">Como acelerar ou desacelerar uma animação</span><span class="sxs-lookup"><span data-stu-id="9606c-102">How to: Accelerate or Decelerate an Animation</span></span>
-<span data-ttu-id="9606c-103">Este exemplo demonstra como fazer uma animação acelerar e desacelerar ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="9606c-103">This example demonstrates how to make an animation accelerate and decelerate over time.</span></span> <span data-ttu-id="9606c-104">No exemplo a seguir, vários retângulos são animados por animações com diferentes <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> e <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> configurações.</span><span class="sxs-lookup"><span data-stu-id="9606c-104">In the following example, several rectangles are animated by animations with different <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> and <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> settings.</span></span>  
+# <a name="how-to-accelerate-or-decelerate-an-animation"></a><span data-ttu-id="a602e-102">Como acelerar ou desacelerar uma animação</span><span class="sxs-lookup"><span data-stu-id="a602e-102">How to: Accelerate or Decelerate an Animation</span></span>
+<span data-ttu-id="a602e-103">Este exemplo demonstra como fazer uma animação acelerar e desacelerar ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="a602e-103">This example demonstrates how to make an animation accelerate and decelerate over time.</span></span> <span data-ttu-id="a602e-104">No exemplo a seguir, vários retângulos são animados por animações com diferentes <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> e <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> configurações.</span><span class="sxs-lookup"><span data-stu-id="a602e-104">In the following example, several rectangles are animated by animations with different <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> and <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> settings.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9606c-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9606c-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a602e-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a602e-105">Example</span></span>  
  [!code-xaml[timingbehaviors_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AccelDecelExample.xaml#1)]  
   
- <span data-ttu-id="9606c-106">O código foi omitido neste exemplo.</span><span class="sxs-lookup"><span data-stu-id="9606c-106">Code has been omitted from this example.</span></span> <span data-ttu-id="9606c-107">Para o código completo, consulte o [exemplo de comportamento de tempo de animação](https://go.microsoft.com/fwlink/?LinkID=159970).</span><span class="sxs-lookup"><span data-stu-id="9606c-107">For the complete code, see the [Animation Timing Behavior Sample](https://go.microsoft.com/fwlink/?LinkID=159970).</span></span>
+ <span data-ttu-id="a602e-106">O código foi omitido neste exemplo.</span><span class="sxs-lookup"><span data-stu-id="a602e-106">Code has been omitted from this example.</span></span> <span data-ttu-id="a602e-107">Para o código completo, consulte o [exemplo de comportamento de tempo de animação](https://go.microsoft.com/fwlink/?LinkID=159970).</span><span class="sxs-lookup"><span data-stu-id="a602e-107">For the complete code, see the [Animation Timing Behavior Sample](https://go.microsoft.com/fwlink/?LinkID=159970).</span></span>

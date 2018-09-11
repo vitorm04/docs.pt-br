@@ -7,42 +7,42 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191970"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261610"
 ---
-# <a name="manipulating-xml-in-visual-basic"></a><span data-ttu-id="90be9-102">Manipulando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="90be9-102">Manipulating XML in Visual Basic</span></span>
-<span data-ttu-id="90be9-103">Você pode usar *literais XML* ao carregar XML de uma fonte externa, como uma cadeia de caracteres, arquivo ou fluxo.</span><span class="sxs-lookup"><span data-stu-id="90be9-103">You can use *XML literals* to load XML from an external source such as a string, file, or stream.</span></span> <span data-ttu-id="90be9-104">Você pode usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular o XML e usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] para consultar o XML.</span><span class="sxs-lookup"><span data-stu-id="90be9-104">You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.</span></span>  
+# <a name="manipulating-xml-in-visual-basic"></a><span data-ttu-id="d92cb-102">Manipulando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d92cb-102">Manipulating XML in Visual Basic</span></span>
+<span data-ttu-id="d92cb-103">Você pode usar *literais XML* ao carregar XML de uma fonte externa, como uma cadeia de caracteres, arquivo ou fluxo.</span><span class="sxs-lookup"><span data-stu-id="d92cb-103">You can use *XML literals* to load XML from an external source such as a string, file, or stream.</span></span> <span data-ttu-id="d92cb-104">Você pode usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular o XML e usar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] para consultar o XML.</span><span class="sxs-lookup"><span data-stu-id="d92cb-104">You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="90be9-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="90be9-105">In This Section</span></span>  
- [<span data-ttu-id="90be9-106">Como carregar XML de um arquivo, cadeia de caracteres ou fluxo</span><span class="sxs-lookup"><span data-stu-id="90be9-106">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- <span data-ttu-id="90be9-107">Demonstra como carregar XML em um <xref:System.Xml.Linq.XDocument> ou <xref:System.Xml.Linq.XElement> objeto a partir de um arquivo de texto, cadeia de caracteres ou fluxo.</span><span class="sxs-lookup"><span data-stu-id="90be9-107">Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d92cb-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="d92cb-105">In This Section</span></span>  
+ [<span data-ttu-id="d92cb-106">Como carregar XML de um arquivo, cadeia de caracteres ou fluxo</span><span class="sxs-lookup"><span data-stu-id="d92cb-106">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ <span data-ttu-id="d92cb-107">Demonstra como carregar XML em um <xref:System.Xml.Linq.XDocument> ou <xref:System.Xml.Linq.XElement> objeto a partir de um arquivo de texto, cadeia de caracteres ou fluxo.</span><span class="sxs-lookup"><span data-stu-id="d92cb-107">Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.</span></span>  
   
- [<span data-ttu-id="90be9-108">Como transformar XML usando LINQ</span><span class="sxs-lookup"><span data-stu-id="90be9-108">How to: Transform XML by Using LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- <span data-ttu-id="90be9-109">Demonstra como transformar o conteúdo de um <xref:System.Xml.Linq.XDocument> objeto em um novo documento XML.</span><span class="sxs-lookup"><span data-stu-id="90be9-109">Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.</span></span>  
+ [<span data-ttu-id="d92cb-108">Como transformar XML usando LINQ</span><span class="sxs-lookup"><span data-stu-id="d92cb-108">How to: Transform XML by Using LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
+ <span data-ttu-id="d92cb-109">Demonstra como transformar o conteúdo de um <xref:System.Xml.Linq.XDocument> objeto em um novo documento XML.</span><span class="sxs-lookup"><span data-stu-id="d92cb-109">Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.</span></span>  
   
- [<span data-ttu-id="90be9-110">Como modificar literais XML</span><span class="sxs-lookup"><span data-stu-id="90be9-110">How to: Modify XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
- <span data-ttu-id="90be9-111">Demonstra como modificar os elementos, atributos e valores em um literal XML.</span><span class="sxs-lookup"><span data-stu-id="90be9-111">Demonstrates how to modify the elements, attributes, and values in an XML literal.</span></span>  
+ [<span data-ttu-id="d92cb-110">Como modificar literais XML</span><span class="sxs-lookup"><span data-stu-id="d92cb-110">How to: Modify XML Literals</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
+ <span data-ttu-id="d92cb-111">Demonstra como modificar os elementos, atributos e valores em um literal XML.</span><span class="sxs-lookup"><span data-stu-id="d92cb-111">Demonstrates how to modify the elements, attributes, and values in an XML literal.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="90be9-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="90be9-112">Related Sections</span></span>  
- [<span data-ttu-id="90be9-113">Propriedades do Eixo XML</span><span class="sxs-lookup"><span data-stu-id="90be9-113">XML Axis Properties</span></span>](../../../../visual-basic/language-reference/xml-axis/index.md)  
- <span data-ttu-id="90be9-114">Fornece links para seções que descrevem as várias propriedades de acesso do XML.</span><span class="sxs-lookup"><span data-stu-id="90be9-114">Provides links to sections that describe the various XML access properties.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="d92cb-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="d92cb-112">Related Sections</span></span>  
+ [<span data-ttu-id="d92cb-113">Propriedades do Eixo XML</span><span class="sxs-lookup"><span data-stu-id="d92cb-113">XML Axis Properties</span></span>](../../../../visual-basic/language-reference/xml-axis/index.md)  
+ <span data-ttu-id="d92cb-114">Fornece links para seções que descrevem as várias propriedades de acesso do XML.</span><span class="sxs-lookup"><span data-stu-id="d92cb-114">Provides links to sections that describe the various XML access properties.</span></span>  
   
- [<span data-ttu-id="90be9-115">Visão geral do LINQ to XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="90be9-115">Overview of LINQ to XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- <span data-ttu-id="90be9-116">Fornece uma introdução ao uso [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="90be9-116">Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.</span></span>  
+ [<span data-ttu-id="d92cb-115">Visão geral do LINQ to XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d92cb-115">Overview of LINQ to XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ <span data-ttu-id="d92cb-116">Fornece uma introdução ao uso [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d92cb-116">Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.</span></span>  
   
- [<span data-ttu-id="90be9-117">Criando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="90be9-117">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- <span data-ttu-id="90be9-118">Fornece uma introdução ao uso de literais XML no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="90be9-118">Provides an introduction to using XML literals in Visual Basic.</span></span>  
+ [<span data-ttu-id="d92cb-117">Criando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d92cb-117">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ <span data-ttu-id="d92cb-118">Fornece uma introdução ao uso de literais XML no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d92cb-118">Provides an introduction to using XML literals in Visual Basic.</span></span>  
   
- [<span data-ttu-id="90be9-119">Acessando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="90be9-119">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- <span data-ttu-id="90be9-120">Demonstra como acessar partes de um elemento XML ou documento no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="90be9-120">Demonstrates how to access parts of an XML element or document in Visual Basic.</span></span>  
+ [<span data-ttu-id="d92cb-119">Acessando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d92cb-119">Accessing XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
+ <span data-ttu-id="d92cb-120">Demonstra como acessar partes de um elemento XML ou documento no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d92cb-120">Demonstrates how to access parts of an XML element or document in Visual Basic.</span></span>  
   
- [<span data-ttu-id="90be9-121">XML</span><span class="sxs-lookup"><span data-stu-id="90be9-121">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- <span data-ttu-id="90be9-122">Fornece links para seções que descrevem como usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="90be9-122">Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.</span></span>  
+ [<span data-ttu-id="d92cb-121">XML</span><span class="sxs-lookup"><span data-stu-id="d92cb-121">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ <span data-ttu-id="d92cb-122">Fornece links para seções que descrevem como usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d92cb-122">Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90be9-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="90be9-123">See Also</span></span>  
- [<span data-ttu-id="90be9-124">XML</span><span class="sxs-lookup"><span data-stu-id="90be9-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [<span data-ttu-id="90be9-125">LINQ</span><span class="sxs-lookup"><span data-stu-id="90be9-125">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [<span data-ttu-id="90be9-126">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="90be9-126">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a><span data-ttu-id="d92cb-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d92cb-123">See Also</span></span>  
+ [<span data-ttu-id="d92cb-124">XML</span><span class="sxs-lookup"><span data-stu-id="d92cb-124">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [<span data-ttu-id="d92cb-125">LINQ</span><span class="sxs-lookup"><span data-stu-id="d92cb-125">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="d92cb-126">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d92cb-126">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

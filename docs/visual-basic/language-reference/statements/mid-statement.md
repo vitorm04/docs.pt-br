@@ -11,16 +11,16 @@ helpviewer_keywords:
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209349"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277095"
 ---
-# <a name="mid-statement"></a><span data-ttu-id="784de-102">Instrução Mid</span><span class="sxs-lookup"><span data-stu-id="784de-102">Mid Statement</span></span>
-<span data-ttu-id="784de-103">Substitui um número especificado de caracteres em um `String` variável com caracteres de outra cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="784de-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
+# <a name="mid-statement"></a><span data-ttu-id="82694-102">Instrução Mid</span><span class="sxs-lookup"><span data-stu-id="82694-102">Mid Statement</span></span>
+<span data-ttu-id="82694-103">Substitui um número especificado de caracteres em um `String` variável com caracteres de outra cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="82694-103">Replaces a specified number of characters in a `String` variable with characters from another string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="784de-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="784de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82694-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="82694-104">Syntax</span></span>  
   
 ```  
 Mid( _  
@@ -30,46 +30,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="784de-105">Partes</span><span class="sxs-lookup"><span data-stu-id="784de-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="82694-105">Partes</span><span class="sxs-lookup"><span data-stu-id="82694-105">Parts</span></span>  
  `Target`  
- <span data-ttu-id="784de-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="784de-106">Required.</span></span> <span data-ttu-id="784de-107">Nome da `String` variável para modificar.</span><span class="sxs-lookup"><span data-stu-id="784de-107">Name of the `String` variable to modify.</span></span>  
+ <span data-ttu-id="82694-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="82694-106">Required.</span></span> <span data-ttu-id="82694-107">Nome da `String` variável para modificar.</span><span class="sxs-lookup"><span data-stu-id="82694-107">Name of the `String` variable to modify.</span></span>  
   
  `Start`  
- <span data-ttu-id="784de-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="784de-108">Required.</span></span> <span data-ttu-id="784de-109">Expressão `Integer`.</span><span class="sxs-lookup"><span data-stu-id="784de-109">`Integer` expression.</span></span> <span data-ttu-id="784de-110">Posição de caractere `Target` onde a substituição de texto começa.</span><span class="sxs-lookup"><span data-stu-id="784de-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="784de-111">`Start` usa um índice baseado em um.</span><span class="sxs-lookup"><span data-stu-id="784de-111">`Start` uses a one-based index.</span></span>  
+ <span data-ttu-id="82694-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="82694-108">Required.</span></span> <span data-ttu-id="82694-109">Expressão `Integer`.</span><span class="sxs-lookup"><span data-stu-id="82694-109">`Integer` expression.</span></span> <span data-ttu-id="82694-110">Posição de caractere `Target` onde a substituição de texto começa.</span><span class="sxs-lookup"><span data-stu-id="82694-110">Character position in `Target` where the replacement of text begins.</span></span> <span data-ttu-id="82694-111">`Start` usa um índice baseado em um.</span><span class="sxs-lookup"><span data-stu-id="82694-111">`Start` uses a one-based index.</span></span>  
   
  `Length`  
- <span data-ttu-id="784de-112">Opcional.</span><span class="sxs-lookup"><span data-stu-id="784de-112">Optional.</span></span> <span data-ttu-id="784de-113">Expressão `Integer`.</span><span class="sxs-lookup"><span data-stu-id="784de-113">`Integer` expression.</span></span> <span data-ttu-id="784de-114">Número de caracteres a substituir.</span><span class="sxs-lookup"><span data-stu-id="784de-114">Number of characters to replace.</span></span> <span data-ttu-id="784de-115">Se omitido, todos os `String` é usado.</span><span class="sxs-lookup"><span data-stu-id="784de-115">If omitted, all of `String` is used.</span></span>  
+ <span data-ttu-id="82694-112">Opcional.</span><span class="sxs-lookup"><span data-stu-id="82694-112">Optional.</span></span> <span data-ttu-id="82694-113">Expressão `Integer`.</span><span class="sxs-lookup"><span data-stu-id="82694-113">`Integer` expression.</span></span> <span data-ttu-id="82694-114">Número de caracteres a substituir.</span><span class="sxs-lookup"><span data-stu-id="82694-114">Number of characters to replace.</span></span> <span data-ttu-id="82694-115">Se omitido, todos os `String` é usado.</span><span class="sxs-lookup"><span data-stu-id="82694-115">If omitted, all of `String` is used.</span></span>  
   
  `StringExpression`  
- <span data-ttu-id="784de-116">Necessário.</span><span class="sxs-lookup"><span data-stu-id="784de-116">Required.</span></span> <span data-ttu-id="784de-117">`String` expressão que substitui parte de `Target`.</span><span class="sxs-lookup"><span data-stu-id="784de-117">`String` expression that replaces part of `Target`.</span></span>  
+ <span data-ttu-id="82694-116">Necessário.</span><span class="sxs-lookup"><span data-stu-id="82694-116">Required.</span></span> <span data-ttu-id="82694-117">`String` expressão que substitui parte de `Target`.</span><span class="sxs-lookup"><span data-stu-id="82694-117">`String` expression that replaces part of `Target`.</span></span>  
   
-## <a name="exceptions"></a><span data-ttu-id="784de-118">Exceções</span><span class="sxs-lookup"><span data-stu-id="784de-118">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="82694-118">Exceções</span><span class="sxs-lookup"><span data-stu-id="82694-118">Exceptions</span></span>  
   
-|<span data-ttu-id="784de-119">Tipo de exceção</span><span class="sxs-lookup"><span data-stu-id="784de-119">Exception type</span></span>|<span data-ttu-id="784de-120">Condição</span><span class="sxs-lookup"><span data-stu-id="784de-120">Condition</span></span>|  
+|<span data-ttu-id="82694-119">Tipo de exceção</span><span class="sxs-lookup"><span data-stu-id="82694-119">Exception type</span></span>|<span data-ttu-id="82694-120">Condição</span><span class="sxs-lookup"><span data-stu-id="82694-120">Condition</span></span>|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<span data-ttu-id="784de-121">`Start` <= 0 ou `Length` < 0.</span><span class="sxs-lookup"><span data-stu-id="784de-121">`Start` <= 0 or `Length` < 0.</span></span>|  
+|<xref:System.ArgumentException>|<span data-ttu-id="82694-121">`Start` <= 0 ou `Length` < 0.</span><span class="sxs-lookup"><span data-stu-id="82694-121">`Start` <= 0 or `Length` < 0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="784de-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="784de-122">Remarks</span></span>  
- <span data-ttu-id="784de-123">O número de caracteres serão substituídos sempre é menor ou igual ao número de caracteres em `Target`.</span><span class="sxs-lookup"><span data-stu-id="784de-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="82694-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="82694-122">Remarks</span></span>  
+ <span data-ttu-id="82694-123">O número de caracteres serão substituídos sempre é menor ou igual ao número de caracteres em `Target`.</span><span class="sxs-lookup"><span data-stu-id="82694-123">The number of characters replaced is always less than or equal to the number of characters in `Target`.</span></span>  
   
- <span data-ttu-id="784de-124">O Visual Basic possui um <xref:Microsoft.VisualBasic.Strings.Mid%2A> função e um `Mid` instrução.</span><span class="sxs-lookup"><span data-stu-id="784de-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="784de-125">Os dois elementos operam em um número especificado de caracteres em uma cadeia de caracteres, mas o `Mid` função retorna os caracteres enquanto o `Mid` instrução substitui os caracteres.</span><span class="sxs-lookup"><span data-stu-id="784de-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="784de-126">Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span><span class="sxs-lookup"><span data-stu-id="784de-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
+ <span data-ttu-id="82694-124">O Visual Basic possui um <xref:Microsoft.VisualBasic.Strings.Mid%2A> função e um `Mid` instrução.</span><span class="sxs-lookup"><span data-stu-id="82694-124">Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement.</span></span> <span data-ttu-id="82694-125">Os dois elementos operam em um número especificado de caracteres em uma cadeia de caracteres, mas o `Mid` função retorna os caracteres enquanto o `Mid` instrução substitui os caracteres.</span><span class="sxs-lookup"><span data-stu-id="82694-125">These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters.</span></span> <span data-ttu-id="82694-126">Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span><span class="sxs-lookup"><span data-stu-id="82694-126">For more information, see <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="784de-127">O `MidB` declaração de versões anteriores do Visual Basic substitui uma subcadeia de caracteres em bytes, em vez de caracteres.</span><span class="sxs-lookup"><span data-stu-id="784de-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="784de-128">Ele é usado principalmente para converter cadeias de caracteres em caracteres de byte duplo (DBCS) conjunto de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="784de-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="784de-129">Todas as cadeias de caracteres do Visual Basic estão em Unicode, e `MidB` não é mais suportada.</span><span class="sxs-lookup"><span data-stu-id="784de-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
+>  <span data-ttu-id="82694-127">O `MidB` declaração de versões anteriores do Visual Basic substitui uma subcadeia de caracteres em bytes, em vez de caracteres.</span><span class="sxs-lookup"><span data-stu-id="82694-127">The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters.</span></span> <span data-ttu-id="82694-128">Ele é usado principalmente para converter cadeias de caracteres em caracteres de byte duplo (DBCS) conjunto de aplicativos.</span><span class="sxs-lookup"><span data-stu-id="82694-128">It is used primarily for converting strings in double-byte character set (DBCS) applications.</span></span> <span data-ttu-id="82694-129">Todas as cadeias de caracteres do Visual Basic estão em Unicode, e `MidB` não é mais suportada.</span><span class="sxs-lookup"><span data-stu-id="82694-129">All Visual Basic strings are in Unicode, and `MidB` is no longer supported.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="784de-130">Exemplo</span><span class="sxs-lookup"><span data-stu-id="784de-130">Example</span></span>  
- <span data-ttu-id="784de-131">Este exemplo usa o `Mid` instrução para substituir um número especificado de caracteres em uma variável de cadeia de caracteres com caracteres de outra cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="784de-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
+## <a name="example"></a><span data-ttu-id="82694-130">Exemplo</span><span class="sxs-lookup"><span data-stu-id="82694-130">Example</span></span>  
+ <span data-ttu-id="82694-131">Este exemplo usa o `Mid` instrução para substituir um número especificado de caracteres em uma variável de cadeia de caracteres com caracteres de outra cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="82694-131">This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.</span></span>  
   
  [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## <a name="requirements"></a><span data-ttu-id="784de-132">Requisitos</span><span class="sxs-lookup"><span data-stu-id="784de-132">Requirements</span></span>  
- <span data-ttu-id="784de-133">**Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="784de-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82694-132">Requisitos</span><span class="sxs-lookup"><span data-stu-id="82694-132">Requirements</span></span>  
+ <span data-ttu-id="82694-133">**Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="82694-133">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="784de-134">**Módulo:** `Strings`</span><span class="sxs-lookup"><span data-stu-id="784de-134">**Module:** `Strings`</span></span>  
+ <span data-ttu-id="82694-134">**Módulo:** `Strings`</span><span class="sxs-lookup"><span data-stu-id="82694-134">**Module:** `Strings`</span></span>  
   
- <span data-ttu-id="784de-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="784de-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
+ <span data-ttu-id="82694-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82694-135">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="784de-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="784de-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="82694-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82694-136">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- [<span data-ttu-id="784de-137">Cadeias de Caracteres</span><span class="sxs-lookup"><span data-stu-id="784de-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)  
- [<span data-ttu-id="784de-138">Introdução às cadeias de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="784de-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+ [<span data-ttu-id="82694-137">Cadeias de Caracteres</span><span class="sxs-lookup"><span data-stu-id="82694-137">Strings</span></span>](../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [<span data-ttu-id="82694-138">Introdução às cadeias de caracteres no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="82694-138">Introduction to Strings in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
