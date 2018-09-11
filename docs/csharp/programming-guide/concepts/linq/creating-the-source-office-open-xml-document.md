@@ -2,27 +2,27 @@
 title: Criando o documento do Office Open XML de origem (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: c5884d1e34558d01be4c873c3f44222396e588ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7941864e5dc2401a27df151c8c7806218609fcd4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324493"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189878"
 ---
-# <a name="creating-the-source-office-open-xml-document-c"></a><span data-ttu-id="82ba2-102">Criando o documento do Office Open XML de origem (C#)</span><span class="sxs-lookup"><span data-stu-id="82ba2-102">Creating the Source Office Open XML Document (C#)</span></span>
-<span data-ttu-id="82ba2-103">Este tópico mostra como criar o documento do Office Open XML WordprocessingML que os outros exemplos neste tutorial uso.</span><span class="sxs-lookup"><span data-stu-id="82ba2-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="82ba2-104">Se você segue essas declarações, a saída corresponderão a saída fornecida em cada exemplo.</span><span class="sxs-lookup"><span data-stu-id="82ba2-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  
+# <a name="creating-the-source-office-open-xml-document-c"></a><span data-ttu-id="a8051-102">Criando o documento do Office Open XML de origem (C#)</span><span class="sxs-lookup"><span data-stu-id="a8051-102">Creating the Source Office Open XML Document (C#)</span></span>
+<span data-ttu-id="a8051-103">Este tópico mostra como criar o documento do Office Open XML WordprocessingML que os outros exemplos neste tutorial uso.</span><span class="sxs-lookup"><span data-stu-id="a8051-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="a8051-104">Se você segue essas declarações, a saída corresponderão a saída fornecida em cada exemplo.</span><span class="sxs-lookup"><span data-stu-id="a8051-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  
   
- <span data-ttu-id="82ba2-105">No entanto, os exemplos neste tutorial funcionarão com qualquer documento válido de WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="82ba2-105">However, the examples in this tutorial will work with any valid WordprocessingML document.</span></span>  
+ <span data-ttu-id="a8051-105">No entanto, os exemplos neste tutorial funcionarão com qualquer documento válido de WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="a8051-105">However, the examples in this tutorial will work with any valid WordprocessingML document.</span></span>  
   
- <span data-ttu-id="82ba2-106">Para criar o documento que este tutorial usa, você precisa ter o Microsoft Office 2007 ou posterior instalado ou precisa ter o Microsoft Office 2003 com o Microsoft Office Compatibility Pack para formatos de arquivo do Word, Excel e PowerPoint 2007.</span><span class="sxs-lookup"><span data-stu-id="82ba2-106">To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
+ <span data-ttu-id="a8051-106">Para criar o documento que este tutorial usa, você precisa ter o Microsoft Office 2007 ou posterior instalado ou precisa ter o Microsoft Office 2003 com o Microsoft Office Compatibility Pack para formatos de arquivo do Word, Excel e PowerPoint 2007.</span><span class="sxs-lookup"><span data-stu-id="a8051-106">To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
   
-## <a name="creating-the-wordprocessingml-document"></a><span data-ttu-id="82ba2-107">Criando o documento de WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="82ba2-107">Creating the WordprocessingML Document</span></span>  
+## <a name="creating-the-wordprocessingml-document"></a><span data-ttu-id="a8051-107">Criando o documento de WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="a8051-107">Creating the WordprocessingML Document</span></span>  
   
-#### <a name="to-create-the-wordprocessingml-document"></a><span data-ttu-id="82ba2-108">Para criar o documento de WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="82ba2-108">To create the WordprocessingML document</span></span>  
+#### <a name="to-create-the-wordprocessingml-document"></a><span data-ttu-id="a8051-108">Para criar o documento de WordprocessingML</span><span class="sxs-lookup"><span data-stu-id="a8051-108">To create the WordprocessingML document</span></span>  
   
-1.  <span data-ttu-id="82ba2-109">Crie um novo documento Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="82ba2-109">Create a new Microsoft Word document.</span></span>  
+1.  <span data-ttu-id="a8051-109">Crie um novo documento Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="a8051-109">Create a new Microsoft Word document.</span></span>  
   
-2.  <span data-ttu-id="82ba2-110">Cole o seguinte texto no novo documento:</span><span class="sxs-lookup"><span data-stu-id="82ba2-110">Paste the following text into the new document:</span></span>  
+2.  <span data-ttu-id="a8051-110">Cole o seguinte texto no novo documento:</span><span class="sxs-lookup"><span data-stu-id="a8051-110">Paste the following text into the new document:</span></span>  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,16 +42,17 @@ ms.locfileid: "33324493"
     Hello World  
     ```  
   
-3.  <span data-ttu-id="82ba2-111">Formatar a primeira linha com o estilo que dirige “1 ".</span><span class="sxs-lookup"><span data-stu-id="82ba2-111">Format the first line with the style "Heading 1".</span></span>  
+3.  <span data-ttu-id="a8051-111">Formatar a primeira linha com o estilo que dirige “1 ".</span><span class="sxs-lookup"><span data-stu-id="a8051-111">Format the first line with the style "Heading 1".</span></span>  
   
-4.  <span data-ttu-id="82ba2-112">Selecione as linhas que contêm o código em c.</span><span class="sxs-lookup"><span data-stu-id="82ba2-112">Select the lines that contain the C# code.</span></span> <span data-ttu-id="82ba2-113">A primeira linha começa com a palavra-chave `using` .</span><span class="sxs-lookup"><span data-stu-id="82ba2-113">The first line starts with the `using` keyword.</span></span> <span data-ttu-id="82ba2-114">A última linha é a chave da última.</span><span class="sxs-lookup"><span data-stu-id="82ba2-114">The last line is the last closing brace.</span></span> <span data-ttu-id="82ba2-115">Formatar as linhas com a fonte de correio.</span><span class="sxs-lookup"><span data-stu-id="82ba2-115">Format the lines with the courier font.</span></span> <span data-ttu-id="82ba2-116">Formatar-los com um novo estilo, e nomeie o novo estilo “código”.</span><span class="sxs-lookup"><span data-stu-id="82ba2-116">Format them with a new style, and name the new style "Code".</span></span>  
+4.  <span data-ttu-id="a8051-112">Selecione as linhas que contêm o código em c.</span><span class="sxs-lookup"><span data-stu-id="a8051-112">Select the lines that contain the C# code.</span></span> <span data-ttu-id="a8051-113">A primeira linha começa com a palavra-chave `using` .</span><span class="sxs-lookup"><span data-stu-id="a8051-113">The first line starts with the `using` keyword.</span></span> <span data-ttu-id="a8051-114">A última linha é a chave da última.</span><span class="sxs-lookup"><span data-stu-id="a8051-114">The last line is the last closing brace.</span></span> <span data-ttu-id="a8051-115">Formatar as linhas com a fonte de correio.</span><span class="sxs-lookup"><span data-stu-id="a8051-115">Format the lines with the courier font.</span></span> <span data-ttu-id="a8051-116">Formatar-los com um novo estilo, e nomeie o novo estilo “código”.</span><span class="sxs-lookup"><span data-stu-id="a8051-116">Format them with a new style, and name the new style "Code".</span></span>  
   
-5.  <span data-ttu-id="82ba2-117">Finalmente, selecione a linha inteira que contém a saída, e formatar-la com o estilo de `Code` .</span><span class="sxs-lookup"><span data-stu-id="82ba2-117">Finally, select the entire line that contains the output, and format it with the `Code` style.</span></span>  
+5.  <span data-ttu-id="a8051-117">Finalmente, selecione a linha inteira que contém a saída, e formatar-la com o estilo de `Code` .</span><span class="sxs-lookup"><span data-stu-id="a8051-117">Finally, select the entire line that contains the output, and format it with the `Code` style.</span></span>  
   
-6.  <span data-ttu-id="82ba2-118">Salve o documento, e denomine-o SampleDoc.docx.</span><span class="sxs-lookup"><span data-stu-id="82ba2-118">Save the document, and name it SampleDoc.docx.</span></span>  
+6.  <span data-ttu-id="a8051-118">Salve o documento, e denomine-o SampleDoc.docx.</span><span class="sxs-lookup"><span data-stu-id="a8051-118">Save the document, and name it SampleDoc.docx.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="82ba2-119">Se você estiver usando o Microsoft Word 2003, selecione **Documento do Word 2007** na lista suspensa **Salvar como tipo**.</span><span class="sxs-lookup"><span data-stu-id="82ba2-119">If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.</span></span>  
+    >  <span data-ttu-id="a8051-119">Se você estiver usando o Microsoft Word 2003, selecione **Documento do Word 2007** na lista suspensa **Salvar como tipo**.</span><span class="sxs-lookup"><span data-stu-id="a8051-119">If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82ba2-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="82ba2-120">See Also</span></span>  
- [<span data-ttu-id="82ba2-121">Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="82ba2-121">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="a8051-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a8051-120">See Also</span></span>
+
+- [<span data-ttu-id="a8051-121">Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="a8051-121">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
