@@ -2,12 +2,12 @@
 title: 'Arquivo XML de exemplo: várias ordens de compra (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: 02e414ef0fbe5787a98a0783ba9ed5583886d2ac
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f510de028198dc6ad1f86490704d1c8df6e39cf4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245512"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201017"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Arquivo XML de exemplo: várias ordens de compra (LINQ to XML)
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém várias ordens de compra.  
@@ -109,5 +109,6 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

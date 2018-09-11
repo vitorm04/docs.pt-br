@@ -5,12 +5,12 @@ ms.date: 08/06/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: bb7ab2b8c13c2b8b4b6cd60e7959a391cd7e75c1
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754950"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178231"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Como identificar um tipo que permite valor nulo (Guia de programação em C#)
 
@@ -34,6 +34,6 @@ Você pode usar o código apresentado no exemplo a seguir para determinar se uma
   
 ## <a name="see-also"></a>Consulte também
 
-[Tipos que permitem valor nulo](index.md)  
-[Usando tipos que permitem valor nulo](using-nullable-types.md)  
-<xref:System.Nullable.GetUnderlyingType%2A>  
+- [Tipos que permitem valor nulo](index.md)  
+- [Usando tipos que permitem valor nulo](using-nullable-types.md)  
+- <xref:System.Nullable.GetUnderlyingType%2A>  

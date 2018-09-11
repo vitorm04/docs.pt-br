@@ -6,12 +6,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 74f51d18ddda1ae4706b78aaf713683d2e505d2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327236"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195170"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Como usar o alias de namespace global (Guia de Programação em C#)
 A capacidade de acessar um membro no [namespace](../../../csharp/language-reference/keywords/namespace.md) global é útil quando o membro estiver oculto por outra entidade com o mesmo nome.  
@@ -41,12 +41,14 @@ A capacidade de acessar um membro no [namespace](../../../csharp/language-refere
   
  [!code-csharp[csProgGuideNamespaces#5](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-global-namespace-alias_6.cs)]  
   
- **A 1**  
-**B 2**  
-**C 3**   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
- [. Operador .](../../../csharp/language-reference/operators/member-access-operator.md)  
- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+**A 1**
+**B 2**
+**C 3**
+
+## <a name="see-also"></a>Consulte também
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
+- [. Operador .](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

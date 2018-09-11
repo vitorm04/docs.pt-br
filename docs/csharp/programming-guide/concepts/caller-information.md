@@ -2,12 +2,12 @@
 title: Informações do chamador (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 048e91ad337f74ef04a2a03412a44a0be0ef9506
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320684"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212445"
 ---
 # <a name="caller-information-c"></a>Informações do chamador (C#)
 Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número da linha no código-fonte e o nome do membro do chamador. Essas informações são úteis para fins de rastreamento, depuração e criação de ferramentas de diagnóstico.  
@@ -75,8 +75,9 @@ public void TraceMessage(string message,
 |Construtor de atributos|O nome do membro ao qual o atributo se aplica. Se o atributo é qualquer elemento dentro de um membro (como um parâmetro, um valor de retorno, ou um parâmetro de tipo genérico), esse resultado é o nome do membro associado a esse elemento.|  
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|  
   
-## <a name="see-also"></a>Consulte também  
- [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Atributos comuns (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
- [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [Atributos (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Atributos comuns (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+- [Argumentos nomeados e opcionais](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)

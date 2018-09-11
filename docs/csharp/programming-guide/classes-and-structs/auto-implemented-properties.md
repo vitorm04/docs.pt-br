@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 756e235dacc3fcb2bf741d1d426e8dfcb53bf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313794"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228072"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Propriedades autoimplementadas (Guia de Programação em C#)
 No C# 3.0 e versões posteriores, as propriedades autoimplementadas tornam a declaração de propriedade mais concisa quando nenhuma lógica adicional for necessária nos acessadores de propriedade. Elas também habilitam o código do cliente a criar objetos. Ao declarar uma propriedade, como mostrado no exemplo a seguir, o compilador cria um campo de suporte privado e anônimo que pode ser acessado somente por meio dos acessadores `get` e `set` da propriedade.  
@@ -30,6 +30,7 @@ public string FirstName { get; set; } = "Jane";
   
  Os atributos são permitidos em propriedades autoimplementadas, mas, obviamente, não são permitidos nos campos de suporte, pois eles não são acessíveis por meio do código-fonte. Se for necessário utilizar um atributo no campo de suporte de uma propriedade, basta criar uma propriedade regular.  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>Consulte também
+
+- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)

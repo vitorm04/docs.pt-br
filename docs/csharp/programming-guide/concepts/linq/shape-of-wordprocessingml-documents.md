@@ -2,12 +2,12 @@
 title: Formato de documentos de WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 0d8a80a8e7d33facd452e3b7fb31793c1ed55c58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aeb047f23f60ba6951950a85a6e2ef57fcbd9dda
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331981"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211379"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Formato de documentos de WordprocessingML (C#)
 Este tópico apresenta a forma XML de um documento WordprocessingML.  
@@ -94,5 +94,6 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [Introdução a WordprocessingML](http://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
  [Office 2003: página de download de esquemas de referência XML](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
   
-## <a name="see-also"></a>Consulte também  
- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Consulte também
+
+- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

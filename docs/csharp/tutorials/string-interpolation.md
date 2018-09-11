@@ -3,12 +3,12 @@ title: Interpolação de cadeias de caracteres em C#
 description: Saiba como incluir resultados de expressão formatada em uma cadeia de caracteres de resultado em C# com a interpolação de cadeia de caracteres.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43419093"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086697"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeias de caracteres em C# #
 
@@ -108,7 +108,7 @@ Este tutorial descreve cenários comuns de uso da interpolação de cadeia de ca
 
 ## <a name="see-also"></a>Consulte também
 
-<xref:System.String.Format%2A?displayProperty=nameWithType>  
-<xref:System.FormattableString?displayProperty=nameWithType>  
-<xref:System.IFormattable?displayProperty=nameWithType>  
-[Cadeias de Caracteres](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- <xref:System.FormattableString?displayProperty=nameWithType>  
+- <xref:System.IFormattable?displayProperty=nameWithType>  
+- [Cadeias de Caracteres](../programming-guide/strings/index.md)  
