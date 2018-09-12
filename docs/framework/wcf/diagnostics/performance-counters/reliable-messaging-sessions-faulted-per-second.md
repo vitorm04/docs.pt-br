@@ -3,18 +3,18 @@ title: Sessões de Mensagens Confiáveis com Falha por Segundo
 ms.date: 03/30/2017
 ms.assetid: 8f8ca2eb-1be4-4b6a-aa78-fcd3ee145fe8
 ms.openlocfilehash: c77d6a5f12dcce15dba94e2f63025a219ebcc6fd
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367308"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44704963"
 ---
-# <a name="reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="b3a21-102">Sessões de Mensagens Confiáveis com Falha por Segundo</span><span class="sxs-lookup"><span data-stu-id="b3a21-102">Reliable Messaging Sessions Faulted Per Second</span></span>
-<span data-ttu-id="b3a21-103">Nome do contador: Sessões de Reliable Messaging com falha por segundo.</span><span class="sxs-lookup"><span data-stu-id="b3a21-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
+# <a name="reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="af0df-102">Sessões de Mensagens Confiáveis com Falha por Segundo</span><span class="sxs-lookup"><span data-stu-id="af0df-102">Reliable Messaging Sessions Faulted Per Second</span></span>
+<span data-ttu-id="af0df-103">Nome do contador: Sessões de Reliable Messaging com falha por segundo.</span><span class="sxs-lookup"><span data-stu-id="af0df-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b3a21-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="b3a21-104">Description</span></span>  
- <span data-ttu-id="b3a21-105">Número de sessões de reliable messaging com falha neste serviço em um segundo.</span><span class="sxs-lookup"><span data-stu-id="b3a21-105">Number of reliable messaging sessions that are faulted in this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="af0df-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="af0df-104">Description</span></span>  
+ <span data-ttu-id="af0df-105">Número de sessões de reliable messaging com falha neste serviço em um segundo.</span><span class="sxs-lookup"><span data-stu-id="af0df-105">Number of reliable messaging sessions that are faulted in this service in a second.</span></span>  
   
- <span data-ttu-id="b3a21-106">Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir.</span><span class="sxs-lookup"><span data-stu-id="b3a21-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="af0df-106">Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir.</span><span class="sxs-lookup"><span data-stu-id="af0df-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="b3a21-107">(N 1 - N 0) / ((1!D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="b3a21-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="af0df-107">(N 1 - N 0) / ((1!D 1 - D 0) / F)</span><span class="sxs-lookup"><span data-stu-id="af0df-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
