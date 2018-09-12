@@ -3,11 +3,11 @@ title: Atividades de expressão regular
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201004"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509876"
 ---
 # <a name="regular-expression-activities"></a>Atividades de expressão regular
 Este exemplo demonstra como criar um conjunto de atividades que expõe a funcionalidade de expressões regulares do <xref:System.Text.RegularExpressions> . Essas atividades personalizados podem ser usadas em um aplicativo de fluxo de trabalho. Para obter mais informações sobre expressões regulares, consulte [RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
