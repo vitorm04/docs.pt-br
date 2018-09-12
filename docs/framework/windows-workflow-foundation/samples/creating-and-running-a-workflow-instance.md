@@ -3,11 +3,11 @@ title: Criando e executando uma instância de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270627"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705486"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Criando e executando uma instância de fluxo de trabalho
 Este exemplo mostra como executar uma instância de fluxo de trabalho. Mostra como executar forma síncrona e de forma assíncrona.  
