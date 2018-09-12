@@ -11,11 +11,11 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
 ms.openlocfilehash: dd006f669ab6f0186bbcc7d1c76f9852ab6e8f60
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875012"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189203"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Como adicionar painéis a um controle StatusBar
 > [!IMPORTANT]
