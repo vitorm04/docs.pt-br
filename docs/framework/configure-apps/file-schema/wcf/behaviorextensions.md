@@ -3,11 +3,11 @@ title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353116"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705067"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 Extensões de comportamento permitem ao usuário criar elementos de comportamento definidos pelo usuário. Esses elementos podem ser usados juntamente com os elementos de comportamento padrão do Windows Communication Foundation (WCF). O `behaviorExtensions` seção define o elemento, de modo que ele pode ser usado na configuração. Aqui está um exemplo de uma extensão de comportamento típico.  
