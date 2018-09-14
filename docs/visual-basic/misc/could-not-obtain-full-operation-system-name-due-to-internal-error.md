@@ -5,11 +5,11 @@ f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
 ms.openlocfilehash: 192033348a779591a54860505d5d707a802c415a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569184"
+ms.locfileid: "45613869"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>Não foi possível obter o nome do sistema de operação completa devido a erro interno
 Não foi possível obter o nome do sistema de operação completa devido a erro interno. Isso pode ser causado pelo WMI não existente no computador atual.  

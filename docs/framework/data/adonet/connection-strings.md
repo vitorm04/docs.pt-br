@@ -3,11 +3,11 @@ title: Cadeias de caracteres de conexão no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583392"
+ms.locfileid: "45617020"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadeias de caracteres de conexão no ADO.NET
 O .NET Framework 2.0 apresentou novas funcionalidades para trabalhar com cadeias de conexão, incluindo a introdução de novas palavras-chave nas classes de construtores de cadeias de conexão, que permitem criar mais facilmente cadeias de conexão válidas em tempo de execução.  

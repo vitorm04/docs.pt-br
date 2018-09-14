@@ -14,11 +14,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: c6845a85f9d3e07a4ecc9aad1ec11df8cdbc1f7a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529487"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616715"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>Assinar eventos de automação de interface do usuário
 > [!NOTE]

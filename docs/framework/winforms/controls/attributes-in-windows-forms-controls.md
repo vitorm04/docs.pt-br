@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
 ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514599"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617124"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos em controles dos Windows Forms
 O .NET Framework fornece uma variedade de atributos que podem se aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
 ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509199"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597518"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Como definir ToolTips para controles em um Windows Form no momento do design
 Você pode definir um <xref:System.Windows.Forms.ToolTip> cadeia de caracteres no código ou no Designer de formulários do Windows. Para obter mais informações sobre o <xref:System.Windows.Forms.ToolTip> componente, consulte [visão geral do componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  

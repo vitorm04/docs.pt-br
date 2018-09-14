@@ -6,11 +6,11 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
 ms.openlocfilehash: 4c696644e61004bcac48399ffc752e40675642fc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528137"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597779"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Como adicionar colunas ao controle ListView dos Windows Forms usando o designer
 Os formulários do Windows <xref:System.Windows.Forms.ListView> controle pode exibir várias colunas para cada lista de itens na **detalhes** exibição. Você pode usar as colunas para exibir vários tipos de informações sobre cada item de lista. Por exemplo, uma lista de arquivos pode exibir o nome do arquivo, tipo de arquivo, tamanho e data da última modificação do arquivo. Para obter informações sobre como preencher as colunas depois que elas forem criadas, consulte [Como exibir subitens em colunas com o controle ListView dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  

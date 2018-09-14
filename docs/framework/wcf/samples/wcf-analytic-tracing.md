@@ -3,11 +3,11 @@ title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 006f8aa0bc2f32e43269aa83433e8ca7a773a1c9
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494273"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597336"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava ETW no Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos de analíticos destinam-se tornar mais fácil de obter visibilidade em seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram com os serviços WCF.  

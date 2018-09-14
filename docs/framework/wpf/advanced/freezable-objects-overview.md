@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507924"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615573"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que oferecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  

@@ -3,11 +3,11 @@ title: Operadores de consulta padrão em consultas LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527104"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616650"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta padrão em consultas LINQ to Entities
 Em uma consulta, você especifica as informações que deseja recuperar da fonte de dados. Uma consulta também pode especificar como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. A sintaxe de consulta LINQ fornece um conjunto de métodos de consulta padrão que você pode usar em uma consulta. A maioria desses métodos opera em sequências; Nesse contexto, uma sequência é um objeto cujo tipo implementa a <xref:System.Collections.Generic.IEnumerable%601> interface ou o <xref:System.Linq.IQueryable%601> interface. A funcionalidade de consulta de operadores de consulta padrão inclui filtragem, projeção, agregação, classificação, agrupamento, paginação e muito mais. Alguns dos operadores de consulta padrão mais usados possuem sintaxe de palavra-chave dedicada para que possam ser chamados por meio da sintaxe da expressão de consulta. Uma expressão de consulta é uma maneira diferente e mais legível de expressar uma consulta do que o equivalente baseado em método. As cláusulas de expressão de consulta são convertidas em chamadas para os métodos de consulta em tempo de compilação. Para obter uma lista de operadores de consulta padrão que têm cláusulas de expressão de consulta equivalente, consulte [visão geral de operadores de consulta padrão](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

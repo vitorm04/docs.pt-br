@@ -11,11 +11,11 @@ ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710895"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615574"
 ---
 # <a name="designing-for-extensibility"></a>Designer voltado para extensibilidade
 Um aspecto importante da criação de uma estrutura é verificar se que a extensibilidade do framework foi considerada com cuidado. Isso exige que você compreenda os custos e benefícios associados com vários mecanismos de extensibilidade. Este capítulo ajuda você a decidir qual dos mecanismos de extensibilidade — a criação de subclasses, eventos, os membros virtuais, retornos de chamada e assim por diante — pode lidar melhor com os requisitos de sua estrutura.  
