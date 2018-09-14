@@ -1,33 +1,33 @@
 ---
 title: Conclusões
-description: Modernizar aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure | conclusões
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | conclusões
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c115aa09c3de2cbd71a3b7dab7e8bbedc911ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580504"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45509738"
 ---
-# <a name="conclusions"></a><span data-ttu-id="ab1f1-103">Conclusões</span><span class="sxs-lookup"><span data-stu-id="ab1f1-103">Conclusions</span></span>
+# <a name="conclusions"></a><span data-ttu-id="7a336-103">Conclusões</span><span class="sxs-lookup"><span data-stu-id="7a336-103">Conclusions</span></span>
 
-- <span data-ttu-id="ab1f1-104">Soluções baseadas no contêiner, por fim, fornecem benefícios de economia de custo.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-104">Container-based solutions ultimately provide cost savings benefits.</span></span> <span data-ttu-id="ab1f1-105">Contêineres são uma solução de problemas de implantação porque eles remover a fricção causada por uma ausência de dependências em ambientes de produção.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-105">Containers are a solution to deployment problems because they remove the friction caused by an absence of dependencies in production environments.</span></span> <span data-ttu-id="ab1f1-106">Removendo esses problemas, ele melhora significativamente as operações de desenvolvimento/teste, produção e DevOps.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-106">By removing those issues, it improves Dev/Test, DevOps, and production operations significantly.</span></span>
+- <span data-ttu-id="7a336-104">Soluções baseadas em contêiner, por fim, fornecem benefícios de economia de custo.</span><span class="sxs-lookup"><span data-stu-id="7a336-104">Container-based solutions ultimately provide cost savings benefits.</span></span> <span data-ttu-id="7a336-105">Contêineres são uma solução para problemas de implantação porque eliminam o atrito causado por uma ausência de dependências em ambientes de produção.</span><span class="sxs-lookup"><span data-stu-id="7a336-105">Containers are a solution to deployment problems because they remove the friction caused by an absence of dependencies in production environments.</span></span> <span data-ttu-id="7a336-106">Removendo esses problemas, ele melhora significativamente as operações de desenvolvimento/teste, operações de desenvolvimento e produção.</span><span class="sxs-lookup"><span data-stu-id="7a336-106">By removing those issues, it improves Dev/Test, DevOps, and production operations significantly.</span></span>
 
-- <span data-ttu-id="ab1f1-107">Um contêiner do Docker está se tornando a unidade padrão de implantação para qualquer serviço ou aplicativo baseado em servidor.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-107">A Docker container is becoming the standard unit of deployment for any server-based application or service.</span></span>
+- <span data-ttu-id="7a336-107">Um contêiner do Docker está se tornando a unidade padrão de implantação para qualquer serviço ou aplicativo baseado em servidor.</span><span class="sxs-lookup"><span data-stu-id="7a336-107">A Docker container is becoming the standard unit of deployment for any server-based application or service.</span></span>
 
-- <span data-ttu-id="ab1f1-108">Para ambientes de produção, você deve usar um orquestrador (como serviço de malha ou Kubernetes) para hospedar aplicativos baseados em contêineres do Windows escalonável.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-108">For production environments, you should use an orchestrator (like Service Fabric or Kubernetes) to host scalable Windows Containers­­–based applications.</span></span>
+- <span data-ttu-id="7a336-108">Para ambientes de produção, você deve usar um orquestrador (como o Service Fabric ou Kubernetes) para hospedar aplicativos baseados em contêineres do Windows escalonável.</span><span class="sxs-lookup"><span data-stu-id="7a336-108">For production environments, you should use an orchestrator (like Service Fabric or Kubernetes) to host scalable Windows Containers­­–based applications.</span></span>
 
-- <span data-ttu-id="ab1f1-109">Contêineres de hospedagem de VMs do Azure são uma maneira rápida e simple de criar pequenos ambientes de desenvolvimento/teste na nuvem.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-109">Azure VMs hosting containers are a fast and simple way to create small Dev/Test environments in the cloud.</span></span>
+- <span data-ttu-id="7a336-109">As VMs do Azure hospedando contêineres são uma maneira rápida e simple para criar pequenos ambientes de desenvolvimento/teste na nuvem.</span><span class="sxs-lookup"><span data-stu-id="7a336-109">Azure VMs hosting containers are a fast and simple way to create small Dev/Test environments in the cloud.</span></span>
 
-- <span data-ttu-id="ab1f1-110">Instância de gerenciados do banco de dados de SQL do Azure é recomendada por padrão, ao migrar seus bancos de dados relacionais de aplicativos existentes para o Azure.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-110">Azure SQL Database Managed Instance is recommended by default when migrating your relational databases from existing applications to Azure.</span></span>
+- <span data-ttu-id="7a336-110">Instância de gerenciada do banco de dados de SQL do Azure é recomendável por padrão, ao migrar seus bancos de dados relacionais de aplicativos existentes no Azure.</span><span class="sxs-lookup"><span data-stu-id="7a336-110">Azure SQL Database Managed Instance is recommended by default when migrating your relational databases from existing applications to Azure.</span></span>
 
-- <span data-ttu-id="ab1f1-111">O Visual Studio 2017 e Image2Docker são ferramentas básicas para você começar a seus aplicativos existentes do .NET com contêineres do Windows para modernizar acelerando a curva de aprendizado obtendo iniciada.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-111">Visual Studio 2017 and Image2Docker are basic tools for you to start modernizing your existing .NET applications with Windows Containers by accelerating the getting started learning curve.</span></span>
+- <span data-ttu-id="7a336-111">O Visual Studio 2017 e Image2Docker são ferramentas básicas para você começar a modernizar seus aplicativos .NET existentes com contêineres do Windows, acelerando a curva de aprendizado de Introdução ao obter.</span><span class="sxs-lookup"><span data-stu-id="7a336-111">Visual Studio 2017 and Image2Docker are basic tools for you to start modernizing your existing .NET applications with Windows Containers by accelerating the getting started learning curve.</span></span>
 
-- <span data-ttu-id="ab1f1-112">Ao colocar em contêineres de aplicativos em produção será sempre criar ou adotar uma cultura DevOps e ferramentas de DevOps para pipelines de CI/CD, como o Visual Studio Team Services ou Jenkins.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-112">When placing containerized applications in production you will always create or adopt a DevOps culture and DevOps tools for CI/CD pipelines, like Visual Studio Team Services or Jenkins.</span></span>
+- <span data-ttu-id="7a336-112">Ao colocar aplicativos em contêineres em produção será sempre criar ou adotar uma cultura de DevOps e ferramentas do DevOps para os pipelines de CI/CD, como serviços de DevOps do Azure ou o Jenkins.</span><span class="sxs-lookup"><span data-stu-id="7a336-112">When placing containerized applications in production you will always create or adopt a DevOps culture and DevOps tools for CI/CD pipelines, like Azure DevOps Services or Jenkins.</span></span>
 
-- <span data-ttu-id="ab1f1-113">Microsoft Azure fornece o ambiente mais abrangente e completo para modernizar seus aplicativos existentes do .NET Framework com contêineres do Windows, a infraestrutura de nuvem e os serviços de PaaS.</span><span class="sxs-lookup"><span data-stu-id="ab1f1-113">Microsoft Azure provides the most comprehensive and complete environment to modernize your existing .NET Framework applications with Windows Containers, cloud infrastructure and PaaS services.</span></span>
+- <span data-ttu-id="7a336-113">Microsoft Azure fornece o ambiente mais abrangente e completo para modernizar seus aplicativos do .NET Framework existentes com contêineres do Windows, a infraestrutura de nuvem e os serviços de PaaS.</span><span class="sxs-lookup"><span data-stu-id="7a336-113">Microsoft Azure provides the most comprehensive and complete environment to modernize your existing .NET Framework applications with Windows Containers, cloud infrastructure and PaaS services.</span></span>
 
 >[!div class="step-by-step"]
-[<span data-ttu-id="ab1f1-114">Anterior</span><span class="sxs-lookup"><span data-stu-id="ab1f1-114">Previous</span></span>](walkthroughs-technical-get-started-overview.md)
+[<span data-ttu-id="7a336-114">Anterior</span><span class="sxs-lookup"><span data-stu-id="7a336-114">Previous</span></span>](walkthroughs-technical-get-started-overview.md)
