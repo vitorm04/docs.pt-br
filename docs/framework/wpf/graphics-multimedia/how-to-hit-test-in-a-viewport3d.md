@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698491"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507327"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Como fazer teste de clique em um Viewport3D
 Este exemplo mostra como testar ocorrências de elementos visuais 3D em um <xref:System.Windows.Controls.Viewport3D>.  

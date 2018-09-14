@@ -3,11 +3,11 @@ title: Somente os oito primeiros caracteres de um nome de log personalizado são
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699183"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45528799"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Somente os oito primeiros caracteres de um nome de log personalizado são significativos
 Ao verificar os nomes de log de eventos para exclusividade, somente os oito primeiros caracteres são considerados. Um conflito pode resultar de logs de eventos que compartilham seus primeiros oito caracteres.  

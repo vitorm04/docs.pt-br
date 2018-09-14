@@ -2,12 +2,12 @@
 title: Criar um serviço WCF habilitado para AJAX e um cliente do ASP.NET no Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384280"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558035"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Como criar um serviço do WCF habilitado pelo AJAX em um cliente do ASP.NET que acessa o serviço
 
@@ -25,7 +25,7 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
 
 1. No **novo aplicativo Web ASP.NET** caixa de diálogo, selecione **vazia** e, em seguida, selecione **Okey**.
 
-   ![Diálogo do tipo de aplicativo do ASP.NET web no Visual Studio](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Diálogo do tipo de aplicativo do ASP.NET web no Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>Adicionar um formulário da web
 
@@ -51,7 +51,7 @@ Este tópico mostra como usar o Visual Studio para criar um serviço habilitado 
 
 1. No **Adicionar Novo Item** caixa de diálogo, expanda o **instalado** > **Visual C#** > **Web** categoria e, em seguida, Selecione o **serviço do WCF (habilitado para AJAX)** modelo.
 
-   ![Modelo de item (habilitado para AJAX) do serviço WCF no Visual Studio](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![Modelo de item (habilitado para AJAX) do serviço WCF no Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
 1. Nomeie o serviço **CostService** e, em seguida, selecione **Add**.
 
