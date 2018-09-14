@@ -3,11 +3,11 @@ title: Provedores de tipos
 description: 'Saiba como um provedor de tipos F # é um componente que fornece tipos, propriedades e métodos para uso em seus programas.'
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276572"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615242"
 ---
 # <a name="type-providers"></a>Provedores de tipos
 

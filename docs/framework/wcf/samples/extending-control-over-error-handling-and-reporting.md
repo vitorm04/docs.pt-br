@@ -3,11 +3,11 @@ title: Controle estendido através de relatórios e tratamento de erro
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264220"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595289"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Controle estendido através de relatórios e tratamento de erro
 Este exemplo demonstra como estender o controle sobre o tratamento de erros e o relatório de erros no como um serviço do Windows Communication Foundation (WCF) usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface. O exemplo se baseia o [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) com algum código adicional adicionado ao serviço para lidar com erros. O cliente força várias condições de erro. O serviço intercepta os erros e registra em log em um arquivo.  

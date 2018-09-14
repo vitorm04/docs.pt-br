@@ -3,11 +3,11 @@ title: Usando o ExpressionTextBox em um designer personalizado de atividades
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: 34a2d7b2217fb5ce072ad4bc243022ec27828af1
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353246"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594605"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Usando o ExpressionTextBox em um designer personalizado de atividades
 Este exemplo mostra como usar <xref:System.Activities.Presentation.View.ExpressionTextBox> em um designer personalizado de atividade. A atividade personalizado, `MultiAssign`, atribui dois valores de cadeia de caracteres a duas variáveis de cadeia de caracteres. Alguns controles de <xref:System.Activities.Presentation.View.ExpressionTextBox> associação a <xref:System.Activities.InArgument>s e associar a qualquer <xref:System.Activities.OutArgument>S.  
