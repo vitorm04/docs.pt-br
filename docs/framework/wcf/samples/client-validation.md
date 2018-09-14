@@ -3,11 +3,11 @@ title: Validação de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 3f8b5ec3f8652ef50bbda3456669f2abf456472b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262698"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569954"
 ---
 # <a name="client-validation"></a>Validação de cliente
 Com frequência, os serviços publicam metadados para habilitar a geração automática e a configuração de tipos de proxy de cliente. Quando o serviço não for confiável, os aplicativos cliente devem validar que os metadados estão em conformidade com a política do aplicativo cliente em relação à segurança, transações, o tipo de contrato de serviço e assim por diante. O exemplo a seguir demonstra como escrever um cliente de comportamento de ponto de extremidade que valida o ponto de extremidade de serviço para garantir que esse ponto de extremidade de serviço é seguro usar.  

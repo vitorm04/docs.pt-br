@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339327"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593160"
 ---
 # <a name="security-and-race-conditions"></a>Segurança e condições de corrida
 Outra área de interesse é o potencial para brechas de segurança exploradas por condições de corrida. Há várias maneiras em que isso pode acontecer. Os subtópicos seguir descrevem algumas das principais armadilhas que o desenvolvedor deve evitar.  

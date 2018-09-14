@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
 ms.openlocfilehash: 893fdb1b9b3b5ace6b869c7b64ce7483ff523023
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521074"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45590920"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Literais e propriedades de XML não são suportados em código inserido dentro do ASP.NET
 Não há suporte para literais XML e propriedades XML no código inserido dentro do ASP.NET. Para usar recursos XML, mova o código para code-behind.  

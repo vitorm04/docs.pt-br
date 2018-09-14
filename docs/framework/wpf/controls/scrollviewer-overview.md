@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508745"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593798"
 ---
 # <a name="scrollviewer-overview"></a>Visão geral de ScrollViewer
 O conteúdo dentro de uma interface do usuário geralmente é maior do que a área de exibição de uma tela de computador. O <xref:System.Windows.Controls.ScrollViewer> controle fornece uma maneira conveniente de permitir a rolagem de conteúdo em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos. Este tópico apresenta o <xref:System.Windows.Controls.ScrollViewer> elemento e fornece vários exemplos de uso.  

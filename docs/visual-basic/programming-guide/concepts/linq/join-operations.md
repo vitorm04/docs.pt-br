@@ -3,11 +3,11 @@ title: Junte-se operações (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700603"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589044"
 ---
 # <a name="join-operations-visual-basic"></a>Junte-se operações (Visual Basic)
 Uma *junção* de duas fontes de dados é a associação de objetos em uma fonte de dados, com objetos que compartilham um atributo comum em outra fonte de dados.  

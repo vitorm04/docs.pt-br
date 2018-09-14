@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
 ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509495"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569457"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimentos genéricos no Visual Basic
 Um *procedimento genérico*, também chamado um *método genérico*, é um procedimento definido pelo menos um parâmetro de tipo. Isso permite que o código de chamada personalizar os tipos de dados para seus requisitos de cada vez que ele chama o procedimento.  

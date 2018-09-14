@@ -5,11 +5,11 @@ ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 69257099338ae2d50c5ea184c0800d0057e020f4
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342898"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569847"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding com segurança de transporte
 Este exemplo demonstra o uso da segurança de transporte SSL com a associação básica. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  

@@ -3,11 +3,11 @@ title: Contratos de roteamento
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44710457"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45567884"
 ---
 # <a name="routing-contracts"></a>Contratos de roteamento
 Contratos de roteamento definem os padrões de mensagem que o serviço de roteamento pode processar.  Cada contrato é sem especificação de tipo e permite que o serviço receber uma mensagem sem o conhecimento do esquema de mensagem ou ação. Isso permite que o serviço de roteamento genericamente rotear mensagens sem configuração adicional para as especificações das mensagens subjacentes que está sendo roteado.  

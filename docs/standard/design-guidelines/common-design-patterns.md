@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261990"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587463"
 ---
 # <a name="common-design-patterns"></a>Padrões comuns de Design
 Existem vários livros sobre padrões de software, linguagens de padrões e antipadrões que abordam o assunto muito amplo de padrões. Assim, este capítulo fornece diretrizes e as discussões relacionadas a um conjunto muito limitado de padrões que são usados com frequência no design de APIs do .NET Framework.  

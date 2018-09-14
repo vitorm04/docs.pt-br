@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268543"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568755"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Como usar os modificadores e as propriedades GenerateMember
 Quando você coloca um componente em um Windows Form, duas propriedades são fornecidas pelo ambiente de design: `GenerateMember` e `Modifiers`. A propriedade `GenerateMember` especifica quando o Designer de Formulários do Windows gera uma variável de membro de um componente. A propriedade `Modifiers` é o modificador de acesso atribuído a essa variável de membro. Se o valor da propriedade `GenerateMember` for `false`, o valor da propriedade `Modifiers` não terá efeito.  
