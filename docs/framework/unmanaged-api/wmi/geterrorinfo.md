@@ -17,37 +17,37 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5f25777402fa31e72cbbf36f58a6c4cc65542979
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352408"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45560091"
 ---
-# <a name="geterrorinfo-function"></a><span data-ttu-id="256e3-103">Função GetErrorInfo</span><span class="sxs-lookup"><span data-stu-id="256e3-103">GetErrorInfo function</span></span>
-<span data-ttu-id="256e3-104">Recupera informações de erro da chamada de função anterior.</span><span class="sxs-lookup"><span data-stu-id="256e3-104">Retrieves error information from the previous function call.</span></span>  
+# <a name="geterrorinfo-function"></a><span data-ttu-id="9efb4-103">Função GetErrorInfo</span><span class="sxs-lookup"><span data-stu-id="9efb4-103">GetErrorInfo function</span></span>
+<span data-ttu-id="9efb4-104">Recupera informações de erro da chamada de função anterior.</span><span class="sxs-lookup"><span data-stu-id="9efb4-104">Retrieves error information from the previous function call.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="256e3-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="256e3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9efb4-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9efb4-105">Syntax</span></span>  
   
 ```  
 IErrorInfo* GetErrorInfo(); 
 ```  
 
-## <a name="return-value"></a><span data-ttu-id="256e3-106">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="256e3-106">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="9efb4-106">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="9efb4-106">Return value</span></span>
 
-<span data-ttu-id="256e3-107">Um ponteiro para um [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) objeto se a chamada de função for bem-sucedida, ou `null` se ele falhar.</span><span class="sxs-lookup"><span data-stu-id="256e3-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
+<span data-ttu-id="9efb4-107">Um ponteiro para um [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) objeto se a chamada de função for bem-sucedida, ou `null` se ele falhar.</span><span class="sxs-lookup"><span data-stu-id="9efb4-107">An pointer to an [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) object if the function call succeeds, or `null` if it fails.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="256e3-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="256e3-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9efb4-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="9efb4-108">Remarks</span></span>
 
-<span data-ttu-id="256e3-109">Essa função encapsula uma chamada para o [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) método.</span><span class="sxs-lookup"><span data-stu-id="256e3-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="9efb4-109">Essa função encapsula uma chamada para o [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) método.</span><span class="sxs-lookup"><span data-stu-id="9efb4-109">This function wraps a call to the [IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="256e3-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="256e3-110">Requirements</span></span>  
- <span data-ttu-id="256e3-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="256e3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9efb4-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9efb4-110">Requirements</span></span>  
+ <span data-ttu-id="9efb4-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9efb4-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="256e3-112">**Cabeçalho:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="256e3-112">**Header:** WMINet_Utils.def</span></span>  
+ <span data-ttu-id="9efb4-112">**Cabeçalho:** WMINet_Utils.def</span><span class="sxs-lookup"><span data-stu-id="9efb4-112">**Header:** WMINet_Utils.def</span></span>  
   
- <span data-ttu-id="256e3-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="256e3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="9efb4-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="9efb4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="256e3-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="256e3-114">See also</span></span>  
-[<span data-ttu-id="256e3-115">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="256e3-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9efb4-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9efb4-114">See also</span></span>  
+[<span data-ttu-id="9efb4-115">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="9efb4-115">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
