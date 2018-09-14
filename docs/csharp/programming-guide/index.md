@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271212"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515126"
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
 Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.  

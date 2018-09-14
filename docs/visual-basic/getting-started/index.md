@@ -1,16 +1,16 @@
 ---
 title: Introdução ao Visual Basic
-ms.date: 08/10/2017
+ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 373f5815e1ca466545da4e2368bdf55e944d28f8
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367568"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45557767"
 ---
 # <a name="get-started-with-visual-basic"></a>Introdução ao Visual Basic
 Esta seção da documentação ajuda você a começar o desenvolvimento de aplicativos do Visual Basic.  
@@ -31,12 +31,6 @@ Lista as alterações nesta versão que podem evitar que um aplicativo compile o
   
 [Recursos Adicionais para Programadores do Visual Basic](additional-resources.md)  
 Fornece uma lista de sites e grupos de notícias que podem ajudá-lo a encontrar respostas para problemas comuns.  
-
-## <a name="develop-net-core-applications-with-visual-basic"></a>Desenvolver aplicativos .NET Core com o Visual Basic
-
-[Criar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) 
-
-[Compilação de uma biblioteca de classes com Visual Basic e com o .NET Core no Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
 
 ## <a name="see-also"></a>Consulte também
  [Obtenha o Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
