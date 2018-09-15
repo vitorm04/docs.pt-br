@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
 ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515854"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625614"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Desenvolvendo aplicativos com o Visual Basic
 Esta seção aborda documentação conceitual para a linguagem do Visual Basic.  

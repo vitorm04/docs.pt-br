@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
 ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569327"
+ms.locfileid: "45625458"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Visão geral do controle ListView (Windows Forms)
 O controle <xref:System.Windows.Forms.ListView> do Windows Forms exibe uma lista de itens com ícones. É possível usar uma exibição de lista para criar uma interface do usuário, como o painel direito do Windows Explorer. O controle tem quatro modos de exibição: LargeIcon, SmallIcon, Lista e Detalhes.  
