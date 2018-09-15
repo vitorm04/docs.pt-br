@@ -9,11 +9,11 @@ ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529416"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649432"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada ao falar sobre segurança pode não ser familiar. Este tópico fornece explicações curtas sobre alguns dos termos de segurança, mas não se destina a fornecer uma documentação abrangente para cada item.  

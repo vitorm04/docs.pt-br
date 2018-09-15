@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222007"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649992"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar origens de rastreamento para emitir rastreamentos e definir níveis de rastreamento, rastreamento de atividades do conjunto e propagação para dar suporte à correlação de rastreamento de ponta a ponta e definir ouvintes de rastreamento para acessar rastreamentos.  

@@ -3,11 +3,11 @@ title: Mapeamentos de tipos de dados do SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511377"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649530"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapeamentos de tipos de dados do SQL Server
 O SQL Server e o .NET Framework baseiam-se em diferentes sistemas de tipo. Por exemplo, a estrutura <xref:System.Decimal> do .NET Framework tem uma escala máxima de 28, enquanto os tipos de dados decimais e numéricos do SQL Server têm uma escala máximo de 38. Para manter a integridade dos dados ao ler e gravar dados, o <xref:System.Data.SqlClient.SqlDataReader> expõe métodos acessadores tipados específicos do SQL Server que retornam objetos de <xref:System.Data.SqlTypes>, bem como métodos acessadores que retornam tipos do .NET Framework. Os tipos do SQL Server e do .NET Framework também são representados por enumerações nas classes <xref:System.Data.DbType> e <xref:System.Data.SqlDbType>, que você pode usar ao especificar tipos de dados <xref:System.Data.SqlClient.SqlParameter>.  

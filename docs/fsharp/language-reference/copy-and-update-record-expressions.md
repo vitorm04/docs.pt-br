@@ -4,11 +4,11 @@ description: Saiba como escrever um 'Copiar e atualizar registro expression' que
 author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494064"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638341"
 ---
 # <a name="copy-and-update-record-expressions"></a>Copiar e atualizar expressões de registro
 

@@ -4,32 +4,32 @@ description: Ciclo de vida de aplicativo do Docker em contêineres com a platafo
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b915c53b70192139c64c63d8b47110263e1621d0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104459"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639179"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Fluxo de trabalho de DevOps de aplicativos do Docker com as ferramentas da Microsoft
 
-O Microsoft Visual Studio, Visual Studio Team Services, Team Foundation Server e Application Insights fornecem um ecossistema abrangente para desenvolvimento e operações de TI que proporcionam à sua equipe as ferramentas para gerenciar projetos e compilar, testar e implantar aplicativos em contêineres com rapidez.
+Microsoft Visual Studio, o serviços de DevOps do Azure, o Team Foundation Server e o Application Insights fornecem um ecossistema abrangente para desenvolvimento e operações de TI que proporcionam à sua equipe as ferramentas para gerenciar projetos e rapidamente criar, testar e implantar aplicativos em contêineres.
 
-Com o Visual Studio e o Visual Studio Team Services na nuvem, juntamente com o Team Foundation Server local, as equipes de desenvolvimento podem compilar, testar e liberar aplicativos em contêineres direcionados para qualquer plataforma (Windows ou Linux) de forma produtiva.
+Com o Visual Studio e serviços do Azure DevOps na nuvem, juntamente com o Team Foundation Server local, as equipes de desenvolvimento produtiva podem criar, testar e liberar aplicativos em contêineres direcionados para qualquer plataforma (Windows ou Linux).
 
-As ferramentas da Microsoft podem automatizar o pipeline para implementações específicas de aplicativos em contêineres — Docker, .NET Core ou qualquer combinação com outras plataformas — desde compilações globais e CI (Integração Contínua) e testes com o Visual Studio Team Services ou Team Foundation Server, até CD (Implantação Contínua) para ambientes do Docker (Desenvolvimento, Preparo, Produção) e para transmitir informações de análise sobre os serviços para a equipe de desenvolvimento por meio do Application Insights. Cada confirmação de código pode iniciar uma compilação (CI) e implantar automaticamente os serviços em ambientes em contêineres específicos (CD).
+Ferramentas da Microsoft podem automatizar o pipeline para implementações específicas de aplicativos em contêineres — Docker, .NET Core ou qualquer combinação com outras plataformas — desde compilações globais e CI (integração contínua) e testes com serviços de DevOps do Azure ou a equipe Foundation Server, a CD (implantação contínua) para ambientes do Docker (desenvolvimento, preparo, produção) e para transmitir informações de análise sobre os serviços para a equipe de desenvolvimento por meio do Application Insights. Cada confirmação de código pode iniciar uma compilação (CI) e implantar automaticamente os serviços em ambientes em contêineres específicos (CD).
 
 Os desenvolvedores e testadores podem provisionar ambientes de desenvolvimento e teste semelhante à produção com rapidez e facilidade baseados no Docker usando modelos no Microsoft Azure.
 
-A complexidade do desenvolvimento de aplicativos em contêineres aumenta de maneira estável dependendo das necessidades de complexidade e escalabilidade do negócio. Um bom exemplo disso são os aplicativos baseados em arquiteturas de microsserviços. Para ter êxito nesse ambiente, o projeto precisa automatizar todo o ciclo de vida — não apenas o build e a implantação, mas também deve gerenciar versões junto com a coleta de telemetria. O Visual Studio Team Services e o Azure oferecem os seguintes recursos:
+A complexidade do desenvolvimento de aplicativos em contêineres aumenta de maneira estável dependendo das necessidades de complexidade e escalabilidade do negócio. Um bom exemplo disso são os aplicativos baseados em arquiteturas de microsserviços. Para ter êxito nesse ambiente, o projeto precisa automatizar todo o ciclo de vida — não apenas o build e a implantação, mas também deve gerenciar versões junto com a coleta de telemetria. Serviços de DevOps do Azure e o Azure oferecem os seguintes recursos:
 
--   O gerenciamento de código-fonte do Visual Studio Team Services/Team Foundation Server (baseado no Git ou Controle de Versão do Team Foundation), planejamento do Agile (Agile, Scrum e CMMI têm suporte), CI, Release Management e outras ferramentas para equipes Agile.
+-   Gerenciamento de código de origem de DevOps Services/Team Foundation Server do Azure (baseado em Git ou Team Foundation Version Control), planejamento Agile (Agile, Scrum e CMMI têm suporte), CI, gerenciamento de versão e outras ferramentas para equipes Agile.
 
--   O Visual Studio Team Services/Team Foundation Server inclui um ecossistema avançado e crescente de extensões internas e de terceiros com as quais você pode facilmente construir um CI, compilar, testar, entregar e gerenciar versões com pipeline para microsserviços.
+-   Azure DevOps Services/Team Foundation Server incluem um ecossistema avançado e crescente de extensões de primeiro e terceiro com a qual você facilmente pode construir um CI, de compilação, teste, entrega e gerenciamento pipeline para microsserviços da versão.
 
--   Execute testes automatizados como parte de seu pipeline de build no Visual Studio Team Services.
+-   Execute testes automatizados como parte de seu pipeline de compilação nos serviços de DevOps do Azure.
 
--   O Visual Studio Team Services pode aprimorar o ciclo de vida de DevOps com distribuição para vários ambientes, não apenas para ambientes de produção, mas também para teste, incluindo experimentação A/B, [versões canário](https://martinfowler.com/bliki/CanaryRelease.html) e assim por diante.
+-   Serviços de DevOps do Azure pode aumentar o DevOps ciclo de vida com a entrega em vários ambientes, não apenas para ambientes de produção, mas também para teste, incluindo um / experimentação de B [versões canário](https://martinfowler.com/bliki/CanaryRelease.html)e assim por diante.
 
 -   As organizações podem provisionar facilmente contêineres do Docker com base em imagens privadas armazenadas no Registro de Contêiner do Azure juntamente com as dependências em componentes do Azure (Dados, PaaS, etc.) usando modelos do Azure Resource Manager com ferramentas com a qual elas já estão familiarizadas a trabalhar.
 
