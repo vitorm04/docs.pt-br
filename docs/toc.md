@@ -82,7 +82,7 @@
 ### [Introdução ao .NET Core em macOS usando o Visual Studio para Mac](core/tutorials/using-on-mac-vs.md)
 ### [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Introdução ao .NET Core usando as ferramentas da CLI](core/tutorials/using-with-xplat-cli.md)
-#### [Organizar e testar projetos com a linha de comando do .NET Core](core/tutorials/testing-with-cli.md)
+### [Organizar e testar projetos com a linha de comando do .NET Core](core/tutorials/testing-with-cli.md)
 ### [Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](core/tutorials/libraries.md)
 ### [Desenvolvendo aplicativos ASP.NET Core](core/tutorials/aspnet-core.md)
 ### [Como Gerenciar Versões de Dependência de Pacote para o .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
