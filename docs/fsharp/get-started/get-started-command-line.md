@@ -3,48 +3,48 @@ title: 'Introdução ao F # com ferramentas de linha de comando'
 description: 'Saiba como criar uma solução multiprojeto simples em F # usando a CLI do .NET Core em qualquer sistema operacional (Windows, macOs ou Linux).'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569769"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45673903"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="be757-103">Introdução ao F # com a CLI do .NET Core</span><span class="sxs-lookup"><span data-stu-id="be757-103">Get started with F# with the .NET Core CLI</span></span>
+# <a name="get-started-with-f-with-the-net-core-cli"></a><span data-ttu-id="9bb52-103">Introdução ao F # com a CLI do .NET Core</span><span class="sxs-lookup"><span data-stu-id="9bb52-103">Get started with F# with the .NET Core CLI</span></span>
 
-<span data-ttu-id="be757-104">Este artigo aborda como você pode começar com o F # em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="be757-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="be757-105">Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="be757-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
+<span data-ttu-id="9bb52-104">Este artigo aborda como você pode começar com o F # em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="9bb52-104">This article covers how you can get started with F# on any operating system (Windows, macOS, or Linux) with the .NET Core CLI.</span></span> <span data-ttu-id="9bb52-105">Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="9bb52-105">It goes through building a multi-project solution with a class library that is called by a console application.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="be757-106">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="be757-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="9bb52-106">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="9bb52-106">Prerequisites</span></span>
 
-<span data-ttu-id="be757-107">Para começar, você deve instalar a versão mais recente [SDK do .NET Core](https://www.microsoft.com/net/download/).</span><span class="sxs-lookup"><span data-stu-id="be757-107">To begin, you must install the latest [.NET Core SDK](https://www.microsoft.com/net/download/).</span></span>
+<span data-ttu-id="9bb52-107">Para começar, você deve instalar a versão mais recente [SDK do .NET Core](https://www.microsoft.com/net/download/).</span><span class="sxs-lookup"><span data-stu-id="9bb52-107">To begin, you must install the latest [.NET Core SDK](https://www.microsoft.com/net/download/).</span></span>
 
-<span data-ttu-id="be757-108">Este artigo pressupõe que você sabe como usar uma linha de comando e tiver um texto preferido de editor.</span><span class="sxs-lookup"><span data-stu-id="be757-108">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="be757-109">Se você não usá-lo, já [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto para F #.</span><span class="sxs-lookup"><span data-stu-id="be757-109">If you don't already use it, [Visual Studio Code](get-started-vscode.md) is a great option as a text editor for F#.</span></span>
+<span data-ttu-id="9bb52-108">Este artigo pressupõe que você sabe como usar uma linha de comando e tiver um texto preferido de editor.</span><span class="sxs-lookup"><span data-stu-id="9bb52-108">This article assumes that you know how to use a command line and have a preferred text editor.</span></span> <span data-ttu-id="9bb52-109">Se você não usá-lo, já [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto para F #.</span><span class="sxs-lookup"><span data-stu-id="9bb52-109">If you don't already use it, [Visual Studio Code](get-started-vscode.md) is a great option as a text editor for F#.</span></span>
 
-## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="be757-110">Crie uma solução multiprojeto simples</span><span class="sxs-lookup"><span data-stu-id="be757-110">Build a simple multi-project solution</span></span>
+## <a name="build-a-simple-multi-project-solution"></a><span data-ttu-id="9bb52-110">Crie uma solução multiprojeto simples</span><span class="sxs-lookup"><span data-stu-id="9bb52-110">Build a simple multi-project solution</span></span>
 
-<span data-ttu-id="be757-111">Abra um prompt de comando/terminal e use o [dotnet new](../../core/tools/dotnet-new.md) comando para criar um novo arquivo de solução chamado `FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="be757-111">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
+<span data-ttu-id="9bb52-111">Abra um prompt de comando/terminal e use o [dotnet new](../../core/tools/dotnet-new.md) comando para criar um novo arquivo de solução chamado `FSNetCore`:</span><span class="sxs-lookup"><span data-stu-id="9bb52-111">Open a command prompt/terminal and use the [dotnet new](../../core/tools/dotnet-new.md) command to create new solution file called `FSNetCore`:</span></span>
 
 ```console
 dotnet new sln -o FSNetCore
 ```
 
-<span data-ttu-id="be757-112">A seguinte estrutura de diretório é produzida depois de executar o comando anterior:</span><span class="sxs-lookup"><span data-stu-id="be757-112">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="9bb52-112">A seguinte estrutura de diretório é produzida depois de executar o comando anterior:</span><span class="sxs-lookup"><span data-stu-id="9bb52-112">The following directory structure is produced after running the previous command:</span></span>
 
 ```console
 FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a><span data-ttu-id="be757-113">Escrever uma biblioteca de classes</span><span class="sxs-lookup"><span data-stu-id="be757-113">Write a class library</span></span>
+### <a name="write-a-class-library"></a><span data-ttu-id="9bb52-113">Escrever uma biblioteca de classes</span><span class="sxs-lookup"><span data-stu-id="9bb52-113">Write a class library</span></span>
 
-<span data-ttu-id="be757-114">Altere os diretórios para *FSNetCore*.</span><span class="sxs-lookup"><span data-stu-id="be757-114">Change directories to *FSNetCore*.</span></span>
+<span data-ttu-id="9bb52-114">Altere os diretórios para *FSNetCore*.</span><span class="sxs-lookup"><span data-stu-id="9bb52-114">Change directories to *FSNetCore*.</span></span>
 
-<span data-ttu-id="be757-115">Use o `dotnet new` de comando, crie um projeto de biblioteca de classes na **src** pasta denominada biblioteca.</span><span class="sxs-lookup"><span data-stu-id="be757-115">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
+<span data-ttu-id="9bb52-115">Use o `dotnet new` de comando, crie um projeto de biblioteca de classes na **src** pasta denominada biblioteca.</span><span class="sxs-lookup"><span data-stu-id="9bb52-115">Use the `dotnet new` command, create a class library project in the **src** folder named Library.</span></span>
 
 ```console
 dotnet new classlib -lang F# -o src/Library
 ```
 
-<span data-ttu-id="be757-116">A seguinte estrutura de diretório é produzida depois de executar o comando anterior:</span><span class="sxs-lookup"><span data-stu-id="be757-116">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="9bb52-116">A seguinte estrutura de diretório é produzida depois de executar o comando anterior:</span><span class="sxs-lookup"><span data-stu-id="9bb52-116">The following directory structure is produced after running the previous command:</span></span>
 
 ```console
 └── FSNetCore
@@ -55,7 +55,7 @@ dotnet new classlib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-<span data-ttu-id="be757-117">Substitua o conteúdo do `Library.fs` com o código a seguir:</span><span class="sxs-lookup"><span data-stu-id="be757-117">Replace the contents of `Library.fs` with the following code:</span></span>
+<span data-ttu-id="9bb52-117">Substitua o conteúdo do `Library.fs` com o código a seguir:</span><span class="sxs-lookup"><span data-stu-id="9bb52-117">Replace the contents of `Library.fs` with the following code:</span></span>
 
 ```fsharp
 module Library
@@ -66,29 +66,29 @@ let getJsonNetJson value =
     sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
-<span data-ttu-id="be757-118">Adicione o pacote do NuGet newtonsoft. JSON ao projeto de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="be757-118">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
+<span data-ttu-id="9bb52-118">Adicione o pacote do NuGet newtonsoft. JSON ao projeto de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="9bb52-118">Add the Newtonsoft.Json NuGet package to the Library project.</span></span>
 
 ```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-<span data-ttu-id="be757-119">Adicione a `Library` do projeto para o `FSNetCore` solução usando o [dotnet sln adicionar](../../core/tools/dotnet-sln.md) comando:</span><span class="sxs-lookup"><span data-stu-id="be757-119">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
+<span data-ttu-id="9bb52-119">Adicione a `Library` do projeto para o `FSNetCore` solução usando o [dotnet sln adicionar](../../core/tools/dotnet-sln.md) comando:</span><span class="sxs-lookup"><span data-stu-id="9bb52-119">Add the `Library` project to the `FSNetCore` solution using the [dotnet sln add](../../core/tools/dotnet-sln.md) command:</span></span>
 
 ```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="be757-120">Executar `dotnet build` para compilar o projeto.</span><span class="sxs-lookup"><span data-stu-id="be757-120">Run `dotnet build` to build the project.</span></span> <span data-ttu-id="be757-121">Dependências não resolvidas serão restauradas ao compilar.</span><span class="sxs-lookup"><span data-stu-id="be757-121">Unresolved dependencies will be restored when building.</span></span>
+<span data-ttu-id="9bb52-120">Executar `dotnet build` para compilar o projeto.</span><span class="sxs-lookup"><span data-stu-id="9bb52-120">Run `dotnet build` to build the project.</span></span> <span data-ttu-id="9bb52-121">Dependências não resolvidas serão restauradas ao compilar.</span><span class="sxs-lookup"><span data-stu-id="9bb52-121">Unresolved dependencies will be restored when building.</span></span>
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="be757-122">Escrever um aplicativo de console que consome a biblioteca de classes</span><span class="sxs-lookup"><span data-stu-id="be757-122">Write a console application that consumes the class library</span></span>
+### <a name="write-a-console-application-that-consumes-the-class-library"></a><span data-ttu-id="9bb52-122">Escrever um aplicativo de console que consome a biblioteca de classes</span><span class="sxs-lookup"><span data-stu-id="9bb52-122">Write a console application that consumes the class library</span></span>
 
-<span data-ttu-id="be757-123">Use o `dotnet new` de comando, crie um aplicativo de console na **src** pasta aplicativo de chamada.</span><span class="sxs-lookup"><span data-stu-id="be757-123">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
+<span data-ttu-id="9bb52-123">Use o `dotnet new` de comando, crie um aplicativo de console na **src** pasta aplicativo de chamada.</span><span class="sxs-lookup"><span data-stu-id="9bb52-123">Use the `dotnet new` command, create a console application in the **src** folder named App.</span></span>
 
 ```console
 dotnet new console -lang F# -o src/App
 ```
 
-<span data-ttu-id="be757-124">A seguinte estrutura de diretório é produzida depois de executar o comando anterior:</span><span class="sxs-lookup"><span data-stu-id="be757-124">The following directory structure is produced after running the previous command:</span></span>
+<span data-ttu-id="9bb52-124">A seguinte estrutura de diretório é produzida depois de executar o comando anterior:</span><span class="sxs-lookup"><span data-stu-id="9bb52-124">The following directory structure is produced after running the previous command:</span></span>
 
 ```console
 └── FSNetCore
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-<span data-ttu-id="be757-125">Substitua o conteúdo do `Program.fs` arquivo pelo código a seguir:</span><span class="sxs-lookup"><span data-stu-id="be757-125">Replace the contents of the `Program.fs` file with the following code:</span></span>
+<span data-ttu-id="9bb52-125">Substitua o conteúdo do `Program.fs` arquivo pelo código a seguir:</span><span class="sxs-lookup"><span data-stu-id="9bb52-125">Replace the contents of the `Program.fs` file with the following code:</span></span>
 
 ```fsharp
 open System
@@ -119,28 +119,28 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="be757-126">Adicione uma referência para o `Library` projeto usando o [dotnet adicionar referência](../../core/tools/dotnet-add-reference.md).</span><span class="sxs-lookup"><span data-stu-id="be757-126">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
+<span data-ttu-id="9bb52-126">Adicione uma referência para o `Library` projeto usando o [dotnet adicionar referência](../../core/tools/dotnet-add-reference.md).</span><span class="sxs-lookup"><span data-stu-id="9bb52-126">Add a reference to the `Library` project using [dotnet add reference](../../core/tools/dotnet-add-reference.md).</span></span>
 
 ```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-<span data-ttu-id="be757-127">Adicione a `App` do projeto para o `FSNetCore` solução usando o `dotnet sln add` comando:</span><span class="sxs-lookup"><span data-stu-id="be757-127">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
+<span data-ttu-id="9bb52-127">Adicione a `App` do projeto para o `FSNetCore` solução usando o `dotnet sln add` comando:</span><span class="sxs-lookup"><span data-stu-id="9bb52-127">Add the `App` project to the `FSNetCore` solution using the `dotnet sln add` command:</span></span>
 
 ```console
 dotnet sln add src/App/App.fsproj
 ```
 
-<span data-ttu-id="be757-128">Restaure as dependências do NuGet `dotnet restore` ([veja Observação](#dotnet-restore-note)) e execute `dotnet build` para compilar o projeto.</span><span class="sxs-lookup"><span data-stu-id="be757-128">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
+<span data-ttu-id="9bb52-128">Restaure as dependências do NuGet `dotnet restore` ([veja Observação](#dotnet-restore-note)) e execute `dotnet build` para compilar o projeto.</span><span class="sxs-lookup"><span data-stu-id="9bb52-128">Restore the NuGet dependencies, `dotnet restore` ([see note](#dotnet-restore-note)) and run `dotnet build` to build the project.</span></span>
 
-<span data-ttu-id="be757-129">Altere o diretório para o `src/App` projeto de console e executar o projeto passando `Hello World` como argumentos:</span><span class="sxs-lookup"><span data-stu-id="be757-129">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
+<span data-ttu-id="9bb52-129">Altere o diretório para o `src/App` projeto de console e executar o projeto passando `Hello World` como argumentos:</span><span class="sxs-lookup"><span data-stu-id="9bb52-129">Change directory to the `src/App` console project and run the project passing `Hello World` as arguments:</span></span>
 
 ```console
 cd src/App
 dotnet run Hello World
 ```
 
-<span data-ttu-id="be757-130">Você verá os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="be757-130">You should see the following results:</span></span>
+<span data-ttu-id="9bb52-130">Você verá os seguintes resultados:</span><span class="sxs-lookup"><span data-stu-id="9bb52-130">You should see the following results:</span></span>
 
 ```console
 Nice command-line arguments! Here's what JSON.NET has to say about them:
@@ -149,6 +149,6 @@ I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="be757-131">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="be757-131">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="9bb52-131">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="9bb52-131">Next steps</span></span>
 
-<span data-ttu-id="be757-132">Em seguida, confira a [Tour do F #](../tour.md) para saber mais sobre os diferentes recursos do F #.</span><span class="sxs-lookup"><span data-stu-id="be757-132">Next, check out the [Tour of F#](../tour.md) to learn more about different F# features.</span></span>
+<span data-ttu-id="9bb52-132">Em seguida, confira a [Tour do F #](../tour.md) para saber mais sobre os diferentes recursos do F #.</span><span class="sxs-lookup"><span data-stu-id="9bb52-132">Next, check out the [Tour of F#](../tour.md) to learn more about different F# features.</span></span>
