@@ -6,11 +6,11 @@ ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dca266066a4e53a57789210fd61e90edfcc13b79
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45687394"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Acessando dados XML usando XPathNavigator
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece métodos para navegar, nós dados XML do extrair e para acessar dados fortemente tipados XML em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> .  

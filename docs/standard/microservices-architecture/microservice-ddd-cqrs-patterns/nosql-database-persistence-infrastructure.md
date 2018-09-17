@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
 ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251791"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45685719"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Usando bancos de dados NoSQL como uma infraestrutura de persistência
 
