@@ -5,11 +5,11 @@ helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 ms.openlocfilehash: d3920fff26eccdd509c72143ff8553fb0c501bbc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597635"
+ms.locfileid: "45698143"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estrutura geral de um programa em C# (Guia de Programação em C#)
 Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter zero ou mais namespaces. Um namespace pode conter tipos como classes, estruturas, interfaces, enumerações e delegados, além de outros namespaces. A seguir está o esqueleto de um programa em C# que contém todos esses elementos.  
