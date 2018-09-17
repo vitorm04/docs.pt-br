@@ -1,6 +1,6 @@
 ---
-title: 'O que é o F#'
-description: 'Saiba mais sobre o que o F# é linguagem de programação e o que é a programação em F# como. Saiba mais sobre tipos de dados avançados, funções e como elas se encaixam.'
+title: O que é o F#
+description: 'Saiba mais sobre o que o F # é linguagem de programação e o que é a programação em F # como. Saiba mais sobre tipos de dados avançados, funções e como elas se encaixam.'
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
 ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
