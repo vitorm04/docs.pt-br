@@ -8,37 +8,37 @@ helpviewer_keywords:
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
 ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271241"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609509"
 ---
-# <a name="-gt-operator-c-reference"></a><span data-ttu-id="f2216-102">Operador -&gt; (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="f2216-102">-&gt; Operator (C# Reference)</span></span>
-<span data-ttu-id="f2216-103">O operador `->` combina a desreferência de ponteiro e o acesso de membro.</span><span class="sxs-lookup"><span data-stu-id="f2216-103">The `->` operator combines pointer dereferencing and member access.</span></span>  
+# <a name="-gt-operator-c-reference"></a><span data-ttu-id="570eb-102">Operador -&gt; (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="570eb-102">-&gt; Operator (C# Reference)</span></span>
+<span data-ttu-id="570eb-103">O operador `->` combina a desreferência de ponteiro e o acesso de membro.</span><span class="sxs-lookup"><span data-stu-id="570eb-103">The `->` operator combines pointer dereferencing and member access.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f2216-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="f2216-104">Remarks</span></span>  
- <span data-ttu-id="f2216-105">Uma expressão da forma,</span><span class="sxs-lookup"><span data-stu-id="f2216-105">An expression of the form,</span></span>  
+## <a name="remarks"></a><span data-ttu-id="570eb-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="570eb-104">Remarks</span></span>  
+ <span data-ttu-id="570eb-105">Uma expressão da forma,</span><span class="sxs-lookup"><span data-stu-id="570eb-105">An expression of the form,</span></span>  
   
 ```csharp  
 x->y  
 ```  
   
- <span data-ttu-id="f2216-106">(em que `x` é um ponteiro de tipo `T*` e `y` é um membro de `T`) é equivalente a,</span><span class="sxs-lookup"><span data-stu-id="f2216-106">(where `x` is a pointer of type `T*` and `y` is a member of `T`) is equivalent to,</span></span>  
+ <span data-ttu-id="570eb-106">(em que `x` é um ponteiro de tipo `T*` e `y` é um membro de `T`) é equivalente a,</span><span class="sxs-lookup"><span data-stu-id="570eb-106">(where `x` is a pointer of type `T*` and `y` is a member of `T`) is equivalent to,</span></span>  
   
 ```csharp  
 (*x).y  
 ```  
   
- <span data-ttu-id="f2216-107">O operador `->` pode ser usado apenas no código que está marcado como [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="f2216-107">The `->` operator can be used only in code that is marked as [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
+ <span data-ttu-id="570eb-107">O operador `->` pode ser usado apenas no código que está marcado como [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="570eb-107">The `->` operator can be used only in code that is marked as [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
   
- <span data-ttu-id="f2216-108">O operador `->` não pode ser sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="f2216-108">The `->` operator cannot be overloaded.</span></span>  
+ <span data-ttu-id="570eb-108">O operador `->` não pode ser sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="570eb-108">The `->` operator cannot be overloaded.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f2216-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f2216-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="570eb-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="570eb-109">Example</span></span>  
  [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="f2216-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f2216-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="570eb-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="570eb-110">See Also</span></span>
 
-- [<span data-ttu-id="f2216-111">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="f2216-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="f2216-112">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="f2216-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f2216-113">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="f2216-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="570eb-111">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="570eb-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="570eb-112">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="570eb-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="570eb-113">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="570eb-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

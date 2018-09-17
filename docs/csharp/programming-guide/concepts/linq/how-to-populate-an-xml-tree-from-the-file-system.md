@@ -3,17 +3,17 @@ title: Como preencher uma árvore XML do sistema de arquivos (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 ms.openlocfilehash: 7bddab1942c5a673969e271338f17705914f81a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204988"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609012"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="6d055-102">Como preencher uma árvore XML do sistema de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="6d055-102">How to: Populate an XML Tree from the File System (C#)</span></span>
-<span data-ttu-id="6d055-103">Um aplicativo comum e útil das árvores XML é como um armazenamento de dados hierárquica de nome/valor.</span><span class="sxs-lookup"><span data-stu-id="6d055-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="6d055-104">Você pode preencher uma árvore XML com dados hierárquicos, e consultar-la em seguida, transformar-la e, se necessário, serializar-la.</span><span class="sxs-lookup"><span data-stu-id="6d055-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="6d055-105">Neste cenário de uso, muitas de semântica específica XML, como namespaces e comportamento de espaço em branco, não são importantes.</span><span class="sxs-lookup"><span data-stu-id="6d055-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="6d055-106">Em vez disso, você estiver usando a árvore XML como um pequeno, na memória, base de dados hierárquica de usuário único.</span><span class="sxs-lookup"><span data-stu-id="6d055-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="000ae-102">Como preencher uma árvore XML do sistema de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="000ae-102">How to: Populate an XML Tree from the File System (C#)</span></span>
+<span data-ttu-id="000ae-103">Um aplicativo comum e útil das árvores XML é como um armazenamento de dados hierárquica de nome/valor.</span><span class="sxs-lookup"><span data-stu-id="000ae-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="000ae-104">Você pode preencher uma árvore XML com dados hierárquicos, e consultar-la em seguida, transformar-la e, se necessário, serializar-la.</span><span class="sxs-lookup"><span data-stu-id="000ae-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="000ae-105">Neste cenário de uso, muitas de semântica específica XML, como namespaces e comportamento de espaço em branco, não são importantes.</span><span class="sxs-lookup"><span data-stu-id="000ae-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="000ae-106">Em vez disso, você estiver usando a árvore XML como um pequeno, na memória, base de dados hierárquica de usuário único.</span><span class="sxs-lookup"><span data-stu-id="000ae-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6d055-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6d055-107">Example</span></span>  
- <span data-ttu-id="6d055-108">O exemplo a seguir preenche uma árvore XML do sistema de arquivos local usando a recursão.</span><span class="sxs-lookup"><span data-stu-id="6d055-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="6d055-109">Consulta na árvore, calculando o total de tamanhos de todos os arquivos na árvore.</span><span class="sxs-lookup"><span data-stu-id="6d055-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="000ae-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="000ae-107">Example</span></span>  
+ <span data-ttu-id="000ae-108">O exemplo a seguir preenche uma árvore XML do sistema de arquivos local usando a recursão.</span><span class="sxs-lookup"><span data-stu-id="000ae-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="000ae-109">Consulta na árvore, calculando o total de tamanhos de todos os arquivos na árvore.</span><span class="sxs-lookup"><span data-stu-id="000ae-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -46,7 +46,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="6d055-110">Este exemplo gerencia a saída semelhante ao seguinte:</span><span class="sxs-lookup"><span data-stu-id="6d055-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="000ae-110">Este exemplo gerencia a saída semelhante ao seguinte:</span><span class="sxs-lookup"><span data-stu-id="000ae-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -116,6 +116,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6d055-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6d055-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="000ae-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="000ae-111">See Also</span></span>
 
-- [<span data-ttu-id="6d055-112">Técnicas avançadas de consulta (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="6d055-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="000ae-112">Técnicas avançadas de consulta (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="000ae-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
