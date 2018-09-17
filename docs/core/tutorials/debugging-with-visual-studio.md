@@ -4,12 +4,13 @@ description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Vi
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
-ms.openlocfilehash: 3c130c2eebdf79c1db171cb2171aa68dfff728a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218424"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696140"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depurar seu aplicativo Olá, Mundo com o Visual Studio 2017
 
