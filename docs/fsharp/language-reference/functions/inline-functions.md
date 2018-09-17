@@ -3,11 +3,11 @@ title: Funções embutidas (F#)
 description: 'Saiba como usar F # embutido funções integradas diretamente ao código de chamada.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685667"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45745939"
 ---
 # <a name="inline-functions"></a>Funções embutidas
 

@@ -3,11 +3,11 @@ title: 'Loops: expressão for...in (F#)'
 description: 'Veja como o F # loop for... expressão constructo de loop é usado para iterar sobre as correspondências de um padrão em uma coleção enumerável.'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746255"
 ---
 # <a name="loops-forin-expression"></a>Loops: expressão for...in
 

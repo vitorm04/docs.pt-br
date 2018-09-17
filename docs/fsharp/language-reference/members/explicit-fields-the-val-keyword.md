@@ -3,11 +3,11 @@ title: 'Campos explícitos: a palavra-chave val (F#)'
 description: "Saiba mais sobre o F # 'val' palavra-chave, que é usada para declarar um local para armazenar um valor em um tipo de classe ou estrutura sem inicializar o tipo."
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617364"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746349"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: a palavra-chave val
 

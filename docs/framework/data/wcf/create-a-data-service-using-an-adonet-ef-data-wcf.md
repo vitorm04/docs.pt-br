@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679603"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743768"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Como criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework (WCF Data Services)
 
@@ -34,7 +34,7 @@ O [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] também fornece um
 
 6. No **propriedades de Conexão** caixa de diálogo, digite o nome do servidor, selecione o método de autenticação, digite o nome do banco de dados e, em seguida, clique em **Okey**.
 
-     O **escolha sua Conexão de dados**caixa de diálogo é atualizada com as configurações de conexão de banco de dados.
+     O **escolha sua Conexão de dados** caixa de diálogo é atualizada com as configurações de conexão de banco de dados.
 
 7. Certifique-se de que o **salvar configurações de conexão de entidade em App. config como:** caixa de seleção é marcada. Clique em **Avançar**.
 

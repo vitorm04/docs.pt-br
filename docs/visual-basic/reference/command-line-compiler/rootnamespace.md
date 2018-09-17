@@ -12,11 +12,11 @@ ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13bce09ca9fd1ae9ebb919a9245d8ccf87fbde1d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368738"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692678"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 Especifica um namespace para todas as declarações de tipo.  

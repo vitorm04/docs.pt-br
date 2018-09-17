@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: bc91e3bde54eedb4d9dbcfcb9f7faa0ccc98e397
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505618"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746199"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Instruções passo a passo: demonstrando herança visual
 A herança visual permite que você veja os controles no formulário de base e adicione novos controles. Neste passo a passo, você criará um formulário de base e o compilará em uma biblioteca de classes. Você importará esta biblioteca de classes em outro projeto e criará um novo formulário que herda do formulário de base. Durante este passo a passo, você aprenderá a:  
@@ -80,7 +80,7 @@ A herança visual permite que você veja os controles no formulário de base e a
   
     -   Defina a propriedade **(Nome)** como **btnProtected**.  
   
-    -   Defina a propriedade **Modificadores** como **Protegido**. Isso possibilita que formulários que herdam de **Form1** modifiquem as propriedades de **btnProtected**.  
+    -   Defina a **modificadores** propriedade **protegido**. Isso possibilita que formulários que herdam de **Form1** modifiquem as propriedades de **btnProtected**.  
   
 4.  Clique duas vezes no botão **Say Hello** para adicionar um manipulador de eventos para o evento **Clique**.  
   
@@ -128,7 +128,7 @@ A herança visual permite que você veja os controles no formulário de base e a
   
 #### <a name="to-add-an-inherited-form"></a>Para adicionar um formulário herdado  
   
-1.  No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **InheritanceTest**, selecione **Adicionar** e selecione **Novo Item**.  
+1.  No **Gerenciador de soluções**, clique com botão direito do **InheritanceTest** projeto, selecione **Add**e, em seguida, selecione **Novo Item**.  
   
 2.  Na caixa de diálogo **Adicionar Novo Item**, selecione a categoria **Windows Forms** (se você tiver uma lista de categorias) e selecione o modelo **Formulário Herdado**.  
   
