@@ -3,12 +3,12 @@ title: Documentando seu código com comentários em XML
 description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517475"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45683051"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -29,7 +29,7 @@ Comentários de documentação XML, como todos os outros comentários, são igno
    Você também pode especificar o caminho relativo ou absoluto exato e o nome do arquivo XML. O exemplo a seguir gera o arquivo XML no mesmo diretório que a versão de depuração de um aplicativo:
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Se estiver desenvolvendo um aplicativo usando o Visual Studio, clique com botão direito do mouse no projeto e selecione **Propriedades**. Na caixa de diálogo Propriedades, selecione a guia **Build** e marque **Arquivo de documentação XML**. Também é possível alterar o local em que o compilador grava o arquivo.

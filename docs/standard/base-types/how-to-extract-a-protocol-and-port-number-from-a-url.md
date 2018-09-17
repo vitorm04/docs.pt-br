@@ -16,11 +16,11 @@ ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209900"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45594731"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Como extrair um protocolo e um número de porta de uma URL
 O exemplo a seguir extrai um protocolo e um número da porta de uma URL.  

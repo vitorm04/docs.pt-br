@@ -3,11 +3,11 @@ title: Preservar espaço em branco ao serializar3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
 ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267083"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624295"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Preservar espaço em branco para serializar
 Este tópico descreve como controlar o espaço em branco para serializar uma árvore XML.  

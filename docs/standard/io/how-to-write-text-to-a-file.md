@@ -14,11 +14,11 @@ ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270806"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677143"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Como gravar texto em um arquivo
 Este tópico mostra diferentes maneiras de gravar texto em um arquivo para aplicativos .NET Framework ou aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. As classes e métodos seguintes normalmente são usados para gravar texto em um arquivo:  

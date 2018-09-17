@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268845"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646214"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
@@ -19,7 +19,7 @@ Definir os limites dos microsserviços provavelmente é o primeiro desafio que q
 
 Primeiro, você precisa se concentrar nos modelos de domínio lógicos do aplicativo e nos dados relacionados. Você precisa tentar identificar desacopladas ilhas de dados desacopladas e contextos diferentes dentro do mesmo aplicativo. Cada contexto pode ter uma linguagem de negócios diferente (termos de negócios diferentes). Os contextos devem ser definidos e gerenciados de forma independente. Os termos e as entidades usados nesses contextos diferentes podem parecer semelhantes, mas você descobrirá que, em um contexto específico, um conceito de negócios é usado para uma finalidade e em outro contexto para outra finalidade, podendo até mesmo ter um nome diferente. Por exemplo, um usuário pode ser mencionado como um usuário no contexto de identidade ou de associação, como um cliente em um contexto de CRM, como um comprador em um contexto de pedidos e assim por diante.
 
-Sua forma de identificar os limites entre vários contextos de aplicativo com um domínio diferente para cada contexto é exatamente a forma que você pode usar para identificar os limites de cada microsserviço de negócios, além de seu modelo de domínio e seus dados relacionados. Você sempre deve tentar minimizar o acoplamento entre esses microsserviços. Mais adiante, este guia apresentará mais detalhes sobre essa identificação e esse design de modelo de domínio na seção [Identificando limites de modelo de domínio para cada microsserviço](#identifying-domain-model-boundaries-for-each-microservice).
+Sua forma de identificar os limites entre vários contextos de aplicativo com um domínio diferente para cada contexto é exatamente a forma que você pode usar para identificar os limites de cada microsserviço de negócios, além de seu modelo de domínio e seus dados relacionados. Você sempre deve tentar minimizar o acoplamento entre esses microsserviços. Mais adiante, este guia apresentará mais detalhes sobre essa identificação e esse design de modelo de domínio na seção [Identificando limites de modelo de domínio para cada microsserviço](identify-microservice-domain-model-boundaries.md).
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Desafio \#2: Como criar consultas que recuperam dados de vários microsserviços
 
@@ -57,7 +57,7 @@ Conforme indicado pelo [Teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem),
 
 E além de o estilo ACID ou as transações de confirmação de duas fases serem contra os princípios dos microsserviços, a maioria dos bancos de dados NoSQL (como o Azure Cosmos DB, o MongoDB, etc.) não são compatíveis com transações de confirmação de duas fases. No entanto, manter a consistência dos dados entre os serviços e os bancos de dados é fundamental. Esse desafio também está relacionado à questão de como propagar alterações entre vários microsserviços quando determinados dados precisam ser redundante. Por exemplo, quando o nome ou a descrição do produto precisa estar no microsserviço de catálogo e também no microsserviço de cesta de compras.
 
-Uma boa solução para esse problema é usar a consistência eventual entre os microsserviços, articulada pela comunicação controlada por evento e por um sistema de publicação e assinatura. Esses tópicos serão abordados na seção [Comunicação controlada por evento assíncrono](#async_event_driven_communication) mais adiante neste guia.
+Uma boa solução para esse problema é usar a consistência eventual entre os microsserviços, articulada pela comunicação controlada por evento e por um sistema de publicação e assinatura. Esses tópicos serão abordados na seção [Comunicação controlada por evento assíncrono](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) mais adiante neste guia.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Desafio \#4: Como projetar a comunicação entre os limites dos microsserviços
 

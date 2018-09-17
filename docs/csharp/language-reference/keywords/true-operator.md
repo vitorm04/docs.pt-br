@@ -5,11 +5,11 @@ helpviewer_keywords:
 - true operator [C#]
 ms.assetid: acaba817-5da5-4364-b3b2-2e5c75ec1839
 ms.openlocfilehash: 54b8d764dc673598474d6adbbee82e0223a16b93
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271306"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609907"
 ---
 # <a name="true-operator-c-reference"></a>Operador true (Referência de C#)
 Retorna o valor [bool](../../../csharp/language-reference/keywords/bool.md) `true` para indicar que um operando é true, caso contrário, retorna `false`.  

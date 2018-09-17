@@ -13,11 +13,11 @@ ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269248"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675698"
 ---
 # <a name="interlocked-operations"></a>Operações interconectadas
 A classe <xref:System.Threading.Interlocked> fornece métodos que sincronizam o acesso a uma variável que é compartilhada por vários threads. Os threads de processos diferentes podem usar esse mecanismo se a variável estiver na memória compartilhada. Operações interconectadas são atômicas — ou seja, toda a operação é uma unidade que não pode ser interrompida por outra operação interconectada na mesma variável. Isso é importante em sistemas de operacionais com multithreading preemptivo, onde um thread pode ser suspenso após o carregamento de um valor de um endereço de memória, mas antes de ter a chance de alterá-lo e armazená-lo.  

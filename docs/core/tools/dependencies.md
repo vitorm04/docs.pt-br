@@ -4,12 +4,12 @@ description: Explica como gerenciar suas dependências com as ferramentas do .NE
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244222"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45591115"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Gerenciando dependências com o SDK 1.0 do .NET Core
 
@@ -32,7 +32,7 @@ Se você estiver familiarizado com o MSBuild, ele será parecido com outros tipo
 Pode-se adicionar uma dependência disponível somente em um destino específico usando condições como no exemplo a seguir:
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 Isso significa que a dependência só será válida se o build estiver ocorrendo para esse destino específico. O `$(TargetFramework)` na condição é uma propriedade do MSBuild que está sendo definida no projeto. Para aplicativos .NET Core mais comuns, não será necessário fazer isso. 
@@ -57,7 +57,7 @@ O projeto completo tem esta aparência:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

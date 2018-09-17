@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
 ms.openlocfilehash: 0ac711740a3d20d83787882b5ff38954bed2ac14
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45596345"
 ---
 # <a name="endregion-c-reference"></a>#endregion (Referência de C#)
 O `#endregion` marca o fim de um bloco [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md). Por exemplo:  

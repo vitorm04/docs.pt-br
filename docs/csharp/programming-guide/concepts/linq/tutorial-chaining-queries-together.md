@@ -2,12 +2,12 @@
 title: 'Tutorial: encadear consultas juntas (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: 8411d8577c192e2aa1a43bea47644fe6bdc09e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323704"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609626"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Tutorial: encadear consultas juntas (C#)
 Este tutorial mostra o modelo de processamento quando você encadea consultas juntos. Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais. É importante compreender exatamente como as consultas encadeadas funcionam.  
@@ -24,5 +24,6 @@ Este tutorial mostra o modelo de processamento quando você encadea consultas ju
 |[Materialização intermediária (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|Identifica e ilustra a semântica de materialization intermediária.|  
 |[Encadeando operadores de consulta padrão juntos (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|Descreve a semântica lazy dos operadores de consulta padrão.|  
   
-## <a name="see-also"></a>Consulte também  
- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Consulte também
+
+- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

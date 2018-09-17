@@ -12,11 +12,11 @@ ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44225195"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45590946"
 ---
 # <a name="handling-com-interop-exceptions"></a>Manipulando exceções de interoperabilidade COM
 Os códigos gerenciado e não gerenciado podem trabalhar juntos para tratar de exceções. Se um método lança uma exceção no código gerenciado, o common language runtime pode passar um HRESULT para um objeto COM. Se um método falhar no código não gerenciado, retornando um HRESULT de falha, o tempo de execução lançará uma exceção que pode ser detectada pelo código gerenciado.  

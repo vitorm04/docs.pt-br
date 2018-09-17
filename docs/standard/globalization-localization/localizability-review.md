@@ -19,11 +19,11 @@ ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206056"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45678898"
 ---
 # <a name="localizability-review"></a>Revisão de localização
 A revisão de localização é uma etapa intermediária no desenvolvimento de um aplicativo pronto para o mundo. Ela verifica se um aplicativo globalizado está pronto para a localização e identifica qualquer código ou aspecto da interface do usuário que exija tratamento especial. Esta etapa também ajuda a garantir que o processo de localização não apresente qualquer defeito funcionais em seu aplicativo. Quando todos os problemas levantados pela revisão de localização forem resolvidos, o aplicativo estará pronto para a localização. Se a revisão de localização estiver concluída, você não precisará modificar qualquer código-fonte durante o processo de localização.  

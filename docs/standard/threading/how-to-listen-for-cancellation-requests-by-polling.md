@@ -11,11 +11,11 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266846"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624957"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Como ouvir solicitações de cancelamento por meio de sondagem
 O exemplo a seguir mostra uma maneira de o código do usuário sondar um token de cancelamento em intervalos regulares para verificar se o thread de chamada solicitou o cancelamento. Este exemplo usa o tipo <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, mas o mesmo padrão se aplica a operações assíncronas criadas diretamente pelo tipo <xref:System.Threading.ThreadPool?displayProperty=nameWithType> ou <xref:System.Threading.Thread?displayProperty=nameWithType>.  

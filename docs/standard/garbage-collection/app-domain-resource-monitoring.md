@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208751"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "44710935"
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitoramento de recursos de domínio de aplicativo
 O ARM (Monitoramento de recursos de domínio do aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio do aplicativo. Isso é útil para hosts como o ASP.NET que usam vários domínios do aplicativo em um processo de longa execução. O host pode descarregar o domínio do aplicativo de um aplicativo que está prejudicando o desempenho de todo o processo, mas apenas se puder identificar o aplicativo problemático. O ARM fornece informações que podem ser usadas para ajudar a tomar essas decisões.  

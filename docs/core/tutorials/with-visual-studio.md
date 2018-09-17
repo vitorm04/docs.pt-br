@@ -4,12 +4,13 @@ description: Saiba como compilar um aplicativo de console simples do .NET Core c
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.openlocfilehash: d68ae899e5dc7c37a9c92e79aeae452b000b0960
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218014"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45594343"
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017
 
@@ -25,7 +26,7 @@ Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Cor
 
 Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas:
 
-1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto*\*, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
+1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
 
    ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/with-visual-studio/newproject.png)
    

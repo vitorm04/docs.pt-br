@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4275fa574d7fc30f5416c16aaafd2a9494904128
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078783"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45648519"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Noções básicas sobre problemas e exceções de WebRequest
 <xref:System.Net.WebRequest> e suas classes derivadas (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> e <xref:System.Net.FileWebRequest>) geram exceções para sinalizar uma condição anormal. Às vezes, a resolução desses problemas não é óbvia.  

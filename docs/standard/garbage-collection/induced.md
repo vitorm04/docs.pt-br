@@ -8,11 +8,11 @@ ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192542"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45645964"
 ---
 # <a name="induced-collections"></a>Coletas induzidas
 Na maioria dos casos, o coletor de lixo pode determinar o melhor momento para executar uma coleta e você deve permitir que ele seja executado de modo independente. Existem situações raras nas quais uma coleta forçada pode melhorar o desempenho do seu aplicativo. Nesses casos, você poderá induzir a coleta de lixo usando o método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forçar uma coleta de lixo.  

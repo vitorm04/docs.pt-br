@@ -3,11 +3,11 @@ title: Como compartilhar um assembly com outros aplicativos (C#)
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
 ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266463"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638390"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Como compartilhar um assembly com outros aplicativos (C#)
 Os assemblies podem ser particulares ou compartilhados: por padrão, a maioria dos programas simples consistem em um assembly particular porque eles não se destinam a serem usados por outros aplicativos.  

@@ -7,12 +7,13 @@ ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.custom: vs-dotnet
+ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827307"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45518159"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Consumir uma biblioteca .NET Standard no Visual Studio 2017
 

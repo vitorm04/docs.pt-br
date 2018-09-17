@@ -3,11 +3,11 @@ title: Como controlar prefixos de namespace (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44182130"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649699"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Como controlar prefixos de namespace (C#) (LINQ to XML)
 Este tópico descreve como você pode controlar prefixos de namespace ao serializar uma árvore XML.  

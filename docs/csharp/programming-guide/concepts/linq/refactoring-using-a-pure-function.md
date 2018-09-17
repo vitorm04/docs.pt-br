@@ -3,11 +3,11 @@ title: Refatoração usando uma função pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266434"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45610108"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refatoração usando uma função pura (C#)
 O exemplo a seguir refatora o exemplo anterior, [Refatoração usando um método de extensão (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar uma função pura. Neste exemplo, o código para localizar o texto de um parágrafo é movido para o método estático puro `ParagraphText`.  

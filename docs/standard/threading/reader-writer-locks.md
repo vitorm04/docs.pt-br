@@ -9,11 +9,11 @@ ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275032"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45640927"
 ---
 # <a name="reader-writer-locks"></a>Bloqueios de leitor-gravador
 A classe <xref:System.Threading.ReaderWriterLockSlim> permite que vários threads leiam um recurso ao mesmo tempo, mas requer que um thread aguarde um bloqueio exclusivo para gravar o recurso.  

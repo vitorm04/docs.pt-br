@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591610"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615018"
 ---
 # <a name="order-preservation-in-plinq"></a>Preservação da ordem em PLINQ
 Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consulta deve ser executada o mais rápido possível, mas ainda produzir os resultados corretos. Em alguns casos, a exatidão requer que a ordem da sequência de origem seja preservada. No entanto, a ordenação pode ser dispendiosa. Portanto, por padrão, o PLINQ não preserva a ordem da sequência de origem. Nesse sentido, o PLINQ assemelha-se a [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], mas é diferente do LINQ to Objects que preserva a ordenação.  
@@ -122,6 +122,7 @@ Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consult
   
  Os resultados não ordenados não são ativamente embaralhados. Eles simplesmente não têm qualquer lógica de ordenação especial aplicada a eles. Em alguns casos, uma consulta não ordenada pode manter a ordenação da sequência de origem. No caso das consultas que usam o operador Select indexado, o PLINQ garante que os elementos de saída serão apresentados na ordem de índices crescentes, mas não garante quais índices serão atribuídos a quais elementos.  
   
-## <a name="see-also"></a>Consulte também  
- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Consulte também
+
+- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Programação paralela](../../../docs/standard/parallel-programming/index.md)

@@ -4,12 +4,12 @@ description: Conheça os novos recursos encontrados no .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191047"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591757"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novidades do .NET Core 2.0
 
@@ -158,8 +158,8 @@ A [Arquitetura do Aplicativo .NET](https://www.microsoft.com/net/learn/architect
 
 - [Microsserviços e contêineres do Docker](../../standard/microservices-architecture/index.md)
 - [Aplicativos Web com o ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Aplicativos móveis com o Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [Aplicativos que são implantados na Nuvem com o Azure](/azure/architecture/reference-architectures/index.md)
+- [Aplicativos móveis com o Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Aplicativos que são implantados na Nuvem com o Azure](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>Consulte também
 

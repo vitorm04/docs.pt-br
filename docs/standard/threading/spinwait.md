@@ -11,11 +11,11 @@ ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273405"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625492"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> é um tipo de sincronização leve que você pode usar em cenários de baixo nível a fim de evitar as alternâncias dispendiosas de contexto e transições de kernel necessárias para eventos de kernel. Em computadores com vários núcleos, quando espera-se que um recurso não seja mantido por muito tempo, talvez seja mais eficiente para um thread em espera executar no modo de usuário durante algumas dezenas ou centenas de ciclos e, em seguida, tentar novamente para adquirir o recurso. Se o recurso estiver disponível após a rotação, você terá salvo vários milhares de ciclos. Se o recurso ainda não estiver disponível, você terá passado apenas alguns ciclos e ainda poderá inserir uma espera baseada em kernel. Essa combinação de rotação e espera é, às vezes, conhecida como uma *operação bifásica de espera*.  
