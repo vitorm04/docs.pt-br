@@ -3,11 +3,11 @@ title: Conectando-se a uma fonte de dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696153"
+ms.locfileid: "45964573"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Conectando-se a uma fonte de dados no ADO.NET
 No ADO.NET você usa um **Conexão** objeto para se conectar a uma fonte de dados específica fornecendo as informações de autenticação necessárias em uma cadeia de caracteres de conexão. O **Conexão** objeto que você usa depende do tipo de fonte de dados.  
