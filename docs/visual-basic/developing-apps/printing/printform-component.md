@@ -5,11 +5,11 @@ helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
 ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000798"
 ---
 # <a name="printform-component-visual-basic"></a>Componente PrintForm (Visual Basic)
 O <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> componente para o Visual Basic permite que você imprimir uma imagem de um Windows Form no tempo de execução. Seu comportamento substituir essa o `PrintForm` método nas versões anteriores do Visual Basic.  

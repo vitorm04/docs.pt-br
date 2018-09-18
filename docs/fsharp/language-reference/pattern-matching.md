@@ -3,11 +3,11 @@ title: Correspondência padrão (F#)
 description: 'Saiba como os padrões são usados em F # para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991418"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 

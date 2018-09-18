@@ -3,11 +3,11 @@ title: Mensagens de formatação em serviços de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45590189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003029"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Mensagens de formatação em serviços de fluxo de trabalho
 Este exemplo mostra como os tipos de usuário diferentes podem ser usados em atividades de mensagem (de serviços WCF). O serviço de exemplo é um serviço simples de aprovação de despesas e expõe três operações. `ApproveExpense` utiliza um tipo de contrato de dados e mostra como usar tipos conhecidos. Retorna `true` ou `false` da operação com base na quantidade de despesas. `ApprovePO` usa um tipo de XmlSerializer e retorna `true` ou `false` com base na quantidade de despesas.`ApprovedVendor` usa um tipo de contrato de mensagem e retorna `true` ou `false` se o fornecedor estiver na lista de fornecedores aprovados ou se a solicitação origina-se do departamento de Finanças (do departamento financeiro pode usar qualquer fornecedor).  

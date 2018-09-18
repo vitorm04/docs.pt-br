@@ -11,11 +11,11 @@ ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991266"
 ---
 # <a name="names-of-namespaces"></a>Nomes de Namespaces
 Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é criando clareza suficiente para o programador usando a estrutura de saber imediatamente qual o conteúdo do namespace é provavelmente será. O modelo a seguir especifica a regra geral para a nomeação de namespaces:  

@@ -3,11 +3,11 @@ title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46008639"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
 Este tópico relaciona e descreve os componentes do Windows Process Activation Service (também conhecido como WAS).  
