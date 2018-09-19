@@ -3,11 +3,11 @@ title: '&lt;adicionar&gt; &lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287247"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;adicionar&gt; &lt;commonParameters&gt;
 Especifica um par nome-valor de parâmetros que são usados globalmente em vários serviços. Normalmente, esse parâmetro inclui a cadeia de caracteres de conexão de banco de dados que pode ser compartilhada por serviços duráveis.  

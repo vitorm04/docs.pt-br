@@ -13,11 +13,11 @@ ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653038"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288001"
 ---
 # <a name="abstract-class-design"></a>Design de classe abstrata
 **X DO NOT** definir construtores internos públicos ou privados em tipos abstratos.  
