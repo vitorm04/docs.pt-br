@@ -3,11 +3,11 @@ title: Tipos flexíveis (F#)
 description: 'Saiba como usar F # anotação de tipo flexível, que indica que um parâmetro, variável ou valor tem um tipo que é compatível com um tipo especificado.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991019"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326498"
 ---
 # <a name="flexible-types"></a>Tipos flexíveis
 
