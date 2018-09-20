@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104632"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646240"
 ---
 # <a name="key-takeaways"></a>Principais aspectos a serem lembrados
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104632"
 
 -   Um ambiente de DevOps de ponta a ponta dando que dá suporte à suporte a conexão de Integração Contínua/Implantação Contínua com ambientes de produção do Docker para fornecer agilidade e, dessa forma, melhorar o tempo de entrega de seus aplicativos.
 
-O Visual Studio Team Services simplifica muito o ambiente de DevOps designado para ambientes de Docker nos pipelines de Implantação Contínua, incluindo ambientes simples do Docker ou microsserviços mais avançados e orquestradores de contêiner baseados no Azure.
+Serviços de DevOps do Azure simplifica bastante o seu ambiente de DevOps designado para ambientes do Docker de seus pipelines de implantação contínua, incluindo ambientes simples do Docker ou orquestradores de contêiner e microsserviços mais avançados com base no Azure.
 
 >[!div class="step-by-step"]
 [Anterior](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

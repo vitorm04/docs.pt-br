@@ -3,11 +3,11 @@ title: Associações do (F#)
 description: "Saiba como F # 'do' associação é usado para executar o código sem definir uma função ou um valor."
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45973138"
 ---
 # <a name="do-bindings"></a>Associações do
 

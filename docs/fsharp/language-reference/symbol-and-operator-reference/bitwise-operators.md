@@ -3,11 +3,11 @@ title: Operadores bit a bit (F#)
 description: 'Saiba mais sobre os operadores bit a bit que estão disponíveis na linguagem de programação F #.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338023"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508446"
 ---
 # <a name="bitwise-operators"></a>Operadores Bit a Bit
 

@@ -3,11 +3,11 @@ title: Citações de código (F#)
 description: 'Saiba mais sobre o F # citações de código, um recurso de linguagem que permite que você gerar e trabalhar com expressões de código F # programaticamente.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508563"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516338"
 ---
 # <a name="code-quotations"></a>Citações de código
 

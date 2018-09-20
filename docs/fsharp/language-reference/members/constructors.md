@@ -3,11 +3,11 @@ title: Construtores (F#)
 description: 'Saiba como definir e usar construtores em F # para criar e inicializar objetos de classe e estrutura.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514297"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743897"
 ---
 # <a name="constructors"></a>Construtores
 

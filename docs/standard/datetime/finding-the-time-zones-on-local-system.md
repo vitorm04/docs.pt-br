@@ -14,11 +14,11 @@ ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a65798c46b01bb7a702559d685590ecf7a6f2793
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262211"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749393"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>Encontrando os fusos horários definidos em um sistema local
 

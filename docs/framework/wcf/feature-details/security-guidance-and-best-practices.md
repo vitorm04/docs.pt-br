@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700271"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512862"
 ---
 # <a name="security-guidance-and-best-practices"></a>Orientação de segurança e práticas recomendadas
 Os tópicos nesta seção apresentam diretrizes para e itens a serem considerados ao criar aplicativos seguros do Windows Communication Foundation (WCF). Para obter mais informações sobre o Windows Server AppFabric e segurança, consulte [segurança modelo para o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

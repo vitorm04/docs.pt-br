@@ -3,11 +3,11 @@ title: '&lt;transporte&gt; de &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
 ms.openlocfilehash: 1b0de5e1d581384d00c18dbefbf7b170325e2061
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44174172"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746790"
 ---
 # <a name="lttransportgt-of-ltnetmsmqbindinggt"></a>&lt;transporte&gt; de &lt;netMsmqBinding&gt;
 Define as configurações de segurança de transporte.  

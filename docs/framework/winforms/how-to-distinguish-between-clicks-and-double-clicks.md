@@ -11,11 +11,11 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
 ms.openlocfilehash: 84d085700091c4e7b8658e8eac4cf86fbd7730d5
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361729"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45512994"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Como distinguir entre cliques e cliques duplos
 Normalmente, um único *clique* inicia uma interface do usuário e um *clique duplo* estende a ação. Por exemplo, um clique normalmente seleciona um item e um clique duplo edita o item selecionado. No entanto, eventos de clique a formulários do Windows não acomodam facilmente um cenário onde um clique e um clique duplo executam ações incompatíveis, como uma ação associada à <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> eventos é executado antes da ação ligada para o <xref:System.Windows.Forms.Control.DoubleClick>ou <xref:System.Windows.Forms.Control.MouseDoubleClick> eventos. Este tópico demonstra duas soluções para esse problema. Uma solução é manipular o evento de clique duplo e reverter as ações no tratamento de evento de clique. Em raras situações, você talvez seja necessário simular um clique e comportamento de clique duplo manipulando o <xref:System.Windows.Forms.Control.MouseDown> evento e, usando o <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> e <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> propriedades do <xref:System.Windows.Forms.SystemInformation> classe. Você medir o tempo entre cliques e se um segundo clique ocorre antes do valor de <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> for atingido e o clique foi dentro de um retângulo definido por <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, executar a ação de clique duplo; caso contrário, execute a ação de clique.  

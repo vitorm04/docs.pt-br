@@ -3,11 +3,11 @@ title: 'Serviço: chamadas com falha por segundo'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
 ms.openlocfilehash: b4a8a1eeec13195e4f8fe088da14dff7c06ecdb3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192126"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514853"
 ---
 # <a name="service-calls-faulted-per-second"></a>Serviço: chamadas com falha por segundo
 Nome do contador: Chamadas com falha por segundo.  
