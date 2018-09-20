@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
 ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002861"
 ---
 # <a name="soundplayer-class"></a>Classe SoundPlayer
 A classe `SoundPlayer` permite que você inclua facilmente sons em seus aplicativos.  

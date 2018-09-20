@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
 ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45509994"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45963738"
 ---
 # <a name="query-typed-datasets"></a>Consultar conjuntos de dados tipados
 

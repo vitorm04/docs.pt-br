@@ -3,11 +3,11 @@ title: Obter WorkflowInstanceId
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
 ms.openlocfilehash: 6725ed92bf785e5b7f7d61332944fcce8427388a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45520743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007276"
 ---
 # <a name="get-workflowinstanceid"></a>Obter WorkflowInstanceId
 Este exemplo demonstra como usar a atividade personalizado, `GetWorkflowInstanceId` para retornar a identificação de instância de fluxo de trabalho  

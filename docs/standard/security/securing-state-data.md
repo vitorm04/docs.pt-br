@@ -11,11 +11,11 @@ ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003445"
 ---
 # <a name="securing-state-data"></a>Protegendo dados de estado
 Aplicativos que lidam com dados confidenciais ou fazer qualquer tipo de decisões de segurança necessário manter esses dados em seu próprio controle e não é possível permitir que outro código potencialmente mal-intencionado acessar os dados diretamente. A melhor maneira de proteger os dados na memória é declarar os dados como privado ou interno (com escopo limitado ao mesmo assembly) variáveis. No entanto, até mesmo com esses dados são sujeito ao acesso, que você deve estar atento:  

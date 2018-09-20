@@ -3,11 +3,11 @@ title: DataSets tipados
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516114"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591180"
 ---
 # <a name="typed-datasets"></a>DataSets tipados
 Juntamente com acesso de associação tardia por meio de valores com variáveis fracamente tipadas, o <xref:System.Data.DataSet> fornece acesso a dados por meio de uma metáfora fortemente tipada. Tabelas e colunas que fazem parte do **conjunto de dados** podem ser acessadas usando nomes amigáveis e variáveis fortemente tipadas.  

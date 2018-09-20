@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
 ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513921"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45748621"
 ---
 # <a name="working-with-data-definition-language"></a>Trabalhando com a linguagem de definição de dados
 Começando com o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versão 4, o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dá suporte à linguagem de definição de dados (DDL). Isso permite que você crie ou exclua uma instância do banco de dados com base na cadeia de conexão e nos metadados do modelo de armazenamento (SSDL).  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508038"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320549"
 ---
 # <a name="how-to-create-application-settings"></a>Como criar configurações de aplicativo
 Usando código gerenciado, é possível criar novas configurações de aplicativo e associá-las a propriedades no seu formulário ou aos controles de formulário, para que essas configurações sejam carregadas e salvas automaticamente no tempo de execução.  

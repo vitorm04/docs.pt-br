@@ -6,11 +6,11 @@ helpviewer_keywords:
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45512797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969490"
 ---
 # <a name="ltexceptiongt-visual-basic"></a>&lt;exceção&gt; (Visual Basic)
 Especifica quais exceções podem ser geradas.  

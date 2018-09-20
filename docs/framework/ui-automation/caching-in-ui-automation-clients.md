@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: fd695678b8bb30418899786e9670bb8274f9d751
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44757101"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326499"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Armazenando em cache em clientes de automação de interface do usuário
 > [!NOTE]

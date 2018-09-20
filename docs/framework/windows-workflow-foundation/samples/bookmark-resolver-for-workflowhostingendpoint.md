@@ -3,11 +3,11 @@ title: Resolução do indexador para WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
 ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000564"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>Resolução do indexador para WorkflowHostingEndpoint
 Este exemplo demonstra como <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> pode ser usado com <xref:System.ServiceModel.Activities.WorkflowServiceHost> para criar instâncias de fluxo de trabalho.  

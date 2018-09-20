@@ -9,11 +9,11 @@ ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519465"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677065"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Classes base para implementar abstrações
 Estritamente falando, uma classe se torna uma classe base quando outra classe for derivada dela. Para fins desta seção, no entanto, uma classe base é uma classe projetada principalmente para fornecer uma abstração comum ou para outras classes de reutilizar parte implementação padrão entanto herança. Classes base geralmente ficam no meio de hierarquias de herança entre uma abstração na raiz de uma hierarquia e várias implementações personalizadas na parte inferior.  

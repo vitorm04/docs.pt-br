@@ -3,11 +3,11 @@ title: 'Serviço: Ouvintes de canais e canais'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510243"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326157"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Serviço: Ouvintes de canais e canais
 

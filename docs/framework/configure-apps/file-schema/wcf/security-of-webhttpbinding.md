@@ -5,11 +5,11 @@ ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 52146fa08ec63ef63fa996cdc09f9185b9f42e02
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515295"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698504"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;segurança&gt; de &lt;webHttpBinding&gt;
 Especifica os requisitos de segurança para um ponto de extremidade configurado com um [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  

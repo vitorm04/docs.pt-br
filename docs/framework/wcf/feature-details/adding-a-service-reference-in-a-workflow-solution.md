@@ -3,11 +3,11 @@ title: Adicionando uma referência de serviço em uma solução de fluxo de trab
 ms.date: 03/30/2017
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
 ms.openlocfilehash: 9dcbf779d948f6d295c2a23f5a09efc5ac989cdd
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45512784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972394"
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>Adicionando uma referência de serviço em uma solução de fluxo de trabalho
 

@@ -12,11 +12,11 @@ ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287016"
 ---
 # <a name="equality-operators"></a>Operadores de igualdade
 Esta seção discute a sobrecarga de operadores de igualdade e refere-se ao `operator==` e `operator!=` como operadores de igualdade.  

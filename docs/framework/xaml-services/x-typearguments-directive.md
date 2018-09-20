@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510143"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46321386"
 ---
 # <a name="xtypearguments-directive"></a>Diretiva x:TypeArguments
 Passa a restrição de tipo de argumentos de um genérico para o construtor do tipo genérico.  

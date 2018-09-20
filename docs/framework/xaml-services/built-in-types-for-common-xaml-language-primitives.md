@@ -16,11 +16,11 @@ helpviewer_keywords:
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
 ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44757088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326352"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Tipos inseridos para primitivos de linguagem XML comuns
 XAML 2009 introduz o suporte de nível de linguagem XAML para vários tipos de dados que são usados com frequência primitivas no common language runtime (CLR) e em outras linguagens de programação. XAML 2009 adiciona suporte para esses primitivos: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, e `x:Array`  
