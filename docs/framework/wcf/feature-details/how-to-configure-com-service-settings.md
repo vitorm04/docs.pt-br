@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490098"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471678"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Como configurar configurações de serviço de COM+
-Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração do serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo de hospedados pelo COM+, o arquivo de config é colocado no diretório raiz do aplicativo (aplicativos de %PROGRAMFILES%\ComPlus\\{appid} é o padrão). Em ambos os modos hospedado na Web, o arquivo Web. config é colocado no diretório raiz virtual especificado.  
+Quando uma interface de aplicativo é adicionada ou removida usando a ferramenta de configuração de serviço COM+, a configuração do serviço Web é atualizada no arquivo de configuração do aplicativo. No modo de COM+ hospedado, o arquivo Application config está colocado no diretório raiz do aplicativo (aplicativos de %PROGRAMFILES%\ComPlus\\{appid} é o padrão). Em qualquer um dos modos hospedados na Web, o arquivo Web. config está colocado no diretório raiz virtual especificado.  
   
 > [!NOTE]
->  Assinatura de mensagens deve ser usada para proteger contra falsificação de mensagens entre um cliente e um servidor. Além disso, a criptografia de camada de transporte ou a mensagem deve ser usada para proteger contra a divulgação de informações de mensagens entre um cliente e um servidor. Como com os serviços do Windows Communication Foundation (WCF), você deve usar a limitação para limitar o número de chamadas simultâneas, conexões, instâncias e as operações pendentes. Isso ajuda a impedir o consumo excessivo de recursos. Comportamento de limitação é especificado por meio do arquivo de configuração do serviço.  
+>  Assinatura de mensagens deve ser usado para proteger contra falsificação de mensagens entre um cliente e um servidor. Também, a criptografia de camada de transporte ou de mensagem deve ser usada para proteger contra a divulgação de informações de mensagens entre um cliente e um servidor. Assim como acontece com os serviços Windows Communication Foundation (WCF), você deve usar a limitação para limitar o número de chamadas simultâneas, conexões, instâncias e as operações pendentes. Isso ajuda a impedir o excesso de consumo de recursos. Comportamento de limitação é especificado por meio de configurações do arquivo de configuração de serviço.  
   
 ## <a name="example"></a>Exemplo  
- Considere a possibilidade de um componente que implementa a interface a seguir:  
+ Considere um componente que implementa a interface a seguir:  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -29,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- Se o componente é exposto como um serviço Web, o contrato de serviço correspondente que é exposta, e que os clientes precisam estar em conformidade, é o seguinte:  
+ Se o componente é exposto como um serviço Web, o contrato de serviço correspondente que é exposto, e que os clientes precisam estar em conformidade, é o seguinte:  
   
 ```  
 [ServiceContract(Session = true,  
@@ -47,19 +47,19 @@ public interface IFinancesContract : IDisposable
 > [!NOTE]
 >  IID faz parte do espaço para nome inicial para o contrato.  
   
- Aplicativos cliente que usam esse serviço precisa estar de acordo com este contrato, além de usar uma associação que é compatível com a especificada na configuração do aplicativo.  
+ Aplicativos cliente que usam esse serviço precisa estar de acordo com esse contrato, além de usar uma associação que é compatível com o especificado na configuração do aplicativo.  
   
- O exemplo de código a seguir mostra um arquivo de configuração padrão. Sendo um serviço Web do Windows Communication Foundation (WCF), isso está em conformidade com o esquema de configuração de modelo de serviço padrão e pode ser editado da mesma maneira como outros arquivos de configuração de serviços do WCF.  
+ O exemplo de código a seguir mostra um arquivo de configuração padrão. Sendo um serviço Web do Windows Communication Foundation (WCF), isso está de acordo com o esquema de configuração de modelo de serviço standard e pode ser editado da mesma maneira como outros arquivos de configuração de serviços do WCF.  
   
  Modificações típicas inclui:  
   
--   Alterando o endereço de ponto de extremidade do formulário ComponentName/ApplicationName/InterfaceName padrão para um formato mais utilizável.  
+- Alterando o endereço do ponto de extremidade do formulário ApplicationName/ComponentName/InterfaceName padrão para um formato mais utilizável.  
   
--   Modificando o namespace do serviço do padrão de "http://tempuri.org/InterfaceID" formulário a um formulário mais relevante.  
+- Modificando o namespace do serviço do padrão `http://tempuri.org/InterfaceID` formulário a um formulário mais relevante.  
   
--   Alterar o ponto de extremidade para usar uma associação de transporte diferentes.  
+- Alterando o ponto de extremidade para usar uma associação de transporte diferentes.  
   
-     No COM+-caso hospedado, o transporte de pipes nomeados é usado por padrão, mas um transporte-machine como TCP pode ser usado em vez disso.  
+     No COM+-caso hospedado, o transporte de pipes nomeados é usado por padrão, mas um transporte de logoff do computador, como TCP pode ser usado em vez disso.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

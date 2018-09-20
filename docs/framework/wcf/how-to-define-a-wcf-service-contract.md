@@ -8,11 +8,11 @@ dev_langs:
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
 ms.openlocfilehash: 4f85a51c47eb045d1d2f0111cb217199c9acf0d7
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46008995"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489153"
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>Como definir um contrato de serviço do Windows Communication Foundation
 

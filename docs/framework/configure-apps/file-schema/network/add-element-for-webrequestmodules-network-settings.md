@@ -1,5 +1,5 @@
 ---
-title: '&lt;Adicionar&gt; elemento webRequestModules (configurações de rede)'
+title: '&lt;Adicionar&gt; elemento para webRequestModules (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -13,14 +13,14 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742784"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481748"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Adicionar&gt; elemento webRequestModules (configurações de rede)
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Adicionar&gt; elemento para webRequestModules (configurações de rede)
 Adiciona um módulo de solicitação da Web personalizado para o aplicativo.  
   
  \<configuration>  
@@ -44,8 +44,8 @@ Adiciona um módulo de solicitação da Web personalizado para o aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`prefix`|O prefixo do URI para solicitações tratadas por este módulo de solicitação da Web.|  
-|`type`|O nome de tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula, que implementa este módulo de solicitação da Web.|  
+|`prefix`|O prefixo URI para solicitações manipuladas por esse módulo de solicitação da Web.|  
+|`type`|O nome do tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula, que implementa este módulo de solicitação da Web.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,16 +54,16 @@ Adiciona um módulo de solicitação da Web personalizado para o aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica módulos a ser usado para solicitar informações de hosts de rede.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica os módulos para usá-lo para solicitar informações de hosts da rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `prefix` atributo define o prefixo URI que usa o módulo de solicitação da Web especificado. Módulos de solicitação da Web geralmente são registrados para lidar com um protocolo específico, como HTTP ou FTP, mas podem ser registrados para manipular uma solicitação para um servidor específico ou em um servidor.  
+ O `prefix` atributo define o prefixo URI que usa o módulo de solicitação da Web especificado. Módulos de solicitação da Web geralmente são registrados para lidar com um protocolo específico, como HTTP ou FTP, mas podem ser registrados para manipular uma solicitação para um servidor específico ou um caminho em um servidor.  
   
- O módulo de solicitação da Web é criado quando um correspondência de prefixo do URI é passado para o <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> método.  
+ O módulo de solicitação da Web é criado quando um prefixo URI correspondente é passado para o <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> método.  
   
- O valor para o `prefix` atributo deve ser os caracteres à esquerda de um URI válido – por exemplo, "http" ou "http://www.contoso.com".  
+ O valor para o `prefix` atributo deve ser os caracteres à esquerda de um URI válido. Por exemplo `http` ou `http://www.contoso.com`.
   
- O valor para o `type` atributo deve ser um nome de tipo válido e o nome de assembly correspondente, separados por uma vírgula.  
+ O valor para o `type` atributo deve ser um nome de tipo válido e o nome do assembly correspondente, separados por vírgula.
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

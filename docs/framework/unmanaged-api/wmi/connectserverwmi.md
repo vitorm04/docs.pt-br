@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287735"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473532"
 ---
 # <a name="connectserverwmi-function"></a>Função ConnectServerWmi
 Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado.  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in] Ponteiro para um válido `BSTR` que contém o caminho do objeto do namespace WMI correto. Consulte a [comentários](#remarks) seção para obter mais informações.
 
-`strUser` [in] Um ponteiro para um válido `BSTR` que contém o nome de usuário. Um `null` valor indica o contexto de segurança atual. Se o usuário for de um domínio diferente daquele atual, `strUser` também pode conter o nome de usuário e domínio separados por uma barra invertida. `strUser` também pode ser usuário nome principal (UPN) Formatar, suhc como *userName@domainName*. Consulte a [comentários](#remarks) seção para obter mais informações.
+`strUser` [in] Um ponteiro para um válido `BSTR` que contém o nome de usuário. Um `null` valor indica o contexto de segurança atual. Se o usuário for de um domínio diferente daquele atual, `strUser` também pode conter o nome de usuário e domínio separados por uma barra invertida. `strUser` também pode ser no formato de nome principal (UPN) do usuário, tal como `userName@domainName`. Consulte a [comentários](#remarks) seção para obter mais informações.
 
 `strPassword` [in] Um ponteiro para um válido `BSTR` que contém a senha. Um `null` indica o contexto de segurança atual. Uma cadeia de caracteres vazia ("") indica uma senha válida de comprimento zero.
 

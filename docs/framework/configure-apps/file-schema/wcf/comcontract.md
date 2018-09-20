@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b15d40c5933776676c605e71c77453442ad3e339
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749056"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490446"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Especifica um contrato de serviço de integração COM+.  
@@ -53,7 +53,7 @@ Especifica um contrato de serviço de integração COM+.
 |contrato|Uma cadeia de caracteres que contém o tipo de contrato.|  
 |name|Uma cadeia de caracteres que contém o nome do contrato.|  
 |namespace|Uma cadeia de caracteres que contém o namespace de contrato.|  
-|requiresSession|Um valor booleano que especifica se o contrato só pode ser usado em associações de sessão. Quando o serviço é inicializado, o tempo de execução de integração garante que essa configuração é consistente com o tipo de associação a ser usada. Uma exceção será gerada se um ou mais associações para o contrato estão em conflito. Se essa propriedade for `false`e um canal unidirecional está em uso e houver [parâmetros out], também será gerada uma exceção.|  
+|requiresSession|Um valor booliano que especifica se o contrato só pode ser usado em associações de sessão. Quando o serviço é inicializado, o integration runtime garante que essa configuração é consistente com o tipo de associação a ser usada. Uma exceção será gerada se um ou mais das associações para o contrato estão em conflito. Se essa propriedade for `false`e um canal unidirecional está em uso e houver [parâmetros out], também será gerada uma exceção.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -61,7 +61,7 @@ Especifica um contrato de serviço de integração COM+.
 |-------------|-----------------|  
 |persistableTypes|Todos os tipos persistentes.|  
 |userDefinedTypes|Uma coleção de usuário definidos UDTS (tipos) que deve ser incluído no contrato de serviço.|  
-|exposedMethods|Uma coleção de métodos COM+ expostos quando a interface em um componente COM+ é exposta como um serviço Web.|  
+|exposedMethods|Uma coleção de métodos COM+ que são expostos quando a interface em um componente COM+ é exposta como um serviço Web.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -70,7 +70,7 @@ Especifica um contrato de serviço de integração COM+.
 |comContracts|Contém uma coleção de `comContract` elementos.|  
   
 ## <a name="remarks"></a>Comentários  
- Contratos de serviço COM+ integration estão restritos atualmente para o "http://tempuri.org" namespace e nome de contrato é derivado da interface COM suporte. No entanto, você pode especificar alternativas usando o `comContracts` seção, bem como a `comContract` elemento no arquivo de configuração. Por exemplo, você pode usar a configuração a seguir para especificar o namespace, nome do contrato e tipos definidos pelo usuário a ser incluído, bem como outras configurações para um contrato de serviço.  
+ Contratos de serviço de integração COM+ são atualmente restritos ao `http://tempuri.org` namespace, e o nome do contrato é derivado da interface COM suporte. No entanto, você pode especificar alternativas usando o `comContracts` seção, bem como o `comContract` elemento no arquivo de configuração. Por exemplo, você pode usar a configuração a seguir para especificar o namespace, nome do contrato e tipos definidos pelo usuário a serem incluídos, bem como outras configurações para um contrato de serviço.  
   
 ```xml  
 <comContracts>  

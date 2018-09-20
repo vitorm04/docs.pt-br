@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649127"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46470895"
 ---
 # <a name="delete-function"></a>Excluir função
 Exclui a propriedade especificada e todos os seus qualificadores de uma definição de classe do CIM.

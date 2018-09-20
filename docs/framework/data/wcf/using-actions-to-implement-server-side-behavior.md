@@ -2,15 +2,16 @@
 title: Usando as ações implementar o comportamento do lado do servidor
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516255"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471708"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Usando as ações implementar o comportamento do lado do servidor
-As ações OData fornecem uma maneira de implementar um comportamento que age mediante um recurso recuperado de um serviço OData.  Por exemplo, considere um filme como um recurso. Há muitas coisas que você pode fazer com um filme: check-out, avaliar/comentar ou check-in. Estes são exemplos de Ações que podem ser implementadas por um WCF Data Service que gerencia filmes. As ações são descritas em uma resposta OData que contém um recurso no qual a Ação pode ser invocada. Quando um usuário solicita um recurso que representa um filme, a resposta retornada do WCF Data Service contém informações sobre as Ações disponíveis para esse recurso. A disponibilidade de uma Ação pode depender do estado do serviço de dados ou recurso. Por exemplo, quando um filme fez o check-out, ele não pode ter o check-out feito por outro usuário. Os clientes podem invocar uma ação somente especificando uma URL. Por exemplo http://MyServer/MovieService.svc/Movies(6) identificaria um filme digital específico e http://MyServer/MovieService.svc/Movies(6)/Checkout faria para invocar a ação do filme específico. As ações permitem que você exponha o modelo de serviço sem expor o modelo de dados. Continuando o exemplo do serviço de filmes, talvez você queira permitir que um usuário avalie um filme, mas não expor os dados de avaliação diretamente como um recurso. Você pode implementar uma Ação de Avaliação para permitir que o usuário avalie um filme, mas não acessar os dados de avaliação diretamente como um recurso.  
+
+As ações OData fornecem uma maneira de implementar um comportamento que age mediante um recurso recuperado de um serviço OData. Por exemplo, considere um filme como um recurso. Há muitas coisas que você pode fazer com um filme: check-out, avaliar/comentar ou check-in. Estes são exemplos de Ações que podem ser implementadas por um WCF Data Service que gerencia filmes. As ações são descritas em uma resposta OData que contém um recurso no qual a Ação pode ser invocada. Quando um usuário solicita um recurso que representa um filme, a resposta retornada do WCF Data Service contém informações sobre as Ações disponíveis para esse recurso. A disponibilidade de uma Ação pode depender do estado do serviço de dados ou recurso. Por exemplo, quando um filme fez o check-out, ele não pode ter o check-out feito por outro usuário. Os clientes podem invocar uma ação somente especificando uma URL. Por exemplo, `http://MyServer/MovieService.svc/Movies(6)` identificaria um filme digital específico e `http://MyServer/MovieService.svc/Movies(6)/Checkout` faria para invocar a ação do filme específico. As ações permitem que você exponha o modelo de serviço sem expor o modelo de dados. Continuando o exemplo do serviço de filmes, talvez você queira permitir que um usuário avalie um filme, mas não expor os dados de avaliação diretamente como um recurso. Você pode implementar uma Ação de Avaliação para permitir que o usuário avalie um filme, mas não acessar os dados de avaliação diretamente como um recurso.
   
 ## <a name="implementing-an-action"></a>Implementando uma ação  
  Para implementar uma ação de serviço, você deve implementar o <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), e [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) interfaces. <xref:System.IServiceProvider> permite que o WCF Data Services para obter sua implementação de [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) permite que o WCF Data Services criar, localizar, descreva e chame ações de serviço. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) permite que você invocar o código que implementa o comportamento das ações de serviço e obter os resultados, se houver. Lembre-se de que o WCF Data Services são Serviços do WCF por chamada, uma nova instância do serviço será criada cada vez que o serviço for chamado.  Verifique se nenhum trabalho desnecessário é feito quando o serviço é criado.  
@@ -52,7 +53,7 @@ As ações OData fornecem uma maneira de implementar um comportamento que age me
 ## <a name="invoking-a-wcf-data-service-action"></a>Chamar uma ação do WCF Data Service  
  As ações são chamadas usando uma solicitação HTTP POST. O URL especifica o recurso seguido pelo nome da ação. Os parâmetros são passados no corpo da solicitação. Por exemplo, se houve um serviço chamado MovieService que expôs uma ação chamada Avaliar. Você pode usar a seguinte URL para chamar a ação Avaliar em um filme específico:  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) especifica o filme que você deseja avaliar e Avaliar especifica a ação. O valor real da avaliação estará no corpo da solicitação de HTTP conforme mostrado no seguinte exemplo:  
   
@@ -67,17 +68,17 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  O código de exemplo acima somente funcionará com o WCF Data Services 5.2 e posterior que tem o suporte para JSON light. Se estiver usando uma versão anterior do WCF Data Services, você deverá especificar o tipo de conteúdo detalhado de json da seguinte maneira: `application/json;odata=verbose`.  
+> O código de exemplo acima somente funcionará com o WCF Data Services 5.2 e posterior que tem o suporte para JSON light. Se estiver usando uma versão anterior do WCF Data Services, você deverá especificar o tipo de conteúdo detalhado de json da seguinte maneira: `application/json;odata=verbose`.  
   
- Como alternativa, você pode chamar uma ação usando o cliente do WCF Data Services conforme mostrado no seguinte trecho de código.  
+ Como alternativa, você pode chamar uma ação usando o cliente do WCF Data Services conforme mostrado no seguinte snippet de código.  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
- No trecho de código acima, a classe `MoviesModel` foi gerada com o Visual Studio para Adicionar a Referência de Serviço a um WCF Data Service.  
+ No snippet de código acima, a classe `MoviesModel` foi gerada com o Visual Studio para Adicionar a Referência de Serviço a um WCF Data Service.  
   
 ## <a name="see-also"></a>Consulte também  
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  

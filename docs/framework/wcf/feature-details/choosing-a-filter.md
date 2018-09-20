@@ -2,12 +2,12 @@
 title: Escolhendo um filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743132"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478487"
 ---
 # <a name="choosing-a-filter"></a>Escolhendo um filtro
 Ao configurar o serviço de roteamento, é importante selecionar os filtros de mensagem correta e configurá-los para que você possa fazer as correspondências exatas nas mensagens recebidas. Se os filtros que você seleciona são excessivamente amplas em suas correspondências ou estão configurados incorretamente, mensagens são roteadas incorretamente. Se os filtros são muito restritivos, você não pode ter nenhuma rota válida disponível para algumas de suas mensagens.  
@@ -16,7 +16,7 @@ Ao configurar o serviço de roteamento, é importante selecionar os filtros de m
  Ao selecionar os filtros que são usados pelo serviço de roteamento, é importante que você compreenda o funcionamento de cada filtro, bem como quais informações estão disponíveis como parte das mensagens de entrada. Por exemplo, se todas as mensagens são recebidas ao longo do mesmo ponto de extremidade, os filtros de endereço e EndpointName não são úteis porque todas as mensagens coincidam com estes filtros.  
   
 ### <a name="action"></a>Ação  
- O filtro de ação inspeciona o <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> propriedade. Se o conteúdo do cabeçalho da ação na mensagem corresponde ao valor de dados do filtro especificado na configuração do filtro e, em seguida, retorna esse filtro `true`. O exemplo a seguir define uma `FilterElement` que usa o filtro de ação para corresponder as mensagens com um cabeçalho de ação que contém um valor de "http://namespace/contract/operation/".  
+ O filtro de ação inspeciona o <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A> propriedade. Se o conteúdo do cabeçalho da ação na mensagem corresponde ao valor de dados do filtro especificado na configuração do filtro e, em seguida, retorna esse filtro `true`. O exemplo a seguir define uma `FilterElement` que usa o filtro de ação para corresponder as mensagens com um cabeçalho de ação que contém um valor de `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  Esse filtro deve ser usado quando as mensagens de entrada endereçadas para um endereço exclusivo.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- O filtro EndpointAddressPrefix é semelhante ao filtro EndpointAddress. O filtro EndpointAddressPrefix inspeciona o EndpointAddress que a mensagem foi recebida no. No entanto o filtro EndpointAddressPrefix atua como um caractere curinga por correspondência de endereços que começam com o valor especificado na configuração de filtro. O exemplo a seguir define uma `FilterElement` que usa o filtro de EndpointAddressPrefix para corresponder a todas as mensagens endereçadas a "http://\<nome do host > / vdir *".  
+ O filtro EndpointAddressPrefix é semelhante ao filtro EndpointAddress. O filtro EndpointAddressPrefix inspeciona o EndpointAddress que a mensagem foi recebida no. No entanto o filtro EndpointAddressPrefix atua como um caractere curinga por correspondência de endereços que começam com o valor especificado na configuração de filtro. O exemplo a seguir define uma `FilterElement` que usa o filtro de EndpointAddressPrefix para corresponder a todas as mensagens endereçadas a `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  
