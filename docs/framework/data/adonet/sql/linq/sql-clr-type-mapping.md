@@ -2,12 +2,12 @@
 title: Mapeamento de tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862099"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478689"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
@@ -122,7 +122,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
  Há muitos outros mapeamentos numéricos que você pode escolher, mas alguns podem resultar em estouro ou exceções de perda de dados ao converter para ou do banco de dados. Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Tipos de decimal e dinheiro  
- A precisão padrão do SQL Server `DECIMAL` tipo (18 dígitos decimais à esquerda e à direita do ponto decimal) é muito menor do que a precisão do CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` tipo que ele está associado, por padrão. Isso pode levar na perda de precisão quando você salva dados no banco de dados. No entanto, apenas o oposto pode acontecer se o tipo `DECIMAL` do SQL Server é configurado com mais de 29 dígitos de precisão. Quando um tipo `DECIMAL` do SQL Server tiver sido configurado com uma precisão maior do que o <xref:System.Decimal?displayProperty=nameWithType> CLR, a perda de precisão poderá ocorrer ao recuperar dados do banco de dados.  
+ A precisão padrão do SQL Server `DECIMAL` tipo (18 dígitos decimais à esquerda e à direita do ponto decimal) é muito menor do que a precisão do CLR <xref:System.Decimal?displayProperty=nameWithType> tipo que ele está associado, por padrão. Isso pode levar na perda de precisão quando você salva dados no banco de dados. No entanto, apenas o oposto pode acontecer se o tipo `DECIMAL` do SQL Server é configurado com mais de 29 dígitos de precisão. Quando um tipo `DECIMAL` do SQL Server tiver sido configurado com uma precisão maior do que o <xref:System.Decimal?displayProperty=nameWithType> CLR, a perda de precisão poderá ocorrer ao recuperar dados do banco de dados.  
   
  Os tipos `MONEY` e `SMALLMONEY` do SQL Server, que também são emparelhados com o tipo <xref:System.Decimal?displayProperty=nameWithType> CLR por padrão, têm uma precisão muito menor, que pode resultar em estouro ou exceções de perda de dados ao salvar dados no banco de dados.  
   
