@@ -3,66 +3,66 @@ title: DOTIPO (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
 ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002028"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481459"
 ---
-# <a name="oftype-entity-sql"></a><span data-ttu-id="edcf2-102">DOTIPO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="edcf2-102">OFTYPE (Entity SQL)</span></span>
-<span data-ttu-id="edcf2-103">Retorna uma coleção de objetos de uma expressão de consulta que é de um tipo específico.</span><span class="sxs-lookup"><span data-stu-id="edcf2-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  
+# <a name="oftype-entity-sql"></a><span data-ttu-id="8e85b-102">DOTIPO (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8e85b-102">OFTYPE (Entity SQL)</span></span>
+<span data-ttu-id="8e85b-103">Retorna uma coleção de objetos de uma expressão de consulta que é de um tipo específico.</span><span class="sxs-lookup"><span data-stu-id="8e85b-103">Returns a collection of objects from a query expression that is of a specific type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edcf2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="edcf2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e85b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8e85b-104">Syntax</span></span>  
   
 ```  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="edcf2-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="edcf2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="8e85b-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="8e85b-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="edcf2-106">Qualquer expressão de consulta válida que retorna uma coleção de objetos.</span><span class="sxs-lookup"><span data-stu-id="edcf2-106">Any valid query expression that returns a collection of objects.</span></span>  
+ <span data-ttu-id="8e85b-106">Qualquer expressão de consulta válida que retorna uma coleção de objetos.</span><span class="sxs-lookup"><span data-stu-id="8e85b-106">Any valid query expression that returns a collection of objects.</span></span>  
   
  `test_type`  
- <span data-ttu-id="edcf2-107">O tipo para testar cada objeto retornado por `expression` contra.</span><span class="sxs-lookup"><span data-stu-id="edcf2-107">The type to test each object returned by `expression` against.</span></span> <span data-ttu-id="edcf2-108">O tipo deve ser qualificado por um namespace.</span><span class="sxs-lookup"><span data-stu-id="edcf2-108">The type must be qualified by a namespace.</span></span>  
+ <span data-ttu-id="8e85b-107">O tipo para testar cada objeto retornado por `expression` contra.</span><span class="sxs-lookup"><span data-stu-id="8e85b-107">The type to test each object returned by `expression` against.</span></span> <span data-ttu-id="8e85b-108">O tipo deve ser qualificado por um namespace.</span><span class="sxs-lookup"><span data-stu-id="8e85b-108">The type must be qualified by a namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="edcf2-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="edcf2-109">Return Value</span></span>  
- <span data-ttu-id="edcf2-110">Uma coleção de objetos que são do tipo `test_type`, ou um tipo base ou um tipo derivado de `test_type`.</span><span class="sxs-lookup"><span data-stu-id="edcf2-110">A collection of objects that are of type `test_type`, or a base type or derived type of `test_type`.</span></span> <span data-ttu-id="edcf2-111">Se for especificado SOMENTE, somente as instâncias de `test_type` ou de uma coleção vazia serão retornadas.</span><span class="sxs-lookup"><span data-stu-id="edcf2-111">If ONLY is specified, only instances of the `test_type` or an empty collection will be returned.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8e85b-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="8e85b-109">Return Value</span></span>  
+ <span data-ttu-id="8e85b-110">Uma coleção de objetos que são do tipo `test_type`, ou um tipo base ou um tipo derivado de `test_type`.</span><span class="sxs-lookup"><span data-stu-id="8e85b-110">A collection of objects that are of type `test_type`, or a base type or derived type of `test_type`.</span></span> <span data-ttu-id="8e85b-111">Se for especificado SOMENTE, somente as instâncias de `test_type` ou de uma coleção vazia serão retornadas.</span><span class="sxs-lookup"><span data-stu-id="8e85b-111">If ONLY is specified, only instances of the `test_type` or an empty collection will be returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="edcf2-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="edcf2-112">Remarks</span></span>  
- <span data-ttu-id="edcf2-113">Uma expressão de `OFTYPE` especifica uma expressão que é emitida para executar um teste de tipo versus cada elemento de uma coleção.</span><span class="sxs-lookup"><span data-stu-id="edcf2-113">An `OFTYPE` expression specifies a type expression that is issued to perform a type test against each element of a collection.</span></span>  <span data-ttu-id="edcf2-114">A expressão de `OFTYPE` gerencia uma nova coleção do tipo especificado que contém somente os elementos que foram qualquer equivalente a esse tipo ou um subpropriedades tipo deles.</span><span class="sxs-lookup"><span data-stu-id="edcf2-114">The `OFTYPE` expression produces a new collection of the specified type containing only those elements that were either equivalent to that type or a sub-type of it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8e85b-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="8e85b-112">Remarks</span></span>  
+ <span data-ttu-id="8e85b-113">Uma expressão de `OFTYPE` especifica uma expressão que é emitida para executar um teste de tipo versus cada elemento de uma coleção.</span><span class="sxs-lookup"><span data-stu-id="8e85b-113">An `OFTYPE` expression specifies a type expression that is issued to perform a type test against each element of a collection.</span></span>  <span data-ttu-id="8e85b-114">A expressão de `OFTYPE` gerencia uma nova coleção do tipo especificado que contém somente os elementos que foram qualquer equivalente a esse tipo ou um subpropriedades tipo deles.</span><span class="sxs-lookup"><span data-stu-id="8e85b-114">The `OFTYPE` expression produces a new collection of the specified type containing only those elements that were either equivalent to that type or a sub-type of it.</span></span>  
   
- <span data-ttu-id="edcf2-115">Uma expressão de `OFTYPE` é uma abreviação de expressão de consulta a seguir:</span><span class="sxs-lookup"><span data-stu-id="edcf2-115">An `OFTYPE` expression is an abbreviation of the following query expression:</span></span>  
+ <span data-ttu-id="8e85b-115">Uma expressão de `OFTYPE` é uma abreviação de expressão de consulta a seguir:</span><span class="sxs-lookup"><span data-stu-id="8e85b-115">An `OFTYPE` expression is an abbreviation of the following query expression:</span></span>  
   
 ```  
 select value treat(t as T) from ts as t where t is of (T)  
 ```  
   
- <span data-ttu-id="edcf2-116">Já que um gerente é um subtipo de funcionários, a seguinte expressão gerenciar uma coleção somente de gerentes de uma coleção de funcionários:</span><span class="sxs-lookup"><span data-stu-id="edcf2-116">Given that a Manager is a subtype of Employee, the following expression produces a collection of only managers from a collection of employees:</span></span>  
+ <span data-ttu-id="8e85b-116">Já que um gerente é um subtipo de funcionários, a seguinte expressão gerenciar uma coleção somente de gerentes de uma coleção de funcionários:</span><span class="sxs-lookup"><span data-stu-id="8e85b-116">Given that a Manager is a subtype of Employee, the following expression produces a collection of only managers from a collection of employees:</span></span>  
   
 ```  
 OfType(employees, NamespaceName.Manager)  
 ```  
   
- <span data-ttu-id="edcf2-117">Também é possível gerar a conversão uma coleção usando o filtro de tipo:</span><span class="sxs-lookup"><span data-stu-id="edcf2-117">It is also possible to up cast a collection using the type filter:</span></span>  
+ <span data-ttu-id="8e85b-117">Também é possível gerar a conversão uma coleção usando o filtro de tipo:</span><span class="sxs-lookup"><span data-stu-id="8e85b-117">It is also possible to up cast a collection using the type filter:</span></span>  
   
 ```  
 OfType(executives, NamespaceName.Manager)  
 ```  
   
- <span data-ttu-id="edcf2-118">Desde que os executivos são gerentes, a coleção resultante ainda contém todos os executivos originais, embora a coleção é digitada agora como uma coleção de gerentes.</span><span class="sxs-lookup"><span data-stu-id="edcf2-118">Since all executives are managers, the resulting collection still contains all the original executives, though the collection is now typed as a collection of managers.</span></span>  
+ <span data-ttu-id="8e85b-118">Desde que os executivos são gerentes, a coleção resultante ainda contém todos os executivos originais, embora a coleção é digitada agora como uma coleção de gerentes.</span><span class="sxs-lookup"><span data-stu-id="8e85b-118">Since all executives are managers, the resulting collection still contains all the original executives, though the collection is now typed as a collection of managers.</span></span>  
   
- <span data-ttu-id="edcf2-119">A tabela a seguir mostra o comportamento do operador de `OFTYPE` sobre alguns padrões.</span><span class="sxs-lookup"><span data-stu-id="edcf2-119">The following table shows the behavior of the `OFTYPE` operator over some patterns.</span></span> <span data-ttu-id="edcf2-120">Todas as exceções são geradas do lado do cliente antes que o provedor foi chamado:</span><span class="sxs-lookup"><span data-stu-id="edcf2-120">All exceptions are thrown from the client side before the provider is invoked:</span></span>  
+ <span data-ttu-id="8e85b-119">A tabela a seguir mostra o comportamento do operador de `OFTYPE` sobre alguns padrões.</span><span class="sxs-lookup"><span data-stu-id="8e85b-119">The following table shows the behavior of the `OFTYPE` operator over some patterns.</span></span> <span data-ttu-id="8e85b-120">Todas as exceções são geradas do lado do cliente antes que o provedor foi chamado:</span><span class="sxs-lookup"><span data-stu-id="8e85b-120">All exceptions are thrown from the client side before the provider is invoked:</span></span>  
   
-|<span data-ttu-id="edcf2-121">Padrão</span><span class="sxs-lookup"><span data-stu-id="edcf2-121">Pattern</span></span>|<span data-ttu-id="edcf2-122">Comportamento</span><span class="sxs-lookup"><span data-stu-id="edcf2-122">Behavior</span></span>|  
+|<span data-ttu-id="8e85b-121">Padrão</span><span class="sxs-lookup"><span data-stu-id="8e85b-121">Pattern</span></span>|<span data-ttu-id="8e85b-122">Comportamento</span><span class="sxs-lookup"><span data-stu-id="8e85b-122">Behavior</span></span>|  
 |-------------|--------------|  
-|<span data-ttu-id="edcf2-123">OFTYPE (coleção (EntityType), EntityType)</span><span class="sxs-lookup"><span data-stu-id="edcf2-123">OFTYPE(Collection(EntityType), EntityType)</span></span>|<span data-ttu-id="edcf2-124">Coleção (EntityType)</span><span class="sxs-lookup"><span data-stu-id="edcf2-124">Collection(EntityType)</span></span>|  
-|<span data-ttu-id="edcf2-125">OFTYPE (coleção (ComplexType), ComplexType)</span><span class="sxs-lookup"><span data-stu-id="edcf2-125">OFTYPE(Collection(ComplexType), ComplexType)</span></span>|<span data-ttu-id="edcf2-126">Gera</span><span class="sxs-lookup"><span data-stu-id="edcf2-126">Throws</span></span>|  
-|<span data-ttu-id="edcf2-127">OFTYPE (coleção (RowType), RowType)</span><span class="sxs-lookup"><span data-stu-id="edcf2-127">OFTYPE(Collection(RowType), RowType)</span></span>|<span data-ttu-id="edcf2-128">Gera</span><span class="sxs-lookup"><span data-stu-id="edcf2-128">Throws</span></span>|  
+|<span data-ttu-id="8e85b-123">OFTYPE (coleção (EntityType), EntityType)</span><span class="sxs-lookup"><span data-stu-id="8e85b-123">OFTYPE(Collection(EntityType), EntityType)</span></span>|<span data-ttu-id="8e85b-124">Coleção (EntityType)</span><span class="sxs-lookup"><span data-stu-id="8e85b-124">Collection(EntityType)</span></span>|  
+|<span data-ttu-id="8e85b-125">OFTYPE (coleção (ComplexType), ComplexType)</span><span class="sxs-lookup"><span data-stu-id="8e85b-125">OFTYPE(Collection(ComplexType), ComplexType)</span></span>|<span data-ttu-id="8e85b-126">Gera</span><span class="sxs-lookup"><span data-stu-id="8e85b-126">Throws</span></span>|  
+|<span data-ttu-id="8e85b-127">OFTYPE (coleção (RowType), RowType)</span><span class="sxs-lookup"><span data-stu-id="8e85b-127">OFTYPE(Collection(RowType), RowType)</span></span>|<span data-ttu-id="8e85b-128">Gera</span><span class="sxs-lookup"><span data-stu-id="8e85b-128">Throws</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="edcf2-129">Exemplo</span><span class="sxs-lookup"><span data-stu-id="edcf2-129">Example</span></span>  
- <span data-ttu-id="edcf2-130">O seguinte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta usa o operador OFTYPE para retornar uma coleção de objetos OnsiteCourse de uma coleção é claro que objetos.</span><span class="sxs-lookup"><span data-stu-id="edcf2-130">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the OFTYPE operator to return a collection of OnsiteCourse objects from a collection of Course objects.</span></span> <span data-ttu-id="edcf2-131">A consulta se baseia a [modelo de escola](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="edcf2-131">The query is based on the [School Model](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
+## <a name="example"></a><span data-ttu-id="8e85b-129">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8e85b-129">Example</span></span>  
+ <span data-ttu-id="8e85b-130">O seguinte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta usa o operador OFTYPE para retornar uma coleção de objetos OnsiteCourse de uma coleção é claro que objetos.</span><span class="sxs-lookup"><span data-stu-id="8e85b-130">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the OFTYPE operator to return a collection of OnsiteCourse objects from a collection of Course objects.</span></span> <span data-ttu-id="8e85b-131">A consulta se baseia a [modelo de escola](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span><span class="sxs-lookup"><span data-stu-id="8e85b-131">The query is based on the [School Model](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   
-## <a name="see-also"></a><span data-ttu-id="edcf2-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="edcf2-132">See Also</span></span>  
- [<span data-ttu-id="edcf2-133">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="edcf2-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="8e85b-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8e85b-132">See Also</span></span>  
+ [<span data-ttu-id="8e85b-133">Referência de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="8e85b-133">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
