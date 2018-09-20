@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d06f1c93275cb6adf4f1da02ccd5d889cb06c5d0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964797"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46325491"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>Método IHostSyncManager::CreateMonitorEvent
 Cria um objeto de evento de redefinição automática monitorado.  

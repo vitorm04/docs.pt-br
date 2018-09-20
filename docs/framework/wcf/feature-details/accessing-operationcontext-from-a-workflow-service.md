@@ -2,17 +2,17 @@
 title: Acessando OperationContext por meio de um serviço de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495561"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326365"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Acessando OperationContext por meio de um serviço de fluxo de trabalho
-Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço de fluxo de trabalho, você deve implementar o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface em uma propriedade personalizada de execução. Substituir o <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> método que é passado uma referência para o <xref:System.ServiceModel.OperationContext>. Este tópico o guiará através de implementar essa propriedade de execução para recuperar um cabeçalho personalizado, bem como uma atividade personalizada que será superficial essa propriedade como o <xref:System.ServiceModel.Activities.Receive> em tempo de execução.  A atividade personalizada implementará o mesmo comportamento que um <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` atividade, exceto que, quando um <xref:System.ServiceModel.Activities.Receive> é colocado dentro do elemento, o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> será chamado e o <xref:System.ServiceModel.OperationContext> informações serão recuperadas.  Este tópico também mostra como acessar o cliente <xref:System.ServiceModel.OperationContext> para adicionar cabeçalhos de saída por meio de <xref:System.ServiceModel.Activities.ISendMessageCallback> interface.  
+Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço de fluxo de trabalho, você deve implementar o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface em uma propriedade de execução personalizado. Substituir a <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> método que é passado uma referência para o <xref:System.ServiceModel.OperationContext>. Este tópico orientará você por meio de implementar essa propriedade de execução para recuperar um cabeçalho personalizado, bem como uma atividade personalizada que serão exibidos essa propriedade para o <xref:System.ServiceModel.Activities.Receive> em tempo de execução.  A atividade personalizado implementará o mesmo comportamento que um <xref:System.Activities.Statements.Sequence> atividade, exceto que, quando um <xref:System.ServiceModel.Activities.Receive> é colocado dentro dela, o <xref:System.ServiceModel.Activities.IReceiveMessageCallback> será chamado e o <xref:System.ServiceModel.OperationContext> informações serão recuperadas.  Este tópico também mostra como acessar o lado do cliente <xref:System.ServiceModel.OperationContext> para adicionar cabeçalhos de saída por meio de <xref:System.ServiceModel.Activities.ISendMessageCallback> interface.  
   
-### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementar o IReceiveMessageCallback no lado do serviço  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a>Implementar o IReceiveMessageCallback do lado do serviço  
   
 1.  Criar um vazio [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solução.  
   
@@ -51,11 +51,11 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
   
      Esse código usa o <xref:System.ServiceModel.OperationContext> passado para o método para acessar os cabeçalhos da mensagem de entrada.  
   
-### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementar uma atividade nativo no lado do serviço para adicionar a implementação de IReceiveMessageCallback a NativeActivityContext  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementar uma atividade nativa do lado do serviço para adicionar a implementação de IReceiveMessageCallback para o NativeActivityContext  
   
-1.  Adicionar uma nova classe derivada de <xref:System.Activities.NativeActivity> chamado `ReceiveInstanceIdScope`.  
+1.  Adicionar uma nova classe derivada <xref:System.Activities.NativeActivity> chamado `ReceiveInstanceIdScope`.  
   
-2.  Adicionar variáveis locais para controlar atividades filho, variáveis, o índice da atividade atual e um <xref:System.Activities.CompletionCallback> retorno de chamada.  
+2.  Adicionar variáveis de locais para manter o controle de atividades filhas, variáveis, o índice da atividade atual e um <xref:System.Activities.CompletionCallback> retorno de chamada.  
   
     ```  
     public sealed class ReceiveInstanceIdScope : NativeActivity  
@@ -80,7 +80,7 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
     }  
     ```  
   
-4.  Implementar o `Activities` e `Variables` propriedades.  
+4.  Implemente a `Activities` e `Variables` propriedades.  
   
     ```  
     public Collection<Activity> Activities  
@@ -144,7 +144,7 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
   
 ### <a name="implement-the-workflow-service"></a>Implementar o serviço de fluxo de trabalho  
   
-1.  Abrir o `Program` classe.  
+1.  Abrir existente `Program` classe.  
   
 2.  Defina as seguintes constantes:  
   
@@ -156,7 +156,7 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
     }  
     ```  
   
-3.  Adicionar um método estático chamado `GetWorkflowService` que cria o serviço de fluxo de trabalho.  
+3.  Adicione um método estático chamado `GetWorkflowService` que cria o serviço de fluxo de trabalho.  
   
     ```  
     static Activity GetServiceWorkflow()  
@@ -194,7 +194,7 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
             }  
     ```  
   
-4.  Existentes no `Main` método, o serviço de fluxo de trabalho do host.  
+4.  Existente `Main` método, o serviço de fluxo de trabalho do host.  
   
     ```  
     static void Main(string[] args)  
@@ -245,11 +245,11 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
   
      Esse código usa o <xref:System.ServiceModel.OperationContext> passado para o método para adicionar um cabeçalho personalizado para a mensagem de entrada.  
   
-### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementar uma atividade de cliente nativo para adicionar a implementação de ISendMessageCallback do lado do cliente para o NativeActivityContext  
+### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementar uma atividade nativa do lado do cliente para adicionar a implementação de ISendMessageCallback do lado do cliente para o NativeActivityContext  
   
-1.  Adicionar uma nova classe derivada de <xref:System.Activities.NativeActivity> chamado `SendInstanceIdScope`.  
+1.  Adicionar uma nova classe derivada <xref:System.Activities.NativeActivity> chamado `SendInstanceIdScope`.  
   
-2.  Adicionar variáveis locais para controlar atividades filho, variáveis, o índice da atividade atual e um <xref:System.Activities.CompletionCallback> retorno de chamada.  
+2.  Adicionar variáveis de locais para manter o controle de atividades filhas, variáveis, o índice da atividade atual e um <xref:System.Activities.CompletionCallback> retorno de chamada.  
   
     ```  
     public sealed class SendInstanceIdScope : NativeActivity  
@@ -273,7 +273,7 @@ Para acessar o <xref:System.ServiceModel.OperationContext> dentro de um serviço
             }  
     ```  
   
-4.  Implementar o `Activities` e `Variables` propriedades.  
+4.  Implemente a `Activities` e `Variables` propriedades.  
   
     ```  
     public Collection<Activity> Activities  

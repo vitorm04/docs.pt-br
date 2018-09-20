@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994011"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46325988"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
 Um conjunto consistente de convenções de nomenclatura no desenvolvimento de uma estrutura a seguir pode ser uma contribuição importante para facilidade de uso da estrutura. Ele permite que a estrutura a ser usado por muitos desenvolvedores em projetos amplamente separados. Além da consistência do formulário, os nomes de elementos de estrutura devem ser compreendidos com facilidade e devem transmitir a função de cada elemento.  
