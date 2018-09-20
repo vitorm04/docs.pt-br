@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361093"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45521345"
 ---
-# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="33d37-102">Método ICLRStrongName::StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="33d37-102">ICLRStrongName::StrongNameHashSize Method</span></span>
-<span data-ttu-id="33d37-103">Obtém o tamanho do buffer necessário para um hash, usando o algoritmo de hash especificado.</span><span class="sxs-lookup"><span data-stu-id="33d37-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="430fc-102">Método ICLRStrongName::StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="430fc-102">ICLRStrongName::StrongNameHashSize Method</span></span>
+<span data-ttu-id="430fc-103">Obtém o tamanho do buffer necessário para um hash, usando o algoritmo de hash especificado.</span><span class="sxs-lookup"><span data-stu-id="430fc-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33d37-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="33d37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="430fc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="430fc-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameHashSize (  
@@ -36,24 +36,24 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="33d37-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="33d37-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="430fc-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="430fc-105">Parameters</span></span>  
  `ulHashAlg`  
- <span data-ttu-id="33d37-106">[in] O algoritmo de hash usado para calcular o tamanho do buffer.</span><span class="sxs-lookup"><span data-stu-id="33d37-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
+ <span data-ttu-id="430fc-106">[in] O algoritmo de hash usado para calcular o tamanho do buffer.</span><span class="sxs-lookup"><span data-stu-id="430fc-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="33d37-107">[out] O tamanho do buffer retornado, em bytes.</span><span class="sxs-lookup"><span data-stu-id="33d37-107">[out] The returned buffer size, in bytes.</span></span>  
+ <span data-ttu-id="430fc-107">[out] O tamanho do buffer retornado, em bytes.</span><span class="sxs-lookup"><span data-stu-id="430fc-107">[out] The returned buffer size, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="33d37-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="33d37-108">Return Value</span></span>  
- <span data-ttu-id="33d37-109">`S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="33d37-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="430fc-108">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="430fc-108">Return Value</span></span>  
+ <span data-ttu-id="430fc-109">`S_OK` Se o método foi concluída com êxito; Caso contrário, um valor HRESULT que indica uma falha (consulte [valores HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para obter uma lista).</span><span class="sxs-lookup"><span data-stu-id="430fc-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33d37-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="33d37-110">Requirements</span></span>  
- <span data-ttu-id="33d37-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="33d37-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="430fc-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="430fc-110">Requirements</span></span>  
+ <span data-ttu-id="430fc-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="430fc-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33d37-112">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="33d37-112">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="430fc-112">**Cabeçalho:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="430fc-112">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="33d37-113">**Biblioteca:** incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="33d37-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="430fc-113">**Biblioteca:** incluído como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="430fc-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="33d37-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33d37-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="430fc-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="430fc-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33d37-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="33d37-115">See Also</span></span>  
- [<span data-ttu-id="33d37-116">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="33d37-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="430fc-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="430fc-115">See Also</span></span>  
+ [<span data-ttu-id="430fc-116">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="430fc-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
