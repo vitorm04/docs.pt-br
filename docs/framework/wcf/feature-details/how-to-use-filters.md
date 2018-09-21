@@ -2,12 +2,12 @@
 title: Como usar filtros
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 6b1e02563fcc32a0095e2bdb5e25d0853fc05e84
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42754625"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508996"
 ---
 # <a name="how-to-use-filters"></a>Como usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são roteadas para duas implementações de um serviço de Calculadora, regularCalc e roundingCalc. Ambas as implementações de suportam as mesmas operações; No entanto, um serviço Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar a versão de arredondamento do serviço; Se nenhuma preferência de serviço é expressa a mensagem é balanceada entre os dois serviços. As operações expostas por ambos os serviços são:  
@@ -113,7 +113,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
      Isso **MessageFilter** procura por um cabeçalho RoundingCalculator na mensagem que contém um valor de "arredondamento". Esse cabeçalho é definido pelo cliente para indicar que a mensagem deve ser roteada para o serviço roundingCalc.  
   
     > [!NOTE]
-    >  O prefixo de namespace s12 é definido por padrão na tabela de namespace e representa o namespace "http://www.w3.org/2003/05/soap-envelope".  
+    > O prefixo de namespace s12 é definido por padrão na tabela de namespace e representa o namespace `http://www.w3.org/2003/05/soap-envelope`.
   
 2.  Você também deve definir filtros que procure as mensagens recebidas em dois pontos de extremidade virtuais. O primeiro ponto de extremidade virtual é o ponto de extremidade "regular/Calculadora". O cliente pode enviar solicitações para esse ponto de extremidade para indicar que a mensagem deve ser roteada para o serviço regularCalc. A configuração a seguir define um filtro que usa o <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para determinar se a mensagem foi recebida por meio de um ponto de extremidade com o nome especificado em filterData.  
   
@@ -132,7 +132,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Se uma mensagem é recebida em um endereço que começa com "http://localhost/routingservice/router/rounding/", em seguida, esse filtro é avaliada como **verdadeiro**. Como o endereço base usado por esta configuração é "http://localhost/routingservice/router"e o endereço especificado para o roundingEndpoint é "arredondamento/Calculadora", o endereço de completo usado para se comunicar com esse ponto de extremidade é"http://localhost/routingservice/router/rounding/calculator", que corresponde a este filtro.  
+     Se uma mensagem é recebida em um endereço que começa com `http://localhost/routingservice/router/rounding/` esse filtro é avaliada como **verdadeiro**. Como o endereço base usado por esta configuração é `http://localhost/routingservice/router` e o endereço especificado para o roundingEndpoint é "arredondamento/Calculadora", o endereço completo usado para se comunicar com esse ponto de extremidade `http://localhost/routingservice/router/rounding/calculator`, que corresponde a este filtro.  
   
     > [!NOTE]
     >  O filtro PrefixEndpointAddress não avalia o nome do host ao executar uma correspondência, pois um único host pode ser chamado usando uma variedade de nomes de host que podem todos ser válidas maneiras de fazer referência ao host do aplicativo cliente. Por exemplo, todos os itens a seguir podem se referir ao mesmo host:  
@@ -156,7 +156,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
                     filterData="group1"/>  
     ```  
   
-     Durante o tempo de execução, esse tipo de filtro alterna entre todas as instâncias de filtro definido desse tipo que são configuradas como o mesmo grupo em uma coleção. Isso faz com que as mensagens processadas por esse filtro personalizado para alternar entre retornando `true` para RoundRobinFilter1 e RoundRobinFilter2.  
+     Durante o tempo de execução, esse tipo de filtro alterna entre todas as instâncias de filtro definido desse tipo que são configuradas como o mesmo grupo em uma coleção. Isso faz com que as mensagens processadas por esse filtro personalizado para alternar entre retornando `true` para `RoundRobinFilter1` e `RoundRobinFilter2`.  
   
 ### <a name="define-filter-tables"></a>Definir as tabelas de filtro  
   
@@ -165,7 +165,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
     > [!NOTE]
     >  Ao especificar uma prioridade de filtro permite que você controle a ordem na qual os filtros é processados, ele pode afetar negativamente o desempenho do serviço de roteamento. Quando possível, construa a lógica do filtro para que o uso das prioridades de filtro não é necessário.  
   
-     A seguir define a tabela de filtro e adiciona "XPathFilter" definido anteriormente para a tabela com uma prioridade 2. Essa entrada também especifica que, se a mensagem corresponde a "XPathFilter", a mensagem será roteada para "roundingCalcEndpoint"  
+     A seguir define a tabela de filtro e adiciona "XPathFilter" definido anteriormente para a tabela com uma prioridade 2. Essa entrada também especifica que, se o `XPathFilter` coincide com a mensagem, a mensagem será roteada para o `roundingCalcEndpoint`.  
   
     ```xml  
     <routing>  

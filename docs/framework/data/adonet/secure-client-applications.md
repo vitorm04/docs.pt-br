@@ -3,11 +3,11 @@ title: Proteger aplicativos cliente
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481878"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529016"
 ---
 # <a name="secure-client-applications"></a>Proteger aplicativos cliente
 Aplicativos geralmente consistem em várias partes que precisam ser protegidos contra vulnerabilidades que poderiam resultar em perda de dados ou comprometer o sistema. Criar interfaces do usuário segura pode impedir que muitos problemas, bloqueando os invasores antes que possam acessar dados ou recursos do sistema.  

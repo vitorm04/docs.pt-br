@@ -2,12 +2,12 @@
 title: Acessando os serviços WCF com um aplicativo cliente da Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: cfc5dd13c5660ff1604e9de02fdf6755d70a95e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485658"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46541113"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Acessando os serviços WCF com um aplicativo cliente da Windows Store
 O Windows 8 apresenta um novo tipo de aplicativos chamados aplicativos da Windows Store. Esses aplicativos são criados em torno de uma interface de tela sensível ao toque. O .NET Framework 4.5 permite que aplicativos da Windows Store chamem serviços WCF.  
@@ -107,17 +107,18 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 >  XmlDictionaryWriter.Write(DateTime) grava agora o objeto DateTime como uma cadeia de caracteres.  
   
 ### <a name="security"></a>Segurança  
- Os seguintes modelos de segurança têm suporte em aplicativos da Windows Store  
+
+Os modos de segurança a seguir têm suporte em aplicativos da Windows Store:
   
-1.  <xref:System.ServiceModel.SecurityMode.None>  
+1. <xref:System.ServiceModel.SecurityMode.None>  
   
-2.  <xref:System.ServiceModel.SecurityMode.Transport>  
+2. <xref:System.ServiceModel.SecurityMode.Transport>  
   
-3.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredentials> --> `System.ServiceModel.SecurityMode.TransportWithMessageCredentials`
+3. <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>
   
-4.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportCredentialOnly>  --> `System.ServiceModel.SecurityMode.TransportCredentialOnly`
+4. <xref:System.ServiceModel.SecurityMode.Message>
   
- Os seguintes tipos de credenciais de clientes têm suporte em aplicativos da Windows Store  
+Os seguintes tipos de credencial do cliente têm suporte em aplicativos da Windows Store:
   
 1.  Nenhum  
   
@@ -145,7 +146,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 1.  <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <!--zz <xref:System.ServiceModel.DuplexChannelFactory> --> `System.ServiceModel.DuplexChannelFactory`
+2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
   
 3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
@@ -156,7 +157,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 >  Embora nenhuma exceção seja gerada se você definir uma operação síncrona, é altamente recomendável definir apenas operações assíncronas.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Chamando serviços WCF de aplicativos da Windows Store  
- Como mencionado acima, todas as configurações devem ser feitas no código no método GetBindingForEndpoint na classe proxy gerada. Chamar uma operação de serviço é feito da mesma maneira que chamar qualquer método assíncrono baseado em tarefas conforme mostrado no seguinte trecho de código.  
+ Como mencionado acima, todas as configurações devem ser feitas no código no método GetBindingForEndpoint na classe proxy gerada. Chamar uma operação de serviço é feito da mesma maneira que chamar qualquer método assíncrono baseado em tarefas conforme mostrado no seguinte snippet de código.  
   
 ```csharp  
 void async SomeMethod()  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471217"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537443"
 ---
 # <a name="myforms-object"></a>Objeto My.Forms
 Fornece propriedades para acessar uma instância de cada formulário do Windows declarado no projeto atual.  

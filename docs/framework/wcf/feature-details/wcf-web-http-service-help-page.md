@@ -2,24 +2,24 @@
 title: Página de ajuda de serviço HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500946"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529970"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ajuda de serviço HTTP Web do WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Fornece uma página de ajuda automática para serviços WCF WEB HTTP. Esta página de Ajuda contém uma descrição de cada operação de solicitação e resposta formatos e esquemas. Essa funcionalidade é desativada por padrão. Quando um usuário navega para um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo http://localhost:8000/Customers/Help, uma página de Ajuda, como o seguinte é exibido.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Fornece uma página de ajuda automática para serviços WCF WEB HTTP. Esta página de Ajuda lista uma descrição de cada operação de solicitação e formatos de resposta e esquemas. Essa funcionalidade é desativada por padrão. Quando um usuário navega até um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo http://localhost:8000/Customers/Help, uma página de Ajuda, como o seguinte é exibido.  
   
- ![Página de Ajuda do WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Página de Ajuda do REST do WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
- O usuário poderá clicar em qualquer método listado na página de Ajuda e a página detalhada para essa operação é exibida mostrando mais informações sobre o método, incluindo os formatos de mensagem e respostas de exemplo. A imagem a seguir é um exemplo de uma página de ajuda para um método.  
+ O usuário pode, em seguida, clique em qualquer método listado na página de Ajuda e a página detalhada para essa operação é exibida mostrando a obter mais informações sobre o método, incluindo os formatos de mensagem e respostas de exemplo. A imagem a seguir é um exemplo de uma página de ajuda para um método.  
   
  ![Detalhes da página de Ajuda do WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Usando a página de Ajuda do WCF Web HTTP  
- A página de Ajuda do WCF WEB HTTP exibe uma breve descrição de cada operação desde que você especificar um usando o <xref:System.ComponentModel.DescriptionAttribute>. Este atributo tem uma cadeia de caracteres que contém uma breve descrição da operação a que será aplicada. Por exemplo, o código a seguir mostra como usar o <xref:System.ComponentModel.DescriptionAttribute> para fornecer uma breve descrição.  
+ A página de Ajuda do WCF WEB HTTP exibe uma breve descrição para cada operação, desde que você especificar um usando o <xref:System.ComponentModel.DescriptionAttribute>. Esse atributo usa uma cadeia de caracteres que contém uma breve descrição da operação de que qual é aplicado. Por exemplo, o código a seguir mostra como usar o <xref:System.ComponentModel.DescriptionAttribute> para fornecer uma breve descrição.  
   
 ```  
 [OperationContract]  
@@ -28,7 +28,7 @@ ms.locfileid: "33500946"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- Para ativar a página de Ajuda do WCF WEB HTTP, você deve adicionar um comportamento de ponto de extremidade para os pontos de extremidade do serviço. Isso pode ser feito na configuração ou código. Para habilitar a idade de WCF WEB HTTP ajuda na configuração, adicione um comportamento de ponto de extremidade com um `<webHttp>` elemento, defina `enableHelp` para `true`, adicione um ponto de extremidade e configurá-lo para usar o comportamento de ponto de extremidade. O código de configuração a seguir mostra como fazer isso.  
+ Para ativar a página de Ajuda do WCF WEB HTTP, você deve adicionar um comportamento de ponto de extremidade para pontos de extremidade do serviço. Isso pode ser feito na configuração ou código. Para habilitar a idade de Ajuda do WCF WEB HTTP na configuração, adicione um comportamento de ponto de extremidade com um `<webHttp>` elemento, defina `enableHelp` para `true`, adicionar um ponto de extremidade e configurá-lo para usar o comportamento de ponto de extremidade. O código de configuração a seguir mostra como fazer isso.  
   
 ```xml  
 <endpointBehaviors>  
@@ -45,21 +45,21 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Para habilitar a página de Ajuda do WCF Web HTTP no código, adicione um ponto de extremidade de serviço e adicione um <xref:System.ServiceModel.Description.WebHttpBehavior> para a configuração de ponto de extremidade <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` para `true`. O código a seguir mostra como fazer isso.  
+ Para habilitar a página de Ajuda do WCF Web HTTP no código, adicione um ponto de extremidade de serviço e adicione uma <xref:System.ServiceModel.Description.WebHttpBehavior> para a configuração de ponto de extremidade <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> para `true`. O código a seguir mostra como fazer isso.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  
 ```  
   
- A página de Ajuda é XHTML baseado em com marcação que identifica as diferentes partes da página. Isso permite que os clientes acessem programaticamente usando a página <xref:System.Xml.Linq.XElement> ou outras APIs XLinq.  
+ A página de Ajuda é XHTML com base em com marcação que identifica as diferentes partes da página. Isso permite que os clientes por meio de programação de acesso usando a página <xref:System.Xml.Linq.XElement> ou outras APIs XLinq.  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>Página de ajuda de esquemas usados no serviço WCF Web HTTP  
- Os seguintes esquemas são usados na página de ajuda de serviço WCF Web HTTP.  
+ Os esquemas a seguir são usados na página de Ajuda do serviço WCF Web HTTP.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Para obter mais informações sobre o esquema de serialização de contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Para obter mais informações sobre o esquema de serialização do contrato de dados, consulte [referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

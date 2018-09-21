@@ -3,11 +3,11 @@ title: Associações let em classes (F#)
 description: "Saiba como definir campos particulares e funções privadas para classes de F # por meio de associações 'let' na definição de classe."
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972866"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46561533"
 ---
 # <a name="let-bindings-in-classes"></a>Associações let em classes
 

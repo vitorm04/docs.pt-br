@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489621"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529700"
 ---
 # <a name="startupflags-enumeration"></a>Enumeração STARTUP_FLAGS
 Contém valores que indicam o comportamento de inicialização do common language runtime (CLR). Por padrão, a coleta de lixo é não simultânea e somente a biblioteca de classe base é carregada para a área de domínio neutro.  

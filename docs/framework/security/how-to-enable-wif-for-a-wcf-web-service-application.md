@@ -5,11 +5,11 @@ ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321043"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508746"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Como habilitar o WIF para um aplicativo de serviço Web WCF
 ## <a name="applies-to"></a>Aplica-se a  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
 ms.openlocfilehash: 9aec0af684d3fde139e6bc1a031f400c739d0155
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46008549"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46526595"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>NumberOfChars deve ser maior que zero
 Ao usar o `PeekChars` método da `TextFieldParser` do objeto, você deve fornecer um `NumberOfChars` valor é maior que `0`.  

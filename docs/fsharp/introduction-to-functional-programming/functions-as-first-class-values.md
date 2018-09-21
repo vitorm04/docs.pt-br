@@ -3,11 +3,11 @@ title: Funções como valores de primeira classe (F#)
 description: 'Saiba como as funções são elevadas para status de primeira classe na linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 45b65ab2454a592d38c80fd367e7243635614727
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478566"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537521"
 ---
 # <a name="functions-as-first-class-values"></a>Funções como valores de primeira classe
 

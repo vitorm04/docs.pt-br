@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46477776"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508839"
 ---
 # <a name="inheritsfrom-function"></a>Função InheritsFrom
 Determina se a classe ou instância atual é derivada de uma classe pai especificada.

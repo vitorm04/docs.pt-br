@@ -3,11 +3,11 @@ title: Chave não pode ser excluída porque contém subchaves
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46472727"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46519613"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Chave não pode ser excluída porque contém subchaves
 A chave não pode ser excluída porque ela tem subchaves.  

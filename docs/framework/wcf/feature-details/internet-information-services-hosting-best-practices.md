@@ -3,11 +3,11 @@ title: Práticas recomendadas de hospedagem dos Serviços de Informações da In
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009395"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540457"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 Este tópico descreve algumas práticas recomendadas para a hospedagem de serviços Windows Communication Foundation (WCF).  

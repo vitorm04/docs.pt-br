@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490621"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525640"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>Elemento &lt;Directives&gt; (.NET Nativo)
 O elemento raiz em cada arquivo de diretivas de tempo de execução para .NET nativo.  

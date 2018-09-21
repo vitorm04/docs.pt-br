@@ -3,11 +3,11 @@ title: Propriedades de instância Store de fluxo de trabalho do SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972670"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538697"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Propriedades de instância Store de fluxo de trabalho do SQL
 Os tópicos nesta seção fornecem detalhes sobre propriedades de instância Store de fluxo de trabalho SQL.  

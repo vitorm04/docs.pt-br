@@ -2,16 +2,16 @@
 title: Política de autorização
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: eaf4dfc6e1f02a1cd98d9ab48af70426e8ba6151
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217289"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508785"
 ---
 # <a name="authorization-policy"></a>Política de autorização
 
-Este exemplo demonstra como implementar uma política de autorização de declaração personalizada e um Gerenciador de autorização de serviço personalizado associado. Isso é útil quando o acesso baseado em declarações verifica a operações de serviço e antes das verificações de acesso, a serviço torna concede ao chamador determinados direitos. Este exemplo mostra o processo de adição de declarações, bem como o processo para fazer uma verificação de acesso em relação ao conjunto finalizado de declarações. Todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Por padrão com o `wsHttpBinding` , um nome de usuário e senha fornecidos pelo cliente são usadas para fazer logon em uma conta válida do Windows NT. Este exemplo demonstra como utilizar um personalizado <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` para autenticar o cliente. Além disso, este exemplo mostra o cliente autenticar para o serviço usando um certificado X.509. Este exemplo mostra uma implementação de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre eles conceder acesso aos métodos específicos do serviço para usuários específicos. Este exemplo é baseado na [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md), mas demonstra como executar uma transformação de declaração antes do <xref:System.ServiceModel.ServiceAuthorizationManager> que está sendo chamado.
+Este exemplo demonstra como implementar uma política de autorização de declaração personalizada e um Gerenciador de autorização de serviço personalizado associado. Isso é útil quando o acesso baseado em declarações verifica a operações de serviço e antes das verificações de acesso, a serviço torna concede ao chamador determinados direitos. Este exemplo mostra o processo de adição de declarações, bem como o processo para fazer uma verificação de acesso em relação ao conjunto finalizado de declarações. Todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Por padrão com o `wsHttpBinding` , um nome de usuário e senha fornecidos pelo cliente são usadas para fazer logon em uma conta válida do Windows NT. Este exemplo demonstra como utilizar um personalizado <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> para autenticar o cliente. Além disso, este exemplo mostra o cliente autenticar para o serviço usando um certificado X.509. Este exemplo mostra uma implementação de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e <xref:System.ServiceModel.ServiceAuthorizationManager>, que entre eles conceder acesso aos métodos específicos do serviço para usuários específicos. Este exemplo é baseado na [nome de usuário de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-user-name.md), mas demonstra como executar uma transformação de declaração antes do <xref:System.ServiceModel.ServiceAuthorizationManager> que está sendo chamado.
 
 > [!NOTE]
 > As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.

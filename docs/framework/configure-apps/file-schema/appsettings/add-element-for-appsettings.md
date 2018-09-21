@@ -1,5 +1,5 @@
 ---
-title: '&lt;Adicionar&gt; elemento para &lt;appSettings&gt;'
+title: '&lt;Adicione&gt; elemento para &lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 35a9fc08033d2b9cd1dae5a1f1f3ddcd361f03eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753632"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529574"
 ---
-# <a name="add-element-for-appsettings"></a>\<Adicionar > elemento \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<Adicionar > elemento para \<appSettings >
 
 Adiciona uma configuração de aplicativo personalizado.
 
@@ -36,8 +36,8 @@ Adiciona uma configuração de aplicativo personalizado.
 
 |           | Descrição |
 | --------- | ----------- |
-| **key**   | Atributo obrigatório.<br><br>Especifica o nome da chave para adicionar. |
-| **value** | Atributo obrigatório.<br><br>Especifica o valor da chave para adicionar. |
+| **key**   | Atributo obrigatório.<br><br>Especifica o nome da chave a ser adicionada. |
+| **value** | Atributo obrigatório.<br><br>Especifica o valor da chave a ser adicionada. |
 
 ## <a name="parent-element"></a>Elemento pai
 
@@ -51,11 +51,20 @@ Nenhum
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como adicionar uma configuração personalizada para o nome do aplicativo:
+O exemplo a seguir mostra como adicionar uma definição de configuração personalizada para o nome do aplicativo:
 
 ```xml
 <appSettings>
   <add key="ApplicationName" value="MyApplication" />
+</appSettings>
+```
+
+O exemplo a seguir usa o `<add>` elemento para definir duas configurações de compatibilidade em um aplicativo ASP.NET:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
 </appSettings>
 ```
 
