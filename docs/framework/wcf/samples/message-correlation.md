@@ -2,12 +2,12 @@
 title: Correlação de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: e4cd5dfd6f03370a408dc6f8fb39c983db3d43df
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999423"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493153"
 ---
 # <a name="message-correlation"></a>Correlação de mensagem
 Este exemplo demonstra como um aplicativo de enfileiramento de mensagens (MSMQ) pode enviar uma mensagem MSMQ a um serviço do Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre remetente e destinatário aplicativos em um cenário de solicitação/resposta. Este exemplo usa a associação msmqIntegrationBinding. Nesse caso, o serviço é um aplicativo de console auto-hospedado para que você possa observar o serviço que recebe de mensagens na fila. K  
@@ -16,7 +16,7 @@ Este exemplo demonstra como um aplicativo de enfileiramento de mensagens (MSMQ) 
   
  O `IOrderProcessor` contrato de serviço define uma operação de serviço unidirecional que é adequada para uso com o enfileiramento de mensagens. Uma mensagem MSMQ não tem um cabeçalho de ação, portanto, não é possível mapear diferentes mensagens MSMQ para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação nesse caso. Se você quiser definir contratos de operação mais no serviço, o aplicativo deve fornecer informações sobre qual cabeçalho no MSMQ mensagem (por exemplo, o rótulo ou correlationID) pode ser usada para decidir qual contrato de operação para o qual expedir. Isso é demonstrado na [Demux personalizado](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
- A mensagem do MSMQ também não contém informações sobre qual cabeçalhos são mapeados para os parâmetros diferentes do contrato da operação. Portanto, pode haver apenas um parâmetro no contrato de operação. O parâmetro é do tipo <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` que contém a mensagem MSMQ subjacente. O tipo "T" no `MsmqMessage<T>` classe representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o `PurchaseOrder` tipo é serializado no corpo da mensagem MSMQ.  
+ A mensagem do MSMQ também não contém informações sobre qual cabeçalhos são mapeados para os parâmetros diferentes do contrato da operação. Portanto, pode haver apenas um parâmetro no contrato de operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, que contém a mensagem MSMQ subjacente. O tipo "T" no `MsmqMessage<T>` classe representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o `PurchaseOrder` tipo é serializado no corpo da mensagem MSMQ.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  

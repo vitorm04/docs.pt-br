@@ -2,12 +2,12 @@
 title: funcionalidades de simplificação do WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526347"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493224"
 ---
 # <a name="wcf-simplification-features"></a>funcionalidades de simplificação do WCF
 Este tópico discute os novos recursos que facilitam escrever aplicativos WCF.  
@@ -106,7 +106,7 @@ Este tópico discute os novos recursos que facilitam escrever aplicativos WCF.
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Obtém e define a extensão máxima permitida da matriz. Essa cota limita o tamanho máximo de uma matriz de primitivas que o leitor de XML retorna, inclusive matrizes de bytes. Essa cota não limita o consumo de memória no próprio leitor de XML, mas em qualquer componente que esteja usando o leitor. Por exemplo, quando o <xref:System.Runtime.Serialization.DataContractSerializer> usa um leitor protegido com <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, ele não desserializa as matrizes de bytes maiores do que essa cota.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Obtém e define o máximo permitido de bytes retornados para cada leitura. Essa cota limita o número de bytes que são lidos em uma única operação de leitura ao ler a marca inicial do elemento e seus atributos. (Em casos não transmitidos por streaming, o nome do elemento em si não é contado na cota.) Ter atributos XML demais pode consumir todo o tempo de processamento de maneira desproporcional porque a exclusividade dos nomes de atributo tem que ser verificada. O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> atenua essa ameaça.|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 nós profundos|Essa cota limita a profundidade máxima de aninhamento dos elementos XML.  O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> interage com o <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: o leitor sempre mantém dados na memória para o elemento atual e todos os seus ancestrais, para que o consumo máximo de memória do leitor seja proporcional ao produto dessas duas configurações. Ao desserializar um grafo de objeto aninhado mais profundamente, o desserializador é forçado para acessar a pilha inteira e gerar um <xref:System.StackOverflowException> irrecuperável. Uma correlação direta existe entre aninhamento de XML e aninhamento de objeto para o <xref:System.Runtime.Serialization.DataContractSerializer> e o <!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`. O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> é usado para atenuar essa ameaça.|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 nós profundos|Essa cota limita a profundidade máxima de aninhamento dos elementos XML.  O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> interage com o <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: o leitor sempre mantém dados na memória para o elemento atual e todos os seus ancestrais, para que o consumo máximo de memória do leitor seja proporcional ao produto dessas duas configurações. Ao desserializar um grafo de objeto aninhado mais profundamente, o desserializador é forçado para acessar a pilha inteira e gerar um <xref:System.StackOverflowException> irrecuperável. Uma correlação direta existe entre aninhamento de XML e aninhamento de objeto para <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer>. O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> é usado para atenuar essa ameaça.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Essa cota limita o número máximo de caracteres permitidos em um nametable. O nametable contém algumas cadeias de caracteres (como namespaces e prefixos) que são encontrados ao processar um documento XML. Como essas cadeias de caracteres são armazenadas em buffer na memória, essa cota é usada para evitar o armazenamento em buffer excessivo quando o streaming é esperado.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|Essa cota limita o tamanho máximo da cadeia de caracteres que o leitor de XML retorna. Essa cota não limita o consumo de memória no próprio leitor de XML, mas no componente que esteja usando o leitor. Por exemplo, quando o <xref:System.Runtime.Serialization.DataContractSerializer> usa um leitor protegido com <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, ele não desserializa as cadeias de caracteres maiores do que essa cota.|  
   
