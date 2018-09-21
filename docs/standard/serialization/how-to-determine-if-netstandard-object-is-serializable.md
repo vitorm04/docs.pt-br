@@ -11,11 +11,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525481"
+ms.locfileid: "46537963"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>Como determinar se um objeto .NET padrão é serializável
 
