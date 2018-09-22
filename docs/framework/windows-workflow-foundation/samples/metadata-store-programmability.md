@@ -2,17 +2,17 @@
 title: Programabilidade de Store de metadados
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
-ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9f30fcdac131b8749a4d165875b9bbb584542843
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998910"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583568"
 ---
 # <a name="metadata-store-programmability"></a>Programabilidade de Store de metadados
 O armazenamento de metadados é um recurso de [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] que permite a associação de metadados arbitrários, na forma de atributos CLR, para tipos em tempo de execução. Isso permite que um acoplamento fraco entre os componentes de tempo de execução e suas contrapartes em tempo de design, bem como a capacidade alterar os componentes de tempo de design sem afetar o tempo de execução. O exemplo mostra como programar no armazenamento de metadados aplicando atributos para um tipo de tempo de execução, a fonte para que nós não tem controle sobre. A terminologia usada normalmente é que um aplicativo hospedeiro registra os metadados para um conjunto de tipos.  
   
- Dentro de saída, você pode perceber um atributo adicional, inesperado, <!--zz <xref:System.Runtime.InteropServices.GUIDAttribute> --> `System.Runtime.InteropServices.GUIDAttribute`. Isso é adicionado ao usar os metadados API e não tem impacto no exemplo.  
+ Dentro de saída, você pode observar um atributo adicional, inesperado, <xref:System.Runtime.InteropServices.GuidAttribute>. Isso é adicionado ao usar os metadados API e não tem impacto no exemplo.  
   
  Este exemplo demonstra:  
   
@@ -22,7 +22,7 @@ O armazenamento de metadados é um recurso de [!INCLUDE[wfd1](../../../../includ
   
 -   Usando um mecanismo de retorno de chamada para adiar o registro de metadados.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
+## <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
   
 1.  Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de solução de ProgrammingMetadataStore.sln.  
   

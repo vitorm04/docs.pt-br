@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508918"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577691"
 ---
 # <a name="panels-overview"></a>Visão geral de painéis
 <xref:System.Windows.Controls.Panel> elementos são componentes que controlam a renderização de elementos – seu tamanho e as dimensões, sua posição e a disposição de seu conteúdo filho. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece uma série de predefinido <xref:System.Windows.Controls.Panel> elementos, bem como a capacidade de construir personalizado <xref:System.Windows.Controls.Panel> elementos.  

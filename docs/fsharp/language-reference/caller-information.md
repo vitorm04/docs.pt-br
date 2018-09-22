@@ -3,11 +3,11 @@ title: 'Informações do chamador (F #)'
 description: Descreve como usar atributos de argumento de informações do chamador para obter informações do chamador de um método.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537274"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577565"
 ---
 # <a name="caller-information"></a>Informações do chamador
 

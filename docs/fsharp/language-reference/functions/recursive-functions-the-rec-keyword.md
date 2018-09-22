@@ -3,11 +3,11 @@ title: 'Funções recursivas: a palavra-chave rec (F#)'
 description: "Saiba como a palavra-chave F # 'rec' é usada com a palavra-chave 'let' para definir uma função recursiva."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508548"
+ms.locfileid: "46562672"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funções recursivas: a palavra-chave rec
 

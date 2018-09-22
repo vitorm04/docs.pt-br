@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529347"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586241"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizando um conjunto de dados com um XmlDataDocument
 Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando um fortemente tipados <xref:System.Data.DataSet> sincronizado com um <xref:System.Xml.XmlDataDocument>. Os exemplos a seguir criam uma **conjunto de dados** com um esquema minimizado que corresponde a apenas uma parte do documento XML de origem. Os exemplos usam um **XmlDataDocument** para preservar a fidelidade do documento XML de origem, permitindo que o **conjunto de dados** a ser usado para expor um subconjunto do documento XML.  
