@@ -3,17 +3,17 @@ title: Funções espaciais
 ms.date: 03/30/2017
 ms.assetid: 90cb177d-88a0-45be-97e8-3b306283c6e0
 ms.openlocfilehash: ad6b722e84aae40354e30434b107752d02352645
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526635"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580675"
 ---
-# <a name="spatial-functions"></a><span data-ttu-id="b9ffa-102">Funções espaciais</span><span class="sxs-lookup"><span data-stu-id="b9ffa-102">Spatial Functions</span></span>
-<span data-ttu-id="b9ffa-103">Não há nenhum formato literal para tipos espaciais.</span><span class="sxs-lookup"><span data-stu-id="b9ffa-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="b9ffa-104">Entretanto, você pode usar funções canônicas do Entity Framework que você chama usando cadeias de caracteres no formato de texto bem conhecido.</span><span class="sxs-lookup"><span data-stu-id="b9ffa-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="b9ffa-105">Por exemplo, a chamada de função a seguir cria um ponto geométrico:</span><span class="sxs-lookup"><span data-stu-id="b9ffa-105">For example, the following function call creates a geometry point:</span></span>  
+# <a name="spatial-functions"></a><span data-ttu-id="76c0a-102">Funções espaciais</span><span class="sxs-lookup"><span data-stu-id="76c0a-102">Spatial Functions</span></span>
+<span data-ttu-id="76c0a-103">Não há nenhum formato literal para tipos espaciais.</span><span class="sxs-lookup"><span data-stu-id="76c0a-103">There is no literal format for spatial types.</span></span> <span data-ttu-id="76c0a-104">Entretanto, você pode usar funções canônicas do Entity Framework que você chama usando cadeias de caracteres no formato de texto bem conhecido.</span><span class="sxs-lookup"><span data-stu-id="76c0a-104">However, you can use canonical Entity Framework functions that you call using strings in Well-Known Text format.</span></span> <span data-ttu-id="76c0a-105">Por exemplo, a chamada de função a seguir cria um ponto geométrico:</span><span class="sxs-lookup"><span data-stu-id="76c0a-105">For example, the following function call creates a geometry point:</span></span>  
   
 ```  
 GeometryFromText('POINT (43 -73)')  
 ```  
   
- <span data-ttu-id="b9ffa-106">O [métodos SpatialEdmFunctions](https://msdn.microsoft.com/library/hh749531.aspx) página lista todos os métodos do Entity Framework canônicos espaciais.</span><span class="sxs-lookup"><span data-stu-id="b9ffa-106">The [SpatialEdmFunctions Methods](https://msdn.microsoft.com/library/hh749531.aspx) page lists all spatial canonical Entity Framework methods.</span></span> <span data-ttu-id="b9ffa-107">Clique em um método de interesse ver quais parâmetros devem ser passados para uma função.</span><span class="sxs-lookup"><span data-stu-id="b9ffa-107">Click on a method of interest to see what parameters should be passed to a function.</span></span>
+ <span data-ttu-id="76c0a-106">O [métodos SpatialEdmFunctions](https://msdn.microsoft.com/library/hh749531.aspx) página lista todos os métodos do Entity Framework canônicos espaciais.</span><span class="sxs-lookup"><span data-stu-id="76c0a-106">The [SpatialEdmFunctions Methods](https://msdn.microsoft.com/library/hh749531.aspx) page lists all spatial canonical Entity Framework methods.</span></span> <span data-ttu-id="76c0a-107">Clique em um método de interesse ver quais parâmetros devem ser passados para uma função.</span><span class="sxs-lookup"><span data-stu-id="76c0a-107">Click on a method of interest to see what parameters should be passed to a function.</span></span>
