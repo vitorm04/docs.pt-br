@@ -3,11 +3,11 @@ title: Exemplo de extensões fortemente tipadas
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006490"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577909"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Exemplo de extensões fortemente tipadas
 O exemplo usa o <xref:System.ServiceModel.Syndication.SyndicationFeed> classe para os fins do exemplo. No entanto, os padrões demonstrados nesse exemplo podem ser usados com todas as classes de distribuição que dão suporte a dados de extensão.  

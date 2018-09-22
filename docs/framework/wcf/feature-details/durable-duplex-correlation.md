@@ -3,11 +3,11 @@ title: Correlação duplex durável
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526608"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699177"
 ---
 # <a name="durable-duplex-correlation"></a>Correlação duplex durável
 Correlação duplex durável, também conhecido como correlação de retorno de chamada, é útil quando um serviço de fluxo de trabalho tem um requisito para enviar um retorno de chamada ao chamador inicial. Ao contrário de duplex do WCF, o retorno de chamada pode ocorrer a qualquer momento no futuro e não está vinculado ao mesmo canal ou o tempo de vida do canal; o único requisito é que o chamador tem um ponto de extremidade ativo escuta para a mensagem de retorno de chamada. Isso permite que dois serviços de fluxo de trabalho para se comunicar em uma conversa de longa execução. Este tópico fornece uma visão geral de correlação duplex durável.  

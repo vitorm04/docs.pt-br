@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: adee6ab283fb7e2fe9bbfcda78c9692621407e9e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320802"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698448"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Como definir estilos de célula padrão e formatos de dados para o controle DataGridView dos Windows Forms usando o designer
 O <xref:System.Windows.Forms.DataGridView> controle permite especificar estilos de célula padrão e formatos de dados para todo o controle, para colunas específicas, para os cabeçalhos de linha e coluna e para linhas para criar um efeito de razão alternadas de célula. Os estilos padrão definidos para todo o controle serão substituídos por estilos padrão definidos para colunas e linhas alternadas. Além disso, os estilos definidos no código para as linhas e células individuais substituem os estilos padrão.  

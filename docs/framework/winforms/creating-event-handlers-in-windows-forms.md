@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
 ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540720"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577789"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Criando manipuladores de eventos no Windows Forms
 Um manipulador de eventos é um procedimento no seu código que determina quais ações são executadas quando ocorre um evento, por exemplo, quando o usuário clica em um botão ou uma fila de mensagens recebe uma mensagem. Quando um evento é gerado, o manipulador ou manipuladores de eventos que receberão o evento são executados. Os eventos podem ser atribuídos a vários manipuladores e os métodos que manipulam os eventos particulares podem ser alterados dinamicamente. Você também pode usar o Designer de Formulários do Windows para criar manipuladores de eventos.  
