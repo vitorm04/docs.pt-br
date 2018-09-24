@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; elemento'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747519"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027355"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; elemento
 Define uma ou mais opções usadas pela classe <xref:System.AppContext> para fornecer um mecanismo de recusa de uma nova funcionalidade.  
@@ -125,7 +125,21 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
   
  Os desenvolvedores de biblioteca também podem definir opções personalizadas para permitir que os chamadores recusar alterada funcionalidade introduzida em versões posteriores de suas bibliotecas. Para obter mais informações, consulte a classe <xref:System.AppContext>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="switches-in-aspnet-applications"></a>Comutadores nos aplicativos ASP.NET
+
+Você pode configurar um aplicativo ASP.NET para usar configurações de compatibilidade com a adição de um [ \<Adicionar >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) elemento para o [ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) seção do arquivo Web. config. 
+
+O exemplo a seguir usa o `<add>` elemento para adicionar duas configurações para o `<appSettings>` seção de um arquivo Web. config:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>Exemplo
+
  O exemplo a seguir usa o `AppContextSwitchOverrides` elemento para definir uma opção de compatibilidade de aplicativo único, `Switch.System.Globalization.NoAsyncCurrentCulture`, que impede a cultura que fluem entre threads em chamadas de método assíncrono.  
   
 ```xml  
