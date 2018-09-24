@@ -8,27 +8,27 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45638315"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586478"
 ---
-# <a name="parallel-diagnostic-tools"></a><span data-ttu-id="2ef3a-102">Ferramentas de diagnóstico em paralelo</span><span class="sxs-lookup"><span data-stu-id="2ef3a-102">Parallel Diagnostic Tools</span></span>
-<span data-ttu-id="2ef3a-103">O Visual Studio fornece amplo suporte para depuração e criação de perfil de aplicativos multi-threaded.</span><span class="sxs-lookup"><span data-stu-id="2ef3a-103">Visual Studio provides extensive support for debugging and profiling multi-threaded applications.</span></span>  
+# <a name="parallel-diagnostic-tools"></a><span data-ttu-id="e3309-102">Ferramentas de diagnóstico em paralelo</span><span class="sxs-lookup"><span data-stu-id="e3309-102">Parallel Diagnostic Tools</span></span>
+<span data-ttu-id="e3309-103">O Visual Studio fornece amplo suporte para depuração e criação de perfil de aplicativos multi-threaded.</span><span class="sxs-lookup"><span data-stu-id="e3309-103">Visual Studio provides extensive support for debugging and profiling multi-threaded applications.</span></span>  
   
-## <a name="debugging"></a><span data-ttu-id="2ef3a-104">Depuração</span><span class="sxs-lookup"><span data-stu-id="2ef3a-104">Debugging</span></span>  
- <span data-ttu-id="2ef3a-105">O depurador do Visual Studio adiciona novas janelas para depurar aplicativos paralelos.</span><span class="sxs-lookup"><span data-stu-id="2ef3a-105">The Visual Studio debugger adds new windows for debugging parallel applications.</span></span> <span data-ttu-id="2ef3a-106">Para mais informações, consulte os seguintes tópicos:</span><span class="sxs-lookup"><span data-stu-id="2ef3a-106">For more information, see the following topics:</span></span>  
+## <a name="debugging"></a><span data-ttu-id="e3309-104">Depuração</span><span class="sxs-lookup"><span data-stu-id="e3309-104">Debugging</span></span>  
+ <span data-ttu-id="e3309-105">O depurador do Visual Studio adiciona novas janelas para depurar aplicativos paralelos.</span><span class="sxs-lookup"><span data-stu-id="e3309-105">The Visual Studio debugger adds new windows for debugging parallel applications.</span></span> <span data-ttu-id="e3309-106">Para mais informações, consulte os seguintes tópicos:</span><span class="sxs-lookup"><span data-stu-id="e3309-106">For more information, see the following topics:</span></span>  
   
--   [<span data-ttu-id="2ef3a-107">Usando a janela Pilhas Paralelas</span><span class="sxs-lookup"><span data-stu-id="2ef3a-107">Using the Parallel Stacks Window</span></span>](/visualstudio/debugger/using-the-parallel-stacks-window)  
+-   [<span data-ttu-id="e3309-107">Usando a janela Pilhas Paralelas</span><span class="sxs-lookup"><span data-stu-id="e3309-107">Using the Parallel Stacks Window</span></span>](/visualstudio/debugger/using-the-parallel-stacks-window)  
   
--   [<span data-ttu-id="2ef3a-108">Usando a janela Tarefas</span><span class="sxs-lookup"><span data-stu-id="2ef3a-108">Using the Tasks Window</span></span>](/visualstudio/debugger/using-the-tasks-window)  
+-   [<span data-ttu-id="e3309-108">Usando a janela Tarefas</span><span class="sxs-lookup"><span data-stu-id="e3309-108">Using the Tasks Window</span></span>](/visualstudio/debugger/using-the-tasks-window)  
   
--   <span data-ttu-id="2ef3a-109">[Passo a passo: depurar um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).</span><span class="sxs-lookup"><span data-stu-id="2ef3a-109">[Walkthrough: Debugging a Parallel Application](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).</span></span>  
+-   <span data-ttu-id="e3309-109">[Passo a passo: depurar um aplicativo paralelo](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).</span><span class="sxs-lookup"><span data-stu-id="e3309-109">[Walkthrough: Debugging a Parallel Application](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).</span></span>  
   
-## <a name="profiling"></a><span data-ttu-id="2ef3a-110">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="2ef3a-110">Profiling</span></span>  
- <span data-ttu-id="2ef3a-111">As visualizações do relatório Visualizador de Simultaneidade permitem que você visualize como os threads em um programa paralelo interagem uns com os outros e com threads de outros processos no sistema.</span><span class="sxs-lookup"><span data-stu-id="2ef3a-111">The Concurrency Visualizer report views enable you to visualize how the threads in a parallel program interact with each other and with threads from other processes on the system.</span></span> <span data-ttu-id="2ef3a-112">Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).</span><span class="sxs-lookup"><span data-stu-id="2ef3a-112">For more information, see [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span></span>  
+## <a name="profiling"></a><span data-ttu-id="e3309-110">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="e3309-110">Profiling</span></span>  
+ <span data-ttu-id="e3309-111">As visualizações do relatório Visualizador de Simultaneidade permitem que você visualize como os threads em um programa paralelo interagem uns com os outros e com threads de outros processos no sistema.</span><span class="sxs-lookup"><span data-stu-id="e3309-111">The Concurrency Visualizer report views enable you to visualize how the threads in a parallel program interact with each other and with threads from other processes on the system.</span></span> <span data-ttu-id="e3309-112">Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).</span><span class="sxs-lookup"><span data-stu-id="e3309-112">For more information, see [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ef3a-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2ef3a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3309-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e3309-113">See also</span></span>
 
-- [<span data-ttu-id="2ef3a-114">Programação paralela</span><span class="sxs-lookup"><span data-stu-id="2ef3a-114">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)
+- [<span data-ttu-id="e3309-114">Programação paralela</span><span class="sxs-lookup"><span data-stu-id="e3309-114">Parallel Programming</span></span>](../../../docs/standard/parallel-programming/index.md)

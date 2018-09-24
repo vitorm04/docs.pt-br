@@ -3,16 +3,16 @@ title: Usando XSLT para transformar uma árvore XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646711"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585940"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="98e38-102">Usando XSLT para transformar uma árvore XML (C#)</span><span class="sxs-lookup"><span data-stu-id="98e38-102">Using XSLT to Transform an XML Tree (C#)</span></span>
-<span data-ttu-id="98e38-103">Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento.</span><span class="sxs-lookup"><span data-stu-id="98e38-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="98e38-104">Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação.</span><span class="sxs-lookup"><span data-stu-id="98e38-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="98e38-105">Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.</span><span class="sxs-lookup"><span data-stu-id="98e38-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="97273-102">Usando XSLT para transformar uma árvore XML (C#)</span><span class="sxs-lookup"><span data-stu-id="97273-102">Using XSLT to Transform an XML Tree (C#)</span></span>
+<span data-ttu-id="97273-103">Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento.</span><span class="sxs-lookup"><span data-stu-id="97273-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="97273-104">Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação.</span><span class="sxs-lookup"><span data-stu-id="97273-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="97273-105">Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.</span><span class="sxs-lookup"><span data-stu-id="97273-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98e38-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="98e38-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="97273-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="97273-106">Example</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -49,7 +49,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- <span data-ttu-id="98e38-107">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="98e38-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="97273-107">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="97273-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -58,8 +58,8 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="98e38-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="98e38-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97273-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="97273-108">See Also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="98e38-109">Programação LINQ to XML avançada (C#)</span><span class="sxs-lookup"><span data-stu-id="98e38-109">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="97273-109">Programação LINQ to XML avançada (C#)</span><span class="sxs-lookup"><span data-stu-id="97273-109">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
