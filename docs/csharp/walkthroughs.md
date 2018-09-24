@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641047"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696314"
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  

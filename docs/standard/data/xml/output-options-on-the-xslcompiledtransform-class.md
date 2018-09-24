@@ -6,11 +6,11 @@ ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45678367"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699112"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opções de saída na classe de XslCompiledTransform
 Este tópico discute opções de saída disponíveis XSLT. Você pode especificar opções de saída na folha de estilos, ou o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  

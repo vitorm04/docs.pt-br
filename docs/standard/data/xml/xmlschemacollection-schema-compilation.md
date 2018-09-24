@@ -9,11 +9,11 @@ ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45677690"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580142"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilação do esquema de XmlSchemaCollection
 **XmlSchemaCollection** é um cache ou uma biblioteca em que esquemas XDR (XML-Data Reduced) e XSD (XML Schema definition language) podem ser armazenados e validados. **XmlSchemaCollection** melhora o desempenho armazenando em cache esquemas na memória em vez de acessá-los de um arquivo ou de uma URL.  

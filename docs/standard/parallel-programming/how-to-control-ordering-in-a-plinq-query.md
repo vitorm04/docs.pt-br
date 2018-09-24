@@ -11,11 +11,11 @@ ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaa08106126212345bb594cdeabe6e7281cd7b5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45668881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004293"
 ---
 # <a name="how-to-control-ordering-in-a-plinq-query"></a>Como controlar a ordem em uma consulta PLINQ
 Estes exemplos mostram como controlar a ordem em uma consulta PLINQ usando o método de extensão <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  

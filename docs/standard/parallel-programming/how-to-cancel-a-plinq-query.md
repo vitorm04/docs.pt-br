@@ -12,11 +12,11 @@ ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45973086"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Como cancelar uma consulta PLINQ
 Os exemplos a seguir mostram duas maneiras de cancelar uma consulta PLINQ. O primeiro exemplo mostra como cancelar uma consulta composta principalmente de travessia de dados. O segundo exemplo mostra como cancelar uma consulta que contém uma função de usuário que gasta muitos recursos de computação.  

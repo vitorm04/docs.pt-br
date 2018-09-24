@@ -9,11 +9,11 @@ ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68c98b3b4effbe7cea1a3c4443d2222e6bbcd43c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45652960"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46584247"
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Scripts de folha de estilos de XSLT usando &lt;msxsl:script&gt;
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  

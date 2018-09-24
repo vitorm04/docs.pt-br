@@ -11,11 +11,11 @@ ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45964827"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ e TPL
 Para paralelizar a uma operação em uma fonte de dados, uma das etapas essenciais é *particionar* a fonte em várias seções que possam ser acessadas simultaneamente por vários threads. O PLINQ e a TPL (Biblioteca de Paralelismo de Tarefas) fornecem particionadores padrão que funcionam de forma transparente quando você escreve uma consulta paralela ou um loop <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Para cenários mais avançados, você pode conectar seu próprio particionador.  

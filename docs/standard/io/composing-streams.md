@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45676818"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577016"
 ---
 # <a name="composing-streams"></a>Compondo fluxos
 Um repositório de backup é uma mídia de armazenamento, como um disco ou memória. Cada repositório de backup diferente implementa seu próprio fluxo como uma implementação da classe <xref:System.IO.Stream>. Cada tipo de fluxo lê e grava bytes de e para seu repositório de backup específico. Os fluxos que se conectam aos repositório de backup são chamados de fluxos base. Os fluxos base têm construtores com os parâmetros necessários para conectar o fluxo ao repositório de backup. Por exemplo, <xref:System.IO.FileStream> tem construtores que especificam um parâmetro de caminho, o qual especifica como o arquivo será compartilhado por processos etc.  

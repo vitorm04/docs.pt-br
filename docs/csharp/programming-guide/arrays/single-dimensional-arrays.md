@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
 ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45616215"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46695732"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrizes unidimensionais (Guia de Programação em C#)
 

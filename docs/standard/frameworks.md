@@ -7,11 +7,11 @@ ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45616741"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46007289"
 ---
 # <a name="target-frameworks"></a>Frameworks de destino
 

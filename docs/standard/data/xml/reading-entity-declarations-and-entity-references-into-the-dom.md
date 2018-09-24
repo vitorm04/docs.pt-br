@@ -6,11 +6,11 @@ ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45615204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45748675"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Declarações de entidade de leitura e referências a entidades em DOM
 Uma entidade é uma declaração que indica um nome ser usado em XML no lugar do conteúdo ou marcação. Há duas partes a entidades. Primeiro, você deve a um nome ao conteúdo de substituição utilizando uma declaração de entidade. Uma declaração de entidade é criada usando a sintaxe de `<!ENTITY name "value">` em um Document type definition (DTD) ou no esquema XML. Em segundo lugar, o nome definido na declaração de entidade é usado posteriormente em XML. Quando usado em XML, é chamado uma referência de entidade. Por exemplo, a seguinte declaração de entidade declara uma entidade de nome `publisher` que está sendo associado com o conteúdo de “de pressionamento Microsoft”.  

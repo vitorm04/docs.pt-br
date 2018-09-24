@@ -9,11 +9,11 @@ ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45645951"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697861"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recuperação não ordenada do nó por nome ou índice
 **XmlNamedNodeMap** é descrito na especificação do W3C (World Wide Web Consortium) como NamedNodeMap e é necessário para tratar um conjunto não ordenado de nós com a capacidade de fazer referência a nós pelos respectivos nome ou índice. A única maneira de ter acesso a um **XmlNamedNodeMap** é quando um **XmlNamedNodeMap** é retornado através de um método ou de uma propriedade. Há três métodos ou propriedades que retornam um **XmlNamedNodeMap**:  

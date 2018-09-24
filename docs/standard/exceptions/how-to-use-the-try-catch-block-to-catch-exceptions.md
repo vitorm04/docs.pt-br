@@ -15,11 +15,11 @@ ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45618064"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699307"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Como usar o bloco try/catch para capturar exceções
 

@@ -4,12 +4,12 @@ description: Saiba como selecionar um aplicativo de console do .NET Framework e 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 266c439163888962075f804a0f5651a8e7d83151
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392678"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581253"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Executando aplicativos de console em contêineres do Windows
 
@@ -64,7 +64,7 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
     Invoke-Expression "$MSBuildPath $MSBuildParameters"
 }
 
-Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
+Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj -p:OutputPath=.\publish -p:Configuration=Release"
 ```
 
 ## <a name="creating-the-dockerfile"></a>Criando o Dockerfile

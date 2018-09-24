@@ -3,11 +3,11 @@ title: Como escrever uma consulta que encontra elementos com base no contexto (C
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45593303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45987949"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como escrever uma consulta que encontra elementos com base no contexto (C#)
 Muitas vezes você pode ter que escrever uma consulta que seleciona elementos com base no contexto. Você pode querer filtrar com base nos elementos irmãos precedentes ou seguintes. Você pode querer filtrar com base nos elementos filhos ou ancestrais.  

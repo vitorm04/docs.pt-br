@@ -3,11 +3,11 @@ title: Serializando com uma declaração XML (C#)
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
 ms.openlocfilehash: 613280efc8c734c53c4af9252b4b83e2dd942f36
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597270"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586281"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>Serializando com uma declaração XML (C#)
 Este tópico descreve como controlar se a serialização gera uma declaração XML.  

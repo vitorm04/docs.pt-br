@@ -15,11 +15,11 @@ ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f39b079de1c97d0954ba013ba1c87a8bd606920
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45652853"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585528"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Como exibir milissegundos em valores de data e hora
 Os métodos padrão de formatação de data e hora, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluem as horas, minutos e segundos de um valor temporal, mas excluem seu componente de milissegundos. Este tópico mostra como incluir um componente de milissegundos de uma data e hora em cadeias de caracteres de data e hora formatadas.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
 ms.openlocfilehash: b55827b60a89da2569fad9da135c84571a24b094
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45988381"
 ---
 # <a name="add-c-reference"></a>add (Referência de C#)
 A palavra-chave contextual `add` é usada para definir um acessador de evento personalizado que é invocado quando o código cliente assina seu [evento](../../../csharp/language-reference/keywords/event.md). Se você fornecer um acessador `add` personalizado, também será fornecer um acessador [remove](../../../csharp/language-reference/keywords/remove.md).  

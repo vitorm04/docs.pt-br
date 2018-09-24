@@ -3,11 +3,11 @@ title: Classificando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
 ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45638302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45749573"
 ---
 # <a name="sorting-data-c"></a>Classificando dados (C#)
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.  
@@ -20,7 +20,7 @@ Uma operação de classificação ordena os elementos de uma sequência com base
   
 ## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais Informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Classifica valores em ordem crescente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Classifica valores em ordem decrescente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  

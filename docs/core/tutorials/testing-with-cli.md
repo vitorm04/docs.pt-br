@@ -5,11 +5,11 @@ author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
 ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668347"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46580344"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
 

@@ -4,12 +4,12 @@ description: O comando dotnet build compila um projeto e todas as suas dependên
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: dc5970fa1c8f3172916676819fa7789d84a5386e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692970"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580103"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -47,7 +47,7 @@ A compilação exige o arquivo *project.assets.json*, que lista as dependências
 
 O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
 
-Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `/p` para configurar propriedades ou `/l` para definir um agente. Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `-p` para configurar propriedades ou `-l` para definir um agente. Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
 O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto. O seguinte exemplo mostra um projeto que produz um código executável:
 

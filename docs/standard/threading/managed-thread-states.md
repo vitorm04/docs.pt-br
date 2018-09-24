@@ -8,11 +8,11 @@ ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45624561"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711137"
 ---
 # <a name="managed-thread-states"></a>Estados de thread gerenciado
 A propriedade <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> fornece uma máscara de bits que indica o estado atual do thread. Um thread está sempre em pelo menos um dos estados possíveis na enumeração <xref:System.Threading.ThreadState> e pode estar em vários estados ao mesmo tempo.  

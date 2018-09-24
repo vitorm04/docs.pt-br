@@ -3,11 +3,11 @@ title: Segurança do LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
 ms.openlocfilehash: 0c4ee8df85d6e5c6f84947dcaaeb6875bbd687de
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591666"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532448"
 ---
 # <a name="linq-to-xml-security-c"></a>Segurança do LINQ to XML (C#)
 Este tópico descreve problemas de segurança associadas LINQ to XML. Além disso, fornece alguma orientação para a exposição de segurança de abrandamento.  

@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653025"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705552"
 ---
 # <a name="network-programming-samples"></a>Amostras de programação de rede
 Esta seção contém descrições e links para amostras de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> e <xref:System.Net.Sockets>, e em outros relacionados. 

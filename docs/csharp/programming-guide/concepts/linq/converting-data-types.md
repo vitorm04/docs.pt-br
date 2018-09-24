@@ -3,11 +3,11 @@ title: Convertendo Tipos de Dados (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
 ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45648051"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580571"
 ---
 # <a name="converting-data-types-c"></a>Convertendo Tipos de Dados (C#)
 Os métodos de conversão alteram o tipo dos objetos de entrada.  
@@ -25,7 +25,7 @@ Os métodos de conversão alteram o tipo dos objetos de entrada.
   
  Os métodos de conversão nesta tabela cujos nomes começam com "As" alteram o tipo estático da coleção de origem, mas não a enumeram. Os métodos cujos nomes começam com "To" enumeram a coleção de origem e colocam os itens na coleção de tipo correspondente.  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais Informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|Retorna a entrada digitada como <xref:System.Collections.Generic.IEnumerable%601>.|Não aplicável.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|Converte um <xref:System.Collections.IEnumerable> (genérico) em um <xref:System.Linq.IQueryable> (genérico).|Não aplicável.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  

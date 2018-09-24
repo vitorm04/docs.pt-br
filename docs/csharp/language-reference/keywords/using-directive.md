@@ -5,11 +5,11 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594744"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326027"
 ---
 # <a name="using-directive-c-reference"></a>Diretiva using (Referência de C#)
 A diretiva `using` tem três usos:  

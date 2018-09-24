@@ -9,11 +9,11 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593114"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583581"
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
 

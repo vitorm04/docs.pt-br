@@ -12,11 +12,11 @@ ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004173"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend, coleta de lixo e pontos seguros
 Quando você chama <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> em um thread, o sistema observa que uma suspensão de thread foi solicitada e permite que o thread seja executado até atingir um ponto seguro antes de realmente suspendê-lo. Um ponto seguro de um thread é um ponto da execução em que a coleta de lixo pode ser executada.  
