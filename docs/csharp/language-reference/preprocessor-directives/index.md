@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584653"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082156"
 ---
 # <a name="c-preprocessor-directives"></a>Diretivas de pré-processador do C#
 Esta seção contém informações sobre as seguintes diretivas de pré-processador do C#:
