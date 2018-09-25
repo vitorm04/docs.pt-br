@@ -4,12 +4,12 @@ description: Saiba quais dependências você precisa em seu computador Windows p
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482604"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179488"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
 
@@ -30,6 +30,8 @@ O .NET Core é compatível com as seguintes versões de:
 * Windows Server 2012 SP1 (Servidor Completo ou Server Core)
 * Windows Server 2012 R2 (servidor completo ou Server Core)
 * Windows Server 2016 ou versões posteriores (Servidor completo, Servidor Core ou Nano Server)
+
+## <a name="net-core-supported-operating-systems"></a>Sistemas operacionais compatíveis com .NET Core
 
 Os artigos a seguir têm uma lista completa dos sistemas operacionais compatíveis do .NET Core por versão:
 

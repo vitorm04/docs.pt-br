@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391632"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697913"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
 
@@ -94,7 +94,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
     |379893|.NET Framework 4.5.2|
     |Somente em sistemas Windows 10: 393295<br /><br /> Em todas as outras versões do sistema operacional: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
     |Somente em sistemas com a Atualização de novembro do Windows 10: 394254<br /><br /> Em todas as outras versões do sistema operacional: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Somente na Atualização de Aniversário do Windows 10: 394802<br /><br /> Em todas as outras versões do sistema operacional: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Na Atualização de Aniversário do Windows 10 e Windows Server 2016: 394802<br /><br /> Em todas as outras versões do sistema operacional: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Somente na Atualização do Windows 10 para Criadores: 460798<br/><br/> Em todas as outras versões do sistema operacional: 460805 | .NET Framework 4.7 |
     |Somente no Windows 10 Fall Creators Update: 461308<br/><br/> Em todas as outras versões do sistema operacional: 461310 | .NET Framework 4.7.1 |
     |Somente na Atualização de abril de 2018 do Windows 10: 461808<br/><br/> Em todas as outras versões do sistema operacional: 461814| .NET Framework 4.7.2 |
@@ -142,7 +142,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
     |.NET Framework 4.6 instalado em todas as outras versões do sistema operacional Windows|393297|
     |.NET Framework 4.6.1 instalado no Windows 10|394254|
     |.NET Framework 4.6.1 instalado em todas as outras versões do sistema operacional Windows|394271|
-    |.NET Framework 4.6.2 instalado na Atualização de Aniversário do Windows 10|394802|
+    |.NET Framework 4.6.2 instalado na Atualização de Aniversário do Windows 10 e no Windows Server 2016|394802|
     |.NET Framework 4.6.2 instalado em todas as outras versões do sistema operacional Windows|394806|
     |.NET Framework 4.7 instalado no Windows 10 Creators Update|460798|
     |.NET Framework 4.7 instalado em todas as outras versões do sistema operacional Windows|460805|

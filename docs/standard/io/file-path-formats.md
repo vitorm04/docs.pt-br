@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933599"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861296"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -117,7 +117,7 @@ Quase todos os caminhos passados para APIs do Windows são normalizados. Durante
 - Avalia os componentes do diretório relativo (`.` para o diretório atual e `..` para o diretório pai).
 - Corta alguns caracteres.
 
-Essa normalização ocorre de maneira implícita, mas é possível fazê-la explicitamente chamando o método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula uma chamada para a [função GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx). Também é possível chamar a [função GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) do Windows diretamente usando P/Invoke. Também é possível chamar a 
+Essa normalização ocorre de maneira implícita, mas é possível fazê-la explicitamente chamando o método <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, que encapsula uma chamada ao [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Também é possível chamar o [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) do Windows diretamente usando P/Invoke. Também é possível chamar a 
 
 ### <a name="identifying-the-path"></a>Identificar o caminho
 

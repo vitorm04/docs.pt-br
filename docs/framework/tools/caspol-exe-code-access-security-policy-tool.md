@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410092"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748421"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
@@ -83,29 +83,29 @@ caspol [options]
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|**-allcode**|Especifica qualquer código. Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.AllMembershipCondition>.|  
-|**-appdir**|Especifica o diretório do aplicativo. Se você especificar **–appdir** como a condição de associação, a evidência de URL do código será comparada com a evidência do diretório de aplicativo do código. Se ambos os valores de evidência forem iguais, essa condição de associação será atendida. Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
+|**-allcode**|Especifica qualquer código. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
+|**-appdir**|Especifica o diretório do aplicativo. Se você especificar **–appdir** como a condição de associação, a evidência de URL do código será comparada com a evidência do diretório de aplicativo do código. Se ambos os valores de evidência forem iguais, essa condição de associação será atendida. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom**  *xmlfile*|Adiciona uma condição de associação personalizada. O argumento *xmlfile* obrigatório especifica o arquivo .xml que contém a serialização XML da condição de associação personalizada.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Especifica o código que tem o hash de assembly indicado. Para usar um hash como uma condição de associação do grupo de códigos, você deve especificar o valor de hash ou o arquivo de assembly. Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica o código que tem o editor de software indicado, conforme mostrado por um arquivo de certificado, uma assinatura em um arquivo ou pela representação hexadecimal de um certificado X509. Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.PublisherMembershipCondition>.|  
-|**-site** *website*|Especifica o código que tem o site de origem indicado. Por exemplo:<br /><br /> **-site** www.proseware.com<br /><br /> Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.SiteMembershipCondition>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica o código que tem um nome forte específico, conforme designado pelo nome do arquivo, o nome do assembly como uma cadeia de caracteres e a versão do assembly no formato *major*.*minor*.*build*.*revision*. Por exemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
-|**-url** *URL*|Especifica o código originado da URL indicada. A URL deve incluir um protocolo, como http:// ou ftp://. Além disso, um caractere curinga (\*) pode ser usado para especificar vários assemblies de uma URL específica. **Observação:** como uma URL pode ser identificada usando vários nomes, o uso de uma URL como uma condição de associação não é uma maneira segura de verificar a identidade do código. Sempre que possível, use uma condição de associação de nome forte, uma condição de associação de publicador ou a condição de associação de hash. <br /><br /> Para obter mais informações sobre essa condição de associação, consulte a <xref:System.Security.Policy.UrlMembershipCondition>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Especifica o código que tem o hash de assembly indicado. Para usar um hash como uma condição de associação do grupo de códigos, você deve especificar o valor de hash ou o arquivo de assembly. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica o código que tem o editor de software indicado, conforme mostrado por um arquivo de certificado, uma assinatura em um arquivo ou pela representação hexadecimal de um certificado X509. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
+|**-site** *website*|Especifica o código que tem o site de origem indicado. Por exemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica o código que tem um nome forte específico, conforme designado pelo nome do arquivo, o nome do assembly como uma cadeia de caracteres e a versão do assembly no formato *major*.*minor*.*build*.*revision*. Por exemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Especifica o código originado da URL indicada. A URL deve incluir um protocolo, como http:// ou ftp://. Além disso, um caractere curinga (\*) pode ser usado para especificar vários assemblies de uma URL específica. **Observação:** como uma URL pode ser identificada usando vários nomes, o uso de uma URL como uma condição de associação não é uma maneira segura de verificar a identidade do código. Sempre que possível, use uma condição de associação de nome forte, uma condição de associação de publicador ou a condição de associação de hash. <br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Especifica o código com a zona de origem indicada. O argumento *zonename* pode ter um dos seguintes valores: **MyComputer**, **Intranet**, **Trusted**, **Internet** ou **Untrusted**. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.ZoneMembershipCondition> Classe.|  
   
  O argumento *flags*, que pode ser usado com as opções **–addgroup** e **–chggroup**, é especificado usando um dos valores a seguir.  
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|**-description "** *description* **"**|Se usado com a opção **–addgroup**, especifica a descrição de um grupo de códigos a ser adicionado. Se usado com a opção **–chggroup**, especifica a descrição de um grupo de códigos a ser editado. O argumento *description* deve ser colocado entre aspas duplas.|  
+|**-description** "*descrição*"|Se usado com a opção **–addgroup**, especifica a descrição de um grupo de códigos a ser adicionado. Se usado com a opção **–chggroup**, especifica a descrição de um grupo de códigos a ser editado. O argumento *description* deve ser colocado entre aspas duplas.|  
 |**-exclusive** {**on**&#124;**off**}|Quando definido como **on**, indica que apenas o conjunto de permissões associado ao grupo de códigos que você está adicionando ou modificando é levado em consideração quando algum código se ajusta à condição de associação do grupo de códigos. Quando essa opção é definida como **off**, Caspol.exe leva em consideração os conjuntos de permissões de todos os grupos de códigos compatíveis no nível da política.|  
 |**-levelfinal** {**on**&#124;**off**}|Quando definido como **on**, indica que nenhum nível de política abaixo do nível no qual o ocorre grupo de códigos adicionado ou modificado é considerado. Essa opção costuma ser usada no nível de política do computador. Por exemplo, se você definir esse sinalizador para um grupo de códigos no nível do computador e algum código corresponder a essa condição de associação do grupo de códigos, Caspol.exe não calculará ou não aplicará a política de nível do usuário desse código.|  
-|**-name "** *name* **"**|Se usado com a opção **–addgroup**, especifica o nome de script de um grupo de códigos a ser adicionado. Se usado com a opção **-chggroup**, especifica o nome de script de um grupo de códigos a ser editado. O argumento *name* deve ser colocado entre aspas duplas. O argumento *name* não pode começar com um número e só pode conter A-Z, 0-9 e o caractere de sublinhado. Os grupos de códigos podem ser referenciados por esse *name* em vez de seu rótulo numérico. O *name* também é muito útil para fins de script.|  
+|**-name** "*nome*"|Se usado com a opção **–addgroup**, especifica o nome de script de um grupo de códigos a ser adicionado. Se usado com a opção **-chggroup**, especifica o nome de script de um grupo de códigos a ser editado. O argumento *name* deve ser colocado entre aspas duplas. O argumento *name* não pode começar com um número e só pode conter A-Z, 0-9 e o caractere de sublinhado. Os grupos de códigos podem ser referenciados por esse *name* em vez de seu rótulo numérico. O *name* também é muito útil para fins de script.|  
   
 ## <a name="remarks"></a>Comentários  
  A política de segurança é expressada usando-se três níveis de política: política de computador, política de usuário e política de empresa. O conjunto de permissões recebido por um assembly é determinado pela interseção dos conjuntos de permissões permitidos por esses três níveis de política. Cada nível de política é representado por uma estrutura hierárquica de grupos de códigos. Cada grupo de códigos tem uma condição de associação que determina qual código é um membro desse grupo. Um conjunto de permissões nomeado também está associado a cada grupo de códigos. Esse conjunto de permissões especifica as permissões permitidas pelo tempo de execução que a condição de associação deve ter. Uma hierarquia do grupo de códigos, além de seus conjuntos de permissões nomeados associados, define e mantém cada nível de política de segurança. É possível usar as opções **–user**, **-customuser**, **–machine** e **-enterprise** para definir o nível de política de segurança.  
   
- Para obter mais informações sobre a política de segurança e como o tempo de execução determina quais permissões devem ser concedidas ao código, consulte [Gerenciamento de Políticas de Segurança](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Para obter mais informações sobre a política de segurança e como o tempo de execução determina quais permissões devem ser concedidas ao código, consulte [Gerenciamento de Políticas de Segurança](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Fazendo Referência a Grupos de Códigos e Conjuntos de Permissões  
  Para facilitar referências a grupos de códigos em uma hierarquia, a opção **-list** exibe uma lista recuada de grupos de códigos com seus rótulos numéricos (1, 1.1, 1.1.1 e assim por diante). As outras operações de linha de comando com grupos de códigos como destino também usam os rótulos numéricos para fazer referência a grupos de códigos específicos.  
@@ -132,13 +132,13 @@ caspol [options]
   
  Suponhamos que um conjunto de permissões contendo uma permissão personalizada tenha sido adicionado à política do computador. Essa permissão personalizada é implementada em `MyPerm.exe` e faz referência a classes `MyPerm.exe` em `MyOther.exe`. Ambos os assemblies devem ser adicionados à lista de assemblies de confiança total. O comando a seguir adiciona o assembly `MyPerm.exe` à lista de confiança total da política do computador.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  O comando a seguir adiciona o assembly `MyOther.exe` à lista de confiança total da política do computador.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  O comando a seguir adiciona um grupo de códigos filho à raiz da hierarquia do grupo de códigos da política do computador. O novo grupo de códigos é um membro da zona **Internet** e é associado ao conjunto de permissões **Execução**.  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  O comando a seguir adiciona um grupo de códigos filho que concede ao compartilhamento \\\netserver\netshare permissões de intranet local.  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  O comando a seguir adiciona o conjunto de permissões `Mypset` à política do usuário.  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  O comando a seguir altera o conjunto de permissões definido na política do usuário do grupo de códigos identificado como 1.2. para o conjunto de permissões **Execução**.  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  O comando a seguir altera a condição de associação na política padrão do grupo de códigos identificado como 1.2.1. e altera a configuração do sinalizador **exclusive**. A condição de associação é definida para ser o código originado na zona **Internet** e o sinalizador **exclusive** é ativado.  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  O comando a seguir altera o conjunto de permissões com o nome `Mypset` para o conjunto de permissões contido em `newpset.xml`. Observe que a versão atual não dá suporte à alteração dos conjuntos de permissões que estão sendo usados pela hierarquia do grupo de códigos.  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  O comando a seguir associa o grupo de códigos raiz da política do usuário (identificada como 1) ao conjunto de permissões nomeado como **Nothing**. Isso impede a execução de Caspol.exe.  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  O comando a seguir recupera a política do computador salva mais recentemente.  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  O comando a seguir remove o grupo de códigos identificado como 1.1. Se esse grupo de códigos tiver algum grupo de códigos filho, esses grupos também serão excluídos.  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  O comando a seguir remove o conjunto de permissões **Execution** da política do usuário.  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  O comando a seguir remove `Mypset` do nível de política do usuário.  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  O comando a seguir mostra todos os grupos de códigos da política do computador aos quais `myassembly` pertence.  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  O comando a seguir mostra todos os grupos de códigos das políticas do computador, da empresa e do usuário personalizado especificado a que `myassembly` pertence.  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  O comando a seguir calcula as permissões de `testassembly` com base nos níveis de política do computador e do usuário.  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Ferramentas](../../../docs/framework/tools/index.md)  
- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Ferramentas](index.md)  
+ [Prompts de Comando](developer-command-prompt-for-vs.md)

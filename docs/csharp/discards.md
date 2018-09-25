@@ -4,12 +4,12 @@ description: Descreve o suporte do C# a descartes, que são variáveis descartá
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219226"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524197"
 ---
 # <a name="discards---c-guide"></a>Descartes – Guia do C#
 
@@ -54,7 +54,7 @@ O exemplo a seguir define um método `ProvidesFormatInfo` que usa instruções [
 
 ## <a name="calls-to-methods-with-out-parameters"></a>Chamadas para métodos com parâmetros out
 
-Ao chamar o método `Deconstruct` para desconstruir um tipo definido pelo usuário (uma instância de uma classe, estrutura ou interface), você pode descartar os valores de argumentos `out` individuais. Mas você também pode descartar o valor de argumentos `out` ao chamar qualquer método com um parâmetro out. 
+Ao chamar o método `Deconstruct` para desconstruir um tipo definido pelo usuário (uma instância de uma classe, estrutura ou interface), você pode descartar os valores de argumentos `out` individuais. Mas você também pode descartar o valor de argumentos `out` ao chamar qualquer método com um parâmetro out.
 
 A exemplo a seguir chama o método [DateTime.TryParse(String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) para determinar se a representação de cadeia de caracteres de uma data é válida na cultura atual. Já que o exemplo está preocupado apenas em validar a cadeia de caracteres de data e não em analisá-lo para extrair a data, o argumento `out` para o método é um descarte.
 
@@ -71,16 +71,17 @@ Observe que `_` também é um identificador válido. Quando usado fora de um con
 - A modificação acidental do valor da variável `_` no escopo atribuindo a ela o valor do descarte pretendido. Por exemplo:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
- 
+
 - Um erro do compilador por violação de segurança de tipo. Por exemplo:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
- 
-- Erro do compilador CS0136, "Um local ou um parâmetro denominado '_' não pode ser declarado neste escopo porque esse nome é usado em um escopo delimitador de local para definir um local ou parâmetro." Por exemplo:
+
+- Erro do compilador CS0136, "Um local ou um parâmetro denominado '\_' não pode ser declarado neste escopo porque esse nome é usado em um escopo delimitador de local para definir um local ou parâmetro." Por exemplo:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Consulte também
-[Desconstruindo tuplas e outros tipos](deconstruct.md)   
-[`is` palavra-chave](language-reference/keywords/is.md)   
-[`switch` palavra-chave](language-reference/keywords/switch.md)   
+
+- [Desconstruindo tuplas e outros tipos](deconstruct.md)
+- [`is` palavra-chave](language-reference/keywords/is.md)
+- [`switch` palavra-chave](language-reference/keywords/switch.md)

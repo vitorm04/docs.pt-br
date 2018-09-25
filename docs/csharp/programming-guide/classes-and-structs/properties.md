@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199154"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857674"
 ---
 # <a name="properties-c-programming-guide"></a>Propriedades (Guia de Programação em C#)
 
@@ -73,8 +73,9 @@ Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverã
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
- [Palavra-chave get](../../../csharp/language-reference/keywords/get.md)    
- [Palavra-chave set](../../../csharp/language-reference/keywords/set.md)    
+
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Usando propriedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
+- [Palavra-chave get](../../../csharp/language-reference/keywords/get.md)    
+- [Palavra-chave set](../../../csharp/language-reference/keywords/set.md)    

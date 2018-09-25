@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577807"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264669"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
 O .NET fornece vários métodos para comparar os valores de cadeias de caracteres. A tabela a seguir lista e descreve os métodos de comparação de valores.  
@@ -150,6 +150,8 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Os dois métodos são úteis quando usados em conjunto com o método **String.Remove**. Você pode usar tanto o método **IndexOf** quanto o **LastIndexOf** para recuperar a posição de um caractere e, em seguida, fornecer essa posição para o método **Remove** para remover um caractere ou uma palavra que começa com esse caractere.  
   
-## <a name="see-also"></a>Consulte também  
- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
- [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Consulte também
+
+- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Classificação de tabelas de peso](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

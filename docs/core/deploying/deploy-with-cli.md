@@ -4,12 +4,12 @@ description: Aprenda a implantação de aplicativos .NET Core com ferramentas da
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244738"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855016"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implantando aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
 
@@ -26,7 +26,7 @@ Ao trabalhar na linha de comando, você pode usar um editor de programa de sua e
 
 ## <a name="framework-dependent-deployment"></a>Implantação dependente de estrutura
 
-Implantar uma implantação dependente de estrutura sem dependências de terceiros significa simplesmente compilar, testar e publicar o aplicativo. Um exemplo simples criado em C# ilustra o processo. 
+Implantar uma implantação dependente de estrutura sem dependências de terceiros significa simplesmente compilar, testar e publicar o aplicativo. Um exemplo simples criado em C# ilustra o processo.
 
 1. Crie um diretório de projeto.
 
@@ -43,7 +43,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Atualize as ferramentas e as dependências do projeto.
- 
+
    Execute o comando [dotnet restore](../tools/dotnet-restore.md) ([veja observação](#dotnet-restore-note)) para restaurar as dependências especificadas no projeto.
 
 1. Crie um build de depuração do seu aplicativo.
@@ -105,7 +105,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Defina as plataformas às quais seu aplicativo se destinará.
 
-   Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. 
+   Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução.
 
    Por exemplo, a seção `<PropertyGroup>` a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
@@ -188,8 +188,7 @@ Observe que você só pode implantar uma implantação autocontida com uma bibli
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte também
 
-[Implantação de aplicativos .NET Core](index.md)   
-[Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)   
-
+* [Implantação de um aplicativo .NET Core](index.md)
+* [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)

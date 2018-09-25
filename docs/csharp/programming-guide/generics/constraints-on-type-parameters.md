@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457350"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208654"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -19,7 +19,7 @@ Restrições informam o compilador sobre as funcionalidades que um argumento de 
 
 |Restrição|Descrição|
 |----------------|-----------------|
-|`where T : struct`|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable> pode ser especificado. Para obter mais informações, veja [Usando tipos anuláveis](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable%601> pode ser especificado. Para obter mais informações sobre tipos que permitem valor nulo, consulte [Tipos que permitem valor nulo](../nullable-types/index.md).|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : unmanaged`|O argumento de tipo não deve ser um tipo de referência e não deve conter nenhum membro de tipo de referência em nenhum nível de aninhamento.|
 |`where T : new()`|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada.|
@@ -111,7 +111,8 @@ Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e c
 
 ## <a name="see-also"></a>Consulte também
 
- <xref:System.Collections.Generic> [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Classes genéricas](../../../csharp/programming-guide/generics/generic-classes.md)  
- [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Classes genéricas](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)  

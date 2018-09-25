@@ -5,12 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc
-ms.openlocfilehash: bc652a375abd03bbc70f055b34d6ecea4d9fc374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe3fcdee1c508f5c8165b7709ca08e42d0b1d55
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219161"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251765"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -127,7 +127,7 @@ O [exemplo dotnet-framework:4.6.2](https://github.com/Microsoft/dotnet-framework
 
 * [Imagens do Windows Communication Framework (WCF) no GitHub](https://github.com/microsoft/wcf-docker)
 
-* [Exemplos de Docker do Windows Communication Framework (WCF) usando o .NET Full Framework 4.6.2](https://github.com/Microsoft/wcf-docker-samples)
+* [Exemplos de Docker do WCF (Windows Communication Framework) usando o .NET Framework 4.6.2](https://github.com/Microsoft/wcf-docker-samples)
 
 #### <a name="internet-information-server-iis"></a>Internet Information Server (IIS)
 

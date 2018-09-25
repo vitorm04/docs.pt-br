@@ -3,13 +3,16 @@ title: Implantação de aplicativos .NET Core com o Visual Studio
 description: Aprenda a implantação de aplicativos .NET Core com o Visual Studio
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.date: 09/03/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407443"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227734"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implantando aplicativos .NET Core com o Visual Studio
 
@@ -30,13 +33,14 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Crie o projeto.
 
-   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo Projeto**, selecione **.NET Core** no painel de tipos de projeto **Instalados** e selecione o modelo **Aplicativo de Console (.NET Core)** no painel central. Insira um nome de projeto, como "FDD" na caixa de texto **Nome**. Selecione o botão **OK**.
+   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "FDD" na caixa de texto **Nome**. Selecione o botão **OK**.
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o arquivo *Program.cs* ou *Program.vb* no editor e substitua o código gerado automaticamente com o seguinte código. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Crie um build de depuração do seu aplicativo.
 
@@ -54,7 +58,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
       1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações do perfil são mostradas na seção **Resumo** da guia.
 
-   Os arquivos resultantes são colocados em um diretório chamado `PublishOutput` que está em um subdiretório de *.\bin\release* do projeto.
+   Os arquivos resultantes são colocados em um diretório nomeado `Publish` no Windows e `publish` em sistemas Unix que está em um subdiretório do subdiretório *.\bin\release\netcoreapp2.1* do seu projeto.
 
 Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
@@ -76,17 +80,40 @@ Observe que uma implantação dependente de estrutura com dependências de terce
 
 ## <a name="simpleSelf"></a> Implantação autocontida sem dependências de terceiros
 
-Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, a modificação do arquivo *csproj*, a compilação, os testes e a publicação do aplicativo. Um exemplo simples criado em C# ilustra o processo.
+Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, a modificação do arquivo *csproj*, a compilação, os testes e a publicação do aplicativo. Um exemplo simples criado em C# ilustra o processo. Comece criando, codificando e testando seu projeto como você faria com uma implantação que depende da estrutura:
 
 1. Crie o projeto.
 
-   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Adicionar Novo Projeto**, selecione **.NET Core** no painel de tipos de projeto **Instalados** e selecione o modelo **Aplicativo de Console (.NET Core)** no painel central. Insira um nome de projeto, como "SCD" na caixa de texto **Nome** e selecione o botão **OK**.
+   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "SCD" na caixa de texto **Nome** e selecione o botão **OK**.
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o *Program.cs* ou o arquivo no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+
+1. Determine se você deseja usar o modo de invariável de globalização.
+
+   Especialmente se seu aplicativo for destinado ao Linux, será possível reduzir o tamanho total da sua implantação usando o [modo invariável de globalização](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). O modo invariável de globalização é útil para aplicativos que não são conhecidos globalmente e que podem usar as convenções de formatação, de maiúsculas e minúsculas e a comparação de cadeia de caracteres e ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Para habilitar o modo invariável, clique com o botão direito do mouse no seu projeto (não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj** ou **Editar SCD.vbproj**. Em seguida, adicione as seguintes linhas realçadas ao arquivo:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
+1. Crie um build de depuração do seu aplicativo.
+
+   Selecione **Compilar** > **Compilar Solução**. Você também pode compilar e executar o build de Depuração do aplicativo selecionando **Depurar** > **Iniciar Depuração**. Essa etapa de depuração permite identificar problemas com seu aplicativo quando ele está em execução em sua plataforma de host. Ainda será necessário testá-lo em cada uma de suas plataformas de destino.
+
+   Se você tiver habilitado o modo invariável de globalização, certifique-se principalmente de testar se a ausência de dados que levam em conta a cultura é adequada para o seu aplicativo.
+
+Após concluir a depuração, será possível publicar sua implantação independente:
+
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
+
+Depois de ter depurado e testado o programa, crie os arquivos a serem implantados com seu aplicativo para cada plataforma à qual ele se destina.
+
+Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
 1. Defina as plataformas às quais seu aplicativo se destinará.
 
@@ -96,17 +123,13 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
-```xml
-<PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-</PropertyGroup>
-```
+   ```xml
+   <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+   </PropertyGroup>
+   ```
 
    Observe que o elemento `<RuntimeIdentifiers>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo *csproj*. Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
-
-1. Crie um build de depuração do seu aplicativo.
-
-   Selecione **Compilar** > **Compilar Solução**. Você também pode compilar e executar o build de Depuração do aplicativo selecionando **Depurar** > **Iniciar Depuração**.
 
 1. Publique seu aplicativo.
 
@@ -146,11 +169,97 @@ A seguir está o arquivo *csproj* completo para esse projeto.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versões posteriores](#tab/vs157)
+
+Depois de ter depurado e testado o programa, crie os arquivos a serem implantados com seu aplicativo para cada plataforma à qual ele se destina. Isso envolve a criação de um perfil separado para cada plataforma de destino.
+
+Para cada plataforma que seu aplicativo direciona, faça o seguinte:
+
+1. Crie um perfil para sua plataforma de destino.
+
+   Se este for o primeiro perfil que você criou, clique com o botão direito do mouse no projeto (não na solução) no **Gerenciador de Soluções** e selecione **Publicar**.
+
+   Se você já criou um perfil, clique com o botão direito do mouse no projeto para abrir a caixa de diálogo **Publicar** se ela ainda não estiver aberta. Em seguida, selecione **Novo perfil**.
+
+   A caixa de diálogo **Escolher um destino de publicação** é aberta.
+  
+1. Selecione o local em que o Visual Studio publica seu aplicativo.
+
+   Se você apenas estiver publicando em uma única plataforma, será possível aceitar o valor padrão na caixa de texto **Escolher uma pasta**; isso publicará a implantação dependente de estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\*.
+
+   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\linux*.
+
+1. Crie o perfil selecionando o ícone de lista suspensa ao lado do botão **Publicar** e selecionando **Criar perfil**. Em seguida, selecione o botão **Criar perfil** para criar o perfil.
+
+1. Indique que você está publicando uma implantação independente e defina uma plataforma que seu aplicativo direcionará.
+
+   1. Na caixa de diálogo **Publicar**, selecione o link **Configurar** para abrir a caixa de diálogo **Configurações de perfil**.
+
+   1. Selecione **Independente** na caixa de listagem **Modo de implantação**.
+
+   1. Na caixa de listagem **Tempo de execução de destino**, selecione uma das plataformas que seu aplicativo direciona.
+
+   1. Selecione **Salvar** para aceitar suas alterações e fechar a caixa de diálogo.
+
+1. Nomeie seu perfil.
+
+   1. Selecione **Ações** > **Renomear perfil** para nomear seu perfil.
+
+   2. Atribua um nome ao seu perfil que identifique a plataforma de destino e, em seguida, selecione **Salvar*.
+
+Repita essas etapas para definir quaisquer plataformas de destino adicionais que seu aplicativo direciona.
+
+Você configurou seus perfis e agora está pronto para publicar seu aplicativo. Para fazer isso:
+
+   1. Se a janela **Publicar** não estiver aberta no momento, clique com o botão direito do mouse no projeto (não na solução) no **Gerenciador de Soluções** e selecione **Publicar**.
+
+   2. Selecione o perfil que você deseja publicar e, em seguida, selecione **Publicar**. Faça isso para cada perfil a ser publicado.
+
+   Observe que cada local de destino (no caso de nosso exemplo, bin\release\netcoreapp2.1\publish\\*profile-name* contém o conjunto completo de arquivos (seus arquivos de aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+
+Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
+
+Implante os arquivos publicados na maneira que desejar. Por exemplo, você pode empacotá-los em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha.
+
+A seguir está o arquivo *csproj* completo para esse projeto.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
+
+Além disso, o Visual Studio cria um perfil de publicação separado (\*.pubxml) para cada plataforma que você direciona. Por exemplo, o arquivo para nosso perfil do linux (linux.pubxml) aparece da seguinte maneira:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishProtocol>FileSystem</PublishProtocol>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PublishDir>bin\Release\netcoreapp2.1\publish\linux</PublishDir>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <_IsPortable>false</_IsPortable>
+  </PropertyGroup>
+</Project>
+```
+
+---
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Implantação autocontida com dependências de terceiros
 
@@ -164,11 +273,13 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
 
 A seguir está o arquivo *csproj* completo para esse projeto:
 
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -176,6 +287,22 @@ A seguir está o arquivo *csproj* completo para esse projeto:
   </ItemGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versões posteriores](#tab/vs157)
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+</Project>
+```
+
+---
 
 Quando você implanta seu aplicativo, todas as dependências de terceiros usadas em seu aplicativo também contém os arquivos do aplicativo. As bibliotecas de terceiros não são necessárias no sistema em que o aplicativo está em execução.
 

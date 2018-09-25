@@ -6,12 +6,12 @@ f1_keywords:
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: b9abedb72e04cb36273b48bb609fe8e410872f8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 04449d99fd3e1b573333bc11a9766e9809b44785
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415430"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259708"
 ---
 # <a name="in-c-reference"></a>in (Referência de C#)
 
@@ -20,6 +20,7 @@ A palavra-chave `in` é usada em quatro contextos:
 - [parâmetros de tipo genérico](in-generic-modifier.md) em interfaces e delegados genéricos.
 - Como um [modificador de parâmetro](in-parameter-modifier.md), que permite passar um argumento para um método por referência, não por valor.
 - Instruções [foreach](foreach-in.md).
+- [Cláusulas from](from-clause.md) em expressões de consulta LINQ.
 - [Cláusulas de junção](join-clause.md) em expressões de consulta LINQ.
   
 ## <a name="see-also"></a>Consulte também
