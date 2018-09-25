@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching&gt; elemento (configurações de rede)'
+title: '&lt;requestCaching&gt; (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9c0c8d80182931f9ac14e687a337b7be55a5a9a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743427"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083183"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; elemento (configurações de rede)
+# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; (configurações de rede)
 Controla o mecanismo de cache para solicitações de rede.  
   
  \<configuration>  
@@ -46,29 +45,29 @@ Controla o mecanismo de cache para solicitações de rede.
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`isPrivateCache`|Especifica se o cache fornece isolamento entre as informações de usuários diferentes. O valor padrão é `true`. Esse valor deve ser `false` para aplicativos de camada intermediária.|  
-|`disableAllCaching`|Especifica que o cache está desabilitado para todas as respostas de Web e não pode ser substituído por meio de programação.|  
+|`disableAllCaching`|Especifica que o cache está desabilitado para todas as respostas da Web e não pode ser substituído por meio de programação.|  
 |`defaultPolicyLevel`|Um dos valores na enumeração <xref:System.Net.Cache.RequestCacheLevel>. O valor padrão é `BypassCache`.|  
-|`unspecifiedMaximumAge`|Especifica o tempo padrão depois que o conteúdo seja marcado como expirada.|  
+|`unspecifiedMaximumAge`|Especifica o tempo padrão após o qual o conteúdo seja marcado como expirada.|  
   
 ## <a name="policylevel-attribute"></a>policyLevel atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`Default`|Retorna o recurso em cache se o recurso for atualizado, o comprimento do conteúdo é preciso e a expiração, modificação e atributos de comprimento de conteúdo estão presentes.|  
-|`BypassCache`|Retorna o recurso do servidor.|  
-|`CacheOnly`|Retorna o recurso em cache se o comprimento do conteúdo está presente e corresponde ao tamanho de entrada.|  
-|`CacheIfAvailable`|Retorna o recurso em cache se o comprimento do conteúdo for fornecido e corresponda ao tamanho de entrada; Caso contrário, o recurso é baixado do servidor e é retornado ao chamador.|  
-|`Revalidate`|Retorna o recurso em cache se o carimbo de hora do recurso em cache é o mesmo que o carimbo de hora do recurso no servidor. Caso contrário, o recurso é baixado do servidor, armazenado em cache e é retornado ao chamador.|  
-|`Reload`|Baixe o recurso do servidor, armazena em cache e retorna o recurso para o chamador.|  
-|`NoCacheNoStore`|Se existe um recurso de cache, ele será excluído. O recurso é baixado do servidor e é retornado ao chamador.|  
-|`Revalidate`|Atenda a uma solicitação usando a cópia armazenada em cache do recurso se o carimbo de hora é o mesmo que o carimbo de hora do recurso no servidor. Caso contrário, o recurso é baixado do servidor, apresentado para o chamador e é armazenado no cache,|  
+|`Default`|Retorna o recurso armazenado em cache se o recurso estiver atualizado, o comprimento do conteúdo é preciso e a expiração, modificação e atributos de comprimento de conteúdo estão presentes.|  
+|`BypassCache`|Retorna o recursos do servidor.|  
+|`CacheOnly`|Retorna o recurso armazenado em cache se o comprimento do conteúdo está presente e corresponde ao tamanho de entrada.|  
+|`CacheIfAvailable`|Retorna o recurso armazenado em cache se o comprimento do conteúdo é fornecido e corresponde o tamanho da entrada. Caso contrário, o recurso é baixado do servidor e é retornado ao chamador.|  
+|`Revalidate`|Retorna o recurso armazenado em cache se o carimbo de hora do recurso em cache é o mesmo que o carimbo de hora do recurso no servidor. Caso contrário, o recurso é baixado do servidor, armazenado no cache e é retornado ao chamador.|  
+|`Reload`|Baixa o recurso do servidor, armazena em cache e retorna o recurso para o chamador.|  
+|`NoCacheNoStore`|Se existir um recurso armazenado em cache, ele será excluído. O recurso é baixado do servidor e é retornado ao chamador.|  
+|`Revalidate`|Atende a uma solicitação usando a cópia armazenada em cache do recurso se o carimbo de hora é o mesmo que o carimbo de hora do recurso no servidor. Caso contrário, o recurso é baixado do servidor, apresentado ao chamador e é armazenado no cache,|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](../../../../../docs/framework/configure-apps/file-schema/network/defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache de HTTP está ativo e descreve a política de cache padrão.|  
-|[\<defaultFtpCachePolicy > elemento (configurações de rede)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache de FTP está ativo e descreve a política de cache padrão.|  
+|[\<defaultFtpCachePolicy > (configurações de rede)](../../../../../docs/framework/configure-apps/file-schema/network/defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache de FTP está ativo e descreve a política de cache padrão.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

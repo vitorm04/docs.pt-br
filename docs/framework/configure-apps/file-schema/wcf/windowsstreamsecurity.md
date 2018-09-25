@@ -1,24 +1,23 @@
 ---
-title: '&lt;windowsstreamsecurity está&gt;'
+title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a089a6fb61e8f7fac4116b2280a5c2fe0b703f94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c1253e6f402da6b818a4438142e122f8b31809c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755104"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084248"
 ---
-# <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsstreamsecurity está&gt;
+# <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Especifica configurações de segurança de fluxo do Windows da associação personalizada.  
   
  \<system.serviceModel>  
 \<associações >  
 \<customBinding>  
 \<associação >  
-\<windowsstreamsecurity está >  
+\<windowsStreamSecurity >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,7 +32,7 @@ Especifica configurações de segurança de fluxo do Windows da associação per
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|protectionLevel|Define a segurança em nível de mensagem. Assinatura de mensagens reduz o risco de um terceiro que viole a mensagem enquanto eles estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Sem proteção.<br />-Sign: Mensagens são assinadas.<br />-EncryptAndSign: Mensagens são assinadas e criptografadas.<br /><br /> O padrão é EncryptAndSign.<br /><br /> Esse atributo é do tipo <xref:System.Net.Security.ProtectionLevel>.|  
+|protectionLevel|Define a segurança em nível de mensagem. Assinar mensagens minimiza o risco de um terceiro violação da mensagem enquanto estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: Mensagens assinadas e criptografadas.<br /><br /> O padrão é EncryptAndSign.<br /><br /> Esse atributo é do tipo <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -42,10 +41,10 @@ Especifica configurações de segurança de fluxo do Windows da associação per
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- Transportes que usam um protocolo orientado por fluxo como TCP e pipes nomeados oferecem suporte a atualizações com base em fluxo de transporte. Especificamente, o WCF fornece atualizações de segurança. A configuração de segurança de transporte é encapsulada por este elemento de configuração, bem como por [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), que pode ser configurado e adicionado a uma associação personalizada  
+ Transportes que usam um protocolo orientado a fluxo como TCP e pipes nomeados oferecem suporte a atualizações com base no fluxo de transporte. Especificamente, o WCF fornece atualizações de segurança. A configuração dessa segurança de transporte é encapsulada por este elemento de configuração, bem como por [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md), que pode ser configurado e adicionado a uma associação personalizada  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.CustomBinding>  

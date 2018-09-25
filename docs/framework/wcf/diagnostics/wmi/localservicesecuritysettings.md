@@ -3,13 +3,12 @@ title: LocalServiceSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8f80af782c474ccf3a232ab353125fa223d4f5d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c79eb11fcc1973a3ef25a78afb8b141443d865c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486891"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156942"
 ---
 # <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
@@ -37,7 +36,7 @@ class LocalServiceSecuritySettings
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe LocalServiceSecuritySettings não define nenhum método.  
+ A classe LocalServiceSecuritySettings não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe LocalServiceSecuritySettings tem as seguintes propriedades:  
@@ -47,21 +46,21 @@ class LocalServiceSecuritySettings
   
  Tipo de acesso: somente leitura  
   
- Um valor booleano que especifica se os ataques por repetição contra o canal são detectados e lidados automaticamente.  
+ Um valor booliano que especifica se os ataques de reprodução contra o canal são detectados e tratados automaticamente.  
   
 ### <a name="inactivitytimeout"></a>InactivityTimeout  
  Tipo de dados: datetime  
   
  Tipo de acesso: somente leitura  
   
- O número máximo de pendente sessões de segurança que o serviço oferece suporte.  
+ O número máximo de sessões de segurança que o serviço suporta pendentes.  
   
 ### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
  Tipo de dados: datetime  
   
  Tipo de acesso: somente leitura  
   
- Um TimeSpan que especifica o tempo de vida concedido a todos os novos cookies de segurança.  
+ Um TimeSpan que especifica o tempo de vida emitido a todos os novos cookies de segurança.  
   
 ### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Tipo de dados: sint32  
@@ -103,21 +102,21 @@ class LocalServiceSecuritySettings
   
  Tipo de acesso: somente leitura  
   
- Um valor booleano que especifica se as conexões usando mensagens WS-Reliable tentam se reconectar após falhas de transporte.  
+ Um valor booliano que especifica se as conexões que usam mensagens WS-Reliable tentam se reconectar após falhas de transporte.  
   
 ### <a name="replaycachesize"></a>ReplayCacheSize  
  Tipo de dados: sint32  
   
  Tipo de acesso: somente leitura  
   
- O número de momentos em cache usados para detecção de repetição.  
+ O número de nonces armazenados em cache usados para detecção de reprodução.  
   
 ### <a name="replaywindow"></a>ReplayWindow  
  Tipo de dados: datetime  
   
  Tipo de acesso: somente leitura  
   
- Um TimeSpan que especifica a duração em que momentos de mensagens individuais são válidos.  
+ Um TimeSpan que especifica a duração na qual nonces de mensagens individuais são válidos.  
   
 ### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
  Tipo de dados: datetime  
@@ -138,13 +137,13 @@ class LocalServiceSecuritySettings
   
  Tipo de acesso: somente leitura  
   
- Um TimeSpan que especifica a duração na qual um carimbo de data / hora é válido.  
+ Um TimeSpan que especifica a duração em que um carimbo de data / hora é válido.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

@@ -3,13 +3,12 @@ title: Falhas de autenticação e validação de segurança
 ms.date: 03/30/2017
 ms.assetid: 0d4e3666-dfc6-421c-baf8-9479c22f7050
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5d7964c59f28f33d6ec7bc3ba605b84e6a201b14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d13e94800d71c6f567c6aab61974e42b1a3f1706
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474253"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070936"
 ---
 # <a name="security-validation-and-authentication-failures"></a>Falhas de autenticação e validação de segurança
 Nome do contador: falhas de autenticação e validação de segurança  
@@ -27,6 +26,6 @@ Nome do contador: falhas de autenticação e validação de segurança
   
 -   Ocorreu uma falha de descriptografia.  
   
--   Alguns necessários faltam elementos (por exemplo, timestamp ausente ou bloquear os dados criptografados) da mensagem.  
+-   Alguns necessários elementos (por exemplo, carimbo de hora ausente ou bloquear os dados criptografados) estão ausentes da mensagem.  
   
 -   Ocorreram erros durante o handshake TLSNEGO/SPNEGO.

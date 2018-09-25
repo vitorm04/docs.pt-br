@@ -1,5 +1,5 @@
 ---
-title: '&lt;remover&gt; elemento para &lt;namedCaches&gt;'
+title: '&lt;Remova&gt; elemento para &lt;namedCaches&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
@@ -7,15 +7,14 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745208"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071679"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;remover&gt; elemento para &lt;namedCaches&gt;
+# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;Remova&gt; elemento para &lt;namedCaches&gt;
 Remove uma entrada de cache nomeado da coleção de `namedCaches` para um cache de memória.  
   
  \<system.runtime.caching>  
@@ -51,7 +50,7 @@ Remove uma entrada de cache nomeado da coleção de `namedCaches` para um cache 
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contém uma coleção de definições de configuração para nomeado <xref:System.Runtime.Caching.MemoryCache> instâncias.|  
   
 ## <a name="remarks"></a>Comentários  
- O `remove` elemento remove um `namedCache` entrada da coleção de cache nomeado para um cache de memória.  
+ O `remove` elemento remove uma `namedCache` entrada da coleção para um cache de memória cache nomeado.  
   
 ## <a name="see-also"></a>Consulte também  
- [\<namedCaches > elemento (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+ [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -3,13 +3,12 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 646833f277c3ef4675a835ca0af3daf647e01224
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758575"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075235"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Registra o resolvedor de token do emissor que é usado por manipuladores na coleção de manipulador de token. O resolvedor de token do emissor é usado para resolver o token de assinatura em tokens de entrada e de mensagens.  
@@ -54,15 +53,15 @@ Registra o resolvedor de token do emissor que é usado por manipuladores na cole
 |[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornece manipuladores de token de configuração para uma coleção de segurança.|  
   
 ## <a name="remarks"></a>Comentários  
- O resolvedor de token do emissor é usado para resolver o token de assinatura em tokens de entrada e de mensagens. Ele é usado para recuperar o material criptográfico usado para verificar a assinatura. Você deve especificar o `type` atributo. O tipo especificado pode ser <xref:System.IdentityModel.Tokens.IssuerTokenResolver> ou um tipo personalizado que deriva de <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  
+ O resolvedor de token do emissor é usado para resolver o token de assinatura em tokens de entrada e de mensagens. Ele é usado para recuperar o material criptográfico que é usado para verificar a assinatura. Você deve especificar o `type` atributo. O tipo especificado pode ser <xref:System.IdentityModel.Tokens.IssuerTokenResolver> ou um tipo personalizado que deriva de <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  
   
- Alguns manipuladores de token permitem que você especifique configurações de resolvedor de token do emissor na configuração. As configurações em manipuladores de token individuais substituem especificado na coleção de manipulador de token de segurança.  
+ Alguns manipuladores de token permitem que você especifique configurações de resolvedor de token do emissor na configuração. As configurações em manipuladores de token individuais substituem aqueles especificados na coleção de manipulador de token de segurança.  
   
 > [!NOTE]
->  Especificando o `<issuerTokenResolver>` como um elemento filho do [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento foi substituído, mas ainda há suporte para compatibilidade com versões anteriores. Configurações de `<securityTokenHandlerConfiguration>` elemento substituem aquelas no `<identityConfiguration>` elemento.  
+>  Especificando o `<issuerTokenResolver>` como um elemento filho do [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento foi preterido, mas ainda há suporte para compatibilidade com versões anteriores. Configurações de `<securityTokenHandlerConfiguration>` elemento substituem as o `<identityConfiguration>` elemento.  
   
 ## <a name="example"></a>Exemplo  
- O XML a seguir mostra a configuração para um resolvedor de token do emissor que se baseia em uma classe personalizada que é derivada de <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. O resolvedor de token mantém um dicionário de pares de chave público que é inicializado de um elemento de configuração personalizada (`<AddAudienceKeyPair>`) definidos para a classe. As substituições de classe a <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> método para processar este elemento. A substituição é mostrada no exemplo a seguir; No entanto, os métodos que ele chama não são mostrados para fins de brevidade. Para o exemplo completo, consulte o `CustomToken` exemplo.  
+ O XML a seguir mostra a configuração para um resolvedor de token do emissor que se baseia em uma classe personalizada que derive de <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. O resolvedor de token mantém um dicionário de pares de chave público que é inicializado de um elemento de configuração personalizada (`<AddAudienceKeyPair>`) definido para a classe. A classe substitui o <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> método para processar este elemento. A substituição é mostrada no exemplo a seguir; No entanto, os métodos que ele chama não são mostrados para fins de brevidade. Para o exemplo completo, consulte o `CustomToken` exemplo.  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  

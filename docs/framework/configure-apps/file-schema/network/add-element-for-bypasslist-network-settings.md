@@ -1,5 +1,5 @@
 ---
-title: '&lt;Adicionar&gt; elemento bypasslist (configurações de rede)'
+title: '&lt;Adicionar&gt; elemento para bypasslist (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754513"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081027"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Adicionar&gt; elemento bypasslist (configurações de rede)
-Adiciona um endereço IP ou nome DNS para a lista de proxies.  
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Adicionar&gt; elemento para bypasslist (configurações de rede)
+Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -53,14 +52,14 @@ Adiciona um endereço IP ou nome DNS para a lista de proxies.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem os endereços que não usam um proxy.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
   
 ## <a name="remarks"></a>Comentários  
- O `add` elemento insere expressões regulares que descreve a endereços IP ou nomes de servidores DNS à lista de endereços que ignorar um servidor proxy.  
+ O `add` elemento insere expressões regulares que descrevem endereços IP ou nomes de servidores DNS à lista de endereços que ignora um servidor proxy.  
   
- O valor de `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
+ O valor da `address` atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
   
- Você deve ter cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] +\\.contoso\\.com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] +\\.contoso\\.com$".  
+ Você deve usar o cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] +\\.contoso\\.com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] +\\.contoso\\.com$".  
   
  Para obter mais informações sobre expressões regulares, consulte. [Expressões regulares do .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -68,7 +67,7 @@ Adiciona um endereço IP ou nome DNS para a lista de proxies.
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir adiciona dois endereços à lista de bypass. O primeiro ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192.168.  
+ O exemplo a seguir adiciona dois endereços à lista de bypass. A primeira ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192.168.  
   
 ```xml  
 <configuration>  

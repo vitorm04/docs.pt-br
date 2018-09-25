@@ -1,5 +1,5 @@
 ---
-title: '&lt;remover&gt; elemento webRequestModules (configurações de rede)'
+title: '&lt;remover&gt; elemento para webRequestModules (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073015"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112199"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;remover&gt; elemento webRequestModules (configurações de rede)
-Remove um módulo personalizado de solicitação da Web do aplicativo.  
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;remover&gt; elemento para webRequestModules (configurações de rede)
+Remove um módulo de solicitação da Web personalizado do aplicativo.  
   
  \<configuration>  
 \<system.net>  
@@ -43,7 +42,7 @@ Remove um módulo personalizado de solicitação da Web do aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`prefix`|O prefixo do URI para solicitações tratadas por este módulo de solicitação da Web.|  
+|`prefix`|O prefixo URI para solicitações manipuladas por esse módulo de solicitação da Web.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -52,12 +51,12 @@ Remove um módulo personalizado de solicitação da Web do aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica módulos a ser usado para solicitar informações de hosts de rede.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica os módulos para usá-lo para solicitar informações de hosts da rede.|  
   
 ## <a name="remarks"></a>Comentários  
  O `remove` elemento remove o módulo de solicitação da Web registrado para o prefixo URI especificado.  
   
- O valor para o `prefix` atributo deve ser os caracteres à esquerda de um URI válido – por exemplo, "http" ou "`http://www.contoso.com` ".  
+ O valor para o `prefix` atributo deve ser os caracteres à esquerda de um URI válido – por exemplo, "http", ou "`http://www.contoso.com` ".  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

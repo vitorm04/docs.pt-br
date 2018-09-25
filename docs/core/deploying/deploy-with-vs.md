@@ -7,12 +7,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227734"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705793"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implantando aplicativos .NET Core com o Visual Studio
 
@@ -310,5 +311,5 @@ Observe que você só pode implantar uma implantação autocontida com uma bibli
 
 ## <a name="see-also"></a>Consulte também
 
-* [Implantação de aplicativos do .NET Core](index.md)
+* [Implantação de um aplicativo .NET Core](index.md)
 * [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)

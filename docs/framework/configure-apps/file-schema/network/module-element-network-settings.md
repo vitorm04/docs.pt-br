@@ -1,5 +1,5 @@
 ---
-title: '&lt;módulo&gt; elemento (configurações de rede)'
+title: '&lt;módulo&gt; (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 06c653d8759224e1112183a7e86e9797a97402af
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753762"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075194"
 ---
-# <a name="ltmodulegt-element-network-settings"></a>&lt;módulo&gt; elemento (configurações de rede)
+# <a name="ltmodulegt-element-network-settings"></a>&lt;módulo&gt; (configurações de rede)
 Adiciona um novo módulo de proxy para o aplicativo.  
   
  \<configuration>  
@@ -41,7 +40,7 @@ Adiciona um novo módulo de proxy para o aplicativo.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`type`|O nome de tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula, que implementa o proxy.|  
+|`type`|O nome do tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula, que implementa o proxy.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -50,10 +49,10 @@ Adiciona um novo módulo de proxy para o aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura o servidor de proxy do protocolo HTTP (Hypertext Transfer).|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura o servidor de proxy de protocolo HTTP (Hypertext Transfer).|  
   
 ## <a name="remarks"></a>Comentários  
- O `module` elemento registra as classes de proxy que implementam o <xref:System.Net.IWebProxy> interface. Depois de registrar a classe de proxy, `module` pode ser usado para solicitar informações por meio do proxy com suporte.  
+ O `module` elemento registra classes de proxy que implementam o <xref:System.Net.IWebProxy> interface. Depois de registrar a classe de proxy, `module` pode ser usado para solicitar informações por meio do proxy com suporte.  
   
  O valor para o `type` atributo deve ser o nome da classe do módulo e o nome de seu correspondente dinâmico Link Library (DLL).  
   

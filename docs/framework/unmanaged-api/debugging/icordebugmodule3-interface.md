@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537154"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111744"
 ---
 # <a name="icordebugmodule3-interface"></a>Interface ICorDebugModule3
 Cria um leitor de símbolos para um módulo dinâmico.  

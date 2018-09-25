@@ -3,16 +3,15 @@ title: '&lt;msmqTransportSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ff60772e96d2709e018a2201459a1a0c65659464
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d9fd78e349f5c3affb1184ba0ee146eb7076922
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750200"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079643"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
-Especifica as configurações de segurança de transporte MSMQ para uma associação personalizada.  
+Especifica as configurações de segurança do transporte MSMQ para uma associação personalizada.  
   
  \<system.serviceModel>  
 \<associações >  
@@ -39,9 +38,9 @@ Especifica as configurações de segurança de transporte MSMQ para uma associa�
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|Especifica como a mensagem deve ser autenticada pelo transporte MSMQ. Se isso for definido como `None`, o valor de `msmqProtectionLevel` atributo também deve ser definido como `None`.<br /><br /> Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Nenhuma autenticação.<br />-Windows: O mecanismo de autenticação usa o Active Directory para obter o certificado x. 509 para o SID associado à mensagem. Isso é usado para verificar a ACL da fila para garantir que o usuário tem permissão para gravar na fila.<br />-O certificado: O canal obtém o certificado do repositório de certificados.<br /><br /> O valor padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqAuthenticationMode`|Especifica como a mensagem deve ser autenticada pelo transporte MSMQ. Se isso for definido como `None`, o valor da `msmqProtectionLevel` atributo também deve ser definido como `None`.<br /><br /> Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma autenticação.<br />-Windows: O mecanismo de autenticação usa o Active Directory para obter o certificado X.509 para o SID associado à mensagem. Em seguida, isso é usado para verificar a ACL da fila para garantir que o usuário tem permissão para gravar na fila.<br />-Certificado: O canal obtém o certificado do repositório de certificados.<br /><br /> O valor padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Especifica o algoritmo a ser usado para criptografia de mensagem no fio durante a transferência de mensagens entre os gerenciadores de fila de mensagem. Os valores válidos incluem o seguinte:<br /><br /> -RC4Stream<br />-AES<br /><br /> O valor padrão é RC4Stream. Esse atributo é do tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Especifica como a mensagem é protegida no nível de transporte MSMQ. A criptografia assegura a integridade da mensagem enquanto EncryptAndSign garante a integridade da mensagem e não-repúdio; ou seja, a mensagem é realmente do remetente e o remetente é quem diz que ser. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: Sem proteção.<br />-Sign: Mensagens são assinadas.<br />-EncryptAndSign: Mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é o sinal. Esse atributo é do tipo <xref:System.Net.Security.ProtectionLevel>.|  
+|`msmqProtectionLevel`|Especifica como a mensagem é protegida no nível do transporte MSMQ. Criptografia assegura a integridade da mensagem enquanto EncryptAndSign garante a integridade da mensagem e não-repúdio; ou seja, a mensagem é proveniente, de fato, o remetente e o remetente é quem diz que ser. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é o sinal. Esse atributo é do tipo <xref:System.Net.Security.ProtectionLevel>.|  
 |`msmqSecureHashAlgorithm`|Especifica o algoritmo a ser usado no cálculo do resumo como parte das assinaturas. Os valores válidos incluem o seguinte:<br /><br /> -   MD5<br />-SHA1<br />-   SHA256<br />-   SHA512<br /><br /> O valor padrão é SHA1. Esse atributo é do tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -51,11 +50,11 @@ Especifica as configurações de segurança de transporte MSMQ para uma associa�
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<msmqIntegration >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Especifica as configurações necessárias para interação com um remetente de enfileiramento de mensagens (MSMQ) ou do destinatário.|  
-|[\<msmqTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Especifica as propriedades de comunicação de enfileiramento de mensagens para um serviço do Windows Communication Foundation (WCF) que usa o protocolo nativo do MSMQ.|  
+|[\<msmqIntegration >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegration.md)|Especifica as configurações necessárias para interação com um remetente de enfileiramento de mensagens (MSMQ) ou o receptor.|  
+|[\<msmqTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|Especifica as propriedades de comunicação de enfileiramento de mensagens para um serviço do Windows Communication Foundation (WCF) que usa o protocolo MSMQ nativo.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre segurança de transporte, consulte [segurança de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
+ Para obter mais informações sobre a segurança de transporte, consulte [segurança de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  

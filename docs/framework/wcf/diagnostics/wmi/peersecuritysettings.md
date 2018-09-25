@@ -3,13 +3,12 @@ title: PeerSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 24ae0d35-f3a3-419b-afd6-686e22aae27b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 58b372f26fee7dc180d75731fd4855db569c87c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c74ee82d7aa3a23f0ee6a69185ad45857c31bb0b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484512"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087873"
 ---
 # <a name="peersecuritysettings"></a>PeerSecuritySettings
 PeerSecuritySettings  
@@ -25,7 +24,7 @@ class PeerSecuritySettings
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe PeerSecuritySettings não define nenhum método.  
+ A classe PeerSecuritySettings não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe PeerSecuritySettings tem as seguintes propriedades:  
@@ -35,7 +34,7 @@ class PeerSecuritySettings
   
  Tipo de acesso: somente leitura  
   
- Se nível de mensagem e segurança em nível de transporte são usados por um ponto de extremidade configurado com a associação.  
+ Se no nível da mensagem e segurança em nível de transporte são usados por um ponto de extremidade configurado com a associação.  
   
 ### <a name="transport"></a>Transporte  
  Tipo de dados: PeerTransportSecuritySettings  
@@ -48,7 +47,7 @@ class PeerSecuritySettings
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.PeerSecuritySettings>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;ouvintes de&gt; elemento para &lt;fonte&gt;'
+title: '&lt;ouvintes&gt; elemento para &lt;fonte&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a711b8d6bfd5b6d73d3240cb84810841bdc5a2b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746833"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085636"
 ---
-# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;ouvintes de&gt; elemento para &lt;fonte&gt;
-Adiciona ou remove ouvintes no <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção para um <xref:System.Diagnostics.TraceSource>. Um ouvinte direciona a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  
+# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;ouvintes&gt; elemento para &lt;fonte&gt;
+Adiciona ou remove os ouvintes na <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção para um <xref:System.Diagnostics.TraceSource>. Um ouvinte direciona a saída de rastreamento para um destino apropriado, como um log, a janela ou o arquivo de texto.  
   
  \<configuration>  
 \<System. Diagnostics >  

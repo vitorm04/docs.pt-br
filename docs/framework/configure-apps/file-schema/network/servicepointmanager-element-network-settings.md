@@ -1,5 +1,5 @@
 ---
-title: '&lt;servicePointManager&gt; elemento (configurações de rede)'
+title: '&lt;servicePointManager&gt; (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753580"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113063"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; elemento (configurações de rede)
-Configura conexões aos recursos da rede.  
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; (configurações de rede)
+Configura as conexões aos recursos da rede.  
   
  \<configuration>  
 \<system.net>  
@@ -47,13 +46,13 @@ Configura conexões aos recursos da rede.
   
 |**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Especifica se o sistema deve verificar se o nome do certificado corresponde o nome de host do servidor antes de usar o certificado. O valor padrão é `true`.|  
+|`checkCertificateName`|Especifica se o sistema deve verificar o nome do certificado coincide com o nome de host do servidor antes de usar o certificado. O valor padrão é `true`.|  
 |`checkCertificateRevocationList`|Especifica se o sistema deve verificar se o certificado foi revogado antes de usar o certificado. O valor padrão é `false`.|  
-|`dnsRefreshTimeout`|Especifica quanto tempo serviço DNS (Domain Name) resoluções são armazenados em cache em conjunto com a opção DNS Round Robin, em milissegundos. O valor padrão é de 120.000 milissegundos (dois minutos).|  
-|`enableDnsRoundRobin`|Especifica se resolução DNS do host nomes com retorno de vários endereços IP (Internet Protocol) de todos os endereços ou apenas o primeiro. O valor padrão é `false`.|  
+|`dnsRefreshTimeout`|Especifica quanto tempo domínio nome DNS (serviço) resoluções são armazenados em cache em conjunto com a opção de Round Robin de DNS, em milissegundos. O valor padrão é de 120.000 milissegundos (dois minutos).|  
+|`enableDnsRoundRobin`|Especifica se as resoluções DNS do host de nomes com retorno de vários endereços IP (Internet Protocol), todos os endereços, ou apenas a primeira. O valor padrão é `false`.|  
 |`encryptionPolicy`|Especifica a política de criptografia aplicada a uma sessão SSL/TLS em um <xref:System.Net.ServicePointManager> instância. Os valores possíveis são equivalentes aos valores para o <xref:System.Net.Security.EncryptionPolicy> enumeração. O uso de <xref:System.Security.Authentication.CipherAlgorithmType.Null> é necessária quando a política de criptografia é definida como `NoEncryption`. O valor padrão é `RequireEncryption`.|  
-|`expect100Continue`|Especifica se os métodos de POSTAGEM devem esperar receber um `100-continue` resposta do servidor. O valor padrão é `true`.|  
-|`useNagleAlgorithm`|Especifica se as conexões controlados pelo Gerenciador de ponto de serviço usar o algoritmo Nagle. O valor padrão é `true`.|  
+|`expect100Continue`|Especifica se os métodos POST devem esperar receber um `100-continue` resposta do servidor. O valor padrão é `true`.|  
+|`useNagleAlgorithm`|Especifica se as conexões controladas pelo Gerenciador de ponto de serviço usar o algoritmo de Nagle. O valor padrão é `true`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

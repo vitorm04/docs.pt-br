@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7f41bc477f8d8095bf73859c02b7e2fc2443c14
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71d2edac1dd9a84c9d3c92049d2494c7c5bd54b0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742868"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083696"
 ---
 # <a name="cryptography-settings-schema"></a>Esquema de configurações de criptografia
 O esquema de configurações de criptografia contém elementos que especificam como mapear nomes de algoritmo amigáveis para classes que implementam algoritmos de criptografia.  

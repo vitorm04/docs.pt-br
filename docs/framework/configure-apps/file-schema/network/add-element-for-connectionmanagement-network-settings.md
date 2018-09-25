@@ -1,5 +1,5 @@
 ---
-title: '&lt;Adicionar&gt; elemento connectionManagement (configurações de rede)'
+title: '&lt;Adicionar&gt; elemento para connectionManagement (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753736"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080319"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Adicionar&gt; elemento connectionManagement (configurações de rede)
+# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Adicionar&gt; elemento para connectionManagement (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
   
  \<configuration>  
@@ -59,7 +58,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 ## <a name="remarks"></a>Comentários  
  O valor de `address` atributo deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
   
- Se o URI passado para quaisquer APIs HTTP contém Unicode, o nome será convertido usando internamente <xref:System.Uri.DnsSafeHost%2A> que podem retornar uma cadeia de caracteres punicode (comportamento depende da configuração atual de IDN).  
+ Se o URI passado para quaisquer APIs HTTP contém Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> que podem retornar uma cadeia de caracteres punicode (comportamento depende da configuração atual de IDN).  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

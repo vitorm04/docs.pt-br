@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6a3358b2d64ade65e641caa203e2e760dcc4be2c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743115"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073457"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > elemento \<Configuração >
+# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > elemento para \<configuration >
 
 Especifica a diretiva de ligação de assembly no nível de configuração.
 
@@ -52,10 +51,10 @@ Especifica a diretiva de ligação de assembly no nível de configuração.
 
 ## <a name="remarks"></a>Comentários
 
-O [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica o gerenciamento de assemblies do componente, permitindo que os arquivos de configuração de aplicativo para incluir o assembly de arquivos de configuração em locais conhecidos, em vez de duplicar definições de configuração do assembly.
+O [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) elemento simplifica o gerenciamento de assemblies de componente, permitindo que os arquivos de configuração de aplicativo para incluir o assembly de arquivos de configuração locais bem conhecidos, em vez de duplicar as definições de configuração de assembly.
 
 > [!NOTE]
-> O  **\<linkedConfiguration >** elemento não tem suporte para aplicativos com manifestos de lado a lado do Windows.
+> O  **\<linkedConfiguration >** elemento não tem suporte para aplicativos com manifestos do Windows lado a lado.
 
 ## <a name="example"></a>Exemplo
 

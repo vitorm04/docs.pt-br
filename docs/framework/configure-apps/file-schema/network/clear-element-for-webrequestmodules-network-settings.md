@@ -1,5 +1,5 @@
 ---
-title: '&lt;Limpar&gt; elemento webRequestModules (configurações de rede)'
+title: '&lt;Limpar&gt; elemento para webRequestModules (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d89fbc757198f25219b8051bf77dbdeea0cef53
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752722"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070377"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Limpar&gt; elemento webRequestModules (configurações de rede)
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Limpar&gt; elemento para webRequestModules (configurações de rede)
 Remove todos os módulos de solicitação da Web registrados do aplicativo.  
   
  \<configuration>  
@@ -47,10 +46,10 @@ Remove todos os módulos de solicitação da Web registrados do aplicativo.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica módulos a ser usado para solicitar informações de hosts de rede.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica os módulos para usá-lo para solicitar informações de hosts da rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `clear` elemento remove todos os módulos de solicitação da Web que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
+ O `clear` elemento remove todos os módulos de solicitação da Web que foram definidos anteriormente no arquivo de configuração ou em um nível mais alto na hierarquia de configuração.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

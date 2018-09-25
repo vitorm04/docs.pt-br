@@ -3,13 +3,12 @@ title: '&lt;claimTypeRequired&gt;'
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6fb600aac46b3ee5cb54fa904d35ac7b7ed90719
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754948"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084222"
 ---
 # <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
 Especifica o conjunto de declarações necessárias para tokens de segurança de entrada.  
@@ -39,7 +38,7 @@ Especifica o conjunto de declarações necessárias para tokens de segurança de
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Especifica uma única declaração opcional ou obrigatórias para tokens de segurança de entrada.|  
+|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Especifica uma única declaração obrigatórias ou opcional para tokens de segurança de entrada.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

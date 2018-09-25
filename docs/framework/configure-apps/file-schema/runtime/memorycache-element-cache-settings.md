@@ -1,5 +1,5 @@
 ---
-title: '&lt;memoryCache&gt; elemento (configurações de Cache)'
+title: '&lt;memoryCache&gt; (configurações de Cache)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
@@ -8,16 +8,15 @@ helpviewer_keywords:
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3d0d741fd8193c7d874d70248cbd149f11163ed0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d6b7a1ba9c9b7ba598dbcea076ff6ee553ddc9a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748393"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075379"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; elemento (configurações de Cache)
-Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> classe define um [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) elemento que você pode usar para configurar o cache. Várias instâncias de <xref:System.Runtime.Caching.MemoryCache> classe pode ser usada em um único aplicativo. Cada `memoryCache` elemento no arquivo de configuração pode conter configurações para um conjunto nomeado <xref:System.Runtime.Caching.MemoryCache> instância.  
+# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; (configurações de Cache)
+Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> classe define um [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) elemento que você pode usar para configurar o cache. Várias instâncias do <xref:System.Runtime.Caching.MemoryCache> classe pode ser usada em um único aplicativo. Cada `memoryCache` elemento no arquivo de configuração pode conter configurações para uma nomeada <xref:System.Runtime.Caching.MemoryCache> instância.  
   
  \<configuration>  
 \<system.runtime.caching>  
@@ -43,10 +42,10 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`CacheMemoryLimitMegabytes`|O tamanho máximo de memória, em megabytes, que uma instância de um <xref:System.Runtime.Caching.MemoryCache> objeto pode atingir. O valor padrão é 0, o que significa que o <xref:System.Runtime.Caching.MemoryCache> heurística de autosize da classe é usadas por padrão.|  
-|`Name`|O nome da configuração de cache.|  
-|`PhysicalMemoryLimitPercentage`|A porcentagem de memória física que pode ser usada pelo cache. O valor padrão é 0, o que significa que o <xref:System.Runtime.Caching.MemoryCache> heurística de autosize da classe é usadas por padrão.|  
-|`PollingInterval`|Um valor que indica o intervalo de tempo após o qual a implementação de cache compara a carga de memória atual em relação as limites de memória absoluto e baseadas em porcentagens que são definidas para a instância de cache. O valor é inserido no formato "Hh".|  
+|`CacheMemoryLimitMegabytes`|O tamanho máximo de memória, em megabytes, que uma instância de um <xref:System.Runtime.Caching.MemoryCache> objeto pode atingir. O valor padrão é 0, o que significa que o <xref:System.Runtime.Caching.MemoryCache> heurística de autosize da classe é usada por padrão.|  
+|`Name`|O nome da configuração do cache.|  
+|`PhysicalMemoryLimitPercentage`|A porcentagem de memória física que pode ser usada pelo cache. O valor padrão é 0, o que significa que o <xref:System.Runtime.Caching.MemoryCache> heurística de autosize da classe é usada por padrão.|  
+|`PollingInterval`|Um valor que indica o intervalo de tempo após o qual a implementação de cache compara a carga de memória atual com os limites de memória absoluto e baseado em percentual que são definidas para a instância do cache. O valor é inserido no formato "Hh".|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -58,14 +57,14 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Contém tipos que permitem implementar o cache de saída em aplicativos que são incorporados a [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Contém tipos que permitem implementar o cache de saída em aplicativos que integram o [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
   
 ## <a name="remarks"></a>Comentários  
- O <xref:System.Runtime.Caching.MemoryCache> classe é uma implementação concreta do resumo <xref:System.Runtime.Caching.ObjectCache> classe. Instâncias de <xref:System.Runtime.Caching.MemoryCache> classe pode ser fornecida com informações de configuração de arquivos de configuração do aplicativo. O [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) seção de configuração contém um `namedCaches` coleção de configuração.  
+ O <xref:System.Runtime.Caching.MemoryCache> classe é uma implementação concreta do resumo <xref:System.Runtime.Caching.ObjectCache> classe. Instâncias do <xref:System.Runtime.Caching.MemoryCache> classe pode ser fornecido com informações de configuração de arquivos de configuração do aplicativo. O [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) seção de configuração contém um `namedCaches` coleção de configuração.  
   
- Quando um objeto de cache com base em memória é inicializado, ele primeiro tenta encontrar um `namedCaches` entrada que corresponde ao nome no parâmetro que é passado para o construtor de cache de memória. Se um `namedCaches` entrada for encontrada, a sondagem e informações de gerenciamento de memória são recuperados do arquivo de configuração.  
+ Quando um objeto de cache baseadas em memória é inicializado, ele primeiro tenta encontrar um `namedCaches` entrada que corresponde ao nome no parâmetro que é passado para o construtor de cache de memória. Se um `namedCaches` entrada for encontrada, a sondagem e informações de gerenciamento de memória são recuperados do arquivo de configuração.  
   
- O processo de inicialização, em seguida, determina se as entradas de configuração foram substituídas por meio da coleção opcional de pares de nome/valor das informações de configuração no construtor. Se você passar qualquer um dos seguintes valores no conjunto de pares de nome/valor, esses valores substituem as informações obtidas do arquivo de configuração:  
+ O processo de inicialização, em seguida, determina se todas as entradas de configuração foram substituídas usando a coleção opcional de pares nome/valor das informações de configuração no construtor. Se você passar qualquer um dos seguintes valores na coleção de par nome/valor, esses valores substituem as informações obtidas do arquivo de configuração:  
   
 -   <xref:System.Runtime.Caching.Configuration.MemoryCacheElement.CacheMemoryLimitMegabytes%2A>  
   
@@ -74,9 +73,9 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
 -   <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como definir o nome do <xref:System.Runtime.Caching.MemoryCache> objeto para o nome do objeto de cache padrão definindo o `name` atributo como "padrão".  
+ O exemplo a seguir mostra como definir o nome da <xref:System.Runtime.Caching.MemoryCache> objeto para o nome do objeto de cache padrão definindo a `name` atributo como "default".  
   
- O `cacheMemoryLimitMegabytes` atributo e o `physicalMemoryLimitPercentage` atributo são definidos como zero. Definir esses atributos como zero significa que o <xref:System.Runtime.Caching.MemoryCache> dimensionando heurística é usadas por padrão. A implementação de cache deve comparar a carga de memória atual em relação as limites de memória absoluto e baseadas em porcentagens cada dois minutos.  
+ O `cacheMemoryLimitMegabytes` atributo e o `physicalMemoryLimitPercentage` atributo são definidos como zero. Definir esses atributos como zero significa que o <xref:System.Runtime.Caching.MemoryCache> heurística de dimensionamento automático é usada por padrão. A implementação de cache deve comparar a carga de memória atual em relação as limites de memória absoluto e baseado em percentual cada dois minutos.  
   
 ```xml  
 <configuration>  
@@ -95,5 +94,5 @@ Define um elemento usado para configurar um cache baseado na classe <xref:System
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.Caching.MemoryCache>  
- [\<System.Runtime.Caching > elemento (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
- [\<namedCaches > elemento (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+ [\<System.Runtime.Caching > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
+ [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

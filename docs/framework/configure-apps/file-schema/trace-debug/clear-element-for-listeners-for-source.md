@@ -1,5 +1,5 @@
 ---
-title: '&lt;Limpar&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;'
+title: '&lt;Desmarque&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8c6ef51dae36e94fa4a4fdc5ad8983380e78bde3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746846"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071747"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Limpar&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;
+# <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Desmarque&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;
 Limpa a coleção `Listeners` de uma origem de rastreamento.  
   
  \<configuration>  
@@ -50,10 +49,10 @@ Limpa a coleção `Listeners` de uma origem de rastreamento.
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
 |`sources`|Contém as origens de rastreamento que iniciam as mensagens de rastreamento.|  
 |`source`|Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
-|`listeners`|Especifica os ouvintes que coletarem, armazenam e rotear mensagens.|  
+|`listeners`|Especifica os ouvintes que coletam, armazenam e roteiam mensagens.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<clear>` elemento remove todos os ouvintes do `Listeners` coleção para uma origem de rastreamento, incluindo o <xref:System.Diagnostics.DefaultTraceListener>. Você pode usar o `<clear>` elemento antes de usar o `<add>` elemento para ter certeza de que não há nenhum outros ouvintes ativos na coleção.  
+ O `<clear>` elemento remove todos os ouvintes de `Listeners` coleção para uma origem de rastreamento, incluindo o <xref:System.Diagnostics.DefaultTraceListener>. Você pode usar o `<clear>` elemento antes de usar o `<add>` elemento para ter certeza de que não há nenhum outros ouvintes ativos na coleção.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  

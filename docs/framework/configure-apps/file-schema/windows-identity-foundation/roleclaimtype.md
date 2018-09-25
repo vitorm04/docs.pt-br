@@ -1,17 +1,16 @@
 ---
-title: '&lt;roleClaimType&gt;'
+title: '&lt;RoleClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 909df1bd6054d9737f91c30c3c6b2d68b932281c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 565bf30d334c62c8132c60f411e89f7b260c54f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755182"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084339"
 ---
-# <a name="ltroleclaimtypegt"></a>&lt;roleClaimType&gt;
+# <a name="ltroleclaimtypegt"></a>&lt;RoleClaimType&gt;
 Especifica o tipo de declaração que define as declarações de tipo de função na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método do manipulador de token.  
   
  \<system.identityModel>  
@@ -57,7 +56,7 @@ Especifica o tipo de declaração que define as declarações de tipo de funçã
 |[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> classe, o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe ou uma classe derivada de qualquer uma dessas classes.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<roleClaimType>` elemento define o <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> propriedade quando um <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> é inicializar o objeto de configuração.  
+ O `<roleClaimType>` conjuntos de elemento de <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> propriedade quando um <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objeto é inicializado da configuração.  
   
 ## <a name="example"></a>Exemplo  
   

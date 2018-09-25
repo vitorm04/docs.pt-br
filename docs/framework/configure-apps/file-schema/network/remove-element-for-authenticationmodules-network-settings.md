@@ -1,5 +1,5 @@
 ---
-title: '&lt;remover&gt; elemento authenticationModules (configurações de rede)'
+title: '&lt;remover&gt; elemento para authenticationModules (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a22ddbada0162ba38589b244cab9123f33d7cf45
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742384"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072775"
 ---
-# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;remover&gt; elemento authenticationModules (configurações de rede)
+# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;remover&gt; elemento para authenticationModules (configurações de rede)
 Remove um módulo de autenticação do aplicativo.  
   
  \<configuration>  
@@ -55,9 +54,9 @@ Remove um módulo de autenticação do aplicativo.
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica os módulos usados para autenticar solicitações de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `remove` elemento remove os módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.  
+ O `remove` elemento remove os módulos de autenticação que foram definidos anteriormente no arquivo de configuração ou em um nível mais alto na hierarquia de configuração.  
   
- O valor para o `type` atributo deve ser um nome de classe válido.  
+ O valor para o `type` atributo deve ser um nome de classe válida.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

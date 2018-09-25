@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b86ffdd242a95a0c5c34efb3f38b3501f3f2ba6c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748211"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108530"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
 
@@ -37,28 +36,28 @@ Especifica a quais versões do Common Language Runtime o aplicativo oferece supo
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` de atributo, consulte o [valores de "versão de tempo de execução"](#version) seção. **Observação:** por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. A partir do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], somente os números das versões principal e secundária são necessários (isto é, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|  
-|**sku**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a unidade de manutenção de estoque (SKU), que por sua vez Especifica qual versão do .NET Framework oferece suporte a esse aplicativo.<br /><br /> Começando com o .NET Framework 4.0, o uso do `sku` atributo é recomendado.  Quando presente, indica a versão do .NET Framework que o aplicativo é destinado.<br /><br /> Para obter valores válidos do atributo sku, consulte o [valores de "id do sku"](#sku) seção.|  
+|**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` atributo, consulte a [valores de "versão de tempo de execução"](#version) seção. **Observação:** por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. A partir do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], somente os números das versões principal e secundária são necessários (isto é, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|  
+|**sku**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a unidade de manutenção de estoque (SKU), que por sua vez Especifica qual versão do .NET Framework dá suporte a esse aplicativo.<br /><br /> Começando com o .NET Framework 4.0, o uso do `sku` atributo é recomendado.  Quando presente, indica a versão do .NET Framework que o destino do aplicativo.<br /><br /> Para obter valores válidos do atributo sku, consulte o [valores de "id de sku"](#sku) seção.|  
   
 ## <a name="remarks"></a>Comentários
 
-Se o  **\<supportedRuntime >** elemento não está presente no arquivo de configuração do aplicativo, a versão do tempo de execução usada para criar o aplicativo é usada.  
+Se o  **\<supportedRuntime >** elemento não estiver presente no arquivo de configuração do aplicativo, a versão do tempo de execução usado para compilar o aplicativo é usada.  
 
-O  **\<supportedRuntime >** elemento deve ser usado por todos os aplicativos criados com a versão 1.1 ou posterior do tempo de execução. Os aplicativos criados para oferecer suporte a apenas versão 1.0 do tempo de execução devem usar o [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elemento.  
+O  **\<supportedRuntime >** elemento deve ser usado por todos os aplicativos criados usando a versão 1.1 ou posterior do tempo de execução. Os aplicativos criados para oferecer suporte somente à versão 1.0 do tempo de execução devem usar o [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elemento.  
   
 > [!NOTE]
->  Se você usar o [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) de função para especificar o arquivo de configuração, você deve usar o `<requiredRuntime>` elemento para todas as versões do tempo de execução. O `<supportedRuntime>` elemento será ignorado quando você usar [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
+>  Se você usar o [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) para especificar o arquivo de configuração de função, você deve usar o `<requiredRuntime>` elemento para todas as versões do tempo de execução. O `<supportedRuntime>` elemento é ignorado quando você usa [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
-Para aplicativos que dão suporte a versões do tempo de execução do .NET Framework 1.1 por meio de 3.5, quando há suporte para várias versões do tempo de execução, o primeiro elemento deve especificar a versão preferida do tempo de execução e o último elemento deve especificar o menor versão preferencial. Para aplicativos que dão suporte a .NET Framework 4.0 ou versões posteriores, o `version` atributo indica a versão do CLR, que é comum para o .NET Framework 4 e versões posteriores, e o `sku` única versão do .NET Framework do atributo indica que o aplicativo destinos.  
+Para aplicativos que dão suporte a versões do tempo de execução do .NET Framework 1.1, por meio do 3.5, quando há suporte para várias versões do tempo de execução, o primeiro elemento deve especificar a versão preferencial do tempo de execução e o último elemento deve especificar o menor versão de preferência. Para aplicativos que dão suporte a .NET Framework 4.0 ou versões posteriores, o `version` atributo indica a versão do CLR, que é comum para o .NET Framework 4 e versões posteriores, e o `sku` única versão do .NET Framework do atributo indica que o aplicativo destinos.  
   
 > [!NOTE]
->  Se seu aplicativo usa caminhos de ativação herdadas, como o [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja que esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo é criado com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], mas tem uma dependência em um assembly de modo misto foi compilado com uma versão anterior do .NET Framework, não é suficiente especificar o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] na lista de tempos de execução com suporte. Além disso, no [ \<inicialização > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) no arquivo de configuração, você deve definir o `useLegacyV2RuntimeActivationPolicy` atributo `true`. No entanto, definir esse atributo como `true` significa que todos os componentes criados com versões anteriores do .NET Framework serão executados usando [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] em vez dos tempos de execução com os quais foram criados.  
+>  Se seu aplicativo usa caminhos de ativação herdados, como o [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), e você deseja esses caminhos para ativar a versão 4 do CLR em vez de uma versão anterior, ou se seu aplicativo é criado com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], mas tem uma dependência em um assembly de modo misto criado com uma versão anterior do .NET Framework, não é suficiente especificar o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] na lista de tempos de execução com suporte. Além disso, nos [ \<inicialização > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) em seu arquivo de configuração, você deve definir a `useLegacyV2RuntimeActivationPolicy` atributo `true`. No entanto, definir esse atributo como `true` significa que todos os componentes criados com versões anteriores do .NET Framework serão executados usando [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] em vez dos tempos de execução com os quais foram criados.  
   
 Recomendamos que você teste aplicativos com todas as versões do .NET Framework na qual eles podem ser executados.  
   
 <a name="version"></a>   
 ## <a name="runtime-version-values"></a>valores de "versão de tempo de execução"  
-O `runtime` atributo especifica a versão do Common Language Runtime (CLR) que é necessária para um determinado aplicativo. Observe que todas as versões do .NET Framework versão 4. x especificar o `v4.0` CLR. A tabela a seguir lista os valores válidos para o *versão de tempo de execução* valor o `version` atributo.  
+O `runtime` atributo especifica a versão de tempo de execução de linguagem comum (CLR) que é necessária para um determinado aplicativo. Observe que todas as versões do .NET Framework versão 4. x especificam o `v4.0` CLR. A tabela a seguir lista os valores válidos para o *versão de tempo de execução* valor o `version` atributo.  
 
 |Versão do .NET Framework|Atributo `version`|  
 |----------------------------|-------------------------|  
@@ -67,23 +66,23 @@ O `runtime` atributo especifica a versão do Common Language Runtime (CLR) que �
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.7.2 4.0|"v4.0"|  
+|4.0 4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
-## <a name="sku-id-values"></a>valores de "id do sku"
+## <a name="sku-id-values"></a>valores de "id de sku"
 
-O `sku` atributo usa um moniker do framework de destino (TFM) para indicar a versão do .NET Framework que o aplicativo tem como alvo e precisa ser executado. A tabela a seguir lista os valores válidos são suportados pelo `sku` atributo, começando com o .NET Framework 4.
+O `sku` atributo usa um moniker de estrutura de destino (TFM) para indicar a versão do .NET Framework que o aplicativo tem como alvo e precisa para ser executado. A tabela a seguir lista os valores válidos são compatíveis com o `sku` atributo, começando com o .NET Framework 4.
   
 |Versão do .NET Framework|Atributo `sku`|  
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0, o perfil de cliente|".NETFramework,Version=v4.0,Profile=Client"|  
-|atualização da plataforma 4.0, 1|.NETFramework,Version=v4.0.1|  
-|4.0, o perfil de cliente da atualização 1|.NETFramework,Version=v4.0.1,Profile=Client|  
-|atualização da plataforma 4.0, 2|.NETFramework,Version=v4.0.2|  
-|4.0, perfil do cliente, atualização 2|.NETFramework,Version=v4.0.2,Profile=Client|  
-|atualização da plataforma 4.0, 3|.NETFramework,Version=v4.0.3|  
-|4.0, perfil do cliente, a atualização 3|.NETFramework,Version=v4.0.3,Profile=Client|  
+|atualização 1 da plataforma 4.0,|.NETFramework,Version=v4.0.1|  
+|4.0, o perfil de cliente, a atualização 1|.NETFramework,Version=v4.0.1,Profile=Client|  
+|atualização da plataforma do 4.0, 2|.NETFramework,Version=v4.0.2|  
+|4.0, o perfil de cliente, atualização 2|.NETFramework,Version=v4.0.2,Profile=Client|  
+|atualização da plataforma do 4.0, 3|.NETFramework,Version=v4.0.3|  
+|4.0, o perfil de cliente, a atualização 3|.NETFramework,Version=v4.0.3,Profile=Client|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  
@@ -92,7 +91,7 @@ O `sku` atributo usa um moniker do framework de destino (TFM) para indicar a ver
 |4.6.2|".NETFramework,Version=v4.6.2"|  
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
-|4.7.2|". NETFramework, Version = v4.7.2 "|
+|4.7.2|". NETFramework, versão = v4.7.2 "|
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar a versão de tempo de execução com suporte em um arquivo de configuração. O arquivo de configuração indica que o aplicativo tem como alvo o .NET Framework 4.7.  

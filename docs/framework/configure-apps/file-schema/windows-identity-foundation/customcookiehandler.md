@@ -3,18 +3,17 @@ title: '&lt;customCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b974767aa86801bff234e200e1fce021bfc422c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755598"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081585"
 ---
 # <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
-Define o tipo de manipulador de cookie personalizado. Esse elemento só pode estar presente se a `mode` atributo o `<cookieHandler>` elemento é "Custom". O tipo personalizado deve ser derivado de <xref:System.IdentityModel.Services.CookieHandler> classe.  
+Define o tipo de manipulador de cookie personalizado. Esse elemento pode estar presente apenas se o `mode` atributo do `<cookieHandler>` elemento é "Custom". O tipo personalizado deve ser derivado de <xref:System.IdentityModel.Services.CookieHandler> classe.  
   
- \<System >  
+ \<IdentityModel >  
 \<federationConfiguration >  
 \<cookieHandler >  
 \<customCookieHandler >  
@@ -39,7 +38,7 @@ Define o tipo de manipulador de cookie personalizado. Esse elemento só pode est
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|Especifica um tipo personalizado que deriva de <xref:System.IdentityModel.Services.CookieHandler> classe. Para obter mais informações sobre como especificar o `type` de atributo, consulte [referências de tipo personalizado](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|tipo|Especifica um tipo personalizado que deriva de <xref:System.IdentityModel.Services.CookieHandler> classe. Para obter mais informações sobre como especificar o `type` atributo, consulte [referências de tipo personalizado](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -48,15 +47,15 @@ Define o tipo de manipulador de cookie personalizado. Esse elemento só pode est
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configura o <xref:System.IdentityModel.Services.CookieHandler> que o <xref:System.IdentityModel.Services.SessionAuthenticationModule> usa para ler e gravar cookies.|  
+|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Configura a <xref:System.IdentityModel.Services.CookieHandler> que o <xref:System.IdentityModel.Services.SessionAuthenticationModule> usa para ler e gravar cookies.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando você especificar um manipulador personalizado de cookie, definindo o `mode` atributo do `<cookieHandler>` elemento como "Custom", você deve especificar o tipo do manipulador de cookie personalizado, incluindo um `<customCookieHandler>` elemento filho que faz referência ao tipo de manipulador de cookie. Esse elemento não pode ser especificado quando o `mode` atributo é definido como "Em partes" ou "Padrão". Manipuladores de cookie personalizado devem derivar do <xref:System.IdentityModel.Services.CookieHandler> classe.  
+ Quando você especifica um manipulador de cookie personalizado definindo a `mode` atributo do `<cookieHandler>` elemento como "Custom", você deve especificar o tipo do manipulador de cookie personalizado, incluindo um `<customCookieHandler>` elemento filho que faz referência ao tipo de manipulador de cookie. Esse elemento não pode ser especificado quando o `mode` atributo é definido como "Em bloco" ou "Padrão". Manipuladores de cookie personalizado devem derivar do <xref:System.IdentityModel.Services.CookieHandler> classe.  
   
- O `<customCookieHandler>` elemento é representado pela <xref:System.IdentityModel.Configuration.CustomTypeElement> classe.  
+ O `<customCookieHandler>` elemento é representado pelo <xref:System.IdentityModel.Configuration.CustomTypeElement> classe.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir configura o SAM para usar um manipulador personalizado de cookie do tipo `MyNamespace.MyCustomCookieHandler`.  
+ O exemplo a seguir configura o SAM para usar um manipulador de cookie personalizado do tipo `MyNamespace.MyCustomCookieHandler`.  
   
 ```xml  
 <cookieHandler mode="Custom">  

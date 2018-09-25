@@ -1,5 +1,5 @@
 ---
-title: '&lt;filtro&gt; elemento para &lt;adicionar&gt; para &lt;sharedListeners&gt;'
+title: '&lt;filtro&gt; elemento para &lt;adicione&gt; para &lt;sharedListeners&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745049"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115133"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;filtro&gt; elemento para &lt;adicionar&gt; para &lt;sharedListeners&gt;
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;filtro&gt; elemento para &lt;adicione&gt; para &lt;sharedListeners&gt;
 Adiciona um filtro a um ouvinte na coleção `sharedListeners`.  
   
  \<configuration>  
@@ -43,7 +42,7 @@ Adiciona um filtro a um ouvinte na coleção `sharedListeners`.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**type**|Atributo obrigatório.<br /><br /> Especifica o tipo do filtro. Você pode usar apenas o nome completo do tipo (no formato do <xref:System.Type.FullName%2A?displayProperty=nameWithType> propriedade), ou você pode usar o nome de tipo totalmente qualificado, incluindo as informações de assembly (no formato de <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> propriedade). Para obter informações sobre a criação de um nome de tipo totalmente qualificado, consulte [especificando nomes de tipo totalmente qualificados](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Atributo obrigatório.<br /><br /> Especifica o tipo do filtro. Você pode usar apenas o nome completo do tipo (no formato de <xref:System.Type.FullName%2A?displayProperty=nameWithType> propriedade), ou você pode usar o nome de tipo totalmente qualificado, incluindo as informações de assembly (no formato do <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> propriedade). Para obter informações sobre como criar um nome de tipo totalmente qualificado, consulte [especificando nomes de tipo totalmente qualificados](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Atributo opcional.<br /><br /> A cadeia de caracteres passada para o construtor para a classe especificada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -55,11 +54,11 @@ Adiciona um filtro a um ouvinte na coleção `sharedListeners`.
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
-|`sharedListeners`|Uma coleção de ouvintes que podem referenciar qualquer origem ou o elemento de rastreamento.|  
+|`sharedListeners`|Uma coleção de ouvintes que qualquer elemento de rastreamento ou de código-fonte pode fazer referência.|  
 |`add`|Adiciona um ouvinte para o **sharedListeners** coleção.|  
   
 ## <a name="remarks"></a>Comentários  
- Se um ouvinte é definido em um `<add>` elemento do `<sharedListeners>` elemento, o filtro para esse ouvinte deve ser definido em um `<filter>` que é um filho do elemento de `<add>` elemento.  
+ Se um ouvinte é definido em um `<add>` elemento do `<sharedListeners>` elemento, o filtro para esse ouvinte deve ser definido em um `<filter>` que é um filho do elemento a `<add>` elemento.  
   
  Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  
   
