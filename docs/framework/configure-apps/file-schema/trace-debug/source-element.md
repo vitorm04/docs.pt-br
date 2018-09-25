@@ -9,13 +9,12 @@ helpviewer_keywords:
 - source element
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752566"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088939"
 ---
 # <a name="ltsourcegt-element"></a>&lt;origem&gt; elemento
 Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.  
@@ -40,16 +39,16 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`name`|Atributo opcional.<br /><br /> Especifica o nome da origem do rastreamento.|  
+|`name`|Atributo opcional.<br /><br /> Especifica o nome da origem de rastreamento.|  
 |`switchName`|Atributo opcional.<br /><br /> Especifica o nome de uma instância de comutador de rastreamento no aplicativo. Se a opção não for identificada em um `<switches>` elemento, o valor Especifica o nível para o comutador.|  
 |`switchType`|Atributo opcional.<br /><br /> Especifica o tipo de opção de rastreamento. Se estiver presente, o tipo deve ser um nome de classe válido e não pode ser uma cadeia de caracteres vazia.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica o valor para um atributo de origem específico de rastreamento identificado pelo <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para essa origem de rastreamento.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica o valor para um atributo específico de fonte de rastreamento identificado pelo <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para essa origem de rastreamento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Contém os ouvintes que coletarem, armazenam e rotear mensagens.|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -63,7 +62,7 @@ Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.
  Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o `<source>` elemento a ser adicionado a origem de rastreamento `mySource` e definir o nível para a alternância de origem nomeado `sourceSwitch`. Um ouvinte de rastreamento do console é adicionado, que grava informações de rastreamento para o console.  
+ O exemplo a seguir mostra como usar o `<source>` elemento para adicionar a origem de rastreamento `mySource` e para definir o nível para a alternância de origem chamado `sourceSwitch`. Um ouvinte de rastreamento do console é adicionado, que grava informações de rastreamento no console.  
   
 ```xml  
 <configuration>  

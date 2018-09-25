@@ -3,16 +3,15 @@ title: Recursos de segurança com associações personalizadas
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2cfe5a18dd0fc7f8a8f54559d1d5b57e52cefa8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d2477af3dc7ce6fdd075055fff9e687bdc2a60
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497419"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110275"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Recursos de segurança com associações personalizadas
-Você pode executar tarefas mais comuns de segurança usando uma das associações fornecidas pelo sistema. Se você precisar de mais controle, no entanto, você pode criar uma associação personalizada com um <xref:System.ServiceModel.Channels.SecurityBindingElement>, conforme explicado nestes tópicos. Para obter mais informações sobre associações personalizadas, consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+Você pode executar tarefas mais comuns de segurança usando uma das associações fornecidas pelo sistema. Se você precisar de mais controle, no entanto, você pode criar uma ligação personalizada com um <xref:System.ServiceModel.Channels.SecurityBindingElement>, conforme explicado nestes tópicos. Para obter mais informações sobre ligações personalizadas, consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Modos de autenticação de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
@@ -25,7 +24,7 @@ Você pode executar tarefas mais comuns de segurança usando uma das associaçõ
  Descreve como criar um elemento de segurança para um modo de autenticação especificado.  
   
  [Como: desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- Descreve como desabilitar sessões seguras durante a criação de um serviço de Federação.  
+ Descreve como desabilitar sessões seguras ao criar um serviço de Federação.  
   
  [Como habilitar a detecção de reprodução de mensagem](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  Descreve como determinar quando ocorre um ataque de repetição.  

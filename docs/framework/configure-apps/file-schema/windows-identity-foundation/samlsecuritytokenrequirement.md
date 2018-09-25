@@ -3,13 +3,12 @@ title: '&lt;samlSecurityTokenRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 86a9b9dcf0b9f5971e50ff7d1f1c37ca2e5f778a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9856dae971691baf9dabe845bdecae90cbc8aa5
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756521"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47107981"
 ---
 # <a name="ltsamlsecuritytokenrequirementgt"></a>&lt;samlSecurityTokenRequirement&gt;
 Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> classe, o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> classe ou uma classe derivada de qualquer uma dessas classes. Representado pelo <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> classe.  
@@ -50,8 +49,8 @@ Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityToke
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |mapToWindows|Especifica se o manipulador de token deve mapear o token de validação para uma conta do Windows usando a declaração de UPN de entrada. O padrão é "false".|  
-|issuerCertificateRevocationMode|Um <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valor que especifica o modo de revogação a ser usado para o certificado x. 509. O valor padrão é "Online".|  
-|issuerCertificateValidationMode|Um <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica o modo de validação a ser usado para o certificado x. 509. O valor padrão é "PeerOrChainTrust".|  
+|issuerCertificateRevocationMode|Um <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valor que especifica o modo de revogação para usar o certificado x. 509. O valor padrão é "Online".|  
+|issuerCertificateValidationMode|Um <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica o modo de validação a ser usado para o certificado X.509. O valor padrão é "PeerOrChainTrust".|  
 |issuerCertificateTrustedStoreLocation|Um <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica o repositório de certificados x. 509. O valor padrão é "LocalMachine".|  
 |issuerCertificateValidator|Um tipo personalizado que deriva de <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Se o `issuerCertificateValidationMode` atributo é "Custom", uma instância desse tipo é usada para validação de certificado do emissor.|  
   
@@ -66,10 +65,10 @@ Fornece configuração para o <xref:System.IdentityModel.Tokens.SamlSecurityToke
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Adiciona o manipulador de token de segurança especificados na coleção de manipulador de token.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<samlSecurityTokenRequirement>` elemento é representado pelo <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> no modelo de objeto de classe e é usado para configurar o `SamlSecurityTokenRequirement` propriedade em um <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> ou <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.  
+ O `<samlSecurityTokenRequirement>` elemento é representado pela <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> classe no modelo de objeto e é usado para configurar a `SamlSecurityTokenRequirement` propriedade em uma <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> ou um <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>.  
   
 ## <a name="example"></a>Exemplo  
   

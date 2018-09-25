@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 292937000eb1baca191c0960e8e496a128ee4696
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b5da49ff22cfa6bd1c3e4d574865eb5e61dc73fb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743557"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085638"
 ---
 # <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; elemento para configurações de criptografia
 Contém o [ \<cryptographySettings > elemento](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
@@ -50,7 +49,7 @@ Contém o [ \<cryptographySettings > elemento](../../../../../docs/framework/con
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<mscorlib >** elemento para fazer referência a uma classe de criptografia e configurar o tempo de execução. Você pode passar a cadeia de caracteres "RSA" para o <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método e o uso de <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para retornar um `MyCryptoRSAClass` objeto.  
+ O exemplo a seguir mostra como usar o  **\<mscorlib >** elemento para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método e o uso de <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para retornar um `MyCryptoRSAClass` objeto.  
   
 ```xml  
 <configuration>  

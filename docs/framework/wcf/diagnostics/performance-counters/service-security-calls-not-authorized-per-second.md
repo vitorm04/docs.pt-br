@@ -3,13 +3,12 @@ title: 'Serviço: chamadas de segurança não autorizadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f2c921991f059d7dfe5661dfe688ec9675d0d5fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 17da19e88dfa837cc1e45d0b6af2ebdbfd00182c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528220"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157123"
 ---
 # <a name="service-security-calls-not-authorized-per-second"></a>Serviço: chamadas de segurança não autorizadas por segundo
 Nome do contador: segurança chamadas não autorizadas por segundo  

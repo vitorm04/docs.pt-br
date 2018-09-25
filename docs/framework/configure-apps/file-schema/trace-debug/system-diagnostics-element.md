@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 090c296ba84043445364b350c8b74587c35b5940
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750330"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156972"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;System. Diagnostics&gt; elemento
 Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  
@@ -43,9 +42,9 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 |-------------|-----------------|  
 |[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.|  
 |[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Especifica o tamanho da memória global compartilhada por contadores de desempenho.|  
-|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento. Ouvintes identificados como ouvintes compartilhados podem ser adicionados com fontes ou os rastreamentos por nome.|  
-|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Especifica as fontes de rastreamento que iniciam as mensagens de rastreamento.|  
-|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contém opções de rastreamento e os níveis em que as opções de rastreamento são definidas.|  
+|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento. Ouvintes identificados como ouvintes compartilhados podem ser adicionados à fontes ou rastreamentos por nome.|  
+|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Especifica as origens de rastreamento que iniciam as mensagens de rastreamento.|  
+|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contém opções de rastreamento e os níveis de onde as opções de rastreamento são definidas.|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -55,7 +54,7 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como inserir um comutador de rastreamento e um ouvinte de rastreamento dentro de  **\<System. Diagnostics >** elemento. O `General` opção de rastreamento é definida como o <xref:System.Diagnostics.TraceLevel> nível. O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída para o arquivo.  
+ O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do  **\<System. Diagnostics >** elemento. O `General` opção de rastreamento é definida como o <xref:System.Diagnostics.TraceLevel> nível. O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída para o arquivo.  
   
 > [!NOTE]
 >  No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou use o texto que representa um valor de enumeração como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  

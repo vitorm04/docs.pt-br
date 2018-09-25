@@ -9,22 +9,21 @@ helpviewer_keywords:
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 97fc358ac66bb92ccc40c92207bf6561f61b84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e81469f5ac55b1c698dc99af0782dbdedab33339
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489870"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088341"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Como desabilitar sessões seguranças em uma WSFederationHttpBinding
-Alguns serviços podem exigir credenciais federadas mas não oferecer suporte a sessões seguras. Nesse caso, você deve desabilitar o recurso de sessão segura. Ao contrário de <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, a <xref:System.ServiceModel.WSFederationHttpBinding> classe não fornecerá uma maneira de desabilitar sessões seguras ao se comunicar com um serviço. Em vez disso, você deve criar uma associação personalizada que substitui as configurações de sessão segura com um programa de inicialização.  
+Alguns serviços podem exigir credenciais federadas, mas não dá suporte a sessões seguras. Nesse caso, você deve desabilitar o recurso de sessão segura. Ao contrário de <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, o <xref:System.ServiceModel.WSFederationHttpBinding> classe não fornece uma maneira de desabilitar sessões seguras ao se comunicar com um serviço. Em vez disso, você deve criar uma associação personalizada que substitui as configurações de sessão segura com um bootstrap.  
   
- Este tópico demonstra como modificar os elementos de associação contidos em um <xref:System.ServiceModel.WSFederationHttpBinding> para criar uma associação personalizada. O resultado é idêntico de <xref:System.ServiceModel.WSFederationHttpBinding> exceto que não usa sessões seguras.  
+ Este tópico demonstra como modificar os elementos de associação contidos em um <xref:System.ServiceModel.WSFederationHttpBinding> para criar uma associação personalizada. O resultado é idêntico de <xref:System.ServiceModel.WSFederationHttpBinding> , exceto que ele não usa sessões seguras.  
   
 ### <a name="to-create-a-custom-federated-binding-without-secure-session"></a>Para criar um personalizado federado associação sem sessão segura  
   
-1.  Criar uma instância do <xref:System.ServiceModel.WSFederationHttpBinding> classe imperativa no código ou carregando um arquivo de configuração.  
+1.  Criar uma instância da <xref:System.ServiceModel.WSFederationHttpBinding> classe imperativa no código ou carregando um arquivo de configuração.  
   
 2.  Clone o <xref:System.ServiceModel.WSFederationHttpBinding> em um <xref:System.ServiceModel.Channels.CustomBinding>.  
   
@@ -32,7 +31,7 @@ Alguns serviços podem exigir credenciais federadas mas não oferecer suporte a 
   
 4.  Localizar o <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> no <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-5.  Substituir o original <xref:System.ServiceModel.Channels.SecurityBindingElement> com o elemento de associação de segurança de inicialização de <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.  
+5.  Substituir o original <xref:System.ServiceModel.Channels.SecurityBindingElement> com o elemento de associação de segurança de inicialização do <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo a seguir cria uma associação personalizada federada sem sessão segura.  
@@ -42,7 +41,7 @@ Alguns serviços podem exigir credenciais federadas mas não oferecer suporte a 
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Para compilar o exemplo de código, crie um projeto que referencia o assembly System.ServiceModel.dll.  
+-   Para compilar o exemplo de código, crie um projeto que referencia o assembly de ServiceModel.  
   
 ## <a name="see-also"></a>Consulte também  
  [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

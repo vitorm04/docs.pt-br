@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696695"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47107877"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Como recuperar a impressão digital de um certificado
 Ao escrever um aplicativo do Windows Communication Foundation (WCF) que usa um certificado X.509 para autenticação, muitas vezes é necessário especificar declarações encontrados no certificado. Por exemplo, você deve fornecer uma declaração de impressão digital ao usar o <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> enumeração no <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> método. Localizar o valor da declaração requer duas etapas. Primeiro, abra o snap-in do Console de gerenciamento Microsoft (MMC) para certificados. (Consulte [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Segundo, conforme descrito aqui, localizar um certificado apropriado e copiar sua impressão digital (ou outros valores de declaração).  

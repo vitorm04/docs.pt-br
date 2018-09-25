@@ -1,5 +1,5 @@
 ---
-title: '&lt;codeBase&gt; elemento'
+title: '&lt;Base de código&gt; elemento'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745988"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073162"
 ---
-# <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; elemento
+# <a name="ltcodebasegt-element"></a>&lt;Base de código&gt; elemento
 Especifica onde o common language runtime pode encontrar um assembly.  
   
  \<configuration>  
 \<runtime>  
 \<assemblyBinding>  
 \<dependentAssembly >  
-\<codeBase >  
+\<Base de código >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,9 +43,9 @@ href="URL of assembly"/>
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`href`|Atributo obrigatório.<br /><br /> Especifica a URL onde o tempo de execução pode encontrar a versão especificada do assembly.|  
-|`version`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly a que a base de código aplica-se. O formato de um número de versão do assembly é *Revision*.|  
+|`version`|Atributo obrigatório.<br /><br /> Especifica a versão do assembly a que a base de código aplica-se. O formato de um número de versão do assembly é *Major*.|  
   
-## <a name="version-attribute"></a>versão de atributo  
+## <a name="version-attribute"></a>Atributo de versão  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
@@ -59,17 +58,17 @@ href="URL of assembly"/>
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`buildproviders`|Define uma coleção de provedores de compilação usada para compilar arquivos de recursos personalizados. Você pode ter qualquer número de provedores de compilação.|  
+|`buildproviders`|Define uma coleção de provedores de compilação usado para compilar os arquivos de recurso personalizado. Você pode ter qualquer número de provedores de compilação.|  
 |`compilation`|Configura todas as configurações de compilação que o ASP.NET usa.|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`System.web`|Especifica o elemento raiz para a seção de configuração do ASP.NET.|  
   
 ## <a name="remarks"></a>Comentários  
- Para o tempo de execução usar o  **\<codeBase >** configuração em um arquivo de configuração de máquina ou arquivo de política de editor, o arquivo deve também redirecionar a versão do assembly. Arquivos de configuração do aplicativo podem ter uma configuração de base de código sem redirecionando a versão do assembly. Depois de determinar qual versão do assembly a ser usado, o tempo de execução se aplica a configuração de base de código do arquivo que determina a versão. Se nenhuma codebase é indicado, o tempo de execução de testes para o assembly como de costume.  
+ Para o tempo de execução usar o  **\<codeBase >** configuração em um arquivo de configuração do computador ou arquivo de política de editor, o arquivo também deve redirecionar a versão do assembly. Arquivos de configuração de aplicativo podem ter uma configuração de base de código sem redirecionar a versão do assembly. Depois de determinar qual versão de assembly a ser usada, o tempo de execução se aplica a configuração de base de código do arquivo que determina a versão. Se nenhuma base de código estiver indicado, o tempo de execução investiga o assembly como de costume.  
   
- Se o assembly tiver um nome forte, a configuração de base de código pode estar em qualquer lugar na intranet local ou na Internet. Se o assembly é um assembly privado, a configuração de base de código deve ser um caminho relativo ao diretório do aplicativo.  
+ Se o assembly tiver um nome forte, a configuração de base de código pode estar em qualquer lugar na intranet local ou na Internet. Se o assembly é um assembly particular, a configuração de base de código deve ser um caminho relativo ao diretório do aplicativo.  
   
- Para assemblies sem um nome forte, a versão é ignorada e o carregador usa a primeira ocorrência de \<codebase > dentro de \<dependentAssembly >. Se houver uma entrada no arquivo de configuração do aplicativo que redireciona a associação a outro assembly, o redirecionamento terá precedência, mesmo se a versão do assembly não corresponde a solicitação de associação.  
+ Para assemblies sem um nome forte, a versão é ignorado e o carregador usará a primeira ocorrência desse \<codebase > dentro de \<dependentAssembly >. Se houver uma entrada no arquivo de configuração do aplicativo que redireciona associação a outro assembly, o redirecionamento terá precedência mesmo se a versão do assembly não corresponde a solicitação de associação.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar onde o tempo de execução pode encontrar um assembly.  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b12d5d95a17439308d79d094e8c22206778f3128
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9153b4525063d6c52e22d754d68ffa42e914d00
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743245"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074895"
 ---
 # <a name="configuring-cryptography-classes"></a>Configurando classes de criptografia
-O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite que os administradores do computador configurar os algoritmos de criptografia padrão e implementações de algoritmo que usam o .NET Framework e aplicativos escritos corretamente.  Por exemplo, uma empresa que tem sua própria implementação de um algoritmo de criptografia pode fazer essa implementação padrão em vez da implementação fornecida com o [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Embora os aplicativos gerenciados que usam criptografia sempre podem optar por associar explicitamente uma implementação específica, é recomendável que criar objetos de criptografia usando o sistema de configuração de criptografia.  
+O [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite que os administradores do computador configurar os algoritmos de criptografia padrão e implementações de algoritmo que usam o .NET Framework e aplicativos escritos corretamente.  Por exemplo, uma empresa que tem sua própria implementação de um algoritmo de criptografia pode tornar essa implementação padrão em vez da implementação fornecida no [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Embora os aplicativos gerenciados que usam criptografia sempre podem optar por associar explicitamente a uma implementação específica, é recomendável que criar objetos criptográficos usando o sistema de configuração de criptografia.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Mapeando nomes de algoritmo para classes de criptografia](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  

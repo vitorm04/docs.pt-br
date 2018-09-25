@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fc85610f5c3db7929f824fda2dd211300d9b05c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ce303d33a83d972247609e5d02d16a4a57669ff
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742985"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083787"
 ---
 # <a name="ltcompilersgt-element"></a>&lt;compiladores&gt; elemento
 Contêiner de elementos de configuração do compilador. Contém zero ou mais elementos [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md).  
@@ -56,10 +55,10 @@ Contêiner de elementos de configuração do compilador. Contém zero ou mais el
 ## <a name="remarks"></a>Comentários  
  O [ \<compiladores >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md) elemento contém as definições de configuração do compilador para provedores de linguagem em um computador. Cada [ \<compilador >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elemento Especifica os atributos de configuração do compilador para um provedor de idioma específico.  
   
- O .NET Framework define o compilador inicial e configurações de idioma do provedor no arquivo de configuração da máquina (Machine. config). Os desenvolvedores e fornecedores do compilador podem adicionar parâmetros de configuração em uma nova implementação do <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar programaticamente as definições de configuração do compilador e do provedor de linguagem em um computador.  
+ O .NET Framework define o compilador iniciais e as configurações do provedor de linguagem no arquivo de configuração do computador (Machine. config). Os desenvolvedores e fornecedores do compilador podem adicionar parâmetros de configuração em uma nova implementação do <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar programaticamente as definições de configuração do compilador e do provedor de linguagem em um computador.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
- Esse elemento pode ser usado no arquivo de configuração de máquina e o arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração do computador e o arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir ilustra um elemento típico de configuração do compilador.  

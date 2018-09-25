@@ -3,13 +3,12 @@ title: Como criar um aplicativo Web ASP.NET MVC baseado em declarações usando 
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 146724f31e1d09f09f94d102366539dc79ddfe02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399143"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087665"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Como criar um aplicativo Web ASP.NET MVC baseado em declarações usando o WIF
 ## <a name="applies-to"></a>Aplica-se a  

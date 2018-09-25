@@ -1,5 +1,5 @@
 ---
-title: '&lt;Limpar&gt; elemento connectionManagement (configurações de rede)'
+title: '&lt;Limpar&gt; elemento para connectionManagement (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741978"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070494"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Limpar&gt; elemento connectionManagement (configurações de rede)
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Limpar&gt; elemento para connectionManagement (configurações de rede)
 Limpa a lista de gerenciamento de conexão.  
   
  \<configuration>  

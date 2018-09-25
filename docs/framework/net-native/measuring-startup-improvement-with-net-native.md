@@ -5,11 +5,11 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586032"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073222"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medindo o aprimoramento da inicialização com o .NET Nativo
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] melhora significativamente o tempo de inicialização dos aplicativos. Esse aprimoramento é particularmente perceptível em dispositivos portáteis, de baixa energia e com aplicativos complexos. Este tópico ajuda você a começar a trabalhar com a instrumentação básica necessária para medir essa melhoria de inicialização.  

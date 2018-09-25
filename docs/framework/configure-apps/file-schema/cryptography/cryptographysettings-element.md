@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 14b510df192dcff1f005eec4f029aa0f26b967a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dc55acd7a698ef37d45e8a412db684c13a3b8b16
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751929"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156603"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; elemento
 Contém configurações de criptografia.  
@@ -43,7 +42,7 @@ Contém configurações de criptografia.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Contém mapeamentos de classes para nomes amigáveis.|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contém mapeamentos OID (identificador) de objeto ASN. 1 para classes.|  
+|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -53,7 +52,7 @@ Contém configurações de criptografia.
 |`mscorlib`|Contém o `cryptographySettings` elemento.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o  **\<cryptographySettings >** elemento para conter mapeamentos de nome de criptografia e mapeamentos OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> retorna um `MyHashClass` objeto e o `MyCryptoClass` é mapeado para o identificador de objeto 1.3.36.2.1 de classe.  
+ O exemplo a seguir mostra como usar o  **\<cryptographySettings >** elemento para conter os mapeamentos de nome de criptografia e mapeamentos OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> retorna um `MyHashClass` objeto e o `MyCryptoClass` é mapeado para o identificador de objeto 1.3.36.2.1 de classe.  
   
 ```xml  
 <configuration>  

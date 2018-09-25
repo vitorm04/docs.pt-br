@@ -3,11 +3,11 @@ title: Visão geral de correlação
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696476"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113930"
 ---
 # <a name="correlation-overview"></a>Visão geral de correlação
 Correlação é o mecanismo para relacionar mensagens do serviço de fluxo de trabalho entre si ou para o estado da instância de aplicativo, como uma resposta a uma solicitação inicial ou uma ID de ordem específica para o estado persistente de um fluxo de trabalho de processamento de pedidos. Este tópico fornece uma visão geral de correlação. Os outros tópicos nesta seção fornecem informações adicionais para cada tipo de correlação.  

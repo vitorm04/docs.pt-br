@@ -3,11 +3,11 @@ title: '&lt;serviços&gt; de &lt;workflowRuntime&gt;'
 ms.date: 03/30/2017
 ms.assetid: 219a05b1-f573-45c9-849b-e86bc373b62f
 ms.openlocfilehash: 44da735ab1aa2391fe882dfba6e1afc47be746ff
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576685"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086347"
 ---
 # <a name="ltservicesgt-of-ltworkflowruntimegt"></a>&lt;serviços&gt; de &lt;workflowRuntime&gt;
 Representa uma coleção de serviços que serão adicionados para o <xref:System.Workflow.Runtime.WorkflowRuntime> mecanismo. Os elementos são do tipo <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Os serviços especificados na coleção serão inicializados pelo mecanismo de tempo de execução de fluxo de trabalho e adicionados a seus serviços quando apropriado <xref:System.Workflow.Runtime.WorkflowRuntime> construtor é chamado. Portanto, os serviços especificados na coleção devem seguir determinadas regras sobre as assinaturas de seus construtores. Consulte <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> para obter mais informações.  

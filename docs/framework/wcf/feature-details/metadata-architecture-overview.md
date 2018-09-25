@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490105"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108360"
 ---
 # <a name="metadata-architecture-overview"></a>Visão geral da arquitetura de metadados
 Windows Communication Foundation (WCF) fornece uma infraestrutura avançada para exportar, publicando, recuperando e importação de metadados de serviço. Os serviços WCF usam metadados para descrever como interagir com pontos de extremidade do serviço para que as ferramentas, como Svcutil.exe, podem gerar automaticamente o código do cliente para acessar o serviço.  

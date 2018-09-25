@@ -1,5 +1,5 @@
 ---
-title: '&lt;remover&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;'
+title: '&lt;Remova&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 11f4b648ac1ffc614f18a3686eb2b6508a272980
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746547"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088952"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;remover&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;
-Remove um ouvinte do **ouvintes** coleção.  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Remova&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;
+Remove um ouvinte dos **ouvintes** coleção.  
   
  \<configuration>  
 \<System. Diagnostics >  
@@ -39,7 +38,7 @@ Remove um ouvinte do **ouvintes** coleção.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**name**|Atributo obrigatório.<br /><br /> O nome do ouvinte a remova o **ouvintes** coleção.|  
+|**name**|Atributo obrigatório.<br /><br /> O nome do ouvinte para remover o **ouvintes** coleção.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -49,14 +48,14 @@ Remove um ouvinte do **ouvintes** coleção.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`listeners`|Especifica um ouvinte que coleta, armazena e roteamento de mensagens. Os ouvintes direcionam a saída de rastreamento para um destino satisfatório.|  
+|`listeners`|Especifica um ouvinte que coleta, armazena e encaminha mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.|  
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
 |`trace`|Configura o serviço de rastreamento do ASP.NET.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Removendo o <xref:System.Diagnostics.DefaultTraceListener> do `Listeners` coleção altera o comportamento do <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> métodos. Chamando um `Assert` ou `Fail` método normalmente resulta na exibição de uma caixa de mensagem, no entanto, a caixa de mensagem não será exibida se o <xref:System.Diagnostics.DefaultTraceListener> não está no `Listeners` coleção.  
+>  Removendo o <xref:System.Diagnostics.DefaultTraceListener> do `Listeners` coleção altera o comportamento das <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, e <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> métodos. Chamar um `Assert` ou `Fail` método normalmente resulta na exibição de uma caixa de mensagem, no entanto, a caixa de mensagem não será exibida se o <xref:System.Diagnostics.DefaultTraceListener> não está no `Listeners` coleção.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como remover o ouvinte de rastreamento padrão do rastreamento **ouvintes** coleção.  

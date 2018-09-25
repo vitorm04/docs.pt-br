@@ -3,11 +3,11 @@ title: Como usar filtros
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586479"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070951"
 ---
 # <a name="how-to-use-filters"></a>Como usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são roteadas para duas implementações de um serviço de Calculadora, regularCalc e roundingCalc. Ambas as implementações de suportam as mesmas operações; No entanto, um serviço Arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deseja usar a versão de arredondamento do serviço; Se nenhuma preferência de serviço é expressa a mensagem é balanceada entre os dois serviços. As operações expostas por ambos os serviços são:  

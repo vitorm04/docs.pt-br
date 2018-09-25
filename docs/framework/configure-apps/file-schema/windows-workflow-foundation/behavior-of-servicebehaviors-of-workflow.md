@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
 ms.openlocfilehash: 9b16aad6138d79d3dbff4994250f05d617d54140
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584084"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109531"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt-of-workflow"></a>&lt;comportamento&gt; dos &lt;serviceBehaviors&gt; de fluxo de trabalho
 O **comportamento** elemento contém uma coleção de configurações para o comportamento de um serviço. Cada comportamento é indexado por seus **nome**. Serviços podem vincular a cada comportamento por esse nome usando o **behaviorConfiguration** atributo da [ \<ponto de extremidade >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. Isso permite que os pontos de extremidade compartilhem configurações comuns de comportamento sem redefinir as configurações.  

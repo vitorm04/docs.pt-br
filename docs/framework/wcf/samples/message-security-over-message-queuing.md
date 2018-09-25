@@ -3,13 +3,12 @@ title: Segurança de mensagem através do enfileiramento de mensagem
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a7bb69fa40637629e416336a893f98277cb6ed08
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 48318206844b8d3289d367435cc737e2421ff491
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040990"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108592"
 ---
 # <a name="message-security-over-message-queuing"></a>Segurança de mensagem através do enfileiramento de mensagem
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X.509v3 para o cliente e requer autenticação de servidor usando o certificado X.509v3 do servidor em relação ao MSMQ. Mensagem de segurança, às vezes, é mais desejável para garantir que as mensagens no armazenamento de MSMQ permanecem criptografadas e o aplicativo pode executar sua própria autenticação da mensagem.  
@@ -45,7 +44,7 @@ Este exemplo demonstra como implementar um aplicativo que usa WS-Security com au
   
 3.  Inicie o Service.exe no \service\bin.  
   
-4.  Inicie o Client.exe no \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+4.  Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
 5.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   

@@ -9,21 +9,20 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741731"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073419"
 ---
 # <a name="application-settings-schema"></a>Esquema de configurações do aplicativo
 
-Configurações de aplicativo permitem que um aplicativo Windows Forms ou ASP.NET armazenar e recuperar as configurações no escopo do aplicativo e no escopo do usuário. Nesse contexto, um *configuração* é qualquer informação que seja específico para o aplicativo ou específicos ao usuário atual — tudo de uma cadeia de caracteres de conexão de banco de dados para o usuário preferencial tamanho padrão da janela.
+As configurações de aplicativo permitem que um aplicativo Windows Forms ou do ASP.NET armazene e recupere configurações no escopo do aplicativo e no escopo do usuário. Nesse contexto, uma *configuração* é qualquer informação que podem ser específicos do usuário atual ou específica do aplicativo — qualquer coisa, desde uma cadeia de caracteres de conexão de banco de dados para o usuário preferencial tamanho de janela padrão do.
 
-Por padrão, as configurações de aplicativo em um aplicativo Windows Forms usa o <xref:System.Configuration.LocalFileSettingsProvider> classe, que usa o sistema de configuração do .NET para armazenar configurações em um arquivo de configuração XML. Para obter mais informações sobre os arquivos usados pelas configurações de aplicativo, consulte [arquitetura de configurações do aplicativo](~/docs/framework/winforms/advanced/application-settings-architecture.md).
+Por padrão, as configurações do aplicativo em um aplicativo Windows Forms usa o <xref:System.Configuration.LocalFileSettingsProvider> classe, que usa o sistema de configuração do .NET para armazenar configurações em um arquivo de configuração XML. Para obter mais informações sobre os arquivos usados pelas configurações de aplicativo, consulte [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md).
 
-Configurações de aplicativo define os elementos a seguir como parte dos arquivos de configuração que ele usa.
+As configurações de aplicativo define os elementos a seguir como parte dos arquivos de configuração, ele usa.
 
 | Elemento                    | Descrição                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
@@ -34,20 +33,20 @@ Configurações de aplicativo define os elementos a seguir como parte dos arquiv
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > elemento
 
-Esse elemento contém todos os  **\<Configuração >** marcas que são específicas para uma instância do aplicativo em um computador cliente. Não define nenhum atributo.
+Esse elemento contém todos os  **\<Configuração >** marcas que são específicas a uma instância do aplicativo em um computador cliente. Não define nenhum atributo.
 
 ## <a name="usersettings-element"></a>\<userSettings > elemento
 
-Esse elemento contém todos os  **\<Configuração >** marcas que são específicas para o usuário que está usando o aplicativo. Não define nenhum atributo.
+Esse elemento contém todos os  **\<Configuração >** marcas que são específicas para o usuário que está usando atualmente o aplicativo. Não define nenhum atributo.
 
 ## <a name="setting-element"></a>\<Configuração > elemento
 
-Este elemento define uma configuração. Ele tem os seguintes atributos.
+Esse elemento define uma configuração. Ele tem os seguintes atributos.
 
 | Atributo        | Descrição |
 | ---------------- | ----------- |
-| **name**         | Necessário. A ID exclusiva da configuração. As configurações criadas com o Visual Studio são salvos com o nome `ProjectName.Properties.Settings`. |
-| **serializedAs** | Necessário. O formato a ser usado para serializar o valor em texto. Os valores válidos são:<br><br>- `string`. O valor é serializado como uma cadeia de caracteres usando um <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. O valor é serializado usando a serialização de XML.<br>- `binary`. O valor é serializado como texto codificado binário usando a serialização binária.<br />- `custom`. O provedor de configurações tem conhecimento inerente dessa configuração e serializa e desfaz a serialização. |
+| **name**         | Necessário. A ID exclusiva da configuração. As configurações criadas por meio do Visual Studio são salvos com o nome `ProjectName.Properties.Settings`. |
+| **serializedAs** | Necessário. O formato a ser usado para serializar o valor em texto. Os valores válidos são:<br><br>- `string`. O valor é serializado como uma cadeia de caracteres usando um <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. O valor é serializado usando a serialização de XML.<br>- `binary`. O valor é serializado como texto codificado binário usando a serialização binária.<br />- `custom`. O provedor de configurações possui conhecimento inerente dessa configuração e serializa e desserializa-o. |
 
 ## <a name="value-element"></a>\<valor > elemento
 
@@ -55,7 +54,7 @@ Esse elemento contém o valor de uma configuração.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra um arquivo de configurações do aplicativo que define duas configurações no escopo do aplicativo e duas configurações no escopo do usuário:
+O exemplo a seguir mostra um arquivo de configurações do aplicativo que define duas configurações no escopo do aplicativo e duas configurações de escopo do usuário:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584143"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112462"
 ---
 # <a name="attached-events-overview"></a>Visão geral de eventos anexados
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define um componente de linguagem e o tipo de evento chamado de *evento anexado*. O conceito de um evento anexado permite que você adicione um manipulador para um evento específico a um elemento arbitrário em vez de um elemento que realmente define ou herda o evento. Nesse caso, nem o objeto potencialmente aumentando o evento, nem a instância de tratamento define ou caso contrário, é "proprietário" do evento.  
