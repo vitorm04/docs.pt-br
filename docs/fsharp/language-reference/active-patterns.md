@@ -3,11 +3,11 @@ title: Padrões ativos (F#)
 description: 'Saiba como usar padrões ativos para definir partições nomeadas que subdividem os dados de entrada a linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46524409"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027720"
 ---
 # <a name="active-patterns"></a>Padrões ativos
 

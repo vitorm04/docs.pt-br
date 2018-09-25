@@ -3,11 +3,11 @@ title: 'Como: determinar se um arquivo é um Assembly (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745584"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027101"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Como: determinar se um arquivo é um Assembly (Visual Basic)
 Um arquivo será um assembly somente se ele for gerenciado e se contiver uma entrada de assembly em seus metadados. Para obter mais informações sobre metadados e assemblies, consulte o tópico [Manifesto do assembly](../../../../framework/app-domains/assembly-manifest.md).  
