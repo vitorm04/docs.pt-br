@@ -4,50 +4,50 @@ ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
 author: BrucePerlerMS
 ms.openlocfilehash: 3adcf7ba9814bcf494d345cf0e3f47c57df2152c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173402"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206457"
 ---
-# <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a><span data-ttu-id="518a8-102">&lt;secureConversationAuthentication&gt; de &lt;serviceCredential&gt;</span><span class="sxs-lookup"><span data-stu-id="518a8-102">&lt;secureConversationAuthentication&gt; of &lt;serviceCredential&gt;</span></span>
-<span data-ttu-id="518a8-103">Especifica as configurações para um serviço de conversa segura.</span><span class="sxs-lookup"><span data-stu-id="518a8-103">Specifies the settings for a secure conversation service.</span></span>  
+# <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a><span data-ttu-id="85a59-102">&lt;secureConversationAuthentication&gt; de &lt;serviceCredential&gt;</span><span class="sxs-lookup"><span data-stu-id="85a59-102">&lt;secureConversationAuthentication&gt; of &lt;serviceCredential&gt;</span></span>
+<span data-ttu-id="85a59-103">Especifica as configurações para um serviço de conversa segura.</span><span class="sxs-lookup"><span data-stu-id="85a59-103">Specifies the settings for a secure conversation service.</span></span>  
   
- <span data-ttu-id="518a8-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="518a8-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="518a8-105">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="518a8-105">\<behaviors></span></span>  
-<span data-ttu-id="518a8-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="518a8-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="518a8-107">\<comportamento de ></span><span class="sxs-lookup"><span data-stu-id="518a8-107">\<behavior></span></span>  
-<span data-ttu-id="518a8-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="518a8-108">\<serviceCredentials></span></span>  
-<span data-ttu-id="518a8-109">\<secureConversationAuthentication ></span><span class="sxs-lookup"><span data-stu-id="518a8-109">\<secureConversationAuthentication></span></span>  
+ <span data-ttu-id="85a59-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="85a59-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="85a59-105">\<comportamentos ></span><span class="sxs-lookup"><span data-stu-id="85a59-105">\<behaviors></span></span>  
+<span data-ttu-id="85a59-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="85a59-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="85a59-107">\<comportamento de ></span><span class="sxs-lookup"><span data-stu-id="85a59-107">\<behavior></span></span>  
+<span data-ttu-id="85a59-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="85a59-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="85a59-109">\<secureConversationAuthentication ></span><span class="sxs-lookup"><span data-stu-id="85a59-109">\<secureConversationAuthentication></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="518a8-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="518a8-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85a59-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="85a59-110">Syntax</span></span>  
   
 ```xml  
 <secureConversationAuthentication securityStateEncoderType="String" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="518a8-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="518a8-111">Attributes and Elements</span></span>  
- <span data-ttu-id="518a8-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="518a8-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="85a59-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="85a59-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="85a59-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="85a59-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="518a8-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="518a8-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="85a59-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="85a59-113">Attributes</span></span>  
   
-|<span data-ttu-id="518a8-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="518a8-114">Attribute</span></span>|<span data-ttu-id="518a8-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="518a8-115">Description</span></span>|  
+|<span data-ttu-id="85a59-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="85a59-114">Attribute</span></span>|<span data-ttu-id="85a59-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="85a59-115">Description</span></span>|  
 |---------------|-----------------|  
-|`securityStateEncoderType`|<span data-ttu-id="518a8-116">Uma cadeia de caracteres que especifica o tipo de <xref:System.ServiceModel.Security.SecurityStateEncoder> a ser usado.</span><span class="sxs-lookup"><span data-stu-id="518a8-116">A string that specifies the type of <xref:System.ServiceModel.Security.SecurityStateEncoder> to be used.</span></span>|  
+|`securityStateEncoderType`|<span data-ttu-id="85a59-116">Uma cadeia de caracteres que especifica o tipo de <xref:System.ServiceModel.Security.SecurityStateEncoder> a ser usado.</span><span class="sxs-lookup"><span data-stu-id="85a59-116">A string that specifies the type of <xref:System.ServiceModel.Security.SecurityStateEncoder> to be used.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="518a8-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="518a8-117">Child Elements</span></span>  
- <span data-ttu-id="518a8-118">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="518a8-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="85a59-117">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="85a59-117">Child Elements</span></span>  
+ <span data-ttu-id="85a59-118">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="85a59-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="518a8-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="518a8-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="85a59-119">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="85a59-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="518a8-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="518a8-120">Element</span></span>|<span data-ttu-id="518a8-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="518a8-121">Description</span></span>|  
+|<span data-ttu-id="85a59-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="85a59-120">Element</span></span>|<span data-ttu-id="85a59-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="85a59-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="518a8-122">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="518a8-122">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="518a8-123">Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.</span><span class="sxs-lookup"><span data-stu-id="518a8-123">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
+|[<span data-ttu-id="85a59-122">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="85a59-122">\<serviceCredentials></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|<span data-ttu-id="85a59-123">Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.</span><span class="sxs-lookup"><span data-stu-id="85a59-123">Specifies the credential to be used in authenticating the service, and the client credential validation-related settings.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="518a8-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="518a8-124">Remarks</span></span>  
- <span data-ttu-id="518a8-125">Use este elemento de configuração para especificar uma lista de tipos de declaração conhecida para a serialização de cookies do contexto de segurança Token (SCT), bem como um codificador para codificar e proteger as informações de cookies.</span><span class="sxs-lookup"><span data-stu-id="518a8-125">Use this configuration element to specify a list of known claim types for the Security Context Token (SCT) cookies serialization, as well as an encoder to encode and secure cookies information.</span></span> <span data-ttu-id="518a8-126">Para obter mais informações sobre SCT, consulte <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span><span class="sxs-lookup"><span data-stu-id="518a8-126">For more information on SCT, see <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="85a59-124">Comentários</span><span class="sxs-lookup"><span data-stu-id="85a59-124">Remarks</span></span>  
+ <span data-ttu-id="85a59-125">Use este elemento de configuração para especificar uma lista de tipos de declaração conhecida para a serialização de cookies do contexto de segurança Token (SCT), bem como um codificador para codificar e proteger as informações de cookies.</span><span class="sxs-lookup"><span data-stu-id="85a59-125">Use this configuration element to specify a list of known claim types for the Security Context Token (SCT) cookies serialization, as well as an encoder to encode and secure cookies information.</span></span> <span data-ttu-id="85a59-126">Para obter mais informações sobre SCT, consulte <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span><span class="sxs-lookup"><span data-stu-id="85a59-126">For more information on SCT, see <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="518a8-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="518a8-127">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="85a59-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="85a59-127">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>  
  <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>  
  <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>  
