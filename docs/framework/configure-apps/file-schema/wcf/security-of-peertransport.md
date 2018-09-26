@@ -3,25 +3,24 @@ title: '&lt;segurança&gt; de &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749836"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176754"
 ---
-# <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="b16aa-102">&lt;segurança&gt; de &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="b16aa-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
-<span data-ttu-id="b16aa-103">Contém as definições de segurança associadas a um canal de pares, incluindo o tipo de autenticação utilizada e a segurança usada para o transporte de mensagens.</span><span class="sxs-lookup"><span data-stu-id="b16aa-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  
+# <a name="ltsecuritygt-of-ltpeertransportgt"></a><span data-ttu-id="7b25d-102">&lt;segurança&gt; de &lt;peerTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="7b25d-102">&lt;security&gt; of &lt;peerTransport&gt;</span></span>
+<span data-ttu-id="7b25d-103">Contém as definições de segurança associadas a um canal de pares, incluindo o tipo de autenticação utilizada e a segurança usada para o transporte de mensagens.</span><span class="sxs-lookup"><span data-stu-id="7b25d-103">Contains the security settings associated with a peer channel, including the type of authentication used and the security used for the message transport.</span></span>  
   
- <span data-ttu-id="b16aa-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="b16aa-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="b16aa-105">\<associações ></span><span class="sxs-lookup"><span data-stu-id="b16aa-105">\<bindings></span></span>  
-<span data-ttu-id="b16aa-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="b16aa-106">\<customBinding></span></span>  
-<span data-ttu-id="b16aa-107">\<associação ></span><span class="sxs-lookup"><span data-stu-id="b16aa-107">\<binding></span></span>  
-<span data-ttu-id="b16aa-108">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="b16aa-108">\<peerTransport></span></span>  
-<span data-ttu-id="b16aa-109">\<segurança ></span><span class="sxs-lookup"><span data-stu-id="b16aa-109">\<security></span></span>  
+ <span data-ttu-id="7b25d-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="7b25d-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="7b25d-105">\<associações ></span><span class="sxs-lookup"><span data-stu-id="7b25d-105">\<bindings></span></span>  
+<span data-ttu-id="7b25d-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="7b25d-106">\<customBinding></span></span>  
+<span data-ttu-id="7b25d-107">\<associação ></span><span class="sxs-lookup"><span data-stu-id="7b25d-107">\<binding></span></span>  
+<span data-ttu-id="7b25d-108">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="7b25d-108">\<peerTransport></span></span>  
+<span data-ttu-id="7b25d-109">\<segurança ></span><span class="sxs-lookup"><span data-stu-id="7b25d-109">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b16aa-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b16aa-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b25d-110">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7b25d-110">Syntax</span></span>  
   
 ```xml  
 <security mode="None/Transport/Message/TransportWithMessageCredential">  
@@ -29,44 +28,44 @@ ms.locfileid: "32749836"
 </security  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b16aa-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="b16aa-111">Attributes and Elements</span></span>  
- <span data-ttu-id="b16aa-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="b16aa-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7b25d-111">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="7b25d-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="7b25d-112">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="7b25d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b16aa-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="b16aa-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="7b25d-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="7b25d-113">Attributes</span></span>  
   
-|<span data-ttu-id="b16aa-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="b16aa-114">Attribute</span></span>|<span data-ttu-id="b16aa-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="b16aa-115">Description</span></span>|  
+|<span data-ttu-id="7b25d-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="7b25d-114">Attribute</span></span>|<span data-ttu-id="7b25d-115">Descrição</span><span class="sxs-lookup"><span data-stu-id="7b25d-115">Description</span></span>|  
 |---------------|-----------------|  
-|`mode`|<span data-ttu-id="b16aa-116">Especifica o tipo de segurança a ser aplicado.</span><span class="sxs-lookup"><span data-stu-id="b16aa-116">Specifies the type of security to be applied.</span></span> <span data-ttu-id="b16aa-117">O valor padrão é a mensagem.</span><span class="sxs-lookup"><span data-stu-id="b16aa-117">The default value is Message.</span></span> <span data-ttu-id="b16aa-118">Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="b16aa-118">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
+|`mode`|<span data-ttu-id="7b25d-116">Especifica o tipo de segurança a ser aplicada.</span><span class="sxs-lookup"><span data-stu-id="7b25d-116">Specifies the type of security to be applied.</span></span> <span data-ttu-id="7b25d-117">O valor padrão é a mensagem.</span><span class="sxs-lookup"><span data-stu-id="7b25d-117">The default value is Message.</span></span> <span data-ttu-id="7b25d-118">Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="7b25d-118">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="b16aa-119">Atributo mode</span><span class="sxs-lookup"><span data-stu-id="b16aa-119">mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="7b25d-119">modo de atributo</span><span class="sxs-lookup"><span data-stu-id="7b25d-119">mode Attribute</span></span>  
   
-|<span data-ttu-id="b16aa-120">Valor</span><span class="sxs-lookup"><span data-stu-id="b16aa-120">Value</span></span>|<span data-ttu-id="b16aa-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="b16aa-121">Description</span></span>|  
+|<span data-ttu-id="7b25d-120">Valor</span><span class="sxs-lookup"><span data-stu-id="7b25d-120">Value</span></span>|<span data-ttu-id="7b25d-121">Descrição</span><span class="sxs-lookup"><span data-stu-id="7b25d-121">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="b16aa-122">A segurança é desabilitada.</span><span class="sxs-lookup"><span data-stu-id="b16aa-122">Security is disabled.</span></span>|  
-|`Transport`|<span data-ttu-id="b16aa-123">A proteção é fornecida usando HTTPS.</span><span class="sxs-lookup"><span data-stu-id="b16aa-123">Security is provided using HTTPS.</span></span>|  
-|`Message`|<span data-ttu-id="b16aa-124">Segurança SOAP fornece autenticação, integridade e confidencialidade.</span><span class="sxs-lookup"><span data-stu-id="b16aa-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
-|`TransportWithMessageCredential`|<span data-ttu-id="b16aa-125">HTTPS fornece autenticação e confidencialidade.</span><span class="sxs-lookup"><span data-stu-id="b16aa-125">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="b16aa-126">Mensagens SOAP fornecem tipos de credenciais avançados.</span><span class="sxs-lookup"><span data-stu-id="b16aa-126">SOAP messages provide rich credential types.</span></span>|  
+|`None`|<span data-ttu-id="7b25d-122">A segurança é desabilitada.</span><span class="sxs-lookup"><span data-stu-id="7b25d-122">Security is disabled.</span></span>|  
+|`Transport`|<span data-ttu-id="7b25d-123">A proteção é fornecida usando HTTPS.</span><span class="sxs-lookup"><span data-stu-id="7b25d-123">Security is provided using HTTPS.</span></span>|  
+|`Message`|<span data-ttu-id="7b25d-124">Segurança SOAP fornece autenticação, integridade e confidencialidade.</span><span class="sxs-lookup"><span data-stu-id="7b25d-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
+|`TransportWithMessageCredential`|<span data-ttu-id="7b25d-125">HTTPS fornece autenticação e confidencialidade.</span><span class="sxs-lookup"><span data-stu-id="7b25d-125">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="7b25d-126">As mensagens SOAP fornecem tipos de credencial avançados.</span><span class="sxs-lookup"><span data-stu-id="7b25d-126">SOAP messages provide rich credential types.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b16aa-127">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="b16aa-127">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="7b25d-127">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="7b25d-127">Child Elements</span></span>  
   
-|<span data-ttu-id="b16aa-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="b16aa-128">Element</span></span>|<span data-ttu-id="b16aa-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="b16aa-129">Description</span></span>|  
+|<span data-ttu-id="7b25d-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="7b25d-128">Element</span></span>|<span data-ttu-id="7b25d-129">Descrição</span><span class="sxs-lookup"><span data-stu-id="7b25d-129">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b16aa-130">\<transporte ></span><span class="sxs-lookup"><span data-stu-id="b16aa-130">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|<span data-ttu-id="b16aa-131">Define um transporte de par para uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="b16aa-131">Defines a peer transport for a custom binding.</span></span> <span data-ttu-id="b16aa-132">Este elemento tem um `clientCredentialType` atributo que especifica as credenciais a serem usados ao interagir com um serviço.</span><span class="sxs-lookup"><span data-stu-id="b16aa-132">This element has a `clientCredentialType` attribute that specifies the credentials to be used when interacting with a service.</span></span> <span data-ttu-id="b16aa-133">Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="b16aa-133">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span><br /><br /> <span data-ttu-id="b16aa-134">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="b16aa-134">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="7b25d-130">\<transporte ></span><span class="sxs-lookup"><span data-stu-id="7b25d-130">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|<span data-ttu-id="7b25d-131">Define um transporte de par para uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="7b25d-131">Defines a peer transport for a custom binding.</span></span> <span data-ttu-id="7b25d-132">Este elemento tem um `clientCredentialType` atributo que especifica as credenciais a serem usadas ao interagir com um serviço.</span><span class="sxs-lookup"><span data-stu-id="7b25d-132">This element has a `clientCredentialType` attribute that specifies the credentials to be used when interacting with a service.</span></span> <span data-ttu-id="7b25d-133">Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="7b25d-133">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span><br /><br /> <span data-ttu-id="7b25d-134">Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="7b25d-134">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="b16aa-135">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="b16aa-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="7b25d-135">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="7b25d-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="b16aa-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="b16aa-136">Element</span></span>|<span data-ttu-id="b16aa-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="b16aa-137">Description</span></span>|  
+|<span data-ttu-id="7b25d-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="7b25d-136">Element</span></span>|<span data-ttu-id="7b25d-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="7b25d-137">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b16aa-138">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="b16aa-138">\<peerTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|<span data-ttu-id="b16aa-139">Define um transporte de par para uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="b16aa-139">Defines a peer transport for a custom binding.</span></span>|  
+|[<span data-ttu-id="7b25d-138">\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="7b25d-138">\<peerTransport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|<span data-ttu-id="7b25d-139">Define um transporte de par para uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="7b25d-139">Defines a peer transport for a custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="b16aa-140">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b16aa-140">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7b25d-140">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7b25d-140">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
  <xref:System.ServiceModel.PeerSecuritySettings>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="b16aa-141">Segurança de transporte</span><span class="sxs-lookup"><span data-stu-id="b16aa-141">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [<span data-ttu-id="b16aa-142">Transportes</span><span class="sxs-lookup"><span data-stu-id="b16aa-142">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [<span data-ttu-id="b16aa-143">Escolhendo um transporte</span><span class="sxs-lookup"><span data-stu-id="b16aa-143">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [<span data-ttu-id="b16aa-144">Associações</span><span class="sxs-lookup"><span data-stu-id="b16aa-144">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="b16aa-145">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="b16aa-145">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="b16aa-146">Associações personalizadas</span><span class="sxs-lookup"><span data-stu-id="b16aa-146">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="b16aa-147">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="b16aa-147">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [<span data-ttu-id="7b25d-141">Segurança de transporte</span><span class="sxs-lookup"><span data-stu-id="7b25d-141">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [<span data-ttu-id="7b25d-142">Transportes</span><span class="sxs-lookup"><span data-stu-id="7b25d-142">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="7b25d-143">Escolhendo um transporte</span><span class="sxs-lookup"><span data-stu-id="7b25d-143">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="7b25d-144">Associações</span><span class="sxs-lookup"><span data-stu-id="7b25d-144">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="7b25d-145">Estendendo associações</span><span class="sxs-lookup"><span data-stu-id="7b25d-145">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="7b25d-146">Associações personalizadas</span><span class="sxs-lookup"><span data-stu-id="7b25d-146">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="7b25d-147">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="7b25d-147">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
