@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
 author: Xansky
 ms.author: mhopkins
-manager: markl
-ms.openlocfilehash: 4fb586b9ef34781eafbbe2deb66efdefff0eee19
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 44e1440ca9ab49ffcbc849991891eb5c4c0e7357
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085560"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082650"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle StatusBar
 > [!NOTE]
