@@ -9,24 +9,23 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493872"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172187"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Como criar um serviço de token de segurança
-Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validar tokens de segurança. Um serviço de token de segurança fornece um ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  
+Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validando tokens de segurança. Um serviço de token de segurança fornece uma ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  
   
 ## <a name="issuing-tokens"></a>Emissão de Tokens  
- WS-Trust define os formatos de mensagem, com base no `RequestSecurityToken` elemento do esquema de linguagem XSD de definição de esquema XML, e `RequestSecurityTokenResponse` elemento do esquema XSD para a execução de emissão de token. Além disso, ele define os associados ação Uniform Resource Identifiers (URIs). A ação associado a URI de `RequestSecurityToken` mensagem http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. A ação associado a URI de `RequestSecurityTokenResponse` mensagem http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust define os formatos de mensagem, com base nas `RequestSecurityToken` elemento de esquema XSD (linguagem) de definição de esquema XML, e `RequestSecurityTokenResponse` elemento do esquema XSD para a execução de emissão de token. Além disso, ele define o associado ação de recurso uniformes (URIs). A ação de URI associado a `RequestSecurityToken` mensagem é http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. A ação de URI associado a `RequestSecurityTokenResponse` mensagem é http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
-### <a name="request-message-structure"></a>Estrutura de mensagens de solicitação  
+### <a name="request-message-structure"></a>Estrutura de mensagem de solicitação  
  A estrutura de mensagens de solicitação de problema normalmente consiste dos seguintes itens:  
   
--   Uma solicitação de tipo de URI com um valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   URI de tipo de uma solicitação com um valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
   
 -   Um tipo de token URI. Para tokens de segurança asserções Markup Language (SAML) 1.1, o valor desse URI é http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
   
@@ -34,33 +33,33 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
   
 -   Um tipo de chave URI. Para chaves simétricas, o valor desse URI é http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
   
- Além disso, alguns dos outros itens podem estar presentes:  
+ Além disso, alguns outros itens podem estar presentes:  
   
 -   Material de chave fornecido pelo cliente.  
   
--   Informações de escopo que indica o serviço de destino que será usado com o token emitido.  
+-   Informações de escopo que indicam o serviço de destino que será usado com o token emitido.  
   
- O serviço de token de segurança usa as informações na mensagem de solicitação de problema quando ele cria a mensagem de resposta do problema.  
+ O serviço de token de segurança usa as informações na mensagem de solicitação de problema ao construir a mensagem de resposta do problema.  
   
-## <a name="response-message-structure"></a>Estrutura de mensagens de resposta  
- A estrutura de mensagens de resposta de problema normalmente é constituído dos itens a seguir;  
+## <a name="response-message-structure"></a>Estrutura de mensagem de resposta  
+ A estrutura de mensagem de resposta de problema normalmente consiste dos seguintes itens;  
   
 -   O token de segurança emitido, por exemplo, uma asserção SAML 1.1.  
   
--   Um token de prova associado ao token de segurança. Para chaves simétricas, isso geralmente é um formato criptografado do material de chave.  
+-   Um token de prova associado com o token de segurança. As chaves simétricas, isso geralmente é um formato criptografado do material de chave.  
   
 -   Referências para o token de segurança emitido. Normalmente, o serviço de token de segurança retorna uma referência que pode ser usada quando o token emitido é exibido em uma mensagem subsequente enviada pelo cliente e outro que pode ser usada quando o token não está presente nas mensagens subsequentes.  
   
- Além disso, alguns dos outros itens podem estar presentes:  
+ Além disso, alguns outros itens podem estar presentes:  
   
 -   Material de chave fornecido pelo serviço de token de segurança.  
   
 -   O algoritmo necessário para calcular a chave compartilhada.  
   
--   Informações de tempo de vida do token emitido.  
+-   Informações de tempo de vida de token emitido.  
   
-## <a name="processing-request-messages"></a>Mensagens de solicitação de processamento  
- O serviço de token de segurança processa a solicitação de problema examinando as várias partes da mensagem de solicitação e garantir que ele pode emitir um token que atende à solicitação. O serviço de token de segurança deve determinar o seguinte antes de ele constrói o token a ser emitido:  
+## <a name="processing-request-messages"></a>Processando mensagens de solicitação  
+ O serviço de token de segurança processa a solicitação de problema examinando as várias partes da mensagem de solicitação e garantindo que ele pode emitir um token que atende à solicitação. O serviço de token de segurança deve determinar o seguinte antes de ele constrói o token a ser emitido:  
   
 -   A solicitação é realmente uma solicitação para um token a ser emitido.  
   
@@ -68,24 +67,24 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
   
 -   O solicitante está autorizado a fazer a solicitação.  
   
--   O serviço de token de segurança pode atender às expectativas do solicitante em relação ao material de chave.  
+-   O serviço de token de segurança pode atender às expectativas do solicitante com relação ao material de chave.  
   
- Duas partes essenciais de construção de um token de determinar qual chave para assinar o token com e quais para criptografar a chave compartilhada com. O token precisa ser assinado para que quando o cliente apresenta o token para o serviço de destino, que o serviço pode determinar que o token foi emitido por um serviço de token de segurança que ele confia. O material da chave deve ser criptografada de forma que o serviço de destino pode descriptografar o material de chave.  
+ Duas partes vitais de construir um token são determinar qual chave para assinar o token com e qual chave deve criptografar a chave compartilhada com. O token precisa ser assinado para que quando o cliente apresenta o token ao serviço de destino, o serviço pode determinar que o token foi emitido por um serviço de token de segurança que ele confia. O material da chave precisa ser criptografado de tal forma que o serviço de destino pode descriptografar o material da chave.  
   
- Assinatura de uma asserção SAML envolve a criação de um <xref:System.IdentityModel.Tokens.SigningCredentials> instância. O construtor para essa classe usa o seguinte:  
+ Uma asserção SAML de assinatura envolve a criação de um <xref:System.IdentityModel.Tokens.SigningCredentials> instância. O construtor para essa classe usa o seguinte:  
   
--   Um <xref:System.IdentityModel.Tokens.SecurityKey> para a chave a ser usado para assinar a asserção SAML.  
+-   Um <xref:System.IdentityModel.Tokens.SecurityKey> para a chave a ser usado para assinar declaração SAML.  
   
--   Uma cadeia de caracteres que identifica o algoritmo de assinatura para uso.  
+-   Uma cadeia de caracteres que identifica o algoritmo de assinatura a ser usado.  
   
--   Uma cadeia de caracteres que identifica o algoritmo de digest para uso.  
+-   Uma cadeia de caracteres que identifica o algoritmo de resumo para usar.  
   
 -   Opcionalmente, um <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> que identifica a chave a ser usado para assinar a asserção.  
   
  [!code-csharp[c_CreateSTS#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#1)]
  [!code-vb[c_CreateSTS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#1)]  
   
- Criptografar a chave compartilhada envolve colocar o material da chave e criptografá-los com uma chave que o serviço de destino pode usar para descriptografar a chave compartilhada. Normalmente, a chave pública do serviço de destino é usada.  
+ Criptografar a chave compartilhada envolve pegar o material da chave e criptografá-los com uma chave que o serviço de destino pode usar para descriptografar a chave compartilhada. Normalmente, a chave pública do serviço de destino é usada.  
   
  [!code-csharp[c_CreateSTS#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#2)]
  [!code-vb[c_CreateSTS#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#2)]  
@@ -95,27 +94,27 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
  [!code-csharp[c_CreateSTS#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#3)]
  [!code-vb[c_CreateSTS#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#3)]  
   
- Isso <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> é usado para criar um `SamlSubject` como parte do `SamlToken`.  
+ Isso <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier> , em seguida, é usado para criar um `SamlSubject` como parte do `SamlToken`.  
   
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- Para obter mais informações, consulte [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Para obter mais informações, consulte [exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-## <a name="creating-response-messages"></a>Criar mensagens de resposta  
- Depois que o serviço de token de segurança processa a solicitação de problema e constrói o token a ser emitido junto com a chave de prova, a mensagem de resposta deve ser construído, inclusive pelo menos o token solicitado, o token de prova e as referências de token emitidas. O token emitido é normalmente uma <xref:System.IdentityModel.Tokens.SamlSecurityToken> criado a partir de <xref:System.IdentityModel.Tokens.SamlAssertion>, conforme mostrado no exemplo a seguir.  
+## <a name="creating-response-messages"></a>Criação de mensagens de resposta  
+ Depois que o serviço de token de segurança processa a solicitação de problema e constrói o token a ser emitido junto com a chave de prova, a mensagem de resposta precisa ser construído, incluindo pelo menos o token solicitado, o token de prova e as referências de token emitidas. O token emitido é normalmente um <xref:System.IdentityModel.Tokens.SamlSecurityToken> criado a partir de <xref:System.IdentityModel.Tokens.SamlAssertion>, conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
  [!code-vb[c_CreateSTS#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#5)]  
   
- No caso em que o serviço de token de segurança fornece o material de chave compartilhado, o token de prova é construído com a criação de um <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>.  
+ No caso em que o serviço de token de segurança fornece o material da chave compartilhado, o token de prova é construído com a criação de um <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>.  
   
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- Para obter mais informações sobre como construir o token de prova quando o cliente e o serviço de token de segurança fornecem material de chave para a chave compartilhada, consulte [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Para obter mais informações sobre como construir o token de prova quando o cliente e o serviço de token de segurança fornecem o material da chave para a chave compartilhada, consulte [exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
- As referências de tokens emitidas são construídas com a criação de instâncias da <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> classe.  
+ As referências de token emitidas são construídas com a criação de instâncias do <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> classe.  
   
  [!code-csharp[c_CreateSTS#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#7)]
  [!code-vb[c_CreateSTS#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#7)]  
@@ -123,7 +122,7 @@ Um serviço de token de segurança implementa o protocolo definido na especifica
  Esses vários valores, em seguida, são serializados em mensagem de resposta retornada ao cliente.  
   
 ## <a name="example"></a>Exemplo  
- Para obter o código completo para um serviço de token de segurança, consulte [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Para o código completo para um serviço de token de segurança, consulte [exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

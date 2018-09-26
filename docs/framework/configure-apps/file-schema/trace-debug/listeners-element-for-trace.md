@@ -1,5 +1,5 @@
 ---
-title: '&lt;ouvintes de&gt; elemento para &lt;rastreamento&gt;'
+title: '&lt;ouvintes&gt; elemento para &lt;rastreamento&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -9,21 +9,20 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748133"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172830"
 ---
-# <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;ouvintes de&gt; elemento para &lt;rastreamento&gt;
-Especifica um ouvinte que coleta, armazena e roteamento de mensagens. Os ouvintes direcionam a saída de rastreamento para um destino satisfatório.  
+# <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;ouvintes&gt; elemento para &lt;rastreamento&gt;
+Especifica um ouvinte que coleta, armazena e encaminha mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.  
   
  \<Configuração > elemento  
 \<System. Diagnostics > elemento  
 \<rastreamento > elemento  
-\<ouvintes > elemento \<rastreamento >  
+\<ouvintes > elemento para \<rastreamento >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +57,7 @@ Especifica um ouvinte que coleta, armazena e roteamento de mensagens. Os ouvinte
 |`trace`|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- O <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes compartilham o mesmo **ouvintes** coleção. Se você adicionar um objeto de ouvinte para a coleção em uma dessas classes, de outra classe usa o mesmo ouvinte. As classes de ouvinte fornecidas com o .NET Framework derivam de <xref:System.Diagnostics.TraceListener> classe.  
+ O <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes compartilham o mesmo **ouvintes** coleção. Se você adicionar um objeto de ouvinte à coleção em uma dessas classes, a outra classe usa o mesmo ouvinte. As classes de ouvinte que acompanham o .NET Framework derivam o <xref:System.Diagnostics.TraceListener> classe.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado no arquivo de configuração de máquina (Machine. config) e o arquivo de configuração do aplicativo.  

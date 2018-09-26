@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504699"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170464"
 ---
 # <a name="using-wpf-controls"></a>Usando controles WPF
 Você pode usar controles do WPF (Windows Presentation Foundation) em seus aplicativos do Windows Forms. Embora essas sejam duas tecnologias de exibição diferentes, elas interoperam com harmonia.  
@@ -24,16 +24,10 @@ Você pode usar controles do WPF (Windows Presentation Foundation) em seus aplic
  Mostra como copiar um controle Windows Presentation Foundation em um Windows Form.  
   
  [Instruções passo a passo: organizando conteúdo WPF no Windows Forms no tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- Mostra como usar os recursos de layout do Windows Forms, como ancoragem e guias de alinhamento para organizar controles do Windows Presentation Foundation.  
-  
- [Instruções passo a passo: alterando propriedades de um elemento WPF hospedado no tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Mostra o fluxo de trabalho entre o Designer de Formulários do Windows e o [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] para alterar as propriedades de controles WPF.  
+ Mostra como usar os recursos de layout do Windows Forms, como ancoragem e guias de alinhamento para organizar controles do Windows Presentation Foundation.
   
  [Instruções passo a passo: criando novo conteúdo WPF no Windows Forms no tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- Mostra como criar um controle do Windows Presentation Foundation para uso em aplicativos do Windows Forms.  
-  
- [Instruções passo a passo: copiando e colando um controle ElementHost em Windows Forms separados](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- Mostra como copiar um controle do Windows Presentation Foundation de um Windows Form para outro.  
+ Mostra como criar um controle do Windows Presentation Foundation para uso em aplicativos do Windows Forms.
   
  [Instruções passo a passo: atribuindo conteúdo WPF no Windows Forms no tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Mostra como selecionar os tipos de controle do Windows Presentation Foundation que você deseja exibir em seu formulário.  

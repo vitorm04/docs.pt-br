@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748666"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172726"
 ---
 # <a name="ltruntimegt-element"></a>&lt;tempo de execução&gt; elemento
 Fornece informações usadas pelo common language runtime para configurar os aplicativos.  
@@ -33,7 +32,7 @@ Fornece informações usadas pelo common language runtime para configurar os apl
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos filho e pai.  
+ As seções a seguir descrevem os elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
  nenhuma.  
@@ -51,8 +50,8 @@ Fornece informações usadas pelo common language runtime para configurar os apl
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Especifica se uma verificação de nome forte para assemblies confiáveis deve ser ignorada.|  
 |[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Especifica que o tempo de execução deve usar o comportamento de classificação herdado ao executar comparações de cadeia de caracteres.|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Especifica se o tempo de execução pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.|  
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Especifica se o cache de falhas de associação, que é o comportamento padrão do .NET Framework versão 2.0, está desabilitada.|  
-|[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Especifica se a pilha do thread completo é confirmada quando um thread é iniciado.|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Especifica se o armazenamento em cache de falhas de associação, que é o comportamento padrão no .NET Framework versão 2.0, está desabilitado.|  
+|[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Especifica se a pilha completa de threads é confirmada quando um thread é iniciado.|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Especifica se o comportamento padrão, que é permitir que o host de tempo de execução substitua as definições de configuração de um domínio de aplicativo, está desabilitado.|  
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Determina se os métodos de análise de data e hora usam um conjunto de regras ajustado para analisar sequências de datas que contêm somente um dia, mês, hora e designador AM/PM.|  
 |[\<enforceFIPSPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|Especifica se deve-se impor um requisito de configuração do computador em que os algoritmos de criptografia devem estar em conformidade com o FIPS (padrão norte-americano de processamento de informações).|  
@@ -88,9 +87,9 @@ Fornece informações usadas pelo common language runtime para configurar os apl
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários  
- Elementos filhos a [ \<tempo de execução >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção de um arquivo de configuração são usadas pelo tempo de execução de linguagem comum para configurar como um aplicativo é executado. Por exemplo, o [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina se o coletor de lixo usa coleta de lixo de estação de trabalho ou a coleta de lixo do servidor, o [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina se o common language runtime calcula os códigos de hash para a cadeia de caracteres por aplicativo ou um domínio de aplicativo e o `AppContextSwitchOverrides` elemento permite que os usuários da biblioteca para aceitar ou recusar alterada funcionalidade fornecida por uma biblioteca.  
+ Os elementos filho na [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção de um arquivo de configuração são usadas pelo common language runtime para configurar como um aplicativo é executado. Por exemplo, o [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina se o coletor de lixo usa a coleta de lixo de estação de trabalho ou coleta de lixo do servidor, o [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina se o common language runtime calcula códigos hash para a cadeia de caracteres em um aplicativo ou uma base de domínio de aplicativo e o `AppContextSwitchOverrides` elemento permite que os usuários da biblioteca para aceitar ou recusar alterada funcionalidade fornecida por uma biblioteca.  
   
- Os elementos de [ \<tempo de execução >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção são lidas automaticamente pelo common language runtime na inicialização do aplicativo. Você também pode definir o arquivo de configuração para um domínio de aplicativo não padrão, fornecendo seu nome para o <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propriedade; suas configurações são lidas automaticamente quando o domínio de aplicativo é carregado. Raramente, ou nunca, que precisa ler diretamente as configurações de [ \<tempo de execução >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção no arquivo de configuração do aplicativo.  
+ Os elementos na [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção são lidas automaticamente pelo common language runtime na inicialização do aplicativo. Você também pode definir o arquivo de configuração para um domínio de aplicativo não padrão, fornecendo seu nome para o <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propriedade; suas configurações são lidas automaticamente quando o domínio do aplicativo é carregado. Raramente, ou nunca, que a necessidade de ler diretamente as configurações de [ \<tempo de execução >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção no arquivo de configuração do seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

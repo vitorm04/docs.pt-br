@@ -3,13 +3,12 @@ title: '&lt;secureConversationAuthentication&gt; de &lt;serviceCredential&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 7b56d12793ad35e6f951638465e77b92a66a6fd0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3adcf7ba9814bcf494d345cf0e3f47c57df2152c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749326"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173402"
 ---
 # <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>&lt;secureConversationAuthentication&gt; de &lt;serviceCredential&gt;
 Especifica as configurações para um serviço de conversa segura.  
@@ -17,7 +16,7 @@ Especifica as configurações para um serviço de conversa segura.
  \<system.ServiceModel>  
 \<comportamentos >  
 \<serviceBehaviors >  
-\<comportamento >  
+\<comportamento de >  
 \<serviceCredentials>  
 \<secureConversationAuthentication >  
   
@@ -46,7 +45,7 @@ Especifica as configurações para um serviço de conversa segura.
 |[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Especifica a credencial a ser usado na autenticação do serviço e as configurações de relacionadas à validação de credenciais do cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Use este elemento de configuração para especificar uma lista de tipos de declaração conhecidos para a serialização de cookies de segurança contexto Token SCT (), bem como um codificador para codificar e proteger as informações de cookies. Para obter mais informações sobre SCT, consulte <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
+ Use este elemento de configuração para especificar uma lista de tipos de declaração conhecida para a serialização de cookies do contexto de segurança Token (SCT), bem como um codificador para codificar e proteger as informações de cookies. Para obter mais informações sobre SCT, consulte <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>  

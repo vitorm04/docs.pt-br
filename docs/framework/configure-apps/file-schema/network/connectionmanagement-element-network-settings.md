@@ -1,5 +1,5 @@
 ---
-title: '&lt;connectionManagement&gt; elemento (configurações de rede)'
+title: '&lt;connectionManagement&gt; (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742816"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173064"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; elemento (configurações de rede)
+# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; (configurações de rede)
 Especifica o número máximo de conexões para um host de rede.  
   
  \<configuration>  
@@ -53,7 +52,7 @@ Especifica o número máximo de conexões para um host de rede.
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O `connectionManagement` elemento define o número máximo de conexões para um servidor ou grupo de servidores.  
+ O `connectionManagement` elemento define o número máximo de conexões a um servidor ou grupo de servidores.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

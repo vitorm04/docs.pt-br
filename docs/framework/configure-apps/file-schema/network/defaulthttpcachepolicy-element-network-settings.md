@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultHttpCachePolicy&gt; elemento (configurações de rede)'
+title: '&lt;defaultHttpCachePolicy&gt; (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741835"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172884"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; elemento (configurações de rede)
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; (configurações de rede)
 Descreve se o cache de HTTP está ativo e descreve a política de cache padrão.  
   
  \<configuration>  
@@ -44,10 +43,10 @@ Descreve se o cache de HTTP está ativo e descreve a política de cache padrão.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`maximumAge`|Especifica o intervalo de tempo máximo antes de um objeto armazenado em cache está marcado como expirada.|  
-|`maximumStale`|Especifica o tempo máximo após o tempo de atualização computada antes que um objeto armazenado em cache está marcado como expirada.|  
-|`minimumFresh`|Especifica o tempo mínimo de um objeto armazenado em cache para ser considerado atualizado.|  
-|`policyLevel`|Especifica se a política de cache é automático ou se o cache é ignorado. O valor padrão é `BypassCache`.|  
+|`maximumAge`|Especifica o intervalo de tempo máximo antes que um objeto armazenado em cache seja marcado como expirada.|  
+|`maximumStale`|Especifica o tempo máximo após o tempo de atualização computada antes de um objeto armazenado em cache seja marcado como expirada.|  
+|`minimumFresh`|Especifica o tempo mínimo para um objeto armazenado em cache ser considerado atualizado.|  
+|`policyLevel`|Especifica se a política de cache é automática, ou se o cache é ignorado. O valor padrão é `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -61,13 +60,13 @@ Descreve se o cache de HTTP está ativo e descreve a política de cache padrão.
 ## <a name="remarks"></a>Comentários  
  O valor para o `policyLevel` atributo seja `BypassCache` ou `Default`.  
   
- Valores para o `maximumAge`, `maximumStale`, e `minimumFresh` elementos são um intervalo de tempo explícito com um formato de *d*. *hh*:*mm*:*ss* (dias, horas, minutos e segundos), ou as constantes `minValue` ou `maxValue`, conforme apropriado.  
+ Os valores para o `maximumAge`, `maximumStale`, e `minimumFresh` elementos são um intervalo de tempo explícito com um formato de *1!d*. *hh*:*mm*:*ss* (dias, horas, minutos e segundos), ou as constantes `minValue` ou `maxValue`, conforme apropriado.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar um tempo de novo mínimo de seis horas, um tempo de duração máxima de dois dias e um máximo obsoletas de quatro horas.  
+ O exemplo a seguir mostra como especificar um tempo de novo mínimo de seis horas, uma hora de idade máxima de dois dias e um tempo máximo obsoleto de quatro horas.  
   
 ```xml  
 <configuration>  

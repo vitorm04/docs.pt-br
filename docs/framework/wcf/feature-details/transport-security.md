@@ -3,13 +3,12 @@ title: Segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498209"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171420"
 ---
 # <a name="transport-security"></a>Segurança de transporte
 Segurança de transporte no Windows Communication Foundation (WCF) depende da associação selecionada. O transporte que implementa a associação determina o mecanismo de segurança real. Os tópicos nesta seção explicam os mecanismos que são implementados e suas opções.  
@@ -19,7 +18,7 @@ Segurança de transporte no Windows Communication Foundation (WCF) depende da as
  Explica os conceitos básicos de segurança de transporte do WCF.  
   
  [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
- Explica como o WCF implementa Secure Sockets Layer (SSL ou HTTPS).  
+ Explica como o WCF implementa o Secure Sockets Layer (SSL ou HTTPS).  
   
  [Entendendo a autenticação HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  Descreve os esquemas de autenticação de HTTP, como Basic, Digest, NT LAN Manager (NTLM) e outros.  
@@ -28,7 +27,7 @@ Segurança de transporte no Windows Communication Foundation (WCF) depende da as
  Explica os cinco níveis de representação que são possíveis com o modo de segurança de transporte.  
   
  [Como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- Explica as Noções básicas de configuração de uma porta em um computador com um certificado x. 509 para segurança SSL (transporte).  
+ Apresenta os conceitos básicos de configuração de uma porta em uma máquina com um certificado x. 509 para segurança SSL (transport).  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  

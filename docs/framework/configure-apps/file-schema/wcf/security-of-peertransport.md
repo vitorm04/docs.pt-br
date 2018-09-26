@@ -3,13 +3,12 @@ title: '&lt;segurança&gt; de &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749836"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176754"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;segurança&gt; de &lt;peerTransport&gt;
 Contém as definições de segurança associadas a um canal de pares, incluindo o tipo de autenticação utilizada e a segurança usada para o transporte de mensagens.  
@@ -36,22 +35,22 @@ Contém as definições de segurança associadas a um canal de pares, incluindo 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`mode`|Especifica o tipo de segurança a ser aplicado. O valor padrão é a mensagem. Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
+|`mode`|Especifica o tipo de segurança a ser aplicada. O valor padrão é a mensagem. Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
   
-## <a name="mode-attribute"></a>Atributo mode  
+## <a name="mode-attribute"></a>modo de atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |`None`|A segurança é desabilitada.|  
 |`Transport`|A proteção é fornecida usando HTTPS.|  
 |`Message`|Segurança SOAP fornece autenticação, integridade e confidencialidade.|  
-|`TransportWithMessageCredential`|HTTPS fornece autenticação e confidencialidade. Mensagens SOAP fornecem tipos de credenciais avançados.|  
+|`TransportWithMessageCredential`|HTTPS fornece autenticação e confidencialidade. As mensagens SOAP fornecem tipos de credencial avançados.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Define um transporte de par para uma associação personalizada. Este elemento tem um `clientCredentialType` atributo que especifica as credenciais a serem usados ao interagir com um serviço. Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Define um transporte de par para uma associação personalizada. Este elemento tem um `clientCredentialType` atributo que especifica as credenciais a serem usadas ao interagir com um serviço. Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

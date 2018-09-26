@@ -8,29 +8,28 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495626"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171732"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Como criar uma associação personalizada utilizando o SecurityBindingElement
-Windows Communication Foundation (WCF) inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecer total flexibilidade ao configurar todas as opções de segurança que dá suporte ao WCF. Este tópico demonstra como criar uma associação personalizada diretamente de elementos de associação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) inclui várias associações fornecidas pelo sistema que podem ser configuradas, mas não fornecem flexibilidade total durante a configuração de todas as opções de segurança que o WCF oferece suporte. Este tópico demonstra como criar uma ligação personalizada diretamente de elementos de ligação individuais e destaca algumas das configurações de segurança que podem ser especificadas ao criar essa associação. Para obter mais informações sobre como criar associações personalizadas, consulte [estendendo associações](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> não oferece suporte a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, o que é o uso de forma de canal padrão por TCP de canal de transporte quando <xref:System.ServiceModel.TransferMode> é definido como <xref:System.ServiceModel.TransferMode.Buffered>. Você deve definir <xref:System.ServiceModel.TransferMode> para <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> neste cenário.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> não oferece suporte a <xref:System.ServiceModel.Channels.IDuplexSessionChannel> forma, o que é o uso de forma de canal padrão por TCP de canal de transporte quando <xref:System.ServiceModel.TransferMode> é definido como <xref:System.ServiceModel.TransferMode.Buffered>. Você deve definir <xref:System.ServiceModel.TransferMode> à <xref:System.ServiceModel.TransferMode.Streamed> para usar <xref:System.ServiceModel.Channels.SecurityBindingElement> nesse cenário.  
   
 ## <a name="creating-a-custom-binding"></a>Criando uma associação personalizada  
- No WCF todas as associações são compostas de *elementos de associação*. Cada elemento de associação derivado de <xref:System.ServiceModel.Channels.BindingElement> classe. Para as associações padrão fornecido pelo sistema, os elementos de associação criados e configurados para você, embora você pode personalizar algumas das configurações de propriedade.  
+ No WCF todas as associações são compostas de *elementos de associação*. Cada elemento de associação deriva o <xref:System.ServiceModel.Channels.BindingElement> classe. Para associações fornecidas pelo sistema padrão, os elementos de associação criados e configurados para você, embora você pode personalizar algumas das configurações de propriedade.  
   
- Por outro lado, para criar uma associação personalizada, elementos de associação são criados e configurados e um <xref:System.ServiceModel.Channels.CustomBinding> é criado a partir de elementos de associação.  
+ Por outro lado, para criar uma ligação personalizada, elementos de associação são criados e configurados e um <xref:System.ServiceModel.Channels.CustomBinding> é criada a partir de elementos de associação.  
   
- Para fazer isso, você deve adicionar os elementos de associação individuais em uma coleção representada por uma instância do <xref:System.ServiceModel.Channels.BindingElementCollection> classe e, em seguida, defina o `Elements` propriedade o `CustomBinding` igual a esse objeto. Você deve adicionar os elementos de associação na seguinte ordem: fluxo de transações, sessão confiável, segurança, Duplex compostos, unidirecional, segurança de fluxo, codificação de mensagem e transporte. Observe que nem todos os elementos de associação listados são necessários em cada associação.  
+ Para fazer isso, você deve adicionar os elementos de associação individuais em uma coleção representada por uma instância das <xref:System.ServiceModel.Channels.BindingElementCollection> de classe e, em seguida, defina o `Elements` propriedade do `CustomBinding` igual a esse objeto. Você deve adicionar os elementos de associação na seguinte ordem: fluxo de transação, sessão confiável, segurança, Duplex composto, unidirecional, segurança de Stream, codificação de mensagem e transporte. Observe que nem todos os elementos de associação listados são necessárias em todas as associações.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
- Três elementos de associação se relacionam com segurança em nível de mensagem, que derivam de <xref:System.ServiceModel.Channels.SecurityBindingElement> classe. Os três são <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. O <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> é usado para fornecer a segurança de modo misto. Os dois elementos são usados quando a camada de mensagem fornece segurança.  
+ Três elementos de ligação se relacionam com segurança em nível de mensagem, que derivam de <xref:System.ServiceModel.Channels.SecurityBindingElement> classe. Os três são <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. O <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> é usado para fornecer segurança de modo misto. Os dois elementos são usados quando a camada de mensagem fornece segurança.  
   
  Classes adicionais são usadas quando a segurança em nível de transporte é fornecida:  
   
@@ -49,9 +48,9 @@ Windows Communication Foundation (WCF) inclui várias associações fornecidas p
   
 -   Protocolo de transporte.  
   
--   O padrão de troca mensagens (MEPS) especificado no contrato.  
+-   O padrão de troca mensagens (MEP) especificado no contrato.  
   
- A tabela a seguir mostra as configurações de pilha do elemento de associação válida para cada combinação de fatores anteriores. Observe que esses são os requisitos mínimos. Você pode adicionar elementos de associação adicionais para a associação, como elementos de associações, elementos de associação de transação e outros elementos de associação de codificação de mensagem.  
+ A tabela a seguir mostra as configurações de pilha do elemento de associação válida para cada combinação de fatores anteriores. Observe que esses são os requisitos mínimos. Você pode adicionar elementos de ligação adicionais para associação, como elementos de associação, elementos de associação da transação e outros elementos de associação de codificação de mensagem.  
   
 |Modo de segurança|Transporte|Contrato padrão de troca de mensagem|Contrato padrão de troca de mensagem|Contrato padrão de troca de mensagem|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
@@ -69,7 +68,7 @@ Windows Communication Foundation (WCF) inclui várias associações fornecidas p
 |||HttpTransportBindingElement|HttpTransportBindingElement|HttpTransportBindingElement|  
 ||TCP|SecurityBindingElement|SecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
-|Misto (transporte com credenciais de mensagem)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
+|Misto (transporte com as credenciais de mensagem)|HTTPS|TransportSecurityBindingElement|TransportSecurityBindingElement||  
 |||OneWayBindingElement|||  
 |||HttpsTransportBindingElement|HttpsTransportBindingElement||  
 ||TCP|TransportSecurityBindingElement|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|SymmetricSecurityBindingElement (modo de autenticação = SecureConversation)|  
@@ -77,27 +76,27 @@ Windows Communication Foundation (WCF) inclui várias associações fornecidas p
 |||SSL ou StreamSecurityBindingElement do Windows|SSL ou StreamSecurityBindingElement do Windows|SSL ou StreamSecurityBindingElement do Windows|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- Observe que há muitas definições configuráveis no SecurityBindingElements. Para obter mais informações, consulte [modos de autenticação SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Observe que há muitas definições configuráveis no SecurityBindingElements. Para obter mais informações, consulte [modos de autenticação de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
- Para obter mais informações, consulte [proteger conversas e proteger sessões](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
+ Para obter mais informações, consulte [conversas segura e proteger sessões](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md).  
   
 ## <a name="procedures"></a>Procedimentos  
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Para criar uma associação personalizada que usa um SymmetricSecurityBindingElement  
   
-1.  Criar uma instância do <xref:System.ServiceModel.Channels.BindingElementCollection> classe com o nome `outputBec`.  
+1.  Criar uma instância das <xref:System.ServiceModel.Channels.BindingElementCollection> classe com o nome `outputBec`.  
   
-2.  Chame o método estático `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, que retorna uma instância do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> classe.  
+2.  Chame o método estático `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, que retorna uma instância da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> classe.  
   
-3.  Adicionar o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à coleção (`outputBec`) chamando o `Add` método o <xref:System.Collections.ObjectModel.Collection%601> de <xref:System.ServiceModel.Channels.BindingElement> classe.  
+3.  Adicione a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> à coleção (`outputBec`) chamando o `Add` método da <xref:System.Collections.ObjectModel.Collection%601> de <xref:System.ServiceModel.Channels.BindingElement> classe.  
   
-4.  Criar uma instância do <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> classe e adicione-o à coleção (`outputBec`). Especifica a codificação usada pela associação.  
+4.  Criar uma instância das <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> de classe e adicione-o à coleção (`outputBec`). Especifica a codificação usada pela associação.  
   
-5.  Criar um <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e adicioná-lo à coleção (`outputBec`). Especifica que a associação usa o transporte HTTP.  
+5.  Criar uma <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e adicione-o à coleção (`outputBec`). Isso especifica que a associação usa o transporte HTTP.  
   
-6.  Criar uma nova associação personalizada, criando uma instância do <xref:System.ServiceModel.Channels.CustomBinding> classe e passando a coleção `outputBec` para o construtor.  
+6.  Criar uma nova associação personalizada, criando uma instância das <xref:System.ServiceModel.Channels.CustomBinding> classe e passando a coleção `outputBec` para o construtor.  
   
-7.  A associação personalizada resultante compartilha muitas das mesmas características como o padrão <xref:System.ServiceModel.WSHttpBinding>. Especifica as credenciais do Windows e a segurança em nível de mensagem, mas desabilita sessões seguras, requer que a credencial de serviço seja especificada fora de banda e não criptografa assinaturas. O último pode ser controlado apenas definindo o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> propriedade, como mostrado na etapa 4. Os outros dois podem ser controlados usando configurações de associação padrão.  
+7.  A associação personalizada resultante compartilha muitas das mesmas características como o padrão <xref:System.ServiceModel.WSHttpBinding>. Especifica as credenciais do Windows e a segurança em nível de mensagem, mas desabilita sessões seguras, requer que a credencial de serviço seja especificada fora de banda e não criptografa assinaturas. O último pode ser controlado apenas definindo a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> propriedade conforme mostrado na etapa 4. Os outros dois podem ser controlados usando as configurações em associação padrão.  
   
 ## <a name="example"></a>Exemplo  
   

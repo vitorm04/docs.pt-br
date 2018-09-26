@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746053"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176341"
 ---
 # <a name="lttracegt-element"></a>&lt;rastreamento&gt; elemento
 Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.  
@@ -42,7 +41,7 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`autoflush`|Atributo opcional.<br /><br /> Especifica se os ouvintes de rastreamento automaticamente liberar o buffer de saída depois de cada operação de gravação.|  
+|`autoflush`|Atributo opcional.<br /><br /> Especifica se os ouvintes de rastreamento automaticamente liberar o buffer de saída após cada operação de gravação.|  
 |`indentsize`|Atributo opcional.<br /><br /> Especifica o número de espaços para recuar.|  
 |`useGlobalLock`|Atributo opcional.<br /><br /> Indica se o bloqueio global deve ser usado.|  
   
@@ -50,21 +49,21 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não limpa automaticamente o buffer de saída. Esse é o padrão.|  
+|`false`|Não libera o buffer de saída automaticamente. Esse é o padrão.|  
 |`true`|Automaticamente libera o buffer de saída.|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não use o bloqueio global se o ouvinte é thread-safe; Caso contrário, usará o bloqueio global.|  
+|`false`|Não usa o bloqueio global, se o ouvinte é thread-safe; Caso contrário, usará o bloqueio global.|  
 |`true`|Usa o bloqueio global, independentemente se o ouvinte é thread-safe. Esse é o padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Especifica um ouvinte que coleta, armazena e roteamento de mensagens.|  
+|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Especifica um ouvinte que coleta, armazena e encaminha mensagens.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
