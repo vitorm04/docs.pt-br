@@ -3,35 +3,34 @@ title: Como especificar credenciais de segurança de canal
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e730e3deaccb581b1722b62ce6282d8fde7180e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496845"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196168"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Como especificar credenciais de segurança de canal
-O Moniker de serviço do Windows Communication Foundation (WCF) permite que aplicativos de COM chamar serviços WCF. A maioria dos serviços WCF requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um serviço WCF de um cliente WCF, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração do aplicativo. Ao chamar um serviço WCF de um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico ilustrará várias maneiras de especificar credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
+O Moniker de serviço do Windows Communication Foundation (WCF) permite que aplicativos de COM chamar serviços WCF. A maioria dos serviços WCF requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um serviço WCF de um cliente WCF, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração de aplicativo. Ao chamar um serviço WCF em um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico será ilustram várias maneiras para especificar as credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> é uma interface baseada em IDispatch e você não terá a funcionalidade do IntelliSense no ambiente do Visual Studio.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> é uma interface baseada em IDispatch e você não obterá a funcionalidade do IntelliSense no ambiente do Visual Studio.  
   
- Este artigo usará o serviço WCF definido no [exemplo de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Este artigo usará o serviço WCF definido na [exemplo de segurança de mensagem](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Para especificar um certificado de cliente  
   
-1.  Execute o arquivo bat no diretório de segurança de mensagem para criar e instalar os certificados de teste necessário.  
+1.  Execute o arquivo Setup. bat no diretório de segurança de mensagem para criar e instalar os certificados de teste necessário.  
   
 2.  Abra o projeto de segurança de mensagem.  
   
-3.  Adicionar `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` para o `ICalculator` definição de interface.  
+3.  Adicione `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` para o `ICalculator` definição de interface.  
   
-4.  Adicionar `bindingNamespace=``http://Microsoft.ServiceModel.Samples` à marca de ponto de extremidade no App. config para o serviço.  
+4.  Adicionar `bindingNamespace=``http://Microsoft.ServiceModel.Samples` à marca de ponto de extremidade em App. config para o serviço.  
   
-5.  Criar o exemplo de segurança de mensagem e executar Service.exe. Use o Internet Explorer e navegue até o URI do serviço (http://localhost:8000/ServiceModelSamples/Service) para garantir que o serviço está funcionando.  
+5.  Criar o exemplo de segurança de mensagem e execute Service.exe. Usar o Internet Explorer e navegue até o URI do serviço (http://localhost:8000/ServiceModelSamples/Service) para garantir que o serviço está funcionando.  
   
-6.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o código a seguir para o manipulador de cliques:  
+6.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -52,29 +51,29 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
   
 7.  Execute o aplicativo do Visual Basic e verificar os resultados.  
   
-     O aplicativo do Visual Basic exibirá uma caixa de mensagem com o resultado de chamar o método Add (3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> ou <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> também pode ser usado no lugar de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> para definir o certificado de cliente:  
+     O aplicativo Visual Basic exibe uma caixa de mensagem com o resultado de chamar o método Add (3, 4). <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> ou <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> também pode ser usado no lugar de <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> para definir o certificado do cliente:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
     ```  
   
 > [!NOTE]
->  Para esta chamada funcionar, o certificado de cliente precisa ser confiável no computador que cliente está em execução no.  
+>  Para essa chamada funcione, o certificado do cliente precisa ser confiável no computador que cliente está em execução no.  
   
 > [!NOTE]
->  Se o identificador de origem está malformado ou se o serviço está indisponível, a chamada para `GetObject` retornará um erro dizendo "Sintaxe inválida". Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
+>  Se o moniker está mal formado ou se o serviço está indisponível, a chamada para `GetObject` retornará um erro informando que "Sintaxe inválida". Se você receber esse erro, verifique se você estiver usando o identificador de origem está correto e o serviço está disponível.  
   
 ### <a name="to-specify-user-name-and-password"></a>Para especificar o nome de usuário e senha  
   
-1.  Modificar o arquivo App. config do serviço para usar o `wsHttpBinding`. Isso é necessário para a validação de nome e a senha do usuário:  
+1.  Modifique o arquivo App. config do serviço para usar o `wsHttpBinding`. Isso é necessário para a validação de nome e a senha do usuário:  
   
   
   
-2.  Definir o `clientCredentialType` para o nome de usuário:  
+2.  Defina o `clientCredentialType` ao nome de usuário:  
   
   
   
-3.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o código a seguir para o manipulador de cliques:  
+3.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -90,10 +89,10 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
     MsgBox monikerProxy.Add(3, 4)  
     ```  
   
-4.  Execute o aplicativo do Visual Basic e verificar os resultados. O aplicativo do Visual Basic exibirá uma caixa de mensagem com o resultado de chamar o método Add (3, 4).  
+4.  Execute o aplicativo do Visual Basic e verificar os resultados. O aplicativo Visual Basic exibe uma caixa de mensagem com o resultado de chamar o método Add (3, 4).  
   
     > [!NOTE]
-    >  A associação especificada no apelido serviço neste exemplo foi alterada para WSHttpBinding_ICalculator. Observe também que você deve fornecer um nome de usuário válido e uma senha na chamada para <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
+    >  A associação especificada neste exemplo, o moniker de serviço foi alterada para WSHttpBinding_ICalculator. Observe também que você deve fornecer um nome de usuário válido e uma senha na chamada para <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29>.  
   
 ### <a name="to-specify-windows-credentials"></a>Para especificar as credenciais do Windows  
   
@@ -101,7 +100,7 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
   
   
   
-2.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o código a seguir para o manipulador de cliques:  
+2.  Abra o Visual Basic 6.0 e crie um novo arquivo .exe padrão. Adicione um botão ao formulário e clique duas vezes no botão para adicionar o seguinte código ao manipulador de cliques:  
   
     ```  
     monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -116,16 +115,16 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
     MsgBox monikerProxy.Add(3, 4)  
     ```  
   
-3.  Execute o aplicativo do Visual Basic e verificar os resultados. O aplicativo do Visual Basic exibirá uma caixa de mensagem com o resultado de chamar o método Add (3, 4).  
+3.  Execute o aplicativo do Visual Basic e verificar os resultados. O aplicativo Visual Basic exibe uma caixa de mensagem com o resultado de chamar o método Add (3, 4).  
   
     > [!NOTE]
-    >  Você deve substituir "domínio", "userID" e "password" com os valores válidos.  
+    >  Você deve substituir "domínio", "userID" e "senha" pelos valores válidos.  
   
 ### <a name="to-specify-an-issue-token"></a>Para especificar um token de problema  
   
-1.  Emitir tokens são usados apenas para aplicativos que usam segurança federada. Para obter mais informações sobre segurança federada, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) e [federação exemplo](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1.  Emitir tokens são usados apenas para aplicativos que usam segurança federada. Para obter mais informações sobre segurança federada, consulte [federação e Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) e [exemplo de Federação](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-     O seguinte exemplo de código do Visual Basic mostra como chamar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> método:  
+     O exemplo de código Visual Basic a seguir ilustra como chamar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> método:  
   
     ```  
         monString = "service:mexAddress=http://localhost:8000/ServiceModelSamples/Service?wsdl"  
@@ -137,7 +136,7 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
     monikerProxy.SetIssuedToken("http://somemachine/sts", "bindingType", "binding")  
     ```  
   
-     Para obter mais informações sobre os parâmetros para este método, consulte <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
+     Para obter mais informações sobre os parâmetros para esse método, consulte <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Federação](../../../../docs/framework/wcf/feature-details/federation.md)  

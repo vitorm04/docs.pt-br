@@ -3,13 +3,12 @@ title: PeerTransportSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 1df08cbb-68c5-4d36-9f88-a776a8117de8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: afab6f513f62e65a82f0348dc7fce9be5f3fc89c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b49aea0ee78b68f199d1ac9e9a1050960342bcb2
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487783"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188217"
 ---
 # <a name="peertransportsecuritysettings"></a>PeerTransportSecuritySettings
 PeerTransportSecuritySettings  
@@ -24,7 +23,7 @@ class PeerTransportSecuritySettings
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe PeerTransportSecuritySettings não define nenhum método.  
+ A classe PeerTransportSecuritySettings não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe PeerTransportSecuritySettings tem a seguinte propriedade:  
@@ -40,7 +39,7 @@ class PeerTransportSecuritySettings
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.PeerTransportSecuritySettings>

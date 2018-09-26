@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
 ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171420"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198157"
 ---
 # <a name="transport-security"></a>Segurança de transporte
 Segurança de transporte no Windows Communication Foundation (WCF) depende da associação selecionada. O transporte que implementa a associação determina o mecanismo de segurança real. Os tópicos nesta seção explicam os mecanismos que são implementados e suas opções.  

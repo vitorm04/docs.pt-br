@@ -2,18 +2,18 @@
 title: Criando e implementando atividades personalizadas
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 2ed80b5cbb27c6647053ee9b8f4cd2bedb0c6cde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 673145c856e950c8648a87cb3dcb9665ffa51ba9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513806"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216703"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Criando e implementando atividades personalizadas
 As atividades personalizadas no [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] são criadas montando atividades fornecida pelo sistema em atividades compostas ou criando novos tipos que derivam de <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> ou <xref:System.Activities.NativeActivity>. Esta seção descreve como criar atividades personalizadas com um dos métodos.  
   
 > [!IMPORTANT]
->  Atividades personalizadas por padrão são exibidas no designer de fluxo de trabalho como um retângulo simples com o nome da atividade. Para fornecer uma representação visual de sua atividade personalizada no designer de fluxo de trabalho, você também deverá criar um designer personalizado. Para obter mais informações, consulte [modelos e Designers de atividade personalizada usando](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
+>  Atividades personalizadas por padrão são exibidas no designer de fluxo de trabalho como um retângulo simples com o nome da atividade. Para fornecer uma representação visual de sua atividade personalizada no designer de fluxo de trabalho, você também deverá criar um designer personalizado. Para obter mais informações, consulte [usando os Designers de atividade personalizada e modelos](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Opções de criação de atividades](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  
@@ -35,10 +35,7 @@ As atividades personalizadas no [!INCLUDE[netfx_current_long](../../../includes/
  Descreve como usar as propriedades de execução do fluxo de trabalho para adicionar propriedades específicas de contexto ao ambiente de uma atividade  
   
  [Usando representantes de atividades](../../../docs/framework/windows-workflow-foundation/using-activity-delegates.md)  
- Discute como criar e usar as atividades que contêm representantes de atividade.  
-  
- [Localização de atividades](../../../docs/framework/windows-workflow-foundation/activity-localization.md)  
- Descreve como usar a localização de recursos de cadeia de caracteres em atividades.  
+ Discute como criar e usar as atividades que contêm representantes de atividade.
   
  [Usando extensões de atividade](../../../docs/framework/windows-workflow-foundation/using-activity-extensions.md)  
  Descreve como criar e usar extensões de atividade.  

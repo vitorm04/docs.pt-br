@@ -3,11 +3,11 @@ title: Propriedades (F#)
 description: 'Saiba mais sobre propriedades F #, que são membros que representam os valores associados a um objeto.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109989"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209867"
 ---
 # <a name="properties"></a>Propriedades
 

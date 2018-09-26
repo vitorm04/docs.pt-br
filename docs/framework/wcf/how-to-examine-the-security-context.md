@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 author: BrucePerlerMS
 ms.openlocfilehash: c2cb1f6d06961546a04b4a132bf9861c925ca421
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113852"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197988"
 ---
 # <a name="how-to-examine-the-security-context"></a>Como examinar o contexto de segurança
 Ao programar serviços Windows Communication Foundation (WCF), o contexto de segurança permite que você determine os detalhes sobre as credenciais de cliente e declarações usadas para autenticar com o serviço. Isso é feito por meio das propriedades do <xref:System.ServiceModel.ServiceSecurityContext> classe.  

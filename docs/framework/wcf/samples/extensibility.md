@@ -2,25 +2,25 @@
 title: Extensibilidade
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805376"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196850"
 ---
 # <a name="extensibility"></a>Extensibilidade
-Esta seção contém exemplos que lidam com extensibilidade personalizada e outros recursos do Windows Communication Foundation (WCF).  
+Esta seção contém exemplos que tratam de extensibilidade personalizada e outros recursos do Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Extensibilidade de canais](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
- Demonstra canais personalizados.  
+ Demonstra os canais personalizados.  
   
  [Extensibilidade de descoberta](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
- Demonstra a detecção personalizada.  
+ Demonstra a descoberta personalizada.  
   
  [Extensibilidade de instanciação](../../../../docs/framework/wcf/samples/instancing-extensibility.md)  
- Demonstra a extensibilidade personalizada.  
+ Demonstra extensibilidade personalizada.  
   
  [Extensibilidade de interoperabilidade](../../../../docs/framework/wcf/samples/interop-extensibility.md)  
  Demonstra a interoperabilidade personalizada.  
@@ -29,7 +29,7 @@ Esta seção contém exemplos que lidam com extensibilidade personalizada e outr
  Demonstra a codificação de mensagem personalizada.  
   
  [Extensibilidade de metadados](../../../../docs/framework/wcf/samples/metadata-extensibility.md)  
- Demonstra a metadados personalizados.  
+ Demonstra os metadados personalizados.  
   
  [Extensibilidade de segurança](../../../../docs/framework/wcf/samples/security-extensibility.md)  
  Demonstra a segurança personalizada.  
@@ -38,16 +38,13 @@ Esta seção contém exemplos que lidam com extensibilidade personalizada e outr
  Demonstra a agregação personalizada.  
   
  [Extensibilidade de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- Demonstra a transportes personalizados.  
-  
- [Extensibilidade de Web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- Demonstra a funcionalidade da Web personalizada.  
+ Demonstra os transportes personalizados.
   
  [Formatador de operação e seletor de operação](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
- Demonstra como pontos de extensibilidade podem consumir os formatos de dados da mensagem personalizada.  
+ Demonstra como pontos de extensibilidade podem consumir os formatos de dados de mensagem personalizada.  
   
  [Filtro de mensagem personalizado](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Demonstra como substituir os filtros de mensagem que usa o Windows Communication Foundation (WCF) para enviar mensagens a pontos de extremidade.  
+ Demonstra como substituir os filtros de mensagem que usa o Windows Communication Foundation (WCF) para enviar mensagens para pontos de extremidade.  
   
  [Host de serviço personalizado](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Demonstra como usar um personalizado derivado do <xref:System.ServiceModel.ServiceHost> classe para alterar o comportamento de tempo de execução de um serviço.  
@@ -56,10 +53,10 @@ Esta seção contém exemplos que lidam com extensibilidade personalizada e outr
  Demonstra como processos como a serialização, desserialização, exportação de esquema e importação de esquema podem ser personalizados usando um contrato de dados alternativos classe.  
   
  [Estendendo o controle sobre o tratamento de erro e emissão de relatórios](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Demonstra como estender o controle sobre o tratamento de erros e o relatório de erros em um serviço WCF usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  
+ Demonstra como estender o controle sobre o tratamento de erros e o relatório de erros no como um serviço WCF usando o <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  
   
  [Inspetores de mensagem](../../../../docs/framework/wcf/samples/message-inspectors.md)  
- Demonstra como implementar e configurar o cliente e o serviço inspetores de mensagem.  
+ Demonstra como implementar e configurar o cliente e serviço inspetores de mensagem.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Demonstra como mapear os novos tipos de conteúdo para formatos de corpo de mensagem WCF.
+ Demonstra como mapear os novos tipos de conteúdo para formatos de corpo de mensagem do WCF.

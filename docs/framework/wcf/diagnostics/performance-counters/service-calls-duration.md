@@ -3,11 +3,11 @@ title: 'Serviço: Duração de chamadas'
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
 ms.openlocfilehash: 660a36844c2b48324447616aa0f2530127cef94f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074840"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199834"
 ---
 # <a name="service-calls-duration"></a>Serviço: Duração de chamadas
 Nome do contador: Duração de chamadas  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 author: BrucePerlerMS
 ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157513"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47194080"
 ---
 # <a name="activity-tracing-in-message-security"></a>Rastreamento de atividades em segurança de mensagens
 Este tópico descreve o rastreamento de atividade para processamento de segurança, o que acontece a seguir três fases.  

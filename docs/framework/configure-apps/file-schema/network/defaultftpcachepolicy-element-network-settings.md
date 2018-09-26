@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultFtpCachePolicy&gt; elemento (configurações de rede)'
+title: '&lt;defaultFtpCachePolicy&gt; (configurações de rede)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743141"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209420"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; elemento (configurações de rede)
+# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; (configurações de rede)
 Descreve se o cache de FTP está ativo e descreve a política de cache padrão.  
   
  \<configuration>  
@@ -47,13 +46,13 @@ Descreve se o cache de FTP está ativo e descreve a política de cache padrão.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`Default`|Retorna o recurso em cache se o recurso for atualizado, o comprimento do conteúdo é preciso e a expiração, modificação e atributos de comprimento de conteúdo estão presentes.|  
-|`BypassCache`|Retorna o recurso do servidor.|  
-|`CacheOnly`|Retorna o recurso em cache se o comprimento do conteúdo está presente e corresponde ao tamanho de entrada.|  
-|`CacheIfAvailable`|Retorna o recurso em cache se o comprimento do conteúdo for fornecido e corresponda ao tamanho de entrada; Caso contrário, o recurso é baixado do servidor e é retornado ao chamador.|  
-|`Revalidate`|Retorna o recurso em cache se o carimbo de hora do recurso em cache é o mesmo que o carimbo de hora do recurso no servidor. Caso contrário, o recurso é baixado do servidor, armazenado no cache e retornado ao chamador.|  
-|`Reload`|Baixe o recurso do servidor, armazena em cache e retorna o recurso para o chamador.|  
-|`NoCacheNoStore`|Se existe um recurso de cache, ele será excluído. O recurso é baixado do servidor e é retornado ao chamador.|  
+|`Default`|Retorna o recurso armazenado em cache se o recurso estiver atualizado, o comprimento do conteúdo é preciso e a expiração, modificação e atributos de comprimento de conteúdo estão presentes.|  
+|`BypassCache`|Retorna o recursos do servidor.|  
+|`CacheOnly`|Retorna o recurso armazenado em cache se o comprimento do conteúdo está presente e corresponde ao tamanho de entrada.|  
+|`CacheIfAvailable`|Retorna o recurso armazenado em cache se o comprimento do conteúdo é fornecido e corresponde o tamanho da entrada. Caso contrário, o recurso é baixado do servidor e é retornado ao chamador.|  
+|`Revalidate`|Retorna o recurso armazenado em cache se o carimbo de hora do recurso em cache é o mesmo que o carimbo de hora do recurso no servidor. Caso contrário, o recurso é baixado do servidor, armazenado no cache e retornado ao chamador.|  
+|`Reload`|Baixa o recurso do servidor, armazena em cache e retorna o recurso para o chamador.|  
+|`NoCacheNoStore`|Se existir um recurso armazenado em cache, ele será excluído. O recurso é baixado do servidor e é retornado ao chamador.|  
 |`Revalidate`|Atende a uma solicitação usando a cópia do recurso armazenada em cache se o carimbo de data/hora for igual ao do recurso no servidor; caso contrário, o recurso será baixado do servidor, apresentado ao chamador e armazenado no cache.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -68,7 +67,7 @@ Descreve se o cache de FTP está ativo e descreve a política de cache padrão.
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar um FTP caching de política de `NoCacheNoStore`.  
+ O exemplo a seguir mostra como especificar um política de cache de FTP `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  
