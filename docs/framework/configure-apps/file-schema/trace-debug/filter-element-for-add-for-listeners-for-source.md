@@ -12,11 +12,11 @@ ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073275"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233173"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;filtro&gt; elemento para &lt;adicione&gt; para &lt;ouvintes&gt; para &lt;fonte&gt;
 Adiciona um filtro a um ouvinte na coleção `Listeners` de uma origem de rastreamento.  

@@ -13,11 +13,11 @@ ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176341"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233087"
 ---
 # <a name="lttracegt-element"></a>&lt;rastreamento&gt; elemento
 Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.  
