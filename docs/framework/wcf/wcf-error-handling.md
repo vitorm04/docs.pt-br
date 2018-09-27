@@ -3,11 +3,11 @@ title: Tratamento de erros do WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080988"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47235355"
 ---
 # <a name="wcf-error-handling"></a>Tratamento de erros do WCF
 Os erros encontrados por um aplicativo WCF pertencem a um dos três grupos:  

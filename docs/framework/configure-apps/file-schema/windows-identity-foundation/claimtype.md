@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
 ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47084209"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47234949"
 ---
 # <a name="ltclaimtypegt"></a>&lt;ClaimType&gt;
 Especifica uma única declaração obrigatórias ou opcional para tokens de segurança de entrada.  

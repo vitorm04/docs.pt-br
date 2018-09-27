@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 author: BrucePerlerMS
 ms.openlocfilehash: 537bb1d9cfbda98b0e92833d94b40097fae205fd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088588"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397027"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizando Personificação com segurança de transporte
 *Representação* é a capacidade de um aplicativo de servidor para assumir a identidade do cliente. É comum para os serviços usam a representação ao validar o acesso aos recursos. O aplicativo de servidor é executado usando uma conta de serviço, mas quando o servidor aceita uma conexão de cliente, ele representa o cliente para que as verificações de acesso são executadas usando as credenciais do cliente. Segurança de transporte é um mecanismo para passar as credenciais e proteger a comunicação usando essas credenciais. Este tópico descreve como usar a segurança de transporte no Windows Communication Foundation (WCF) com o recurso de representação. Para obter mais informações sobre representação usando a segurança de mensagem, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

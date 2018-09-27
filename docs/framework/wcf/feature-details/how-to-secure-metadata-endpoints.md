@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
 ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090221"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400009"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Como proteger pontos de extremidade de metadados
 Metadados para um serviço podem conter informações confidenciais sobre seu aplicativo que um usuário mal-intencionado pode aproveitar. Os consumidores do seu serviço também podem exigir um mecanismo seguro para obtenção de metadados sobre o serviço. Portanto, às vezes, é necessário publicar seus metadados usando um ponto de extremidade seguro.  

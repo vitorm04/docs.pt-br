@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077831"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397901"
 ---
 # <a name="exception-throwing"></a>Gerando exceções
 Diretrizes de exceções descritas nesta seção exigem uma boa definição do significado da falha de execução. Falha na execução ocorre sempre que um membro não pode fazer o que ele foi projetado para fazer (o que o nome do membro implica). Por exemplo, se o `OpenFile` método não pode retornar um identificador de arquivo aberto para o chamador, ele será considerado uma falha na execução.  
