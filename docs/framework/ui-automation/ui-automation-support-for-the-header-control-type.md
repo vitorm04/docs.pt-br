@@ -9,11 +9,11 @@ ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 2803f297225319a5512c7e24cedd9440d44c1f7d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071093"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47236391"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Header
 > [!NOTE]

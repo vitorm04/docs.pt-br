@@ -8,11 +8,11 @@ ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085808"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400433"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Adicione&gt; elemento para &lt;namedCaches&gt;
 Adiciona uma `namedCache` entrada para o `namedCaches` coleção para um cache de memória.  
