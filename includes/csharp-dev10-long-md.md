@@ -1,1 +1,1 @@
-<span data-ttu-id="2710e-101">C# 4</span><span class="sxs-lookup"><span data-stu-id="2710e-101">C# 4</span></span>
+<span data-ttu-id="a962f-101">C# 4</span><span class="sxs-lookup"><span data-stu-id="a962f-101">C# 4</span></span>
