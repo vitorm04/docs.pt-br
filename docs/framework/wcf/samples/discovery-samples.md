@@ -2,46 +2,34 @@
 title: Descoberta (exemplos)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: 8bfeb98c63c6b0356a2ac408a5a78903406e20fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500838"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421264"
 ---
-# <a name="discovery-samples"></a><span data-ttu-id="43938-102">Descoberta (exemplos)</span><span class="sxs-lookup"><span data-stu-id="43938-102">Discovery (Samples)</span></span>
-<span data-ttu-id="43938-103">Esta seção contém exemplos relacionados para o recurso de descoberta.</span><span class="sxs-lookup"><span data-stu-id="43938-103">This section contains samples related to the Discovery feature.</span></span>  
+# <a name="discovery-samples"></a><span data-ttu-id="05871-102">Descoberta (exemplos)</span><span class="sxs-lookup"><span data-stu-id="05871-102">Discovery (Samples)</span></span>
+<span data-ttu-id="05871-103">Esta seção contém exemplos relacionados ao recurso de descoberta.</span><span class="sxs-lookup"><span data-stu-id="05871-103">This section contains samples related to the Discovery feature.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="43938-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="43938-104">In This Section</span></span>  
- [<span data-ttu-id="43938-105">Anúncios</span><span class="sxs-lookup"><span data-stu-id="43938-105">Announcements</span></span>](../../../../docs/framework/wcf/samples/announcements-sample.md)  
- <span data-ttu-id="43938-106">Demonstra como usar anúncios com o recurso de descoberta.</span><span class="sxs-lookup"><span data-stu-id="43938-106">Demonstrates how to use announcements with the discovery feature.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="05871-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="05871-104">In This Section</span></span>  
+ [<span data-ttu-id="05871-105">Anúncios</span><span class="sxs-lookup"><span data-stu-id="05871-105">Announcements</span></span>](../../../../docs/framework/wcf/samples/announcements-sample.md)  
+ <span data-ttu-id="05871-106">Demonstra como usar os anúncios com o recurso de descoberta.</span><span class="sxs-lookup"><span data-stu-id="05871-106">Demonstrates how to use announcements with the discovery feature.</span></span>  
   
- [<span data-ttu-id="43938-107">Descoberta assíncrona</span><span class="sxs-lookup"><span data-stu-id="43938-107">Asynchronous Find</span></span>](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
- <span data-ttu-id="43938-108">Demonstra como executar um assíncrono encontrado para pesquisar todos os serviços de cálculo.</span><span class="sxs-lookup"><span data-stu-id="43938-108">Demonstrates how to perform an asynchronous find to search for all calculator services.</span></span>  
+ [<span data-ttu-id="05871-107">Básico</span><span class="sxs-lookup"><span data-stu-id="05871-107">Basic</span></span>](../../../../docs/framework/wcf/samples/basic-sample.md)  
+ <span data-ttu-id="05871-108">Demonstra como fazer um serviço detectável por meio de programação, bem como a pesquisa para esse serviço usando o <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="05871-108">Demonstrates how to make a service discoverable programmatically as well as search for that service using the <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
   
- [<span data-ttu-id="43938-109">Básico</span><span class="sxs-lookup"><span data-stu-id="43938-109">Basic</span></span>](../../../../docs/framework/wcf/samples/basic-sample.md)  
- <span data-ttu-id="43938-110">Demonstra como fazer um serviço detectável programaticamente, bem como a pesquisa para esse serviço usando o <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="43938-110">Demonstrates how to make a service discoverable programmatically as well as search for that service using the <xref:System.ServiceModel.Discovery.DynamicEndpoint>.</span></span>  
+ [<span data-ttu-id="05871-109">Configuração</span><span class="sxs-lookup"><span data-stu-id="05871-109">Configuration</span></span>](../../../../docs/framework/wcf/samples/configuration-sample.md)  
+ <span data-ttu-id="05871-110">Demonstra como usar um arquivo de configuração para tornar um serviço detectável, bem como usar um <xref:System.ServiceModel.Discovery.DynamicEndpoint> por meio de configuração para procurar por esse serviço.</span><span class="sxs-lookup"><span data-stu-id="05871-110">Demonstrates how to use a configuration file to make a service discoverable as well as how to use a <xref:System.ServiceModel.Discovery.DynamicEndpoint> through configuration to look for that service.</span></span>  
   
- [<span data-ttu-id="43938-111">Configuração</span><span class="sxs-lookup"><span data-stu-id="43938-111">Configuration</span></span>](../../../../docs/framework/wcf/samples/configuration-sample.md)  
- <span data-ttu-id="43938-112">Demonstra como usar um arquivo de configuração para tornar um serviço detectável, bem como usar um <xref:System.ServiceModel.Discovery.DynamicEndpoint> por meio de configuração para procurar por esse serviço.</span><span class="sxs-lookup"><span data-stu-id="43938-112">Demonstrates how to use a configuration file to make a service discoverable as well as how to use a <xref:System.ServiceModel.Discovery.DynamicEndpoint> through configuration to look for that service.</span></span>  
+ [<span data-ttu-id="05871-111">Descoberta com escopos</span><span class="sxs-lookup"><span data-stu-id="05871-111">Discovery with Scopes</span></span>](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
+ <span data-ttu-id="05871-112">Demonstra como usar os escopos para categorizar os pontos de extremidade podem ser descobertos como bem como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona para pontos de extremidade.</span><span class="sxs-lookup"><span data-stu-id="05871-112">Demonstrates how to use scopes to categorize discoverable endpoints as well how to use <xref:System.ServiceModel.Discovery.DiscoveryClient> to perform an asynchronous search for endpoints.</span></span>  
   
- [<span data-ttu-id="43938-113">Exemplo de elemento de associação de descoberta</span><span class="sxs-lookup"><span data-stu-id="43938-113">Discovery Binding Element Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
- <span data-ttu-id="43938-114">Demonstra como adicionar um elemento de associação de descoberta em uma associação personalizada.</span><span class="sxs-lookup"><span data-stu-id="43938-114">Demonstrates how to add a discovery binding element into a custom binding.</span></span> <span data-ttu-id="43938-115">Isso permite que os clientes descobrir um serviço quando um canal é aberto.</span><span class="sxs-lookup"><span data-stu-id="43938-115">This allows clients to discover a service when a channel is opened.</span></span>  
+ [<span data-ttu-id="05871-113">Critérios de localização personalizados</span><span class="sxs-lookup"><span data-stu-id="05871-113">Custom Find Criteria</span></span>](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
+ <span data-ttu-id="05871-114">Demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizada.</span><span class="sxs-lookup"><span data-stu-id="05871-114">Demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span>  
   
- [<span data-ttu-id="43938-116">Exemplo de Proxy de descoberta</span><span class="sxs-lookup"><span data-stu-id="43938-116">Discovery Proxy Sample</span></span>](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
- <span data-ttu-id="43938-117">Demonstra como criar uma implementação de um Proxy de descoberta para armazenar informações sobre os serviços existentes e como os clientes podem consultar para obter informações de proxy.</span><span class="sxs-lookup"><span data-stu-id="43938-117">Demonstrates how to create an implementation of a Discovery Proxy to store information about existing services and how clients can query that proxy for information.</span></span>  
+ [<span data-ttu-id="05871-115">Exemplo de descoberta de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="05871-115">Workflow Discovery Sample</span></span>](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
+ <span data-ttu-id="05871-116">Demonstra como tornar um serviço de fluxo de trabalho detectável e como criar uma atividade de código personalizado que procura por um serviço específico.</span><span class="sxs-lookup"><span data-stu-id="05871-116">Demonstrates how to make a workflow service discoverable and how to author a custom code activity that searches for a particular service.</span></span>  
   
- [<span data-ttu-id="43938-118">Descobrir um serviço com exemplo de modo de Uri de escuta exclusivo</span><span class="sxs-lookup"><span data-stu-id="43938-118">Discover a Service with Unique Listen Uri Mode Sample</span></span>](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
- <span data-ttu-id="43938-119">Demonstra como descobrir um serviço que tem o <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> propriedade definida como <xref:System.ServiceModel.Description.ListenUriMode.Unique>.</span><span class="sxs-lookup"><span data-stu-id="43938-119">Demonstrates how to discover a service that has the <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> property set to <xref:System.ServiceModel.Description.ListenUriMode.Unique>.</span></span>  
-  
- [<span data-ttu-id="43938-120">Descoberta com escopos</span><span class="sxs-lookup"><span data-stu-id="43938-120">Discovery with Scopes</span></span>](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- <span data-ttu-id="43938-121">Demonstra como usar escopos para categorizar os pontos de extremidade detectáveis como também como usar <xref:System.ServiceModel.Discovery.DiscoveryClient> para executar uma pesquisa assíncrona para pontos de extremidade.</span><span class="sxs-lookup"><span data-stu-id="43938-121">Demonstrates how to use scopes to categorize discoverable endpoints as well how to use <xref:System.ServiceModel.Discovery.DiscoveryClient> to perform an asynchronous search for endpoints.</span></span>  
-  
- [<span data-ttu-id="43938-122">Critérios de localização personalizados</span><span class="sxs-lookup"><span data-stu-id="43938-122">Custom Find Criteria</span></span>](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
- <span data-ttu-id="43938-123">Demonstra como criar uma correspondência de escopo personalizado usando a lógica e como implementar um serviço de descoberta personalizado.</span><span class="sxs-lookup"><span data-stu-id="43938-123">Demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span>  
-  
- [<span data-ttu-id="43938-124">Exemplo de descoberta de fluxo de trabalho</span><span class="sxs-lookup"><span data-stu-id="43938-124">Workflow Discovery Sample</span></span>](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
- <span data-ttu-id="43938-125">Demonstra como criar um serviço de fluxo de trabalho podem ser descobertos e como criar uma atividade de código personalizado que procura um serviço específico.</span><span class="sxs-lookup"><span data-stu-id="43938-125">Demonstrates how to make a workflow service discoverable and how to author a custom code activity that searches for a particular service.</span></span>  
-  
- [<span data-ttu-id="43938-126">Serviço de roteador de descoberta</span><span class="sxs-lookup"><span data-stu-id="43938-126">Discovery Router Service</span></span>](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
- <span data-ttu-id="43938-127">Demonstra como encaminhar mensagens de descoberta para outro ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="43938-127">Demonstrates how to forward discovery messages to another endpoint.</span></span>
+ [<span data-ttu-id="05871-117">Serviço de roteador de descoberta</span><span class="sxs-lookup"><span data-stu-id="05871-117">Discovery Router Service</span></span>](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
+ <span data-ttu-id="05871-118">Demonstra como encaminhar mensagens de descoberta para outro ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="05871-118">Demonstrates how to forward discovery messages to another endpoint.</span></span>
