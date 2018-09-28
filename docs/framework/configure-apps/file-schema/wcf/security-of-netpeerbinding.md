@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
 author: BrucePerlerMS
 ms.openlocfilehash: d17d063ffdd354327c2523415b7d9394e723135a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085717"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47436291"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;segurança&gt; de &lt;netPeerBinding&gt;
 Define as configurações de segurança de [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), incluindo o tipo de autenticação usado e a segurança usada para o transporte de mensagens.  
