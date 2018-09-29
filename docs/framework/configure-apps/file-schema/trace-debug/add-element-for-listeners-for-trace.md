@@ -1,5 +1,5 @@
 ---
-title: '&lt;Adicionar&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;'
+title: '&lt;Adicione&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd8ddf5daec4ab7e4de636a2f14cf413aedaa99a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747340"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455756"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Adicionar&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;
+# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Adicione&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;
 Adiciona um ouvinte para o **ouvintes** coleção.  
   
  \<configuration>  
@@ -42,7 +41,7 @@ Adiciona um ouvinte para o **ouvintes** coleção.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**type**|Atributo obrigatório.<br /><br /> Especifica o tipo de ouvinte. Você deve usar uma cadeia de caracteres que atenda aos requisitos especificados em [especificando nomes de tipo totalmente qualificados](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Atributo obrigatório.<br /><br /> Especifica o tipo do ouvinte. Você deve usar uma cadeia de caracteres que atenda aos requisitos especificados em [especificando nomes de tipo totalmente qualificados](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Atributo opcional.<br /><br /> A cadeia de caracteres passada para o construtor para a classe especificada.|  
 |**name**|Atributo opcional.<br /><br /> Especifica o nome do ouvinte.|  
   
@@ -57,28 +56,28 @@ Adiciona um ouvinte para o **ouvintes** coleção.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`listeners`|Especifica um ouvinte que coleta, armazena e roteamento de mensagens. Os ouvintes direcionam a saída de rastreamento para um destino satisfatório.|  
+|`listeners`|Especifica um ouvinte que coleta, armazena e encaminha mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.|  
 |`system.diagnostics`|Especifica o elemento raiz para a seção de configuração do ASP.NET.|  
 |`trace`|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- O <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes compartilham o mesmo **ouvintes** coleção. Se você adicionar um objeto de ouvinte para a coleção em uma dessas classes, de outra classe usa o mesmo ouvinte. As classes de ouvinte derivam de <xref:System.Diagnostics.TraceListener>.  
+ O <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> classes compartilham o mesmo **ouvintes** coleção. Se você adicionar um objeto de ouvinte à coleção em uma dessas classes, a outra classe usa o mesmo ouvinte. As classes de ouvinte derivam o <xref:System.Diagnostics.TraceListener>.  
   
- Se você não especificar o `name` atributo do ouvinte de rastreamento, o <xref:System.Diagnostics.TraceListener.Name%2A> os padrões de ouvinte de rastreamento para uma cadeia de caracteres vazia (""). Se seu aplicativo tiver somente um ouvinte, você pode adicioná-lo sem especificar um nome e removê-la, especificando uma cadeia de caracteres vazia para o nome. No entanto, se seu aplicativo tiver mais de um ouvinte, você deve especificar nomes exclusivos para cada ouvinte de rastreamento, que permite identificar e gerenciar os ouvintes de rastreamento individuais dentro de <xref:System.Diagnostics.Debug.Listeners%2A> e <xref:System.Diagnostics.Trace.Listeners%2A> coleções.  
-  
-> [!NOTE]
->  Adicionar mais de um ouvinte de rastreamento do mesmo tipo e com o mesmo nome resultados no ouvinte de rastreamento somente uma desse tipo e nome que está sendo adicionado para o `Listeners` coleção. No entanto, você pode adicionar vários ouvintes idênticos para programaticamente o `Listeners` coleção.  
-  
- O valor para o **initializeData** atributo depende do tipo de ouvinte que você criar. Nem todos os ouvintes de rastreamento requerem que você especifique **initializeData**.  
+ Se você não especificar o `name` atributo do ouvinte de rastreamento, o <xref:System.Diagnostics.TraceListener.Name%2A> dos padrões de ouvinte de rastreamento para uma cadeia de caracteres vazia (""). Se seu aplicativo tiver somente um ouvinte, você pode adicioná-lo sem especificar um nome e removê-la, especificando uma cadeia de caracteres vazia para o nome. No entanto, se seu aplicativo tiver mais de um ouvinte, você deve especificar nomes exclusivos para cada ouvinte de rastreamento, que permite que você identifique e gerencie os ouvintes de rastreamento individuais dentro de <xref:System.Diagnostics.Debug.Listeners%2A> e <xref:System.Diagnostics.Trace.Listeners%2A> coleções.  
   
 > [!NOTE]
->  Quando você usa o `initializeData` atributo, você pode obter o compilador aviso "o atributo 'initializeData' não é declarado". Este aviso ocorre porque as definições de configuração são validadas em relação a classe base abstrata <xref:System.Diagnostics.TraceListener>, que não reconhece o `initializeData` atributo. Normalmente, você pode ignorar este aviso para implementações de ouvinte de rastreamento que tem um construtor que usa um parâmetro.  
+>  Adicionando mais de um ouvinte de rastreamento do mesmo tipo e com o mesmo nome resultados no ouvinte de rastreamento somente um desse tipo e nomeie o que está sendo adicionado ao `Listeners` coleção. No entanto, você pode adicionar programaticamente várias escutas idênticas a `Listeners` coleção.  
+  
+ O valor para o **initializeData** atributo depende do tipo de ouvinte que você cria. Nem todos os ouvintes de rastreamento requerem que você especifique **initializeData**.  
+  
+> [!NOTE]
+>  Quando você usa o `initializeData` atributo, você pode receber o aviso "o atributo 'initializeData' não é declarado" do compilador Este aviso ocorre porque as definições de configuração são validadas em relação a classe base abstrata <xref:System.Diagnostics.TraceListener>, que não reconhece o `initializeData` atributo. Normalmente, você pode ignorar este aviso para as implementações de ouvinte de rastreamento que tem um construtor que aceita um parâmetro.  
   
  A tabela a seguir mostra os ouvintes de rastreamento que são incluídos com o .NET Framework e descreve o valor de suas **initializeData** atributos.  
   
-|Classe de ouvinte de rastreamento|valor do atributo initializeData|  
+|Classe de ouvintes de rastreamento|valor do atributo initializeData|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|O `useErrorStream` valor para o <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> construtor.  Definir o `initializeData` atributo "`true`" para gravar o rastreamento e depuração de saída para <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" para gravar <xref:System.Console.Out%2A?displayProperty=nameWithType>.|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|O `useErrorStream` de valor para o <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> construtor.  Defina as `initializeData` de atributo para "`true`" para gravar o rastreamento e depuração de saída para <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" para gravar <xref:System.Console.Out%2A?displayProperty=nameWithType>.|  
 |<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|O nome do arquivo no qual o <xref:System.Diagnostics.DelimitedListTraceListener> é gravado.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|O nome do nome de uma fonte de log de eventos existente.|  
 |<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|O nome do arquivo que o <xref:System.Diagnostics.EventSchemaTraceListener> grava.|  
