@@ -3,11 +3,11 @@ title: 'Tutorial: encadear consultas juntas (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
 ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489924"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47204512"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Tutorial: encadear consultas juntas (C#)
 Este tutorial mostra o modelo de processamento quando você encadea consultas juntos. Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais. É importante compreender exatamente como as consultas encadeadas funcionam.  

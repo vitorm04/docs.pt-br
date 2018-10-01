@@ -3,11 +3,11 @@ title: Como projetar um gráfico de objeto (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706033"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196077"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Como projetar um gráfico de objeto (C#)
 Este tópico ilustra como projeto, ou preencher, um grafo de objeto XML.  

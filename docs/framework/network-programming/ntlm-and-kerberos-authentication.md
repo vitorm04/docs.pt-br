@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d1f621af2b365d229b7b5e62069471af98be267a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7638b9558363b77b03208d86d98330b922b414c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394381"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195448"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>Autenticação NTLM e Kerberos
 A autenticação padrão NTLM e a autenticação Kerberos usam as credenciais de usuário do Microsoft Windows NT associadas com o aplicativo de chamada para tentar a autenticação com o servidor. Ao usar a autenticação NTLM não padrão, o aplicativo define o tipo de autenticação para NTLM e usa um objeto <xref:System.Net.NetworkCredential> para passar o nome de usuário, senha e domínio para o host, conforme mostrado no exemplo a seguir.  

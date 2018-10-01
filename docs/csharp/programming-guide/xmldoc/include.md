@@ -9,11 +9,11 @@ helpviewer_keywords:
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
 ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47192986"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  

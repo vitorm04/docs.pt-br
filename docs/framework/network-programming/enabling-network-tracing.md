@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d0ab0aeecdbd6cf763ae34cfa3bcd50af1874d39
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f7720016a94d78e8a49e8566ad7b5096e9b31722
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517182"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47193480"
 ---
 # <a name="enabling-network-tracing"></a>Habilitando o rastreamento de rede
 O rastreamento de rede fornece acesso a informações sobre invocações de método e o tráfego de rede gerados por um aplicativo gerenciado. Você deve concluir as seguintes tarefas para habilitar o rastreamento de rede no aplicativo:  

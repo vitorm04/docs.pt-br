@@ -3,11 +3,11 @@ title: Trabalhando com namespaces XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46579180"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47208854"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Trabalhando com namespaces XML (C#)
 Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte a namespaces.  

@@ -3,11 +3,11 @@ title: Como localizar todos os nós em um namespace (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696892"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47230950"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Como localizar todos os nós em um namespace (C#)
 Você pode filtrar no namespace de cada elemento ou atributo para localizar todos os nós nesse namespace específico.  

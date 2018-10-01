@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 14a1260bf67469e792439985fec43ac44c6f0c9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84f29d1ec44383a42446316b8e53b2886314960b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395808"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47208848"
 ---
 # <a name="deriving-from-webresponse"></a>Derivando de WebResponse
 A classe <xref:System.Net.WebResponse> é uma classe base abstrata que fornece os métodos e as propriedades básicas para criar uma resposta específica ao protocolo que se ajusta ao modelo de protocolo conectável do .NET Framework. Os aplicativos que usam a classe <xref:System.Net.WebRequest> para solicitar dados de recursos recebem as respostas em uma **WebResponse**. Os descendentes de **WebResponse** específicos ao protocolo devem implementar os membros abstratos da classe **WebResponse**.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d88ef1e736a16dddf156a1bc0e42f06d128d2c57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a35bdeaf0fc6cf513363f3d990167f342a496c76
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394160"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193454"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interação da política de cache – idade máxima e atualização mínima
 Para ajudar a garantir que o conteúdo mais atualizado é retornado para o aplicativo cliente, a interação dos requisitos de revalidação do servidor e da política de cache de cliente sempre resulta na política de cache mais conservadora. Todos os exemplos deste tópico ilustram a política de cache para um recurso que é armazenado em cache em 1º de janeiro e expira em 4 de janeiro.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 74ffa8a0ced264b29cd30cdcd1ca8f9a87c8c358
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d05e0f374f4454c95dd02be8bd2eff573040f97e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396955"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209136"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretando o rastreamento de rede
 Quando o rastreamento de rede está habilitado, você pode usar o rastreamento para capturar as chamadas que seu aplicativo faz para membros de classe <xref:System.Net> diversos. A saída dessas chamadas pode ser semelhante aos exemplos a seguir.  

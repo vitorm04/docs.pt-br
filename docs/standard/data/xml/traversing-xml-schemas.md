@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580077"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233009"
 ---
 # <a name="traversing-xml-schemas"></a>Percorrer esquemas XML
 Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece acesso aos elementos, a atributos, e tipos armazenados no SOM. Percorrer um esquema XML carregado no SOM também é a primeira etapa em editar um esquema XML usando o SOM API.  

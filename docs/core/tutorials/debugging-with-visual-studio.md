@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
 ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696140"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399223"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depurar seu aplicativo Olá, Mundo com o Visual Studio 2017
 

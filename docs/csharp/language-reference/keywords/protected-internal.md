@@ -3,11 +3,11 @@ title: protected internal (referência do C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46586643"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47210026"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (referência do C#)
 

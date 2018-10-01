@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 62ab62520e42fcf3ecfb8bd7fd6b57485451e6e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e066af175982b71fb42bf2eec75fe9d92f532e61
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394021"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47402744"
 ---
 # <a name="how-to-ping-a-host"></a>Como executar ping em um host
 Este exemplo mostra como executar o ping em um host remoto.  

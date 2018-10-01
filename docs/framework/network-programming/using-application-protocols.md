@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9f979b6d065e23b6d448a14d9545327de254dc70
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084605"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47216468"
 ---
 # <a name="using-application-protocols"></a>Usando protocolos de aplicativo
 O .NET Framework dá suporte aos protocolos de aplicativo da Internet geralmente usados. Esta seção inclui informações sobre como usar os protocolos [HTTP](../../../docs/framework/network-programming/http.md), “TCP” e “UDP”, bem como informações sobre como usar a interface do [Windows Sockets](../../../docs/framework/network-programming/sockets.md) para implementar protocolos personalizados.  

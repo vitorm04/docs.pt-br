@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6c793f98e25c22ecb34b8aa8deb185048a08a1f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4eb38c72a7f7629cea0f8137a4337553457808
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395073"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200900"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>Como obter informações de interface e de protocolo
 Este exemplo mostra como ler as estatísticas de TCP de um adaptador de rede.  

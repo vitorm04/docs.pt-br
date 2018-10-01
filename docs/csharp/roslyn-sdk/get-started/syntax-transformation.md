@@ -3,12 +3,12 @@ title: Introdução à transformação de sintaxe (APIs Roslyn)
 description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47400784"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introdução à transformação de sintaxe
 
@@ -30,7 +30,7 @@ Você escolhe uma das duas estratégias para transformações de sintaxe. Os **m
 
 A primeira transformação de sintaxe demonstra os métodos de fábrica. Substitua uma instrução `using System.Collections;` por uma instrução `using System.Collections.Generic;`. Este exemplo demonstra como você cria objetos <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> usando os métodos de fábrica <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Para cada tipo de **nó**, **token**ou **trivia**, há um método de fábrica que cria uma instância desse tipo. Você cria árvores de sintaxe compondo os nós hierarquicamente de baixa para cima. Em seguida, você transformará o programa existente substituindo nós existentes pela nova árvore que você criou.
 
-Inicie o Visual Studio e crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, escolha **Arquivo** > **Novo* > **Projeto** para exibir a caixa de diálogo Novo Projeto. Em **Visual C#** > **Extensibilidade**, escolha uma **Ferramenta de Análise de Código Autônoma**. Este guia de início rápido tem dois projetos de exemplo, portanto, nomeie a solução **SyntaxTransformationQuickStart** e nomeie o projeto **ConstructionCS**. Clique em **OK**.
+Inicie o Visual Studio e crie um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#. No Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** para exibir a caixa de diálogo Novo Projeto. Em **Visual C#** > **Extensibilidade**, escolha uma **Ferramenta de Análise de Código Autônoma**. Este guia de início rápido tem dois projetos de exemplo, portanto, nomeie a solução **SyntaxTransformationQuickStart** e nomeie o projeto **ConstructionCS**. Clique em **OK**.
 
 Este projeto usa os métodos de classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> para construir um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> representando o namespace `System.Collections.Generic`.
 

@@ -6,13 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-manager: douge
-ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a529a94edf3a4cf71150c04994d82b8f21eb996
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517856"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47204632"
 ---
 # <a name="how-to-create-windows-services"></a>Como criar Serviços Windows
 Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado **Serviço Windows**. Esse modelo realiza automaticamente muito do trabalho para você referenciando as classes e namespaces apropriados, configurando a herança de classe base para serviços, e substituindo muitos dos métodos que você provavelmente desejará substituir.  
@@ -44,7 +43,7 @@ Ao criar um serviço, você pode usar um modelo de projeto Visual Studio chamado
   
 3.  Defina qualquer uma das propriedades a seguir para determinar como seu serviço funcionará.  
   
-    |propriedade|Configuração|  
+    |Propriedade|Configuração|  
     |--------------|-------------|  
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|`True` para indicar que o serviço aceitará solicitações para parar a execução; `false` para impedir que o serviço seja interrompido.|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|`True` para indicar que o serviço deseja receber uma notificação quando o computador no qual ele está for desligado, permitindo que a ele chamar o procedimento <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A>.|  

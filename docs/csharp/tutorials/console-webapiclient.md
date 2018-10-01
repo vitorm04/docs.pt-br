@@ -4,11 +4,11 @@ description: Este tutorial ensina vários recursos no .NET Core e da linguagem C
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46525575"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397914"
 ---
 # <a name="rest-client"></a>Cliente REST
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2baedaa445f81e3e204f7414c5142232755581ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25261185f263a775b6104f94d10874ff39035de9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396240"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47396975"
 ---
 # <a name="using-secure-sockets-layer"></a>Usando o protocolo SSL
 As classes <xref:System.Net> usam o protocolo SSL para criptografar a conexão para vários protocolos de rede.  
