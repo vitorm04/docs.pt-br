@@ -2,57 +2,31 @@
 title: Basic1
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
-ms.openlocfilehash: 4e6c4217eb50577a6649e09545db40492bac9a6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 371c80bba9b7398af936415819609b531ddd1593
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031845"
 ---
-# <a name="basic"></a><span data-ttu-id="57d7c-102">Basic</span><span class="sxs-lookup"><span data-stu-id="57d7c-102">Basic</span></span>
-<span data-ttu-id="57d7c-103">Esta seção fornece exemplos que demonstram a funcionalidade básica do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="57d7c-103">This section provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  
+# <a name="basic"></a><span data-ttu-id="2eb12-102">Basic</span><span class="sxs-lookup"><span data-stu-id="2eb12-102">Basic</span></span>
+<span data-ttu-id="2eb12-103">Esta seção fornece exemplos que demonstram a funcionalidade básica do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="2eb12-103">This section provides samples that demonstrate basic Windows Workflow Foundation (WF) functionality.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="57d7c-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="57d7c-104">In This Section</span></span>  
- [<span data-ttu-id="57d7c-105">Atividades internas</span><span class="sxs-lookup"><span data-stu-id="57d7c-105">Built-in Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
- <span data-ttu-id="57d7c-106">Contém exemplos que usam a biblioteca interno de atividade.</span><span class="sxs-lookup"><span data-stu-id="57d7c-106">Contains samples that use the built-in activity library.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2eb12-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="2eb12-104">In This Section</span></span>  
+ [<span data-ttu-id="2eb12-105">Atividades internas</span><span class="sxs-lookup"><span data-stu-id="2eb12-105">Built-in Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
+ <span data-ttu-id="2eb12-106">Contém exemplos que usam a biblioteca interno de atividade.</span><span class="sxs-lookup"><span data-stu-id="2eb12-106">Contains samples that use the built-in activity library.</span></span>  
   
- [<span data-ttu-id="57d7c-107">Compensação</span><span class="sxs-lookup"><span data-stu-id="57d7c-107">Compensation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
- <span data-ttu-id="57d7c-108">Contém exemplos que demonstram a compensação.</span><span class="sxs-lookup"><span data-stu-id="57d7c-108">Contains samples that demonstrate compensation.</span></span>  
+ [<span data-ttu-id="2eb12-107">Atividades personalizadas</span><span class="sxs-lookup"><span data-stu-id="2eb12-107">Custom Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
+ <span data-ttu-id="2eb12-108">Contém exemplos que demonstram a criação de atividades personalizados.</span><span class="sxs-lookup"><span data-stu-id="2eb12-108">Contains samples that demonstrate creating custom activities.</span></span>  
   
- [<span data-ttu-id="57d7c-109">Atividades personalizadas</span><span class="sxs-lookup"><span data-stu-id="57d7c-109">Custom Activities</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
- <span data-ttu-id="57d7c-110">Contém exemplos que demonstram a criação de atividades personalizados.</span><span class="sxs-lookup"><span data-stu-id="57d7c-110">Contains samples that demonstrate creating custom activities.</span></span>  
+ [<span data-ttu-id="2eb12-109">Designer</span><span class="sxs-lookup"><span data-stu-id="2eb12-109">Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
+ <span data-ttu-id="2eb12-110">Contém exemplos que demonstram como usar [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2eb12-110">Contains samples that demonstrate how to use [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span>  
   
- [<span data-ttu-id="57d7c-111">Designer</span><span class="sxs-lookup"><span data-stu-id="57d7c-111">Designer</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
- <span data-ttu-id="57d7c-112">Contém exemplos que demonstram como usar [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="57d7c-112">Contains samples that demonstrate how to use [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].</span></span>  
+ [<span data-ttu-id="2eb12-111">Mudança de host de designer</span><span class="sxs-lookup"><span data-stu-id="2eb12-111">Designer ReHosting</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
+ <span data-ttu-id="2eb12-112">Contém exemplos que demonstram novamente hospedar o designer de atividade.</span><span class="sxs-lookup"><span data-stu-id="2eb12-112">Contains samples that demonstrate re-hosting the activity designer.</span></span>  
   
- [<span data-ttu-id="57d7c-113">Mudança de host de designer</span><span class="sxs-lookup"><span data-stu-id="57d7c-113">Designer ReHosting</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
- <span data-ttu-id="57d7c-114">Contém exemplos que demonstram novamente hospedar o designer de atividade.</span><span class="sxs-lookup"><span data-stu-id="57d7c-114">Contains samples that demonstrate re-hosting the activity designer.</span></span>  
+ [<span data-ttu-id="2eb12-113">Execução</span><span class="sxs-lookup"><span data-stu-id="2eb12-113">Execution</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+ <span data-ttu-id="2eb12-114">Contém exemplos que demonstram executar fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="2eb12-114">Contains samples that demonstrate executing workflows.</span></span>
   
- [<span data-ttu-id="57d7c-115">Execução</span><span class="sxs-lookup"><span data-stu-id="57d7c-115">Execution</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
- <span data-ttu-id="57d7c-116">Contém exemplos que demonstram executar fluxos de trabalho.</span><span class="sxs-lookup"><span data-stu-id="57d7c-116">Contains samples that demonstrate executing workflows.</span></span>  
-  
- [<span data-ttu-id="57d7c-117">Expressões</span><span class="sxs-lookup"><span data-stu-id="57d7c-117">Expressions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
- <span data-ttu-id="57d7c-118">Contém exemplos que demonstram expressões do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="57d7c-118">Contains samples that demonstrate Windows Workflow Foundation (WF) expressions.</span></span>  
-  
- [<span data-ttu-id="57d7c-119">Migração</span><span class="sxs-lookup"><span data-stu-id="57d7c-119">Migration</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
- <span data-ttu-id="57d7c-120">Contém exemplos que demonstram migrando fluxos de trabalho criados com versões anteriores do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="57d7c-120">Contains samples that demonstrate migrating workflows created with previous versions of Windows Workflow Foundation (WF).</span></span>  
-  
- [<span data-ttu-id="57d7c-121">Persistência</span><span class="sxs-lookup"><span data-stu-id="57d7c-121">Persistence</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
- <span data-ttu-id="57d7c-122">Contém exemplos que demonstram persistir fluxos de trabalho a um meio durável.</span><span class="sxs-lookup"><span data-stu-id="57d7c-122">Contains samples that demonstrate persisting workflows to a durable medium.</span></span>  
-  
- [<span data-ttu-id="57d7c-123">Exemplos de regras</span><span class="sxs-lookup"><span data-stu-id="57d7c-123">Rules Samples</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/rules-samples.md)  
- <span data-ttu-id="57d7c-124">Contém exemplos que demonstram usando o mecanismo das regras de fluxo de trabalho [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="57d7c-124">Contains samples that demonstrate using the workflow rules engine from [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)].</span></span>  
-  
- [<span data-ttu-id="57d7c-125">Serviços</span><span class="sxs-lookup"><span data-stu-id="57d7c-125">Services</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/services.md)  
- <span data-ttu-id="57d7c-126">Contém exemplos que demonstram serviços de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="57d7c-126">Contains samples that demonstrate workflow services.</span></span>  
-  
- [<span data-ttu-id="57d7c-127">Acompanhamento</span><span class="sxs-lookup"><span data-stu-id="57d7c-127">Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
- <span data-ttu-id="57d7c-128">Contém exemplos que demonstram o rastreamento de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="57d7c-128">Contains samples that demonstrate workflow tracking.</span></span>  
-  
- [<span data-ttu-id="57d7c-129">Transações</span><span class="sxs-lookup"><span data-stu-id="57d7c-129">Transactions</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
- <span data-ttu-id="57d7c-130">Contém exemplos que demonstram transações de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="57d7c-130">Contains samples that demonstrate workflow transactions.</span></span>  
-  
- [<span data-ttu-id="57d7c-131">Validação</span><span class="sxs-lookup"><span data-stu-id="57d7c-131">Validation</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
- <span data-ttu-id="57d7c-132">Contém exemplos que demonstram a validação do Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="57d7c-132">Contains samples that demonstrate validation in Windows Workflow Foundation.</span></span>  
-  
-## <a name="reference"></a><span data-ttu-id="57d7c-133">Referência</span><span class="sxs-lookup"><span data-stu-id="57d7c-133">Reference</span></span>
+ [<span data-ttu-id="2eb12-115">Acompanhamento</span><span class="sxs-lookup"><span data-stu-id="2eb12-115">Tracking</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)  
+ <span data-ttu-id="2eb12-116">Contém exemplos que demonstram o rastreamento de fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="2eb12-116">Contains samples that demonstrate workflow tracking.</span></span>
