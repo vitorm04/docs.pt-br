@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417187"
 ---
 # <a name="icordebugthreadgetid-method"></a><span data-ttu-id="c4b52-102">Método ICorDebugThread::GetID</span><span class="sxs-lookup"><span data-stu-id="c4b52-102">ICorDebugThread::GetID Method</span></span>
 <span data-ttu-id="c4b52-103">Obtém o identificador de sistema operacional atual da parte ativa deste ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="c4b52-103">Gets the current operating system identifier of the active part of this ICorDebugThread.</span></span>  

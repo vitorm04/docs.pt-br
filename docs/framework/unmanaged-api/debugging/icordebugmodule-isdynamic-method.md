@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5157c62f2719a9d62608750cd122561807197494
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418286"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a><span data-ttu-id="cba29-102">Método ICorDebugModule::IsDynamic</span><span class="sxs-lookup"><span data-stu-id="cba29-102">ICorDebugModule::IsDynamic Method</span></span>
 <span data-ttu-id="cba29-103">Obtém um valor que indica se esse módulo é dinâmico.</span><span class="sxs-lookup"><span data-stu-id="cba29-103">Gets a value that indicates whether this module is dynamic.</span></span>  

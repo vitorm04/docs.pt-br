@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426969"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a><span data-ttu-id="492ea-102">Método ISymUnmanagedWriter::DefineParameter</span><span class="sxs-lookup"><span data-stu-id="492ea-102">ISymUnmanagedWriter::DefineParameter Method</span></span>
 <span data-ttu-id="492ea-103">Define um único parâmetro no método atual.</span><span class="sxs-lookup"><span data-stu-id="492ea-103">Defines a single parameter in the current method.</span></span> <span data-ttu-id="492ea-104">O tipo de parâmetro é obtido da posição do parâmetro (sequência) na assinatura do método.</span><span class="sxs-lookup"><span data-stu-id="492ea-104">The parameter type is taken from the parameter's position (sequence) within the method's signature.</span></span>  

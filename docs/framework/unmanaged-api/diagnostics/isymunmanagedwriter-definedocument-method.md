@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427701"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="f7548-102">Método ISymUnmanagedWriter::DefineDocument</span><span class="sxs-lookup"><span data-stu-id="f7548-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
 <span data-ttu-id="f7548-103">Define um documento de origem.</span><span class="sxs-lookup"><span data-stu-id="f7548-103">Defines a source document.</span></span> <span data-ttu-id="f7548-104">GUIDs são fornecidos para idiomas conhecidos, fornecedores e tipos de documento.</span><span class="sxs-lookup"><span data-stu-id="f7548-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  

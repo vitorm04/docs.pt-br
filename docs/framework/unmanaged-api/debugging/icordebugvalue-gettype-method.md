@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0fc0dd03abc1adb8eeea76a1053fb4d58de4ecf8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419826"
 ---
 # <a name="icordebugvaluegettype-method"></a><span data-ttu-id="242ac-102">Método ICorDebugValue::GetType</span><span class="sxs-lookup"><span data-stu-id="242ac-102">ICorDebugValue::GetType Method</span></span>
 <span data-ttu-id="242ac-103">Obtém o tipo primitivo do objeto "ICorDebugValue".</span><span class="sxs-lookup"><span data-stu-id="242ac-103">Gets the primitive type of this "ICorDebugValue" object.</span></span>  

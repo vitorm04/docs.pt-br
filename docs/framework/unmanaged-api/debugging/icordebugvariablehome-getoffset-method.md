@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a2ea7273fec62654c168d6786d3644b184ff7f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419563"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a><span data-ttu-id="43795-102">Método ICorDebugVariableHome::GetOffset</span><span class="sxs-lookup"><span data-stu-id="43795-102">ICorDebugVariableHome::GetOffset Method</span></span>
 <span data-ttu-id="43795-103">Obtém o deslocamento do registro base para uma variável.</span><span class="sxs-lookup"><span data-stu-id="43795-103">Gets the offset from the base register for a variable.</span></span>  

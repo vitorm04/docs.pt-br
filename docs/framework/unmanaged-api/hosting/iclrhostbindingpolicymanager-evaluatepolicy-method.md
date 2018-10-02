@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e37d56a321e6529812045e37c4f1929818b38a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433601"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a><span data-ttu-id="ecfbb-102">Método ICLRHostBindingPolicyManager::EvaluatePolicy</span><span class="sxs-lookup"><span data-stu-id="ecfbb-102">ICLRHostBindingPolicyManager::EvaluatePolicy Method</span></span>
 <span data-ttu-id="ecfbb-103">Avalia a política de associação em nome de host.</span><span class="sxs-lookup"><span data-stu-id="ecfbb-103">Evaluates binding policy on behalf of the host.</span></span>  

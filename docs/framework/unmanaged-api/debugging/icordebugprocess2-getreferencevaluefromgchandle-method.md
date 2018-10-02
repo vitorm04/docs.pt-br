@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60624a5f6323399d06bda4e0280de8fbe861bd9b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419579"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a><span data-ttu-id="d0ba2-102">Método ICorDebugProcess2::GetReferenceValueFromGCHandle</span><span class="sxs-lookup"><span data-stu-id="d0ba2-102">ICorDebugProcess2::GetReferenceValueFromGCHandle Method</span></span>
 <span data-ttu-id="d0ba2-103">Obtém um ponteiro de referência para o objeto especificado gerenciado que possua uma coleta de lixo a alça.</span><span class="sxs-lookup"><span data-stu-id="d0ba2-103">Gets a reference pointer to the specified managed object that has a garbage collection handle.</span></span>  

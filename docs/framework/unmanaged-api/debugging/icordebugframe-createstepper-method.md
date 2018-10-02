@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3662ed8a3fda5881b0e0929a830d19b0d805299f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411025"
 ---
 # <a name="icordebugframecreatestepper-method"></a><span data-ttu-id="c0459-102">Método ICorDebugFrame::CreateStepper</span><span class="sxs-lookup"><span data-stu-id="c0459-102">ICorDebugFrame::CreateStepper Method</span></span>
 <span data-ttu-id="c0459-103">Obtém um seletor que permite que o depurador executar operações de revisão em relação a essa ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="c0459-103">Gets a stepper that allows the debugger to perform stepping operations relative to this ICorDebugFrame.</span></span>  

@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a79133b117f3a718dd84af6c2144a6098bc79f2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407218"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a><span data-ttu-id="a5dc8-102">Método ICLRDataTarget::GetImageBase</span><span class="sxs-lookup"><span data-stu-id="a5dc8-102">ICLRDataTarget::GetImageBase Method</span></span>
 <span data-ttu-id="a5dc8-103">Obtém o endereço de memória base da imagem especificada.</span><span class="sxs-lookup"><span data-stu-id="a5dc8-103">Gets the base memory address of the specified image.</span></span>  

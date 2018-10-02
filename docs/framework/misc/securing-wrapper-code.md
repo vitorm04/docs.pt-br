@@ -11,8 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397943"
 ---
 # <a name="securing-wrapper-code"></a><span data-ttu-id="8309b-102">Protegendo código de wrapper</span><span class="sxs-lookup"><span data-stu-id="8309b-102">Securing Wrapper Code</span></span>
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446899"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a><span data-ttu-id="208e8-102">Método IMetaDataAssemblyEmit::SetAssemblyRefProps</span><span class="sxs-lookup"><span data-stu-id="208e8-102">IMetaDataAssemblyEmit::SetAssemblyRefProps Method</span></span>
 <span data-ttu-id="208e8-103">Modifica especificado `AssemblyRef` estrutura de metadados.</span><span class="sxs-lookup"><span data-stu-id="208e8-103">Modifies the specified `AssemblyRef` metadata structure.</span></span>  

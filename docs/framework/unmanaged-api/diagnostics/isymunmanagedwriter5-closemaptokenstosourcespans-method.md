@@ -6,8 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 653dd933066898c1954cfbcc57c0c0493e47b4be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428606"
 ---
 # <a name="isymunmanagedwriter5closemaptokenstosourcespans-method"></a><span data-ttu-id="03c63-102">Método ISymUnmanagedWriter5::CloseMapTokensToSourceSpans</span><span class="sxs-lookup"><span data-stu-id="03c63-102">ISymUnmanagedWriter5::CloseMapTokensToSourceSpans Method</span></span>
 <span data-ttu-id="03c63-103">Feche a seção de dados personalizada especial para informações de mapeamento de extensão de token para a fonte.</span><span class="sxs-lookup"><span data-stu-id="03c63-103">Close the special custom data section for token-to-source span mapping information.</span></span> <span data-ttu-id="03c63-104">Depois de fechado, não há mais informações de mapeamento podem ser adicionadas.</span><span class="sxs-lookup"><span data-stu-id="03c63-104">After it is closed, no more mapping information can be added.</span></span>  

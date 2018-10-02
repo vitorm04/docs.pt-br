@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af99bd165386f86d2045a7f5a5a7708c7b0d0b8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419716"
 ---
 # <a name="icordebugstepperenum-interface1"></a><span data-ttu-id="e4a85-102">ICorDebugStepperEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="e4a85-102">ICorDebugStepperEnum Interface1</span></span>
 <span data-ttu-id="e4a85-103">Implementa métodos ICorDebugEnum e enumera ICorDebugStepper matrizes.</span><span class="sxs-lookup"><span data-stu-id="e4a85-103">Implements ICorDebugEnum methods, and enumerates ICorDebugStepper arrays.</span></span>  

@@ -19,8 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425136"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="eba8a-102">Método ISymUnmanagedReader::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="eba8a-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
 <span data-ttu-id="eba8a-103">Obtém os namespaces definidos no escopo global esse armazenamento de símbolo.</span><span class="sxs-lookup"><span data-stu-id="eba8a-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  

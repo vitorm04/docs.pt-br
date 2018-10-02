@@ -13,8 +13,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364691"
 ---
 # <a name="bindingfailure-mda"></a><span data-ttu-id="39d6c-102">MDA bindingFailure</span><span class="sxs-lookup"><span data-stu-id="39d6c-102">bindingFailure MDA</span></span>
 <span data-ttu-id="39d6c-103">O MDA (assistente para depuração gerenciada) `bindingFailure` é ativado quando um assembly falha ao ser carregado.</span><span class="sxs-lookup"><span data-stu-id="39d6c-103">The `bindingFailure` managed debugging assistant (MDA) is activated when an assembly fails to load.</span></span>  

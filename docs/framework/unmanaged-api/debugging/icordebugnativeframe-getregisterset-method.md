@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6880ed3a2519ad7d4a415e4fcc4510668a0852f4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416700"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a><span data-ttu-id="792cb-102">Método ICorDebugNativeFrame::GetRegisterSet</span><span class="sxs-lookup"><span data-stu-id="792cb-102">ICorDebugNativeFrame::GetRegisterSet Method</span></span>
 <span data-ttu-id="792cb-103">Obtém o conjunto de registros deste quadro de pilhas.</span><span class="sxs-lookup"><span data-stu-id="792cb-103">Gets the register set for this stack frame.</span></span>  

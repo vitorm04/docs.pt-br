@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4652bcb00d3437350b5fd3e1071b3c538403cfe3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418683"
 ---
 # <a name="icordebugstepper2-interface1"></a><span data-ttu-id="137ad-102">Interface1 ICorDebugStepper2</span><span class="sxs-lookup"><span data-stu-id="137ad-102">ICorDebugStepper2 Interface1</span></span>
 <span data-ttu-id="137ad-103">Fornece suporte para apenas meu código (JMC) de depuração.</span><span class="sxs-lookup"><span data-stu-id="137ad-103">Provides support for just my code (JMC) debugging.</span></span>  

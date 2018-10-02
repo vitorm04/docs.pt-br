@@ -19,8 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0dbac6570fc0af0452a0e44f838124afbf6a4fe
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419878"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a><span data-ttu-id="ec2dd-102">Método ICorDebugProcess::EnableLogMessages</span><span class="sxs-lookup"><span data-stu-id="ec2dd-102">ICorDebugProcess::EnableLogMessages Method</span></span>
 <span data-ttu-id="ec2dd-103">Habilita e desabilita a transmissão de mensagens de log para o depurador.</span><span class="sxs-lookup"><span data-stu-id="ec2dd-103">Enables and disables the transmission of log messages to the debugger.</span></span>  

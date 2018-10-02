@@ -18,8 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408080"
 ---
 # <a name="efnstacktrace-function"></a><span data-ttu-id="4b324-102">Função _EFN_StackTrace</span><span class="sxs-lookup"><span data-stu-id="4b324-102">_EFN_StackTrace Function</span></span>
 <span data-ttu-id="4b324-103">Fornece uma representação de texto de um rastreamento de pilha gerenciada e uma matriz de `CONTEXT` registra, uma para cada transição entre não gerenciados e código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="4b324-103">Provides a text representation of a managed stack trace and an array of `CONTEXT` records, one for each transition between unmanaged and managed code.</span></span>  
