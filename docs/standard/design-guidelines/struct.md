@@ -14,11 +14,11 @@ ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47862478"
 ---
 # <a name="struct-design"></a>Design de struct
 O tipo de valor de uso geral é mais conhecido como um struct, sua palavra-chave c#. Esta seção fornece diretrizes para design de struct geral.  

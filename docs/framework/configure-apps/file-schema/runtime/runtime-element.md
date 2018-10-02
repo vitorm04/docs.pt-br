@@ -12,11 +12,11 @@ ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863618"
 ---
 # <a name="ltruntimegt-element"></a>&lt;tempo de execução&gt; elemento
 Fornece informações usadas pelo common language runtime para configurar os aplicativos.  
