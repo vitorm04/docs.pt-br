@@ -7,4 +7,4 @@ Para usar o caractere de sublinhado como um separador à esquerda, você deve ad
 </PropertyGroup>
 ```
 
-Para obter mais informações, consulte [definindo a versão de idioma do Visual Basic](../docs/visual-basic/language-reference/configure-language-version.md).
+Para obter mais informações, consulte [definindo a versão da linguagem Visual Basic](../docs/visual-basic/language-reference/configure-language-version.md).
