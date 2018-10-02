@@ -11,11 +11,11 @@ ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9d6189c736e1f2843a986c3a96f8547e9a231db0
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033227"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;configurações&gt; (configurações de rede)
 Configura as opções de rede básicaspara o namespace <xref:System.Net?displayProperty=nameWithType>.  

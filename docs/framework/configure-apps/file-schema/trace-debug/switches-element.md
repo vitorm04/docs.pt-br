@@ -12,11 +12,11 @@ ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033331"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;comutadores&gt; elemento
 Contém opções de rastreamento e o nível em que as opções de rastreamento são definidas.  

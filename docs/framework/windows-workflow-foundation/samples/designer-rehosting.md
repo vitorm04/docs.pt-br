@@ -2,14 +2,14 @@
 title: Designer ReHosting
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 1901df62ccdeec3f75ce0d8cd85484f46fac4541
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45652918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028908"
 ---
-# <a name="designer-rehosting"></a>Designer ReHosting
+# <a name="designer-rehosting"></a>Designer Rehosting
 O designer que rehosting é um cenário comum que se refere hospedar a tela de design de fluxo de trabalho em um aplicativo personalizado. O aplicativo que hospedando a maioria de pessoas estão familiarizados com é Visual Studio entanto, há um número de cenários onde mostrar o designer de fluxo de trabalho em um aplicativo pode ser útil:  
   
 -   Monitorando aplicativos (que permitem que um usuário final visualizem o processo, bem como os dados em tempo de execução sobre o processo como o estado atualmente ativa, os dados agregados de tempo de execução, ou outras informações sobre uma instância de fluxo de trabalho).  

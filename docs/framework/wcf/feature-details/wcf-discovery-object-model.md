@@ -3,11 +3,11 @@ title: Modelo de objeto de descoberta do WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231370"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046663"
 ---
 # <a name="wcf-discovery-object-model"></a>Modelo de objeto de descoberta do WCF
 Descoberta do WCF consiste em um conjunto de tipos que fornecem um modelo de programação unificado que permite que você escreva os serviços que são descobertos no tempo de execução e os clientes que localizarem e usam esses serviços.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
 ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234855"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030279"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Como criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework (WCF Data Services)
 

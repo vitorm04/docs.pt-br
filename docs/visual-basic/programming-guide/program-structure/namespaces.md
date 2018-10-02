@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030438"
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces no Visual Basic
 Namespaces organizam objetos definidos em um assembly. Os assemblies podem conter vários namespaces, que por sua vez pode conter outros namespaces. Namespaces evitar a ambiguidade e simplificar as referências ao usar grupos grandes de objetos, como bibliotecas de classes.  

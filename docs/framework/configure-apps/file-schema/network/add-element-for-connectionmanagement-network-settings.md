@@ -13,11 +13,11 @@ ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028361"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Adicionar&gt; elemento para connectionManagement (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  

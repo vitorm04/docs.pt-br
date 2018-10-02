@@ -10,11 +10,11 @@ ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400836"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029268"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Remova&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;
 Remove um ouvinte da coleção `Listeners` de uma origem de rastreamento.  

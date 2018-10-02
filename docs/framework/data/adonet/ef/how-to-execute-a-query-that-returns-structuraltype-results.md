@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
 ms.openlocfilehash: 1a53ab6ab455975f0597eab76aeaa2db3ffd42a3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031910"
 ---
 # <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>Como: Executar uma consulta que retorna resultados de StructuralType
 Este tópico mostra como executar um comando em um modelo conceitual usando um objeto de <xref:System.Data.EntityClient.EntityCommand> , e como recuperar <xref:System.Data.Metadata.Edm.StructuralType> resultados usando <xref:System.Data.EntityClient.EntityDataReader>. <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.RowType> e as classes de <xref:System.Data.Metadata.Edm.ComplexType> derivam da classe de <xref:System.Data.Metadata.Edm.StructuralType> .  

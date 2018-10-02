@@ -10,11 +10,11 @@ ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47230976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030529"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Remova&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;
 Remove um ouvinte dos **ouvintes** coleção.  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037074"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Como assegurar que a linha selecionada em uma tabela filho permaneça na posição correta
 Muitas vezes, ao trabalhar com a vinculação de dados nos Windows Forms, você exibirá dados no que é chamado de modo de exibição pai/filho ou detalhes/mestre. Isso se refere a um cenário de associação de dados em que os dados da mesma fonte são exibidos em dois controles. Alterar a seleção em um controle faz com que os dados exibidos no segundo controle mudem. Por exemplo, o primeiro controle pode conter uma lista de clientes e o segundo, uma lista de pedidos relacionada ao cliente selecionado no primeiro controle.  

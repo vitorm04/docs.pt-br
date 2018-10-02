@@ -3,11 +3,11 @@ title: Configurando serviços WCF em código
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037450"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurando serviços WCF em código
 Windows Communication Foundation (WCF) permite que os desenvolvedores configurem serviços usando arquivos de configuração ou código.  Os arquivos de configuração são úteis quando um serviço precisa ser configurado depois de ser implantado. Ao usar arquivos de configuração, um profissional de TI apenas precisa atualizar o arquivo de configuração, nenhuma recompilação é necessária. Os arquivos de configuração, porém, podem ser complexos e difíceis de manter. Não há suporte para depurar arquivos de configuração e os elementos de configuração são referenciados por nomes, o que torna os arquivos de configuração de criação sujeitos a erros e difíceis. O WCF também permite configurar serviços no código. Em versões anteriores da configuração dos serviços do WCF (4.0 e anterior) no código era fácil em cenários auto-hospedados, o <xref:System.ServiceModel.ServiceHost> classe permitido configurar pontos de extremidade e comportamentos antes de chamar ServiceHost. Em cenários de hospedado na web, no entanto, você não tem acesso direto para o <xref:System.ServiceModel.ServiceHost> classe. Para configurar um serviço Web hospedado, você precisava criar um `System.ServiceModel.ServiceHostFactory` que criou o <xref:System.ServiceModel.Activation.ServiceHostFactory> e executar qualquer configuração necessária. Começando com o .NET 4.5, o WCF fornece uma maneira mais fácil configurar ambos auto-hospedado e hospedado de web services em código.  

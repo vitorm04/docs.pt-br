@@ -2,12 +2,12 @@
 title: Atividade exteriorizada de política no .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503401"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48046624"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Atividade exteriorizada de política no .NET Framework 4.5
 
@@ -56,7 +56,7 @@ O designer ExternalizedPolicy4 permite que você configure uma atividade para us
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 e ExternalPolicy4
 
-O [atividade de política no .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) atividade permite que você crie e execute um conjunto de regras do .NET Framework 3.5 em um fluxo de trabalho WF 4,5. <xref:System.Workflow.Activities.Rules.RuleSet> é embutido serializado Policy4 na definição da atividade XAML. O exemplo ExternalizedPolicy4 mostra como usar <xref:System.Workflow.Activities.Rules.RuleSet> externo existente (contido em um arquivo de .rules).
+A atividade de política permite que você crie e execute um conjunto de regras do .NET Framework 3.5 em um fluxo de trabalho WF 4,5. <xref:System.Workflow.Activities.Rules.RuleSet> é embutido serializado Policy4 na definição da atividade XAML. O exemplo ExternalizedPolicy4 mostra como usar <xref:System.Workflow.Activities.Rules.RuleSet> externo existente (contido em um arquivo de .rules).
 
 ## <a name="use-this-sample"></a>Use este exemplo
 

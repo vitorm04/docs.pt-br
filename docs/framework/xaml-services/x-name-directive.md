@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863241"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035052"
 ---
 # <a name="xname-directive"></a>Diretiva x:Name
 Identifica os elementos definidos pelo XAML em um namescope XAML. Namescopes XAML e seus modelos de exclusividade podem ser aplicados para objetos instanciados, quando estruturas fornecem APIs ou implementam comportamentos que acesse o gráfico de objeto criado pelo XAML em tempo de execução.  

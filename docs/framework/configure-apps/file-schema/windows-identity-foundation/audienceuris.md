@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034474"
 ---
 # <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
 Especifica o conjunto de URIs que são aceitáveis identificadores da terceira parte confiável (RP). Não serão aceita tokens, a menos que eles estão no escopo para um dos URIs de audiência permitidas.  

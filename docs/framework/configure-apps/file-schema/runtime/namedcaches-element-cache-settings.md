@@ -9,11 +9,11 @@ ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: a74dfaf883ea23514c6bc4641d9d576f5baf10b4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028253"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt; (configurações de Cache)
 Especifica uma coleção de definições de configuração para nomeado <xref:System.Runtime.Caching.MemoryCache> instâncias. O <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> propriedade referencia a coleção de definições de configuração de um ou mais `namedCaches` elementos do arquivo de configuração.  

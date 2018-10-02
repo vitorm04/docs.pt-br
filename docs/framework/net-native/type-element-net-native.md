@@ -5,11 +5,11 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037463"
 ---
 # <a name="lttypegt-element-net-native"></a>Elemento &lt;Type&gt; (.NET Nativo)
 Aplica a política de tempo de execução a um tipo específico, como uma classe ou estrutura.  

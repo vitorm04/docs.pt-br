@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030266"
 ---
 # <a name="workflow-security"></a>Segurança de fluxo de trabalho
 Windows Workflow Foundation (WF) está integrado com várias tecnologias diferentes, como Microsoft SQL Server e Windows Communication Foundation (WCF). Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) está integrado com várias tecnologias diferen
 
 -   Pontos de extremidade do Windows Communication Foundation (WCF) usados em fluxos de trabalho devem ser protegidos. Para obter mais informações, consulte [visão geral de segurança do WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   Autorização do nível pode ser implementada usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Ver [How To: criar um Gerenciador de autorização personalizado para um serviço](https://go.microsoft.com/fwlink/?LinkId=192228) para obter detalhes. Isso também é demonstrado no exemplo a seguir: [protegendo serviços de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).
+-   Autorização do nível pode ser implementada usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Ver [How To: criar um Gerenciador de autorização personalizado para um serviço](https://go.microsoft.com/fwlink/?LinkId=192228) para obter detalhes.
 
 -   O ServiceSecurityContext para a mensagem de entrada também está disponível no fluxo de trabalho acessando OperationContext.
 

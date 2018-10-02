@@ -2,12 +2,12 @@
 title: Usando atividades do .NET Framework 3.0 WF no .NET Framework 4 com a atividade de Interoperabilidade
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029251"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Usando atividades do .NET Framework 3.0 WF no .NET Framework 4 com a atividade de Interoperabilidade
 A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 4,5 (WCF) que envolve uma atividade de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 3,5 (WCF) dentro de um fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] . A atividade de WF 3 pode ser uma única atividade de folha ou uma árvore inteira de atividades. A execução (incluindo de manipulação de exceção e cancelar) e persistência de atividade de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] ocorrem dentro do contexto da instância do fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que está executando.  
@@ -52,7 +52,4 @@ A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [
   
 3.  Os registros de rastreamento de WF 3 para atividades em uma atividade de <xref:System.Activities.Statements.Interop> são fornecidos para os participantes através de WF 4,5 como objetos de <xref:System.Activities.Tracking.InteropTrackingRecord> . <xref:System.Activities.Tracking.InteropTrackingRecord> é derivado de um <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  Uma atividade personalizado de WF 3 pode acessar dados usando filas de fluxo de trabalho no ambiente de interoperação exatamente a mesma forma como no tempo de execução do fluxo de trabalho WF 3. Nenhuma alteração de código personalizado de atividade é necessária. No host, os dados são enviados a fila para uma fila de fluxo de trabalho WF 3 continuando <xref:System.Activities.Bookmark>. O nome do marcador é a forma de cadeia de caracteres o nome da fila de fluxo de trabalho de <xref:System.IComparable> .  
-  
-## <a name="see-also"></a>Consulte também  
- [Usar uma atividade do .NET Framework 3.0 ou .NET Framework 3.5 em um fluxo de trabalho do .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  Uma atividade personalizado de WF 3 pode acessar dados usando filas de fluxo de trabalho no ambiente de interoperação exatamente a mesma forma como no tempo de execução do fluxo de trabalho WF 3. Nenhuma alteração de código personalizado de atividade é necessária. No host, os dados são enviados a fila para uma fila de fluxo de trabalho WF 3 continuando <xref:System.Activities.Bookmark>. O nome do marcador é a forma de cadeia de caracteres o nome da fila de fluxo de trabalho de <xref:System.IComparable> .

@@ -2,15 +2,15 @@
 title: Invocando a validação de atividades
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520169"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035130"
 ---
 # <a name="invoking-activity-validation"></a>Invocando a validação de atividades
-Validação de atividade fornece um método para identificar e relatar erros na configuração de quaisquer atividades antes da execução. A validação ocorre quando um trabalho são alterados no designer de trabalho e todos os erros ou avisos de validação são exibidos no designer de fluxo de trabalho. Validação também ocorre em tempo de execução quando um fluxo de trabalho é chamado e se qualquer erro de validação ocorre, <xref:System.Activities.InvalidWorkflowException> é acionada pela lógica padrão de validação. Windows Workflow Foundation (WF) fornece o <xref:System.Activities.Validation.ActivityValidationServices> classe que pode ser usada pelo aplicativo de fluxo de trabalho e os desenvolvedores de ferramentas para validar explicitamente uma atividade. Este tópico descreve como usar <xref:System.Activities.Validation.ActivityValidationServices> para executar a validação de atividade.  
+Validação de atividade fornece um método para identificar e relatar erros na configuração de quaisquer atividades antes da execução. A validação ocorre quando um trabalho são alterados no designer de trabalho e todos os erros ou avisos de validação são exibidos no designer de fluxo de trabalho. Validação também ocorre em tempo de execução quando um fluxo de trabalho é chamado e se qualquer erro de validação ocorre, <xref:System.Activities.InvalidWorkflowException> é acionada pela lógica padrão de validação. Windows Workflow Foundation (WF) fornece o <xref:System.Activities.Validation.ActivityValidationServices> classe que pode ser usada pelo aplicativo de fluxo de trabalho e os desenvolvedores de ferramentas validar explicitamente uma atividade. Este tópico descreve como usar <xref:System.Activities.Validation.ActivityValidationServices> para executar a validação de atividade.  
   
 ## <a name="using-activityvalidationservices"></a>Usando ActivityValidationServices  
  <xref:System.Activities.Validation.ActivityValidationServices> tem duas sobrecargas de <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> que são usadas para chamar a lógica de validação de uma atividade. A primeira sobrecarga toma a atividade raiz para ser validadas e retorna uma coleção de erros e avisos de validação. No exemplo a seguir, uma atividade de `Add` personalizado é usada que tem dois argumentos necessários.  
@@ -76,8 +76,8 @@ else
   
  Quando <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> é chamado esse fluxo de trabalho de exemplo, dois erros de validação são retornados.  
   
- **Erro: O valor de um argumento de atividade obrigatório 'Operando2' não foi fornecido.**  
-**Erro: O valor de um argumento de atividade obrigatório 'Operando1' não foi fornecido.**  Se esse fluxo de trabalho foi chamado, <xref:System.Activities.InvalidWorkflowException> seria acionada, conforme mostrado no exemplo o seguir.  
+ **Erro: O valor de um argumento necessário "operando2" de atividade não foi fornecido.**  
+**Erro: O valor de um argumento necessário "operando1" de atividade não foi fornecido.**  Se esse fluxo de trabalho foi chamado, <xref:System.Activities.InvalidWorkflowException> seria acionada, conforme mostrado no exemplo o seguir.  
   
 ```csharp  
 try  
@@ -91,9 +91,9 @@ catch (Exception ex)
 ```  
   
  **System.Activities.InvalidWorkflowException:**  
-**Os seguintes erros foram encontrados ao processar a árvore de fluxo de trabalho:**   
-**'Add': valor de um argumento de atividade obrigatório 'Operando2' não foi fornecido.**   
-**'Add': valor de um argumento de atividade obrigatório 'Operando1' não foi fornecido.**  Para que este fluxo de trabalho de exemplo é válida, os dois argumentos pré-requisito de atividade de `Add` devem ser associados. No exemplo a seguir, os dois argumentos são necessárias associados a variáveis de fluxo de trabalho juntamente com o valor de resultado. Nesse exemplo o argumento de <xref:System.Activities.Activity%601.Result%2A> está associado juntamente com os dois argumentos necessários. O argumento de <xref:System.Activities.Activity%601.Result%2A> não é necessário para ser associado e não causa um erro de validação se não é. É responsabilidade do autor de fluxo de trabalho associar <xref:System.Activities.Activity%601.Result%2A> se seu valor é usado em outro lugar no fluxo de trabalho.  
+**Os seguintes erros foram encontrados durante o processamento da árvore de fluxo de trabalho:**   
+**'Adicionar': valor de um argumento necessário "operando2" de atividade não foi fornecido.**   
+**'Adicionar': valor de um argumento necessário "operando1" de atividade não foi fornecido.**  Para que este fluxo de trabalho de exemplo é válida, os dois argumentos pré-requisito de atividade de `Add` devem ser associados. No exemplo a seguir, os dois argumentos são necessárias associados a variáveis de fluxo de trabalho juntamente com o valor de resultado. Nesse exemplo o argumento de <xref:System.Activities.Activity%601.Result%2A> está associado juntamente com os dois argumentos necessários. O argumento de <xref:System.Activities.Activity%601.Result%2A> não é necessário para ser associado e não causa um erro de validação se não é. É responsabilidade do autor de fluxo de trabalho associar <xref:System.Activities.Activity%601.Result%2A> se seu valor é usado em outro lugar no fluxo de trabalho.  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System. ArgumentException: Configurações do argumento da atividade raiz estão incorretas.**  
-**Corrija a definição de fluxo de trabalho ou fornecer valores de entrada para corrigir estes erros:**   
-**'Add': valor de um argumento de atividade obrigatório 'Operando2' não foi fornecido.**   
-**'Add': valor de um argumento de atividade obrigatório 'Operando1' não foi fornecido.**  Após os argumentos corretos são passados, o fluxo de trabalho concluída com sucesso, conforme mostrado no exemplo o seguir.  
+ **System. ArgumentException: As configurações do argumento da atividade raiz estão incorretas.**  
+**Corrija a definição de fluxo de trabalho ou forneça valores de entrada para corrigir esses erros:**   
+**'Adicionar': valor de um argumento necessário "operando2" de atividade não foi fornecido.**   
+**'Adicionar': valor de um argumento necessário "operando1" de atividade não foi fornecido.**  Após os argumentos corretos são passados, o fluxo de trabalho concluída com sucesso, conforme mostrado no exemplo o seguir.  
   
 ```csharp  
 Add wf = new Add();  
@@ -152,12 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  Nesse exemplo, a atividade de raiz ter sido declarada como `Add` em vez de `Activity` como no exemplo anterior. Isso permite que o método de `WorkflowInvoker.Invoke` retorna um único número inteiro que representa os resultados de atividade de `Add` em vez de um dicionário de argumentos de `out` . `wf` variável pode também ter sido declarado como `Activity<int>`.  
+> Nesse exemplo, a atividade de raiz ter sido declarada como `Add` em vez de `Activity` como no exemplo anterior. Isso permite que o método de `WorkflowInvoker.Invoke` retorna um único número inteiro que representa os resultados de atividade de `Add` em vez de um dicionário de argumentos de `out` . `wf` variável pode também ter sido declarado como `Activity<int>`.  
   
  Para validar argumentos de raiz, é responsabilidade do aplicativo host garantir que todos os argumentos necessários são passados quando o fluxo de trabalho é chamado.  
   
-### <a name="invoking-imperative-code-based-validation"></a>Invocando a validação classe base imperativa  
- A validação classe base imperativa fornece uma maneira simples para uma atividade fornece validação sobre se, e está disponível para as atividades que derivam de <xref:System.Activities.CodeActivity>, de <xref:System.Activities.AsyncCodeActivity>, e de <xref:System.Activities.NativeActivity>. O código de validação que determina os erros ou avisos de validação é adicionado à atividade. Quando a validação é chamada na atividade, esses erros ou avisos estão contidos na coleção retornada pela chamada a <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. No exemplo a seguir, retirado de [validação básica](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md) exemplo, um `CreateProduct` atividade está definida. Se `Cost` é maior do que `Price`, um erro de validação é adicionado aos metadados em uma substituição de <xref:System.Activities.CodeActivity.CacheMetadata%2A> .  
+### <a name="invoking-imperative-code-based-validation"></a>Invocando a validação classe base imperativa
+
+A validação classe base imperativa fornece uma maneira simples para uma atividade fornece validação sobre se, e está disponível para as atividades que derivam de <xref:System.Activities.CodeActivity>, de <xref:System.Activities.AsyncCodeActivity>, e de <xref:System.Activities.NativeActivity>. O código de validação que determina os erros ou avisos de validação é adicionado à atividade. Quando a validação é chamada na atividade, esses erros ou avisos estão contidos na coleção retornada pela chamada a <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. No exemplo a seguir, uma atividade de `CreateProduct` é definida. Se `Cost` é maior do que `Price`, um erro de validação é adicionado aos metadados em uma substituição de <xref:System.Activities.CodeActivity.CacheMetadata%2A> .  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -228,7 +229,7 @@ else
 ```  
   
  **Erro: O custo deve ser menor ou igual ao preço.**  
-**Erro: O valor de um argumento de atividade obrigatório 'Description' não foi fornecido.**    
+**Erro: O valor de um argumento de atividade 'Description' não foi fornecido.**    
 > [!NOTE]
 >  Os autores de atividade personalizados podem fornecer a lógica de validação em uma substituição de <xref:System.Activities.CodeActivity.CacheMetadata%2A> de uma atividade. Nenhuma exceções que são geradas de <xref:System.Activities.CodeActivity.CacheMetadata%2A> não são tratados como erros de validação. Essas exceções escaparão de chamada para <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> e devem ser tratadas pelo chamador.  
   
@@ -303,4 +304,4 @@ else
   
  Este código exibe a saída a seguir:  
   
- **Nenhum aviso ou erro** , embora o `Add` atividade exigiu argumentos que não estão associados, a validação for bem-sucedida, porque somente a atividade raiz é avaliada. Esse tipo de validação é útil para validar somente os elementos específicos em uma árvore de atividade, como validação de uma alteração de propriedade de uma única atividade em um designer. Observe que se esse fluxo de trabalho é chamado, a validação completa configurado no fluxo de trabalho é avaliado e <xref:System.Activities.InvalidWorkflowException> será lançada. <xref:System.Activities.Validation.ActivityValidationServices> e configurar <xref:System.Activities.Validation.ValidationSettings> somente validação chamada explicitamente pelo host, e não a validação que ocorre quando um fluxo de trabalho é chamado.
+ **Nenhum aviso ou erro** mesmo que o `Add` atividade requer argumentos que não são associados, a validação é bem-sucedida pois somente a atividade raiz é avaliada. Esse tipo de validação é útil para validar somente os elementos específicos em uma árvore de atividade, como validação de uma alteração de propriedade de uma única atividade em um designer. Observe que se esse fluxo de trabalho é chamado, a validação completa configurado no fluxo de trabalho é avaliado e <xref:System.Activities.InvalidWorkflowException> será lançada. <xref:System.Activities.Validation.ActivityValidationServices> e configurar <xref:System.Activities.Validation.ValidationSettings> somente validação chamada explicitamente pelo host, e não a validação que ocorre quando um fluxo de trabalho é chamado.
