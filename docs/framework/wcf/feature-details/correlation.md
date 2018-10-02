@@ -2,12 +2,12 @@
 title: Correlação
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: e72f462a9b8777fbeadb306c7fea8354f64ffe8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6d02b95bcf735d42cca2b51167e21a6a091add1c
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025169"
 ---
 # <a name="correlation"></a>Correlação
 Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros serviços, é importante que as mensagens entre eles são expedidas para a instância de fluxo de trabalho apropriado. Correlação fornece o mecanismo para isso. Os tópicos nesta seção fornecem uma visão geral de correlação e como usá-lo em cenários de serviço de fluxo de trabalho diferente.  
@@ -26,9 +26,8 @@ Quando os aplicativos de serviço de fluxo de trabalho se comunicam com outros s
  Fornece métodos para correlação de solução de problemas.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activities.CorrelationHandle>  
- <xref:System.ServiceModel.Activities.Send>  
- <xref:System.ServiceModel.Activities.Receive>  
- <xref:System.ServiceModel.CorrelationQuery>  
- [Correlação baseada em conteúdo](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [Calculadora correlacionada](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)
+
+- <xref:System.ServiceModel.Activities.CorrelationHandle>  
+- <xref:System.ServiceModel.Activities.Send>  
+- <xref:System.ServiceModel.Activities.Receive>  
+- <xref:System.ServiceModel.CorrelationQuery>  

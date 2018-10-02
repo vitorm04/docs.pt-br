@@ -3,11 +3,11 @@ title: Comparando serviços Web do ASP.NET ao WCF com base na finalidade e nos p
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
 ms.openlocfilehash: 9ceb28fece3cc17aa4ac2329dc101eac8e89bd77
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025393"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>Comparando serviços Web do ASP.NET ao WCF com base na finalidade e nos padrões usados
 Serviços Web do ASP.NET foi desenvolvido para a criação de aplicativos que enviam e recebem mensagens usando o SOAP Simple Object Access Protocol () em HTTP. A estrutura das mensagens pode ser definida usando um esquema XML, e uma ferramenta é fornecida para facilitar a serializar as mensagens para e de objetos do .NET Framework. A tecnologia pode gerar automaticamente os metadados para descrever serviços Web na descrição de linguagem WSDL (Web Services) e uma segunda ferramenta é fornecida para a geração de clientes para serviços Web do WSDL.  

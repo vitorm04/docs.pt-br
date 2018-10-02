@@ -2,12 +2,12 @@
 title: Correlação de solução de problemas
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027917"
 ---
 # <a name="troubleshooting-correlation"></a>Correlação de solução de problemas
 Correlação é usada para relacionar mensagens do serviço de fluxo de trabalho entre si e com a instância de fluxo de trabalho correto, mas se ele não está configurado corretamente, as mensagens não serão recebidas e aplicativos não funcionarão corretamente. Este tópico fornece uma visão geral dos vários métodos para solução de problemas de correlação e também lista alguns problemas comuns que podem ocorrer quando você usa a correlação.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Um participante de rastreamento, como o ConsoleTrackingParticipant é útil para serviços de fluxo de trabalho auto-hospedado que têm uma janela do console. Para um serviço hospedado na Web, um participante de rastreamento que registra as informações de rastreamento em um repositório durável deve ser usado, como a conta interna <xref:System.Activities.Tracking.EtwTrackingParticipant>, ou um participante de acompanhamento personalizado que registra as informações em um arquivo, como o `TextWriterTrackingParticpant` do [ Usando um arquivo de texto de controle](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) exemplo.
+ Um participante de rastreamento, como o ConsoleTrackingParticipant é útil para serviços de fluxo de trabalho auto-hospedado que têm uma janela do console. Para um serviço hospedado na Web, um participante de rastreamento que registra as informações de rastreamento em um repositório durável deve ser usado, como a conta interna <xref:System.Activities.Tracking.EtwTrackingParticipant>, ou um participante de acompanhamento personalizado que registra as informações em um arquivo.
 
  Para obter mais informações sobre o acompanhamento e configurando o rastreamento para um serviço de fluxo de trabalho hospedados na Web, consulte [fluxo de trabalho, controle e rastreamento](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Configurando o rastreamento para um fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)e o [ Controle &#91;exemplos do WF&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) exemplos.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Isso pode ser confirmado ao examinar o corpo da mensagem.
+Isso pode ser confirmado ao examinar o corpo da mensagem.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- A exemplo a seguir mostra uma <xref:System.ServiceModel.Activities.Receive> atividade configurada para um `AddItem` operação que usa o contrato de mensagem anterior para receber dados. A consulta XPath está configurada corretamente.
+A exemplo a seguir mostra uma <xref:System.ServiceModel.Activities.Receive> atividade configurada para um `AddItem` operação que usa o contrato de mensagem anterior para receber dados. A consulta XPath está configurada corretamente.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Para obter mais informações sobre a correlação conteudo base, consulte o [Calculadora correlacionada](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) exemplo.

@@ -9,11 +9,11 @@ ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: cab684ba9ceea392b245f04a9613832e1e262eab
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025578"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle Separator
 > [!NOTE]

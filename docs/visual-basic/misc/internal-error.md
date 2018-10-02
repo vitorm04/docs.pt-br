@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID51
 ms.assetid: 21266dbb-f4a1-4c5d-a646-27909cf53248
 ms.openlocfilehash: 219f7b31beec468a7d3e14e750a7163831f58548
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025474"
 ---
 # <a name="internal-error-visual-basic"></a>Erro interno (Visual Basic)
 Um mau funcionamento interno ocorreu no Visual Basic.  

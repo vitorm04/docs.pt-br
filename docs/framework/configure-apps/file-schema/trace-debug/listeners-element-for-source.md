@@ -10,11 +10,11 @@ ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027803"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;ouvintes&gt; elemento para &lt;fonte&gt;
 Adiciona ou remove os ouvintes na <xref:System.Diagnostics.TraceSource.Listeners%2A> coleção para um <xref:System.Diagnostics.TraceSource>. Um ouvinte direciona a saída de rastreamento para um destino apropriado, como um log, a janela ou o arquivo de texto.  

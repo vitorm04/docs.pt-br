@@ -2,12 +2,12 @@
 title: Criando uma atividade em tempo de execução com o DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515167"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027358"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Criando uma atividade em tempo de execução com o DynamicActivity
 <xref:System.Activities.DynamicActivity> é um concreto, classe lacradas com um construtor público. <xref:System.Activities.DynamicActivity> pode ser usado para reunir a funcionalidade de atividade em tempo de execução usando os DOM de uma atividade.  
@@ -23,9 +23,9 @@ ms.locfileid: "33515167"
   
 1.  Abra[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Selecione **arquivo**, **novo**, **projeto**. Selecione **Workflow 4.0** em **Visual C#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **aplicativo de Console de fluxo de trabalho sequencial** no **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
+2.  Selecione **arquivo**, **novos**, **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **Sequential Workflow Console Application** na **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
   
-3.  Workflow1.xaml no projeto HelloActivity e selecione **excluir**.  
+3.  Botão direito do mouse Workflow1.xaml no projeto de HelloActivity e selecione **excluir**.  
   
 4.  Abra Module.vb. Adicione a seguinte diretiva para a parte superior do arquivo.  
   
@@ -66,17 +66,17 @@ ms.locfileid: "33515167"
                 Console.ReadLine();  
     ```  
   
-6.  Executar o aplicativo. Uma janela de console com o texto "Olá, mundo!" Exibe.  
+6.  Executar o aplicativo. Uma janela de console com o texto "Hello World!" Exibe.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Para criar uma atividade em tempo de execução usando XAML  
   
 1.  Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
   
-2.  Selecione **arquivo**, **novo**, **projeto**. Selecione **Workflow 4.0** em **Visual C#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **aplicativo de Console do fluxo de trabalho** no **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
+2.  Selecione **arquivo**, **novos**, **projeto**. Selecione **Workflow 4.0** sob **Visual c#** no **tipos de projeto** janela e selecione o **v2010** nó. Selecione **aplicativo de Console do fluxo de trabalho** na **modelos** janela. Nomeie o novo projeto DynamicActivitySample.  
   
 3.  Workflow1.xaml aberto no projeto de HelloActivity. Clique o **argumentos** opção na parte inferior do designer. Crie um novo argumento de `In` chamado `TextToWrite` de tipo `String`.  
   
-4.  Arraste um **WriteLine** atividade a partir de **primitivos** seção da caixa de ferramentas para a superfície de designer. Atribuir o valor `TextToWrite` para o **texto** propriedade da atividade.  
+4.  Arraste uma **WriteLine** atividade da **primitivos** seção da caixa de ferramentas na superfície do designer. Atribua o valor `TextToWrite` para o **texto** propriedade da atividade.  
   
 5.  Abra Module.vb. Adicione a seguinte diretiva para a parte superior do arquivo.  
   
@@ -92,10 +92,10 @@ ms.locfileid: "33515167"
     Console.ReadLine();  
     ```  
   
-7.  Executar o aplicativo. Uma janela de console com o texto "Olá, mundo!" é exibida.  
+7.  Executar o aplicativo. Uma janela de console com o texto "Hello World!" é exibida.  
   
-8.  Clique no arquivo Workflow1.xaml no **Solution Explorer** e selecione **Exibir código**. Observe que a classe da atividade é criada com `x:Class` e a propriedade é criada com `x:Property`.  
+8.  Clique no arquivo de Workflow1.xaml na **Gerenciador de soluções** e selecione **Exibir código**. Observe que a classe da atividade é criada com `x:Class` e a propriedade é criada com `x:Property`.  
   
-## <a name="see-also"></a>Consulte também  
- [Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [Criação de DynamicActivity](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+## <a name="see-also"></a>Consulte também
+
+- [Criando fluxos de trabalho, atividades e expressões de design usando o código obrigatório](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
