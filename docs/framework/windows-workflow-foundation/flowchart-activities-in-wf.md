@@ -15,8 +15,7 @@ ms.locfileid: "33511609"
 |||  
 |-|-|  
 |<xref:System.Activities.Statements.Flowchart>|Executes continha atividades usando o paradigma familiar do fluxograma.|  
-|<xref:System.Activities.Statements.FlowDecision>|
-          <xref:System.Activities.Statements.FlowNode> especializado que fornece a capacidade de modelagem um nó condicional com dois resultados.|  
+|<xref:System.Activities.Statements.FlowDecision>|<xref:System.Activities.Statements.FlowNode> especializado que fornece a capacidade de modelagem um nó condicional com dois resultados.|  
 |<xref:System.Activities.Statements.FlowSwitch%601>|<xref:System.Activities.Statements.FlowNode> especializado que permite a modelagem uma compilação de opção, com uma expressão de um tipo definido no especificador de tipo de atividade e um único resultado para cada correspondência.|  
   
 ## <a name="see-also"></a>Consulte também  
