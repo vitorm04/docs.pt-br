@@ -3,11 +3,11 @@ title: Asserções (F#)
 description: "Saiba como usar a expressão 'Declare' como um recurso de depuração para testar expressões na linguagem de programação F #."
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034304"
 ---
 # <a name="assertions"></a>Asserções
 
