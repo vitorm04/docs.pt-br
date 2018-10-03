@@ -15,7 +15,7 @@ ms.lasthandoff: 10/02/2018
 ms.locfileid: "48037424"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos em controles dos Windows Forms
-O .NET Framework fornece uma variedade de atributos que podem se aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  
+O .NET Framework fornece uma variedade de atributos que podem ser aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Atributos de propriedades de controles e componentes  
  A tabela a seguir mostra os atributos que podem ser aplicados a propriedades ou outros membros de seus controles e componentes personalizados. Para ver um exemplo que usa muitos desses atributos, consulte [Como aplicar atributos a controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
