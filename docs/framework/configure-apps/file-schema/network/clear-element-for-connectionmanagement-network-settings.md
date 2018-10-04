@@ -13,49 +13,49 @@ ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235920"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244809"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="4dc18-102">&lt;Limpar&gt; elemento para connectionManagement (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="4dc18-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
-<span data-ttu-id="4dc18-103">Limpa a lista de gerenciamento de conexão.</span><span class="sxs-lookup"><span data-stu-id="4dc18-103">Clears the connection management list.</span></span>  
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="d7ebc-102">&lt;Limpar&gt; elemento para connectionManagement (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="d7ebc-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
+<span data-ttu-id="d7ebc-103">Limpa a lista de gerenciamento de conexão.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-103">Clears the connection management list.</span></span>  
   
- <span data-ttu-id="4dc18-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="4dc18-104">\<configuration></span></span>  
-<span data-ttu-id="4dc18-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="4dc18-105">\<system.net></span></span>  
-<span data-ttu-id="4dc18-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="4dc18-106">\<connectionManagement></span></span>  
-<span data-ttu-id="4dc18-107">\<Limpar ></span><span class="sxs-lookup"><span data-stu-id="4dc18-107">\<clear></span></span>  
+ <span data-ttu-id="d7ebc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="d7ebc-104">\<configuration></span></span>  
+<span data-ttu-id="d7ebc-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="d7ebc-105">\<system.net></span></span>  
+<span data-ttu-id="d7ebc-106">\<connectionManagement ></span><span class="sxs-lookup"><span data-stu-id="d7ebc-106">\<connectionManagement></span></span>  
+<span data-ttu-id="d7ebc-107">\<Limpar ></span><span class="sxs-lookup"><span data-stu-id="d7ebc-107">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4dc18-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4dc18-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7ebc-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d7ebc-108">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4dc18-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="4dc18-109">Attributes and Elements</span></span>  
- <span data-ttu-id="4dc18-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="4dc18-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d7ebc-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="d7ebc-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="d7ebc-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4dc18-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="4dc18-111">Attributes</span></span>  
- <span data-ttu-id="4dc18-112">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="4dc18-112">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d7ebc-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="d7ebc-111">Attributes</span></span>  
+ <span data-ttu-id="d7ebc-112">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-112">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="4dc18-113">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="4dc18-113">Child Elements</span></span>  
- <span data-ttu-id="4dc18-114">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="4dc18-114">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d7ebc-113">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="d7ebc-113">Child Elements</span></span>  
+ <span data-ttu-id="d7ebc-114">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4dc18-115">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="4dc18-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d7ebc-115">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="d7ebc-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="4dc18-116">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="4dc18-116">**Element**</span></span>|<span data-ttu-id="4dc18-117">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="4dc18-117">**Description**</span></span>|  
+|<span data-ttu-id="d7ebc-116">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="d7ebc-116">**Element**</span></span>|<span data-ttu-id="d7ebc-117">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="d7ebc-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="4dc18-118">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="4dc18-118">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="4dc18-119">Especifica o número máximo de conexões para um host de rede.</span><span class="sxs-lookup"><span data-stu-id="4dc18-119">Specifies the maximum number of connections to a network host.</span></span>|  
+|[<span data-ttu-id="d7ebc-118">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="d7ebc-118">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="d7ebc-119">Especifica o número máximo de conexões para um host de rede.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-119">Specifies the maximum number of connections to a network host.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4dc18-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="4dc18-120">Remarks</span></span>  
- <span data-ttu-id="4dc18-121">O `clear` elemento limpa todas as entradas da lista de gerenciamento de conexão.</span><span class="sxs-lookup"><span data-stu-id="4dc18-121">The `clear` element clears all entries from the connection management list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d7ebc-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="d7ebc-120">Remarks</span></span>  
+ <span data-ttu-id="d7ebc-121">O `clear` elemento limpa todas as entradas da lista de gerenciamento de conexão.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-121">The `clear` element clears all entries from the connection management list.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="4dc18-122">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="4dc18-122">Configuration Files</span></span>  
- <span data-ttu-id="4dc18-123">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="4dc18-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="d7ebc-122">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="d7ebc-122">Configuration Files</span></span>  
+ <span data-ttu-id="d7ebc-123">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="d7ebc-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4dc18-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4dc18-124">Example</span></span>  
- <span data-ttu-id="4dc18-125">O exemplo a seguir limpa a lista de gerenciamento de conexão e, em seguida, adiciona novas entradas de gerenciamento de conexão para o servidor www.contoso.com e todos os outros hosts de rede.</span><span class="sxs-lookup"><span data-stu-id="4dc18-125">The following example clears the connection management list and then adds new connection management entries for the server www.contoso.com and all other network hosts.</span></span>  
+## <a name="example"></a><span data-ttu-id="d7ebc-124">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d7ebc-124">Example</span></span>  
+ <span data-ttu-id="d7ebc-125">O exemplo a seguir limpa a lista de gerenciamento de conexão e, em seguida, adiciona novas entradas de gerenciamento de conexão para o servidor www.contoso.com e todos os outros hosts de rede.</span><span class="sxs-lookup"><span data-stu-id="d7ebc-125">The following example clears the connection management list and then adds new connection management entries for the server www.contoso.com and all other network hosts.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,7 +69,7 @@ ms.locfileid: "47235920"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4dc18-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4dc18-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d7ebc-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d7ebc-126">See Also</span></span>  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
- [<span data-ttu-id="4dc18-127">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="4dc18-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="d7ebc-127">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="d7ebc-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
