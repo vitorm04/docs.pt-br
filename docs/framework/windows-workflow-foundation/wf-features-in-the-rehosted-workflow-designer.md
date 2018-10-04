@@ -2,106 +2,106 @@
 title: Suporte para novas Funcionalidades do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c6f6c6baedba0c932472a087d378ccce90b60db7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800629"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266724"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novas Funcionalidades do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
-Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos novos recursos, incluindo vários aprimoramentos à experiência de designer do fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.  
-  
+Windows Workflow Foundation (WF) no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduziu muitos novos recursos, incluindo vários aprimoramentos à experiência de designer do fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
+
 > [!NOTE]
->  Para obter uma lista de todos os novos recursos do Windows Workflow Foundation (WF) introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluindo aqueles que estão relacionadas ao designer que rehosting, consulte [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
-  
-## <a name="activities"></a>Atividades  
- A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes. Todas essas novas atividades têm suporte no designer hospedado novamente. Para obter mais informações sobre essas novas atividades, consulte o [atividades](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) seção [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
-  
-## <a name="c-expressions"></a>Expressões C#  
- Antes do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todas as expressões em fluxos de trabalho podiam ser escritas no Visual Basic. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões do Visual Basic são usadas apenas para os projetos criados usando o Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Ao criar fluxos de trabalho no [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], um editor de expressão C# completamente funcional é fornecido com recursos como realce de gramática e intellisense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.  
-  
+>  Para obter uma lista de todos os novos recursos do Windows Workflow Foundation (WF) introduzidos no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluindo aqueles que estão relacionadas ao designer que rehosting, consulte [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+
+## <a name="activities"></a>Atividades
+ A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes. Todas essas novas atividades têm suporte no designer hospedado novamente. Para obter mais informações sobre essas novas atividades, consulte o [atividades](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) seção [o que há de novo no Windows Workflow Foundation no .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).
+
+## <a name="c-expressions"></a>Expressões C#
+ Antes do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todas as expressões em fluxos de trabalho podiam ser escritas no Visual Basic. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as expressões do Visual Basic são usadas apenas para os projetos criados usando o Visual Basic. Os projetos do Visual C# agora usam o C# para expressões. Ao criar fluxos de trabalho no Visual Studio 2012, um editor de expressão c# completamente funcional é fornecido com recursos como realce de gramática e intellisense. Os projetos do fluxo de trabalho C# criados em versões anteriores que usam expressões do Visual Basic continuarão funcionando.
+
 > [!WARNING]
->  As expressões C# não têm suporte no designer hospedado novamente.  
-  
-## <a name="new-designer-capabilities"></a>Novos recursos do designer  
-  
-### <a name="designer-search"></a>Pesquisa do designer  
- O [localização rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) recursos introduzidos com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] não têm suporte no designer hospedado novamente. A pesquisa de `Toolbox` tem suporte no designer hospedado novamente. Para obter mais informações sobre esses recursos, consulte [Designer de pesquisa](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).  
-  
+>  As expressões C# não têm suporte no designer hospedado novamente.
+
+## <a name="new-designer-capabilities"></a>Novos recursos do designer
+
+### <a name="designer-search"></a>Pesquisa do designer
+ O [localização rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) recursos introduzidos com [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] não têm suporte no designer hospedado novamente. A pesquisa de `Toolbox` tem suporte no designer hospedado novamente. Para obter mais informações sobre esses recursos, consulte [Designer de pesquisa](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+
 > [!WARNING]
->  [Localização rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) não têm suporte no designer hospedado novamente.  
-  
-### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Excluir item de menu de contexto no designer de argumento e variável  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as variáveis e os argumentos podem ser excluídos com o menu de contexto. Esse recurso tem suporte no designer hospedado novamente.  
-  
- A captura de tela a seguir mostra o menu de contexto do designer de variável e argumento.  
-  
- ![Variável e o Menu de contexto do Designer do argumento](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
-  
-### <a name="auto-surround-with-sequence"></a>Envolvimento automático com sequência  
- Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ao adicionar uma segunda atividade para a superfície do designer, uma atividade de `Sequence` será criada automaticamente para incluir as duas atividades. Esse recurso tem suporte no designer hospedado novamente.  
-  
- A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.  
-  
- ![Automático&#45;coloque o local de destino](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
-  
- A captura de tela a seguir mostra a atividade de `Sequence` criada automaticamente no `Body` quando um segundo `WriteLine` é solto abaixo do primeiro.  
-  
- ![Atividade de sequência criada automaticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
-  
-### <a name="pan-mode"></a>Modo panorâmico  
- Para navegar mais facilmente um grande fluxo de trabalho no designer, o modo panorâmico pode ser habilitado, permitindo que o desenvolvedor clique e arraste para mover a parte visível do fluxo de trabalho, em vez de precisar usar as barras de rolagem. O botão para ativar o modo de superfície está no canto inferior direito do designer. Esse recurso tem suporte no designer hospedado novamente.  
-  
- A captura de tela a seguir mostra o botão de panorâmica qual está localizado no canto inferior direito do designer de fluxo de trabalho.  
-  
- ![Botão de panorâmica no designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")  
-  
- O botão do meio do mouse ou a barra de espaço também podem ser usados para executar uma panorâmica do designer de fluxo de trabalho.  
-  
-### <a name="multi-select"></a>Multisseleção  
- Várias atividades podem ser selecionadas ao mesmo tempo, arrastando um retângulo ao redor delas (quando o modo panorâmico não está habilitado), ou mantendo pressionada a tecla CTRL e clicando nas atividades desejadas. Esse recurso tem suporte no designer hospedado novamente.  
-  
- Várias seleções de atividade também podem ser arrastadas e soltadas dentro do designer, e também podem ser interagidas usando o menu de contexto.  
-  
-### <a name="outline-view-of-workflow-items"></a>Exibição de destaque de itens de fluxo de trabalho  
- Para facilitar a navegação de fluxos de trabalho hierárquicos, os componentes de um fluxo de trabalho são mostrados em uma exibição de destaque em estilo de árvore. O modo de exibição de estrutura de tópicos é exibido na **Document Outline** modo de exibição. Para abrir este modo de exibição no Visual Studio, no menu superior, selecione **modo de exibição**, **Other Windows**, **Document Outline**, ou pressione Ctrl W, U. Clicar em um nó na exibição de destaque navegará para a atividade correspondente no designer de fluxo de trabalho, e a exibição da estrutura será atualizada para mostrar as atividades que estão selecionadas no designer. Esse recurso tem suporte no designer hospedado novamente.  
-  
- A seguinte captura de tela de fluxo de trabalho concluído do [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) mostra a exibição de estrutura de tópicos com um fluxo de trabalho sequencial.  
-  
- ![Modo de exibição no Designer de fluxo de trabalho de estrutura de tópicos](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
-  
-### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Mais controle da visibilidade da barra de shell e dos itens de cabeçalho  
- Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a visibilidade dos itens de cabeçalho do shell na parte superior do designer pode ser ajustada definindo o <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o valor apropriado <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.  
-  
-### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Conexão automática e inserção automática em fluxograma e fluxos de trabalho de máquina de estado  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os nós de fluxograma e da máquina de estado têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas na superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.  
-  
- A captura de tela a seguir mostra os pontos de anexação que ficam visíveis quando uma atividade é arrastada da caixa de ferramentas.  
-  
- ![Nó de início de fluxograma mostrando pontos de conexão automática](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
-  
- As atividades também podem ser arrastadas em conexões entre nós de fluxograma e estados para inserção automática do nó entre dois outros nós. A captura de tela a seguir mostra a linha de conexão realçada em que as atividades podem ser arrastadas da caixa de ferramentas e soltas.  
-  
- ![Automático&#45;inserir um identificador para soltar atividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
-  
- A conexão automática e a inserção automática têm suporte no designer hospedado novamente.  
-  
-### <a name="designer-annotations"></a>Anotações do designer  
- Para facilitar o desenvolvimento de fluxos de trabalho maiores, o designer agora permite adicionar anotações para ajudar a controlar o processo de design. A anotação pode ser adicionada a atividades, estados, nós de fluxograma, variáveis e argumentos. A captura de tela a seguir mostra o menu de contexto usado para adicionar anotações para o designer.  
-  
- ![Menu de contexto de anotação](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")  
-  
- As anotações do designer não têm suporte no designer hospedado novamente.  
-  
-### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definir e consumir objetos ActivityDelegate no designer  
- As atividades no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] usavam objetos <xref:System.Activities.ActivityDelegate> para expor pontos de execução onde outras partes do fluxo de trabalho podiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução necessários geralmente exigia uma grande quantidade de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, consulte [como: definir e consumir representantes de atividade no Designer de fluxo de trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).  
-  
- Os delegados de atividade não têm suporte no designer hospedado novamente.  
-  
-### <a name="build-time-validation"></a>Validação de tempo de compilação  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os erros de validação do fluxo de trabalho causam a falha na compilação.  
-  
+>  [Localização rápida](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localizar nos arquivos](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) não têm suporte no designer hospedado novamente.
+
+### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Excluir item de menu de contexto no designer de argumento e variável
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as variáveis e os argumentos podem ser excluídos com o menu de contexto. Esse recurso tem suporte no designer hospedado novamente.
+
+ A captura de tela a seguir mostra o menu de contexto do designer de variável e argumento.
+
+ ![Variável e o Menu de contexto do Designer do argumento](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+
+### <a name="auto-surround-with-sequence"></a>Envolvimento automático com sequência
+ Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ao adicionar uma segunda atividade para a superfície do designer, uma atividade de `Sequence` será criada automaticamente para incluir as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
+
+ A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.
+
+ ![Automático&#45;coloque o local de destino](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+
+ A captura de tela a seguir mostra a atividade de `Sequence` criada automaticamente no `Body` quando um segundo `WriteLine` é solto abaixo do primeiro.
+
+ ![Atividade de sequência criada automaticamente](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+
+### <a name="pan-mode"></a>Modo panorâmico
+ Para navegar mais facilmente um grande fluxo de trabalho no designer, o modo panorâmico pode ser habilitado, permitindo que o desenvolvedor clique e arraste para mover a parte visível do fluxo de trabalho, em vez de precisar usar as barras de rolagem. O botão para ativar o modo de superfície está no canto inferior direito do designer. Esse recurso tem suporte no designer hospedado novamente.
+
+ A captura de tela a seguir mostra o botão de panorâmica qual está localizado no canto inferior direito do designer de fluxo de trabalho.
+
+ ![Botão de panorâmica no designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+
+ O botão do meio do mouse ou a barra de espaço também podem ser usados para executar uma panorâmica do designer de fluxo de trabalho.
+
+### <a name="multi-select"></a>Multisseleção
+ Várias atividades podem ser selecionadas ao mesmo tempo, arrastando um retângulo ao redor delas (quando o modo panorâmico não está habilitado), ou mantendo pressionada a tecla CTRL e clicando nas atividades desejadas. Esse recurso tem suporte no designer hospedado novamente.
+
+ Várias seleções de atividade também podem ser arrastadas e soltadas dentro do designer, e também podem ser interagidas usando o menu de contexto.
+
+### <a name="outline-view-of-workflow-items"></a>Exibição de destaque de itens de fluxo de trabalho
+ Para facilitar a navegação de fluxos de trabalho hierárquicos, os componentes de um fluxo de trabalho são mostrados em uma exibição de destaque em estilo de árvore. O modo de exibição de estrutura de tópicos é exibido na **Document Outline** modo de exibição. Para abrir este modo de exibição no Visual Studio, no menu superior, selecione **modo de exibição**, **Other Windows**, **Document Outline**, ou pressione Ctrl W, U. Clicar em um nó na exibição de destaque navegará para a atividade correspondente no designer de fluxo de trabalho, e a exibição da estrutura será atualizada para mostrar as atividades que estão selecionadas no designer. Esse recurso tem suporte no designer hospedado novamente.
+
+ A seguinte captura de tela de fluxo de trabalho concluído do [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) mostra a exibição de estrutura de tópicos com um fluxo de trabalho sequencial.
+
+ ![Modo de exibição no Designer de fluxo de trabalho de estrutura de tópicos](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+
+### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Mais controle da visibilidade da barra de shell e dos itens de cabeçalho
+ Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a visibilidade dos itens de cabeçalho do shell na parte superior do designer pode ser ajustada definindo o <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o valor apropriado <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.
+
+### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Conexão automática e inserção automática em fluxograma e fluxos de trabalho de máquina de estado
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os nós de fluxograma e da máquina de estado têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas na superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
+
+ A captura de tela a seguir mostra os pontos de anexação que ficam visíveis quando uma atividade é arrastada da caixa de ferramentas.
+
+ ![Nó de início de fluxograma mostrando pontos de conexão automática](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+
+ As atividades também podem ser arrastadas em conexões entre nós de fluxograma e estados para inserção automática do nó entre dois outros nós. A captura de tela a seguir mostra a linha de conexão realçada em que as atividades podem ser arrastadas da caixa de ferramentas e soltas.
+
+ ![Automático&#45;inserir um identificador para soltar atividades](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")
+
+ A conexão automática e a inserção automática têm suporte no designer hospedado novamente.
+
+### <a name="designer-annotations"></a>Anotações do designer
+ Para facilitar o desenvolvimento de fluxos de trabalho maiores, o designer agora permite adicionar anotações para ajudar a controlar o processo de design. A anotação pode ser adicionada a atividades, estados, nós de fluxograma, variáveis e argumentos. A captura de tela a seguir mostra o menu de contexto usado para adicionar anotações para o designer.
+
+ ![Menu de contexto de anotação](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+
+ As anotações do designer não têm suporte no designer hospedado novamente.
+
+### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definir e consumir objetos ActivityDelegate no designer
+ As atividades no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] usavam objetos <xref:System.Activities.ActivityDelegate> para expor pontos de execução onde outras partes do fluxo de trabalho podiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução necessários geralmente exigia uma grande quantidade de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, consulte [como: definir e consumir representantes de atividade no Designer de fluxo de trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+
+ Os delegados de atividade não têm suporte no designer hospedado novamente.
+
+### <a name="build-time-validation"></a>Validação de tempo de compilação
+ No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], os erros de validação do fluxo de trabalho causam a falha na compilação.
+
 > [!WARNING]
 >  A validação de tempo de compilação não tem suporte no designer hospedado novamente.  
   

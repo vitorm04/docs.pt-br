@@ -2,31 +2,31 @@
 title: Paralelo estrangulado ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-ms.openlocfilehash: 7149e6db8992bff5b436ffae4a77d985ec255986
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8691edb8a5a61204b187be8def553f2f06be0f0d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44215980"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581856"
 ---
 # <a name="throttled-parallel-foreach"></a>Paralelo estrangulado ForEach
-O `ThrottleParallelForEach` atividade é semelhante de <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` atividade com uma exceção que permite que define um fator de simultaneidade para restringir o número de ramificações simultâneas para executar. A atividade de `ThrottleParallelForEach` deriva de <xref:System.Activities.NativeActivity>, porque precisa agendar outras atividades (as atividades filho) e isso é acessível somente por meio da classe <xref:System.Activities.NativeActivityContext> .  
-  
-## <a name="projects"></a>Projetos  
-  
-|**ProjectName**|**Descrição**|**Arquivos principais**|  
-|-|-|-|  
-|ThrottledParallelForEach|Contém a atividade de `ThrottledParallelForEach` e o designer.|ThrottledParallelForEach.cs<br /><br /> A definição de atividade de `ThrottledParallelForEach` .|  
-|CodeTestClient|Exemplo do aplicativo cliente que configura e executa um fluxo de trabalho com `ThrottledParallelForEach` usando o código obrigatório.|Module.vb<br /><br /> Define e executa uma instância de fluxo de trabalho de exemplo.|  
-  
-#### <a name="to-use-this-sample"></a>Para usar este exemplo  
-  
-1.  Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de ThrottledParallelForEach.sln.  
-  
-2.  Para criar a solução, pressione CTRL+SHIFT+B.  
-  
-3.  Para executar a solução, pressione F5.  
-  
+O `ThrottleParallelForEach` atividade é semelhante de <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` atividade com uma exceção que permite que define um fator de simultaneidade para restringir o número de ramificações simultâneas para executar. A atividade de `ThrottleParallelForEach` deriva de <xref:System.Activities.NativeActivity>, porque precisa agendar outras atividades (as atividades filho) e isso é acessível somente por meio da classe <xref:System.Activities.NativeActivityContext> .
+
+## <a name="projects"></a>Projetos
+
+|**ProjectName**|**Descrição**|**Arquivos principais**|
+|-|-|-|
+|ThrottledParallelForEach|Contém a atividade de `ThrottledParallelForEach` e o designer.|ThrottledParallelForEach.cs<br /><br /> A definição de atividade de `ThrottledParallelForEach` .|
+|CodeTestClient|Exemplo do aplicativo cliente que configura e executa um fluxo de trabalho com `ThrottledParallelForEach` usando o código obrigatório.|Module.vb<br /><br /> Define e executa uma instância de fluxo de trabalho de exemplo.|
+
+#### <a name="to-use-this-sample"></a>Para usar este exemplo
+
+1.  Usando o Visual Studio 2010, abra o arquivo de Throttledparallelforeach.
+
+2.  Para criar a solução, pressione CTRL+SHIFT+B.
+
+3.  Para executar a solução, pressione F5.
+
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   

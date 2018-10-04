@@ -2,16 +2,16 @@
 title: Exemplo básico
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508703"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580310"
 ---
 # <a name="basic-sample"></a>Exemplo básico
-Este exemplo mostra como tornar um serviço detectável e como pesquisar e chamar um serviço de descoberta. Este exemplo é composto de dois projetos: serviço e cliente.  
-  
+Este exemplo mostra como tornar um serviço detectável e como pesquisar e chamar um serviço de descoberta. Este exemplo é composto de dois projetos: serviço e cliente.
+
 > [!NOTE]
 >  Este exemplo implementa descoberta no código.  Para obter um exemplo que implementa descoberta na configuração, consulte [configuração](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
@@ -84,7 +84,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 1.  Este exemplo usa pontos de extremidade HTTP e para executar este exemplo, o URL apropriado ACLs deve ser adicionado. Para obter mais informações, consulte [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Executando o seguinte comando para um nível de privilégio elevado deve adicionar as ACLs apropriado. Você talvez queira substituir seu domínio e nome de usuário para os argumentos a seguir, se o comando não funcionar como está. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Usando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], abra o Basic.sln e compilar o exemplo.  
+2.  Usando o Visual Studio 2012, abra o Basic.sln e compilar o exemplo.  
   
 3.  Execute o aplicativo service.exe.  
   

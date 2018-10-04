@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
 ms.openlocfilehash: 0ec7e44363f87e54eae97b70352f520fe87540be
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032286"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581817"
 ---
 # <a name="ltclaimsauthenticationmanagergt"></a>&lt;claimsAuthenticationManager&gt;
 Registra um Gerenciador de autenticação de declarações para as declarações de entrada.  

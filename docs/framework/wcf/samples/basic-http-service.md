@@ -2,12 +2,12 @@
 title: Serviço básico de HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028232"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48262376"
 ---
 # <a name="basic-http-service"></a>Serviço básico de HTTP
 Este exemplo demonstra como implementar um serviço baseado em HTTP e baseados em RPC - popularmente conhecido como serviço "POX" (Plain Old XML) – usando o modelo de programação de REST do Windows Communication Foundation (WCF). Esse exemplo consiste em dois componentes: um serviço auto-hospedado do HTTP do WCF (Service.cs) e um aplicativo de console (Program.cs) que cria o serviço e faz chamadas para ele.  
@@ -27,7 +27,7 @@ Este exemplo demonstra como implementar um serviço baseado em HTTP e baseados e
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Abra a solução para o exemplo de serviço Http básico. Ao iniciar [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], você deve executar como administrador para o exemplo para executar com êxito. Fazer isso clicando com o [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] ícone e selecionando **executar como administrador** no menu de contexto.  
+1.  Abra a solução para o exemplo de serviço Http básico. Ao iniciar o Visual Studio 2012, você deve executar como administrador para o exemplo para executar com êxito. Fazer isso clicando duas vezes no ícone do Visual Studio 2012 e selecionando **executar como administrador** no menu de contexto.  
   
 2.  Pressione CTRL + SHIFT + B para compilar a solução e, em seguida, pressione Ctrl + F5 para executar o aplicativo de console sem depuração. A janela do console é exibida e fornece o URI do serviço em execução e o URI do HTML na página para a execução do serviço de Ajuda. A qualquer momento, você pode exibir a página de ajuda HTML, digitando o URI da página de Ajuda em um navegador. Como o exemplo é executado, o cliente grava o status da atividade atual.  
   

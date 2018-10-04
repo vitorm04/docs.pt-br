@@ -2,12 +2,12 @@
 title: Restrições declarativas
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: bf794d5b14d2d278dc4068309f25e6f0ddcf3342
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517654"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580476"
 ---
 # <a name="declarative-constraints"></a>Restrições declarativas
 As restrições declarativas fornecem um método poderoso de validação para uma atividade e suas relações com outras atividades. As restrições são configuradas para uma atividade durante o processo de design, mas as restrições adicionais podem também ser especificadas pelo host de fluxo de trabalho. Este tópico fornece uma visão geral do uso de restrições declarativas para fornecer validação de atividade.  
@@ -57,12 +57,13 @@ public sealed class SampleActivity : CodeActivity
   
  O host também pode especificar esta restrição para atividades em um fluxo de trabalho usando <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>, que é abordado na seção a seguir.  
   
- A atividade de <xref:System.Activities.Validation.AddValidationError> é usada para gerar um erro ou um aviso de validação sem exigir a avaliação de uma expressão. Suas propriedades são semelhantes a <xref:System.Activities.Validation.AssertValidation> e pode ser usado em conjunto com atividades de controle de fluxo de uma restrição como a atividade de <xref:System.Activities.Statements.If> .  
+ A atividade de <xref:System.Activities.Validation.AddValidationError> é usada para gerar um erro ou um aviso de validação sem exigir a avaliação de uma expressão. Suas propriedades são semelhantes a <xref:System.Activities.Validation.AssertValidation> e pode ser usado em conjunto com atividades de controle de fluxo de uma restrição como a atividade de <xref:System.Activities.Statements.If> .
   
-### <a name="workflow-relationship-activities"></a>Atividades de relação de fluxo de trabalho  
- Várias atividades de validação estão disponíveis que fornecem informações sobre as outras atividades no fluxo de trabalho com relação a atividade que está sendo validada. <xref:System.Activities.Validation.GetParentChain> retorna uma coleção de atividades que contém todas as atividades entre a atividade atual e a atividade de raiz. <xref:System.Activities.Validation.GetChildSubtree> fornece uma coleção de atividades que contém as atividades filho em um padrão recursiva, e <xref:System.Activities.Validation.GetWorkflowTree> obtém todas as atividades no fluxo de trabalho.  
+### <a name="workflow-relationship-activities"></a>Atividades de relação de fluxo de trabalho
+
+Várias atividades de validação estão disponíveis que fornecem informações sobre as outras atividades no fluxo de trabalho com relação a atividade que está sendo validada. <xref:System.Activities.Validation.GetParentChain> retorna uma coleção de atividades que contém todas as atividades entre a atividade atual e a atividade de raiz. <xref:System.Activities.Validation.GetChildSubtree> fornece uma coleção de atividades que contém as atividades filho em um padrão recursiva, e <xref:System.Activities.Validation.GetWorkflowTree> obtém todas as atividades no fluxo de trabalho.  
   
- No exemplo a seguir do [validação das relações de atividade](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) exemplo, um `CreateState` atividade está definida. A atividade de `CreateState` deve estar contido dentro de uma atividade de `CreateCountry` , e o método de `GetParent` retorna uma restrição que impõe esse requisito. `GetParent` usa a atividade de <xref:System.Activities.Validation.GetParentChain> em conjunto com uma atividade de <xref:System.Activities.Statements.ForEach%601> verificar as atividades pai de atividade de `CreateState` para determinar se o requisito é atingido.  
+No exemplo a seguir, uma atividade de `CreateState` é definida. A atividade de `CreateState` deve estar contido dentro de uma atividade de `CreateCountry` , e o método de `GetParent` retorna uma restrição que impõe esse requisito. `GetParent` usa a atividade de <xref:System.Activities.Validation.GetParentChain> em conjunto com uma atividade de <xref:System.Activities.Statements.ForEach%601> verificar as atividades pai de atividade de `CreateState` para determinar se o requisito é atingido.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -134,9 +135,7 @@ public sealed class CreateState : CodeActivity
         // not needed for the sample  
     }  
 }  
-```  
-  
- Para obter mais informações, consulte o Windows Workflow Foundation [validação](../../../docs/framework/windows-workflow-foundation/samples/validation.md) exemplos.  
+```
   
 ## <a name="additional-constraints"></a>Restrições adicionais  
  Os autores de host de fluxo de trabalho podem especificar restrições adicionais de validação para atividades em um fluxo de trabalho criando as restrições e adicionando ao dicionário de <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> de uma instância de <xref:System.Activities.Validation.ValidationSettings> . Cada item em <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contém o tipo de atividade para que as restrições se aplicam e uma lista de restrições adicionais para esse tipo de atividade. Quando a validação é chamada para o fluxo de trabalho, cada atividade do tipo especificado, incluindo classes derivadas, avalia as restrições. Nesse exemplo, a restrição de `ActivityDisplayNameIsNotSetWarning` a seção anterior é aplicado a todas as atividades em um fluxo de trabalho.  
@@ -177,4 +176,4 @@ else
 }  
 ```  
   
- Se a propriedade de <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> é `true`, então somente as restrições adicionais especificadas são avaliadas quando a validação é chamada chamando o <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Isso pode ser útil para inspecionar fluxos de trabalho para configurações específicas de validação. Observe entretanto que quando o fluxo de trabalho é chamado, a lógica de validação configurou no fluxo de trabalho é avaliado e deve passar para o fluxo de trabalho inicia com êxito. Para obter mais informações sobre invocando a validação, consulte [invocando a validação de atividades](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Se a propriedade de <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> é `true`, então somente as restrições adicionais especificadas são avaliadas quando a validação é chamada chamando o <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Isso pode ser útil para inspecionar fluxos de trabalho para configurações específicas de validação. Observe entretanto que quando o fluxo de trabalho é chamado, a lógica de validação configurou no fluxo de trabalho é avaliado e deve passar para o fluxo de trabalho inicia com êxito. Para obter mais informações sobre como invocar a validação, consulte [invocando a validação de atividade](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

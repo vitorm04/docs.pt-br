@@ -5,19 +5,19 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65797863fc8187ffebbcb660e9fb285bfa1aabd0
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513665"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583848"
 ---
 # <a name="windows-service-host"></a>Host de serviço do Windows
-Este exemplo demonstra um serviço do Windows Communication Foundation (WCF) hospedado em um serviço Windows gerenciado. Serviços do Windows são controlados usando o miniaplicativo Serviços no **painel de controle** e pode ser configurado para iniciar automaticamente após uma reinicialização do sistema. O exemplo consiste em um programa cliente e um programa de serviço do Windows. O serviço é implementado como um programa .exe e contém seu próprio código de hospedagem. Em outros ambientes de hospedagem, como Windows processo WAS (Activation Services) ou o Internet Information Services (IIS), não é necessário para escrever código de hospedagem.  
-  
+Este exemplo demonstra um serviço do Windows Communication Foundation (WCF) hospedado em um serviço Windows gerenciado. Serviços do Windows são controlados usando o miniaplicativo Serviços no **painel de controle** e pode ser configurado para iniciar automaticamente após uma reinicialização do sistema. O exemplo consiste em um programa cliente e um programa de serviço do Windows. O serviço é implementado como um programa .exe e contém seu próprio código de hospedagem. Em outros ambientes de hospedagem, como Windows processo WAS (Activation Services) ou o Internet Information Services (IIS), não é necessário para escrever código de hospedagem.
+
 > [!NOTE]
->  Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
-  
+>  Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.
+
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
@@ -59,7 +59,7 @@ Este exemplo demonstra um serviço do Windows Communication Foundation (WCF) hos
   
 2.  Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Após a solução foi criada, execute Setup. bat com privilégios elevados [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prompt de comando para instalar o serviço do Windows usando a ferramenta Installutil.exe. O serviço deve aparecer em serviços.  
+3.  Após a solução foi criada, execute Setup. bat em um prompt de comando elevado do Visual Studio 2012 para instalar o serviço do Windows usando a ferramenta Installutil.exe. O serviço deve aparecer em serviços.  
   
 4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   

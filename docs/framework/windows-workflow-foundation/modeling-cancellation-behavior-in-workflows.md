@@ -2,12 +2,12 @@
 title: Modelando o comportamento cancelar em fluxos de trabalho
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-ms.openlocfilehash: 08687f8c2e06a459714d934713fddfe3f3536774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72bed8da8ed67121340a55afb9bbe768fbd631e6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519893"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580895"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modelando o comportamento cancelar em fluxos de trabalho
 As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma atividade de <xref:System.Activities.Statements.Parallel> que cancela ramificações incompletos quando seu <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> avalia a `true`, ou fora de fluxo de trabalho, se o host chama <xref:System.Activities.WorkflowApplication.Cancel%2A>. Para fornecer tratamento cancelar, os autores de fluxo de trabalho podem usar a atividade de <xref:System.Activities.Statements.CancellationScope> , a atividade de <xref:System.Activities.Statements.CompensableActivity> , ou crie as atividades personalizados que fornecem lógica cancelar. Este tópico fornece uma visão geral de cancelamento em fluxos de trabalho.  
@@ -29,7 +29,7 @@ As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma 
  Quando esse fluxo de trabalho é chamado, a seguinte saída é exibida no console.  
   
  **Iniciando o fluxo de trabalho.**  
-**CancellationHandler invocado.**   
+**CancellationHandler invocada.**   
 **Fluxo de trabalho b30ebb30-df46-4d90-a211-e31c38d8db3c cancelada.**    
 > [!NOTE]
 >  Quando uma atividade de <xref:System.Activities.Statements.CancellationScope> é cancelada e <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> é invocado, foi responsabilidade do autor de fluxo de trabalho determinar o progresso que a atividade cancelada feita antes que foi cancelado para fornecer a lógica apropriada cancelar. <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> não fornece nenhuma informação sobre o andamento de atividade cancelada.  
@@ -41,9 +41,9 @@ As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma 
  Quando esse fluxo de trabalho é chamado, a seguinte saída é exibida no console.  
   
  **Iniciando o fluxo de trabalho.**  
-**OnUnhandledException em 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9 do fluxo de trabalho**   
-**Foi lançada uma ApplicationException.**   
-**CancellationHandler invocado.**   
+**OnUnhandledException no fluxo de trabalho 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9**   
+**Um ApplicationException foi lançada.**   
+**CancellationHandler invocada.**   
 **Fluxo de trabalho 6bb2d5d6-f49a-4c6d-a988-478afb86dbe9 cancelada.**    
 ### <a name="canceling-an-activity-from-inside-a-workflow"></a>Cancelando uma atividade de dentro de um fluxo de trabalho  
  Uma atividade também pode ser cancelada por seu pai. Por exemplo, se uma atividade de <xref:System.Activities.Statements.Parallel> tem várias ramificações e que executa o <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> avalia a `true` suas ramificações incompletos serão canceladas em seguida. Nesse exemplo uma atividade de <xref:System.Activities.Statements.Parallel> é criada que possui duas ramificações. O <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> é definido como `true` portanto <xref:System.Activities.Statements.Parallel> concluir o que qualquer uma de suas ramificações terminar. Nesta ramificação 2 do exemplo completo, e assim que a 1 é cancelado.  
@@ -52,16 +52,16 @@ As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma 
   
  Quando esse fluxo de trabalho é chamado, a seguinte saída é exibida no console.  
   
- **Branch a partir de 1.**  
-**Ramificação 2 concluída.**   
-**Ramificação de 1 cancelada.**   
+ **Ramificação 1 que inicia.**  
+**Ramificação 2 completo.**   
+**Ramificação 1 cancelado.**   
 **E0685e24-18ef-4a47-acf3-5c638732f3be de fluxo de trabalho concluído.**  As atividades também são canceladas se uma exceção borbulha anterior após a raiz da atividade mas tratadas em um nível mais alto no fluxo de trabalho. Nesse exemplo, a principal lógica de fluxo de trabalho consiste em uma atividade de <xref:System.Activities.Statements.Sequence> . <xref:System.Activities.Statements.Sequence> é especificado como <xref:System.Activities.Statements.CancellationScope.Body%2A> de uma atividade de <xref:System.Activities.Statements.CancellationScope> que está contida por uma atividade de <xref:System.Activities.Statements.TryCatch> . Uma exceção é lançada do corpo de <xref:System.Activities.Statements.Sequence>, é tratada pela atividade pai de <xref:System.Activities.Statements.TryCatch> , e <xref:System.Activities.Statements.Sequence> é cancelado.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#39](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#39)]  
   
  Quando esse fluxo de trabalho é chamado, a seguinte saída é exibida no console.  
   
- **Sequência inicial.**  
+ **Iniciar a sequência.**  
 **Sequência cancelada.**   
 **Exceção capturada.**   
 **E3c18939-121e-4c43-af1c-ba1ce977ce55 de fluxo de trabalho concluído.**   
@@ -69,15 +69,15 @@ As atividades podem ser canceladas em um fluxo de trabalho, por exemplo por uma 
  Todas as exceções geradas de <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> de <xref:System.Activities.Statements.CancellationScope> são fatais ao fluxo de trabalho. Se houver uma chance de exceções que escapam de <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>, use <xref:System.Activities.Statements.TryCatch> em <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> para capturar e tratar essas exceções.  
   
 ### <a name="cancellation-using-compensableactivity"></a>Cancelar usando CompensableActivity  
- Como a atividade de <xref:System.Activities.Statements.CancellationScope> , <xref:System.Activities.Statements.CompensableActivity> tem <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>. Se <xref:System.Activities.Statements.CompensableActivity> é cancelado, todas as atividades em seu <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> são chamadas. Isso pode ser útil para desfazer o trabalho compensável parcialmente concluído. Para obter informações sobre como usar <xref:System.Activities.Statements.CompensableActivity> para compensação e cancelamento, consulte [compensação](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ Como a atividade de <xref:System.Activities.Statements.CancellationScope> , <xref:System.Activities.Statements.CompensableActivity> tem <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>. Se <xref:System.Activities.Statements.CompensableActivity> é cancelado, todas as atividades em seu <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> são chamadas. Isso pode ser útil para desfazer o trabalho compensável parcialmente concluído. Para obter informações sobre como usar <xref:System.Activities.Statements.CompensableActivity> para a compensação e Cancelar, consulte [compensação](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="cancellation-using-custom-activities"></a>Cancelar usando atividades personalizados  
  Os autores de atividade personalizados podem implementar a lógica cancelar nas atividades personalizados em várias maneiras diferentes. As atividades personalizados que derivam de <xref:System.Activities.Activity> podem implementar a lógica de cancelamento colocando <xref:System.Activities.Statements.CancellationScope> ou outra atividade personalizado que contém a lógica cancelar no corpo da atividade. <xref:System.Activities.AsyncCodeActivity> e as atividades <xref:System.Activities.NativeActivity> derivadas podem substituir o método respectivo de <xref:System.Activities.NativeActivity.Cancel%2A> e fornecer a lógica de cancelamento lá. <xref:System.Activities.CodeActivity> derivado atividades não fornece nenhuma para o cancelamento como todo o trabalho é executado em uma única explosão de execução quando o tempo de execução chama o método de <xref:System.Activities.CodeActivity.Execute%2A> . Se o método executar não foi chamado ainda e uma atividade com base <xref:System.Activities.CodeActivity> será cancelada, a atividade fecha com um status de <xref:System.Activities.ActivityInstanceState.Canceled> e o método de <xref:System.Activities.CodeActivity.Execute%2A> não é chamado.  
   
 ### <a name="cancellation-using-nativeactivity"></a>Cancelar usando NativeActivity  
- <xref:System.Activities.NativeActivity> derivado atividades pode substituir o método de <xref:System.Activities.NativeActivity.Cancel%2A> para fornecer a lógica personalizada cancelar. Se este método não é substituído, então a lógica padrão de cancelamento de fluxo de trabalho é aplicada. Cancelamento de padrão é o processo que ocorre para um <xref:System.Activities.NativeActivity> não substitui o <xref:System.Activities.NativeActivity.Cancel%2A> método ou cujo <xref:System.Activities.NativeActivity.Cancel%2A> a base de chamadas de método <xref:System.Activities.NativeActivity> <xref:System.Activities.NativeActivity.Cancel%2A> método. Quando uma atividade é cancelada, o tempo de execução sinaliza a atividade para o botão e automaticamente trata determinada limpeza. Se a atividade tem apenas indicadores pendentes, os indicadores serão removidos e a atividade será marcada como <xref:System.Activities.ActivityInstanceState.Canceled>. Todas as atividades filhos excelentes de atividade cancelada serão canceladas por sua vez. Qualquer tentativa de agendar atividades filho adicionais resultará na tentativa que está sendo ignorada e a atividade será marcada como <xref:System.Activities.ActivityInstanceState.Canceled>. Se alguma atividade excelente filho termina em <xref:System.Activities.ActivityInstanceState.Canceled> ou estado de <xref:System.Activities.ActivityInstanceState.Faulted> , então a atividade será marcada como <xref:System.Activities.ActivityInstanceState.Canceled>. Observe que uma solicitação de cancelamento pode ser ignorada. Se uma atividade não tem nenhum indicadores pendentes ou executar atividades filhos e não agenda os itens de trabalho adicionais após o embandeiramento para cancelamento, se concluirá com êxito. Este padrão cancelar basta para muitos cenários, mas se a lógica adicional cancelar é necessária, então as atividades internos de cancelamento ou as atividades personalizados podem ser usadas.  
+ <xref:System.Activities.NativeActivity> derivado atividades pode substituir o método de <xref:System.Activities.NativeActivity.Cancel%2A> para fornecer a lógica personalizada cancelar. Se este método não é substituído, então a lógica padrão de cancelamento de fluxo de trabalho é aplicada. Cancelar o padrão é o processo que ocorre para um <xref:System.Activities.NativeActivity> que não substitui o <xref:System.Activities.NativeActivity.Cancel%2A> método ou cujo <xref:System.Activities.NativeActivity.Cancel%2A> chama o método base <xref:System.Activities.NativeActivity> <xref:System.Activities.NativeActivity.Cancel%2A> método. Quando uma atividade é cancelada, o tempo de execução sinaliza a atividade para o botão e automaticamente trata determinada limpeza. Se a atividade tem apenas indicadores pendentes, os indicadores serão removidos e a atividade será marcada como <xref:System.Activities.ActivityInstanceState.Canceled>. Todas as atividades filhos excelentes de atividade cancelada serão canceladas por sua vez. Qualquer tentativa de agendar atividades filho adicionais resultará na tentativa que está sendo ignorada e a atividade será marcada como <xref:System.Activities.ActivityInstanceState.Canceled>. Se alguma atividade excelente filho termina em <xref:System.Activities.ActivityInstanceState.Canceled> ou estado de <xref:System.Activities.ActivityInstanceState.Faulted> , então a atividade será marcada como <xref:System.Activities.ActivityInstanceState.Canceled>. Observe que uma solicitação de cancelamento pode ser ignorada. Se uma atividade não tem nenhum indicadores pendentes ou executar atividades filhos e não agenda os itens de trabalho adicionais após o embandeiramento para cancelamento, se concluirá com êxito. Este padrão cancelar basta para muitos cenários, mas se a lógica adicional cancelar é necessária, então as atividades internos de cancelamento ou as atividades personalizados podem ser usadas.  
   
- No exemplo a seguir, a substituição de <xref:System.Activities.NativeActivity.Cancel%2A> de uma atividade personalizada com base <xref:System.Activities.NativeActivity> de `ParallelForEach` é definida. Quando a atividade é cancelada, alças desta substituição lógica cancelar para atividades. Este exemplo é parte do [ParallelForEach não genéricos](../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md) exemplo.  
+ No exemplo a seguir, a substituição de <xref:System.Activities.NativeActivity.Cancel%2A> de uma atividade personalizada com base <xref:System.Activities.NativeActivity> de `ParallelForEach` é definida. Quando a atividade é cancelada, alças desta substituição lógica cancelar para atividades. Este exemplo é parte do [ParallelForEach não genérico](../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md) exemplo.  
   
 ```csharp  
 protected override void Cancel(NativeActivityContext context)  
@@ -98,7 +98,7 @@ protected override void Cancel(NativeActivityContext context)
  <xref:System.Activities.NativeActivity> derivado atividades pode determinar se o cancelar foi solicitado inspecionando a propriedade de <xref:System.Activities.NativeActivityContext.IsCancellationRequested%2A> , e marcar-se como canceladas chamando o método <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> . A chamada <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> não concluir imediatamente a atividade. Como de costume, o tempo de execução se concluirá a atividade quando não tem não mais trabalho excelente, mas se <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> é chamado estado final será <xref:System.Activities.ActivityInstanceState.Canceled> em vez de <xref:System.Activities.ActivityInstanceState.Closed>.  
   
 ### <a name="cancellation-using-asynccodeactivity"></a>Cancelar usando AsyncCodeActivity  
- <xref:System.Activities.AsyncCodeActivity> com atividades também pode fornecer a lógica personalizada cancelar substituindo o método de <xref:System.Activities.AsyncCodeActivity.Cancel%2A> . Se este método não é substituído, então nenhuma tratamento cancelar é executada se a atividade é cancelada. No exemplo a seguir, a substituição de <xref:System.Activities.AsyncCodeActivity.Cancel%2A> de uma atividade personalizada com base <xref:System.Activities.AsyncCodeActivity> de `ExecutePowerShell` é definida. Quando a atividade é cancelada, executa o comportamento desejado cancelar. Este exemplo é parte do [usando a atividade de InvokePowerShell](../../../docs/framework/windows-workflow-foundation/samples/using-the-invokepowershell-activity.md) exemplo.  
+ <xref:System.Activities.AsyncCodeActivity> com atividades também pode fornecer a lógica personalizada cancelar substituindo o método de <xref:System.Activities.AsyncCodeActivity.Cancel%2A> . Se este método não é substituído, então nenhuma tratamento cancelar é executada se a atividade é cancelada. No exemplo a seguir, a substituição de <xref:System.Activities.AsyncCodeActivity.Cancel%2A> de uma atividade personalizada com base <xref:System.Activities.AsyncCodeActivity> de `ExecutePowerShell` é definida. Quando a atividade é cancelada, executa o comportamento desejado cancelar.
   
  [!code-csharp[CFX_WorkflowApplicationExample#1020](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1020)]  
   

@@ -8,11 +8,11 @@ ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: b35014993f10c3a60c16f784e7dd11b9a20f4f4c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032537"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582129"
 ---
 # <a name="ui-automation-security-overview"></a>Visão geral de segurança da automação de interface do usuário
 > [!NOTE]

@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037035"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263499"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Desabilitar o reconhecimento de DPI no Visual Studio
 
@@ -68,6 +68,10 @@ Você pode marcar o Visual Studio como reconhecimento de DPI modificando o regis
 Para definir seu dimensionamento de configuração para 100% no Windows 10 da exibição, digite **configurações de exibição** na barra da caixa de pesquisa e, em seguida, selecione de tarefas **alterar configurações de exibição**. No **as configurações** janela, defina **alterar o tamanho do texto, aplicativos e outros itens** para **100%**.
 
 Definir seu dimensionamento para 100% da exibição pode ser indesejável, pois isso pode tornar a interface do usuário muito pequeno para ser usado.
+
+## <a name="troubleshoot"></a>Solução de problemas
+
+Se a transição de reconhecimento de DPI não está funcionando conforme o esperado no Visual Studio, verifique se você tem o `dpiAwareness` o valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image arquivo execução Options\devenv.exe**  subchave no Editor do registro. Exclua o valor se ele estiver presente.
 
 ## <a name="see-also"></a>Consulte também
 

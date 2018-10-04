@@ -2,12 +2,12 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: e17919ead6d6f7656c39d18b0ce1817c18da524a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 62752ca74c7e5332c025a42d87608bb4c7f725ae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086655"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777494"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Um elemento de configuração usado para configurar o <xref:System.ServiceModel.UdpBinding> associação.  
@@ -108,5 +108,5 @@ Um elemento de configuração usado para configurar o <xref:System.ServiceModel.
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

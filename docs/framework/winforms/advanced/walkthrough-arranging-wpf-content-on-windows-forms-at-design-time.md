@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509769"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266658"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Instruções passo a passo: organizando conteúdo WPF em Windows Forms na hora do design
-Esta instrução passo a passo mostra como usar os recursos de layout dos Windows Forms, como ancoragem e guias de alinhamento para organizar controles do WPF (Windows Presentation Foundation).  
-  
- Nesta instrução passo a passo, as seguintes tarefas serão executadas:  
-  
--   Crie o projeto.  
-  
--   Crie o controle WPF.  
-  
--   Hospede controles WPF em um painel de layout.  
-  
--   Use guias de alinhamento para alinhar controles WPF.  
-  
--   Ancore e encaixe controles WPF.  
-  
+Esta instrução passo a passo mostra como usar os recursos de layout dos Windows Forms, como ancoragem e guias de alinhamento para organizar controles do WPF (Windows Presentation Foundation).
+
+ Nesta instrução passo a passo, as seguintes tarefas serão executadas:
+
+-   Crie o projeto.
+
+-   Crie o controle WPF.
+
+-   Hospede controles WPF em um painel de layout.
+
+-   Use guias de alinhamento para alinhar controles WPF.
+
+-   Ancore e encaixe controles WPF.
+
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Criando o Projeto  
  A primeira etapa é criar o projeto dos Windows Forms.  

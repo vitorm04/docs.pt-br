@@ -11,11 +11,11 @@ ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: fd8ddf5daec4ab7e4de636a2f14cf413aedaa99a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032745"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261427"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Adicione&gt; elemento para &lt;ouvintes&gt; para &lt;rastreamento&gt;
 Adiciona um ouvinte para o **ouvintes** coleção.  

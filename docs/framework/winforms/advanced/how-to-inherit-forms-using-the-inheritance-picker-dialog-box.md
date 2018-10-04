@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525738"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777403"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como herdar formulários usando a caixa de diálogo Selecionador de Herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  
@@ -27,7 +27,7 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
   
      A caixa de diálogo **Adicionar Novo Item** é aberta.  
   
-2.  Selecione o modelo **Formulário Herdado** e nomeie-o na caixa **Nome**. Clique no botão **Adicionar** para continuar.  
+2.  Pesquisa o **formulário herdado** modelo a partir da caixa de pesquisa ou clicando na **Windows Forms** categoria, selecione-o e nomeie-o na **nome** caixa. Clique no botão **Adicionar** para continuar.  
   
      A caixa de diálogo **Selecionador de Herança** é aberta. Se o projeto atual já contiver formulários, eles serão exibidos na caixa de diálogo **Selecionador de Herança**.  
   

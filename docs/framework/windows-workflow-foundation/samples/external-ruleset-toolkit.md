@@ -2,22 +2,22 @@
 title: Kit de ferramentas de Ruleset externo
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f545d083bb6caf9daca3ce553d0a1ee6711b0062
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803350"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584254"
 ---
 # <a name="external-ruleset-toolkit"></a>Kit de ferramentas de Ruleset externo
-Normalmente quando as regras são usadas em um aplicativo de fluxo de trabalho, as regras são parte do assembly. Em algumas situações, convém manter o RuleSets separada do assembly de modo que eles possam ser atualizados sem recriar e implantar o assembly de fluxo de trabalho. Este exemplo permite que você gerencie e edite RuleSets em uma base de dados e acesse o RuleSets de um fluxo de trabalho em tempo de execução. Isso permite que instâncias em execução de fluxo de trabalho para inserir automaticamente alterações de RuleSet.  
-  
- O exemplo externo do kit de ferramentas de RuleSet contém uma ferramenta baseada em Windows que você pode usar para gerenciar e editar versões de RuleSet em uma base de dados. Ele também inclui uma atividade e um serviço de hospedagem para executar essas regras.  
-  
+Normalmente quando as regras são usadas em um aplicativo de fluxo de trabalho, as regras são parte do assembly. Em algumas situações, convém manter o RuleSets separada do assembly de modo que eles possam ser atualizados sem recriar e implantar o assembly de fluxo de trabalho. Este exemplo permite que você gerencie e edite RuleSets em uma base de dados e acesse o RuleSets de um fluxo de trabalho em tempo de execução. Isso permite que instâncias em execução de fluxo de trabalho para inserir automaticamente alterações de RuleSet.
+
+ O exemplo externo do kit de ferramentas de RuleSet contém uma ferramenta baseada em Windows que você pode usar para gerenciar e editar versões de RuleSet em uma base de dados. Ele também inclui uma atividade e um serviço de hospedagem para executar essas regras.
+
 > [!NOTE]
 >  Este exemplo requer [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] fornece um editor de RuleSet como parte do Windows Workflow Foundation (WF). Você pode iniciar o editor clicando duas vezes na atividade de `Policy` em um fluxo de trabalho; serializa o objeto definido de RuleSet para o arquivo de .rules associado com o fluxo de trabalho (uma atividade de `Policy` executa uma instância de RuleSet contra o fluxo de trabalho). O arquivo de .rules é compilado no assembly como um recurso quando você compila o projeto de fluxo de trabalho.  
+ Visual Studio fornece um editor de RuleSet como parte do Windows Workflow Foundation (WF). Você pode iniciar o editor clicando duas vezes na atividade de `Policy` em um fluxo de trabalho; serializa o objeto definido de RuleSet para o arquivo de .rules associado com o fluxo de trabalho (uma atividade de `Policy` executa uma instância de RuleSet contra o fluxo de trabalho). O arquivo de .rules é compilado no assembly como um recurso quando você compila o projeto de fluxo de trabalho.  
   
  Componentes deste exemplo incluem:  
   

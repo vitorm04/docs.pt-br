@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 36d38756f7df88ec04aca781525f0f6b0a48b768
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747118"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580924"
 ---
 # <a name="security-in-windows-forms-overview"></a>Visão geral da Segurança do Windows Forms
 Antes do lançamento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], todo código em execução no computador de um usuário tinha os mesmos direitos ou permissões que esse usuário para acessar recursos do computador. Por exemplo, se o usuário era autorizado a acessar o sistema de arquivos, o código era autorizado a acessar o sistema de arquivos. Se o usuário era autorizado a acessar um banco de dados, o código era autorizado a acessar o banco de dados. Embora esses direitos ou permissões possam ser aceitáveis para código em executáveis que o usuário explicitamente instalou no computador local, eles podem não ser aceitáveis para código potencialmente mal-intencionado proveniente da Internet ou de uma intranet local. Esse código não deveria ser capaz de acessar recursos do computador do usuário sem permissão.  
@@ -49,7 +49,7 @@ Antes do lançamento do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
   
  Ao solicitar permissões opcionais, você deverá tratar as exceções de segurança que serão geradas se o aplicativo realizar uma ação que exija permissões que não foram concedidas a ele. Tratamento apropriado do <xref:System.Security.SecurityException> garantirá que seu aplicativo pode continuar a operar. Seu aplicativo pode usar a exceção para determinar se um recurso deve ser desabilitado para o usuário. Por exemplo, um aplicativo poderá desabilitar a opção de menu **Salvar** se a permissão de arquivo necessária não for concedida.  
   
- Às vezes é difícil saber se você declarou todas as permissões apropriadas. Uma chamada de método que parece inofensiva na superfície, por exemplo, pode acessar o sistema de arquivos em algum ponto durante sua execução. Se você não implantar seu aplicativo com todas as permissões necessárias, poderá ser bem sucedido em teste, quando você depurá-lo na área de trabalho, mas falhar ao ser implantado. Os dois os [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contém ferramentas para calcular as permissões que precisa de um aplicativo: o MT.exe comando ferramenta de linha e o recurso calcular permissões do Visual Studio, respectivamente.  
+ Às vezes é difícil saber se você declarou todas as permissões apropriadas. Uma chamada de método que parece inofensiva na superfície, por exemplo, pode acessar o sistema de arquivos em algum ponto durante sua execução. Se você não implantar seu aplicativo com todas as permissões necessárias, poderá ser bem sucedido em teste, quando você depurá-lo na área de trabalho, mas falhar ao ser implantado. Os dois o [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK e o Visual Studio 2005 contém ferramentas para calcular as permissões que precisa de um aplicativo: o MT.exe comando ferramenta de linha e o recurso calcular permissões do Visual Studio, respectivamente.  
   
  Os tópicos a seguir descrevem recursos adicionais de segurança dos Windows Forms.  
   

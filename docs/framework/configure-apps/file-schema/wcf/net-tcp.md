@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c67aeca183eb476460fa0be2c6dcd9c6077165d8
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500805"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579337"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Especifica as definições de configuração para a rede. TCP porta de serviço de compartilhamento, que permite que vários processos compartilhem a mesma porta TCP.  
@@ -71,9 +71,9 @@ Especifica as definições de configuração para a rede. TCP porta de serviço 
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo de escuta SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o compartilhamento de porta, consulte [compartilhamento de porta NET. TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Para entender como configurar a serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta NET. TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Para obter mais informações sobre o compartilhamento de porta, consulte [compartilhamento de porta NET. TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Para entender como configurar a serviço de compartilhamento de porta, consulte [Configurando o serviço de compartilhamento de porta NET. TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Compartilhamento de porta do NET.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [Configurando o serviço de compartilhamento de porta NET.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Compartilhamento de porta do NET.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Configurando o serviço de compartilhamento de porta NET.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

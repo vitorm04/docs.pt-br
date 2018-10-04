@@ -2,19 +2,19 @@
 title: Como criar um serviço de fluxo de trabalho com atividades de mensagens
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196545"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580412"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Como criar um serviço de fluxo de trabalho com atividades de mensagens
 Este tópico descreve como criar um serviço de fluxo de trabalho simples usando as atividades de mensagem. Este tópico se concentra na mecânica de criação de um serviço de fluxo de trabalho em que o serviço consiste inteiramente de atividades de mensagem. Em um serviço do mundo real, o fluxo de trabalho contém muitas outras atividades. O serviço implementa uma única operação chamada Echo, que usa uma cadeia de caracteres e retorna a cadeia de caracteres para o chamador. Este tópico é o primeiro de uma série de dois tópicos. O próximo tópico [How To: acessar um serviço de um fluxo de trabalho aplicativo](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) discute como criar um aplicativo de fluxo de trabalho que possa chamar o serviço criado neste tópico.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Para criar um projeto de serviço de fluxo de trabalho  
   
-1.  Inicie o [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Inicie o Visual Studio 2012.  
   
 2.  Clique o **arquivo** menu, selecione **New**e, em seguida, **projeto** para exibir o **caixa de diálogo Novo projeto**. Selecione **fluxo de trabalho** na lista de modelos instalados e **aplicativo de serviço de fluxo de trabalho WCF** na lista de tipos de projeto. Nomeie o projeto `MyWFService` e usar o local padrão, conforme mostrado na ilustração a seguir.  
   
