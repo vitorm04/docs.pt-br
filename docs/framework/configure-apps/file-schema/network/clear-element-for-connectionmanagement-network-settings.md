@@ -13,11 +13,11 @@ ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235920"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48244809"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Limpar&gt; elemento para connectionManagement (configurações de rede)
 Limpa a lista de gerenciamento de conexão.  
