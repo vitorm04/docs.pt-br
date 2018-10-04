@@ -2,12 +2,12 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779306"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780148"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 Este exemplo demonstra como hospedar aplicativos no serviço de ativação de processos para Windows (WAS) que são lidos a partir de uma fila de mensagens. Este exemplo usa o `netMsmqBinding` e se baseia o [comunicação bidirecional](../../../../docs/framework/wcf/samples/two-way-communication.md) exemplo. Nesse caso, o serviço é um aplicativo hospedado na Web e o cliente é auto-hospedado e gera como saída para o console para observar o status das ordens de compra enviado.  
@@ -20,7 +20,7 @@ Este exemplo demonstra como hospedar aplicativos no serviço de ativação de pr
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Se este diretório não existir, vá para o Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e o Windows Workflow Foundation (WF) exemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para baixar todos os WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
+>  Se este diretório não existir, vá para o Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_em branco" e o Windows Workflow Foundation (WF) exemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para baixar todos os WCF e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  O cliente de associação a ser usado é especificado usando um arquivo de configuração.  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  A fila de status do pedido é criada no `Main` método. A configuração do cliente inclui a configuração de serviço de status do pedido para hospedar o serviço de status do pedido, conforme mostrado no seguinte exemplo de configuração.  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Esse comando é uma única linha de texto.  
   
-         Este comando habilita o aplicativo /servicemodelsamples sejam acessados usando http://localhost/servicemodelsamples e net.msmq://localhost/servicemodelsamples.  
+         Este comando habilita o aplicativo /servicemodelsamples sejam acessados usando `http://localhost/servicemodelsamples` e `net.msmq://localhost/servicemodelsamples`.
   
 7.  Se você ainda não feito isso anteriormente, certifique-se de que o serviço de ativação MSMQ está habilitado. Do **inicie** menu, clique em **execute**e o tipo `Services.msc`. Pesquise a lista de serviços para o **adaptador de escuta NET. MSMQ**. Clique com botão direito e selecione **propriedades**. Defina a **tipo de inicialização** para **automáticas**, clique em **aplicar** e clique no **iniciar** botão. Esta etapa deve ser feita apenas uma vez antes do primeiro uso do serviço de adaptador de escuta NET. MSMQ.  
   

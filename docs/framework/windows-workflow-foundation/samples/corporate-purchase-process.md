@@ -2,42 +2,42 @@
 title: Processo de compra corporativo
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802905"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781655"
 ---
 # <a name="corporate-purchase-process"></a>Processo de compra corporativo
-Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.  
-  
- Este exemplo contém um aplicativo cliente de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permita interagir com o processo como participantes diferentes (como o solicitador original ou um fornecedor particular).  
-  
-## <a name="requirements"></a>Requisitos  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
-  
-## <a name="demonstrates"></a>Demonstra  
-  
--   Atividades personalizados.  
-  
--   Composição de atividades.  
-  
--   Indexadores.  
-  
--   Persistência.  
-  
--   Persistência esquematizada.  
-  
--   Rastreamento.  
-  
--   Controlar.  
-  
--   Hospedando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos de aplicativos da Web e de WinForms de[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ).  
-  
+Este exemplo mostra como criar uma solicitação bem básico para o processo com base (RFP) de compra de propostas com a melhor seleção automático de proposta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, e <xref:System.Activities.Statements.ForEach%601> e uma atividade personalizado para criar um fluxo de trabalho que representa o processo.
+
+ Este exemplo contém um aplicativo cliente de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permita interagir com o processo como participantes diferentes (como o solicitador original ou um fornecedor particular).
+
+## <a name="requirements"></a>Requisitos
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+
+## <a name="demonstrates"></a>Demonstra
+
+-   Atividades personalizados.
+
+-   Composição de atividades.
+
+-   Indexadores.
+
+-   Persistência.
+
+-   Persistência esquematizada.
+
+-   Rastreamento.
+
+-   Controlar.
+
+-   Hospedando [!INCLUDE[wf1](../../../../includes/wf1-md.md)] em diferentes clientes (aplicativos de aplicativos da Web e de WinForms de[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ).
+
 > [!IMPORTANT]
 >  Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
@@ -143,7 +143,7 @@ Este exemplo mostra como criar uma solicitação bem básico para o processo com
   
 #### <a name="to-use-this-sample"></a>Para usar este exemplo  
   
-1.  Usando [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra o arquivo de solução de PurchaseProcess.sln.  
+1.  Usando o Visual Studio 2010, abra o arquivo de solução de Purchaseprocess.  
   
 2.  Para executar o projeto de cliente da Web, abra **Gerenciador de soluções** e clique com botão direito do **cliente Web** projeto. Selecione **definir como projeto de inicialização**.  
   
