@@ -36,7 +36,7 @@ Este guia mostra como usar as ferramentas de CLI do .NET Core para criar aplicat
 
 **[Gravando Bibliotecas com Ferramentas de Plataforma Cruzada](../core/tutorials/libraries.md)**
 
-Esse exemplo aborda como escrever bibliotecas para .NET usando ferramentas de CLI de plataforma cruzada. Essas ferramentas proporcionam uma experiência eficiente e de nível baixo que funciona em qualquer sistema operacional com suporte. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) está disponível no repositório de exemplos/dotnet no GitHub.
+Esse exemplo aborda como escrever bibliotecas para .NET usando ferramentas de CLI de plataforma cruzada. Essas ferramentas proporcionam uma experiência eficiente e de nível baixo que funciona em qualquer sistema operacional com suporte. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) está disponível no repositório dotnet/samples no GitHub.
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
