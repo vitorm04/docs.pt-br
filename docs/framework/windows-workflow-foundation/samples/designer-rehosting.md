@@ -2,12 +2,12 @@
 title: Designer ReHosting
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028908"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837343"
 ---
 # <a name="designer-rehosting"></a>Designer Rehosting
 O designer que rehosting é um cenário comum que se refere hospedar a tela de design de fluxo de trabalho em um aplicativo personalizado. O aplicativo que hospedando a maioria de pessoas estão familiarizados com é Visual Studio entanto, há um número de cenários onde mostrar o designer de fluxo de trabalho em um aplicativo pode ser útil:  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Usando o exemplo  
   
-1.  Abra a solução de DesignerRehosting.sln em [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Abra a solução de Designerrehosting no Visual Studio 2010.  
   
 2.  Pressione F5 para compilar e executar o aplicativo.  
   

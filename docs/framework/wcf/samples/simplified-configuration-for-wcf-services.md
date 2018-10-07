@@ -2,12 +2,12 @@
 title: Configuração simplificada para serviços do WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 333469cecdf2acae72e6d1add8f96829a127dcf8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500707"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836716"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configuração simplificada para serviços do WCF
 Este exemplo demonstra como implementar e configurar um serviço típico e o cliente usando o Windows Communication Foundation (WCF). Este exemplo é a base para todos os outros exemplos de tecnologia básica.  
@@ -37,7 +37,7 @@ Este exemplo demonstra como implementar e configurar um serviço típico e o cli
 </configuration>  
 ```  
   
- Na [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], o `<service>` elemento é opcional. Quando um serviço não define nenhum ponto de extremidade, um ponto de extremidade para cada endereço básico e contrato implementada são adicionadas ao serviço. O endereço básico é acrescentado ao nome do contrato para determinar o ponto de extremidade e a associação é determinada pelo esquema de endereço. O exemplo de código a seguir demonstra um arquivo de configuração simplificada. Conforme configurado, o serviço pode ser acessado em http://localhost/servicemodelsamples/service.svc por um cliente no mesmo computador. Para clientes em computadores remotos acessar o serviço, um nome de domínio totalmente qualificado deve ser especificado em vez do localhost. O serviço não expõe metadados por padrão. Como tal, o serviço liga o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportamento.  
+ Na [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], o `<service>` elemento é opcional. Quando um serviço não define nenhum ponto de extremidade, um ponto de extremidade para cada endereço básico e contrato implementada são adicionadas ao serviço. O endereço básico é acrescentado ao nome do contrato para determinar o ponto de extremidade e a associação é determinada pelo esquema de endereço. O exemplo de código a seguir demonstra um arquivo de configuração simplificada. Conforme configurado, o serviço pode ser acessado em `http://localhost/servicemodelsamples/service.svc` por um cliente no mesmo computador. Para clientes em computadores remotos acessar o serviço, um nome de domínio totalmente qualificado deve ser especificado em vez do localhost. O serviço não expõe metadados por padrão. Como tal, o serviço liga o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportamento.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

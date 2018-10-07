@@ -3,11 +3,11 @@ title: '&lt;transporte&gt; de &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
 ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777715"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845654"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transporte&gt; de &lt;basicHttpBinding&gt;
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  

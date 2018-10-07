@@ -2,12 +2,12 @@
 title: FindCriteria e descoberta achada
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 7c389a4f0b8fb9789db33fe3edbb01a1d6302137
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583913"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836797"
 ---
 # <a name="discovery-find-and-findcriteria"></a>FindCriteria e descoberta achada
 Uma operação de localização de descoberta é iniciada por um cliente para descobrir um ou mais serviços e é uma das principais ações na descoberta. Executar um localizar envia uma mensagem de teste do WS-Discovery pela rede. Serviços que correspondem aos critérios especificados responder com mensagens WS-Discovery ProbeMatch. Para obter mais informações sobre as mensagens de descoberta, consulte o [especificação WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -28,7 +28,7 @@ Uma operação de localização de descoberta é iniciada por um cliente para de
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> diferencia maiusculas de minúsculas básico comparação cadeia de caracteres.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> correspondências por segmentos separados por "/". Uma pesquisa por http://contoso/building1 corresponde a um serviço com escopo http://contoso/building/floor1. Observe que não corresponde ao http://contoso/building100 porque os dois últimos segmentos não coincidem.  
+    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> correspondências por segmentos separados por "/". Uma pesquisa por `http://contoso/building1` corresponde a um serviço com escopo `http://contoso/building/floor1`. Observe que não corresponde ao `http://contoso/building100` porque os dois últimos segmentos não coincidem.  
   
     -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> faz a correspondência escopos por segmentos usando uma URL LDAP.  
   

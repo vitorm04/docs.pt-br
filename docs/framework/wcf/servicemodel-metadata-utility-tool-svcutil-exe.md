@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200757"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837252"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)
 
@@ -236,7 +236,7 @@ O comando a seguir gera tipos de serialização para os tipos <xref:System.Xml.S
 
 Ao usar o svcutil para gerar metadados para um serviço, você poderá receber a seguinte mensagem:
 
-Erro: Não é possível obter metadados de http://localhost:8000/somesservice/mex a cota de contagem de caracteres máximo nametable (16384) foi excedida durante a leitura de dados XML. Nametable é uma estrutura de dados usada para armazenar cadeias de caracteres encontradas durante o processamento do XML - documentos XML longos com nomes de elementos, nomes de atributos e valores de atributos não repetidos, podem disparar essa cota. Essa cota pode ser aumentada com a alteração da propriedade MaxNameTableCharCount no objeto XmlDictionaryReaderQuotas usado na criação da leitora XML.
+Erro: Não é possível obter metadados de `http://localhost:8000/somesservice/mex` a cota de contagem de caracteres máximo nametable (16384) foi excedida durante a leitura de dados XML. Nametable é uma estrutura de dados usada para armazenar cadeias de caracteres encontradas durante o processamento do XML - documentos XML longos com nomes de elementos, nomes de atributos e valores de atributos não repetidos, podem disparar essa cota. Essa cota pode ser aumentada com a alteração da propriedade MaxNameTableCharCount no objeto XmlDictionaryReaderQuotas usado na criação da leitora XML.
 
 Este erro pode ser causado por um serviço que retorna um arquivo WSDL grande quando você solicita seus metadados. O problema é que a cota de caracteres para a ferramenta svcutil.exe foi excedida. Esse valor é definido para ajudar a evitar ataques de negação de serviço (dos). Você pode aumentar essa cota especificando o seguinte arquivo de configuração para o svcutil.
 

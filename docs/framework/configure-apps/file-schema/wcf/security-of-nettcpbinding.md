@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 author: BrucePerlerMS
 ms.openlocfilehash: 8db4fd0a123ac798cae803240b0db98a7057fa97
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777377"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840097"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;segurança&gt; de &lt;netTcpBinding&gt;
 Define as configurações de segurança para uma associação.  

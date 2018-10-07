@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7cd25b980afa067ac78fc081c0a7a8e65a23258b
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028154"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838249"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; (configurações de rede)
 Especifica os módulos para usá-lo para solicitar informações de hosts da rede.  
@@ -54,7 +54,7 @@ Especifica os módulos para usá-lo para solicitar informações de hosts da red
 ## <a name="remarks"></a>Comentários  
  O `webRequestModules` descendentes do elemento registra o <xref:System.Net.WebRequest> classe para manipular solicitações de informações e os hosts da rede. Módulos de solicitação da Web devem implementar o <xref:System.Net.IWebRequestCreate> interface.  
   
- O .NET Framework inclui módulos de solicitação da Web para URIs que começam com http://, https:// e file://. Você pode substituir os módulos padrão somente por registrar um módulo personalizado no arquivo de configuração.  
+ O .NET Framework inclui módulos de solicitação da Web para URIs que começam com `http://`, `https://`, e `file://`. Você pode substituir os módulos padrão somente por registrar um módulo personalizado no arquivo de configuração.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  

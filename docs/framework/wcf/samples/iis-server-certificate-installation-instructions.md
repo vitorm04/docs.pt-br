@@ -2,12 +2,12 @@
 title: Instruções da instalação do certificado de servidor dos Serviços de Informações da Internet (IIS)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502599"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838241"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instruções da instalação do certificado de servidor dos Serviços de Informações da Internet (IIS)
 Para executar os exemplos que comunicam com segurança com o IIS (Serviços de Informações da Internet), você deverá criar e instalar um certificado do servidor.  
@@ -26,7 +26,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1.  Abra o snap-in do MMC do Gerenciador dos Serviços de Informações da Internet.  
   
-2.  Site da Web padrão e selecione **propriedades**.  
+2.  O site padrão com o botão direito e selecione **propriedades**.  
   
 3.  Selecione o **segurança de diretório** guia.  
   
@@ -36,7 +36,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![Assistente de certificado do IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Testar o acesso ao serviço em um navegador usando o endereço HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Testar o acesso ao serviço em um navegador usando o endereço HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Se o SSL foi configurado anteriormente usando Httpcfg.exe  
   
@@ -55,17 +55,17 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Para instalar o IIS no IIS 7.0 (Windows Vista e Windows Server 2008)  
   
-1.  Do **iniciar** menu, clique em **executar**, em seguida, digite **inetmgr** para abrir o snap-in MMC de serviços de informações da Internet (IIS).  
+1.  Do **iniciar** menu, clique em **execute**, em seguida, digite **inetmgr** para abrir o snap-in MMC de serviços de informações da Internet (IIS).  
   
-2.  Clique com botão direito do **Default Web Site** e selecione **Editar Ligações...**  
+2.  Clique com botão direito do **Site padrão** e selecione **Editar Ligações...**  
   
-3.  Clique o **adicionar** botão do **ligações de Site** caixa de diálogo.  
+3.  Clique o **Add** botão da **associações de Site** caixa de diálogo.  
   
-4.  Selecione **HTTPS** do **tipo** lista suspensa.  
+4.  Selecione **HTTPS** da **tipo** lista suspensa.  
   
-5.  Selecione o **ServiceModelSamples-HTTPS-servidor** do **certificado SSL** lista suspensa e clique em **Okey**.  
+5.  Selecione o **ServiceModelSamples-HTTPS-Server** da **certificado SSL** lista suspensa e clique em **Okey**.  
   
-6.  Testar o acesso ao serviço em um navegador usando o endereço HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Testar o acesso ao serviço em um navegador usando o endereço HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 > [!NOTE]
 >  Como o certificado de teste que você acabou de instalar não é um certificado confiável, você poderá encontrar avisos de segurança adicionais do Internet Explorer ao navegar em endereços Web locais protegidos por esse certificado.  

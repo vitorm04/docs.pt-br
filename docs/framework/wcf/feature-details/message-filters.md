@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780447"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839099"
 ---
 # <a name="message-filters"></a>Filtros de mensagem
 Para implementar o roteamento baseado em conteúdo, o serviço de roteamento usa <xref:System.ServiceModel.Dispatcher.MessageFilter> implementações que inspecionam a seções específicas de uma mensagem, como o endereço, nome do ponto de extremidade ou uma instrução XPath específica. Se nenhum dos filtros de mensagem fornecido com [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] às suas necessidades, você pode criar um filtro personalizado, criando uma nova implementação de base de <xref:System.ServiceModel.Dispatcher.MessageFilter> classe.  

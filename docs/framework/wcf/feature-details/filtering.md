@@ -2,12 +2,12 @@
 title: Filtragem
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208101"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836061"
 ---
 # <a name="filtering"></a>Filtragem
 O Windows Communication Foundation (WCF) filtragem de sistema pode usar filtros declarativos para corresponder as mensagens e tomar decisões operacionais. Você pode usar filtros para determinar o que fazer com uma mensagem, examinando a parte da mensagem. Um processo de enfileiramento de mensagens, por exemplo, pode usar uma consulta XPath 1.0 para verificar o elemento de prioridade de um cabeçalho conhecido para determinar se deseja mover uma mensagem para o início da fila.  
@@ -42,7 +42,7 @@ O Windows Communication Foundation (WCF) filtragem de sistema pode usar filtros 
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtros de endereço do ponto de extremidade de prefixo  
   
-1.  O <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> funciona como o <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrar, exceto que a correspondência pode ser em um prefixo da mensagem de URI. Por exemplo, um filtro especificando o endereço http://www.adatum.com corresponde a mensagens endereçadas a http://www.adatum.com/userA.  
+1.  O <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> funciona como o <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> filtrar, exceto que a correspondência pode ser em um prefixo da mensagem de URI. Por exemplo, um filtro especificando o endereço `http://www.adatum.com` corresponde a mensagens endereçadas a `http://www.adatum.com/userA`.  
   
 ### <a name="xpath-message-filters"></a>Filtros de mensagem de XPath  
  Um <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> usa uma expressão XPath para determinar se um documento XML contém elementos específicos, atributos, texto ou outros XML sintático constrói. O filtro é otimizado para ser extremamente eficiente para um subconjunto estrito do XPath. O XML Path Language é descrito na [especificação W3C XML caminho Language 1.0](https://go.microsoft.com/fwlink/?LinkId=94779).  

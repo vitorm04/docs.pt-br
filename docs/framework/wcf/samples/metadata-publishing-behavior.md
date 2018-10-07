@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b728d1c5a794fa6e0cadef136050d8fa31fb4afe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197068"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838787"
 ---
 # <a name="metadata-publishing-behavior"></a>Comportamento de publicação de metadados
 O comportamento de publicação de metadados que demonstra como controlar os recursos de publicação de metadados de um serviço. Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para serviços Windows Communication Foundation (WCF) desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importar ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração.  
@@ -23,7 +23,7 @@ O comportamento de publicação de metadados que demonstra como controlar os rec
 > [!NOTE]
 >  As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.  
   
- Para um serviço para expor metadados, o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> deve ser configurado no serviço. Quando esse comportamento estiver presente, você pode publicar metadados por meio da configuração de um ponto de extremidade para expor o <xref:System.ServiceModel.Description.IMetadataExchange> contrato como uma implementação de um protocolo WS-MetadataExchange (MEX). Como uma conveniência, este contrato tem o nome abreviado de configuração de "IMetadataExchange". Este exemplo usa o `mexHttpBinding`, que é uma conveniência padrão de associação que é equivalente de `wsHttpBinding` com o modo de segurança definido como `None`. Um endereço relativo "mex" é usado no ponto de extremidade, que, quando resolvido nos serviços de base endereço resulta em um endereço de ponto de extremidade de http://localhost/servicemodelsamples/service.svc/mex. O exemplo a seguir mostra a configuração de comportamento:  
+ Para um serviço para expor metadados, o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> deve ser configurado no serviço. Quando esse comportamento estiver presente, você pode publicar metadados por meio da configuração de um ponto de extremidade para expor o <xref:System.ServiceModel.Description.IMetadataExchange> contrato como uma implementação de um protocolo WS-MetadataExchange (MEX). Como uma conveniência, este contrato tem o nome abreviado de configuração de "IMetadataExchange". Este exemplo usa o `mexHttpBinding`, que é uma conveniência padrão de associação que é equivalente de `wsHttpBinding` com o modo de segurança definido como `None`. Um endereço relativo "mex" é usado no ponto de extremidade, que, quando resolvido nos serviços de base endereço resulta em um endereço de ponto de extremidade de `http://localhost/servicemodelsamples/service.svc/mex`. O exemplo a seguir mostra a configuração de comportamento:  
   
 ```xml  
 <behaviors>  
@@ -55,7 +55,7 @@ O comportamento de publicação de metadados que demonstra como controlar os rec
           contract="IMetadataExchange" />  
 ```  
   
- Este exemplo define o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propriedade para `true`, que também expõe metadados do serviço usando o HTTP GET. Para habilitar um ponto de extremidade de metadados HTTP GET, o serviço deve ter um endereço básico HTTP. A cadeia de caracteres de consulta `?wsdl` é usado no endereço base do serviço para acessar os metadados. Por exemplo, para ver o WSDL para o serviço em um navegador da Web você usaria o endereço http://localhost/servicemodelsamples/service.svc?wsdl. Como alternativa, você pode usar esse comportamento para expor metadados via HTTPS, definindo <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> para `true`. Isso requer um endereço base HTTPS.  
+ Este exemplo define o <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> propriedade para `true`, que também expõe metadados do serviço usando o HTTP GET. Para habilitar um ponto de extremidade de metadados HTTP GET, o serviço deve ter um endereço básico HTTP. A cadeia de caracteres de consulta `?wsdl` é usado no endereço base do serviço para acessar os metadados. Por exemplo, para ver o WSDL para o serviço em um navegador da Web você usaria o endereço `http://localhost/servicemodelsamples/service.svc?wsdl`. Como alternativa, você pode usar esse comportamento para expor metadados via HTTPS, definindo <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> para `true`. Isso requer um endereço base HTTPS.  
   
  Para acessar o uso de ponto de extremidade MEX do serviço do [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -63,7 +63,7 @@ O comportamento de publicação de metadados que demonstra como controlar os rec
   
  Isso gera um cliente com base nos metadados do serviço.  
   
- Para acessar os metadados do serviço usando o HTTP GET, aponte seu navegador para http://localhost/servicemodelsamples/service.svc?wsdl.  
+ Para acessar os metadados do serviço usando o HTTP GET, aponte seu navegador para `http://localhost/servicemodelsamples/service.svc?wsdl`.  
   
  Se você remove esse comportamento e tente abrir o serviço, você receberá uma exceção. Esse erro ocorre porque sem o comportamento, o ponto de extremidade configurado com o `IMetadataExchange` contrato não tem nenhuma implementação.  
   

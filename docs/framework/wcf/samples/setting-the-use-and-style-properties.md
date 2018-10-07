@@ -2,12 +2,12 @@
 title: Definindo o uso e as propriedades de estilo
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865534"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836837"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Definindo o uso e as propriedades de estilo
 Este exemplo demonstra como usar as propriedades de estilo e de uso sobre o <xref:System.ServiceModel.XmlSerializerFormatAttribute> e o <xref:System.ServiceModel.DataContractFormatAttribute>. Essas propriedades afetam como as mensagens são formatadas. Por padrão, o corpo da mensagem é formatado com o estilo definido como <xref:System.ServiceModel.OperationFormatStyle.Document>. Essas configurações podem ser especificadas no nível do contrato de serviço ou o nível de contrato de operação.  
@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Para ver a diferença entre os diferentes <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> e <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> configurações, modificá-los no serviço, gerar novamente o cliente, executar o exemplo e examinar o arquivo c:\logs\message.logs com a ferramenta Visualizador de rastreamento de serviço. Também observar o impacto sobre os metadados por meio da exibição http://localhost/ServiceModelSamples/service.svc?wsdl. Os metadados para os serviços normalmente é dividido em várias páginas. A página principal de wsdl contém associações WSDL, mas exibir http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 para observar as definições de mensagem.  
+ Para ver a diferença entre os diferentes <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> e <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> configurações, modificá-los no serviço, gerar novamente o cliente, executar o exemplo e examinar o arquivo c:\logs\message.logs com a ferramenta Visualizador de rastreamento de serviço. Também observar o impacto sobre os metadados por meio da exibição `http://localhost/ServiceModelSamples/service.svc?wsdl`. Os metadados para os serviços normalmente é dividido em várias páginas. A página principal de wsdl contém associações WSDL, mas exibir `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` para observar as definições de mensagem.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
