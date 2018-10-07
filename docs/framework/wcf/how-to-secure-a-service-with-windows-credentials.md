@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200692"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848225"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Como proteger um serviço com credenciais Windows
 Este tópico mostra como habilitar a segurança de transporte em um serviço do Windows Communication Foundation (WCF) que reside em um domínio do Windows e é chamado por clientes no mesmo domínio. Para obter mais informações sobre esse cenário, consulte [segurança de transporte com autenticação do Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para um aplicativo de exemplo, consulte o [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemplo.  
@@ -55,7 +55,7 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
   
 3.  Crie um segundo `Type` variável nomeada `serviceType` e atribua-o tipo do contrato implementado (`Calculator`).  
   
-4.  Criar uma instância das <xref:System.Uri> classe denominada `baseAddress` com o endereço básico do serviço. O endereço base deve ter um esquema que corresponde ao transporte. Nesse caso, o esquema de transporte é HTTP, e o endereço inclui especiais "Localhost" identificador de recurso uniforme (URI) e uma número de porta (8036), bem como um endereço base do ponto de extremidade ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/.  
+4.  Criar uma instância das <xref:System.Uri> classe denominada `baseAddress` com o endereço básico do serviço. O endereço base deve ter um esquema que corresponde ao transporte. Nesse caso, o esquema de transporte é HTTP, e o endereço inclui especiais "Localhost" identificador de recurso uniforme (URI) e uma número de porta (8036), bem como um endereço base do ponto de extremidade ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
 5.  Criar uma instância das <xref:System.ServiceModel.ServiceHost> classe com o `serviceType` e `baseAddress` variáveis.  
   

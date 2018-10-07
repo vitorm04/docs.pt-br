@@ -2,20 +2,20 @@
 title: Elemento &lt;defaultCertificate&gt;
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751006"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847848"
 ---
 # <a name="ltdefaultcertificategt-element"></a>Elemento &lt;defaultCertificate&gt;
-Especifica um certificado x. 509 a ser usado quando um serviço ou STS não fornece um através de um protocolo de negociação.  
+Especifica um certificado X.509 a ser usado quando um serviço ou STS não fornece um através de um protocolo de negociação.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
-\<comportamento >  
+\<comportamento de >  
 \<clientCredentials>  
 \<serviceCertificate >  
 \<defaultCertificate >  
@@ -30,16 +30,16 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos pai de atributos e elementos filho  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |findValue|Cadeia. O valor a ser procurado.|  
-|X509FindType|Enumeração. Um dos campos de certificado a ser pesquisado.|  
-|storeLocation|Enumeração. Um sistema de dois locais de repositório para pesquisar.|  
-|storeName|Enumeração. Um dos repositórios de sistema para pesquisar.|  
+|x509FindType|Enumeração. Um dos campos do certificado para pesquisar.|  
+|storeLocation|Enumeração. Um dos dois sistemas locais de repositório para pesquisar.|  
+|storeName|Enumeração. Um dos armazenamentos de sistema para pesquisar.|  
   
 ## <a name="findvalue-attribute"></a>findValue atributo  
   
@@ -59,11 +59,11 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |-----------|-----------------|  
 |Enumeração|CurrentUser ou LocalMachine.|  
   
-## <a name="storename-attribute"></a>Atributo da storeName  
+## <a name="storename-attribute"></a>storeName atributo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|Enumeração|Os valores incluem: catálogo de endereços, AuthRoot, CertificateAuthority, não permitidas, My, raiz, TrustedPeople e TrustedPublisher.|  
+|Enumeração|Os valores incluem: catálogo de endereços, AuthRoot, CertificateAuthority, não permitido, My, raiz, TrustedPeople e TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -75,10 +75,10 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Especifica um certificado a ser usado ao autenticar um serviço para o cliente.|  
   
 ## <a name="remarks"></a>Comentários  
- Para associações que usam a segurança de mensagens baseada em certificado, o certificado especificado por este elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usada pelo serviço para assinar respostas ao cliente. Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.  
+ Para associações que usam a segurança de mensagem baseada em certificado, o certificado especificado por este elemento de configuração é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas ao cliente. Ele armazena um único certificado a ser usado quando nenhum certificado é especificado por um serviço.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com http://www.contoso.com e um certificado a ser usado para todos os outros pontos de extremidade que não executam a negociação do certificado.  
+ O exemplo a seguir especifica um certificado a ser usado para pontos de extremidade cujo URI começa com `http://www.contoso.com` e um certificado a ser usado para todos os outros pontos de extremidade que não executam o processo de negociação do certificado.  
   
 ```xml  
 <serviceCertificate>  

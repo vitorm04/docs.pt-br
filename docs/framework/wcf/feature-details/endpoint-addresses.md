@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855709"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847394"
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um identificador de URI (Uniform Resource), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no modelo de programação pelo Windows Communication Foundation (WCF) a <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocar mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP exigidos para alcançar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Estrutura de um endereço de URI  
- O endereço URI para a maioria dos transportes tem quatro partes. Por exemplo, as quatro partes do URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint podem ser discriminados da seguinte maneira:  
+ O endereço URI para a maioria dos transportes tem quatro partes. Por exemplo, as quatro partes do URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` podem ser discriminados da seguinte maneira:  
   
--   Esquema: http:  
+-   Esquema: `http:`
   
 -   Computador: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  Por exemplo, um site pode conter os seguintes endereços de base:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Com [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], especifique um filtro de prefixo no nível do AppDomain no arquivo de configuração. Você faz isso com o [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) elemento, que contém uma lista de prefixos. Os endereços base entrados fornecidos pelo IIS, são filtrados com base na lista de prefixo opcional. Por padrão, quando um prefixo não for especificado, todos os endereços são passados. Especificando os resultados de prefixo em somente o endereço base correspondente para que o esquema deve ser passado.  
   
@@ -75,7 +75,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
 </system.serviceModel>  
 ```  
   
- No exemplo anterior, net.tcp://payroll.myorg.com: 8000 e http://shipping.myorg.com:8000 são os endereços base apenas, para seus respectivos esquemas, que são passados por meio do.  
+ No exemplo anterior, `net.tcp://payroll.myorg.com:8000` e `http://shipping.myorg.com:8000` são os endereços base apenas, para seus respectivos esquemas, que são passados por meio do.  
   
  O `baseAddressPrefixFilter` não dá suporte a curingas.  
   

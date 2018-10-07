@@ -2,12 +2,12 @@
 title: Cache com suporte para serviços HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972982"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847627"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cache com suporte para serviços HTTP Web do WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] permite que você use o mecanismo de cache declarativo já disponível no ASP.NET em seus serviços WCF Web HTTP. Isso permite que você em cache as respostas de suas operações de serviço WCF Web HTTP. Quando um usuário envia um HTTP GET para o serviço que está configurado para armazenar em cache, o ASP.NET envia a resposta armazenada em cache e o método de serviço não é chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET, o método de serviço será chamado e mais uma vez armazenado em cache a resposta. Para obter mais informações sobre o cache do ASP.NET, consulte [visão geral de armazenamento em cache do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- Isso é o mesmo elemento de configuração que está disponível para aplicativos ASP.NET. Para obter mais informações sobre perfis de cache do ASP.NET, consulte <xref:System.Web.Configuration.OutputCacheProfile>. Para serviços Web HTTP, os atributos mais importantes no perfil de cache são: `cacheDuration` e `varyByParam`. Esses dois atributos são necessários. `cacheDuration` Define a quantidade de tempo que uma resposta deve ser armazenada em cache em segundos. `varyByParam` permite que você especifique um parâmetro de cadeia de caracteres de consulta que é usada para respostas em cache. Todas as solicitações feitas com valores de parâmetro de cadeia de caracteres de consulta diferentes são armazenadas em cache separadamente. Por exemplo, depois que uma solicitação inicial é feita para http://MyServer/MyHttpService/MyOperation?param=10 todas as solicitações subsequentes feitas com o mesmo URI seriam retornadas a resposta em cache (desde que a duração do cache não tiver decorrido). As respostas para uma solicitação semelhante que é o mesmo, mas tem um valor diferente para o parâmetro de cadeia de caracteres de consulta de parâmetro são armazenados em cache separadamente. Se você não quiser esse comportamento de cache separado, defina `varyByParam` como "none".  
+ Isso é o mesmo elemento de configuração que está disponível para aplicativos ASP.NET. Para obter mais informações sobre perfis de cache do ASP.NET, consulte <xref:System.Web.Configuration.OutputCacheProfile>. Para serviços Web HTTP, os atributos mais importantes no perfil de cache são: `cacheDuration` e `varyByParam`. Esses dois atributos são necessários. `cacheDuration` Define a quantidade de tempo que uma resposta deve ser armazenada em cache em segundos. `varyByParam` permite que você especifique um parâmetro de cadeia de caracteres de consulta que é usada para respostas em cache. Todas as solicitações feitas com valores de parâmetro de cadeia de caracteres de consulta diferentes são armazenadas em cache separadamente. Por exemplo, depois que uma solicitação inicial é feita para `http://MyServer/MyHttpService/MyOperation?param=10`, todas as solicitações subsequentes feitas com o mesmo URI seriam retornadas a resposta em cache (desde que a duração do cache não tiver decorrido). As respostas para uma solicitação semelhante que é o mesmo, mas tem um valor diferente para o parâmetro de cadeia de caracteres de consulta de parâmetro são armazenados em cache separadamente. Se você não quiser esse comportamento de cache separado, defina `varyByParam` como "none".  
   
 ## <a name="sql-cache-dependency"></a>SQL Cache Dependency  
  Respostas de serviço da Web HTTP podem também ser armazenados em cache com uma dependência de cache SQL. Se seu serviço WCF Web HTTP depende de dados armazenados em um banco de dados SQL, convém armazenar em cache a resposta do serviço e invalidar a resposta em cache quando as alterações da tabela de banco de dados de dados no SQL. Esse comportamento é configurado completamente dentro do arquivo Web. config. Você deve primeiro definir uma cadeia de caracteres de conexão no <`connectionStrings`> elemento.  
