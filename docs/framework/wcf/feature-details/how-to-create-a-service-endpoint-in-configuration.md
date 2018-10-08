@@ -3,11 +3,11 @@ title: Como criar um ponto de extremidade de serviço em configuração
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
 ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266267"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850590"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Como criar um ponto de extremidade de serviço em configuração
 Pontos de extremidade fornecem acesso à funcionalidade de que um serviço do Windows Communication Foundation (WCF) oferece aos clientes. Você pode definir um ou mais pontos de extremidade para um serviço usando uma combinação de endereços de ponto de extremidade relativas e absolutas, ou se você não definir nenhum ponto de extremidade de serviço, o tempo de execução fornece alguns por padrão para você. Este tópico mostra como adicionar pontos de extremidade usando um arquivo de configuração que contêm endereços relativos e absolutos.  

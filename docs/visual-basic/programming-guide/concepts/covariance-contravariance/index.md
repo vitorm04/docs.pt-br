@@ -2,12 +2,12 @@
 title: Covariância e contravariância (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644037"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850439"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>Covariância e contravariância (Visual Basic)
 No Visual Basic, a covariância e a contravariância habilitam a conversão de referência implícita para tipos de matriz, tipos delegados e argumentos de tipo genérico. A covariância preserva a compatibilidade de atribuição, e a contravariância reverte.  
@@ -78,7 +78,7 @@ Shared Sub Test()
 End Sub  
 ```  
   
- No .NET Framework 4 ou mais recente, o Visual Basic dá suporte à covariância e à contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ No .NET Framework 4 ou posterior, o Visual Basic dá suporte à covariância e contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
  O exemplo de código a seguir mostra a conversão de referência implícita para interfaces genéricas.  
   

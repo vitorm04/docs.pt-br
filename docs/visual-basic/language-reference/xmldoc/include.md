@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778699"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849472"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;incluir&gt; (Visual Basic)
 Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.  
@@ -37,7 +37,7 @@ Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.
 ## <a name="remarks"></a>Comentários  
  Use o `<include>` marca para fazer referência a comentários em outro arquivo que descrevem os tipos e membros em seu código-fonte. Essa é uma alternativa para inserir comentários de documentação diretamente em seu arquivo de código-fonte.  
   
- O `<include>` marca usa a recomendação do W3C XML Path Language (XPath) versão 1.0. Para obter mais informações de maneiras de personalizar seu `<include>` uso está disponível em http://www.w3.org/TR/xpath.  
+ O `<include>` marca usa a recomendação do W3C XML Path Language (XPath) versão 1.0. Para obter mais informações sobre como personalizar suas `<include>` usar, consulte <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo usa o `<include>` marca para importar os comentários de documentação do membro de um arquivo chamado `commentFile.xml`.  

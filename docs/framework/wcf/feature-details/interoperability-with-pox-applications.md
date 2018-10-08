@@ -3,11 +3,11 @@ title: Interoperabilidade com aplicativos de POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778004"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850071"
 ---
 # <a name="interoperability-with-pox-applications"></a>Interoperabilidade com aplicativos de POX
 

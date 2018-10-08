@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 549f3dcfd7225937fd04ad2116e2be311687861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399444"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849783"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; (configurações de rede)
 Habilita ou desabilita os contadores de desempenho de rede.  
@@ -54,7 +54,7 @@ Habilita ou desabilita os contadores de desempenho de rede.
 ## <a name="remarks"></a>Comentários  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
- Contadores de desempenho de rede precisam ser habilitados no arquivo de configuração a ser usado. Todos os contadores de desempenho de rede são habilitados ou desabilitados com uma única configuração no arquivo de configuração. Contadores de desempenho de rede individuais não podem ser habilitados nem desabilitados. Para obter mais informações sobre os contadores de desempenho de rede específicos, consulte [contadores de desempenho de rede](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd).  
+ Contadores de desempenho de rede precisam ser habilitados no arquivo de configuração a ser usado. Todos os contadores de desempenho de rede são habilitados ou desabilitados com uma única configuração no arquivo de configuração. Contadores de desempenho de rede individuais não podem ser habilitados nem desabilitados. Para obter mais informações sobre os contadores de desempenho de rede específicos, consulte [contadores de desempenho de rede](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking).  
   
  O valor padrão é o desempenho de rede que os contadores estão desabilitados.  
   
@@ -79,4 +79,4 @@ Habilita ou desabilita os contadores de desempenho de rede.
  <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
  [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Contadores de desempenho de rede](https://msdn.microsoft.com/library/d1860235-f643-46ae-846c-ff0ed8b0e3cd)
+ [Contadores de desempenho de rede](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
