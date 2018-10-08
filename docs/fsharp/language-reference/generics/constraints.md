@@ -3,11 +3,11 @@ title: Restrições (F#)
 description: 'Saiba mais sobre restrições de F # que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: HT
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579864"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837344"
 ---
 # <a name="constraints"></a>Restrições
 
