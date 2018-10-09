@@ -3,12 +3,12 @@ title: Autorização baseada em declarações usando o WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236050"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872912"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorização baseada em declarações usando o WIF
 Em um aplicativo de terceira parte confiável, a autorização determina quais recursos uma identidade autenticada pode acessar e quais operações ela pode executar nesses recursos. A autorização inadequada ou fraca leva à divulgação de informações e à violação de dados. Este tópico descreve as abordagens disponíveis para implementar a autorização para aplicativos e serviços Web ASP.NET com reconhecimento de declarações usando o Windows Identity Foundation (WIF) e um Serviço de Token de Segurança (STS), por exemplo, o Serviço de Controle de Acesso (ACS) do Microsoft Azure.  
@@ -36,7 +36,7 @@ Em um aplicativo de terceira parte confiável, a autorização determina quais r
 ### <a name="expressing-roles-as-claims"></a>Expressando funções como declarações  
  Quando o método **IsInRole()** é chamado, há uma verificação feita para ver se o usuário atual tem essa função. Em aplicativos com reconhecimento de declarações, a função é expressa por um tipo de declaração de função que deve estar disponível no token. O tipo de declaração de função é expresso usando o seguinte URI:  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  Há várias maneiras de enriquecer um token com um tipo de declaração de função:  
   

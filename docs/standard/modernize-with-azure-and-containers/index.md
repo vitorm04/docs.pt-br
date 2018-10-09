@@ -4,12 +4,12 @@ description: Aprenda a comparação de precisão and -shift e modernizar aplicat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746998"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873486"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure (2ª edição)
 
@@ -25,7 +25,7 @@ Copyright © 2018, Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida de nenhuma forma, nem por nenhum meio, sem a permissão por escrito do distribuidor.
 
-Este livro está disponível gratuitamente na forma de um livro eletrônico (livro eletrônico) disponível por meio de diversos canais da Microsoft, como http://dot.net/architecture.
+Este livro está disponível gratuitamente na forma de um livro eletrônico (livro eletrônico) disponível por meio de diversos canais da Microsoft, como <http://dot.net/architecture>.
 
 Se você tiver dúvidas relacionadas a esse livro, envie-as por email para [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Este livro é fornecido “no estado em que se encontra” e expressa os pontos 
 
 Alguns exemplos aqui representados são fornecidos apenas para ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser deduzida.
 
-A Microsoft e as marcas listadas em http://www.microsoft.com na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft. Todas as outras marcas são propriedade de seus respectivos proprietários.
+A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft. Todas as outras marcas são propriedade de seus respectivos proprietários.
 
 Autor:
 > **Cesar de la Torre**. PM, Equipe de Produto do .NET, Microsoft Corp.

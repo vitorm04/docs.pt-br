@@ -2,12 +2,12 @@
 title: Política de autorização
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198313"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873473"
 ---
 # <a name="authorization-policy"></a>Política de autorização
 
@@ -284,7 +284,7 @@ Ou você pode fazer a mesma coisa na configuração:
 
 Windows Communication Foundation (WCF) fornece um rico modelo baseado em declarações para executar verificações de acesso. O <xref:System.ServiceModel.ServiceAuthorizationManager> objeto é usado para executar a verificação de acesso e determinar se as declarações associadas com o cliente satisfazem os requisitos necessários para acessar o método de serviço.
 
-Para fins de demonstração, este exemplo mostra uma implementação de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir o acesso do usuário aos métodos com base em declarações de tipo http://example.com/claims/allowedoperation cujo valor é o URI de ação da operação que é pode ser chamado.
+Para fins de demonstração, este exemplo mostra uma implementação de <xref:System.ServiceModel.ServiceAuthorizationManager> que implementa o <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> método para permitir o acesso do usuário aos métodos com base em declarações de tipo `http://example.com/claims/allowedoperation` cujo valor é o URI de ação da operação que é pode ser chamado.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
