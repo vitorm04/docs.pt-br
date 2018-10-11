@@ -10,72 +10,35 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591393"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192194"
 ---
-# <a name="-c-reference"></a><span data-ttu-id="ea5b7-102">@ (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="ea5b7-102">@ (C# Reference)</span></span>
+# <a name="-c-reference"></a><span data-ttu-id="95289-102">@ (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="95289-102">@ (C# Reference)</span></span>
 
-<span data-ttu-id="ea5b7-103">O caractere especial `@` serve como um identificador textual.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-103">The `@` special character serves as a verbatim identifier.</span></span> <span data-ttu-id="ea5b7-104">Ele pode ser usado das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="ea5b7-104">It can be used in the following ways:</span></span>
+<span data-ttu-id="95289-103">O caractere especial `@` serve como um identificador textual.</span><span class="sxs-lookup"><span data-stu-id="95289-103">The `@` special character serves as a verbatim identifier.</span></span> <span data-ttu-id="95289-104">Ele pode ser usado das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="95289-104">It can be used in the following ways:</span></span>
 
-1. <span data-ttu-id="ea5b7-105">Para habilitar palavras-chave de C# a serem usadas como identificadores.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-105">To enable C# keywords to be used as identifiers.</span></span> <span data-ttu-id="ea5b7-106">O caractere `@` atua como prefixo de um elemento de código que o compilador deve interpretar como um identificador e não como uma palavra-chave de C#.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-106">The `@` character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword.</span></span> <span data-ttu-id="ea5b7-107">O exemplo a seguir usa o caractere `@` para definir um identificador chamado `for` que usa em um loop `for`.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-107">The following example uses the `@` character to define an identifier named `for` that it uses in a `for` loop.</span></span>
+1. <span data-ttu-id="95289-105">Para habilitar palavras-chave de C# a serem usadas como identificadores.</span><span class="sxs-lookup"><span data-stu-id="95289-105">To enable C# keywords to be used as identifiers.</span></span> <span data-ttu-id="95289-106">O caractere `@` atua como prefixo de um elemento de código que o compilador deve interpretar como um identificador e não como uma palavra-chave de C#.</span><span class="sxs-lookup"><span data-stu-id="95289-106">The `@` character prefixes a code element that the compiler is to interpret as an identifier rather than a C# keyword.</span></span> <span data-ttu-id="95289-107">O exemplo a seguir usa o caractere `@` para definir um identificador chamado `for` que usa em um loop `for`.</span><span class="sxs-lookup"><span data-stu-id="95289-107">The following example uses the `@` character to define an identifier named `for` that it uses in a `for` loop.</span></span>
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. <span data-ttu-id="ea5b7-108">Para indicar que um literal de cadeia de caracteres é interpretado de forma textual.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-108">To indicate that a string literal is to be interpreted verbatim.</span></span> <span data-ttu-id="ea5b7-109">O caractere `@` neste exemplo define um *literal de cadeia de caracteres textual*.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-109">The `@` character in this instance defines a *verbatim string literal*.</span></span> <span data-ttu-id="ea5b7-110">Sequências de escape simples (como `"\\"` para uma barra invertida), sequências de escape hexadecimais (como um `"\x0041"` para um A maiúsculo) e sequências de escape Unicode (como `"\u0041"` para um A maiúsculo) são interpretadas de forma textual.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-110">Simple escape sequences (such as `"\\"` for a backslash), hexadecimal escape sequences (such as `"\x0041"` for an uppercase A), and Unicode escape sequences (such as `"\u0041"` for an uppercase A) are interpreted literally.</span></span> <span data-ttu-id="ea5b7-111">Somente uma sequência de escape de aspas (`""`) não é interpretada literalmente; ela produz aspas simples.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-111">Only a quote escape sequence (`""`) is not interpreted literally; it produces a single quotation mark.</span></span> <span data-ttu-id="ea5b7-112">Além disso, no caso de uma [cadeia de caracteres interpolada](interpolated.md) textual, as sequências de escape de chave (`{{` e `}}`) não são interpretadas de forma textual; elas geram caracteres de chave única.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-112">Additionally, in case of a verbatim [interpolated string](interpolated.md) brace escape sequences (`{{` and `}}`) are not interpreted literally; they produce single brace characters.</span></span> <span data-ttu-id="ea5b7-113">O exemplo a seguir define dois caminhos de arquivo idênticos, um usando um literal de cadeia de caracteres regular e o outro usando um literal de cadeia de caracteres textual.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-113">The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal.</span></span> <span data-ttu-id="ea5b7-114">Este é um dos usos mais comuns de literais de cadeias de caracteres textuais.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-114">This is one of the more common uses of verbatim string literals.</span></span>
+1. <span data-ttu-id="95289-108">Para indicar que um literal de cadeia de caracteres é interpretado de forma textual.</span><span class="sxs-lookup"><span data-stu-id="95289-108">To indicate that a string literal is to be interpreted verbatim.</span></span> <span data-ttu-id="95289-109">O caractere `@` neste exemplo define um *literal de cadeia de caracteres textual*.</span><span class="sxs-lookup"><span data-stu-id="95289-109">The `@` character in this instance defines a *verbatim string literal*.</span></span> <span data-ttu-id="95289-110">Sequências de escape simples (como `"\\"` para uma barra invertida), sequências de escape hexadecimais (como um `"\x0041"` para um A maiúsculo) e sequências de escape Unicode (como `"\u0041"` para um A maiúsculo) são interpretadas de forma textual.</span><span class="sxs-lookup"><span data-stu-id="95289-110">Simple escape sequences (such as `"\\"` for a backslash), hexadecimal escape sequences (such as `"\x0041"` for an uppercase A), and Unicode escape sequences (such as `"\u0041"` for an uppercase A) are interpreted literally.</span></span> <span data-ttu-id="95289-111">Somente uma sequência de escape de aspas (`""`) não é interpretada literalmente; ela produz aspas simples.</span><span class="sxs-lookup"><span data-stu-id="95289-111">Only a quote escape sequence (`""`) is not interpreted literally; it produces a single quotation mark.</span></span> <span data-ttu-id="95289-112">Além disso, no caso de uma [cadeia de caracteres interpolada](interpolated.md) textual, as sequências de escape de chave (`{{` e `}}`) não são interpretadas de forma textual; elas geram caracteres de chave única.</span><span class="sxs-lookup"><span data-stu-id="95289-112">Additionally, in case of a verbatim [interpolated string](interpolated.md) brace escape sequences (`{{` and `}}`) are not interpreted literally; they produce single brace characters.</span></span> <span data-ttu-id="95289-113">O exemplo a seguir define dois caminhos de arquivo idênticos, um usando um literal de cadeia de caracteres regular e o outro usando um literal de cadeia de caracteres textual.</span><span class="sxs-lookup"><span data-stu-id="95289-113">The following example defines two identical file paths, one by using a regular string literal and the other by using a verbatim string literal.</span></span> <span data-ttu-id="95289-114">Este é um dos usos mais comuns de literais de cadeias de caracteres textuais.</span><span class="sxs-lookup"><span data-stu-id="95289-114">This is one of the more common uses of verbatim string literals.</span></span>
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
-   <span data-ttu-id="ea5b7-115">O exemplo a seguir ilustra o efeito de definir um literal de cadeia de caracteres regular e um literal de cadeia de caracteres textual que contêm sequências de caracteres idênticas.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-115">The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.</span></span>
+   <span data-ttu-id="95289-115">O exemplo a seguir ilustra o efeito de definir um literal de cadeia de caracteres regular e um literal de cadeia de caracteres textual que contêm sequências de caracteres idênticas.</span><span class="sxs-lookup"><span data-stu-id="95289-115">The following example illustrates the effect of defining a regular string literal and a verbatim string literal that contain identical character sequences.</span></span>
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. <span data-ttu-id="ea5b7-116">Para habilitar o compilador a distinguir entre os atributos em caso de um conflito de nomenclatura.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-116">To enable the compiler to distinguish between attributes in cases of a naming conflict.</span></span> <span data-ttu-id="ea5b7-117">Um atributo é um tipo que deriva de <xref:System.Attribute>.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-117">An attribute is a type that derives from <xref:System.Attribute>.</span></span> <span data-ttu-id="ea5b7-118">Seu nome de tipo normalmente inclui o sufixo **Attribute**, embora o compilador não imponha essa convenção.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-118">Its type name typically includes the suffix **Attribute**, although the compiler does not enforce this convention.</span></span> <span data-ttu-id="ea5b7-119">O atributo pode, então, ser referenciado no código por seu nome de tipo completo (por exemplo, `[InfoAttribute]` ou pelo nome abreviado (por exemplo, `[Info]`).</span><span class="sxs-lookup"><span data-stu-id="ea5b7-119">The attribute can then be referenced in code either by its full type name (for example, `[InfoAttribute]` or its shortened name (for example, `[Info]`).</span></span> <span data-ttu-id="ea5b7-120">No entanto, um conflito de nomenclatura ocorre se dois nomes de tipo abreviados forem idênticos e um nome de tipo incluir o sufixo **Attribute** e o outro não incluir.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-120">However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the **Attribute** suffix but the other does not.</span></span> <span data-ttu-id="ea5b7-121">Por exemplo, o código a seguir não é compilado porque o compilador não consegue determinar se o atributo `Info` ou `InfoAttribute` é aplicado à classe `Example`.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-121">For example, the following code fails to compile because the compiler cannot determine whether the `Info` or `InfoAttribute` attribute is applied to the `Example` class.</span></span>
+1. <span data-ttu-id="95289-116">Para habilitar o compilador a distinguir entre os atributos em caso de um conflito de nomenclatura.</span><span class="sxs-lookup"><span data-stu-id="95289-116">To enable the compiler to distinguish between attributes in cases of a naming conflict.</span></span> <span data-ttu-id="95289-117">Um atributo é um tipo que deriva de <xref:System.Attribute>.</span><span class="sxs-lookup"><span data-stu-id="95289-117">An attribute is a class that derives from <xref:System.Attribute>.</span></span> <span data-ttu-id="95289-118">Seu nome de tipo normalmente inclui o sufixo **Attribute**, embora o compilador não imponha essa convenção.</span><span class="sxs-lookup"><span data-stu-id="95289-118">Its type name typically includes the suffix **Attribute**, although the compiler does not enforce this convention.</span></span> <span data-ttu-id="95289-119">O atributo pode, então, ser referenciado no código por seu nome de tipo completo (por exemplo, `[InfoAttribute]` ou pelo nome abreviado (por exemplo, `[Info]`).</span><span class="sxs-lookup"><span data-stu-id="95289-119">The attribute can then be referenced in code either by its full type name (for example, `[InfoAttribute]` or its shortened name (for example, `[Info]`).</span></span> <span data-ttu-id="95289-120">No entanto, um conflito de nomenclatura ocorre se dois nomes de tipo abreviados forem idênticos e um nome de tipo incluir o sufixo **Attribute** e o outro não incluir.</span><span class="sxs-lookup"><span data-stu-id="95289-120">However, a naming conflict occurs if two shortened attribute type names are identical, and one type name includes the **Attribute** suffix but the other does not.</span></span> <span data-ttu-id="95289-121">Por exemplo, o código a seguir não é compilado porque o compilador não consegue determinar se o atributo `Info` ou `InfoAttribute` é aplicado à classe `Example`.</span><span class="sxs-lookup"><span data-stu-id="95289-121">For example, the following code fails to compile because the compiler cannot determine whether the `Info` or `InfoAttribute` attribute is applied to the `Example` class.</span></span> <span data-ttu-id="95289-122">Veja [CS1614](../compiler-messages/cs1614.md) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="95289-122">See [CS1614](../compiler-messages/cs1614.md) for more information.</span></span>
 
-   ```csharp
-   using System;
+   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
-   [AttributeUsage(AttributeTargets.Class)]
-   public class Info : Attribute
-   {
-      private string information;
-      
-      public Info(string info)
-      {
-          information = info;
-      }
-   }
+## <a name="see-also"></a><span data-ttu-id="95289-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="95289-123">See Also</span></span>
 
-   [AttributeUsage(AttributeTargets.Method)]
-   public class InfoAttribute : Attribute
-   {
-      private string information;
-      
-      public InfoAttribute(string info)
-      {
-          information = info;
-      }
-   }
-
-   [Info("A simple executable.")]
-   public class Example
-   {
-      [InfoAttribute("The entry point.")]
-      public static void Main()
-      {
-      }
-   }
-   ```  
-
-   <span data-ttu-id="ea5b7-122">Se o identificador textual for usado para identificar o atributo `Info`, o exemplo será compilado com êxito.</span><span class="sxs-lookup"><span data-stu-id="ea5b7-122">If the verbatim identifier is used to identify the `Info` attribute, the example compiles successfully.</span></span>
-
-   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
-
-## <a name="see-also"></a><span data-ttu-id="ea5b7-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ea5b7-123">See Also</span></span>
-
-- [<span data-ttu-id="ea5b7-124">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="ea5b7-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ea5b7-125">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="ea5b7-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ea5b7-126">Caracteres especiais de C#</span><span class="sxs-lookup"><span data-stu-id="ea5b7-126">C# Special Characters</span></span>](../../../csharp/language-reference/tokens/index.md)
+- [<span data-ttu-id="95289-124">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="95289-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="95289-125">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="95289-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="95289-126">Caracteres especiais de C#</span><span class="sxs-lookup"><span data-stu-id="95289-126">C# Special Characters</span></span>](../../../csharp/language-reference/tokens/index.md)
