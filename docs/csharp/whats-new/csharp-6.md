@@ -3,12 +3,12 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565872"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208179"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -45,7 +45,7 @@ O efeito geral desses recursos é que você escreve código mais conciso e tamb�
 
 O restante deste tópico fornece detalhes sobre cada um desses recursos.
 
-## <a name="auto-property-enhancements"></a>Aprimoramentos de propriedade automática 
+## <a name="auto-property-enhancements"></a>Aprimoramentos de propriedade automática
 
 A sintaxe para propriedades implementadas automaticamente (geralmente conhecidas como 'propriedades automáticas ') facilitou muito a criação de propriedades que tinham acessadores simples get e set:
 
@@ -88,6 +88,8 @@ public class Student
 
 Esse recurso habilita o suporte real à linguagem para criar tipos imutáveis e usar a sintaxe de propriedade automática mais concisa e conveniente.
 
+Se adicionar essa sintaxe não remove um método acessível, ele é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
+
 ### <a name="auto-property-initializers"></a>Inicializadores de propriedade automática
 
 Os *Inicializadores de propriedade automática* permitem que você declare o valor inicial de uma propriedade automática como parte da declaração de propriedade.  Em versões anteriores, essas propriedades precisariam de setters e você teria que usar esse setter para inicializar o armazenamento de dados usado pelo campo de suporte. Considere essa classe para um aluno que contém o nome e uma lista das notas do aluno:
@@ -115,6 +117,9 @@ O corpo de muitos membros que escrevemos consiste em apenas uma instrução, que
 Você também pode usar membros aptos para expressão em propriedades somente leitura:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+A alteração de um membro existente para um membro de corpo da expressão é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
+
 
 ## <a name="using-static"></a>usando estático
 
@@ -398,4 +403,3 @@ A opção `-deterministic` instrui o compilador a produzir um assembly de saída
 Por padrão, cada compilação produz uma saída exclusiva em cada compilação. O compilador adiciona um carimbo de data/hora e um GUID gerado com base em números aleatórios. Use essa opção se desejar comparar a saída byte a byte para garantir a consistência nos builds.
 
 Para obter mais informações, confira o artigo [Opção do compilador -deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
-

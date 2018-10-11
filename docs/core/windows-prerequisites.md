@@ -4,12 +4,12 @@ description: Saiba quais dependências você precisa em seu computador Windows p
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179488"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747462"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
 
@@ -61,7 +61,7 @@ A [Atualização 3 dos Pacotes Redistribuíveis do Microsoft Visual C++ 2015](ht
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Pré-requisitos do Visual Studio 2017
 
-Você pode usar qualquer editor para desenvolver aplicativos .NET Core usando o SDK do .NET Core. O [Visual Studio 2017](#visual-studio-2017) oferece um ambiente de desenvolvimento integrado para aplicativos .NET Core no Windows.
+Você pode usar qualquer editor para desenvolver aplicativos .NET Core usando o SDK do .NET Core. O Visual Studio 2017 oferece um ambiente de desenvolvimento integrado para aplicativos .NET Core no Windows.
 
 Leia mais sobre as alterações no Visual Studio 2017 nas [notas de versão](/visualstudio/releasenotes/vs2017-relnotes).
 

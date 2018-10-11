@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084712"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702771"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 A classe <xref:System.Threading.EventWaitHandle> permite que os threads se comuniquem entre si por meio da sinalização e aguardando sinais. Identificadores de espera de eventos (conhecidos simplesmente como eventos) são identificadores de espera que podem ser sinalizados a fim de liberar um ou mais threads de espera. Após a sinalização, um identificador de espera de eventos é redefinido manualmente ou automaticamente. A classe <xref:System.Threading.EventWaitHandle> pode representar um identificador de espera de evento local (evento local) ou um identificador de espera evento de evento do sistema nomeado (evento nomeado ou evento do sistema, visível a todos os processos).  
   
 > [!NOTE]
->  Os identificadores de espera de eventos não são eventos no sentido geralmente atribuído à palavra no .NET Framework. Não há delegados ou manipuladores de eventos envolvidos. A palavra "evento" é usada para descrevê-los, pois eles têm sido chamados tradicionalmente de eventos do sistema operacional, e porque o ato de sinalização do identificador de espera indica aos threads de espera que um evento ocorreu.  
+>  Os identificadores de espera de eventos não são [eventos](../events/index.md) do .NET. Não há delegados ou manipuladores de eventos envolvidos. A palavra "evento" é usada para descrevê-los, pois eles têm sido chamados tradicionalmente de eventos do sistema operacional, e porque o ato de sinalização do identificador de espera indica aos threads de espera que um evento ocorreu.  
   
  Os identificadores de espera de eventos local e nomeado usam objetos de sincronização do sistema, que são protegidos por wrappers <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> a fim de garantir a liberação de recursos. Você pode usar o método <xref:System.Threading.WaitHandle.Dispose%2A> para liberar os recursos imediatamente ao terminar de usar o objeto.  
   

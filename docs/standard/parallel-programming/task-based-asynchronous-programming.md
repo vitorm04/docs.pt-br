@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592583"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171368"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tarefa*, que representa uma operação assíncrona. De certa forma, uma tarefa é semelhante a um thread ou a um item de trabalho <xref:System.Threading.ThreadPool>, mas em um nível mais alto de abstração. O termo *paralelismo de tarefas* refere-se a uma ou mais tarefas independentes que são executadas simultaneamente. As tarefas fornecem dois benefícios principais:  
@@ -59,10 +59,10 @@ A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tare
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- Você também pode usar o método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> para criar e iniciar uma tarefa em uma operação. Use este método quando a criação e o agendamento não precisarem ser separados e você precisar de opções adicionais de criação de tarefas ou do uso de um agendador específico, ou ainda quando você precisar passar estado adicional na tarefa através da propriedade <xref:System.Threading.Tasks.Task.AsyncState%2A>, conforme mostrado no exemplo a seguir.  
+ Você também pode usar o método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> para criar e iniciar uma tarefa em uma operação. Use este método quando a criação e o agendamento não precisarem ser separados e você precisar de opções adicionais de criação de tarefas ou do uso de um agendador específico, ou ainda quando você precisar passar estado adicional na tarefa que você pode recuperar através da propriedade <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> expõem uma propriedade <xref:System.Threading.Tasks.Task.Factory%2A> estática que retorna uma instância padrão de <xref:System.Threading.Tasks.TaskFactory> para que você possa chamar o método como `Task.Factory.StartNew()`. Além disso, no exemplo a seguir, como as tarefas são do tipo <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, cada uma possui uma propriedade pública <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> que contém o resultado do cálculo. As tarefas são executadas de forma assíncrona e podem ser concluídas em qualquer ordem. Se a propriedade <xref:System.Threading.Tasks.Task%601.Result%2A> for acessada antes que a computação seja concluída, a propriedade bloqueará o thread de chamada até o valor estar disponível.  
   
@@ -267,6 +267,7 @@ A TPL (Biblioteca de Paralelismo de Tarefas) é baseada no conceito de uma *tare
 |[Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Descreve como usar <xref:System.Threading.Tasks.Parallel.For%2A> e <xref:System.Threading.Tasks.Parallel.ForEach%2A> para criar loops paralelos sobre dados.|  
 |[Programação paralela](../../../docs/standard/parallel-programming/index.md)|Nó de nível superior para a programação paralela do .NET Framework.|  
   
-## <a name="see-also"></a>Consulte também  
- [Programação paralela](../../../docs/standard/parallel-programming/index.md)  
- [Amostras de programação paralela com o .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>Consulte também
+
+- [Programação paralela](../../../docs/standard/parallel-programming/index.md)  
+- [Amostras de programação paralela com o .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

@@ -3,33 +3,33 @@ title: Protocolos de segurança versão 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 author: BrucePerlerMS
-ms.openlocfilehash: 043a092855b7f5827c03b1d247b03328ba561edf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 59d82fc3238f12b33f3111c88854b9d6348a5e27
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036273"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086785"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de segurança versão 1.0
 Os protocolos de segurança de serviços Web fornecem mecanismos de segurança de serviços Web que abrangem todos os empresariais existentes, requisitos de segurança de mensagens. Esta seção descreve os detalhes do Windows Communication Foundation (WCF) versão 1.0 (implementado de <xref:System.ServiceModel.Channels.SecurityBindingElement>) para protocolos de segurança de serviços da Web a seguir.  
   
 |Especificação/documento|Link|  
 |-|-|  
-|WSS: Segurança de mensagem SOAP 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS: Perfil de Token de nome de usuário 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X509 Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS: SAML 1.1 Token Profile 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS: Segurança de mensagem SOAP 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
-|Perfil de Token de nome de usuário 1.1 do WSS|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: Perfil de Token de x. 509 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS: Perfil de Token Kerberos 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS: SAML 1.1 Profile 1.1 de Token|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
-|WS-Secure Conversation|http://msdn.microsoft.com/ws/2005/02/ws-secure-conversation/|  
-|WS-Trust|http://msdn.microsoft.com/ws/2005/02/ws-trust/|  
+|WSS: Segurança de mensagem SOAP 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS: Perfil de Token de nome de usuário 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: X509 Token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS: SAML 1.1 Token Profile 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS: Segurança de mensagem SOAP 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|Perfil de Token de nome de usuário 1.1 do WSS|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: Perfil de Token de x. 509 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS: Perfil de Token Kerberos 1.1|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS: SAML 1.1 Profile 1.1 de Token|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
+|WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |Observação de aplicativo:<br /><br /> Usando o WS-Trust para o Handshake TLS|Para serem publicados|  
 |Observação de aplicativo:<br /><br /> Usando o WS-Trust para SPNEGO|Para serem publicados|  
 |Observação de aplicativo:<br /><br /> Identidade e referências de endereçamento de ponto de extremidade de serviços Web|Para serem publicados|  
-|O WS-SecurityPolicy 1.1<br /><br /> (2005/07)|http://msdn.microsoft.com/ws/2005/07/ws-security-policy/<br /><br /> como corrigida por errata enviado ao OASIS WS-SX Technical Committee http://www.oasis-open.org/archives/ws-sx/200512/msg00017.html|  
+|O WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> como corrigida por [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) enviado ao OASIS WS-SX Technical Committee |  
   
  O WCF, versão 1, oferece 17 modos de autenticação que podem ser usados como a base de configuração de segurança de serviços da Web. Cada modo é otimizado para um conjunto comum de requisitos de implantação, tais como:  
   
@@ -69,9 +69,9 @@ Os protocolos de segurança de serviços Web fornecem mecanismos de segurança d
   
 |Prefixo|Namespace|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
-|SP|http://schemas.xmlsoap.org/ws/2005/07/securitypolicy|  
-|a|http://www.w3.org/2005/08/addressing|  
+|s|<https://www.w3.org/2003/05/soap-envelope/>|
+|SP|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
+|a|<https://www.w3.org/2005/08/addressing>|  
 |wsse|TBD – URI DO OASIS WSS 1.0|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
 |wsu|TBD – OASIS WSS 1.0 utilitário URI|  
@@ -79,8 +79,8 @@ Os protocolos de segurança de serviços Web fornecem mecanismos de segurança d
 |WST|TBD – URI de 2005 do WS-Trust/02|  
 |wssc|TBD – URI de 2005 do WS-SecureConversation/02|  
 |wsaw|TBD - namespace WS-Addressing de política|  
-|wsp|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
+|wsp|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
+|mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
 ## <a name="1-token-profiles"></a>1. Perfis de token  
  Especificações de segurança de serviços da Web representam credencial como tokens de segurança. O WCF suporta os seguintes tipos de token:  

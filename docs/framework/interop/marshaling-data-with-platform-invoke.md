@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911725"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231119"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling de dados com invocação de plataforma
 Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativo do .NET Framework requer um protótipo de função em código gerenciado que representa a função não gerenciada. Para criar um protótipo que habilita a invocação de plataforma a realizar marshaling de dados corretamente, você deve fazer o seguinte:  
@@ -46,10 +46,10 @@ Para chamar funções exportadas de uma biblioteca não gerenciada, um aplicativ
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bits|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Decore com ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Decore com Unicode.|  
-|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
-|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
-|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
+|**LPSTR**|**char &ast;**|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
+|**LPCSTR**|**Caractere constante &ast;**|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com ANSI.|  
+|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
+|**LPCWSTR**|**Const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Decore com Unicode.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 bits|  
 |**DOUBLE**|**Duplo**|<xref:System.Double?displayProperty=nameWithType>|64 bits|  
   

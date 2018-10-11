@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 27860feed5fbb33fb007120d082599c8f80b240d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1770ba69be537ccbe1c5ec26150428a3618b21a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395902"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209971"
 ---
 # <a name="making-asynchronous-requests"></a>Fazer solicitações assíncronas
 As classes <xref:System.Net> usam o modelo de programação assíncrona padrão do .NET Framework para acesso assíncrono aos recursos de Internet. Os métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> e <xref:System.Net.WebRequest.EndGetResponse%2A> da classe <xref:System.Net.WebRequest> iniciam e concluem solicitações assíncronas para um recurso de Internet.  
@@ -31,7 +30,7 @@ As classes <xref:System.Net> usam o modelo de programação assíncrona padrão 
   
  O programa define duas classes para seu próprio uso, a classe **RequestState**, que transmite dados entre chamadas assíncronas e a classe **ClientGetAsync**, que implementa a solicitação assíncrona para um recurso de Internet.  
   
- A classe **RequestState** preserva o estado da solicitação entre chamadas para os métodos assíncronos que atendem a solicitação. Ela contém instâncias de **WebRequest** e de <xref:System.IO.Stream> que contêm a solicitação atual para o recurso e o fluxo recebido em resposta, um buffer que contém os dados recebidos atualmente do recurso de Internet e um <xref:System.Text.StringBuilder> que contém a resposta completa. Um **RequestState**é passado como o parâmetro *state* quando o método <xref:System.AsyncCallback> é registrado com **WebRequest.BeginGetResponse**.  
+ A classe **RequestState** preserva o estado da solicitação entre chamadas para os métodos assíncronos que atendem a solicitação. Ela contém instâncias de **WebRequest** e de <xref:System.IO.Stream> que contêm a solicitação atual para o recurso e o fluxo recebido em resposta, um buffer que contém os dados recebidos atualmente do recurso de Internet e um <xref:System.Text.StringBuilder> que contém a resposta completa. Um **RequestState** é passado como o parâmetro *state* quando o método <xref:System.AsyncCallback> é registrado com **WebRequest.BeginGetResponse**.  
   
  A classe **ClientGetAsync** implementa uma solicitação assíncrona para um recurso de Internet e grava a resposta resultante no console. Ela contém os métodos e as propriedades descritas na lista a seguir.  
   

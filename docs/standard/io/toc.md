@@ -14,6 +14,7 @@
 ### [Compondo fluxos](composing-streams.md)
 ### [Como converter entre fluxos do .NET Framework e do Tempo de Execução do Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [E/S de arquivo assíncrona](asynchronous-file-i-o.md)
+## [Como lidar com erros de E/S](handling-io-errors.md)
 ## [Armazenamentos isolado](isolated-storage.md)
 ### [Tipos de isolamento](types-of-isolation.md)
 ### [Como obter repositórios para o armazenamento isolado](how-to-obtain-stores-for-isolated-storage.md)

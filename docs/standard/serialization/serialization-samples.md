@@ -3,11 +3,11 @@ title: Amostras de serialização para o .NET Framework
 ms.date: 03/30/2017
 ms.assetid: 6a56f66d-c80a-43e9-8e50-fb9b61120222
 ms.openlocfilehash: 5deae766b2b05fcb14c51666fa9fb988832a9a2d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035286"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086032"
 ---
 # <a name="serialization-samples-for-the-net-framework"></a>Amostras de serialização para o .NET Framework
 Essa seção demonstra os objetos de serialização no .NET Framework.  

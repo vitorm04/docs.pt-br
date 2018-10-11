@@ -1,6 +1,6 @@
 ---
 title: Tabelas de referência de tipos (Referência em C#)
-ms.date: 07/20/2015
+ms.date: 09/21/2018
 f1_keywords:
 - cs.referencetables
 helpviewer_keywords:
@@ -8,36 +8,31 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: 2138bd85740b715466e263020125b367d6036c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f75a1cf0b118becd940bd1aa8ac66550d0852773
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529904"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47207329"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabelas de referência de tipos (Referência em C#)
 
 As tabelas de referência a seguir resumem os tipos do C#:
 
-- [Tabela de tipos internos](built-in-types-table.md)
-
-- [Tipos integrais](integral-types-table.md)
-
-- [Tipos de ponto flutuante](floating-point-types-table.md)
-
-- [Valores padrão](default-values-table.md)
-
-- [Tipos de valor](value-types-table.md)
-
-- [Conversões numéricas implícitas](implicit-numeric-conversions-table.md)
-
-- [Tabela de conversões numéricas explícitas](explicit-numeric-conversions-table.md)
-
-Para obter informações sobre como formatar a saída de tipos numéricos, consulte [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md).
+|Tabela|Descrição|
+|---------|---------|
+|[Tipos internos](built-in-types-table.md)|Lista tipos C# internos e tipos .NET correspondentes.|
+|[Tipos integrais](integral-types-table.md)|Fornece uma visão geral dos tipos integrais.|
+|[Tipos de ponto flutuante](floating-point-types-table.md)|Fornece uma visão geral dos tipos de ponto flutuante.|
+|[Tipos de valor](value-types-table.md)|Lista os tipos de valor do C#.|
+|[Valores padrão](default-values-table.md)|Lista os valores padrão dos tipos de valor do C#.|
+|[Conversões numéricas implícitas](implicit-numeric-conversions-table.md)|Fornece uma visão geral das conversões implícitas com suporte entre tipos numéricos do C#.|
+|[Conversões numéricas explícitas](explicit-numeric-conversions-table.md)|Fornece uma visão geral das conversões explícitas com suporte entre tipos numéricos do C#.|
+|[Formatação de resultados numéricos](formatting-numeric-results-table.md)|Fornece uma visão geral de cadeias de caracteres de formato numérico padrão.|
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../language-reference/index.md)
+- [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Tipos de referência](reference-types.md)
 - [Tipos de valor](value-types.md)

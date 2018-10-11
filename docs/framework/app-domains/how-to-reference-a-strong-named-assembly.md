@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743310"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199868"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
@@ -68,7 +68,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  Se você tiver um arquivo de chave pública, use o comando a seguir (observe a diferença no caso da opção de linha de comando):  
   
- **sn -tp \<** *assembly* **>**  
+ **sn -tp \<** *arquivo de chave pública* **>**  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

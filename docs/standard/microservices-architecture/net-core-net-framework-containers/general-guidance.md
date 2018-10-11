@@ -3,13 +3,13 @@ title: Diretrizes gerais
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Diretrizes gerais
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104073"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537820"
 ---
 # <a name="general-guidance"></a>Diretrizes gerais
 
@@ -27,7 +27,7 @@ Em resumo, quando você cria novos aplicativos .NET em contêineres, você deve 
 
 Um benefício adicional de usar o .NET Core é que você pode executar versões do .NET para aplicativos lado a lado dentro do mesmo computador. Esse benefício é mais importante para servidores ou VMs que não usam contêineres, porque os contêineres isolam as versões do .NET de que o aplicativo precisa. (Desde que sejam compatíveis com o sistema operacional subjacente.)
 
-Você deverá usar o .NET Framework, com contêineres do Windows, para seu aplicativo para servidores do Docker em contêineres quando:
+Você deverá usar o .NET Framework para seu aplicativo para servidores do Docker em contêineres quando:
 
 -   No momento, seu aplicativo usar o .NET Framework e tem fortes dependências no Windows.
 
@@ -35,15 +35,15 @@ Você deverá usar o .NET Framework, com contêineres do Windows, para seu aplic
 
 -   For necessário usar bibliotecas .NET de terceiros ou pacotes NuGet não disponíveis para o .NET Core.
 
-Usar o .NET Framework no Docker pode melhorar suas experiências de implantação minimizando os problemas de implantação. Este [*cenário de "lift-and-shift"*](https://aka.ms/liftandshiftwithcontainersebook) é importante para colocar aplicativos herdados em contêineres que foram desenvolvidos originalmente com o .NET Framework tradicional, como os serviços ASP.NET WebForms, aplicativos Web MVC ou WCF (Windows Communication Foundation).
+Usar o .NET Framework no Docker pode melhorar suas experiências de implantação minimizando os problemas de implantação. Este [cenário de "lift-and-shift"](https://aka.ms/liftandshiftwithcontainersebook) é importante para colocar aplicativos herdados em contêineres que foram desenvolvidos originalmente com o .NET Framework tradicional, como os serviços ASP.NET WebForms, aplicativos Web MVC ou WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Livro eletrônico: Modernizar aplicativos .NET Framework existentes com o Azure e Contêineres do Windows**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **Livro eletrônico: modernizar aplicativos .NET Framework existentes com o Azure e Contêineres do Windows**  
+    https://aka.ms/liftandshiftwithcontainersebook
 
--   **Aplicativos de exemplo: modernização de aplicativos Web ASP.NET herdados usando Contêineres do Windows**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **Aplicativos de exemplo: modernização de aplicativos Web ASP.NET herdados usando Contêineres do Windows**  
+    https://aka.ms/eshopmodernizing
 
 
 >[!div class="step-by-step"]

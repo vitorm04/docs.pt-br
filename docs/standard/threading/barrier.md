@@ -1,6 +1,6 @@
 ---
-title: Barreira (.NET Framework)
-ms.date: 03/30/2017
+title: Barreira
+ms.date: 09/14/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,46 +10,51 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cbbf7055a250ae7fa630097f3014a6420228fed3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45647545"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397001"
 ---
-# <a name="barrier-net-framework"></a>Barreira (.NET Framework)
-Uma *barreira* é um primitivo de sincronização definido pelo usuário que permite que vários threads (conhecidos como *participantes*) trabalhem simultaneamente em um algoritmo em fases. Cada participante executa até atingir o ponto de barreira no código. A barreira representa o final de uma fase de trabalho. Quando um participante alcança a barreira, ela é bloqueada até que todos os participantes atinjam a mesma barreira. Depois que todos os participantes tiverem chegado à barreira, opcionalmente, você poderá chamar uma ação pós-fase. Esta ação pós-fase pode ser usada para executar ações por um único thread enquanto todos os outros threads ainda estiverem bloqueados. Após a ação ser executada, todos os participantes serão desbloqueados.  
+# <a name="barrier"></a>Barreira
+
+Um <xref:System.Threading.Barrier?displayProperty=nameWithType> é um primitivo de sincronização definido pelo usuário que permite que vários threads (conhecidos como *participantes*) trabalhem simultaneamente em um algoritmo em fases. Cada participante executa até atingir o ponto de barreira no código. A barreira representa o final de uma fase de trabalho. Quando um participante alcança a barreira, ela é bloqueada até que todos os participantes atinjam a mesma barreira. Depois que todos os participantes tiverem chegado à barreira, opcionalmente, você poderá chamar uma ação pós-fase. Esta ação pós-fase pode ser usada para executar ações por um único thread enquanto todos os outros threads ainda estiverem bloqueados. Após a ação ser executada, todos os participantes serão desbloqueados.  
   
  O snippet de código a seguir mostra um padrão de barreira básica.  
   
  [!code-csharp[CDS_Barrier#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#02)]
  [!code-vb[CDS_Barrier#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_barrier/vb/barrier_vb.vb#02)]  
   
- Para um exemplo completo, veja [Como sincronizar operações simultâneas com uma barreira](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+ Para um exemplo completo, veja [Como sincronizar operações simultâneas com uma barreira](how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
-## <a name="adding-and-removing-participants"></a>Como adicionar e remover participantes  
- Ao criar um <xref:System.Threading.Barrier>, especifique o número de participantes. Você também pode adicionar ou remover participantes dinamicamente a qualquer momento. Por exemplo, se um participante resolver sua parte do problema, você poderá armazenar o resultado, parar a execução no thread e chamar <xref:System.Threading.Barrier.RemoveParticipant%2A> para diminuir o número de participantes na barreira. Quando você adiciona um participante chamando <xref:System.Threading.Barrier.AddParticipant%2A>, o valor de retorno especifica o número de fase atual, que pode ser útil para inicializar o trabalho do novo participante.  
+## <a name="adding-and-removing-participants"></a>Adicionar e remover participantes
+
+ Ao criar uma instância de <xref:System.Threading.Barrier>, especifique o número de participantes. Você também pode adicionar ou remover participantes dinamicamente a qualquer momento. Por exemplo, se um participante resolver sua parte do problema, você poderá armazenar o resultado, parar a execução no thread e chamar <xref:System.Threading.Barrier.RemoveParticipant%2A?displayProperty=nameWithType> para diminuir o número de participantes na barreira. Quando você adiciona um participante chamando <xref:System.Threading.Barrier.AddParticipant%2A?displayProperty=nameWithType>, o valor de retorno especifica o número de fase atual, que pode ser útil para inicializar o trabalho do novo participante.  
   
-## <a name="broken-barriers"></a>Barreiras interrompidas  
- Os deadlocks podem ocorrer se um participante não conseguir alcançar a barreira. Para evitar esses deadlocks, use as sobrecargas do método <xref:System.Threading.Barrier.SignalAndWait%2A> para especificar um período de tempo limite e um token de cancelamento. Essas sobrecargas retorno um valor booliano que cada participante pode verificar antes de ele continuar para a próxima fase.  
+## <a name="broken-barriers"></a>Barreiras interrompidas
+
+ Os deadlocks podem ocorrer se um participante não conseguir alcançar a barreira. Para evitar esses deadlocks, use as sobrecargas do método <xref:System.Threading.Barrier.SignalAndWait%2A?displayProperty=nameWithType> para especificar um período de tempo limite e um token de cancelamento. Essas sobrecargas retorno um valor booliano que cada participante pode verificar antes de ele continuar para a próxima fase.  
   
-## <a name="post-phase-exceptions"></a>Exceções pós-fase  
+## <a name="post-phase-exceptions"></a>Exceções pós-fase
+
  Se o representante da pós-fase lançar uma exceção, ele será encapsulado em um objeto <xref:System.Threading.BarrierPostPhaseException> que será, em seguida, propagado para todos os participantes.  
   
-## <a name="barrier-versus-continuewhenall"></a>Barreira versus ContinueWhenAll  
+## <a name="barrier-versus-continuewhenall"></a>Barreira versus ContinueWhenAll
+
  As barreiras são especialmente úteis quando os threads estão executando várias fases em loops. Caso seu código requeira somente uma ou duas fases de trabalho, considere o uso de objetos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> com qualquer tipo de junção implícita, incluindo:  
   
--   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>  
+-   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.Invoke%2A>  
+-   <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
+-   <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.For%2A>  
+-   <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
   
- Para obter mais informações, consulte [Encadeando tarefas com tarefas de continuação](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
+ Para obter mais informações, consulte [Encadeando tarefas com tarefas de continuação](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [Como sincronizar operações simultâneas com uma barreira](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+- [Objetos e recursos de threading](threading-objects-and-features.md)  
+- [Como sincronizar operações simultâneas com uma barreira](how-to-synchronize-concurrent-operations-with-a-barrier.md)

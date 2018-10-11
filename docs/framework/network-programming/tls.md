@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798906"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424474"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
@@ -179,7 +179,10 @@ Para saber mais sobre os protocolos TLS, confira [Mitigação: protocolos TLS](.
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Como configurar a segurança por meio do Registro do Windows
 
-Se configurar uma ou ambas as opções `AppContext` não for uma opção, será possível controlar os protocolos de segurança que seu aplicativo usa com as chaves de Registro do Windows descritas nesta seção. Você não poderá usar uma ou ambas as opções `AppContext` se seu aplicativo for destinado a uma versão do .NET Framework anterior à 4.6 ou se não for possível editar o arquivo de configuração. Se você quiser configurar a segurança com o registro, não especifique um valor de protocolo de segurança no seu código; isso pode substituir o registro.
+> [!WARNING]
+> Definir as chaves do Registro afeta todos os aplicativos no sistema. Use esta opção somente se você estiver no controle total do computador e puder controlar as alterações ao Registro.
+
+Se configurar uma ou ambas as opções `AppContext` não for uma opção, será possível controlar os protocolos de segurança que seu aplicativo usa com as chaves do Registro do Windows descritas nesta seção. Você não poderá usar uma ou ambas as opções `AppContext` se o aplicativo executar no .NET Framework 4.5.2 ou anterior ou se não for possível editar o arquivo de configuração. Se você quiser configurar a segurança com o Registro, não especifique um valor de protocolo de segurança no seu código; isso substituirá a configuração do Registro.
 
 Os nomes das chaves do Registro são similares aos nomes das opções `AppContext` correspondentes, mas sem um `DontEnable` anexado ao nome. Por exemplo, a opção `AppContext` `DontEnableSchUseStrongCrypto` é a chave do Registro chamada [SchUseStrongCrypto](#schusestrongcrypto).
 

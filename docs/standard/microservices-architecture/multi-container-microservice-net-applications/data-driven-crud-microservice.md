@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512110"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45617137"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -252,7 +252,7 @@ catalog.api:
     - "5101:80"
 ```
 
-Os arquivos docker-compose.yml no nível da solução não são apenas mais flexíveis do que os arquivos de configuração no nível do projeto ou do microsserviço, mas também mais seguros se você substitui as variáveis de ambiente declaradas nos arquivos docker-compose pelos valores definidos pelas ferramentas de implantação, como as tarefas de implantação do Docker do VSTS. 
+Os arquivos docker-compose.yml no nível da solução não são apenas mais flexíveis do que arquivos de configuração no nível do projeto ou do microsserviço, mas também serão mais seguros se você substituir as variáveis de ambiente declaradas em arquivos docker-compose com valores definidos das suas ferramentas de implantação, como de tarefas de implantação do Docker do Azure DevOps Services. 
 
 Por fim, você pode obter esse valor do código usando Configuration\["ConnectionString"\], como foi mostrado no método ConfigureServices em um exemplo de código anterior.
 

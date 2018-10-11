@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003809"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Como implementar um componente compatível com o padrão assíncrono baseado em evento
 Se você estiver escrevendo uma classe com algumas operações que possam causar atrasos notáveis, considere a opção de fornecer funcionalidade assíncrona Implementando a [visão geral de padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -58,7 +58,7 @@ Se você estiver escrevendo uma classe com algumas operações que possam causar
 -   Criar uma classe chamada `PrimeNumberCalculator` que herda de <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definir representantes e eventos assíncronos públicos  
- O componente se comunica com clientes usando eventos. O evento *MethodName***Completed** alerta os clientes da conclusão de uma tarefa assíncrona, e o evento *MethodName***ProgressChanged** informa os clientes do progresso de uma tarefa assíncrona.  
+ O componente se comunica com clientes usando eventos. O evento _MethodName_**Completed** alerta os clientes da conclusão de uma tarefa assíncrona, e o evento _MethodName_**ProgressChanged** informa os clientes do progresso de uma tarefa assíncrona.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Para definir eventos assíncronos para clientes do componente:  
   

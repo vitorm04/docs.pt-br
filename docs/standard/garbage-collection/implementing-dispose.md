@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743382"
 ---
 # <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
 
@@ -107,7 +107,7 @@ Aqui está o padrão geral para implementar o padrão de descarte para uma class
 
 Uma classe derivada de uma classe que implementa a interface <xref:System.IDisposable> não deve implementar <xref:System.IDisposable> porque a implementação da classe base <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> é herdada pelas classes derivadas. Em vez disso, para implementar o padrão de descarte para uma classe derivada, você deverá fornecer o seguinte:  
   
-* Um método `protected Dispose(Boolean)` que substitua o método da classe base e execute o trabalho real de liberar os recursos da classe derivada. Esse método também deve chamar o método `Dispose(Boolean)` da classe base e passar para ele um valor de `true` para o argumento *disposing*.  
+* Um método `protected Dispose(Boolean)` que substitua o método da classe base e execute o trabalho real de liberar os recursos da classe derivada. Esse método também deve chamar o método `Dispose(Boolean)` da classe base e passar seu status de descarte para o argumento.  
   
 * Uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> que envolva o recurso não gerenciado (recomendado) ou uma substituição para o método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. A classe <xref:System.Runtime.InteropServices.SafeHandle> fornece um finalizador que o libera de ter que codificar um. Se você fornecer um finalizador, ele deverá chamar a sobrecarga de `Dispose(Boolean)` com um argumento *disposing* de `false`.  
   

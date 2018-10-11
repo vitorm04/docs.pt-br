@@ -3,22 +3,21 @@ title: Imagens oficiais do .NET Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Imagens oficiais do .NET Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/06/2018
-ms.openlocfilehash: 8664493f3d5d5e03cccbe1c33f2c2abe048e3f57
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105570"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075561"
 ---
 # <a name="official-net-docker-images"></a>Imagens oficiais do .NET Docker
 
 As imagens oficiais do .NET Docker são imagens do Docker criadas e otimizadas pela Microsoft. Elas ficam publicamente disponíveis nos repositórios da Microsoft no [Hub do Docker](https://hub.docker.com/u/microsoft/). Cada repositório pode conter várias imagens, dependendo de versões do .NET e, dependendo do sistema operacional e das versões (Linux Debian, Linux Alpine, Windows Nano Server, Windows Server Core, etc.).
 
-Desde o .NET Core 2.1, todas as imagens do .NET Core, inclusive para o ASP.NET Core, estão disponíveis no Docker Hub no [repositório de imagens do .NET Core](https://hub.docker.com/r/microsoft/dotnet/).
+Desde o .NET Core 2.1, todas as imagens do .NET Core, inclusive para o ASP.NET Core, estão disponíveis no Docker Hub no repositório de imagens do .NET Core: https://hub.docker.com/r/microsoft/dotnet/
 
 A maioria dos repositórios de imagens fornecem marcação extensiva para ajudar a selecionar não apenas uma versão de estrutura específica, mas também escolher um sistema operacional (distribuição Linux ou versão do Windows).
-
 
 ## <a name="net-core-and-docker-image-optimizations-for-development-versus-production"></a>Otimizações de imagem do .NET Core e do Docker para desenvolvimento versus produção
 
@@ -32,27 +31,24 @@ Por que várias imagens? Ao desenvolver, criar e executar aplicativos em contêi
 
 ### <a name="during-development-and-build"></a>Durante o desenvolvimento e o build
 
-Durante o desenvolvimento, o que é importante é a velocidade em que é possível iterar alterações e a capacidade de depurá-las. O tamanho da imagem não é tão importante quanto a capacidade de fazer alterações em seu código e ver as alterações rapidamente. Algumas ferramentas e "contêineres de agente de build" usam a imagem de desenvolvimento do ASP.NET Core (**microsoft/dotnet:2.1-sdk**) durante o processo de build e de desenvolvimento. Ao compilar dentro de um contêiner do Docker, os aspectos importantes são os elementos necessários a fim de compilar seu aplicativo. Isso inclui o compilador e quaisquer outras dependências do .NET, além de dependências de desenvolvimento da Web.
+Durante o desenvolvimento, o que é importante é a velocidade em que é possível iterar alterações e a capacidade de depurá-las. O tamanho da imagem não é tão importante quanto a capacidade de fazer alterações em seu código e ver as alterações rapidamente. Algumas ferramentas e "contêineres de agentes de build" usam a imagem de desenvolvimento do .NET Core (*microsoft/dotnet:2.1-sdk*) durante o processo de build e de desenvolvimento. Ao compilar dentro de um contêiner do Docker, os aspectos importantes são os elementos necessários a fim de compilar seu aplicativo. Isso inclui o compilador e quaisquer outras dependências do .NET.
 
 Por que este tipo de imagem de build é importante? Você não implanta essa imagem em produção. Em vez disso, é uma imagem usada para criar o conteúdo inserido em uma imagem de produção. Essa imagem seria usada em seu ambiente de CI (integração contínua) ou no ambiente de build ao usar builds do Docker Multi-stage.
 
 ### <a name="in-production"></a>Em produção
 
-O que é importante na produção é a rapidez com que é possível implantar e iniciar seus contêineres com base em uma imagem do .NET Core de produção. Portanto, a imagem somente em tempo de execução baseada em **microsoft/dotnet:2.1-aspnetcore-runtime** é pequena, então ela pode percorrer rapidamente a rede do seu Registro do Docker para seus hosts do Docker. O conteúdo está pronto para ser executado, habilitando o tempo mais rápido possível da inicialização do contêiner ao processamento de resultados. No modelo do Docker, não há necessidade de compilação de código C\#, como há quando você executa dotnet build ou dotnet publish ao usar o contêiner de build.
+O que é importante na produção é a rapidez com que é possível implantar e iniciar seus contêineres com base em uma imagem do .NET Core de produção. Portanto, a imagem somente em tempo de execução baseada em *microsoft/dotnet:2.1-aspnetcore-runtime* é pequena, então ela pode percorrer rapidamente a rede do seu Registro do Docker para seus hosts do Docker. O conteúdo está pronto para ser executado, habilitando o tempo mais rápido possível da inicialização do contêiner ao processamento de resultados. No modelo do Docker, não há necessidade de compilação de código C\#, como há quando você executa dotnet build ou dotnet publish ao usar o contêiner de build.
 
-Nesta imagem otimizada você colocar somente os binários e outro conteúdo necessário para executar o aplicativo. Por exemplo, o conteúdo criado pelo dotnet publish contém apenas os binários do .NET compilados, imagens e arquivos .js e .css. Com o passar do tempo, você verá imagens que contêm pacotes pré-compilados com JIT.
+Nesta imagem otimizada você colocar somente os binários e outro conteúdo necessário para executar o aplicativo. Por exemplo, o conteúdo criado pelo dotnet publish contém apenas os binários do .NET compilados, imagens e arquivos .js e .css. Ao longo do tempo, você verá imagens que contêm pacotes pré-compilados (compilação de IL para nativa que ocorre em tempo de execução).
 
 Embora haja várias versões das imagens do .NET Core e do ASP.NET Core, todas elas compartilham uma ou mais camadas, incluindo a camada base. Portanto, a quantidade de espaço em disco necessário para armazenar uma imagem é pequena; ela é composta apenas pelo delta entre sua imagem personalizada e sua imagem de base. O resultado é que é rápido extrair a imagem do Registro.
 
 Quando você explorar os repositórios de imagem do .NET no Hub do Docker, encontrará várias versões de imagem confidenciais ou marcadas. Essas marcas ajudam a decidir qual usar, dependendo da versão de que você precisa, como as que estão na tabela a seguir:
 
--   microsoft/dotnet:**2.1-aspnetcore-runtime**
-
-        ASP.NET Core, with runtime only and ASP.NET Core optimizations, on Linux and Windows (multi-arch)
-
--   microsoft/**dotnet:2.1-sdk**
-
-        .NET Core, with SDKs included, on Linux and Windows (multi-arch)
+| Image                                       | Comentários                                                                                          |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, somente com tempo de execução e otimizações de ASP.NET Core, no Linux e no Windows (várias arquiteturas) |
+| microsoft/dotnet:**2.1-sdk**                | .NET Core, com SDKs incluídos, no Linux e no Windows (várias arquiteturas)                                  |
 
 
 >[!div class="step-by-step"]

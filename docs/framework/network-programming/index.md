@@ -10,11 +10,11 @@ ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: b949c9fd50ee4d09d7237bc14898a1b55689f2f4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088608"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216889"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programação de rede no .NET Framework
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Os aplicativos de rede podem compilar em protocolos conectáveis para usufruir automaticamente de novos protocolos da Internet ou podem usar uma implementação gerenciada da interface de soquete do Windows para trabalhar com a rede a nível de soquete.  
@@ -33,7 +33,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Usando protocolos de aplicativo](../../../docs/framework/network-programming/using-application-protocols.md)  
  Descreve aplicativos de programação que se beneficiam de protocolos de rede como o TCP, UDP e HTTP.  
   
- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  Descreve as vantagens do Protocolo de Internet versão 6 (IPv6) sob a versão atual do pacote do Protocolo de Internet (IPv4), descreve o endereçamento do IPv6, o roteamento e a configuração automática e também como habilitar e desabilitar o IPv6.  
   
  [Configurando aplicativos da Internet](../../../docs/framework/network-programming/configuring-internet-applications.md)  
@@ -67,7 +67,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Descreve um conjunto de aprimoramentos na classe <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> na versão 3.5, 3.0 SP1 e 2.0 SP1, que fornece um padrão assíncrono alternativo, o qual pode ser usado por aplicativos de alto desempenho especializados em soquete.  
   
  [Protocolo PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
- Descreve o suporte adicionado à versão 3.5 para oferecer suporte ao Protocolo de Resolução de Nomes de Ponto (PNRP), um protocolo de resolução de nome e um registro de nome dinâmico sem servidor. Esses novos recursos têm suporte pelo namespace <xref:System.Net.PeerToPeer?displayProperty=nameWithType>.  
+ Descreve o suporte adicionado à versão 3.5 para oferecer suporte ao protocolo PNRP, um protocolo de resolução de nome e um registro de nome dinâmico sem servidor. Esses novos recursos têm suporte pelo namespace <xref:System.Net.PeerToPeer?displayProperty=nameWithType>.  
   
  [Colaboração ponto a ponto](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
  Descreve o suporte adicionado à versão 3.5 para dar suporte à Colaboração Ponto a Ponto que compila no PNRP. Esses novos recursos têm suporte pelo namespace <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>.  
@@ -113,7 +113,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Classes para coletar programaticamente informações sobre eventos, alterações, estatísticas e propriedades de rede.  
   
  <xref:System.Net.PeerToPeer?displayProperty=nameWithType>  
- Fornece uma implementação gerenciada do Protocolo de Resolução de Nomes de Ponto (PNRP) para desenvolvedores.  
+ Fornece uma implementação gerenciada do protocolo PNRP para desenvolvedores.  
   
  <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType>  
  Fornece uma implementação gerenciada da interface de Colaboração Ponto a Ponto para desenvolvedores.  
@@ -136,7 +136,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Fornece suporte à configuração da autenticação usando proteção estendida para aplicativos.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Veja também  
 
  [Práticas recomendadas do protocolo TLS com o .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Tópicos de instruções de programação de rede](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  

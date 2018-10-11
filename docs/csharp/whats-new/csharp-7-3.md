@@ -2,12 +2,12 @@
 title: Novidades no C# 7.3
 description: Uma visão geral dos novos recursos no C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511605"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235225"
 ---
 # <a name="whats-new-in-c-73"></a>Novidades no C# 7.3
 
@@ -36,7 +36,7 @@ As novas opções do compilador são:
 
 O restante deste artigo fornece detalhes e links para saber mais sobre cada uma das melhorias.
 
-## <a name="enabling-more-performant-safe-code"></a>Como habilitar código seguro com melhor desempenho
+## <a name="enabling-more-efficient-safe-code"></a>Como habilitar código seguro mais eficiente
 
 Você deve ser capaz de escrever um código C# de forma segurança que seja executado tão bem quanto o código não seguro. O código seguro evita classes de erros, como estouros de buffer, ponteiros perdidos e outros erros de acesso à memória. Esses novos recursos expandem as capacidades do código seguro verificável. Tente escrever mais partes do seu código usando construções seguras. Esses recursos tornam isso mais fácil.
 
@@ -82,7 +82,7 @@ class C
 }
 ```
 
-Para saber mais, confira o artigo sobre como a [instrução `fixed`](../language-reference/keywords/fixed-statement.md).
+Para obter mais informações, confira o artigo sobre como a [instrução `fixed`](../language-reference/keywords/fixed-statement.md).
 
 ### <a name="ref-local-variables-may-be-reassigned"></a>É possível reatribuir variáveis locais `ref`
 
@@ -128,13 +128,15 @@ Você também pode usar a nova restrição `unmanaged` para especificar que um p
 
 Para saber mais, confira os artigos sobre [restrições genéricas `where`](../language-reference/keywords/where-generic-type-constraint.md) e [Restrições a parâmetros de tipo](../programming-guide/generics/constraints-on-type-parameters.md).
 
+Adicionar essas restrições a tipos existentes é uma [alteração incompatível](version-update-considerations.md#incompatible-changes). Tipos genéricos fechados podem não atender mais a essas novas restrições.
+
 ## <a name="make-existing-features-better"></a>Melhorias nos recursos existentes
 
 O segundo tema fornece melhorias aos recursos da linguagem. Esses recursos melhoram a produtividade ao escrever em C#.
 
 ### <a name="tuples-support--and-"></a>As tuplas são compatíveis com `==` e `!=`
 
-Os tipos de tupla de C# agora são compatíveis com `==` e `!=`. Para saber mais, confira a seção que aborda [igualdade](../tuples.md#equality-and-tuples) no artigo sobre [tuplas](../tuples.md).
+Os tipos de tupla de C# agora são compatíveis com `==` e `!=`. Para obter mais informações, confira a seção que aborda [igualdade](../tuples.md#equality-and-tuples) no artigo sobre [tuplas](../tuples.md).
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Anexar atributos aos campos de suporte de propriedades autoimplementadas
 

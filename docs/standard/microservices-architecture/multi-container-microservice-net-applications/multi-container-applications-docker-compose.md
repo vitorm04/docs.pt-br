@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754723"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937599"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml 
 
@@ -126,7 +126,7 @@ Esse serviço em contêiner tem a seguinte configuração básica:
 
 -   O nome do SQL Server é sql.data, que é o mesmo nome usado pelo contêiner que está executando a Instância do SQL Server para Linux. Isso é conveniente: a possibilidade de usar essa resolução de nome (interna ao host do Docker) resolverá o endereço de rede, então você não precisará saber o IP interno dos contêineres que está acessando de outros contêineres.
 
-Como a cadeia de conexão é definida por uma variável de ambiente, você pode definir essa variável por meio de um mecanismo diferente e em outro momento. Por exemplo, você pode definir uma cadeia de conexão diferente durante a implantação em produção nos hosts finais ou fazer isso através dos pipelines de CI/CD no VSTS ou no sistema de DevOps de sua preferência.
+Como a cadeia de conexão é definida por uma variável de ambiente, você pode definir essa variável por meio de um mecanismo diferente e em outro momento. Por exemplo, você pode definir uma cadeia de conexão diferente durante a implantação em produção nos hosts finais ou fazer isso através dos pipelines de CI/CD no Azure DevOps Services ou no sistema de DevOps de sua preferência.
 
 -   Ele expõe a porta 80 para acesso interno ao serviço catalog.api dentro do host do Docker. Atualmente o host é uma VM do Linux, porque ele se baseia em uma imagem do Docker para Linux, mas você também pode configurar o contêiner para ser executado em uma imagem do Windows.
 
@@ -180,7 +180,7 @@ Ao destinar-se a ambientes diferentes, você deve usar vários arquivos compose.
 
 Você pode usar um único arquivo docker-compose.yml, como nos exemplos simplificados mostrados nas seções anteriores. No entanto, isso não é recomendável para a maioria dos aplicativos.
 
-Por padrão, o Compose lê dois arquivos, um docker-compose.yml e um arquivo docker-compose.override.yml opcional. Conforme mostrado na Figura 8-11, quando você está usando o Visual Studio e habilitando o suporte do Docker, o Visual Studio também cria outro arquivo yml, o docker-compose.ci.build, para que você use nos pipelines de CI/CD, como no VSTS.
+Por padrão, o Compose lê dois arquivos, um docker-compose.yml e um arquivo docker-compose.override.yml opcional. Conforme mostrado na Figura 8-11, quando você está usando o Visual Studio e habilitando o suporte do Docker, o Visual Studio também cria outro arquivo docker-compose.ci.build,yml para que você use nos pipelines de CI/CD, como no Azure DevOps Services.
 
 ![](./media/image12.png)
 

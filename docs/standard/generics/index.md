@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027891"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579061"
   
 -   Delegados genéricos permitem retornos fortemente tipados sem a necessidade de criar múltiplas classes de delegados. Por exemplo, o delegado genérico <xref:System.Predicate%601> permite criar um método que implementa seus próprios critérios de pesquisa para um tipo específico e usar seu método com método do tipo <xref:System.Array>, tais como <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A> e <xref:System.Array.FindAll%2A>.  
   
--   Genéricos simplificam o código gerado dinamicamente. Quando você usa genéricos com código gerado dinamicamente, não é necessário gerar o tipo. Isso aumenta o número de cenários nos quais você pode usar métodos dinâmicos leves, em vez de gerar assemblies inteiros. Para obter mais informações, consulte Como: definir e executar métodos dinâmicos e DynamicMethod.  
+-   Genéricos simplificam o código gerado dinamicamente. Quando você usa genéricos com código gerado dinamicamente, não é necessário gerar o tipo. Isso aumenta o número de cenários nos quais você pode usar métodos dinâmicos leves, em vez de gerar assemblies inteiros. Para obter mais informações, confira [Como definir e executar métodos dinâmicos](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) e <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Veja a seguir algumas limitações de genéricos:  
   

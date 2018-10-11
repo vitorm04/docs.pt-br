@@ -2,15 +2,15 @@
 title: Como configurar um serviço do WCF hospedado no IIS com SSL
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493475"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086213"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Como configurar um serviço do WCF hospedado no IIS com SSL
-Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para usar a segurança de transporte HTTP. Segurança de transporte HTTP requer um certificado SSL a ser registrado com o IIS. Se você não tiver um certificado SSL que você pode usar o IIS para gerar um certificado de teste. Em seguida, você deve adicionar uma associação SSL para o site da web e configurar as propriedades de autenticação do site da web. Finalmente, você precisa configurar o serviço do WCF para usar HTTPS.  
+Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para usar a segurança de transporte HTTP. Segurança de transporte HTTP requer um certificado SSL a ser registrado com o IIS. Se você não tiver um certificado SSL que você pode usar o IIS para gerar um certificado de teste. Em seguida, você deve adicionar uma associação SSL para o site da web e configurar as propriedades de autenticação do site da web. Por fim, você precisa configurar o serviço do WCF para usar HTTPS.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Criando um certificado autoassinado  
   
@@ -18,25 +18,25 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
   
      ![Tela de inicial do Gerenciador do IIS](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2.  Na janela de certificados do servidor, clique no **criar um certificado autoassinado...** link.  
+2.  Na janela de certificados de servidor, clique no **criar certificado autoassinado...** link.  
   
      ![Criando um self&#45;assinou o certificado com o IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
 3.  Insira um nome amigável para o certificado autoassinado e clique em **Okey**.  
   
-     ![Criar&#45;caixa de diálogo de certificado assinado](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Criar Self&#45;caixa de diálogo de certificado assinado](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
-     Agora, os detalhes do certificado autoassinado criado recentemente são mostrados no **certificados de servidor** janela.  
+     Os detalhes do certificado autoassinado recém-criado agora são mostrados na **certificados de servidor** janela.  
   
-     ![Janela de certificado de servidor](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
+     ![Janela de certificado do servidor](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
      O certificado gerado é instalado em autoridades de certificação raiz confiáveis armazenar.  
   
-### <a name="add-ssl-binding"></a>Adicionar associação de SSL  
+### <a name="add-ssl-binding"></a>Adicionar associação SSL  
   
 1.  Ainda no Gerenciador de serviços de informações da Internet, expanda o **Sites** pasta e, em seguida, o **Default Web Site** pasta na exibição de árvore no lado esquerdo da tela.  
   
-2.  Clique o **associações...** Vincular a **ações** seção na parte superior direito da janela.  
+2.  Clique o **associações...** Link na **ações** seção na parte superior direito da janela.  
   
      ![Adicionar uma associação SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
@@ -44,25 +44,25 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
   
      ![Caixa de diálogo ligações do site](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  No **Adicionar associação do Site** caixa de diálogo, selecione https para o tipo e o nome amigável do certificado autoassinado apenas que você criou.  
+4.  No **adicionar ligação do Site** selecione https para o tipo e o nome amigável do certificado autoassinado que você acabou de caixa de diálogo, criada.  
   
      ![Exemplo de associação de site](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
 ### <a name="configure-virtual-directory-for-ssl"></a>Configurar o diretório Virtual para SSL  
   
-1.  Ainda no Gerenciador de serviços de informações da Internet, selecione o diretório virtual que contém o serviço de segurança do WCF.  
+1.  Ainda no Gerenciador de serviços de informações da Internet, selecione o diretório virtual que contém o serviço de seguro do WCF.  
   
-2.  No painel central da janela, selecione **configurações de SSL** na seção do IIS.  
+2.  No painel central da janela, selecione **configurações de SSL** na seção de IIS.  
   
      ![Configurações de SSL para o diretório virtual](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  No painel de configurações de SSL, selecione o **exigir SSL** caixa de seleção e clique no **aplicar** link no **ações** seção no lado direito da tela.  
+3.  No painel de configurações de SSL, selecione a **exigir SSL** caixa de seleção e clique no **Apply** link no **ações** seção no lado direito da tela.  
   
      ![Configurações de SSL do diretório virtual](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a>Configurar o serviço do WCF para segurança de transporte HTTP  
+### <a name="configure-wcf-service-for-http-transport-security"></a>Configurar o serviço do WCF para segurança de transporte de HTTP  
   
-1.  O WCF Web. config do serviço configura a associação HTTP para usar a segurança de transporte, conforme mostrado no seguinte XML.  
+1.  No WCF Web. config do serviço configurar a associação de HTTP para usar a segurança de transporte, conforme mostrado no seguinte XML.  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
     </bindings>  
     ```  
   
-2.  Especifique seu serviço e o ponto de extremidade de serviço, conforme mostrado no seguinte XML.  
+2.  Especifique seu serviço e o ponto de extremidade de serviço, conforme mostrado no XML a seguir.  
   
     ```xml  
     <services>  
@@ -94,7 +94,7 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
     ```  
   
 ## <a name="example"></a>Exemplo  
- Este é um exemplo completo de um arquivo Web. config para um serviço WCF usando a segurança de transporte HTTP  
+ A seguir está um exemplo completo de um arquivo Web. config para um serviço WCF usando a segurança de transporte HTTP  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -145,7 +145,7 @@ Este tópico descreve como configurar um serviço WCF hospedado pelo IIS para us
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Hospedagem do IIS utilizando código embutido](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+* [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+* [Instruções de hospedagem do Serviços de Informações da Internet](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+* [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+* [Hospedagem do IIS utilizando código embutido](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

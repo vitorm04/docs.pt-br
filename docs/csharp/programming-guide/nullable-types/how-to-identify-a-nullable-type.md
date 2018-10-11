@@ -1,20 +1,20 @@
 ---
 title: Como identificar um tipo que permite valor nulo (Guia de programação em C#)
 description: Saiba como determinar se um tipo ou uma instância é de um tipo que permite valor nulo
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45624938"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47400537"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Como identificar um tipo que permite valor nulo (Guia de programação em C#)
 
-O exemplo a seguir mostra como determinar se uma instância de <xref:System.Type?displayProperty=nameWithType> representa um tipo que permite valor nulo:
+O exemplo a seguir mostra como determinar se uma instância de <xref:System.Type?displayProperty=nameWithType> representa um tipo que permite valor nulo genérico fechado, ou seja, o tipo <xref:System.Nullable%601?displayProperty=nameWithType> com um parâmetro de tipo especificado `T`:
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 

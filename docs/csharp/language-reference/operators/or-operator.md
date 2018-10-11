@@ -8,18 +8,18 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: d95fe29aa7ffab9938e8edc57999445268fe41a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085699"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46706142"
 ---
 # <a name="-operator-c-reference"></a>Operador | (Referência de C#)
 Os operadores binários `|` são predefinidos para os tipos integrais e `bool`. Para tipos integrais, o `|` computa o OR bit a bit de seus operandos. Para operandos `bool`, o `|` computa o OR lógico de seus operandos; ou seja, o resultado será `false` se e somente se, ambos seus operandos forem `false`.  
   
 ## <a name="remarks"></a>Comentários  
- O operador binário `|` avalia os dois operadores, independentemente do valor do primeiro, ao contrário do [operador OR condicional]     (conditional-or-operator.md) `||`.
+ O operador binário `|` avalia ambos os operandos, independentemente do valor do primeiro, em contraste ao [operador OR-condicional](conditional-or-operator.md) `||`.
  
  Os tipos definidos pelo usuário podem sobrecarregar o operador `|` (consulte [operador](../../../csharp/language-reference/keywords/operator.md)).  
   

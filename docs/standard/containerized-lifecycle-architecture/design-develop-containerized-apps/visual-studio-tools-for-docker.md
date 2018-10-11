@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838228"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086382"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Usando ferramentas do Visual Studio para Docker (Visual Studio no Windows)
 
@@ -76,12 +76,15 @@ Figura 4-30: opções de ferramentas do Docker
 
 A tabela a seguir pode ajudá-lo a decidir como definir essas opções.
 
-| Nome | Configuração padrão | Descrição |
-| -----|:---------------:| ----------- |
-| Extrair automaticamente as imagens necessárias do Docker no carregamento do projeto | On | Para melhorar o desempenho, ao carregar projetos, o Visual Studio será iniciado uma operação de pull do Docker em segundo plano para que quando você estiver pronto para executar seu código, a imagem é baixada já ou no processo de download. Se você estiver apenas carregar projetos e navegação de código, você pode desativar isso para evitar o download de imagens de contêiner, que você não precisa. |
-| Iniciar automaticamente os contêineres em segundo plano | On | Novamente para melhorar o desempenho, o Visual Studio cria um contêiner com montagens de volume pronto para quando você compila e executar seu contêiner. Se você desejar controlar quando o contêiner é criado, desative essa opção. |
-| Fechar automaticamente os contêineres kill na solução | On | Desative essa opção se você desejar contêineres para sua solução continuar a executar após fechar a solução ou fechar o Visual Studio. |
-| Não solicitar certificado SSL localhost confiável | Off | Visual Studio continuará solicitar novos projetos mesmo depois que o certificado SSL foi marcado como confiável para um projeto anterior. Você pode definir essa caixa de seleção para evitar o prompt quando você abre outros projetos. |
+| Nome | Configuração padrão | Aplica-se a | Descrição |
+| -----|:---------------:|:----------:| ----------- |
+| Extrair automaticamente as imagens necessárias do Docker no carregamento do projeto | On | Docker Compose | Para melhorar o desempenho, ao carregar projetos, o Visual Studio será iniciado uma operação de pull do Docker em segundo plano para que quando você estiver pronto para executar seu código, a imagem é baixada já ou no processo de download. Se você estiver apenas carregar projetos e navegação de código, você pode desativar isso para evitar o download de imagens de contêiner, que você não precisa. |
+| Iniciar automaticamente os contêineres em segundo plano | On | Docker Compose | Novamente para melhorar o desempenho, o Visual Studio cria um contêiner com montagens de volume pronto para quando você compila e executar seu contêiner. Se você desejar controlar quando o contêiner é criado, desative essa opção. |
+| Fechar automaticamente os contêineres kill na solução | On | Docker Compose | Desative essa opção se você desejar contêineres para sua solução continuar a executar após fechar a solução ou fechar o Visual Studio. |
+| Não solicitar certificado SSL localhost confiável | Off | Projetos do ASP.NET Core 2.1 | Se o certificado SSL do localhost não for confiável, Visual Studio solicitará que toda vez que você execute seu projeto, a menos que essa caixa de seleção está marcada. |
+
+> [!WARNING]
+> Se o certificado SSL do localhost não é confiável e você marcar a caixa para suprimir a solicitação, solicitações da web HTTPS podem falhar em tempo de execução em seu aplicativo ou serviço. Nesse caso, desmarque a **não solicitar** caixa de seleção, execute seu projeto e indicar confiança no prompt de.
 
 **Obter mais informações:** para obter mais detalhes sobre a implementação de serviços e o uso de ferramentas do Visual Studio para Docker, leia os artigos a seguir:
 

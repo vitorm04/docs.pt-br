@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025591"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces `System.IO` contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
@@ -41,6 +41,8 @@ Para convenções de nomenclatura de caminhos e os modos de expressar um caminho
   
 -   <xref:System.IO.Path> – Fornece métodos e propriedades para processar cadeias de caracteres de diretório de uma maneira compatível com várias plataformas.  
   
+ Você sempre deve fornecer tratamento de exceção robusto ao chamar métodos de sistema de arquivos. Para obter mais informações, veja [Tratamento de erros de E/S](handling-io-errors.md).
+ 
  Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para E/S de arquivo.  
   
  Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  

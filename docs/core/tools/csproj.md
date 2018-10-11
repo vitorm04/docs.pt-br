@@ -4,12 +4,12 @@ description: Saiba mais sobre as diferenças entre arquivos existentes e de cspr
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646370"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47216910"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -83,11 +83,11 @@ Com o csproj, recomendamos remover os globs padrão do projeto e adicionar apena
 
 Uma vez que essas alterações do csproj simplificam bastante os arquivos de projeto, talvez você queira conferir o projeto totalmente expandido conforme exibido pelo MSBuild, quando o SDK e os respectivos destinos forem incluídos. Pré-processe o projeto com [a opção `/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) do comando [`dotnet msbuild`](dotnet-msbuild.md), que mostra quais arquivos foram importados, as respectivas origens e contribuições para o build, sem realmente criar o projeto:
 
-`dotnet msbuild /pp:fullproject.xml`
+`dotnet msbuild -pp:fullproject.xml`
 
 Quando o projeto tem várias estruturas de destino, os resultados do comando devem se concentrar apenas em uma delas, especificando-a como uma propriedade do MSBuild:
 
-`dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
+`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
 
 ## <a name="additions"></a>Adições
 
@@ -265,3 +265,37 @@ O caminho base para o arquivo *.nuspec*.
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Lista separada por ponto e vírgula de pares chave-valor.
+
+## <a name="assemblyinfo-properties"></a>Propriedades de AssemblyInfo
+[Atributos de assembly](../../framework/app-domains/set-assembly-attributes.md) que estavam presentes em um arquivo *AssemblyInfo* agora são gerados automaticamente de propriedades.
+
+### <a name="properties-per-attribute"></a>Propriedades por atributo
+
+Cada atributo tem uma propriedade que controla seu conteúdo e outra para desabilitar a geração dele, conforme mostrado na tabela a seguir:
+
+| Atributo                                                      | Propriedade               | Propriedade para desabilitar                             |
+|----------------------------------------------------------------|------------------------|-------------------------------------------------|
+| <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
+| <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |
+| <xref:System.Reflection.AssemblyCopyrightAttribute>            | `Copyright`            | `GenerateAssemblyCopyrightAttribute`            |
+| <xref:System.Reflection.AssemblyDescriptionAttribute>          | `Description`          | `GenerateAssemblyDescriptionAttribute`          |
+| <xref:System.Reflection.AssemblyFileVersionAttribute>          | `FileVersion`          | `GenerateAssemblyFileVersionAttribute`          |
+| <xref:System.Reflection.AssemblyInformationalVersionAttribute> | `InformationalVersion` | `GenerateAssemblyInformationalVersionAttribute` |
+| <xref:System.Reflection.AssemblyProductAttribute>              | `Product`              | `GenerateAssemblyProductAttribute`              |
+| <xref:System.Reflection.AssemblyTitleAttribute>                | `AssemblyTitle`        | `GenerateAssemblyTitleAttribute`                |
+| <xref:System.Reflection.AssemblyVersionAttribute>              | `AssemblyVersion`      | `GenerateAssemblyVersionAttribute`              |
+| <xref:System.Resources.NeutralResourcesLanguageAttribute>      | `NeutralLanguage`      | `GenerateNeutralResourcesLanguageAttribute`     |
+
+Notas:
+
+* O padrão de `AssemblyVersion` e `FileVersion` é usar o valor de `$(Version)` sem sufixo. Por exemplo, se `$(Version)` fosse `1.2.3-beta.4`, então o valor seria `1.2.3`.
+* `InformationalVersion` usa por padrão o valor de `$(Version)`.
+* `$(SourceRevisionId)` é acrescentado a `InformationalVersion` se a propriedade está presente. Ele pode ser desabilitado usando `IncludeSourceRevisionInInformationalVersion`.
+* As propriedades `Copyright` e `Description` também são usadas para metadados do NuGet.
+* `Configuration` é compartilhado com o processo de build e definido por meio do parâmetro `--configuration` de comandos `dotnet`.
+
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
+Um booliano que habilita ou desabilita a geração de AssemblyInfo. O valor padrão é `true`. 
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
+O caminho do arquivo de informações do assembly gerado. Um arquivo no diretório `$(IntermediateOutputPath)` (obj) é usado por padrão.

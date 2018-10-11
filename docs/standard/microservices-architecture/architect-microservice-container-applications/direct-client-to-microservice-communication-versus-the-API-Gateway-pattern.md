@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: f820b0ed866c539beda641164ef42631263490d3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739676"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198677"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de Gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -176,6 +176,8 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 - **Clemens Vasters. Mensagens e microsserviços no GOTO 2016** (vídeo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+
+- **Gateway de API neste mundo insano** (série de tutoriais da Gateway de API do ASP.NET Core)    [*http://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](http://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
 [Anterior](identify-microservice-domain-model-boundaries.md)

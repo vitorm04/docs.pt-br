@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos que virão na futura versão 7 da linguagem C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956403"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237378"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -159,7 +159,7 @@ O exemplo a seguir define um método `QueryCityDataForYears` que retorna uma tup
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Para obter mais informações, consulte [Descartes](../discards.md).
- 
+
 ## <a name="pattern-matching"></a>Correspondência de padrões
 
 *Correspondência de padrões* é um recurso que permite que você implemente a expedição do método em propriedades diferentes do tipo de um objeto. Você provavelmente já está familiarizado com a expedição de método com base no tipo de um objeto. Em programação orientada a objetos, os métodos de substituição e virtual fornecem a sintaxe da linguagem para implementar a expedição de método com base em um tipo de objeto. As classes base e derivada fornecem implementações diferentes. Expressões de correspondência de padrões estendem esse conceito para que você possa implementar facilmente padrões de expedição semelhantes para elementos de dados e tipos que não são relacionados por meio de uma hierarquia de herança. 
@@ -277,7 +277,9 @@ A linguagem C# tem outras três regras que protegem contra o uso indevido de loc
 * O locais e retornos de `ref` não podem ser usados com métodos assíncronos.
     - O compilador não consegue saber se a variável referenciada foi definida com o valor final quando o método assíncrono retorna.
 
-A adição de locais de ref e retornos de ref habilita algoritmos que são mais eficientes evitando copiar valores ou executar operações de desreferenciamento várias vezes. 
+A adição de locais de ref e retornos de ref habilita algoritmos que são mais eficientes evitando copiar valores ou executar operações de desreferenciamento várias vezes.
+
+Adicionar `ref` ao valor retornado é uma [alteração compatível com a origem](version-update-considerations.md#source-compatible-changes). O código existente é compilado, mas o valor retornado ref é copiado quando atribuído. Os chamadores devem atualizar o armazenamento para o valor retornado para uma variável local `ref` para armazenar o retorno como uma referência.
 
 ## <a name="local-functions"></a>Funções locais
 
@@ -327,6 +329,8 @@ O C# 6 introduziu [membros aptos para expressão](csharp-6.md#expression-bodied-
 
 Esses novos locais para membros aptos para expressão representam uma etapa importante para a linguagem C#: esses recursos foram implementados por membros da comunidade trabalhando no projeto [Roslyn](https://github.com/dotnet/Roslyn) de software livre.
 
+A alteração de um método para um membro de corpo da expressão é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
+
 ## <a name="throw-expressions"></a>Expressões throw
 
 No C#, `throw` sempre foi uma instrução. Como `throw` é uma instrução, não uma expressão, havia constructos C# em que não era possível usá-la. Eles incluíam expressões condicionais, expressões de união nulas e algumas expressões lambda. A adição de membros aptos para expressão inclui mais locais em que as expressões `throw` seriam úteis. Para que você possa escrever qualquer um desses constructos, o C# 7.0 apresenta *expressões throw*.
@@ -362,8 +366,10 @@ O novo recurso de linguagem significa que os métodos assíncronos podem retorna
 Uma otimização simples seria usar `ValueTask` em locais em que `Task` seria usado antes. No entanto, se você quiser executar otimizações adicionais manualmente, poderá armazenar em cache os resultados do trabalho assíncrono e reutilizar o resultado em chamadas subsequentes. O struct `ValueTask` tem um construtor com um parâmetro `Task` para que você possa construir um `ValueTask` do valor retornado de qualquer método assíncrono existente:
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 Como com todas as recomendações de desempenho, você deve submeter a benchmark as duas versões antes de fazer alterações em grande escala em seu código.
+
+Quando o valor retornado é o destino de uma instrução `await`, a alteração de uma API de um <xref:System.Threading.Tasks.Task%601> para um <xref:System.Threading.Tasks.ValueTask%601> é uma [alteração compatível com a origem](version-update-considerations.md#source-compatible-changes). Em geral, a alteração para `ValueTask` não o é.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Aprimoramentos da sintaxe de literais numéricos
 

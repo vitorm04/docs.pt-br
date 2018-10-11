@@ -2,12 +2,12 @@
 title: Serviços e rastreamento de eventos WCF para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266865"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086577"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Serviços e rastreamento de eventos WCF para Windows
 Este exemplo demonstra como usar o rastreamento analítico no Windows Communication Foundation (WCF) para emitir eventos no rastreamento de eventos para Windows (ETW). Os rastreamentos analíticos são eventos emitidos nos pontos-chave na pilha do WCF que permitem a solução de problemas dos serviços WCF no ambiente de produção.
@@ -34,7 +34,7 @@ Este exemplo demonstra como usar o rastreamento analítico no Windows Communicat
 
 5.  Dentro do cliente de teste do WCF, adicione o serviço, selecionando **arquivo**e então **Adicionar serviço**.
 
-     Adicione o endereço do ponto de extremidade na caixa de entrada. O padrão é http://localhost:1378/Calculator.svc.
+     Adicione o endereço do ponto de extremidade na caixa de entrada. O padrão é `http://localhost:1378/Calculator.svc`.
 
 6.  Abra o aplicativo visualizador de eventos.
 

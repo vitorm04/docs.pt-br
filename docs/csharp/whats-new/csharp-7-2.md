@@ -2,12 +2,12 @@
 title: Novidades no C# 7.2
 description: Uma visão geral dos novos recursos no C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566183"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47400797"
 ---
 # <a name="whats-new-in-c-72"></a>Novidades no C# 7.2
 
@@ -33,10 +33,10 @@ Os novos recursos de linguagem nesta versão são:
 
 Os recursos de linguagem introduzidos na 7.2 permitem trabalhar com tipos de valor ao usar semântica de referência. Eles são projetados para melhorar o desempenho, minimizando a cópia de tipos de valor sem incorrer nas alocações de memória associadas ao uso de tipos de referência. Os recursos incluem:
 
- - O modificador `in` em parâmetros, para especificar que um argumento é passado por referência, mas não modificado pelo método chamado.
- - O modificador `ref readonly` nos retornos de método, para indicar que um método retorna seu valor por referência, mas não permite gravações nesse objeto.
- - A declaração `readonly struct`, para indicar que uma struct é imutável e deve ser passado como um parâmetro `in` para seus métodos de membro.
- - A declaração `ref struct`, para indicar que um tipo de struct acessa a memória gerenciada diretamente e deve sempre ser alocado por pilha.
+ - O modificador `in` em parâmetros, para especificar que um argumento é passado por referência, mas não modificado pelo método chamado. Adicionar o modificador `in` a um argumento é uma [alteração compatível com a origem](version-update-considerations.md#source-compatible-changes).
+ - O modificador `ref readonly` nos retornos de método, para indicar que um método retorna seu valor por referência, mas não permite gravações nesse objeto. Adicionar o modificador `ref readonly` é uma [alteração compatível com a origem](version-update-considerations.md#source-compatible-changes) se o retorno é atribuído a um valor. Adicionar o modificador `readonly` a uma instrução de retorno `ref` existente é uma [alteração incompatível](version-update-considerations.md#incompatible-changes). Ela requer que os chamadores atualizem a declaração de `ref` variáveis locais para incluir o modificador `readonly`.
+ - A declaração `readonly struct`, para indicar que uma struct é imutável e deve ser passado como um parâmetro `in` para seus métodos de membro. Adicionar o modificador `readonly` a uma declaração struct existente é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
+ - A declaração `ref struct`, para indicar que um tipo de struct acessa a memória gerenciada diretamente e deve sempre ser alocado por pilha. Adicionar o modificador `ref` a uma declaração `struct` existente é uma [alteração incompatível](version-update-considerations.md#incompatible-changes). Um `ref struct` não pode ser um membro de uma classe ou usado em outros locais em que ele pode ser alocado no heap.
 
 Você pode ler mais sobre todas essas alterações em [Uso de tipos de valor com a semântica de referência](../reference-semantics-with-value-types.md).
 

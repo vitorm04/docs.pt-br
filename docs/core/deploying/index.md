@@ -4,12 +4,12 @@ description: Implantação de um aplicativo .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
-ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277145"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030490"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 

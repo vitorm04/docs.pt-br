@@ -2,12 +2,12 @@
 title: 'Convenções de codificação do F #'
 description: 'Saiba mais linguagens e as diretrizes gerais ao escrever código F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237391"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087382"
 ---
 # <a name="f-coding-conventions"></a>Convenções de codificação do F #
 
@@ -420,7 +420,7 @@ Essa técnica não deve ser universalmente aplicada a toda sua base de código, 
 
 O F # tem várias opções para [controle de acesso](../language-reference/access-control.md), herdados do que está disponível no tempo de execução .NET. Esses não são apenas pode ser usados para tipos – você pode usá-los para funções, muito.
 
-* Prefira não -`public` tipos e membros até que você precisa deles para ser consumível publicamente. Isso minimiza também que alguns consumidores para
+* Prefira não -`public` tipos e membros até que você precisa deles para ser consumível publicamente. Isso minimiza também que alguns consumidores para.
 * Tente manter todas as funcionalidades de auxiliar `private`.
 * Considere o uso de `[<AutoOpen>]` em um módulo privado de funções auxiliares se tornarem vários.
 

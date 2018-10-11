@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de classificação biná
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dec44bf114472e19fdac131e0af6c13854957fe3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864768"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47436135"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Usar o ML.NET em um cenário de classificação binária de análise de sentimento
 
@@ -55,7 +55,7 @@ As fases do fluxo de trabalho são as seguintes:
 
 ### <a name="understand-the-problem"></a>Compreender o problema
 
-Você primeiro precisa compreender o problema, para que possa dividi-lo em partes que possam oferecer suporte à criação e ao treinamento do modelo. Divida o problema para prever e avaliar os resultados.
+Você primeiro precisa compreender o problema, para que possa dividi-lo em partes que possam oferecer suporte à criação e ao treinamento do modelo. Dividir o problema permite prever e avaliar os resultados.
 
 O problema deste tutorial é compreender o sentimento de comentário do site recebido para executar a ação apropriada.
 

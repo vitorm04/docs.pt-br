@@ -9,15 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861296"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424383"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 

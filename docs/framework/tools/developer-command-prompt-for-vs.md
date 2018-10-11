@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524710"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170003"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt de Comando do Desenvolvedor para o Visual Studio
 
-O Prompt de Comando do Desenvolvedor do Visual Studio define automaticamente as variáveis de ambiente que permitem usar as ferramentas do .NET Framework com facilidade.
+O Prompt de Comando do Desenvolvedor para Visual Studio permite que você use ferramentas do .NET Framework com mais facilidade. Trata-se de um prompt de comando que define variáveis de ambiente específicas automaticamente.
 
 > [!div class="button"]
 [Baixar o Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
-## <a name="searching-for-the-command-prompt-on-your-machine"></a>Pesquisando o prompt de comando em seu computador
+## <a name="search-for-the-command-prompt-on-your-machine"></a>Pesquisar pelo prompt de comando em seu computador
 
-É possível que haja vários prompts de comando, dependendo da versão do Visual Studio e de todos os SDKs adicionais instalados. Por exemplo, as versões 64 bits do Visual Studio oferecem prompts de comando 32 e 64 bits. (As versões 32 e 64 bits da maioria das ferramentas são iguais; porém, algumas ferramentas fazem alterações específicas em ambientes 32 e 64 bits.) Se as etapas a seguir não funcionarem, tente [Localizar manualmente os arquivos em seu computador](#manually-locating-the-files-on-your-machine) ou [Executar o prompt de comando de dentro do Visual Studio](#running-command-prompt-from-inside-visual-studio).
+É possível que haja vários prompts de comando, dependendo da versão do Visual Studio e de todos os SDKs adicionais instalados. Por exemplo, as versões 64 bits do Visual Studio oferecem prompts de comando 32 e 64 bits. (As versões 32 e 64 bits da maioria das ferramentas são iguais; porém, algumas ferramentas fazem alterações específicas em ambientes 32 e 64 bits.) Se as etapas a seguir não funcionarem, você poderá tentar [Localizar manualmente os arquivos em seu computador](#manually-locate-the-files-on-your-machine) ou [Executar o prompt de comando de dentro do Visual Studio](#run-the-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>No Windows 10
 
@@ -40,7 +40,7 @@ O Prompt de Comando do Desenvolvedor do Visual Studio define automaticamente as 
 
 1. Abra a tela **Iniciar** pressionando a tecla do logotipo do Windows ![Logotipo do Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") no seu teclado, por exemplo.
 
-2. Na tela **Iniciar**, pressione `CTRL + TAB` para abrir a lista **Aplicativos** e digite `V`. Isso mostra uma lista que inclui todos os prompts de comando do Visual Studio instalados.
+2. Na tela **Iniciar**, pressione **Ctrl**+**Tab** para abrir a lista **Aplicativos** e digite `V`. Isso mostra uma lista que inclui todos os prompts de comando do Visual Studio instalados.
 
 3. Escolha o **Prompt de Comando do Desenvolvedor** (ou o prompt de comando que você deseja usar).
 
@@ -66,7 +66,7 @@ Se houver outros SDKs instalados, como o [SDK do Windows 10](https://developer.m
 
 Normalmente, os atalhos para os prompts de comando que você instalou serão colocados na pasta **Menu Iniciar** do Visual Studio, como em C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools. Porém, se por algum motivo a pesquisa do prompt de comando não gerar os resultados esperados, você poderá tentar localizar manualmente o atalho em seu computador. Tente pesquisar pelo nome do arquivo do prompt de comando, como *VsDevCmd.bat* ou acesse a pasta Tools, como C:\Arquivos de Programas (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (o caminho mudará conforme seu local de instalação, edição e versão do Visual Studio).
 
-## <a name="run-command-prompt-from-inside-visual-studio"></a>Executar o prompt de comando de dentro do Visual Studio
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Executar o prompt de comando de dentro do Visual Studio
 
 Para facilitar o acesso, você pode adicionar o Prompt de Comando do Desenvolvedor do Visual Studio ou qualquer outro prompt de comando ao menu **Ferramentas** do Visual Studio. Para disponibilizar a ferramenta, adicione-a à lista de ferramentas externas. Aqui estão as etapas:
 
@@ -87,6 +87,8 @@ Para facilitar o acesso, você pode adicionar o Prompt de Comando do Desenvolved
 8. Escolha o botão **OK**.
 
    O novo item de menu foi adicionado e você pode acessar o prompt de comando no menu **Ferramentas**.
+
+   ![Item de menu do prompt de comando no Visual Studio](media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Consulte também
 

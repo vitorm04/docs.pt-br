@@ -1,6 +1,6 @@
 ---
 title: Práticas recomendadas para o uso de cadeias de caracteres no .NET
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000145"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080332"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  
@@ -123,10 +123,12 @@ ms.locfileid: "43000145"
  A comparação de cadeia de caracteres é o centro de muitas operações relacionadas à cadeia de caracteres, especialmente a classificação e teste de igualdade. As cadeias de caracteres são classificadas em uma determinada ordem: se “my” aparece antes de “string” em uma lista classificada de cadeias de caracteres, “my” deve comparar menos que ou igual a “string”. Além disso, a comparação define implicitamente a igualdade. A operação de comparação retorna zero para cadeias de caracteres que considerar iguais. Uma boa interpretação é que nenhuma cadeia de caracteres é menor que a outra. Operações mais significativas envolvendo cadeias de caracteres incluem um ou ambos destes procedimentos: comparação com outra cadeia de caracteres e execução de uma operação de classificação bem definida.  
 
 > [!NOTE]
-> Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/en-us/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows.
+> Você pode baixar as [Tabelas de peso de classificação](https://www.microsoft.com/en-us/download/details.aspx?id=10921), um conjunto de arquivos de texto que contêm informações sobre os pesos de caracteres usados em operações de classificação e comparação dos sistemas operacionais Windows, e a [Tabela de elemento de ordenação Unicode padrão](https://www.unicode.org/Public/UCA/latest/allkeys.txt), a versão mais recente da tabela de peso de classificação para Linux e macOS. A versão específica da tabela de peso de classificação do Linux e macOS depende da versão das bibliotecas de [Componentes internacionais para Unicode](http://site.icu-project.org/) instaladas no sistema. Para obter informações sobre versões de ICU e as versões Unicode que elas implementam, veja [Baixar ICU](http://site.icu-project.org/download).
 
  No entanto, avaliar duas cadeias de caracteres quanto à igualdade ou ordem de classificação não gera um único resultado correto, o resultado depende dos critérios usados para comparar as cadeias de caracteres. Em particular, as comparações de cadeia de caracteres ordinais ou baseadas no uso de maiúsculas e minúsculas e convenções classificação da cultura atual ou da cultura invariável (uma cultura independente de localidade com base no idioma inglês) podem gerar resultados diferentes.  
-  
+
+Além disso, comparações de cadeia de caracteres usando versões diferentes do .NET ou usando o .NET em diferentes sistemas operacionais ou versões do sistema operacional podem retornar resultados diferentes. Para obter mais informações, veja [Cadeias de caracteres e o padrão Unicode](xref:System.String#Unicode). 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>Comparações da Cadeia de Caracteres que Usam a Cultura Atual  
  Um critério envolve o uso das convenções da cultura atual ao comparar cadeias de caracteres. As comparações que se baseiam na cultura atual usam a localidade ou a cultura atual do thread. Se a cultura não for definida pelo usuário, o padrão será a configuração na janela **Opções Regionais** no Painel de Controle. Você deve sempre usar comparações que se baseiam na cultura atual quando os dados forem linguisticamente relevantes e quando eles refletirem a interação do usuário que leva em conta a cultura.  
@@ -370,5 +372,6 @@ ms.locfileid: "43000145"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Manipulando cadeias de caracteres](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>Consulte também
+
+- [Manipulando cadeias de caracteres](../../../docs/standard/base-types/manipulating-strings.md)

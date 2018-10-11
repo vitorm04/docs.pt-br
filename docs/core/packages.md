@@ -4,12 +4,12 @@ description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472796"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597652"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 
@@ -56,7 +56,7 @@ Normalmente, em vez de incluir um pacote de cada vez nos projetos, é muito mais
 
 Metapacotes são uma convenção de pacotes NuGet para descrever um conjunto de pacotes que são significativos juntos. Eles representam esse conjunto de pacotes tornando-os dependências. Opcionalmente, eles podem estabelecer uma estrutura para esse conjunto de pacotes especificando-a. 
 
-Por padrão, as versões anteriores das ferramentas do .NET Core (ferramentas baseadas em project.json e csproj) especificavam uma estrutura e um metapacote. Atualmente, no entanto, o metapacote é referenciado implicitamente pela estrutura de destino, para que cada metapacote seja vinculado a uma estrutura de destino. Por exemplo, a estrutura `netstandard1.6` referencia o metapacote NetStandard.Library versão 1.6.0. Da mesma forma, a estrutura `netcoreapp1.1` referencia o metapacote Microsoft.NETCore.App Versão 1.1.0. Para obter mais informações, consulte [Referência implícita de pacote de metapacote no SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
+Por padrão, as versões anteriores das ferramentas do .NET Core (ferramentas baseadas em project.json e csproj) especificavam uma estrutura e um metapacote. Atualmente, no entanto, o metapacote é referenciado implicitamente pela estrutura de destino, para que cada metapacote seja vinculado a uma estrutura de destino. Por exemplo, a estrutura `netstandard1.6` referencia o metapacote NetStandard.Library versão 1.6.0. Da mesma forma, a estrutura `netcoreapp2.1` referencia o metapacote Microsoft.NETCore.App Versão 2.1.0. Para obter mais informações, consulte [Referência implícita de pacote de metapacote no SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
 
 Definir uma estrutura como destino e referenciar um metapacote implicitamente significa que você, na verdade, está adicionando uma referência a cada um de seus pacotes dependentes como um único gesto. Isso disponibiliza todas as bibliotecas nesses pacotes para o IntelliSense (ou uma experiência semelhante) e para publicação do aplicativo.  
 

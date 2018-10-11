@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264669"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698556"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
 O .NET fornece vários métodos para comparar os valores de cadeias de caracteres. A tabela a seguir lista e descreve os métodos de comparação de valores.  
@@ -154,4 +154,5 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
 
 - [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Classificação de tabelas de peso](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Classificação de tabelas de peso (para .NET em Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Tabela do elemento de ordenação Unicode padrão (para .NET Core em Linux e macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805449"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209907"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
 Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
@@ -22,14 +22,14 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
  Qualquer método de qualquer classe ou struct acessível que corresponda ao tipo delegado pode ser atribuído ao delegado. O método pode ser estático ou de instância. Isso possibilita alterar via programação chamadas de método e também conectar novo código a classes existentes.  
   
 > [!NOTE]
->  No contexto da sobrecarga de método, a assinatura de um método não inclui o valor de retorno. No entanto, no contexto de delegados, a assinatura inclui o valor de retorno. Em outras palavras, um método deve ter o mesmo tipo de retorno que o delegado.  
+>  No contexto da sobrecarga de método, a assinatura de um método não inclui o valor retornado. No entanto, no contexto de delegados, a assinatura inclui o valor retornado. Em outras palavras, um método deve ter o mesmo tipo de retorno que o delegado.  
   
  Essa capacidade de se referir a um método como um parâmetro torna delegados ideais para definir métodos de retorno de chamada. Por exemplo, uma referência a um método que compara dois objetos poderia ser passada como um argumento para um algoritmo de classificação. Como o código de comparação está em um procedimento separado, o algoritmo de classificação pode ser escrito de forma mais geral.  
   
 ## <a name="delegates-overview"></a>Visão geral de delegados  
- Os delegados possuem as seguintes propriedades:  
+ Os delegados têm as seguintes propriedades:  
   
--   Os delegados são como ponteiros de funções em C++, mas apresentam tipos seguros.  
+-   Representantes são semelhantes a ponteiros de função do C++, mas delegados são totalmente orientados a objeto e, ao contrário dos ponteiros de C++ para funções de membro, os delegados encapsulam uma instância do objeto e um método.
   
 -   Os delegados permitem que métodos sejam passados como parâmetros.  
   
@@ -37,9 +37,9 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
 -   Os delegados podem ser encadeados juntos; por exemplo, vários métodos podem ser chamados um único evento.  
   
--   Os métodos não precisam corresponder ao tipo delegado exatamente. Para obter mais informações, consulte [Usando a variação delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
+-   Os métodos não precisam corresponder ao tipo delegado exatamente. Para obter mais informações, confira [Usando a variação delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
--   O C# versão 2.0 introduziu o conceito de [Métodos Anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que permitem que blocos de código sejam passados como parâmetros em vez de um método definido separadamente. O C# 3.0 introduziu expressões lambda como uma maneira mais concisa de escrever blocos de código embutidos. Os métodos anônimos e as expressões lambda (em determinados contextos) são compilados para tipos delegados. Juntos, esses recursos são agora conhecidos como funções anônimas. Para obter mais informações sobre expressões lambda, consulte [Funções Anônimas](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+-   O C# versão 2.0 introduziu o conceito de [Métodos Anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que permitem que blocos de código sejam passados como parâmetros em vez de um método definido separadamente. O C# 3.0 introduziu expressões lambda como uma maneira mais concisa de escrever blocos de código embutidos. Os métodos anônimos e as expressões lambda (em determinados contextos) são compilados para tipos delegados. Juntos, esses recursos são agora conhecidos como funções anônimas. Para obter mais informações sobre expressões lambda, confira [Funções Anônimas](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -65,7 +65,7 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
  [Delegados e eventos](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) em [Learning C# 3.0: Master the fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Delegate>  
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  

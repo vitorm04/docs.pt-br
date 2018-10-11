@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106522"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205011"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -53,7 +53,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
   
  As seções a seguir fornecem informações detalhadas sobre cada um dos especificadores de formato numérico personalizado.  
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-partial-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Especificador personalizado "0"  
@@ -64,7 +64,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir mostra vários valores formatados com cadeias de caracteres de formato personalizado que incluem espaços reservados de zero.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Voltar à tabela](#table)  
@@ -80,7 +80,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir mostra vários valores formatados com cadeias de caracteres de formato personalizado que incluem espaços reservados de dígito.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Para retornar uma cadeia de caracteres de resultado em que dígitos ausentes ou zeros à esquerda são substituídos por espaços, use o recurso de [formatação de composição](../../../docs/standard/base-types/composite-formatting.md) e especifique uma largura de campo, como mostra o exemplo a seguir.  
@@ -100,7 +100,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir usa o especificador de formato "." para definir a posição do ponto decimal em várias cadeias de caracteres de resultados.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Voltar à tabela](#table)  
@@ -120,13 +120,13 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir ilustra o uso da vírgula como um separador de grupo.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  O exemplo a seguir ilustra o uso da vírgula como um especificador de escala numérica.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Voltar à tabela](#table)  
@@ -138,7 +138,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir define várias cadeias de caracteres de formato personalizado que incluem o especificador personalizado "%".  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Voltar à tabela](#table)  
@@ -150,7 +150,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir define uma cadeia de caracteres de formato personalizado que inclui o especificador personalizado "‰".  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Voltar à tabela](#table)  
@@ -162,7 +162,7 @@ Você pode criar uma cadeia de caracteres de formato numérico personalizado, qu
  O exemplo a seguir formata vários valores numéricos usando os especificadores para notação científica.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Voltar à tabela](#table)  
@@ -235,8 +235,8 @@ O exemplo a seguir ilustra um uso comum de unidades de caractere literal (neste 
 
 O exemplo a seguir usa as duas abordagem para incluir caracteres reservados em uma cadeia de caracteres de formato numérica personalizada.  
   
-     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
-     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+ [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal1.cs#1)]
+ [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal1.vb#1)]  
     
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Observações  
@@ -264,9 +264,10 @@ O exemplo a seguir usa as duas abordagem para incluir caracteres reservados em u
   
  [Voltar à tabela](#table)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Como preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Exemplo: Utilitário de Formatação do .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
+- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
+- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Como preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Exemplo: Utilitário de Formatação do .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

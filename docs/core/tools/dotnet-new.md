@@ -4,12 +4,12 @@ description: O comando dotnet new cria novos projetos .NET Core com base no mode
 author: mairaw
 ms.author: mairaw
 ms.date: 07/31/2018
-ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512549"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208622"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -228,8 +228,9 @@ Filtra modelos com base em tipos disponíveis. Os valores predefinidos são "pro
 Desinstala um pacote de origem ou de modelo no `PATH` ou `NUGET_ID` fornecido.
 
 > [!NOTE]
-> Para desinstalar um modelo usando um `PATH`, você precisa qualificar totalmente o caminho. Por exemplo, *C:/Usuários/\<USUÁRIO>/Documentos/Modelos/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, mas *./GarciaSoftware.ConsoleTemplate.CSharp* da pasta que o contém, não.
-> Além disso, não inclua uma barra final de encerramento de diretório no caminho do modelo.
+> Para desinstalar um modelo usando uma origem `PATH`, você precisa qualificar totalmente o caminho. Por exemplo, *C:/Usuários/\<USUÁRIO>/Documentos/Modelos/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, mas *./GarciaSoftware.ConsoleTemplate.CSharp* da pasta que o contém, não. Além disso, não inclua uma barra final de encerramento de diretório no caminho do modelo.
+> 
+> Se não for possível determinar o argumento `PATH` ou `NUGET_ID` necessário para desinstalar um modelo, executar `dotnet new --uninstall` sem um argumento listará todos os modelos instalados e o argumento necessário desinstalá-los.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

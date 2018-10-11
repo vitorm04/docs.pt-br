@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591393"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192194"
 ---
 # <a name="-c-reference"></a>@ (Referência de C#)
 
@@ -33,46 +33,9 @@ O caractere especial `@` serve como um identificador textual. Ele pode ser usado
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Para habilitar o compilador a distinguir entre os atributos em caso de um conflito de nomenclatura. Um atributo é um tipo que deriva de <xref:System.Attribute>. Seu nome de tipo normalmente inclui o sufixo **Attribute**, embora o compilador não imponha essa convenção. O atributo pode, então, ser referenciado no código por seu nome de tipo completo (por exemplo, `[InfoAttribute]` ou pelo nome abreviado (por exemplo, `[Info]`). No entanto, um conflito de nomenclatura ocorre se dois nomes de tipo abreviados forem idênticos e um nome de tipo incluir o sufixo **Attribute** e o outro não incluir. Por exemplo, o código a seguir não é compilado porque o compilador não consegue determinar se o atributo `Info` ou `InfoAttribute` é aplicado à classe `Example`.
+1. Para habilitar o compilador a distinguir entre os atributos em caso de um conflito de nomenclatura. Um atributo é um tipo que deriva de <xref:System.Attribute>. Seu nome de tipo normalmente inclui o sufixo **Attribute**, embora o compilador não imponha essa convenção. O atributo pode, então, ser referenciado no código por seu nome de tipo completo (por exemplo, `[InfoAttribute]` ou pelo nome abreviado (por exemplo, `[Info]`). No entanto, um conflito de nomenclatura ocorre se dois nomes de tipo abreviados forem idênticos e um nome de tipo incluir o sufixo **Attribute** e o outro não incluir. Por exemplo, o código a seguir não é compilado porque o compilador não consegue determinar se o atributo `Info` ou `InfoAttribute` é aplicado à classe `Example`. Veja [CS1614](../compiler-messages/cs1614.md) para obter mais informações.
 
-   ```csharp
-   using System;
-
-   [AttributeUsage(AttributeTargets.Class)]
-   public class Info : Attribute
-   {
-      private string information;
-      
-      public Info(string info)
-      {
-          information = info;
-      }
-   }
-
-   [AttributeUsage(AttributeTargets.Method)]
-   public class InfoAttribute : Attribute
-   {
-      private string information;
-      
-      public InfoAttribute(string info)
-      {
-          information = info;
-      }
-   }
-
-   [Info("A simple executable.")]
-   public class Example
-   {
-      [InfoAttribute("The entry point.")]
-      public static void Main()
-      {
-      }
-   }
-   ```  
-
-   Se o identificador textual for usado para identificar o atributo `Info`, o exemplo será compilado com êxito.
-
-   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
+   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>Consulte também
 

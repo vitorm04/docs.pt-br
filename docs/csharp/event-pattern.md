@@ -3,12 +3,12 @@ title: Padrões de evento .NET padrão
 description: Saiba mais sobre como criar padrões de evento .NET e como criar origens de evento padrão, bem como assinar e processar os eventos padrão em seu código.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827242"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399944"
 ---
 # <a name="standard-net-event-patterns"></a>Padrões de evento .NET padrão
 
@@ -49,7 +49,7 @@ Vamos preencher a classe FileSearcher para pesquisar arquivos que correspondam a
 
 [!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
-## <a name="definining-and-raising-field-like-events"></a>Definindo e acionando eventos semelhantes a campo
+## <a name="defining-and-raising-field-like-events"></a>Definindo e acionando eventos semelhantes a campo
 
 A maneira mais simples de adicionar um evento à sua classe é declarar esse evento como um campo público, como no exemplo anterior:
 

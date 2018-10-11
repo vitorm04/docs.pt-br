@@ -3,13 +3,16 @@ title: Implantação de aplicativos .NET Core com as ferramentas da CLI
 description: Aprenda a implantação de aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855016"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208244"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implantando aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
 
@@ -34,13 +37,14 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Crie o projeto.
 
-   Na linha de comando, digite [dotnet new console](../tools/dotnet-new.md) para criar um novo projeto de console em C# naquele diretório.
+   Na linha de comando, digite [dotnet new console](../tools/dotnet-new.md) para criar um novo projeto de console em C# ou [dotnet new console -lang vb](../tools/dotnet-new.md) para criar um novo projeto de console do Visual Basic nesse diretório.
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o arquivo *Program.cs* ou *Program.vb* no editor e substitua o código gerado automaticamente com o código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Atualize as ferramentas e as dependências do projeto.
 
@@ -55,7 +59,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
    Depois de ter depurado e testado o programa, crie a implantação usando o seguinte comando:
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    Isso cria uma versão de Lançamento (em vez de Depuração) de seu aplicativo. Os arquivos resultantes são colocados em um diretório chamado *publish*, que está em um subdiretório do diretório *bin* do projeto.
 
@@ -101,8 +105,8 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    Abra o arquivo *Program.cs* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. Defina as plataformas às quais seu aplicativo se destinará.
 
    Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução.
@@ -121,6 +125,14 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    Execute o comando [dotnet restore](../tools/dotnet-restore.md) ([veja observação](#dotnet-restore-note)) para restaurar as dependências especificadas no projeto.
 
+1. Determine se você deseja usar o modo de invariável de globalização.
+
+   Especialmente se seu aplicativo for destinado ao Linux, será possível reduzir o tamanho total da sua implantação usando o [modo invariável de globalização](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). O modo invariável de globalização é útil para aplicativos que não são conhecidos globalmente e que podem usar as convenções de formatação, de maiúsculas e minúsculas e a comparação de cadeia de caracteres e ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Para habilitar o modo invariável, clique com o botão direito do mouse no seu projeto (não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj** ou **Editar SCD.vbproj**. Em seguida, adicione as seguintes linhas realçadas ao arquivo:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. Crie um build de depuração do seu aplicativo.
 
    Na linha de comando, use o comando [dotnet build](../tools/dotnet-build.md).
@@ -134,7 +146,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   Isso cria uma versão de Lançamento (em vez de Depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado *publish* que está em um subdiretório de *.\bin\Release\netcoreapp1.1\<runtime_identifier>* do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+   Isso cria uma versão de Lançamento (em vez de Depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado *publish* que está em um subdiretório de *.\bin\Release\netcoreapp2.1\<identificador_de_tempo_de_execução>* do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
 Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
@@ -146,7 +158,7 @@ A seguir está o arquivo *csproj* completo para esse projeto.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ A seguir está o arquivo *csproj* completo para esse projeto:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

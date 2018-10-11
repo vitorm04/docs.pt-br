@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046728"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087720"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Como criar um serviço de token de segurança
 Um serviço de token de segurança implementa o protocolo definido na especificação WS-Trust. Esse protocolo define os formatos de mensagem e padrões de troca de mensagem para a emissão, renovação, cancelando e validando tokens de segurança. Um serviço de token de segurança fornece uma ou mais desses recursos. Este tópico é o cenário mais comum: implementação de emissão de token.  
   
 ## <a name="issuing-tokens"></a>Emissão de Tokens  
- WS-Trust define os formatos de mensagem, com base nas `RequestSecurityToken` elemento de esquema XSD (linguagem) de definição de esquema XML, e `RequestSecurityTokenResponse` elemento do esquema XSD para a execução de emissão de token. Além disso, ele define o associado ação de recurso uniformes (URIs). A ação de URI associado a `RequestSecurityToken` mensagem é http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. A ação de URI associado a `RequestSecurityTokenResponse` mensagem é http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust define os formatos de mensagem, com base nas `RequestSecurityToken` elemento de esquema XSD (linguagem) de definição de esquema XML, e `RequestSecurityTokenResponse` elemento do esquema XSD para a execução de emissão de token. Além disso, ele define o associado ação de recurso uniformes (URIs). A ação de URI associado a `RequestSecurityToken` mensagem é `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`. A ação de URI associado a `RequestSecurityTokenResponse` mensagem é `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`.  
   
 ### <a name="request-message-structure"></a>Estrutura de mensagem de solicitação  
  A estrutura de mensagens de solicitação de problema normalmente consiste dos seguintes itens:  
   
--   URI de tipo de uma solicitação com um valor de http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   URI de tipo de uma solicitação com um valor de `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Um tipo de token URI. Para tokens de segurança asserções Markup Language (SAML) 1.1, o valor desse URI é http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Um tipo de token URI. Para tokens de segurança asserções Markup Language (SAML) 1.1, o valor desse URI é `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
 -   Um valor de tamanho de chave que indica o número de bits na chave a ser associado com o token emitido.  
   
--   Um tipo de chave URI. Para chaves simétricas, o valor desse URI é http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Um tipo de chave URI. Para chaves simétricas, o valor desse URI é `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Além disso, alguns outros itens podem estar presentes:  
   
