@@ -2,15 +2,15 @@
 title: Página de ajuda de serviço HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195986"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121200"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ajuda de serviço HTTP Web do WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Fornece uma página de ajuda automática para serviços WCF WEB HTTP. Esta página de Ajuda lista uma descrição de cada operação de solicitação e formatos de resposta e esquemas. Essa funcionalidade é desativada por padrão. Quando um usuário navega até um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo http://localhost:8000/Customers/Help, uma página de Ajuda, como o seguinte é exibido.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Fornece uma página de ajuda automática para serviços WCF WEB HTTP. Esta página de Ajuda lista uma descrição de cada operação de solicitação e formatos de resposta e esquemas. Essa funcionalidade é desativada por padrão. Quando um usuário navega até um serviço WCF WEB HTTP e acrescenta "/Help" no final da URL, por exemplo `http://localhost:8000/Customers/Help`, uma página de Ajuda, como o seguinte é exibido.  
   
  ![Página de Ajuda do REST do WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   

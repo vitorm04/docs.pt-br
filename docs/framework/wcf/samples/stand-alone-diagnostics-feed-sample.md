@@ -2,12 +2,12 @@
 title: Exemplo de feed de diagnóstico independente
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 64222297373f194a33b5520ecd71b0acc7755359
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6def1d02ed46675d98db115f77ac36bb9f9401de
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418291"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123547"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Exemplo de feed de diagnóstico independente
 Este exemplo demonstra como criar um RSS/Atom feed de sindicalização com o Windows Communication Foundation (WCF). É um programa "Hello World" básico que mostra as Noções básicas do modelo de objeto e como configurá-lo em um serviço do Windows Communication Foundation (WCF).  
@@ -49,7 +49,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Como esse serviço recebe solicitações que usam o HTTP padrão GET, você pode usar qualquer cliente RSS ou reconhecimento do ATOM para acessar o serviço. Por exemplo, você pode exibir a saída desse serviço, navegando até http://localhost:8000/diagnostics/feed/?format=atom ou http://localhost:8000/diagnostics/feed/?format=rss em um navegador com suporte a RSS, como o Internet Explorer 7.  
+ Como esse serviço recebe solicitações que usam o HTTP padrão GET, você pode usar qualquer cliente RSS ou reconhecimento do ATOM para acessar o serviço. Por exemplo, você pode exibir a saída desse serviço, navegando até `http://localhost:8000/diagnostics/feed/?format=atom` ou `http://localhost:8000/diagnostics/feed/?format=rss` em um navegador com suporte a RSS.
   
  Você também pode usar o [como o WCF Sindicalização objeto modelo é mapeado para Atom e RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) para ler dados agregados e processá-lo usando o código obrigatório.  
   
@@ -82,7 +82,7 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  Execute o aplicativo de console.  
   
-4.  Durante a execução do aplicativo de console, navegue até http://localhost:8000/diagnostics/feed/?format=atom ou http://localhost:8000/diagnostics/feed/?format=rss usando um navegador com suporte a RSS.  
+4.  Durante a execução do aplicativo de console, navegue até `http://localhost:8000/diagnostics/feed/?format=atom` ou `http://localhost:8000/diagnostics/feed/?format=rss` usando um navegador com suporte a RSS.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

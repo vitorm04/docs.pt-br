@@ -2,20 +2,21 @@
 title: '&lt;estado&gt; do WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 69ebedec40243d3e6580b8350c1253fca83e0802
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 427cba7a51bfb908171e476cd703c6a40fd6e144
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754565"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123209"
 ---
 # <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>&lt;estado&gt; do WCF, &lt;workflowInstanceQuery&gt;
 Representa uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.  
   
- Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de controle](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
-\<controle >  
+\<system.serviceModel>  
+\<Acompanhamento >  
+\<perfis de >  
 \<trackingProfile>  
 \<workflow>  
 \<workflowInstanceQueries>  
@@ -26,31 +27,48 @@ Representa uma coleção de estados inscritos da instância do fluxo de trabalho
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <workflowInstanceQueries>
+          <workflowInstanceQuery>
+            <states>
+              <state name="Name"/>
+            </states>
+          </workflowInstanceQuery>
+        </workflowInstanceQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>  
 ```
   
-## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+## <a name="attributes-and-elements"></a>Atributos e elementos
+
+As seções a seguir descrevem atributos, elementos filho e elementos pai.
   
-### <a name="attributes"></a>Atributos  
-  
+### <a name="attributes"></a>Atributos
+
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|name|Uma cadeia de caracteres que especifica um estado inscrito da instância do fluxo de trabalho controladas quando o registro de rastreamento é criado.|  
+|`name`|Uma cadeia de caracteres que especifica um estado inscrito da instância do fluxo de trabalho controladas quando o registro de rastreamento é criado.|  
   
-### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
-  
-### <a name="parent-elements"></a>Elementos pai  
-  
+### <a name="child-elements"></a>Elementos filho
+
+nenhuma.
+
+### <a name="parent-elements"></a>Elementos pai
+
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.|  
+|[\<estados >](states-of-wcf-workflowinstancequery.md)|Uma coleção de estados inscritos da instância do fluxo de trabalho controladas quando os registros de rastreamento são criados.|  
   
 ## <a name="remarks"></a>Comentários  
- Os registros retornados são filtrados por estados nesta coleção.  
+
+Os registros retornados são filtrados por estados nesta coleção.  
   
- Estado de possíveis valores é descritos na tabela a seguir.  
+Estado de possíveis valores é descritos na tabela a seguir:
   
 |Estado|Descrição|  
 |-----------|-----------------|  
@@ -68,22 +86,24 @@ Representa uma coleção de estados inscritos da instância do fluxo de trabalho
 |Encerrada|A instância de fluxo de trabalho é encerrada.|  
 |Não suspenso|A instância de fluxo de trabalho é unsuspended.|  
   
-## <a name="example"></a>Exemplo  
- A configuração a seguir assina o fluxo de trabalho em nível de instância registros de controle para o `Started` estado da instância usando esta consulta.  
+## <a name="example"></a>Exemplo
+
+A configuração a seguir assina o fluxo de trabalho em nível de instância registros de controle para o `Started` estado da instância usando esta consulta.  
   
-```xml  
-<workflowInstanceQueries>  
-    <workflowInstanceQuery>  
-      <states>  
-        <state name="Started"/>  
-      </states>  
-    </workflowInstanceQuery>  
-</workflowInstanceQueries>  
+```xml
+<workflowInstanceQueries>
+  <workflowInstanceQuery>  
+    <states>  
+      <state name="Started"/>  
+    </states>  
+  </workflowInstanceQuery>  
+</workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

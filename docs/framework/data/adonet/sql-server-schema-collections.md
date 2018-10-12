@@ -2,12 +2,12 @@
 title: Coleções de esquema do SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7020c74d41ce1feef38c4dfc66117a7b8c8eff4e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508484"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123859"
 ---
 # <a name="sql-server-schema-collections"></a>Coleções de esquema do SQL Server
 O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleções de esquema adicionais além das coleções de esquema comuns. As coleções de esquema variam ligeiramente conforme a versão do SQL Server que você está usando. Para determinar a lista de coleções de esquema com suporte, chame o **GetSchema** método sem argumentos ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam.  
@@ -28,7 +28,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |CONSTRAINT_SCHEMA|Cadeia de Caracteres|Esquema que contém a restrição.|  
 |CONSTRAINT_NAME|Cadeia de Caracteres|Nome.|  
 |TABLE_CATALOG|Cadeia de Caracteres|Restrição de nome de tabela faz parte.|  
-|TABLE_SCHEMA|Cadeia de Caracteres|Esquema que que contém a tabela.|  
+|TABLE_SCHEMA|Cadeia de Caracteres|Esquema que contém a tabela.|  
 |TABLE_NAME|Cadeia de Caracteres|Nome da tabela|  
 |CONSTRAINT_TYPE|Cadeia de Caracteres|Tipo de restrição. Somente "FOREIGN KEY" é permitido.|  
 |IS_DEFERRABLE|Cadeia de Caracteres|Especifica se a restrição é Adiável. Não retorna.|  

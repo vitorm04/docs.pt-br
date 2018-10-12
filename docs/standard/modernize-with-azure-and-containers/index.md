@@ -3,13 +3,13 @@ title: Modernizar os aplicativos de .NET existentes com nuvem de Azure e contêi
 description: Aprenda a comparação de precisão and -shift e modernizar aplicativos existentes para a nuvem do Azure e contêineres com este livro eletrônico.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 4/28/2018
-ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.date: 04/28/2018
+ms.openlocfilehash: f4ca3789ec4b3d84960f2ecd4494a899339a787b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873486"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121435"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure (2ª edição)
 

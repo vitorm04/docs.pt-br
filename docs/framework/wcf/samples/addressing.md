@@ -2,12 +2,12 @@
 title: Endereçando
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468359"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123196"
 ---
 # <a name="addressing"></a>Endereçando
 O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é hospedado internamente. O serviço e o cliente são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidade relativas e absolutas.  
@@ -40,7 +40,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço básico. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service.  
+ Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço básico. O endereço do ponto de extremidade real é `http://localhost:8000/servicemodelsamples/service`.
   
  A definição de ponto de extremidade segundo também especifica um endereço relativo, conforme mostrado no seguinte exemplo de configuração.  
   
@@ -53,7 +53,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço relativo, "teste", é acrescentado ao endereço básico. O endereço do ponto de extremidade real é http://localhost:8000/servicemodelsamples/service/test.  
+ O endereço relativo, "teste", é acrescentado ao endereço básico. O endereço do ponto de extremidade real é `http://localhost:8000/servicemodelsamples/service/test`.
   
  A definição de ponto de extremidade a terceira Especifica um endereço absoluto, conforme mostrado no seguinte exemplo de configuração.  
   
@@ -63,9 +63,9 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço básico não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é http://localhost:8001/hello/servicemodelsamples.  
+ O endereço básico não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é `http://localhost:8001/hello/servicemodelsamples`.
   
- O quarto endereço do ponto de extremidade Especifica um endereço absoluto e um transporte diferente — TCP. O endereço básico não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é baseaddress="NET.TCP://localhost:6080/vmmhelperservice/: 9000/servicemodelsamples/serviço.  
+ O quarto endereço do ponto de extremidade Especifica um endereço absoluto e um transporte diferente — TCP. O endereço básico não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

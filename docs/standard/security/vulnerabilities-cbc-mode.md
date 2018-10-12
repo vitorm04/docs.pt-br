@@ -4,12 +4,12 @@ description: Saiba como detectar e atenuar as vulnerabilidades de medição de t
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840505"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123638"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de medição de tempo com a descriptografia simétrica de modo CBC usando preenchimento
 
@@ -65,7 +65,7 @@ Historicamente, tem sido um consenso, o que é importante criptografar e autenti
 
 Uma classe de vulnerabilidades conhecidas como "preenchimento de ataques do oracle" conhecido existam para mais de 10 anos. Essas vulnerabilidades permitem que um invasor descriptografar dados criptografados por algoritmos de bloco simétricas, como AES e 3DES, usando as tentativas não mais que 4096 por bloco de dados. Essas vulnerabilidades fazer uso do fato de que as codificações de bloco é mais frequentemente usada com os dados de preenchimento verificável no final. Foi encontrado que, se um invasor pode violar o texto cifrado e descobrir se a violação causou um erro no formato do preenchimento no final, o invasor poderá descriptografar os dados.
 
-Inicialmente, ataques práticos eram baseados em serviços que retornam os códigos de erro diferentes com base em se preenchimento foi válido, como a vulnerabilidade do ASP.NET [MS10 070](https://technet.microsoft.com/library/security/ms10-070.aspx). No entanto, a Microsoft acredita agora é prático conduzir ataques semelhantes usando apenas as diferenças no tempo entre o processamento de preenchimento válido e inválido.
+Inicialmente, ataques práticos eram baseados em serviços que retornam os códigos de erro diferentes com base em se preenchimento foi válido, como a vulnerabilidade do ASP.NET [MS10 070](/security-updates/SecurityBulletins/2010/ms10-070). No entanto, a Microsoft acredita agora é prático conduzir ataques semelhantes usando apenas as diferenças no tempo entre o processamento de preenchimento válido e inválido.
 
 Desde que o esquema de criptografia utiliza uma assinatura e que a verificação da assinatura é executada com um tempo de execução fixado para um determinado comprimento de dados (independentemente do conteúdo), a integridade dos dados pode ser verificada sem emitir qualquer informação a um o invasor por meio de um [canal do lado do](https://en.wikipedia.org/wiki/Side-channel_attack). Uma vez que a verificação de integridade rejeita qualquer mensagem violadas, a ameaça do oracle de preenchimento é atenuada.
 

@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873687"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123807"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Mesmo com fluxos de trabalho complexos com muitos de profundida e um número alto de atividades, os resultados de desempenho são consistentes com outros números de produção mostradas anteriormente neste artigo.  A taxa de WF4 é pedidos de magnitude mais rapidamente e tem que ser comparadas em uma escala logarítmica.
 
 ### <a name="memory"></a>Memória
- A sobrecarga de memória do Windows Workflow Foundation é medida em dois pontos chave: complexidade de fluxo de trabalho e número de definições de fluxo de trabalho.  As medidas de memória foram executadas em uma estação de trabalho de 64 bits do Windows 7.  Há muitas maneiras de obter a medida de tamanho do conjunto, como monitorar contadores de desempenho, sondagem WorkingSet ou usando uma ferramenta como VMMap disponível no trabalho [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Uma combinação de métodos foi usada para obter e verificar os resultados de cada teste.
+ A sobrecarga de memória do Windows Workflow Foundation é medida em dois pontos chave: complexidade de fluxo de trabalho e número de definições de fluxo de trabalho.  As medidas de memória foram executadas em uma estação de trabalho de 64 bits do Windows 7.  Há muitas maneiras de obter a medida de tamanho do conjunto, como monitorar contadores de desempenho, sondagem WorkingSet ou usando uma ferramenta como VMMap disponível no trabalho [VMMap](/sysinternals/downloads/vmmap). Uma combinação de métodos foi usada para obter e verificar os resultados de cada teste.
 
 ### <a name="workflow-complexity-test"></a>Teste a complexidade de fluxo de trabalho
  O teste de complexidade de fluxo de trabalho mede a diferença de conjunto de trabalho baseado em complexidade de fluxo de trabalho.  Além dos fluxos de trabalho complexo usados na seção anterior, as novas variações são adicionados para cobrir dois casos básicos: um único fluxo de trabalho de atividade e uma sequência com 1000 atividades.  Para esses testes fluxos de trabalho são inicializados e executados para a conclusão em um único loop serial por um período de um minuto.  Cada variação de teste é executada três vezes e os dados são gravados a média dessas três é executado.

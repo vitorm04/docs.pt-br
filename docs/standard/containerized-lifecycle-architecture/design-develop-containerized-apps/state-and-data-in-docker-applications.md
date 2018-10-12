@@ -4,18 +4,18 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586029"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123222"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
 Um primitivo de contêineres é imutabilidade. Quando comparado a uma VM, os contêineres não desaparecerem como uma ocorrência comum. Uma VM pode falhar em várias formas de processos inativos, sobrecarga da CPU ou um disco cheio ou com falha. Ainda assim, esperamos que a VM esteja disponível e unidades RAID são comuns para garantir que falhas de unidade mantêm os dados.
 
-No entanto, contêineres forem considerados instâncias dos processos. Um processo não mantém o estado durável. Mesmo que um contêiner pode gravar em seu armazenamento local, supondo que essa instância permanecerá indefinidamente seria equivalente a supondo que uma cópia única de memória será durável. Você deve presumir que os contêineres, como processos, são duplicados, eliminado, ou, quando gerenciados com um orquestrador de contêiner, eles podem ser movidos.
+No entanto, contêineres forem considerados instâncias dos processos. Um processo não mantém o estado durável. Mesmo que um contêiner pode gravar em seu armazenamento local, supondo que a instância permanecerá indefinidamente seria equivalente a supondo que uma cópia única de memória será durável. Você deve presumir que os contêineres, como processos, são duplicados, eliminado, ou, quando gerenciados com um orquestrador de contêiner, eles podem ser movidos.
 
 Docker usa um recurso conhecido como um *sistema de arquivos de sobreposição* implementar um processo de cópia na gravação que armazena qualquer informações atualizadas sobre o sistema de arquivos raiz de um contêiner, em comparação comparado a imagem original na qual ele se baseia. Essas alterações serão perdidas se o contêiner for excluído posteriormente do sistema. Um contêiner, portanto, não tem armazenamento persistente por padrão. Embora seja possível salvar o estado de um contêiner, criação de um sistema em torno disso seria em conflito com o princípio de arquitetura do contêiner.
 
