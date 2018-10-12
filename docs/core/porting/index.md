@@ -4,12 +4,12 @@ description: Entenda o processo de compatibilidade e descubra ferramentas que po
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210076"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835386"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Portabilidade do .NET Framework para .NET Core
 
@@ -27,7 +27,7 @@ O processo recomendado de portabilidade segue a série de etapas a seguir.  Cada
 
    Isso garante que você possa usar alternativas de API para destinos específicos de .NET Framework nos casos em que o .NET Core não dá suporte a uma determinada API.
    
-3. Use a [ferramenta Analisador de Portabilidade de API](https://github.com/Microsoft/dotnet-apiport/) para analisar seus assemblies e desenvolver um plano de portabilidade com base em seus resultados.
+3. Use o [Analisador de Portabilidade do .NET](../../standard/analyzers/portability-analyzer.md) para analisar seus assemblies e desenvolver um plano de portabilidade com base nos resultados dele.
 
    A ferramenta Analisador de Portabilidade de API analisará seus assemblies compilados e gerará um relatório que mostra um resumo de portabilidade de alto nível e um detalhamento de cada API usada que não está disponível no .NET Core.  Você pode usar esse relatório junto com uma análise da sua base de código para desenvolver um plano para como você realizará a portabilidade do código.
    
