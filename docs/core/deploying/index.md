@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030490"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836622"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
