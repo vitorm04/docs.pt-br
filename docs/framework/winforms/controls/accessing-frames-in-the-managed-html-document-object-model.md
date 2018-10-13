@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847628"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308481"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Acessando quadros no Document Object Model HTML gerenciado
 Alguns documentos HTML são compostos de *quadros* ou janelas que podem manter seus próprios documentos HTML distintos. Usar quadros facilita a criação de páginas HTML na qual uma ou mais partes da página permanecem estáticas, como uma barra de navegação, enquanto outros quadros alterar seu conteúdo constantemente.  

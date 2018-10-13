@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50cc8fdbf175a7148795078e4d243df21d34a40e
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353205"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308507"
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;System. ServiceModel&gt;
 Esta seção de configuração contém todos os elementos de configuração de ServiceModel do Windows Communication Foundation (WCF).  
@@ -45,7 +45,9 @@ Esta seção de configuração contém todos os elementos de configuração de S
   <services>  
   </services>
   <standardEndpoints>  
-  </standardEndpoints>  
+  </standardEndpoints>
+  <tracking>
+  </tracking>
 </system.serviceModel>  
 ```  
   
@@ -60,18 +62,19 @@ Esta seção de configuração contém todos os elementos de configuração de S
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<comportamentos >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|Esta seção define duas coleções filhas nomeadas `endpointBehaviors` e `serviceBehaviors`.  Cada coleção define elementos de comportamento consumidos pelos pontos de extremidade e serviços, respectivamente. Cada elemento do comportamento é identificado por seu exclusivo `name` atributo.|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esta seção contém uma coleção de associações padrão e personalizadas. Cada entrada é identificada pelo seu exclusivo `name`. Serviços usar associações vinculando-as usando o `name`.|  
+|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esta seção contém uma coleção de associações padrão e personalizadas. Cada entrada é identificada por seu exclusivo `name`. Serviços usam associações vinculando-as usando o `name`.|  
 |[\<cliente >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Esta seção contém uma lista de pontos de extremidade de que um cliente usa para se conectar a um serviço.|  
-|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Esta seção define os contratos COM habilitado para interoperabilidade COM e o WCF.|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Esta seção só pode ser definida no arquivo Machine. config. Ele define duas coleções filhas nomeadas `endpointBehaviors` e `serviceBehaviors`.  Cada coleção define elementos de comportamento consumidos por todos os pontos de extremidade do WCF e serviços no computador, respectivamente.  Se um comportamento é definido em `<commonBehaviors>` e `<behaviors>` seções, o comportamento de \<comportamentos > seção tem preferência.|  
+|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Esta seção define os contratos COM habilitado para a interoperabilidade do WCF e do COM.|  
+|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Esta seção só pode ser definida no arquivo Machine. config. Ele define duas coleções filhas nomeadas `endpointBehaviors` e `serviceBehaviors`.  Cada coleção define elementos de comportamento consumidos por todos os pontos de extremidade do WCF e serviços no computador, respectivamente.  Se um comportamento é definido em ambos `<commonBehaviors>` e `<behaviors>` seções, o comportamento no \<comportamentos > seção é dada preferência.|  
+|[\<diagnóstico >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Esta seção contém as configurações para os recursos de diagnóstico do WCF. O usuário pode habilitar/desabilitar o rastreamento, contadores de desempenho e o provedor WMI e pode adicionar filtros de mensagem personalizada.|  
 |[\<Extensões >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Esta seção contém uma coleção de extensões, que permitem que o usuário crie associações definidas pelo usuário, comportamentos e outros aspectos de extensões.|  
-|[\<diagnóstico >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Esta seção contém as configurações para os recursos de diagnóstico do WCF. O usuário pode ativar/desativar o rastreamento, contadores de desempenho e o provedor WMI e pode adicionar filtros de mensagem personalizada.|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Esta seção define um conjunto de mapeamento de padrão de protocolo entre esquemas de protocolo de transporte (por exemplo, http, net.tcp, NET. pipe, etc.) e as associações do WCF.|  
-|[\<roteamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Esta seção define um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como o roteamento de tabelas que definem os pontos de extremidade de destino para enviar mensagens quando um corresponde ao filtro.|  
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Esta seção define o tipo de serviço instancia do ambiente de hospedagem para um determinado transporte. Se esta seção está vazia, o tipo padrão será usado.|  
-|[\<Serviços >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|A seção contém uma coleção de serviços. Para cada serviço definido no assembly, esse elemento contém um `service` elemento para especificar configurações para o serviço.|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Esta seção define uma coleção de pontos de extremidade padrão, que são pontos de extremidade pré-configurados reutilizáveis. Um ponto de extremidade padrão terá um ou mais do endereço, associação e os atributos do contrato definido como um valor fixo. Por exemplo, no ponto de extremidade de descoberta do contrato é fixo. Você também pode usar pontos de extremidade padrão para estender o ponto de extremidade de serviço com novas propriedades semelhantes para definir associações personalizadas.|  
-  
+|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Esta seção define um conjunto padrão de mapeamento de protocolo entre esquemas de protocolo de transporte (por exemplo, http, NET. TCP, NET. pipe, etc.) e associações do WCF.|  
+|[\<roteamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Esta seção define um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como roteamento de tabelas que definem os pontos de extremidade de destino para enviar mensagens para quando um corresponde ao filtro.|  
+|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Esta seção define que tipo de serviço do ambiente de hospedagem cria uma instância para um transporte particular. Se esta seção está vazia, o tipo padrão é usado.|  
+|[\<Serviços >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|A seção contém uma coleção de serviços. Para cada serviço definido no assembly, esse elemento contém um `service` elemento que especifica configurações para o serviço.|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Esta seção define uma coleção de pontos de extremidade padrão que são pontos de extremidade pré-configurados reutilizáveis. Um ponto de extremidade padrão terá um ou mais do endereço, associação e atributos de contrato definido como um valor fixo. Por exemplo, o ponto de extremidade de descoberta o contrato é fixo. Você também pode usar pontos de extremidade padrão para estender o ponto de extremidade de serviço com novas propriedades semelhantes à definição de ligações personalizadas.|
+|[\<Acompanhamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|Esta seção define as configurações de rastreamento para um serviço de fluxo de trabalho.|
+
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
@@ -81,15 +84,15 @@ Esta seção de configuração contém todos os elementos de configuração de S
 ## <a name="remarks"></a>Comentários  
  WCF não adiciona elementos para as seções de configuração de outros produtos.  
   
- Serviços WCF são definidos no `services` seção do arquivo de configuração. Um assembly pode conter qualquer número de serviços. Cada serviço tem seu próprio `service` seção de configuração. A seção e seu conteúdo definem o contrato de serviço, o comportamento e os pontos de extremidade do serviço em questão.  
+ Os serviços do WCF são definidos na `services` seção do arquivo de configuração. Um assembly pode conter qualquer número de serviços. Cada serviço tem seu próprio `service` seção de configuração. A seção e seu conteúdo definem o contrato de serviço, o comportamento e os pontos de extremidade do serviço em questão.  
   
- Do somente um serviço `name` atributo é necessário.  Por padrão, o nome do serviço descreve o tipo CLR subjacente usado para implementar um serviço; No entanto, você pode alterar a propriedade ConfigurationName em um <xref:System.ServiceModel.ServiceContractAttribute> para substituir o requisito de tipo CLR.  
+ Somente o de um serviço `name` atributo é necessário.  Por padrão, o nome do serviço descreve o tipo CLR subjacente usado para implementar um serviço; No entanto, você pode alterar a propriedade ConfigurationName em um <xref:System.ServiceModel.ServiceContractAttribute> para substituir o requisito de tipo CLR.  
   
- O atributo `behaviorConfiguration` é opcional. Ele identifica o comportamento de serviço usado por um serviço. O comportamento especificado por esse atributo deve vincular a um comportamento de serviço definido no escopo do mesmo arquivo de configuração (ou seja, o mesmo arquivo ou um arquivo pai).  
+ O atributo `behaviorConfiguration` é opcional. Ele identifica o comportamento de serviço usado por um serviço. O comportamento especificado por este atributo deve vincular a um comportamento de serviço definido no escopo do mesmo arquivo de configuração (ou seja, o mesmo arquivo ou um arquivo pai).  
   
- Cada serviço expõe um ou mais pontos de extremidade definidos em um `endpoint` elemento. Cada ponto de extremidade tem seu próprio endereço e associação. Todas as associações usadas no arquivo de configuração devem ser definidas no escopo do arquivo.  
+ Cada serviço expõe um ou mais pontos de extremidade definido em um `endpoint` elemento. Cada ponto de extremidade tem seu próprio endereço e associação. Todas as ligações usadas no arquivo de configuração devem ser definidas no escopo do arquivo.  
   
- Associações são vinculadas aos pontos de extremidade pela combinação dos atributos `name` e `bindingConfiguration`. O `binding` atributo define na seção a associação está definida. O `bindingConfiguration` atributo define qual associação configurada na seção de associação é usada. Uma seção de associação pode definir várias associações configuradas.  
+ Associações são vinculadas aos pontos de extremidade por meio da combinação dos atributos `name` e `bindingConfiguration`. O `binding` atributo define em qual seção a associação é definida. O `bindingConfiguration` atributo define qual associação configurada dentro da seção de associação é usada. Uma seção de associação pode definir várias associações configuradas.  
   
 ## <a name="example"></a>Exemplo  
  Este é um exemplo de um arquivo de configuração do WCF.  

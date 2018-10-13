@@ -2,27 +2,33 @@
 title: '&lt;fluxo de trabalho&gt; do WCF'
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: a9c3f8a4910c3cad28ae8b06b24b74782abec037
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7f6e648b98f436074c7fc5c563b4b5879158bcc3
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756963"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308301"
 ---
 # <a name="ltworkflowgt-of-wcf"></a>&lt;fluxo de trabalho&gt; do WCF
 Configure um participante de rastreamento que escuta para registros de rastreamento emissores de tempo de execução diretamente e processá-los de forma que ele foi configurado. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
   
- Para obter mais informações no controle de fluxo de trabalho e participantes de rastreamento, consulte [fluxo de trabalho de rastreamento e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes de rastreamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
+ Para obter mais informações no controle de fluxo de trabalho e os participantes de rastreamento, consulte [fluxo de trabalho, controle e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes de rastreamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<controle >  
+\<Acompanhamento >  
 \<os participantes >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml
-   <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>   
+  <tracking>
+    <participants>
+      <add name="String"
+            profileName="String"
+            type="String" />
+    </participants>
+  </tracking>   
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  

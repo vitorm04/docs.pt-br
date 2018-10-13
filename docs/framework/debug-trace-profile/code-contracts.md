@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649205"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308546"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código. As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade. As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado. As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.  
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Um valor de pré-estado em uma pós-condição refere-se ao valor de uma expressão no início de um método ou uma propriedade. Ele usa a expressão `Contract.OldValue<T>(e)`, em que `T` é o tipo de `e`. É possível omitir o argumento de tipo genérico sempre que o compilador pode inferir seu tipo. (Por exemplo, o compilador do C# sempre infere o tipo porque ele usa um argumento.) Há várias restrições sobre o que pode ocorrer em `e` e os contextos nos quais uma expressão antiga pode aparecer. Uma expressão antiga não pode conter outra expressão antiga. O mais importante é que uma expressão antiga deve se referir a um valor que existia no estado de pré-condição do método. Em outras palavras, ela deve ser uma expressão que possa ser avaliada, desde que a pré-condição do método seja `true`. Veja a seguir várias instâncias dessa regra.  
   
-    -   O valor deve existir no estado de pré-condição do método. Para referenciar um campo em um objeto, as pré-condições devem garantir que o objeto seja sempre não nulo.  
+    -   O valor deve existir no estado de pré-condição do método. Para fazer referência a um campo em um objeto, as pré-condições devem garantir que o objeto é sempre não nulo.  
   
     -   Não é possível se referir ao valor retornado do método em uma expressão antiga:  
   
