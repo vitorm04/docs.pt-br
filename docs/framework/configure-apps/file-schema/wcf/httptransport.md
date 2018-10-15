@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cbd375652a2051c22e12e12e7650077e56ed2d7d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ddce1053a7494a84d0266c7ad14f6b1937365fa5
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086408"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316422"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Especifica um transporte HTTP para transmissão de mensagens SOAP para uma associação personalizada.  
@@ -47,7 +47,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |allowCookies|Um valor booliano que especifica se o cliente aceita cookies e propaga-os em solicitações futuras. O padrão é `false`.<br /><br /> Você pode usar esse atributo quando você interage com os serviços Web ASMX que usam cookies. Dessa forma, você pode ter certeza de que os cookies retornados do servidor são copiados automaticamente para todas as solicitações futuras de cliente para o serviço.|  
 |AuthenticationScheme|Especifica o protocolo usado para autenticar solicitações de cliente sendo processadas por um ouvinte HTTP. Os valores válidos incluem o seguinte:<br /><br /> -Digest: Especifica a autenticação digest.<br />-Negotiate: Negocia com o cliente para determinar o esquema de autenticação. Se o cliente e o servidor oferecem suporte ao Kerberos, ele é usado; caso contrário, o NTLM é usado.<br />-Ntlm: Especifica a autenticação NTLM.<br />-Básico: Especifica a autenticação básica.<br />-Anônimo: Especifica a autenticação anônima.<br /><br /> O padrão é anônimo. Esse atributo é do tipo <xref:System.Net.AuthenticationSchemes>. Esse atributo só pode ser definido uma vez.|  
 |bypassProxyOnLocal|Um valor booliano que indica se deve ignorar o servidor proxy para endereços locais. O padrão é `false`.<br /><br /> Um endereço local é aquele que está na rede local ou da intranet.<br /><br /> Windows Communication Foundation (WCF) sempre ignora o proxy se o endereço do serviço começa com `http://localhost`.<br /><br /> Se você deseja que os clientes para passar por um proxy ao conversar com os serviços no mesmo computador, você deve usar o nome de host em vez do localhost.|  
-|hostnameComparisonMode|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Os valores válidos são,<br /><br /> -StrongWildcard: ("+") corresponde a todos os possíveis nomes de host no contexto do esquema especificado, porta e o URI relativo.<br />-Exato: sem curingas<br />-WeakWildcard: ("*") corresponde ao nome de host de todos os possíveis no contexto do esquema especificado, porta e UIR relativa que não foram correspondidas explicitamente ou por meio do mecanismo de curinga forte.<br /><br /> O padrão é StrongWildcard. Esse atributo é do tipo `System.ServiceModel.HostnameComparisonMode`.|  
+|hostnameComparisonMode|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Os valores válidos são,<br /><br /> -StrongWildcard: ("+") corresponde a todos os possíveis nomes de host no contexto do esquema especificado, porta e o URI relativo.<br />-Exato: sem curingas<br />-WeakWildcard: ("\*") corresponde ao nome de host de todos os possíveis no contexto do esquema especificado, porta e UIR relativa que não foram correspondidas explicitamente ou por meio do mecanismo de curinga forte.<br /><br /> O padrão é StrongWildcard. Esse atributo é do tipo `System.ServiceModel.HostnameComparisonMode`.|  
 |keepAliveEnabled|Um valor booliano que especifica se é necessário fazer uma conexão persistente para o recurso de internet.|  
 |maxBufferSize|Um inteiro positivo que especifica o tamanho máximo do buffer. O padrão é 524288|  
 |proxyAddress|Um URI que especifica o endereço do proxy HTTP. Se `useSystemWebProxy` está `true`, essa configuração deve ser `null`. O padrão é `null`.|  
