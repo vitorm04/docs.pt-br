@@ -2,12 +2,12 @@
 title: Exemplo de anúncios
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865716"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347489"
 ---
 # <a name="announcements-sample"></a>Exemplo de anúncios
 Este exemplo mostra como usar a funcionalidade de lançamento do recurso de descoberta. Anúncios de permitir que os serviços enviar mensagens de anúncio que contêm metadados sobre o serviço. Por padrão, um anúncio hello é enviado quando o serviço é iniciado e um anúncio bye é enviado quando o serviço é desligado. Esses anúncios podem ser multicast ou eles podem ser enviados ponto a ponto. Esse exemplo consiste em cliente e o serviço de dois projetos.  
@@ -15,7 +15,7 @@ Este exemplo mostra como usar a funcionalidade de lançamento do recurso de desc
 ## <a name="service"></a>Serviço  
  Este projeto contém um serviço de calculadora auto-hospedado. No `Main` método, um host de serviço é criado e um ponto de extremidade de serviço é adicionado a ele. Em seguida, um <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> é criado. Para habilitar os anúncios, um ponto de extremidade de comunicado deve ser adicionado para o <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Nesse caso, um ponto de extremidade padrão, usando o UDP multicast é adicionado como o ponto de extremidade de comunicado. Isso transmite os anúncios sobre um endereço conhecido de UDP.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
   
 // Create a ServiceHost for the CalculatorService type.  
@@ -39,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ## <a name="client"></a>Cliente  
  Neste projeto, observe que os hosts de cliente um <xref:System.ServiceModel.Discovery.AnnouncementService>. Além disso, os dois delegados são registrados com eventos. Esses eventos determinam o que o cliente faz quando anúncios online e offline são recebidos.  
   
-```  
+```csharp
 // Create an AnnouncementService instance  
 AnnouncementService announcementService = new AnnouncementService();  
   
@@ -50,7 +50,7 @@ announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
  O `OnOnlineEvent` e `OnOfflineEvent` métodos lidam com as mensagens de comunicado de saudação e bye respectivamente.  
   
-```  
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
 {  
     Console.WriteLine();              

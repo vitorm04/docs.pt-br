@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 45a5584a082c4b274614b8fd55be8be4b87945b3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969974"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347780"
 ---
 # <a name="duplex"></a>Duplex
 O exemplo de Duplex demonstra como definir e implementar um contrato duplex. Comunicação duplex ocorre quando um cliente estabelece uma sessão com um serviço e fornece o serviço de um canal no qual o serviço pode enviar mensagens de volta ao cliente. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). Um contrato duplex é definido como um par de interfaces — uma interface principal do cliente para o serviço e uma interface de retorno de chamada do serviço ao cliente. Neste exemplo, o `ICalculatorDuplex` interface permite que o cliente a executar operações matemáticas, calculando o resultado em uma sessão. O serviço retorna resultados sobre o `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens sendo enviadas entre o cliente e o serviço.  
@@ -19,7 +19,7 @@ O exemplo de Duplex demonstra como definir e implementar um contrato duplex. Com
   
  Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS). O contrato duplex é definido da seguinte maneira:  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
                  CallbackContract=typeof(ICalculatorDuplexCallback))]  
 public interface ICalculatorDuplex  
@@ -47,7 +47,7 @@ public interface ICalculatorDuplexCallback
   
  O `CalculatorService` classe implementa o primário `ICalculatorDuplex` interface. O serviço usa o <xref:System.ServiceModel.InstanceContextMode.PerSession> modo de instância para manter o resultado para cada sessão. Uma propriedade privada chamada `Callback` é usado para acessar o canal de retorno de chamada para o cliente. O serviço usa o retorno de chamada para o envio de mensagens de volta ao cliente por meio da interface de retorno de chamada.  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorDuplex  
 {  
@@ -71,7 +71,9 @@ public class CalculatorService : ICalculatorDuplex
         equation += " + " + n.ToString();  
         Callback.Result(result);  
     }  
-    ...  
+    
+    //...  
+    
     ICalculatorDuplexCallback Callback  
     {  
         get  
@@ -84,7 +86,7 @@ public class CalculatorService : ICalculatorDuplex
   
  O cliente deve fornecer uma classe que implementa a interface de retorno de chamada do contrato duplex, para receber mensagens do serviço. No exemplo, uma `CallbackHandler` classe é definida para implementar o `ICalculatorDuplexCallback` interface.  
   
-```  
+```csharp 
 public class CallbackHandler : ICalculatorDuplexCallback  
 {  
    public void Result(double result)  
@@ -101,7 +103,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
   
  O proxy gerado para um contrato duplex requer um <xref:System.ServiceModel.InstanceContext> a ser fornecido no momento da construção. Isso <xref:System.ServiceModel.InstanceContext> é usado como o site para um objeto que implementa a interface de retorno de chamada e manipula as mensagens enviadas a resposta do serviço. Uma <xref:System.ServiceModel.InstanceContext> é construído com uma instância da `CallbackHandler` classe. Esse objeto manipula as mensagens enviadas do serviço ao cliente na interface de retorno de chamada.  
   
-```  
+```csharp
 // Construct InstanceContext to handle messages on callback interface.  
 InstanceContext instanceContext = new InstanceContext(new CallbackHandler());  
   
@@ -172,14 +174,14 @@ client.Close();
   
     ```xml  
     <client>  
-    <endpoint name = ""  
-    address="http://service_machine_name/servicemodelsamples/service.svc"  
-    ... />  
+        <endpoint name = ""  
+        address="http://service_machine_name/servicemodelsamples/service.svc"  
+        ... />  
     </client>  
     ...  
     <wsDualHttpBinding>  
-    <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
-    </binding>  
+        <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
+        </binding>  
     </wsDualHttpBinding>  
     ```  
   

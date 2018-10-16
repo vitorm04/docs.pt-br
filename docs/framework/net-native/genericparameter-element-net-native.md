@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c0bf4aff9d7cc657b3005f0a19b09f3df10957c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd0d9851f62381a16f628607c326c6690492628b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393088"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347845"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>Elemento &lt;GenericParameter&gt; (.NET Nativo)
 Aplica a política ao tipo de parâmetro de um tipo ou método genérico.  
@@ -74,7 +74,7 @@ Aplica a política ao tipo de parâmetro de um tipo ou método genérico.
 ## <a name="remarks"></a>Comentários  
  O elemento `<GenericParameter>` é filho do elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) ou [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) e é usado para aplicar a política a um parâmetro de tipo genérico específico, que é especificado pelo seu nome no tipo genérico ou na assinatura do método.  
   
- O elemento `<GenericParameter>` é mais útil quando usado com serializadores. O exemplo a seguir usa o elemento `<GenericParameter>` para aplicar a política ao tipo `T` em chamadas a sobrecargas do método [JsonConvert.DeserializeObject\<T>(String)](http://james.newtonking.com/json/help/index.html?topic=html/T_Newtonsoft_Json_JsonConvert.htm) do serializador JSON da NewtonSoft.  
+ O elemento `<GenericParameter>` é mais útil quando usado com serializadores. O exemplo a seguir usa o elemento `<GenericParameter>` para aplicar a política ao tipo `T` em chamadas a sobrecargas do método [JsonConvert.DeserializeObject\<T>(String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) do serializador JSON da NewtonSoft.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

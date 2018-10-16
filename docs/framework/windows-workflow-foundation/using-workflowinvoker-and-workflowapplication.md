@@ -2,15 +2,15 @@
 title: Usando WorkflowInvoker e WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc315013ce50539eb4b72d26848a99164bb6b2d0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519620"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347975"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Usando WorkflowInvoker e WorkflowApplication
-Windows Workflow Foundation (WF) fornece vários métodos de hospedar fluxos de trabalho. <xref:System.Activities.WorkflowInvoker> fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado somente para os fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> fornece um modelo mais rico para executar fluxos de trabalho que inclui notificação de eventos de ciclo de vida, controle de execução, de ressunção do indexador, e de persistência. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornece suporte para atividades de mensagem e é basicamente usado com serviços de fluxo de trabalho. Este tópico apresenta o fluxo de trabalho que hospeda com <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. Para obter mais informações sobre como hospedar fluxos de trabalho com <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consulte [serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md) e [visão geral dos serviços de fluxo de trabalho de hospedagem](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) fornece vários métodos de hospedagem de fluxos de trabalho. <xref:System.Activities.WorkflowInvoker> fornece uma maneira simples para chamar um fluxo de trabalho como se fosse uma chamada de método e pode ser usado somente para os fluxos de trabalho que não usam persistência. <xref:System.Activities.WorkflowApplication> fornece um modelo mais rico para executar fluxos de trabalho que inclui notificação de eventos de ciclo de vida, controle de execução, de ressunção do indexador, e de persistência. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornece suporte para atividades de mensagem e é basicamente usado com serviços de fluxo de trabalho. Este tópico apresenta o fluxo de trabalho que hospeda com <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication>. Para obter mais informações sobre como hospedar fluxos de trabalho com <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consulte [serviços de fluxo de trabalho](../../../docs/framework/wcf/feature-details/workflow-services.md) e [visão geral dos serviços de fluxo de trabalho de hospedagem](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Usando WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> fornece um modelo para executar um fluxo de trabalho como se fosse um chamada de método. Para chamar um fluxo de trabalho usando <xref:System.Activities.WorkflowInvoker>, chame o método de <xref:System.Activities.WorkflowInvoker.Invoke%2A> e passe a definição de fluxo de trabalho de fluxo de trabalho para chamar. Nesse exemplo, uma atividade de <xref:System.Activities.Statements.WriteLine> é chamada usando <xref:System.Activities.WorkflowInvoker>.  
@@ -60,7 +60,7 @@ Windows Workflow Foundation (WF) fornece vários métodos de hospedar fluxos de 
  [!code-csharp[CFX_WorkflowApplicationExample#30](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>Recuperando argumentos de saída de um fluxo de trabalho  
- Quando um fluxo de trabalho concluir, os argumentos de saída podem ser recuperados no manipulador de <xref:System.Activities.WorkflowApplication.Completed%2A> acessando o dicionário de <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> . O exemplo a seguir hospeda um fluxo de trabalho usando <xref:System.Activities.WorkflowApplication>. Uma instância de <xref:System.Activities.WorkflowApplication> é usar construída usando uma definição de fluxo de trabalho que consiste em uma única atividade de `DiceRoll` . A atividade de `DiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído, a saída são recuperadas no manipulador de <xref:System.Activities.WorkflowApplication.Completed%2A> .  
+ Quando um fluxo de trabalho concluir, os argumentos de saída podem ser recuperados no manipulador de <xref:System.Activities.WorkflowApplication.Completed%2A> acessando o dicionário de <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> . O exemplo a seguir hospeda um fluxo de trabalho usando <xref:System.Activities.WorkflowApplication>. Um <xref:System.Activities.WorkflowApplication> instância é construída usando uma definição de fluxo de trabalho consiste em uma única `DiceRoll` atividade. A atividade de `DiceRoll` tem dois argumentos de saída que representam os resultados da operação de rolagem de dados. Quando o fluxo de trabalho for concluído, a saída são recuperadas no manipulador de <xref:System.Activities.WorkflowApplication.Completed%2A> .  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
@@ -85,13 +85,13 @@ Windows Workflow Foundation (WF) fornece vários métodos de hospedar fluxos de 
  O exemplo de código é como o exemplo anterior exceto que os indicadores ativas são enumerados antes que o indexador é continuado. O fluxo de trabalho é iniciado, e depois que <xref:System.Activities.Bookmark> é criado e fluxo de trabalho aparece ociosa, <xref:System.Activities.WorkflowApplication.GetBookmarks%2A> é chamado. Quando o fluxo de trabalho for concluído, a saída a seguir são exibidas no console.  
   
  **Qual é o seu nome?**  
-**BookmarkName: O nome de usuário - OwnerDisplayName: ReadLine**   
+**BookmarkName: Nome de usuário - OwnerDisplayName: ReadLine**   
 **Steve**   
 **Olá, Steve**
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- O exemplo de código inspeciona <xref:System.Activities.WorkflowApplicationIdleEventArgs> passado para o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> de uma instância de <xref:System.Activities.WorkflowApplication> . Nesse exemplo a ociosa indo de fluxo de trabalho tem um <xref:System.Activities.Bookmark> com um nome de `EnterGuess`, possuídas por uma atividade chamada `ReadInt`. Este exemplo de código baseia-se da [como: executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), que faz parte do [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md). Se o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> nessa etapa é alterado para conter o código deste exemplo, a seguinte saída são exibidas.  
+ O exemplo de código inspeciona <xref:System.Activities.WorkflowApplicationIdleEventArgs> passado para o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> de uma instância de <xref:System.Activities.WorkflowApplication> . Nesse exemplo a ociosa indo de fluxo de trabalho tem um <xref:System.Activities.Bookmark> com um nome de `EnterGuess`, possuídas por uma atividade chamada `ReadInt`. Este exemplo de código é baseado fora de [como: executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), que faz parte das [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md). Se o manipulador de <xref:System.Activities.WorkflowApplication.Idle%2A> nessa etapa é alterado para conter o código deste exemplo, a seguinte saída são exibidas.  
   
  **BookmarkName: EnterGuess - OwnerDisplayName: ReadInt**
  

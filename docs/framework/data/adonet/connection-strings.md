@@ -1,26 +1,27 @@
 ---
 title: Cadeias de caracteres de conexão no ADO.NET
-ms.date: 03/30/2017
+ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1e6e2b6870195c99279639e1f4576a30b7126d4d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583679"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347936"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadeias de caracteres de conexão no ADO.NET
-O .NET Framework 2.0 apresentou novas funcionalidades para trabalhar com cadeias de conexão, incluindo a introdução de novas palavras-chave nas classes de construtores de cadeias de conexão, que permitem criar mais facilmente cadeias de conexão válidas em tempo de execução.  
-  
-Uma cadeia de conexão contém informações de inicialização que são passadas como parâmetros de um provedor de dados para uma fonte de dados. A sintaxe depende do provedor de dados, e a cadeia de conexão é analisada durante a tentativa de abrir uma conexão. Erros de sintaxe geram uma exceção em tempo de execução, mas outros erros ocorrem somente após a fonte de dados receber informações de conexão. Uma vez validada, a fonte de dados aplica as opções especificadas na cadeia de conexão e abre a conexão.
-  
-O formato de uma cadeia de conexão é uma lista de pares chave-valor de parâmetros separados por ponto e vírgula:
+
+Uma cadeia de conexão contém informações de inicialização que são passadas como parâmetros de um provedor de dados para uma fonte de dados. O provedor de dados recebe a cadeia de caracteres de conexão como o valor da <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> propriedade. O provedor analisa a cadeia de conexão e garante que a sintaxe está correta e que as palavras-chave têm suporte. Em seguida, a <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> método passa os parâmetros de conexão analisado para a fonte de dados. A fonte de dados executa a validação e estabelece uma conexão.
+
+## <a name="connection-string-syntax"></a>Sintaxe de cadeia de caracteres de Conexão
+
+Uma cadeia de caracteres de conexão é uma lista delimitada por ponto e vírgula de pares de chave/valor do parâmetro:
   
     keyword1=value; keyword2=value;
   
-Palavras-chave não diferenciam maiusculas de minúsculas. No entanto, valores, podem ser diferencia maiusculas de minúsculas, dependendo da fonte de dados. Palavras-chave e valores podem conter [caracteres de espaço em branco](https://en.wikipedia.org/wiki/Whitespace_character#Unicode), embora à direita e espaço em branco é ignorado em palavras-chave e sem aspas valores.
+Palavras-chave não diferenciam maiusculas de minúsculas. No entanto, valores, podem ser diferencia maiusculas de minúsculas, dependendo da fonte de dados. Palavras-chave e valores podem conter [caracteres de espaço em branco](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Espaço em branco à esquerda e à direita será ignorado em palavras-chave e sem aspas valores.
 
-Se um valor contém o ponto e vírgula [caracteres de controle Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), à esquerda ou à direita de espaço em branco, ele deve estar entre aspas simples ou duplas, por exemplo:
+Se um valor contém o ponto e vírgula [caracteres de controle Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), ou à esquerda ou à direita de espaço em branco, ela deve ser colocada entre aspas simples ou duplas. Por exemplo:
 
     Keyword=" whitespace  ";
     Keyword='special;character';
@@ -37,10 +38,12 @@ As aspas em si, bem como o sinal de igual, não exige o escape, portanto, as seg
 
 Uma vez que cada valor é lido até o próximo ponto e vírgula ou ao final da cadeia de caracteres, o valor no segundo exemplo é `a=b=c`, e o ponto e vírgula final é opcional.
 
-A sintaxe válida de cadeia de conexão depende do provedor e evoluiu ao longo dos anos desde as primeiras APIs, como ODBC. O Provedor de Dados .NET Framework para SQL Server (SqlClient) incorpora muitos elementos de uma sintaxe mais antiga e é geralmente mais flexível com a sintaxe comum de cadeias de conexão. Existem, frequentemente, sinônimos igualmente válidos para elementos de sintaxe de cadeia de conexão, mas alguns erros de sintaxe e de ortografia podem causar problemas. Por exemplo, "`Integrated Security=true`" é válido, enquanto "`IntegratedSecurity=true`" gera um erro. Além disso, as cadeias de conexão construídas em tempo de execução a partir de entrada de usuário não validada podem resultar em ataques de injeção de cadeia de caracteres, colocando em risco a segurança da fonte de dados.
-  
-Para resolver esses problemas, o ADO.NET 2.0 introduziu novos construtores de cadeias de conexão para cada provedor de dados .NET Framework. As palavras-chave são expostas como propriedades, permitindo que a sintaxe da cadeia de conexão seja validada antes de ser enviada à fonte de dados.
-  
+Todas as cadeias de conexão compartilham a mesma sintaxe básica descrita acima. O conjunto de palavras-chave reconhecidas depende do provedor, no entanto e evoluiu ao longo dos anos desde as primeiras APIs, como *ODBC*. O *.NET Framework* provedor de dados para *SQL Server* (`SqlClient`) dá suporte a muitas palavras-chave das APIs mais antigas, mas é geralmente mais flexível e aceita sinônimos para muitos da cadeia de caracteres de conexão comum palavras-chave.
+
+Erros de digitação podem causar erros. Por exemplo, `Integrated Security=true` é válido, mas `IntegratedSecurity=true` causa um erro.
+
+Cadeias de caracteres de Conexão manualmente construídas em tempo de execução da entrada do usuário não validada são vulneráveis a ataques de injeção de cadeia de caracteres e colocar em risco a segurança na fonte de dados. Para resolver esses problemas *ADO.NET* 2.0 introduzida [construtores de cadeia de conexão](../../../../docs/framework/data/adonet/connection-string-builders.md) para cada *do .NET Framework* provedor de dados. Esses construtores de cadeia de conexão expõem parâmetros como propriedades fortemente tipadas e tornam possível validar a cadeia de caracteres de conexão antes de serem enviado à fonte de dados.
+
 ## <a name="in-this-section"></a>Nesta seção  
  [Construtores de cadeia de Conexão](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  Demonstra como usar as classes `ConnectionStringBuilder` para construir cadeias de conexão válidas em tempo de execução.

@@ -2,12 +2,12 @@
 title: Cliente ASMX com um serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 3465954cc937e1611634c8cd13a9264173e71817
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507193"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347832"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX com um serviço do WCF
 Este exemplo demonstra como criar um serviço usando o Windows Communication Foundation (WCF) e, em seguida, acessar o serviço de um cliente não WCF, como um cliente do ASMX.  
@@ -19,7 +19,7 @@ Este exemplo demonstra como criar um serviço usando o Windows Communication Fou
   
  O serviço implementa um `ICalculator` contrato conforme definido no código a seguir.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface ICalculator  
 {  
@@ -83,7 +83,7 @@ wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorS
   
  A implementação do cliente constrói uma instância do proxy tipado para começar a se comunicar com o serviço.  
   
-```  
+```csharp
 // Create a client to the CalculatorService.  
 using (CalculatorService client = new CalculatorService())  
 {  
@@ -120,7 +120,7 @@ Console.ReadLine();
   
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console 
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

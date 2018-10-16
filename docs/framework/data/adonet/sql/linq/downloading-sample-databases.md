@@ -1,56 +1,56 @@
 ---
-title: Baixando bancos de dados de exemplo
-ms.date: 03/30/2017
+title: Obter os bancos de dados de exemplo para exemplos de código do ADO.NET
+description: Baixe os bancos de dados de exemplo usados nos exemplos de código na documentação do ADO.NET, bem como ferramentas de gerenciamento e do SQL Server
+ms.date: 10/12/2018
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 75ae1895d683b669f51b33130fc2f47010e39814
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585448"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347488"
 ---
-# <a name="downloading-sample-databases"></a>Baixando bancos de dados de exemplo
-Diversos exemplos e tutoriais passo a passo na documentação do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usam o banco de dados de exemplo Northwind e o SQL Server Express edition. Você pode baixar esses produtos gratuitamente no site de download da Microsoft.  
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a>Obter os bancos de dados de exemplo para exemplos de código do ADO.NET
+
+Um número de exemplos e explicações passo a passo no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentação usar bancos de dados de exemplo e o SQL Server Express. Você pode baixar esses produtos gratuitos da Microsoft.
+
+## <a name="get-the-adventureworks-sample-database"></a>Obter dados de exemplo AdventureWorks
+
+Baixe o banco de dados de exemplo AdventureWorks do repositório do GitHub a seguir:
+
+[Bancos de dados de exemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+Depois de baixar um backup de banco de dados de (\*. bak) arquivos, restaure o backup para uma instância do SQL Server usando o SQL Server Management Studio (SSMS). Ver [obter o SQL Server Management Studio](#get_ssms).
+
+## <a name="get-the-northwind-sample-database"></a>Obter dados de exemplo Northwind
+
+Baixe o banco de dados de exemplo Northwind na seguinte página no Microsoft Download Center:
+
+[Northwind e Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296)
+
+Depois que o arquivo é baixado, clique duas vezes no arquivo para extrair os bancos de dados e scripts. Por padrão, os arquivos são instalados na pasta `<drive>:\SQL Server 2000 Sample Databases`.
+
+Antes de usar o banco de dados Northwind, você deve fazer uma das seguintes ações:
+
+- Recriar o banco de dados em uma instância do SQL Server executando o `instnwnd.sql` arquivo de script na pasta de instalação.
+
+- Anexar a `northwnd.mdf` arquivo com correspondente `*.ldf` arquivo de log para uma instância do SQL Server.
+
+## <a name="get_sql"></a> Obtenha o SQL Server Express
+
+SQL Server Express é uma edição gratuita do SQL Server que pode ser redistribuído com aplicativos de nível básica. Baixe o SQL Server Express da seguinte página:
   
-## <a name="downloading-the-northwind-database"></a>Baixando o banco de dados Northwind  
+[Edições Express do SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)
+
+Se você estiver usando [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB está incluído na Community edition, bem como as edições Professional e superior.  
+
+## <a name="get_ssms"></a> Obtenha o SQL Server Management Studio
+Se você quiser exibir ou modificar um banco de dados que você baixou, você pode usar o SQL Server Management Studio (SSMS). Baixe o SSMS na seguinte página:
+
+[Baixar o SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
+
+Você também pode exibir e gerenciar bancos de dados no ambiente de desenvolvimento integrado (IDE) do Visual Studio. Na [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), conecte-se ao banco de dados do **Pesquisador de objetos do SQL Server**, ou criar uma Conexão de dados ao banco de dados **Gerenciador de servidores**. Abrir esses painéis explorer do **exibição** menu.
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a>Para baixar e instalar o banco de dados de exemplo Northwind para o SQL Server  
-  
-1.  Inicie o Internet Explorer.  
-  
-2.  Vá para o [Northwind e Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) site da Web.  
-  
-3.  Clique em **Baixar**.  
-  
-4.  No **Download do arquivo** caixa de diálogo, selecione **salvar**.  
-  
-5.  Depois que o arquivo é baixado, clique duas vezes o **Nwind.exe** arquivo para instalar o banco de dados.  
-  
-     Por padrão, o banco de dados é instalado em *unidade*: \SQL Server 2000 Sample Databases.  
-  
-## <a name="downloading-sql-server-express-edition"></a>Baixando o SQL Server Express Edition  
- O SQL Server Express Edition está disponível gratuitamente, e você pode redistribuí-lo com os aplicativos. Se você estiver usando o Visual Studio, SQL Server Express Edition está incluído nas edições Pro e posteriores.  
-  
-#### <a name="to-download-and-install-sql-server-express-edition"></a>Para baixar e instalar o SQL Server Express Edition  
-  
-1.  Inicie o Internet Explorer.  
-  
-2.  Vá para o [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) site da Web.  
-  
-3.  Na caixa de palavras-chave, digite **SQL Server Express**.  
-  
-4.  Clique em **acesse**.  
-  
-5.  Na página de resultados, clique no link para o **Microsoft SQL Server 2005 Express Edition** página de download.  
-  
-6.  Siga as instruções de instalação no site.  
-  
-## <a name="downloading-management-studio-express"></a>Baixando o Management Studio Express  
- Se você quiser modificar um banco de dados que você baixou, você pode acessar o banco de dados do **Gerenciador de servidores** no Visual Studio integrado (IDE) do ambiente de desenvolvimento ou usar o Microsoft SQL Server Management Studio Express (SSMSE) .  
-  
-#### <a name="to-download-management-studio-express"></a>Para baixar o Management Studio Express  
-  
--   Siga as instruções na [site do SSMSE](https://go.microsoft.com/fwlink/?LinkId=95933).  
-  
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>Consulte também
+
+- [Introdução](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

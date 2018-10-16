@@ -2,12 +2,12 @@
 title: Contrato de falha
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003926"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347764"
 ---
 # <a name="fault-contract"></a>Contrato de falha
 O exemplo de contrato de falha demonstra como se comunicar informações de erro de um serviço para um cliente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com algum código adicional adicionado ao serviço para converter uma exceção interna para uma falha. O cliente tenta executar a divisão por zero para forçar uma condição de erro no serviço.  
@@ -17,7 +17,7 @@ O exemplo de contrato de falha demonstra como se comunicar informações de erro
   
  O contrato de Calculadora foi modificado para incluir um <xref:System.ServiceModel.FaultContractAttribute> conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  O <xref:System.ServiceModel.FaultContractAttribute> atributo indica que o `Divide` operação poderá retornar uma falha do tipo `MathFault`. Uma falha pode ser de qualquer tipo que pode ser serializado. Nesse caso, o `MathFault` é um contrato de dados, da seguinte maneira:  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
 {      
@@ -60,7 +60,7 @@ public class MathFault
   
  O `Divide` método lança um <xref:System.ServiceModel.FaultException%601> ocorrerá uma exceção quando uma divisão por zero exceção conforme mostrado no código de exemplo a seguir. Essa exceção resulta em uma falha que está sendo enviada ao cliente.  
   
-```  
+```csharp
 public int Divide(int n1, int n2)  
 {  
     try  
@@ -79,7 +79,7 @@ public int Divide(int n1, int n2)
   
  O código do cliente força um erro ao solicitar uma divisão por zero. Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Você pode ver a divisão por zero, que está sendo relatado como uma falha. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -90,7 +90,7 @@ Press <ENTER> to terminate client.
   
  O cliente faz isso capturando apropriado `FaultException<MathFault>` exceção:  
   
-```  
+```csharp
 catch (FaultException<MathFault> e)  
 {  
     Console.WriteLine("FaultException<MathFault>: Math fault while doing " + e.Detail.operation + ". Problem: " + e.Detail.problemType);  
