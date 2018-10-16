@@ -2,22 +2,22 @@
 title: Contrato de falha
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003926"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347764"
 ---
-# <a name="fault-contract"></a><span data-ttu-id="c7e52-102">Contrato de falha</span><span class="sxs-lookup"><span data-stu-id="c7e52-102">Fault Contract</span></span>
-<span data-ttu-id="c7e52-103">O exemplo de contrato de falha demonstra como se comunicar informações de erro de um serviço para um cliente.</span><span class="sxs-lookup"><span data-stu-id="c7e52-103">The Fault Contract sample demonstrates how to communicate error information from a service to a client.</span></span> <span data-ttu-id="c7e52-104">O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com algum código adicional adicionado ao serviço para converter uma exceção interna para uma falha.</span><span class="sxs-lookup"><span data-stu-id="c7e52-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), with some additional code added to the service to convert an internal exception to a fault.</span></span> <span data-ttu-id="c7e52-105">O cliente tenta executar a divisão por zero para forçar uma condição de erro no serviço.</span><span class="sxs-lookup"><span data-stu-id="c7e52-105">The client attempts to perform division by zero to force an error condition on the service.</span></span>  
+# <a name="fault-contract"></a><span data-ttu-id="b8a68-102">Contrato de falha</span><span class="sxs-lookup"><span data-stu-id="b8a68-102">Fault Contract</span></span>
+<span data-ttu-id="b8a68-103">O exemplo de contrato de falha demonstra como se comunicar informações de erro de um serviço para um cliente.</span><span class="sxs-lookup"><span data-stu-id="b8a68-103">The Fault Contract sample demonstrates how to communicate error information from a service to a client.</span></span> <span data-ttu-id="b8a68-104">O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com algum código adicional adicionado ao serviço para converter uma exceção interna para uma falha.</span><span class="sxs-lookup"><span data-stu-id="b8a68-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), with some additional code added to the service to convert an internal exception to a fault.</span></span> <span data-ttu-id="b8a68-105">O cliente tenta executar a divisão por zero para forçar uma condição de erro no serviço.</span><span class="sxs-lookup"><span data-stu-id="b8a68-105">The client attempts to perform division by zero to force an error condition on the service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c7e52-106">As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="c7e52-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="b8a68-106">As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="b8a68-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="c7e52-107">O contrato de Calculadora foi modificado para incluir um <xref:System.ServiceModel.FaultContractAttribute> conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="c7e52-107">The calculator contract has been modified to include a <xref:System.ServiceModel.FaultContractAttribute> as shown in the following sample code.</span></span>  
+ <span data-ttu-id="b8a68-107">O contrato de Calculadora foi modificado para incluir um <xref:System.ServiceModel.FaultContractAttribute> conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="b8a68-107">The calculator contract has been modified to include a <xref:System.ServiceModel.FaultContractAttribute> as shown in the following sample code.</span></span>  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -33,9 +33,9 @@ public interface ICalculator
 }  
 ```  
   
- <span data-ttu-id="c7e52-108">O <xref:System.ServiceModel.FaultContractAttribute> atributo indica que o `Divide` operação poderá retornar uma falha do tipo `MathFault`.</span><span class="sxs-lookup"><span data-stu-id="c7e52-108">The <xref:System.ServiceModel.FaultContractAttribute> attribute indicates that the `Divide` operation may return a fault of type `MathFault`.</span></span> <span data-ttu-id="c7e52-109">Uma falha pode ser de qualquer tipo que pode ser serializado.</span><span class="sxs-lookup"><span data-stu-id="c7e52-109">A fault can be of any type that can be serialized.</span></span> <span data-ttu-id="c7e52-110">Nesse caso, o `MathFault` é um contrato de dados, da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="c7e52-110">In this case, the `MathFault` is a data contract, as follows:</span></span>  
+ <span data-ttu-id="b8a68-108">O <xref:System.ServiceModel.FaultContractAttribute> atributo indica que o `Divide` operação poderá retornar uma falha do tipo `MathFault`.</span><span class="sxs-lookup"><span data-stu-id="b8a68-108">The <xref:System.ServiceModel.FaultContractAttribute> attribute indicates that the `Divide` operation may return a fault of type `MathFault`.</span></span> <span data-ttu-id="b8a68-109">Uma falha pode ser de qualquer tipo que pode ser serializado.</span><span class="sxs-lookup"><span data-stu-id="b8a68-109">A fault can be of any type that can be serialized.</span></span> <span data-ttu-id="b8a68-110">Nesse caso, o `MathFault` é um contrato de dados, da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="b8a68-110">In this case, the `MathFault` is a data contract, as follows:</span></span>  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
 {      
@@ -58,9 +58,9 @@ public class MathFault
 }  
 ```  
   
- <span data-ttu-id="c7e52-111">O `Divide` método lança um <xref:System.ServiceModel.FaultException%601> ocorrerá uma exceção quando uma divisão por zero exceção conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="c7e52-111">The `Divide` method throws a <xref:System.ServiceModel.FaultException%601> exception when a divide by zero exception occurs as shown in the following sample code.</span></span> <span data-ttu-id="c7e52-112">Essa exceção resulta em uma falha que está sendo enviada ao cliente.</span><span class="sxs-lookup"><span data-stu-id="c7e52-112">This exception results in a fault being sent to the client.</span></span>  
+ <span data-ttu-id="b8a68-111">O `Divide` método lança um <xref:System.ServiceModel.FaultException%601> ocorrerá uma exceção quando uma divisão por zero exceção conforme mostrado no código de exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="b8a68-111">The `Divide` method throws a <xref:System.ServiceModel.FaultException%601> exception when a divide by zero exception occurs as shown in the following sample code.</span></span> <span data-ttu-id="b8a68-112">Essa exceção resulta em uma falha que está sendo enviada ao cliente.</span><span class="sxs-lookup"><span data-stu-id="b8a68-112">This exception results in a fault being sent to the client.</span></span>  
   
-```  
+```csharp
 public int Divide(int n1, int n2)  
 {  
     try  
@@ -77,9 +77,9 @@ public int Divide(int n1, int n2)
 }  
 ```  
   
- <span data-ttu-id="c7e52-113">O código do cliente força um erro ao solicitar uma divisão por zero.</span><span class="sxs-lookup"><span data-stu-id="c7e52-113">The client code forces an error by requesting a division by zero.</span></span> <span data-ttu-id="c7e52-114">Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente.</span><span class="sxs-lookup"><span data-stu-id="c7e52-114">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="c7e52-115">Você pode ver a divisão por zero, que está sendo relatado como uma falha.</span><span class="sxs-lookup"><span data-stu-id="c7e52-115">You see the division by zero being reported as a fault.</span></span> <span data-ttu-id="c7e52-116">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="c7e52-116">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="b8a68-113">O código do cliente força um erro ao solicitar uma divisão por zero.</span><span class="sxs-lookup"><span data-stu-id="b8a68-113">The client code forces an error by requesting a division by zero.</span></span> <span data-ttu-id="b8a68-114">Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente.</span><span class="sxs-lookup"><span data-stu-id="b8a68-114">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="b8a68-115">Você pode ver a divisão por zero, que está sendo relatado como uma falha.</span><span class="sxs-lookup"><span data-stu-id="b8a68-115">You see the division by zero being reported as a fault.</span></span> <span data-ttu-id="b8a68-116">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="b8a68-116">Press ENTER in the client window to shut down the client.</span></span>  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -88,9 +88,9 @@ FaultException<MathFault>: Math fault while doing division. Problem: divide by z
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="c7e52-117">O cliente faz isso capturando apropriado `FaultException<MathFault>` exceção:</span><span class="sxs-lookup"><span data-stu-id="c7e52-117">The client does this by catching the appropriate `FaultException<MathFault>` exception:</span></span>  
+ <span data-ttu-id="b8a68-117">O cliente faz isso capturando apropriado `FaultException<MathFault>` exceção:</span><span class="sxs-lookup"><span data-stu-id="b8a68-117">The client does this by catching the appropriate `FaultException<MathFault>` exception:</span></span>  
   
-```  
+```csharp
 catch (FaultException<MathFault> e)  
 {  
     Console.WriteLine("FaultException<MathFault>: Math fault while doing " + e.Detail.operation + ". Problem: " + e.Detail.problemType);  
@@ -98,9 +98,9 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- <span data-ttu-id="c7e52-118">Por padrão, os detalhes de exceções inesperadas não são enviados ao cliente para impedir que os detalhes da implementação do serviço de escape de limite seguro do serviço.</span><span class="sxs-lookup"><span data-stu-id="c7e52-118">By default, the details of unexpected exceptions are not sent to the client to prevent details of the service implementation from escaping the secure boundary of the service.</span></span> <span data-ttu-id="c7e52-119">`FaultContract` Fornece uma maneira de descrever as falhas em um contrato e marcar a determinados tipos de exceções, conforme apropriado para a transmissão para o cliente.</span><span class="sxs-lookup"><span data-stu-id="c7e52-119">`FaultContract` provides a way to describe faults in a contract and mark certain types of exceptions as appropriate for transmission to the client.</span></span> <span data-ttu-id="c7e52-120">`FaultException<T>` fornece o mecanismo de tempo de execução para o envio de falhas para consumidores.</span><span class="sxs-lookup"><span data-stu-id="c7e52-120">`FaultException<T>` provides the run-time mechanism for sending faults to consumers.</span></span>  
+ <span data-ttu-id="b8a68-118">Por padrão, os detalhes de exceções inesperadas não são enviados ao cliente para impedir que os detalhes da implementação do serviço de escape de limite seguro do serviço.</span><span class="sxs-lookup"><span data-stu-id="b8a68-118">By default, the details of unexpected exceptions are not sent to the client to prevent details of the service implementation from escaping the secure boundary of the service.</span></span> <span data-ttu-id="b8a68-119">`FaultContract` Fornece uma maneira de descrever as falhas em um contrato e marcar a determinados tipos de exceções, conforme apropriado para a transmissão para o cliente.</span><span class="sxs-lookup"><span data-stu-id="b8a68-119">`FaultContract` provides a way to describe faults in a contract and mark certain types of exceptions as appropriate for transmission to the client.</span></span> <span data-ttu-id="b8a68-120">`FaultException<T>` fornece o mecanismo de tempo de execução para o envio de falhas para consumidores.</span><span class="sxs-lookup"><span data-stu-id="b8a68-120">`FaultException<T>` provides the run-time mechanism for sending faults to consumers.</span></span>  
   
- <span data-ttu-id="c7e52-121">No entanto, é útil ver os detalhes internos de uma falha de serviço durante a depuração.</span><span class="sxs-lookup"><span data-stu-id="c7e52-121">However, it is useful to see the internal details of a service failure when debugging.</span></span> <span data-ttu-id="c7e52-122">Para desativar o comportamento seguro descrito anteriormente, você pode indicar que os detalhes de cada exceção sem tratamento no servidor devem ser incluídos na falha que é enviada ao cliente.</span><span class="sxs-lookup"><span data-stu-id="c7e52-122">To turn off the secure behavior previously described, you can indicate that the details of every unhandled exception on the server should be included in the fault that is sent to the client.</span></span> <span data-ttu-id="c7e52-123">Isso é feito definindo <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para `true`.</span><span class="sxs-lookup"><span data-stu-id="c7e52-123">This is accomplished by setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> to `true`.</span></span> <span data-ttu-id="c7e52-124">Você pode defini-lo no código ou na configuração, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="c7e52-124">You can either set it in code, or in configuration as shown in the following sample.</span></span>  
+ <span data-ttu-id="b8a68-121">No entanto, é útil ver os detalhes internos de uma falha de serviço durante a depuração.</span><span class="sxs-lookup"><span data-stu-id="b8a68-121">However, it is useful to see the internal details of a service failure when debugging.</span></span> <span data-ttu-id="b8a68-122">Para desativar o comportamento seguro descrito anteriormente, você pode indicar que os detalhes de cada exceção sem tratamento no servidor devem ser incluídos na falha que é enviada ao cliente.</span><span class="sxs-lookup"><span data-stu-id="b8a68-122">To turn off the secure behavior previously described, you can indicate that the details of every unhandled exception on the server should be included in the fault that is sent to the client.</span></span> <span data-ttu-id="b8a68-123">Isso é feito definindo <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> para `true`.</span><span class="sxs-lookup"><span data-stu-id="b8a68-123">This is accomplished by setting <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> to `true`.</span></span> <span data-ttu-id="b8a68-124">Você pode defini-lo no código ou na configuração, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="b8a68-124">You can either set it in code, or in configuration as shown in the following sample.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -113,27 +113,27 @@ catch (FaultException<MathFault> e)
 </behaviors>  
 ```  
   
- <span data-ttu-id="c7e52-125">Além disso, o comportamento deve ser associado ao serviço, definindo o `behaviorConfiguration` atributo do serviço no arquivo de configuração para "CalculatorServiceBehavior".</span><span class="sxs-lookup"><span data-stu-id="c7e52-125">Further, the behavior must be associated with the service by setting the `behaviorConfiguration` attribute of the service in the configuration file to "CalculatorServiceBehavior".</span></span>  
+ <span data-ttu-id="b8a68-125">Além disso, o comportamento deve ser associado ao serviço, definindo o `behaviorConfiguration` atributo do serviço no arquivo de configuração para "CalculatorServiceBehavior".</span><span class="sxs-lookup"><span data-stu-id="b8a68-125">Further, the behavior must be associated with the service by setting the `behaviorConfiguration` attribute of the service in the configuration file to "CalculatorServiceBehavior".</span></span>  
   
- <span data-ttu-id="c7e52-126">Para capturar essas falhas no cliente, a não-genérica <xref:System.ServiceModel.FaultException> deve ser capturada.</span><span class="sxs-lookup"><span data-stu-id="c7e52-126">To catch such faults on the client, the non-generic <xref:System.ServiceModel.FaultException> must be caught.</span></span>  
+ <span data-ttu-id="b8a68-126">Para capturar essas falhas no cliente, a não-genérica <xref:System.ServiceModel.FaultException> deve ser capturada.</span><span class="sxs-lookup"><span data-stu-id="b8a68-126">To catch such faults on the client, the non-generic <xref:System.ServiceModel.FaultException> must be caught.</span></span>  
   
- <span data-ttu-id="c7e52-127">Esse comportamento só deve ser usado para fins de depuração e nunca deve ser habilitado em produção.</span><span class="sxs-lookup"><span data-stu-id="c7e52-127">This behavior should only be used for debugging purposes and should never be enabled in production.</span></span>  
+ <span data-ttu-id="b8a68-127">Esse comportamento só deve ser usado para fins de depuração e nunca deve ser habilitado em produção.</span><span class="sxs-lookup"><span data-stu-id="b8a68-127">This behavior should only be used for debugging purposes and should never be enabled in production.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c7e52-128">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="c7e52-128">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b8a68-128">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="b8a68-128">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="c7e52-129">Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c7e52-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="b8a68-129">Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b8a68-129">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="c7e52-130">Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c7e52-130">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="b8a68-130">Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b8a68-130">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="c7e52-131">Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="c7e52-131">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3.  <span data-ttu-id="b8a68-131">Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b8a68-131">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="c7e52-132">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="c7e52-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c7e52-133">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="c7e52-133">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b8a68-132">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="b8a68-132">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b8a68-133">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="b8a68-133">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="c7e52-134">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="c7e52-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c7e52-135">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="c7e52-135">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b8a68-134">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="b8a68-134">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b8a68-135">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="b8a68-135">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
   
-## <a name="see-also"></a><span data-ttu-id="c7e52-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c7e52-136">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b8a68-136">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b8a68-136">See Also</span></span>
