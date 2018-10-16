@@ -178,7 +178,7 @@ Essa instrução **COPY** copia o restante dos arquivos em nosso contêiner para
 COPY . ./
 ```
 
-Estamos publicando o aplicativo com essa instrução **RUN**. O comando [**dotnet publish**](../tools/dotnet-publish.md) compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto resultantes de arquivos em um diretório. Nosso aplicativo é publicado com uma configuração **Versão** e uma saída para o diretório padrão.
+Estamos publicando o aplicativo com essa instrução **RUN**. O comando [**dotnet publish**](../tools/dotnet-publish.md) compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto resultante de arquivos em um diretório. Nosso aplicativo é publicado com uma configuração **Versão** e uma saída para o diretório padrão.
 
 ```Dockerfile
 RUN dotnet publish -c Release -o out
