@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 9e92c253aa1981065274dc3413f9b8888b5f8849
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a0ec7b1a91dc701093131b8807b25e66d291a746
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500657"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371908"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Exceções e manipulação de exceções (Guia de Programação em C#)
 Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar com quaisquer situações excepcionais ou inesperadas que ocorram quando um programa for executado. A manipulação de exceção usa as palavras-chave `try`, `catch` e `finally` para executar ações que podem não ser bem-sucedidas, lidar com falhas quando decidir se é razoável fazer isso e limpar recursos posteriormente. As exceções podem ser geradas pelo CLR (Common Language Runtime), pelo .NET Framework ou por quaisquer bibliotecas de terceiros, ou pelo código do aplicativo. As exceções são criadas usando a palavra-chave `throw`.  
@@ -43,7 +43,7 @@ Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar c
   
 -   O código em um bloco `finally` será executado mesmo se uma exceção for lançada. Use um bloco `finally` para liberar recursos, por exemplo, para fechar todos os fluxos ou arquivos que foram abertos no bloco `try`.  
   
--   As exceções gerenciadas no .NET Framework são implementadas sobre o mecanismo de manipulação de exceções estruturadas do Win32. Para obter mais informações, consulte [Manipulação de exceções estruturadas (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) e [Curso rápido sobre a manipulação de exceções estruturadas do Win32](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
+-   As exceções gerenciadas no .NET Framework são implementadas sobre o mecanismo de manipulação de exceções estruturadas do Win32. Para obter mais informações, consulte [Manipulação de exceções estruturadas (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) e [Curso rápido sobre a manipulação de exceções estruturadas do Win32](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Consulte os tópicos a seguir para obter mais informações sobre exceções e manipulação de exceção:  

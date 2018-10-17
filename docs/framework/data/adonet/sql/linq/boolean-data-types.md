@@ -1,5 +1,5 @@
 ---
-title: Tipos de dados booleanos
+title: Tipos de dados booleano
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 ms.openlocfilehash: 4879455aefbd08e3c9483870b4ac1e28df7bd02b
@@ -9,8 +9,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/27/2018
 ms.locfileid: "37028221"
 ---
-# <a name="boolean-data-types"></a>Tipos de dados booleanos
-Os operadores boolianos funciona como esperado em Common Language Runtime (CLR), exceto que short-circuiting o comportamento não é convertido. Por exemplo, o operador do Visual Basic `AndAlso` se comporta como o operador de `And` . O operador C# `&&` se comporta como o operador de `&` .  
+# <a name="boolean-data-types"></a>Tipos de dados booleano
+Os operadores booleanos funciona como esperado em Common Language Runtime (CLR), exceto que short-circuiting o comportamento não é convertido. Por exemplo, o operador do Visual Basic `AndAlso` se comporta como o operador de `And` . O operador C# `&&` se comporta como o operador de `&` .  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oferece suporte aos seguintes operadores.  
   
