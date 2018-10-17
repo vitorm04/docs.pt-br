@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837418"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370998"
 ---
-# <a name="getpropertyhandle-function"></a><span data-ttu-id="d825f-103">Função GetPropertyHandle</span><span class="sxs-lookup"><span data-stu-id="d825f-103">GetPropertyHandle function</span></span>
-<span data-ttu-id="d825f-104">Retorna um identificador exclusivo que reconhece uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="d825f-104">Returns a unique handle that identifies a property.</span></span>
+# <a name="getpropertyhandle-function"></a><span data-ttu-id="a2266-103">Função GetPropertyHandle</span><span class="sxs-lookup"><span data-stu-id="a2266-103">GetPropertyHandle function</span></span>
+<span data-ttu-id="a2266-104">Retorna um identificador exclusivo que reconhece uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="a2266-104">Returns a unique handle that identifies a property.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="d825f-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d825f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a2266-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a2266-105">Syntax</span></span>  
   
 ```  
 HRESULT GetPropertyHandle (
@@ -40,48 +40,48 @@ HRESULT GetPropertyHandle (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="d825f-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d825f-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="a2266-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a2266-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="d825f-107">[in] Esse parâmetro é usado.</span><span class="sxs-lookup"><span data-stu-id="d825f-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="a2266-107">[in] Esse parâmetro é usado.</span><span class="sxs-lookup"><span data-stu-id="a2266-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="d825f-108">[in] Um ponteiro para um [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instância.</span><span class="sxs-lookup"><span data-stu-id="d825f-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
+<span data-ttu-id="a2266-108">[in] Um ponteiro para um [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instância.</span><span class="sxs-lookup"><span data-stu-id="a2266-108">[in] A pointer to an [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.</span></span>
 
 `wszPropertyName`  
-<span data-ttu-id="d825f-109">[in] Uma cadeia terminada em nulo de characaters codificada em UTF16 que contém o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="d825f-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
+<span data-ttu-id="a2266-109">[in] Uma cadeia terminada em nulo de characaters codificada em UTF16 que contém o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="a2266-109">[in] A null-terminated string of UTF16-encoded characaters that contains the property name.</span></span>   
 
 `pType`  
-<span data-ttu-id="d825f-110">[out] Um ponteiro para um [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) membro de enumeração que representa o tipo CIM da propriedade.</span><span class="sxs-lookup"><span data-stu-id="d825f-110">[out] A pointer to a [`CIMTYPE`](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) enumeration member that represents the CIM type of the property.</span></span>
+<span data-ttu-id="a2266-110">[out] Um ponteiro para um [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) membro de enumeração que representa o tipo CIM da propriedade.</span><span class="sxs-lookup"><span data-stu-id="a2266-110">[out] A pointer to a [`CIMTYPE`](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) enumeration member that represents the CIM type of the property.</span></span>
 
 `pHandle`   
-<span data-ttu-id="d825f-111">[out] Um ponteiro para um inteiro que contém o identificador de propriedade.</span><span class="sxs-lookup"><span data-stu-id="d825f-111">[out] A pointer to an integer that contains the property handle.</span></span>
+<span data-ttu-id="a2266-111">[out] Um ponteiro para um inteiro que contém o identificador de propriedade.</span><span class="sxs-lookup"><span data-stu-id="a2266-111">[out] A pointer to an integer that contains the property handle.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="d825f-112">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="d825f-112">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="a2266-112">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="a2266-112">Return value</span></span>
 
-<span data-ttu-id="d825f-113">Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:</span><span class="sxs-lookup"><span data-stu-id="d825f-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="a2266-113">Os seguintes valores retornados por essa função são definidos na *WbemCli.h* arquivo de cabeçalho, ou você pode defini-los como constantes em seu código:</span><span class="sxs-lookup"><span data-stu-id="a2266-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="d825f-114">Constante</span><span class="sxs-lookup"><span data-stu-id="d825f-114">Constant</span></span>  |<span data-ttu-id="d825f-115">Valor</span><span class="sxs-lookup"><span data-stu-id="d825f-115">Value</span></span>  |<span data-ttu-id="d825f-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="d825f-116">Description</span></span>  |
+|<span data-ttu-id="a2266-114">Constante</span><span class="sxs-lookup"><span data-stu-id="a2266-114">Constant</span></span>  |<span data-ttu-id="a2266-115">Valor</span><span class="sxs-lookup"><span data-stu-id="a2266-115">Value</span></span>  |<span data-ttu-id="a2266-116">Descrição</span><span class="sxs-lookup"><span data-stu-id="a2266-116">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="d825f-117">0x80041002</span><span class="sxs-lookup"><span data-stu-id="d825f-117">0x80041002</span></span> | <span data-ttu-id="d825f-118">Nome da propriedade especificada não foi encontrado.</span><span class="sxs-lookup"><span data-stu-id="d825f-118">The specified property name was not found.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="d825f-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="d825f-119">0x80041008</span></span> | <span data-ttu-id="d825f-120">Um parâmetro não é válido.</span><span class="sxs-lookup"><span data-stu-id="d825f-120">A parameter is not valid.</span></span> |
-|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="d825f-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="d825f-121">0x8004100c</span></span> | <span data-ttu-id="d825f-122">A propriedade solicitada é do tipo são `CIM_OBJECT` ou `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="d825f-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="d825f-123">0</span><span class="sxs-lookup"><span data-stu-id="d825f-123">0</span></span> | <span data-ttu-id="d825f-124">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="d825f-124">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="a2266-117">0x80041002</span><span class="sxs-lookup"><span data-stu-id="a2266-117">0x80041002</span></span> | <span data-ttu-id="a2266-118">Nome da propriedade especificada não foi encontrado.</span><span class="sxs-lookup"><span data-stu-id="a2266-118">The specified property name was not found.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="a2266-119">0x80041008</span><span class="sxs-lookup"><span data-stu-id="a2266-119">0x80041008</span></span> | <span data-ttu-id="a2266-120">Um parâmetro não é válido.</span><span class="sxs-lookup"><span data-stu-id="a2266-120">A parameter is not valid.</span></span> |
+|`WBEM_E_NOT_SUPPORTED` | <span data-ttu-id="a2266-121">0x8004100c</span><span class="sxs-lookup"><span data-stu-id="a2266-121">0x8004100c</span></span> | <span data-ttu-id="a2266-122">A propriedade solicitada é do tipo são `CIM_OBJECT` ou `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="a2266-122">The requested property is of type are `CIM_OBJECT` or `CIM_ARRAY`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="a2266-123">0</span><span class="sxs-lookup"><span data-stu-id="a2266-123">0</span></span> | <span data-ttu-id="a2266-124">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="a2266-124">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="d825f-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="d825f-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a2266-125">Comentários</span><span class="sxs-lookup"><span data-stu-id="a2266-125">Remarks</span></span>
 
-<span data-ttu-id="d825f-126">Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) método.</span><span class="sxs-lookup"><span data-stu-id="d825f-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
+<span data-ttu-id="a2266-126">Essa função encapsula uma chamada para o [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) método.</span><span class="sxs-lookup"><span data-stu-id="a2266-126">This function wraps a call to the [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) method.</span></span>
 
-<span data-ttu-id="d825f-127">Você pode usar esse identificador para identificar as propriedades ao usar [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) métodos para ler ou gravar valores de propriedade.</span><span class="sxs-lookup"><span data-stu-id="d825f-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
+<span data-ttu-id="a2266-127">Você pode usar esse identificador para identificar as propriedades ao usar [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) métodos para ler ou gravar valores de propriedade.</span><span class="sxs-lookup"><span data-stu-id="a2266-127">You can use this handle to identify properties when using  [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) methods to read or write property values.</span></span>
 
-<span data-ttu-id="d825f-128">Identificadores podem ser recuperados para propriedades de todos os tipos de dados diferente de `CIM_OBJECT` e `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="d825f-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="d825f-129">Retornou o trabalho de identificadores em todas as instâncias de uma classe.</span><span class="sxs-lookup"><span data-stu-id="d825f-129">Returned handles work across all instances of a class.</span></span>
+<span data-ttu-id="a2266-128">Identificadores podem ser recuperados para propriedades de todos os tipos de dados diferente de `CIM_OBJECT` e `CIM_ARRAY`.</span><span class="sxs-lookup"><span data-stu-id="a2266-128">Handles can be retrieved for properties of all data types other than `CIM_OBJECT` and `CIM_ARRAY`.</span></span> <span data-ttu-id="a2266-129">Retornou o trabalho de identificadores em todas as instâncias de uma classe.</span><span class="sxs-lookup"><span data-stu-id="a2266-129">Returned handles work across all instances of a class.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d825f-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d825f-130">Requirements</span></span>  
-<span data-ttu-id="d825f-131">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d825f-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a2266-130">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a2266-130">Requirements</span></span>  
+<span data-ttu-id="a2266-131">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2266-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d825f-132">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d825f-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="a2266-132">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="a2266-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="d825f-133">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d825f-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="a2266-133">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a2266-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d825f-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d825f-134">See also</span></span>  
-[<span data-ttu-id="d825f-135">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="d825f-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="a2266-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a2266-134">See also</span></span>  
+[<span data-ttu-id="a2266-135">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="a2266-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
