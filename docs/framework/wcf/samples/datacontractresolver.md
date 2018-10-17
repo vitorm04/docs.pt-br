@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 6b489be65669869352f682ff32d65620cfb9dac2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 75b8ccdef2ee0c8106edf4d25224bbec989ad966
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840830"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374125"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 Este exemplo demonstra como os processos de serialização e desserialização podem ser personalizados usando o <xref:System.Runtime.Serialization.DataContractResolver> classe. Este exemplo mostra como usar um DataContractResolver para mapear tipos CLR para e de uma representação de xsi: Type durante a serialização e desserialização.
@@ -101,7 +101,7 @@ public void deserialize(Type type)
 
  O exemplo de código a seguir é uma classe derivada da <xref:System.Runtime.Serialization.DataContractResolver>.
 
-```
+```csharp
 class MyDataContractResolver : DataContractResolver
 {
     private Dictionary<string, XmlDictionaryString> dictionary = new Dictionary<string, XmlDictionaryString>();

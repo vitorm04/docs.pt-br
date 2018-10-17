@@ -2,19 +2,19 @@
 title: ServiceAuthorizationBehavior
 ms.date: 03/30/2017
 ms.assetid: 77dad8e8-fea4-4d1c-b366-2f01a2a87f78
-ms.openlocfilehash: e03f83927ec5aef7f916b2262c9c8cff1db68ac9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c916d0820a1eae333384deab7b0619abfbdc8167
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486467"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374294"
 ---
 # <a name="serviceauthorizationbehavior"></a>ServiceAuthorizationBehavior
 ServiceAuthorizationBehavior  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class ServiceAuthorizationBehavior : Behavior  
 {  
   boolean ImpersonateCallerForAllOperations;  
@@ -25,7 +25,7 @@ class ServiceAuthorizationBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe ServiceAuthorizationBehavior não define nenhum método.  
+ A classe ServiceAuthorizationBehavior não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe ServiceAuthorizationBehavior tem as seguintes propriedades:  
@@ -35,16 +35,16 @@ class ServiceAuthorizationBehavior : Behavior
   
  Tipo de acesso: somente leitura  
   
- Um valor que controla se o serviço tenta representar usando as credenciais fornecidas pela mensagem de entrada.  
+ Um valor que controla se o serviço tentará representar usando as credenciais fornecidas pela mensagem de entrada.  
   
 ### <a name="principalpermissionmode"></a>PrincipalPermissionMode  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: somente leitura  
   
- O principal usado para realizar operações no servidor.  
+ A entidade de segurança usada para executar operações no servidor.  
   
-### <a name="roleprovider"></a>Propriedade RoleProvider  
+### <a name="roleprovider"></a>RoleProvider  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: somente leitura  
@@ -62,7 +62,7 @@ class ServiceAuthorizationBehavior : Behavior
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>

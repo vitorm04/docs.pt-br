@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030292"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374164"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Mensagem de segurança com um cliente anônimo
 O cenário a seguir mostra um cliente e serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro ele pode dar suporte a um modelo mais avançado baseado em declarações. Para obter mais informações sobre como usar rica de declarações para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

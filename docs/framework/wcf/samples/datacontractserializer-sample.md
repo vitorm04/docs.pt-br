@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0086bdd41b9f87c14b3a9d0653a8f8982235b1ad
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743843"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371510"
 ---
 # <a name="datacontractserializer-sample"></a>Exemplo de DataContractSerializer
 O exemplo de DataContractSerializer demonstra o <xref:System.Runtime.Serialization.DataContractSerializer>, que executa a serialização geral e a desserialização de serviços para os dados de classes de contrato. O exemplo cria um `Record` do objeto, serializa-lo para um fluxo de memória e desserializa o fluxo de memória para outro `Record` objeto demonstrar o uso do <xref:System.Runtime.Serialization.DataContractSerializer>. O exemplo, em seguida, serializa o `Record` usando um gravador binário para demonstrar como o gravador afeta a serialização do objeto.  
@@ -19,7 +19,7 @@ O exemplo de DataContractSerializer demonstra o <xref:System.Runtime.Serializati
   
  O contrato de dados para `Record` é mostrado no código de exemplo a seguir.  
   
-```  
+```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 internal class Record  
 {  
@@ -74,14 +74,14 @@ internal class Record
   
  O código de exemplo cria um `Record` objeto chamado `record1` , em seguida, exibe o objeto.  
   
-```  
+```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
  O exemplo, em seguida, usa o <xref:System.Runtime.Serialization.DataContractSerializer> para serializar `record1` em um fluxo de memória.  
   
-```  
+```csharp  
 MemoryStream stream1 = new MemoryStream();  
   
 //Serialize the Record object to a memory stream using DataContractSerializer.  
@@ -91,7 +91,7 @@ serializer.WriteObject(stream1, record1);
   
  Em seguida, o exemplo usa o <xref:System.Runtime.Serialization.DataContractSerializer> para desserializar o fluxo de memória em um novo `Record` do objeto e o exibe.  
   
-```  
+```csharp  
 stream1.Position = 0;  
   
 //Deserialize the Record object back into a new record object.  
@@ -102,7 +102,7 @@ Console.WriteLine("Deserialized record: {0}", record2.ToString());
   
  Por padrão, o `DataContractSerializer` codifica os objetos em um fluxo usando uma representação textual do XML. No entanto, você pode influenciar a codificação do XML, passando um gravador diferente. O exemplo cria um gravador binário chamando <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>. Ele passa o gravador e o objeto de registro para o serializador quando ele chama <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Por fim, o exemplo libera o gravador e relatórios sobre o comprimento dos fluxos.  
   
-```  
+```csharp  
 MemoryStream stream2 = new MemoryStream();  
   
 XmlDictionaryWriter binaryDictionaryWriter = XmlDictionaryWriter.CreateBinaryWriter(stream2);  
@@ -116,7 +116,7 @@ Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);
   
  Quando você executar o exemplo, o registro original e o registro desserializado são exibidos, seguido por meio da comparação entre o comprimento da codificação de texto e a codificação binária. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Original record: Record: 1 + 2 = 3  
 Deserialized record: Record: 1 + 2 = 3  
 Text Stream is 233 bytes long  

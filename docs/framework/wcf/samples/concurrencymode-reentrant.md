@@ -2,19 +2,19 @@
 title: ConcurrencyMode Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 94ea62d18fec202a099c2797602224eab43299b4
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740523"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372156"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
 Este exemplo demonstra a necessidade e implicações do uso de Reentrant em uma implementação de serviço. Reentrant implica que o serviço (ou retorno de chamada) processa apenas uma mensagem em um determinado momento (análogo ao `ConcurencyMode.Single`). Para garantir acesso thread-safe, o Windows Communication Foundation (WCF) bloqueia o `InstanceContext` processamento de uma mensagem para que nenhuma outra mensagem possa ser processada. No caso de modo reentrante, o `InstanceContext` é desbloqueada imediatamente antes que o serviço faz uma chamada de saída permitindo assim que a chamada subsequente, (que pode ser reentrante, conforme demonstrado no exemplo) para obter o bloqueio a próxima vez em que eles chegam ao serviço. Para demonstrar o comportamento, o exemplo mostra como um serviço e o cliente podem enviar mensagens entre si usando um contrato duplex.  
   
  O contrato definido é um contrato duplex com o `Ping` que está sendo implementado pelo serviço e o método de retorno de chamada de método `Pong` que está sendo implementado pelo cliente. Um cliente chama o servidor `Ping` iniciando, assim, a chamada de contagem de método com um tique. O serviço verifica se a contagem de tiques não é igual a 0 e, em seguida, invoca os retornos de chamada `Pong` método durante a diminuição a contagem de tiques. Isso é feito pelo código a seguir no exemplo.  
   
-```  
+```csharp
 public void Ping(int ticks)  
 {  
      Console.WriteLine("Ping: Ticks = " + ticks);  
@@ -28,7 +28,7 @@ public void Ping(int ticks)
   
  O retorno de chamada `Pong` implementação tem a mesma lógica que o `Ping` implementação. Ou seja, ele verifica se a contagem de tiques não for zero e, em seguida, invoca o `Ping` método no canal de retorno de chamada (nesse caso, é o canal que foi usado para enviar o original `Ping` mensagem) com a escala contar diminuído em 1. No momento em que a contagem de tiques chega a 0, o método retorna, assim, o desempacotamento todas as respostas de volta para a primeira chamada feita pelo cliente que iniciou a chamada. Isso é mostrado na implementação do retorno de chamada.  
   
-```  
+```csharp
 public void Pong(int ticks)  
 {  
     Console.WriteLine("Pong: Ticks = " + ticks);  
@@ -55,7 +55,7 @@ public void Pong(int ticks)
 ## <a name="demonstrates"></a>Demonstra  
  Para executar o exemplo, crie os projetos de cliente e servidor. Em seguida, abrir duas janelas de comando e altere os diretórios para o \<amostra > \CS\Service\bin\debug e \<exemplo > \CS\Client\bin\debug diretórios. Em seguida, inicie o serviço digitando `service.exe` e, em seguida, invoque o Client.exe com o valor inicial de tiques passado como um argumento de entrada. É mostrado um exemplo de saída para 10 tiques.  
   
-```  
+```console  
 Prompt>Service.exe  
 ServiceHost Started. Press Enter to terminate service.  
 Ping: Ticks = 10  

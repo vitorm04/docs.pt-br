@@ -9,11 +9,11 @@ ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 8e2d1e6774c6a8c00478bdb89bf541bb47a8a8a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847277"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374558"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Image
 > [!NOTE]

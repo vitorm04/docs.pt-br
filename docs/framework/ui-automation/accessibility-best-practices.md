@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 60e95d79ae7cd43b79ec4fd79285bfea071f20f8
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8bdb16ca40142f3ef989708c567b940e1da2c0ac
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873551"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372675"
 ---
 # <a name="accessibility-best-practices"></a>Práticas recomendadas de Acessibilidade
 > [!NOTE]
@@ -135,4 +135,4 @@ ms.locfileid: "48873551"
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Automation.Peers>  
  [Controle personalizado NumericUpDown com tema e amostra de suporte de automação de interface do usuário](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Diretrizes para Design de Interface do usuário de teclado](http://msdn2.microsoft.com/library/ms971323.aspx)
+ [Diretrizes para Design de Interface do usuário de teclado](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

@@ -2,12 +2,12 @@
 title: Visão geral de fluxo de mensagens
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841976"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372779"
 ---
 # <a name="message-flow-overview"></a>Visão geral de fluxo de mensagens
 Em um sistema distribuído que contém serviços interconectados, é necessário determinar relações causais entre os serviços. É importante entender os vários componentes que faziam parte de um fluxo de solicitação para dar suporte a cenários críticos, tais como integridade, monitoramento, solução de problemas e análise da causa raiz. Para habilitar a correlação de rastreamentos entre vários serviços, no .NET Framework 4, adicionamos suporte por meio dos seguintes recursos:
@@ -52,13 +52,13 @@ Em um sistema distribuído que contém serviços interconectados, é necessário
 
 8.  Em Program.cs no cliente, adicione a seguinte instrução Using.
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. No método Main no arquivo program.cs no projeto do cliente, defina o GUID de rastreamento sejam propagadas no log de eventos.
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```

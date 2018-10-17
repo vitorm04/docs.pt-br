@@ -2,19 +2,19 @@
 title: MustUnderstandBehavior
 ms.date: 03/30/2017
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
-ms.openlocfilehash: 14150a992130e9ed4734c950d4ed92f1bbd3206c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f3efc446104a1afff507f6e7d2cd8c01c4ed417
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485551"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371790"
 ---
 # <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
 MustUnderstandBehavior  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class MustUnderstandBehavior : Behavior  
 {  
   boolean ValidateMustUnderstand;  
@@ -22,7 +22,7 @@ class MustUnderstandBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe MustUnderstandBehavior não define nenhum método.  
+ A classe MustUnderstandBehavior não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe MustUnderstandBehavior tem a seguinte propriedade:  
@@ -38,7 +38,7 @@ class MustUnderstandBehavior : Behavior
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Description.MustUnderstandBehavior>

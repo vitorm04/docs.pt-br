@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261505"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372415"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante o WCF Data Services
 
@@ -80,7 +80,7 @@ Você deve considerar o seguinte ao desenvolver um serviço de dados:
 
 -   Um programa de inspeção de HTTP pode ser muito útil ao depurar um serviço de dados permitindo que você inspecione o conteúdo de mensagens de solicitação e resposta. Qualquer analisador de pacote de rede que possa exibir pacotes brutos pode ser usado para inspecionar solicitações HTTP para e respostas do serviço de dados.
 
--   Para depurar um serviço de dados, você pode desejar obter mais informações sobre um erro do serviço de dados do que durante a operação normal. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. Para obter mais informações, consulte a postagem [depuração WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Você também pode habilitar o rastreamento do WCF para exibir as exceções geradas na camada de mensagens HTTP. Para obter mais informações, consulte [Configurando o rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
+-   Quando estiver depurando um serviço de dados, você talvez queira obter mais informações sobre o erro do serviço de dados que, durante a operação normal. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. Para obter mais informações, consulte a postagem [depuração WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Você também pode habilitar o rastreamento do WCF para exibir as exceções geradas na camada de mensagens HTTP. Para obter mais informações, consulte [Configurando o rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
 -   Um serviço de dados é geralmente desenvolvido como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto de aplicativo, mas você também pode criar serviço de dados como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto de site da Web no Visual Studio. Para obter informações sobre as diferenças entre os dois tipos de projetos, consulte [NIB: projetos de aplicativos Web versus projetos de Site da Web no Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 

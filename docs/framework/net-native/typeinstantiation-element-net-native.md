@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777776"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374542"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>Elemento &lt;TypeInstantiation&gt; (.NET Nativo)
 Aplica a política de reflexão de tempo de execução a um tipo genérico construído.  
@@ -99,7 +99,7 @@ Aplica a política de reflexão de tempo de execução a um tipo genérico const
  Se um elemento `<TypeInstantiation>` for o filho de um elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) ou [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), ele substituirá as configurações de política definidas pelo elemento pai. Se um elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) definir uma definição de tipo genérico correspondente, o elemento `<TypeInstantiation>` substituirá a política de reflexão em tempo de execução somente para instanciações do tipo genérico construído especificado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa uma reflexão para recuperar a definição de tipo genérico de um objeto <xref:System.Collections.Generic.Dictionary%602> construído. Ele também usa reflexão para exibir informações sobre objetos <xref:System.Type> que representam tipos genéricos construídos e definições de tipo genérico. A variável `b` no exemplo é um controle [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ O exemplo a seguir usa uma reflexão para recuperar a definição de tipo genérico de um objeto <xref:System.Collections.Generic.Dictionary%602> construído. Ele também usa reflexão para exibir informações sobre objetos <xref:System.Type> que representam tipos genéricos construídos e definições de tipo genérico. A variável `b` no exemplo é um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: ce91adbb5156eef09221a76773e5a9551f0e8440
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0f6a06bfb9d1e5274df047e45a5042353515e206
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517886"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371649"
 ---
 # <a name="session"></a>Session
 O exemplo sessão demonstra como implementar um contrato que requer uma sessão. Uma sessão fornece contexto para executar várias operações. Isso permite que um serviço associar a uma determinada sessão, de estado, de modo que as operações subsequentes podem usar o estado de uma operação anterior. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa um serviço de calculadora. O `ICalculator` contrato foi modificado para permitir que um conjunto de operações aritméticas a serem executadas, mantendo um resultado em execução. Essa funcionalidade é definida pelo `ICalculatorSession` contrato. O serviço mantém o estado para um cliente, como várias operações de serviço são chamadas para executar um cálculo. O cliente pode recuperar o resultado atual chamando `Result()` e desmarque o resultado como zero chamando `Clear()`.  
@@ -21,7 +21,7 @@ O exemplo sessão demonstra como implementar um contrato que requer uma sessão.
   
  Definindo o <xref:System.ServiceModel.SessionMode> do contrato para `Required` garante que quando o contrato é exposto através de uma ligação específica, a associação dá suporte a sessões. Se a associação não dá suporte a sessões de uma exceção é lançada. O `ICalculatorSession` interface é definida, de modo que podem ser chamadas uma ou mais operações, que modifica um resultado de execução, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface ICalculatorSession  
 {  
@@ -42,7 +42,7 @@ public interface ICalculatorSession
   
  O serviço usa um <xref:System.ServiceModel.InstanceContextMode> de <xref:System.ServiceModel.InstanceContextMode.PerSession> para associar um contexto de instância de determinado serviço para cada sessão de entrada. Isso permite que o serviço manter o resultado em execução para cada sessão em uma variável de membro local.  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorSession  
 {  
@@ -70,7 +70,7 @@ public class CalculatorService : ICalculatorSession
   
  Quando você executar o exemplo, o cliente faz várias solicitações ao servidor e solicita que os resultados, que então são exibidos na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 (((0 + 100) - 50) * 17.65) / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  

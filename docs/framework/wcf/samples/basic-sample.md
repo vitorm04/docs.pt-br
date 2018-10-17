@@ -2,12 +2,12 @@
 title: Exemplo básico
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c16ad22a63958bd7c7b2b3d94f2c82b5b7db6f65
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580310"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373944"
 ---
 # <a name="basic-sample"></a>Exemplo básico
 Este exemplo mostra como tornar um serviço detectável e como pesquisar e chamar um serviço de descoberta. Este exemplo é composto de dois projetos: serviço e cliente.
@@ -18,7 +18,7 @@ Este exemplo mostra como tornar um serviço detectável e como pesquisar e chama
 ## <a name="service"></a>Serviço  
  Isso é uma implementação de serviço de calculadora simples. A descoberta relacionados ao código pode ser encontrado no `Main` em que um <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> é adicionado ao host de serviço e um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é adicionado, conforme mostrado no código a seguir.  
   
-```  
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
 {  
     serviceHost.AddServiceEndpoint(typeof(ICalculatorService), new   

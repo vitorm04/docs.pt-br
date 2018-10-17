@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395522"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372377"
 ---
 # <a name="net-native-and-compilation"></a>Compilação e .NET nativo
 Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcionados ao .NET Framework são escritos em uma linguagem de programação específica e compilados em IL (linguagem intermediária). Em tempo de execução, um compilador JIT (Just-in-Time) é responsável pela compilação de IL em código nativo para o computador local antes de um método ser executado pela primeira vez. Por outro lado, a cadeia de ferramentas do .NET Native converte código-fonte em código nativo em tempo de compilação. Este tópico compara .NET Native com outras tecnologias de compilação disponíveis para aplicativos do .NET Framework e também fornece uma visão prática de como o .NET Native produz código nativo que pode lhe ajudar a entender por que as exceções que ocorrem no código compilado com o .NET Native não ocorrem no código com compilação JIT.  
@@ -102,6 +102,6 @@ Aplicativos do Windows 8.1 e aplicativos de Área de Trabalho do Windows direcio
   
 ## <a name="see-also"></a>Consulte também  
  [Metadados e componentes autodescritivos](../../../docs/standard/metadata-and-self-describing-components.md)  
- [Inside .NET nativo (vídeo do Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Por dentro, o .NET Native (vídeo do Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [Solução de problemas gerais do .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

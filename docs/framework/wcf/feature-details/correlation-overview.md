@@ -2,12 +2,12 @@
 title: Visão geral de correlação
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 1f9e4db4002e53af5cdf91ab9d563764495b30d3
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261242"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372636"
 ---
 # <a name="correlation-overview"></a>Visão geral de correlação
 Correlação é o mecanismo para relacionar mensagens do serviço de fluxo de trabalho entre si ou para o estado da instância de aplicativo, como uma resposta a uma solicitação inicial ou uma ID de ordem específica para o estado persistente de um fluxo de trabalho de processamento de pedidos. Este tópico fornece uma visão geral de correlação. Os outros tópicos nesta seção fornecem informações adicionais para cada tipo de correlação.  
@@ -21,7 +21,7 @@ Correlação é o mecanismo para relacionar mensagens do serviço de fluxo de tr
 
 Correlação baseada em protocolo usa o mecanismo de transporte para relacionar mensagens entre si e a instância apropriada. Algumas correlações de protocolo fornecido pelo sistema incluem a correlação de solicitação-resposta e correlação de contexto base. Uma correlação de solicitação-resposta é usada para correlacionar um único par de atividades de mensagem para formar uma operação bidirecional, tal como uma <xref:System.ServiceModel.Activities.Send> emparelhado com um <xref:System.ServiceModel.Activities.ReceiveReply>, ou uma <xref:System.ServiceModel.Activities.Receive> emparelhado com um <xref:System.ServiceModel.Activities.SendReply>. O Designer de fluxo de trabalho do Visual Studio também fornece um conjunto de modelos de atividade rapidamente implementar esse padrão. Uma correlação baseada em contexto baseia-se o mecanismo de troca de contexto descrito o [especificação de protocolo de troca de contexto do .NET](https://go.microsoft.com/fwlink/?LinkID=166059). Para usar a correlação baseada em contexto, uma com base no contexto de associação, como <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding> deve ser usado no ponto de extremidade.  
   
-Para obter mais informações sobre a correlação de protocolo, consulte [Duplex durável](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) e [solicitação-resposta](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Para obter mais informações sobre como usar os modelos de atividade do Designer de fluxo de trabalho do Visual Studio, consulte [atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Para o código de exemplo, consulte o [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) exemplo.  
+Para obter mais informações sobre a correlação de protocolo, consulte [Duplex durável](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) e [solicitação-resposta](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Para obter mais informações sobre como usar os modelos de atividade do Designer de fluxo de trabalho do Visual Studio, consulte [atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Para o código de exemplo, consulte o [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) exemplo.  
   
 ## <a name="content-based-correlation"></a>Correlação conteudo base
 
@@ -29,4 +29,4 @@ Correlação conteudo base que usa de alguma informação na mensagem de associ�
   
 ## <a name="see-also"></a>Consulte também  
 
-- [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

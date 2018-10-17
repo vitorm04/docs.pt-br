@@ -3,12 +3,12 @@ title: Validação de segurança
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
-ms.openlocfilehash: 4b80457fb551c2ee99f910710c5f30fa59c53a01
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: df056287c216b92fa0bcbab2bcbc9bedf799873c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123326"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374436"
 ---
 # <a name="security-validation"></a>Validação de segurança
 Este exemplo demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos. Neste exemplo, os serviços são validados pelo comportamento personalizado de verificação por meio de cada ponto de extremidade no serviço e verificando para ver se eles contêm elementos de associação de segurança. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -19,12 +19,12 @@ Este exemplo demonstra como usar um comportamento personalizado para validar os 
 ## <a name="endpoint-validation-custom-behavior"></a>Comportamento personalizado de validação de ponto de extremidade  
  Adicionando o código de usuário para o `Validate` método contido no <xref:System.ServiceModel.Description.IServiceBehavior> interface, comportamento personalizado pode ser fornecido para um serviço ou um ponto de extremidade para executar ações definidas pelo usuário. O código a seguir é usado para executar loop em cada ponto de extremidade contido em um serviço, que procura por meio de suas coleções de associação para associações seguras.  
   
-```  
+```csharp
 public void Validate(ServiceDescription serviceDescription,   
                                        ServiceHostBase serviceHostBase)  
 {  
-    // Loop through each endpoint individually gathering their    
-       binding elements.  
+    // Loop through each endpoint individually, gathering their    
+    // binding elements.  
     foreach (ServiceEndpoint endpoint in serviceDescription.Endpoints)  
     {  
         secureElementFound = false;  

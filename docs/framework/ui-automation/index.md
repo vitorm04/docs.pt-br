@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 12fc92c716cf0ff1ab15786a067ad955caee0d20
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a99d42b4d61f3270b50e0c4698683cf89458ec9c
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205298"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372259"
 ---
 # <a name="accessibility"></a>Acessibilidade
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "47205298"
   
  A [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] é a nova estrutura de acessibilidade do [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Ela atende às necessidades de produtos de tecnologia assistencial e de estruturas de teste automatizado, fornecendo acesso programático a informações sobre a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Além disso, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que os desenvolvedores de controle e de aplicativo disponibilizem seus produtos.  
   
- Esta documentação descreve a [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para código gerenciado. Para obter informações sobre programação para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] em C++, consulte [UI Automation for Win32 Applications](https://msdn.microsoft.com/library/ms726294.aspx) (Automação da Interface do Usuário para aplicativos Win32).  
+ Esta documentação descreve a [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para código gerenciado. Para obter informações sobre programação para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] em C++, consulte [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Automação da Interface do Usuário para aplicativos Win32).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Accessibility Best Practices](../../../docs/framework/ui-automation/accessibility-best-practices.md) (Práticas recomendadas de acessibilidade)  

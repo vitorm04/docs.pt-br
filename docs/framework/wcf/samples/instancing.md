@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 1d193b0cac56f365a4f0a294145369502754a1b1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696543"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373750"
 ---
 # <a name="instancing"></a>Instanciação
 A criação de instâncias que demonstra a configuração de comportamento de instanciação, que controla como as instâncias de uma classe de serviço são criadas em resposta às solicitações do cliente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define um novo contrato, `ICalculatorInstance`, que herda de `ICalculator`. O contrato especificado pelo `ICalculatorInstance` fornece três operações adicionais para inspecionar o estado da instância do serviço. Alterando a configuração de instanciação, você pode observar a alteração no comportamento executando o cliente.  
@@ -30,7 +30,7 @@ A criação de instâncias que demonstra a configuração de comportamento de in
   
  A classe de serviço Especifica o comportamento de instanciação com o `[ServiceBehavior(InstanceContextMode=<setting>)]` atributo conforme mostrado no exemplo de código que segue. Alterando as linhas que são comentadas, você pode observar o comportamento de cada um dos modos de instância. Lembre-se recriar o serviço depois de alterar o modo de instanciação. Não há nenhuma configuração relacionados à criação de instância para especificar no cliente.  
   
-```  
+```csharp
 // Enable one of the following instance modes to compare instancing behaviors.  
  [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
   

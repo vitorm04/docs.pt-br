@@ -2,19 +2,19 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12b45c08a3d8dc69e740ce77d0d2abd097907ac2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485701"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371557"
 ---
 # <a name="contract"></a>Contrato
 Contrato  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class Contract  
 {  
   sint32 AppDomainId;  
@@ -30,7 +30,7 @@ class Contract
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe de contrato não define nenhum método.  
+ A classe de contrato não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe de contrato tem as seguintes propriedades:  
@@ -40,7 +40,7 @@ class Contract
   
  Tipo de acesso: somente leitura  
   
- A identificação appdomain do appdomain que hospeda o contrato.  
+ A id appdomain do appdomain que hospeda o contrato.  
   
 ### <a name="behaviors"></a>Comportamentos  
  Tipo de dados: matriz de comportamento  
@@ -61,14 +61,14 @@ class Contract
   
  Tipo de acesso: somente leitura  
   
- O namespace do `portType` elemento em WSDL.  
+ O namespace do `portType` elemento no WSDL.  
   
 ### <a name="operations"></a>Operações  
  Tipo de dados: matriz de operação  
   
  Tipo de acesso: somente leitura  
   
- As operações desse contrato.  
+ As operações do contrato.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de dados: sint32  
@@ -89,7 +89,7 @@ class Contract
   
  Tipo de acesso: somente leitura  
   
- Indica se o contrato requer a associação associada a esse contrato use sessões do canal.  
+ Indica se o contrato requer a associação associada a este contrato para usar sessões de canal.  
   
 ### <a name="type"></a>Tipo  
  Tipo de dados: cadeia de caracteres  
@@ -102,7 +102,7 @@ class Contract
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Description.ContractDescription>

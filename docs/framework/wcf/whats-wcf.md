@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 0aaa72741a1bb75862a1e3a4c5569ea53919a7f3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1046f80ee094fa1c65c9f0f69febff84ccd36db0
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845574"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372032"
 ---
 # <a name="what-is-windows-communication-foundation"></a>O que é o Windows Communication Foundation
 Windows Communication Foundation (WCF) é uma estrutura para criar aplicativos orientados a serviço. Usando o WCF, você pode enviar dados como mensagens assíncronas do ponto de extremidade de um serviço para outro. Um ponto de extremidade de serviço pode ser parte de um serviço disponível continuamente hospedado pelo IIS, ou pode ser um serviço hospedado em um aplicativo. Um ponto de extremidade pode ser um cliente de um serviço que solicita dados de um ponto de extremidade de serviço. As mensagens podem ser simples como um único caractere ou uma palavra enviada como XML ou complexo como um fluxo de dados binários. Alguns cenários de exemplo incluem:
@@ -103,4 +103,4 @@ O [!INCLUDE[dublin](../../../includes/dublin-md.md)] servidor de aplicativos foi
 - [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Guia da documentação](../../../docs/framework/wcf/guide-to-the-documentation.md)
 - [Programação básica do WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Amostras do Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Amostras do Windows Communication Foundation](/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

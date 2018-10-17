@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 499d3e9824ede493043b996d581b079ec23938f8
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857963"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371979"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 O exemplo de OperationContextScope demonstra como enviar informações extras em uma chamada de Windows Communication Foundation (WCF) usando cabeçalhos. Neste exemplo, o servidor e o cliente são aplicativos de console.  
@@ -20,7 +20,7 @@ O exemplo de OperationContextScope demonstra como enviar informações extras em
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
  Este é o serviço de exemplo que recebe uma mensagem do cliente e tenta pesquisar o cabeçalho no <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> coleção. O cliente passa o GUID que ele enviado no cabeçalho e o serviço recupera o cabeçalho personalizado e, se estiver presente, o compara com o GUID passado como o argumento pelo cliente.  
   
-```  
+```csharp
 public bool RetrieveHeader(string guid)  
 {  
      MessageHeaders messageHeaderCollection =   
@@ -57,7 +57,7 @@ public bool RetrieveHeader(string guid)
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
  Esta é a implementação de cliente que usa o proxy gerado pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para se comunicar com o serviço remoto. Primeiro, ele cria dois objetos de proxy do `MessageHeaderReaderClient`.  
   
-```  
+```csharp
 //Create two clients to the remote service.  
 MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();  
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
@@ -65,7 +65,7 @@ MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();
   
  Cliente, em seguida, cria um OperationContextScope e escopos para `client1`. Ele adiciona uma <xref:System.ServiceModel.Channels.MessageHeader> para <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca uma chamada em ambos os clientes. Isso garante que o cabeçalho é enviado somente em `client1` e não no `client2` verificando o valor de retorno a `RetrieveHeader` chamar.  
   
-```  
+```csharp
 using (new OperationContextScope(client1.InnerChannel))  
 {  
     //Create a new GUID that is sent as the header.  
@@ -92,7 +92,7 @@ using (new OperationContextScope(client1.InnerChannel))
   
  Este exemplo é auto-hospedado. A seguinte saída de exemplo da execução do exemplo é fornecida:  
   
-```  
+```console  
 Prompt> Service.exe  
 The service is ready.  
 Press <ENTER> to terminate service.  

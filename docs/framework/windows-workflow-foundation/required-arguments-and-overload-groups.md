@@ -2,12 +2,12 @@
 title: Argumentos necessários e grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842067"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374255"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necessários e grupos de sobrecarga
 As atividades podem ser configuradas de modo que determinados argumentos são necessários para ser associados para que a atividade é válido para a execução. O atributo de `RequiredArgument` é usado para indicar que determinados argumentos em uma atividade são necessários e o atributo de `OverloadGroup` é usado para agrupar categorias de argumentos necessários. Usando atributos, os autores de atividade podem fornecer configurações simples ou complexas de validação de atividade.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Valor de um argumento necessário "operando1" de atividade não foi fornecido.**  
 > [!NOTE]
-> Para obter mais informações sobre sobre para verificar e tratamento de erros de validação e avisos, consulte [invocando a validação de atividade](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Para obter mais informações sobre como verificar e tratamento de erros de validação e avisos, consulte [invocando a validação de atividade](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Usando grupos de sobrecarga
 

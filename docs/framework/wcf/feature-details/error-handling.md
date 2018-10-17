@@ -2,12 +2,12 @@
 title: Tratamento de erros
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486148"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372195"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 ## <a name="error-handling-in-windows-communication-foundation"></a>Tratamento de erro no Windows Communication Foundation  
@@ -30,7 +30,7 @@ ms.locfileid: "43486148"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Lidando com exceções inesperadas usando um IErrorHandler  
  Para lidar com exceções inesperadas, o curso de ação recomendado é "vincular" um IErrorHandler. Manipuladores de erro somente capturam exceções no nível de tempo de execução do WCF (a camada de "modelo de serviço"), não na camada do canal. A única maneira de conectar um IErrorHandler no nível do canal é criar um canal personalizado, que não é recomendado na maioria dos cenários.  
   
- "Exceção inesperada" geralmente não é uma exceção irrecuperável nem uma exceção de processamento; ele é, em vez disso, uma exceção inesperada do usuário. Uma exceção irrecuperável (por exemplo, uma exceção de memória insuficiente) – um geralmente tratada pelos [manipulador de exceção do modelo de serviço](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automaticamente — não podem geralmente ser manipuladas com elegância e o único motivo para tratar essa exceção em todos os pode ser um log adicional ou para retornar uma exceção padrão para o cliente. Uma exceção de processamento ocorre no processamento da mensagem – por exemplo, no codificador, serialização ou nível de formatador – geralmente não podem ser tratadas em um IErrorHandler, porque ele é geralmente muito no início ou muito tarde para o manipulador de erro intervir por a hora em que essas exceções ocorrem. Da mesma forma, as exceções de transporte não podem ser manipuladas em um IErrorHandler.  
+ "Exceção inesperada" geralmente não é uma exceção irrecuperável nem uma exceção de processamento; ele é, em vez disso, uma exceção inesperada do usuário. Uma exceção irrecuperável (por exemplo, uma exceção de memória insuficiente) – um geralmente tratada pelos [manipulador de exceção do modelo de serviço](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automaticamente — não podem geralmente ser manipuladas com elegância e o único motivo para tratar essa exceção em todos os pode ser um log adicional ou para retornar uma exceção padrão para o cliente. Uma exceção de processamento ocorre no processamento da mensagem – por exemplo, no codificador, serialização ou nível de formatador – geralmente não podem ser tratadas em um IErrorHandler, porque ele é geralmente muito no início ou muito tarde para o manipulador de erro intervir por a hora em que essas exceções ocorrem. Da mesma forma, as exceções de transporte não podem ser manipuladas em um IErrorHandler.  
   
  Com um IErrorHandler, você pode controlar explicitamente o comportamento do seu aplicativo quando uma exceção é lançada. Você pode:  
   

@@ -2,12 +2,12 @@
 title: Como bloquear pontos de extremidade na empresa
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836889"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374151"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Como bloquear pontos de extremidade na empresa
 Empresas de grandes porte geralmente exigem que os aplicativos são desenvolvidos em conformidade com políticas de segurança da empresa. O tópico a seguir discute como desenvolver e instalar um validador de ponto de extremidade do cliente que pode ser usado para validar todos os aplicativos de cliente do Windows Communication Foundation (WCF) instalados em computadores.  
@@ -39,7 +39,7 @@ Empresas de grandes porte geralmente exigem que os aplicativos são desenvolvido
   
 1.  Instale o validador de ponto de extremidade usando o mecanismo apropriado. Em uma empresa, isso pode estar usando diretiva de grupo e o Systems Management Server (SMS).  
   
-2.  Instalar o assembly de nome forte no cache de assembly global usando o [Gacutil.exe (ferramenta de Cache de Assembly Global)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Instalar o assembly de nome forte no cache de assembly global usando o [Gacutil.exe (ferramenta de Cache de Assembly Global)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
 3.  Use o <xref:System.Configuration?displayProperty=nameWithType> tipos de namespace:  
   

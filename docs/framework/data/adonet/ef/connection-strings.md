@@ -1,32 +1,33 @@
 ---
-title: Cadeias de caracteres de conexão
-ms.date: 03/30/2017
+title: Cadeias de caracteres de Conexão no ADO.NET Entity Framework
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842172"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372480"
 ---
-# <a name="connection-strings"></a>Cadeias de caracteres de conexão
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadeias de caracteres de Conexão no ADO.NET Entity Framework
 Uma cadeia de conexão contém informações de inicialização que são passadas como parâmetros de um provedor de dados para uma fonte de dados. A sintaxe depende do provedor de dados, e a cadeia de conexão é analisada durante a tentativa de abrir uma conexão. As cadeias de conexão usadas por Entity Framework contêm informações usadas para conectar ao provedor de dados ADO.NET subjacente que dá suporte a Entity Framework. Elas também contêm informações sobre os arquivos de modelo e de mapeamento necessários.  
   
  A cadeia de conexão é usada pelo provedor EntityClient ao acessar metadados de modelo e de mapeamento e ao se conectar à fonte de dados. A cadeia de conexão pode ser acessada ou definida por meio da propriedade <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. A classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> pode ser usada para construir ou acessar programaticamente parâmetros na cadeia de conexão. Para obter mais informações, consulte [como: criar uma cadeia de caracteres de Conexão EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  O [ferramentas de modelo de dados de entidade](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) gerar uma cadeia de caracteres de conexão é armazenada no arquivo de configuração do aplicativo. O <xref:System.Data.Objects.ObjectContext> recupera essas informações de conexão automaticamente ao criar consultas de objeto. O <xref:System.Data.EntityClient.EntityConnection> usado por uma instância <xref:System.Data.Objects.ObjectContext> pode ser acessado a partir da propriedade <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obter mais informações, consulte [Gerenciando conexões e transações](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Sintaxe da cadeia de conexão
+
+Para saber mais sobre a sintaxe geral para cadeias de caracteres de conexão, consulte [sintaxe da cadeia de Conexão | Cadeias de caracteres de Conexão no ADO.NET](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Parâmetros de cadeia de conexão  
- O formato de uma cadeia de conexão é uma lista de pares chave-valor de parâmetros separados por ponto e vírgula:  
-  
- `keyword1=value; keyword2=value;`  
-  
- O sinal de igual (=) conecta cada palavra-chave e seu valor. As palavras-chave não diferenciam maiúsculas de minúsculas, e os espaços entre os pares chave-valor são ignorados. Entretanto, os valores podem diferenciar maiúsculas de minúsculas, dependendo da fonte de dados. Todo valor que contenha ponto e vírgula, aspas simples ou aspas duplas devem ficar entre aspas duplas. A tabela a seguir lista os nomes válidos para valores de palavra-chave na propriedade <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+A tabela a seguir lista os nomes válidos para valores de palavra-chave na propriedade <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Palavra-chave|Descrição|  
 |-------------|-----------------|  
 |`Provider`|Necessária quando a palavra-chave `Name` não é especificada. O nome do provedor, que é usado para recuperar o objeto <xref:System.Data.Common.DbProviderFactory> do provedor subjacente. Esse valor é constante.<br /><br /> Quando a palavra-chave `Name` não é incluída em uma cadeia de conexão de entidade, um valor não vazio para a palavra-chave `Provider` é necessário. Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|  
-|`Provider Connection String`|Opcional. Especifica a cadeia de conexão específica ao provedor que é passada para a fonte de dados subjacente. Essa cadeia de conexão é expressa usando pares de palavra-chave-valor válidos para o provedor de dados. Uma palavra-chave `Provider Connection String` inválida produzirá um erro em tempo de execução ao ser avaliada pela fonte de dados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.<br /><br /> O valor da palavra-chave `Provider Connection String` deve ficar entre aspas. A seguir está um exemplo:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> O exemplo a seguir não funcionará:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|Opcional. Especifica a cadeia de conexão específica ao provedor que é passada para a fonte de dados subjacente. Essa cadeia de caracteres de conexão contém pares de palavra-chave/valor válido para o provedor de dados. Uma palavra-chave `Provider Connection String` inválida produzirá um erro em tempo de execução ao ser avaliada pela fonte de dados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.<br /><br /> Certifique-se de escape do valor de acordo com a sintaxe geral de [cadeias de caracteres de conexão ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Considere, por exemplo, a seguinte cadeia de conexão: `Server=serverName; User ID = userID`. Ela deverá ser substituída porque ela contém um ponto e vírgula. Uma vez que ele não contém aspas duplas, eles podem ser usados para escapar:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Necessária quando a palavra-chave `Name` não é especificada. Uma lista de diretórios, arquivos e locais de recursos delimitados por pipe na qual procurar informações de metadados e mapeamento. A seguir está um exemplo:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Os espaços em branco em cada lado do separador de pipe são ignorados.<br /><br /> Essa palavra-chave é mutuamente excludente com a palavra-chave `Name`.|  
 |`Name`|O aplicativo pode, opcionalmente, especificar o nome da conexão em um arquivo de configuração do aplicativo que forneça os valores de cadeia de conexão de palavra-chave-valor necessários. Nesse caso, não é possível fornecê-los diretamente na cadeia de conexão. A palavra-chave `Name` não é permitida em um arquivo de configuração.<br /><br /> Quando a palavra-chave `Name` não é incluída na cadeia de conexão, um valor não vazio para a palavra-chave Provider é necessário.<br /><br /> Essa palavra-chave é mutuamente excludente com todos as outras palavras-chave de cadeia de conexão.|  
   

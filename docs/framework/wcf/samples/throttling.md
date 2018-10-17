@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519160"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374034"
 ---
 # <a name="throttling"></a>Limitação
 O exemplo de limitação demonstra o uso de controles de limitação. Os controles de limitação colocam limites no número de chamadas simultâneas, instâncias ou sessões para evitar a sobrecarga de consumo de recursos. Comportamento de limitação é especificado no arquivo de configuração do serviço. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
@@ -40,7 +40,7 @@ O exemplo de limitação demonstra o uso de controles de limitação. Os control
   
  Para demonstrar a limitação, definimos um tempo de suspensão em métodos de serviço da seguinte maneira:  
   
-```  
+```csharp
 public double Add(double n1, double n2)  
 {  
     System.Threading.Thread.Sleep(2000);  
@@ -50,7 +50,7 @@ public double Add(double n1, double n2)
   
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Os métodos adicionar e subtrair são executados simultaneamente e os métodos de divisão e multiplicação são executados simultaneamente, provando que não mais de 2 métodos podem ser executados simultaneamente, portanto, demonstrando a limitação.  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Add(100,15.99)  
 Subtract(145,76.54)  

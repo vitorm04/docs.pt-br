@@ -2,12 +2,12 @@
 title: Obrigatório
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 9039e2f0d13baefb8b0c2abcfb63dd11ce15ffd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510720"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370933"
 ---
 # <a name="imperative"></a>Obrigatório
 Este exemplo demonstra como definir um <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> para um serviço usando código, em vez de definir o `wsHttpBinding` na configuração de associação. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
@@ -17,7 +17,7 @@ Este exemplo demonstra como definir um <<!--zz xref:System.ServiceModel.WsHttpBi
   
  O código a seguir demonstra como definir uma associação imperativa no código.  
   
-```  
+```csharp
 public static void Main()  
 {  
     WSHttpBinding binding = new WSHttpBinding();  
@@ -52,7 +52,7 @@ public static void Main()
   
  O cliente cria um canal para se comunicar com o serviço, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp
 WSHttpBinding binding = new WSHttpBinding();  
 binding.Name = "binding1";  
 binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;  
@@ -68,7 +68,7 @@ ICalculator channel = channelFactory.CreateChannel();
   
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

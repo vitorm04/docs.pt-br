@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193899"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372376"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -45,7 +45,7 @@ Exemplo de um fluxo de texto com objetos inseridos e seus intervalos abrangentes
   
  Quando for necessário atravessar o conteúdo de um intervalo de texto, uma série de etapas envolvidas nos bastidores para que o <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> método a ser executado com êxito.  
   
-1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido em um intervalo de degeneração a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover a ambiguidade em situações onde um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, "{a U} RL [ http://www.microsoft.com ](https://www.microsoft.com) é inserido no texto" onde "{" e "}" é pontos de extremidade do intervalo de texto.  
+1.  O intervalo de texto é normalizado; ou seja, o intervalo de texto é recolhido em um intervalo de degeneração a <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ponto de extremidade, o que torna o <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> supérfluo de ponto de extremidade. Essa etapa é necessária para remover a ambiguidade em situações onde um intervalo de texto abrange <xref:System.Windows.Automation.Text.TextUnit> limites: por exemplo, `{The URL https://www.microsoft.com is embedded in text` onde "{" e "}" é o texto de pontos de extremidade do intervalo.  
   
 2.  O intervalo resultante é movido para trás na <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> para o início da solicitada <xref:System.Windows.Automation.Text.TextUnit> limites.  
   
@@ -66,22 +66,22 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Hiperlink  
- **Exemplo 1 - um intervalo de texto que contém um hiperlink de texto inserido**  
+
+**Exemplo 1 - um intervalo de texto que contém um hiperlink de texto inserido**
   
- {A URL [ http://www.microsoft.com ](https://www.microsoft.com) é inserida em texto}.  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres "a URL http://www.microsoft.com é inserido no texto".|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retorna a cadeia de caracteres `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais interno <xref:System.Windows.Automation.AutomationElement> que inclui o intervalo de texto; nesse caso, o <xref:System.Windows.Automation.AutomationElement> que representa o próprio provedor de texto.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retorna um <xref:System.Windows.Automation.AutomationElement> que representa o controle de hiperlink.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> em que <xref:System.Windows.Automation.AutomationElement> é o objeto retornado pelo anterior `GetChildren` método.|Retorna o intervalo que representa "http://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> em que <xref:System.Windows.Automation.AutomationElement> é o objeto retornado pelo anterior `GetChildren` método.|Retorna o intervalo que representa "https://www.microsoft.com".|  
   
  **Exemplo 2 - um intervalo de texto que abrange parcialmente um hiperlink de texto inserido**  
   
- A URL `http://{[www]}` é inserido no texto.  
+ A URL `https://{[www]}` é inserido no texto.  
   
 |Método chamado|Resultado|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ Exemplos de como um intervalo de texto é ajustado para Move () e ExpandToEnclos
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retorna o mais interno <xref:System.Windows.Automation.AutomationElement> que inclui o intervalo de texto; nesse caso, o hiperlink de controle.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retorna `null` , pois o intervalo de texto não abrange toda cadeia de caracteres de URL.|  
   
- **Exemplo 3: um intervalo de texto que abrange parcialmente o conteúdo de um contêiner de texto. O contêiner de texto tem um hiperlink de texto inserido não é parte do intervalo de texto.**  
+**Exemplo 3: um intervalo de texto que abrange parcialmente o conteúdo de um contêiner de texto. O contêiner de texto tem um hiperlink de texto inserido não é parte do intervalo de texto.**  
   
- {URL} [ http://www.microsoft.com ](https://www.microsoft.com) é inserido no texto.  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |Método chamado|Resultado|  
 |-------------------|------------|  

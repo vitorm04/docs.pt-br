@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837418"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370998"
 ---
 # <a name="getpropertyhandle-function"></a>Função GetPropertyHandle
 Retorna um identificador exclusivo que reconhece uma propriedade.
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in] Uma cadeia terminada em nulo de characaters codificada em UTF16 que contém o nome da propriedade.   
 
 `pType`  
-[out] Um ponteiro para um [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) membro de enumeração que representa o tipo CIM da propriedade.
+[out] Um ponteiro para um [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) membro de enumeração que representa o tipo CIM da propriedade.
 
 `pHandle`   
 [out] Um ponteiro para um inteiro que contém o identificador de propriedade.

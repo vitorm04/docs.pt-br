@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3955329903af0d4c27bc7228c7c9025cb03e00f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394307"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371830"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Classe MissingMetadataException (.NET Nativo)
 **.NET para Aplicativos da Windows Store para Windows 10, somente [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -76,8 +76,8 @@ ms.locfileid: "33394307"
 > [!IMPORTANT]
 >  Como essa exceção indica que os metadados exigidos pelo seu aplicativo não estão disponíveis no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la usando um arquivo de diretivas de tempo de execução. Para obter a entrada que você pode adicionar ao seu arquivo de diretivas de tempo de execução e que elimina a exceção, você pode usar uma das duas soluções de problemas:  
 >   
->  -   A [solução de problemas MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
-> -   A [solução de problemas MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
+>  -   A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
+> -   A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
   
  A classe `MissingMetadataException` não contém membros exclusivos. Todos os seus membros são herdados de sua classe base, <xref:System.TypeAccessException>.  
   

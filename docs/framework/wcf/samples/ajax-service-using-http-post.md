@@ -2,12 +2,12 @@
 title: Serviço AJAX utilizando HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041103"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372031"
 ---
 # <a name="ajax-service-using-http-post"></a>Serviço AJAX utilizando HTTP POST
 Este exemplo demonstra como usar o Windows Communication Foundation (WCF) para criar um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serviço Asynchronous JavaScript and XML (AJAX) que usa o HTTP POST. Um serviço AJAX é aquele que você pode acessar usando o código JavaScript básico de um cliente de navegador da Web. Este exemplo se baseia a [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo; a única diferença entre os dois exemplos é o uso de HTTP POST em vez de HTTP GET.  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  Criar um ponto de extremidade do AJAX no serviço usando o <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, assim como no exemplo de serviço básico do AJAX.  
   
- Ao contrário de solicitações GET, você não pode chamar serviços POST do navegador. Por exemplo, navegando até http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 resulta em um erro, porque o serviço de POSTAGEM espera que o `n1` e `n2` parâmetros a serem enviados no corpo da mensagem — no formato JSON — e não na URL.  
+ Ao contrário de solicitações GET, você não pode chamar serviços POST do navegador. Por exemplo, navegando até `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` resulta em um erro, porque o serviço de POSTAGEM espera que o `n1` e `n2` parâmetros a serem enviados no corpo da mensagem no formato JSON e não na URL.  
   
  O cliente PostAjaxClientPage.aspx de página da Web contém código ASP.NET para invocar o serviço sempre que o usuário clica em um dos botões de operação na página. O serviço responde da mesma forma como na [serviço de AJAX básico](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemplo, com a solicitação GET.  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  Compile a solução PostAjaxService.sln, conforme descrito em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Navegue até http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (não abrir PostAjaxClientPage.aspx no navegador do diretório do projeto).  
-  
-## <a name="see-also"></a>Consulte também
+3.  Navegue até `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (não abrir PostAjaxClientPage.aspx no navegador do diretório do projeto).

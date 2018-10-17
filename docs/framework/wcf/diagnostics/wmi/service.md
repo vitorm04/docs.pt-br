@@ -2,19 +2,19 @@
 title: Serviço
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: 0cfeb178e26f6c93e29210accf5d7866cc1fca02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487141"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374203"
 ---
 # <a name="service"></a>Serviço
 Serviço  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class Service  
 {  
   string BaseAddresses[];  
@@ -33,7 +33,7 @@ class Service
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe de serviço não define nenhum método.  
+ A classe de serviço não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe de serviço tem as seguintes propriedades:  
@@ -78,7 +78,7 @@ class Service
   
  Tipo de acesso: somente leitura  
   
- Os contextos da instância para as extensões da instância do serviço.  
+ Os contextos de instância para as extensões da instância do serviço.  
   
 ### <a name="metadata"></a>Metadados  
  Tipo de dados: matriz de cadeia de caracteres  
@@ -92,7 +92,7 @@ class Service
   
  Tipo de acesso: somente leitura  
   
- O nome exclusivo desse serviço.  
+ O nome exclusivo deste serviço.  
   
 ### <a name="namespace"></a>Namespace  
  Tipo de dados: cadeia de caracteres  
@@ -120,10 +120,10 @@ class Service
   
  Tipo de acesso: somente leitura  
   
- A id de processo do processo que hospeda o serviço.  
+ A id do processo do processo que hospeda o serviço.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|
+|Namespace|Definido no root\ServiceModel|

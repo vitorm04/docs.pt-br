@@ -2,12 +2,12 @@
 title: Como fazer intercâmbio de mensagens dentro de uma sessão confiável
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 6b204749ce86b79bf46b2d5c96be1b00dca9500d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 53e5661bf140540cd0fc7a9fcb739b67488b8491
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037370"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374498"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Como fazer intercâmbio de mensagens dentro de uma sessão confiável
 
@@ -23,7 +23,7 @@ Para a cópia de origem deste exemplo, consulte [sessão confiável de WS](../..
 
    [!code-csharp[c_HowTo_UseReliableSession#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1121)]
 
-1. Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não estão especificadas dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de informações de associação ou o endereço do arquivo de configuração.
+1. Implemente o contrato de serviço em uma classe de serviço. Observe que as informações de associação ou o endereço não estão especificadas dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de associação ou o endereço do arquivo de configuração.
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
@@ -51,7 +51,7 @@ Para a cópia de origem deste exemplo, consulte [sessão confiável de WS](../..
 
    [!code-csharp[C_HowTo_UseReliableSession#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1221)]
 
-1. O aplicativo de cliente gerado também contém a implementação do `ClientCalculator`. Observe que as informações de endereço e a associação não são especificadas em qualquer lugar dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de informações de associação ou o endereço do arquivo de configuração.
+1. O aplicativo de cliente gerado também contém a implementação do `ClientCalculator`. Observe que as informações de endereço e a associação não são especificadas em qualquer lugar dentro da implementação do serviço. Não é necessário escrever código para recuperar as informações de associação ou o endereço do arquivo de configuração.
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 

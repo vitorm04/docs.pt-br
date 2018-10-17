@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521348"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373878"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>Método ICorDebugMetaDataLocator::GetMetaData
 Solicita que o depurador para retornar o caminho completo para um módulo cujos metadados são necessários para concluir uma operação solicitado do depurador.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Uma cadeia terminada em nulo que representa o caminho completo para o arquivo. Se o caminho completo não estiver disponível, o nome e a extensão do arquivo (*filename*. *extensão*).  
   
  `dwImageTimeStamp`  
- [in] O carimbo de hora de cabeçalhos de arquivo PE da imagem. Esse parâmetro potencialmente pode ser usado para um servidor de símbolos ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) pesquisa.  
+ [in] O carimbo de hora de cabeçalhos de arquivo PE da imagem. Esse parâmetro potencialmente pode ser usado para um servidor de símbolos ([SymSrv](/windows/desktop/debug/using-symsrv)) pesquisa.  
   
  `dwImageSize`  
  [in] O tamanho da imagem de cabeçalhos de arquivo PE. Potencialmente, esse parâmetro pode ser usado para uma pesquisa SymSrv.  

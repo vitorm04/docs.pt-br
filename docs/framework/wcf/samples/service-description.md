@@ -2,12 +2,12 @@
 title: Descrição do serviço
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c31edae952b20823945403dd5aebb438bcbf0c11
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003330"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374060"
 ---
 # <a name="service-description"></a>Descrição do serviço
 A descrição do serviço que demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com uma operação de serviço adicional definida para retornar informações descritivas sobre o serviço. As informações retornadas listam os endereços base e os pontos de extremidade para o serviço. O serviço fornece essas informações usando o <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, e <xref:System.ServiceModel.Description.ServiceDescription> classes.  
@@ -19,7 +19,7 @@ A descrição do serviço que demonstra como um serviço pode recuperar suas inf
   
  Este exemplo tem uma versão modificada do contrato de calculadora chamado `IServiceDescriptionCalculator`. O contrato define uma operação de serviço adicional denominada `GetServiceDescriptionInfo` que retorna uma cadeia de caracteres de várias linha para o cliente que descreve o endereço base endereços e ponto de extremidade de serviço ou pontos de extremidade para o serviço.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IServiceDescriptionCalculator  
 {  
@@ -38,7 +38,7 @@ public interface IServiceDescriptionCalculator
   
  O código de implementação para `GetServiceDescriptionInfo` usa o <xref:System.ServiceModel.Description.ServiceDescription> para listar os pontos de extremidade de serviço. Como os pontos de extremidade de serviço podem ter endereços relativos, ele primeiro lista os endereços base para o serviço. Para obter todas essas informações, o código obtém seu contexto de operação usando <xref:System.ServiceModel.OperationContext.Current%2A>. O <xref:System.ServiceModel.ServiceHost> e seu <xref:System.ServiceModel.Description.ServiceDescription> objeto são recuperados do contexto da operação. Para listar os pontos de extremidade de base para o serviço, o código itera por meio do host de serviço <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> coleção. Para listar os pontos de extremidade de serviço para o serviço, o código itera pela coleção de pontos de extremidade da descrição do serviço.  
   
-```  
+```csharp
 public string GetServiceDescriptionInfo()  
 {  
     string info = "";  
@@ -65,7 +65,7 @@ public string GetServiceDescriptionInfo()
   
  Quando você executar o exemplo, você verá as operações de Calculadora e, em seguida, as informações de serviço retornado pelo `GetServiceDescriptionInfo` operação. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  

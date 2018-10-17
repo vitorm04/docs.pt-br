@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004345"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372035"
 ---
 # <a name="ltpropertygt-element-net-native"></a>Elemento &lt;Property&gt; (.NET Nativo)
 Aplica a política de reflexão de tempo de execução a uma propriedade.  
@@ -75,7 +75,7 @@ Aplica a política de reflexão de tempo de execução a uma propriedade.
   
  O arquivo se aplica ao valor `All` para a política `Activate` da classe `Book`, que permite acesso aos construtores de classe por meio de reflexão. A política `Browse` para a classe `Book` é herdada do seu namespace pai. Isso é definido para `Required Public`, que disponibiliza metadados no tempo de execução.  
   
- Este é o código-fonte para o exemplo. A variável `outputBlock` representa um controle [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx).  
+ Este é o código-fonte para o exemplo. O `outputBlock` variável representa um <xref:Windows.UI.Xaml.Controls.TextBlock> controle.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
