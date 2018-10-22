@@ -419,7 +419,7 @@ ms.locfileid: "48837463"
                                             <div class="cardText">
                                                 <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Usando F# no Azure</h3>
-                                                    <p>Saiba como usar vários serviços do Azure em F # como o Armazenamento do Azure, Serviços de Nuvem e o Azure Functions.</p>
+                                                    <p>Saiba como usar vários serviços do Azure em F# como o Armazenamento do Azure, Serviços de Nuvem e o Azure Functions.</p>
                                                 </a>
                                             </div>
                                         </div>
