@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33656302"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propriedades autoimplementadas (Visual Basic)
-*Propriedades autoimplementadas* permitem que você especificar uma propriedade de uma classe rapidamente sem a necessidade de escrever código para `Get` e `Set` a propriedade. Quando você escrever código para uma propriedade implementada automaticamente, o compilador do Visual Basic cria automaticamente um campo particular para armazenar a variável de propriedade, além de criar associado `Get` e `Set` procedimentos.  
+*Propriedades autoimplementadas* permitem que você especifique uma propriedade de uma classe rapidamente sem a necessidade de escrever código para as propriedades `Get` e `Set`. Quando você escreve código criando uma propriedade implementada automaticamente, o compilador do Visual Basic cria automaticamente um campo *private* para armazenar a variável de propriedade, além de criar os procedimentos `Get` e `Set` associados.  
   
  Com Propriedades autoimplementadas, uma propriedade, incluindo um valor padrão, pode ser declarada em uma única linha. O exemplo a seguir mostra três declarações de propriedade.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33656302"
   
  [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
- O código a seguir mostram como implementar propriedades somente leitura:  
+ O código a seguir mostra como implementar propriedades somente leitura:  
   
 ```vb  
 Class Customer  
@@ -45,12 +45,12 @@ Class Customer
 End Class  
 ```  
   
- Você pode atribuir a propriedade com expressões de inicialização, conforme mostrado no exemplo a, ou você pode atribuir às propriedades do construtor do tipo recipiente.  Você pode atribuir aos campos de backup propriedades somente leitura a qualquer momento.  
+ Você pode atribuir a propriedade com expressões de inicialização, conforme mostrado no exemplo, ou você pode atribuir às propriedades do construtor do tipo recipiente.  Você pode atribuir aos campos de backup propriedades somente leitura a qualquer momento.  
   
 ## <a name="backing-field"></a>Campo de backup  
- Quando você declara uma propriedade implementada automaticamente, o Visual Basic cria automaticamente um campo particular oculto chamado o *campo existente* para conter o valor da propriedade. O nome do campo de backup é o nome da propriedade implementada automaticamente precedido por um sublinhado (_). Por exemplo, se você declarar uma propriedade implementada automaticamente denominada `ID`, o campo de backup é denominado `_ID`. Se você incluir um membro da sua classe que também é denominada `_ID`, produzir um conflito de nomeação e Visual Basic relata um erro do compilador.  
+ Quando você declara uma propriedade implementada automaticamente, o Visual Basic cria automaticamente um campo particular oculto chamado o *campo de suporte* para conter o valor da propriedade. O nome do campo de suporte é o nome da propriedade implementada automaticamente precedido por um *sublinhado* (_). Por exemplo, se você declarar uma propriedade implementada automaticamente denominada `ID`, o campo de suporte é denominado `_ID`. Se você incluir um membro da sua classe que também é chamado `_ID`, isso produzirá um conflito de nomeação e o Visual Basic vai relatar um erro de compilação.
   
- O campo de reforço também tem as seguintes características:  
+ O campo de suporte também tem as seguintes características: 
   
 -   O modificador de acesso para o campo de backup é sempre `Private`, mesmo quando a própria propriedade tem um nível de acesso diferentes, como `Public`.  
   
@@ -58,10 +58,10 @@ End Class
   
 -   Atributos especificados para a propriedade não se aplicam ao campo de backup.  
   
--   O campo de backup pode ser acessado de código dentro da classe e de ferramentas de depuração, como a janela inspeção. No entanto, o campo de reforço não mostrar em uma lista de conclusão do IntelliSense word.  
+-   O campo de suporte pode ser acessado do código dentro da classe e de ferramentas de depuração, como a janela de inspeção. No entanto, o campo de suporte não aparece na lista de conclusão do IntelliSense word. 
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inicializando uma propriedade implementada automaticamente  
- Qualquer expressão que pode ser usado para inicializar um campo é válido para a inicialização de uma propriedade implementada automaticamente. Quando você inicializa uma propriedade implementada automaticamente, a expressão é avaliada e passada para o `Set` procedimento para a propriedade. Os exemplos de código a seguir mostram algumas propriedades autoimplementadas que incluem valores iniciais.  
+ Qualquer expressão que pode ser usada para inicializar um campo é válida para a inicialização de uma propriedade implementada automaticamente. Quando você inicializa uma propriedade implementada automaticamente, a expressão é avaliada e passada para o `Set` procedimento para a propriedade. Os exemplos de código a seguir mostram algumas propriedades autoimplementadas que incluem valores iniciais.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
