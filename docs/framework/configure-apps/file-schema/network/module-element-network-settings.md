@@ -8,24 +8,22 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d263fd64475d119d536e7cef69896fcfa5ae42c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397183"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183692"
 ---
-# <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="68598-102">&lt;módulo&gt; (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="68598-102">&lt;module&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="68598-103">Adiciona um novo módulo de proxy para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="68598-103">Adds a new proxy module to the application.</span></span>  
+# <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="a0729-102">&lt;módulo&gt; (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="a0729-102">&lt;module&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="a0729-103">Adiciona um novo módulo de proxy para o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a0729-103">Adds a new proxy module to the application.</span></span>  
   
- <span data-ttu-id="68598-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="68598-104">\<configuration></span></span>  
-<span data-ttu-id="68598-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="68598-105">\<system.net></span></span>  
-<span data-ttu-id="68598-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="68598-106">\<defaultProxy></span></span>  
-<span data-ttu-id="68598-107">\<módulo ></span><span class="sxs-lookup"><span data-stu-id="68598-107">\<module></span></span>  
+ <span data-ttu-id="a0729-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a0729-104">\<configuration></span></span>  
+<span data-ttu-id="a0729-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="a0729-105">\<system.net></span></span>  
+<span data-ttu-id="a0729-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="a0729-106">\<defaultProxy></span></span>  
+<span data-ttu-id="a0729-107">\<módulo ></span><span class="sxs-lookup"><span data-stu-id="a0729-107">\<module></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68598-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="68598-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a0729-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a0729-108">Syntax</span></span>  
   
 ```xml  
 <module   
@@ -33,34 +31,34 @@ ms.locfileid: "47397183"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="68598-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="68598-109">Attributes and Elements</span></span>  
- <span data-ttu-id="68598-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="68598-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a0729-109">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="a0729-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="a0729-110">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="a0729-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="68598-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="68598-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a0729-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="a0729-111">Attributes</span></span>  
   
-|<span data-ttu-id="68598-112">**Atributo**</span><span class="sxs-lookup"><span data-stu-id="68598-112">**Attribute**</span></span>|<span data-ttu-id="68598-113">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="68598-113">**Description**</span></span>|  
+|<span data-ttu-id="a0729-112">**Atributo**</span><span class="sxs-lookup"><span data-stu-id="a0729-112">**Attribute**</span></span>|<span data-ttu-id="a0729-113">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="a0729-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|<span data-ttu-id="68598-114">O nome do tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula, que implementa o proxy.</span><span class="sxs-lookup"><span data-stu-id="68598-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
+|`type`|<span data-ttu-id="a0729-114">O nome do tipo totalmente qualificado (indicado pelo <xref:System.Type.FullName%2A> propriedade) e o nome do assembly (indicado pelo <xref:System.Reflection.Assembly.FullName%2A> propriedade), separados por uma vírgula, que implementa o proxy.</span><span class="sxs-lookup"><span data-stu-id="a0729-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="68598-115">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="68598-115">Child Elements</span></span>  
- <span data-ttu-id="68598-116">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="68598-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a0729-115">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="a0729-115">Child Elements</span></span>  
+ <span data-ttu-id="a0729-116">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="a0729-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="68598-117">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="68598-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a0729-117">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="a0729-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="68598-118">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="68598-118">**Element**</span></span>|<span data-ttu-id="68598-119">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="68598-119">**Description**</span></span>|  
+|<span data-ttu-id="a0729-118">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="a0729-118">**Element**</span></span>|<span data-ttu-id="a0729-119">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="a0729-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="68598-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="68598-120">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="68598-121">Configura o servidor de proxy de protocolo HTTP (Hypertext Transfer).</span><span class="sxs-lookup"><span data-stu-id="68598-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="a0729-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="a0729-120">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="a0729-121">Configura o servidor de proxy de protocolo HTTP (Hypertext Transfer).</span><span class="sxs-lookup"><span data-stu-id="a0729-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="68598-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="68598-122">Remarks</span></span>  
- <span data-ttu-id="68598-123">O `module` elemento registra classes de proxy que implementam o <xref:System.Net.IWebProxy> interface.</span><span class="sxs-lookup"><span data-stu-id="68598-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="68598-124">Depois de registrar a classe de proxy, `module` pode ser usado para solicitar informações por meio do proxy com suporte.</span><span class="sxs-lookup"><span data-stu-id="68598-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0729-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="a0729-122">Remarks</span></span>  
+ <span data-ttu-id="a0729-123">O `module` elemento registra classes de proxy que implementam o <xref:System.Net.IWebProxy> interface.</span><span class="sxs-lookup"><span data-stu-id="a0729-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="a0729-124">Depois de registrar a classe de proxy, `module` pode ser usado para solicitar informações por meio do proxy com suporte.</span><span class="sxs-lookup"><span data-stu-id="a0729-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
   
- <span data-ttu-id="68598-125">O valor para o `type` atributo deve ser o nome da classe do módulo e o nome de seu correspondente dinâmico Link Library (DLL).</span><span class="sxs-lookup"><span data-stu-id="68598-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
+ <span data-ttu-id="a0729-125">O valor para o `type` atributo deve ser o nome da classe do módulo e o nome de seu correspondente dinâmico Link Library (DLL).</span><span class="sxs-lookup"><span data-stu-id="a0729-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="68598-126">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="68598-126">Configuration Files</span></span>  
- <span data-ttu-id="68598-127">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="68598-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="a0729-126">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="a0729-126">Configuration Files</span></span>  
+ <span data-ttu-id="a0729-127">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="a0729-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68598-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="68598-128">Example</span></span>  
- <span data-ttu-id="68598-129">O exemplo a seguir registra uma classe de proxy personalizado.</span><span class="sxs-lookup"><span data-stu-id="68598-129">The following example registers a custom proxy class.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0729-128">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a0729-128">Example</span></span>  
+ <span data-ttu-id="a0729-129">O exemplo a seguir registra uma classe de proxy personalizado.</span><span class="sxs-lookup"><span data-stu-id="a0729-129">The following example registers a custom proxy class.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,6 +72,6 @@ ms.locfileid: "47397183"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="68598-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="68598-130">See Also</span></span>  
- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="68598-131">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="68598-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="a0729-130">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a0729-130">See Also</span></span>  
+- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+- [<span data-ttu-id="a0729-131">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="a0729-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

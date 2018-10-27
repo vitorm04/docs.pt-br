@@ -4,43 +4,42 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-author: BrucePerlerMS
-ms.openlocfilehash: 3ae41e10a51ba0e4c27bcfbb1eb812e0015e5178
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d2f1997534a33f246c85501e66b6aa8a684445f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397145"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190691"
 ---
-# <a name="extending-security"></a><span data-ttu-id="67104-102">Segurança estendida</span><span class="sxs-lookup"><span data-stu-id="67104-102">Extending Security</span></span>
-<span data-ttu-id="67104-103">Para acomodar novos tipos de declaração e tokens personalizados, você pode estender a infraestrutura de segurança do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="67104-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="67104-104">Os tópicos nesta seção mostram como isso é feito.</span><span class="sxs-lookup"><span data-stu-id="67104-104">The topics in this section show you how this is done.</span></span>  
+# <a name="extending-security"></a><span data-ttu-id="0e844-102">Segurança estendida</span><span class="sxs-lookup"><span data-stu-id="0e844-102">Extending Security</span></span>
+<span data-ttu-id="0e844-103">Para acomodar novos tipos de declaração e tokens personalizados, você pode estender a infraestrutura de segurança do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0e844-103">To accommodate new claim types and custom tokens, you can extend the security infrastructure of Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="0e844-104">Os tópicos nesta seção mostram como isso é feito.</span><span class="sxs-lookup"><span data-stu-id="0e844-104">The topics in this section show you how this is done.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="67104-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="67104-105">In This Section</span></span>  
- [<span data-ttu-id="67104-106">Arquitetura de segurança</span><span class="sxs-lookup"><span data-stu-id="67104-106">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- <span data-ttu-id="67104-107">Explica a arquitetura do sistema de segurança do WCF.</span><span class="sxs-lookup"><span data-stu-id="67104-107">Walks through the architecture of the WCF security system.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0e844-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="0e844-105">In This Section</span></span>  
+ [<span data-ttu-id="0e844-106">Arquitetura de segurança</span><span class="sxs-lookup"><span data-stu-id="0e844-106">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ <span data-ttu-id="0e844-107">Explica a arquitetura do sistema de segurança do WCF.</span><span class="sxs-lookup"><span data-stu-id="0e844-107">Walks through the architecture of the WCF security system.</span></span>  
   
- [<span data-ttu-id="67104-108">Credencial personalizada e validação de credenciais</span><span class="sxs-lookup"><span data-stu-id="67104-108">Custom Credential and Credential Validation</span></span>](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
- <span data-ttu-id="67104-109">Explica como o modelo de identidade é usado ao validar credenciais personalizadas.</span><span class="sxs-lookup"><span data-stu-id="67104-109">Explains how the Identity Model is used when validating custom credentials.</span></span>  
+ [<span data-ttu-id="0e844-108">Credencial personalizada e validação de credenciais</span><span class="sxs-lookup"><span data-stu-id="0e844-108">Custom Credential and Credential Validation</span></span>](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
+ <span data-ttu-id="0e844-109">Explica como o modelo de identidade é usado ao validar credenciais personalizadas.</span><span class="sxs-lookup"><span data-stu-id="0e844-109">Explains how the Identity Model is used when validating custom credentials.</span></span>  
   
- [<span data-ttu-id="67104-110">Tokens personalizados</span><span class="sxs-lookup"><span data-stu-id="67104-110">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- <span data-ttu-id="67104-111">Normalmente, de um Security Token Service (STS) de tokens emitidos são tokens SAML.</span><span class="sxs-lookup"><span data-stu-id="67104-111">Issued tokens from a Security Token Service (STS) are typically SAML tokens.</span></span> <span data-ttu-id="67104-112">Este tópico explica como criar um tipo de token personalizado.</span><span class="sxs-lookup"><span data-stu-id="67104-112">This topic explains how to create a custom token type.</span></span>  
+ [<span data-ttu-id="0e844-110">Tokens personalizados</span><span class="sxs-lookup"><span data-stu-id="0e844-110">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)  
+ <span data-ttu-id="0e844-111">Normalmente, de um Security Token Service (STS) de tokens emitidos são tokens SAML.</span><span class="sxs-lookup"><span data-stu-id="0e844-111">Issued tokens from a Security Token Service (STS) are typically SAML tokens.</span></span> <span data-ttu-id="0e844-112">Este tópico explica como criar um tipo de token personalizado.</span><span class="sxs-lookup"><span data-stu-id="0e844-112">This topic explains how to create a custom token type.</span></span>  
   
- [<span data-ttu-id="67104-113">Autorização personalizada</span><span class="sxs-lookup"><span data-stu-id="67104-113">Custom Authorization</span></span>](../../../../docs/framework/wcf/extending/custom-authorization.md)  
- <span data-ttu-id="67104-114">Explica como implementar a autorização personalizada.</span><span class="sxs-lookup"><span data-stu-id="67104-114">Explains how to implement custom authorization.</span></span>  
+ [<span data-ttu-id="0e844-113">Autorização personalizada</span><span class="sxs-lookup"><span data-stu-id="0e844-113">Custom Authorization</span></span>](../../../../docs/framework/wcf/extending/custom-authorization.md)  
+ <span data-ttu-id="0e844-114">Explica como implementar a autorização personalizada.</span><span class="sxs-lookup"><span data-stu-id="0e844-114">Explains how to implement custom authorization.</span></span>  
   
- [<span data-ttu-id="67104-115">Substituindo a identidade de um serviço de autenticação</span><span class="sxs-lookup"><span data-stu-id="67104-115">Overriding the Identity of a Service for Authentication</span></span>](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
- <span data-ttu-id="67104-116">Descreve como substituir a identidade de um serviço de autenticação.</span><span class="sxs-lookup"><span data-stu-id="67104-116">Describes how to override the identity of a service for authentication.</span></span>  
+ [<span data-ttu-id="0e844-115">Substituindo a identidade de um serviço de autenticação</span><span class="sxs-lookup"><span data-stu-id="0e844-115">Overriding the Identity of a Service for Authentication</span></span>](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ <span data-ttu-id="0e844-116">Descreve como substituir a identidade de um serviço de autenticação.</span><span class="sxs-lookup"><span data-stu-id="0e844-116">Describes how to override the identity of a service for authentication.</span></span>  
   
- [<span data-ttu-id="67104-117">Como criar um verificador de identidade de cliente personalizado</span><span class="sxs-lookup"><span data-stu-id="67104-117">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- <span data-ttu-id="67104-118">Demonstra como validar uma identidade de ponto de extremidade personalizado.</span><span class="sxs-lookup"><span data-stu-id="67104-118">Demonstrates how to validate a custom endpoint identity.</span></span>  
+ [<span data-ttu-id="0e844-117">Como criar um verificador de identidade de cliente personalizado</span><span class="sxs-lookup"><span data-stu-id="0e844-117">How to: Create a Custom Client Identity Verifier</span></span>](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
+ <span data-ttu-id="0e844-118">Demonstra como validar uma identidade de ponto de extremidade personalizado.</span><span class="sxs-lookup"><span data-stu-id="0e844-118">Demonstrates how to validate a custom endpoint identity.</span></span>  
   
- [<span data-ttu-id="67104-119">Como usar certificados X.509 separados para assinatura e criptografia</span><span class="sxs-lookup"><span data-stu-id="67104-119">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- <span data-ttu-id="67104-120">As mensagens são normalmente assinadas e criptografadas com um único certificado.</span><span class="sxs-lookup"><span data-stu-id="67104-120">Messages are typically signed and encrypted with a single certificate.</span></span> <span data-ttu-id="67104-121">Este tópico explica como dois certificados pode ser usado quando for necessário.</span><span class="sxs-lookup"><span data-stu-id="67104-121">This topic explains how two certificates can be used, when required.</span></span>  
+ [<span data-ttu-id="0e844-119">Como usar certificados X.509 separados para assinatura e criptografia</span><span class="sxs-lookup"><span data-stu-id="0e844-119">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ <span data-ttu-id="0e844-120">As mensagens são normalmente assinadas e criptografadas com um único certificado.</span><span class="sxs-lookup"><span data-stu-id="0e844-120">Messages are typically signed and encrypted with a single certificate.</span></span> <span data-ttu-id="0e844-121">Este tópico explica como dois certificados pode ser usado quando for necessário.</span><span class="sxs-lookup"><span data-stu-id="0e844-121">This topic explains how two certificates can be used, when required.</span></span>  
   
- [<span data-ttu-id="67104-122">Como alterar o provedor criptográfico para a chave privada de um certificado X.509</span><span class="sxs-lookup"><span data-stu-id="67104-122">How to: Change the Cryptographic Provider for an X.509 Certificate's Private Key</span></span>](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- <span data-ttu-id="67104-123">Explica como alterar o provedor criptográfico usado para fornecer a chave privada de um certificado X.509 e como integrar o provedor a estrutura do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="67104-123">Explains how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) framework.</span></span>  
+ [<span data-ttu-id="0e844-122">Como alterar o provedor criptográfico para a chave privada de um certificado X.509</span><span class="sxs-lookup"><span data-stu-id="0e844-122">How to: Change the Cryptographic Provider for an X.509 Certificate's Private Key</span></span>](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ <span data-ttu-id="0e844-123">Explica como alterar o provedor criptográfico usado para fornecer a chave privada de um certificado X.509 e como integrar o provedor a estrutura do Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0e844-123">Explains how to change the cryptographic provider used to provide an X.509 certificate's private key and how to integrate the provider into the Windows Communication Foundation (WCF) framework.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="67104-124">Referência</span><span class="sxs-lookup"><span data-stu-id="67104-124">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0e844-124">Referência</span><span class="sxs-lookup"><span data-stu-id="0e844-124">Reference</span></span>  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
   
  <xref:System.ServiceModel.Security>  
@@ -53,10 +52,10 @@ ms.locfileid: "47397145"
   
  <xref:System.IdentityModel.Selectors>  
   
-## <a name="related-sections"></a><span data-ttu-id="67104-125">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="67104-125">Related Sections</span></span>  
- [<span data-ttu-id="67104-126">Segurança</span><span class="sxs-lookup"><span data-stu-id="67104-126">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
+## <a name="related-sections"></a><span data-ttu-id="0e844-125">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="0e844-125">Related Sections</span></span>  
+ [<span data-ttu-id="0e844-126">Segurança</span><span class="sxs-lookup"><span data-stu-id="0e844-126">Security</span></span>](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [<span data-ttu-id="67104-127">Programação básica do WCF</span><span class="sxs-lookup"><span data-stu-id="67104-127">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="0e844-127">Programação básica do WCF</span><span class="sxs-lookup"><span data-stu-id="0e844-127">Basic WCF Programming</span></span>](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a><span data-ttu-id="67104-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="67104-128">See Also</span></span>  
- [<span data-ttu-id="67104-129">Visão geral de segurança</span><span class="sxs-lookup"><span data-stu-id="67104-129">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a><span data-ttu-id="0e844-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0e844-128">See Also</span></span>  
+ [<span data-ttu-id="0e844-129">Visão geral de segurança</span><span class="sxs-lookup"><span data-stu-id="0e844-129">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
