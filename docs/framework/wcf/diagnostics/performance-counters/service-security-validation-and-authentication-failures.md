@@ -2,30 +2,29 @@
 title: 'Serviço: falhas de autenticação e validação de segurança'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-author: BrucePerlerMS
-ms.openlocfilehash: 4c74cb1962bbc0f03ac33d8fcc7b10052bec8273
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50039985"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="1c895-102">Serviço: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="1c895-102">Service: Security Validation and Authentication Failures</span></span>
-<span data-ttu-id="1c895-103">Nome do contador: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="1c895-103">Counter name: Security Validation and Authentication Failures</span></span>  
+# <a name="service-security-validation-and-authentication-failures"></a><span data-ttu-id="4e423-102">Serviço: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="4e423-102">Service: Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="4e423-103">Nome do contador: falhas de autenticação e validação de segurança</span><span class="sxs-lookup"><span data-stu-id="4e423-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## <a name="description"></a><span data-ttu-id="1c895-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="1c895-104">Description</span></span>  
- <span data-ttu-id="1c895-105">Esse contador é incrementado sempre que uma mensagem foi rejeitada devido a um problema de segurança não coberto pelo contador "Chamadas de segurança não autorizado".</span><span class="sxs-lookup"><span data-stu-id="1c895-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="1c895-106">Esses problemas incluem:</span><span class="sxs-lookup"><span data-stu-id="1c895-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="4e423-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="4e423-104">Description</span></span>  
+ <span data-ttu-id="4e423-105">Esse contador é incrementado sempre que uma mensagem foi rejeitada devido a um problema de segurança não coberto pelo contador "Chamadas de segurança não autorizado".</span><span class="sxs-lookup"><span data-stu-id="4e423-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="4e423-106">Esses problemas incluem:</span><span class="sxs-lookup"><span data-stu-id="4e423-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="1c895-107">Não é possível ler o token de cliente da mensagem.</span><span class="sxs-lookup"><span data-stu-id="1c895-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="4e423-107">Não é possível ler o token de cliente da mensagem.</span><span class="sxs-lookup"><span data-stu-id="4e423-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="1c895-108">Token de cliente falha na autenticação (por exemplo, senha incorreta).</span><span class="sxs-lookup"><span data-stu-id="1c895-108">Client token has failed authentication (for example,, bad password).</span></span>  
+-   <span data-ttu-id="4e423-108">Token de cliente falha na autenticação (por exemplo, senha incorreta).</span><span class="sxs-lookup"><span data-stu-id="4e423-108">Client token has failed authentication (for example,, bad password).</span></span>  
   
--   <span data-ttu-id="1c895-109">Falha na verificação de assinatura (por exemplo, a mensagem foi violada).</span><span class="sxs-lookup"><span data-stu-id="1c895-109">Signature verification has failed (for example,, the message has been tampered).</span></span>  
+-   <span data-ttu-id="4e423-109">Falha na verificação de assinatura (por exemplo, a mensagem foi violada).</span><span class="sxs-lookup"><span data-stu-id="4e423-109">Signature verification has failed (for example,, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="1c895-110">A mensagem é uma duplicata da anterior, o que pode ocorrer durante um ataque de repetição.</span><span class="sxs-lookup"><span data-stu-id="1c895-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="4e423-110">A mensagem é uma duplicata da anterior, o que pode ocorrer durante um ataque de repetição.</span><span class="sxs-lookup"><span data-stu-id="4e423-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="1c895-111">Ocorreu uma falha de descriptografia.</span><span class="sxs-lookup"><span data-stu-id="1c895-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="4e423-111">Ocorreu uma falha de descriptografia.</span><span class="sxs-lookup"><span data-stu-id="4e423-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="1c895-112">Alguns necessários elementos (por exemplo, carimbo de hora ausente ou bloquear os dados criptografados) estão ausentes da mensagem.</span><span class="sxs-lookup"><span data-stu-id="1c895-112">Some required elements (for example,, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="4e423-112">Alguns necessários elementos (por exemplo, carimbo de hora ausente ou bloquear os dados criptografados) estão ausentes da mensagem.</span><span class="sxs-lookup"><span data-stu-id="4e423-112">Some required elements (for example,, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="1c895-113">Ocorreram erros durante o handshake TLSNEGO/SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="1c895-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>
+-   <span data-ttu-id="4e423-113">Ocorreram erros durante o handshake TLSNEGO/SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="4e423-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>
