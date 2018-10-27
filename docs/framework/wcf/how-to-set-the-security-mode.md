@@ -9,13 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-author: BrucePerlerMS
-ms.openlocfilehash: 0efa9ecbe384009cc8fc4735ec9fc3db8ed3ce59
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9f4f83502016fb749c75776dd6c2dc2bd01476e6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841450"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183341"
 ---
 # <a name="how-to-set-the-security-mode"></a>Como definir o modo de segurança
 Segurança do Windows Communication Foundation (WCF) tem três modos de segurança comuns que são encontrados no associações mais predefinidas: "transporte com credencial de mensagem.", a mensagem e transporte Dois modos adicionais são específicos para duas ligações: o modo "somente credenciais transporte" encontrado na <xref:System.ServiceModel.BasicHttpBinding>e "Dois" modo, encontrado no <xref:System.ServiceModel.NetMsmqBinding>. No entanto, este tópico concentra-se em três modos comuns de segurança: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970066"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034293"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento de instantâneo no SQL Server
 O isolamento de instantâneo melhora a simultaneidade para aplicativos de OLTP.  
@@ -24,7 +24,7 @@ O isolamento de instantâneo melhora a simultaneidade para aplicativos de OLTP.
   
  O isolamento de instantâneo deve ser habilitado configurando-se a opção do banco de dados ALLOW_SNAPSHOT_ISOLATION ON antes de ser usada nas transações. Isso ativa o mecanismo para armazenar versões de linha no banco de dados temporário (**tempdb**). Você deve habilitar o isolamento de instantâneo em cada banco de dados que o usa com a instrução Transact-SQL ALTER DATABASE. Quanto a isso, o isolamento de instantâneo difere dos níveis de isolamento tradicionais de READ COMMITTED, REPEATABLE READ, SERIALIZABLE e READ UNCOMMITTED, que não exigem nenhuma configuração. As instruções a seguir ativam o isolamento de instantâneo e substituem o comportamento padrão de READ COMMITTED por SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   SERIALIZABLE é o nível de isolamento mais restritivo, porque bloqueia intervalos inteiros de chaves e mantém os bloqueios até que a transação seja concluída. Ele abrange REPEATABLE READ e adiciona a restrição que outras transações não podem inserir novas linhas em intervalos que foram lidos pela transação até que a transação seja concluída.  
   
- Para obter mais informações, consulte “Níveis de isolamento” nos Manuais Online do SQL Server.  
+ Para obter mais informações, consulte o [guia de controle de versão de linha e bloqueio de transação](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Extensões de nível de isolamento de instantâneo  
  O SQL Server introduziu extensões nos níveis de isolamento SQL-92 com a introdução do nível de isolamento do SNAPSHOT e uma implementação adicional de READ COMMITTED. O nível de isolamento READ_COMMITTED_SNAPSHOT pode substituir de modo transparente READ COMMITTED para todas as transações.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Usando dicas de bloqueio com isolamento de instantâneo  
  No exemplo anterior, a primeira transação seleciona dados, e uma segunda transação atualiza os dados antes que a primeira transação possa ser concluída, causando um conflito de atualização quando a primeira transação tentar atualizar a mesma linha. Você pode reduzir a possibilidade de conflitos de atualização em transações de instantâneo de execução longa fornecendo dicas de bloqueio no início de transação. A seguinte instrução SELECT usa a dica UPDLOCK para bloquear as linhas selecionadas:  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Consulte também  
  [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md) (SQL Server e ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [Gerenciados ADO.NET e Centro de desenvolvedores do conjunto de dados](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [Guia de controle de versão de linha e bloqueio de transação](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

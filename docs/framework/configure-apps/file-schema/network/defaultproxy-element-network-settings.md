@@ -8,14 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0d32e5d03b7c78f616f7d68c0fe0edc9a69dd42e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027424"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037185"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; (configurações de rede)
 Configura o servidor de proxy de protocolo HTTP (Hypertext Transfer).  
@@ -51,7 +49,7 @@ Configura o servidor de proxy de protocolo HTTP (Hypertext Transfer).
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam o proxy.|  
-|[módulo](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Adiciona um novo módulo de proxy para o aplicativo.|  
+|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Adiciona um novo módulo de proxy para o aplicativo.|  
 |[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Define um servidor proxy.|  
   
 ### <a name="parent-elements"></a>Elementos pai  

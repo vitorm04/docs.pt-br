@@ -3,11 +3,11 @@ title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 91d126eb75c9cac2823b756010351dd692b2e24e
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372701"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453210"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 Windows Communication Foundation (WCF) expõe dados de inspeção de um serviço em tempo de execução através de um provedor de instrumentação de gerenciamento do Windows (WMI) do WCF.  

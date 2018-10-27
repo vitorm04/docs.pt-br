@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779246"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453171"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidade com código não gerenciado  
  O código executado fora do CLR é chamado de código não gerenciado. Portanto, mecanismos de segurança, como o CAS, não podem ser aplicados a código não gerenciado. Componentes COM, interfaces ActiveX e funções da API do Win32 são exemplos de código não gerenciado. Aplicam-se considerações de segurança especiais ao executar o código não gerenciado, para que você não coloque em risco a segurança geral do aplicativo. Para obter mais informações, consulte [interoperação com código não gerenciado](../../../../docs/framework/interop/index.md).  
   
- O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade de COM avançadas](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade de COM avançadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
  [PAVE Security in Native and .NET Framework Code](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784) (PAVE Segurança no código nativo e do .NET Framework)  
- [Segurança de acesso do código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Segurança baseada em Função](https://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Segurança de acesso do código](../../../../docs/framework/misc/code-access-security.md)  
+ [Segurança baseada em Função](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -2,19 +2,19 @@
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: bf906e09ae71d26f8e95877f1c545c0724d57b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26bd0c95f930bf7859ae6409d797afbb596844fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485730"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180660"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class ServiceCredentials : Behavior  
 {  
   string ClientCertificate;  
@@ -28,7 +28,7 @@ class ServiceCredentials : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe ServiceCredentials não define nenhum método.  
+ A classe ServiceCredentials não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe ServiceCredentials tem as seguintes propriedades:  
@@ -38,16 +38,16 @@ class ServiceCredentials : Behavior
   
  Tipo de acesso: somente leitura  
   
- Os certificado de provisionamento e autenticação de configurações do cliente para esse serviço.  
+ Os certificado de autenticação e provisionamento configurações do cliente para esse serviço.  
   
-### <a name="issuedtokenauthentication"></a>IssuedTokenAuthentication  
+### <a name="issuedtokenauthentication"></a>issuedTokenAuthentication  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: somente leitura  
   
  Atual emitido configurações de autenticação de token para este serviço.  
   
-### <a name="peer"></a>ponto a ponto  
+### <a name="peer"></a>Par  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: somente leitura  
@@ -61,7 +61,7 @@ class ServiceCredentials : Behavior
   
  Especifica as configurações atuais de conversa segura.  
   
-### <a name="servicecertificate"></a>ServiceCertificate  
+### <a name="servicecertificate"></a>serviceCertificate  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: somente leitura  
@@ -73,7 +73,7 @@ class ServiceCredentials : Behavior
   
  Tipo de acesso: somente leitura  
   
- As configurações de nome de usuário e senha para este serviço.  
+ As configurações de nome de usuário e senha para esse serviço.  
   
 ### <a name="windowsauthentication"></a>WindowsAuthentication  
  Tipo de dados: cadeia de caracteres  
@@ -86,7 +86,7 @@ class ServiceCredentials : Behavior
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Description.ServiceCredentials>

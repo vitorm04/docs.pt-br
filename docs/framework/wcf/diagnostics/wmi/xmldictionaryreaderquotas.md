@@ -2,19 +2,19 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: 78914d52a9e57fe2e48adcfc0d7b6f911a0d8b3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc519509b00383be333ac605688950d2709117c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487822"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044223"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class XmlDictionaryReaderQuotas  
 {  
   sint32 MaxArrayLength;  
@@ -26,7 +26,7 @@ class XmlDictionaryReaderQuotas
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe XmlDictionaryReaderQuotas não define nenhum método.  
+ A classe XmlDictionaryReaderQuotas não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe XmlDictionaryReaderQuotas tem as seguintes propriedades:  
@@ -70,7 +70,7 @@ class XmlDictionaryReaderQuotas
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.XmlDictionaryReaderQuotas>  

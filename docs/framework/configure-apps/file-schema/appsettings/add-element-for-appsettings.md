@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
-ms.translationtype: MT
+ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086310"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036379"
 ---
 # <a name="add-element-for-appsettings"></a>\<Adicionar > elemento para \<appSettings >
 
@@ -70,4 +70,4 @@ O exemplo a seguir usa o `<add>` elemento para definir duas configurações de c
 
 ## <a name="see-also"></a>Consulte também
 
-[Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

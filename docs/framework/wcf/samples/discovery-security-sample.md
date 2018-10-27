@@ -2,13 +2,12 @@
 title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-author: BrucePerlerMS
-ms.openlocfilehash: be915a0b619c800c79ef1acbec9b71812c749cf7
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863722"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50041200"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 A especificação de descoberta não requer que os pontos de extremidade que participam do processo de descoberta para ser seguro. Aprimorando as mensagens de descoberta com segurança atenua os vários tipos de ataques (negação de serviço, a alteração da mensagem, reproduzir, falsificação). Este exemplo implementa canais personalizados de computação e verifique se as assinaturas de mensagem usando o formato de assinatura compact (descrito na seção 8.2 da especificação WS-Discovery). O exemplo dá suporte a ambos os [especificação de descoberta de 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e o [versão 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  

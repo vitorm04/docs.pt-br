@@ -8,14 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: d1cb7e17cbe84f07222928030039eb47eb3c01fa
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028138"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170023"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; (configurações de rede)
 Controla o mecanismo de cache para solicitações de rede.  

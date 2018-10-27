@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: 2dbcdbe7fff758bab0e932817feddab398ed9ed1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b59fe7277a266a7e006f980ac31e6987dbb5b977
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526498"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453405"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Representa uma associação que um serviço do Windows Communication Foundation (WCF) pode usar para configurar e expor pontos de extremidade que podem se comunicar por HTTPS. Quando usado com um contrato duplex, soquetes da Web será usado, caso contrário, o HTTPS será usado.  
@@ -181,5 +181,5 @@ Próximo elemento
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Associações](../../../../../docs/framework/wcf/bindings.md)  
  [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar clientes e serviços do Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<associação >](../../../../../docs/framework/misc/binding.md)

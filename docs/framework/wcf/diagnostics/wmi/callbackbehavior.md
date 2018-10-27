@@ -2,19 +2,19 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 2755ac4f365536366b41e743110ce494063a5ecc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38a38a71db2927d187ccdd93e5e364b0d4955373
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486928"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452606"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class CallbackBehavior : Behavior  
 {  
   boolean AutomaticSessionShutdown;  
@@ -28,7 +28,7 @@ class CallbackBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe CallbackBehavior não define nenhum método.  
+ A classe CallbackBehavior não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe CallbackBehavior tem as seguintes propriedades:  
@@ -44,21 +44,21 @@ class CallbackBehavior : Behavior
  Tipo de dados: cadeia de caracteres  
 Tipo de acesso: somente leitura  
   
- Especifica se o serviço oferece suporte a um thread, vários threads ou chamadas reentrantes.  
+ Especifica se o serviço dá suporte a um thread, vários threads ou chamadas reentrantes.  
   
 ### <a name="ignoreextensiondataobject"></a>IgnoreExtensionDataObject  
  Tipo de dados: boolean  
   
  Tipo de acesso: somente leitura  
   
- Um valor que especifica se deve enviar dados de serialização desconhecidos na conexão.  
+ Um valor que especifica se é necessário enviar dados de serialização desconhecidos em trânsito.  
   
-### <a name="includeexceptiondetailinfaults"></a>includeExceptionDetailInFaults  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Tipo de dados: boolean  
   
  Tipo de acesso: somente leitura  
   
- Quando habilitada, detalhes sobre exceções no retorno de chamada são anexados às falhas retornadas ao serviço.  
+ Quando habilitado, detalhes sobre exceções no retorno de chamada são anexados às falhas retornadas para o serviço.  
   
 ### <a name="maxitemsinobjectgraph"></a>MaxItemsInObjectGraph  
  Tipo de dados: boolean  
@@ -79,13 +79,13 @@ Tipo de acesso: somente leitura
   
  Tipo de acesso: somente leitura  
   
- Especifica se o sistema ou o aplicativo reforça o processamento de cabeçalho MustUnderstand SOAP.  
+ Especifica se o sistema ou o aplicativo impõe o processamento do cabeçalho SOAP MustUnderstand.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.CallbackBehaviorAttribute>

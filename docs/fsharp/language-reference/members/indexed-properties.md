@@ -1,58 +1,48 @@
 ---
 title: Propriedades indexadas (F#)
-description: 'Saiba mais sobre as propriedades indexadas do F #, que são propriedades que fornecem acesso de matriz aos dados ordenados.'
-ms.date: 05/16/2016
-ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+description: Saiba mais sobre as propriedades indexadas no F#, que permitem acesso de matriz aos dados ordenados.
+ms.date: 10/17/2018
+ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321360"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452242"
 ---
 # <a name="indexed-properties"></a>Propriedades indexadas
 
-*Propriedades indexadas* são ordenadas de propriedades que fornecem acesso de matriz aos dados. Eles vêm em três formas:
-
-* `Item`
-* `Ordinal`
-* `Cardinal`
-
-Um membro em F # deve ser nomeado um desses três nomes para fornecer acesso de matriz. `IndexerName` é usado para representar qualquer uma das três opções abaixo:
+Ao definir uma classe que abstrai sobre dados ordenados, às vezes, pode ser útil fornecer acesso indexado para dados sem expor a implementação subjacente. Isso é feito com o `Index` membro.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.IndexerName
-    with get(index-variable) =
-        get-function-body
-    and set index-variablesvalue-variables =
-        set-function-body
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
+    and set index-values values-to-set =
+        set-member-body
 
-// Indexed property that has get only.
-member self-identifier.IndexerName(index-variable) =
-    get-function-body
-
-// Alternative syntax for indexed property with get only
-member self-identifier.IndexerName
-    with get(index-variables) =
-        get-function-body
+// Indexed property with get only
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
 
 // Indexed property that has set only.
-member self-identifier.IndexerName
-    with set index-variablesvalue-variables = 
-        set-function-body
+member self-identifier.Index
+    with set index-values values-to-set =
+        set-member-body
 ```
 
 ## <a name="remarks"></a>Comentários
 
 As formas de sintaxe anterior mostram como definir as propriedades indexadas com as duas uma `get` e uma `set` método, ter um `get` somente, no método ou tem um `set` somente no método. Você também pode combinar dois a sintaxe mostrada para somente get e a sintaxe mostrada para apenas o conjunto e produzir uma propriedade que tem get e set. Este último formulário permite que você coloque os modificadores de acessibilidade diferente e atributos em get e métodos definidos.
 
-Quando o *IndexerName* é `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Um *propriedade default indexada* é uma propriedade que você pode acessar usando a sintaxe de matriz na instância do objeto. Por exemplo, se `obj` é um objeto do tipo que define essa propriedade, a sintaxe `obj.[index]` é usado para acessar a propriedade.
+Usando o nome `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Um *propriedade default indexada* é uma propriedade que você pode acessar usando a sintaxe de matriz na instância do objeto. Por exemplo, se `o` é um objeto do tipo que define essa propriedade, a sintaxe `o.[index]` é usado para acessar a propriedade.
 
-A sintaxe para acessar uma propriedade indexada de não-padrão é fornecer o nome da propriedade e o índice entre parênteses. Por exemplo, se a propriedade é `Ordinal`, você escreve `obj.Ordinal(index)` para acessá-lo.
+A sintaxe para acessar uma propriedade indexada de não-padrão é fornecer o nome da propriedade e o índice entre parênteses, assim como um membro regular. Por exemplo, se a propriedade em `o` é chamado `Ordinal`, você escreve `o.Ordinal(index)` para acessá-lo.
 
-Independentemente de qual formulário usar, você sempre deve usar o formulário na forma curried para o `set` método em uma propriedade indexada. Para obter informações sobre funções via currying, consulte [funções](../functions/index.md).
+Independentemente de qual formulário usar, você sempre deve usar o formulário na forma curried para o método set em uma propriedade indexada. Para obter informações sobre funções via currying, consulte [funções](../functions/index.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -62,7 +52,7 @@ O exemplo de código a seguir ilustra a definição e uso do padrão e proprieda
 
 ## <a name="output"></a>Saída
 
-```
+```console
 ONE two three four five six seven eight nine ten
 ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth

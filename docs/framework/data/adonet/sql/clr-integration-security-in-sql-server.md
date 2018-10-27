@@ -2,12 +2,12 @@
 title: Segurança da integração CLR no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
-ms.openlocfilehash: 953982045574cc62b1da46c5d763693b9d9d89ff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfd99155e42f426eeb01c89c433955cc2e3f0178
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516187"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454350"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>Segurança da integração CLR no SQL Server
 Microsoft SQL Server fornece a integração do componente do common language runtime (CLR) do .NET Framework. Integração CLR permite que você grave procedimentos armazenados, disparadores, tipos definidos pelo usuário, funções definidas pelo usuário, agregações definidas pelo usuário e streaming funções com valor de tabela, usando qualquer linguagem do .NET Framework, como o Microsoft Visual Basic .NET ou o Microsoft Visual c#.  
@@ -19,11 +19,11 @@ Microsoft SQL Server fornece a integração do componente do common language run
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Segurança de acesso do código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contém tópicos que descrevem o CAS no .NET Framework.|  
-|[Segurança da integração CLR](https://go.microsoft.com/fwlink/?LinkId=59998)|Discute o modelo de segurança para código gerenciado em execução dentro do SQL Server.|  
+|[Segurança de acesso do código](../../../../../docs/framework/misc/code-access-security.md)|Contém tópicos que descrevem o CAS no .NET Framework.|  
+|[Segurança da integração CLR](/sql/relational-databases/clr-integration/security/clr-integration-security)|Discute o modelo de segurança para código gerenciado em execução dentro do SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
  [Cenários de segurança do aplicativo no SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [Integração do Common Language Runtime ao SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+ [ADO.NET Overview](../../../../../docs/framework/data/adonet/ado-net-overview.md) (Visão geral do ADO.NET)

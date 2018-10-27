@@ -3,12 +3,12 @@ title: Como depurar serviços e aplicativos baseados em declarações usando o r
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584267"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453379"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Como depurar serviços e aplicativos baseados em declarações usando o rastreamento do WIF
 ## <a name="applies-to"></a>Aplica-se a  
@@ -104,7 +104,7 @@ ms.locfileid: "48584267"
   
 |**ID de erro**|**Mensagem de erro**|**Ação necessária para corrigir o erro**|  
 |-|-|-|  
-|ID4175|O emissor do token de segurança não foi reconhecido pelo IssuerNameRegistry.  Para aceitar tokens de segurança desse emissor, configure o IssuerNameRegistry para retornar um nome válido para esse emissor.|Esse erro pode ser causado pela ação de copiar uma impressão digital do snap-in do MMC e colá-la no arquivo *Web.config*. Especificamente, você pode obter um caractere extra não imprimível na cadeia de texto ao copiar da janela de propriedades do certificado. Esse caractere extra faz com que a correspondência da impressão digital falhe. O procedimento para copiar corretamente a impressão digital pode ser encontrado aqui: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|O emissor do token de segurança não foi reconhecido pelo IssuerNameRegistry.  Para aceitar tokens de segurança desse emissor, configure o IssuerNameRegistry para retornar um nome válido para esse emissor.|Esse erro pode ser causado pela ação de copiar uma impressão digital do snap-in do MMC e colá-la no arquivo *Web.config*. Especificamente, você pode obter um caractere extra não imprimível na cadeia de texto ao copiar da janela de propriedades do certificado. Esse caractere extra faz com que a correspondência da impressão digital falhe. O procedimento para copiar corretamente a impressão digital pode ser encontrado em [logon único baseado em declarações-para a Web e o Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Itens relacionados  
   

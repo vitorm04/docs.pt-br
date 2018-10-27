@@ -2,13 +2,12 @@
 title: Segurança de mensagem através do enfileiramento de mensagem
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-author: BrucePerlerMS
-ms.openlocfilehash: 4578f93759379fabe258f6a70e38a9c5d46433dc
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ddb06e4c85d3fa6db3df14ce15813adb8ae2fc99
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850831"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181534"
 ---
 # <a name="message-security-over-message-queuing"></a>Segurança de mensagem através do enfileiramento de mensagem
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X.509v3 para o cliente e requer autenticação de servidor usando o certificado X.509v3 do servidor em relação ao MSMQ. Mensagem de segurança, às vezes, é mais desejável para garantir que as mensagens no armazenamento de MSMQ permanecem criptografadas e o aplicativo pode executar sua própria autenticação da mensagem.

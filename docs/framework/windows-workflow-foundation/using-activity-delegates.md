@@ -3,11 +3,11 @@ title: Usando representantes de atividades
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374229"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184878"
 ---
 # <a name="using-activity-delegates"></a>Usando representantes de atividades
 Os representantes de atividade permitem autores de atividade para expor retornos de chamada com assinaturas específicas, para que os usuários de atividade podem fornecer manipuladores atividades base. Dois tipos de representantes de atividade estão disponíveis: <xref:System.Activities.ActivityAction%601> é usado para definir os representantes de atividade que não têm um valor de retorno, e <xref:System.Activities.ActivityFunc%601> é usado para definir os representantes de atividade que têm um valor de retorno.  

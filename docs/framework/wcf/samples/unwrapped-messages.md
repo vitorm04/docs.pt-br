@@ -2,12 +2,12 @@
 title: Mensagens sem quebra de texto
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 2c818cc6c37a59f75599afb3eab3290d8525e4bc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 835312101ba9e0daaa7986a78c9a0040535881b9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797583"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044613"
 ---
 # <a name="unwrapped-messages"></a>Mensagens sem quebra de texto
 Este exemplo demonstra as mensagens sem quebra de texto. Por padrão, o corpo da mensagem é formatado, de modo que os parâmetros para uma operação de serviço são encapsulados. O exemplo a seguir mostra uma `Add` mensagem de solicitação para o `ICalculator` serviço no modo encapsulado.  
@@ -52,7 +52,7 @@ Este exemplo demonstra as mensagens sem quebra de texto. Por padrão, o corpo da
   
  Neste exemplo, uma mensagem sem quebra de texto é criada aplicando a <xref:System.ServiceModel.MessageContractAttribute> para o tipo de parâmetro de operação de serviço e o tipo de valor de retorno, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  

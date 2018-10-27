@@ -2,12 +2,12 @@
 title: Tipos conhecidos
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 76e0dadd372df4bc2755db0c3ff7cce5cc31ba20
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192483"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454402"
 ---
 # <a name="known-types"></a>Tipos conhecidos
 Este exemplo demonstra como especificar informações sobre tipos derivados em um contrato de dados. Contratos de dados permitem que você passe dados estruturados para e de serviços. Na programação orientada a objeto, um tipo que herda de outro tipo pode ser usado no lugar do tipo original. Na programação orientada a serviços, esquemas, em vez de tipos são comunicados e, portanto, a relação entre tipos não é preservada. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo permite que as informações sobre tipos derivados para ser incluído no contrato de dados. Se esse mecanismo não é usado, um tipo derivado não pode ser enviado ou recebido em que um tipo base é esperado.  
@@ -17,7 +17,7 @@ Este exemplo demonstra como especificar informações sobre tipos derivados em u
   
  O contrato de serviço para o serviço usa números complexos, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  O <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> é aplicado para o `ComplexNumber` classe para indicar quais campos da classe podem ser passados entre o cliente e o serviço. Derivado `ComplexNumberWithMagnitude` classe pode ser usada no lugar de `ComplexNumber`. O <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo a `ComplexNumber` tipo indicará isso.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 [KnownType(typeof(ComplexNumberWithMagnitude))]  
 public class ComplexNumber  
@@ -55,7 +55,7 @@ public class ComplexNumber
   
  O `ComplexNumberWithMagnitude` deriva do tipo `ComplexNumber` , mas adiciona um membro de dados adicionais, `Magnitude`.  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class ComplexNumberWithMagnitude : ComplexNumber  
 {  
@@ -73,7 +73,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  Para demonstrar o recurso de tipos conhecidos, o serviço é implementado de tal forma que ele retorna um `ComplexNumberWithMagnitude` somente para adição e subtração. (Mesmo que o contrato especifica `ComplexNumber`, isso é permitido devido a `KnownTypeAttribute` atributo). Multiplicação e divisão ainda retornará a base `ComplexNumber` tipo.  
   
-```  
+```csharp
 public class DataContractCalculatorService : IDataContractCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -116,14 +116,14 @@ public class DataContractCalculatorService : IDataContractCalculator
   
  No cliente, o contrato de serviço e o contrato de dados são definidos no generatedClient.cs de arquivo de origem, que é gerado pelo [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço. Porque o <xref:System.Runtime.Serialization.KnownTypeAttribute> atributo é especificado no contrato de dados do serviço, o cliente é capaz de receber ambas as `ComplexNumber` e `ComplexNumberWithMagnitude` classes quando usar o serviço. O cliente detecta se ele tem um `ComplexNumberWithMagnitude` e gerar a saída apropriada:  
   
-```  
+```csharp
 // Create a client  
 DataContractCalculatorClient client =   
     new DataContractCalculatorClient();  
   
 // Call the Add service operation.  
-ComplexNumber value1 = new ComplexNumber(); value1.real = 1; value1.imaginary = 2;  
-ComplexNumber value2 = new ComplexNumber(); value2.real = 3; value2.imaginary = 4;  
+ComplexNumber value1 = new ComplexNumber() { real = 1, imaginary = 2 };  
+ComplexNumber value2 = new ComplexNumber() { real = 3, imaginary = 4 };  
 ComplexNumber result = client.Add(value1, value2);  
 Console.WriteLine("Add({0} + {1}i, {2} + {3}i) = {4} + {5}i",  
     value1.real, value1.imaginary, value2.real, value2.imaginary,  
@@ -141,7 +141,7 @@ else
   
  Quando você executar o exemplo, as solicitações e respostas da operação são exibidas na janela do console de cliente. Observe que uma magnitude é impresso para adição e subtração, mas não para multiplicação e divisão por causa da maneira o serviço foi implementado. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
 Subtract(1 + 2i, 3 + 4i) = -2 + -2i  

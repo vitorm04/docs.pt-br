@@ -3,12 +3,12 @@ title: Como transformar declarações de entrada
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582116"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181618"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Como transformar declarações de entrada
 ## <a name="applies-to"></a>Aplica-se a  
@@ -173,4 +173,4 @@ ms.locfileid: "48582116"
   
     ||||||  
     |-|-|-|-|-|  
-    |LOCAL AUTHORITY|LOCAL AUTHORITY|http://schemas.microsoft.com/ws/2008/06/identity/claims/role|Admin|http://www.w3.org/2001/XMLSchema#string|
+    |LOCAL AUTHORITY|LOCAL AUTHORITY|`http://schemas.microsoft.com/ws/2008/06/identity/claims/role`|Admin|<https://www.w3.org/2001/XMLSchema#string>|

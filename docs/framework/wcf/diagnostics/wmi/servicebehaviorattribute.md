@@ -2,19 +2,19 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: 514af4c6d9eaaf8929ca831e4e786c895d14c67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487193"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182951"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class ServiceBehaviorAttribute : Behavior  
 {  
   boolean AutomaticSessionShutdown;  
@@ -36,7 +36,7 @@ class ServiceBehaviorAttribute : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe ServiceBehaviorAttribute não define nenhum método.  
+ A classe ServiceBehaviorAttribute não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe ServiceBehaviorAttribute tem as seguintes propriedades:  
@@ -46,13 +46,13 @@ class ServiceBehaviorAttribute : Behavior
   
  Tipo de acesso: somente leitura  
   
- Indica se fechar automaticamente uma sessão quando um cliente fechar uma sessão de saída.  
+ Indica se deve fechar automaticamente uma sessão quando um cliente fechar uma sessão de saída.  
   
 ### <a name="concurrencymode"></a>ConcurrencyMode  
  Tipo de dados: cadeia de caracteres  
 Tipo de acesso: somente leitura  
   
- Indica se um serviço oferece suporte a um thread, vários threads ou chamadas reentrantes.  
+ Indica se um serviço dá suporte a um thread, vários threads ou chamadas reentrantes.  
   
 ### <a name="configurationname"></a>ConfigurationName  
  Tipo de dados: cadeia de caracteres  
@@ -66,14 +66,14 @@ Tipo de acesso: somente leitura
   
  Tipo de acesso: somente leitura  
   
- Especifica se deve enviar dados de serialização desconhecidos na conexão.  
+ Especifica se deve enviar dados de serialização desconhecidos em trânsito.  
   
-### <a name="includeexceptiondetailinfaults"></a>includeExceptionDetailInFaults  
+### <a name="includeexceptiondetailinfaults"></a>IncludeExceptionDetailInFaults  
  Tipo de dados: boolean  
   
  Tipo de acesso: somente leitura  
   
- Especifica se deve incluir informações de exceção gerenciada no detalhe de falhas SOAP retornadas aos clientes para fins de depuração.  
+ Especifica se deve incluir informações de exceção gerenciada nos detalhes das falhas SOAP retornadas aos clientes para fins de depuração.  
   
 ### <a name="instancecontextmode"></a>InstanceContextMode  
  Tipo de dados: cadeia de caracteres  
@@ -94,7 +94,7 @@ Tipo de acesso: somente leitura
   
  Tipo de acesso: somente leitura  
   
- O atributo de nome do serviço em WSDL.  
+ O atributo de nome do serviço no WSDL.  
   
 ### <a name="namespace"></a>Namespace  
  Tipo de dados: cadeia de caracteres  
@@ -108,14 +108,14 @@ Tipo de acesso: somente leitura
   
  Tipo de acesso: somente leitura  
   
- Especifica se o objeto de serviço será reciclado quando a transação atual seja concluída.  
+ Especifica se o objeto de serviço é reciclado quando a transação atual seja concluída.  
   
 ### <a name="transactionautocompleteonsessionclose"></a>TransactionAutoCompleteOnSessionClose  
  Tipo de dados: boolean  
   
  Tipo de acesso: somente leitura  
   
- Especifica se as transações pendentes a são concluídos quando fecha a sessão atual.  
+ Especifica se as transações pendentes são foi concluída quando a sessão atual é fechada.  
   
 ### <a name="transactionisolationlevel"></a>TransactionIsolationLevel  
  Tipo de dados: cadeia de caracteres  
@@ -129,7 +129,7 @@ Tipo de acesso: somente leitura
   
  Tipo de acesso: somente leitura  
   
- O período no qual uma transação deve ser concluída.  
+ O período dentro do qual uma transação deve ser concluída.  
   
 ### <a name="usesynchronizationcontext"></a>UseSynchronizationContext  
  Tipo de dados: boolean  
@@ -143,13 +143,13 @@ Tipo de acesso: somente leitura
   
  Tipo de acesso: somente leitura  
   
- Especifica se o sistema ou o aplicativo reforça o processamento de cabeçalho MustUnderstand SOAP.  
+ Especifica se o sistema ou o aplicativo impõe o processamento do cabeçalho SOAP MustUnderstand.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ServiceBehaviorAttribute>

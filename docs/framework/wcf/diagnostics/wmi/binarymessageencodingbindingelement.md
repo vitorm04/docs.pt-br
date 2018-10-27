@@ -2,19 +2,19 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: 03a33f01fe6b6f75e81749c96c31770009350b05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 326fe6a7ca8dc5dba0dd64b1c5fc97cec49279c7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486557"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180868"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp  
 class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement  
 {  
   sint32 MaxReadPoolSize;  
@@ -25,7 +25,7 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe BinaryMessageEncodingBindingElement não define nenhum método.  
+ A classe BinaryMessageEncodingBindingElement não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe BinaryMessageEncodingBindingElement tem as seguintes propriedades.  
@@ -51,7 +51,7 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
   
  Um inteiro que define quantas mensagens pode ser enviado simultaneamente sem alocar novos escritores.  
   
-## <a name="readerquotas"></a>ReaderQuotas  
+## <a name="readerquotas"></a>readerQuotas  
  Tipo de dados: XmlDictionaryReaderQuotas  
   
  Tipo de acesso: somente leitura  
@@ -62,7 +62,7 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

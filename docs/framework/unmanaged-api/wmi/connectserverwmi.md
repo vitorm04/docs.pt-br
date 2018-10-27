@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049276"
 ---
 # <a name="connectserverwmi-function"></a>Função ConnectServerWmi
 Cria uma conexão por meio do DCOM para um namespace do WMI em um computador especificado.  
@@ -70,7 +70,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*nome de domínio* | Autenticação NT LAN Manager é usada, e este parâmetro contém um nome de domínio do NTLM. |
 
 `pCtx`   
-[in] Normalmente, esse parâmetro é é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto exigido por um ou mais provedores de classe dinâmica. 
+[in] Normalmente, esse parâmetro é `null`. Caso contrário, ele é um ponteiro para um [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) objeto exigido por um ou mais provedores de classe dinâmica. 
 
 `ppNamespace`  
 [out] Quando a função retornar, recebe um ponteiro para um [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto associado ao namespace especificado. Ele é definido para apontar para `null` quando ocorre um erro.
@@ -94,7 +94,7 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) método.
+Essa função encapsula uma chamada para o [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) método.
 
  Para acesso local para o namespace padrão, `strNetworkResource` pode ser um caminho de objeto simples: "root\default" ou "\\.\root\default". Para acessar o namespace padrão em um computador remoto usando a rede COM ou compatível com a Microsoft, que incluem o nome do computador: "\\myserver\root\default". O nome do computador também pode ser um nome DNS ou endereço IP. O `ConnectServerWmi` função também pode se conectar com computadores que executam o IPv6 usando um endereço IPv6.
 

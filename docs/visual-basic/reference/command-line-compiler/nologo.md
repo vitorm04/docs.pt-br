@@ -7,14 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 011c9499eaa728588e6181e33a96dd75b4a7b84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648535"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037276"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 Suprime a exibição da faixa de direitos autorais e mensagens informativas durante a compilação.  
@@ -29,10 +27,10 @@ Suprime a exibição da faixa de direitos autorais e mensagens informativas dura
  Se você especificar `-nologo`, o compilador não exibirá uma faixa de direitos autorais. Por padrão, `-nologo` não está em vigor.  
   
 > [!NOTE]
->  O `-nologo` opção não está disponível no ambiente de desenvolvimento do Visual Studio; está disponível somente quando estiver compilando na linha de comando.  
+>  O `-nologo` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `T2.vb` e não exibe uma faixa de direitos autorais.  
+ O seguinte código compila `T2.vb` e não exibirá uma faixa de direitos autorais.  
   
 ```console
 vbc -nologo t2.vb  

@@ -2,17 +2,17 @@
 title: Behavior class
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 6fbe6bae02d580dc0b44c2a1922187dd2b166e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf7d7f4ae4340cd8aee9a200015255820ac140f4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485688"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50034323"
 ---
 # <a name="behavior-class"></a>Behavior class
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class Behavior  
 {  
   string Type;  
@@ -20,7 +20,7 @@ class Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe de comportamento não define nenhum método.  
+ A classe de comportamento não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe de comportamento tem a seguinte propriedade:  
@@ -36,7 +36,7 @@ class Behavior
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>

@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: e5c563c4f46924a95936bc5a51862230f2cbdb99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28dce033064517a427750ef99b1cd4f8bccaaf09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527632"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182964"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Como adicionar ou remover imagens com o componente ImageList dos Windows Forms
-Windows Forms <xref:System.Windows.Forms.ImageList> componente normalmente é populado com imagens antes de ser associado um controle. No entanto, você pode adicionar e remover imagens depois de associar a lista de imagens a um controle.  
+Os formulários do Windows <xref:System.Windows.Forms.ImageList> componente normalmente é preenchido com imagens antes que ele seja associado a um controle. No entanto, você pode adicionar e remover imagens depois de associar a lista de imagens a um controle.  
   
 > [!NOTE]
->  Quando você remover imagens, verifique o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade de qualquer controle associado ainda é válida.  
+>  Quando você remove imagens, verifique o <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propriedade de qualquer controle associado ainda é válida.  
   
 ### <a name="to-add-images-programmatically"></a>Para adicionar imagens de forma programática  
   
 -   Use o <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> método da lista de imagens <xref:System.Windows.Forms.ImageList.Images%2A> propriedade.  
   
-     No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários que têm níveis de acesso ao sistema mínimos executem com mais segurança o aplicativo. O exemplo de código a seguir exige que você tenha um formulário com um <xref:System.Windows.Forms.ImageList> controle já foi adicionado.  
+     No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários que têm níveis de acesso ao sistema mínimos executem com mais segurança o aplicativo. O exemplo de código a seguir exige que você tenha um formulário com um <xref:System.Windows.Forms.ImageList> controle já adicionado.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -76,9 +76,9 @@ Windows Forms <xref:System.Windows.Forms.ImageList> componente normalmente é po
   
 ### <a name="to-add-images-with-a-key-value"></a>Para adicionar imagens com um valor de chave.  
   
--   Use um do <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> métodos da lista de imagens <xref:System.Windows.Forms.ImageList.Images%2A> propriedade que recebe um valor de chave.  
+-   Use um dos <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> métodos da lista de imagens <xref:System.Windows.Forms.ImageList.Images%2A> propriedade que aceita um valor de chave.  
   
-     No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários que têm níveis de acesso ao sistema mínimos executem com mais segurança o aplicativo. O exemplo de código a seguir exige que você tenha um formulário com um <xref:System.Windows.Forms.ImageList> controle já foi adicionado.  
+     No exemplo de código a seguir, o caminho definido para o local da imagem é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários que têm níveis de acesso ao sistema mínimos executem com mais segurança o aplicativo. O exemplo de código a seguir exige que você tenha um formulário com um <xref:System.Windows.Forms.ImageList> controle já adicionado.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -104,8 +104,6 @@ public void addImage()
    imageList1.Images.Add("myPhoto", myImage);  
 }  
 ```  
-  
-1.  
   
 ### <a name="to-remove-all-images-programmatically"></a>Para remover todas as imagens de forma programática  
   
@@ -144,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
- [Visão geral do componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [Visão geral do componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
+- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

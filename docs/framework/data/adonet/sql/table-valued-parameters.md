@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374638"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088579"
 ---
 # <a name="table-valued-parameters"></a>Parâmetros de valores de tabela
 Os parâmetros com valor de tabela fornecem uma maneira fácil de empacotar várias linhas de dados de um aplicativo cliente para o SQL Server sem exigir várias viagens de ida e volta ou lógica especial do lado do servidor para processar os dados. Você pode usar parâmetros de valores de tabela para encapsular linhas de dados em um aplicativo cliente e enviar os dados para o servidor em um único comando parametrizado. As linhas de dados de entrada são armazenadas em uma variável da tabela que pode, em seguida, ser operada usando o [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  

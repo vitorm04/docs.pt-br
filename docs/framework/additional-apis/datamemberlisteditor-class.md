@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742043"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50046068"
 ---
 # <a name="datamemberlisteditor-class"></a>Classe DataMemberListEditor
 
-Fornece uma interface de usuário da lista suspensa para editar as propriedades de objetos de associação de dados (objetos que têm o null não `DataSource` propriedade), listando todas as propriedades do `DataSource` objeto para selecionar a fonte do valor de.  
+Fornece uma interface do usuário da lista suspensa para editar as propriedades dos objetos de associação de dados (objetos que têm nulos `DataSource` propriedade), listando todas as propriedades do `DataSource` objeto para selecionar a origem do valor de.  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -32,7 +32,7 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> O `DataMemberListEditor` classe é interno e não se destina a ser usado diretamente no seu código.
+> O `DataMemberListEditor` classe é interno e não se destina a ser usado diretamente em seu código.
 > 
 > Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
   
@@ -40,10 +40,10 @@ internal class DataMemberListEditor : UITypeEditor
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System (em System.Design.dll)  
+**Assembly:** System (em dll)  
   
 **Versões do .NET framework:** disponível desde o 2.0.  
   
 ## <a name="see-also"></a>Consulte também
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

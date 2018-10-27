@@ -3,11 +3,11 @@ title: Visualizando logs de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374827"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047495"
 ---
 # <a name="viewing-message-logs"></a>Visualizando logs de mensagem
 Este tópico descreve como você pode exibir os logs de mensagens.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316461"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181612"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Como hospedar várias versões de um fluxo de trabalho lado a lado
 O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma versão a uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida. Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica. Esta etapa no tutorial demonstra como usar o `WorkflowIdentity` para hospedar ao mesmo tempo várias versões de um fluxo de trabalho.
@@ -555,14 +555,15 @@ O `WorkflowIdentity` fornece uma maneira para que os desenvolvedores de aplicati
 
 2.  Inicie um novo fluxo de trabalho clicando **novo jogo**. A versão do fluxo de trabalho é exibida abaixo da janela de status e reflete a versão atualizada do `WorkflowIdentity` associado. Faça uma anotação do `InstanceId` para que você possa exibir o arquivo de rastreamento para o fluxo de trabalho quando ele for concluído, e insira os palpites até que o jogo seja concluído. Observe como o palpite do usuário é exibido nas informações exibidas na janela de status com base nas atualizações das atividades `WriteLine`.
 
- **Insira um número entre 1 e 10**
-**5 é muito alta.** 
- **Insira um número entre 1 e 10**
-**3 é muito alta.** 
- **Insira um número entre 1 e 10**
-**1 é muito baixa.** 
- **Insira um número entre 1 e 10**
-**Parabéns, você já entendeu o número em 4 sequências.**
+ **Insira um número entre 1 e 10**  
+**5 é muito alta.**  
+**Insira um número entre 1 e 10**  
+**3 é muito alta.**  
+**Insira um número entre 1 e 10**  
+**1 é muito baixo.**  
+**Insira um número entre 1 e 10**  
+**Parabéns, você já entendeu o número em 4 sequências.**  
+
     > [!NOTE]
     >  O texto atualizado das atividades `WriteLine` é exibido, mas não a saída final da atividade `WriteLine` final que foi adicionada neste tópico. Isso ocorre porque a janela de status é atualizada pelo manipulador `PersistableIdle`. Como o fluxo de trabalho é concluído e não fica ocioso após a atividade final, o manipulador `PersistableIdle` não é chamado. No entanto, uma mensagem semelhante é exibida na janela de status pelo manipulador `Completed`. Se desejar, um código pode ser adicionado ao manipulador `Completed` para extrair o texto de `StringWriter` e exibi-lo na janela de status.
 

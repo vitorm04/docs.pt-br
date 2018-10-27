@@ -3,12 +3,12 @@ title: Usando F# no Azure
 description: 'Guia para o uso de serviços do Azure com F #'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033539"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033944"
 ---
 # <a name="using-f-on-azure"></a>Usando F# no Azure
 
@@ -23,7 +23,7 @@ As seções a seguir contêm recursos sobre como usar vários serviços com F#.
 
 O Azure oferece suporte a várias configurações de VM (máquina virtual), veja [Máquinas virtuais Linux e Azure](https://azure.microsoft.com/services/virtual-machines/).
 
-Para instalar F# em uma máquina virtual para execução, compilação e/ou geração de script, veja [Como usar F# no Linux](http://fsharp.org/use/linux) e [Como usar F# no Windows](http://fsharp.org/use/windows).
+Para instalar F# em uma máquina virtual para execução, compilação e/ou geração de script, veja [Como usar F# no Linux](https://fsharp.org/use/linux) e [Como usar F# no Windows](https://fsharp.org/use/windows).
 
 
 ## <a name="using-azure-functions-with-f"></a>Usando o Azure Functions com F # #
@@ -78,7 +78,7 @@ O Azure Cosmos DB pode ser usado com o F # de duas maneiras:
 
 Os Hubs de Eventos do Azure podem ser usados com F# de duas maneiras:
 
-1. Durante a criação de Azure Functions em F # que são disparadas por eventos. Consulte [Gatilhos do Azure Function para Hub de Eventos](/azure/azure-functions/functions-bindings-event-hubs), ou
+1. Durante a criação de Azure Functions em F# que são disparadas por eventos. Consulte [Gatilhos do Azure Function para Hub de Eventos](/azure/azure-functions/functions-bindings-event-hubs), ou
 2. Usando o [SDK do .NET para Azure](/azure/event-hubs/event-hubs-csharp-ephcs-getstarted). Observe que esses exemplos estão em C#.
 
 ## <a name="using-azure-notification-hubs-with-f"></a>Usando os Hubs de notificação do Azure com F # #

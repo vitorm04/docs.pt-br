@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21295268ba5c230062fadddc9c61217f3574551b
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041824"
 ---
 # <a name="iclrsyncmanager-interface"></a>Interface ICLRSyncManager
 Define métodos que permitem que o host para obter informações sobre tarefas solicitadas e para detectar deadlocks em sua implementação de sincronização.  
@@ -47,5 +47,5 @@ Define métodos que permitem que o host para obter informações sobre tarefas s
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading.Thread>  
  [Interface IHostSyncManager](ihostsyncmanager-interface.md)  
- [Threading gerenciado e não gerenciado](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
  [Hospedagem de Interfaces](hosting-interfaces.md)

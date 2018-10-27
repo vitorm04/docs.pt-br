@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698543"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181690"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Estratégia de segurança do WPF - engenharia de segurança
 A Computação Confiável é uma iniciativa da Microsoft para garantir a produção de código seguro. Um elemento chave da iniciativa Computação Confiável é o [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] é uma prática de engenharia que é usada em conjunto com processos de engenharia padrão para facilitar o fornecimento de código seguro. O [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] consiste em dez fases que combinam melhores práticas com formalização, mensurabilidade e estruturas adicionais, incluindo:  
@@ -67,7 +67,7 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
 ### <a name="source-analysis-and-editing-tools"></a>Ferramentas de edição e análise de código-fonte  
  Além dos elementos manuais de revisão de código de segurança do [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], a equipe do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] usa várias ferramentas para análise do código-fonte e das edições associadas para diminuir as vulnerabilidades de segurança. Uma ampla variedade de ferramentas de código são usadas e incluem o seguinte:  
   
--   **FXCop**: encontra problemas comuns de segurança no código gerenciado, que vão desde as regras de herança ao uso da segurança do acesso de código e a como interoperar com segurança com código não gerenciado. Consulte [FXCop](http://www.gotdotnet.com/team/fxcop/).  
+-   **FXCop**: encontra problemas comuns de segurança no código gerenciado, que vão desde as regras de herança ao uso da segurança do acesso de código e a como interoperar com segurança com código não gerenciado. Consulte [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
 -   **Prefix/Prefast**: localiza vulnerabilidades de segurança e problemas comuns de segurança em código não gerenciado, como saturações de buffer, problemas com cadeias de formatação e verificação de erros.  
   

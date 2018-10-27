@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374697"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633892"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 

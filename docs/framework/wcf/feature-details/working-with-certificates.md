@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201108"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453457"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.  
@@ -42,7 +42,7 @@ Para programar a segurança do WCF (Windows Communication Foundation), os certif
   
 -   **Pessoal**. Esse repositório é usado para os certificados associados com um usuário de um computador. Geralmente, esse repositório é usado para os certificados emitidos por um dos certificados da autoridade de certificação localizados no repositório Autoridades de Certificação Confiáveis. Como alternativa, um certificado localizado aqui pode ser emitido por conta própria e confiável por um aplicativo.  
   
- Para obter mais informações sobre repositórios de certificados, confira [Repositórios de certificados](https://go.microsoft.com/fwlink/?LinkId=88912).  
+ Para obter mais informações sobre repositórios de certificados, confira [Repositórios de certificados](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Selecionando um repositório  
  Selecionar onde armazenar um certificado depende de como e quando o serviço ou o cliente é executado. As seguintes regras gerais se aplicam:  

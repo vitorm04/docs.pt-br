@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121834"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182210"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Adicionar&gt; elemento para bypasslist (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.  
@@ -83,5 +81,5 @@ Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

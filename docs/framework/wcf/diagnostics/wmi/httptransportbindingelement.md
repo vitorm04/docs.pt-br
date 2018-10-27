@@ -2,19 +2,19 @@
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 1975fd2e04a5c9cdb68bc838802abafbd781b7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34ad4b8534d082d7f5248d42d70ca5bd0647a5dc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487014"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454311"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class HttpTransportBindingElement : TransportBindingElement  
 {  
   boolean AllowCookies;  
@@ -33,7 +33,7 @@ class HttpTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe HttpTransportBindingElement não define nenhum método.  
+ A classe HttpTransportBindingElement não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe HttpTransportBindingElement tem as seguintes propriedades:  
@@ -43,14 +43,14 @@ class HttpTransportBindingElement : TransportBindingElement
   
  Tipo de acesso: somente leitura  
   
- Um valor que indica se o cliente aceita cookies e os propaga em solicitações futuras.  
+ Um valor que indica se o cliente aceita cookies e propaga-os em solicitações futuras.  
   
-### <a name="authenticationscheme"></a>authenticationScheme  
+### <a name="authenticationscheme"></a>AuthenticationScheme  
  Tipo de dados: cadeia de caracteres  
   
  Tipo de acesso: somente leitura  
   
- O esquema de autenticação usado para autenticar solicitações de cliente processadas por um ouvinte HTTP.  
+ O esquema de autenticação usado para autenticar solicitações de cliente sendo processadas por um ouvinte HTTP.  
   
 ### <a name="bypassproxyonlocal"></a>BypassProxyOnLocal  
  Tipo de dados: boolean  
@@ -64,14 +64,14 @@ class HttpTransportBindingElement : TransportBindingElement
   
  Tipo de acesso: somente leitura  
   
- Um valor que indica se o nome do host é usado para acessar o serviço ao fazer correspondência no URI.  
+ Um valor que indica se o nome do host é usado para alcançar o serviço ao fazer a correspondência no URI.  
   
 ### <a name="keepaliveenabled"></a>keepAliveEnabled  
  Tipo de dados: boolean  
   
  Tipo de acesso: somente leitura  
   
- Quando habilitada, as conexões HTTP são mantidas ativas independentemente do nível de atividade.  
+ Quando habilitada, as conexões HTTP são mantidas ativos, independentemente do nível de atividade.  
   
 ### <a name="maxbuffersize"></a>maxBufferSize  
  Tipo de dados: sint32  
@@ -92,7 +92,7 @@ class HttpTransportBindingElement : TransportBindingElement
   
  Tipo de acesso: somente leitura  
   
- O esquema de autenticação usado para autenticar solicitações de cliente processadas por um proxy HTTP.  
+ O esquema de autenticação usado para autenticar solicitações de cliente sendo processadas por um proxy HTTP.  
   
 ### <a name="realm"></a>território  
  Tipo de dados: cadeia de caracteres  
@@ -106,7 +106,7 @@ class HttpTransportBindingElement : TransportBindingElement
   
  Tipo de acesso: somente leitura  
   
- Um valor que especifica se as mensagens são armazenados em buffer ou transmitidas ou uma solicitação ou resposta.  
+ Um valor que especifica se as mensagens são armazenadas em buffer ou transmitidas ou uma solicitação ou resposta.  
   
 ### <a name="unsafeconnectionntlmauthentication"></a>unsafeConnectionNtlmAuthentication  
  Tipo de dados: boolean  
@@ -126,7 +126,7 @@ class HttpTransportBindingElement : TransportBindingElement
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

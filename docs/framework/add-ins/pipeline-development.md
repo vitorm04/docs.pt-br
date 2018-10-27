@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504879"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135422"
 ---
 # <a name="pipeline-development"></a>Desenvolvimento de pipelines
 O pipeline de suplemento é o caminho dos segmentos de pipeline que o aplicativo host e seu suplemento devem usar para se comunicar entre si.  
@@ -89,5 +89,5 @@ Caminho de ativação do suplemento para o host
      Descreve como passar coleções de dados sobre o pipeline usando um cenário de repositório de livro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cenários de pipelines de suplemento](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
- [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md)
+- [Cenários de pipelines de suplemento](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+- [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 4a0d2b99368dc985c11951089adbabf8e1cdc8b9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372142"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415194"
 ---
 # <a name="documents"></a>Documentos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Fornece um conjunto versátil de componentes que permitem aos desenvolvedores criar aplicativos com recursos de documento avançados e uma experiência de leitura aprimorada. Além dos recursos aprimorados e a qualidade, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece serviços de gerenciamento simplificado para empacotamento de documento, segurança e armazenamento.  
@@ -28,4 +28,4 @@ ms.locfileid: "49372142"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe (conformidade isXPS)](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+ [isXPS.exe (conformidade isXPS)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

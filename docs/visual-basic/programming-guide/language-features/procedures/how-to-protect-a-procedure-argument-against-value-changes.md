@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: d2e131b770d8498a634d946a5900f9b373ca7e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035638"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Como proteger um argumento de procedimento contra alterações de valor (Visual Basic)
 Se um procedimento declara um parâmetro como [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), o Visual Basic fornece ao código do procedimento uma referência direta para o elemento de programação subjacente do argumento no código de chamada. Isso permite que o procedimento altere o valor subjacente do argumento no código de chamada. Em alguns casos, o código de chamada talvez queira estar protegido contra essa alteração.  
@@ -35,12 +35,12 @@ Se um procedimento declara um parâmetro como [ByRef](../../../../visual-basic/l
   
  [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
- A primeira `MsgBox` chamada exibe "após increase (n): 11, 21, 31, 41". Porque a matriz `n` é um tipo de referência, `replace` pode alterar seus membros, mesmo que o mecanismo de passagem é `ByVal`.  
+ A primeira `MsgBox` chamada exibe "após increase (n): 11, 21, 31, 41". Porque a matriz `n` é um tipo de referência `increase` podem alterar seus membros, mesmo que o mecanismo de passagem é `ByVal`.  
   
- A segunda `MsgBox` chamada exibe "Após replace (n): 11, 21, 31, 41". Porque `n` é passado `ByVal`, `replace` não é possível modificar a variável `n` no código de chamada atribuindo uma nova matriz. Quando `replace` cria a nova instância de matriz `k` e o atribui à variável local `a`, ele perde a referência à `n` passado pelo código de chamada. Quando ele é alterado os membros de `a`, somente a matriz local `k` é afetado. Portanto, `replace` não incrementa os valores de matriz `n` no código de chamada.  
+ A segunda `MsgBox` chamada exibe "Após replace (n): 11, 21, 31, 41". Porque `n` é passado `ByVal`, `replace` não é possível modificar a variável `n` no código de chamada, atribuindo uma nova matriz a ela. Quando `replace` cria a nova instância de matriz `k` e o atribui à variável local `a`, ele perde a referência à `n` passado pelo código de chamada. Quando ele é alterado os membros da `a`, apenas a matriz local `k` é afetado. Portanto, `replace` não é incrementado para os valores de matriz `n` no código de chamada.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O padrão no Visual Basic é passar argumentos por valor. No entanto, é uma boa prática de programação incluir as palavras-chave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) em cada parâmetro declarado. Isso facilita a leitura do seu código.  
+ É o padrão no Visual Basic passar argumentos por valor. No entanto, é uma boa prática de programação incluir as palavras-chave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) em cada parâmetro declarado. Isso torna o código mais fácil de ler.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos](./index.md)  

@@ -2,19 +2,19 @@
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: dc7a29e5911a9d0a774e36f5be8c1f3cacad69b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79d8b1f4a5127ca36eb57954cff6ee6a97e55e41
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486611"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182652"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class TransportBindingElement : BindingElement  
 {  
   boolean ManualAddressing;  
@@ -25,7 +25,7 @@ class TransportBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe de TransportBindingElement não define nenhum método.  
+ A classe de TransportBindingElement não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe de TransportBindingElement tem as seguintes propriedades:  
@@ -35,21 +35,21 @@ class TransportBindingElement : BindingElement
   
  Tipo de acesso: somente leitura  
   
- Um valor booleano que especifica se o usuário deseja assumir o controle do endereçamento da mensagem.  
+ Um valor booliano que especifica se o usuário deseja assumir o controle do endereçamento de mensagem.  
   
 ### <a name="maxbufferpoolsize"></a>maxBufferPoolSize  
  Tipo de dados: sint64  
   
  Tipo de acesso: somente leitura  
   
- O tamanho do pool de buffer máximo para a associação.  
+ O tamanho máximo do buffer do pool para a associação.  
   
-### <a name="maxreceivedmessagesize"></a>maxReceivedMessageSize  
+### <a name="maxreceivedmessagesize"></a>MaxReceivedMessageSize  
  Tipo de dados: sint64  
   
  Tipo de acesso: somente leitura  
   
- O tamanho máximo para uma mensagem que é processada por essa associação.  
+ O tamanho máximo para uma mensagem que é processado por essa associação.  
   
 ### <a name="scheme"></a>Esquema  
  Tipo de dados: cadeia de caracteres  
@@ -62,7 +62,7 @@ class TransportBindingElement : BindingElement
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.TransportBindingElement>

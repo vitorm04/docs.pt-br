@@ -3,11 +3,11 @@ title: Classe de operação
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
 ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371583"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180933"
 ---
 # <a name="operation-class"></a>Classe de operação
 Operação  

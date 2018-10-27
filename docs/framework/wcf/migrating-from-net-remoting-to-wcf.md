@@ -2,12 +2,12 @@
 title: Migrando de .NET Remoting para o WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857382"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039589"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa o .NET Remoting para usar o Windows Communication Foundation (WCF). Ele compara conceitos semelhantes entre esses produtos e, em seguida, descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -292,7 +292,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Por que migrar da comunicação remota do WCF?  
   
--   **Comunicação remota do .NET é um produto herdado.** Conforme descrito em [comunicação remota do .NET](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx), ele é considerado um produto herdado e não é recomendado para novo desenvolvimento. WCF ou API Web do ASP.NET são recomendados para aplicativos novos e existentes.  
+-   **Comunicação remota do .NET é um produto herdado.** Conforme descrito em [comunicação remota do .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), ele é considerado um produto herdado e não é recomendado para novo desenvolvimento. WCF ou API Web do ASP.NET são recomendados para aplicativos novos e existentes.  
   
 -   **O WCF usa padrões de plataforma cruzada.** O WCF foi desenvolvido com a interoperabilidade entre plataformas em mente e dá suporte a muitos padrões do setor (SOAP, WS-Security, WS-Trust, etc.). Um serviço WCF pode interoperar com clientes em execução em sistemas operacionais diferentes do Windows. Comunicação remota foi projetada principalmente para ambientes em que aplicativos cliente e servidor executados usando o .NET framework em um sistema de operacional Windows.  
   

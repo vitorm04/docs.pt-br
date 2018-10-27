@@ -2,12 +2,12 @@
 title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850251"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181651"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava ETW no Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos de analíticos destinam-se tornar mais fácil de obter visibilidade em seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram com os serviços WCF.  
@@ -53,7 +53,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 4.  Execute o cliente de teste do WCF (WcfTestClient.exe).  
   
-     O cliente de teste do WCF (WcfTestClient.exe) está localizado no \<Visual Studio 2012 instalar Dir > \Common7\IDE\ WcfTestClient.exe (dir de instalação do Visual Studio 2012 padrão é C:\Program Files\Microsoft Visual Studio 10.0).  
+     O cliente de teste do WCF (WcfTestClient.exe) está localizado em `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Dir de instalação do Visual Studio 2012 padrão é `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
 5.  Dentro do cliente de teste do WCF, adicione o serviço, selecionando **arquivo**e então **Adicionar serviço**.  
   

@@ -2,12 +2,12 @@
 title: Atividade personalizado de SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845249"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181284"
 ---
 # <a name="sendmail-custom-activity"></a>Atividade personalizado de SendMail
 Este exemplo demonstra como criar uma atividade personalizada que derive de <xref:System.Activities.AsyncCodeActivity> para enviar email SMTP usando para uso em um aplicativo de fluxo de trabalho. A atividade personalizada usa os recursos do <xref:System.Net.Mail.SmtpClient> para enviar email de forma assíncrona e enviar email com autenticação. Também fornece alguns recursos de usuário final como o modo de teste, a substituição de token, os modelos de arquivo, e o caminho da operação de teste.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Enviar email no modo de teste  
- Este trecho de código mostra como definir as duas propriedades testando: definindo `TestMailTo` a todas as mensagens serão enviadas para john.doe@contoso.con (sem consideração os valores de para, Cc, Cco). Definindo TestDropPath todos os email de saída também serão gravados no caminho fornecido. Essas propriedades podem ser definidas independentes (não são relacionadas).  
+ Este trecho de código mostra como definir as duas propriedades testando: definindo `TestMailTo` a todas as mensagens serão enviadas para `john.doe@contoso.con` (sem consideração os valores de para, Cc, Cco). Definindo TestDropPath todos os email de saída também serão gravados no caminho fornecido. Essas propriedades podem ser definidas independentes (não são relacionadas).  
   
 ```  
 new SendMail  

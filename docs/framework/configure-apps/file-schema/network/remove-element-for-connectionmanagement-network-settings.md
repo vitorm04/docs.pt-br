@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024578"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181547"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;remover&gt; elemento para connectionManagement (configurações de rede)
 Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.  
@@ -62,7 +60,7 @@ Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir remove qualquer entradas de lista de gerenciamento de conexão para o servidor www.adventure-works.com e, em seguida, configura um aplicativo para usar quatro conexões com o servidor www.contoso.com e duas conexões com todos os outros servidores.  
+ O exemplo a seguir remove quaisquer entradas de lista de gerenciamento de conexão para o servidor `www.adventure-works.com` e, em seguida, configura um aplicativo para usar quatro conexões com o servidor `www.contoso.com` e duas conexões com todos os outros servidores.  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

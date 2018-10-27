@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7b138aec8a64683ca4b42cbbc8bd3584c06cc90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1fa27a713890f2988a2fcd7983630080dc21d05
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397043"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170335"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>Classe MissingRuntimeArtifactException (.NET Nativo)
 **.NET para Aplicativos da Windows Store para Windows 10, somente [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -70,13 +70,13 @@ ms.locfileid: "33397043"
 ## <a name="usage-details"></a>Detalhes de uso  
  A exceção `MissingRuntimeArtifactException` é gerada quando ocorre uma tentativa de instanciar um tipo ou invocar um membro de tipo e, embora o tipo ou metadados do membro estejam presentes, sua implementação foi removida.  
   
- Se metadados e o código de implementação para executar um método dinamicamente estão disponíveis para um aplicativo em tempo de execução é definido pelo arquivo de diretivas de tempo de execução (configuração XML), *. rd.xml. Para impedir que o seu aplicativo gere esta exceção, você deve modificar o \*.rd.xml para garantir que os metadados necessários para um tipo ou membro de tipo estejam presentes no tempo de execução. Para obter informações sobre o formato do arquivo \*.rd.xml, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Se metadados e o código de implementação para executar um método dinamicamente estão disponíveis para um aplicativo em tempo de execução é definido pelo arquivo de diretivas (configuração XML) de tempo de execução, \*. RD. XML. Para impedir que o seu aplicativo gere esta exceção, você deve modificar o \*.rd.xml para garantir que os metadados necessários para um tipo ou membro de tipo estejam presentes no tempo de execução. Para obter informações sobre o formato do arquivo \*.rd.xml, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
->  Como essa exceção indica que o código de implementação exigido pelo seu aplicativo não está disponível no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la usando um arquivo de diretivas de tempo de execução. Normalmente, eliminamos essa exceção especificando as políticas `Activate` ou `Dynamic` adequadas para um elemento de programa no arquivo de diretivas de tempo de execução (arquivo *.rd.xml). Para obter a entrada que você pode adicionar ao seu arquivo de diretivas de tempo de execução e que elimina a exceção, você pode usar uma das duas soluções de problemas:  
+>  Como essa exceção indica que o código de implementação exigido pelo seu aplicativo não está disponível no tempo de execução, você não deve tratar essa exceção em um bloco `try`/`catch`. Em vez disso, você deve diagnosticar a causa da exceção e eliminá-la usando um arquivo de diretivas de tempo de execução. Normalmente, eliminamos essa exceção especificando apropriado `Activate` ou `Dynamic` política para um elemento de programa no arquivo de diretivas de tempo de execução (\*. arquivo RD. xml). Para obter a entrada que você pode adicionar ao seu arquivo de diretivas de tempo de execução e que elimina a exceção, você pode usar uma das duas soluções de problemas:  
 >   
->  -   A [solução de problemas MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
-> -   A [solução de problemas MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
+> - A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para tipos.  
+> - A [solução de problemas MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para métodos.  
   
  A classe `MissingRuntimeArtifactException` não contém membros exclusivos. Todos os seus membros são herdados de sua classe base, <xref:System.MemberAccessException>.  
   

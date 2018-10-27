@@ -2,19 +2,19 @@
 title: Ponto de extremidade
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: 5d597e9e029cec3552c94b47a64dfbf36d933e67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487640"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452921"
 ---
 # <a name="endpoint"></a>Ponto de extremidade
 Ponto de extremidade  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class Endpoint  
 {  
   string Address;  
@@ -68,7 +68,7 @@ class Endpoint
   
  Tipo de acesso: somente leitura  
   
- A identificação appdomain do appdomain que hospeda o ponto de extremidade.  
+ A id appdomain do appdomain que hospeda o ponto de extremidade.  
   
 ### <a name="behaviors"></a>Comportamentos  
  Tipo de dados: matriz de comportamento  
@@ -89,7 +89,7 @@ class Endpoint
   
  Tipo de acesso: somente leitura  
   
- Uma cadeia de caracteres que especifica qual contrato esse ponto de extremidade está expondo.  
+ Uma cadeia de caracteres que especifica qual contrato este ponto de extremidade está expondo.  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
  Tipo de dados: cadeia de caracteres  
@@ -110,7 +110,7 @@ class Endpoint
   
  Tipo de acesso: somente leitura  
   
- O nome exclusivo desse ponto de extremidade.  
+ O nome exclusivo do ponto de extremidade.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de dados: sint32  
@@ -130,4 +130,4 @@ class Endpoint
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|
+|Namespace|Definido no root\ServiceModel|

@@ -3,11 +3,11 @@ title: Atividade
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372363"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453340"
 ---
 # <a name="activity"></a>Atividade
 Este tópico descreve os rastreamentos de atividade no modelo de rastreamento do Windows Communication Foundation (WCF). As atividades são unidades que ajudam o usuário a restringir o escopo de uma falha de processamento. Erros que ocorrem na mesma atividade estão diretamente relacionados. Por exemplo, uma operação falhará porque a falha na descriptografia mensagem. Os rastreamentos para a operação e a falha na descriptografia mensagem aparecem na mesma atividade, mostrando uma correlação direta entre o erro de descriptografia e o erro da solicitação.  

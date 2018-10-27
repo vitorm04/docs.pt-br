@@ -2,14 +2,12 @@
 title: 'Como: criar e usar Assemblies usando a linha de comando (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643283"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036925"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Como: criar e usar Assemblies usando a linha de comando (Visual Basic)
 Um assembly ou uma DLL (biblioteca de vínculo dinâmico), está vinculada ao seu programa em tempo de execução. Para demonstrar a compilação e uso de uma DLL, considere o seguinte cenário:  
@@ -83,7 +81,7 @@ End Module
   
  Esse arquivo contém o algoritmo que usa os métodos DLL `Add` e `Multiply`. Ele começa com a análise dos argumentos `num1` e `num2`, inseridos na linha de comando. Em seguida, ele calcula a soma, usando o método `Add` na classe `AddClass` e o produto, usando o método `Multiply` na classe `MultiplyClass`.  
   
- Observe que o `Imports` instrução no início do arquivo permite que você use os nomes de classe não qualificados para referenciar os métodos DLL em tempo de compilação, da seguinte maneira:  
+ Observe que o `Imports` instrução no início do arquivo permite que você use os nomes de classe não qualificados para fazer referência a métodos de DLL em tempo de compilação, da seguinte maneira:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -107,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- O [-alvo (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opção de compilador informa ao compilador para gerar uma DLL em vez de um arquivo EXE. O [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opção de compilador seguida por um nome de arquivo é usada para especificar o nome do arquivo DLL. Caso contrário, o compilador usará o primeiro arquivo (`Add.vb`) como o nome da DLL.  
+ O [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opção de compilador informa ao compilador para gerar uma DLL em vez de um arquivo EXE. O [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opção de compilador seguida por um nome de arquivo é usada para especificar o nome do arquivo DLL. Caso contrário, o compilador usará o primeiro arquivo (`Add.vb`) como o nome da DLL.  
   
  Para compilar o arquivo executável `TestCode.exe`, use a seguinte linha de comando:  
   
@@ -115,9 +113,9 @@ vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- O **-out** opção de compilador informa ao compilador para gerar um arquivo EXE e especifica o nome do arquivo de saída (`TestCode.exe`). Essa opção do compilador é opcional. O [-referência (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opção de compilador Especifica o arquivo DLL ou arquivos que usa este programa.  
+ O **-out** opção de compilador informa ao compilador para gerar um arquivo EXE e especifica o nome do arquivo de saída (`TestCode.exe`). Essa opção do compilador é opcional. O [-referência (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opção do compilador Especifica o arquivo DLL ou os arquivos que esse programa usa.  
   
- Para obter mais informações sobre a criação da linha de comando, consulte e [Compilando a partir da linha de comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Para obter mais informações sobre a compilação da linha de comando, consulte e [compilando da linha de comando](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)  

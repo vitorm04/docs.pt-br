@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
 ms.openlocfilehash: a1758ef83adf11cdeee8bd3560ad2275985b3788
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49373814"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49994847"
 ---
 # <a name="self-host"></a>Self-Host
 Este exemplo demonstra como implementar um serviço auto-hospedado em um aplicativo de console. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). O arquivo de configuração do serviço foi renomeado de Web. config para App. config e modificado para configurar um endereço de base, que usa o host. O código-fonte de serviço foi modificado para implementar um estático `Main` função que cria e abre um host de serviço que fornece o endereço básico configurado. A implementação do serviço foi modificada para gravar a saída no console para cada operação. O cliente ficou sem modificações, com exceção de configuração do endereço do ponto de extremidade correto do serviço.  

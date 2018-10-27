@@ -8,11 +8,11 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372415"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49415244"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante o WCF Data Services
 

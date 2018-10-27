@@ -2,12 +2,12 @@
 title: Suporte para POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: beba1469d5d9575a5b2ef76a4db3747dfcc35d0c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bb4f8b0a5eb20be50a2d3ba9a15d66fd7fc573f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857596"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452804"
 ---
 # <a name="poco-support"></a>Suporte para POCO
 Este exemplo demonstra o suporte de serialização para tipos de desmarcados. ou seja, tipos aos quais atributos de serialização não foram aplicados, às vezes chamados de tipos Plain Old CLR Object (POCO). O <xref:System.Runtime.Serialization.DataContractSerializer> infere um contrato de dados para todos os tipos de desmarcados públicos que tem um construtor padrão. Contratos de dados permitem que você passe dados estruturados para e de serviços. Para obter mais informações sobre os tipos de desmarcados, consulte [tipos serializáveis](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -21,7 +21,7 @@ Este exemplo demonstra o suporte de serialização para tipos de desmarcados. ou
   
  O `ComplexNumber` classe é usada no `ServiceContract`. O `ComplexNumber` tipo não tem o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> atributos, como mostrado no código de exemplo a seguir. Por padrão, todos os campos e propriedades públicas são serializados.  
   
-```  
+```csharp
 public class ComplexNumber  
 {  
     public double Real;  

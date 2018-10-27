@@ -2,19 +2,19 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: a4c46543ff5bfa562a05f157d826d84c4589da28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 7c7b53ff8eb8b6bc3dd73e5dea6f4c6a5613ec56
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487653"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039096"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class XmlSerializerOperationBehavior : Behavior  
 {  
   string Style;  
@@ -23,7 +23,7 @@ class XmlSerializerOperationBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe XmlSerializerOperationBehavior não define nenhum método.  
+ A classe XmlSerializerOperationBehavior não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe XmlSerializerOperationBehavior tem as seguintes propriedades:  
@@ -46,7 +46,7 @@ class XmlSerializerOperationBehavior : Behavior
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>
