@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b5da49ff22cfa6bd1c3e4d574865eb5e61dc73fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6a8a589077aba413fa89518e560373df816f8943
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028338"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187839"
 ---
 # <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; elemento para configurações de criptografia
 Contém o [ \<cryptographySettings > elemento](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
@@ -71,9 +71,9 @@ Contém o [ \<cryptographySettings > elemento](../../../../../docs/framework/con
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
- <xref:System.Security.Cryptography>  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
- [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
+- <xref:System.Security.Cryptography>  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

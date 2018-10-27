@@ -2,17 +2,17 @@
 title: Suporte de streaming do SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364730"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191029"
 ---
 # <a name="sqlclient-streaming-support"></a>Suporte de streaming do SqlClient
-Suporte entre o SQL Server e um aplicativo de streaming (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperando BLOBS pode usar muita memória.  
+Suporte a streaming entre o SQL Server e um aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperar BLOBS pode usar muita memória.  
   
- Suporte para e do SQL Server de streaming simplifica a gravação de aplicativos em que dados de fluxo, sem a necessidade de carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.  
+ Streaming suporte para e do SQL Server simplifica a gravação de aplicativos em que dados de fluxo, sem ter que carregar completamente os dados na memória, resultando em menos exceções de estouro de memória.  
   
  O suporte a streaming também habilitará aplicativos da camada intermediária para dimensionar melhor, especialmente em cenários onde os objetos comerciais se conectam ao SQL Azure para enviar, recuperar e manipular BLOBs grandes.  
   
@@ -22,7 +22,7 @@ Suporte entre o SQL Server e um aplicativo de streaming (novo no [!INCLUDE[net_v
 >  Os membros adicionados para dar suporte a streaming são usados para recuperar dados de consultas e passar parâmetros para consultas e procedimentos armazenados. O recurso de streaming aborda cenários básicos de migração de dados e de OLTP e é aplicável ambientes de migrações de dados locais e externos.  
   
 ## <a name="streaming-support-from-sql-server"></a>Suporte a streaming do SQL Server  
- Suporte do SQL Server de streaming introduz novas funcionalidades no <xref:System.Data.Common.DbDataReader> e no <xref:System.Data.SqlClient.SqlDataReader> classes para obter <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, e <xref:System.IO.TextReader> objetos e reagir a elas.  Essas classes são usadas para recuperar dados de consultas. Como resultado, o suporte de Streaming do SQL Server abrange cenários de OLTP e aplica-se para o local e ambientes fora do local.  
+ Suporte a streaming do SQL Server introduz uma nova funcionalidade na <xref:System.Data.Common.DbDataReader> e, em de <xref:System.Data.SqlClient.SqlDataReader> classes para obter <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, e <xref:System.IO.TextReader> objetos e reagir a eles.  Essas classes são usadas para recuperar dados de consultas. Como resultado, o suporte de Streaming do SQL Server aborda cenários de OLTP e aplica-se para o local e em ambientes fora do local.  
   
  Os seguintes membros foram adicionados ao <xref:System.Data.SqlClient.SqlDataReader> para habilitar o suporte a streaming do SQL Server:  
   
@@ -46,8 +46,8 @@ Suporte entre o SQL Server e um aplicativo de streaming (novo no [!INCLUDE[net_v
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-sql-server"></a>Suporte de streaming para o SQL Server  
- Suporte para o SQL Server de streaming introduz novas funcionalidades no <xref:System.Data.SqlClient.SqlParameter> de classe para que possa aceitar e reagir a <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, e <xref:System.IO.TextReader> objetos. <xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.  
+## <a name="streaming-support-to-sql-server"></a>Suporte a streaming para o SQL Server  
+ Suporte para o SQL Server de streaming introduz uma nova funcionalidade na <xref:System.Data.SqlClient.SqlParameter> de classe para que possa aceitar e reagir às <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, e <xref:System.IO.TextReader> objetos. <xref:System.Data.SqlClient.SqlParameter> é usado para transmitir parâmetros para consultas e procedimentos armazenados.  
   
  Descartar um objeto <xref:System.Data.SqlClient.SqlCommand> ou chamar <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> deve cancelar qualquer operação de streaming. Se um aplicativo enviar <xref:System.Threading.CancellationToken>, o cancelamento não será garantido.  
   
@@ -61,7 +61,7 @@ Suporte entre o SQL Server e um aplicativo de streaming (novo no [!INCLUDE[net_v
   
 -   **Char**  
   
--   **NChar**  
+-   **nChar**  
   
 -   **NVarChar**  
   
@@ -73,7 +73,7 @@ Suporte entre o SQL Server e um aplicativo de streaming (novo no [!INCLUDE[net_v
   
  O objeto <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> e <xref:System.IO.Stream> serão transferidos até atingir o valor definido pelo <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## <a name="sample----streaming-from-sql-server"></a>Exemplo – Streaming do SQL Server  
+## <a name="sample----streaming-from-sql-server"></a>Exemplo-- Streaming do SQL Server  
  Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:  
   
 ```  
@@ -97,9 +97,9 @@ GO
   
 -   Evite fechar um thread da interface do usuário fornecendo uma maneira assíncrona de recuperar arquivos grandes.  
   
--   Transferência de um arquivo de texto grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferir um arquivo de texto grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transferência de um arquivo XML grande do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferir um arquivo grande XML do SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Recupere dados do SQL Server.  
   
@@ -241,7 +241,7 @@ namespace StreamingFromServer {
             Async = true,  
             // Since we will immediately wrap the TextReader we are creating in an XmlReader, we will permit the XmlReader to take care of closing\disposing it  
             CloseInput = true,  
-            // If the Xml you are reading is not a valid document (as per http://msdn.microsoft.com/library/6bts1x50.aspx) you will need to set the conformance level to Fragment  
+            // If the Xml you are reading is not a valid document (as per <https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6bts1x50(v=vs.100)>) you will need to set the conformance level to Fragment  
             ConformanceLevel = ConformanceLevel.Fragment  
          };  
   
@@ -294,7 +294,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-sql-server"></a>Exemplo – Streaming para o SQL Server  
+## <a name="sample----streaming-to-sql-server"></a>Exemplo-- Streaming para o SQL Server  
  Use o seguinte [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para criar o banco de dados de exemplo:  
   
 ```  
@@ -318,7 +318,7 @@ GO
   
  O exemplo a seguir mostra como fazer o seguinte:  
   
--   Transferência de um BLOB grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferindo um grande BLOB para o SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Transferência de um arquivo de texto grande no SQL Server em [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
@@ -328,7 +328,7 @@ GO
   
 -   Cancelando a transferência de um BLOB grande.  
   
--   Streaming de um SQL Server para outro usando o novo recurso assíncrono.  
+-   Streaming de um SQL Server para outra usando o novo recurso assíncrono.  
   
 ```  
 using System;  
@@ -450,8 +450,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Exemplo – Streaming de um SQL Server para outro SQL Server  
- Este exemplo demonstra como um BLOB grande de um SQL Server para outra, com suporte para cancelamento de fluxo de forma assíncrona.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Exemplo-- Streaming de um servidor SQL para outro SQL Server  
+ Este exemplo demonstra como um BLOB grande de um SQL Server para outra, com suporte ao cancelamento de forma assíncrona.  
   
 ```  
 using System;  

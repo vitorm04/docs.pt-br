@@ -2,19 +2,19 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: c2fb32c4c693cbfc487ce89b36f013398cbdb703
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 027ace6ea9fc2a0e5ce63efa84e1a49c0ed2cd0a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485613"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188021"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class TransactionFlowBindingElement : BindingElement  
 {  
   string IssuedTokens;  
@@ -24,7 +24,7 @@ class TransactionFlowBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe TransactionFlowBindingElement não define nenhum método.  
+ A classe TransactionFlowBindingElement não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe TransactionFlowBindingElement tem as seguintes propriedades:  
@@ -34,7 +34,7 @@ class TransactionFlowBindingElement : BindingElement
   
  Tipo de acesso: somente leitura  
   
- Especifica o requisito para um cabeçalho de tokens de segurança emitidos (IssuedTokens do WS-Trust).  
+ Especifica o requisito para um cabeçalho de tokens de segurança emitido (IssuedTokens do WS-Trust).  
   
 ### <a name="transactionprotocol"></a>transactionProtocol  
  Tipo de dados: cadeia de caracteres  
@@ -54,7 +54,7 @@ class TransactionFlowBindingElement : BindingElement
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

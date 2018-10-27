@@ -2,12 +2,12 @@
 title: Protocolos de mensagens
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703005"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183848"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 
@@ -47,7 +47,7 @@ Especificação/documento:
 
 Os seguintes namespaces XML e prefixos associados são usados ao longo deste tópico:
 
-| Prefixo | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | wsa | `http://www.w3.org/2004/08/addressing`| | wsam | `http://www.w3.org/2007/05/addressing/metadata`| | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | xop | `http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Prefixo | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` | | s12 | `http://www.w3.org/2003/05/soap-envelope` | | wsa | `http://www.w3.org/2004/08/addressing` | | wsam | `http://www.w3.org/2007/05/addressing/metadata` | | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 | `http://www.w3.org/2005/08/addressing` | | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` | | xop | `http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | DP |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 e SOAP 1.2
 
@@ -190,20 +190,20 @@ Quando um ponto de extremidade do WCF é configurado para uma mensagem com um de
 ### <a name="web-services-addressing-faults"></a>Falhas de endereçamento de serviços da Web
 R3411: O WCF gera as seguintes falhas definidas pelo 08/2004 de WS-Addressing.
 
-|Código|Causa|
+| Código | Causa |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|A mensagem chegou com um `ReplyTo` que é diferente do endereço de resposta estabelecido para este canal; não há nenhum ponto de extremidade escutando no endereço especificado no cabeçalho To.|
-|`wsa:ActionNotSupported`|canais de infraestrutura ou dispatcher associado com o ponto de extremidade não reconhecem a ação especificada no `Action` cabeçalho.|
+| `wsa:DestinationUnreachable` | A mensagem chegou com um `ReplyTo` que é diferente do endereço de resposta estabelecido para este canal; não há nenhum ponto de extremidade escutando no endereço especificado no cabeçalho To. |
+| `wsa:ActionNotSupported` | canais de infraestrutura ou dispatcher associado com o ponto de extremidade não reconhecem a ação especificada no `Action` cabeçalho. |
 
 R3412: O WCF gera as seguintes falhas definidas pelo WS-Addressing 1.0.
 
-|Código|Causa|
+| Código | Causa |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Duplicar `wsa:To`, `wsa:ReplyTo`, `wsa:From` ou `wsa:MessageID`. Duplicar `wsa:RelatesTo` com o mesmo `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|O cabeçalho de endereçamento necessário está ausente.|
-|`wsa10:DestinationUnreachable`|A mensagem chegou com um `ReplyTo` que é diferente do endereço de resposta estabelecido para este canal. Não há nenhum ponto de extremidade escutando no endereço especificado no cabeçalho To.|
-|`wsa10:ActionNotSupported`|Uma ação especificada no `Action` cabeçalho não é reconhecido pelo dispatcher associado com o ponto de extremidade ou canais de infraestrutura.|
-|`wsa10:EndpointUnavailable`|O canal do RM envia essa falha, que indica o ponto de extremidade não processará a sequência com base no exame do `CreateSequence` cabeçalhos de endereçamento da mensagem.|
+| `wsa10:InvalidAddressingHeader` | Duplicar `wsa:To`, `wsa:ReplyTo`, `wsa:From` ou `wsa:MessageID`. Duplicar `wsa:RelatesTo` com o mesmo `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | O cabeçalho de endereçamento necessário está ausente. |
+| `wsa10:DestinationUnreachable` | A mensagem chegou com um `ReplyTo` que é diferente do endereço de resposta estabelecido para este canal. Não há nenhum ponto de extremidade escutando no endereço especificado no cabeçalho To. |
+| `wsa10:ActionNotSupported` | Uma ação especificada no `Action` cabeçalho não é reconhecido pelo dispatcher associado com o ponto de extremidade ou canais de infraestrutura. |
+| `wsa10:EndpointUnavailable` | O canal do RM envia essa falha, que indica o ponto de extremidade não processará a sequência com base no exame do `CreateSequence` cabeçalhos de endereçamento da mensagem. |
 
 Mapas de código nas tabelas anteriores ao `FaultCode` em SOAP 1.1 e `SubCode` (com o código = remetente) em SOAP 1.2.
 

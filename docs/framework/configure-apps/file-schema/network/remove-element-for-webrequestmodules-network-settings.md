@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208575"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190743"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;remover&gt; elemento para webRequestModules (configurações de rede)
 Remove um módulo de solicitação da Web personalizado do aplicativo.  
@@ -56,13 +54,14 @@ Remove um módulo de solicitação da Web personalizado do aplicativo.
 ## <a name="remarks"></a>Comentários  
  O `remove` elemento remove o módulo de solicitação da Web registrado para o prefixo URI especificado.  
   
- O valor para o `prefix` atributo deve ser os caracteres à esquerda de um URI válido – por exemplo, "http", ou "`http://www.contoso.com` ".  
+ O valor para o `prefix` atributo deve ser os caracteres à esquerda de um URI válido – por exemplo, "`http`", ou "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir remove o módulo de solicitação da Web existente para HTTP e, em seguida, registra um novo módulo de solicitação da Web personalizado para solicitações HTTP para www.contoso.com.  
+
+O exemplo a seguir remove o módulo de solicitação da Web existente para HTTP e, em seguida, registra um novo módulo de solicitação da Web personalizado para HTTP solicitações para `www.contoso.com`.
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ Remove um módulo de solicitação da Web personalizado do aplicativo.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.WebRequest>  
- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

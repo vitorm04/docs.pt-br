@@ -2,12 +2,12 @@
 title: Segurança 2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861852"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183523"
 ---
 # <a name="security-overview"></a>Visão geral de segurança
 Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que um desenvolvedor pode garantir que um aplicativo está protegido contra todos os ataques, porque é impossível prever quais tipos de novas tecnologias de ataques futuros trará. Por outro lado, apenas porque ninguém tem falhas de segurança ainda descobertos (ou publicado) em um sistema não significa que nenhum existir ou podem existir. Você precisa planejar a segurança durante a fase de design do projeto, bem como para planejar como segurança será mantida durante a vida útil do aplicativo.  
@@ -67,7 +67,7 @@ Proteger um aplicativo é um processo contínuo. Nunca haverá um ponto em que u
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[Segurança de acesso do código e o ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Descreve as interações entre ambientes parcialmente confiáveis da perspectiva de um aplicativo ADO.NET, segurança baseada em função e segurança de acesso do código.|  
-|[Segurança de acesso do código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|  
+|[Segurança de acesso do código](../../../../docs/framework/misc/code-access-security.md)|Contém links para tópicos adicionais que descrevem o CAS no .NET Framework.|  
   
 ## <a name="database-security"></a>Segurança de banco de dados  
  O princípio de privilégios mínimos também se aplica à sua fonte de dados. Algumas diretrizes gerais para segurança de banco de dados incluem:  

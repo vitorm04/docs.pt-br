@@ -2,14 +2,12 @@
 title: 'Como: Criar Assemblies amigáveis assinados (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b31a359167307a58d8393e9c29e7dab1575cfdc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643660"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188425"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Como: Criar Assemblies amigáveis assinados (Visual Basic)
 Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes. Os dois assemblies devem ter nomes fortes. Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.  
@@ -32,7 +30,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Crie um arquivo do Visual Basic chamado `friend_signed_A` que contém o código a seguir. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly autorizado.  
+3.  Crie um arquivo de Visual Basic chamado `friend_signed_A` que contém o código a seguir. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly autorizado.  
   
      A ferramenta Nome Forte gera uma nova chave pública sempre que for executada. Portanto, você deve substituir a chave pública no código a seguir com a chave pública que você acabou de gerar, conforme mostrado no exemplo a seguir.  
   
@@ -57,7 +55,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  Criar um arquivo do Visual Basic chamado `friend_signed_B` e contém o código a seguir. Como o friend_signed_A especifica o friend_signed_B como um assembly amigável, o código em friend_signed_B pode acessar tipos `Friend` e membros do friend_signed_A. O arquivo contém o seguinte código.  
+5.  Crie um arquivo de Visual Basic chamado `friend_signed_B` e contém o código a seguir. Como o friend_signed_A especifica o friend_signed_B como um assembly amigável, o código em friend_signed_B pode acessar tipos `Friend` e membros do friend_signed_A. O arquivo contém o seguinte código.  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -92,6 +90,6 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nome
  [Assemblies amigáveis (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Como: Criar Assemblies amigáveis não assinados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (ferramenta de nome forte)] [Sn.exe (ferramenta de nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
+ [Sn.exe (ferramenta nome forte)] [Sn.exe (ferramenta nome forte)](../../../../framework/tools/sn-exe-strong-name-tool.md))  
  [Criar e usar assemblies de nomes fortes](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Conceitos de Programação](../../../../visual-basic/programming-guide/concepts/index.md)

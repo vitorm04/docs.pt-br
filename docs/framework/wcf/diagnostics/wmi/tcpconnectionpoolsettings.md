@@ -2,19 +2,19 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 4a30ad3ddfef5d39942345b0e0d5274eeff8e596
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485915"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189557"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class TcpConnectionPoolSettings  
 {  
   string GroupName;  
@@ -25,7 +25,7 @@ class TcpConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe TcpConnectionPoolSettings não define nenhum método.  
+ A classe TcpConnectionPoolSettings não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe TcpConnectionPoolSettings tem as seguintes propriedades:  
@@ -35,7 +35,7 @@ class TcpConnectionPoolSettings
   
  Tipo de acesso: somente leitura  
   
- O nome do grupo do pool de conexão usado para o elemento de associação.  
+ O nome de grupo do pool de conexão usado pelo elemento de associação.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
  Tipo de dados: datetime  
@@ -49,7 +49,7 @@ class TcpConnectionPoolSettings
   
  Tipo de acesso: somente leitura  
   
- O tempo máximo para a operação de concessão seja concluída antes do tempo limite.  
+ O tempo máximo para a operação seja concluída antes de atingir o tempo limite de concessão.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
  Tipo de dados: sint32  
@@ -62,7 +62,7 @@ class TcpConnectionPoolSettings
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

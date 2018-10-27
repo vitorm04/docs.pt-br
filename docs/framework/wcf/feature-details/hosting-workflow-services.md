@@ -2,18 +2,18 @@
 title: Serviços de fluxo de trabalho de hospedagem
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505540"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186090"
 ---
 # <a name="hosting-workflow-services"></a>Serviços de fluxo de trabalho de hospedagem
 Um serviço de fluxo de trabalho deve ser hospedado para responder às mensagens de entrada. Serviços de fluxo de trabalho usam a infraestrutura de mensagens do WCF e, portanto, são hospedados de maneiras semelhantes. Assim como serviços WCF, serviços de fluxo de trabalho podem ser hospedados em qualquer aplicativo gerenciado, em serviços de informações da Internet (IIS) ou em Windows processo WAS (Activation Services). Além disso, os serviços de fluxo de trabalho podem ser hospedados no Windows Server App Fabric. Para obter mais informações sobre o Windows Server AppFabric, consulte [documentação do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [recursos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), e [conceitos de hospedagem de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Para obter mais informações sobre as várias maneiras de WCF do host dos serviços de ver [serviços de hospedagem](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hospedagem em um aplicativo gerenciado
- Para hospedar um serviço de fluxo de trabalho em um aplicativo gerenciado, use o <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe. O <xref:System.ServiceModel.Activities.WorkflowServiceHost> construtor permite que você especifique uma instância singleton do serviço de fluxo de trabalho, uma definição de serviço de fluxo de trabalho ou uma atividade que usa o fluxo de trabalho de atividades de mensagem. Chamar <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> faz com que o serviço iniciar a escuta para mensagens de entrada.
+ Para hospedar um serviço de fluxo de trabalho em um aplicativo gerenciado, use o <xref:System.ServiceModel.Activities.WorkflowServiceHost> classe. O <xref:System.ServiceModel.Activities.WorkflowServiceHost> construtor permite que você especifique uma instância singleton do serviço de fluxo de trabalho, uma definição de serviço de fluxo de trabalho ou uma atividade que usa o fluxo de trabalho de atividades de mensagem. Chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> faz com que o serviço iniciar a escuta para mensagens de entrada.
 
 ## <a name="hosting-under-iis-or-was"></a>Hospedarmos no IIS ou WAS
  Hospedar um serviço de fluxo de trabalho em IIS ou WAS envolve a criação de um diretório virtual e colocar arquivos no diretório virtual que definem o serviço e seu comportamento. Ao hospedar um serviço de fluxo de trabalho em IIS ou WAS lá é várias possibilidades:

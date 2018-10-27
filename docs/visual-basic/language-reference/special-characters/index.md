@@ -1,14 +1,12 @@
 ---
 title: Caracteres especiais (referência do Visual Basic)
 ms.date: 10/31/2017
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9bbe3213030f8b8964de0e415cba5eaff61ba028
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 02e489a7712c740bf5dbd01a980454e43d7bc97a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664352"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187121"
 ---
 # <a name="special-characters-visual-basic-reference"></a>Caracteres especiais (referência do Visual Basic)
 

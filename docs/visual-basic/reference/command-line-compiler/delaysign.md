@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c979ada9984ef345ffbb6b5e29c2f30595c3074d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1459484b858137836fcfdcd9db46d8e99a06e9c7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654236"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185203"
 ---
 # <a name="-delaysign"></a>-delaysign
 Especifica se o assembly será assinado total ou parcialmente.  
@@ -26,24 +24,24 @@ Especifica se o assembly será assinado total ou parcialmente.
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Opcional. Use `-delaysign-` se você quiser um assembly totalmente assinado. Use `-delaysign+` se você deseja colocar a chave pública no assembly e reserva de espaço para o hash assinado. O padrão é `-delaysign-`.  
+ Opcional. Use `-delaysign-` se você quiser um assembly totalmente assinado. Use `-delaysign+` se você deseja colocar a chave pública no assembly e reserva espaço para o hash com sinal. O padrão é `-delaysign-`.  
   
 ## <a name="remarks"></a>Comentários  
  O `-delaysign` opção não tem nenhum efeito a menos que usado com [- keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) ou [- keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
   
- Quando você solicita um assembly totalmente assinado, o compilador usa o hash no arquivo que contém o manifesto (metadados de assembly) e sinaliza esse hash com a chave particular. A assinatura digital resultante é armazenada no arquivo que contém o manifesto. Quando um assembly é assinado com atraso, o compilador não calcular e armazenar a assinatura, mas as reservas de espaço no arquivo de forma a assinatura pode ser adicionada posteriormente.  
+ Quando você solicita um assembly totalmente assinado, o compilador usa o hash no arquivo que contém o manifesto (metadados de assembly) e sinaliza esse hash com a chave particular. A assinatura digital resultante é armazenada no arquivo que contém o manifesto. Quando um assembly é assinado com atraso, o compilador não de computação e armazenar a assinatura, mas as reservas de espaço no arquivo para que a assinatura pode ser adicionada depois.  
   
- Por exemplo, usando `-delaysign+`, um desenvolvedor em uma organização pode distribuir versões de teste não assinado de um assembly que testadores podem registrar com o cache de assembly global e usar. Quando o trabalho no assembly é concluído, a pessoa responsável pela chave privada da organização totalmente pode assinar o assembly. Este compartimentalização protege a chave privada da organização contra divulgação, permitindo que todos os desenvolvedores possam trabalhar em assemblies.  
+ Por exemplo, usando `-delaysign+`, um desenvolvedor em uma organização pode distribuir versões de teste sem sinal de um assembly que os testadores podem se registrar com o cache de assembly global e usar. Quando o trabalho no assembly for concluído, a pessoa responsável pela chave privada da organização pode assinar completamente o assembly. Este compartimentalização protege a chave privada da organização contra divulgação, permitindo que todos os desenvolvedores trabalhar em assemblies.  
   
- Consulte [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obter mais informações sobre como assinar um assembly.  
+ Ver [criando e usando Assemblies nomes fortes](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) para obter mais informações sobre como assinar um assembly.  
   
-### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Para definir - delaysign no ambiente de desenvolvimento integrado do Visual Studio  
+### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Definir - delaysign no ambiente de desenvolvimento integrado do Visual Studio  
   
 1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.   
   
 2.  Clique na guia **Assinatura**.  
   
-3.  Definir o valor no **atrasar a assinatura apenas** caixa.  
+3.  Defina o valor na **somente sinal de atraso** caixa.  
   
 ## <a name="see-also"></a>Consulte também  
  [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  

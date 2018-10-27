@@ -2,19 +2,19 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: 68e6a25e4e3f47c556363e2fd5aa8d3bb9946449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58bf07b0429ca2435b5aae3683ef69951a10003e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485639"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185177"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 class PeerTransportBindingElement : TransportBindingElement  
 {  
   string ListenIPAddress;  
@@ -24,7 +24,7 @@ class PeerTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
- A classe PeerTransportBindingElement não define nenhum método.  
+ A classe PeerTransportBindingElement não define quaisquer métodos.  
   
 ## <a name="properties"></a>Propriedades  
  A classe PeerTransportBindingElement tem as seguintes propriedades:  
@@ -34,27 +34,27 @@ class PeerTransportBindingElement : TransportBindingElement
   
  Tipo de acesso: somente leitura  
   
- O endereço IP no qual o nó par escuta as mensagens.  
+ O endereço IP no qual o nó par escuta para mensagens.  
   
 ### <a name="port"></a>Porta  
  Tipo de dados: sint32  
   
  Tipo de acesso: somente leitura  
   
- A porta de interface de rede no qual essa processos de associação pares de mensagens do canal.  
+ A porta de interface de rede na qual o mensagens do canal de pares de processos de associação.  
   
 ### <a name="security"></a>Segurança  
  Tipo de dados: PeerSecuritySettings  
   
  Tipo de acesso: somente leitura  
   
- Configurações de segurança de transporte ponto a ponto.  
+ Configurações de segurança de transporte de par.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |MOF|Declarado em Servicemodel.mof.|  
 |---------|-----------------------------------|  
-|Namespace|Definido em root\ServiceModel|  
+|Namespace|Definido no root\ServiceModel|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.PeerTransportBindingElement>

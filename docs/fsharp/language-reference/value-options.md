@@ -2,12 +2,12 @@
 title: 'Opções de valor (F #)'
 description: 'Saiba mais sobre o tipo de opção de valor de F #, que é uma versão de estrutura do tipo de opção.'
 ms.date: 06/16/2018
-ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041204"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185830"
 ---
 # <a name="value-options"></a>Opções de valor
 
@@ -20,19 +20,14 @@ Nem todos os cenários sensíveis a desempenho são "resolvidos" usando structs.
 
 ## <a name="definition"></a>Definição
 
-Opção de valor é definida como um [união discriminada de struct](discriminated-unions.md#struct-discriminated-unions) que é semelhante ao tipo de opção de referência:
+Opção de valor é definida como um [união discriminada de struct](discriminated-unions.md#struct-discriminated-unions) que é semelhante ao tipo de opção de referência. Sua definição pode ser pensada desta forma:
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
-[<CompiledName("FSharpValueOption`1")>]
 [<Struct>]
 type ValueOption<'T> =
-    | ValueNone: 'T voption
-    | ValueSome: 'T -> 'T voption
-
-    member Value : 'T
-
-and 'T voption = ValueOption<'T>
+    | ValueNone
+    | ValueSome of 'T
 ```
 
 Opção de valor está em conformidade com a comparação e igualdade estrutural. A principal diferença é que o nome compilado, o nome do tipo e o casos nomes indicam que ele é um tipo de valor.

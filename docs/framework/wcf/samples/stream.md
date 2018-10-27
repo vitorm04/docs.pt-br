@@ -2,12 +2,12 @@
 title: Fluxo
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861108"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191175"
 ---
 # <a name="stream"></a>Fluxo
 O exemplo de Stream demonstra o uso de fluxo de comunicação de modo de transferência. O serviço expõe diversas operações que enviam e recebem transmissões. Este exemplo é auto-hospedado. O cliente e o serviço são programas de console.  
@@ -20,7 +20,7 @@ O exemplo de Stream demonstra o uso de fluxo de comunicação de modo de transfe
 ## <a name="streaming-and-service-contracts"></a>Streaming e contratos de serviço  
  Streaming é algo a ser considerados ao criar um contrato de serviço. Se uma operação recebe ou retorna grandes quantidades de dados, você deve considerar esses dados para evitar a utilização de memória alta devido a buffer de mensagens de entrada ou saídas de streaming. Para transmitir dados, o parâmetro que contém a que os dados devem ser o único parâmetro na mensagem. Por exemplo, se a mensagem de entrada é à ser transmitido, a operação deve ter exatamente um parâmetro de entrada. Da mesma forma, se a mensagem de saída deve ser transmitido, a operação deve ter exatamente um parâmetro de saída ou um valor de retorno. No caso, o parâmetro ou retorno valor de tipo deve ser `Stream`, `Message`, ou `IXmlSerializable`. Este é o contrato de serviço usado neste exemplo de streaming.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` cria e retorna uma nova instância da `ReverseStream`. O processamento real ocorre conforme o sistema lê do que `ReverseStream` objeto. O `ReverseStream.Read` implementação lê um bloco de bytes do arquivo subjacente, reverta e retorna os bytes invertidos. Isso não reverte o conteúdo do arquivo inteiro; ele reserva um bloco de bytes de cada vez. Este é um exemplo para mostrar como você pode executar o processamento de fluxo como o conteúdo está sendo lidos ou gravados de e para o fluxo.  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  Saída do serviço:  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  Saída do cliente:  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

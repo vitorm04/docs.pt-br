@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 8583c74f85d9638313db1779610c0f6dac9cfbe5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857752"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184472"
 ---
 # <a name="default-service-behavior"></a>Comportamento padrão de serviço
 Este exemplo demonstra como as configurações de comportamento de serviço podem ser configuradas. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define explicitamente os comportamentos de serviço e comportamentos de operação usando o <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute> atributos. Você pode configurar comportamentos em arquivos de configuração ou imperativa no código (como este exemplo demonstra).  
@@ -22,7 +22,7 @@ Este exemplo demonstra como as configurações de comportamento de serviço pode
   
  A classe de serviço Especifica os comportamentos com o <xref:System.ServiceModel.ServiceBehaviorAttribute> e o <xref:System.ServiceModel.OperationBehaviorAttribute> conforme mostrado no exemplo de código a seguir. Todos os valores especificados são os padrões.  
   
-```  
+```csharp
 [ServiceBehavior(  
     AutomaticSessionShutdown=true,  
     ConcurrencyMode=ConcurrencyMode.Single,  
@@ -68,7 +68,7 @@ public class CalculatorService : ICalculator
   
  Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. O atraso entre as chamadas é o resultado das chamadas para `System.Threading.Thread.Sleep()` feitas nas operações de serviço. O restante dos exemplos de comportamento explicar esses comportamentos em mais detalhes. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

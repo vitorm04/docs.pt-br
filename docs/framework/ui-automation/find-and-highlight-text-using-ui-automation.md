@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1f9b1ce1b92086f34a8c18917966b71cf7018ca2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1a356e2872f803d393015574c380c5f99110074e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200458"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185596"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Encontre e destaque texto usando automação de interface de usuário
 > [!NOTE]
@@ -30,8 +30,8 @@ ms.locfileid: "47200458"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir obtém um <xref:System.Windows.Automation.TextPattern> objeto a partir de um controle de texto. Um <xref:System.Windows.Automation.Text.TextPatternRange> objeto, que representa o conteúdo textual do documento inteiro, em seguida, é criado usando o <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> propriedade deste <xref:System.Windows.Automation.TextPattern>. Adicionais <xref:System.Windows.Automation.Text.TextPatternRange> , em seguida, são criados para a pesquisa sequencial de objetos e funcionalidade de realce.  
   
- [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
- [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
+[!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
+[!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
 [!code-csharp[FindText#FindTextProvider](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#findtextprovider)]
 [!code-vb[FindText#FindTextProvider](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#findtextprovider)]  
 [!code-csharp[FindText#SearchTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#searchtarget)]

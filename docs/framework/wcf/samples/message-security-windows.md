@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-author: BrucePerlerMS
-ms.openlocfilehash: aed9c89395f7715b0d0d4478cd292b741e754629
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5121b5076d867c57c97e637045aced8a00e24c84
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197066"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185541"
 ---
 # <a name="message-security-windows"></a>Segurança de mensagens do Windows
 Este exemplo demonstra como configurar um <xref:System.ServiceModel.WSHttpBinding> associação para usar segurança em nível de mensagem com a autenticação do Windows. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço está hospedado no Internet Information Services (IIS) e o cliente é um aplicativo de console (.exe).  

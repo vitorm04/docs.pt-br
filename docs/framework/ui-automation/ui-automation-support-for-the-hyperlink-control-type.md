@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e454f968bbb80f0e59142dc623fde5d455a78d1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8e2140d02b39a181f55da2c0bed4826dc893f068
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200419"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185792"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Hyperlink
 > [!NOTE]
@@ -59,7 +59,7 @@ ms.locfileid: "47200419"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Sim|Todos os controles de hiperlink devem suportar o padrão de Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Controles de hiperlink devem dar suporte o padrão de controle de valor quando o link contém informações que são utilizáveis e significativo para o usuário.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Por exemplo, `"http://www...."`|Uma URL para um endereço de Internet ou Intranet é um exemplo de um hiperlink que contém informações que são significativas para o usuário. Um link programático, no entanto, é significativo apenas para um aplicativo e não é recomendado para a propriedade Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Por exemplo, `"https://www...."`|Uma URL para um endereço de Internet ou Intranet é um exemplo de um hiperlink que contém informações que são significativas para o usuário. Um link programático, no entanto, é significativo apenas para um aplicativo e não é recomendado para a propriedade Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação de interface do usuário necessária  

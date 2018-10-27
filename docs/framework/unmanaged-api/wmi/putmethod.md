@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516744"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191030"
 ---
 # <a name="putmethod-function"></a>Função PutMethod
 Cria um método.
@@ -80,11 +80,11 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 
 Essa função encapsula uma chamada para o [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) método.
 
-Esta chamada de método só tem suporte se `ptr` é uma definição de classe do CIM. Manipulação de método não está disponível no [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) ponteiros que apontam para instâncias CIM.
+Esta chamada de método só tem suporte se `ptr` é uma definição de classe do CIM. Manipulação de método não está disponível no [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponteiros que apontam para instâncias CIM.
 
 Os usuários não é possível criar métodos com nomes que começam ou terminam com um sublinhado. Isso é reservado para as propriedades e classes do sistema.
 
-Para um método, o `in` e `out` parâmetros são descritos como propriedades nas [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) objetos.
+Para um método, o `in` e `out` parâmetros são descritos como propriedades nas [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) objetos.
 
 Uma `[in/out]` parâmetro pode ser definido, adicionando a mesma propriedade para ambos os objetos apontados pela `pInSignature` e `pOutSignature` parâmetros. Nesse caso, as propriedades compartilham o mesmo **ID** valor do qualificador.
 

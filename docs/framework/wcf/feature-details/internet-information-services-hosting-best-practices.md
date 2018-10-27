@@ -2,12 +2,12 @@
 title: Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840739"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187564"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 Este tópico descreve algumas práticas recomendadas para a hospedagem de serviços Windows Communication Foundation (WCF).  
@@ -35,7 +35,7 @@ Este tópico descreve algumas práticas recomendadas para a hospedagem de servi�
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF em cenários de hospedagem múltipla ou múltipla nomeados  
  Você pode implantar os serviços WCF dentro de um farm da Web do IIS, onde um conjunto de computadores compartilham o nome comum externo (como `http://www.contoso.com`), mas são abordadas individualmente por nomes de host diferentes (por exemplo, `http://www.contoso.com` pode direcionar o tráfego para dois computadores diferentes chamado `http://machine1.internal.contoso.com` e `http://machine2.internal.contoso.com`). Neste cenário de implantação é totalmente suportado pelo WCF, mas requer configuração especial do site da Web do IIS que hospeda serviços WCF para exibir o nome de host correto (externo) nos metadados do serviço (Web Services Description Language).  
   
- Para garantir que o nome de host correto apareça nos metadados de serviço WCF gera, configurar a identidade padrão para o site da Web do IIS que hospeda os serviços do WCF para usar um nome de host explícito. Por exemplo, os computadores que residem no interior do farm www.contoso.com devem usar uma associação de site do IIS de *:80:www.contoso.com para HTTP e \*: 443:www.contoso.com para HTTPS.  
+ Para garantir que o nome de host correto apareça nos metadados de serviço WCF gera, configurar a identidade padrão para o site da Web do IIS que hospeda os serviços do WCF para usar um nome de host explícito. Por exemplo, os computadores que residem dentro do `www.contoso.com` farm deve usar uma associação de site do IIS de *:80:www.contoso.com para HTTP e \*: 443:www.contoso.com para HTTPS.  
   
  Você pode configurar as ligações do site da Web do IIS usando o snap-in do Console de gerenciamento Microsoft (MMC) do IIS.  
   
