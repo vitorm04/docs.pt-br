@@ -10,11 +10,11 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036379"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194339"
 ---
 # <a name="add-element-for-appsettings"></a>\<Adicionar > elemento para \<appSettings >
 

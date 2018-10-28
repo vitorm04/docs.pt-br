@@ -2,13 +2,12 @@
 title: LeiaMe para exemplo de autenticação de proteção estendida
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-author: BrucePerlerMS
-ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847939"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192467"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>LeiaMe para exemplo de autenticação de proteção estendida
 Proteção estendida é uma iniciativa de segurança para proteger contra ataques (MITM) de man-in-the-middle, em que um invasor (o "man-in-the-middle") intercepta as credenciais de um cliente e os utiliza para acessar recursos protegidos no servidor pretendido do cliente.  

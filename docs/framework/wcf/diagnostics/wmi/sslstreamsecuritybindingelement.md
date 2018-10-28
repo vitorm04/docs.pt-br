@@ -2,13 +2,12 @@
 title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
-author: BrucePerlerMS
-ms.openlocfilehash: 73855197d0fb518d49d6273d0587ddcf1f28885c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f75fa33be2857904417edb78757b3d40d6efdb59
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371117"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192597"
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  

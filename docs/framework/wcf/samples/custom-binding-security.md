@@ -2,13 +2,12 @@
 title: Segurança de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-author: BrucePerlerMS
-ms.openlocfilehash: 85d069fed9fb1e82670c81003b5ef091c22a8e92
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841566"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192883"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 Este exemplo demonstra como configurar a segurança por meio de uma associação personalizada. Ele mostra como usar uma ligação personalizada para habilitar a segurança em nível de mensagem junto com um transporte seguro. Isso é útil quando um transporte seguro é necessária para transmitir as mensagens entre o cliente e o serviço e ao mesmo tempo as mensagens devem ser seguras no nível da mensagem. Essa configuração não é suportada por associações fornecidas pelo sistema.

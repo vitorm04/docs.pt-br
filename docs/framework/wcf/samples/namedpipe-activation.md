@@ -3,11 +3,11 @@ title: NamedPipe Activation
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 05dea4e4faa91e4df9fdde8bdafc29473e49214e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170491"
+ms.locfileid: "50195470"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Activation
 Este exemplo demonstra como hospedar um serviço que usa o serviço de ativação de processos do Windows (WAS) para ativar um serviço que se comunica por pipes de nomes. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e requer [!INCLUDE[wv](../../../../includes/wv-md.md)] para executar.  

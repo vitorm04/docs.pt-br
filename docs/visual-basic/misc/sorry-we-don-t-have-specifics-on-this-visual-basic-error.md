@@ -1,5 +1,5 @@
 ---
-title: Desculpe, estamos don&#39;t há informações específicas sobre este erro do Visual Basic
+title: Infelizmente, estamos don&#39;t há informações específicas sobre este erro do Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,18 +3044,18 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231457"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192779"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Desculpe, estamos don&#39;t há informações específicas sobre este erro do Visual Basic
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Infelizmente, estamos don&#39;t há informações específicas sobre este erro do Visual Basic
 Infelizmente não temos informações específicas sobre este erro. Você pode procurar o número do erro e o texto da mensagem para localizar informações na web. Ou pode perguntar a outros desenvolvedores usando um destes fóruns:  
   
  [Linguagem Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
- Fornece um fórum para perguntas discussões sobre e gerais da sintaxe de linguagem do Visual Basic e compilador.  
+ Fornece um fórum para perguntas e discussões gerais sobre do sintaxe da linguagem Visual Basic e do compilador.  
   
  [Interoperabilidade e atualização do Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Fornece um fórum para perguntas sobre e problemas com a atualização para o Visual Basic e trabalhar com recursos de interoperabilidade.  
@@ -3064,9 +3064,9 @@ Infelizmente não temos informações específicas sobre este erro. Você pode p
  Fornece um fórum para perguntas sobre como trabalhar no ambiente do Visual Studio.  
   
  [Informações gerais sobre o Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
- Fornece um fórum para perguntas sobre e problemas com o Visual Basic não são abordados em outros fóruns.  
+ Fornece um fórum para perguntas sobre e problemas com o Visual Basic não são discutidas em outros fóruns.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
+ [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
  Fornece um fórum para perguntas sobre e problemas com o Visual Basic.  
   
  Consulte também:  

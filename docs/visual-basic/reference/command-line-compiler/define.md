@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656094"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195171"
 ---
 # <a name="-define-visual-basic"></a>-Definir (Visual Basic)
 Define as constantes de compilador condicional.  
@@ -34,10 +32,10 @@ Define as constantes de compilador condicional.
 |Termo|Definição|  
 |---|---|  
 |`symbol`|Obrigatório. O símbolo a ser definido.|  
-|`value`|Opcional. O valor para atribuir `symbol`. Se `value` é uma cadeia de caracteres, ele deve estar entre sequências de barra invertida/aspas (\\") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
+|`value`|Opcional. O valor para atribuir `symbol`. Se `value` é uma cadeia de caracteres, ele deverá ser colocado entre sequências de barra invertida/aspas (\\") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
   
 ## <a name="remarks"></a>Comentários  
- O `-define` opção tem um efeito semelhante ao uso de um `#Const` no arquivo de origem, exceto que constantes definidas pela diretiva de pré-processador `-define` são públicos e se aplicam a todos os arquivos no projeto.  
+ O `-define` opção tem um efeito semelhante ao uso de um `#Const` diretiva de pré-processador em seu arquivo de origem, exceto que as constantes definidas com `-define` são públicos e se aplicam a todos os arquivos no projeto.  
   
  Você pode usar símbolos criados por essa opção com a diretiva `#If`...`Then`...`#Else` para compilar os arquivos de origem condicionalmente.  
   

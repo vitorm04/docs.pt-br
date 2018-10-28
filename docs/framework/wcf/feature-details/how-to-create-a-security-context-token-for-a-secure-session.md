@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 ms.openlocfilehash: ec065854e049e333252003e0ce6e6efad4c6ce6c
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50040115"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193520"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Como criar um token de contexto de segurança para uma sessão segura
 Usando um token de contexto de segurança com monitoração de estado (SCT) em uma sessão segura, a sessão pode suportar o serviço que está sendo reciclado. Por exemplo, quando um SCT sem monitoração de estado é usado em uma sessão segura e redefinição de serviços de informações da Internet (IIS), os dados da sessão que está associados com o serviço são perdidos. Esses dados de sessão incluem um cache de token SCT. Portanto, na próxima vez que um cliente envia o serviço um SCT sem monitoração de estado, um erro será retornado, porque a chave que está associada com o SCT não pode ser recuperada. Se, no entanto, é usado um SCT com monitoração de estado, a chave que está associada com o SCT está contida dentro do SCT. Porque a chave é contida em SCT e, portanto, contida dentro da mensagem, a sessão segura não é afetada pelo serviço que está sendo reciclado. Por padrão, o Windows Communication Foundation (WCF) usa SCTs sem monitoração de estado em uma sessão segura. Este tópico fornece detalhes sobre como usar SCTs com monitoração de estado em uma sessão segura.  
