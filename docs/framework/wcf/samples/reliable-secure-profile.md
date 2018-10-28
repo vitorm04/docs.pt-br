@@ -3,11 +3,11 @@ title: Perfil seguro confiável
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50037487"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194612"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiável
 Este exemplo demonstra como compor o WCF e [perfil seguro confiável](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este exemplo demonstra a implementação de um [fazer Conexão](https://go.microsoft.com/fwlink/?LinkId=178141) canal que pode ser composto em conjunto com o sistema de mensagens confiável e, opcionalmente, um canal seguro para criar uma associação segura confiável com base na especificação RSP.  

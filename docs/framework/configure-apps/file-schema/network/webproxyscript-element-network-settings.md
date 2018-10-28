@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1e1450d2df424b32aacc5c113b5936001f65915a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 683c4c5e3f3f62d947ce244c66cc590eabe64f17
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48031767"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195782"
 ---
 # <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt; (configurações de rede)
 Configura as características do script usado para descobrir os proxies da Web.  
@@ -57,4 +55,4 @@ Configura as características do script usado para descobrir os proxies da Web.
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou o arquivo de configuração de máquina (Machine. config).  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

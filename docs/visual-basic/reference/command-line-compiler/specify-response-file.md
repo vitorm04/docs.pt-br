@@ -4,17 +4,15 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4ad4201dcc094364899984e13c85f2f43a6467ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54a4cee0b779c0784eec169a15ab1594c56cede9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653618"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194677"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (especificar arquivo de resposta) (Visual Basic)
-Especifica um arquivo que contém opções do compilador e arquivos de código-fonte para compilar.  
+Especifica um arquivo que contém as opções do compilador e arquivos de código-fonte para compilar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -24,10 +22,10 @@ Especifica um arquivo que contém opções do compilador e arquivos de código-f
   
 ## <a name="arguments"></a>Arguments  
  `response_file`  
- Necessário. Um arquivo que lista as opções do compilador ou arquivos de código-fonte para compilar. Coloque o nome do arquivo entre aspas ("") se ele contiver um espaço.  
+ Necessário. Um arquivo que lista Opções do compilador ou arquivos de código-fonte para compilar. Coloque o nome do arquivo entre aspas ("") se ele contiver um espaço.  
   
 ## <a name="remarks"></a>Comentários  
- O compilador processa as opções do compilador e arquivos de código-fonte especificados em um arquivo de resposta como se eles tivessem sido especificados na linha de comando.  
+ O compilador processa as opções do compilador e arquivos de código-fonte especificados em um arquivo de resposta, como se eles tivessem sido especificados na linha de comando.  
   
  Para especificar mais de um arquivo de resposta em uma compilação, especifique várias opções de arquivo de resposta, como a seguir.  
   
@@ -35,14 +33,14 @@ Especifica um arquivo que contém opções do compilador e arquivos de código-f
 @file1.rsp @file2.rsp  
 ```  
   
- Arquivo, várias opções do compilador e arquivos de código-fonte podem aparecer em uma linha em uma resposta. Uma especificação de opção de compilador único deve aparecer em uma linha (não pode abranger várias linhas). Arquivos de resposta podem ter os comentários que começam com o `#` símbolo.  
+ Em uma resposta de arquivo, várias opções do compilador e arquivos de código-fonte podem aparecer em uma única linha. Uma especificação de opção de compilador único deve aparecer em uma linha (não pode abranger várias linhas). Arquivos de resposta podem ter comentários que começam com o `#` símbolo.  
   
- Você pode combinar as opções especificadas na linha de comando com as opções especificadas em um ou mais arquivos de resposta. O compilador processa as opções de comando como encontrá-las. Portanto, argumentos de linha de comando podem substituir as opções listadas anteriormente em arquivos de resposta. Por outro lado, opções em um arquivo de resposta substituem as opções listadas anteriormente na linha de comando ou em outros arquivos de resposta.  
+ Você pode combinar as opções especificadas na linha de comando com as opções especificadas em um ou mais arquivos de resposta. O compilador processa as opções de comando ao encontrá-los. Portanto, os argumentos de linha de comando podem substituir opções listadas anteriormente em arquivos de resposta. Por outro lado, as opções em um arquivo de resposta substituem as opções listadas anteriormente na linha de comando ou em outros arquivos de resposta.  
   
- Visual Basic fornece o arquivo Vbc.rsp, que está localizado no mesmo diretório que o arquivo Vbc.exe. O arquivo Vbc.rsp está incluído por padrão, a menos que o `-noconfig` opção é usada. Para obter mais informações, consulte [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
+ Visual Basic fornece o arquivo Vbc. rsp, localizado no mesmo diretório que o arquivo Vbc.exe. O arquivo Vbc. exe é incluído por padrão, a menos que o `-noconfig` opção é usada. Para obter mais informações, consulte [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
   
 > [!NOTE]
->  O `@` opção não está disponível no ambiente de desenvolvimento do Visual Studio; está disponível somente quando estiver compilando na linha de comando.  
+>  O `@` opção não está disponível no ambiente de desenvolvimento do Visual Studio; ele está disponível somente durante a compilação da linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  As linhas a seguir são de um arquivo de resposta de exemplo.  

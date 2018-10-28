@@ -2,13 +2,12 @@
 title: '&lt;segurança&gt; de &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-author: BrucePerlerMS
-ms.openlocfilehash: 04a44535b1f293c9961b617eaa12b1c0a478a0f5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fbf9ac87da0d23930d589a40a9335acc34c4e94d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839612"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194367"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;segurança&gt; de &lt;webHttpBinding&gt;
 Especifica os requisitos de segurança para um ponto de extremidade configurado com um [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  

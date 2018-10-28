@@ -6,13 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-author: BrucePerlerMS
-ms.openlocfilehash: a97f1b96d6cf4d166239ba8e0a14f6e3af2bf48b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071053"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195223"
 ---
 # <a name="securing-services"></a>Serviços de segurança
 Segurança de um serviço do Windows Communication Foundation (WCF) consiste em dois requisitos principais: segurança e autorização de transferência. (Um terceiro requisito, a auditoria de eventos de segurança, é descrito em [auditoria](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Em suma, a segurança de transferência inclui autenticação (verificar a identidade do serviço e o cliente), confidencialidade (criptografia de mensagens) e integridade (para detectar violação de assinatura digital). A autorização é o controle de acesso a recursos, por exemplo, permitindo que apenas usuários com privilégios ler um arquivo. Usando recursos do WCF, os dois requisitos principais são implementados com facilidade.  

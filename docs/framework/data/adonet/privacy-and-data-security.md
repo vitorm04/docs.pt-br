@@ -3,11 +3,11 @@ title: Privacidade e segurança de dados
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
 ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372506"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194924"
 ---
 # <a name="privacy-and-data-security"></a>Privacidade e segurança de dados
 Protegendo e gerenciamento de informações confidenciais em um aplicativo ADO.NET depende de produtos e tecnologias usadas para criá-lo subjacentes. ADO.NET não fornece serviços para proteger ou criptografar dados diretamente.  

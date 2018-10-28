@@ -2,12 +2,12 @@
 title: 'Instalar o F #'
 description: 'Saiba como instalar o F # com base em seu ambiente.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120928"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193897"
 ---
 # <a name="install-f"></a>Instalar o F # #
 
@@ -33,7 +33,7 @@ Você deve ter [git instalado](https://git-scm.com/download) e está disponível
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](http://www.mono-project.com) é usado para [F # interativo](../tutorials/fsharp-interactive/index.md) dão suporte. A maneira mais fácil de instalar o Mono no macOS é por meio do Homebrew. Simplesmente digite o seguinte no seu terminal:
+[Mono](https://www.mono-project.com) é usado para [F # interativo](../tutorials/fsharp-interactive/index.md) dão suporte. A maneira mais fácil de instalar o Mono no macOS é por meio do Homebrew. Simplesmente digite o seguinte no seu terminal:
 
 ```console
 brew install mono

@@ -3,11 +3,11 @@ title: Sem tipo de solicitação-resposta
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
 ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50047625"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195301"
 ---
 # <a name="untyped-requestreply"></a>Solicitações/Respostas não digitadas
 Este exemplo demonstra como definir contratos de operação que usam a classe de mensagem.  

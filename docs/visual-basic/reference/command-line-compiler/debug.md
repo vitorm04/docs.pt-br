@@ -7,17 +7,15 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 18d74b8f0a7b319e08780a8db9175c7be16d932e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92ff9c5ea7352506c1949a77b4fb6291d63758d7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654139"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193793"
 ---
-# <a name="-debug-visual-basic"></a>-a depuração (Visual Basic)
-Faz com que o compilador gere informações de depuração e colocá-lo nos arquivos de saída.  
+# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
+Faz com que o compilador gerar informações de depuração e colocá-lo nos arquivos de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +30,10 @@ Faz com que o compilador gere informações de depuração e colocá-lo nos arqu
 |Termo|Definição|  
 |---|---|  
 |`+` &#124; `-`|Opcional. Especificando `+` ou `/debug` faz com que o compilador gerar informações de depuração e colocá-lo em um arquivo. PDB. Especificando `-` tem o mesmo efeito que não especificar `/debug`.|  
-|`full` &#124; `pdbonly`|Opcional. Especifica o tipo de informações de depuração geradas pelo compilador. Se você não especificar `/debug:pdbonly`, o padrão é `full`, que permite anexar um depurador para o programa em execução. O `pdbonly` argumento permite a depuração de código-fonte quando o programa for iniciado no depurador, mas ele exibe o código de linguagem de assembly somente quando o programa em execução está anexado ao depurador.|  
+|`full` &#124; `pdbonly`|Opcional. Especifica o tipo de informações de depuração geradas pelo compilador. Se você não especificar `/debug:pdbonly`, o padrão é `full`, que permite anexar um depurador ao programa em execução. O `pdbonly` argumento permite a depuração de código-fonte quando o programa é iniciado no depurador, mas ele exibe o código de linguagem assembly somente quando o programa em execução está anexado ao depurador.|  
   
 ## <a name="remarks"></a>Comentários  
- Use essa opção para criar builds de depuração. Se você não especificar `/debug`, `/debug+`, ou `/debug:full`, não será possível depurar o arquivo de saída do programa.  
+ Use essa opção para criar builds de depuração. Se você não especificar `/debug`, `/debug+`, ou `/debug:full`, não será possível depurar o arquivo de saída do seu programa.  
   
  Por padrão, as informações de depuração não é emitida (`/debug-`). Para emitir informações de depuração, especifique `/debug` ou `/debug+`.  
   

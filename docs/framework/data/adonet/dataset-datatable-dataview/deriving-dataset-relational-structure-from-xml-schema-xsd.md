@@ -3,11 +3,11 @@ title: Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
 ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033609"
+ms.locfileid: "50195288"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivando a estrutura relacional do DataSet do esquema XML (XSD)
 Esta seção fornece uma visão geral de como o esquema relacional de um `DataSet` é compilado a partir de um documento de esquema XSD (linguagem de definição de esquema XML). Em geral, para cada `complexType` elemento filho de um elemento de esquema, em que uma tabela é gerada a `DataSet`. A estrutura da tabela é determinada pela definição do tipo complexo. Tabelas são criadas no `DataSet` para elementos de nível superior no esquema. No entanto, uma tabela só é criada para um nível superior `complexType` elemento quando o `complexType` elemento está aninhado em outro `complexType` elemento, nesse caso, aninhada `complexType` elemento é mapeado para um `DataTable` dentro a `DataSet`.  
