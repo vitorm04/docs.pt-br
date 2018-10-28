@@ -4,11 +4,11 @@ description: Apresenta a LINQ (consulta integrada à linguagem) em C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
 ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038416"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197373"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Consulta Integrada à Linguagem)
 
