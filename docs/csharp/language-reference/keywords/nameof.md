@@ -6,36 +6,36 @@ f1_keywords:
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
 ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035247"
 ---
-# <a name="nameof-c-reference"></a><span data-ttu-id="282f7-102">nameof (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="282f7-102">nameof (C# Reference)</span></span>
+# <a name="nameof-c-reference"></a><span data-ttu-id="32ea3-102">nameof (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="32ea3-102">nameof (C# Reference)</span></span>
 
-<span data-ttu-id="282f7-103">Usado para obter o nome de cadeia de caracteres simples (não qualificado) de uma variável, tipo ou membro.</span><span class="sxs-lookup"><span data-stu-id="282f7-103">Used to obtain the simple (unqualified) string name of a variable, type, or member.</span></span>  
+<span data-ttu-id="32ea3-103">Usado para obter o nome de cadeia de caracteres simples (não qualificado) de uma variável, tipo ou membro.</span><span class="sxs-lookup"><span data-stu-id="32ea3-103">Used to obtain the simple (unqualified) string name of a variable, type, or member.</span></span>  
 
-<span data-ttu-id="282f7-104">Ao relatar erros no código, conectar links de MVC (Modelo-Exibição-Controlador), disparando eventos de propriedade alterada etc., normalmente você captura o nome da cadeia de caracteres de um método.</span><span class="sxs-lookup"><span data-stu-id="282f7-104">When reporting errors in code, hooking up model-view-controller (MVC) links, firing property changed events, etc., you often want to capture the string name of a method.</span></span>  <span data-ttu-id="282f7-105">Usar `nameof` ajuda a manter seu código válido ao renomear definições.</span><span class="sxs-lookup"><span data-stu-id="282f7-105">Using `nameof` helps keep your code valid when renaming definitions.</span></span>  <span data-ttu-id="282f7-106">Antes era necessário usar literais de cadeia de caracteres para se referir às definições, o que é frágil ao renomear os elementos de código porque as ferramentas não sabem verificar esses literais de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="282f7-106">Before, you had to use string literals to refer to definitions, which is brittle when renaming code elements because tools do not know to check these string literals.</span></span>  
+<span data-ttu-id="32ea3-104">Ao relatar erros no código, conectar links de MVC (Modelo-Exibição-Controlador), disparando eventos de propriedade alterada etc., normalmente você captura o nome da cadeia de caracteres de um método.</span><span class="sxs-lookup"><span data-stu-id="32ea3-104">When reporting errors in code, hooking up model-view-controller (MVC) links, firing property changed events, etc., you often want to capture the string name of a method.</span></span>  <span data-ttu-id="32ea3-105">Usar `nameof` ajuda a manter seu código válido ao renomear definições.</span><span class="sxs-lookup"><span data-stu-id="32ea3-105">Using `nameof` helps keep your code valid when renaming definitions.</span></span>  <span data-ttu-id="32ea3-106">Antes era necessário usar literais de cadeia de caracteres para se referir às definições, o que é frágil ao renomear os elementos de código porque as ferramentas não sabem verificar esses literais de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="32ea3-106">Before, you had to use string literals to refer to definitions, which is brittle when renaming code elements because tools do not know to check these string literals.</span></span>  
   
- <span data-ttu-id="282f7-107">Uma expressão `nameof` tem este formato:</span><span class="sxs-lookup"><span data-stu-id="282f7-107">A `nameof` expression has this form:</span></span>  
+ <span data-ttu-id="32ea3-107">Uma expressão `nameof` tem este formato:</span><span class="sxs-lookup"><span data-stu-id="32ea3-107">A `nameof` expression has this form:</span></span>  
   
 ```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
 WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode"  
 ```  
   
-## <a name="key-use-cases"></a><span data-ttu-id="282f7-108">Principais casos de uso</span><span class="sxs-lookup"><span data-stu-id="282f7-108">Key Use Cases</span></span>  
- <span data-ttu-id="282f7-109">Esses exemplos mostram os principais casos de uso para `nameof`.</span><span class="sxs-lookup"><span data-stu-id="282f7-109">These examples show the key use cases for `nameof`.</span></span>  
+## <a name="key-use-cases"></a><span data-ttu-id="32ea3-108">Principais casos de uso</span><span class="sxs-lookup"><span data-stu-id="32ea3-108">Key Use Cases</span></span>  
+ <span data-ttu-id="32ea3-109">Esses exemplos mostram os principais casos de uso para `nameof`.</span><span class="sxs-lookup"><span data-stu-id="32ea3-109">These examples show the key use cases for `nameof`.</span></span>  
   
- <span data-ttu-id="282f7-110">Validar parâmetros:</span><span class="sxs-lookup"><span data-stu-id="282f7-110">Validate parameters:</span></span>  
+ <span data-ttu-id="32ea3-110">Validar parâmetros:</span><span class="sxs-lookup"><span data-stu-id="32ea3-110">Validate parameters:</span></span>  
  ```csharp  
 void f(string s) {  
     if (s == null) throw new ArgumentNullException(nameof(s));  
 }  
 ```  
   
- <span data-ttu-id="282f7-111">Links de ação do MVC:</span><span class="sxs-lookup"><span data-stu-id="282f7-111">MVC Action links:</span></span>  
+ <span data-ttu-id="32ea3-111">Links de ação do MVC:</span><span class="sxs-lookup"><span data-stu-id="32ea3-111">MVC Action links:</span></span>  
  ```html  
 <%= Html.ActionLink("Sign up",  
              @typeof(UserController),  
@@ -43,7 +43,7 @@ void f(string s) {
 %>  
 ```  
   
- <span data-ttu-id="282f7-112">INotifyPropertyChanged:</span><span class="sxs-lookup"><span data-stu-id="282f7-112">INotifyPropertyChanged:</span></span>  
+ <span data-ttu-id="32ea3-112">INotifyPropertyChanged:</span><span class="sxs-lookup"><span data-stu-id="32ea3-112">INotifyPropertyChanged:</span></span>  
  ```csharp  
 int p {  
     get { return this.p; }  
@@ -51,19 +51,19 @@ int p {
 }  
 ```  
   
- <span data-ttu-id="282f7-113">Propriedade de dependência XAML:</span><span class="sxs-lookup"><span data-stu-id="282f7-113">XAML dependency property:</span></span>  
+ <span data-ttu-id="32ea3-113">Propriedade de dependência XAML:</span><span class="sxs-lookup"><span data-stu-id="32ea3-113">XAML dependency property:</span></span>  
  ```csharp  
 public static DependencyProperty AgeProperty = DependencyProperty.Register(nameof(Age), typeof(int), typeof(C));  
 ```  
   
- <span data-ttu-id="282f7-114">Registrando em log:</span><span class="sxs-lookup"><span data-stu-id="282f7-114">Logging:</span></span>  
+ <span data-ttu-id="32ea3-114">Registrando em log:</span><span class="sxs-lookup"><span data-stu-id="32ea3-114">Logging:</span></span>  
  ```csharp  
 void f(int i) {  
     Log(nameof(f), "method entry");  
 }  
 ```  
   
- <span data-ttu-id="282f7-115">Atributos:</span><span class="sxs-lookup"><span data-stu-id="282f7-115">Attributes:</span></span>  
+ <span data-ttu-id="32ea3-115">Atributos:</span><span class="sxs-lookup"><span data-stu-id="32ea3-115">Attributes:</span></span>  
  ```csharp  
 [DebuggerDisplay("={" + nameof(GetString) + "()}")]  
 class C {  
@@ -71,8 +71,8 @@ class C {
 }  
 ```  
   
-## <a name="examples"></a><span data-ttu-id="282f7-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="282f7-116">Examples</span></span>  
- <span data-ttu-id="282f7-117">Alguns exemplos de C#:</span><span class="sxs-lookup"><span data-stu-id="282f7-117">Some C# examples:</span></span>  
+## <a name="examples"></a><span data-ttu-id="32ea3-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="32ea3-116">Examples</span></span>  
+ <span data-ttu-id="32ea3-117">Alguns exemplos de C#:</span><span class="sxs-lookup"><span data-stu-id="32ea3-117">Some C# examples:</span></span>  
   
 ```csharp  
 using Stuff = Some.Cool.Functionality  
@@ -103,12 +103,12 @@ class Test {
 }
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="282f7-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="282f7-118">Remarks</span></span>  
- <span data-ttu-id="282f7-119">O argumento para `nameof` deve ser um nome simples, nome qualificado, acesso de membro, acesso básico com um membro especificado ou esse acesso com um membro especificado.</span><span class="sxs-lookup"><span data-stu-id="282f7-119">The argument to `nameof` must be a simple name, qualified name, member access, base access with a specified member, or this access with a specified member.</span></span>  <span data-ttu-id="282f7-120">A expressão de argumento identifica uma definição de código, mas ela nunca é avaliada.</span><span class="sxs-lookup"><span data-stu-id="282f7-120">The argument expression identifies a code definition, but it is never evaluated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="32ea3-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="32ea3-118">Remarks</span></span>  
+ <span data-ttu-id="32ea3-119">O argumento para `nameof` deve ser um nome simples, nome qualificado, acesso de membro, acesso básico com um membro especificado ou esse acesso com um membro especificado.</span><span class="sxs-lookup"><span data-stu-id="32ea3-119">The argument to `nameof` must be a simple name, qualified name, member access, base access with a specified member, or this access with a specified member.</span></span>  <span data-ttu-id="32ea3-120">A expressão de argumento identifica uma definição de código, mas ela nunca é avaliada.</span><span class="sxs-lookup"><span data-stu-id="32ea3-120">The argument expression identifies a code definition, but it is never evaluated.</span></span>  
   
- <span data-ttu-id="282f7-121">Como o argumento deve ser uma expressão sintaticamente, há muitas coisas não permitidas que não são úteis para a lista.</span><span class="sxs-lookup"><span data-stu-id="282f7-121">Because the argument needs to be an expression syntactically, there are many things disallowed that are not useful to list.</span></span>  <span data-ttu-id="282f7-122">Os itens a seguir são os que valem a pena mencionar que produzem erros: tipos predefinidos (por exemplo, `int` ou `void`), tipos que permitem valor nulo (`Point?`), tipos de matriz (`Customer[,]`), tipos de ponteiro (`Buffer*`), alias qualificado (`A::B`) e tipos genéricos não associados (`Dictionary<,>`), símbolos de pré-processamento (`DEBUG`) e rótulos (`loop:`).</span><span class="sxs-lookup"><span data-stu-id="282f7-122">The following are worth mentioning that produce errors: predefined types (for example, `int` or `void`), nullable types (`Point?`), array types (`Customer[,]`), pointer types (`Buffer*`), qualified alias (`A::B`), and unbound generic types (`Dictionary<,>`), preprocessing symbols (`DEBUG`), and labels (`loop:`).</span></span>  
+ <span data-ttu-id="32ea3-121">Como o argumento deve ser uma expressão sintaticamente, há muitas coisas não permitidas que não são úteis para a lista.</span><span class="sxs-lookup"><span data-stu-id="32ea3-121">Because the argument needs to be an expression syntactically, there are many things disallowed that are not useful to list.</span></span>  <span data-ttu-id="32ea3-122">Os itens a seguir são os que valem a pena mencionar que produzem erros: tipos predefinidos (por exemplo, `int` ou `void`), tipos que permitem valor nulo (`Point?`), tipos de matriz (`Customer[,]`), tipos de ponteiro (`Buffer*`), alias qualificado (`A::B`) e tipos genéricos não associados (`Dictionary<,>`), símbolos de pré-processamento (`DEBUG`) e rótulos (`loop:`).</span><span class="sxs-lookup"><span data-stu-id="32ea3-122">The following are worth mentioning that produce errors: predefined types (for example, `int` or `void`), nullable types (`Point?`), array types (`Customer[,]`), pointer types (`Buffer*`), qualified alias (`A::B`), and unbound generic types (`Dictionary<,>`), preprocessing symbols (`DEBUG`), and labels (`loop:`).</span></span>  
   
- <span data-ttu-id="282f7-123">Se você precisar obter o nome totalmente qualificado, poderá usar expressão `typeof` juntamente com `nameof`.</span><span class="sxs-lookup"><span data-stu-id="282f7-123">If you need to get the fully-qualified name, you can use the `typeof` expression along with `nameof`.</span></span>  <span data-ttu-id="282f7-124">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="282f7-124">For example:</span></span>
+ <span data-ttu-id="32ea3-123">Se você precisar obter o nome totalmente qualificado, poderá usar expressão `typeof` juntamente com `nameof`.</span><span class="sxs-lookup"><span data-stu-id="32ea3-123">If you need to get the fully-qualified name, you can use the `typeof` expression along with `nameof`.</span></span>  <span data-ttu-id="32ea3-124">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="32ea3-124">For example:</span></span>
 ```csharp  
 class C {
     void f(int i) {  
@@ -117,24 +117,24 @@ class C {
 }
 ``` 
 
- <span data-ttu-id="282f7-125">Infelizmente `typeof` não é uma expressão de constante como `nameof`, então `typeof` não pode ser usada em conjunto com `nameof` em todos os mesmos locais como `nameof`.</span><span class="sxs-lookup"><span data-stu-id="282f7-125">Unfortunately `typeof` is not a constant expression like `nameof`, so `typeof` cannot be used in conjunction with `nameof` in all the same places as `nameof`.</span></span>  <span data-ttu-id="282f7-126">Por exemplo, o seguinte poderia causar um erro de compilação CS0182:</span><span class="sxs-lookup"><span data-stu-id="282f7-126">For example, the following would cause a CS0182 compile error:</span></span>
+ <span data-ttu-id="32ea3-125">Infelizmente `typeof` não é uma expressão de constante como `nameof`, então `typeof` não pode ser usada em conjunto com `nameof` em todos os mesmos locais como `nameof`.</span><span class="sxs-lookup"><span data-stu-id="32ea3-125">Unfortunately `typeof` is not a constant expression like `nameof`, so `typeof` cannot be used in conjunction with `nameof` in all the same places as `nameof`.</span></span>  <span data-ttu-id="32ea3-126">Por exemplo, o seguinte poderia causar um erro de compilação CS0182:</span><span class="sxs-lookup"><span data-stu-id="32ea3-126">For example, the following would cause a CS0182 compile error:</span></span>
  ```csharp  
 [DebuggerDisplay("={" + typeof(C) + nameof(GetString) + "()}")]  
 class C {  
     string GetString() { }  
 }  
 ```    
- <span data-ttu-id="282f7-127">Nos exemplos você vê que pode usar um nome de tipo e acessar um nome de método de instância.</span><span class="sxs-lookup"><span data-stu-id="282f7-127">In the examples you see that you can use a type name and access an instance method name.</span></span>  <span data-ttu-id="282f7-128">Você não precisa ter uma instância do tipo, como necessário nas expressões avaliadas.</span><span class="sxs-lookup"><span data-stu-id="282f7-128">You do not need to have an instance of the type, as required in evaluated expressions.</span></span>  <span data-ttu-id="282f7-129">Usar o nome do tipo pode ser muito conveniente em algumas situações e como você está fazendo referência ao nome e não usando os dados da instância, não precisa criar uma variável de instância ou expressão.</span><span class="sxs-lookup"><span data-stu-id="282f7-129">Using the type name can be very convenient in some situations, and since you are just referring to the name and not using instance data, you do not need to contrive an instance variable or expression.</span></span>  
+ <span data-ttu-id="32ea3-127">Nos exemplos você vê que pode usar um nome de tipo e acessar um nome de método de instância.</span><span class="sxs-lookup"><span data-stu-id="32ea3-127">In the examples you see that you can use a type name and access an instance method name.</span></span>  <span data-ttu-id="32ea3-128">Você não precisa ter uma instância do tipo, como necessário nas expressões avaliadas.</span><span class="sxs-lookup"><span data-stu-id="32ea3-128">You do not need to have an instance of the type, as required in evaluated expressions.</span></span>  <span data-ttu-id="32ea3-129">Usar o nome do tipo pode ser muito conveniente em algumas situações e como você está fazendo referência ao nome e não usando os dados da instância, não precisa criar uma variável de instância ou expressão.</span><span class="sxs-lookup"><span data-stu-id="32ea3-129">Using the type name can be very convenient in some situations, and since you are just referring to the name and not using instance data, you do not need to contrive an instance variable or expression.</span></span>  
   
- <span data-ttu-id="282f7-130">Você pode fazer referência aos membros de uma classe em expressões de atributo na classe.</span><span class="sxs-lookup"><span data-stu-id="282f7-130">You can reference the members of a class in attribute expressions on the class.</span></span>  
+ <span data-ttu-id="32ea3-130">Você pode fazer referência aos membros de uma classe em expressões de atributo na classe.</span><span class="sxs-lookup"><span data-stu-id="32ea3-130">You can reference the members of a class in attribute expressions on the class.</span></span>  
   
- <span data-ttu-id="282f7-131">Não é possível obter as informações de uma assinaturas como "`Method1 (str, str)`".</span><span class="sxs-lookup"><span data-stu-id="282f7-131">There is no way to get a signatures information such as "`Method1 (str, str)`".</span></span>  <span data-ttu-id="282f7-132">Uma maneira de fazer isso é usar uma expressão, `Expression e = () => A.B.Method1("s1", "s2")` e efetuar o pull de MemberInfo da árvore de expressão resultante.</span><span class="sxs-lookup"><span data-stu-id="282f7-132">One way to do that is to use an Expression, `Expression e = () => A.B.Method1("s1", "s2")`, and pull the MemberInfo from the resulting expression tree.</span></span>  
+ <span data-ttu-id="32ea3-131">Não é possível obter as informações de uma assinaturas como "`Method1 (str, str)`".</span><span class="sxs-lookup"><span data-stu-id="32ea3-131">There is no way to get a signatures information such as "`Method1 (str, str)`".</span></span>  <span data-ttu-id="32ea3-132">Uma maneira de fazer isso é usar uma expressão, `Expression e = () => A.B.Method1("s1", "s2")` e efetuar o pull de MemberInfo da árvore de expressão resultante.</span><span class="sxs-lookup"><span data-stu-id="32ea3-132">One way to do that is to use an Expression, `Expression e = () => A.B.Method1("s1", "s2")`, and pull the MemberInfo from the resulting expression tree.</span></span>  
   
-## <a name="language-specifications"></a><span data-ttu-id="282f7-133">Especificações da linguagem</span><span class="sxs-lookup"><span data-stu-id="282f7-133">Language Specifications</span></span>  
+## <a name="language-specifications"></a><span data-ttu-id="32ea3-133">Especificações da linguagem</span><span class="sxs-lookup"><span data-stu-id="32ea3-133">Language Specifications</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="282f7-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="282f7-134">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32ea3-134">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32ea3-134">See Also</span></span>
 
-- [<span data-ttu-id="282f7-135">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="282f7-135">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="282f7-136">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="282f7-136">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="282f7-137">typeof</span><span class="sxs-lookup"><span data-stu-id="282f7-137">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
+- [<span data-ttu-id="32ea3-135">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="32ea3-135">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="32ea3-136">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="32ea3-136">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="32ea3-137">typeof</span><span class="sxs-lookup"><span data-stu-id="32ea3-137">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  

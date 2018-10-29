@@ -12,34 +12,32 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3e47828f14ffbaac57a43ddbf53094e220acb082
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b57465d4cf89bb38dd5cda70f090f444e52ea819
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205087"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195847"
 ---
-# <a name="security-in-network-programming"></a><span data-ttu-id="3af27-102">Segurança na programação de rede</span><span class="sxs-lookup"><span data-stu-id="3af27-102">Security in network programming</span></span>
+# <a name="security-in-network-programming"></a><span data-ttu-id="12cbe-102">Segurança na programação de rede</span><span class="sxs-lookup"><span data-stu-id="12cbe-102">Security in network programming</span></span>
 
-<span data-ttu-id="3af27-103">As classes de namespace <xref:System.Net> do .NET Framework dão suporte interno a mecanismos de autenticação de aplicativo de Internet populares e permissões de acesso a código do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3af27-103">The .NET Framework <xref:System.Net> namespace classes provide built-in support for popular Internet application authentication mechanisms and for .NET Framework code access permissions.</span></span>  
+<span data-ttu-id="12cbe-103">As classes de namespace <xref:System.Net> do .NET Framework dão suporte interno a mecanismos de autenticação de aplicativo de Internet populares e permissões de acesso a código do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="12cbe-103">The .NET Framework <xref:System.Net> namespace classes provide built-in support for popular Internet application authentication mechanisms and for .NET Framework code access permissions.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3af27-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="3af27-104">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="12cbe-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="12cbe-104">In this section</span></span>
 
-[<span data-ttu-id="3af27-105">Práticas recomendadas do protocolo TLS com o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3af27-105">Transport Layer Security (TLS) best practices with .NET Framework</span></span>](tls.md)  
-<span data-ttu-id="3af27-106">Descreve as melhores práticas de TLS com o .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3af27-106">Describes TLS best practices with the .NET Framwork.</span></span>
+[<span data-ttu-id="12cbe-105">Práticas recomendadas do protocolo TLS com o .NET Framework</span><span class="sxs-lookup"><span data-stu-id="12cbe-105">Transport Layer Security (TLS) best practices with .NET Framework</span></span>](tls.md)  
+<span data-ttu-id="12cbe-106">Descreve as melhores práticas de TLS com o .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="12cbe-106">Describes TLS best practices with the .NET Framwork.</span></span>
  
-[<span data-ttu-id="3af27-107">Usando o protocolo SSL</span><span class="sxs-lookup"><span data-stu-id="3af27-107">Using Secure Sockets Layer</span></span>](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
-<span data-ttu-id="3af27-108">Descreve como usar conexões de protocolo SSL.</span><span class="sxs-lookup"><span data-stu-id="3af27-108">Describes how to use Secure Sockets Layer (SSL) connections.</span></span>  
+[<span data-ttu-id="12cbe-107">Usando o protocolo SSL</span><span class="sxs-lookup"><span data-stu-id="12cbe-107">Using Secure Sockets Layer</span></span>](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+<span data-ttu-id="12cbe-108">Descreve como usar conexões de protocolo SSL.</span><span class="sxs-lookup"><span data-stu-id="12cbe-108">Describes how to use Secure Sockets Layer (SSL) connections.</span></span>  
   
-[<span data-ttu-id="3af27-109">Autenticação da Internet</span><span class="sxs-lookup"><span data-stu-id="3af27-109">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)  
-<span data-ttu-id="3af27-110">Descreve como usar os métodos de autenticação HTTP para estabelecer conexões autenticadas com servidores HTTP.</span><span class="sxs-lookup"><span data-stu-id="3af27-110">Describes how to use HTTP authentication methods to establish authenticated connections to HTTP servers.</span></span>  
+[<span data-ttu-id="12cbe-109">Autenticação da Internet</span><span class="sxs-lookup"><span data-stu-id="12cbe-109">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)  
+<span data-ttu-id="12cbe-110">Descreve como usar os métodos de autenticação HTTP para estabelecer conexões autenticadas com servidores HTTP.</span><span class="sxs-lookup"><span data-stu-id="12cbe-110">Describes how to use HTTP authentication methods to establish authenticated connections to HTTP servers.</span></span>  
   
-[<span data-ttu-id="3af27-111">Permissões da Web e de soquete</span><span class="sxs-lookup"><span data-stu-id="3af27-111">Web and Socket Permissions</span></span>](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
-<span data-ttu-id="3af27-112">Descreve como definir a segurança de acesso de código para aplicativos que usam conexões de Internet.</span><span class="sxs-lookup"><span data-stu-id="3af27-112">Describes how to set code access security for applications that use Internet connections.</span></span>  
+[<span data-ttu-id="12cbe-111">Permissões da Web e de soquete</span><span class="sxs-lookup"><span data-stu-id="12cbe-111">Web and Socket Permissions</span></span>](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+<span data-ttu-id="12cbe-112">Descreve como definir a segurança de acesso de código para aplicativos que usam conexões de Internet.</span><span class="sxs-lookup"><span data-stu-id="12cbe-112">Describes how to set code access security for applications that use Internet connections.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="3af27-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="3af27-113">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="12cbe-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="12cbe-113">Related sections</span></span>
 
-[<span data-ttu-id="3af27-114">Programação de rede no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3af27-114">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
-<span data-ttu-id="3af27-115">Apresenta as classes nos namespaces <xref:System.Net> e <xref:System.Net.Sockets>.</span><span class="sxs-lookup"><span data-stu-id="3af27-115">Introduces the classes in the <xref:System.Net> and <xref:System.Net.Sockets> namespaces.</span></span>
+[<span data-ttu-id="12cbe-114">Programação de rede no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="12cbe-114">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)  
+<span data-ttu-id="12cbe-115">Apresenta as classes nos namespaces <xref:System.Net> e <xref:System.Net.Sockets>.</span><span class="sxs-lookup"><span data-stu-id="12cbe-115">Introduces the classes in the <xref:System.Net> and <xref:System.Net.Sockets> namespaces.</span></span>
