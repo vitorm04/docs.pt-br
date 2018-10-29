@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cbef005c913d818dba23d85404fe0382fe79f4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741939"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190899"
 ---
 # <a name="strong-named-assemblies"></a>Assemblies de nomes fortes
 Uma nomeação forte na assembly cria uma única identidade para assembly e pode evitar conflitos de assembly.  
@@ -43,7 +43,7 @@ Uma nomeação forte na assembly cria uma única identidade para assembly e pode
  Se você é um desenvolvedor de código aberto e deseja os benefícios da identidade de um assembly de nome forte, considere inserir na chave privada um assembly no sistema de controle de fonte.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
- [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+- [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

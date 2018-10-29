@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106571"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194066"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -152,7 +152,7 @@ Para simplificar, o exemplo eShopOnContainers usa a primeira abordagem (sem proc
 
 O código a seguir mostra como criar uma única transação que envolva vários objetos DbContext: um contexto relacionados aos dados originais que estão sendo atualizados e o segundo contexto relacionado à tabela IntegrationEventLog.
 
-Observe que a transação, no código de exemplo abaixo, não será resiliente se as conexões com o banco de dados enfrentarem qualquer problema no momento em que o código estiver sendo executado. Isso pode ocorrer em sistemas baseados em nuvem, como o BD SQL do Azure, que pode mover bancos de dados entre servidores. Para implementar transações resilientes em vários contextos, consulte a seção [Implementando conexões de SQL do Entity Framework Core resilientes](#implementing_resilient_EFCore_SQL_conns) mais adiante, neste guia.
+Observe que a transação, no código de exemplo abaixo, não será resiliente se as conexões com o banco de dados enfrentarem qualquer problema no momento em que o código estiver sendo executado. Isso pode ocorrer em sistemas baseados em nuvem, como o BD SQL do Azure, que pode mover bancos de dados entre servidores. Para implementar transações resilientes em vários contextos, consulte a seção [Implementando conexões de SQL do Entity Framework Core resilientes](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) mais adiante, neste guia.
 
 Para maior clareza, o exemplo a seguir mostra todo o processo em um único segmento de código. No entanto, a implementação do eShopOnContainers refatorou e dividiu essa lógica em várias classes, sendo mais fácil de manter.
 
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -317,7 +317,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
 ### <a name="additional-resources"></a>Recursos adicionais
 
 -   **Forked eShopOnContainers using NServiceBus (eShopOnContainers ramificado usando NServiceBus) (software específico)**
-    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
 -   **Mensagens controladas por evento**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
@@ -326,7 +326,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **Canal de publicação/assinatura**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Comunicação entre contextos limitados**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)

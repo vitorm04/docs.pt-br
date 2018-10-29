@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105729"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188047"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Projetando validações na camada de modelo de domínio
 
@@ -17,7 +17,7 @@ Em DDD, as regras de validação podem ser consideradas invariáveis. A principa
 
 Entidades de domínio devem ser sempre entidades válidas. Existe um determinado número de invariáveis para um objeto que devem ser sempre verdadeiras. Por exemplo, um objeto de item do pedido sempre deve ter uma quantidade que deve ser um inteiro positivo, além de um nome de artigo e preço. Portanto, a imposição de invariáveis é de responsabilidade das entidades de domínio (especialmente da raiz de agregação) e um objeto de entidade não deve ser capaz de existir sem ser válido. Regras invariáveis simplesmente são expressas como contratos e exceções ou notificações são geradas quando elas são violadas.
 
-O raciocínio por trás disso é que vários bugs ocorrerem porque os objetos estão em um estado em que nunca deveriam ter ficado. A seguir está uma boa explicação de Greg Young em uma [discussão online](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
+O raciocínio por trás disso é que vários bugs ocorrerem porque os objetos estão em um estado em que nunca deveriam ter ficado. A seguir está uma boa explicação de Greg Young em uma [discussão online](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
 
 Vamos propor que agora temos um SendUserCreationEmailService que usa um UserProfile..., como podemos racionalizar nesse serviço que o Nome não é nulo? Podemos verificar novamente? Ou, mais provável… você apenas não se preocupa em verificar e "espera pelo melhor": você espera que alguém tenha se preocupado em validá-lo antes de enviá-lo a você. É claro que, usando TDD, um dos primeiros testes que devemos escrever é que, se eu enviar um cliente com um nome nulo, isso deverá gerar um erro. Porém, quando começarmos a escrever esses tipos de testes repetidamente, percebemos… "espere, se nunca tivéssemos permitido que o nome se tornasse nulo, não teríamos todos esses testes"
 

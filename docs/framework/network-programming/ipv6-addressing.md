@@ -26,14 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47194003"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183406"
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
 No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um motivo para um espaço de endereço tão grande é subdividir os endereços disponíveis em uma hierarquia de domínios de roteamento que reflitam a topologia da Internet. Outro motivo é mapear os endereços de adaptadores de rede (ou interfaces) que conectam dispositivos à rede. O IPv6 tem uma capacidade inerente de resolver endereços no nível mais baixo deles, que é o nível de adaptador de rede e também tem capacidades de configuração automática.  
@@ -75,5 +73,5 @@ No protocolo IP versão 6 (IPv6), os endereços têm tamanho de 128 bits. Um mot
  Em geral, um nó sempre tem um endereço de link local. Ele pode ter um endereço de site local e um ou mais endereços globais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Soquetes](../../../docs/framework/network-programming/sockets.md)

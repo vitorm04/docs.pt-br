@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a9e5ee865b5e0ac9ec0214a4a0b5194bbcd9f30
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b8b4cbdff72167cfc063254cf5370d22fb729b0a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742082"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50088566"
 ---
 # <a name="how-to-unload-an-application-domain"></a>Como descarregar um domínio de aplicativo
 Quando terminar de usar um domínio do aplicativo, descarregue-o usando o método <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>. O método **Unload** desliga normalmente o domínio de aplicativo especificado. Durante o processo de descarga, nenhum thread novo pode acessar o domínio do aplicativo e todas as estruturas de dados específicas do domínio do aplicativo são liberadas.  
@@ -32,6 +32,6 @@ Quando terminar de usar um domínio do aplicativo, descarregue-o usando o métod
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
- [Como criar um domínio do aplicativo](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)
+- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
+- [Como criar um domínio do aplicativo](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)

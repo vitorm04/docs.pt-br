@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57483f099bb71a1ab685cedf148d4343c12983dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390517"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187238"
 ---
 # <a name="com-wrappers"></a>Wrappers COM
 O COM difere do modelo de objeto .NET Framework de várias maneiras importantes:  
@@ -35,7 +35,7 @@ Visão geral do wrapper COM
  Na maioria dos casos, o RCW padrão ou o CCW gerado pelo tempo de execução fornece o marshaling adequado para chamadas que cruzam o limite entre o COM e o .NET Framework. Usando atributos personalizados, opcionalmente, você pode ajustar a maneira como o tempo de execução representa o código gerenciado e não gerenciado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Interoperabilidade COM avançada](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)  
  [COM Callable Wrapper](com-callable-wrapper.md)  
  [Customizing Standard Wrappers](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)) (Personalizando wrappers padrão)  

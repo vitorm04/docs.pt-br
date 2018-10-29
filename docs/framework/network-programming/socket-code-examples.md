@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b744690cf2af1c2935a381c3edc2198840704425
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197897"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199949"
 ---
 # <a name="socket-code-examples"></a>Exemplos de código de soquete
 Os exemplos de código a seguir demonstram como usar a classe <xref:System.Net.Sockets.Socket> como um cliente para se conectar aos serviços de rede remota e como um servidor para escutar conexões de clientes remotos.  

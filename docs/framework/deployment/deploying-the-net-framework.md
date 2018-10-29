@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391401"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196434"
 ---
 # <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
 Esta seção da documentação do .NET Framework fornece informações para desenvolvedores que desejam instalar o .NET Framework com seus aplicativos e administradores que desejam implantar o .NET Framework em uma rede. Ele também aborda os problemas de ativação e reinicialização associados à implantação e como monitorar o andamento da instalação do .NET Framework.  
@@ -37,4 +37,4 @@ Esta seção da documentação do .NET Framework fornece informações para dese
  Explica como exibir e depurar os logs de ativação do CLR para resolver problemas que você pode encontrar para fazer com que seu aplicativo seja executado com a versão correta do CLR.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de desenvolvimento](../../../docs/framework/development-guide.md)
+- [Guia de desenvolvimento](../../../docs/framework/development-guide.md)

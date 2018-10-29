@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b5293afbda1bdf13db318b072696c597a12b8187
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 333baa68f4bd80b98e8bb03929ab41dc9cbed7a1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205350"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50088696"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 O namespace <xref:System.Net.NetworkInformation> permite que você colete informações sobre eventos, alterações, estatísticas e propriedades de rede. Você também pode determinar se um host remoto está acessível usando a classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  

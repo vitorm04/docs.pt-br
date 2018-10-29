@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210621"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190652"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Como definir uma política de cache para uma solicitação
-O exemplo a seguir demonstra como definir uma política de cache para uma solicitação. A entrada de exemplo é um URI, como http://www.contoso.com/.  
+O exemplo a seguir demonstra como definir uma política de cache para uma solicitação. A entrada de exemplo é um URI, como `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir cria uma política de cache que permite que o recurso solicitado seja usado em cache se ele não esteve no cache por mais de um dia. O exemplo exibe uma mensagem que indica se o recurso foi usado do cache (por exemplo, `"The response was retrieved from the cache : False."`) e, em seguida, exibe o recurso. Uma solicitação pode ser atendida por qualquer cache entre o cliente e servidor.  

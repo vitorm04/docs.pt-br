@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664521"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50134914"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Encaminhamento de tipo no Common Language Runtime
 O encaminhamento de tipo permite que você mova um tipo para outro assembly sem ter que recompilar os aplicativos que usam o assembly original.  
@@ -44,9 +44,9 @@ O encaminhamento de tipo permite que você mova um tipo para outro assembly sem 
   
 3.  Compile o assembly que agora contém o tipo.  
   
-4.  Recompile o assembly onde o tipo estava localizado, com uma referência ao assembly que agora contém o tipo. Por exemplo, se você estiver compilando um arquivo em C# na linha de comando, use a opção [/reference (opções do compilador em C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar o assembly que contém o tipo. Em C++, use a diretiva [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) no arquivo de origem para especificar o assembly que contém o tipo.  
+4.  Recompile o assembly onde o tipo estava localizado, com uma referência ao assembly que agora contém o tipo. Por exemplo, se você estiver compilando um arquivo em C# na linha de comando, use a opção [/reference (opções do compilador em C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar o assembly que contém o tipo. Em C++, use a diretiva [#using](/cpp/preprocessor/hash-using-directive-cpp) no arquivo de origem para especificar o assembly que contém o tipo.  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
- [Encaminhamento de tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [Diretiva #using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+- [Encaminhamento de tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+- [Diretiva #using](/cpp/preprocessor/hash-using-directive-cpp)

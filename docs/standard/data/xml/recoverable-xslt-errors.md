@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581928"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202979"
 ---
 # <a name="recoverable-xslt-errors"></a>Erros recuperáveis XSLT
 A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as áreas no qual o provedor de implementação pode decidir como manipular uma situação. Essas áreas são consideradas como comportamento arbitrário. Por exemplo, em instruções de processamento criadoras da seção 7,3, XSLT 1,0 estados de recomendação que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, a recomendação XSLT 1,0 indica o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
@@ -22,7 +22,7 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
   
 -   O erro indica que uma exceção é gerada para essa condição.  
   
--   As referências da seção podem ser encontradas em [Recomendação de transformações XSL (XSLT) de W3C da versão 1.0](http://www.w3.org/TR/xslt) e a [Errata da especificação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   As referências da seção podem ser encontradas em [Recomendação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/TR/xslt) e a [Errata da especificação de transformações XSL (XSLT) de W3C da versão 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condição XSLT|Seção|Comportamento de XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270416"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50088787"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre segurança de assemblies
 <a name="top"></a> Ao criar um assembly, você pode especificar um conjunto de permissões que o assembly exige para ser executado. Se determinadas permissões são concedidas ou não a um assembly é algo que se baseia na evidência.  
@@ -63,6 +63,6 @@ ms.locfileid: "36270416"
  Como a nomenclatura forte e a assinatura usando o [SignTool.exe (Ferramenta de assinatura)](../../../docs/framework/tools/signtool-exe.md) garantem integridade, você pode basear a política de segurança de acesso a códigos nessas duas formas de evidência do assembly. Nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md) garantem a integridade por meio de certificados e assinaturas digitais. Todas as tecnologias mencionadas — verificação de hash, nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md) — funcionam juntas para garantir que o assembly não tenha sido alterado de forma alguma.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md)
+- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [SignTool.exe (Ferramenta de Assinatura)](../../../docs/framework/tools/signtool-exe.md)

@@ -2,14 +2,12 @@
 title: Habilitando e desabilitando o IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f63d62c7605d32dfbe97193f8aed53f0fc547cff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9dbbbbb522628de81be3d3d1382867de99c570d0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195597"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183081"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitando e desabilitando o IPv6
 Para usar o protocolo IPv6, verifique se você está executando uma versão do sistema operacional que dá suporte ao IPv6 e se o sistema operacional e as classes de rede estão configuradas corretamente.  
@@ -43,7 +41,7 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
  Para o .NET Framework versão 2.0 e posterior, se o Windows der suporte ao IPv6, os membros da classe <xref:System.Net.Dns?displayProperty=nameWithType>, (por exemplo, o método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>), retornarão endereços IPv6 com uma limitação. Os membros obsoletos do DNS <xref:System.Net.Dns?displayProperty=nameWithType> (por exemplo, o método <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) lerão e reconhecerão o valor no arquivo de configuração para a configuração ipv6 enabled.  
   
 ## <a name="see-also"></a>Consulte também  
- [Protocolo IP versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Protocolo da Internet Versão 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Soquetes](../../../docs/framework/network-programming/sockets.md)  
  [Esquema de configurações de rede](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<Elemento ipv6> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

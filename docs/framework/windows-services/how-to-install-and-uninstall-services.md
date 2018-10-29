@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: eb68809909c0550ea5fa5eab1f9d5ca6a069e314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 265ee152bf106d0f97cca83552fe9a3e75fb4165
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232723"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348998"
 ---
 # <a name="how-to-install-and-uninstall-services"></a>Como instalar e desinstalar serviços
 Se você estiver desenvolvendo um serviço Windows usando o .NET Framework, você pode rapidamente instalar seu aplicativo de serviço usando um utilitário de linha de comando chamado InstallUtil.exe. Se você for um desenvolvedor que deseja liberar um serviço Windows que os usuários possam instalar e desinstalar, você deve usar o InstallShield. Confira [Implantação do Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0).  
@@ -60,7 +60,7 @@ Se você estiver desenvolvendo um serviço Windows usando o .NET Framework, voc�
     installutil /u <yourproject>.exe  
     ```  
   
-3.  Às vezes, depois que o executável de um serviço é excluído, o serviço ainda pode estar presente no registro. Nesse caso, use o comando [sc delete](https://technet.microsoft.com/library/cc742045.aspx) para remover a entrada para o serviço do registro.  
+3.  Às vezes, depois que o executável de um serviço é excluído, o serviço ainda pode estar presente no registro. Nesse caso, use o comando [sc delete](/windows-server/administration/windows-commands/sc-delete) para remover a entrada para o serviço do registro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução aos Aplicativos de Serviço Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

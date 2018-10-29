@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744623"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191058"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  
@@ -98,9 +98,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Gerenciando Assinatura de Assembly e Manifesto](/visualstudio/ide/managing-assembly-and-manifest-signing)  
- [Página de Assinatura, Designer de Projeto](https://msdn.microsoft.com/library/0k50fs3b)
+- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+- [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+- [Gerenciando Assinatura de Assembly e Manifesto](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+- [Página de Assinatura, Designer de Projeto](/visualstudio/ide/reference/signing-page-project-designer)

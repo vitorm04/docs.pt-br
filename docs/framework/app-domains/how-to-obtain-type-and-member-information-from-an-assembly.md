@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fb06555f18c13f87347a5a76e6f4a3060777f02
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 44fcded298f33a420a505900f618c1c67f4b9b6f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744061"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180056"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Como obter as informações de tipo e membro de um assembly
 O namespace <xref:System.Reflection> contém vários métodos para obter informações de um assembly. Esta seção demonstra um desses métodos. Para saber mais, veja [Visão geral da reflexão](../../../docs/framework/reflection-and-codedom/reflection.md).  
@@ -29,5 +29,6 @@ O namespace <xref:System.Reflection> contém vários métodos para obter informa
  [!code-vb[Conceptual.Types.ViewInfo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source6.vb#8)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação com domínios do aplicativo](./application-domains.md#programming-with-application-domains) [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)
+- [Programação com domínios do aplicativo](./application-domains.md#programming-with-application-domains)
+- [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)

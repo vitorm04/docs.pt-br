@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395363"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453249"
 ---
 # <a name="interop-marshaling"></a>marshaling de interoperabilidade
 <a name="top"></a> O marshaling de interoperabilidade controla como os dados são passados em argumentos de método e valores retornados entre memória gerenciada e não gerenciada e durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.  
@@ -96,7 +96,7 @@ Chamada entre apartments entre um cliente .NET e um objeto COM
     > [!NOTE]
     >  Depois que o thread de um cliente C# for definido para STA, chamadas para componentes COM MTA exigirão marshaling entre apartments.  
   
- Para obter instruções sobre como selecionar explicitamente um modelo de apartment, consulte [Threading gerenciado e não gerenciado](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100)).  
+ Para obter instruções sobre como selecionar explicitamente um modelo de apartment, consulte [Threading gerenciado e não gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
  [Voltar ao início](#top)  
   
@@ -152,7 +152,7 @@ Chamadas remotas através de firewalls usando SOAP ou a classe TcpChannel
 |[Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)|Descreve como mapear exceções personalizadas para HRESULTs e fornece o mapeamento completo de cada HRESULT para a respectiva classe de exceção comparável no .NET Framework.|  
 |[Interoperação usando tipos genéricos](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.|  
 |[Interoperação com código não gerenciado](index.md)|Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.|  
-|[Interoperabilidade COM avançada](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.|  
+|[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Fornece links para obter mais informações sobre como incorporar componentes COM no aplicativo do .NET Framework.|  
 |[Considerações sobre design para interoperação](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Fornece dicas para escrever componentes COM integrados.|  
   
  [Voltar ao início](#top)  

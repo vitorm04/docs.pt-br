@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231551"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198478"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (ferramenta Gerenciador de Certificados)
 A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CTLs (listas de certificados confiáveis) e CRLs (listas de certificados revogados).  
@@ -54,7 +54,7 @@ A ferramenta Gerenciador de Certificados (Certmgr.exe) gerencia certificados, CT
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/add**|Adiciona certificados, CTLs e CRLs a um repositório de certificados.|  
-|**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções **/add** ou **/del**. A opção **/all** não pode ser usada com **/put**.|  
+|**/all**|Adiciona todas as entradas quando usadas com **/add**. Exclui todas as entradas quando usadas com **/del**. Exibe todas as entradas quando usadas sem as opções /add ou **/del**. A opção **/all** não pode ser usada com **/put**.|  
 |**/c**|Adiciona certificados quando usados com **/add**. Exclui certificados quando usados com **/del**. Salva certificados quando usados com **/put**. Exibe certificados quando usados sem as opções **/add**, **/del** ou **/put**.|  
 |**/CRL**|Adiciona CRLs quando usadas com **/add**. Exclui CRLs quando usadas com **/del**. Salva CRLs quando usadas com **/put**. Exibe CRLs quando usadas sem a opção **/add**, **/del** ou **/put**.|  
 |**/CTL**|Adiciona CTLs quando usadas com **/add**. Exclui CTLs quando usadas com **/del**. Salva CTLs quando usadas com **/put**. Exibe CTLs quando usadas sem as opções **/add**, **/del** ou **/put**.|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Consulte também  
  [Ferramentas](../../../docs/framework/tools/index.md)  
- [Makecert.exe (Ferramenta de Criação de Certificado)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (Ferramenta de Criação de Certificado)](/windows/desktop/SecCrypto/makecert)  
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

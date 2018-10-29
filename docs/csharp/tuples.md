@@ -3,12 +3,12 @@ title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509440"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186025"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C# #
 
@@ -92,7 +92,7 @@ Começando com o C# 7.3, os tipos de tupla oferecem suporte aos operadores `==` 
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Há várias regras que tornam os testes de igualdade de tuplas mais convenientes. A igualdade de tupla executa [conversões lifted](language-reference/language-specification/index.md) se uma das tuplas for uma tupla que permite valor nulo, conforme mostrado no código a seguir:
+Há várias regras que tornam os testes de igualdade de tuplas mais convenientes. A igualdade de tupla executa [conversões lifted](~/_csharplang/spec/conversions.md#lifted-conversion-operators) se uma das tuplas for uma tupla que permite valor nulo, conforme mostrado no código a seguir:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522085"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192740"
 ---
 # <a name="overview-of-the-net-framework"></a>Visão geral do .NET Framework
 
@@ -93,9 +93,9 @@ As classes Windows Forms são um conjunto abrangente de tipos reutilizáveis que
 
 ## <a name="see-also"></a>Consulte também
 
-[Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md)   
-[Guia de instalação](../../../docs/framework/install/index.md)   
-[Guia de desenvolvimento](../../../docs/framework/development-guide.md)   
-[ Ferramentas](../../../docs/framework/tools/index.md)   
-[Exemplos do .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[Biblioteca de classes .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md)   
+- [Guia de instalação](../../../docs/framework/install/index.md)   
+- [Guia de desenvolvimento](../../../docs/framework/development-guide.md)   
+- [Ferramentas](../../../docs/framework/tools/index.md)   
+- [Exemplos do .NET Framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [Biblioteca de classes .NET Framework](https://go.microsoft.com/fwlink/?LinkID=227195)

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198677"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183594"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de Gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -84,13 +84,13 @@ Neste exemplo, o Gateway de API deve ser implementado como um serviço de WebHos
 
 Portanto, os Gateways de API devem ser segregados com base nos limites de negócios e nos aplicativos cliente, e não agir como um agregador único para todos os microsserviços internos.
 
-Ao dividir a camada do Gateway de API em vários Gateways de API, se seu aplicativo tiver vários aplicativos cliente, isso poderá ser um fator fundamental ao identificar os vários tipos de Gateways de API, para que você possa ter uma fachada diferente para as necessidades de cada aplicativo cliente. Esse caso é um padrão chamado "Back-end para Front-end" ([BFF](http://samnewman.io/patterns/architectural/bff/)), em que cada Gateway de API pode fornecer uma API diferente personalizada para cada tipo de aplicativo cliente, possivelmente com base no fator forma do cliente implementando código de adaptador específico que chama, em segundo plano, vários microsserviços internos, conforme mostrado na imagem a seguir:
+Ao dividir a camada do Gateway de API em vários Gateways de API, se seu aplicativo tiver vários aplicativos cliente, isso poderá ser um fator fundamental ao identificar os vários tipos de Gateways de API, para que você possa ter uma fachada diferente para as necessidades de cada aplicativo cliente. Esse caso é um padrão chamado "Back-end para Front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)), em que cada Gateway de API pode fornecer uma API diferente personalizada para cada tipo de aplicativo cliente, possivelmente com base no fator forma do cliente implementando código de adaptador específico que chama, em segundo plano, vários microsserviços internos, conforme mostrado na imagem a seguir:
 
 ![Diagrama mostrando vários Gateways de API personalizados](./media/image13.1.png)
 
 **Figura 4-13.1**. Uso de mostrando vários Gateways de API personalizados
 
-A imagem anterior mostra uma arquitetura simplificada com vários Gateways de API refinados. Nesse caso, os limites identificados para cada gateway de API são baseados puramente no padrão "Back-end para Front-end" ([BFF](http://samnewman.io/patterns/architectural/bff/)), portanto, com base apenas na API necessária por aplicativo cliente. Porém, em aplicativos maiores, você deve ir além e criar Gateways de API adicionais com base nos limites de negócios como um segundo fator de design.
+A imagem anterior mostra uma arquitetura simplificada com vários Gateways de API refinados. Nesse caso, os limites identificados para cada gateway de API são baseados puramente no padrão "Back-end para Front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)), portanto, com base apenas na API necessária por aplicativo cliente. Porém, em aplicativos maiores, você deve ir além e criar Gateways de API adicionais com base nos limites de negócios como um segundo fator de design.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Principais recursos do padrão de Gateway de API
 
@@ -168,7 +168,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 
 - **Padrão de Gateway de API?** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Padrão de composição e agregação** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Padrão de composição e agregação** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Gerenciamento de API do Azure** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

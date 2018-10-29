@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035065"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205263"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Suporte de automação de interface do usuário para o tipo de controle List
 > [!NOTE]
@@ -36,21 +36,19 @@ ms.locfileid: "48035065"
   
  O modo de exibição de controle para um controle que implementa o tipo de controle de lista (por exemplo, um controle de lista) consiste em:  
   
--   Zero ou mais itens dentro do controle de lista (itens podem ser baseados nos tipos de controle Item de lista ou Item de dados)  
+- Zero ou mais itens dentro do controle de lista (itens podem ser baseados nos tipos de controle Item de lista ou Item de dados).
   
--   Zero ou mais controles de grupo em um controle de lista  
+- Zero ou mais controles de grupo em um controle de lista.
   
--   Controles da barra de rolagem zero, um ou dois  
+- Zero, um ou dois controles de barra de rolagem.
   
--  
+A exibição de conteúdo de um controle que implementa o tipo de controle de lista (por exemplo, um controle de lista) consiste em:  
   
- A exibição de conteúdo de um controle que implementa o tipo de controle de lista (por exemplo, um controle de lista) consiste em:  
+- Zero ou mais itens dentro do controle de lista (itens podem ser baseados nos tipos de controle Item de lista ou Item de dados).
   
--   Zero ou mais itens dentro do controle de lista (itens podem ser baseados nos tipos de controle Item de lista ou Item de dados)  
-  
--   Zero ou mais grupos dentro do controle de lista  
-  
- Um controle de lista não deve ter itens que têm uma relação hierárquica diferente ser agrupados. Se os itens têm filhos no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore, em seguida, o contêiner de lista deve ser baseado no tipo de controle de árvore.  
+- Zero ou mais grupos dentro do controle de lista.
+
+Um controle de lista não deve ter itens que têm uma relação hierárquica diferente ser agrupados. Se os itens têm filhos no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de árvore, em seguida, o contêiner de lista deve ser baseado no tipo de controle de árvore.  
   
  Os itens selecionáveis dentro do controle de lista estarão disponíveis a partir dos descendentes no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore do controle de lista. Todos os itens dentro do controle de lista devem pertencer ao mesmo grupo de seleção. Os itens podem ser selecionados na lista devem ser expostos como tipos de controle ListItem (em vez de DataItem).  
   

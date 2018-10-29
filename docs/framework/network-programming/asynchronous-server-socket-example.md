@@ -9,14 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6816b22014f9e6669abe0b1aab62d0863e1f895b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 26b5c53c4983aa392dba7346f357e2700cfe0178
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47398830"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50088683"
 ---
 # <a name="asynchronous-server-socket-example"></a>Exemplo de soquete de servidor assíncrono
 O programa de exemplo a seguir cria um servidor que recebe solicitações de conexão de clientes. O servidor é criado com um soquete assíncrono e, portanto, a execução do aplicativo para servidores não é suspensa enquanto ele aguarda uma conexão de um cliente. O aplicativo recebe uma cadeia de caracteres do cliente, exibe a cadeia de caracteres no console e, em seguida, retorna-a ao cliente. A cadeia de caracteres do cliente deve conter a cadeia de caracteres “\<EOF>” para sinalizar o final da mensagem.  

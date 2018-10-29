@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210952"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034309"
 ---
 # <a name="xslt-security-considerations"></a>Considerações de segurança XSLT
 O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e flexibilidade. Inclui muitos recursos que, quando úteis, podem também ser explorados por fontes fora. Para usar com segurança XSLT, você deve compreender os tipos de problemas de segurança que ocorrem ao usar XSLT, e as estratégias básicas que você pode usar para atenuar esses riscos.  
@@ -60,4 +60,4 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
 - [Resolvendo recursos externos durante processamento XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
-- [Segurança de acesso do código](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+- [Segurança de acesso do código](../../../../docs/framework/misc/code-access-security.md)

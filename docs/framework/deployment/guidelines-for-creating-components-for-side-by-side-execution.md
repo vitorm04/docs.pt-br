@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f45e68d9d340d857bc25b3848bd687e46fd73c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391027"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198491"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Diretrizes para criação de componentes para execução lado a lado
 Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes projetados para execução lado a lado:  
@@ -63,5 +63,5 @@ Siga estas diretrizes gerais para criar aplicativos gerenciados ou componentes p
  A [ferramenta Cache de Assembly Global (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) permite que você substitua um assembly quando apenas o número de versão do arquivo é mais recente. O instalador geralmente não instala em um assembly, a menos que o número de versão do assembly seja maior.  
   
 ## <a name="see-also"></a>Consulte também  
- [Execução lado a lado](../../../docs/framework/deployment/side-by-side-execution.md)  
- [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Execução lado a lado](../../../docs/framework/deployment/side-by-side-execution.md)  
+- [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

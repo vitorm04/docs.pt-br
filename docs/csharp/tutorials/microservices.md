@@ -3,12 +3,12 @@ title: Microsserviços hospedados no Docker - C#
 description: Aprenda a criar serviços asp.net core que são executados em contêineres do Docker
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106344"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454480"
 ---
 # <a name="microservices-hosted-in-docker"></a>Microsserviços hospedados no Docker
 
@@ -41,7 +41,7 @@ Você precisará configurar seu computador para executar o .NET Core. Você enco
 Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
 Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
-Também precisará instalar o mecanismo Docker. Consulte a [página Instalação de Docker](http://www.docker.com/products/docker) para obter instruções para sua plataforma.
+Também precisará instalar o mecanismo Docker. Consulte a [página Instalação de Docker](https://docs.docker.com/install/overview/) para obter instruções para sua plataforma.
 O Docker pode ser instalado em muitas distribuições do Linux, macOS ou Windows. A página mencionada acima contém seções para cada uma das instalações disponíveis.
 
 ## <a name="create-the-application"></a>Criar o aplicativo

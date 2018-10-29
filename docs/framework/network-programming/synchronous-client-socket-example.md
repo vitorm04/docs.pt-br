@@ -9,14 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 55fd8c33f80ecf3b31fdbacec1abd73ebab92396
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1720d0a476d3eb5586ed8742c377324bc1950cd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47230665"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192506"
 ---
 # <a name="synchronous-client-socket-example"></a>Exemplo de soquete de cliente síncrono
 O programa de exemplo a seguir cria um cliente que se conecta a um servidor. O cliente é criado com um soquete síncrono e, portanto, a execução do aplicativo cliente é suspensa até que o servidor retorne uma resposta. O aplicativo envia uma cadeia de caracteres ao servidor e, em seguida, exibe a cadeia de caracteres retornada pelo servidor no console.  

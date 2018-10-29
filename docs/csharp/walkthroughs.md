@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47202228"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192558"
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -23,7 +23,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Acessando a Web usando Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Mostra como criar uma solução assíncrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).  
   
- [Criando um componente do Tempo de Execução do Windows em C# ou no Visual Basic e chamando-o do JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ [Criando um componente do Tempo de Execução do Windows em C# ou no Visual Basic e chamando-o do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Mostra como criar um tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], compactá-lo em um componente [!INCLUDE[wrt](~/includes/wrt-md.md)] e chamar o componente de um aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] que é compilado para Windows usando JavaScript.  
   
  [Programação do Office (C# e Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041096"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Como determinar o nome totalmente qualificado de um assembly
 Para descobrir o nome totalmente qualificado de um assembly no cache de assembly global, use a Ferramenta Cache de Assembly Global ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Consulte [Como exibir o conteúdo do cache de assembly global](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
@@ -43,9 +43,9 @@ Para descobrir o nome totalmente qualificado de um assembly no cache de assembly
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Nomes de assembly](../../../docs/framework/app-domains/assembly-names.md)  
- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Nomes de assembly](../../../docs/framework/app-domains/assembly-names.md)  
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

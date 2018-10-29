@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: b79e687d75f133b64e6e7dcb8dc78cce98e8b175
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233186"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185921"
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
@@ -25,7 +25,7 @@ Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou 
 
 Para hospedar contêineres em ambientes de desenvolvimento e fornecer ferramentas para desenvolvedores adicionais, o Docker envia o [Docker Community Edition (CE)](https://www.docker.com/community-edition) para Windows ou para o macOS. Esses produtos instalam a VM necessária (o host do Docker) para hospedar os contêineres. O Docker também disponibiliza o [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), que foi projetado para desenvolvimento empresarial e é usado por equipes de TI que criam, enviam e executam aplicativos de grande porte críticos para os negócios em produção.
 
-Para executar [contêineres do Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), há dois tipos de tempos de execução:
+Para executar [contêineres do Windows](/virtualization/windowscontainers/about/), há dois tipos de tempos de execução:
 
 - Os contêineres do Windows Server fornecem isolamento de aplicativos por meio da tecnologia de isolamento de processo e de namespace. Um contêiner do Windows Server compartilha um kernel com o host do contêiner e todos os contêineres em execução no host.
 

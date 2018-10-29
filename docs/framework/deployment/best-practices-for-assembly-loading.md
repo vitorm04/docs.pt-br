@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394147"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201576"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Práticas recomendadas para carregamento de assemblies
 Este artigo descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros. O artigo aborda as seguintes recomendações:  
@@ -164,9 +164,10 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Observe que você pode usar o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> para carregar esses assemblies. Como agora eles estão no caminho de investigação, eles serão carregados no contexto de carregamento padrão em vez de no contexto de origem do carregamento. No entanto, recomendamos que você alterne para o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e forneça nomes de exibição completos do assembly para garantir que as versões corretas sejam sempre usadas.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
- [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
+- [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md)

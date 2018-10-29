@@ -2,14 +2,12 @@
 title: Cenários de rede ponto a ponto
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3f15e555f64479d18c5fb5d18522a3dbe33e3521
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 46e0be29d367db0d36b87c063779d55d1338b39e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193558"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199936"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Cenários de rede ponto a ponto
 Rede ponto a ponto permite ou aprimora os cenários a seguir:  
@@ -26,13 +24,13 @@ Rede ponto a ponto permite ou aprimora os cenários a seguir:
   
 ## <a name="collaboration"></a>Colaboração  
   
--   Espaços de trabalho de projeto atingindo uma meta  
+-   Workspaces de projeto atingindo uma meta  
   
- Aplicativos de espaço de trabalho compartilhado permitem a criação de grupos de trabalho ad hoc e, em seguida, permitem que os proprietários do grupo de trabalho preencham o espaço de trabalho compartilhado com as ferramentas e o conteúdo que permitirão que o grupo solucione um problema. Isso pode incluir arquivos, ferramentas de produtividade e quadros de mensagens.  
+ Aplicativos de workspace compartilhado permitem a criação de grupos de trabalho ad hoc e, em seguida, permitem que os proprietários do grupo de trabalho preencham o workspace compartilhado com as ferramentas e o conteúdo que permitirão que o grupo solucione um problema. Isso pode incluir arquivos, ferramentas de produtividade e quadros de mensagens.  
   
 -   Compartilhamento de arquivos com outras pessoas  
   
- Um subconjunto do compartilhamento de espaço de trabalho de projeto é a capacidade de compartilhar arquivos. Embora essa capacidade exista atualmente com a versão atual do Windows, ela pode ser aprimorada por meio da rede ponto a ponto para disponibilizar o conteúdo do arquivo de uma maneira fácil e amigável. Permitir o acesso fácil à incrível riqueza de conteúdo na borda da Internet ou em ambientes de computação ad-hoc aumenta o valor da computação de rede.  
+ Um subconjunto do compartilhamento de workspace de projeto é a capacidade de compartilhar arquivos. Embora essa capacidade exista atualmente com a versão atual do Windows, ela pode ser aprimorada por meio da rede ponto a ponto para disponibilizar o conteúdo do arquivo de uma maneira fácil e amigável. Permitir o acesso fácil à incrível riqueza de conteúdo na borda da Internet ou em ambientes de computação ad-hoc aumenta o valor da computação de rede.  
   
 -   Compartilhando experiências  
   

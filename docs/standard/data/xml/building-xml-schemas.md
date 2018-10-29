@@ -10,11 +10,11 @@ ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47402650"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842613"
 ---
 # <a name="building-xml-schemas"></a>Compilando esquemas XML
 As classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType> mapeiam para as estruturas definidas na recomendação do W3C (World Wide Web Consortium) sobre esquemas XML e podem ser usadas para compilar esquemas XML na memória.  

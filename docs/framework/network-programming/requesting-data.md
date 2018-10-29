@@ -17,14 +17,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a163374810cbc06ca048c1bdd304de9519db140c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 026912a2dc8a09fb52e0427fc7bf2dbb1d55413a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195700"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50182808"
 ---
 # <a name="requesting-data"></a>Solicitando dados
 Desenvolver aplicativos que são executados no ambiente operacional distribuído da Internet de hoje requer um método eficiente e fácil de usar para recuperar dados de recursos de todos os tipos. Protocolos conectáveis permitem desenvolver aplicativos que usam uma única interface para recuperar dados de vários protocolos de Internet.  

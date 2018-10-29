@@ -2,12 +2,12 @@
 title: Iterar em coleções em C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436258"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191188"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 
@@ -342,7 +342,7 @@ A cada iteração sucessiva do loop `foreach` (ou a chamada direta ao `IEnumerat
 
 Iteradores não dão suporte ao método <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>. Para iterar novamente desde o início, você deve obter um novo iterador. Chamar <xref:System.Collections.IEnumerator.Reset%2A> no iterador retornado por um método iterador lança um <xref:System.NotSupportedException>.
 
-Para obter informações adicionais, consulte a [Especificação da linguagem C#](../../../csharp/language-reference/language-specification/index.md).
+Para obter informações adicionais, consulte a [Especificação da linguagem C#](~/_csharplang/spec/classes.md#iterators).
 
 ## <a name="use-of-iterators"></a>Uso de iteradores
 

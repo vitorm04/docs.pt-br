@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c0081e5677ca65e8c730c7199ebac5d4c86261
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741822"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194826"
 ---
 # <a name="assembly-contents"></a>Conteúdo de um assembly
 Em geral, um assembly estático pode consistir em quatro elementos:  
@@ -49,6 +49,6 @@ Assembly de vários arquivos
  À medida que cria seu código-fonte, você toma decisões sobre como particionar a funcionalidade do seu aplicativo em um ou mais arquivos. Ao criar código do .NET Framework, você tomará decisões semelhantes sobre como particionar a funcionalidade em um ou mais assemblies.  
   
 ## <a name="see-also"></a>Consulte também  
- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md)  
- [Considerações sobre segurança de assembly](../../../docs/framework/app-domains/assembly-security-considerations.md)
+- [Assemblies no Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md)  
+- [Considerações sobre segurança de assembly](../../../docs/framework/app-domains/assembly-security-considerations.md)

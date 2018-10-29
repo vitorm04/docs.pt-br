@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0f5d8e2e465e9dfa64a57c5ec7b99001f768492
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753645"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415062"
 ---
 # <a name="assembly-manifest"></a>Manifesto de um assembly
 Cada assembly, seja estático ou dinâmico, contém uma coleção de dados que descreve como os elementos do assembly se relacionam. O manifesto do assembly contém esses metadados do assembly. O manifesto de um assembly contém todos os metadados necessários para especificar os requisitos de versão e a identidade de segurança, além de todos os metadados necessários para definir o escopo do assembly e resolver referências a recursos e classes. O manifesto do assembly pode ser armazenado em um arquivo PE (.exe ou .dll) com código MSIL (Microsoft Intermediate Language) ou em um arquivo PE autônomo que contém somente informações do manifesto do assembly.  
@@ -55,7 +55,7 @@ Tipos de assemblies
  Você pode adicionar ou alterar informações do manifesto do assembly usando os atributos do assembly em seu código. Você pode alterar informações sobre versão e atributos informativos, incluindo marca comercial, direitos autorais, produto, empresa e versão informativa. Para obter uma lista completa dos atributos do assembly, confira [Configuração de atributos de assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conteúdo do assembly](../../../docs/framework/app-domains/assembly-contents.md)  
- [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md)  
- [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Conteúdo do assembly](../../../docs/framework/app-domains/assembly-contents.md)  
+- [Controle de versão do assembly](../../../docs/framework/app-domains/assembly-versioning.md)  
+- [Criando assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)

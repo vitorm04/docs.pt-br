@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106470"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205289"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 
@@ -39,7 +39,7 @@ Como uma introdução ao EF Core já está disponível na documentação da Micr
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infraestrutura no Entity Framework Core da perspectiva do DDD
 
-Do ponto de vista do DDD, um recurso importante do EF é a capacidade de usar as entidades de domínio POCO (objeto CRL básico), também conhecidas na terminologia do EF como *entidades code-first* POCO. Se você usar as entidades de domínio POCO, as classes de modelo de domínio ignorarão a persistência, seguindo os princípios de [Ignorância de Persistência](http://deviq.com/persistence-ignorance/) e de [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance).
+Do ponto de vista do DDD, um recurso importante do EF é a capacidade de usar as entidades de domínio POCO (objeto CRL básico), também conhecidas na terminologia do EF como *entidades code-first* POCO. Se você usar as entidades de domínio POCO, as classes de modelo de domínio ignorarão a persistência, seguindo os princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e de [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance).
 
 De acordo com os padrões do DDD você deve encapsular o comportamento e as regras do domínio dentro da própria classe de entidade, assim ela poderá controlar as invariáveis, as validações e as regras ao acessar qualquer coleção. Portanto, não é uma prática recomendada no DDD permitir o acesso público a coleções de entidades filhas ou a objetos de valor. Em vez disso, é possível expor métodos que controlam como e quando as coleções de propriedade e os campos podem ser atualizados e qual comportamento e medidas deverão ser tomadas quando isso acontecer.
 
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-A seguinte especificação carrega uma única entidade de cesta de compras de acordo com a ID da cesta de compras ou com a ID do comprador ao qual a cesta de compras pertence. Isso fará o [carregamento adiantado](https://docs.microsoft.com/en-us/ef/core/querying/related-data) da coleção de itens da cesta de compras.
+A seguinte especificação carrega uma única entidade de cesta de compras de acordo com a ID da cesta de compras ou com a ID do comprador ao qual a cesta de compras pertence. Isso fará o [carregamento adiantado](https://docs.microsoft.com/ef/core/querying/related-data) da coleção de itens da cesta de compras.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -467,7 +467,7 @@ Embora não seja recomendado retornar IQueryable de um repositório, é perfeita
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **The Specification pattern**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/) (O padrão de especificação)
+    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/) (O padrão de especificação)
     
 
 >[!div class="step-by-step"]

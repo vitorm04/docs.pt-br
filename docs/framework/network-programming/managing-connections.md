@@ -17,14 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1e4eb6c88bfad132f9e974445adf9ae0d6531f57
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4fd7d01a3592c76fc1bb4ff8afe280c50cdf9f12
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47399431"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181297"
 ---
 # <a name="managing-connections"></a>Gerenciando conexões
 Aplicativos que usam HTTP para se conectar aos recursos de dados podem usar as classes <xref:System.Net.ServicePoint> e <xref:System.Net.ServicePointManager> do .NET Framework para gerenciar conexões com a Internet e para ajudá-las a obter a melhor escala e desempenho.  

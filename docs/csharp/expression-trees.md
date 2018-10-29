@@ -3,12 +3,12 @@ title: Árvores de expressão
 description: Saiba mais sobre árvores de expressão no .NET Core e como usá-las para representar o código como estruturas que você pode examinar, modificar e executar.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214907"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190730"
 ---
 # <a name="expression-trees"></a>Árvores de expressão
 
@@ -20,7 +20,7 @@ Quando quiser ter uma interação mais avançada, você precisa usar *Árvores d
 Árvores de expressão representam o código como uma estrutura que você pode examinar, modificar ou executar. Essas ferramentas oferecem a capacidade de manipular o código em tempo de execução. Você pode escrever código que examina algoritmos em execução ou injeta novos recursos. Em cenários mais avançados, você pode modificar algoritmos em execução e até mesmo converter expressões C# para outro formato para execução em outro ambiente.
 
 Provavelmente, você já escreveu código usando Árvores de expressão. APIs do LINQ do Entity Framework aceitam Árvores de expressão como os argumentos para o padrão de expressão de consulta do LINQ.
-Isso permite que o [Entity Framework](http://docs.efproject.net/en/latest/) converta a consulta que você escreveu em C# em SQL, que é executado no mecanismo do banco de dados. Outro exemplo é [Moq](https://github.com/Moq/moq), que é uma estrutura de simulação popular para .NET.
+Isso permite que o [Entity Framework](/ef/) converta a consulta que você escreveu em C# em SQL, que é executado no mecanismo do banco de dados. Outro exemplo é [Moq](https://github.com/Moq/moq), que é uma estrutura de simulação popular para .NET.
 
 As seções restantes deste tutorial explorarão o que são as árvores de expressão, examinarão as classes de estrutura que dão suporte a árvores de expressão e mostrarão como trabalhar com árvores de expressão. Você aprenderá a ler árvores de expressão, criar árvores de expressão, criar árvores de expressão modificadas e executar o código representado pelas árvores de expressão. Após a leitura, você estará pronto para usar essas estruturas para criar algoritmos adaptáveis avançados.
 

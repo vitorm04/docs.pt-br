@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203284"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193065"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Como carregar assemblies em um domínio de aplicativo
 Há várias maneiras de carregar um assembly em um domínio de aplicativo. A maneira recomendada é usar o método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` no Visual Basic) da classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Outras maneiras que os assemblies podem ser carregados incluem:  
@@ -47,9 +47,9 @@ Há várias maneiras de carregar um assembly em um domínio de aplicativo. A man
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
- [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)  
- [Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [Domínios do aplicativo e assemblies](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
+- [Reflexão](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)  
+- [Como carregar assemblies no contexto somente reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+- [Domínios do aplicativo e assemblies](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

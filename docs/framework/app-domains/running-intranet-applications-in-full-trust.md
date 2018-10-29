@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f58ef5bd96d8a74ce27bb53acd36af005c335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356775"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180634"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Executando aplicativos de intranet em confiança total
 A partir do .NET Framework versão 3.5 SP1 (Service Pack 1), os aplicativos e seus assemblies de bibliotecas podem ser executados como assemblies de confiança total de um compartilhamento de rede. A evidência de zona <xref:System.Security.SecurityZone.MyComputer> é automaticamente adicionada a assemblies que são carregados de um compartilhamento na intranet. Essa evidência fornece a esses assemblies o mesmo conjunto de concessões (que geralmente é de confiança total) que os assemblies que residem no computador. Essa funcionalidade não se aplica aos aplicativos ClickOnce ou que são projetados para serem executados em um host.  
@@ -35,4 +35,4 @@ A partir do .NET Framework versão 3.5 SP1 (Service Pack 1), os aplicativos e se
 -   Em computadores de 64 bits, crie uma subchave sob a chave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework no Registro do sistema. Use o nome de chave LegacyMyComputerZone com um valor DWORD de 1. Crie a mesma subchave sob a chave HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

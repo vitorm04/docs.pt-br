@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab5a4c5f06e7b1789b9252820374ab1b0aca75be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743401"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183159"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Como configurar um domínio de aplicativo
 Você pode fornecer o Common Language Runtime com informações de configuração para um novo domínio de aplicativo usando a classe <xref:System.AppDomainSetup>. Ao criar seus próprios domínios de aplicativo, a propriedade mais importante é <xref:System.AppDomainSetup.ApplicationBase%2A>. As outras propriedades **AppDomainSetup** são usadas principalmente por hosts de tempo de execução para configurar um domínio de aplicativo específico.  
@@ -34,5 +34,5 @@ Você pode fornecer o Common Language Runtime com informações de configuraçã
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)
+- [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)  
+- [Usar domínios do aplicativo](../../../docs/framework/app-domains/use.md)
