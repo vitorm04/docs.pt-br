@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
 ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50039017"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198257"
 ---
 # <a name="end-of-statement-expected"></a>Fim de instrução esperado
 A instrução está sintaticamente completa, mas um elemento de programação adicional após o elemento que conclui a declaração. Um terminador de linha é necessário no final de cada instrução.

@@ -9,17 +9,15 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26485fe2ba3f5647266147744cbe53f978694a9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f061497083dc23fd07f61108938a4129c0af5f3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656120"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188515"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
-Ativa para operações de inteiro ou desativar a verificação de erro de estouro.  
+Ativa o erro de estouro para operações de inteiros ou desativar a verificação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,14 +29,14 @@ Ativa para operações de inteiro ou desativar a verificação de erro de estour
   
 |Termo|Definição|  
 |---|---|  
-|`+` &#124; `-`|Opcional. O `-removeintchecks-` opção faz com que o compilador verificar se todos os cálculos de inteiros para erros de estouro. O padrão é `-removeintchecks-`.<br /><br /> Especificando `-removeintchecks` ou `-removeintchecks+` impede a verificação de erro e pode fazer os cálculos de inteiros mais rápidos. No entanto, sem a verificação de erros, e se as capacidades de tipo de dados são estourou, resultados incorretos podem ser armazenados sem gerar um erro.|  
+|`+` &#124; `-`|Opcional. O `-removeintchecks-` opção faz com que o compilador verifique todos os cálculos de inteiro para erros de estouro. O padrão é `-removeintchecks-`.<br /><br /> Especificando `-removeintchecks` ou `-removeintchecks+` impede a verificação de erros e pode fazer cálculos de inteiro mais rápidos. No entanto, sem verificação de erro, e se as capacidades de tipo de dados são estouradas, resultados incorretos podem ser armazenados sem gerar um erro.|  
   
-|Para definir - removeintchecks no ambiente de desenvolvimento integrado do Visual Studio|  
+|Definir - removeintchecks no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
 |1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Clique no botão **Avançado**.<br />4.  Modificar o valor da **remover verificações de estouro de inteiro** caixa.|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `Test.vb` e desativa a verificação de erro de estouro de inteiro.  
+ O seguinte código compila `Test.vb` e desativa a verificação de erro de estouro de inteiro.  
   
 ```console
 vbc -removeintchecks+ test.vb  

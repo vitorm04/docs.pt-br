@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 892def5d9788dfdf86d312aa04cf89e891323971
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528421"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185999"
 ---
 # <a name="concurrency"></a>Concorrência
 O exemplo de simultaneidade demonstra como usar o <xref:System.ServiceModel.ServiceBehaviorAttribute> com o <xref:System.ServiceModel.ConcurrencyMode> enumeração, que controla se uma instância de um serviço processa mensagens consecutivamente ou simultaneamente. O exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o `ICalculator` contrato de serviço. Este exemplo define um novo contrato, `ICalculatorConcurrency`, que herda de `ICalculator`, fornecendo duas operações adicionais para inspecionar o estado de simultaneidade de serviço. Alterando a configuração de simultaneidade, você pode observar a alteração no comportamento executando o cliente.  
@@ -32,7 +32,7 @@ O exemplo de simultaneidade demonstra como usar o <xref:System.ServiceModel.Serv
   
  A classe de serviço Especifica o comportamento de simultaneidade com o `[ServiceBehavior(ConcurrencyMode=<setting>)]` atributo conforme mostrado no exemplo de código que segue. Alterando as linhas que são comentadas, você pode fazer experiências com o `Single` e `Multiple` modos de simultaneidade. Lembre-se recriar o serviço depois de alterar o modo de simultaneidade.  
   
-```  
+```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
 //[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.Single)]  
   

@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-author: BrucePerlerMS
-ms.openlocfilehash: 1c5ab5e76ebed549df09b365a5a271f81003a517
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402559"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196889"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Como proteger um serviço com um certificado X.509
 Proteger um serviço com um certificado X.509 é uma técnica básica que usam a maioria das ligações no Windows Communication Foundation (WCF). Este tópico explica as etapas de configuração de um serviço auto-hospedado com um certificado X.509.  
