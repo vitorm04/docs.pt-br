@@ -4,12 +4,12 @@ description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# 
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668217"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192571"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao Visual Studio Code e C#
 
@@ -58,7 +58,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
 ## <a name="debug"></a>Depurar
 
-1. Abra *Program.cs* clicando nele. Na primeira vez que um arquivo do C# é aberto no Visual Studio Code, o [OmniSharp](http://www.omnisharp.net/) é carregado no editor.
+1. Abra *Program.cs* clicando nele. Na primeira vez que um arquivo do C# é aberto no Visual Studio Code, o [OmniSharp](https://www.omnisharp.net/) é carregado no editor.
 
     ![Abra o arquivo Program.cs](media/with-visual-studio-code/opencs.png)
 

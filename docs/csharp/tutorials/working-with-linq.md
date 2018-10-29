@@ -3,12 +3,12 @@ title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172419"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086746"
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -87,6 +87,14 @@ static IEnumerable<string> Ranks()
 ```
 
 Esses dois métodos utilizam a sintaxe `yield return` para produzir uma sequência à medida que eles são executados. O compilador compila um objeto que implementa `IEnumerable<T>` e gera a sequência de cadeias de caracteres conforme solicitado.
+
+Para que isso seja compilado, será necessário adicionar as duas linhas a seguir na parte superior do arquivo:
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+```
 
 Vá em frente e execute o exemplo que você criou neste momento. Ele exibirá todas as 52 cartas do baralho. Talvez seja muito útil executar esse exemplo em um depurador para observar como os métodos `Suits()` e `Values()` são executados. Você pode ver claramente que cada cadeia de caracteres em cada sequência é gerada apenas conforme o necessário.
 

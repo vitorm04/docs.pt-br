@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237394"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201407"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Limpar&gt; elemento para bypasslist (configurações de rede)
 Limpa a lista de bypass de proxy.  
@@ -73,5 +71,5 @@ Limpa a lista de bypass de proxy.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

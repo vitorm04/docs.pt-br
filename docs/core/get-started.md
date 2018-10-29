@@ -4,18 +4,18 @@ description: Encontre recursos para aprender a criar aplicativos .NET Core no Wi
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792394"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121248"
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
 Este artigo fornece informações de como começar a usar o .NET Core. O .NET Core pode ser instalado no Windows, no Linux e no macOS. Você pode codificar em seu editor de texto favorito e produzir aplicativos e bibliotecas multiplataforma. 
 
-Se você não souber exatamente o que é o .NET Core ou como ele se relaciona com outras tecnologias do .NET, comece com a visão geral [O que é o .NET](https://www.microsoft.com/net/learn/what-is-dotnet). Resumindo, o .NET Core é uma implementação de software livre, multiplataforma do .NET.
+Se você não souber exatamente o que é o .NET Core ou como ele se relaciona com outras tecnologias do .NET, comece com a visão geral [O que é o .NET](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet). Resumindo, o .NET Core é uma implementação de software livre, multiplataforma do .NET.
 
 ## <a name="create-an-application"></a>Criar um aplicativo
 

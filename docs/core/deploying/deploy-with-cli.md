@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208244"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454441"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implantando aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
 
@@ -77,7 +77,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 Implantar uma implantação dependente de estrutura com uma ou mais dependências de terceiros requer que as dependências estejam disponíveis para seu projeto. São necessárias duas etapas adicionais antes de executar o comando `dotnet restore` ([veja observação](#dotnet-restore-note)):
 
-1. Adicione referências para as bibliotecas de terceiros necessárias à seção `<ItemGroup>` do arquivo *csproj*. A seção `<ItemGroup>` a seguir contém uma dependência no [Json.NET](http://www.newtonsoft.com/json) como uma biblioteca de terceiros:
+1. Adicione referências para as bibliotecas de terceiros necessárias à seção `<ItemGroup>` do arquivo *csproj*. A seção `<ItemGroup>` a seguir contém uma dependência no [Json.NET](https://www.newtonsoft.com/json) como uma biblioteca de terceiros:
 
       ```xml
       <ItemGroup>

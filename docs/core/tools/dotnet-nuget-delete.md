@@ -4,12 +4,12 @@ description: O comando dotnet-nuget-delete exclui ou retira da lista um pacote d
 author: karann-msft
 ms.author: mairaw
 ms.date: 06/01/2018
-ms.openlocfilehash: 1b58136d0bc04947f0a5baba320e5e6b3e45e2f1
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f4aa027a465c4adea1de13853063d03e8e295411
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728408"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180869"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -79,7 +79,7 @@ Não solicita entrada do usuário ou confirmações.
 
 `-s|--source <SOURCE>`
 
-Especifica a URL do servidor. URLs com suporte para nuget.org incluem `http://www.nuget.org`, `http://www.nuget.org/api/v3` e `http://www.nuget.org/api/v2/package`. Para feeds privados, substitua o nome do host (por exemplo, `%hostname%/api/v3`).
+Especifica a URL do servidor. URLs com suporte para nuget.org incluem `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Para feeds privados, substitua o nome do host (por exemplo, `%hostname%/api/v3`).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -101,7 +101,7 @@ Não solicita entrada do usuário ou confirmações.
 
 `-s|--source <SOURCE>`
 
-Especifica a URL do servidor. URLs com suporte para nuget.org incluem `http://www.nuget.org`, `http://www.nuget.org/api/v3` e `http://www.nuget.org/api/v2/package`. Para feeds privados, substitua o nome do host (por exemplo, `%hostname%/api/v3`).
+Especifica a URL do servidor. URLs com suporte para nuget.org incluem `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Para feeds privados, substitua o nome do host (por exemplo, `%hostname%/api/v3`).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -123,7 +123,7 @@ Não solicita entrada do usuário ou confirmações.
 
 `-s|--source <SOURCE>`
 
-Especifica a URL do servidor. URLs com suporte para nuget.org incluem `http://www.nuget.org`, `http://www.nuget.org/api/v3` e `http://www.nuget.org/api/v2/package`. Para feeds privados, substitua o nome do host (por exemplo, `%hostname%/api/v3`).
+Especifica a URL do servidor. URLs com suporte para nuget.org incluem `https://www.nuget.org`, `https://www.nuget.org/api/v3` e `https://www.nuget.org/api/v2/package`. Para feeds privados, substitua o nome do host (por exemplo, `%hostname%/api/v3`).
 
 ---
 

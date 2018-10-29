@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43778463"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838072"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
@@ -96,12 +96,12 @@ Com o SDK do .NET Core 1.x, se você especificar uma versão e nenhuma correspon
 ## <a name="troubleshooting-build-warnings"></a>Solucionando problemas de aviso de build
 
 > [!WARNING]
-> Você está trabalhando com uma versão prévia do SDK do .NET Core. Você pode definir a versão do SDK por meio de um arquivo global.json no projeto atual. Saiba mais em https://go.microsoft.com/fwlink/?linkid=869452
+> Você está trabalhando com uma versão prévia do SDK do .NET Core. Você pode definir a versão do SDK por meio de um arquivo global.json no projeto atual. Saiba mais em <https://go.microsoft.com/fwlink/?linkid=869452>
 
 Este aviso indica que seu projeto está sendo compilado usando uma versão prévia do SDK do .NET Core, conforme é explicado na seção [Regras de correspondência](#matching-rules). As versões do SDK do .NET Core têm um histórico e o compromisso de manter a alta qualidade. No entanto, se você não quiser usar uma versão prévia, adicione um arquivo *global.json* à estrutura de hierarquia do projeto para especificar qual versão do SDK deve ser usada e, em seguida, use `dotnet --list-sdks` para confirmar se a versão está instalada em seu computador. Quando uma nova versão for lançada, para usá-la, remova o arquivo *global.json* ou atualize-o para usar a versão mais recente.
 
 > [!WARNING]
-> O projeto de inicialização '{startupProject}' é direcionado à estrutura '.NETCoreApp' versão '{targetFrameworkVersion}'. Essa versão das ferramentas de linha de comando do .NET do Entity Framework Core são compatíveis apenas com a versão 2.0 ou superiores. Para obter informações de como usar as versões mais antigas das ferramentas, confira https://go.microsoft.com/fwlink/?linkid=871254
+> O projeto de inicialização '{startupProject}' é direcionado à estrutura '.NETCoreApp' versão '{targetFrameworkVersion}'. Essa versão das ferramentas de linha de comando do .NET do Entity Framework Core são compatíveis apenas com a versão 2.0 ou superiores. Para obter informações de como usar as versões mais antigas das ferramentas, confira <https://go.microsoft.com/fwlink/?linkid=871254>
 
 Começando com o SDK do .NET Core 2.1 (v. 2.1.300), o comando `dotnet ef` vem incluído no SDK. Este aviso indica que o projeto é direcionado ao EF Core 1.0 ou 1.1, que não é compatível com o .NET Core SDK 2.1 e as versões posteriores. Para compilar seu projeto, instale o SDK do .NET Core 2.0 (v. 2.1.201) e versões anteriores em seu computador e defina a versão do SDK desejada usando o arquivo *global.json*. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 

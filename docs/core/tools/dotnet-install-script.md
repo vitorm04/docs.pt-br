@@ -4,12 +4,12 @@ description: Saiba mais sobre os scripts dotnet-install para instalar as ferrame
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004004"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837070"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
@@ -33,8 +33,8 @@ O scripts `dotnet-install` são usados para executar uma instalação não admin
 
 É recomendável usar a versão estável que está hospedada no [site principal do .NET Core](https://dot.net). Os caminhos diretos para os scripts são:
 
-* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
+* <https://dot.net/v1/dotnet-install.sh> (bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
 
 A principal utilidade desses scripts é para cenários de automação e instalações não administrativas. Há dois scripts: um é um script do PowerShell que funciona no Windows. O outro script é um script de bash que funciona em Linux/macOS. Ambos os scripts têm o mesmo comportamento. O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
 

@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204291"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584371"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Implantando aplicativos .NET Core com o Visual Studio
 
@@ -144,7 +144,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
-      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações do perfil são mostradas na seção **Resumo** da guia. **Tempo de Execução de Destino** identifica qual tempo de execução foi publicado e **Local de Destino** identifica o local em que os arquivos da implantação autocontida foram gravados.
+      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações do perfil são mostradas na seção **Resumo** da guia. Tempo de Execução de Destino identifica qual tempo de execução foi publicado e **Local de Destino** identifica o local em que os arquivos da implantação autocontida foram gravados.
 
       1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada tempo de execução de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 

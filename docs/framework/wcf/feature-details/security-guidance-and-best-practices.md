@@ -5,11 +5,11 @@ helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 ms.openlocfilehash: 3cf42ec2734801dfffcd0115f8bb42d0353c7014
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044210"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202244"
 ---
 # <a name="security-guidance-and-best-practices"></a>Orientação de segurança e práticas recomendadas
 Os tópicos nesta seção apresentam diretrizes para e itens a serem considerados ao criar aplicativos seguros do Windows Communication Foundation (WCF). Para obter mais informações sobre o Windows Server AppFabric e segurança, consulte [segurança modelo para o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

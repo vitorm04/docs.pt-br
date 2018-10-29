@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576084"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202953"
 ---
 # <a name="xml-documents-and-data"></a>Documentos e dados XML
 O .NET Framework fornece um conjunto de classes abrangente e integrado que permite que você crie aplicativos com reconhecimento de XML facilmente. As classes nos namespaces a seguir suportam a análise e gravação de XML, edição de dados XML na memória, validação de dados e transformação de XSLT.  
@@ -35,7 +35,7 @@ O .NET Framework fornece um conjunto de classes abrangente e integrado que permi
   
 -   Os esquemas na classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> dão suporte para as recomendações do [W3C XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/) (Esquema XML do W3C Parte 1: estruturas) e do [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/) (Esquema XML Parte 2: tipos de dados).  
   
--   As classes no namespace <xref:System.Xml.Xsl?displayProperty=nameWithType> dão suporte para as transformações XSLT que estão em conformidade com a recomendação [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
+-   As classes no namespace <xref:System.Xml.Xsl?displayProperty=nameWithType> dão suporte para as transformações XSLT que estão em conformidade com a recomendação [W3C XSLT 1.0](https://www.w3.org/TR/xslt).  
   
  As classes XML do .NET Framework fornecem esses benefícios:  
   

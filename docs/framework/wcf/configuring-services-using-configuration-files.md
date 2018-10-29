@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374801"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200856"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração fornece a flexibilidade de fornecer o ponto de extremidade e os dados de comportamento de serviço no ponto de implantação, em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -186,9 +186,9 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 ## <a name="behavior-merge"></a>Mesclagem de comportamentos  
  O recurso de mesclagem de comportamentos facilita o gerenciamento dos comportamentos quando você deseja que um conjunto de comportamentos comuns sejam usados de maneira consistente. Esse recurso permite que você especifique comportamentos em diferentes níveis da hierarquia de configuração e faça com que os serviços herdem comportamentos de vários níveis da hierarquia de configuração. Para ilustrar como isso funciona, suponha que você tenha o seguinte layout de diretório virtual no IIS:  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- E o arquivo ~\Web.config possui o seguinte conteúdo:  
+ E seu `~\Web.config` arquivo tem o seguinte conteúdo:  
   
 ```xml  
 <configuration>  

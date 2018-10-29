@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123807"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202283"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 Dustin Metzgar
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  Quando WF4 não possui um provedor de rastreamento SQL, AppFabric faz.  A abordagem de rastreamento SQL de AppFabric é assinar eventos de ETW com um serviço do Windows que processa em lotes os eventos e os escrevam a uma tabela SQL criada para inserções rápido possível.  Um trabalho separados sai os dados da tabela e reformam-nos nas tabelas de relatório que podem ser exibidas no painel de AppFabric.  Isso significa que um lote de eventos de rastreamento é tratado independente de fluxo de trabalho proveniente de e portanto não tenha que aguardar um ponto de persistência antes de ser gravado.
 
- Os eventos de ETW podem ser gravados com ferramentas como o logman ou o xperf.  O arquivo de compacto ETL pode ser exibido com uma ferramenta como o xperfview ou ser convertido em um formato mais legível, como XML, com tracerpt.  Em WF3, a única opção para obter eventos de rastreamento sem um base de dados SQL é criar um serviço personalizado de rastreamento. Para obter mais informações sobre o ETW, consulte [os serviços WCF e rastreamento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [rastreamento de eventos para Windows](https://msdn.microsoft.com/library/ff190903.aspx\)).
+ Os eventos de ETW podem ser gravados com ferramentas como o logman ou o xperf.  O arquivo de compacto ETL pode ser exibido com uma ferramenta como o xperfview ou ser convertido em um formato mais legível, como XML, com tracerpt.  Em WF3, a única opção para obter eventos de rastreamento sem um base de dados SQL é criar um serviço personalizado de rastreamento. Para obter mais informações sobre o ETW, consulte [os serviços WCF e rastreamento de eventos para Windows](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [rastreamento de eventos para Windows](https://msdn.microsoft.com/library/ff190903.aspx).
 
  Ativar o rastreamento de fluxo de trabalho irá afetar o desempenho em vários níveis.  A marca de nível abaixo usar a ferramenta de logman para consumir eventos de rastreamento de ETW e para gravar-los a um arquivo de ETL.  O custo de rastreamento SQL em AppFabric não está no escopo deste artigo.  O perfil básico de rastreamento, também usado em AppFabric, é mostrada nessa marca de nível.  Também estão incluídos o custo de acompanhar somente eventos de monitoramento de integridade.  Esses eventos são úteis para solucionar problemas e determinar a taxa média do sistema.
 

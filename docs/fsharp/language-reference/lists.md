@@ -2,12 +2,12 @@
 title: Listas (F#)
 description: 'Saiba mais sobre listas do F #, uma série imutável, ordenada, de elementos do mesmo tipo.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210156"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201618"
 ---
 # <a name="lists"></a>Listas
 
@@ -48,7 +48,7 @@ Você pode anexar elementos a uma lista usando o operador (cons) `::`. Se `list1
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-Você pode concatenar listas que possuem tipos compatíveis usando o operador `@`, como no código a seguir. Se `list1` for `[2; 3; 4]` e `list2` for `[100; 2; 3; 4 ]`, esse código criará `list3` como `[2; 3; 4; 100; 2; 3; 4]`.
+Você pode concatenar listas que possuem tipos compatíveis usando o operador `@`, como no código a seguir. Se `list1` for `[2; 3; 4]` e `list2` for `[100; 2; 3; 4]`, esse código criará `list3` como `[2; 3; 4; 100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 

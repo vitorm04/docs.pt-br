@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: b4615021a4fc3391ac0ae703b6c97301b44aa60e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f4fcff02166091ae5dbd83e7ddf7762373fd9836
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596516"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086447"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (Referência de C#)
 A palavra-chave `unsafe` denota um contexto inseguro, que é necessário para qualquer operação que envolva ponteiros. Para obter mais informações, consulte [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
@@ -20,7 +20,7 @@ A palavra-chave `unsafe` denota um contexto inseguro, que é necessário para qu
  Você pode usar o modificador `unsafe` na declaração de um tipo ou membro. Toda a extensão textual do tipo ou membro é, portanto, considerada um contexto inseguro. Por exemplo, a seguir está um método declarado com o modificador `unsafe`:  
   
 ```csharp  
-      unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
+unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
 }  
@@ -35,7 +35,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  Você também pode usar um bloco não seguro para habilitar o uso de um código não seguro dentro desse bloco. Por exemplo:  
   
 ```csharp  
-      unsafe  
+unsafe  
 {  
     // Unsafe context: can use pointers here.  
 }  

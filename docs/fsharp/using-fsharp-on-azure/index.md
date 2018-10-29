@@ -3,12 +3,12 @@ title: Usando F# no Azure
 description: 'Guia para o uso de serviços do Azure com F #'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033944"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201498"
 ---
 # <a name="using-f-on-azure"></a>Usando F# no Azure
 
@@ -40,7 +40,7 @@ Outros recursos para usar o Azure Functions e F#:
 
 ## <a name="using-azure-storage-with-f"></a>Usar o armazenamento do Azure com F # #
 
-O Armazenamento do Azure é uma camada base de serviços de armazenamento para aplicativos modernos que dependem de durabilidade, disponibilidade e escalabilidade para atender às necessidades dos clientes. Programas em F# podem interagir diretamente com os serviços de Armazenamento do Azure, usando as técnicas descritas nos artigos a seguir.
+O Armazenamento do Azure é uma camada base de serviços de armazenamento para aplicativos modernos que dependem de durabilidade, disponibilidade e escalabilidade para atender às necessidades dos clientes. F#programas podem interagir diretamente com os serviços de armazenamento do Azure, usando as técnicas descritas nos artigos a seguir.
 
 * [Introdução ao armazenamento de Blobs do Azure usando F#](blob-storage.md)
 * [Introdução ao armazenamento de Arquivos do Azure usando F#](file-storage.md)

@@ -5,28 +5,28 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6ed0da9be32a4a4de4111acfb2d347b7bd5096d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856031"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201550"
 ---
 # <a name="use-automatic-layout-overview"></a>Visão geral do uso de layout automático
-Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos com localizáveis [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. No passado, a localização de um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] era um processo demorado. Cada idioma que o [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] foi adaptado exigia um ajuste pixel por pixel. Hoje, com o design e o direito de padrões de codificação, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser criado para que os localizadores tenham menos redimensionamento e reposicionamento. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design do aplicativo.  
-  
+Este tópico apresenta diretrizes para desenvolvedores sobre como escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos com localizáveis [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. No passado, a localização de uma interface do usuário era um processo demorado. A interface do usuário foi adaptado para cada idioma necessário um ajuste pixel por pixel. Hoje, com o design e o direito de padrões de codificação, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] pode ser criado para que os localizadores tenham menos redimensionamento e reposicionamento. A abordagem para escrever aplicativos que podem ser mais facilmente redimensionados e reposicionados é chamada de layout automático e pode ser obtida usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] design do aplicativo.  
+
 <a name="advantages_of_autolayout"></a>   
 ## <a name="advantages-of-using-automatic-layout"></a>Vantagens de usar o layout automático  
  Porque o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema de apresentação é poderoso e flexível, ele fornece a capacidade de dispor os elementos em um aplicativo que pode ser ajustada para atender às necessidades de diferentes idiomas. A lista a seguir destaca algumas das vantagens do layout automático.  
-  
--   [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é bem exibido em qualquer idioma.  
-  
+
+-   Interface do usuário exibe bem em qualquer idioma.  
+
 -   Reduz a necessidade de reajustar a posição e o tamanho dos controles após o texto ser traduzido.  
   
 -   Reduz a necessidade de reajustar o tamanho da janela.  
-  
--   O layout [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] renderiza adequadamente em qualquer idioma.  
-  
+
+-   Layout da interface do usuário é renderizada corretamente em qualquer idioma.  
+
 -   A localização pode ser reduzida a tal ponto que é pouco mais do que uma tradução de cadeia de caracteres.  
   
 <a name="autolayout_controls"></a>   
@@ -46,20 +46,52 @@ Botão redimensionável automaticamente
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>Layout automático e padrões de codificação  
- Usando a abordagem de layout automático requer um conjunto de regras para produzir um completamente localizável e padrões de codificação e design [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. As diretrizes a seguir ajudarão na sua codificação de layout automático.  
-  
-| Padrões de codificação | Descrição |
-| ---------------------- | ----------------- |
-| Não use posições absolutas. | <ul><li>Não use <xref:System.Windows.Controls.Canvas> porque ele posiciona elementos absolutamente.</li><li>Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, e <xref:System.Windows.Controls.Grid> para posicionar controles.</li><li>Para uma discussão sobre diversos tipos de painéis, consulte [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md).</li></ul> |
-| Não defina um tamanho fixo para uma janela. | -Use <xref:System.Windows.Window.SizeToContent%2A>.<br />Por exemplo:<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)] |
-| Adicionar um <xref:System.Windows.FrameworkElement.FlowDirection%2A>. | <ul><li>Adicionar um <xref:System.Windows.FrameworkElement.FlowDirection%2A> ao elemento raiz do seu aplicativo.</li><li>O WPF fornece uma maneira conveniente de dar suporte a horizontais, bidirecionais e layouts verticais. No framework de apresentação, o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade pode ser usada para definir o layout. Os padrões de direção de fluxo são:<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — layout horizontal para latim, Leste Asiático e assim por diante.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — bidirecional para árabe, hebraico e assim por diante.</li></ul></li></ul> |
-| Use fontes de composição em vez de fontes físicas. | <ul><li>Com fontes compostas, o <xref:System.Windows.Controls.Control.FontFamily%2A> propriedade não precisa ser localizada.</li><li>Os desenvolvedores podem usar uma das seguintes fontes ou criar suas próprias.<br /><br /> <ul><li>Interface de Usuário Global</li><li>Global San Serif</li><li>Global Serif</li></ul></li></ul> |
-| Adicionar xml:lang. | <ul><li>Adicione a `xml:lang` atributo no elemento raiz do seu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], como `xml:lang="en-US"` para um aplicativo em inglês.</li><li>Como usam fontes de composição `xml:lang` para determinar qual fonte utilizar, defina essa propriedade para dar suporte a cenários multilíngues.</li></ul> |
-  
+ Usando a abordagem de layout automático requer um conjunto de padrões de design e codificação e as regras para produzir uma interface do usuário completamente localizável. As diretrizes a seguir ajudarão na sua codificação de layout automático.  
+
+**Não use posições absolutas**
+
+- Não use <xref:System.Windows.Controls.Canvas> porque ele posiciona elementos absolutamente.
+
+- Use <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, e <xref:System.Windows.Controls.Grid> para posicionar controles.
+
+Para uma discussão sobre diversos tipos de painéis, consulte [visão geral de painéis](../../../../docs/framework/wpf/controls/panels-overview.md).
+
+**Não defina um tamanho fixo para uma janela**
+
+- Use <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Por exemplo:
+
+   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**Adicionar um <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+
+- Adicionar um <xref:System.Windows.FrameworkElement.FlowDirection%2A> ao elemento raiz do seu aplicativo.
+
+   O WPF fornece uma maneira conveniente de dar suporte a horizontais, bidirecionais e layouts verticais. No framework de apresentação, o <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriedade pode ser usada para definir o layout. Os padrões de direção de fluxo são:
+   
+     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) — layout horizontal para latim, Leste Asiático e assim por diante.
+     
+     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) — bidirecional para árabe, hebraico e assim por diante.
+
+**Use fontes de composição em vez de fontes físicas**
+
+- Com fontes compostas, o <xref:System.Windows.Controls.Control.FontFamily%2A> propriedade não precisa ser localizada.
+
+- Os desenvolvedores podem usar uma das seguintes fontes ou criar suas próprias.
+
+   - Interface de Usuário Global
+   - Global San Serif
+   - Global Serif
+
+**Adicionar XML: lang**
+
+- Adicione a `xml:lang` atributo no elemento raiz da sua interface do usuário, como `xml:lang="en-US"` para um aplicativo em inglês.
+
+- Como usam fontes de composição `xml:lang` para determinar qual fonte utilizar, defina essa propriedade para dar suporte a cenários multilíngues.
+
 <a name="autolay_grids"></a>   
 ## <a name="automatic-layout-and-grids"></a>Layout automático e grades  
- O <xref:System.Windows.Controls.Grid> elemento, é útil para layout automático porque ele permite que um desenvolvedor posicione elementos. Um <xref:System.Windows.Controls.Grid> controle é capaz de distribuir o espaço disponível entre seus elementos filhos, usando uma disposição de linha e coluna. O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos podem abranger várias células, e é possível que haja grades dentro de grades. As grades são úteis porque permitem que você crie e posicione complexos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. O exemplo a seguir demonstra o uso de uma grade para posicionar alguns botões e o texto. Observe que a altura e largura das células são definidas como <xref:System.Windows.GridUnitType.Auto>; portanto, a célula que contém o botão com uma imagem é ajustada para ajustar a imagem.  
-  
+ O <xref:System.Windows.Controls.Grid> elemento, é útil para layout automático porque ele permite que um desenvolvedor posicione elementos. Um <xref:System.Windows.Controls.Grid> controle é capaz de distribuir o espaço disponível entre seus elementos filhos, usando uma disposição de linha e coluna. Os elementos de interface do usuário podem abranger várias células, e é possível que haja grades dentro de grades. As grades são úteis porque permitem que você crie e posicione a interface do usuário complexa. O exemplo a seguir demonstra o uso de uma grade para posicionar alguns botões e o texto. Observe que a altura e largura das células são definidas como <xref:System.Windows.GridUnitType.Auto>; portanto, a célula que contém o botão com uma imagem é ajustada para ajustar a imagem.  
+
  [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  O gráfico a seguir mostra a grade produzida pelo código anterior.  

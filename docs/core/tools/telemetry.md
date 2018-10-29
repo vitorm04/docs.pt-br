@@ -4,12 +4,12 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513334"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841596"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -106,7 +106,7 @@ A distribuição da Microsoft do .NET Core é licenciada com o [EULA da MICROSOF
 
 Os [Pacotes NuGet do .NET](https://www.nuget.org/profiles/dotnetframework) usam essa mesma licença, mas não habilitam a telemetria (consulte o [Escopo](#scope)).
 
-> 2. DADOS. O software pode coletar informações sobre você e seu uso do software e enviá-las para a Microsoft. A Microsoft pode usar essas informações para melhorar nossos produtos e serviços. Você pode saber mais sobre coleta e uso de dados na documentação de ajuda e na política de privacidade em http://go.microsoft.com/fwlink/?LinkId=528096. O uso do software serve como consentimento para essas práticas.
+> 2. DADOS. O software pode coletar informações sobre você e seu uso do software e enviá-las para a Microsoft. A Microsoft pode usar essas informações para melhorar nossos produtos e serviços. Você pode saber mais sobre coleta e uso de dados na documentação de ajuda e na política de privacidade em <http://go.microsoft.com/fwlink/?LinkId=528096>. O uso do software serve como consentimento para essas práticas.
 
 ## <a name="disclosure"></a>Divulgação
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 157bd07f3332883f010ef26ba920dae88276051b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084671"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584345"
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
 
@@ -53,7 +53,7 @@ O exemplo a seguir mostra o uso de um valor booliano para uma chave dividir os r
 
 ### <a name="grouping-by-numeric-range"></a>Agrupar por alcance numérico
 
-O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Observe também na cláusula `group` que para evitar uma exceção “dividir por zero”, o código verifica se o aluno não tem uma média zero. Para obter mais informações sobre como usar métodos com segurança em expressões de consulta, consulte [Como Manipular Exceções em Expressões de Consulta](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para obter mais informações sobre como usar métodos com segurança em expressões de consulta, consulte [Como Manipular Exceções em Expressões de Consulta](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
