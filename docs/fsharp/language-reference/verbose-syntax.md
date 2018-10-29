@@ -3,11 +3,11 @@ title: Sintaxe detalhada (F#)
 description: 'Aprenda a diferença entre a sintaxe detalhada e leve na linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e697c6fe619df7ffe12f7d4e2a234a5a5cb401ff
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044757"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196759"
 ---
 # <a name="verbose-syntax"></a>Sintaxe detalhada
 
