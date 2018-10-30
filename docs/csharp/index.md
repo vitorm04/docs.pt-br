@@ -1,6 +1,6 @@
 ---
 title: Guia de C#
-description: Saiba como o Guia do C# pode ajudá-lo a obter um extenso conhecimento sobre C#, seja você um desenvolvedor novo ou um especialista experiente.
+description: Saiba como o Guia de C# pode ajudar você a obter um extenso conhecimento sobre C#, seja você um desenvolvedor novo ou um especialista experiente.
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 2f888fbc063799e258040edf5116fc02e3f9a668
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512332"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195834"
 ---
 # <a name="c-guide"></a>Guia de C#
 
-O guia do C# fornece muitos recursos sobre a linguagem C#. Este site tem vários públicos diferentes. Dependendo de sua experiência com programação ou com a linguagem C# e .NET, convém explorar as diferentes seções deste guia.
+O guia de C# fornece muitos recursos sobre a linguagem C#. Este site tem vários públicos diferentes. Dependendo de sua experiência com programação ou com a linguagem C# e .NET, convém explorar as diferentes seções deste guia.
 
 * Para desenvolvedores novatos:
-  * Comece com a seção [Guias de início rápido](quick-starts/index.md). Eles permitem explorar a linguagem C# interativamente no seu navegador. A partir daí, você pode ir para a seção [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Eles mostram os conceitos da linguagem e como criar programas em C#. Se você preferir ler primeiro as informações da visão geral, faça o [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
+  * Comece com os [tutoriais de introdução ao C#](tutorials/intro-to-csharp/index.md). Eles permitem explorar a linguagem C# de maneira interativa no seu navegador. Depois, você pode seguir para outros [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Eles mostram os conceitos da linguagem e como você mesmo pode criar programas em C#. Se você preferir ler primeiro as informações da visão geral, faça o [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
 
 * Para os desenvolvedores que não conhecem o C#:
   * Se você já tiver trabalhado com desenvolvimento, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Ele aborda a sintaxe e a estrutura básica da linguagem, e você poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também será possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#.
@@ -35,8 +35,8 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
 * [Introdução](getting-started/index.md)
   * Esta seção aborda o que você precisa instalar para um ambiente de desenvolvimento em C# em sua plataforma de preferência. Os tópicos diferentes nesta seção explicam como criar seu primeiro programa em C# em diferentes ambientes com suporte.
 
-* [Guias de início rápido do C#](quick-starts/index.md):
-  * Os Guias de início rápido do C# apresentam tutoriais interativos para os novos desenvolvedores explorarem e aprenderem a linguagem C # no navegador usando uma interface REPL (Read-Eval-Print Loop). Após concluir as aulas interativas, você pode melhorar suas habilidades de codificação praticando as mesmas lições em seu computador.
+* [Tutoriais de introdução ao C#](tutorials/intro-to-csharp/index.md):
+  * Os tutoriais de introdução ao C# são tutoriais interativos para os novos desenvolvedores explorarem e aprenderem a linguagem C# no navegador usando uma interface REPL (Read-Eval-Print Loop). Após concluir as aulas interativas, você pode melhorar suas habilidades de codificação praticando as mesmas lições em seu computador.
 
 * [Tutoriais](tutorials/index.md)
   * Esta seção fornece vários cenários de ponta a ponta, incluindo descrições e código. Ela mostra por que há preferência por determinadas linguagens, quais recursos do C# funcionam melhor em situações diferentes e implementações de referência para tarefas comuns. Se você aprende melhor analisando o código, comece nesta seção. Você também pode baixar todo o código e testar em seu próprio ambiente.

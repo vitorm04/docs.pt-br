@@ -48,7 +48,7 @@ End Class
  Você pode atribuir a propriedade com expressões de inicialização, conforme mostrado no exemplo, ou você pode atribuir às propriedades do construtor do tipo recipiente.  Você pode atribuir aos campos de backup propriedades somente leitura a qualquer momento.  
   
 ## <a name="backing-field"></a>Campo de backup  
- Quando você declara uma propriedade implementada automaticamente, o Visual Basic cria automaticamente um campo particular oculto chamado o *campo existente* para conter o valor da propriedade. O nome do campo de backup é o nome da propriedade implementada automaticamente precedido por um sublinhado (_). Por exemplo, se você declarar uma propriedade implementada automaticamente denominada `ID`, o campo de backup é denominado `_ID`. Se você incluir um membro da sua classe que também é denominada `_ID`, produzir um conflito de nomeação e Visual Basic relata um erro do compilador.  
+ Quando você declara uma propriedade implementada automaticamente, o Visual Basic cria automaticamente um campo particular oculto chamado o *campo de support* para conter o valor da propriedade. O nome do campo de suporte é o nome da propriedade implementada automaticamente precedido por um sublinhado (_). Por exemplo, se você declarar uma propriedade implementada automaticamente denominada `ID`, o campo de suporte é denominado `_ID`. Se você incluir um membro da sua classe que também é chamado `_ID`, isso produzirá um conflito de nomeação e o Visual Basic vai relatar um erro de compilação.  
   
  O campo de suporte também tem as seguintes características:  
   

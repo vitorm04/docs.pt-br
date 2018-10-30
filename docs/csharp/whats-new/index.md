@@ -3,16 +3,16 @@ title: Novidades no C# – Guia do C#
 description: Como a linguagem C# está evoluindo
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314666"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047248"
 ---
 # <a name="whats-new-in-c"></a>Novidades no C# #
 
-Esta página fornece um roteiro de novos recursos em cada versão principal da linguagem C#. Os links a seguir fornecem informações detalhadas sobre os principais recursos adicionados a cada versão.
+Esta página fornece um roteiro de novos recursos em cada versão principal da linguagem C#. Os artigos vinculados detalham informações sobre os principais recursos adicionados em cada versão. Encontre informações sobre novos recursos lançados, seja na versão geral ou em uma visualização pública. Os status detalhados do recurso de linguagem, incluindo os recursos considerados para as versões futuras, podem ser encontrados [no repositório dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) no GitHub.
 
 > [!IMPORTANT]
 > A linguagem C# depende de tipos e métodos em uma *biblioteca padrão* para alguns dos recursos. Um exemplo é o processamento de exceção. Cada instrução ou expressão `throw` é verificada para garantir que o objeto que está sendo gerado é derivado de <xref:System.Exception>. Da mesma forma, cada `catch` é verificado para garantir que o tipo que está sendo capturado é derivado de <xref:System.Exception>. Cada versão pode adicionar novos requisitos. Para usar os recursos de linguagem mais recentes em ambientes mais antigos, talvez seja necessário instalar bibliotecas específicas. Essas dependências estão documentadas na página de cada versão específica. Saiba mais sobre as [relações entre linguagem e biblioteca](relationships-between-language-and-library.md) para obter informações sobre essa dependência. 

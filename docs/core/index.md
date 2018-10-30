@@ -5,20 +5,20 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 692d49cc940925f629e55cf5cc103522bd3cbb38
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 448edabf624f04311695e8b8c224f653b9939966
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348959"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199455"
 ---
 # <a name="net-core-guide"></a>Guia do .NET Core
 
-O [.NET Core](about.md) é uma plataforma de desenvolvimento [aberta](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) de uso geral mantida pela Microsoft e pela comunidade .NET no [GitHub](https://github.com/dotnet/core). Ele é multiplataforma e oferece suporte a Windows, macOS e Linux, e pode ser usado em dispositivos, na nuvem e em aplicativos de IoT.
+O [.NET Core](about.md) é uma plataforma de desenvolvimento [de código aberto](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) de uso geral mantida pela Microsoft e pela comunidade .NET no [GitHub](https://github.com/dotnet/core). É uma plataforma cruzada (compatível com Windows, macOS e Linux) que pode ser usada no desenvolvimento de dispositivos, na nuvem e em aplicativos de IoT.
 
 Consulte [Sobre o .NET Core](about.md) para saber mais sobre o .NET Core, incluindo suas características, idiomas compatíveis, estruturas e APIs essenciais.
 
-Consulte os [Tutoriais do .NET Core](tutorials/index.md) para aprender a criar um aplicativo .NET Core simples. Bastam apenas alguns minutos para colocar seu primeiro aplicativo em funcionamento. Se quiser experimentar o .NET Core no seu navegador, consulte [Números em C#](../csharp/quick-starts/numbers-in-csharp.yml) no guia de início rápido.
+Consulte os [Tutoriais do .NET Core](tutorials/index.md) para aprender a criar um aplicativo .NET Core simples. Bastam apenas alguns minutos para colocar seu primeiro aplicativo em funcionamento. Consulte o tutorial online [Números em C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) caso deseje experimentar o .NET Core no seu navegador.
 
 ## <a name="download-net-core-21"></a>Faça o download do .NET Core 2.1
 

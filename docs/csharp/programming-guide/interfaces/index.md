@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321399"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181508"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -36,13 +36,13 @@ Para implementar um membro de interface, o membro correspondente da classe de im
   
 Quando uma classe ou struct implementa uma interface, a classe ou o struct deve fornecer uma implementação para todos os membros que a interface define. A interface não fornece nenhuma funcionalidade que uma classe ou um struct possa herdar da forma que ela pode herdar a funcionalidade da classe base. No entanto, se uma classe base implementa uma interface, qualquer classe que é derivada da classe base herda essa implementação.  
   
-O exemplo a seguir mostra uma implementação da interface IEquatable<T\>. A classe de implementação, `Car`, deverá fornecer uma implementação do método <xref:System.IEquatable%601.Equals%2A>.  
+O exemplo a seguir mostra uma implementação da interface <xref:System.IEquatable%601>. A classe de implementação, `Car`, deverá fornecer uma implementação do método <xref:System.IEquatable%601.Equals%2A>.  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
 As propriedades e os indexadores de uma classe podem definir acessadores extras para uma propriedade ou o indexador que é definido em uma interface. Por exemplo, uma interface pode declarar uma propriedade que tem um acessador [get](../../language-reference/keywords/get.md). A classe que implementa a interface pode declarar a mesma propriedade tanto com um acessador `get` quanto com um [set](../../language-reference/keywords/set.md). No entanto, se a propriedade ou o indexador usa a implementação explícita, os acessadores devem corresponder. Para obter mais informações sobre a implementação explícita, consulte [Implementação de interface explícita](explicit-interface-implementation.md) e [Propriedades da interface](../classes-and-structs/interface-properties.md).  
 
-As interfaces podem implementar outras interfaces. Uma classe pode incluir uma interface várias vezes por meio das classes base que ela herda ou por meio de interfaces que outras interfaces implementam. No entanto, a classe poderá fornecer uma implementação de uma interface apenas uma vez e somente se a classe declarar a interface como parte da definição de classe (`class ClassName : InterfaceName`). Se a interface é herdada porque é herdada de uma classe base que implementa a interface, a classe base fornece a implementação dos membros da interface. No entanto, a classe derivada pode reimplementar os membros de interface em vez de usar a implementação herdada.  
+As interfaces podem herdar de outras interfaces. Uma classe pode incluir uma interface várias vezes por meio das classes base que ela herda ou por meio de interfaces que outras interfaces herdam. No entanto, a classe poderá fornecer uma implementação de uma interface apenas uma vez e somente se a classe declarar a interface como parte da definição de classe (`class ClassName : InterfaceName`). Se a interface é herdada porque é herdada de uma classe base que implementa a interface, a classe base fornece a implementação dos membros da interface. No entanto, a classe derivada pode reimplementar qualquer membro de interface virtual em vez de usar a implementação herdada.  
   
 Uma classe base também pode implementar membros de interface usando membros virtuais. Nesse caso, uma classe derivada pode alterar o comportamento da interface substituindo os membros virtuais. Para obter mais informações sobre membros virtuais, consulte [Polimorfismo](../classes-and-structs/polymorphism.md).  
   

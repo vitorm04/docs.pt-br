@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848069"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "49414849"
 ---
 # Novidades do .NET Framework <a name="introduction"></a>
 
@@ -162,7 +162,7 @@ End Function
 
 **Compatibilidade com chaves efêmeras**
 
-Opcionalmente, a importação PFX pode carregar chave privada direto da memória, ignorando o disco rígido. Quando o novo sinalizador <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> é especificado em um construtor <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ou uma das sobrecargas do método <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, as chaves privadas serão carregadas como chaves efêmeras. Isso impede as chaves de ficarem visíveis no disco. No entanto:
+Opcionalmente, a importação PFX pode carregar chave privada direto da memória, ignorando o disco rígido. Quando o novo sinalizador <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> é especificado em um construtor <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ou uma das sobrecargas do método <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, as chaves privadas serão carregadas como chaves efêmeras. Isso impede as chaves de ficarem visíveis no disco. No entanto:
 
 - Como as chaves não são persistidas no disco, os certificados carregados com esse sinalizador não são bons candidatos para serem adicionados a um X509Store.
 
@@ -182,7 +182,7 @@ A partir do .NET Framework 4.7.2, a classe <xref:System.Security.Cryptography.Pk
 
 **Deixar um fluxo encapsulado aberto depois de descartar CryptoStream**
 
-A partir do .NET Framework 4.7.2, a classe <xref:System.Security.Cryptography.CryptoStream> tem um construtor adicional que permite que <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> não feche o fluxo encapsulado. Para manter o fluxo encapsulado aberto após o descarte da instância <xref:System.Security.Cryptography.CryptoStream>, chame o novo construtor <xref:System.Security.Cryptography.CryptoStream> da seguinte maneira:
+A partir do .NET Framework 4.7.2, a classe <xref:System.Security.Cryptography.CryptoStream> tem um construtor adicional que permite que <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> não feche o fluxo encapsulado. Para manter o fluxo encapsulado aberto após o descarte da instância <xref:System.Security.Cryptography.CryptoStream>, chame o novo construtor <xref:System.Security.Cryptography.CryptoStream> da seguinte maneira:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -321,15 +321,15 @@ O arquivo de configuração de aplicativo, em seguida, especifica uma implementa
 
 ```xml
 <configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
+  </configSections>
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
       <add name="Azure" type="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureEnclaveProvider,MyApp"/>
       <add name="HGS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.HGSEnclaveProvider,MyApp" />
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders >
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders >
 </configuration>
 ```
 
@@ -347,13 +347,13 @@ O fluxo básico do Always Encrypted com base em enclave é:
 
 **Localizar ResourceDictionaries por origem**
 
-A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar o <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> criado de um determinado URI de origem. (Esse recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio permite ao usuário editar um ResourceDictionary com a intenção de que as alterações sejam aplicadas ao aplicativo em execução. Uma etapa para conseguir isso é localizar todos os ResourceDictionaries que o aplicativo em execução criou com base no dicionário que está sendo editado. Por exemplo, um aplicativo pode declarar um ResourceDictionary cujo conteúdo é copiado de um determinado URI de origem:
+A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar o  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> criado de um determinado URI de origem. (Esse recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção.) Um assistente de diagnóstico como o recurso "Editar e continuar" do Visual Studio permite ao usuário editar um ResourceDictionary com a intenção de que as alterações sejam aplicadas ao aplicativo em execução. Uma etapa para conseguir isso é localizar todos os ResourceDictionaries que o aplicativo em execução criou com base no dicionário que está sendo editado. Por exemplo, um aplicativo pode declarar um ResourceDictionary cujo conteúdo é copiado de um determinado URI de origem:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-Um assistente de diagnóstico que edita a marcação original em *MyRD.xaml* pode usar o novo recurso para localizar o dicionário. O recurso é implementado por um novo método estático, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. O assistente de diagnóstico chama o novo método usando um URI absoluto que identifica a marcação original, conforme ilustrado pelo código a seguir:
+Um assistente de diagnóstico que edita a marcação original em *MyRD.xaml*  pode usar o novo recurso para localizar o dicionário. O recurso é implementado por um novo método estático, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. O assistente de diagnóstico chama o novo método usando um URI absoluto que identifica a marcação original, conforme ilustrado pelo código a seguir:
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -362,11 +362,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-O método retornará um enumerável vazio, a menos que <xref:System.Windows.Diagnostics.VisualDiagnostics> esteja habilitado e a variável de ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) esteja definida.
+O método retornará um enumerável vazio, a menos que  <xref:System.Windows.Diagnostics.VisualDiagnostics> esteja habilitado e a variável de ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  esteja definida.
 
 **Localizar os proprietários de ResourceDictionary**
 
-A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar os proprietários criado de um determinado <xref:Windows.UI.Xaml.ResourceDictionary>. (O recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção.) Sempre que uma alteração for feita em um <xref:Windows.UI.Xaml.ResourceDictionary>, o WPF encontra automaticamente todos as referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que podem ser afetadas pela alteração.
+A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar os proprietários de um determinado <xref:Windows.UI.Xaml.ResourceDictionary>. O recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção. Sempre que uma alteração for feita em um <xref:Windows.UI.Xaml.ResourceDictionary>, o WPF encontra automaticamente todos as referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que podem ser afetadas pela alteração.
 
 Um assistente de diagnóstico, como o recurso de "Editar e continuar" do Visual Studio pode desejar estendê-lo para tratar as referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A primeira etapa nesse processo é localizar os proprietários do dicionário; ou seja, para localizar todos os objetos cuja propriedade `Resources` se refere ao dicionário (direta ou indiretamente por meio da propriedade <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Três novos métodos estáticos implementados na classe <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, um para cada um dos tipos base que tem uma propriedade `Resources`, compatível com esta etapa:
 
@@ -376,11 +376,11 @@ Um assistente de diagnóstico, como o recurso de "Editar e continuar" do Visual 
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-Esses métodos retornarão um enumerável vazio, a menos que <xref:System.Windows.Diagnostics.VisualDiagnostics> esteja habilitado e a variável de ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) esteja definida.
+Esses métodos retornarão um enumerável vazio, a menos que  <xref:System.Windows.Diagnostics.VisualDiagnostics> esteja habilitado e a variável de ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  esteja definida.
 
 **Localizar referências StaticResource**
 
-Agora, um assistente de diagnóstico pode receber uma notificação sempre que uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) é resolvida. (O recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção.) Um assistente de diagnóstico como o recurso de "Editar e continuar" do Visual Studio pode querer atualizar todos os usos de um recurso quando seu valor em um <xref:Windows.UI.Xaml.ResourceDictionary> é alterado. O WPF faz isso automaticamente para referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), mas ele intencionalmente não o faz para referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partir do .NET Framework 4.7.2, o assistente de diagnóstico pode usar essas notificações para localizar os usos do recurso estático.
+Agora, um assistente de diagnóstico pode receber uma notificação sempre que uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) for resolvida. O recurso é para o uso de assistentes de diagnóstico, e não por aplicativos de produção. Um assistente de diagnóstico como o recurso de "Editar e continuar" do Visual Studio pode querer atualizar todos os usos de um recurso quando seu valor em um <xref:Windows.UI.Xaml.ResourceDictionary> é alterado. O WPF faz isso automaticamente para referências [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), mas ele intencionalmente não o faz para referências [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partir do .NET Framework 4.7.2, o assistente de diagnóstico pode usar essas notificações para localizar os usos do recurso estático.
 
 A notificação é implementada pelo novo evento <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -392,7 +392,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Esse evento é gerado sempre que o tempo de execução resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Os argumentos <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md), o <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
+Esse evento é gerado sempre que o tempo de execução resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Os argumentos <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md), o  <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -407,7 +407,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
-O evento não é gerado (e seu acessador `add` é ignorado), a menos que <xref:System.Windows.Diagnostics.VisualDiagnostics> esteja habilitado e a variável de ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) esteja definida.
+O evento não é gerado (e seu acessador `add` é ignorado), a menos que  <xref:System.Windows.Diagnostics.VisualDiagnostics> esteja habilitado e a variável de ambiente [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) esteja definida.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -415,7 +415,7 @@ Todos os aplicativos com reconhecimento de HDPI para Windows Forms, WPF (Windows
 
 ```xml
 <windowsSettings>
-   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
 </windowsSettings>
 ```
 
@@ -517,7 +517,7 @@ O .NET Framework 4.7 inclui novos recursos nas seguintes áreas:
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Para obter uma lista das novas APIs adicionadas ao .NET Framework 4.7, confira o artigo [Alterações na API do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) do GitHub. Para obter uma lista de aprimoramentos de recursos e correções de bug no .NET Framework 4.7, confira o artigo [Lista de alterações do .NET Framework 4.7](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) do GitHub.  Para saber mais, confira o artigo [Anunciando o .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) no blog do .NET.
+Para obter uma lista das novas APIs adicionadas ao .NET Framework 4.7, confira o artigo [Alterações na API do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) do GitHub. Para obter uma lista de aprimoramentos de recursos e correções de bug no .NET Framework 4.7, confira o artigo [Lista de alterações do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) do GitHub.  Para saber mais, confira o artigo [Anunciando o .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) no blog do .NET.
 
 <a name="Core47" />
 
@@ -725,11 +725,11 @@ public interface ISessionStateModule : IHttpModule {
 <a name="Strings" />
 
 ### <a name="character-categories"></a>Categorias de caractere
- Os caracteres no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] são classificadas com base no [padrão Unicode, versão 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] os caracteres foram classificados com base nas categorias de caracteres do Unicode 6.3.
+ Os caracteres no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] são classificadas com base no [padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] os caracteres foram classificados com base nas categorias de caracteres do Unicode 6.3.
 
  O suporte para o Unicode 8.0 é limitado à classificação de caracteres pela classe <xref:System.Globalization.CharUnicodeInfo> e para tipos e métodos que dependem dela. Entre elas está a classe <xref:System.Globalization.StringInfo>, o método <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> sobrecarregado e as [classes de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) reconhecidas pelo mecanismo de expressões regulares do .NET Framework.  A comparação e a classificação de caracteres e cadeia de caracteres não são afetadas por essa alteração e continuam a depender do sistema operacional subjacente ou, em sistemas com Windows 7, em dados de caracteres fornecidos pelo .NET Framework.
 
- Para alterações nas categorias de caracteres do Unicode 6.0 para Unicode 7.0, confira [O padrão Unicode, versão 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) no site The Unicode Consortium. Para alterações do Unicode 7.0 para Unicode 8.0, confira [O padrão Unicode, versão 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) no site The Unicode Consortium.
+ Para alterações nas categorias de caracteres do Unicode 6.0 para Unicode 7.0, confira [O padrão Unicode, versão 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) no site The Unicode Consortium. Para alterações do Unicode 7.0 para Unicode 8.0, confira [O padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) no site The Unicode Consortium.
 
 <a name="Crypto462" />
 
@@ -1223,7 +1223,7 @@ A API de criação de perfil não gerenciado foi aprimorada da seguinte forma:
 
      MVC, API da Web e Páginas da Web são unificados em uma única estrutura chamada MVC 6. Você cria aplicativos ASP.NET Core por meio de ferramentas no Visual Studio 2015 ou posterior. Os aplicativos existentes funcionarão no novo .NET Framework; no entanto, para compilar um aplicativo que usa o MVC 6 ou SignalR 3, use o sistema de projetos no Visual Studio 2015 ou posterior.
 
-     Para obter informações, veja [ASP.NET Core](http://go.microsoft.com/fwlink/?LinkId=518238).
+     Para obter informações, veja [ASP.NET Core](/aspnet/core/).
 
 - **Atualizações do ASP.NET**
 
@@ -1247,18 +1247,18 @@ A API de criação de perfil não gerenciado foi aprimorada da seguinte forma:
 
     - **Suporte a HTTP/2 (Windows 10)**
 
-         [HTTP/2](http://www.wikipedia.org/wiki/HTTP/2) é uma nova versão do protocolo HTTP que fornece uma utilização de conexão muito melhor (menos viagens entre cliente e servidor), resultando em um carregamento de página da Web com menor latência para os usuários.  As páginas da Web (em vez de serviços) são as mais beneficiados com o HTTP/2, pois o protocolo otimiza para solicitação de vários artefatos como parte de uma experiência única. O suporte ao HTTP/2 foi adicionado ao ASP.NET no .NET Framework 4.6. Como a funcionalidade de rede existe em várias camadas, havia a necessidade de novos recursos no Windows, no IIS e no ASP.NET para habilitar o HTTP/2. Você deve estar executando o Windows 10 para usar o HTTP/2 com o ASP.NET.
+         [HTTP/2](https://www.wikipedia.org/wiki/HTTP/2) é uma nova versão do protocolo HTTP que fornece uma utilização de conexão muito melhor (menos viagens entre cliente e servidor), resultando em um carregamento de página da Web com menor latência para os usuários.  As páginas da Web (em vez de serviços) são as mais beneficiados com o HTTP/2, pois o protocolo otimiza para solicitação de vários artefatos como parte de uma experiência única. O suporte ao HTTP/2 foi adicionado ao ASP.NET no .NET Framework 4.6. Como a funcionalidade de rede existe em várias camadas, havia a necessidade de novos recursos no Windows, no IIS e no ASP.NET para habilitar o HTTP/2. Você deve estar executando o Windows 10 para usar o HTTP/2 com o ASP.NET.
 
          O HTTP/2 também é compatível e ativado por padrão em aplicativos UWP (Plataforma Universal do Windows) do Windows 10 que usam a API <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>.
 
-         Para fornecer uma maneira de usar o recurso [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) em aplicativos ASP.NET, um novo método com duas sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, foi adicionado à classe <xref:System.Web.HttpResponse>.
+         Para fornecer uma maneira de usar o recurso [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) em aplicativos ASP.NET, um novo método com duas sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, foi adicionado à classe <xref:System.Web.HttpResponse>.
 
         > [!NOTE]
         > Embora o ASP.NET Core dê suporte ao HTTP/2, o suporte para o recurso PUSH PROMISE ainda não foi adicionado.
 
          O navegador e o servidor Web (IIS no Windows) fazem todo o trabalho. Você não precisa fazer qualquer trabalho pesado para seus usuários.
 
-         A maioria dos [principais navegadores oferece suporte a HTTP/2](http://www.wikipedia.org/wiki/HTTP/2), portanto, é provável que seus usuários se beneficiem do suporte a HTTP/2 se o servidor oferecer suporte a ele.
+         A maioria dos [principais navegadores oferece suporte a HTTP/2](https://www.wikipedia.org/wiki/HTTP/2), portanto, é provável que seus usuários se beneficiem do suporte a HTTP/2 se o servidor oferecer suporte a ele.
 
     - **Suporte para o protocolo de associação de token**
 
@@ -1681,7 +1681,7 @@ A API de criação de perfil não gerenciado foi aprimorada da seguinte forma:
 
  Entre os aperfeiçoamentos durante a depuração de seus aplicativos do .NET Framework no Visual Studio 2013 estão:
 
-- Valores de retorno no depurador do Visual Studio. Quando você depura um aplicativo gerenciado no Visual Studio 2013, a janela Autos exibe valores e tipos de retorno para os métodos. Essas informações estão disponíveis para aplicativos de área de trabalho, Windows Store e Windows Phone. Para saber mais, confira [Examinar valores de retorno de chamadas de método](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) na biblioteca MSDN.
+- Valores de retorno no depurador do Visual Studio. Quando você depura um aplicativo gerenciado no Visual Studio 2013, a janela Autos exibe valores e tipos de retorno para os métodos. Essas informações estão disponíveis para aplicativos de área de trabalho, Windows Store e Windows Phone. Confira mais informações em [Examinar valores de retorno de chamadas de método](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn32325728%v=vs.120%29).
 
 - Editar e continuar para aplicativos 64 bits. O Visual Studio 2013 dá suporte ao recurso Editar e continuar para aplicativos gerenciados de 64 bits para área de trabalho, Windows Store e Windows Phone. As limitações existentes permanecem em vigor para aplicativos 32 e 64 bits (confira a última seção do artigo [Alterações de código compatíveis (C#)](/visualstudio/debugger/supported-code-changes-csharp)).
 
