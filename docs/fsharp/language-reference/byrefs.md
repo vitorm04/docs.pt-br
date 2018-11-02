@@ -3,10 +3,10 @@ title: 'Zkratka (F #)'
 description: 'Saiba mais sobre byref e byref tipos em F #, que são usados para programação de nível baixo.'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48836875"
 ---
 # <a name="byrefs"></a>Zkratka

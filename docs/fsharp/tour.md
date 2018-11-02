@@ -2,12 +2,12 @@
 title: Tour do F#
 description: Examine alguns dos principais recursos da linguagem em que este tour com exemplos de código de programação F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924515"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235707"
 ---
 # <a name="tour-of-f"></a>Tour do F# #
 
@@ -193,6 +193,6 @@ As classes são ótimas para um grande número de motivos, como quando for neces
 
 Agora que você viu alguns dos principais recursos da linguagem, você deve estar pronto para gravar seus programas em F# primeiro!  Fazer check-out [guia de Introdução](tutorials/getting-started/index.md) para aprender a configurar seu ambiente de desenvolvimento e escrever algum código.
 
-As próximas etapas para aprender mais podem ser que você quiser, mas recomendamos [funciona como valores de primeira classe](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> para fique à vontade com os principais conceitos de programação funcional.  Eles estarão essenciais na criação de programas robustos em F#.
+As próximas etapas para aprender mais podem ser que você quiser, mas recomendamos [Introdução à programação funcional no F# ](introduction-to-functional-programming/index.md) para que fique à vontade com os principais conceitos de programação funcional.  Eles estarão essenciais na criação de programas robustos em F#.
 
 Além disso, confira a [referência da linguagem F#](language-reference/index.md) para ver um conjunto abrangente de conteúdo conceitual em F#.
