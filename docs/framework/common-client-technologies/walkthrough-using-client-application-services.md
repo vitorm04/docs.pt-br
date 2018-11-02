@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788922"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194313"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Instruções passo a passo: usando serviços de aplicativo cliente
 Este tópico descreve como criar um aplicativo do Windows que usa serviços de aplicativo cliente para autenticar usuários e recuperar funções de usuário e configurações.  
@@ -35,9 +35,8 @@ Este tópico descreve como criar um aplicativo do Windows que usa serviços de a
 -   Habilitar modo offline. Você fornecerá uma caixa de seleção para que os usuários possam especificar o status da conexão. Em seguida, você usará esse valor para especificar se os provedores de serviço de aplicativos cliente usarão os dados armazenados em cache localmente em vez de acessar seus serviços Web. Finalmente, você reautenticará o usuário atual quando o aplicativo retornar ao modo online.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Você precisa do seguinte componente para concluir esta instrução passo a passo:  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+É necessário o Visual Studio para concluir este passo a passo.
   
 ## <a name="creating-the-client-application"></a>Criando o aplicativo cliente  
  A primeira coisa que você fará é criar um projeto do Windows Forms. Este passo a passo usa o Windows Forms porque mais pessoas estão familiarizadas com ele, mas o processo é semelhante para projetos do Windows Presentation Foundation (WPF).  

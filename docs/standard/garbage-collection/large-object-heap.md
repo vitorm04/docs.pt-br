@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003081"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202901"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Heap de objeto grande em sistemas Windows
 
@@ -164,7 +164,7 @@ Os contadores de desempenho também podem ser consultados de forma programática
 > [!NOTE]
 > Recomendamos o uso de eventos ETW em vez de contadores de desempenho, pois o ETW fornece informações muito mais sofisticadas.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>eventos ETW
 
 O coletor de lixo fornece um conjunto rico de eventos ETW para ajudá-lo a entender o que o heap está fazendo e por quê. As seguintes postagens no blog mostram como coletar e entender eventos GC com o ETW:
 
@@ -204,7 +204,7 @@ Como você pode ver, esse é um teste muito simples que aloca apenas objetos gra
 
 ### <a name="a-debugger"></a>Um depurador
 
-Se tudo o que você tem é um despejo de memória e você precisa examinar quais objetos estão realmente no LOH, use a [extensão de depurador SoS](http://msdn2.microsoft.com/ms404370.aspx) fornecida pelo .NET.
+Se tudo o que você tem é um despejo de memória e você precisa examinar quais objetos estão realmente no LOH, use a [extensão de depurador SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) fornecida pelo .NET.
 
 > [!NOTE]
 > Os comandos de depuração mencionados nesta seção são aplicáveis aos [Depuradores do Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

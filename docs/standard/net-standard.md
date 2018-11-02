@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595534"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186064"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,6 +49,8 @@ Em geral, recomendamos que você direcione para a versão *menos recente* possí
 
 1. Direcione para a próxima versão menos recente do .NET Standard e compile seu projeto.
 2. Se seu projeto for compilado com êxito, repita a etapa 1. Caso contrário, redirecione para a próxima versão mais recente, e essa será a versão que você deve usar.
+
+No entanto, ter como destino versões do .NET Standard inferiores introduz diversas dependências de suporte. Se o projeto for destinado ao .NET Standard 1.x, recomendamos que você *também* tenha como destino o .NET Standard 2.0. Isso simplifica o grafo de dependência para os usuários da sua biblioteca executados em estruturas compatíveis do .NET Standard 2.0, além de reduzir o número de pacotes que eles precisam baixar.
 
 ### <a name="net-standard-versioning-rules"></a>Regras de controle de versão do .NET Standard
 

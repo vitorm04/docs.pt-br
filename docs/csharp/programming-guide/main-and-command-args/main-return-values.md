@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44184922"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205199"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -25,7 +25,7 @@ Se o valor retornado de `Main` não for usado, o retorno de `void` permite um c�
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.md). Se você não estiver familiarizado com ferramentas de linha de comando do núcleo do .NET, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/using-with-xplat-cli.md).
+Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.md). Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/using-with-xplat-cli.md).
 
 Modifique o método `Main` em *program.cs* da seguinte maneira:
 

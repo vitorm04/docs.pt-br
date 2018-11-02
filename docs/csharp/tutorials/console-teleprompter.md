@@ -3,12 +3,12 @@ title: Aplicativo do Console
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937586"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183614"
 ---
 # <a name="console-application"></a>Aplicativo do Console
 
@@ -155,7 +155,7 @@ Execute o exemplo e você poderá ler em voz alta de acordo com o ritmo pré-con
 
 ## <a name="async-tasks"></a>Tarefas assíncronas
 
-Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, casos ele queira acelerar ou diminuir o ritmo da exibição do texto. Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
+Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, casos ele queira acelerar ou diminuir o ritmo da exibição do texto ou interromper a exibição do texto por completo. Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
 A primeira etapa é criar um método de retorno <xref:System.Threading.Tasks.Task> assíncrono que representa o código que você criou até agora para ler e exibir o arquivo.
 
 Adicione este método à sua classe `Program` (ele é obtido do corpo de seu método `Main`):
@@ -190,7 +190,7 @@ Aqui, em `Main`, o código aguarda de forma síncrona. Use o operador `await` em
 > [!NOTE]
 > Caso use o C# 7.1 ou posterior, você poderá criar aplicativos de console com o método [`async` `Main`](../whats-new/csharp-7-1.md#async-main).
 
-Em seguida, é necessário escrever o segundo método assíncrono a ser lido no Console e ficar atento às teclas "<" (menor que) e ">" (maior que). Este é o método que você adiciona à tarefa:
+Em seguida, é necessário escrever o segundo método assíncrono a ser lido no Console e ficar atento às teclas "<" (menor que), ">" (maior que) e "X" ou "x". Este é o método que você adiciona à tarefa:
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-Isso cria uma expressão lambda para representar um delegado <xref:System.Action> que lê uma chave no Console e modifica uma variável local que representa o atraso quando o usuário pressiona as teclas "<" (menor que) ou ">" (maior que). Esse método usa <xref:System.Console.ReadKey> para bloquear e aguardar até que o usuário pressione uma tecla.
+Isso cria uma expressão lambda para representar um delegado <xref:System.Action> que lê uma chave no Console e modifica uma variável local que representa o atraso quando o usuário pressiona as teclas "<" (menor que) ou ">" (maior que). O método de delegado termina quando o usuário pressiona a tecla "X" ou "x", que permitem ao usuário interromper a exibição de texto a qualquer momento.
+Esse método usa <xref:System.Console.ReadKey> para bloquear e aguardar até que o usuário pressione uma tecla.
 
 Para concluir esse recurso, você precisa criar um novo método de retorno `async Task` que inicia essas duas tarefas (`GetInput` e `ShowTeleprompter`) e também gerencia os dados compartilhados entre essas tarefas.
 

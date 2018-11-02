@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193142"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199429"
 ---
 # <a name="cache-policy"></a>Política de cache
 Uma política de cache define as regras que são usadas para determinar se uma solicitação pode ser atendida usando uma cópia armazenada em cache do recurso solicitado. Os aplicativos especificam requisitos de cache de cliente para atualização, mas a política de cache efetiva é determinada pelos requisitos de cache de cliente, requisitos de expiração de conteúdo do servidor e requisitos de revalidação do servidor. A interação dos requisitos da política de cache de cliente e do servidor sempre resulta na política de cache mais conservadora, para ajudar a garantir que o conteúdo mais atualizado é retornado para o aplicativo cliente.  
   
- As políticas de cache são baseadas na localização ou em tempo. Uma política de cache baseada na localização define a atualização das entradas armazenadas em cache de acordo com o local em que o recurso solicitado pode ser obtido. Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. A maioria dos aplicativos pode usar a política de cache baseada em tempo padrão, que implementa a política de cache especificada no RFC 2616, disponível em [http://www.ietf.org](http://www.ietf.org/).  
+ As políticas de cache são baseadas na localização ou em tempo. Uma política de cache baseada na localização define a atualização das entradas armazenadas em cache de acordo com o local em que o recurso solicitado pode ser obtido. Uma política de cache baseada em tempo define a atualização das entradas armazenadas em cache usando a hora em que o recurso foi recuperado, os cabeçalhos retornados com o recurso e a hora atual. A maioria dos aplicativos pode usar a política de cache baseada em tempo padrão, que implementa a política de cache especificada no RFC 2616, disponível no site da [IETF (Internet Engineering Task Force)](https://www.ietf.org/).  
   
  As classes descritas na tabela a seguir são usadas para especificar políticas de cache.  
   

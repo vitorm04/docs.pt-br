@@ -5,12 +5,12 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515274"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188567"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C\#
 
@@ -21,7 +21,7 @@ Essas duas perguntas são complicadas devido a fatores que afetam as comparaçõ
 - Você pode escolher uma comparação ordinal ou linguística.
 - Você pode escolher se o uso de maiúsculas faz diferença.
 - Você pode escolher comparações específicas de cultura.
-- As comparações linguísticas são dependentes de plataforma e cultura.
+- As comparações linguísticas dependem da plataforma e da cultura.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

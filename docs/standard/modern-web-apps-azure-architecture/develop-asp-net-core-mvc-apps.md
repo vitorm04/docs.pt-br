@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404639"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308585"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -58,7 +58,7 @@ public class ProductsController : Controller
 }
 ```
 
-Depois que for feita a correspondência de uma solicitação específica a uma rota, mas antes da chamada do método de ação, o ASP.NET Core MVC executará a [associação de modelos](/aspnet/core/mvc/models/model-binding) e a [validação de modelos](/aspnet/core/mvc/models/validation) na solicitação. A associação de modelos é responsável por converter os dados HTTP de entrada nos tipos .NET especificados como parâmetros do método de ação a ser chamado. Por exemplo, se o método de ação esperar um parâmetro de ID int, a associação de modelos tentará fornecer esse parâmetro com base em um valor fornecido como parte da solicitação. Para fazer isso, a associação de modelos procurará valores em um formulário publicado, valores na própria rota e valores de cadeia de caracteres de consulta. Supondo que um valor de ID seja encontrado, ele será convertido em um inteiro antes de ser passado para o método de ação.
+Depois que for feita a correspondência de uma solicitação específica a uma rota, mas antes da chamada do método de ação, o ASP.NET Core MVC executará o [model binding](/aspnet/core/mvc/models/model-binding) e a [validação de modelos](/aspnet/core/mvc/models/validation) na solicitação. O model binding é responsável por converter os dados HTTP de entrada nos tipos .NET especificados como parâmetros do método de ação a ser chamado. Por exemplo, se o método de ação esperar um parâmetro de ID int, o model binding tentará fornecer esse parâmetro com base em um valor fornecido como parte da solicitação. Para fazer isso, o model binding procurará valores em um formulário publicado, valores na própria rota e valores de cadeia de caracteres de consulta. Supondo que um valor de ID seja encontrado, ele será convertido em um inteiro antes de ser passado para o método de ação.
 
 Após a associação do modelo, mas antes da chamada do método de ação, ocorre a validação de modelos. A validação de modelos usa atributos opcionais no tipo de modelo e pode ajudar a garantir que o objeto de modelo fornecido está em conformidade com determinados requisitos de dados. Alguns valores podem ser especificados, conforme necessário, ou limitados a determinado tamanho ou intervalo numérico, etc. Se os atributos de validação forem especificados, mas o modelo não estiver em conformidade com seus requisitos, a propriedade ModelState.IsValid será falsa e o conjunto de regras de validação com falha estará disponível para ser enviado ao cliente que faz a solicitação.
 
@@ -70,7 +70,7 @@ Para APIs Web, o ASP.NET Core MVC é compatível com a [_negociação de conteú
 >
 > - **Ações de roteamento para o controlador**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Associação de modelos**
+> - **Model binding**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Validação de modelo**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
@@ -207,9 +207,9 @@ O ASP.NET Core MVC também usa uma convenção para localizar exibições. Você
 
 ### <a name="cross-cutting-concerns"></a>Interesses paralelos
 
-Conforme os aplicativos crescem, fica cada vez mais importante excluir interesses paralelos para eliminar a duplicação e manter a consistência. Alguns exemplos de interesses paralelos em aplicativos ASP.NET Core são autenticação, regras de validação de modelos, cache de saída e tratamento de erro, embora haja muitos outros. Os [filtros](/aspnet/core/mvc/controllers/filters) do ASP.NET Core MVC permitem executar o código antes ou depois de determinadas etapas do pipeline de processamento de solicitações. Por exemplo, um filtro pode ser executado antes e após a associação de modelos, antes e após uma ação ou antes e após o resultado de uma ação. Você também pode usar um filtro de autorização para controlar o acesso ao restante do pipeline. A Figura 7-2 mostra como solicitar fluxos de execução por meio de filtros, caso eles estejam configurados.
+Conforme os aplicativos crescem, fica cada vez mais importante excluir interesses paralelos para eliminar a duplicação e manter a consistência. Alguns exemplos de interesses paralelos em aplicativos ASP.NET Core são autenticação, regras de validação de modelos, cache de saída e tratamento de erro, embora haja muitos outros. Os [filtros](/aspnet/core/mvc/controllers/filters) do ASP.NET Core MVC permitem executar o código antes ou depois de determinadas etapas do pipeline de processamento de solicitações. Por exemplo, um filtro pode ser executado antes e após o model binding, antes e após uma ação ou antes e após o resultado de uma ação. Você também pode usar um filtro de autorização para controlar o acesso ao restante do pipeline. A Figura 7-2 mostra como solicitar fluxos de execução por meio de filtros, caso eles estejam configurados.
 
-![A solicitação é processada por meio de Filtros de autorização, Filtros de recurso, Associação de modelos, Filtros de ação, Execução de ação e Conversão do resultado de ação, Filtros de exceção, Filtros de resultado e Execução de resultado. Na saída, a solicitação é processada somente por Filtros de resultado e Filtros de recurso antes de se tornar uma resposta enviada ao cliente.](./media/image7-2.png)
+![A solicitação é processada por meio de Filtros de autorização, Filtros de recurso, Model binding, Filtros de ação, Execução de ação e Conversão do resultado de ação, Filtros de exceção, Filtros de resultado e Execução de resultado. Na saída, a solicitação é processada somente por Filtros de resultado e Filtros de recurso antes de se tornar uma resposta enviada ao cliente.](./media/image7-2.png)
 
 Figura 7-2 Solicitar a execução por meio de filtros e do pipeline de solicitação.
 

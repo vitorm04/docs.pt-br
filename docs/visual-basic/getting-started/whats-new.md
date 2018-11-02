@@ -1,6 +1,6 @@
 ---
 title: Novidades do Visual Basic
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925605"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194053"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
-Este tópico lista os nomes das principais funcionalidades para cada versão do Visual Basic, com descrições detalhadas das funcionalidades novas e aprimoradas na versão mais recente da linguagem.
+Este tópico lista os nomes dos principais recursos para cada versão do Visual Basic, com descrições detalhadas das funcionalidades novas e aprimoradas nas versões mais recentes da linguagem.
   
 ## <a name="current-version"></a>Versão atual
 
@@ -69,6 +67,10 @@ Por exemplo, a seguinte chamada de método tem dois argumentos posicionais entre
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[Modificador de acesso de membro`Private Protected`](../language-reference/modifiers/private-protected.md)
+
+Essa nova combinação de palavra-chave definirá um membro que é acessível por todos os membros em sua classe recipiente, bem como por tipos derivados da classe recipiente, mas somente se eles também forem encontrados no assembly de contenção. Como estruturas não podem ser herdadas, `Private Protected` só pode ser aplicado aos membros de uma classe.
 
 **Separador hex/binário/octal à esquerda**
 
@@ -153,7 +155,7 @@ Para obter mais informações, consulte [Reference return values](../programming
 [Interpolação de cadeia de caracteres](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-format.md).  
   
-[Acesso de membro nulo condicional e indexação](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Acesso de membro nulo condicional e indexação](../language-reference/operators/null-conditional-operators.md)  
 Você pode testar a nulidade de uma maneira sintática muito simples antes de executar uma operação de acesso de membro (`?.`) ou índice (`?[]`).  Esses operadores ajudam a escrever menos código para lidar com verificações de nulidade, especialmente para entrar em estruturas de dados.  Se a referência de objeto ou o operando esquerdo for nulo, as operações retornarão valores nulos.  
   
 [Literais de cadeia multilinha](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

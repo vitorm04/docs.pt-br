@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744077"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183094"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Como compilar um assembly de vários arquivos
 Este artigo explica como criar um assembly de vários arquivos e fornece código que ilustra cada etapa no procedimento.  
@@ -97,7 +97,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
      Você pode usar o [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar o conteúdo de um assembly ou determinar se um arquivo é um assembly ou um módulo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
- [Como exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Como exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)

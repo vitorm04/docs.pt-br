@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864781"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842821"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens que segmentam o .NET Framework, como C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL e Windows PowerShell. É possível acessar os tipos e os membros das bibliotecas de classes desenvolvidas para o .NET Framework sem que seja necessário conhecer a linguagem em que foram originalmente gravados e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo do .NET Framework, independentemente da linguagem.  
@@ -115,7 +115,7 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |Enumerações|[Enumerações](#enums)|O tipo subjacente de um enum deverá ser um tipo de inteiro CLS interno, o nome do campo deverá ser "value__", e esse campo deverá ser marcado como `RTSpecialName`.|7|  
 |Enumerações|[Enumerações](#enums)|Há dois tipos diferentes de enums, indicados pela presença ou pela ausência do atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType> (consulte a Biblioteca da Partição IV). Um representa valores de inteiro nomeados; o outro representa sinalizadores de bit nomeados que podem ser combinados para gerar um valor sem nome. O valor de um `enum` não está limitado aos valores especificados.|8|  
 |Enumerações|[Enumerações](#enums)|Campos estáticos de literais de um enum deverão ter o tipo do próprio enum.|9|  
-|Eventos|[Eventos](#events)|Os métodos que implementam um evento deverão ser marcados como `SpecialName` em themetadata.|29|  
+|Eventos|[Eventos](#events)|Os métodos que implementam um evento deverão ser marcados como `SpecialName` nos metadados.|29|  
 |Eventos|[Eventos](#events)|A acessibilidade de um evento e de seus acessadores deverá ser idêntica.|30|  
 |Eventos|[Eventos](#events)|Os métodos `add` e `remove` de um evento deverão estar presentes ou ausentes.|31|  
 |Eventos|[Eventos](#events)|Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um cujo tipo define o tipo do evento, e ele deverá ser derivado de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
@@ -129,17 +129,17 @@ O .NET Framework independe da linguagem. Isso significa que, como desenvolvedor,
 |Genéricos|[Tipos e membros genéricos](#Generics)|Tipos usados como restrições em parâmetros genéricos deverão ser compatíveis com CLS.|45|  
 |Genéricos|[Tipos e membros genéricos](#Generics)|A visibilidade e a acessibilidade de membros (incluindo tipos aninhados) em um tipo genérico instanciado deverão ser consideradas no escopo da instanciação específica, em vez da declaração de tipo genérico como um todo. Supondo isso, as regras de visibilidade e acessibilidade da regra 12 da CLS continuam sendo aplicáveis.|46|  
 |Genéricos|[Tipos e membros genéricos](#Generics)|Para cada método genérico abstrato ou virtual, deverá haver uma implementação concreta (não abstrata) padrão.|47|  
-|Interfaces|[Interfaces](#Interfaces)|As interfaces compatíveis com CLS não deverão exigir a definição de métodos incompatíveis com CLS para implementá-los.|18|  
+|Interfaces|[Interfaces](#Interfaces)|As interfaces em conformidade com CLS não deverão exigir a definição de métodos incompatíveis com CLS para implementá-los.|18|  
 |Interfaces|[Interfaces](#Interfaces)|As interfaces compatíveis com CLS não deverão definir métodos estáticos, nem devem definir campos.|19|  
 |Membros|[Membros de tipo em geral](#members)|Campos e métodos estáticos globais não são compatíveis com CLS.|36|  
 |Membros|--|O valor de um estático literal é especificado por meio do uso de metadados de inicialização do campo. Um literal compatível com CLS deve ter um valor especificado em metadados de inicialização de campo que sejam exatamente do mesmo tipo que o literal (ou do tipo subjacente, se esse literal for um `enum`).|13|  
 |Membros|[Membros de tipo em geral](#members)|A restrição vararg não faz parte da CLS e a única convenção de chamada com suporte pela CLS é a convenção de chamada gerenciada padrão.|15|  
-|Convenções de nomenclatura|[Convenções de nomenclatura](#naming)|Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres que podem iniciar e ser incluídos em identificadores, disponíveis online em http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, sem distinção de localidade do Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.|4|  
+|Convenções de nomenclatura|[Convenções de nomenclatura](#naming)|Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres que podem iniciar e ser incluídos em identificadores, disponíveis online em <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a localidade Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.|4|  
 |Sobrecarga|[Convenções de nomenclatura](#naming)|Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga. Ou seja, embora o CTS permita que um único tipo use o mesmo nome para um método e um campo, a CLS não permite.|5|  
-|Sobrecarga|[Convenções de nomenclatura](#naming)|Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra CLS 39.|6|  
+|Sobrecarga|[Convenções de nomenclatura](#naming)|Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS.|6|  
 |Sobrecarga|[Sobrecargas](#overloads)|Somente propriedades e métodos podem ser sobrecarregados.|37|  
 |Sobrecarga|[Sobrecargas](#overloads)|As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno.|38|  
-|Sobrecarga|--|Se dois ou mais métodos compatíveis com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, eles tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo.|48|  
+|Sobrecarga|--|Se dois ou mais métodos em conformidade com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo.|48|  
 |Tipos|[Tipo e assinaturas de membro de tipo](#Types)|<xref:System.Object?displayProperty=nameWithType> é compatível com CLS. Qualquer outra classe compatível com CLS deverá herdar de uma classe compatível com CLS.|23|  
 |Propriedades|[Propriedades](#properties)|Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados.|24|  
 |Propriedades|[Propriedades](#properties)|Os acessadores de uma propriedade deverão ser todos estáticos, virtuais ou de instância.|26|  

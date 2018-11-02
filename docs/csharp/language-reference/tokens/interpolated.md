@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251726"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196972"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 
@@ -86,7 +86,7 @@ O exemplo a seguir usa a conversão implícita em <xref:System.FormattableString
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o guia de início rápido [Interpolação de cadeia de caracteres no C#](../../quick-starts/interpolated-strings.yml). Para obter mais exemplos, confira o tutorial [Interpolação de cadeia de caracteres no C#](../../tutorials/string-interpolation.md).
+Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres no C# Interativo](../../tutorials/intro-to-csharp/interpolated-strings.yml). Ou você pode tentar o tutorial de [Interpolação de cadeia de caracteres C#](../../tutorials/string-interpolation.md) localmente em seu computador.
 
 ## <a name="see-also"></a>Consulte também
 

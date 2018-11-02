@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f456bbe771608258307673337693c1e8a5c45f39
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857187"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454363"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalar o .NET Framework no Windows 10 e no Windows Server 2016
 
@@ -23,6 +23,8 @@ Você pode ter chegado nesta página depois de tentar executar um aplicativo e v
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 O .NET Framework 4.7.2 está incluído na:
+
+* [Atualização de outubro de 2018 para o Windows 10](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10)
 

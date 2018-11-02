@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 069a95656e7ceaf454c01c47d61ff391bcbed2fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6f96286da84e41e79fb0b6253d6f20eea89da21a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538879"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201343"
 ---
 # <a name="interlocked-operations"></a>Operações interconectadas
 
@@ -37,7 +37,7 @@ A classe <xref:System.Threading.Interlocked?displayProperty=nameWithType> fornec
   
  Em processadores modernos, os métodos da classe <xref:System.Threading.Interlocked> geralmente podem ser implementados por uma única instrução. Portanto, eles fornecem sincronização de alto desempenho e podem ser usados para criar mecanismos de sincronização de nível superior, como bloqueios de rotação.  
   
- Para obter um exemplo que usa as classes <xref:System.Threading.Monitor> e <xref:System.Threading.Interlocked> em combinação, consulte [Monitores](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Para obter um exemplo que usa as classes <xref:System.Threading.Monitor> e <xref:System.Threading.Interlocked> em combinação, veja <xref:System.Threading.Monitor>.  
   
 ## <a name="compareexchange-example"></a>Exemplo de CompareExchange
 

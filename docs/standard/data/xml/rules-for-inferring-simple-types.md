@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615307"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123573"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regras para inferir tipos simples
 Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o tipo de dados para atributos e elementos.  
@@ -65,8 +65,9 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
   
  Quando o primeiro valor de `attr2` é encontrado, o tipo de `attr2` será inferida como `unsignedByte` com base no valor `0`. Quando segundo `attr2` é encontrado, o tipo é promovido a `string` com base no tipo atualmente inferido de `unsignedByte` e o valor atual `true` porque a classe de <xref:System.Xml.Schema.XmlSchemaInference> considera valores anteriores para elevar o tipo inferido. No entanto, se ambas as instâncias de `attr2` foram encontrados no mesmo documento XML e não em dois documentos XML diferentes que ilustradas anterior, `attr2` seria inferido como `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Atributos ignorados do namespace http://www.w3.org/2001/XMLSchema-instance  
- Os seguintes esquema- está definindo os atributos que são ignorados durante a inferência de esquema.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Atributos ignorados do namespace <https://www.w3.org/2001/XMLSchema-instance>
+
+Os seguintes esquema- está definindo os atributos que são ignorados durante a inferência de esquema.  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  

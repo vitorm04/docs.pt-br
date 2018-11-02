@@ -8,29 +8,30 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971962"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261388"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrar da classe XslTransform
-A arquitetura XSLT foi reprojetada na versão [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. A classe de <xref:System.Xml.Xsl.XslTransform> foi substituída pela classe de <xref:System.Xml.Xsl.XslCompiledTransform> .  
-  
- As seções a seguir descrevem algumas das principais diferenças entre <xref:System.Xml.Xsl.XslCompiledTransform> e as classes de <xref:System.Xml.Xsl.XslTransform> .  
-  
-## <a name="performance"></a>Desempenho  
- A classe de <xref:System.Xml.Xsl.XslCompiledTransform> inclui muitos aprimoramentos de desempenho. O novo processador XSLT compila a folha de estilos XSLT para baixo em um formato intermediário comuns, semelhante ao que o Common Language Runtime (CLR) faz para outras linguagens de programação. Uma vez que a folha de estilos é compilada, pode ser armazenada em cachê e reutilizado.  
-  
- A classe de <xref:System.Xml.Xsl.XslCompiledTransform> também inclui outras otimizações que o torna muito mais rápido que a classe de <xref:System.Xml.Xsl.XslTransform> .  
-  
+
+A arquitetura XSLT foi reprojetada na versão do Visual Studio 2005. A classe de <xref:System.Xml.Xsl.XslTransform> é substituída pela classe <xref:System.Xml.Xsl.XslCompiledTransform>.
+
+ As seções a seguir descrevem algumas das principais diferenças entre <xref:System.Xml.Xsl.XslCompiledTransform> e as classes de <xref:System.Xml.Xsl.XslTransform> .
+
+## <a name="performance"></a>Desempenho
+ A classe de <xref:System.Xml.Xsl.XslCompiledTransform> inclui muitos aprimoramentos de desempenho. O novo processador XSLT compila a folha de estilos XSLT para baixo em um formato intermediário comuns, semelhante ao que o Common Language Runtime (CLR) faz para outras linguagens de programação. Uma vez que a folha de estilos é compilada, pode ser armazenada em cachê e reutilizado.
+
+ A classe de <xref:System.Xml.Xsl.XslCompiledTransform> também inclui outras otimizações que o torna muito mais rápido que a classe de <xref:System.Xml.Xsl.XslTransform> .
+
 > [!NOTE]
->  Embora o desempenho geral da classe <xref:System.Xml.Xsl.XslCompiledTransform> seja melhor do que o da classe <xref:System.Xml.Xsl.XslTransform>, o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslCompiledTransform> possivelmente apresentará um desempenho mais lento do que o método <xref:System.Xml.Xsl.XslTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslTransform> na primeira vez que for chamado em uma transformação. Isso ocorre porque o arquivo XSLT deve ser compilado antes que seja carregado. Para saber mais, confira a postagem de blog a seguir: [XslCompiledTransform mais lento do que XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)  
-  
-## <a name="security"></a>Segurança  
- Por padrão, o suporte desativa da classe de <xref:System.Xml.Xsl.XslCompiledTransform> para a função XSLT `document()` e script inserido. Esses recursos podem ser ativados criando um objeto de <xref:System.Xml.Xsl.XsltSettings> que possui os recursos ativados e que passa para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> . O exemplo a seguir mostra como habilitar scripts e executar uma transformação XSLT.  
-  
+>  Embora o desempenho geral da classe <xref:System.Xml.Xsl.XslCompiledTransform> seja melhor do que o da classe <xref:System.Xml.Xsl.XslTransform>, o método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslCompiledTransform> possivelmente apresentará um desempenho mais lento do que o método <xref:System.Xml.Xsl.XslTransform.Load%2A> da classe <xref:System.Xml.Xsl.XslTransform> na primeira vez que for chamado em uma transformação. Isso ocorre porque o arquivo XSLT deve ser compilado antes que seja carregado. Para saber mais, confira a postagem de blog a seguir: [XslCompiledTransform mais lento do que XslTransform?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/)
+
+## <a name="security"></a>Segurança
+ Por padrão, o suporte desativa da classe de <xref:System.Xml.Xsl.XslCompiledTransform> para a função XSLT `document()` e script inserido. Esses recursos podem ser ativados criando um objeto de <xref:System.Xml.Xsl.XsltSettings> que possui os recursos ativados e que passa para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> . O exemplo a seguir mostra como habilitar scripts e executar uma transformação XSLT.
+
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
