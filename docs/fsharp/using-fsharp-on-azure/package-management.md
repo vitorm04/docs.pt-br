@@ -1,22 +1,22 @@
 ---
-title: 'Usando o gerenciamento de pacotes com F # para o Azure'
-description: 'Use Paket ou Nuget para gerenciar as dependências de F # do Azure'
+title: Usando o gerenciamento de pacotes com F# para o Azure
+description: Usar Paket ou Nuget para gerenciar F# dependências do Azure
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33566959"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Pacote de gerenciamento para Dependências F# do Azure
 
-Obter pacotes para o desenvolvimento do Azure é fácil quando você usa um Gerenciador de pacotes. As duas opções são [Paket](https://fsprojects.github.io/Paket/) e [NuGet](https://www.nuget.org/).
+Obter pacotes para desenvolvimento do Azure é fácil quando você usa um Gerenciador de pacotes. As duas opções são [Paket](https://fsprojects.github.io/Paket/) e [NuGet](https://www.nuget.org/).
 
 ## <a name="using-paket"></a>Usando Paket
 
-Se você estiver usando [Paket](https://fsprojects.github.io/Paket/) como seu gerente de dependência, você pode usar o `paket.exe` ferramenta para adicionar dependências do Azure. Por exemplo:
+Se você estiver usando [Paket](https://fsprojects.github.io/Paket/) como o Gerenciador de dependência, você pode usar o `paket.exe` ferramenta para adicionar dependências do Azure. Por exemplo:
 
     > paket add nuget WindowsAzure.Storage
 
@@ -24,7 +24,7 @@ Ou, se você estiver usando [Mono](https://www.mono-project.com/) para desenvolv
 
     > mono paket.exe add nuget WindowsAzure.Storage
 
-Isso adicionará `WindowsAzure.Storage` seu conjunto de dependências do pacote para o projeto no diretório atual, modifique o `paket.dependencies` de arquivo e baixar o pacote. Se você tiver configurado anteriormente dependências ou trabalha com um projeto em que as dependências foram definidas por outro desenvolvedor, você pode resolver e instalar dependências localmente como este:
+Isso adicionará `WindowsAzure.Storage` ao seu conjunto de dependências do pacote para o projeto no diretório atual, modifique o `paket.dependencies` de arquivo e baixe o pacote. Se você tiver configurado anteriormente dependências ou trabalhando com um projeto em que as dependências foram configuradas por outro desenvolvedor, você pode resolver e instalar dependências localmente como este:
 
     > paket install
 
@@ -32,7 +32,7 @@ Ou, para desenvolvimento Mono:
 
     > mono paket.exe install
 
-Você pode atualizar todas as suas dependências de pacote para a versão mais recente assim:
+Você pode atualizar todas as suas dependências de pacote para a versão mais recente, como este:
 
     > paket update
 
@@ -42,7 +42,7 @@ Ou, para desenvolvimento Mono:
 
 ## <a name="using-nuget"></a>Usando o Nuget
 
-Se você estiver usando [NuGet](https://www.nuget.org/) como seu gerente de dependência, você pode usar o `nuget.exe` ferramenta para adicionar dependências do Azure. Por exemplo:
+Se você estiver usando [NuGet](https://www.nuget.org/) como o Gerenciador de dependência, você pode usar o `nuget.exe` ferramenta para adicionar dependências do Azure. Por exemplo:
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
@@ -50,7 +50,7 @@ Ou, para desenvolvimento Mono:
 
     > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 
-Isso adicionará `WindowsAzure.Storage` seu conjunto de dependências do pacote para o projeto no diretório atual e o pacote de download. Se você tiver configurado anteriormente dependências ou trabalha com um projeto em que as dependências foram definidas por outro desenvolvedor, você pode resolver e instalar dependências localmente como este:
+Isso adicionará `WindowsAzure.Storage` ao seu conjunto de dependências do pacote para o projeto no diretório atual e o pacote de download. Se você tiver configurado anteriormente dependências ou trabalhando com um projeto em que as dependências foram configuradas por outro desenvolvedor, você pode resolver e instalar dependências localmente como este:
 
     > nuget restore 
 
@@ -58,7 +58,7 @@ Ou, para desenvolvimento Mono:
 
     > mono nuget.exe restore
 
-Você pode atualizar todas as suas dependências de pacote para a versão mais recente assim:
+Você pode atualizar todas as suas dependências de pacote para a versão mais recente, como este:
 
     > nuget update
 
@@ -68,16 +68,16 @@ Ou, para desenvolvimento Mono:
 
 ## <a name="referencing-assemblies"></a>Fazendo Referência a Assemblies
 
-Para usar seus pacotes em seu script F #, você precisa referenciar os assemblies incluídos nos pacotes usando um `#r` diretiva. Por exemplo:
+Para usar os pacotes em seu F# script, você precisa fazer referência os assemblies incluídos nos pacotes usando uma `#r` diretiva. Por exemplo:
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 
-Como você pode ver, você precisará especificar o caminho relativo para a DLL e o nome completo de DLL, que pode não ser exatamente o mesmo que o nome do pacote. O caminho inclui uma versão do framework e, possivelmente, um número de versão do pacote. Para localizar todos os assemblies instalados, você pode usar algo como em uma linha de comando do Windows:
+Como você pode ver, você precisará especificar o caminho relativo para a DLL e o nome completo de DLL, que pode não ser exatamente o mesmo que o nome do pacote. O caminho inclui uma versão do framework e, possivelmente, um número de versão do pacote. Para localizar todos os assemblies instalados, você pode usar algo parecido com isso em uma linha de comando do Windows:
 
     > cd packages/WindowsAzure.Storage
     > dir /s/b *.dll
 
-Ou, em um shell do Unix, algo parecido com:
+Ou em um shell do Unix, algo parecido com isto:
 
     > find packages/WindowsAzure.Storage -name "*.dll"
 

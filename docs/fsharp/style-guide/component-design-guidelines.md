@@ -3,10 +3,10 @@ title: 'Diretrizes de design do componente F #'
 description: 'Saiba as diretrizes para escrever componentes do F # destinadas ao consumo por outros chamadores.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43488281"
 ---
 # <a name="f-component-design-guidelines"></a>Diretrizes de design do componente F #

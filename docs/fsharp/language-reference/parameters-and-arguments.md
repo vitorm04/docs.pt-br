@@ -2,12 +2,12 @@
 title: Parâmetros e argumentos (F#)
 description: 'Saiba mais sobre o suporte de linguagem F # para definir parâmetros e passar argumentos para funções, métodos e propriedades.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123352"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744451"
 ---
 # <a name="parameters-and-arguments"></a>Parâmetros e argumentos
 
@@ -111,6 +111,8 @@ Para obter mais informações, consulte [construtores (F #)](https://msdn.micros
 
 Você pode especificar um parâmetro opcional para um método por meio de um ponto de interrogação na frente do nome do parâmetro. Parâmetros opcionais são interpretados como o tipo de opção F #, portanto, você pode consultá-los da maneira normal, tipos de opção são consultados, usando um `match` expressão com `Some` e `None`. Parâmetros opcionais são permitidos apenas em membros, não em funções criadas com `let` associações.
 
+Você pode passar valores opcionais existentes para o método pelo nome do parâmetro, como `?arg=None` ou `?arg=Some(3)` ou `?arg=arg`. Isso pode ser útil quando a criação de um método que passa argumentos opcionais para outro método.
+
 Você também pode usar uma função `defaultArg`, que define um valor padrão de um argumento opcional. O `defaultArg` função usa o parâmetro opcional como o primeiro argumento e o valor padrão como o segundo.
 
 O exemplo a seguir ilustra o uso de parâmetros opcionais.
@@ -123,7 +125,29 @@ A saída é a seguinte.
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+Para fins de C# e a interoperabilidade de Visual Basic, você pode usar os atributos `[<Optional; DefaultParameterValue<(...)>]` em F#, para que os chamadores vejam um argumento como opcional. Isso é equivalente a definir o argumento como opcionais no C# como na `MyMethod(int i = 3)`.
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+O valor fornecido como argumento para `DefaultParameterValue` deve corresponder ao tipo do parâmetro, ou seja, o seguinte não é permitido:
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+Nesse caso, o compilador gera um aviso e ignorará os dois atributos completamente. Observe que o valor padrão `null` precisa ser anotada de tipo, de outra forma o compilador infere o tipo incorreto, ou seja, `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
 
 ## <a name="passing-by-reference"></a>Passagem por referência
 

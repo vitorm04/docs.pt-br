@@ -1,12 +1,12 @@
 ---
 title: Tratamento de exceções (F#)
-description: 'Conheça os fundamentos da manipulação de exceção no F # e encontrar links para expressões e funções de manipulação de exceção.'
+description: Conheça os fundamentos do tratamento de exceção no F# e encontre links para expressões e funções de manipulação de exceção.
 ms.date: 05/16/2016
 ms.openlocfilehash: fc89feb0d21bc823cb105e435413f8309cd6174c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33564320"
 ---
 # <a name="exception-handling"></a>Tratamento de Exceção

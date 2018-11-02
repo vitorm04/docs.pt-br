@@ -3,10 +3,10 @@ title: Métodos (F#)
 description: 'Saiba como um método de F # é uma função associada com um tipo que são usados para expor e implementar a funcionalidade e o comportamento de objetos e tipos.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44253202"
 ---
 # <a name="methods"></a>Métodos

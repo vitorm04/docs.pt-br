@@ -3,10 +3,10 @@ title: Referência de símbolos e operadores (F#)
 description: 'Saiba mais sobre os símbolos e operadores que são usados na linguagem de programação F #.'
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47216812"
 ---
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores

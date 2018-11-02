@@ -3,10 +3,10 @@ title: Classes abstratas (F#)
 description: 'Saiba mais sobre o F # classes abstratas, que deixar alguns ou todos os membros não implementados e representam a funcionalidade comum de um conjunto diversificado de tipos de objeto.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 7e1bb9daca7e8a3b442cd7fb02ef99bb6a2085cb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43745444"
 ---
 # <a name="abstract-classes"></a>Classes abstratas

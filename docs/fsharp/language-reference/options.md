@@ -3,10 +3,10 @@ title: Opções (F#)
 description: 'Saiba como usar a opção de F # tipos quando um valor real podem não existir para um valor nomeado ou uma variável.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46479514"
 ---
 # <a name="options"></a>Opções
@@ -51,7 +51,7 @@ O tipo de opção suporta as seguintes propriedades e métodos.
 |[IsNone](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|Retorna `true` se a opção tem o `None` valor.|
 |[IsSome](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|Retorna `true` se a opção tem um valor que não seja `None`.|
 |[Alguns](https://msdn.microsoft.com/library/12f048d2-e293-4596-accb-de036ecd63fc)|`'T option`|Um membro estático que cria uma opção que tem um valor que não seja `None`.|
-|[Value](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|Retorna o valor subjacente ou gera uma `System.NullReferenceException` se o valor for `None`.|
+|[Valor](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|Retorna o valor subjacente ou gera uma `System.NullReferenceException` se o valor for `None`.|
 
 ## <a name="option-module"></a>Módulo Option
 

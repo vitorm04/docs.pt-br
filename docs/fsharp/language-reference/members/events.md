@@ -3,10 +3,10 @@ title: Eventos (F#)
 description: 'Saiba como o F # eventos permitem que você associe chamadas de função a ações do usuário, que são importantes na programação de GUI.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43871927"
 ---
 # <a name="events"></a>Eventos

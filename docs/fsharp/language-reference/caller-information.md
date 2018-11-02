@@ -3,10 +3,10 @@ title: 'Informações do chamador (F #)'
 description: Descreve como usar atributos de argumento de informações do chamador para obter informações do chamador de um método.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47216364"
 ---
 # <a name="caller-information"></a>Informações do chamador
@@ -51,7 +51,7 @@ Os valores de informações do chamador são emitidos como literais em linguagem
 
 Você pode fornecer explicitamente os argumentos opcionais para controlar as informações do chamador ou ocultá-las.
 
-## <a name="member-names"></a>Nomes de membro
+## <a name="member-names"></a>Nomes dos membros
 
 Você pode usar o [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar o nome do membro como um `String` argumento para o método chamado. Ao usar essa técnica, você evita que o problema que refatoração de renomeação não altera o `String` valores. Esse benefício é especialmente útil para as seguintes tarefas:
 
