@@ -3,12 +3,12 @@ title: Structs em C# - um tour pela linguagem C#
 description: Aprenda os conceitos básicos dos tipos de valor C#, chamados de structs
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058948"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323091"
 ---
 # <a name="structs"></a>Structs
 
@@ -24,7 +24,7 @@ Uma alternativa é tornar um struct um Ponto.
 
 Agora, somente um objeto é instanciado — um para a matriz — e as instâncias `Point` são armazenadas em linha na matriz.
 
-Construtores de struct são invocados com o operador `new`, mas isso não significa que a memória está sendo alocada. Em vez de alocar dinamicamente um objeto e retornar uma referência a ele, um construtor de struct simplesmente retorna o valor do struct (normalmente em um local temporário na pilha), e esse valor é, então, copiado conforme necessário.
+Os construtores struct são invocados com o operador `new`, semelhante a um construtor de classe. Porém, em vez de alocar dinamicamente um objeto no heap gerenciado e retornar uma referência a ele, um construtor de struct simplesmente retorna o valor do struct (normalmente em um local temporário na pilha), e esse valor é, então, copiado conforme a necessidade.
 
 Com classes, é possível que duas variáveis referenciem o mesmo objeto e, portanto, é possível que operações em uma variável afetem o objeto referenciado por outra variável. Com structs, as variáveis têm sua própria cópia dos dados e não é possível que as operações em um afetem o outro. Por exemplo, a saída produzida pelo seguinte fragmento de código depende de o ponto ser uma classe ou um struct.
 

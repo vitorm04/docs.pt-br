@@ -2,12 +2,12 @@
 title: Novidades no C# 7.2
 description: Uma visão geral dos novos recursos no C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400797"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181167"
 ---
 # <a name="whats-new-in-c-72"></a>Novidades no C# 7.2
 
@@ -20,7 +20,7 @@ O C# 7.2 usa o elemento de configuração de [seleção de versão de linguagem]
 
 Os novos recursos de linguagem nesta versão são:
 
-* [Semântica de referência com tipos de valor](#reference-semantics-with-value-types)
+* [Técnicas para escrever código eficiente seguro](#safe-efficient-code-enhancements)
   - Uma combinação de aprimoramentos de sintaxe que permitem trabalhar com tipos de valor usando a semântica de referência.
 * [Argumentos nomeados que não estejam à direita](#non-trailing-named-arguments)
   - Os argumentos nomeados podem ser seguidos por argumentos posicionais.
@@ -29,7 +29,7 @@ Os novos recursos de linguagem nesta versão são:
 * [Modificador de acesso `private protected`](#private-protected-access-modifier)
   - O modificador de acesso `private protected` permite o acesso a classes derivadas no mesmo assembly.
 
-## <a name="reference-semantics-with-value-types"></a>Semântica de referência com tipos de valores
+## <a name="safe-efficient-code-enhancements"></a>Aprimoramentos de código eficiente seguro
 
 Os recursos de linguagem introduzidos na 7.2 permitem trabalhar com tipos de valor ao usar semântica de referência. Eles são projetados para melhorar o desempenho, minimizando a cópia de tipos de valor sem incorrer nas alocações de memória associadas ao uso de tipos de referência. Os recursos incluem:
 
@@ -38,7 +38,7 @@ Os recursos de linguagem introduzidos na 7.2 permitem trabalhar com tipos de val
  - A declaração `readonly struct`, para indicar que uma struct é imutável e deve ser passado como um parâmetro `in` para seus métodos de membro. Adicionar o modificador `readonly` a uma declaração struct existente é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
  - A declaração `ref struct`, para indicar que um tipo de struct acessa a memória gerenciada diretamente e deve sempre ser alocado por pilha. Adicionar o modificador `ref` a uma declaração `struct` existente é uma [alteração incompatível](version-update-considerations.md#incompatible-changes). Um `ref struct` não pode ser um membro de uma classe ou usado em outros locais em que ele pode ser alocado no heap.
 
-Você pode ler mais sobre todas essas alterações em [Uso de tipos de valor com a semântica de referência](../reference-semantics-with-value-types.md).
+Você pode ler mais sobre todas essas alterações em [Escrever código eficiente seguro](../write-safe-efficient-code.md).
 
 ## <a name="non-trailing-named-arguments"></a>Argumentos nomeados que não estejam à direita
 

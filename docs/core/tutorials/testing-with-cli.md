@@ -4,12 +4,12 @@ description: Este tutorial explica como organizar e testar projetos do .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47235381"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415218"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
 
@@ -101,7 +101,7 @@ Exercício opcional: você pode adicionar um novo tipo de animal de estimação,
 
 ### <a name="testing-the-sample"></a>Testando o exemplo
 
-O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta. Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.github.io/). O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animais de estimação para confirmar se eles estão funcionando corretamente.
+O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta. Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.github.io/). O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animal de estimação para confirmar se eles estão funcionando corretamente.
 
 Crie uma pasta *test* com a pasta *NewTypesTests* nela. Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`. Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.
 

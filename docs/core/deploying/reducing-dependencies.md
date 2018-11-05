@@ -4,12 +4,12 @@ description: Reduza as dependências do pacote ao criar bibliotecas com base no 
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193596"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040875"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
 
@@ -36,7 +36,7 @@ Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências
 Você pode descobrir quais pacotes não são necessários das seguintes maneiras:
 
 1. Tentativa e erro.  Isso significa remover um pacote, restaurar, ver se sua biblioteca ainda é compilada e repetir esse processo.
-2. Usar uma ferramenta como [ILSpy](http://ilspy.net) ou [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) para inspecionar as referências e ver o que seu código realmente está usando.  Você poderá então remover os pacotes que não correspondem aos tipos que você está usando.
+2. Usar uma ferramenta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para inspecionar as referências e ver o que seu código realmente está usando.  Você poderá então remover os pacotes que não correspondem aos tipos que você está usando.
 
 ## <a name="example"></a>Exemplo 
 
@@ -127,7 +127,7 @@ Em seguida, copie as referências do pacote para a seção `dependencies` do arq
 }
 ```
 
-Há um grande volume de pacotes, muitos dos quais certamente não são necessários para estender os tipos de coleção.  Você pode remover os pacotes manualmente ou usar uma ferramenta como [ILSpy](http://ilspy.net) ou [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) para identificar quais pacotes seu código realmente usa.
+Há um grande volume de pacotes, muitos dos quais certamente não são necessários para estender os tipos de coleção.  Você pode remover os pacotes manualmente ou usar uma ferramenta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) para identificar quais pacotes seu código realmente usa.
 
 Veja como um pacote cortado pareceria:
 

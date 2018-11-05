@@ -4,12 +4,12 @@ description: Saiba como implementar Gateways de API com o Ocelot e como usar o O
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522194"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200016"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>Implementação de Gateways de API com o Ocelot
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts é uma matriz que contém o host e a porta de todos os se
 
 O UpstreamPathTemplate é a URL que o Ocelot usará para identificar qual DownstreamPathTemplate será usado para uma determinada solicitação do cliente. Por fim, o UpstreamHttpMethod é usado para que Ocelot possa distinguir entre diferentes solicitações (GET, POST, PUT) para a mesma URL.
 
-Neste ponto, você poderia usar um único Gateway de API do Ocelot (WebHost do ASP.NET Core), com um ou [vários arquivos configuration.json mesclados](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files), ou armazenar a [configuração em um repositório KV Consul](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul). 
+Neste ponto, você poderia usar um único Gateway de API do Ocelot (WebHost do ASP.NET Core), com um ou [vários arquivos configuration.json mesclados](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files), ou armazenar a [configuração em um repositório KV Consul](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
 
 Mas, conforme apresentado nas seções de arquitetura e design, se você realmente deseja usar microsserviços autônomos, talvez seja melhor dividir esse único Gateway de API monolítico em vários Gateways de API e/ou BFFs (back-end para front-end). Para isso, vamos ver como implementar essa abordagem com contêineres do Docker.
 
@@ -346,9 +346,9 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5203:80"   
+    - "5203:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Marketing/apigw:/app/configuration
 ```
@@ -363,25 +363,25 @@ Dividindo o Gateway de API em vários Gateways de API, diferentes equipes de des
 
 Agora, se você executar o eShopOnContainers com os Gateways de API (incluídos por padrão no VS quando uma solução eShopOnContainers-ServicesAndWebApps.sln é aberta ou quando o "docker-compose up" é executado), as rotas de exemplo a seguir serão executadas. 
 
-Por exemplo, ao visitar a URL upstream http://localhost:5202/api/v1/c/catalog/items/2/ atendida pelo Gateway de API webshoppingapigw, você obterá o resultado da URL downstream interna http://catalog.api/api/v1/2 dentro do host do Docker, como no navegador a seguir.
+Por exemplo, ao visitar a URL upstream `http://localhost:5202/api/v1/c/catalog/items/2/` atendida pelo Gateway de API webshoppingapigw, você obterá o resultado da URL downstream interna `http://catalog.api/api/v1/2` dentro do host do Docker, como no navegador a seguir.
 
 ![](./media/image35.png)
 
-**Figura 8-34.** Acessando um microsserviço por meio de uma URL fornecida pelo Gateway de API 
+**Figura 8-34.** Acessando um microsserviço por meio de uma URL fornecida pelo Gateway de API
 
-Por motivos de teste ou depuração, se você quiser acessar diretamente o contêiner do Docker do Catálogo (somente no ambiente de desenvolvimento) sem passar pelo Gateway de API, como 'catalog.api' é uma resolução de DNS interna do host do Docker (descoberta de serviço manipulada pelos nomes de serviço do docker-compose), a única maneira de acessar diretamente o contêiner será por meio da porta externa publicada em docker-compose.override.yml, que é fornecida apenas para testes de desenvolvimento, como http://localhost:5101/api/v1/Catalog/items/1 no navegador a seguir.
+Por motivos de teste ou depuração, se você quiser acessar diretamente o contêiner do Docker do Catálogo (somente no ambiente de desenvolvimento) sem passar pelo Gateway de API, como 'catalog.api' é uma resolução de DNS interna do host do Docker (descoberta de serviço manipulada pelos nomes de serviço do docker-compose), a única maneira de acessar diretamente o contêiner será por meio da porta externa publicada em docker-compose.override.yml, que é fornecida apenas para testes de desenvolvimento, como `http://localhost:5101/api/v1/Catalog/items/1` no navegador a seguir.
 
 ![](./media/image36.png)
 
 **Figura 8-35.** Acesso direto a um microsserviço para fins de teste 
 
-Mas o aplicativo está configurado para acessar todos os microsserviços por meio dos Gateways de API, não pela porta direta "atalhos". 
+Mas o aplicativo está configurado para acessar todos os microsserviços por meio dos Gateways de API, não pela porta direta "atalhos".
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>O padrão de agregação do Gateway em eShopOnContainers
 
-Conforme apresentado anteriormente, uma maneira flexível de implementar a agregação de solicitações é com os serviços personalizados, por código. Você também pode implementar a agregação de solicitação com o recurso de agregação de solicitação no Ocelot, mas talvez essa opção não seja flexível o suficiente. Portanto, a maneira selecionada de implementar a agregação em eShopOnContainers é com um serviços da API Web ASP.NET Core explícitos para cada agregador. 
+Conforme apresentado anteriormente, uma maneira flexível de implementar a agregação de solicitações é com os serviços personalizados, por código. Você também pode implementar a agregação de solicitação com o recurso de agregação de solicitação no Ocelot, mas talvez essa opção não seja flexível o suficiente. Portanto, a maneira selecionada de implementar a agregação em eShopOnContainers é com um serviços da API Web ASP.NET Core explícitos para cada agregador.
 
-De acordo com essa abordagem, o diagrama de composição do Gateway de API é na realidade um pouco mais amplo ao considerar os serviços do agregador que não são mostrados no diagrama de arquitetura global simplificado mostrado anteriormente. 
+De acordo com essa abordagem, o diagrama de composição do Gateway de API é na realidade um pouco mais amplo ao considerar os serviços do agregador que não são mostrados no diagrama de arquitetura global simplificado mostrado anteriormente.
 
 No diagrama a seguir, você também poderá ver como os serviços do agregador funcionam com seus Gateways de API relacionados.
 
@@ -389,13 +389,13 @@ No diagrama a seguir, você também poderá ver como os serviços do agregador f
 
 **Figura 8-36.** Arquitetura de eShopOnContainers com serviços do agregador
 
-A imagem a seguir está mais ampliada para que você possa observar como os aplicativos clientes poderiam ser melhorados para a área de negócios "Compras", reduzindo o excesso de comunicação com microsserviços ao usar esses serviços do agregador no realm dos Gateways de API. 
+A imagem a seguir está mais ampliada para que você possa observar como os aplicativos clientes poderiam ser melhorados para a área de negócios "Compras", reduzindo o excesso de comunicação com microsserviços ao usar esses serviços do agregador no realm dos Gateways de API.
 
  ![](./media/image38.png)
 
 **Figura 8-37.** Visão ampliada do agregador de serviços
 
-Você pode observar como a complexidade aumenta quando o diagrama mostra as possíveis solicitações provenientes dos Gateways de API. Apesar disso, veja como as setas em azul seriam simplificadas, da perspectiva dos aplicativos clientes, ao usar o padrão de agregador reduzindo o excesso de comunicação e a latência na comunicação, por fim, melhorando significativamente a experiência do usuário para os aplicativos remotos ( aplicativos móveis e SPA), principalmente. 
+Você pode observar como a complexidade aumenta quando o diagrama mostra as possíveis solicitações provenientes dos Gateways de API. Apesar disso, veja como as setas em azul seriam simplificadas, da perspectiva dos aplicativos clientes, ao usar o padrão de agregador reduzindo o excesso de comunicação e a latência na comunicação, por fim, melhorando significativamente a experiência do usuário para os aplicativos remotos ( aplicativos móveis e SPA), principalmente.
 
 A área de negócios e de microsserviços de "Marketing" é um caso de uso muito simples, portanto, não há necessidade de usar agregadores, mas, se fosse necessário, também seria possível.
 
@@ -466,9 +466,12 @@ namespace OcelotApiGw
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] { "orders", "basket", "locations", "marketing", "mobileshoppingagg", "webshoppingagg" }
-                    };                   
+                    };
                 });
             //...
+        }
+    }
+}
 ```
 
 Em seguida, você também precisará definir a autorização com o atributo [Authorize] nos recursos a serem acessados, como os microsserviços, como no seguinte controlador do microsserviço Cesta.
@@ -479,7 +482,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.Controllers
     [Route("api/v1/[controller]")]
     [Authorize]
     public class BasketController : Controller
-    {   
+    {
       //...
     }
 }
@@ -506,9 +509,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-Como próxima etapa, se você tentar acessar qualquer microsserviço protegido, como o Cesta, com uma URL de reencaminhamento baseada no Gateway de API, como http://localhost:5202/api/v1/b/basket/1, ocorrerá um erro 401 Não Autorizado, a menos que você forneça um token válido. Por outro lado, se uma URL de reencaminhamento for autenticada, o Ocelot invocará qualquer esquema downstream associado a ela (a URL interna do microsserviço).
+Como próxima etapa, se você tentar acessar qualquer microsserviço protegido, como o Cesta, com uma URL de reencaminhamento baseada no Gateway de API, como `http://localhost:5202/api/v1/b/basket/1`, ocorrerá um erro 401 Não Autorizado, a menos que você forneça um token válido. Por outro lado, se uma URL de reencaminhamento for autenticada, o Ocelot invocará qualquer esquema downstream associado a ela (a URL interna do microsserviço).
 
-**Autorização na camada de reencaminhamento do Ocelot.**  O Ocelot dá suporte a autorização baseada em declarações avaliada após a autenticação. Você pode definir a autorização em um nível de rota adicionando o código a seguir na configuração de reencaminhamento. 
+**Autorização na camada de reencaminhamento do Ocelot.**  O Ocelot dá suporte a autorização baseada em declarações avaliada após a autenticação. Você pode definir a autorização em um nível de rota adicionando o código a seguir na configuração de reencaminhamento.
 
 ```
 "RouteClaimsRequirement": {
@@ -516,13 +519,13 @@ Como próxima etapa, se você tentar acessar qualquer microsserviço protegido, 
 }
 ```
 
-Nesse exemplo, quando o middleware de autorização for chamado, o Ocelot descobrirá se o usuário tem o tipo de declaração 'UserType' no token e se o valor dessa declaração é 'employee'. Se não for, o usuário não será autorizado e a resposta será 403 Proibido. 
+Nesse exemplo, quando o middleware de autorização for chamado, o Ocelot descobrirá se o usuário tem o tipo de declaração 'UserType' no token e se o valor dessa declaração é 'employee'. Se não for, o usuário não será autorizado e a resposta será 403 Proibido.
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Usando a entrada do Kubernetes e os Gateways de API do Ocelot
 
-Ao usar o Kubernetes (como em um cluster do Serviço de Kubernetes do Azure), geralmente se unifica todas as solicitações HTTP por meio da [camada de entrada do Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) com base no *Nginx*. 
+Ao usar o Kubernetes (como em um cluster do Serviço de Kubernetes do Azure), você geralmente unifica todas as solicitações HTTP por meio da [camada de entrada do Kubernetes](https://kubernetes.io/docs/concepts/services-networking/ingress/) com base no *Nginx*. 
 
-No Kubernetes, se você não usar nenhuma abordagem de entrada, seus serviços e pods terão IPs que apenas poderão ser encaminhados pela rede de cluster. 
+No Kubernetes, se você não usar qualquer abordagem de entrada, os seus serviços e pods terão IPs que poderão ser encaminhados apenas pela rede de cluster. 
 
 Mas se você usar uma abordagem de entrada, haverá uma camada intermediária entre a Internet e seus serviços (incluindo seus Gateways de API), atuando como um proxy reverso.
 
@@ -530,9 +533,9 @@ Como uma definição, uma entrada é uma coleção de regras que permitem que co
 
 Em eShopOnContainers, ao desenvolver localmente e usar apenas o computador de desenvolvimento como o host do Docker, você não está usando nenhuma entrada, mas apenas vários Gateways de API. 
 
-No entanto, ao direcionar a um ambiente de "produção" baseado no Kubernetes, o eShopOnCOntainers está usando uma entrada na frente dos gateways de API. Dessa forma, os clientes ainda chamam a mesma URL base, mas as solicitações são encaminhadas para vários Gateways de API ou BFFs. 
+No entanto, ao direcionar a um ambiente de "produção" baseado no Kubernetes, o eShopOnContainers está usando uma entrada na frente dos gateways de API. Dessa forma, os clientes ainda chamam a mesma URL base, mas as solicitações são encaminhadas para vários Gateways de API ou BFFs. 
 
-Observe que os Gateways de API são front-ends ou fachadas que mostram somente os serviços, mas não os aplicativos Web que normalmente estão fora de seu escopo. Além disso, os Gateways de API podem ocultar determinados microsserviços internos. 
+Observe que os Gateways de API são front-ends ou fachadas que mostram somente os serviços, mas não os aplicativos Web que normalmente estão fora de seu escopo. Além disso, os Gateways de API podem ocultar determinados microsserviços internos.
 
 A entrada, no entanto, está apenas redirecionando solicitações HTTP, mas não está tentando ocultar nenhum microsserviço ou aplicativo Web.
 
@@ -552,32 +555,28 @@ Quando você implanta o eShopOnContainers no Kubernetes, ele expõe apenas algun
 -   `/mobileshoppingapigw` para os processos de negócios móveis BFF e de compras
 -   `/mobilemarketingapigw` para os processos de negócios móveis BFF e de marketing
 
-Ao implantar no Kubernetes, cada Gateway de API do Ocelot está usando um arquivo “configuration.json” diferente para cada _pod_ que executa os Gateways de API. Esses arquivos de “configuration.json” são fornecidos ao montar (originalmente com o script deploy.ps1) um volume criado com base em um _mapa de configuração_ do Kubernetes chamado 'ocelot'. Cada contêiner monta seu arquivo de configuração relacionado na pasta do contêiner chamada `/app/configuration`.
+Ao implantar no Kubernetes, cada Gateway de API do Ocelot está usando um arquivo “configuration.json” diferente para cada _pod_ que executa os Gateways de API. Esses arquivos de "configuration.json" são fornecidos pela montagem (originalmente com o script deploy.ps1) de um volume criado com base em um _mapa de configuração_ do Kubernetes chamado 'ocelot'. Cada contêiner monta seu arquivo de configuração relacionado na pasta do contêiner chamada `/app/configuration`.
 
 Nos arquivos de código-fonte do eShopOnContainers, os arquivos “configuration.json” originais podem ser encontrados na pasta `k8s/ocelot/`. Há um arquivo para cada BFF/APIGateway.
-
 
 ## <a name="additional-cross-cutting-features-in-an-ocelot-api-gateway"></a>Recursos de interesses paralelos adicionais em um Gateway de API do Ocelot
 
 Há outros recursos importantes que podem ser pesquisados e usados ao usar um Gateway de API do Ocelot, descritos nos links a seguir.
 
 -   **Descoberta de serviço no lado do cliente integrando o Ocelot ao Consul ou ao Eureka** 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 -   **Cache na camada do Gateway de API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 -   **Registro em log na camada do Gateway de API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 -   **Qualidade de Serviço (repetições e disjuntores) na camada do Gateway de API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 -   **Limitação de taxa** 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
-
-
-
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
 [Anterior] (background-tasks-with-ihostedservice.md) [Próximo] (../microservice-ddd-cqrs-patterns/index.md)

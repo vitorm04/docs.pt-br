@@ -3,12 +3,12 @@ title: Especificar dinamicamente filtros predicados em tempo de execução (LINQ
 description: Saiba como especificar dinamicamente filtros predicados em tempo de execução usando o LINQ em C#.
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512570"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038481"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Especificar filtros predicados dinamicamente em tempo de execução
 
@@ -44,7 +44,7 @@ Em alguns casos, você não sabe até o tempo de execução quantos predicados p
 
 8. A próxima etapa é executar o projeto novamente, desta vez usando a entrada inserida em tempo de execução em vez da matriz `ids`. Altere `QueryByID(ids)` para `QueryByID(args)` no método `Main`.
 
-9. Execute o projeto com os argumentos de linha de comando `122 117 120 115`. Quando o projeto é executado, esses valores se tornam elementos de `args`, o parâmetro do método `Main`...
+9. Execute o projeto com os argumentos de linha de comando `122 117 120 115`. Quando o projeto é executado, esses valores se tornam elementos de `args`, o parâmetro do método `Main`.
 
 10. A saída a seguir é exibida em uma janela do console:
 

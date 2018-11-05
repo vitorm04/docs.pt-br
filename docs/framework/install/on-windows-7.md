@@ -5,12 +5,12 @@ description: Saiba como instalar o .NET Framework no Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 091fb93f26695df01f2f95fdec7ed168d96ba90d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861865"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200752"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Instalar o .NET Framework no Windows 7 SP1 e Windows Server 2008 R2
 
@@ -18,7 +18,7 @@ O .NET Framework é necessário para executar muitos aplicativos no Windows. Use
 
 ![Não foi possível iniciar o aplicativo](./media/this-application-could-not-be-started.png)
 
-Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Há suporte para ele no Windows 7 SP1 e no Windows Server 2008 R2 e ele está incluído na [Atualização de abril de 2018 do Windows 10](https://www.microsoft.com/software-download/windows10).
+Essas instruções ajudarão você a instalar as versões do .NET Framework necessárias. O [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) é a última versão. Ele tem suporte no Windows 7 SP1 e no Windows Server 2008 R2, além de estar incluído na [Atualização de outubro de 2018 para o Windows 10](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) e na [Atualização de abril de 2018 para o Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 

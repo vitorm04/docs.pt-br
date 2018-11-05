@@ -3,12 +3,12 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208179"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194027"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -22,13 +22,13 @@ A versão 6.0 do C# tinha muitos recursos para melhorar a produtividade para des
     - Você pode criar métodos de uma linha usando expressões lambda.
 * [using static](#using-static):
     - Você pode importar todos os métodos de uma única classe para o namespace atual.
-* [Null – operadores condicionais](#null-conditional-operators):
+* [Operadores condicionais nulos](#null-conditional-operators):
     - Você pode acessar membros de um objeto com segurança e de forma concisa, durante a verificação de null, com o operador condicional null.
-* [Interpolação de cadeia de caracteres](#string-interpolation):
+* [Interpolação de cadeias de caracteres](#string-interpolation):
     - Você pode escrever expressões de formatação de cadeias de caracteres, usando expressões embutidas em vez de argumentos posicionais.
 * [Filtros de exceção](#exception-filters):
     - Você pode capturar expressões com base nas propriedades da exceção ou outro estado do programa. 
-* [Expressões nameof](#nameof-expressions):
+* [A expressão `nameof`](#the-nameof-expression):
     - Você pode deixar que o compilador gere representações de cadeia de caracteres de símbolos.
 * [await em blocos catch e finally](#await-in-catch-and-finally-blocks):
     - Você pode usar expressões `await` em locais que antes não era permitido.
@@ -88,7 +88,7 @@ public class Student
 
 Esse recurso habilita o suporte real à linguagem para criar tipos imutáveis e usar a sintaxe de propriedade automática mais concisa e conveniente.
 
-Se adicionar essa sintaxe não remove um método acessível, ele é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
+Se a adição dessa sintaxe não remover um método acessível, ele será uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
 
 ### <a name="auto-property-initializers"></a>Inicializadores de propriedade automática
 
@@ -209,36 +209,36 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 Garantir que o lado esquerdo seja avaliado apenas uma vez também habilita você a usar qualquer expressão, inclusive chamadas de método, no lado esquerdo do `?.`. Mesmo que elas tenham efeitos colaterais, elas serão avaliadas uma vez e os efeitos colaterais ocorrerão apenas uma vez. Você pode ver um exemplo em nosso conteúdo em [eventos](../events-overview.md#language-support-for-events).
 
-## <a name="string-interpolation"></a>Interpolação de cadeia de caracteres
+## <a name="string-interpolation"></a>Interpolação de cadeias de caracteres
 
-O C# 6 contém uma nova sintaxe para compor cadeias de caracteres com base em uma cadeia de caracteres de formato e de expressões que são avaliadas para produzir outros valores de cadeia de caracteres.
+O C# 6 contém uma nova sintaxe para compor cadeias de caracteres usando expressões inseridas e de cadeia de caracteres que são avaliadas para produzir outros valores de cadeia de caracteres.
 
-Tradicionalmente, você precisava usar parâmetros posicionais em um método como `string.Format`:
+Tradicionalmente, você precisava usar parâmetros posicionais em um método como <xref:System.String.Format%2A?displayProperty=nameWithType>:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Com o C# 6, o novo recurso de [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) permite que você insira as expressões na cadeia de caracteres de formato. Basta preceder a cadeia de caracteres com `$`:
+Com o C# 6, o novo recurso de [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) permite que você insira as expressões em uma cadeia de caracteres. Basta preceder a cadeia de caracteres com `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Este exemplo inicial usou expressões de propriedade para as expressões substituídas. Você pode expandir esta sintaxe para usar qualquer expressão. Por exemplo, você pode calcular a média do aluno como parte da interpolação:
+Este exemplo usa expressões de propriedade para as expressões substituídas. Você pode expandir esta sintaxe para usar qualquer expressão. Por exemplo, você pode calcular a média do aluno como parte da interpolação:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-Ao executar o exemplo anterior, você veria que a saída de `Grades.Average()` pode ter mais casas decimais do que o desejado. A sintaxe de interpolação de cadeia de caracteres dá suporte a todas as cadeias de caracteres de formato disponíveis que usam métodos de formatação anteriores. Você adiciona as cadeias de caracteres de formato dentro de chaves. Adicione um `:` seguido da expressão a ser formatada:
+Ao executar o exemplo anterior, você veria que a saída de `Grades.Average()` pode ter mais casas decimais do que o desejado. A sintaxe de interpolação de cadeia de caracteres dá suporte a todas as cadeias de caracteres de formato disponíveis que usam métodos de formatação anteriores. Especifique a cadeia de caracteres de formato entre chaves. Adicione um `:` seguido da expressão a ser formatada:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 A linha de código anterior formata o valor de `Grades.Average()` como um número de ponto flutuante com duas casas decimais.
 
-O `:` é sempre interpretado como o separador entre a expressão que está sendo formatada e a cadeia de caracteres de formato. Isso pode causar problemas quando a expressão usa um `:` de outra forma, como um operador condicional:
+O `:` é sempre interpretado como o separador entre a expressão que está sendo formatada e a cadeia de caracteres de formato. Isso pode causar problemas quando a expressão usa um `:` de outra forma, como um [operador condicional](../language-reference/operators/conditional-operator.md):
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-No exemplo anterior, o `:` é analisado como o início da cadeia de caracteres de formato e não como parte do operador condicional. Em todos os casos em que isso ocorre, você pode colocar a expressão entre parênteses para forçar o compilador a interpretar a expressão como você deseja:
+No exemplo anterior, o `:` é analisado como o início da cadeia de caracteres de formato e não como parte do operador condicional. Em todos os casos em que isso ocorre, coloque a expressão entre parênteses para forçar o compilador a interpretar a expressão como você deseja:
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,19 +249,21 @@ Não há limitações em expressões que você pode colocar entre as chaves. Voc
 Neste exemplo você pode ver que é até mesmo possível aninhar uma expressão de interpolação de cadeia de caracteres dentro de outra expressão de interpolação de cadeia de caracteres. É muito provável que este exemplo seja mais complexo do que você desejaria no código de produção.
 No entanto, ele serve para ilustrar abrangência do recurso. Qualquer expressão de C# pode ser colocada entre as chaves de uma cadeia de caracteres interpolada.
 
+Para se familiarizar com a interpolação de cadeia de caracteres, confira o tutorial interativo [Interpolação de cadeia de caracteres em C#](../tutorials/intro-to-csharp/interpolated-strings.yml).
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolação de cadeia de caracteres e culturas específicas
 
-Todos os exemplos mostrados na seção anterior formatam as cadeias de caracteres usando a cultura e o idioma atuais do computador em que o código é executado. Com frequência, talvez seja necessário formatar a cadeia de caracteres gerada, usando uma cultura específica.
-Para fazer isso, aproveite o fato de que o objeto produzido por uma interpolação de cadeia de caracteres pode ser convertido implicitamente em <xref:System.FormattableString>.
+Todos os exemplos mostrados na seção anterior formatam as cadeias de caracteres usando a cultura atual do computador em que o código é executado. Com frequência, talvez seja necessário formatar a cadeia de caracteres gerada, usando uma cultura específica.
+Para fazer isso, aproveite o fato de que o objeto produzido por uma interpolação de cadeia de caracteres pode ser convertido implicitamente em <xref:System.FormattableString?displayProperty=nameWithType>.
 
-A instância <xref:System.FormattableString> contém a cadeia de caracteres de formato e os resultados da avaliação de expressões antes de convertê-los em cadeias de caracteres. Você pode usar métodos públicos de <xref:System.FormattableString> para especificar a cultura ao formatar uma cadeia de caracteres. Por exemplo, o exemplo a seguir produz uma cadeia de caracteres usando a cultura alemã. (ele usa o caractere ',' como o separador decimal e o caractere '.' como separador de milhares).
+A instância <xref:System.FormattableString> contém a cadeia de caracteres de formato composto e os resultados da avaliação de expressões antes de convertê-los em cadeias de caracteres. Use o método <xref:System.FormattableString.ToString(System.IFormatProvider)> para especificar a cultura ao formatar uma cadeia de caracteres. Por exemplo, o exemplo a seguir produz uma cadeia de caracteres usando a cultura alemã. (ele usa o caractere ',' como o separador decimal e o caractere '.' como separador de milhares).
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Para obter mais informações, consulte o tópico [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md).
+Para saber mais, confira o artigo [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres em C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Filtros de exceção
 
@@ -311,7 +313,7 @@ No seu código, adicione um filtro de exceção para que qualquer código de rec
 Depois de adicionar isso no código, você deve definir o depurador para interromper em todas as exceções sem tratamento. Execute o programa no depurador e o depurador interromperá sempre que `PerformFailingOperation()` lançar uma `RecoverableException`.
 O depurador interrompe o programa, porque a cláusula catch não será executada devido ao filtro de exceção que retorna false.
 
-## <a name="nameof-expressions"></a>Expressões `nameof`
+## <a name="the-nameof-expression"></a>A expressão `nameof`
 
 A expressão `nameof` é avaliada para o nome de um símbolo. É uma ótima maneira de fazer com que as ferramentas funcionem sempre que você precisar do nome de uma variável, de uma propriedade ou de um campo de membro.
 

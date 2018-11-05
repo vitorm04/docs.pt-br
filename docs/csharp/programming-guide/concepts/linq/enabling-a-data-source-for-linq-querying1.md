@@ -2,12 +2,12 @@
 title: Habilitando uma fonte de dados para consulta LINQ1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253176"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122684"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitando uma fonte de dados para consulta LINQ
 Há várias formas de estender o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para permitir que qualquer fonte de dados seja consultada no padrão [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. A fonte de dados pode ser uma estrutura de dados, um serviço Web, um sistema de arquivos ou um banco de dados, apenas para citar algumas opções. O padrão [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] torna fácil para os clientes consultarem uma fonte de dados para a qual a consulta do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] está habilitada, porque a sintaxe e o padrão de consulta não mudam. As formas nas quais o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pode ser estendido para essas fontes de dados incluem as seguintes:  
@@ -28,7 +28,7 @@ Há várias formas de estender o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md
  Há duas formas como você pode habilitar consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para dados na memória. Se os dados forem de um tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>, você poderá consultar os dados usando o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para Objetos. Se não fizer sentido habilitar a enumeração do tipo por meio da implementação da interface <xref:System.Collections.Generic.IEnumerable%601>, você poderá definir métodos de operador de consulta padrão do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nesse tipo ou criar métodos de operador de consulta padrão do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que estendem o tipo. As implementações personalizadas dos operadores de consulta padrão devem usar a execução adiada para retornar os resultados.  
   
 ### <a name="remote-data"></a>Dados remotos  
- A melhor opção para habilitar consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] de uma fonte de dados remota é implementar a interface <xref:System.Linq.IQueryable%601>. No entanto, isso é diferente de estender um provedor como o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para uma fonte de dados. Nenhum modelo de provedor para estender as tecnologias [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existentes, como o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], para outros tipos de fontes de dados está disponível no [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
+ A melhor opção para habilitar consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] de uma fonte de dados remota é implementar a interface <xref:System.Linq.IQueryable%601>. No entanto, isso é diferente de estender um provedor como o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para uma fonte de dados. Nenhum modelo de provedor para estender as tecnologias [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existentes, como o [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], para outros tipos de fonte de dados está disponível no Visual Studio 2008.
   
 ## <a name="iqueryable-linq-providers"></a>Provedores IQueryable de LINQ  
  Os provedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que implementam <xref:System.Linq.IQueryable%601> podem variar enormemente em termos de complexidade. Esta seção discute os diferentes níveis de complexidade.  

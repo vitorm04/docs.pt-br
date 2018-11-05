@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399763"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202914"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Depurador de Linha de Comando do .NET Framework)
 O Depurador de Linha de Comando do .NET Framework ajuda fornecedores de ferramentas e desenvolvedores de aplicativos na localização e na correção de bugs em programas com o Common Language Runtime do .NET Framework como destino. Essa ferramenta usa a API de depuração do tempo de execução para fornecer serviços de depuração. É possível usar MDbg.exe para depurar apenas o código gerenciado; não há suporte para depurar o código não gerenciado.  
   
- Essa ferramenta está disponível por meio do NuGet. Para obter informações sobre a instalação, consulte [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0). Para executar a ferramenta, use o Console do Gerenciador de Pacotes. Para obter mais informações sobre como usar o Console do Gerenciador de Pacotes, consulte [Usando o Console do Gerenciador de Pacotes](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console).  
+Essa ferramenta está disponível por meio do NuGet. Para obter informações sobre a instalação, consulte [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Para executar a ferramenta, use o Console do Gerenciador de Pacotes. Para saber mais sobre como usar o Console do Gerenciador de Pacotes, confira o artigo [Console do Gerenciador de Pacotes](/nuget/tools/package-manager-console).
   
- No prompt de comando do Gerenciador de Pacotes, digite o seguinte:  
+No prompt de comando do Gerenciador de Pacotes, digite o seguinte:  
   
 ## <a name="syntax"></a>Sintaxe  
   

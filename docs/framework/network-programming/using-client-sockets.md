@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195544"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198961"
 ---
 # <a name="using-client-sockets"></a>Usando soquetes de cliente
 Antes de iniciar uma conversa por meio de um <xref:System.Net.Sockets.Socket>, crie um pipe de dados entre o aplicativo e o dispositivo remoto. Embora existam outros protocolos e famílias de endereços de rede, este exemplo mostra como criar uma conexão TCP/IP com um serviço remoto.  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- A IANA (Internet Assigned Numbers Authority) define os números da porta de serviços comuns (para obter mais informações, consulte www.iana.org/assignments/port-numbers). Outros serviços podem ter números de porta registrados no intervalo de 1.024 a 65.535. O código a seguir combina o endereço IP de host.contoso.com com um número da porta para criar um ponto de extremidade remoto para uma conexão.  
+ A IANA (Internet Assigned Numbers Authority) define os números da porta de serviços comuns (para obter mais informações, confira [Registro de número da porta do protocolo de transporte e nome de serviço](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)). Outros serviços podem ter números de porta registrados no intervalo de 1.024 a 65.535. O código a seguir combina o endereço IP de host.contoso.com com um número da porta para criar um ponto de extremidade remoto para uma conexão.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

@@ -2,14 +2,12 @@
 title: Protocolo PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196737"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185151"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
@@ -20,7 +18,7 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
   
  Em termos de segurança, os nomes de par podem ser publicados como seguros (protegidos) ou não seguros (desprotegidos). O PNRP usa criptografia de chave pública para proteger os nomes de par segura contra falsificação; tanto computadores quanto serviços podem ser nomeados com PNRP.  
   
--   O protocolo PNRP demonstra as seguintes propriedades:  
+O protocolo PNRP demonstra as seguintes propriedades:  
   
 -   Distribuído e quase que totalmente sem servidor. Servidores só são necessários para o processo de inicialização.  
   
@@ -30,21 +28,13 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
   
 -   A resolução de nomes por meio de PNRP vai além de computadores, permitindo também a resolução de nomes de serviços.  
   
--  
-  
 ## <a name="the-systemnetpeertopeer-namespace"></a>O namespace System.Net.PeerToPeer  
   
 -   A funcionalidade do protocolo PNRP é definida pelo namespace <xref:System.Net.PeerToPeer> dentro do .NET Framework versão 3.5. Ele fornece um conjunto de tipos que podem ser usados para registrar e resolver os nomes de ponto a ponto com um serviço PNRP disponível.  
   
--  
-  
 -   (PNRP e resolvedores de par personalizados podem ser criados e instanciados usando os tipos fornecidos no namespace <xref:System.ServiceModel.PeerResolvers>.)  
   
--  
-  
 -   Os tipos básicos usados para registrar e resolver os nomes com um serviço PNRP disponível são os seguintes:  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>: define as informações que descrevem uma nuvem PNRP disponíveis, incluindo o escopo dela.  
   
@@ -56,12 +46,8 @@ Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome espec�
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para o respectivo ponto de extremidade da rede, incluindo métodos síncronos e assíncronos para a resolução.  
   
--  
-  
--  
-  
 ## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Amostra de tecnologia PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [Amostras de programação de rede](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Amostra de tecnologia PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

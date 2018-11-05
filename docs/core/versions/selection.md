@@ -4,12 +4,12 @@ description: Saiba como o .NET Core localiza e escolhe versões de tempo de exec
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233187"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841534"
 ---
 # <a name="net-core-version-selection"></a>Seleção de versão do .NET Core
 
@@ -31,12 +31,12 @@ O restante deste documento examina esses quatro cenários.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>O SDK usa a versão mais recente instalada
 
-Os comandos do SDK incluem `dotnet new` e `dotnet run`. A CLI `dotnet` precisa escolher uma versão do SDK para todos os comandos dotnet. A CLI do .NET Core usa o SDK mais recente instalado no computador por padrão, mesmo se:
+Os comandos do SDK incluem `dotnet new` e `dotnet run`. A CLI do .NET Core precisa escolher uma versão do SDK para todos os comandos `dotnet`. Por padrão, ela usa o SDK mais recente instalado no computador, mesmo se:
 
-* O projeto se destina a uma versão anterior.
-* A versão mais recente é uma versão prévia.
+* O projeto se destinar a uma versão anterior do tempo de execução do .NET Core.
+* A versão mais recente do SDK do .NET Core for uma versão prévia.
 
-Aplicativos podem aproveitar os recursos e as melhorias mais recentes do SDK mesmo quando direcionados a versões anteriores de tempo de execução do .NET Core. Você pode direcionar a várias versões de tempo de execução do .NET Core em projetos diferentes, usando as mesmas ferramentas do SDK para todos os projetos.
+Você pode aproveitar os recursos e as melhorias mais recentes do SDK mesmo ao direcionar a versões anteriores de tempo de execução do .NET Core. Você pode direcionar a várias versões de tempo de execução do .NET Core em projetos diferentes, usando as mesmas ferramentas do SDK para todos os projetos.
 
 Em raras ocasiões, talvez você precise usar uma versão anterior do SDK. Nesse caso, especifique essa versão em um [arquivo *global. JSON*](../tools/global-json.md). A política "usar versão mais recente" significa usar o *global.json* somente para especificar uma versão do SDK do .NET Core anterior à versão mais recente instalada.
 

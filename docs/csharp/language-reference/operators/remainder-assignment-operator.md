@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-ms.openlocfilehash: c475517666bdadaa457dbb4188808b3a96fcdf0e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: ab3a6a8d5cbfeb4d527ca1f9c233ddfaba3d35ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085630"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188710"
 ---
 # <a name="-operator-c-reference"></a>Operador %= (Referência de C#)
 
@@ -32,7 +32,7 @@ x = x % y
 
 exceto que `x` é avaliado apenas uma vez.
   
-O [operador de resto](remainder-operator.md) `%` é compatível com todos os tipos numéricos e calcula o resto após a divisão de seus operandos.
+O [operador remainder](remainder-operator.md) `%` calcula o restante após a divisão de seus operandos. Ele é compatível com todos os tipos numéricos.
 
 Se um tipo definido pelo usuário [sobrecarregar](../keywords/operator.md) o [operador de resto](remainder-operator.md) `%`, o operador de atribuição de resto `%=` ficará implicitamente sobrecarregado.
   

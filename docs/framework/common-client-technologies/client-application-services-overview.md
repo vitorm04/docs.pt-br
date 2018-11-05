@@ -5,15 +5,15 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fda9c47f6c446369e0cd774a61375a06825e772f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515376"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836966"
 ---
 # <a name="client-application-services-overview"></a>Visão geral dos serviços de aplicativo cliente
-Os serviços de aplicativo cliente fornecem acesso simplificado ao logon, às funções e aos serviços de perfil do [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] por meio dos aplicativos Windows Forms e WPF (Windows Presentation Foundation). Os serviços de aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] estão incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0, que estão incluídas no [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] e no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor.  
+Os serviços de aplicativo cliente fornecem acesso simplificado ao logon, às funções e aos serviços de perfil do [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] por meio dos aplicativos Windows Forms e WPF (Windows Presentation Foundation). Os serviços de aplicativo [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] estão incluídos nas Extensões AJAX do Microsoft ASP.NET 2.0, que estão incluídas no Visual Studio 2008 e no [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Esses serviços permitem que vários aplicativos Web e baseados no Windows compartilhem informações do usuário e a funcionalidade de gerenciamento de usuários de um único servidor.  
   
  Os serviços de aplicativos cliente incluem provedores de serviço de cliente que se conectam ao modelo de extensibilidade de serviços Web para habilitar os seguintes recursos para aplicativos baseados no Windows:  
   

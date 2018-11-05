@@ -12,34 +12,36 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8612e8d598e7f92cd9fc0106f99d21a239db90b1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f319ef94a5a0f1a5239a2f506386dbc15f0505ef
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742504"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846416"
 ---
 # <a name="multifile-assemblies"></a>Assemblies de vários arquivos
-Você pode criar assemblies de vários arquivos usando os compiladores de linha de comando ou o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] com o Visual C++. Um arquivo no assembly deve conter o manifesto do assembly. Um assembly que inicia um aplicativo também deve conter um ponto de entrada, como um método Main ou WinMain.  
-  
- Por exemplo, suponha que você tenha um aplicativo que contém dois módulos de código, Client.cs e Stringer.cs. Stringer.cs cria o namespace `myStringer` que é referenciado pelo código em Client.cs. Client.cs contém o método `Main`, que é o ponto de entrada do aplicativo. Neste exemplo, você compila os dois módulos de código e cria um terceiro arquivo que contém o manifesto do assembly, que inicia o aplicativo. O manifesto do assembly faz referência aos módulos `Client` e `Stringer`.  
-  
+
+Você pode criar assemblies de vários arquivos usando os compiladores de linha de comando ou o Visual Studio com o Visual C++. Um arquivo no assembly deve conter o manifesto do assembly. Um assembly que inicia um aplicativo também deve conter um ponto de entrada, como um método Main ou WinMain.
+
+Por exemplo, suponha que você tenha um aplicativo que contém dois módulos de código, Client.cs e Stringer.cs. Stringer.cs cria o namespace `myStringer` que é referenciado pelo código em Client.cs. Client.cs contém o método `Main`, que é o ponto de entrada do aplicativo. Neste exemplo, você compila os dois módulos de código e cria um terceiro arquivo que contém o manifesto do assembly, que inicia o aplicativo. O manifesto do assembly faz referência aos módulos `Client` e `Stringer`.
+
 > [!NOTE]
->  Os assemblies de vários arquivos podem ter apenas um ponto de entrada, mesmo que o assembly tenha vários módulos de código.  
-  
- Existem vários motivos que levam você a querer criar um assembly de vários arquivos:  
-  
--   Para combinar módulos escritos em linguagens diferentes. Essa é a razão mais comum para a criação de um assembly de vários arquivos.  
-  
--   Para otimizar o download de um aplicativo colocando tipos raramente usados em um módulo que é baixado apenas quando necessário.  
-  
+> Os assemblies de vários arquivos podem ter apenas um ponto de entrada, mesmo que o assembly tenha vários módulos de código.
+
+Existem vários motivos que levam você a querer criar um assembly de vários arquivos:
+
+-   Para combinar módulos escritos em linguagens diferentes. Essa é a razão mais comum para a criação de um assembly de vários arquivos.
+
+-   Para otimizar o download de um aplicativo colocando tipos raramente usados em um módulo que é baixado apenas quando necessário.
+
     > [!NOTE]
-    >  Se você estiver criando aplicativos que serão baixados usando a marca `<object>` com o Microsoft Internet Explorer, é importante criar assemblies de vários arquivos. Nesse cenário, você cria um arquivo separado do seus módulos de código que contenha somente o manifesto do assembly. O Internet Explorer baixa o manifesto do assembly primeiro e, em seguida, cria threads de trabalho para baixar quaisquer módulos adicionais ou assemblies necessários. Enquanto o arquivo que contém o manifesto do assembly estiver sendo baixado, o Internet Explorer não responderá à entrada do usuário. Quanto menor o arquivo que contém o manifesto do assembly, menos tempo o Internet Explorer ficará sem responder.  
-  
--   Para combinar módulos de código escritos por vários desenvolvedores. Embora cada desenvolvedor possa compilar cada módulo de código em um assembly, isso pode forçar alguns tipos a serem expostos publicamente, que não o seriam se todos os módulos fossem colocados em um assembly de vários arquivos.  
-  
- Depois de criar o assembly, você pode assinar o arquivo que contém o manifesto do assembly (e, portanto, o assembly) ou pode dar um nome forte ao arquivo (e ao assembly) e colocá-lo no cache de assembly global.  
-  
-## <a name="see-also"></a>Consulte também  
- [Como Compilar um Assembly de Vários Arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+    > Se você estiver criando aplicativos que serão baixados usando a marca `<object>` com o Microsoft Internet Explorer, é importante criar assemblies de vários arquivos. Nesse cenário, você cria um arquivo separado do seus módulos de código que contenha somente o manifesto do assembly. O Internet Explorer baixa o manifesto do assembly primeiro e, em seguida, cria threads de trabalho para baixar quaisquer módulos adicionais ou assemblies necessários. Enquanto o arquivo que contém o manifesto do assembly estiver sendo baixado, o Internet Explorer não responderá à entrada do usuário. Quanto menor o arquivo que contém o manifesto do assembly, menos tempo o Internet Explorer ficará sem responder.
+
+-   Para combinar módulos de código escritos por vários desenvolvedores. Embora cada desenvolvedor possa compilar cada módulo de código em um assembly, isso pode forçar alguns tipos a serem expostos publicamente, que não o seriam se todos os módulos fossem colocados em um assembly de vários arquivos.
+
+Depois de criar o assembly, você pode assinar o arquivo que contém o manifesto do assembly (e, portanto, o assembly) ou pode dar um nome forte ao arquivo (e ao assembly) e colocá-lo no cache de assembly global.
+
+## <a name="see-also"></a>Consulte também
+
+- [Como Compilar um Assembly de Vários Arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

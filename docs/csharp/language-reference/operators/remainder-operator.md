@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45645912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041252"
 ---
 # <a name="-operator-c-reference"></a>Operador % (Referência de C#)
 
-O operador de resto `%` calcula o resto após dividir o primeiro operando pelo segundo. Tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) o operador `%`. Quando o `%` está sobrecarregado, o [operador de atribuição de resto](remainder-assignment-operator.md) `%=` também está implicitamente sobrecarregado.
+O operador de resto `%` calcula o resto após dividir o primeiro operando pelo segundo.
+
+Tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) o operador `%`. Quando o `%` está sobrecarregado, o [operador de atribuição de resto](remainder-assignment-operator.md) `%=` também está implicitamente sobrecarregado.
 
 Todos os tipos numéricos são compatíveis com o operador de resto.
 
@@ -33,7 +35,7 @@ Para os operandos [float](../keywords/float.md) e [double](../keywords/double.md
 - o sinal de `z`, se diferente de zero, é o mesmo que o sinal de `x`;
 - o valor absoluto de `z` é o valor produzido por `|x| - n * |y|` em que `n` é o maior inteiro possível que é menor ou igual a `|x| / |y|` e `|x|` e `|y|` são os valores absolutos de `x` e `y`, respectivamente.
 
-Para obter informações sobre o comportamento do operador `%` no caso de operandos não finitos, consulte a seção [Operador de resto](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) da [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/index).
+Para saber mais sobre o comportamento do operador `%` com operandos não finitos, confira a seção [Operador de restante](~/_csharplang/spec/expressions.md#remainder-operator) da [especificação da linguagem C#](../language-specification/index.md).
 
 > [!NOTE]
 > Esse método de calcular o resto é semelhante ao usado para operandos inteiros, mas é diferente do IEEE 754. Se precisar da operação de resto em conformidade com o IEEE 754, use o método <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.

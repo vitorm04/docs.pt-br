@@ -2,18 +2,18 @@
 title: Localizando texto em documentos do Word (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 56a99dd548eb149f6fa85370cef6a114103ce91e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235592"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200490"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Localizando texto em documentos do Word (C#)
 Este tópico estende as consultas anteriores para fazer algo útil: localizar todas as ocorrências de uma cadeia de caracteres no documento.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo processa um documento de WordprocessingML, para localizar todas as ocorrências de uma parte específica de texto no documento. Para fazer isso, usamos uma consulta encontrar a cadeia de caracteres “hello world”. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
+ Este exemplo processa um documento de WordprocessingML para localizar todas as ocorrências de uma parte específica de texto no documento. Para fazer isso, usamos uma consulta encontrar a cadeia de caracteres “hello world”. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
   
  Para obter instruções para criar o documento de origem deste exemplo, consulte [Criando o documento do Office Open XML de origem (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   

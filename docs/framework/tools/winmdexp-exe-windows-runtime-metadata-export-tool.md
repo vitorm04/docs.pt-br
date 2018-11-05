@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47237170"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121383"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime )
 A Ferramenta de Exportação dos Metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforma um módulo do .NET Framework em um arquivo que contém metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Embora os assemblies do .NET Framework e os arquivos de metadados [!INCLUDE[wrt](../../../includes/wrt-md.md)] usem o mesmo formato físico, existem diferenças no conteúdo das tabelas de metadados, o que significa que os assemblies do .NET Framework não são automaticamente úteis como Componentes [!INCLUDE[wrt](../../../includes/wrt-md.md)]. O processo de transformar um módulo do .NET Framework em um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] é conhecido como *exportação*. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e no [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], o arquivo de metadados do Windows (.winmd) resultante contém metadados e implementação.  
   
- Quando você usar o modelo **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Componente**, localizado na **Windows Store** para C# e Visual Basic no [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] ou no [!INCLUDE[vs_dev11_ext](../../../includes/vs-dev11-ext-md.md)], o alvo do compilador será um arquivo .winmdobj e uma etapa de build subsequente chama Winmdexp.exe de uma etapa de compilação para exportar o arquivo .winmdobj para um arquivo .winmd. Essa é a maneira recomendada para compilar um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Use Winmdexp.exe diretamente quando você quiser mais controle sobre o processo de compilação do que o dado pelo Visual Studio.  
+ Quando você usar o modelo **Componente do [!INCLUDE[wrt](../../../includes/wrt-md.md)]**, localizado na **Windows Store** para C# e Visual Basic no Visual Studio 2013 ou Visual Studio 2012, o alvo do compilador será um arquivo .winmdobj e uma etapa de compilação subsequente chamará Winmdexp.exe para exportar o arquivo .winmdobj para um arquivo .winmd. Essa é a maneira recomendada para compilar um componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Use Winmdexp.exe diretamente quando você quiser mais controle sobre o processo de compilação do que o dado pelo Visual Studio.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

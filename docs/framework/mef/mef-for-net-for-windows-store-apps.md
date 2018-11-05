@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 39b7228de775f4dc92e932731ad9967315437e6e
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089929"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121110"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF para .NET para aplicativos da Windows Store
 <xref:System.Composition?displayProperty=nameWithType> e seus namespaces filho contêm tipos para o desenvolvimento de aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] extensíveis com o MEF (Managed Extensibility Framework). Esses namespaces fazem parte do [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] subconjunto [!INCLUDE[win8](../../../includes/win8-md.md)] do sistema operacional.  
   
- Esses namespaces não fazem parte da biblioteca de classes principal distribuída com o .NET Framework. Para instalar esses namespaces, abra seu projeto no [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], escolha **Gerenciar pacotes do NuGet** no menu **Projeto** e pesquise online o pacote Microsoft.Composition.  
+ Esses namespaces não fazem parte da biblioteca de classes principal distribuída com o .NET Framework. Para instalar esses namespaces, abra seu projeto no Visual Studio, escolha **Gerenciar Pacotes NuGet** no menu **Projeto** e pesquise online o pacote Microsoft.Composition.  
   
 -   O <xref:System.Composition?displayProperty=nameWithType> fornece classes que constituem o MEF principal para os aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   

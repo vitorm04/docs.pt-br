@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937161"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453184"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Tutorial: usar o ML.NET para agrupar flores Iris (clustering)
 
@@ -48,7 +48,7 @@ Como você não sabe a qual grupo cada flor pertence, escolha a tarefa [aprendiz
 
 1. Crie um diretório chamado *Dados* em seu projeto para armazenar o conjunto de dados e os arquivos de modelo:
 
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Dados" e pressione Enter.
+    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Data" e pressione Enter.
 
 1. Instale o pacote NuGet **Microsoft.ML**:
 
@@ -138,19 +138,19 @@ A primeira etapa a ser realizada é carregar o conjunto de dados de treinamento.
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-A próxima etapa é combinar todas as colunas de característica na coluna **Features** usando a classe de transformação <xref:Microsoft.ML.Transforms.ColumnConcatenator>. Por padrão, um algoritmo de aprendizado processa apenas os recursos da coluna **Features**. Adicione o seguinte código:
+A próxima etapa é combinar todas as colunas de característica na coluna **Features** usando a classe de transformação <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator>. Por padrão, um algoritmo de aprendizado processa apenas os recursos da coluna **Features**. Adicione o seguinte código:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Escolher um algoritmo de aprendizado
 
-Após adicionar os dados ao pipeline e transformá-los no formato de entrada correto, selecione um algoritmo de aprendizado (**aluno**). O aprendiz treina o modelo. O ML.NET fornece um aprendiz <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer> que implementa o [algoritmo k-means](https://en.wikipedia.org/wiki/K-means_clustering) com um método melhor para escolher os centroides iniciais do cluster.
+Após adicionar os dados ao pipeline e transformá-los no formato de entrada correto, selecione um algoritmo de aprendizado (**aluno**). O aprendiz treina o modelo. O ML.NET fornece um aprendiz <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer> que implementa o [algoritmo k-means](https://en.wikipedia.org/wiki/K-means_clustering) com um método melhor para escolher os centroides iniciais do cluster.
 
 Adicione o seguinte código ao método `Train` após o código de processamento de dados adicionado na etapa anterior:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Use a propriedade <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> para especificar o número de clusters. O código acima especifica que o conjunto de dados deve ser dividido em três clusters.
+Use a propriedade <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType> para especificar o número de clusters. O código acima especifica que o conjunto de dados deve ser dividido em três clusters.
 
 ## <a name="train-the-model"></a>Treinar o modelo
 

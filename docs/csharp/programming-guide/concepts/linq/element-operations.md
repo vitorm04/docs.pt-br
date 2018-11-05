@@ -1,13 +1,13 @@
 ---
 title: Operações de elemento (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856884"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836764"
 ---
 # <a name="element-operations-c"></a>Operações de elemento (C#)
 
@@ -25,8 +25,8 @@ Operações de elemento retornam um único elemento específico de uma sequênci
 |FirstOrDefault|Retorna o primeiro elemento de uma coleção ou o primeiro elemento que satisfaz uma condição. Retorna um valor padrão se esse elemento não existir.|Não aplicável.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |Último|Retorna o último elemento de uma coleção ou o último elemento que satisfaz uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|Retorna o último elemento de uma coleção ou o último elemento que satisfaz uma condição. Retorna um valor padrão se esse elemento não existir.|Não aplicável.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Simples|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição. Retorna um valor padrão se esse elemento não existir ou se a coleção não contiver exatamente um elemento.|Não aplicável.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Simples|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição. Gera um <xref:System.InvalidOperationException> se não houver elemento ou mais de um elemento a ser retornado. |Não aplicável.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|Retorna o único elemento de uma coleção ou o único elemento que satisfaz uma condição. Retorna um valor padrão se não houver elemento a ser retornado. Gera um <xref:System.InvalidOperationException> se houver mais de um elemento a ser retornado. |Não aplicável.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também
 

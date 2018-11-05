@@ -4,12 +4,12 @@ description: Saiba mais sobre o .NET Core.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "48252213"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197646"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -25,24 +25,19 @@ O .NET Core tem as seguintes características:
 
 ## <a name="languages"></a>Linguagens
 
-As linguagens C#, Visual Basic e F# podem ser usadas para escrever aplicativos e bibliotecas para o .NET Core. Essas linguagens são ou podem ser integradas aos seus editores de texto e IDEs favoritos, incluindo [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text e Vim. Essa integração é fornecida, em parte, pelas equipes dos projetos [OmniSharp](http://www.omnisharp.net/) e [Ionide](http://ionide.io).
+As linguagens C#, Visual Basic e F# podem ser usadas para escrever aplicativos e bibliotecas para o .NET Core. Essas linguagens são ou podem ser integradas aos seus editores de texto e IDEs favoritos, incluindo [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text e Vim. Essa integração é fornecida, em parte, pelas equipes dos projetos [OmniSharp](https://www.omnisharp.net/) e [Ionide](http://ionide.io).
 
 ## <a name="apis"></a>APIs
 
 O .NET Core expõe APIs para vários cenários, incluindo:
 
-- Tipos primitivos, como [bool][bool] e [int][int].
+- Tipos primitivos, como [bool](../csharp/language-reference/keywords/bool.md) e [int](../csharp/language-reference/keywords/int.md).
 - Coleções, como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipos de utilitário, como <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> e <xref:System.IO.FileStream?displayProperty=nameWithType>.
-- Tipos de dados, como <xref:System.Data.DataSet?displayProperty=nameWithType> e [DbSet][dbset].
-- Tipos de alto desempenho, como <xref:System.Numerics.Vector?displayProperty=nameWithType> e [Pipelines][pipelines].
+- Tipos de dados, como <xref:System.Data.DataSet?displayProperty=nameWithType>, e [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
+- Tipos de alto desempenho, como <xref:System.Numerics.Vector?displayProperty=nameWithType> e [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/).
 
 O .NET Core oferece compatibilidade com as APIs do .NET Framework e do Mono por meio da implementação da especificação [.NET Standard](../standard/net-standard.md).
-
-[bool]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
-[int]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int
-[pipelines]: https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/
-[dbset]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
 
 ## <a name="frameworks"></a>Estruturas
 
@@ -111,7 +106,7 @@ Embora o .NET Core seja único e apresente diferenças significativas em relaç�
 
 ### <a name="comparison-with-mono"></a>Comparação com Mono
 
-O [Mono](http://www.mono-project.com/) é a implementação .NET de plataforma cruzada e de [software livre](https://github.com/mono/mono) original, sendo fornecido pela primeira vez em 2004. Ele pode ser considerado um clone de comunidade do .NET Framework. A equipe de projeto do Mono contava com [padrões .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (especificamente o ECMA 335) publicados pela Microsoft a fim de fornecer uma implementação compatível.
+O [Mono](https://www.mono-project.com/) é a implementação .NET de plataforma cruzada e de [software livre](https://github.com/mono/mono) original, sendo fornecido pela primeira vez em 2004. Ele pode ser considerado um clone de comunidade do .NET Framework. A equipe de projeto do Mono contava com [padrões .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (especificamente o ECMA 335) publicados pela Microsoft a fim de fornecer uma implementação compatível.
 
 Principais diferenças entre o .NET Core e o Mono:
 

@@ -1,7 +1,7 @@
 ---
 title: Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 description: Descreve as melhores práticas de uso da segurança do protocolo TLS (Transport Layer Security) com o .NET Framework
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424474"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194131"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
-O protocolo TLS (Transport Layer Security) é um padrão da indústria projetado para ajudar a proteger a privacidade das informações comunicadas pela Internet. O [TLS 1.2](https://tools.ietf.org/html/rfc5246) é o padrão mais recente e oferece melhorias em relação a versões anteriores. O TLS 1.2 será, eventualmente, substituído pelo [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). Este artigo apresenta recomendações para proteger aplicativos .NET Framework que usam o protocolo TLS.
+O protocolo TLS (Transport Layer Security) é um padrão da indústria projetado para ajudar a proteger a privacidade das informações comunicadas pela Internet. O [TLS 1.2](https://tools.ietf.org/html/rfc5246) é um padrão que fornece aprimoramentos de segurança em relação às versões anteriores. Com o tempo, o TLS 1.2 será substituído pelo padrão mais recentemente lançado, o [TLS 1.3](https://tools.ietf.org/html/rfc8446), que é mais rápido e mais seguro. Este artigo apresenta recomendações para proteger aplicativos .NET Framework que usam o protocolo TLS.
 
 Para garantir que os aplicativos .NET Framework continuem seguros, a versão do TLS **não** deve ser codificada. Os aplicativos .NET Framework devem usar a versão do TLS compatível com o SO (sistema operacional).
 
@@ -278,7 +277,7 @@ Para habilitar ou reabilitar o TLS 1.2 e/ou o TLS 1.1 em um sistema compatível 
 | Windows Server 2008 | O suporte ao protocolo TLS 1.2 e TLS 1.1 requer uma atualização. Confira [Atualizar para adicionar suporte ao protocolo TLS 1.1 e TLS 1.2 no Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Sem suporte. |
 
-Para saber mais sobre quais protocolos TLS/SSL são habilitados por padrão em cada versão do Windows, confira [Protocolos no TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159).
+Para saber mais sobre quais protocolos TLS/SSL são habilitados por padrão em cada versão do Windows, confira [Protocolos no TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
 
 **Requisitos para suporte ao protocolo TLS 1.2 com .NET Framework 3.5**
 
@@ -305,6 +304,6 @@ Se o aplicativo for destinado a uma versão do .NET Framework que não esteja di
 
 ### <a name="azure-guest-os-registry-settings"></a>Configurações de registro do Sistema Operacional Convidado do Azure
 
-A imagem do Sistema Operacional Convidado do Azure para os [Serviços de Nuvem do Azure](https://azure.microsoft.com/services/cloud-services/) já tem a chave do Registro `SchUseStrongCrypto` definida com um valor 1. Para saber mais, confira [SchUseStrongCrypto](#schusestrongcrypto).
+A imagem de Família de SOs Convidados 5 do Azure para os [Serviços de Nuvem do Azure](https://azure.microsoft.com/services/cloud-services/) já tem a chave do Registro `SchUseStrongCrypto` definida com um valor 1. Para saber mais, confira [SchUseStrongCrypto](#schusestrongcrypto).
 
 Defina a chave do Registro [SystemDefaultTlsVersions](#systemdefaulttlsversions) como 1. Confira [Como configurar a segurança por meio do Registro do Windows](#configuring-security-via-the-windows-registry).

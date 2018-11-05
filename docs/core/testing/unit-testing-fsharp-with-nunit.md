@@ -2,25 +2,34 @@
 title: Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
 description: Aprenda os conceitos de teste de unidade para F# no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo usando dotnet test e NUnit.
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215740"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308370"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
 
 Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Pré-requisitos 
+- [O SDK do .NET Core 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) ou versões posteriores. 
+- Um editor de texto ou de código de sua escolha.
+
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem
 
 Abra uma janela do shell. Crie um diretório chamado *unit-testing-with-fsharp* para armazenar a solução.
-Nesse novo diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Isso facilita o gerenciamento da biblioteca de classes e o projeto de teste de unidade.
-No diretório da solução, crie um diretório *MathService*. A estrutura de arquivo e diretório até aqui é mostrada abaixo:
+Nesse diretório, execute o seguinte comando a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste:
+
+```console
+dotnet new sln
+```
+
+Em seguida, crie um diretório *MathService*. A seguinte estrutura de tópicos mostra a estrutura de arquivo e o diretório até aqui:
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ No diretório da solução, crie um diretório *MathService*. A estrutura de arq
     /MathService
 ```
 
-Torne *MathService* o diretório atual e execute [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) para criar o projeto de origem.  Para usar o TDD (Desenvolvimento Orientado por Testes), você criará uma implementação com falha do serviço math:
+Torne *MathService* o diretório atual e execute o seguinte comando para criar o projeto de origem:
+
+```console
+dotnet new classlib -lang F#
+```
+
+Para usar o TDD (Desenvolvimento Orientado por Testes), crie uma implementação com falha do serviço math:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Altere o diretório de volta para o diretório *unit-testing-with-fsharp*. Execute [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
+Altere o diretório de volta para o diretório *unit-testing-with-fsharp*. Execute o seguinte comando para adicionar o projeto de biblioteca de classes à solução:
 
-## <a name="install-the-nunit-project-template"></a>Instalar o modelo de projeto do NUnit
-
-Os modelos de projeto de teste do NUnit precisam ser instalados antes de criar um projeto de teste. Isso precisa ser feito somente uma vez em cada computador de desenvolvedor em que você criará novos projetos NUnit. Execute [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) para instalar os modelos do NUnit.
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>Criando o projeto de teste
 
@@ -58,7 +69,13 @@ Em seguida, crie o diretório *MathService.Tests*. O seguinte esquema mostra a e
     /MathService.Tests
 ```
 
-Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto usando [`dotnet new nunit -lang F#`](../tools/dotnet-new.md). Isso cria um projeto de teste que usa o NUnit como a estrutura de teste. O modelo gerado configura o executor de teste no *MathServiceTests.fsproj*:
+Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto usando o seguinte comando:
+
+```console
+dotnet new nunit -lang F#
+```
+
+Isso cria um projeto de teste que usa o NUnit como a estrutura de teste. O modelo gerado configura o executor de teste no *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto
 
 O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ Você tem o seguinte layout de solução final:
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-Execute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) no diretório *unit-testing-with-fsharp*.
+Execute o seguinte comando no diretório *unit-testing-with-fsharp*:
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
-A abordagem de TDD pede a criação de um teste com falha para fazê-lo passar e depois a repetição do processo. Abra *Tests.fs* e adicione o seguinte código:
+A abordagem de TDD pede a criação de um teste com falha para fazê-lo passar e depois a repetição do processo. Abra *UnitTest1.fs* e adicione o seguinte código:
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 Observe que a sequência `expected` foi convertida em uma lista. A estrutura do NUnit depende de muitos tipos padrão de .NET. Essa dependência significa que sua interface pública e os resultados esperados dão suporte a <xref:System.Collections.ICollection> em vez de <xref:System.Collections.IEnumerable>.
 
-Ao executar o teste, você verá que ele falha. Você ainda não criou a implementação. Faça esse teste escrevendo o código mais simples na classe `Mathservice` que funciona:
+Ao executar o teste, você verá que ele falha. Você ainda não criou a implementação. Faça esse teste passar escrevendo o código mais simples na classe *Library.fs* em seu projeto MathService que funciona:
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-No diretório *unit-testing-with-fsharp*, execute `dotnet test` novamente. O comando `dotnet test` executa uma compilação para o projeto `MathService` e, depois, para o projeto `MathService.Tests`. Depois de compilar os dois projetos, ele executará esse teste único. Ele é aprovado.
+No diretório *unit-testing-with-fsharp*, execute `dotnet test` novamente. O comando `dotnet test` executa uma compilação para o projeto `MathService` e, depois, para o projeto `MathService.Tests`. Depois de compilar os dois projetos, ele executa os seus testes. Agora, dois testes são aprovados.
 
 ## <a name="completing-the-requirements"></a>Como atender aos requisitos
 

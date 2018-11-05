@@ -1,5 +1,5 @@
 ---
-title: Domínios do aplicativo
+title: Domínios de aplicativo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698309"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192610"
 ---
-# <a name="application-domains"></a>Domínios do aplicativo
+# <a name="application-domains"></a>Domínios de aplicativo
+
 Sistemas operacionais e ambientes em tempo de execução normalmente fornecem alguma forma de isolamento entre aplicativos. Por exemplo, o Windows usa processos para isolar aplicativos. Esse isolamento é necessário para garantir que o código em execução em um aplicativo não possa afetar outros aplicativos não relacionados.  
   
  Domínios de aplicativos oferecem um limite de isolamento para segurança, confiabilidade e controle de versão, além de descarregar assemblies. Domínios de aplicativos normalmente são criados por hosts de tempo de execução, que são responsáveis pela inicialização do Common Language Runtime antes de um aplicativo ser executado.  
   
- Os tópicos nesta seção da documentação explicam como usar domínios de aplicativo para oferecer isolamento entre assemblies.  
-  
- Esta visão geral contém as seguintes seções:  
-  
--   [Os benefícios do isolamento de aplicativos](#benefits)  
-  
--   [Referência](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Os benefícios do isolamento de aplicativos  
+## <a name="the-benefits-of-isolating-applications"></a>Os benefícios do isolamento de aplicativos
+
  Historicamente, os limites de processo têm sido usados para isolar aplicativos em execução no mesmo computador. Cada aplicativo é carregado em um processo separado, que isola o aplicativo de outros aplicativos em execução no mesmo computador.  
   
  Os aplicativos são isolados porque endereços de memória são relativos a processos; um ponteiro de memória passado de um processo para outro não pode ser usado de maneira significativa no processo de destino. Além disso, você não pode fazer chamadas diretas entre dois processos. Em vez disso, você deve usar proxies, que fornecem um nível de indireção.  
@@ -61,9 +54,9 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
 -   Permissões concedidas ao código podem ser controladas pelo domínio do aplicativo no qual o código está sendo executado.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Domínios do aplicativo e assemblies  
- Este tópico descreve o relacionamento entre domínios de aplicativo e assemblies. Você deve carregar um assembly em um domínio de aplicativo para executar o código que ele contém. Executar um aplicativo típico faz vários assemblies serem carregados em um domínio de aplicativo.  
+## <a name="application-domains-and-assemblies"></a>Domínios de aplicativo e assemblies
+
+ Esta seção descreve o relacionamento entre domínios do aplicativo e assemblies. Você deve carregar um assembly em um domínio de aplicativo para executar o código que ele contém. Executar um aplicativo típico faz vários assemblies serem carregados em um domínio de aplicativo.  
   
  A maneira como um assembly é carregado determina se o seu código compilado por JIT (just-in-time) pode ser compartilhado por vários domínios de aplicativo no processo e se o assembly pode ser descarregado do processo.  
   
@@ -95,21 +88,24 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
 -   Todas as dependências de um assembly deverão estar localizadas e carregadas quando o assembly for carregado como neutro em relação ao domínio, porque uma dependência que não puder ser carregada como neutra em relação ao domínio impedirá que o assembly seja carregado como neutro em relação ao domínio.  
   
-## <a name="application-domains-and-threads"></a>Domínios do aplicativo e threads  
+## <a name="application-domains-and-threads"></a>Domínios do aplicativo e threads
+
  Um domínio de aplicativo forma um limite de isolamento para segurança, controle de versão, confiabilidade e descarregamento de código gerenciado. Um thread é o constructo do sistema operacional usado pelo Common Language Runtime para executar código. No tempo de execução, todos os códigos gerenciados são carregados em um domínio de aplicativo e são executados por um ou mais threads gerenciados.  
   
  Não há uma correlação um-para-um entre domínios de aplicativo e threads. Vários threads podem ser executados em um único domínio de aplicativo a qualquer momento e um determinado thread não está confinado a um único domínio de aplicativo. Ou seja, threads são livres para atravessar limites de domínio de aplicativo; um novo thread não é criado para cada domínio de aplicativo.  
   
- A qualquer momento, cada thread é executado em um domínio de aplicativo. Zero, um ou vários threads podem estar em execução em um determinado domínio de aplicativo. O tempo de execução acompanha quais threads estão em execução em quais domínios de aplicativo. Você pode localizar o domínio no qual um thread está em execução a qualquer momento chamando o método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
-  
-### <a name="application-domains-and-cultures"></a>Domínios e culturas de aplicativo  
+ A qualquer momento, cada thread é executado em um domínio de aplicativo. Zero, um ou vários threads podem estar em execução em um determinado domínio de aplicativo. O tempo de execução acompanha quais threads estão em execução em quais domínios do aplicativo. Você pode localizar o domínio no qual um thread está em execução a qualquer momento chamando o método <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
+
+### <a name="application-domains-and-cultures"></a>Domínios do aplicativo e culturas
+
  A cultura, que é representada por um objeto <xref:System.Globalization.CultureInfo>, está associada a threads. Você pode obter a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e obter ou definir a cultura associada ao thread em execução no momento usando a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Se a cultura associada a um thread tiver sido definida explicitamente usando-se a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, ela continuará sendo associada a esse thread quando ele cruzar os limites de domínio do aplicativo. Do contrário, a cultura associada ao thread em um dado momento é determinada pelo valor da propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> no domínio do aplicativo no qual o thread está sendo executado:  
   
 -   Se o valor da propriedade não for `null`, a cultura retornada pela propriedade estará associada ao thread (e, assim, retornada pelas propriedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
 -   Se o valor da propriedade for `null`, a cultura do sistema atual estará associada ao thread.  
   
-## <a name="programming-with-application-domains"></a>Programação com domínios do aplicativo  
+## <a name="programming-with-application-domains"></a>Programação com domínios do aplicativo
+
  Domínios de aplicativo costumam ser criados e manipulados programaticamente por hosts de tempo de execução. Entretanto, às vezes, um aplicativo também pode preferir trabalhar com domínios de aplicativo. Por exemplo, um programa de aplicativo pode carregar um componente do aplicativo em um domínio para poder descarregar o domínio (e o componente) sem precisar interromper o aplicativo inteiro.  
   
  O <xref:System.AppDomain> é a interface programática para domínios de aplicativo. Essa classe inclui métodos para criar e descarregar domínios, para criar instâncias de tipos em domínios e registrar várias notificações como o descarregamento de domínio do aplicativo. A tabela a seguir lista os métodos <xref:System.AppDomain> mais usados.  
@@ -126,7 +122,8 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
   
  As interfaces não gerenciadas descritas na Especificação Hospedando Interfaces do Common Language Runtime também dão acesso a domínios de aplicativo. Hosts em tempo de execução podem usar interfaces do código não gerenciado para criar e obter acesso aos domínios de aplicativo dentro de um processo.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>Variável de ambiente COMPLUS_LoaderOptimization  
+## <a name="the-complusloaderoptimization-environment-variable"></a>A variável de ambiente COMPLUS_LoaderOptimization
+
  Uma variável de ambiente que define a política padrão de otimização do carregador de um aplicativo executável.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -135,7 +132,8 @@ Sistemas operacionais e ambientes em tempo de execução normalmente fornecem al
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Comentários  
+### <a name="remarks"></a>Comentários
+
  Um aplicativo típico carrega vários assemblies em um domínio de aplicativo antes que o código que eles contêm possa ser executado.  
   
  A maneira que o assembly é carregado determina se o seu código compilado por JIT (just-in-time) pode ser compartilhado por vários domínios de aplicativo no processo.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  O sinalizador de ambiente COMPLUS_LoaderOptimization foi projetado para ser usado em cenários de diagnóstico e de teste. Ter o sinalizador ativado pode causar uma grave lentidão e aumentar o uso de memória.  
   
-### <a name="code-example"></a>Exemplo de código  
+### <a name="code-example"></a>Exemplo de código
+
  Para forçar todos os assemblies a não serem carregados como domínios neutros para o serviço IISADMIN, pode ser obtido acrescentando `COMPLUS_LoaderOptimization=1` ao valor de várias cadeia de caracteres de ambiente na chave HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Referência  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Programação com domínios do aplicativo e assemblies](index.md)
+- [Usar domínios do aplicativo](use.md)

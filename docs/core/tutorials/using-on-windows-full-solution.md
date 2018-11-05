@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969555"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185073"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Compilar uma solução completa do .NET Core no Windows usando o Visual Studio 2017
 
@@ -24,7 +24,7 @@ Siga as instruções na [nossa página de pré-requisitos](../windows-prerequisi
 
 ### <a name="writing-the-library"></a>Escrevendo a biblioteca
 
-1. No Visual Studio, escolha **Arquivo**, **Novo** e **Projeto**. Na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C#**, escolha o nó **.NET Standard** e, em seguida, escolha **Biblioteca de Classes (.NET Standard)**. 
+1. No Visual Studio, escolha **Arquivo**, **Novo** e **Projeto**. Na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C#**, escolha o nó **.NET Standard** e, em seguida, escolha **Biblioteca de Classes (.NET Standard)**. Isso cria uma biblioteca .NET Standard que se destina ao .NET Core, bem como a qualquer outra implementação .NET que dê suporte à versão 2.0 do [.NET Standard](../../standard/net-standard.md).
 
 2. Nomeie o projeto como “Biblioteca” e a solução como “Dourada”. Deixe **Criar diretório para a solução** marcado. Clique em **OK**.
 
@@ -55,7 +55,7 @@ Siga as instruções na [nossa página de pré-requisitos](../windows-prerequisi
 
    Agora, você poderá criar a solução. 
    
-4. No menu **Teste**, escolha **Windows**, **Gerenciador de Testes** para obter a janela Gerenciador de Testes na área de trabalho. Depois de alguns segundos, o teste `ThingGetsObjectValFromNumber` deve aparecer no gerenciador de testes. Escolha **Executar Todos**.
+4. No menu **Teste**, escolha **Windows**, **Gerenciador de Testes** para obter a janela Gerenciador de Testes no workspace. Depois de alguns segundos, o teste `ThingGetsObjectValFromNumber` deve aparecer no gerenciador de testes. Escolha **Executar Todos**.
    
    O teste deve ser aprovado.
 

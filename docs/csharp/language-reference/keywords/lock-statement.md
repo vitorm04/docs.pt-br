@@ -1,23 +1,23 @@
 ---
 title: Instrução lock (referência em C#)
-description: Use a instrução lock C# para sincronizar o acesso de thread com o recurso compartilhado
-ms.date: 08/28/2018
+description: Use a instrução lock do C# para sincronizar o acesso de thread com um recurso compartilhado
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858350"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850095"
 ---
 # <a name="lock-statement-c-reference"></a>Instrução lock (referência em C#)
 
-A instrução `lock` obtém o bloqueio de exclusão mútua para um determinado objeto, executa um bloco de instruções, em seguida, libera o bloqueio. Embora um bloqueio seja mantido, o thread que mantém o bloqueio pode obtê-lo novamente e liberá-lo. Qualquer outro thread é impedido de obter o bloqueio e aguarda até que ele seja liberado.
+A instrução `lock` obtém o bloqueio de exclusão mútua para um determinado objeto, executa um bloco de instruções e, em seguida, libera o bloqueio. Embora um bloqueio seja mantido, o thread que mantém o bloqueio pode adquiri-lo novamente e liberá-lo. Qualquer outro thread é impedido de adquirir o bloqueio e aguarda até que ele seja liberado.
 
 A instrução `lock` está no formato
 
@@ -50,13 +50,11 @@ Não é possível usar a palavra-chave [await](await.md) no corpo de uma instru�
 
 ## <a name="remarks"></a>Comentários
 
-Quando você sincroniza o acesso de thread com o recurso compartilhado, bloqueie uma instância de objeto dedicada (por exemplo, `private readonly object balanceLock = new object();`) ou outra instância que provavelmente não será usada como um objeto de bloqueio por partes não relacionadas do código. Evite usar a mesma instância de objeto de bloqueio para diferentes recursos compartilhados, uma vez que ela poderia resultar em deadlock ou contenção de bloqueio. Em particular, evite usar
+Ao sincronizar o acesso de thread com um recurso compartilhado, bloqueie uma instância de objeto dedicada (por exemplo, `private readonly object balanceLock = new object();`) ou outra instância que provavelmente não será usada como um objeto de bloqueio por partes não relacionadas do código. Evite usar a mesma instância de objeto de bloqueio para diferentes recursos compartilhados, uma vez que ela poderia resultar em deadlock ou contenção de bloqueio. Especificamente, evite usar os seguintes itens como objetos de bloqueio:
 
-- `this` (pode ser usado pelos chamadores como um bloqueio),
-- <xref:System.Type> instâncias (podem ser obtidas por meio do operador ou reflexão [typeof](typeof.md)),
-- instâncias de cadeia de caracteres, incluindo literais de cadeia de caracteres,
-
-como objetos de bloqueio.
+- `this`, uma vez que pode ser usado pelos chamadores como um bloqueio.
+- Instâncias <xref:System.Type>, pois podem ser obtidas pelo operador ou reflexão [typeof](typeof.md).
+- Instâncias de cadeia de caracteres, incluindo literais de cadeia de caracteres, pois podem ser [internalizadas](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Exemplo
 

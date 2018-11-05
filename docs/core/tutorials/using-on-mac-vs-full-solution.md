@@ -4,12 +4,12 @@ description: Este tópico explica como compilar uma solução do .NET Core que i
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbbbbc20b45981a41695eac73dcc251ef74a0cb6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530490"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186012"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
@@ -20,7 +20,7 @@ Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
 > * No Visual Studio para Mac, escolha **Ajuda** > **Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/41/index.html).
-> * Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu, ou **Forneça uma Sugestão** na tela de boas-vindas. Isso leva você até a página de [UserVoice do Visual Studio para Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
+> * Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu ou **Forneça uma Sugestão** na tela de boas-vindas. Isso leva você até a página da Web da [Comunidade de Desenvolvedores do Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -32,7 +32,7 @@ Para saber mais sobre pré-requisitos, confira os [Pré-requisitos para .NET Cor
 
 ## <a name="building-a-library"></a>Compilar uma biblioteca
 
-1. Na tela de boas-vindas, escolha **Novo Projeto**. Na caixa de diálogo **Novo Projeto**, sob o nó **Multiplataforma**, selecione o modelo **Biblioteca .NET Padrão**. Selecione **Avançar**.
+1. Na tela de boas-vindas, escolha **Novo Projeto**. Na caixa de diálogo **Novo Projeto**, sob o nó **.NET Core**, selecione o modelo **Biblioteca .NET Standard**. Isso cria uma biblioteca .NET Standard que se destina ao .NET Core, bem como a qualquer outra implementação .NET que dê suporte à versão 2.0 do [.NET Standard](../../standard/net-standard.md). Selecione **Avançar**.
 
    ![Caixa de diálogo Novo projeto](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
 

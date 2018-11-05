@@ -1,15 +1,18 @@
 ---
 title: Novidades do .NET Core 2.1
 description: Conheça os novos recursos encontrados no .NET Core 2.1.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400054"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120941"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -166,9 +169,11 @@ O .NET Core 2.1 inclui alguns novos tipos de tornam o trabalho com matrizes e ou
 
 Sem esses tipos, ao transmitir esses itens como parte de uma matriz ou seção de um buffer de memória, você precisará fazer uma cópia de uma parte dos dados antes de transmiti-los a um método. Esses tipos fornecem uma visão virtual desses dados, o que elimina a necessidade de alocação de memória adicional e operações de cópia.
 
-O exemplo a seguir usa uma instância <xref:System.Span%601> para fornecer uma visão virtual de 10 elementos de uma matriz.
+O exemplo a seguir usa uma instância <xref:System.Span%601> e <xref:System.Memory%601> para fornecer uma visão virtual de 10 elementos de uma matriz.
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compactação Brotli
 

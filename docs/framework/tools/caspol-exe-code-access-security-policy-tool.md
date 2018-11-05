@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201134"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086850"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica o código que tem o editor de software indicado, conforme mostrado por um arquivo de certificado, uma assinatura em um arquivo ou pela representação hexadecimal de um certificado X509. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Especifica o código que tem o site de origem indicado. Por exemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica o código que tem um nome forte específico, conforme designado pelo nome do arquivo, o nome do assembly como uma cadeia de caracteres e a versão do assembly no formato *major*.*minor*.*build*.*revision*. Por exemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Especifica o código originado da URL indicada. A URL deve incluir um protocolo, como http:// ou ftp://. Além disso, um caractere curinga (\*) pode ser usado para especificar vários assemblies de uma URL específica. **Observação:** como uma URL pode ser identificada usando vários nomes, o uso de uma URL como uma condição de associação não é uma maneira segura de verificar a identidade do código. Sempre que possível, use uma condição de associação de nome forte, uma condição de associação de publicador ou a condição de associação de hash. <br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Especifica o código originado da URL indicada. A URL deve incluir um protocolo, como `http://` ou `ftp://`. Além disso, um caractere curinga (\*) pode ser usado para especificar vários assemblies de uma URL específica. **Observação:** como uma URL pode ser identificada usando vários nomes, o uso de uma URL como uma condição de associação não é uma maneira segura de verificar a identidade do código. Sempre que possível, use uma condição de associação de nome forte, uma condição de associação de publicador ou a condição de associação de hash. <br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Especifica o código com a zona de origem indicada. O argumento *zonename* pode ter um dos seguintes valores: **MyComputer**, **Intranet**, **Trusted**, **Internet** ou **Untrusted**. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.ZoneMembershipCondition> Classe.|  
   
  O argumento *flags*, que pode ser usado com as opções **–addgroup** e **–chggroup**, é especificado usando um dos valores a seguir.  

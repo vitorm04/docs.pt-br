@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399711"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848004"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
 O Assembly Linker gera um arquivo com um manifesto de assembly com base em um ou mais arquivos que são arquivos de módulos ou de recurso. Um módulo é um arquivo IL (intermediate language) que não tem um manifesto de assembly.
 
 > [!NOTE]
-> Desde o [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)], os compiladores do C# e do Visual Basic inserem automaticamente um manifesto Win32 no assembly. Para obter mais informações, consulte [/win32manifest (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Desde o Visual Studio 2008, os compiladores do C# e Visual Basic inserem automaticamente um manifesto Win32 no assembly. Para obter mais informações, consulte [/win32manifest (opções do compilador C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -174,9 +174,9 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
 ## <a name="see-also"></a>Consulte também
- 
-[Ferramentas](../../../docs/framework/tools/index.md)  
-[*Sn.exe* (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-[*Gacutil.exe* (Ferramenta do Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [Ferramentas](../../../docs/framework/tools/index.md)
+- [*Sn.exe* (Ferramenta de Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (Ferramenta do Cache de Assembly Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1ab9609fe6b2c1e232f188db8306fc05828285
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744129"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184768"
 ---
 # <a name="assembly-names"></a>Nomes de assembly
 Um nome de assembly é armazenado em metadados e tem um impacto significativo no escopo e uso do assembly por um aplicativo. Um assembly de nome forte tem um nome totalmente qualificado que inclui o nome, a cultura, a chave pública e o número de versão do assembly. Isso muitas vezes é chamado de nome de exibição, e para os assemblies carregados pode ser obtido usando a propriedade <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -50,7 +50,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="naming-application-components"></a>Nomenclatura de componentes do aplicativo  
  O tempo de execução não considera o nome do arquivo ao determinar a identidade de um assembly. A identidade do assembly, composta pelo nome, versão, cultura e nome forte do assembly, deve ficar clara para o tempo de execução.  
   
- Por exemplo, se você tiver um assembly denominado myAssembly.exe que faz referência a um assembly denominado myAssembly.dll, a associação ocorrerá corretamente se você executar myAssembly.exe. No entanto, se outro aplicativo executar myAssembly.exe usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, o tempo de execução determinará que "myAssembly" já está carregado quando myAssembly.exe solicitar a associação ao "myAssembly". Nesse caso, myAssembly.dll nunca é carregado. Como myAssembly.exe não contém o tipo solicitado, uma <xref:System.TypeLoadException> ocorrerá.  
+ Por exemplo, se você tiver um assembly denominado myAssembly.exe que faz referência a um assembly denominado myAssembly.dll, a associação ocorrerá corretamente se você executar myAssembly.exe. No entanto, se outro aplicativo executar myAssembly.exe usando o método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, o tempo de execução determinará que "myAssembly" já está carregado quando myAssembly.exe solicitar a associação ao "myAssembly". Nesse caso, myAssembly.dll nunca é carregado. Como myAssembly.exe não contém o tipo solicitado, ocorrerá uma <xref:System.TypeLoadException>.  
   
  Para evitar esse problema, verifique se os assemblies que compõem seu aplicativo não têm o mesmo nome de assembly ou colocam assemblies com o mesmo nome em diretórios diferentes.  
   
@@ -58,9 +58,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Se você colocar um assembly de nome forte no cache de assembly global, o nome de arquivo do assembly deverá corresponder ao nome de assembly (não incluindo a extensão de nome de arquivo, como .exe ou .dll). Por exemplo, se o nome do arquivo de um assembly for myAssembly.dll, o nome do assembly deverá ser myAssembly. Assemblies particulares implantados somente no diretório do aplicativo raiz podem ter um nome de assembly diferente do nome do arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como determinar o nome totalmente qualificado de um assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Como determinar o nome totalmente qualificado de um assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+- [Criação de assemblies](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Assemblies de nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Cache de assembly global](../../../docs/framework/app-domains/gac.md)  
+- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)

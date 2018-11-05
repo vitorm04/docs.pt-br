@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3354f22f5d1c1f1807388542c4ada5e67a9d5a14
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207316"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192701"
 ---
 # <a name="double-c-reference"></a>double (Referência de C#)
 
@@ -20,7 +20,7 @@ A palavra-chave `double` indica um tipo simples que armazena valores de ponto fl
 
 |Tipo|Intervalo aproximado|Precisão|Tipo .NET|
 |----------|-----------------------|---------------|-------------------------|
-|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|15 a 16 dígitos|<xref:System.Double?displayProperty=nameWithType>|
+|`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|Aproximadamente de 15 a 17 dígitos|<xref:System.Double?displayProperty=nameWithType>|
 
 ## <a name="literals"></a>Literais
 

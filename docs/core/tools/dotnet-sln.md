@@ -4,12 +4,12 @@ description: O comando dotnet-sln oferece uma opção conveniente para adicionar
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207754"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121214"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -95,3 +95,6 @@ Adicione vários projetos C# a uma solução usando um padrão de recurso de cur
 Remova vários projetos C# de uma solução usando um padrão de recurso de curinga:
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> O recurso de curinga não é um recurso CLI, mas do shell de comando. Para expandir os arquivos com êxito, você deve usar um shell que dê suporte ao recurso de curinga. Para saber mais sobre o recurso de curinga, confira [Wikipédia](https://en.wikipedia.org/wiki/Glob_(programming)).

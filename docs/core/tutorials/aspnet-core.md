@@ -4,13 +4,13 @@ description: Saiba mais sobre o ASP.NET Core com os tutoriais na documentação 
 author: tdykstra
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: db2134cb88b088233ae4ff3562d99bef26fa6d90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3749152197997575022dea4828a62393369fd83
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33209492"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840502"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Guia de Introdução ao ASP.NET Core
 
-Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, sugerimos que você acesse a [documentação do ASP.NET Core](/aspnet/core/).
+Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, confira os [Tutoriais do ASP.NET Core](/aspnet/core/tutorials).

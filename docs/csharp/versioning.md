@@ -3,16 +3,16 @@ title: Controle de versão de C# – Guia de C#
 description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585927"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183224"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C# #
 
-Neste tutorial, você aprenderá o que significa o controle de versão no .NET. Você também aprenderá os fatores a serem considerados ao fazer o controle de versão de sua biblioteca, bem como atualizar para uma nova versão da biblioteca.
+Neste tutorial, você aprenderá o que significa o controle de versão no .NET. Você também aprenderá sobre os fatores a serem considerados ao fazer o controle de versão de sua biblioteca, bem como ao atualizar para uma nova versão de uma biblioteca.
 
 ## <a name="authoring-libraries"></a>Criando bibliotecas
 
@@ -20,7 +20,7 @@ Como um desenvolvedor que criou a bibliotecas .NET para uso público, provavelme
 
 ### <a name="semantic-versioning"></a>Controle de Versão Semântico
 
-[Controle de versão semântico](http://semver.org/) (SemVer, de forma abreviada) é uma convenção de nomenclatura aplicada a versões de sua biblioteca para indicar eventos com marcos específicos.
+[Controle de versão semântico](https://semver.org/) (SemVer, de forma abreviada) é uma convenção de nomenclatura aplicada a versões de sua biblioteca para indicar eventos com marcos específicos.
 Idealmente, as informações de versão que você fornece a sua biblioteca devem ajudar os desenvolvedores a determinar a compatibilidade com seus projetos que usam versões mais antigas da mesma biblioteca.
 
 A abordagem mais básica ao SemVer é o formato de 3 componentes `MAJOR.MINOR.PATCH`, em que:

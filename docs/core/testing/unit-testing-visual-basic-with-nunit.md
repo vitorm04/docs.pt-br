@@ -2,23 +2,33 @@
 title: Teste de unidade do Visual Basic no .NET Core usando dotnet test e NUnit
 description: Aprenda os conceitos de teste de unidade no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo do Visual Basic usando NUnit.
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 552b60dd3937abc413c1b4410213948f3b509526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217770"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836890"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do .NET Core do Visual Basic usando dotnet test e NUnit
 
 Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Pré-requisitos 
+- [O SDK do .NET Core 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) ou versões posteriores. 
+- Um editor de texto ou de código de sua escolha.
+
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem
 
-Abra uma janela do shell. Crie um diretório chamado *unit-testing-vb-nunit* para armazenar a solução. Nesse novo diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Essa prática facilita gerenciar a biblioteca de classes e o projeto de teste de unidade. No diretório da solução, crie um diretório *PrimeService*. Você tem a seguinte estrutura de arquivo e diretório até aqui:
+Abra uma janela do shell. Crie um diretório chamado *unit-testing-vb-nunit* para armazenar a solução. Nesse diretório, execute o seguinte comando a fim de criar um novo arquivo de solução para a biblioteca de classes e o projeto de teste:
+
+```console
+dotnet new sln
+```
+
+Em seguida, crie um diretório *PrimeService*. O seguinte contorno mostra a estrutura de arquivos até agora:
 
 ```
 /unit-testing-vb-nunit
@@ -26,7 +36,13 @@ Abra uma janela do shell. Crie um diretório chamado *unit-testing-vb-nunit* par
     /PrimeService
 ```
 
-Torne *PrimeService* o diretório atual e execute [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) para criar o projeto de origem. Renomeie *Class1.VB* para *PrimeService.VB*. Para usar o TDD (Desenvolvimento Orientado por Testes), você cria uma implementação com falha da classe `PrimeService`:
+Torne *PrimeService* o diretório atual e execute o seguinte comando para criar o projeto de origem:
+
+```console
+dotnet new classlib -lang VB
+```
+
+Renomeie *Class1.VB* para *PrimeService.VB*. Para usar o TDD (Desenvolvimento Orientado por Testes), você cria uma implementação com falha da classe `PrimeService`:
 
 ```vb
 Imports System
@@ -40,15 +56,11 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Altere o diretório de volta para o diretório *unit-testing-vb-using-stest*. Execute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
+Altere o diretório de volta para o diretório *unit-testing-vb-using-stest*. Execute o seguinte comando para adicionar o projeto de biblioteca de classes à solução:
 
-## <a name="install-the-nunit-project-template"></a>Instalar o modelo de projeto do NUnit
-
-Os modelos de projeto de teste do NUnit precisam ser instalados antes de criar um projeto de teste. Isso precisa ser feito somente uma vez em cada computador de desenvolvedor em que você criará novos projetos NUnit. Execute [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) para instalar os modelos do NUnit.
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\PrimeService\PrimeService.vbproj
+```
 
 ## <a name="creating-the-test-project"></a>Criando o projeto de teste
 
@@ -63,19 +75,19 @@ Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a 
     /PrimeService.Tests
 ```
 
-Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projeto usando [`dotnet new nunit -lang VB`](../tools/dotnet-new.md). Esse comando cria um projeto de teste que usa o NUnit como a biblioteca de teste. O modelo gerado configura o executor de teste no *PrimeServiceTests.vbproj*:
+Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projeto usando o seguinte comando:
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-  <PackageReference Include="NUnit" Version="3.9.0" />
-  <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
-</ItemGroup>
+```console
+dotnet new nunit -lang VB
 ```
+
+O comando [dotnet new](../tools/dotnet-new.md) cria um projeto de teste que usa o NUnit como a biblioteca de teste. O modelo gerado configura o executor de teste no arquivo *PrimeServiceTests.vbproj*:
+
+[!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
 O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -91,14 +103,18 @@ Você tem o seguinte layout de solução final:
         PrimeService.vbproj
     /PrimeService.Tests
         Test Source Files
-        PrimeServiceTests.vbproj
+        PrimeService.Tests.vbproj
 ```
 
-Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) no diretório *unit-testing-vb-nunit*.
+Execute o seguinte comando no diretório *unit-testing-vb-nunit*:
+
+```console
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
+```
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
-A abordagem de TDD pede a criação de um teste com falha para fazê-lo passar e depois a repetição do processo. Remova *UnitTest1.vb* do diretório *PrimeService.Tests* e crie um novo arquivo do Visual Basic chamado *PrimeService_IsPrimeShould.VB*. Adicione o seguinte código:
+A abordagem de TDD pede a criação de um teste com falha para fazê-lo passar e depois a repetição do processo. No diretório *PrimeService.Tests*, renomeie o arquivo *UnitTest1.vb* para *PrimeService_IsPrimeShould.VB* e substitua todo o seu conteúdo pelo seguinte código:
 
 ```vb
 Imports NUnit.Framework
@@ -142,7 +158,7 @@ Em vez de criar novos testes, aplique esses dois atributos para criar uma série
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Execute `dotnet test`, e dois desses testes falham. Para fazer todos os testes serem aprovados, altere a cláusula `if` no início do método:
+Execute `dotnet test`, e dois desses testes falham. Para fazer com que todos os testes sejam aprovados, altere a cláusula `if` no início do método `Main` no arquivo *PrimeServices.cs*:
 
 ```vb
 if candidate < 2

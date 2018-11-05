@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237040"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197230"
 ---
 # <a name="configuring-internet-applications"></a>Configurando aplicativos da Internet
 O elemento de configuração [\<system.Net> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contém informações de configuração da rede de aplicativos. Usando o Elemento [\<system.Net> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), você pode definir servidores proxy, definir parâmetros de gerenciamento de conexão e incluir módulos de autenticação e solicitação personalizados no aplicativo.  
@@ -37,7 +35,7 @@ O elemento de configuração [\<system.Net> (configurações de rede)](../../../
   
  É importante observar que as configurações do Microsoft Internet Explorer são combinadas com as configurações, com o último tendo precedência sobre o primeiro.  
   
- O exemplo a seguir define o endereço do servidor proxy padrão como http://proxyserver, indica que o proxy não deverá ser usado para endereços locais e especifica que todas as solicitações para servidores localizados no domínio contoso.com deverão ignorar o proxy.  
+ O exemplo a seguir define o endereço do servidor proxy padrão como `http://proxyserver`, indica que o proxy não deverá ser usado para endereços locais e especifica que todas as solicitações para servidores localizados no domínio contoso.com deverão ignorar o proxy.  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ O elemento de configuração [\<system.Net> (configurações de rede)](../../../
 </configuration>  
 ```  
   
- Use o Elemento [\<connectionManagement> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar o número de conexões persistentes que podem ser estabelecidas com um servidor específico ou com todos os outros servidores. O exemplo a seguir configura o aplicativo para usar duas conexões persistentes com o servidor www.contoso.com, quatro conexões persistentes com o servidor com o endereço IP 192.168.1.2 e uma conexão persistente com todos os outros servidores.  
+ Use o Elemento [\<connectionManagement> (configurações de rede)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) para configurar o número de conexões persistentes que podem ser estabelecidas com um servidor específico ou com todos os outros servidores. O exemplo a seguir configura o aplicativo para usar duas conexões persistentes com o servidor `www.contoso.com`, quatro conexões persistentes com o servidor com o endereço IP 192.168.1.2 e uma conexão persistente com todos os outros servidores.  
   
 ```xml  
 <configuration>  
