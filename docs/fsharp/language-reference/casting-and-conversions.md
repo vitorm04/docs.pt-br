@@ -1,6 +1,6 @@
 ---
 title: Conversões cast e conversões (F#)
-description: 'Saiba como a linguagem de programação F # fornece os operadores de conversão para conversões aritméticas entre vários tipos primitivos.'
+description: Saiba como a linguagem de programação F# fornece os operadores de conversão para conversões aritméticas entre vários tipos primitivos.
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45677923"
 ---
 # <a name="casting-and-conversions-f"></a>Conversões cast e conversões (F#)
 
-Este tópico descreve o suporte para conversões de tipos em F #.
+Este tópico descreve o suporte para conversões de tipos em F#.
 
 ## <a name="arithmetic-types"></a>Tipos aritméticos
 
-F # fornece os operadores de conversão para conversões aritméticas entre vários tipos primitivos, como entre inteiro e tipos de ponto flutuante. Os operadores de conversão integral e char verificou e formulários desmarcados; o ponto flutuante operadores e a `enum` operador de conversão não fizer isso. Os formulários não verificados são definidos no `Microsoft.FSharp.Core.Operators` e os formulários verificados são definidos em `Microsoft.FSharp.Core.Operators.Checked`. Os formulários verificados procurar estouro e geram uma exceção de tempo de execução se o valor resultante exceder os limites do tipo de destino.
+F# fornece os operadores de conversão para conversões aritméticas entre vários tipos primitivos, como entre inteiro e tipos de ponto flutuante. Os operadores de conversão integral e char verificou e formulários desmarcados; o ponto flutuante operadores e a `enum` operador de conversão não fizer isso. Os formulários não verificados são definidos no `Microsoft.FSharp.Core.Operators` e os formulários verificados são definidos em `Microsoft.FSharp.Core.Operators.Checked`. Os formulários verificados procurar estouro e geram uma exceção de tempo de execução se o valor resultante exceder os limites do tipo de destino.
 
 Cada um desses operadores tem o mesmo nome que o nome do tipo de destino. Por exemplo, no código a seguir, no qual os tipos explicitamente são anotados, `byte` aparece com dois significados diferentes. A primeira ocorrência é o tipo e o segundo é o operador de conversão.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-A tabela a seguir mostra os operadores de conversão definidos em F #.
+A tabela a seguir mostra os operadores de conversão definidos em F#.
 
 |Operador|Descrição|
 |--------|-----------|
@@ -67,11 +67,11 @@ Para obter mais informações, consulte [enumerações](enumerations.md).
 
 Conversão entre tipos em uma hierarquia de objetos é fundamental para programação orientada a objeto. Há dois tipos básicos de conversões: conversão para cima (upcasting) e de conversão para baixo (Baixar). Conversão de uma hierarquia significa que a conversão de uma referência de objeto derivado de uma referência ao objeto base. Uma conversão é garantida para funcionar, contanto que a classe base está na hierarquia de herança da classe derivada. Conversão de uma hierarquia, de uma referência de objeto base para uma referência de objeto derivado, só terá sucesso se o objeto é, na verdade, uma instância do tipo de destino correto (derivado) ou um tipo derivado do tipo de destino.
 
-F # fornece operadores para esses tipos de conversões. O `:>` operador converte até a hierarquia e o `:?>` operador converte abaixo na hierarquia.
+F# fornece operadores para esses tipos de conversões. O `:>` operador converte até a hierarquia e o `:?>` operador converte abaixo na hierarquia.
 
 ### <a name="upcasting"></a>Upcasting
 
-Em muitas linguagens orientadas a objeto, upcasting é implícita; no F #, as regras são ligeiramente diferentes. Upcasting é aplicada automaticamente quando você passar argumentos para métodos em um tipo de objeto. No entanto, para as funções permitem a associação em um módulo, upcasting não é automática, a menos que o tipo de parâmetro é declarado como um tipo flexível. Para obter mais informações, consulte [tipos flexíveis](flexible-Types.md).
+Em muitas linguagens orientadas a objeto, upcasting é implícita; no F#, as regras são ligeiramente diferentes. Upcasting é aplicada automaticamente quando você passar argumentos para métodos em um tipo de objeto. No entanto, para as funções permitem a associação em um módulo, upcasting não é automática, a menos que o tipo de parâmetro é declarado como um tipo flexível. Para obter mais informações, consulte [tipos flexíveis](flexible-Types.md).
 
 O `:>` operador executa um estático cast, o que significa que o sucesso da conversão é determinado em tempo de compilação. Se uma conversão que usa `:>` será compilado com êxito, ele é uma conversão válida e não tem nenhuma possibilidade de falha em tempo de execução.
 

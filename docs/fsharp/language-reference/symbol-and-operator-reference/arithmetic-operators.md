@@ -1,6 +1,6 @@
 ---
 title: Operadores aritméticos (F#)
-description: 'Saiba mais sobre os operadores aritméticos que estão disponíveis na linguagem de programação F #.'
+description: Saiba mais sobre os operadores aritméticos que estão disponíveis na linguagem de programação F#.
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45597409"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
 
-Este tópico descreve os operadores aritméticos que estão disponíveis na linguagem F #.
+Este tópico descreve os operadores aritméticos que estão disponíveis na linguagem F#.
 
 ## <a name="summary-of-binary-arithmetic-operators"></a>Resumo de operadores aritméticos binários
 
@@ -53,13 +53,13 @@ Números de ponto flutuante nunca devem ser comparados diretamente para igualdad
 
 ## <a name="overloaded-and-generic-operators"></a>Operadores sobrecarregados e genéricos
 
-Todos os operadores discutidos neste tópico são definidos na **Microsoft.FSharp.Core.Operators** namespace. Alguns dos operadores são definidos usando parâmetros de tipo estaticamente resolvidos. Isso significa que há definições individuais para cada tipo específico que funciona com o operador. Todos os operadores aritméticos e bit a bit binários e unários estão nesta categoria. Os operadores de comparação são genéricos e, portanto, trabalhe com qualquer tipo, não apenas primitivos tipos aritméticos. Tipos de registro e de união discriminada têm suas próprias implementações personalizadas que são geradas pelo compilador do F #. Tipos de classe usam o método <xref:System.Object.Equals%2A>.
+Todos os operadores discutidos neste tópico são definidos na **Microsoft.FSharp.Core.Operators** namespace. Alguns dos operadores são definidos usando parâmetros de tipo estaticamente resolvidos. Isso significa que há definições individuais para cada tipo específico que funciona com o operador. Todos os operadores aritméticos e bit a bit binários e unários estão nesta categoria. Os operadores de comparação são genéricos e, portanto, trabalhe com qualquer tipo, não apenas primitivos tipos aritméticos. Tipos de registro e de união discriminada têm suas próprias implementações personalizadas que são geradas pelo compilador do F#. Tipos de classe usam o método <xref:System.Object.Equals%2A>.
 
 Os operadores genéricos são personalizáveis. Para personalizar as funções de comparação, substitua <xref:System.Object.Equals%2A> para fornecer seu próprio comparação de igualdade personalizado e, em seguida, implementar <xref:System.IComparable>. O <xref:System.IComparable?displayProperty=nameWithType> interface tem um único método, o <xref:System.IComparable.CompareTo%2A> método.
 
 ## <a name="operators-and-type-inference"></a>Inferência de tipos e operadores
 
-O uso de um operador em uma expressão restringe a inferência de tipos no operador. Além disso, o uso de operadores impede a generalização automática, pois o uso de operadores implica um tipo aritmético. Na ausência de qualquer outra informação, o compilador F # infere `int` como o tipo de expressões aritméticas. Você pode substituir esse comportamento especificando outro tipo. Portanto, os tipos de argumento e o tipo de retorno de `function1` no código a seguir são inferidos para ser `int`, mas os tipos para `function2` são inferidos ser `float`.
+O uso de um operador em uma expressão restringe a inferência de tipos no operador. Além disso, o uso de operadores impede a generalização automática, pois o uso de operadores implica um tipo aritmético. Na ausência de qualquer outra informação, o compilador F# infere `int` como o tipo de expressões aritméticas. Você pode substituir esse comportamento especificando outro tipo. Portanto, os tipos de argumento e o tipo de retorno de `function1` no código a seguir são inferidos para ser `int`, mas os tipos para `function2` são inferidos ser `float`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 

@@ -1,6 +1,6 @@
 ---
 title: 'Exceções: a função raise (F#)'
-description: 'Saiba como a função F # "raise" é usada para indicar que um erro ou uma condição excepcional ocorreu.'
+description: Saiba como a função F# "raise" é usada para indicar que um erro ou uma condição excepcional ocorreu.
 ms.date: 05/16/2016
 ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

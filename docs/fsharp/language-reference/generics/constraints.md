@@ -1,6 +1,6 @@
 ---
 title: Restrições (F#)
-description: 'Saiba mais sobre restrições de F # que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.'
+description: Saiba mais sobre restrições de F# que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -26,7 +26,7 @@ Há várias restrições diferentes que você pode aplicar para limitar os tipos
 |Restrição|Sintaxe|Descrição|
 |----------|------|-----------|
 |Restrição de tipo|*parâmetro de tipo* :&gt; *tipo*|O tipo fornecido deve ser igual ou derivada do tipo especificado ou, se o tipo é uma interface, o tipo fornecido deve implementar a interface.|
-|Restrição de nulos|*parâmetro de tipo* : nulo|O tipo fornecido deve suportar o literal nulo. Isso inclui todos os tipos de objeto do .NET, mas não F # lista, tupla, função, classe, registro ou tipos de união.|
+|Restrição de nulos|*parâmetro de tipo* : nulo|O tipo fornecido deve suportar o literal nulo. Isso inclui todos os tipos de objeto do .NET, mas não F# lista, tupla, função, classe, registro ou tipos de união.|
 |Restrição de membro explícito|[(]*parâmetro de tipo* [ou... ou *parâmetro de tipo*)]: (*assinatura do membro*)|Pelo menos um dos argumentos de tipo fornecidos deve ter um membro que tem a assinatura especificada; não se destina para uso comum. Membros devem ser seja explicitamente definidos no tipo ou parte de uma extensão de tipo implícito alvos válidos de uma restrição explícita do membro.|
 |Restrição de construtor|*parâmetro de tipo* : (novo: unidade -&gt; ' um)|O tipo fornecido deve ter um construtor padrão.|
 |Restrição de tipo de valor|: struct|O tipo fornecido deve ser um tipo de valor do .NET.|
@@ -40,7 +40,7 @@ Você precisa adicionar uma restrição quando seu código precisa usar um recur
 
 Especifica as restrições às vezes, é necessário ao escrever os parâmetros de tipo explicitamente, porque sem uma restrição, o compilador tem uma forma de verificar que os recursos que você está usando serão disponibilizado em qualquer tipo que pode ser fornecido em tempo de execução para o tipo de parâmetro.
 
-As restrições mais comuns que você usa no código F # são restrições de tipo que especificam a interfaces ou classes base. As outras restrições são usadas pela biblioteca de F # para implementar algumas funcionalidades, como a restrição de membro explícito, que é usada para implementar o sobrecarregamento de operadores aritméticos ou é fornecida principalmente como F # oferece suporte completo conjunto de restrições que é compatível com o common language runtime.
+As restrições mais comuns que você usa no código F# são restrições de tipo que especificam a interfaces ou classes base. As outras restrições são usadas pela biblioteca de F# para implementar algumas funcionalidades, como a restrição de membro explícito, que é usada para implementar o sobrecarregamento de operadores aritméticos ou é fornecida principalmente como F# oferece suporte completo conjunto de restrições que é compatível com o common language runtime.
 
 Durante o processo de inferência de tipo, algumas restrições são inferidas automaticamente pelo compilador. Por exemplo, se você usar o `+` operador em uma função, o compilador infere uma restrição de membro explícito em tipos de variáveis que são usadas na expressão.
 

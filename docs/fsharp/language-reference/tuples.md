@@ -1,6 +1,6 @@
 ---
 title: Tuplas (F#)
-description: 'Saiba mais sobre a tupla F #, um agrupamento de valores sem nomeados, mas ordenadas, possivelmente de diferentes tipos.'
+description: Saiba mais sobre a tupla F#, um agrupamento de valores sem nomeados, mas ordenadas, possivelmente de diferentes tipos.
 ms.date: 05/16/2016
 ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Comentários
 
-Cada *elemento* na sintaxe anterior pode ser qualquer expressão válida do F #.
+Cada *elemento* na sintaxe anterior pode ser qualquer expressão válida do F#.
 
 ## <a name="examples"></a>Exemplos
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperação com tuplas do c#
 
-C# 7.0 introduziu tuplas para o idioma.  As tuplas em c# são structs e são equivalentes a tuplas de struct em F #.  Se você precisar interoperar com c#, você deve usar tuplas de struct.
+C# 7.0 introduziu tuplas para o idioma.  As tuplas em c# são structs e são equivalentes a tuplas de struct em F#.  Se você precisar interoperar com c#, você deve usar tuplas de struct.
 
 Isso é fácil de fazer.  Por exemplo, imagine que você precisa passar uma tupla a uma classe c# e, em seguida, consumir seu resultado, que também é uma tupla:
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-No código do F #, você pode passar uma tupla de struct como parâmetro e consumir o resultado como uma tupla de struct.
+No código do F#, você pode passar uma tupla de struct como parâmetro e consumir o resultado como uma tupla de struct.
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ Você deve padrão correspondem em uma tupla e construir o outro com as partes c
 
 Esta seção explica a forma de tuplas quando eles serão compilados.  As informações fornecidas aqui não não necessária para ler a menos que você tiver como alvo o .NET Framework 3.5 ou inferior.
 
-As tuplas são compiladas em objetos de um dos vários tipos genéricos, todas nomeados `System.Tuple`, que são sobrecarregados na arity ou número de parâmetros de tipo. Tipos de tupla aparecem neste formulário quando você exibi-los de outra linguagem, como c# ou Visual Basic, ou quando você estiver usando uma ferramenta que não está ciente das construções no F #. O `Tuple` tipos foram introduzidos no .NET Framework 4. Se você estiver selecionando uma versão anterior do .NET Framework, o compilador usa as versões do [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) da versão 2.0 da biblioteca principal F #. Os tipos na biblioteca são usados apenas para aplicativos que direcionam o 2.0, 3.0 e 3.5 versões do .NET Framework. Encaminhamento de tipo é usado para garantir a compatibilidade binária entre os componentes do .NET Framework 2.0 e o .NET Framework 4 F #.
+As tuplas são compiladas em objetos de um dos vários tipos genéricos, todas nomeados `System.Tuple`, que são sobrecarregados na arity ou número de parâmetros de tipo. Tipos de tupla aparecem neste formulário quando você exibi-los de outra linguagem, como c# ou Visual Basic, ou quando você estiver usando uma ferramenta que não está ciente das construções no F#. O `Tuple` tipos foram introduzidos no .NET Framework 4. Se você estiver selecionando uma versão anterior do .NET Framework, o compilador usa as versões do [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) da versão 2.0 da biblioteca principal F#. Os tipos na biblioteca são usados apenas para aplicativos que direcionam o 2.0, 3.0 e 3.5 versões do .NET Framework. Encaminhamento de tipo é usado para garantir a compatibilidade binária entre os componentes do .NET Framework 2.0 e o .NET Framework 4 F#.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Forma compilada de tuplas de Struct
 

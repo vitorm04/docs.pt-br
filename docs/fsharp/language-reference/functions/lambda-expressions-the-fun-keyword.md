@@ -1,6 +1,6 @@
 ---
 title: 'Expressões lambda: a palavra-chave fun (F#)'
-description: "Saiba como usar a palavra-chave F # 'divertido' para definir uma expressão lambda, que é uma função anônima."
+description: Saiba como usar a palavra-chave F# 'divertido' para definir uma expressão lambda, que é uma função anônima.
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Comentários
 
-O *lista de parâmetros* normalmente consiste em nomes e, opcionalmente, tipos de parâmetros. De modo geral, o *lista de parâmetros* pode ser composto de quaisquer padrões em F #. Para obter uma lista completa de padrões possíveis, consulte [correspondência de padrões](../pattern-matching.md). Listas de parâmetros válidos incluem os exemplos a seguir.
+O *lista de parâmetros* normalmente consiste em nomes e, opcionalmente, tipos de parâmetros. De modo geral, o *lista de parâmetros* pode ser composto de quaisquer padrões em F#. Para obter uma lista completa de padrões possíveis, consulte [correspondência de padrões](../pattern-matching.md). Listas de parâmetros válidos incluem os exemplos a seguir.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -42,7 +42,7 @@ O *expressão* é o corpo da função, a última expressão que gera um valor de
 
 ## <a name="using-lambda-expressions"></a>Usando Expressões Lambda
 
-Expressões lambda são especialmente úteis quando você deseja realizar operações em uma lista ou outra coleção e quiser evitar o trabalho extra de definir uma função. Muitas funções de biblioteca F # levam valores como argumentos de função e pode ser especialmente conveniente usar uma expressão lambda nesses casos. O código a seguir aplica uma expressão lambda para elementos de uma lista. Nesse caso, a função anônima adiciona 1 a cada elemento de uma lista.
+Expressões lambda são especialmente úteis quando você deseja realizar operações em uma lista ou outra coleção e quiser evitar o trabalho extra de definir uma função. Muitas funções de biblioteca F# levam valores como argumentos de função e pode ser especialmente conveniente usar uma expressão lambda nesses casos. O código a seguir aplica uma expressão lambda para elementos de uma lista. Nesse caso, a função anônima adiciona 1 a cada elemento de uma lista.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 

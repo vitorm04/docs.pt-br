@@ -1,6 +1,6 @@
 ---
-title: 'Expressões de correspondência (F #)'
-description: 'Saiba como a expressão de correspondência do F # fornece controle de ramificação com base na comparação de uma expressão com um conjunto de padrões.'
+title: Expressões de correspondência (F#)
+description: Saiba como a expressão de correspondência do F# fornece controle de ramificação com base na comparação de uma expressão com um conjunto de padrões.
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
