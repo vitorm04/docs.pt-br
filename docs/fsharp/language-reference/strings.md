@@ -1,6 +1,6 @@
 ---
 title: Cadeias de caracteres (F#)
-description: Saiba como o tipo 'string' F# representa texto imutável como uma sequência de caracteres Unicode.
+description: "Saiba como o tipo 'string' F # representa texto imutável como uma sequência de caracteres Unicode."
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ O `string` tipo representa texto imutável, como uma sequência de caracteres Un
 
 ## <a name="remarks"></a>Comentários
 
-Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar determinados caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como uma *sequência de escape*. Com suporte em F# de cadeia de caracteres literais são mostrados na tabela a seguir de sequências de escape.
+Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar determinados caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como uma *sequência de escape*. Com suporte em F # de cadeia de caracteres literais são mostrados na tabela a seguir de sequências de escape.
 
 |Caractere|Sequência de escape|
 |---------|---------------|
@@ -78,7 +78,7 @@ O exemplo a seguir ilustra a concatenação de cadeia de caracteres.
 
 ## <a name="string-class"></a>Classe de cadeia de caracteres
 
-Porque o tipo de cadeia de caracteres no F#, na verdade, um .NET Framework `System.String` digitar, todo o `System.String` membros estão disponíveis. Isso inclui o `+` operador, que é usado para concatenar cadeias de caracteres, o `Length` propriedade e o `Chars` propriedade, que retorna a cadeia de caracteres como uma matriz de caracteres Unicode. Para obter mais informações sobre cadeias de caracteres, consulte `System.String`.
+Porque o tipo de cadeia de caracteres no F #, na verdade, um .NET Framework `System.String` digitar, todo o `System.String` membros estão disponíveis. Isso inclui o `+` operador, que é usado para concatenar cadeias de caracteres, o `Length` propriedade e o `Chars` propriedade, que retorna a cadeia de caracteres como uma matriz de caracteres Unicode. Para obter mais informações sobre cadeias de caracteres, consulte `System.String`.
 
 Usando o `Chars` propriedade de `System.String`, você pode acessar os caracteres individuais em uma cadeia de caracteres especificando um índice, conforme mostrado no código a seguir.
 

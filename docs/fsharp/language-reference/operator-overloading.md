@@ -1,6 +1,6 @@
 ---
 title: Sobrecarga de operador (F#)
-description: Saiba como sobrecarregar operadores aritméticos em uma classe ou tipo de registro e no nível global em F#.
+description: 'Saiba como sobrecarregar operadores aritméticos em uma classe ou tipo de registro e no nível global em F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,11 +47,11 @@ O caractere de operador `.` não afeta a precedência, para que, por exemplo, se
 
 Somente os operadores `?` e `?<-` pode começar com `?`.
 
-Uma tabela que mostra a precedência de todos os operadores em F# pode ser encontrada na [referência de símbolos e operador](symbol-and-operator-reference/index.md).
+Uma tabela que mostra a precedência de todos os operadores em F # pode ser encontrada na [referência de símbolos e operador](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Nomes de operador sobrecarregado
 
-Quando o compilador F# compila uma expressão de operador, ele gera um método que tem um nome gerado pelo compilador para esse operador. Esse é o nome que aparece no Microsoft intermediate language (MSIL) para o método e também na reflexão e IntelliSense. Normalmente, não é necessário usar esses nomes no código F#.
+Quando o compilador F # compila uma expressão de operador, ele gera um método que tem um nome gerado pelo compilador para esse operador. Esse é o nome que aparece no Microsoft intermediate language (MSIL) para o método e também na reflexão e IntelliSense. Normalmente, não é necessário usar esses nomes no código F #.
 
 A tabela a seguir mostra os operadores padrão e suas respectivas nomes gerados.
 
@@ -151,7 +151,7 @@ Você também pode definir operadores no nível global. O código a seguir defin
 
 A saída do código acima é `12`.
 
-Você pode redefinir os operadores aritméticos regulares dessa maneira porque as regras de escopo para F# ditam que recém-definido operadores têm precedência sobre os operadores internos.
+Você pode redefinir os operadores aritméticos regulares dessa maneira porque as regras de escopo para F # ditam que recém-definido operadores têm precedência sobre os operadores internos.
 
 A palavra-chave `inline` é frequentemente usado com operadores globais, que geralmente são pequenas funções que são mais bem integradas ao código de chamada. Tomada de operador funções embutidas também permite para trabalhar com parâmetros de tipo estaticamente resolvidos para produzir código genérico estaticamente resolvido. Para obter mais informações, consulte [funções embutidas](functions/inline-functions.md) e [estaticamente parâmetros de tipo resolvidos](generics/statically-resolved-type-parameters.md).
 

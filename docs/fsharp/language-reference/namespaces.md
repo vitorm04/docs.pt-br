@@ -1,6 +1,6 @@
 ---
 title: Namespaces (F#)
-description: Saiba como um namespace do F# permite que você organize o código em áreas de funcionalidade relacionada, permitindo que você anexe um nome para um agrupamento de elementos do programa.
+description: 'Saiba como um namespace do F # permite que você organize o código em áreas de funcionalidade relacionada, permitindo que você anexe um nome para um agrupamento de elementos do programa.'
 ms.date: 04/24/2017
 ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Você também pode usar global para referenciar o namespace .NET de nível super
 
 ## <a name="recursive-namespaces"></a>Namespaces recursiva
 
-F# 4.1 introduz a noção de namespaces que permitem para todo o código contido ser mutuamente recursivas.  Isso é feito por meio de `namespace rec`.  Uso de `namespace rec` podem aliviar alguns problemas ao não ser capaz de escrever código mutuamente referencial entre módulos e tipos.  Este é um exemplo disso:
+F # 4.1 introduz a noção de namespaces que permitem para todo o código contido ser mutuamente recursivas.  Isso é feito por meio de `namespace rec`.  Uso de `namespace rec` podem aliviar alguns problemas ao não ser capaz de escrever código mutuamente referencial entre módulos e tipos.  Este é um exemplo disso:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +115,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Observe que a exceção `DontSqueezeTheBananaException` e a classe `Banana` fazem referência entre si.  Além disso, o módulo `BananaHelpers` e a classe `Banana` também fazer referência uns aos outros.  Isso não seria possível expressar em F#, se você tiver removido o `rec` palavra-chave do `MutualReferences` namespace.
+Observe que a exceção `DontSqueezeTheBananaException` e a classe `Banana` fazem referência entre si.  Além disso, o módulo `BananaHelpers` e a classe `Banana` também fazer referência uns aos outros.  Isso não seria possível expressar em F #, se você tiver removido o `rec` palavra-chave do `MutualReferences` namespace.
 
-Esse recurso também está disponível para o nível superior [módulos](modules.md) em F# 4.1 ou superior.
+Esse recurso também está disponível para o nível superior [módulos](modules.md) em F # 4.1 ou superior.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referência da Linguagem F#](index.md)
 - [Módulos](modules.md)
-- [FS-1009 do F# RFC - permitir mutuamente referenciais tipos e módulos em escopos maiores dentro de arquivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [FS-1009 do F # RFC - permitir mutuamente referenciais tipos e módulos em escopos maiores dentro de arquivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

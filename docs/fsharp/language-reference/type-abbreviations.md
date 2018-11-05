@@ -1,6 +1,6 @@
 ---
 title: Abreviações de tipo (F#)
-description: Saiba mais sobre as abreviações de tipo F# para dar um nome mais significativo de um tipo para facilitar a leitura do código.
+description: 'Saiba mais sobre as abreviações de tipo F # para dar um nome mais significativo de um tipo para facilitar a leitura do código.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ Abreviações de tipo podem incluir parâmetros genéricos, como no código a se
 
 No código anterior, `Transform` é uma abreviação de tipo que representa uma função que aceita um único argumento de qualquer tipo e que retorna um único valor desse mesmo tipo.
 
-Abreviações de tipo não são preservadas no código MSIL do .NET Framework. Portanto, quando você usa um assembly F# de outra linguagem do .NET Framework, você deve usar o nome do tipo subjacente para uma abreviação de tipo.
+Abreviações de tipo não são preservadas no código MSIL do .NET Framework. Portanto, quando você usa um assembly F # de outra linguagem do .NET Framework, você deve usar o nome do tipo subjacente para uma abreviação de tipo.
 
 Abreviações de tipo também podem ser usadas em unidades de medida. Para obter mais informações, consulte [unidades de medida](units-of-measure.md).
 

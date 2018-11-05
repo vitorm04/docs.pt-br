@@ -1,6 +1,6 @@
 ---
 title: 'Expressões condicionais: if...then...else (F#)'
-description: Saiba como escrever expressões condicionais em F# para executar diferentes ramificações do código.
+description: 'Saiba como escrever expressões condicionais em F # para executar diferentes ramificações do código.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

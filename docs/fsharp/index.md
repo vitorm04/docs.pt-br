@@ -1,6 +1,6 @@
 ---
 title: Guia de F#
-description: 'Este guia fornece uma visão geral dos vários materiais de aprendizagem para F #, uma linguagem de programação funcional que é executado no .NET.'
+description: Este guia fornece uma visão geral dos vários materiais de aprendizagem para F#, uma linguagem de programação funcional que é executado no .NET.
 author: cartermp
 ms.date: 08/03/2018
 ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
@@ -44,7 +44,7 @@ Veja [Introdução ao F# e Xamarin](https://docs.microsoft.com/xamarin/cross-pla
 
 [Wikibook F# Programming](https://en.wikibooks.org/wiki/F_Sharp_Programming) é um wikibook sobre aprender F#. Também é um produto da comunidade F#. Ele é voltado para pessoas novatas em F#, que conheçam um pouco da programação orientada a objetos.
 
-## <a name="learn-f-through-videos"></a>Aprenda F # por meio de vídeos
+## <a name="learn-f-through-videos"></a>Aprenda F# por meio de vídeos
 
 O [Tutorial de F# no YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) é uma excelente introdução ao F# usando o Visual Studio, mostrando muitos exemplos ao longo de uma hora e meia. Ele é voltado para desenvolvedores do Visual Studio iniciantes em F#.
 

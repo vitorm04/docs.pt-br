@@ -1,6 +1,6 @@
 ---
 title: Solução de problemas de provedores de tipos
-description: Descobrir as possíveis soluções para problemas que você têm maior probabilidade de encontrar ao usar provedores de tipos em F#.
+description: 'Descobrir as possíveis soluções para problemas que você têm maior probabilidade de encontrar ao usar provedores de tipos em F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

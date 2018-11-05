@@ -1,6 +1,6 @@
 ---
 title: Associações do em classes (F#)
-description: Saiba como usar F# 'do' associação em uma definição de classe, que executa ações quando o objeto é criado ou quando o tipo é usado pela primeira vez.
+description: "Saiba como usar F # 'do' associação em uma definição de classe, que executa ações quando o objeto é criado ou quando o tipo é usado pela primeira vez."
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

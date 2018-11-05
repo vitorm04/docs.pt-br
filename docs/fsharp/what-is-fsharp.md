@@ -123,4 +123,4 @@ Em vez de escrever código que é orientada a objeto, em F#, você irá geralmen
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre um conjunto maior de recursos do F#, confira a [Tour do F#](tour.md).
+Para saber mais sobre um conjunto maior de recursos do F #, confira a [Tour do F #](tour.md).

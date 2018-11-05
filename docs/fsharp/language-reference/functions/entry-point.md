@@ -1,6 +1,6 @@
 ---
 title: Ponto de entrada (F#)
-description: Saiba como configurar o ponto de entrada a um programa em F# que é compilado como um arquivo executável, onde a execução começa formalmente.
+description: 'Saiba como configurar o ponto de entrada a um programa em F # que é compilado como um arquivo executável, onde a execução começa formalmente.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45698363"
 ---
 # <a name="entry-point"></a>Ponto de entrada
 
-Este tópico descreve o método que você use para definir o ponto de entrada para um programa em F#.
+Este tópico descreve o método que você use para definir o ponto de entrada para um programa em F #.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,7 +24,7 @@ let-function-binding
 
 Na sintaxe anterior, *associação de função permitem* é a definição de uma função em um `let` associação.
 
-O ponto de entrada para um programa que é compilado como um arquivo executável é onde a execução começa formalmente. Especifique o ponto de entrada a um aplicativo do F#, aplicando o `EntryPoint` de atributo para o programa `main` função. Essa função (criado usando um `let` associação) deve ser a última função no último arquivo compilado. O último arquivo compilado é o último arquivo no projeto ou o último arquivo que é passado para a linha de comando.
+O ponto de entrada para um programa que é compilado como um arquivo executável é onde a execução começa formalmente. Especifique o ponto de entrada a um aplicativo do F #, aplicando o `EntryPoint` de atributo para o programa `main` função. Essa função (criado usando um `let` associação) deve ser a última função no último arquivo compilado. O último arquivo compilado é o último arquivo no projeto ou o último arquivo que é passado para a linha de comando.
 
 A função de ponto de entrada tem tipo `string array -> int`. Os argumentos fornecidos na linha de comando são passados para o `main` função na matriz de cadeias de caracteres. O primeiro elemento da matriz é o primeiro argumento; o nome do arquivo executável não está incluído na matriz, como ele está em outras linguagens. O valor de retorno é usado como o código de saída para o processo. Zero geralmente indica sucesso. valores diferentes de zero indicam um erro. Não há nenhum convenção para o significado específico de códigos de retorno diferente de zero; os significados dos códigos de retorno são específicas do aplicativo.
 

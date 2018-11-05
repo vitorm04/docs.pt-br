@@ -1,6 +1,6 @@
 ---
 title: Generalização automática (F#)
-description: Saiba como F# automaticamente generaliza os argumentos e tipos de funções para que eles funcionem com vários tipos, quando possível.
+description: 'Saiba como F # automaticamente generaliza os argumentos e tipos de funções para que eles funcionem com vários tipos, quando possível.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43855771"
 ---
 # <a name="automatic-generalization"></a>Generalização automática
 
-F# usa a inferência de tipo para avaliar os tipos de expressões e funções. Este tópico descreve como F# automaticamente generaliza os argumentos e tipos de funções para que eles funcionem com vários tipos de quando isso for possível.
+F # usa a inferência de tipo para avaliar os tipos de expressões e funções. Este tópico descreve como F # automaticamente generaliza os argumentos e tipos de funções para que eles funcionem com vários tipos de quando isso for possível.
 
 ## <a name="automatic-generalization"></a>Generalização automática
 
-O compilador F#, quando ele executa a inferência de tipo em uma função, determina se um determinado parâmetro pode ser genérico. O compilador examina cada parâmetro e determina se a função tem uma dependência no tipo de parâmetro específico. Se não existir, o tipo é inferido para ser genérico.
+O compilador F #, quando ele executa a inferência de tipo em uma função, determina se um determinado parâmetro pode ser genérico. O compilador examina cada parâmetro e determina se a função tem uma dependência no tipo de parâmetro específico. Se não existir, o tipo é inferido para ser genérico.
 
 O exemplo de código a seguir ilustra uma função que o compilador infere para ser genérico.
 

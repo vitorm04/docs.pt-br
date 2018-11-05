@@ -1,6 +1,6 @@
 ---
 title: Operadores boolianos (F#)
-description: Saiba mais sobre os operadores boolianos que estão disponíveis na linguagem de programação F#.
+description: 'Saiba mais sobre os operadores boolianos que estão disponíveis na linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "45638474"
 ---
 # <a name="boolean-operators"></a>Operadores boolianos
 
-Este tópico descreve o suporte para operadores boolianos na linguagem F#.
+Este tópico descreve o suporte para operadores boolianos na linguagem F #.
 
 ## <a name="summary-of-boolean-operators"></a>Resumo de operadores boolianos
 
-A tabela a seguir resume os operadores boolianos que estão disponíveis na linguagem F#. O único tipo com suporte desses operadores é o `bool` tipo.
+A tabela a seguir resume os operadores boolianos que estão disponíveis na linguagem F #. O único tipo com suporte desses operadores é o `bool` tipo.
 
 |Operador|Descrição|
 |--------|-----------|

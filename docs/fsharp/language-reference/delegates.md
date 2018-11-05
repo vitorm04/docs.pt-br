@@ -1,6 +1,6 @@
 ---
 title: Delegados (F#)
-description: Saiba como trabalhar com delegados em F#.
+description: 'Saiba como trabalhar com delegados em F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45745488"
 ---
 # <a name="delegates"></a>Delegados
 
-Um delegado representa uma chamada de função como um objeto. No F#, você normalmente deve usar valores de função para representar funções como valores de primeira classe; No entanto, delegados são usados no .NET Framework e então, são necessárias ao interoperar com APIs que esperam-los. Eles também podem ser usados quando a criação de bibliotecas projetadas para usam de outros idiomas do .NET Framework.
+Um delegado representa uma chamada de função como um objeto. No F #, você normalmente deve usar valores de função para representar funções como valores de primeira classe; No entanto, delegados são usados no .NET Framework e então, são necessárias ao interoperar com APIs que esperam-los. Eles também podem ser usados quando a criação de bibliotecas projetadas para usam de outros idiomas do .NET Framework.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ type delegate-typename = delegate of type1 -> type2
 
 Na sintaxe anterior, `type1` representa o tipo de argumento ou tipos e `type2` representa o tipo de retorno. Os tipos de argumento são representados por `type1` via currying automaticamente. Isso sugere que, para esse tipo de você usar um formulário de tupla se os argumentos da função de destino são via currying e uma tupla entre parênteses para argumentos que já estão no formulário de tupla. O currying automática remove um conjunto de parênteses, deixando um argumento de tupla que corresponde ao método de destino. Consulte o exemplo de código para a sintaxe que deve ser usada em cada caso.
 
-Delegados podem ser anexados a F# valores de função e estáticos ou métodos de instância. Valores de função F# podem ser passados diretamente como argumentos para delegar a construtores. Para um método estático, você pode construir o delegado usando o nome da classe e o método. Para um método de instância, você pode fornecer a instância do objeto e o método em um argumento. Em ambos os casos, o membro do operador de acesso (`.`) é usado.
+Delegados podem ser anexados a F # valores de função e estáticos ou métodos de instância. Valores de função F # podem ser passados diretamente como argumentos para delegar a construtores. Para um método estático, você pode construir o delegado usando o nome da classe e o método. Para um método de instância, você pode fornecer a instância do objeto e o método em um argumento. Em ambos os casos, o membro do operador de acesso (`.`) é usado.
 
 O `Invoke` método no tipo de delegado chama a função encapsulada. Além disso, os delegados podem ser passados como valores de função referenciando o nome do método Invoke sem parênteses.
 

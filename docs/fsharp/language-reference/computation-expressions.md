@@ -1,6 +1,6 @@
 ---
 title: Expressões de computação (F#)
-description: Saiba como criar uma sintaxe conveniente para criar cálculos em F# que podem ser sequenciados e combinados usando construções de fluxo de controle e associações.
+description: 'Saiba como criar uma sintaxe conveniente para criar cálculos em F # que podem ser sequenciados e combinados usando construções de fluxo de controle e associações.'
 ms.date: 07/27/2018
 ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839863"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
-Expressões de computação no F# fornecem uma sintaxe conveniente para criar cálculos que podem ser sequenciados e combinados usando construções de fluxo de controle e associações. Dependendo do tipo de expressão de computação, elas podem ser consideradas como uma maneira de expressar monads, monoids, transformadores monad e functors applicative. No entanto, ao contrário de outras linguagens (como *notação* em Haskell), eles não estão vinculados a uma única abstração e não dependem de macros ou outras formas de metaprogramação para realizar uma sintaxe conveniente e sensível ao contexto.
+Expressões de computação no F # fornecem uma sintaxe conveniente para criar cálculos que podem ser sequenciados e combinados usando construções de fluxo de controle e associações. Dependendo do tipo de expressão de computação, elas podem ser consideradas como uma maneira de expressar monads, monoids, transformadores monad e functors applicative. No entanto, ao contrário de outras linguagens (como *notação* em Haskell), eles não estão vinculados a uma única abstração e não dependem de macros ou outras formas de metaprogramação para realizar uma sintaxe conveniente e sensível ao contexto.
 
 ## <a name="overview"></a>Visão geral
 
@@ -22,7 +22,7 @@ Computações podem assumir várias formas. A forma mais comum de computação �
 * Computações effectful
 * Computações produtivas
 
-De modo geral, há *contextual* cálculos que você deve executar em determinadas partes de um aplicativo. Escrever o código sensível ao contexto pode ser um desafio, pois é fácil de computações "vaze" fora de um determinado contexto sem abstrações para impedir que você fazer isso. Essas abstrações geralmente são um desafio para escrever por conta própria, por isso, o F# tem uma maneira generalizada fazer chamados **expressões de computação**.
+De modo geral, há *contextual* cálculos que você deve executar em determinadas partes de um aplicativo. Escrever o código sensível ao contexto pode ser um desafio, pois é fácil de computações "vaze" fora de um determinado contexto sem abstrações para impedir que você fazer isso. Essas abstrações geralmente são um desafio para escrever por conta própria, por isso, o F # tem uma maneira generalizada fazer chamados **expressões de computação**.
 
 Expressões de computação oferecem um modelo uniforme de sintaxe e abstração para codificação de cálculos sensíveis ao contexto.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Cada uma dessas palavras-chave e outros F# palavras-chave padrão só estão disponíveis em uma expressão de computação se eles tiverem sido definidos no tipo de construtor de backup. É a única exceção a isso `match!`, que é a própria açúcar sintático para o uso de `let!` seguido por uma correspondência de padrões no resultado.
+Cada uma dessas palavras-chave e outros F # palavras-chave padrão só estão disponíveis em uma expressão de computação se eles tiverem sido definidos no tipo de construtor de backup. É a única exceção a isso `match!`, que é a própria açúcar sintático para o uso de `let!` seguido por uma correspondência de padrões no resultado.
 
-O tipo de construtor é um objeto que define os métodos especiais que regem a forma como os fragmentos da expressão de computação são combinados; ou seja, a seus métodos controlam o comportamento da expressão de computação. Outra maneira de descrever uma classe de construtor é dizer que ele permite que você personalize a operação de várias construções no F#, como loops e associações.
+O tipo de construtor é um objeto que define os métodos especiais que regem a forma como os fragmentos da expressão de computação são combinados; ou seja, a seus métodos controlam o comportamento da expressão de computação. Outra maneira de descrever uma classe de construtor é dizer que ele permite que você personalize a operação de várias construções no F #, como loops e associações.
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-Começando com o F# 4.5, o `match!` palavra-chave permite que você embutir uma chamada para outra correspondência de expressão e o padrão de computação em seu resultado:
+Começando com o F # 4.5, o `match!` palavra-chave permite que você embutir uma chamada para outra correspondência de expressão e o padrão de computação em seu resultado:
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ Ao chamar uma expressão de computação com `match!`, ele obterá o resultado d
 
 ## <a name="built-in-computation-expressions"></a>Expressões de computação interna
 
-A biblioteca principal F# define três expressões de computação interna: [expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de consulta](query-expressions.md).
+A biblioteca principal F # define três expressões de computação interna: [expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de consulta](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Criar um novo tipo de expressão de computação
 
@@ -227,7 +227,7 @@ A expressão aninhada é da seguinte forma:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não estão definidos na classe de construtor de expressão de computação. O corpo da expressão de computação, aqui é denotado como `{| cexpr |}`, é convertida em chamadas envolvendo os métodos da classe de construtor pelas conversões descritas na tabela a seguir. A expressão de cálculo `{| cexpr |}` é definido recursivamente acordo com essas traduções em que `expr` é uma expressão F# e `cexpr` é uma expressão de computação.
+No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não estão definidos na classe de construtor de expressão de computação. O corpo da expressão de computação, aqui é denotado como `{| cexpr |}`, é convertida em chamadas envolvendo os métodos da classe de construtor pelas conversões descritas na tabela a seguir. A expressão de cálculo `{| cexpr |}` é definido recursivamente acordo com essas traduções em que `expr` é uma expressão F # e `cexpr` é uma expressão de computação.
 
 |Expressão|Conversão|
 |----------|-----------|

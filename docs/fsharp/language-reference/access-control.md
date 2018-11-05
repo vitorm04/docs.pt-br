@@ -1,6 +1,6 @@
 ---
 title: Controle de acesso (F#)
-description: Saiba como controlar o acesso aos elementos de programação, como tipos, métodos e funções, na linguagem de programação F#.
+description: 'Saiba como controlar o acesso aos elementos de programação, como tipos, métodos e funções, na linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "43803968"
 
 ## <a name="basics-of-access-control"></a>Noções básicas de controle de acesso
 
-No F#, a controle de acesso especificadores `public`, `internal`, e `private` pode ser aplicado a módulos, tipos, métodos, definições de valor, funções, propriedades e campos explícitos.
+No F #, a controle de acesso especificadores `public`, `internal`, e `private` pode ser aplicado a módulos, tipos, métodos, definições de valor, funções, propriedades e campos explícitos.
 
 - `public` indica que a entidade pode ser acessada por todos os chamadores.
 
@@ -24,13 +24,13 @@ No F#, a controle de acesso especificadores `public`, `internal`, e `private` po
 - `private` indica que a entidade pode ser acessada somente de módulo ou tipo de delimitador.
 
 >[!NOTE]
-O especificador de acesso `protected` não é usado em F#, embora seja aceitável se você estiver usando tipos criados em linguagens que dão suporte a `protected` acesso. Portanto, se você substituir um método protegido, o método permanece acessível somente dentro da classe e seus descendentes.
+O especificador de acesso `protected` não é usado em F #, embora seja aceitável se você estiver usando tipos criados em linguagens que dão suporte a `protected` acesso. Portanto, se você substituir um método protegido, o método permanece acessível somente dentro da classe e seus descendentes.
 
 Em geral, o especificador é colocado na frente do nome da entidade, exceto quando um `mutable` ou `inline` especificador for usado, o que aparecer após o especificador de controle de acesso.
 
 Se nenhum especificador de acesso for usado, o padrão é `public`, exceto para `let` associações em um tipo, que são sempre `private` para o tipo.
 
-Assinaturas em F# fornecem outro mecanismo para controlar o acesso aos elementos de programa do F#. Assinaturas não são necessárias para controle de acesso. Para saber mais, confira [Assinaturas](signatures.md).
+Assinaturas em F # fornecem outro mecanismo para controlar o acesso aos elementos de programa do F #. Assinaturas não são necessárias para controle de acesso. Para saber mais, confira [Assinaturas](signatures.md).
 
 ## <a name="rules-for-access-control"></a>Regras para o controle de acesso
 

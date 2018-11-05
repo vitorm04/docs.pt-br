@@ -1,6 +1,6 @@
 ---
 title: Extensões de tipo (F#)
-description: Saiba como o F#, extensões de tipo permitem que você adicionar novos membros a um tipo de objeto definido anteriormente.
+description: 'Saiba como o F #, extensões de tipo permitem que você adicionar novos membros a um tipo de objeto definido anteriormente.'
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -127,7 +127,7 @@ O que é desejado são métodos estáticos que "flutuem no espaço de" e podem s
 
 ## <a name="extension-methods"></a>Métodos de extensão
 
-Por fim, os métodos de extensão (às vezes chamados de "membros de extensão do estilo C#") podem ser declarados em F# como um método de membro estático em uma classe.
+Por fim, os métodos de extensão (às vezes chamados de "membros de extensão do estilo C#") podem ser declarados em F # como um método de membro estático em uma classe.
 
 Métodos de extensão são úteis para quando você deseja definir as extensões em um tipo genérico que restringe a variável de tipo. Por exemplo:
 
@@ -163,7 +163,7 @@ Também existem as seguintes limitações para extensões de tipo:
 * Extensões de tipo não podem ser definidas [abreviações de tipo](type-abbreviations.md).
 * Extensões de tipo não são válidas para `byref<'T>` (embora eles podem ser declarados).
 * Extensões de tipo não são válidas para os atributos (embora eles podem ser declarados).
-* Você pode definir as extensões que sobrecarregam outros métodos de mesmo nome, mas o compilador F# dá preferência a métodos sem extensão se não houver uma chamada ambígua.
+* Você pode definir as extensões que sobrecarregam outros métodos de mesmo nome, mas o compilador F # dá preferência a métodos sem extensão se não houver uma chamada ambígua.
 
 Por fim, se existirem várias extensões de tipo intrínseco para um tipo, todos os membros devem ser exclusivos. Para extensões de tipo opcionais, membros em diferentes extensões de tipo para o mesmo tipo podem ter os mesmos nomes. Erros de ambiguidade surgem somente se o código do cliente abrir dois escopos diferentes que definem os mesmos nomes de membro.
 

@@ -1,6 +1,6 @@
 ---
 title: Literais (F#)
-description: Saiba mais sobre os tipos de literais na linguagem de programação F#.
+description: 'Saiba mais sobre os tipos de literais na linguagem de programação F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,11 +14,11 @@ ms.locfileid: "44087619"
 > [!NOTE]
 Os links de referência de API neste artigo você será levado ao MSDN (por enquanto).
 
-Este tópico fornece uma tabela que mostra como especificar o tipo de um literal em F#.
+Este tópico fornece uma tabela que mostra como especificar o tipo de um literal em F #.
 
 ## <a name="literal-types"></a>Tipos literais
 
-A tabela a seguir mostra os tipos de literais no F#. Caracteres que representam dígitos em notação hexadecimal não diferenciam maiusculas de minúsculas; caracteres que identifica o tipo diferenciam maiusculas de minúsculas.
+A tabela a seguir mostra os tipos de literais no F #. Caracteres que representam dígitos em notação hexadecimal não diferenciam maiusculas de minúsculas; caracteres que identifica o tipo diferenciam maiusculas de minúsculas.
 
 |Tipo|Descrição|Prefixo ou sufixo|Exemplos|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ A tabela a seguir mostra os tipos de literais no F#. Caracteres que representam 
 
 Cadeias de caracteres Unicode podem conter as codificações explícitas que você pode especificar usando `\u` seguido por um código hexadecimal de 16 bits ou codificações UTF-32 que você pode especificar usando `\U` seguido por um código hexadecimal de 32 bits que representa a Unicode par substituto.
 
-A partir do F# 3.1, você pode usar o `+` entrar para combinar literais de cadeia de caracteres. Você também pode usar o bit a bit ou (`|||`) operador para combinar sinalizadores de enum. Por exemplo, o código a seguir é legal no F# 3.1:
+A partir do F # 3.1, você pode usar o `+` entrar para combinar literais de cadeia de caracteres. Você também pode usar o bit a bit ou (`|||`) operador para combinar sinalizadores de enum. Por exemplo, o código a seguir é legal no F # 3.1:
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sublinhados em literais numéricos
 
-Começando com o F# 4.1, você pode separar dígitos com o caractere de sublinhado (`_`).
+Começando com o F # 4.1, você pode separar dígitos com o caractere de sublinhado (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF
