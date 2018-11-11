@@ -1,6 +1,6 @@
 ---
 title: Tipos flexíveis (F#)
-description: 'Saiba como usar F # anotação de tipo flexível, que indica que um parâmetro, variável ou valor tem um tipo que é compatível com um tipo especificado.'
+description: Saiba como usar F# anotação de tipo flexível, que indica que um parâmetro, variável ou valor tem um tipo que é compatível com um tipo especificado.
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-No F #, como em outras linguagens orientadas a objeto, há contextos em que tipos que implementam interfaces ou tipos derivados são automaticamente convertidos em um tipo base ou interface. Dessas conversões automáticas ocorrem nos argumentos diretos, mas não quando o tipo é em uma posição subordinada, como parte de um tipo mais complexo, como um tipo de retorno de um tipo de função, ou como um argumento de tipo. Portanto, a notação de tipo flexível é útil principalmente quando o tipo que você está aplicando-o para é parte de um tipo mais complexo.
+No F#, como em outras linguagens orientadas a objeto, há contextos em que tipos que implementam interfaces ou tipos derivados são automaticamente convertidos em um tipo base ou interface. Dessas conversões automáticas ocorrem nos argumentos diretos, mas não quando o tipo é em uma posição subordinada, como parte de um tipo mais complexo, como um tipo de retorno de um tipo de função, ou como um argumento de tipo. Portanto, a notação de tipo flexível é útil principalmente quando o tipo que você está aplicando-o para é parte de um tipo mais complexo.
 
 ## <a name="see-also"></a>Consulte também
 

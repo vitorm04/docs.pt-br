@@ -1,6 +1,6 @@
 ---
 title: Correspondência padrão (F#)
-description: 'Saiba como os padrões são usados em F # para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.'
+description: Saiba como os padrões são usados em F# para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991418"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
-Os padrões são regras para transformar dados de entrada. Eles são usados em toda a linguagem F # para comparar dados com um ou mais estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.
+Os padrões são regras para transformar dados de entrada. Eles são usados em toda a linguagem F# para comparar dados com um ou mais estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.
 
 ## <a name="remarks"></a>Comentários
 

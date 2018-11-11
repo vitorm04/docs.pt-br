@@ -1,6 +1,6 @@
 ---
-title: 'Introdução ao F # com ferramentas de linha de comando'
-description: 'Saiba como criar uma solução multiprojeto simples em F # usando a CLI do .NET Core em qualquer sistema operacional (Windows, macOs ou Linux).'
+title: Introdução ao F# com ferramentas de linha de comando
+description: Saiba como criar uma solução multiprojeto simples em F# usando a CLI do .NET Core em qualquer sistema operacional (Windows, macOs ou Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,15 +9,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673903"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F # com a CLI do .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F# com a CLI do .NET Core
 
-Este artigo aborda como você pode começar com o F # em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core. Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.
+Este artigo aborda como você pode começar com o F# em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core. Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para começar, você deve instalar a versão mais recente [SDK do .NET Core](https://www.microsoft.com/net/download/).
 
-Este artigo pressupõe que você sabe como usar uma linha de comando e tiver um texto preferido de editor. Se você não usá-lo, já [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto para F #.
+Este artigo pressupõe que você sabe como usar uma linha de comando e tiver um texto preferido de editor. Se você não usá-lo, já [Visual Studio Code](get-started-vscode.md) é uma ótima opção como um editor de texto para F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Crie uma solução multiprojeto simples
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Em seguida, confira a [Tour do F #](../tour.md) para saber mais sobre os diferentes recursos do F #.
+Em seguida, confira a [Tour do F#](../tour.md) para saber mais sobre os diferentes recursos do F#.

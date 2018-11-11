@@ -1,6 +1,6 @@
 ---
 title: Documentação XML (F#)
-description: 'Saiba mais sobre o suporte em F # para gerar a documentação de comentários.'
+description: Saiba mais sobre o suporte em F# para gerar a documentação de comentários.
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45641619"
 ---
 # <a name="xml-documentation"></a>Documentação XML
 
-Você pode gerar documentação de barra tripla (/ / /) comentários em F # de código. Comentários XML podem preceder declarações em arquivos de código (. FS) ou arquivos de assinatura (. FSI).
+Você pode gerar documentação de barra tripla (/ / /) comentários em F# de código. Comentários XML podem preceder declarações em arquivos de código (. FS) ou arquivos de assinatura (. FSI).
 
 ## <a name="generating-documentation-from-comments"></a>Gerando a documentação de comentários
 
-O suporte em F # para gerar a documentação de comentários é o mesmo que em outras linguagens do .NET Framework. Como em outras linguagens do .NET Framework, o [-opção de compilador doc](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) permite que você produza um arquivo XML que contém informações que você pode converter em documentação usando uma ferramenta como o Sandcastle. A documentação gerada usando as ferramentas que são projetadas para uso com assemblies que são escritos em outras linguagens do .NET Framework em geral produzir uma exibição das APIs que se baseia a forma compilada de construções no F #. A menos que especificamente suporte a ferramentas F #, documentação gerada por essas ferramentas não coincide com a exibição do F # de uma API.
+O suporte em F# para gerar a documentação de comentários é o mesmo que em outras linguagens do .NET Framework. Como em outras linguagens do .NET Framework, o [-opção de compilador doc](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) permite que você produza um arquivo XML que contém informações que você pode converter em documentação usando uma ferramenta como o Sandcastle. A documentação gerada usando as ferramentas que são projetadas para uso com assemblies que são escritos em outras linguagens do .NET Framework em geral produzir uma exibição das APIs que se baseia a forma compilada de construções no F#. A menos que especificamente suporte a ferramentas F#, documentação gerada por essas ferramentas não coincide com a exibição do F# de uma API.
 
 Para obter mais informações sobre como gerar a documentação de XML, consulte [comentários da documentação XML &#40;C&#35; guia de programação&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
 ## <a name="recommended-tags"></a>Marcações recomendadas
 
-Há duas maneiras para escrever comentários de documentação XML. Uma é simplesmente escrever a documentação diretamente em um comentário de barra tripla, sem o uso de marcas XML. Se você fizer isso, o texto de comentário inteiro será interpretado como a documentação de resumida para a construção de código que segue imediatamente. Use esse método quando quiser escrever um breve resumo para cada constructo. O outro método é usar as marcas XML para fornecer mais documentação estruturada. O segundo método permite que você especifique notas separadas para um breve resumo, comentários adicionais, a documentação para cada parâmetro e o parâmetro de tipo e as exceções geradas e uma descrição do valor de retorno. A tabela a seguir descreve as marcas XML que são reconhecidas em comentários de código XML do F #.
+Há duas maneiras para escrever comentários de documentação XML. Uma é simplesmente escrever a documentação diretamente em um comentário de barra tripla, sem o uso de marcas XML. Se você fizer isso, o texto de comentário inteiro será interpretado como a documentação de resumida para a construção de código que segue imediatamente. Use esse método quando quiser escrever um breve resumo para cada constructo. O outro método é usar as marcas XML para fornecer mais documentação estruturada. O segundo método permite que você especifique notas separadas para um breve resumo, comentários adicionais, a documentação para cada parâmetro e o parâmetro de tipo e as exceções geradas e uma descrição do valor de retorno. A tabela a seguir descreve as marcas XML que são reconhecidas em comentários de código XML do F#.
 
 |Sintaxe de marca|Descrição|
 |----------|-----------|

@@ -1,6 +1,6 @@
 ---
 title: Parâmetros de tipo resolvidos estaticamente (F#)
-description: 'Saiba como usar F # parâmetro de tipo estaticamente resolvidos, o que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.'
+description: Saiba como usar F# parâmetro de tipo estaticamente resolvidos, o que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -21,7 +21,7 @@ Um *parâmetro de tipo estaticamente resolvido* é um parâmetro de tipo que é 
 
 ## <a name="remarks"></a>Comentários
 
-Na linguagem F #, há dois tipos diferentes de parâmetros de tipo. O primeiro tipo é o parâmetro de tipo genérico padrão. Eles são indicados por um apóstrofo ('), como em `'T` e `'U`. Eles são equivalentes aos parâmetros de tipo genérico em outras linguagens do .NET Framework. O outro tipo é estaticamente resolvido e indicado por um símbolo de acento circunflexo, como em `^T` e `^U`.
+Na linguagem F#, há dois tipos diferentes de parâmetros de tipo. O primeiro tipo é o parâmetro de tipo genérico padrão. Eles são indicados por um apóstrofo ('), como em `'T` e `'U`. Eles são equivalentes aos parâmetros de tipo genérico em outras linguagens do .NET Framework. O outro tipo é estaticamente resolvido e indicado por um símbolo de acento circunflexo, como em `^T` e `^U`.
 
 Parâmetros de tipo estaticamente resolvidos são úteis principalmente em conjunto com restrições de membro, que são restrições que permitem que você especifique que um argumento de tipo deve ter um determinado membro ou membros para ser usado. Não há nenhuma maneira de criar esse tipo de restrição usando um parâmetro de tipo genérico normal.
 
@@ -36,13 +36,13 @@ A tabela a seguir resume as semelhanças e diferenças entre os dois tipos de pa
 |Use com tipos|Pode ser usada em tipos.|Não pode ser usada em tipos.|
 |Use com funções embutidas|Nº Uma função embutida não pode ser parametrizada com um parâmetro de tipo genérico padrão.|Sim. Parâmetros de tipo estaticamente resolvidos não podem ser usados em funções ou métodos que não estejam embutidos.|
 
-Muitas F # core funções de biblioteca, principalmente operadores, têm parâmetros de tipo estaticamente resolvidos. Essas funções e operadores são embutidos e resultam na geração de código eficiente para cálculos numéricos.
+Muitas F# core funções de biblioteca, principalmente operadores, têm parâmetros de tipo estaticamente resolvidos. Essas funções e operadores são embutidos e resultam na geração de código eficiente para cálculos numéricos.
 
 Métodos embutidos e funções que usam operadores ou usam outras funções que resolveram estaticamente os parâmetros de tipo, também podem usar parâmetros de tipo estaticamente resolvidos. Muitas vezes, a inferência de tipo infere tais funções embutidas para parâmetros de tipo estaticamente resolvidos. O exemplo a seguir ilustra uma definição de operador que é inferida para ter um parâmetro de tipo estaticamente resolvidos.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-O tipo resolvido de `(+@)` baseia-se no uso de ambos `(+)` e `(*)`, ambos fazem com que a inferência de tipo infira restrições de membros nos parâmetros de tipo estaticamente resolvidos. O tipo resolvido, conforme mostrado no interpretador da F #, é da seguinte maneira.
+O tipo resolvido de `(+@)` baseia-se no uso de ambos `(+)` e `(*)`, ambos fazem com que a inferência de tipo infira restrições de membros nos parâmetros de tipo estaticamente resolvidos. O tipo resolvido, conforme mostrado no interpretador da F#, é da seguinte maneira.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -57,7 +57,7 @@ A saída é a seguinte.
 1.500000
 ```
 
-Começando com o F # 4.1, você pode também especificar nomes de tipo concreto em assinaturas de parâmetro de tipo estaticamente resolvidos.  Nas versões anteriores da linguagem, o nome do tipo, na verdade, poderia ser inferido pelo compilador, mas, na verdade, não pôde ser especificado na assinatura.  A partir do F # 4.1, você também pode especificar nomes de tipo concreto em assinaturas de parâmetro de tipo estaticamente resolvidos. Veja um exemplo:
+Começando com o F# 4.1, você pode também especificar nomes de tipo concreto em assinaturas de parâmetro de tipo estaticamente resolvidos.  Nas versões anteriores da linguagem, o nome do tipo, na verdade, poderia ser inferido pelo compilador, mas, na verdade, não pôde ser especificado na assinatura.  A partir do F# 4.1, você também pode especificar nomes de tipo concreto em assinaturas de parâmetro de tipo estaticamente resolvidos. Veja um exemplo:
 
 ```fsharp
 let inline konst x _ = x

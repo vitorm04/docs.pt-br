@@ -1,6 +1,6 @@
 ---
 title: 'Exceções: a expressão try...finally (F#)'
-description: "Saiba como o F # ' try... finally' expressão permite que você execute o código de limpeza, mesmo se um bloco de código gera uma exceção."
+description: Saiba como o F# ' try... finally' expressão permite que você execute o código de limpeza, mesmo se um bloco de código gera uma exceção.
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

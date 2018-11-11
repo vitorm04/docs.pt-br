@@ -1,6 +1,6 @@
 ---
 title: Propriedades (F#)
-description: 'Saiba mais sobre propriedades F #, que são membros que representam os valores associados a um objeto.'
+description: Saiba mais sobre propriedades F#, que são membros que representam os valores associados a um objeto.
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

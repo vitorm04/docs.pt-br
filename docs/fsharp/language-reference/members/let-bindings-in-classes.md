@@ -1,6 +1,6 @@
 ---
 title: Associações let em classes (F#)
-description: "Saiba como definir campos particulares e funções privadas para classes de F # por meio de associações 'let' na definição de classe."
+description: Saiba como definir campos particulares e funções privadas para classes de F# por meio de associações 'let' na definição de classe.
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48033214"
 ---
 # <a name="let-bindings-in-classes"></a>Associações let em classes
 
-Você pode definir campos particulares e funções privadas para classes de F # usando `let` associações na definição de classe.
+Você pode definir campos particulares e funções privadas para classes de F# usando `let` associações na definição de classe.
 
 ## <a name="syntax"></a>Sintaxe
 

@@ -1,6 +1,6 @@
 ---
 title: Herança (F#)
-description: "Saiba como especificar relações de herança F # usando a palavra-chave 'inherit'."
+description: Saiba como especificar relações de herança F# usando a palavra-chave 'inherit'.
 ms.date: 05/16/2016
 ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -34,7 +34,7 @@ A palavra-chave `base` está disponível em classes derivadas e refere-se à ins
 
 ## <a name="virtual-methods-and-overrides"></a>Substituições e métodos virtuais
 
-Métodos virtuais (e propriedades) funcionam um pouco diferente no F # em comparação com outras linguagens .NET. Para declarar um novo membro virtual, você deve usar o `abstract` palavra-chave. Para fazer isso, independentemente se você fornecer uma implementação padrão para esse método. Portanto, uma definição completa de um método virtual em uma classe base segue este padrão:
+Métodos virtuais (e propriedades) funcionam um pouco diferente no F# em comparação com outras linguagens .NET. Para declarar um novo membro virtual, você deve usar o `abstract` palavra-chave. Para fazer isso, independentemente se você fornecer uma implementação padrão para esse método. Portanto, uma definição completa de um método virtual em uma classe base segue este padrão:
 
 ```fsharp
 abstract member [method-name] : [type]

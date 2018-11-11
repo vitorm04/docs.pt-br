@@ -1,5 +1,5 @@
 ---
-title: 'Introdução ao armazenamento de BLOBs do Azure usando F #'
+title: Introdução ao armazenamento de BLOBs do Azure usando F#
 description: Store dados não estruturados na nuvem com o armazenamento de BLOBs do Azure.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037276"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando F # #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando F# #
 
 O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode armazenar qualquer tipo de texto ou dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é conhecido como armazenamento de objeto.
 
-Este artigo mostra como executar tarefas comuns usando o armazenamento de BLOBs. Os exemplos são escritos usando F # usando a biblioteca de cliente de armazenamento do Azure para .NET. Tarefas abordadas incluem como carregar, listar, baixar e excluir blobs.
+Este artigo mostra como executar tarefas comuns usando o armazenamento de BLOBs. Os exemplos são escritos usando F# usando a biblioteca de cliente de armazenamento do Azure para .NET. Tarefas abordadas incluem como carregar, listar, baixar e excluir blobs.
 
 Para obter uma visão geral conceitual do armazenamento de blob, consulte [o guia do .NET para o armazenamento de BLOBs](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ Para obter uma visão geral conceitual do armazenamento de blob, consulte [o gui
 
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account). Você também precisa sua chave de acesso de armazenamento para esta conta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Criar Script de F # e o início da F # interativo
+## <a name="create-an-f-script-and-start-f-interactive"></a>Criar Script de F# e o início da F# interativo
 
-Os exemplos neste artigo podem ser usados em um aplicativo do F # ou um script F #. Para criar um script F #, crie um arquivo com o `.fsx` extensão, por exemplo `blobs.fsx`, em seu ambiente de desenvolvimento do F #.
+Os exemplos neste artigo podem ser usados em um aplicativo do F# ou um script F#. Para criar um script F#, crie um arquivo com o `.fsx` extensão, por exemplo `blobs.fsx`, em seu ambiente de desenvolvimento do F#.
 
 Em seguida, use uma [Gerenciador de pacotes](package-management.md) tais como [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar o `WindowsAzure.Storage` e `Microsoft.WindowsAzure.ConfigurationManager` referência e pacotes `WindowsAzure.Storage.dll` e `Microsoft.WindowsAzure.Configuration.dll` em seu script usando um `#r` diretiva.
 
@@ -230,8 +230,8 @@ Para obter detalhes sobre a criptografia de dados de blob, consulte [o guia do .
 Agora que você aprendeu os conceitos básicos do armazenamento de BLOBs, siga estes links para saber mais.
 
 ### <a name="tools"></a>Ferramentas
-- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) um tipo de provedor de F # que pode ser usado para explorar os ativos de Blob, tabela e fila de armazenamento do Azure e aplicar facilmente operações CRUD neles.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) uma API de F # para usar o serviço de armazenamento de tabela do Microsoft Azure
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) um tipo de provedor de F# que pode ser usado para explorar os ativos de Blob, tabela e fila de armazenamento do Azure e aplicar facilmente operações CRUD neles.
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) uma API de F# para usar o serviço de armazenamento de tabela do Microsoft Azure
 - [Azure Storage Explorer MASE (Microsoft)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) é um aplicativo autônomo gratuito da Microsoft que permite trabalhar visualmente com dados do armazenamento do Azure no Windows, OS X e Linux.
 
 ### <a name="blob-storage-reference"></a>Referência do armazenamento de blob

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 25ac46217a09d658ceaf92a8ea586259668314c1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3d60747400d570a3e5a930377e9be9c0aca4f35
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199442"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982705"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de dados UShort (Visual Basic)
 
@@ -56,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Literais numéricos também podem incluir o `US` ou `us` [caractere de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar o `UShort` tipo de dados, como mostra o exemplo a seguir.
+Literais numéricos também podem incluir o `US` ou `us` [caractere de tipo](../../programming-guide/language-features/data-types/type-characters.md) para denotar o `UShort` tipo de dados, como mostra o exemplo a seguir.
 
 ```vb
 Dim number = &H_5826us

@@ -1,6 +1,6 @@
 ---
 title: Provedores de tipos
-description: 'Saiba como um provedor de tipos F # é um componente que fornece tipos, propriedades e métodos para uso em seus programas.'
+description: Saiba como um provedor de tipos F# é um componente que fornece tipos, propriedades e métodos para uso em seus programas.
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,9 +11,9 @@ ms.locfileid: "46697757"
 ---
 # <a name="type-providers"></a>Provedores de tipos
 
-Um provedor de tipos F# é um componente que fornece tipos, propriedades e métodos para uso em seu programa. Provedores de tipos geram o que é conhecido como **fornecidos tipos**, que é gerado pelo compilador do F # e baseiam-se em uma fonte de dados externa.
+Um provedor de tipos F# é um componente que fornece tipos, propriedades e métodos para uso em seu programa. Provedores de tipos geram o que é conhecido como **fornecidos tipos**, que é gerado pelo compilador do F# e baseiam-se em uma fonte de dados externa.
 
-Por exemplo, um provedor de tipos F # para o SQL pode gerar tipos que representam tabelas e colunas em um banco de dados relacional. Na verdade, isso é o que o [SQLProvider](https://fsprojects.github.io/SQLProvider/) tipo de provedor não.
+Por exemplo, um provedor de tipos F# para o SQL pode gerar tipos que representam tabelas e colunas em um banco de dados relacional. Na verdade, isso é o que o [SQLProvider](https://fsprojects.github.io/SQLProvider/) tipo de provedor não.
 
 Fornecidos que tipos dependem de parâmetros de entrada para um provedor de tipo. Essa entrada pode ser uma fonte de dados de exemplo (como um arquivo de esquema JSON), uma URL que aponta diretamente para um serviço externo ou uma cadeia de caracteres de conexão a uma fonte de dados. Um provedor de tipos também pode garantir que grupos de tipos sejam expandidos sob demanda; ou seja, eles serão expandidos se os tipos forem realmente referenciados pelo seu programa. Isso permite a integração direta e sob demanda de espaços de informações em grande escala como mercados de dados online de uma forma fortemente tipada.
 
@@ -30,8 +30,8 @@ Apagar provedores de tipos produzir tipos que só podem ser consumidos no assemb
 As seguintes bibliotecas usadas contêm provedores de tipos para usos distintos:
 
 - [FSharp](https://fsharp.github.io/FSharp.Data/) inclui provedores de tipos para HTML, XML, CSV e JSON documento formatos e recursos.
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fornece acesso fortemente tipado para bancos de dados de relação por meio do mapeamento de objeto e F # LINQ consultas em relação a essas fontes de dados.
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) tem um conjunto de provedores de tipo para o tempo de compilação verificada incorporação do T-SQL em F #.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fornece acesso fortemente tipado para bancos de dados de relação por meio do mapeamento de objeto e F# LINQ consultas em relação a essas fontes de dados.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) tem um conjunto de provedores de tipo para o tempo de compilação verificada incorporação do T-SQL em F#.
 - [O provedor de tipo de armazenamento do Azure](https://fsprojects.github.io/AzureStorageTypeProvider/) fornece tipos para Blobs do Azure, tabelas e filas, permitindo que você acesse esses recursos sem a necessidade de especificar nomes de recursos, como cadeias de caracteres em todo o seu programa.
 - [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) contém o **GraphQLProvider**, que fornece tipos com base em um servidor GraphQL especificado pela URL.
 

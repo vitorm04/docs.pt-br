@@ -1,26 +1,38 @@
 ---
-title: Como habilitar e desabilitar o redirecionamento automático de associações
-ms.date: 09/12/2018
+title: Habilitar ou desabilitar os redirecionamentos de associação geradas automaticamente
+ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9b9c9cbdb89ccf67942dcccee37ea410c6fa39a5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036183"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980827"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Como habilitar e desabilitar o redirecionamento automático de associações
 
-Quando você compila aplicativos no Visual Studio que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores, redirecionamentos de associação poderão ser automaticamente adicionadas ao arquivo de configuração de aplicativo para substituir a Unificação do assembly. Redirecionamentos de associação serão adicionados se o seu aplicativo ou seus componentes fizerem referência a mais de uma versão do mesmo assembly, mesmo se você especificar manualmente redirecionamentos de associação no arquivo de configuração para seu aplicativo. O recurso de redirecionamento de associação automático afeta aplicativos de desktop tradicionais e aplicativos web que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] ou uma versão posterior, embora o comportamento é ligeiramente diferente para um aplicativo web. Você pode habilitar o redirecionamento de associação automático se houver aplicativos que usem versões anteriores do .NET Framework ou pode desativar esse recurso se desejar manter redirecionamentos manuais de associações criadas.
+Quando você compila aplicativos no Visual Studio que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores, redirecionamentos de associação poderão ser automaticamente adicionadas ao arquivo de configuração de aplicativo para substituir a Unificação do assembly. Redirecionamentos de associação serão adicionados se o seu aplicativo ou seus componentes fizerem referência a mais de uma versão do mesmo assembly, mesmo se você especificar manualmente redirecionamentos de associação no arquivo de configuração para seu aplicativo. O recurso de redirecionamento de associação automático afeta os aplicativos da área de trabalho e aplicativos web que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] ou uma versão posterior, embora o comportamento é ligeiramente diferente para um aplicativo web. Você pode habilitar o redirecionamento de associação automático se você tiver aplicativos existentes destinados a versões anteriores do .NET Framework, ou você pode desativar esse recurso se você quiser criar manualmente redirecionamentos de associação.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Desabilitar os redirecionamentos de associação automáticos em aplicativos da área de trabalho
 
-Os redirecionamentos de associação automáticos são habilitados por padrão para aplicativos tradicionais da área de trabalho que usam o [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores. Os redirecionamentos de associação são adicionadas ao arquivo de configuração de saída (app.config) quando o aplicativo é compilado e substituem a unificação do assembly que pode ocorrer de outra forma. O arquivo de origem app.config não é modificado. Você pode desativar esse recurso ao modificar o arquivo de projeto para o aplicativo.
+Redirecionamentos de associação automáticos são habilitados por padrão para aplicativos de desktop do Windows que se destinam a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] e versões posteriores. Os redirecionamentos de associação são adicionados à configuração de saída (**App. config**) de arquivos quando o aplicativo é compilado e substituem a Unificação do assembly que pode ocorrer de outra forma. O código-fonte **App. config** arquivo não é modificado. Modificando o arquivo de projeto para o aplicativo ou desmarcar uma caixa de seleção nas propriedades do projeto no Visual Studio, você pode desativar esse recurso.
+
+### <a name="disable-through-project-properties"></a>Desabilitar por meio das propriedades do projeto
+
+Se você tiver o Visual Studio 2017 versão 15.7 ou posterior, você pode desativar com facilidade os redirecionamentos de associação geradas automaticamente nas páginas de propriedades do projeto.
+
+1. Clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Propriedades**.
+
+2. Sobre o **aplicativo** página, desmarque a opção a **gerar automaticamente redirecionamentos de associação** opção.
+
+3. Pressione **Ctrl**+**S** para salvar a alteração.
+
+### <a name="disable-manually-in-the-project-file"></a>Desabilitar manualmente no arquivo de projeto
 
 1. Abra o arquivo de projeto para edição usando um dos seguintes métodos:
 
@@ -75,9 +87,9 @@ Você pode habilitar redirecionamentos de associação automáticos em aplicativ
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Habilitar redirecionamentos de associação automáticos em aplicativos web
 
-Redirecionamentos de associação automáticos são implementados de maneira diferente para aplicativos Web. Como o arquivo de configuração de origem (web.config) deve ser modificado para aplicativos Web, redirecionamentos de associação não são adicionados automaticamente ao arquivo de configuração. Entretanto, o Visual Studio o notifica sobre conflitos de associação e você pode adicionar redirecionamentos de associação para resolver os conflitos. Como sempre, você será solicitado a adicionar redirecionamentos de associação, você não precisa desabilitar explicitamente esse recurso para um aplicativo web.
+Redirecionamentos de associação automáticos são implementados de maneira diferente para aplicativos Web. Porque a configuração de origem (**Web. config**) arquivo deve ser modificado para aplicativos web, redirecionamentos de associação não são automaticamente adicionados ao arquivo de configuração. Entretanto, o Visual Studio o notifica sobre conflitos de associação e você pode adicionar redirecionamentos de associação para resolver os conflitos. Como sempre, você será solicitado a adicionar redirecionamentos de associação, você não precisa desabilitar explicitamente esse recurso para um aplicativo web.
 
-Para adicionar redirecionamentos de associação a um arquivo Web. config:
+Para adicionar redirecionamentos de associação para um **Web. config** arquivo:
 
 1. No Visual Studio, compile o aplicativo e verifique a existência de avisos de compilação.
 
@@ -85,7 +97,7 @@ Para adicionar redirecionamentos de associação a um arquivo Web. config:
 
 2. Se houver conflitos de associação de assembly, um aviso será exibido. Clique duas vezes no aviso, ou selecione o aviso e pressione **Enter**.
 
-   Uma caixa de diálogo que permite adicionar automaticamente os redirecionamentos da associação necessários ao arquivo web.config de origem é exibida.
+   Caixa de diálogo que permite que você adicione automaticamente a associação necessário redireciona para a fonte **Web. config** arquivo aparece.
 
    ![Caixa de diálogo de permissão de redirecionamento de associação](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

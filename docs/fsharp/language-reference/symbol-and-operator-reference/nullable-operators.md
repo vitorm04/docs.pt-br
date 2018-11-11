@@ -1,6 +1,6 @@
 ---
 title: Operadores anuláveis (F#)
-description: 'Saiba mais sobre os operadores que permitem valor nulos que estão disponíveis na linguagem de programação F #.'
+description: Saiba mais sobre os operadores que permitem valor nulos que estão disponíveis na linguagem de programação F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ Operadores anuláveis são operadores binários de comparação ou aritmética q
 
 ## <a name="table-of-nullable-operators"></a>Tabela de operadores que permitem valor nulos
 
-A tabela a seguir lista os operadores que permitem valor nulos tem suportados na linguagem F #.
+A tabela a seguir lista os operadores que permitem valor nulos tem suportados na linguagem F#.
 
 |Permite valor nulo à esquerda|Permite valor nulo à direita|Ambos os lados que permitem valor nulos|
 |---|---|---|
@@ -55,7 +55,7 @@ A saída é `10.000000`.
 
 Consulta operadores nos campos de dados que permite valor nulo, tais como `sumByNullable`, também existem para uso em expressões de consulta. Os operadores de consulta para tipos não anuláveis não são tipo compatível com tipos anuláveis, então você deve usar a versão que permite valor nula do operador de consulta apropriado quando você estiver trabalhando com valores de dados que permite valor nulo. Para obter mais informações, consulte [expressões de consulta](../query-expressions.md).
 
-O exemplo a seguir mostra o uso de operadores que permitem valor nulos em uma expressão de consulta do F #. A primeira consulta mostra como você escreveria uma consulta sem um operador que permite valor nulo; a segunda consulta mostra uma consulta equivalente que usa um operador que permite valor nulo. Para o contexto completo, incluindo como configurar o banco de dados para usar esse código de exemplo, consulte [instruções passo a passo: acessando um banco de dados SQL usando provedores de tipos](../../tutorials/type-providers/accessing-a-sql-database.md).
+O exemplo a seguir mostra o uso de operadores que permitem valor nulos em uma expressão de consulta do F#. A primeira consulta mostra como você escreveria uma consulta sem um operador que permite valor nulo; a segunda consulta mostra uma consulta equivalente que usa um operador que permite valor nulo. Para o contexto completo, incluindo como configurar o banco de dados para usar esse código de exemplo, consulte [instruções passo a passo: acessando um banco de dados SQL usando provedores de tipos](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

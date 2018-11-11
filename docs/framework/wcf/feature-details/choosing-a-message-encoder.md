@@ -2,11 +2,11 @@
 title: Escolhendo um codificador de mensagem
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44248924"
 ---
 # <a name="choosing-a-message-encoder"></a>Escolhendo um codificador de mensagem
@@ -25,14 +25,14 @@ Este tópico discute os critérios para escolher entre os codificadores de mensa
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, o codificador de mensagem binária usa um formato binário compacto e é otimizado para o WCF para comunicação WCF e, portanto, não é interoperável. Isso também é o codificador de alto desempenho a maioria dos codificadores que o WCF fornece.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>, o elemento de associação Especifica a codificação de caracteres e versionamento de mensagem para mensagens usando a codificação de MTOM. MTOM é uma tecnologia eficiente para a transmissão de dados binários em mensagens do WCF. O codificador MTOM tenta criar um equilíbrio entre a eficiência e interoperabilidade. A codificação de MTOM transmite a maioria dos XML no formato textual, mas otimiza blocos grandes de dados binários, transmiti-los como-está, sem a conversão em texto. Em termos de eficiência, entre os codificadores que o WCF fornece, MTOM é texto entre as palavras (o mais lento) e o binário (o mais rápido).  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, o elemento de associação Especifica o controle de versão caractere de codificação e a mensagem para mensagens usando a codificação de MTOM. MTOM é uma tecnologia eficiente para a transmissão de dados binários em mensagens do WCF. O codificador MTOM tenta criar um equilíbrio entre a eficiência e interoperabilidade. A codificação de MTOM transmite a maioria dos XML no formato textual, mas otimiza blocos grandes de dados binários, transmiti-los como-está, sem a conversão em texto. Em termos de eficiência, entre os codificadores que o WCF fornece, MTOM é texto entre as palavras (o mais lento) e o binário (o mais rápido).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Como escolher um codificador de mensagem  
  A tabela a seguir descreve os fatores comuns usados para escolher um codificador de mensagem. Priorize os fatores que são importantes para seu aplicativo e, em seguida, escolha os codificadores de mensagem que funcionam melhor com esses fatores. Certifique-se de considerar os fatores adicionais não listados nessa tabela e qualquer codificadores de mensagem personalizada que podem ser necessário em seu aplicativo.  
   
 |fator|Descrição|Codificadores que dão suporte a esse fator|  
 |------------|-----------------|---------------------------------------|  
-|Conjuntos de caracteres com suporte|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> dão suporte apenas a UTF8 e UTF16 Unicode (*big-endian* e *little endian*) codificações. Se outras codificações são necessárias, como UTF7 ou ASCII, um codificador personalizado deve ser usado. Para um codificador personalizado de exemplo, consulte [codificador de mensagem personalizado](https://go.microsoft.com/fwlink/?LinkId=119857).|Texto|  
+|Conjuntos de caracteres com suporte|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dão suporte apenas a UTF8 e UTF16 Unicode (*big-endian* e *little endian*) codificações. Se outras codificações são necessárias, como UTF7 ou ASCII, um codificador personalizado deve ser usado. Para um codificador personalizado de exemplo, consulte [codificador de mensagem personalizado](https://go.microsoft.com/fwlink/?LinkId=119857).|Texto|  
 |Inspeção|A inspeção é a capacidade de examinar as mensagens durante a transmissão. Codificações de texto, com ou sem o uso de SOAP, permitir que as mensagens sejam inspecionadas e analisados por muitos aplicativos sem o uso de ferramentas especializadas. Observe que o uso de segurança de transferência no nível de mensagem ou de transporte, afeta sua capacidade de inspecionar mensagens. Confidencialidade protege uma mensagem de que está sendo examinado e integridade protege uma mensagem de que está sendo modificado.|Texto|  
 |Confiabilidade|A confiabilidade é a resiliência de um codificador para erros de transmissão. Confiabilidade também pode ser fornecida na mensagem, transporte ou camada de aplicativo. Todos os codificadores WCF padrão pressupõem que a outra camada está fornecendo confiabilidade. O codificador tem pouca possibilidade de se recuperar de um erro de transmissão.|Nenhum|  
 |Manter a simplicidade|Simplicidade representa a facilidade com a qual você pode criar codificadores e decodificadores para uma especificação de codificação. Codificações de texto são particularmente vantajosas para manter a simplicidade e a codificação de texto POX tem a vantagem adicional de não exigir suporte para o processamento SOAP.|Texto (POX)|  

@@ -1,6 +1,6 @@
 ---
 title: Células de referência (F#)
-description: 'Saiba como células de referência em F # são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.'
+description: Saiba como células de referência em F# são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ A saída é a seguinte.
 
 O campo `contents` é fornecido para compatibilidade com outras versões do ML e produzirá um aviso durante a compilação. Para desabilitar o aviso, use a opção do compilador `--mlcompatibility`. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).
 
-Programadores de c# devem saber que `ref` em c# não é a mesma coisa que `ref` em F #. As construções equivalentes em F # são [byrefs](byrefs.md), que são um conceito diferente das células de referência.
+Programadores de c# devem saber que `ref` em c# não é a mesma coisa que `ref` em F#. As construções equivalentes em F# são [byrefs](byrefs.md), que são um conceito diferente das células de referência.
 
 Valores marcados como `mutable`pode ser elevada automaticamente a `'a ref` se capturados por um fechamento; veja [valores](values/index.md).
 

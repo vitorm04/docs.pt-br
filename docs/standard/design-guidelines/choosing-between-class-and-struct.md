@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865547"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757420"
 ---
 # <a name="choosing-between-class-and-struct"></a>Escolhendo entre a classe e Struct
 Uma das decisões de design básica que faces cada designer de estrutura é se deseja criar um tipo como uma classe (um tipo de referência) ou como um struct (um tipo de valor). Boa compreensão das diferenças no comportamento dos tipos de referência e tipos de valor é fundamental para fazer essa escolha.  
@@ -28,7 +28,7 @@ Uma das decisões de design básica que faces cada designer de estrutura é se d
   
  Em seguida, matrizes de referência de tipos são alocados fora de linha, que significa que a matriz de elementos são referências apenas para as instâncias do tipo de referência que residem no heap. Matrizes de tipo de valor são alocados em linha, que significa que os elementos da matriz são as instâncias reais do tipo de valor. Portanto, as alocações e Desalocações de matrizes de tipo de valor são muito mais baratas do que as alocações e Desalocações de matrizes de tipo de referência. Além disso, na maioria dos casos, as matrizes de tipo de valor apresentam muito melhor localidade de referência.  
   
- A próxima diferença está relacionada ao uso de memória. Tipos de valor obterem box quando convertido em um tipo de referência ou uma das interfaces que elas implementam. Eles obtêm desconvertidos ao converter para o tipo de valor. Como caixas são objetos que são alocados no heap e coleta de lixo, muito com conversão boxing e unboxing pode ter um impacto negativo sobre o heap, o coletor de lixo e, por fim, o desempenho do aplicativo.  Por outro lado, não há tal conversão boxing ocorre como tipos de referência são convertidos.  
+ A próxima diferença está relacionada ao uso de memória. Tipos de valor obterem box quando convertido em um tipo de referência ou uma das interfaces que elas implementam. Eles obtêm desconvertidos ao converter para o tipo de valor. Como caixas são objetos que são alocados no heap e coleta de lixo, muito com conversão boxing e unboxing pode ter um impacto negativo sobre o heap, o coletor de lixo e, por fim, o desempenho do aplicativo.  Por outro lado, não há tal conversão boxing ocorre como tipos de referência são convertidos. (Para obter mais informações, consulte [conversão Boxing e Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  Em seguida, as atribuições de tipo de referência copiar a referência, enquanto as atribuições de tipo de valor copie o valor inteiro. Portanto, as atribuições de tipos de referência grandes são mais baratas do que as atribuições de tipos de valor grande.  
   

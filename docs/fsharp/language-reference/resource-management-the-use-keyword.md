@@ -1,6 +1,6 @@
 ---
 title: 'Gerenciamento de recursos: a palavra-chave use (F#)'
-description: "Saiba mais sobre o F # palavra-chave 'use' e a função 'using', o que pode controlar a inicialização e a liberação de recursos."
+description: Saiba mais sobre o F# palavra-chave 'use' e a função 'using', o que pode controlar a inicialização e a liberação de recursos.
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -19,7 +19,7 @@ O termo *recurso* é usado em mais de uma maneira. Sim, os recursos podem ser da
 
 ## <a name="managing-resources"></a>Gerenciamento de recursos
 
-Para gerenciar os recursos em um aplicativo com responsabilidade e com eficiência, você deve liberar recursos imediatamente e de maneira previsível. O .NET Framework ajuda você a fazer isso, fornecendo o `System.IDisposable` interface. Um tipo que implementa `System.IDisposable` tem o `System.IDisposable.Dispose` método, que libera os recursos corretamente. Aplicativos bem escritos garantem que `System.IDisposable.Dispose` é chamado imediatamente quando qualquer objeto que contém um recurso limitado não é mais necessário. Felizmente, a maioria das linguagens .NET fornecem suporte para facilitar essa tarefa, e F # não é exceção. Há duas construções de linguagem úteis que suportam o padrão dispose: o `use` associação e o `using` função.
+Para gerenciar os recursos em um aplicativo com responsabilidade e com eficiência, você deve liberar recursos imediatamente e de maneira previsível. O .NET Framework ajuda você a fazer isso, fornecendo o `System.IDisposable` interface. Um tipo que implementa `System.IDisposable` tem o `System.IDisposable.Dispose` método, que libera os recursos corretamente. Aplicativos bem escritos garantem que `System.IDisposable.Dispose` é chamado imediatamente quando qualquer objeto que contém um recurso limitado não é mais necessário. Felizmente, a maioria das linguagens .NET fornecem suporte para facilitar essa tarefa, e F# não é exceção. Há duas construções de linguagem úteis que suportam o padrão dispose: o `use` associação e o `using` função.
 
 ## <a name="use-binding"></a>Usar associação
 

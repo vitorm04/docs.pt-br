@@ -1,6 +1,6 @@
 ---
 title: Fluxos de trabalho assíncronos (F#)
-description: 'Saiba mais sobre o suporte a idioma para executar cálculos de forma assíncrona, de programação F # que são executadas sem bloquear a execução de outro trabalho.'
+description: Saiba mais sobre o suporte a idioma para executar cálculos de forma assíncrona, de programação F# que são executadas sem bloquear a execução de outro trabalho.
 ms.date: 05/16/2016
 ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "43861556"
 > [!NOTE]
 O link de referência da API levará você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
-Este tópico descreve o suporte em F # para executar cálculos de forma assíncrona, ou seja, sem bloquear a execução de outro trabalho. Por exemplo, as computações assíncronas podem ser usadas para gravar aplicativos que têm interfaces do usuário que permaneçam responsivos a usuários conforme o aplicativo execute outro trabalho.
+Este tópico descreve o suporte em F# para executar cálculos de forma assíncrona, ou seja, sem bloquear a execução de outro trabalho. Por exemplo, as computações assíncronas podem ser usadas para gravar aplicativos que têm interfaces do usuário que permaneçam responsivos a usuários conforme o aplicativo execute outro trabalho.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-Além `let!`, você pode usar `use!` para realizar ligações assíncronas. A diferença entre `let!` e `use!` é o mesmo que a diferença entre `let` e `use`. Para `use!`, o objeto é descartado no fechamento do escopo atual. Observe que na versão atual da linguagem F #, `use!` não permite que um valor a ser inicializada como nula, mesmo que `use` faz.
+Além `let!`, você pode usar `use!` para realizar ligações assíncronas. A diferença entre `let!` e `use!` é o mesmo que a diferença entre `let` e `use`. Para `use!`, o objeto é descartado no fechamento do escopo atual. Observe que na versão atual da linguagem F#, `use!` não permite que um valor a ser inicializada como nula, mesmo que `use` faz.
 
 ## <a name="asynchronous-primitives"></a>Primitivos assíncronos
 
-Um método que executa uma única tarefa assíncrona e retorna o resultado é chamado um *primitivo assíncrono*, e elas foram desenvolvidas especificamente para uso com `let!`. Vários primitivos assíncronos são definidos na biblioteca de núcleo do F #. Dois métodos para aplicativos da Web são definidos no módulo [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) e [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Ambos os primitivos de download de dados de uma página da Web, dada um URL. `AsyncGetResponse` produz um `System.Net.WebResponse` objeto, e `AsyncDownloadString` produz uma cadeia de caracteres que representa o HTML para uma página da Web.
+Um método que executa uma única tarefa assíncrona e retorna o resultado é chamado um *primitivo assíncrono*, e elas foram desenvolvidas especificamente para uso com `let!`. Vários primitivos assíncronos são definidos na biblioteca de núcleo do F#. Dois métodos para aplicativos da Web são definidos no módulo [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) e [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Ambos os primitivos de download de dados de uma página da Web, dada um URL. `AsyncGetResponse` produz um `System.Net.WebResponse` objeto, e `AsyncDownloadString` produz uma cadeia de caracteres que representa o HTML para uma página da Web.
 
 Vários primitivos para operações de e/s assíncronas são incluídos na [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) módulo. Esses métodos de extensão do `System.IO.Stream` classe estão [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) e [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
 Você também pode escrever seus próprios primitivos assíncronos, definindo uma função cujo corpo completo é colocado em um bloco assíncrono.
 
-Para usar métodos assíncronos no .NET Framework que são projetados para outros modelos assíncronos com o F # modelo de programação assíncrona, você cria uma função que retorna da F # `Async` objeto. A biblioteca F # tem funções que tornam isso mais fácil de fazer.
+Para usar métodos assíncronos no .NET Framework que são projetados para outros modelos assíncronos com o F# modelo de programação assíncrona, você cria uma função que retorna da F# `Async` objeto. A biblioteca F# tem funções que tornam isso mais fácil de fazer.
 
 Um exemplo de como usar fluxos de trabalho assíncronos é incluído aqui; Há muitas outras na documentação para os métodos do [classe Async](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

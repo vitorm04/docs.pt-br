@@ -1,5 +1,5 @@
 ---
-title: 'Introdução ao armazenamento de arquivos do Azure usando F #'
+title: Introdução ao armazenamento de arquivos do Azure usando F#
 description: Store dados de arquivos na nuvem com o armazenamento de arquivos do Azure e montar o compartilhamento de arquivos de nuvem de uma máquina virtual do Azure (VM) ou de um aplicativo local que executa o Windows.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569337"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Introdução ao armazenamento de arquivos do Azure usando F # #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Introdução ao armazenamento de arquivos do Azure usando F# #
 
 O armazenamento de arquivos do Azure é um serviço que oferece compartilhamentos de arquivos na nuvem usando o padrão [protocolo de bloco de mensagens de servidor (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Há suporte para SMB 2.1 e SMB 3.0. Com o armazenamento de arquivos do Azure, você pode migrar aplicativos herdados que dependem de compartilhamentos de arquivo para o Azure rapidamente e sem regravações caras. Aplicativos em execução em máquinas virtuais do Azure ou serviços de nuvem ou de clientes locais podem montar um compartilhamento de arquivos na nuvem, exatamente como um aplicativo de desktop monta um compartilhamento SMB típico. Qualquer número de componentes de aplicativos pode, em seguida, montar e acessar o compartilhamento de armazenamento de arquivos simultaneamente.
 
@@ -21,9 +21,9 @@ Para obter uma visão geral conceitual de armazenamento de arquivos, consulte [o
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account).
 Você também precisará sua chave de acesso de armazenamento para esta conta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Criar Script de F # e o início da F # interativo
+## <a name="create-an-f-script-and-start-f-interactive"></a>Criar Script de F# e o início da F# interativo
 
-Os exemplos neste artigo podem ser usados em um aplicativo do F # ou um script F #. Para criar um script F #, crie um arquivo com o `.fsx` extensão, por exemplo `files.fsx`, em seu ambiente de desenvolvimento do F #.
+Os exemplos neste artigo podem ser usados em um aplicativo do F# ou um script F#. Para criar um script F#, crie um arquivo com o `.fsx` extensão, por exemplo `files.fsx`, em seu ambiente de desenvolvimento do F#.
 
 Em seguida, use um [Gerenciador de pacotes](package-management.md) tais como [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar o `WindowsAzure.Storage` pacote e referência `WindowsAzure.Storage.dll` em seu script usando um `#r`diretiva.
 

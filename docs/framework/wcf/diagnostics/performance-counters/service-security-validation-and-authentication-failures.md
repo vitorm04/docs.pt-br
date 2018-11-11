@@ -3,11 +3,11 @@ title: 'Serviço: falhas de autenticação e validação de segurança'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50039985"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744243"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Serviço: falhas de autenticação e validação de segurança
 Nome do contador: falhas de autenticação e validação de segurança  

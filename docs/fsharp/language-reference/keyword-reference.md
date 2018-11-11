@@ -1,6 +1,6 @@
 ---
 title: Referência de palavras-chave (F#)
-description: 'Encontre links para informações sobre todas as palavras-chave F # idioma.'
+description: Encontre links para informações sobre todas as palavras-chave F# idioma.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "43856018"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
-Este tópico contém links para informações sobre todos os F # palavras-chave.
+Este tópico contém links para informações sobre todos os F# palavras-chave.
 
-## <a name="f-keyword-table"></a>Tabela de palavra-chave do F #
+## <a name="f-keyword-table"></a>Tabela de palavra-chave do F#
 
-A tabela a seguir mostra todos os F # palavras-chave em ordem alfabética, junto com descrições breves e links para tópicos relevantes que contêm mais informações.
+A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto com descrições breves e links para tópicos relevantes que contêm mais informações.
 
 |Palavra-chave|Link|Descrição|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ A tabela a seguir mostra todos os F # palavras-chave em ordem alfabética, junto
 |`yield`|[Sequências](sequences.md)|Usado em uma expressão de sequência para produzir um valor para uma sequência.|
 |`yield!`|[Expressões de Computação](computation-expressions.md)<br /><br />[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)|Usado em uma expressão de computação para acrescentar o resultado de uma expressão de determinada computação a um conjunto de resultados para a expressão de cálculo de recipiente.|
 
-Os seguintes tokens estão reservados em F #, porque eles são palavras-chave na linguagem OCaml:
+Os seguintes tokens estão reservados em F#, porque eles são palavras-chave na linguagem OCaml:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Os seguintes tokens estão reservados em F #, porque eles são palavras-chave na
 
 Se você usar o `--mlcompatibility` opção de compilador, as palavras-chave acima estão disponíveis para uso como identificadores.
 
-Os seguintes tokens são reservados como palavras-chave para expansão futura da linguagem F #:
+Os seguintes tokens são reservados como palavras-chave para expansão futura da linguagem F#:
 
 * `atomic`
 * `break`
