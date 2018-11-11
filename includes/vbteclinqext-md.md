@@ -1,1 +1,1 @@
-<span data-ttu-id="d375a-101">LINQ (Consulta Integrada à Linguagem)</span><span class="sxs-lookup"><span data-stu-id="d375a-101">Language-Integrated Query (LINQ)</span></span>
+<span data-ttu-id="95657-101">LINQ (Consulta Integrada à Linguagem)</span><span class="sxs-lookup"><span data-stu-id="95657-101">Language-Integrated Query (LINQ)</span></span>
