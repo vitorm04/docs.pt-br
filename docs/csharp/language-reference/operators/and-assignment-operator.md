@@ -1,44 +1,53 @@
 ---
 title: '&amp;Operador = (Referência de C#)'
-ms.date: 07/20/2015
+ms.date: 10/29/2018
 f1_keywords:
 - '&=_CSharpKeyword'
 helpviewer_keywords:
 - AND assignment operator (&=) [C#]
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
-ms.openlocfilehash: f3a6fe20ca89a90b5a64118d73fb39e9a364d1e9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ce27c999cf21a9059ba23ee3c86b8fa024c7341
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506395"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980603"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;Operador = (Referência de C#)
-O operador de atribuição AND.  
-  
-## <a name="remarks"></a>Comentários  
- Uma expressão que usa o operador de atribuição `&=`, como  
-  
-```csharp  
-x &= y  
-```  
-  
- equivale a  
-  
-```csharp  
-x = x & y  
-```  
-  
- exceto que `x` é avaliado apenas uma vez. O [operador &](../../../csharp/language-reference/operators/and-operator.md) executa uma operação AND lógica bit a bit em operandos integrais e AND lógica em operandos `bool`.  
-  
- O operador `&=` não pode ser sobrecarregado diretamente, mas tipos definidos pelo usuário podem sobrecarregar o [operador &](../../../csharp/language-reference/operators/and-operator.md) binário (consulte [operador](../../../csharp/language-reference/keywords/operator.md)).  
-  
-## <a name="example"></a>Exemplo  
- [!code-csharp[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
-  
+
+O operador de atribuição AND.
+
+Uma expressão que usa o operador `&=`, como
+
+```csharp
+x &= y
+```
+
+equivale a
+
+```csharp
+x = x & y
+```
+
+exceto que `x` é avaliado apenas uma vez.
+
+Para operandos inteiros, o [operador `&`](and-operator.md) computa o AND lógico bit a bit de seus operandos. Para operandos [bool](../keywords/bool.md), ele computa o AND lógico de seus operandos.
+
+O exemplo a seguir demonstra o uso do operador `&=`:
+
+[!code-csharp-interactive[AND assignment example](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#AndAssignmentExample)]
+
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
+
+Se um tipo definido pelo usuário [sobrecarregar](../keywords/operator.md) o [operador `&`](and-operator.md), o operador de atribuição AND `&=` ficará implicitamente sobrecarregado. Um tipo definido pelo usuário não pode sobrecarregar explicitamente o operador de atribuição AND.
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, veja a seção [Atribuição composta](~/_csharplang/spec/expressions.md#compound-assignment) na [especificação da linguagem C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Operadores do C#](index.md)

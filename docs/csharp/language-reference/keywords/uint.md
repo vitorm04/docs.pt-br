@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-ms.openlocfilehash: e75abf8ac356eaed6c54dd0309316fb6755bf635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c8610d13a97e672773fdf80d013a159a58e7cfbf
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858298"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744321"
 ---
 # <a name="uint-c-reference"></a>uint (Referência de C#)
 
@@ -85,7 +85,8 @@ uint y = (uint)3.0;
  Para obter mais informações sobre as regras de conversão numérica implícita, consulte a [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para obter mais informações, veja [Tipos integrais](~/_csharplang/spec/types.md#integral-types) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 

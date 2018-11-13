@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: b19676b2549bbb54af7fb1d72ff0e98352c61383
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d10b0de0a3811e615297b31d2d9c8934c9338078
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43529014"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Usando construtores (Guia de Programação em C#)
@@ -88,7 +88,8 @@ Console.WriteLine("{0}, {1}", a, b);
  Um construtor pode ser declarado estático usando a palavra-chave [static](../../../csharp/language-reference/keywords/static.md). Os construtores estáticos são chamados automaticamente, imediatamente antes de qualquer campo estático ser acessado e geralmente são usados para inicializar membros da classe estática. Para obter mais informações, consulte [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para obter mais informações, veja [Construtores de instância](~/_csharplang/spec/classes.md#instance-constructors) e [Construtores estáticos](~/_csharplang/spec/classes.md#static-constructors) na [Especificação de Linguagem C#](../../language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 

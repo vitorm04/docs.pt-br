@@ -4,11 +4,11 @@ description: O comando dotnet publish publica seu projeto .NET Core em um diret�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43511418"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
@@ -58,7 +58,7 @@ A saída do comando `dotnet publish` está pronta para implantação em um siste
 
 `PROJECT`
 
-O projeto a ser publicado. Se não é especificado, ele usa como padrão o diretório atual.
+O projeto a ser publicado. É o caminho e o nome de arquivo de um arquivo de projeto [C#](csproj.md), F# ou do Visual Basic ou o caminho para um diretório que contém um arquivo de projeto C#, F# ou do Visual Basic. Se não é especificado, ele usa como padrão o diretório atual.
 
 ## <a name="options"></a>Opções
 

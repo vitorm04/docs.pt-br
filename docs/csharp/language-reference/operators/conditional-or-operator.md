@@ -1,6 +1,6 @@
 ---
 title: Operador || (Referência de C#)
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925534"
 ---
 # <a name="-operator-c-reference"></a>Operador || (Referência de C#)
-O operador condicional OR (`||`) executa um OR lógico de seus operandos `bool`. Se o primeiro operando for avaliado como `true`, o segundo operando não será avaliado. Se o primeiro operando for avaliado como `false`, o segundo operador determinará se a expressão OR como um todo será avaliada como `true` ou `false`.  
-  
-## <a name="remarks"></a>Comentários  
- A operação  
-  
-```csharp  
-x || y  
-```  
-  
- corresponde à operação  
-  
-```csharp  
-x | y  
-```  
-  
- exceto se `x` for `true`, `y` não será avaliado, porque a operação OR será `true`, independentemente do valor de `y`. Esse conceito é conhecido como avaliação de “curto-circuito”.  
-  
- O operador condicional OR não pode ser sobrecarregado, mas as sobrecargas dos operadores lógicos regulares e dos operadores [true](../../../csharp/language-reference/keywords/true.md) e [false](../../../csharp/language-reference/keywords/false.md), com algumas restrições, também são consideradas sobrecargas dos operadores lógicos condicionais.  
-  
-## <a name="example"></a>Exemplo  
- Nos exemplos a seguir, a expressão que usa `||` avalia apenas o primeiro operando. A expressão que usa `|` avalia os dois operandos. No segundo exemplo, uma exceção de tempo de execução ocorrerá se ambos os operandos forem avaliados.  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
+
+O operador OR lógico condicional `||`, também conhecido como operador OR lógico de "curto-circuito", computa o OR lógico de seus operandos [bool](../keywords/bool.md). O resultado de `x || y` será `true` se `x` ou `y` for avaliado como `true`. Caso contrário, o resultado será `false`. Se o primeiro operando for avaliado como `true`, o segundo operando não será avaliado e o resultado da operação será `true`. O exemplo a seguir demonstra esse comportamento:
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+O [operador OR lógico](or-operator.md) `|` também computa o OR lógico de seus operandos `bool`, mas sempre avalia os dois operandos.
+
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
+
+Um tipo definido pelo usuário não pode sobrecarregar o operador OR lógico condicional. No entanto, se um tipo definido pelo usuário sobrecarregar os operadores de [OR lógico](or-operator.md), [true](../keywords/true-operator.md) e [false](../keywords/false-operator.md) de uma determinada maneira, a operação `||` poderá ser avaliada para os operandos desse tipo. Para obter mais informações, veja a seção [Operadores lógicos condicionais definidos pelo usuário](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) na [especificação da linguagem C#](../language-specification/index.md).
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, veja a seção [Operadores lógicos condicionais](~/_csharplang/spec/expressions.md#conditional-logical-operators) na [especificação da linguagem C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Operadores do C#](index.md)
+- [Operador &&](conditional-and-operator.md)
+- [Operador !](logical-negation-operator.md)
+- [Operador |](or-operator.md)

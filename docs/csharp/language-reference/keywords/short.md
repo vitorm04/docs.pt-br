@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 0d90f31da49b94eee490e95f0cdf1d582bb0b059
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d3b374c01c78a63e8341023b65dc3e57542ec1fd
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "50184147"
 ---
 # <a name="short-c-reference"></a>short (Referência de C#)
@@ -98,9 +98,9 @@ Para obter informações sobre expressões aritméticas com tipos de ponto flutu
 
 Para obter mais informações sobre as regras de conversão numérica implícita, consulte a [Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para obter mais informações, veja [Tipos integrais](~/_csharplang/spec/types.md#integral-types) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Consulte também
 

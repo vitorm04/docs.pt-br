@@ -1,46 +1,46 @@
 ---
 title: Publicar um pacote NuGet
-description: Práticas recomendadas para a publicação bibliotecas .NET NuGet.
+description: Práticas recomendadas para a publicação de bibliotecas .NET para NuGet.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
-ms.translationtype: MT
+ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49369677"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757303"
 ---
 # <a name="publishing-a-nuget-package"></a>Publicar um pacote NuGet
 
-Pacotes do NuGet são publicados e consumidos de repositórios de pacote. Enquanto o NuGet.org é a mais amplamente conhecido e usado de repositório, há muitos lugares para publicar pacotes do NuGet:
+Os pacotes NuGet são publicados e consumidos dos repositórios de pacote. Embora o NuGet.org seja o repositório mais amplamente conhecido e usado, há muitos locais para publicar pacotes NuGet:
 
-* **[NuGet.org](https://www.nuget.org/)**  é o principal repositório online para pacotes do NuGet. Todos os pacotes em NuGet.org estão publicamente disponíveis para todos. Por padrão, o Visual Studio tem NuGet.org como uma origem de pacote e para muitos desenvolvedores NuGet.org é o repositório de pacote somente com que eles poderá interagir. NuGet.org é o melhor lugar para publicar pacotes estáveis e pacotes de pré-lançamento que você deseja comentários da comunidade no.
+* **[NuGet.org](https://www.nuget.org/)** é o principal repositório online para pacotes NuGet. Todos os pacotes no NuGet.org estão disponíveis publicamente para todos. Por padrão, o Visual Studio tem o NuGet.org como fonte de pacotes, e para muitos desenvolvedores o NuGet.org é o único repositório de pacotes com o qual eles vão interagir. O NuGet.org é o melhor lugar para publicar pacotes estáveis e pacotes de pré-lançamento para os quais você deseja comentários da comunidade.
 
-* **[MyGet](https://myget.org/)**  dá suporte ao serviço de repositório [feeds de pacote personalizado gratuito para projetos de código-fonte aberto](https://www.myget.org/opensource). Um feed personalizado do MyGet público é um lugar ideal para publicar pacotes de pré-lançamento criados pelo seu serviço de CI. MyGet também fornece feeds privados comercialmente.
+* **[MyGet](https://myget.org/)** é um serviço de repositório que oferece suporte aos feeds de pacotes personalizados para projetos de software livre. Um feed personalizado público do MyGet é um local ideal para publicar pacotes de pré-lançamento criados pelo seu serviço de CI. O MyGet também fornece comercialmente feeds privados.
 
-* Um **[feed local](/nuget/hosting-packages/local-feeds)** permite que você trate uma pasta como um repositório de pacotes e torna o `*.nupkg` arquivos na pasta acessível pelo NuGet. Um feed local é útil para testar um pacote do NuGet antes de publicá-lo em NuGet.org.
+* Um **[feed local](/nuget/hosting-packages/local-feeds)** permite que você trate uma pasta como um repositório de pacotes e torna os arquivos `*.nupkg` na pasta acessível pelo NuGet. Um feed local é útil para testar um pacote do NuGet antes de publicá-lo no NuGet.org.
 
 > [!NOTE]
-> NuGet.org [não permite que um pacote a ser excluído](/nuget/policies/deleting-packages) depois que ele é carregado. Um pacote pode ser removido da lista para que não é publicamente visível na interface do usuário, mas o `*.nupkg` ainda pode ser baixado na restauração. Além disso, o nuget.org não permite a versões de pacote duplicado. Para corrigir um pacote do NuGet com um erro que você precise remover o pacote incorreto da lista, aumente o número de versão e publicar uma nova versão do pacote.
+> O NuGet.org [não permite que um pacote seja excluído](/nuget/policies/deleting-packages) depois que ele foi carregado. Um pacote pode ser não listado para que não seja visível publicamente na interface do usuário, mas o `*.nupkg` ainda pode ser baixado na restauração. Além disso, o nuget.org não permite versões duplicadas do pacote. Para corrigir um pacote NuGet com um erro, você precisa remover o pacote incorreto, aumentar o número de versão e publicar uma nova versão do pacote.
 
-**FAZER ✔️** [publicar pacotes estáveis e pacotes de pré-lançamento](/nuget/create-packages/publish-a-package) desejar comentários da comunidade do logon no NuGet.org.
+**✔️ SIM:** [publique pacotes estáveis e pacotes de pré-lançamento](/nuget/create-packages/publish-a-package) para os quais você deseja comentários da comunidade no NuGet.org.
 
-**Considere a possibilidade de ✔️** publicar pacotes de pré-lançamento para uma MyGet feed de um build de integração contínua.
+**✔️ CONSIDERE:** publique pacotes de pré-lançamento no feed MyGet de uma compilação de integração contínua.
 
-**Considere a possibilidade de ✔️** testar pacotes no ambiente de desenvolvimento usando um feed local ou MyGet. Verifique o pacote funciona em seguida, publique-o em NuGet.org.
+**✔️ CONSIDERE:** teste os pacotes no ambiente de desenvolvimento usando um feed local ou MyGet. Verifique se o pacote funciona e publique-o no NuGet.org.
 
-## <a name="nugetorg-security"></a>Segurança de NuGet.org
+## <a name="nugetorg-security"></a>Segurança no NuGet.org
 
-É importante que os atores ruins não é possível acessar sua conta do NuGet e carregar uma versão mal-intencionado da sua biblioteca. NuGet.org oferece dois fatores autenticação e notificações por email quando um pacote é publicado. Habilitar esses recursos após fazer logon no NuGet.org sobre o **configurações de conta** página.
+É importante que os invasores não possam acessar sua conta do NuGet e carregar uma versão mal-intencionado da sua biblioteca. O NuGet.org oferece autenticação de dois fatores e notificações por email quando um pacote é publicado. Habilite esses recursos após fazer logon no NuGet.org, na página **Configurações de conta**.
 
-![texto ALT](./media/publish-nuget-package/nuget-2fa.png "NuGet segurança da conta")
+![O texto alt](./media/publish-nuget-package/nuget-2fa.png "Segurança da conta do NuGet")
 
-**FAZER ✔️** usa uma conta da Microsoft para entrar NuGet.
+**✔️ SIM:** use uma conta da Microsoft para entrar no NuGet.
 
-**FAZER ✔️** habilitar a autenticação de dois fatores para acessar o NuGet.
+**✔️ SIM:** habilite a autenticação de dois fatores para acessar o NuGet.
 
-**FAZER ✔️** habilitar notificação por email quando um pacote é publicado.
+**✔️ SIM:** habilite a notificação por email quando um pacote é publicado.
 
 >[!div class="step-by-step"]
 [Anterior](./sourcelink.md)

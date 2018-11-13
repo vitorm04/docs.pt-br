@@ -1,12 +1,12 @@
 ---
 title: Visão geral do LINQ to XML (C#)
-ms.date: 07/20/2015
+ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5e005343226b47fb843b817747ca03c49c28dbfc
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43856615"
 ---
 # <a name="linq-to-xml-overview-c"></a>Visão geral do LINQ to XML (C#)
@@ -30,26 +30,50 @@ O XML tem sido amplamente adotado como um modo de formatar dados em muitos conte
   
  Por exemplo, você pode ter uma ordem de compra em XML típica, conforme descrito em [Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). Usando o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você poderia executar a consulta a seguir para obter o valor do atributo de número de peça para cada elemento de item na ordem de compra:  
   
-```csharp  
-IEnumerable<string> partNos =  
-from item in purchaseOrder.Descendants("Item")  
-select (string) item.Attribute("PartNumber");  
+```csharp
+// Load the XML file from our project directory containing the purchase orders
+var filename = "PurchaseOrder.xml";
+var currentDirectory = Directory.GetCurrentDirectory();
+var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+
+XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+
+IEnumerable<string> partNos =  from item in purchaseOrder.Descendants("Item")  
+                               select (string) item.Attribute("PartNumber");  
+``` 
+Isso pode ser regravado no formulário de sintaxe do método:
+
+```csharp
+IEnumerable<string> partNos = purchaseOrder.Descendants("Item").Select(x => (string) x.Attribute("PartNumber"));
+```
+
+Como outro exemplo, você poderia querer uma lista, classificada por número de peça, dos itens com um valor maior que $ 100. Para obter essas informações, você poderia executar a seguinte consulta:  
+  
+```csharp 
+// Load the XML file from our project directory containing the purchase orders
+var filename = "PurchaseOrder.xml";
+var currentDirectory = Directory.GetCurrentDirectory();
+var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+
+XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+
+IEnumerable<XElement> pricesByPartNos =  from item in purchaseOrder.Descendants("Item")  
+                                 where (int) item.Element("Quantity") * (decimal) item.Element("USPrice") > 100  
+                                 orderby (string)item.Element("PartNumber")  
+                                 select item;  
 ```  
-  
- Como outro exemplo, você poderia querer uma lista, classificada por número de peça, dos itens com um valor maior que $ 100. Para obter essas informações, você poderia executar a seguinte consulta:  
-  
-```csharp  
-IEnumerable<XElement> partNos =  
-from item in purchaseOrder.Descendants("Item")  
-where (int) item.Element("Quantity") *  
-    (decimal) item.Element("USPrice") > 100  
-orderby (string)item.Element("PartNumber")  
-select item;  
-```  
-  
+
+Outra vez, isso pode ser regravado no formulário de sintaxe do método:
+
+```csharp
+IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
+                                        .Where(item => (int)item.Element("Quantity") * (decimal)item.Element("USPrice") > 100)
+                                        .OrderBy(order => order.Element("PartNumber"));
+```
+
  Além desses recursos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oferece uma interface de programação XML aprimorada. Usando o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode:  
   
--   Carregar XML de arquivos ou fluxos.  
+-   Carregar XML de [arquivos](how-to-load-xml-from-a-file.md) ou [fluxos](how-to-stream-xml-fragments-from-an-xmlreader.md).  
   
 -   Serializar o XML em arquivos ou fluxos.  
   

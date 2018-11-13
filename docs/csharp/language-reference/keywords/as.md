@@ -8,11 +8,11 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d6c9d44ff22881e6e5e7a542e1df41bbf77b23d8
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "49122599"
 ---
 # <a name="as-c-reference"></a>as (Referência de C#)
@@ -42,8 +42,9 @@ expression is type ? (type)expression : (type)null
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Para obter mais informações, veja [O operador as](~/_csharplang/spec/expressions.md#the-as-operator) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+ 
 ## <a name="see-also"></a>Consulte também  
 - [Referência de C#](../../../csharp/language-reference/index.md)  
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  

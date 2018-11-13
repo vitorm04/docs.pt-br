@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44260065"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
@@ -62,11 +62,12 @@ As exceções são usadas para indicar que ocorreu um erro durante a execução 
  Novas propriedades só devem ser adicionadas à classe de exceção quando os dados que elas fornecem são úteis para resolver a exceção. Se forem adicionadas novas propriedades à classe de exceção derivada, `ToString()` deverá ser substituído para retornar as informações adicionadas.  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.md) e [A declaração throw](~/_csharplang/spec/statements.md#the-throw-statement) na [Especificação da Linguagem C#](../../language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
 - [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)  
-- [Hierarquia de exceções](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [Hierarquia de exceções](../../../standard/exceptions/index.md)  
 - [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)
