@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424383"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214188"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -202,7 +202,7 @@ Observe que é possível criar caminhos com mais de `MAX_PATH` caracteres para [
 Uma peculiaridade do sistema de arquivos do Windows que usuários e desenvolvedores que não o utilizam consideram confusa é que os nomes do caminho e do diretório não diferenciam maiúsculas de minúsculas. Isto é, os nomes do caminho e do diretório refletem as cadeias de caracteres utilizadas no momento da criação. Por exemplo, a chamada de método
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 cria um diretório chamado TeStDiReCtOrY. Se você renomear um diretório ou arquivo para alterar as maiúsculas e minúsculas, o nome do diretório ou do arquivo refletirá a cadeia de caracteres usadas ao renomeá-los. Por exemplo, o código a seguir renomeia o arquivo test.txt como Test.txt:
 

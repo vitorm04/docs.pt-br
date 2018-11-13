@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404626"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757446"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -97,7 +97,7 @@ A abordagem mais simples para dimensionar um aplicativo Web no Azure é configur
 
 ## <a name="clean-architecture"></a>Arquitetura limpa
 
-Os aplicativos que seguem o Princípio da Inversão de Dependência, bem como os princípios de DDD (Design Controlado por Domínio), tendem a chegar a uma arquitetura semelhante. Essa arquitetura foi conhecida por muitos nomes ao longo dos anos. Um dos primeiros nomes foi Arquitetura Hexagonal, seguido por Portas e Adaptadores. Mais recentemente, ela é citada como a [Arquitetura Cebola](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) ou [Arquitetura Limpa](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). O último nome, Arquitetura Limpa, é usado como o nome dessa arquitetura neste livro eletrônico.
+Os aplicativos que seguem o Princípio da Inversão de Dependência, bem como os princípios de DDD (Design Controlado por Domínio), tendem a chegar a uma arquitetura semelhante. Essa arquitetura foi conhecida por muitos nomes ao longo dos anos. Um dos primeiros nomes foi Arquitetura Hexagonal, seguido por Portas e Adaptadores. Mais recentemente, ela é citada como a [Arquitetura Cebola](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) ou [Arquitetura Limpa](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). O último nome, Arquitetura Limpa, é usado como o nome dessa arquitetura neste livro eletrônico.
 
 > [!NOTE]
 > O termo Arquitetura Limpa pode ser aplicado a aplicativos criados com os Princípios de DDD, bem como os que não são criados com o DDD. No caso anterior, essa combinação pode ser chamada de "Arquitetura de DDD Limpa".
@@ -307,7 +307,7 @@ Para adicionar o suporte ao Docker no aplicativo usando o Visual Studio, verifiq
 > - **A Arquitetura Limpa**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **A Arquitetura Cebola**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **O Padrão de Repositório**  
 >   <https://deviq.com/repository-pattern/>
 > - **Amostra de solução de Arquitetura Limpa**  
