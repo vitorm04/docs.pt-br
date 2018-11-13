@@ -8,21 +8,21 @@ ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50040901"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235744"
 ---
-# <a name="deploying-net-framework-applications"></a><span data-ttu-id="c5324-102">Implantando aplicativos .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c5324-102">Deploying .NET Framework Applications</span></span>
-<span data-ttu-id="c5324-103">Esta seção da documentação do .NET Framework fornece informações essenciais sobre a implantação de aplicativos .NET Framework, incluindo diretrizes para carregar assemblies, resolver referências de assembly e melhorar o desempenho de seu aplicativo por meio da geração de imagem nativa.</span><span class="sxs-lookup"><span data-stu-id="c5324-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  
+# <a name="deploying-net-framework-applications"></a><span data-ttu-id="5ca3f-102">Implantando aplicativos .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5ca3f-102">Deploying .NET Framework Applications</span></span>
+<span data-ttu-id="5ca3f-103">Esta seção da documentação do .NET Framework fornece informações essenciais sobre a implantação de aplicativos .NET Framework, incluindo diretrizes para carregar assemblies, resolver referências de assembly e melhorar o desempenho de seu aplicativo por meio da geração de imagem nativa.</span><span class="sxs-lookup"><span data-stu-id="5ca3f-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c5324-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c5324-104">In This Section</span></span>  
- [<span data-ttu-id="c5324-105">Como o tempo de execução localiza assemblies</span><span class="sxs-lookup"><span data-stu-id="c5324-105">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- <span data-ttu-id="c5324-106">Descreve como o Common Language Runtime localiza e associa os assemblies que compõem seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c5324-106">Describes how the common language runtime locates and binds to the assemblies that make up your application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5ca3f-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5ca3f-104">In This Section</span></span>  
+ [<span data-ttu-id="5ca3f-105">Como o tempo de execução localiza assemblies</span><span class="sxs-lookup"><span data-stu-id="5ca3f-105">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ <span data-ttu-id="5ca3f-106">Descreve como o Common Language Runtime localiza e associa os assemblies que compõem seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5ca3f-106">Describes how the common language runtime locates and binds to the assemblies that make up your application.</span></span>  
   
- [<span data-ttu-id="c5324-107">Práticas recomendadas para carregamento de assemblies</span><span class="sxs-lookup"><span data-stu-id="c5324-107">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- <span data-ttu-id="c5324-108">Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.</span><span class="sxs-lookup"><span data-stu-id="c5324-108">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>  
+ [<span data-ttu-id="5ca3f-107">Práticas recomendadas para carregamento de assemblies</span><span class="sxs-lookup"><span data-stu-id="5ca3f-107">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ <span data-ttu-id="5ca3f-108">Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.</span><span class="sxs-lookup"><span data-stu-id="5ca3f-108">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5324-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c5324-109">See Also</span></span>  
-- [<span data-ttu-id="c5324-110">Guia de desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="c5324-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
+## <a name="see-also"></a><span data-ttu-id="5ca3f-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5ca3f-109">See Also</span></span>  
+- [<span data-ttu-id="5ca3f-110">Guia de desenvolvimento</span><span class="sxs-lookup"><span data-stu-id="5ca3f-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
