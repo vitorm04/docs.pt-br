@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191983"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297160"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Instruções passo a passo: tratando eventos (Visual Basic)
 Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O primeiro tópico, [instruções passo a passo: declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), mostra como declarar e acionar eventos. Esta seção usa o formulário e a classe esse passo a passo para mostrar como manipular eventos quando eles ocorrem.  
@@ -95,7 +95,7 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
 3.  Clique o **Cancelar** no botão para parar a tarefa. Observe que a aparência do **Cancelar** botão não é alterado imediatamente quando você clica nele. O `Click` evento não pode ocorrer até que o `My.Application.DoEvents` instrução permite o processamento de eventos.  
   
     > [!NOTE]
-    >  O `My.Application.DoEvents` método não processa os eventos exatamente da mesma maneira como faz o formulário. Por exemplo, este passo a passo, você deve clicar o **Cancelar** botão duas vezes. Para permitir que o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading](../../../../visual-basic/programming-guide/concepts/threading/index.md).
+    >  O `My.Application.DoEvents` método não processa os eventos exatamente da mesma maneira como faz o formulário. Por exemplo, este passo a passo, você deve clicar o **Cancelar** botão duas vezes. Para permitir que o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading gerenciado](../../../../standard/threading/index.md).
   
  Talvez você ache instrutivos para executar o programa com F11 e percorrer o código uma linha por vez. Você pode ver claramente como execução insere `LongTask`e, em seguida, brevemente reinserido `Form1` cada vez que o `PercentDone` é gerado.  
   
