@@ -11,11 +11,11 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744399"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296891"
 ---
 # <a name="deriving-from-webrequest"></a>Derivando de WebRequest
 A classe <xref:System.Net.WebRequest> é uma classe base abstrata que fornece os métodos e as propriedades básicas para criar um manipulador de solicitação específico ao protocolo que se ajusta ao modelo de protocolo conectável do .NET Framework. Os aplicativos que usam a classe **WebRequest** podem solicitar dados usando qualquer protocolo com suporte sem a necessidade de especificar o protocolo usado.  

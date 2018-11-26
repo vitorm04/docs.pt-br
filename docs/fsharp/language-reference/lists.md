@@ -1,18 +1,18 @@
 ---
 title: Listas (F#)
-description: Saiba mais sobre listas do F#, uma série imutável, ordenada, de elementos do mesmo tipo.
+description: Saiba mais sobre F# lista uma série imutável, ordenada, de elementos do mesmo tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201618"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297498"
 ---
 # <a name="lists"></a>Listas
 
 > [!NOTE]
-Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
+> Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
 Uma lista em F# é uma série imutável, ordenada, de elementos do mesmo tipo. Para executar operações básicas em listas, usar as funções do [módulo lista](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
@@ -56,7 +56,7 @@ Funções para executar operações em listas estão disponíveis na [módulo li
 
 Como as listas em F# são imutáveis, quaisquer operações de modificação geram novas listas em vez de modificar as listas existentes.
 
-Listas em F# são implementadas como listas vinculadas individualmente, o que significa que as operações que acessam apenas o cabeçalho da lista são (1), e o acesso de elemento é O (*n*).
+Listas no F# são implementados como listas vinculadas individualmente, o que significa que as operações que acessam apenas o cabeçalho da lista são (1) e acesso de elemento é O (*n*).
 
 ## <a name="properties"></a>Propriedades
 

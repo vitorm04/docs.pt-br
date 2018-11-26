@@ -1,24 +1,24 @@
 ---
 title: Cadeias de caracteres (F#)
-description: Saiba como o tipo 'string' F# representa texto imutável como uma sequência de caracteres Unicode.
+description: Saiba como o F# tipo 'string' representa texto imutável, como uma sequência de caracteres Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799337"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296765"
 ---
 # <a name="strings"></a>Cadeias de caracteres
 
 > [!NOTE]
-Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
+> Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
 O `string` tipo representa texto imutável, como uma sequência de caracteres Unicode. `string` é um alias para `System.String` no .NET Framework.
 
 ## <a name="remarks"></a>Comentários
 
-Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar determinados caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como uma *sequência de escape*. Com suporte em F# de cadeia de caracteres literais são mostrados na tabela a seguir de sequências de escape.
+Literais de cadeia de caracteres são delimitados pelo caractere de aspas ("). O caractere de barra invertida ( \\ ) é usado para codificar determinados caracteres especiais. A barra invertida e o próximo caractere junto são conhecidos como uma *sequência de escape*. Suportada de sequências de escape F# literais de cadeia de caracteres são mostrados na tabela a seguir.
 
 |Caractere|Sequência de escape|
 |---------|---------------|
@@ -78,7 +78,7 @@ O exemplo a seguir ilustra a concatenação de cadeia de caracteres.
 
 ## <a name="string-class"></a>Classe de cadeia de caracteres
 
-Porque o tipo de cadeia de caracteres no F#, na verdade, um .NET Framework `System.String` digitar, todo o `System.String` membros estão disponíveis. Isso inclui o `+` operador, que é usado para concatenar cadeias de caracteres, o `Length` propriedade e o `Chars` propriedade, que retorna a cadeia de caracteres como uma matriz de caracteres Unicode. Para obter mais informações sobre cadeias de caracteres, consulte `System.String`.
+Porque o tipo de cadeia de caracteres no F# é, na verdade, um .NET Framework `System.String` digitar tudo a `System.String` membros estão disponíveis. Isso inclui o `+` operador, que é usado para concatenar cadeias de caracteres, o `Length` propriedade e o `Chars` propriedade, que retorna a cadeia de caracteres como uma matriz de caracteres Unicode. Para obter mais informações sobre cadeias de caracteres, consulte `System.String`.
 
 Usando o `Chars` propriedade de `System.String`, você pode acessar os caracteres individuais em uma cadeia de caracteres especificando um índice, conforme mostrado no código a seguir.
 

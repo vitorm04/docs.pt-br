@@ -1,18 +1,18 @@
 ---
 title: Expressões de consulta (F#)
-description: Saiba mais sobre o suporte de expressão de consulta do LINQ na linguagem de programação F#.
+description: Saiba mais sobre o suporte de expressão de consulta do LINQ no F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033487"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297147"
 ---
 # <a name="query-expressions"></a>Expressões de consulta
 
 > [!NOTE]
-Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
+> Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
 Expressões de consulta permitem que você consultar uma fonte de dados e colocar os dados em um formulário desejado. Expressões de consulta oferecem suporte para LINQ em F#.
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Comentários
 
-Expressões de consulta são um tipo de expressão de computação semelhante às expressões de sequência. Assim como você pode especificar uma sequência, fornecendo um código em uma expressão de sequência, especifique um conjunto de dados, fornecendo o código em uma expressão de consulta. Em uma expressão de sequência, o `yield` palavra-chave identifica dados a serem retornados como parte da sequência resultante. Em expressões de consulta, o `select` palavra-chave executa a mesma função. Além de `select` palavra-chave, F# também oferece suporte a um número de operadores de consulta que são muito parecidos com as partes de uma instrução SQL SELECT. Aqui está um exemplo de uma expressão de consulta simples, junto com o código que se conecta à fonte de Northwind OData.
+Expressões de consulta são um tipo de expressão de computação semelhante às expressões de sequência. Assim como você pode especificar uma sequência, fornecendo um código em uma expressão de sequência, especifique um conjunto de dados, fornecendo o código em uma expressão de consulta. Em uma expressão de sequência, o `yield` palavra-chave identifica dados a serem retornados como parte da sequência resultante. Em expressões de consulta, o `select` palavra-chave executa a mesma função. Além de `select` palavra-chave, F# também dá suporte a um número de operadores de consulta que são muito parecidos com as partes de uma instrução SQL SELECT. Aqui está um exemplo de uma expressão de consulta simples, junto com o código que se conecta à fonte de Northwind OData.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ Operadores de consulta permitem que você especifique os detalhes da consulta, c
 
 Somente as expressões que podem ser convertidas em SQL são permitidas em expressões de consulta. Por exemplo, nenhuma chamada de função é permitida nas expressões quando você usa o `where` operador de consulta.
 
-A tabela 1 mostra os operadores de consulta disponíveis. Além disso, consulte Table2, que compara as consultas SQL e as F# consulta expressões equivalentes neste tópico. Alguns operadores de consulta não são suportados por alguns provedores de tipo. Em particular, o provedor de tipos do OData é limitado em operadores de consulta que dá suporte a devido a limitações no OData. Para obter mais informações, consulte [provedor de tipos ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+A tabela 1 mostra os operadores de consulta disponíveis. Além disso, consulte Table2, que compara as consultas SQL e o equivalente a F# consultar expressões neste tópico. Alguns operadores de consulta não são suportados por alguns provedores de tipo. Em particular, o provedor de tipos do OData é limitado em operadores de consulta que dá suporte a devido a limitações no OData. Para obter mais informações, consulte [provedor de tipos ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Essa tabela pressupõe um banco de dados da seguinte forma:
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Comparação das Expressões de Transact-SQL e F# Query
-A tabela a seguir mostra as consultas Transact-SQL comuns e seus equivalentes em F#. O código nesta tabela também pressupõe que o mesmo banco de dados da tabela anterior e o mesmo código inicial para configurar o provedor de tipos.
+A tabela a seguir mostra as consultas Transact-SQL comuns e seus equivalentes no F#. O código nesta tabela também pressupõe que o mesmo banco de dados da tabela anterior e o mesmo código inicial para configurar o provedor de tipos.
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabela 2. Expressões de Consulta Transact-SQL e F#
@@ -508,7 +508,7 @@ A tabela a seguir mostra as consultas Transact-SQL comuns e seus equivalentes em
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (não diferencia maiusculas de minúsculas)</th>
-    <th>Expressão F# Query (diferencia maiusculas de minúsculas)</th>
+    <th>F#(Diferencia maiusculas de minúsculas) da expressão de consulta</th>
   </tr>
 <tr><td>
 Selecione todos os campos da tabela.</br>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-E aqui está a saída completa quando esse código é executado em F# interativo.
+E aqui está a saída completa quando esse código é executado F# interativo.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
