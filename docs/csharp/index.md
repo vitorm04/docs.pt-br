@@ -1,6 +1,6 @@
 ---
 title: Guia de C#
-description: Saiba como o Guia de C# pode ajudar você a obter um extenso conhecimento sobre C#, seja você um desenvolvedor novo ou um especialista experiente.
+description: Saiba como o Guia do C# pode ajudá-lo a obter um extenso conhecimento sobre C#, seja você um desenvolvedor novo ou um especialista experiente.
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195834"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296744"
 ---
 # <a name="c-guide"></a>Guia de C#
 
-O guia de C# fornece muitos recursos sobre a linguagem C#. Este site tem vários públicos diferentes. Dependendo de sua experiência com programação ou com a linguagem C# e .NET, convém explorar as diferentes seções deste guia.
+O guia do C# fornece muitos recursos sobre a linguagem C#. Este site tem vários públicos diferentes. Dependendo de sua experiência com programação ou com a linguagem C# e .NET, convém explorar as diferentes seções deste guia.
 
 * Para desenvolvedores novatos:
   * Comece com os [tutoriais de introdução ao C#](tutorials/intro-to-csharp/index.md). Eles permitem explorar a linguagem C# de maneira interativa no seu navegador. Depois, você pode seguir para outros [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Eles mostram os conceitos da linguagem e como você mesmo pode criar programas em C#. Se você preferir ler primeiro as informações da visão geral, faça o [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
@@ -67,5 +67,5 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
 ## <a name="see-also"></a>Consulte também
 
 * [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [Desenvolvimento .NET](https://msdn.microsoft.com/library/ff361664)  
+* [Guia do .NET](../standard/index.md)  
 * [Exemplos do C#](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
