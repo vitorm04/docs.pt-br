@@ -1,37 +1,37 @@
 ---
 title: Implementando objetos de valor
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Implementando objetos de valor
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 4ba2e48e742e580a1c96743fa89e413c488b8dc7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 057e2e65f975c1de8f332b77c8a23d07329381e6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106717"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297472"
 ---
-# <a name="implementing-value-objects"></a>Implementando objetos de valor
+# <a name="implement-value-objects"></a>Implementar objetos de valor
 
 Conforme discutido nas seções anteriores sobre entidades e agregações, a identidade é fundamental para entidades. No entanto, existem muitos objetos e itens de dados em um sistema que não exigem uma identidade e um acompanhamento de identidade, como objetos de valor.
 
 Um objeto de valor pode fazer referência a outras entidades. Por exemplo, em um aplicativo que gera uma rota que descreve como ir de um ponto para outro, essa rota deve ser um objeto de valor. Seria um instantâneo de pontos em uma rota específica, mas essa rota sugerida não teria uma identidade, embora internamente possa fazer referência a entidades, como Cidade, Estrada etc.
 
-A Figura 9-13 mostra o objeto de valor Endereço dentro do agregado de Ordem.
+A Figura 7-13 mostra o objeto de valor Endereço dentro da agregação Ordem.
 
-![](./media/image14.png)
+![O objeto de valor Endereço dentro da Agregação Ordem.](./media/image14.png)
 
-**Figura 9-13**. Tratar objeto de valor no agregado de Ordem
+**Figura 7-13**. Tratar objeto de valor no agregado de Ordem
 
-Conforme mostrado na Figura 9-13, uma entidade geralmente é composta por vários atributos. Por exemplo, a entidade `Order` pode ser modelada como uma entidade com uma identidade e composta internamente por um conjunto de atributos como OrderId, OrderDate, OrderItems etc. Mas o endereço, que é simplesmente um valor complexo composto por país, rua, cidade etc. e não tem nenhuma identidade nesse domínio, deve ser modelado e tratado como um objeto de valor.
+Conforme mostrado na Figura 7-13, uma entidade geralmente é composta por vários atributos. Por exemplo, a entidade `Order` pode ser modelada como uma entidade com uma identidade e composta internamente por um conjunto de atributos como OrderId, OrderDate, OrderItems etc. Mas o endereço, que é simplesmente um valor complexo composto por país, rua, cidade, etc., e não tem nenhuma identidade nesse domínio, precisa ser modelado e tratado como um objeto de valor.
 
 ## <a name="important-characteristics-of-value-objects"></a>Características importantes de objetos de valor
 
 Existem duas características principais para objetos de valor:
 
--   Eles não têm identidade.
+- Eles não têm identidade.
 
--   Eles são imutáveis.
+- Eles são imutáveis.
 
 A primeira característica já foi discutida. A imutabilidade é um requisito importante. Os valores de um objeto de valor devem ser imutáveis depois que o objeto for criado. Portanto, quando o objeto é construído, você deve fornecer os valores necessários, mas não deve permitir que mudem durante o tempo de vida do objeto.
 
@@ -102,11 +102,11 @@ Você pode usar essa classe durante a implementação do seu objeto de valor rea
 ```csharp
 public class Address : ValueObject
 {
-    public String Street { get; }
-    public String City { get; }
-    public String State { get; }
-    public String Country { get; }
-    public String ZipCode { get; }
+    public String Street { get; private set; }
+    public String City { get; private set; }
+    public String State { get; private set; }
+    public String Country { get; private set; }
+    public String ZipCode { get; private set; }
 
     private Address() { }
 
@@ -131,13 +131,19 @@ public class Address : ValueObject
 }
 ```
 
+Você pode ver como essa implementação de objeto de valor do Endereço não tem nenhuma identidade e, portanto, nenhum campo de ID, nem na classe Address, nem mesmo na classe ValueObject.
+
+Não era possível não ter nenhum campo de ID em uma classe a ser usada pelo Entity Framework até o EF Core 2.0, o que ajuda muito a implementar objetos de valor melhores sem nenhuma ID. Essa é justamente a explicação da próxima seção. 
+
+Poderíamos argumentar que os objetos de valor, sendo imutáveis, devem ser somente leitura (ou seja, propriedades get-only) e isso é realmente verdadeiro. No entanto, os objetos de valor geralmente são serializados e desserializados para passar pelas filas de mensagens e, sendo somente leitura, impedem o desserializador de atribuir valores. Portanto, simplesmente os deixamos como um conjunto particular que é somente leitura o suficiente para ser prático.
+
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Como manter objetos de valor no banco de dados com o EF Core 2.0
 
 Você acabou de ver como definir um objeto de valor em seu modelo de domínio. Porém, como pode você realmente mantê-lo no banco de dados por meio de núcleo do EF (Entity Framework) que geralmente tem como alvo entidades com identidade?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Tela de fundo e abordagens mais antigas usando EF Core 1.1
 
-Como contexto, uma limitação ao usar EF Core 1.0 e 1.1 era que você não podia usar [tipos complexos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) conforme definido no EF 6. x no .NET Framework tradicional. Portanto, se estiver usando EF Core 1.0 ou 1.1, precisará armazenar seu objeto de valor como uma entidade EF com um campo de ID. Então, para que se pareça mais com um objeto de valor sem nenhuma identidade, você pode ocultar a ID para deixar claro que a identidade de um objeto de valor não é importante no modelo de domínio. Você pode ocultar essa ID usando a ID como um [propriedade de sombra](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Uma vez que a configuração para ocultar a ID do modelo é configurada no nível de infraestrutura do EF, seria transparente para o seu modelo de domínio.
+Como contexto, uma limitação ao usar o EF Core 1.0 e 1.1 era que não possível usar [tipos complexos](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute), conforme definido no EF 6.x no .NET Framework tradicional. Portanto, se estiver usando EF Core 1.0 ou 1.1, precisará armazenar seu objeto de valor como uma entidade EF com um campo de ID. Então, para que se pareça mais com um objeto de valor sem nenhuma identidade, você pode ocultar a ID para deixar claro que a identidade de um objeto de valor não é importante no modelo de domínio. Você pode ocultar essa ID usando a ID como um [propriedade de sombra](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Uma vez que a configuração para ocultar a ID do modelo é configurada no nível de infraestrutura do EF, seria transparente para o seu modelo de domínio.
 
 Na versão inicial do eShopOnContainers (.NET Core 1.1), a ID oculta necessária para a infraestrutura do EF Core foi implementada da seguinte maneira no nível de DbContext, usando a API Fluente no projeto de infraestrutura. Portanto, a ID foi oculta do ponto de vista do domínio modelo de domínio, mas ainda está na infraestrutura.
 
@@ -164,10 +170,9 @@ Mesmo com algumas lacunas entre o padrão de objeto de valor canônico em DDD e 
 
 O recurso de tipo de entidade própria foi adicionado ao EF Core desde a versão 2.0.
 
-Um tipo de entidade própria permite mapear tipos que não têm a própria identidade definida explicitamente no modelo de domínio e são usados como propriedades, como um objeto de valor, em qualquer uma de suas entidades. Um tipo de entidade própria compartilha o mesmo tipo CLR com outro tipo de entidade. A entidade que contém a navegação de definição é a entidade proprietária. Ao consultar o proprietário, os tipos próprios serão incluídos por padrão.
+Um tipo de entidade própria permite mapear tipos que não têm a própria identidade definida explicitamente no modelo de domínio e são usados como propriedades, como um objeto de valor, em uma de suas entidades. Um tipo de entidade própria compartilha o mesmo tipo CLR com outro tipo de entidade (ou seja, ele é apenas uma classe regular). A entidade que contém a navegação de definição é a entidade proprietária. Ao consultar o proprietário, os tipos próprios serão incluídos por padrão.
 
-Apenas observando o modelo de domínio, um tipo de propriedade parece não ter identidade alguma.
-No entanto, nos bastidores, tipos próprios têm identidade, mas a propriedade de navegação do proprietário faz parte dessa identidade.
+Apenas observando o modelo de domínio, um tipo de propriedade parece não ter identidade alguma. No entanto, nos bastidores, tipos próprios têm identidade, mas a propriedade de navegação do proprietário faz parte dessa identidade.
 
 A identidade de instâncias de tipos próprios não é completamente própria. Consiste em três componentes:
 
@@ -175,7 +180,7 @@ A identidade de instâncias de tipos próprios não é completamente própria. C
 
 - A propriedade de navegação apontando para elas
 
-- No caso de coleções de tipos próprios, um componente independente (ainda não compatível com o EF Core 2.0).
+- No caso de coleções de tipos próprios, um componente independente (ainda não compatível com o EF Core 2.0; em breve no 2.2).
 
 Por exemplo, no modelo de domínio Ordenação em eShopOnContainers, como parte da entidade de Ordem, o objeto de valor de endereço é implementado como um tipo de entidade própria dentro da entidade de proprietário, que é a entidade Ordem. Endereço é um tipo sem propriedade de identidade definida no modelo de domínio. Ele é usado como uma propriedade do tipo Ordem para especificar o endereço para entrega para uma ordem específica.
 
@@ -266,64 +271,64 @@ public class Address
 
 ### <a name="additional-details-on-owned-entity-types"></a>Detalhes adicionais sobre tipos de entidade própria
 
-• Tipos próprios são definidos quando você configura uma propriedade de navegação para um tipo específico usando a API fluente OwnsOne.
+- Os tipos próprios são definidos quando você configura uma propriedade de navegação com um tipo específico usando a API fluente OwnsOne.
 
-• A definição de um tipo próprio em nosso modelo de metadados é uma composição de: tipo de proprietário, a propriedade de navegação e o tipo CLR do tipo próprio.
+- A definição de um tipo próprio em nosso modelo de metadados é uma composição de: o tipo de proprietário, a propriedade de navegação e o tipo CLR do tipo próprio.
 
-• A identidade (chave) de uma instância de tipo próprio na nossa pilha é uma composição de identidade do tipo de proprietário e definição do tipo próprio.
+- A identidade (chave) de uma instância de tipo próprio na nossa pilha é uma composição da identidade do tipo de proprietário e a definição do tipo próprio.
 
 #### <a name="owned-entities-capabilities"></a>Recursos de entidades próprias:
 
-• O tipo próprio pode fazer referência a outras entidades, tanto próprias (tipos próprios aninhados) quanto não próprias (propriedades de navegação de referência comum para outras entidades).
+- Os tipos próprios podem referenciar outras entidades, tanto próprias (tipos próprios aninhados) quanto não próprias (propriedades de navegação de referência comuns para outras entidades).
 
-• Você pode mapear o mesmo tipo CLR como diferentes tipos próprios na mesma entidade de proprietário por meio das propriedades de navegação separadas.
+- Você pode mapear o mesmo tipo CLR como diferentes tipos próprios na mesma entidade de proprietário por meio de propriedades de navegação separadas.
 
-• A divisão de tabela está configurada por convenção, mas você pode optar por não mapear o tipo próprio para uma tabela diferente usando ToTable.
+- A divisão de tabela está configurada por convenção, mas você pode recusá-la mapeando o tipo próprio para uma tabela diferente usando ToTable.
 
-• Carregamento adiantado é executado automaticamente em tipos próprios, ou seja, não há necessidade de chamar Include() na consulta.
+- O carregamento adiantado é executado automaticamente em tipos próprios, ou seja, não há necessidade de chamar Include() na consulta.
+
+- Pode ser configurado com o atributo \[Owned\], do EF Core 2.1 em diante
 
 #### <a name="owned-entities-limitations"></a>Limitações de entidades próprias:
 
-• Não é possível criar um DbSet<T> de um tipo próprio (por design).
+- Não é possível criar um DbSet\<T\> de um tipo próprio (por design).
 
-• Você não pode chamar ModelBuilder.Entity<T>() em tipos próprios (atualmente por design).
+- Não é possível chamar ModelBuilder.Entity\<T\>() em tipos próprios (atualmente por design).
 
-• Nenhuma coleção de tipos próprios ainda (mas serão compatíveis com versões após EF Core 2.0).
+- Nenhuma coleção de tipos próprios ainda (do EF Core 2.1 em diante, mas terá suporte no 2.2).
 
-• Não há suporte para configurá-los por meio de um atributo.
+- Não há suporte para tipos próprios opcionais (ou seja, que permitem valor nulo) mapeados com o proprietário na mesma tabela (ou seja, usando a divisão de tabela). Isso ocorre porque o mapeamento é feito para cada propriedade; não temos um sentinela separado para o valor complexo nulo como um inteiro.
 
-• Não há suporte para tipos próprios opcionais (ou seja, anuláveis) mapeados com o proprietário da mesma tabela (ou seja, usando a divisão de tabela). Isso ocorre porque não há um sentinela separado para o nulo.
-
-• Não há suporte de mapeamento de herança para tipos de propriedade, mas você deve ser capaz de mapear dois tipos de folha das mesmas hierarquias de herança como diferentes tipos próprios. O EF Core não argumentará sobre o fato de que fazem parte da mesma hierarquia.
+- Não há suporte de mapeamento de herança para tipos de propriedade, mas você deve conseguir mapear dois tipos de folha das mesmas hierarquias de herança como diferentes tipos próprios. O EF Core não argumentará sobre o fato de que fazem parte da mesma hierarquia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principais diferenças com tipos complexos do EF6
 
-• A divisão de tabela é opcional, ou seja, podem opcionalmente ser mapeados para uma tabela separada e ainda serem tipos próprios.
+- A divisão de tabela é opcional, ou seja, podem opcionalmente ser mapeados para uma tabela separada e ainda serem tipos próprios.
 
-• Podem fazer referência a outras entidades (ou seja, podem atuar como o lado dependente em relações com outros tipos não próprios).
-
+- Podem referenciar outras entidades (ou seja, podem funcionar como o lado dependente em relações com outros tipos não próprios).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Martin Fowler. ValueObject pattern**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html) (Padrão de ValueObject)
+- **Martin Fowler. Padrão de ValueObject** \
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Implementando um design conduzido por domínio.** (Livro; inclui uma discussão sobre objetos de valor) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+- **Vaughn Vernon. Implementando um design conduzido por domínio.** (Livro; inclui uma discussão sobre objetos de valor) \
+  [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Propriedades de sombra**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **Propriedades de sombra** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Tipos complexos e/ou objetos de valor**. Discussão no repositório do GitHub do EF Core (guia Problemas) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+- **Tipos complexos e/ou objetos de valor**. Discussão no repositório GitHub do EF Core (guia Problemas) \
+  [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
--   **ValueObject.cs.** Classe de objeto de valor base no eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** Classe de objeto de valor base no eShopOnContainers.**  \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **Classe de endereços.** Exemplo de classe de objeto de valor em eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
-
-
+- **Classe de endereços.** Exemplo de classe de objeto de valor em eShopOnContainers. \
+  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
 >[!div class="step-by-step"]
 [Anterior](seedwork-domain-model-base-classes-interfaces.md)

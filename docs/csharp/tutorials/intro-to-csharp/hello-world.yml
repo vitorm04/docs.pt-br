@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
+  ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200135"
+  ms.lasthandoff: 11/26/2018
+  ms.locfileid: "52297043"
 items:
 - durationInMinutes: 1
   content: >
@@ -98,10 +98,4 @@ items:
     > [!NOTE]
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
-- content: >-
-    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#".
-
-
-    Saiba mais sobre como trabalhar com o tipo `string` no tópico [Guia de programação em C#](../../programming-guide/index.md) em [cadeias de caracteres](../../programming-guide/strings/index.md).
-
-    [Dicas de como trabalhar com cadeias de caracteres](../../how-to/index.md#working-with-strings).
+- content: "Você concluiu o tutorial de introdução à linguagem C# \"Olá, C#\". Clique no link **Números em C#** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A etapa \"Continuar aprendendo\" leva você de volta a esses tutoriais.\n\nPara ler mais sobre o tipo `string`:\n- Tópico do [Guia de Programação do C#](../../programming-guide/index.md) sobre [cadeias de caracteres](../../programming-guide/strings/index.md). \n- [Dicas de como trabalhar com cadeias de caracteres](../../how-to/index.md#working-with-strings)."

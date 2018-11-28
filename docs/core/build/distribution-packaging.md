@@ -4,12 +4,12 @@ description: Aprenda a empacotar, nomear e controlar a versão do .NET Core para
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: df1ba6a93106cd6b3ceafa93b7c548287878c3fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840471"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297212"
 ---
 # <a name="net-core-distribution-packaging"></a>Pacote de distribuição do .NET Core
 
@@ -46,7 +46,7 @@ Quando instalado, o .NET Core consiste em vários componentes que estão dispost
 
 - (1) **dotnet** O host (também conhecido como o "muxer") tem duas funções distintas: ativar um tempo de execução para iniciar um aplicativo e ativar um SDK para enviar comandos a ele. O host é um executável nativo (`dotnet.exe`).
 
-Embora haja um único host, a maioria dos outros componentes está em diretórios com controle de versão (2,3,5,6). Isso significa que muitas versões podem estar presentes no sistema, já que eles estão instalados lado a lado.
+Embora haja um único host, a maioria dos outros componentes está em diretórios com controle de versão (2,3,5,6). Isso significa que muitas versões podem estar presentes no sistema, já que elas são instaladas lado a lado.
 
 - (2) **host/fxr/\<versão do fxr>** contém a lógica de resolução do framework usada pelo host. O host usa o hostfxr mais recente instalado. O hostfxr é responsável por selecionar o tempo de execução apropriado ao executar um aplicativo .NET Core. Por exemplo, um aplicativo compilado para .NET Core 2.0.0 usará o tempo de execução 2.0.5 quando ele estiver disponível. Da mesma forma, o hostfxr seleciona o SDK adequado durante o desenvolvimento.
 

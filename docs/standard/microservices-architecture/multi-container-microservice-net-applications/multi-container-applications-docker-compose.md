@@ -1,28 +1,28 @@
 ---
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Definindo o aplicativo de vários contêineres com o docker-compose.yml
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Como especificar a composição de microsserviços para um aplicativo de vários contêineres com docker-compose.yml.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.date: 10/02/2018
+ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937599"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297173"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml 
 
-Neste guia, o arquivo [docker-compose.yml](https://docs.docker.com/compose/compose-file/) foi apresentado na seção [Etapa 4. Definir os serviços no docker-compose.yml ao compilar um aplicativo de vários contêineres do Docker](#step4_define_svcs_in_docker_compose_yml). No entanto, há outras maneiras de usar os arquivos docker-compose e vale a pena explorá-las com mais detalhes.
+Neste guia, o arquivo [docker-compose.yml](https://docs.docker.com/compose/compose-file/) foi apresentado na seção [Etapa 4. Definir os serviços no docker-compose.yml ao compilar um aplicativo de vários contêineres do Docker](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). No entanto, há outras maneiras de usar os arquivos docker-compose e vale a pena explorá-las com mais detalhes.
 
 Por exemplo, você pode descrever explicitamente como deseja implantar o aplicativo de vários contêineres no arquivo docker-compose.yml. Opcionalmente, você também pode descrever como vai criar as imagens personalizadas do Docker. (As imagens personalizadas do Docker também podem ser criadas com a CLI do Docker).
 
-Basicamente, você define cada um dos contêineres que deseja implantar, além de determinadas características para cada implantação de contêiner. Com um arquivo de descrição de implantação de vários contêineres pronto, você poderá implantar toda a solução por meio de uma única ação orquestrada pelo comando da CLI [docker-compose up](https://docs.docker.com/compose/overview/) ou poderá implantá-la de forma transparente no Visual Studio. Caso contrário, você teria que usar a CLI do Docker para implantar contêiner por contêiner, em várias etapas, usando o comando docker run na linha de comando. Portanto, cada serviço definido no docker-compose.yml deve especificar exatamente uma imagem ou build. As outras chaves são opcionais e são semelhantes aos correspondentes do docker run na linha de comando.
+Basicamente, você define cada um dos contêineres que deseja implantar, além de determinadas características para cada implantação de contêiner. Com um arquivo de descrição de implantação de vários contêineres pronto, você poderá implantar toda a solução por meio de uma única ação orquestrada pelo comando da CLI [docker-compose up](https://docs.docker.com/compose/overview/) ou poderá implantá-la de forma transparente no Visual Studio. Caso contrário, você precisará usar a CLI do Docker para implantar contêiner por contêiner, em várias etapas, usando o comando `docker run` na linha de comando. Portanto, cada serviço definido no docker-compose.yml deve especificar exatamente uma imagem ou build. As outras chaves são opcionais e são semelhantes aos correspondentes de `docker run` na linha de comando.
 
 O código YAML a seguir é a definição de um arquivo docker-compose.yml possivelmente global, mas único, do exemplo eShopOnContainers. Esse não é o verdadeiro arquivo docker-compose do eShopOnContainers. Em vez disso, ele é uma versão simplificada e consolidada em um único arquivo, o que não é a melhor maneira de se trabalhar com arquivos docker-compose, como será explicado posteriormente.
 
 ```yml
-version: '2'
+version: '3.4'
 
 services:
   webmvc:
@@ -84,19 +84,16 @@ services:
     image: redis
 ```
 
-A chave de raiz desse arquivo é services. Sob essa chave você define os serviços que você deseja implantar e executar, com o comando docker-compose up, ou ao implantar no Visual Studio usando esse arquivo docker-compose.yml. Nesse caso, o arquivo docker-compose.yml tem vários serviços definidos, conforme descrito na lista a seguir.
+A chave de raiz desse arquivo é services. Sob essa chave, você define os serviços que deseja implantar e executar ao executar o comando `docker-compose up` ou ao implantar por meio do Visual Studio usando esse arquivo docker-compose.yml. Nesse caso, o arquivo docker-compose.yml tem vários serviços definidos, conforme descrito na tabela a seguir.
 
--   Contêiner webmvc, incluindo o aplicativo MVC do ASP.NET Core que consome os microsserviços do C\# do lado do servidor
-
--   Contêiner catalog.api, incluindo o microsserviço da API Web do Catálogo do ASP.NET Core
-
--   Contêiner ordering.api, incluindo o microsserviço da API Web de Pedidos do ASP.NET Core
-
--   Contêiner sql.data, que executa o SQL Server para Linux, mantendo os bancos de dados de microsserviços
-
--   Contêiner basket.api, com o microsserviço Carrinho de compras da API Web do ASP.NET Core
-
--   Contêiner basket.data, que executa o Serviço de Cache Redis, com o banco de dados de carrinho de compras como um Cache Redis
+| Nome do serviço | Descrição |
+|--------------|-------------|
+| webmvc       | Contêiner, incluindo o aplicativo MVC ASP.NET Core, que consome os microsserviços do C\# do lado do servidor|
+| catalog.api  | Contêiner, incluindo o microsserviço de API Web do ASP.NET Core de Catálogo |
+| ordering.api | Contêiner, incluindo o microsserviço de API Web do ASP.NET Core de Pedidos |
+| sql.data     | Contêiner que executa o SQL Server para Linux armazenando os bancos de dados de microsserviços |
+| basket.api   | Contêiner com o microsserviço de API Web do ASP.NET Core de Cesta |
+| basket.data  | Contêiner que executa o serviço de Cache Redis, com o banco de dados da cesta como um Cache Redis |
 
 ### <a name="a-simple-web-service-api-container"></a>Um contêiner de API de serviço Web simples
 
@@ -120,7 +117,7 @@ Concentrando-se em um único contêiner, o microsserviço de contêiner catalog.
 
 Esse serviço em contêiner tem a seguinte configuração básica:
 
--   Ele se baseia na imagem eshop/catalog.api personalizada. Por questões de simplicidade, não há nenhuma definição de chave build: no arquivo. Isso significa que a imagem deverá ser previamente compilada (com docker build) ou ser baixada (com o comando docker pull) de qualquer registro do Docker.
+-   Ele se baseia na imagem eshop/catalog.api personalizada. Por questões de simplicidade, não há nenhuma definição de chave build: no arquivo. Isso significa que a imagem precisa ser previamente compilada (com docker build) ou ser baixada (com o comando docker pull) de qualquer registro do Docker.
 
 -   Ele define uma variável de ambiente denominada ConnectionString, com a cadeia de conexão a ser usada pelo Entity Framework para acessar a instância do SQL Server que contém o modelo de dados de catálogo. Nesse caso, o mesmo contêiner do SQL Server está mantendo vários bancos de dados. Dessa forma, você precisará de menos memória no computador de desenvolvimento do Docker. No entanto, você também poderia implantar um contêiner do SQL Server para cada banco de dados de microsserviço.
 
@@ -140,7 +137,7 @@ Também há outras configurações mais avançadas do docker-compose.yml que dis
 
 ### <a name="using-docker-compose-files-to-target-multiple-environments"></a>Usando arquivos docker-compose para destinar-se a vários ambientes
 
-Os arquivos docker-compose.yml são arquivos de definição e podem ser usados por várias infraestruturas que entendem esse formato. A ferramenta mais simples é o comando docker-compose, mas outras ferramentas, como orquestradores (por exemplo, o Docker Swarm), também entendem esse arquivo.
+Os arquivos docker-compose.yml são arquivos de definição e podem ser usados por várias infraestruturas que entendem esse formato. A ferramenta mais simples é o comando docker-compose.
 
 Portanto, ao usar o comando docker-compose você pode ter os seguintes principais cenários como destino.
 
@@ -148,7 +145,7 @@ Portanto, ao usar o comando docker-compose você pode ter os seguintes principai
 
 Ao desenvolver aplicativos, é importante ser capaz de executar um aplicativo em um ambiente de desenvolvimento isolado. Você pode usar o comando de CLI docker-compose para criar esse ambiente ou usar o Visual Studio, que usa o docker-compose nos bastidores.
 
-O arquivo docker-compose.yml permite que você configure e documente todas as dependências de serviço do seu aplicativo (outros serviços, cache, bancos de dados, filas, etc.). Ao usar o comando de CLI docker-compose, você pode criar e iniciar um ou mais contêineres para cada dependência com um único comando (docker-compose up).
+O arquivo docker-compose.yml permite que você configure e documente todas as dependências de serviço do seu aplicativo (outros serviços, cache, bancos de dados, filas, etc.). Usando o comando da CLI docker-compose, você pode criar e iniciar um ou mais contêineres para cada dependência com um único comando (docker-compose up).
 
 Os docker-compose.yml são arquivos de configuração interpretados pelo mecanismo do Docker, mas também servem como arquivos de documentação convenientes, com informações sobre a composição de seu aplicativo para vários contêineres.
 
@@ -159,16 +156,16 @@ Uma parte importante de qualquer processo de CD (implantação contínua) ou CI 
 Com o Docker Compose, você pode criar e destruir esse ambiente isolado facilmente por meio de alguns comandos no prompt de comando ou por meio de scripts, como os comandos a seguir:
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
-docker-compose down
+docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 ```
 
 #### <a name="production-deployments"></a>Implantações de produção
 
-Você também pode usar o Compose para implantar em um mecanismo remoto do Docker. Um caso comum é a implantação em uma única instância de host do Docker (como uma VM ou servidor de produção, provisionados com o [Docker Machine](https://docs.docker.com/machine/overview/)). Mas também poderia ser em um cluster [Docker Swarm](https://docs.docker.com/swarm/overview/) inteiro, porque os clusters também são compatíveis com os arquivos docker-compose.yml.
+Você também pode usar o Compose para implantar em um mecanismo remoto do Docker. Um caso comum é a implantação em uma única instância de host do Docker (como uma VM ou servidor de produção, provisionados com o [Docker Machine](https://docs.docker.com/machine/overview/)).
 
-Se estiver usando qualquer outro orquestrador (Azure Service Fabric, Mesos DC/OS, Kubernetes, etc.), você precisará adicionar configurações de instalação e metadados, como aqueles no docker-compose.yml, mas no formato exigido pelo outro orquestrador.
+Se estiver usando qualquer outro orquestrador (Azure Service Fabric, Kubernetes, etc.), precisará adicionar definições de configuração de instalação e metadados, como aquelas em docker-compose.yml, mas no formato exigido pelo outro orquestrador.
 
 De qualquer maneira, o docker-compose é uma ferramenta conveniente e um formato de metadados para fluxos de trabalho de desenvolvimento, teste e produção, embora o fluxo de trabalho de produção possa variar no orquestrador que você está usando.
 
@@ -180,13 +177,13 @@ Ao destinar-se a ambientes diferentes, você deve usar vários arquivos compose.
 
 Você pode usar um único arquivo docker-compose.yml, como nos exemplos simplificados mostrados nas seções anteriores. No entanto, isso não é recomendável para a maioria dos aplicativos.
 
-Por padrão, o Compose lê dois arquivos, um docker-compose.yml e um arquivo docker-compose.override.yml opcional. Conforme mostrado na Figura 8-11, quando você está usando o Visual Studio e habilitando o suporte do Docker, o Visual Studio também cria outro arquivo docker-compose.ci.build,yml para que você use nos pipelines de CI/CD, como no Azure DevOps Services.
+Por padrão, o Compose lê dois arquivos, um docker-compose.yml e um arquivo docker-compose.override.yml opcional. Conforme mostrado na Figura 6-11, quando você estiver usando o Visual Studio e habilitar o suporte ao Docker, o Visual Studio também criará um arquivo docker-compose.vs.debug.g.yml adicional para depurar o aplicativo. Dê uma olhada nesse arquivo na pasta obj\\Docker\\ da pasta da solução principal.
 
-![](./media/image12.png)
+![Estrutura do arquivo de projeto de docker-compose: .dockerignore, para ignorar arquivos; docker-compose.yml, para compor microsserviços; docker-compose.override.yml, para configurar o ambiente de microsserviços.](./media/image12.png)
 
-**Figura 8-11**. Arquivos docker-compose no Visual Studio 2017
+**Figura 6-11**. Arquivos docker-compose no Visual Studio 2017
 
-Você pode editar os arquivos docker-compose com qualquer editor, como o Visual Studio Code ou o Sublime, e executar o aplicativo com o comando docker-compose up.
+Edite os arquivos docker-compose com qualquer editor, como o Visual Studio Code ou o Sublime, e execute o aplicativo com o comando docker-compose up.
 
 Por convenção, o arquivo docker-compose.yml contém sua configuração base e outras configurações estáticas. Isso significa que a configuração do serviço não deve ser alterada de acordo com o ambiente de implantação que você tem como destino.
 
@@ -194,23 +191,23 @@ O arquivo docker-compose.override.yml, como o próprio nome sugere, contém defi
 
 #### <a name="targeting-multiple-environments"></a>Destinando-se a vários ambientes
 
-Um caso de uso típico é aquele em que você define vários arquivos compose para destinar-se a vários ambientes, como de produção, de preparo, de CI ou de desenvolvimento. Para dar suporte a essas diferenças, você pode dividir a configuração do Compose em vários arquivos, conforme mostrado na Figura 8-12.
+Um caso de uso típico é aquele em que você define vários arquivos compose para destinar-se a vários ambientes, como de produção, de preparo, de CI ou de desenvolvimento. Para dar suporte a essas diferenças, você pode dividir a configuração do Compose em vários arquivos, conforme mostrado na Figura 6-12.
 
-![](./media/image13.png)
+![Você pode combinar vários arquivos docker-compose*.fml para lidar com diferentes ambientes.](./media/image13.png)
 
-**Figura 8-12**. Vários arquivos docker-compose substituindo valores no arquivo base docker-compose.yml
+**Figura 6-12**. Vários arquivos docker-compose substituindo valores no arquivo base docker-compose.yml
 
-Você inicia com o arquivo base docker-compose.yml. Esse arquivo base deve conter as definições de configuração base ou estáticas que não se alteram de acordo com o ambiente. Por exemplo, o eShopOnContainers tem o seguinte arquivo docker-compose.yml como o arquivo base.
+Você inicia com o arquivo base docker-compose.yml. Esse arquivo base deve conter as definições de configuração base ou estáticas que não se alteram de acordo com o ambiente. Por exemplo, o eShopOnContainers tem o arquivo docker-compose.yml a seguir (simplificado com menos serviços) como o arquivo base.
 
 ```yml
 #docker-compose.yml (Base)
-version: '3'
+version: '3.4'
 services:
   basket.api:
     image: eshop/basket.api:${TAG:-latest}
     build:
-      context: ./src/Services/Basket/Basket.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
     depends_on:
       - basket.data
       - identity.api
@@ -219,8 +216,8 @@ services:
   catalog.api:
     image: eshop/catalog.api:${TAG:-latest}
     build:
-      context: ./src/Services/Catalog/Catalog.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
     depends_on:
       - sql.data
       - rabbitmq
@@ -228,8 +225,8 @@ services:
   marketing.api:
     image: eshop/marketing.api:${TAG:-latest}
     build:
-      context: ./src/Services/Marketing/Marketing.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
     depends_on:
       - sql.data
       - nosql.data
@@ -239,8 +236,8 @@ services:
   webmvc:
     image: eshop/webmvc:${TAG:-latest}
     build:
-      context: ./src/Web/WebMVC
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Web/WebMVC/Dockerfile    
     depends_on:
       - catalog.api
       - ordering.api
@@ -280,7 +277,7 @@ Normalmente, o docker-compose.override.yml é usado para o ambiente de desenvolv
 
 ```yml
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
-version: '3'
+version: '3.4'
 
 services: 
 # Simplified number of services here: 
@@ -308,7 +305,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5101/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
@@ -350,18 +347,16 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
-      - BasketUrl=http://basket.api
-      - LocationsUrl=http://locations.api
+      - PurchaseUrl=http://webshoppingapigw
       - IdentityUrl=http://10.0.75.1:5105
-      - MarketingUrl=http://marketing.api                                                    
+      - MarketingUrl=http://webmarketingapigw
       - CatalogUrlHC=http://catalog.api/hc
       - OrderingUrlHC=http://ordering.api/hc
-      - IdentityUrlHC=http://identity.api/hc     
+      - IdentityUrlHC=http://identity.api/hc
       - BasketUrlHC=http://basket.api/hc
       - MarketingUrlHC=http://marketing.api/hc
       - PaymentUrlHC=http://payment.api/hc
+      - SignalrHubUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5202
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -370,9 +365,8 @@ services:
       - "5100:80"
   sql.data:
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5433:1433"
   nosql.data:
@@ -390,7 +384,7 @@ services:
 
 Neste exemplo, a configuração de substituição de desenvolvimento expõe algumas portas para o host, define variáveis de ambiente com URLs de redirecionamento e especifica cadeias de conexão para o ambiente de desenvolvimento. Todas essas configurações são apenas para o ambiente de desenvolvimento.
 
-Quando você executa `docker-compose up` (ou o inicia no Visual Studio), o comando lerá as substituições automaticamente como se estivesse mesclando os dois arquivos.
+Quando você executa `docker-compose up` (ou o inicia no Visual Studio), o comando lerá as substituições automaticamente como se estivesse mesclando os dois arquivos.
 
 Suponha que você deseja outro arquivo do Compose para o ambiente de produção, com valores de configuração, de portas ou de cadeias de conexão diferentes. Você pode criar outro arquivo de substituição, como um arquivo chamado `docker-compose.prod.yml`, com diferentes configurações e variáveis de ambiente.  Esse arquivo poderá ser armazenado em outro repositório GIT ou gerenciado e protegido por uma equipe diferente.
 
@@ -404,7 +398,7 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 #### <a name="using-environment-variables-in-docker-compose-files"></a>Usando variáveis de ambiente em arquivos docker-compose
 
-É conveniente, especialmente em ambientes de produção, ter a possibilidade de obter informações de configuração de variáveis de ambiente, como mostramos em exemplos anteriores. Faça referência a uma variável de ambiente em arquivos docker-compose, usando a sintaxe \${MY\_VAR}. A seguinte linha de um arquivo docker-compose.prod.yml mostra como referenciar o valor de uma variável de ambiente.
+É conveniente, especialmente em ambientes de produção, ter a possibilidade de obter informações de configuração de variáveis de ambiente, como mostramos em exemplos anteriores. Referencie uma variável de ambiente nos arquivos docker-compose usando a sintaxe ${MY\_VAR}. A seguinte linha de um arquivo docker-compose.prod.yml mostra como referenciar o valor de uma variável de ambiente.
 
 ```yml
 IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
@@ -422,16 +416,16 @@ ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
 ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 ```
 
-O docker-compose espera que cada linha de um arquivo .env esteja no formato &lt;variável&gt;=&lt;valor&gt;.
+O docker-compose espera que cada linha de um arquivo .env esteja no formato \<variável\>=\<valor\>.
 
 Observe que os valores definidos no ambiente do tempo de execução sempre substituem os valores definidos no arquivo .env. De maneira semelhante, os valores passados por meio de argumentos de linha de comando também substituem os valores padrão definidos no arquivo .env.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Visão geral do Docker Compose**
+-   **Visão geral do Docker Compose** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Vários arquivos Compose**
+-   **Vários arquivos Compose** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Criando imagens do Docker do ASP.NET Core otimizadas
@@ -440,112 +434,41 @@ Se estiver explorando o Docker e o .NET Core em fontes na Internet, você encont
 
 ```
 FROM microsoft/dotnet
-
 WORKDIR /app
-
 ENV ASPNETCORE_URLS http://+:80
-
 EXPOSE 80
-
 COPY . .
-
 RUN dotnet restore
-
 ENTRYPOINT ["dotnet", "run"]
 ```
 
 Um Dockerfile como esse funcionará. No entanto, você pode otimizar substancialmente suas imagens, especialmente as imagens de produção.
 
-No modelo de contêiner e microsserviços, você está constantemente iniciando contêineres. O modo comum de uso de contêineres não reinicia um contêiner em suspensão porque o contêiner é descartável. Orquestradores, como Docker Swarm, Kubernetes, DCOS ou Azure Service Fabric, simplesmente criam novas instâncias de imagens. Isso significa que você precisará otimizar por meio da pré-compilação do aplicativo quando ele for criado, fazendo com que o processo de instanciação seja mais rápido. Quando o contêiner é iniciado, ele deve estar pronto para executar. Você não deve restaurar e compilar em tempo de execução, usando os comandos dotnet restore e dotnet build na CLI do dotnet, como você pode ver em várias postagens de blog sobre o .NET Core e o Docker.
+No modelo de contêiner e microsserviços, você está constantemente iniciando contêineres. O modo comum de uso de contêineres não reinicia um contêiner em suspensão porque o contêiner é descartável. Orquestradores (como o Kubernetes e o Azure Service Fabric) simplesmente criam instâncias de imagens. Isso significa que você precisará otimizar por meio da pré-compilação do aplicativo quando ele for criado, fazendo com que o processo de instanciação seja mais rápido. Quando o contêiner é iniciado, ele deve estar pronto para executar. Você não deve restaurar nem compilar em tempo de execução usando os comandos `dotnet restore` e `dotnet build` na CLI do dotnet, como visto em várias postagens no blog sobre o .NET Core e o Docker.
 
-A equipe do .NET está realizando um trabalho importante para tornar o .NET Core e o ASP.NET Core uma estrutura otimizada para contêineres. O .NET Core não é apenas uma estrutura leve com um volume de memória pequeno; a equipe tem se concentrado no desempenho de inicialização e produzido algumas imagens de Docker otimizadas, como a imagem [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/), disponível no [Hub do Docker](https://hub.docker.com/r/microsoft/aspnetcore/), em comparação com as imagens [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) ou [microsoft/nanoserver](https://github.com/dotnet/dotnet-docker/blob/master/1.0/nanoserver/runtime/Dockerfile) regulares. A imagem [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) fornece configuração automática de aspnetcore\_urls para a porta 80 e o cache de assemblies pré criado; essas duas configurações resultam em inicialização mais rápida.
+A equipe do .NET está realizando um trabalho importante para tornar o .NET Core e o ASP.NET Core uma estrutura otimizada para contêineres. O .NET Core não é apenas uma estrutura leve com um volume de memória pequeno; a equipe se concentrou em imagens do Docker otimizadas para três cenários principais e as publicou no Registro no Hub do Docker em <span class="underline">microsoft/dotnet</span>, começando na versão 2.1:
+
+1.  **Desenvolvimento**: quando a prioridade é a capacidade de iterar e depurar alterações rapidamente e o tamanho é secundário.
+
+2.  **Build**: a prioridade é compilar o aplicativo e inclui os binários e outras dependências para otimizar os binários.
+
+3.  **Produção**: quando o foco é a rápida implantação e inicialização de contêineres; portanto, essas imagens são limitadas aos binários e ao conteúdo necessário para executar o aplicativo.
+
+Para conseguir isso, a equipe do .NET fornece três variantes básicas em [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (no Hub do Docker):
+
+1.  **sdk**: para os cenários de desenvolvimento e build.
+2.  **runtime**: para o cenário de produção e
+3.  **runtime-deps**: para o cenário de produção de [aplicativos autossuficientes](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+
+As imagens de tempo de execução também fornecem configuração automática de aspnetcore\_urls para a porta 80 e do cache pré-gerado para imagem nativa de assemblies; para ajudar na obtenção de uma inicialização mais rápida.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Criando imagens otimizadas do Docker com o ASP.NET Core**
+-   **Criando imagens otimizadas do Docker com o ASP.NET Core** <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-### <a name="building-the-application-from-a-build-ci-container"></a>Compilando o aplicativo em um contêiner de build (CI)
-
-Outro benefício do Docker é que você pode compilar o aplicativo em um contêiner pré-configurado, conforme mostrado na Figura 8-13, evitando a necessidade de criar um computador de build ou uma VM para compilar o aplicativo. Você pode usar ou testar esse contêiner de build executando-o em seu computador de desenvolvimento. E o que é ainda mais interessante é que você pode usar o mesmo contêiner de build em seu pipeline de CI (integração contínua).
-
-![](./media/image14.png)
-
-**Figura 8-13**. Contêiner de build do Docker compilando os binários de .NET 
-
-Para este cenário, fornecemos a imagem [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/), que você pode usar para compilar e criar os aplicativos do ASP.NET Core. A saída é colocada em uma imagem baseada na imagem [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/), que é uma imagem de tempo de execução otimizado, conforme observado anteriormente.
-
-A imagem aspnetcore-build contém tudo o que você precisa para compilar um aplicativo do ASP.NET Core, incluindo o .NET Core, o SDK do ASP.NET, o npm, o Bower, o Gulp, etc.
-
-Essas dependências são necessárias no momento do build. No entanto, não queremos levá-las com o aplicativo em tempo de execução, porque isso tornaria a imagem desnecessariamente grande. No aplicativo eShopOnContainers, você pode compilar o aplicativo em um contêiner simplesmente por meio da execução do seguinte comando docker-compose.
-
-```
-  docker-compose -f docker-compose.ci.build.yml up
-```
-
-A figura 8-14 mostra este comando em execução na linha de comando.
-
-![](./media/image15.png)
-
-**Figura 8-14.** Compilando seu aplicativo do .NET em um contêiner
-
-Como você pode ver, o contêiner que está sendo executado é o contêiner ci-build\_1. Ele se baseia na imagem aspnetcore-build para que possa compilar e criar o aplicativo inteiro de dentro do contêiner em vez de fazê-lo em seu computador. É por isso que, na verdade, ele está criando e compilando os projetos do .NET Core no Linux, porque esse contêiner está em execução no host Linux do Docker padrão.
-
-O arquivo [docker-compose.ci.build.yml](https://github.com/dotnet/eShopOnContainers/blob/master/docker-compose.ci.build.yml) dessa imagem (parte do eShopOnContainers) contém o seguinte código. Veja que ele inicia um contêiner de build usando a imagem [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/).
-
-```yml
-version: '3'
-
-services:
-
-  ci-build:
-
-    image: microsoft/aspnetcore-build:2.0
-
-    volumes:
-      - .:/src
-
-    working_dir: /src
-
-    command: /bin/bash -c "pushd ./src/Web/WebSPA && npm rebuild node-sass && popd && dotnet restore ./eShopOnContainers-ServicesAndWebApps.sln && dotnet publish ./eShopOnContainers-ServicesAndWebApps.sln -c Release -o ./obj/Docker/publish"
-
-```
-
-* Começando com o **.NET Core 2.0**, o comando `dotnet restore` é executado automaticamente quando o comando `dotnet publish` é executado.
-
-Após o contêiner de build estar em funcionamento, ele executará os comandos dotnet restore e dotnet publish do SDK do .NET em todos os projetos da solução, a fim de compilar os bits do .NET. Nesse caso, como o eShopOnContainers também tem um SPA com base em TypeScript e Angular para o código do cliente, ele também precisa verificar as dependências de JavaScript com o npm, mas essa ação não está relacionada com os bits do .NET.
-
-O comando dotnet publish compila e publica a saída compilada dentro da pasta de cada projeto na pasta ../obj/Docker/publish, conforme mostrado na Figura 8-15.
-
-![](./media/image16.png)
-
-**Figura 8-15.** Arquivos binários gerados pelo comando dotnet publish
-
-#### <a name="creating-the-docker-images-from-the-cli"></a>Criando as imagens do Docker por meio da CLI
-
-Depois que a saída do aplicativo é publicada nas pastas relacionadas (dentro de cada projeto), a próxima etapa é criar as imagens do Docker. Para fazer isso, você usa os comandos docker-compose build e docker-compose up, conforme mostrado na Figura 8-16.
-
-![](./media/image17.png)
-
-**Figura 8-16.** Criando imagens do Docker e executando os contêineres
-
-Na Figura 8-17, você pode ver como o comando docker-compose build é executado.
-
-![](./media/image18.png)
-
-**Figura 8-17**. Criando as imagens do Docker com o comando docker-compose build
-
-A diferença entre os comandos docker-compose build e docker-compose up é que o docker-compose up compila e inicia as imagens.
-
-Quando você usa o Visual Studio, todas essas etapas são realizadas nos bastidores. O Visual Studio compila seu aplicativo do .NET, cria as imagens do Docker e implanta os contêineres no host do Docker. O Visual Studio oferece recursos adicionais, como a capacidade de depurar seus contêineres em execução no Docker diretamente no Visual Studio.
-
-A conclusão geral aqui é que você pode compilar seu aplicativo da mesma maneira que o pipeline de CI/CD deveria fazê-lo — em um contêiner em vez de um computador local. Depois que as imagens são criadas, você só precisa executar as imagens do Docker usando o comando docker-compose up.
-
-#### <a name="additional-resources"></a>Recursos adicionais
-
--   **Criando bits com base em um contêiner: configurando a solução eShopOnContainers em um ambiente da CLI do Windows (CLI do dotnet, CLI do Docker e VS Code)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
-
+-   **Criando Imagens do Docker para .NET Core Applications** <br/>
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
 [Anterior](data-driven-crud-microservice.md)
