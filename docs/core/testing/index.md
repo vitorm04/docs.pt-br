@@ -1,38 +1,48 @@
 ---
 title: Teste de Unidade no .NET Core
-description: Testes de unidade nunca foram tão fáceis. Saiba como usar o teste de unidade em projetos do .NET Core e .NET Standard.
+description: Teste de unidade em projetos do .NET Core e do .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 5b54e7936fb19a94fad9585c00904ae67a59e064
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: fe0807f93396466df7ed7d01dbb7a83e39c67770
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49314841"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297420"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Teste de unidade no .NET Core e no .NET Standard
 
-O .NET Core foi projetado com a capacidade de realizar testes em mente, para que a criação de testes de unidade para seus aplicativos seja mais fácil do que nunca. Este artigo apresenta brevemente os testes de unidade (e como eles diferem de outros tipos de testes). Os recursos vinculados demonstram como adicionar um projeto de teste à sua solução e executar testes de unidade usando a linha de comando ou o Visual Studio.
+O .NET Core torna mais fácil criar testes de unidade. Este artigo apresenta brevemente os testes de unidade e mostra como eles diferem de outros tipos de testes. Os recursos vinculados na parte inferior da página mostram como adicionar um projeto de teste à sua solução. Depois de configurar seu projeto de teste, você poderá executar testes de unidade usando a linha de comando ou o Visual Studio.
 
-O .NET Core 2.0 suporta o [.NET Standard 2.0](../../standard/net-standard.md). As bibliotecas usadas para demonstrar os testes de unidade nesta seção contam com o .NET Standard e também funcionarão em outros tipos de projeto.
+O .NET Core 2.0 e posterior dá suporte ao [.NET Standard 2.0](../../standard/net-standard.md) e usaremos as bibliotecas dele para demonstrar testes de unidade.
 
-Começando no .NET Core 2.0, há modelos de projeto de teste de unidade para C#, F# e Visual Basic.
+Você é capaz de usar modelos de projeto de teste de unidade internos do .NET Core 2.0 e posteriores para C#, F# e Visual Basic como um ponto de partida para seu projeto pessoal.
 
-## <a name="getting-started-with-testing"></a>Introdução aos testes
+## <a name="what-are-unit-tests"></a>O que são testes de unidade?
 
-Ter um pacote de testes automatizados é uma das melhores maneiras de garantir que um aplicativo de software faça o que seus autores pretendiam. Há diferentes tipos de teste para aplicativos de software, incluindo testes de integração, testes da Web, testes de carga e muitos outros. Os testes de unidade que testam métodos ou componentes de software individuais são os testes de nível mais baixo. Testes de unidade só devem testar o código sob o controle do desenvolvedor e não questões de infraestrutura, como bancos de dados, sistemas de arquivos ou recursos de rede. Testes de unidade podem ser escritos usando [TDD (Desenvolvimento Orientado por Testes)](https://deviq.com/test-driven-development/) ou adicionados ao código existente para confirmar sua precisão. Em ambos os casos, eles devem ser pequenos, bem nomeados e rápidos, visto que o ideal é ser capaz de executar centenas deles antes de enviar as alterações por push para o repositório de códigos compartilhado do projeto.
+Testes automatizados são uma ótima maneira de garantir que um aplicativo de software faça o que seus autores pretendem. Existem vários tipos de testes para aplicativos de software. Isso inclui testes de integração, testes na Web, testes de carga e outros. **Testes de unidade** testam métodos e componentes de software individuais. Testes de unidade devem testar apenas o código dentro do controle do desenvolvedor. Eles não devem testar questões de infraestrutura. Questões de infraestrutura incluem bancos de dados, sistemas de arquivos e recursos de rede. 
+
+Além disso, tenha em mente que há práticas recomendadas para escrever testes. Por exemplo, um [TDD (Desenvolvimento Orientado por Testes)](https://deviq.com/test-driven-development/) é quando um teste de unidade é escrito antes do código que ele é destinado a verificar. O TDD é como criar um sumário para um livro antes de escrevê-lo. Ele destina-se a ajudar os desenvolvedores a escrever código mais legível, simples e eficiente. 
 
 > [!NOTE]
-> Os desenvolvedores geralmente enfrentam problemas para inventar bons nomes para seus métodos e classe de teste. Como ponto de partida, a equipe de produto do ASP.NET segue [essas convenções](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
+> A equipe do ASP.NET segue [estas convenções](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) para ajudar os desenvolvedores a inventar bons nomes para os métodos e classes de teste.
 
-Ao escrever testes de unidade, tenha cuidado para não apresentar dependências à infraestrutura acidentalmente. Eles tendem a tornar os testes mais lentos e mais frágeis, ficando reservados aos testes de integração. Você pode evitar essas dependências ocultas no código do aplicativo seguindo o [Princípio de Dependências Explícitas](https://deviq.com/explicit-dependencies-principle/) e usando a [Injeção de Dependência](/aspnet/core/fundamentals/dependency-injection) para solicitar as dependências da estrutura. Você também pode manter seus testes de unidade em um projeto separado dos seus testes de integração e verificar se o projeto de teste de unidade não tem dependências ou referências a pacotes de infraestrutura.
+Tente não introduzir dependências na infraestrutura ao escrever testes de unidade. Elas tornam os testes lentos e frágeis, devendo ser reservadas para testes de integração. Você pode evitar essas dependências no aplicativo seguindo o [Princípio de Dependências Explícitas](https://deviq.com/explicit-dependencies-principle/) e usando a [Injeção de Dependência](/aspnet/core/fundamentals/dependency-injection). Você também pode manter seus testes de unidade em um projeto separado de seus testes de integração. Isso garante que seu projeto de teste de unidade não tenha dependências de pacotes de infraestrutura nem referências a eles.
 
-Saiba mais sobre testes de unidade em projetos do .NET Core:
+Mais informações sobre testes de unidade em projetos do .NET Core:
 
-Os projetos de teste de unidade para .NET Core são compatíveis com [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [Visual Basic](../../visual-basic/index.md). Também é possível escolher entre [xUnit](https://xunit.github.io), [NUnit](https://nunit.org) e [MSTest](https://github.com/Microsoft/vstest-docs).
+Projetos de testes de unidade do .NET Core são compatíveis com:
+* [C#](../../csharp/index.md)
+* [F#](../../fsharp/index.md)
+* [Visual Basic](../../visual-basic/index.md) 
 
-Você pode ler sobre as combinações nestes artigos passo a passo:
+Você também pode escolher entre:
+* [xUnit](https://xunit.github.io) 
+* [NUnit](https://nunit.org)
+* [MSTest](https://github.com/Microsoft/vstest-docs)
+
+Você pode aprender mais nos guias passo a passo a seguir:
 
 * Criar testes de unidade usando [*xUnit* e *C#* com a CLI do .NET Core](unit-testing-with-dotnet-test.md).
 * Criar testes de unidade usando [*NUnit* e *C#* com a CLI do .NET Core](unit-testing-with-nunit.md).
@@ -44,8 +54,8 @@ Você pode ler sobre as combinações nestes artigos passo a passo:
 * Criar testes de unidade usando [*NUnit* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Criar testes de unidade usando [*MSTest* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-mstest.md).
 
-É possível escolher idiomas diferentes para as bibliotecas de classe e as bibliotecas de teste de unidade. Você pode aprender como combinando e correspondendo os passo a passos mencionados acima.
+Você pode saber mais nos seguintes artigos:
 
 * O Visual Studio Enterprise oferece excelentes ferramentas de teste para o .NET Core. Para saber mais confira o [Live Unit Testing](/visualstudio/test/live-unit-testing) ou a [cobertura de código](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-* Para obter informações adicionais e exemplos de como usar a filtragem de teste de unidade, confira [Executando testes de unidade seletivos](selective-unit-tests.md) ou [including and excluding tests with Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods) (Incluindo e excluindo testes com o Visual Studio).
-* A equipe do xUnit criou um tutorial que mostra [como usar o xUnit com o .NET Core e o Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Para obter mais informações sobre como executar testes de unidade seletivos, veja [Executando testes de unidade seletivos](selective-unit-tests.md) ou [Incluindo e excluindo testes com o Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+* [Como usar o xUnit com o .NET Core e o Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
