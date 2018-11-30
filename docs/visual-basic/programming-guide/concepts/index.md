@@ -2,12 +2,12 @@
 title: Conceitos de Programação (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643326"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672050"
 ---
 # <a name="programming-concepts-visual-basic"></a>Conceitos de Programação (Visual Basic)
 Esta seção explica conceitos de programação na linguagem do Visual Basic.  
@@ -28,7 +28,6 @@ Esta seção explica conceitos de programação na linguagem do Visual Basic.
 |[Programação orientada a objeto (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Descreve os conceitos comuns orientados a objetos, incluindo encapsulamento, herança e polimorfismo.|  
 |[Reflexão (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Explica como usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos.|
 |[Serialização (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Descreve os principais conceitos em binário, XML e serialização SOAP.|  
-|[Threading (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Fornece uma visão geral do modelo de threading do .NET e mostra como escrever código que executa várias tarefas ao mesmo tempo para melhorar o desempenho e a capacidade de resposta dos aplicativos.|  
   
 ## <a name="related-sections"></a>Seções relacionadas  
   

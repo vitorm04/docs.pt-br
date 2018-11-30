@@ -1,13 +1,13 @@
 ---
 title: Asserções (F#)
-description: Saiba como usar a expressão 'Declare' como um recurso de depuração para testar expressões na linguagem de programação F#.
+description: Saiba como usar a expressão 'Declare' como um recurso de depuração para testar expressões no F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842470"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671895"
 ---
 # <a name="assertions"></a>Asserções
 
@@ -27,10 +27,10 @@ Na sintaxe anterior, *condição* representa uma expressão booleana que deve se
 
 Verificação de asserção é habilitada somente quando você compilar no modo de depuração; ou seja, se a constante `DEBUG` é definido. No sistema de projeto, por padrão, o `DEBUG` constante é definida na configuração de depuração, mas não na configuração de versão.
 
-O erro de falha de asserção não pode ser detectado por meio de manipulação de exceção do F#.
+O erro de falha de asserção não pode ser capturado usando F# tratamento de exceção.
 
->[!NOTE]
-O `assert` função resolve para <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
+> [!NOTE]
+> O `assert` função resolve para <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Exemplo
 

@@ -2,12 +2,12 @@
 title: Uniões discriminadas (F#)
 description: Saiba como usar F# uniões discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788117"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672238"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Este código mostra que você pode usar os campos nomeados na inicialização, ou você pode confiar na ordem dos campos na declaração e apenas por sua vez, fornecer os valores para cada campo. A chamada de construtor para `rect` no código anterior usa os campos nomeados, mas a chamada de construtor para `circ` usa a ordenação. Você pode combinar os campos ordenados e nomeados, como a construção de `prism`.
 
-O `option` tipo é uma união discriminada simple na biblioteca de núcleo do F#. O `option` tipo é declarado da seguinte maneira.
+O `option` o tipo é uma união discriminada simples no F# biblioteca principal. O `option` tipo é declarado da seguinte maneira.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Normalmente, os identificadores de caso podem ser usados sem qualificá-los com 
 
 ### <a name="unwrapping-discriminated-unions"></a>Uniões discriminadas descompactação
 
-Em uniões discriminadas F# geralmente são usadas na modelagem de domínio para um único tipo de encapsulamento. É fácil extrair o valor subjacente por meio de correspondência de padrões também. Você não precisa usar uma expressão de correspondência para um único caso:
+No F# uniões discriminadas geralmente são usadas na modelagem de domínio para um único tipo de encapsulamento. É fácil extrair o valor subjacente por meio de correspondência de padrões também. Você não precisa usar uma expressão de correspondência para um único caso:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ O exemplo a seguir demonstra este:
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Correspondência de padrões também é permitida diretamente nos parâmetros de função, portanto, é possível desencapsular a um caso de único:
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Uniões discriminadas de struct
 
-Começando com o F# 4.1, você também pode representar as uniões discriminadas como estruturas.  Isso é feito com o `[<Struct>]` atributo.
+Começando com F# 4.1, você também pode representar as uniões discriminadas como estruturas.  Isso é feito com o `[<Struct>]` atributo.
 
 ```fsharp
 [<Struct>]

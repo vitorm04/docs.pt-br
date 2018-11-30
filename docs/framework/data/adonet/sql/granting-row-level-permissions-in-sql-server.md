@@ -2,12 +2,12 @@
 title: Concedendo permissões de nível de linha no SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873699"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671950"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concedendo permissões de nível de linha no SQL Server
 Em alguns cenários, há um requisito para controlar o acesso a dados em um nível mais granular do que simplesmente concedendo, revogando ou negando permissões fornece. Por exemplo, um aplicativo de banco de dados do hospital pode exigir médicos individuais serão restritas a acesso a informações relacionadas ao somente seus pacientes. Existem requisitos semelhantes em muitos ambientes, incluindo finanças, lei, governo e militares aplicativos. Para ajudar a lidar com esses cenários, o SQL Server 2016 fornece uma [segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx) recurso que simplifica e centraliza a lógica de acesso de nível de linha em uma política de segurança. Para versões anteriores do SQL Server, uma funcionalidade semelhante pode ser obtida usando modos de exibição para aplicar a filtragem de nível de linha.  
@@ -58,13 +58,6 @@ Em alguns cenários, há um requisito para controlar o acesso a dados em um nív
 -   Negar todas as permissões em tabelas (e modos de exibição, se aplicável) para o `public` função. Os usuários não poderão herdar permissões de outras funções de banco de dados, como o predicado de filtro se baseia em nomes de usuário ou logon, não em funções.  
   
 -   Grant EXECUTE nos procedimentos armazenados para funções de banco de dados. Os usuários só podem acessar dados por meio de procedimentos armazenados fornecidos.  
-  
-## <a name="external-resources"></a>Recursos externos  
- Para obter mais informações, consulte o seguinte recurso.  
-  
-|||  
-|-|-|  
-|[Implementando a segurança de nível de linha e célula no classificadas bancos de dados usando o SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) no site do TechCenter do SQL Server.|Descreve como usar a segurança em nível de linha e célula para atender aos requisitos de segurança de banco de dados confidenciais.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx)  
