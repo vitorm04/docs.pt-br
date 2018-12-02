@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757342"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743263"
 ---
 # <a name="monolithic-applications"></a>Aplicativos monolíticos
 
@@ -69,7 +69,6 @@ Figura 4-4: publicar um contêiner no serviço de aplicativo do Azure de aplicat
 
 Figura 4-4 também mostra que o fluxo de publicação envia uma imagem por meio de um registro de contêiner, que pode ser o registro de contêiner do Azure (um registro próximo às implantações no Azure e protegido por contas e grupos do Active Directory do Azure) ou qualquer outro registro do Docker como os registros de Hub do Docker ou locais.
 
-
 >[!div class="step-by-step"]
-[Anterior](common-container-design-principles.md)
-[Próximo](state-and-data-in-docker-applications.md)
+>[Anterior](common-container-design-principles.md)
+>[Próximo](state-and-data-in-docker-applications.md)
