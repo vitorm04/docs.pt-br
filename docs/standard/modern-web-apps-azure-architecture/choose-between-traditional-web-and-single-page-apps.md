@@ -4,12 +4,12 @@ description: Saiba como escolher entre aplicativos Web tradicionais e SPAs (apli
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404139"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745297"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Escolher entre aplicativos Web tradicionais e SPAs (aplicativos de página única)
 
@@ -73,7 +73,7 @@ A configuração de SPAs exige familiaridade com o JavaScript e/ou o TypeScript 
 > - **Angular**  
 >   <https://angular.io>
 > - **Comparação de Estruturas em JavaScript**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **Seu aplicativo já deve expor uma API para outros clientes (internos ou públicos)**
 
@@ -91,5 +91,5 @@ A tabela de decisão a seguir resume alguns dos fatores básicos a serem conside
 | Requisitos avançados e complexos de interface do usuário            | **Limitado**             | **Apropriado**             |
 
 >[!div class="step-by-step"]
-[Anterior](modern-web-applications-characteristics.md)
-[Próximo](architectural-principles.md)
+>[Anterior](modern-web-applications-characteristics.md)
+>[Próximo](architectural-principles.md)

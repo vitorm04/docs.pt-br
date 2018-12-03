@@ -4,12 +4,12 @@ description: Práticas recomendadas para a publicação de bibliotecas .NET para
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50757303"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672063"
 ---
 # <a name="publishing-a-nuget-package"></a>Publicar um pacote NuGet
 
@@ -43,5 +43,5 @@ Os pacotes NuGet são publicados e consumidos dos repositórios de pacote. Embor
 **✔️ SIM:** habilite a notificação por email quando um pacote é publicado.
 
 >[!div class="step-by-step"]
-[Anterior](./sourcelink.md)
-[Próximo](./versioning.md)
+>[Anterior](sourcelink.md)
+>[Próximo](versioning.md)
