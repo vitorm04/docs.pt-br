@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615320"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672024"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construtores de referência inversa em expressões regulares
 As referências inversas fornecem uma maneira conveniente de identificar um caractere ou subcadeia de caracteres repetida em uma cadeia de caracteres. Por exemplo, se a cadeia de caracteres de entrada contiver várias ocorrências de uma subcadeia de caracteres arbitrária, você poderá corresponder a primeira ocorrência a um grupo de captura e, em seguida, usar uma referência inversa para corresponder às ocorrências subsequentes da subcadeia de caracteres.  
@@ -103,7 +103,7 @@ No entanto, se *name* é a representação de cadeia de caracteres de um número
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`(?<1>a)`|Corresponde ao caractere "a" e atribui o resultado ao grupo de captura chamado `1`.|  
-|`(?<1>\1b)*`|Corresponde à ocorrência 0 ou 1 do grupo chamado `1` junto com "b" e atribui o resultado ao grupo de captura chamado `1`.|  
+|`(?<1>\1b)*`|Corresponda zero ou mais ocorrências ao grupo chamado `1` junto com "b" e atribua o resultado ao grupo de captura chamado `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ No entanto, se *name* é a representação de cadeia de caracteres de um número
   
 2.  Ele avança para o segundo caractere e corresponde com êxito a cadeia de caracteres "ab" com a expressão `\1b`, ou "ab". Em seguida, atribui o resultado, "ab", a `\1`.  
   
-3.  Ele avança para o quarto caractere. A expressão `(?<1>\1b)` deve ser correspondida zero ou mais vezes, de forma que corresponda com êxito a cadeia de caracteres “abb” à expressão `\1b`. Ela atribui o resultado, “abb”, a `\1`.  
+3.  Ele avança para o quarto caractere. A expressão `(?<1>\1b)*` deve ser correspondida zero ou mais vezes, de forma que corresponda com êxito a cadeia de caracteres “abb” à expressão `\1b`. Ela atribui o resultado, “abb”, a `\1`.  
   
  Neste exemplo, `*` é um quantificador looping – ele é avaliado repetidamente até que o mecanismo de expressões regulares não corresponda ao padrão definido. Os quantificadores de looping não limpam definições de grupo.  
   

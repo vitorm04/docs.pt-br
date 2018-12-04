@@ -1,15 +1,15 @@
 ---
 title: Resiliência e a alta disponibilidade em microsserviços
-description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Resiliência e a alta disponibilidade em microsserviços
+description: Microsserviços precisam ser projetados para resistir a falhas de dependências e de rede transitória e precisam ser resilientes para alcançar alta disponibilidade.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106311"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745323"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resiliência e a alta disponibilidade em microsserviços
 
@@ -19,17 +19,22 @@ Um microsserviço precisa ser resiliente a falhas e conseguir reiniciar geralmen
 
 Os problemas de resiliência são abordados durante outros cenários, como quando ocorrem falhas durante uma atualização de aplicativo. O microsserviço, trabalhando com o sistema de implantação, precisa determinar se pode continuar a avançar para a versão mais recente ou, em vez disso, reverter para uma versão anterior para manter um estado consistente. Questões como se computadores suficientes estão disponíveis para continuar avançando e como recuperar versões anteriores do microsserviço precisam ser consideradas. Isso requer que o microsserviço emita informações de integridade para que o aplicativo geral e o orquestrador possam tomar essas decisões.
 
-Além disso, a resiliência está relacionada a como sistemas baseados em nuvem devem se comportar. Conforme mencionado, um sistema baseado em nuvem deve compreender falhas e tentar se recuperar automaticamente delas. Por exemplo, no caso de falhas de rede ou um contêiner, aplicativos cliente ou serviços cliente devem ter uma estratégia de repetição de envio de mensagens ou novas tentativas de solicitações, já que, em muitos casos, as falhas na nuvem são parciais. A seção [Implementando aplicativos resilientes](#implementing_resilient_apps) neste guia aborda como lidar com falhas parciais. Descreve técnicas como novas tentativas com retirada exponencial ou o padrão de Disjuntor no .NET Core usando bibliotecas como [Polly](https://github.com/App-vNext/Polly), que oferece uma grande variedade de políticas para lidar com esse assunto.
+Além disso, a resiliência está relacionada a como sistemas baseados em nuvem devem se comportar. Conforme mencionado, um sistema baseado em nuvem deve compreender falhas e tentar se recuperar automaticamente delas. Por exemplo, no caso de falhas de rede ou um contêiner, aplicativos cliente ou serviços cliente devem ter uma estratégia de repetição de envio de mensagens ou novas tentativas de solicitações, já que, em muitos casos, as falhas na nuvem são parciais. A seção [Implementando aplicativos resilientes](../implement-resilient-applications/index.md) neste guia aborda como lidar com falhas parciais. Descreve técnicas como novas tentativas com retirada exponencial ou o padrão de Disjuntor no .NET Core usando bibliotecas como [Polly](https://github.com/App-vNext/Polly), que oferece uma grande variedade de políticas para lidar com esse assunto.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Gerenciamento de integridade e diagnóstico em microsserviços
 
-Pode parecer óbvio, e muitas vezes é negligenciado, mas um microsserviço deve informar sua integridade e seu diagnóstico. Caso contrário, há pouca percepção de uma perspectiva de operações. Correlacionar eventos de diagnóstico em um conjunto de serviços independentes e lidar com desvios de relógio do computador para compreender a ordem de eventos é um desafio. Da mesma maneira que você interage com um microsserviço sobre protocolos e formatos de dados estabelecidos, existe a necessidade de padronização de como registrar em log a integridade e eventos de diagnóstico que, por fim, terminam em um repositório de eventos para consulta e exibição. Em uma abordagem de microsserviços, é essencial que diferentes equipes concordem com um formato de log único. Deve haver uma abordagem consistente para exibir eventos de diagnóstico no aplicativo.
+Pode parecer óbvio, e isso muitas vezes é negligenciado, mas um microsserviço deve informar sua integridade e seu diagnóstico. Caso contrário, há pouca percepção de uma perspectiva de operações. Correlacionar eventos de diagnóstico em um conjunto de serviços independentes e lidar com desvios de relógio do computador para compreender a ordem de eventos é um desafio. Da mesma maneira que você interage com um microsserviço sobre protocolos e formatos de dados estabelecidos, existe a necessidade de padronização de como registrar em log a integridade e eventos de diagnóstico que, por fim, terminam em um repositório de eventos para consulta e exibição. Em uma abordagem de microsserviços, é essencial que diferentes equipes concordem com um formato de log único. Deve haver uma abordagem consistente para exibir eventos de diagnóstico no aplicativo.
 
 ### <a name="health-checks"></a>Verificações de integridade
 
 Integridade é diferente de diagnóstico. Integridade é sobre o microsserviço relatar seu estado atual para executar as ações apropriadas. Um bom exemplo é trabalhar com mecanismos de atualização e implantação para manter a disponibilidade. Embora um serviço possa não estar íntegro no momento devido a uma falha de processo ou reinicialização do computador, o serviço ainda pode estar operacional. A última coisa de que você precisa é tornar isso pior executando uma atualização. A melhor abordagem é fazer uma investigação primeiro ou aguardar até o microsserviço se recuperar. Eventos de integridade de um microsserviço ajudam-nos a tomar decisões informadas e, na verdade, ajudam a criar serviços com autorrecuperação.
 
-Na seção Implementação de verificações de integridade nos serviços ASP.NET Core deste guia, explicamos como usar uma nova biblioteca ASP.NET HealthChecks em seus microsserviços para que eles possam relatar o próprio estado a um serviço de monitoramento para executar as ações apropriadas.
+Na seção [Implementação de verificações de integridade nos serviços ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) deste guia, explicamos como usar uma nova biblioteca ASP.NET HealthChecks em seus microsserviços para que eles possam relatar o próprio estado a um serviço de monitoramento para executar as ações apropriadas.
+
+Você também tem a opção de usar uma excelente biblioteca de código-fonte aberto chamada Pulse vencer, disponível no [GitHub](https://github.com/Xabaril/BeatPulse) e como um [pacote do NuGet](https://www.nuget.org/packages/BeatPulse/). Essa biblioteca também faz verificações de integridade, mas com uma diferença, pois ela lida com dois tipos de verificação:
+
+- **Vivacidade**: verifica se o microsserviço está ativo, ou seja, se ele é capaz de aceitar solicitações e responder. 
+- **Preparação**: verifica se as dependências do microsserviço (banco de dados, serviços de fila, etc.) estão prontas, de modo que o microsserviço pode fazer o que se espera. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Usando fluxos de eventos de logs e diagnóstico
 
@@ -43,7 +48,7 @@ Um aplicativo baseado em microsserviço não deve tentar armazenar o fluxo de sa
 
 Quando você cria um aplicativo baseado em microsserviço, precisa lidar com a complexidade. Logicamente, é simples lidar com um único microsserviço, mas dezenas ou centenas de tipos e milhares de instâncias de microsserviços são um problema complexo. Não envolve apenas criar sua arquitetura de microsserviço: você também precisará de alta disponibilidade, capacidade de endereçamento, resiliência, integridade e diagnóstico se você quiser ter um sistema estável e coeso.
 
-![](./media/image22.png)
+![Orquestradores fornecem uma plataforma de suporte para a execução de seus microsserviços.](./media/image22.png)
 
 **Figura 4-22**. Uma Plataforma de Microsserviço é fundamental para o gerenciamento de integridade do aplicativo
 
@@ -53,30 +58,27 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **O aplicativo de doze fatores. XI. Logs: tratar logs como fluxos de eventos**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **O aplicativo de doze fatores. XI. Logs: tratar logs como fluxos de eventos** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Biblioteca EventFlow de Diagnóstico da Microsoft.** Repositório do GitHub.
+- Repositório do GitHub da **Biblioteca EventFlow de Diagnóstico da Microsoft**. \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **O que é o Diagnóstico do Azure** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **O que é o Diagnóstico do Azure**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Conectar computadores Windows ao serviço do Log Analytics no Azure** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Conectar computadores Windows ao serviço do Log Analytics no Azure**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Registrando o que você quer: usando o bloco de aplicativo de log de semântica** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **Registrando o que você quer: usando o bloco de aplicativo de log de semântica**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- Site oficial do **Splunk**. \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk.** Site oficial.
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **Classe EventSource**. API para ETW (Rastreamento de Eventos para Windows) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- API de **classe EventSource** para ETW (Rastreamento de Eventos para Windows) \
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[Anterior](microservice-based-composite-ui-shape-layout.md)
-[Próximo](scalable-available-multi-container-microservice-applications.md)
+>[Anterior](microservice-based-composite-ui-shape-layout.md)
+>[Próximo](scalable-available-multi-container-microservice-applications.md)

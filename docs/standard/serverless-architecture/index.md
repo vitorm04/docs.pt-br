@@ -4,16 +4,16 @@ description: Guia para arquitetura sem servidor. Saiba quando, por que e como im
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404803"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745310"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicativos sem servidor: arquitetura, padrões e implementação no Azure
+
+![](./media/Cover.jpg)
 
 > DOWNLOAD disponível em: <https://aka.ms/serverless-ebook>
 
@@ -43,7 +43,7 @@ Todas as outras marcas e logotipos são propriedade de seus respectivos propriet
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Consultor de Desenvolvimento em Nuvem Sênior, APEX, Microsoft Corp. 
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, sênior Consultor de Desenvolvimento em Nuvem, APEX, Microsoft Corp.
 
 Colaborador:
 
@@ -61,7 +61,7 @@ Participantes e revisores:
 
 ## <a name="introduction"></a>Introdução
 
-A computação sem servidor é a evolução das plataformas de nuvem na direção do código nativo de nuvem pura. Ela aproxima os desenvolvedores da lógica de negócios, isolando-os das questões de infraestrutura. É um padrão que não quer dizer "nenhum servidor", mas sim, "sem servidor". O código sem servidor é controlado por eventos. O código pode ser disparado por qualquer coisa, desde uma solicitação da Web HTTP tradicional até um temporizador ou o carregamento de um arquivo. A infraestrutura por trás da computação sem servidor permite dimensionar instantaneamente para atender a demandas elásticas e oferece a microcobrança, que realmente permite "pagar por aquilo que você usar". A computação sem servidor requer uma nova maneira de pensar e abordar a criação de aplicativos e não é a solução certa para todos os problemas. Como desenvolvedor, você precisa decidir:
+A computação [sem servidor](https://azure.microsoft.com/solutions/serverless/) é a evolução das plataformas de nuvem na direção do código nativo de nuvem pura. Ela aproxima os desenvolvedores da lógica de negócios, isolando-os das questões de infraestrutura. É um padrão que não quer dizer "nenhum servidor", mas sim, "sem servidor". O código sem servidor é controlado por eventos. O código pode ser disparado por qualquer coisa, desde uma solicitação da Web HTTP tradicional até um temporizador ou o carregamento de um arquivo. A infraestrutura por trás da computação sem servidor permite dimensionar instantaneamente para atender a demandas elásticas e oferece a microcobrança, que realmente permite "pagar por aquilo que você usar". A computação sem servidor requer uma nova maneira de pensar e abordar a criação de aplicativos e não é a solução certa para todos os problemas. Como desenvolvedor, você precisa decidir:
 
 * Quais são os prós e contras do uso da computação sem servidor?
 * Por que você deve considerar a computação sem servidor para seus próprios aplicativos?
@@ -138,4 +138,4 @@ A primeira parte deste guia examina por que a computação sem servidor é uma o
 O guia e os exemplos relacionados estão em constante desenvolvimento, portanto, seus comentários são bem-vindos! Se você tiver comentários de como este guia pode ser melhorado, use a seção de comentários na parte inferior de qualquer página baseada em [problemas do GitHub](https://github.com/dotnet/docs/issues).
 
 >[!div class="step-by-step"]
-[Avançar](architecture-approaches.md)
+>[Avançar](architecture-approaches.md)
