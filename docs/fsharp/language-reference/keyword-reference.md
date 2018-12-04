@@ -64,7 +64,7 @@ A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto 
 |`null`|[Valores Nulos](values/null-values.md)<br /><br />[Restrições](generics/constraints.md)|Indica a ausência de um objeto.<br /><br />Também é usado em restrições de parâmetro genérico.|
 |`of`|[Uniões Discriminadas](discriminated-unions.md)<br /><br />[Delegados](delegates.md)<br /><br />[Tipos de Exceção](exception-handling/exception-types.md)|Usado em uniões discriminadas para indicar o tipo das categorias de valores e nas declarações de delegado e a exceção.|
 |`open`|[Declarações de Importação: a palavra-chave `open`](import-declarations-the-open-keyword.md)|Usado para disponibilizar o conteúdo de um namespace ou módulo sem qualificação.|
-|`or`|[Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado com condições Boolianas como um valor booliano `or` operador. Equivalente a '||`.<br /><br />Também é usado em restrições de membro.|
+|`or`|[Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado com condições Boolianas como um valor booliano `or` operador. Equivalente a `||`.<br /><br />Também é usado em restrições de membro.|
 |`override`|[Membros](members/index.md)|Usado para implementar uma versão de um método abstrato ou virtual que é diferente da versão de base.|
 |`private`|[Controle de Acesso](access-control.md)|Restringe o acesso a um membro para o código no mesmo tipo ou módulo.|
 |`public`|[Controle de Acesso](access-control.md)|Permite o acesso a um membro de fora do tipo.|
