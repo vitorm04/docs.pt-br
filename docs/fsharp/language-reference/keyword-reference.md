@@ -1,19 +1,19 @@
 ---
 title: Referência de palavras-chave (F#)
-description: Encontre links para informações sobre todas as palavras-chave F# idioma.
+description: Encontre links para informações sobre todos os F# palavras-chave.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856018"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
 Este tópico contém links para informações sobre todos os F# palavras-chave.
 
-## <a name="f-keyword-table"></a>Tabela de palavra-chave do F#
+## <a name="f-keyword-table"></a>F#Palavra-chave tabela
 
 A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto com descrições breves e links para tópicos relevantes que contêm mais informações.
 
@@ -64,7 +64,7 @@ A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto 
 |`null`|[Valores Nulos](values/null-values.md)<br /><br />[Restrições](generics/constraints.md)|Indica a ausência de um objeto.<br /><br />Também é usado em restrições de parâmetro genérico.|
 |`of`|[Uniões Discriminadas](discriminated-unions.md)<br /><br />[Delegados](delegates.md)<br /><br />[Tipos de Exceção](exception-handling/exception-types.md)|Usado em uniões discriminadas para indicar o tipo das categorias de valores e nas declarações de delegado e a exceção.|
 |`open`|[Declarações de Importação: a palavra-chave `open`](import-declarations-the-open-keyword.md)|Usado para disponibilizar o conteúdo de um namespace ou módulo sem qualificação.|
-|`or`|[Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado com condições Boolianas como um valor booliano `or` operador. Equivalente a `||`.<br /><br />Também é usado em restrições de membro.|
+|`or`|[Referência de Símbolos e Operadores](symbol-and-operator-reference/index.md)<br /><br />[Restrições](generics/constraints.md)|Usado com condições Boolianas como um valor booliano `or` operador. Equivalente a '||`.<br /><br />Também é usado em restrições de membro.|
 |`override`|[Membros](members/index.md)|Usado para implementar uma versão de um método abstrato ou virtual que é diferente da versão de base.|
 |`private`|[Controle de Acesso](access-control.md)|Restringe o acesso a um membro para o código no mesmo tipo ou módulo.|
 |`public`|[Controle de Acesso](access-control.md)|Permite o acesso a um membro de fora do tipo.|
@@ -90,7 +90,7 @@ A tabela a seguir mostra todos os F# palavras-chave em ordem alfabética, junto 
 |`yield`|[Sequências](sequences.md)|Usado em uma expressão de sequência para produzir um valor para uma sequência.|
 |`yield!`|[Expressões de Computação](computation-expressions.md)<br /><br />[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)|Usado em uma expressão de computação para acrescentar o resultado de uma expressão de determinada computação a um conjunto de resultados para a expressão de cálculo de recipiente.|
 
-Os seguintes tokens estão reservados em F#, porque eles são palavras-chave na linguagem OCaml:
+Os seguintes tokens estão reservados em F# porque eles são palavras-chave na linguagem OCaml:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Os seguintes tokens estão reservados em F#, porque eles são palavras-chave na 
 
 Se você usar o `--mlcompatibility` opção de compilador, as palavras-chave acima estão disponíveis para uso como identificadores.
 
-Os seguintes tokens são reservados como palavras-chave para expansão futura da linguagem F#:
+Os seguintes tokens são reservados como palavras-chave para expansão futura do F# idioma:
 
 * `atomic`
 * `break`
