@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43745317"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154067"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Instruções passo a passo: escrevendo consultas em C# (LINQ)
 Essas instruções passo a passo demonstram os recursos de linguagem C# que são usados para gravar expressões de consulta LINQ.  
@@ -87,7 +87,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 1.  Você pode combinar várias condições boolianas na cláusula `where` para refinar ainda mais uma consulta. O código a seguir adiciona uma condição de forma que a consulta retorna os alunos cuja primeira pontuação foi superior a 90 e cuja última pontuação foi inferior a 80. A cláusula `where` deve parecer com o código a seguir.  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 1.  Será mais fácil verificar os resultados se eles estiverem em algum tipo de ordem. Você pode ordenar a sequência retornada por qualquer campo acessível nos elementos de origem. Por exemplo, a cláusula `orderby` a seguir ordena os resultados em ordem alfabética de A a Z de acordo com o sobrenome de cada aluno. Adicione a cláusula `orderby` a seguir à consulta, logo após a instrução `where` e antes da instrução `select`:  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  Agora, altere a cláusula `orderby` para que ela ordene os resultados em ordem inversa de acordo com a pontuação no primeiro teste, da pontuação mais alta para a mais baixa.  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  Altere a cadeia de caracteres de formato `WriteLine` para que você possa ver as pontuações:  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Para usar a sintaxe do método em uma expressão de consulta  
   
-1.  Conforme descrito em [Sintaxe de consulta e sintaxe de método em LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), algumas operações de consulta podem ser expressadas somente usando a sintaxe de método. O código a seguir calcula a pontuação total para cada `Student` na sequência de origem e então chama o método `Average()` nos resultados da consulta para calcular a pontuação média da classe. Observe a colocação de parênteses em torno da expressão de consulta.  
+1.  Conforme descrito em [Sintaxe de consulta e sintaxe de método em LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), algumas operações de consulta podem ser expressadas somente usando a sintaxe de método. O código a seguir calcula a pontuação total para cada `Student` na sequência de origem e então chama o método `Average()` nos resultados da consulta para calcular a pontuação média da classe.
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
@@ -184,6 +184,6 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ (Consulta Integrada à Linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+- [LINQ (consulta integrada à linguagem) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
 - [Introdução a LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
 - [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)

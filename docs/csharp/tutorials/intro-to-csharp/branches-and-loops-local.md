@@ -3,12 +3,12 @@ title: Tutorial Branches e loops – introdução ao C#
 description: Neste tutorial sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186129"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153768"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
 
-A primeira parte é o **inicializador for**: `for index = 0;` declara que `index` é a variável do loop, e define seu valor inicial como `0`.
+A primeira parte é o **inicializador for**: `int index = 0;` declara que `index` é a variável do loop, e define seu valor inicial como `0`.
 
 A parte central é a **condição for**: `index < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.
 

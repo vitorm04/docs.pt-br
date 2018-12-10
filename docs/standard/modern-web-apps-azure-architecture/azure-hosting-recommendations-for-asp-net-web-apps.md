@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Re
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404522"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125926"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações de hospedagem do Azure para aplicativos Web ASP.NET Core
 
@@ -128,4 +128,4 @@ A Figura 11-2 mostra uma arquitetura de referência de exemplo. Esse diagrama de
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
-[Anterior](development-process-for-azure.md)
+>[Anterior](development-process-for-azure.md)

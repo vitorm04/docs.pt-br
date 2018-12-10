@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404480"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147330"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
@@ -49,7 +49,7 @@ O ASP.NET Core também é totalmente compatível com a injeção de dependência
 
 ## <a name="easily-tested-with-automated-tests"></a>Testados facilmente com testes automatizados
 
-Os aplicativos ASP.NET Core são compatíveis com teste de unidade e seu acoplamento flexível e suporte a injeções de dependência facilitam a alternância de interesses de infraestrutura com implementações fictícias para fins de teste. O ASP.NET Core também fornece um TestServer que pode ser usado para hospedar aplicativos em memória. Os testes funcionais podem então fazer solicitações para esse servidor em memória, exercitando a pilha completa do aplicativo (incluindo middleware, roteamento, associação de modelos, filtros, etc.) e recebendo uma resposta, tudo isso em uma fração do tempo que levaria para hospedar o aplicativo em um servidor real e fazer solicitações por meio da camada de rede. Esses testes são especialmente fáceis de serem gravados e significativos para APIs, que são cada vez mais importantes em aplicativos Web modernos.
+Os aplicativos ASP.NET Core são compatíveis com teste de unidade e seu acoplamento flexível e suporte a injeções de dependência facilitam a alternância de interesses de infraestrutura com implementações fictícias para fins de teste. O ASP.NET Core também fornece um TestServer que pode ser usado para hospedar aplicativos em memória. Os testes funcionais podem então fazer solicitações para esse servidor em memória, exercitando a pilha completa do aplicativo (incluindo middleware, roteamento, model binding, filtros, etc.) e recebendo uma resposta, tudo isso em uma fração do tempo que levaria para hospedar o aplicativo em um servidor real e fazer solicitações por meio da camada de rede. Esses testes são especialmente fáceis de serem gravados e significativos para APIs, que são cada vez mais importantes em aplicativos Web modernos.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Comportamentos tradicionais e de SPA com suporte
 
@@ -77,5 +77,5 @@ Além do ASP.NET Core, o ASP.NET 4.x tradicional continua sendo uma plataforma r
 >   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Próximo](choose-between-traditional-web-and-single-page-apps.md)
+>[Anterior](index.md)
+>[Próximo](choose-between-traditional-web-and-single-page-apps.md)

@@ -2,12 +2,12 @@
 title: Como determinar se um arquivo é um assembly (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: ee2313677fba21624ccdb44db779633f6c4503bf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861004"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125529"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Como determinar se um arquivo é um assembly (C#)
 Um arquivo será um assembly somente se ele for gerenciado e se contiver uma entrada de assembly em seus metadados. Para obter mais informações sobre metadados e assemblies, consulte o tópico [Manifesto do assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).  
@@ -29,7 +29,7 @@ Um arquivo será um assembly somente se ele for gerenciado e se contiver uma ent
 ## <a name="example"></a>Exemplo  
  Este exemplo testa uma DLL para verificar se ela é um assembly.  
   
-```  
+```csharp
 class TestAssembly  
 {  
     static void Main()  
@@ -70,4 +70,4 @@ class TestAssembly
 
 - <xref:System.Reflection.AssemblyName>  
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)  
-- [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
