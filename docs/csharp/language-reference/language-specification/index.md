@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a108e9e625fed3801c283c84a58ea0b503101ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529868"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147934"
 ---
 # <a name="c-60-draft-language-specification"></a>Especificação da linguagem de rascunho de C# 6.0
 
 A especificação da linguagem C# é a fonte definitiva para o uso e a sintaxe de C#. Essa especificação contém informações detalhadas sobre todos os aspectos da linguagem, incluindo vários pontos que a documentação do C# não abrange.
 
-A versão 5.0 da especificação foi lançada em dezembro de 2017 como o documento [Padrão ECMA-334 – 5ª Edição](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf).
+A versão 5.0 da especificação foi lançada em dezembro de 2017 como o documento [Padrão ECMA-334 – 5ª Edição](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
 
 A versão 6.0 da especificação não foi aprovada como um padrão. Este site contém a especificação [*rascunho* de C# 6.0](../../../../_csharplang/spec/introduction.md). Ela é criada de arquivos markdown contidos no [repositório do GitHub dotnet/csharplang](https://github.com/dotnet/csharplang/blob/master/spec/README.md).
 
@@ -31,4 +31,4 @@ Problemas na especificação de rascunho devem ser criados no repositório [dotn
 - [Guia de Programação em C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
-[Avançar](../../../../_csharplang/spec/introduction.md)
+>[Avançar](../../../../_csharplang/spec/introduction.md)

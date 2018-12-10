@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 61bc9ca6fed8f5249dcb125619aa1b07f290ba7e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7736c1fe4cb1a2a4553ba36cecceab37e2fe90c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106873"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144462"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo de desenvolvimento de aplicativos baseados no Docker
 
@@ -44,7 +44,6 @@ Ao instalar as ferramentas do [Docker CE (Community Edition)](https://www.docker
 
 Conforme mencionado nas seções anteriores deste guia, você pode usar o projeto do NET Framework, do .NET Core ou do Mono de software livre ao desenvolver aplicativos .NET em contêineres do Docker. Você poderá desenvolver em C\#, em F\# ou em Visual Basic ao direcionar a contêineres do Linux ou do Windows, dependendo de qual .NET Framework estiver em uso. Para saber mais detalhes sobre as linguagens do .NET detalhes, consulte a postagem no blog [The .NET Language Strategy](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/) (A estratégia de linguagem do .NET).
 
-
 >[!div class="step-by-step"]
-[Anterior](../architect-microservice-container-applications/using-azure-service-fabric.md)
-[Próximo](docker-app-development-workflow.md)
+>[Anterior](../architect-microservice-container-applications/using-azure-service-fabric.md)
+>[Próximo](docker-app-development-workflow.md)

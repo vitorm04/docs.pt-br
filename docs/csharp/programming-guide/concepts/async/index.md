@@ -2,12 +2,12 @@
 title: Programação assíncrona com async e await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 482b77c7dd151dc454082b0def7843fdb0798260
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: edf3f8f7e6623b6b0f041de7eb76a5e6bac1f06b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297433"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126921"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programação assíncrona com async e await (C#)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
@@ -286,8 +286,8 @@ namespace AsyncFirstExample
   
             int contentLength = await AccessTheWebAsync();  
   
-            resultsTextBox.Text +=  
-                String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);  
+            resultsTextBox.Text +=
+                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
         }  
   
         // Three things to note in the signature:  

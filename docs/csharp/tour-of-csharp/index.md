@@ -3,12 +3,12 @@ title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359001"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150388"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#  
 
@@ -76,4 +76,4 @@ Há muito mais para aprender sobre C#.  Os tópicos a seguir fornecem uma visão
     * ***Atributos*** permitem que programas especifiquem informações declarativas adicionais sobre tipos, membros e outras entidades.
 
 >[!div class="step-by-step"]
-[Avançar](program-structure.md)
+>[Avançar](program-structure.md)

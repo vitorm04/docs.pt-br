@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875112"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130788"
 ---
 # <a name="implementing-resilient-applications"></a>Implementando aplicativos resilientes
 
@@ -21,7 +21,6 @@ Já é um grande desafio criar e implantar um aplicativo baseado em microsservi�
 
 Os diversos componentes individuais do aplicativo também precisam incorporar recursos de monitoramento de integridade. Seguindo as diretrizes neste capítulo, você poderá criar um aplicativo que pode funcionar perfeitamente apesar do tempo de inatividade temporário ou das interrupções normais que ocorrem em implantações complexas e baseadas em nuvem.
 
-
 >[!div class="step-by-step"]
-[Anterior](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[Próximo](handle-partial-failure.md)
+>[Anterior](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Próximo](handle-partial-failure.md)

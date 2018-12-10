@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 7ee559f3881101a2382e6767607d5de1482d74ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937027"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126465"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Protegendo microsserviços e aplicativos Web .NET
 
@@ -248,7 +248,6 @@ O middleware de autenticação de portador do JWT também pode dar suporte a cen
 -   **IdentityServer4. Documentação oficial**
     [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
 
-
 >[!div class="step-by-step"]
-[Anterior](../implement-resilient-applications/monitor-app-health.md)
-[Próximo](authorization-net-microservices-web-applications.md)
+>[Anterior](../implement-resilient-applications/monitor-app-health.md)
+>[Próximo](authorization-net-microservices-web-applications.md)

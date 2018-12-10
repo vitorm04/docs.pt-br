@@ -4,11 +4,11 @@ description: Saiba como calcular métricas para avaliar e verificar a qualidade 
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 6fd4dfab6104b4398918e42ed70584b04169a8c1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297563"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149517"
 ---
 # <a name="calculate-metrics-to-evaluate-machine-learning-model-quality---mlnet"></a>Calcular métricas para avaliar a qualidade do modelo de machine learning – ML.NET
 

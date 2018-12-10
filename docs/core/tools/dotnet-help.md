@@ -1,15 +1,13 @@
 ---
 title: Comando dotnet help – CLI do .NET Core
 description: O comando dotnet help mostra uma documentação mais detalhada online para o comando especificado.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: ed152717e32ffb294f5d5bd8e5eb74d55e33e506
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 60d1cc706ca5c78fa3be877bd679888181213e88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152169"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
@@ -29,18 +27,20 @@ O comando `dotnet help` abre a página de referência para oferecer informaçõe
 
 ## <a name="arguments"></a>Arguments
 
-`COMMAND_NAME`
+* **`COMMAND_NAME`**
 
-Nome do comando da CLI do .NET Core. Para obter uma lista dos comandos válidos da CLI, consulte [CLI commands](index.md#cli-commands) (Comandos da CLI).
+  Nome do comando da CLI do .NET Core. Para obter uma lista dos comandos válidos da CLI, consulte [CLI commands](index.md#cli-commands) (Comandos da CLI).
 
 ## <a name="options"></a>Opções
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime uma ajuda breve para o comando.
+  Imprime uma ajuda breve para o comando.
 
 ## <a name="examples"></a>Exemplos
 
-Abre a página de documentação do comando [dotnet new](dotnet-new.md):
+* Abre a página de documentação do comando [dotnet new](dotnet-new.md):
 
-`dotnet help new`
+  ```console
+  dotnet help new
+  ```

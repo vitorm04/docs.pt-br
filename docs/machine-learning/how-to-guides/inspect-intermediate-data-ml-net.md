@@ -4,11 +4,11 @@ description: Saiba como inspecionar valores de dados intermediários reais duran
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: cd229c120f7599c9a304a84a1669947e613fc917
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297583"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151532"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET
 

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos do .NET em 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193910"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152676"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços .NET: arquitetura para aplicativos .NET em contêineres
 
@@ -179,6 +179,5 @@ O logotipo de baleia do Docker é uma marca registrada da Docker, Inc. usado med
 
 Todas as outras marcas e logotipos são propriedade de seus respectivos proprietários.
 
-
 >[!div class="step-by-step"]
-[Avançar](container-docker-introduction/index.md)
+>[Avançar](container-docker-introduction/index.md)
