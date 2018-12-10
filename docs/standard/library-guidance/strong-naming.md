@@ -4,12 +4,12 @@ description: Recomendações de melhores práticas para dar um nome forte a bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128993"
 ---
 # <a name="strong-naming"></a>Nomenclatura forte
 
@@ -71,5 +71,5 @@ Você deve dar um nome forte às suas bibliotecas do .NET de software livre. Dar
 > Publicar dois pacotes bifurca o ecossistema do desenvolvedor. Além disso, se um aplicativo acabar dependendo de ambos os pacotes, o desenvolvedor poderá encontrar conflitos de nome de tipo. No que diz respeito ao .NET, há diferentes tipos em diferentes assemblies.
 
 >[!div class="step-by-step"]
-[Anterior](./cross-platform-targeting.md)
-[Próximo](./nuget.md)
+>[Anterior](cross-platform-targeting.md)
+>[Próximo](nuget.md)

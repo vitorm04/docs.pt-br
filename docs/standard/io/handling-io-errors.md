@@ -2,7 +2,9 @@
 title: Tratamento de erros de E/S no .NET
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696411"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126869"
 ---
 # <a name="handling-io-errors-in-net"></a>Tratamento de erros de E/S no .NET
 

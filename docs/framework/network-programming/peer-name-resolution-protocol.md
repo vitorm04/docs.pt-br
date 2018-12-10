@@ -3,11 +3,11 @@ title: Protocolo PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185151"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129151"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453145"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147250"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementar o padrão de disjuntor
 
@@ -146,14 +146,11 @@ Você pode implementar uma lógica diferente para quando abrir/interromper o cir
 
 Por fim, outra possibilidade do `CircuitBreakerPolicy` é usar `Isolate` (que força o circuito a abrir e a continuar aberto) e `Reset` (que o fecha novamente). Isso pode ser usado para criar um ponto de extremidade HTTP de utilitário que invoque Isolar e Reiniciar diretamente na política.  Esse ponto de extremidade HTTP também pode ser usado, adequadamente protegido, em produção para isolar temporariamente um sistema downstream, como quando você deseja atualizá-lo. Ou poderia desarmar o circuito manualmente para proteger o sistema a downstream que você suspeita ter falha.
 
-
 ## <a name="additional-resources"></a>Recursos adicionais
-
 
 -   **Padrão de disjuntor**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Anterior](implement-http-call-retries-exponential-backoff-polly.md)
-[Próximo](monitor-app-health.md)
+>[Anterior](implement-http-call-retries-exponential-backoff-polly.md)
+>[Próximo](monitor-app-health.md)

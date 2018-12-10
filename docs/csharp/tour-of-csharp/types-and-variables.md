@@ -3,12 +3,12 @@ title: Tipos e variáveis do C# - um tour pela linguagem C#
 description: Saiba mais sobre como definir tipos e declarar variáveis em C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352128"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129513"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
@@ -116,5 +116,5 @@ Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matr
     - Uma referência `null` ou uma referência a uma instância de um tipo de delegado compatível
 
 >[!div class="step-by-step"]
-[Anterior](program-structure.md)
-[Próximo](expressions.md)
+>[Anterior](program-structure.md)
+>[Próximo](expressions.md)

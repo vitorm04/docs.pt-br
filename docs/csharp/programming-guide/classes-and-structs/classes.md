@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: db490225bbef4517c1306aee7afb5c01d2d0fec6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 656e16352e8a88cc2c95483551dd71600f3fec0e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126283"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "44081470"
 Um tipo que é definido como uma [classe](../../../csharp/language-reference/keywords/class.md) é um *tipo de referência*. No tempo de execução, quando você declara uma variável de um tipo de referência, a variável contém o valor [null](../../../csharp/language-reference/keywords/null.md) até que você crie explicitamente uma instância da classe usando o operador [new](../../../csharp/language-reference/keywords/new.md) ou atribua a ela um objeto de um tipo compatível que foi criado em outro lugar, conforme mostrado no exemplo a seguir:
 
 ```csharp
-//Declaring a object of type MyClass.
+//Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
 //Declaring another object of the same type, assigning it the value of the first object.

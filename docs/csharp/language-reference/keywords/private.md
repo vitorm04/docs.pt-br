@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: 0c564f38940e993bdfb93af0ec995c684be0eeb7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a817f3f60b76b51868c5cacd8e648ec10497f64a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802710"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130995"
 ---
 # <a name="private-c-reference"></a>private (Referência de C#)
 
@@ -42,9 +42,9 @@ Neste exemplo, a classe `Employee` contém dois membros de dados particulares, `
 
 [!code-csharp[csrefKeywordsModifiers#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#10)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Consulte também
 

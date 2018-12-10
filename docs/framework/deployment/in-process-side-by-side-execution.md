@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195197"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143838"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar a hospedagem lado a lado em processos para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
@@ -90,7 +90,7 @@ Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você po
   
  Para executar o exemplo a seguir, compile e registre o seguinte componente COM gerenciado usando o [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Para registrar o componente, no menu **Projeto**, clique em **Propriedades**, clique na guia **Compilar** e marque a caixa de seleção **Registrar para interoperabilidade COM**.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  Compile o seguinte aplicativo C++ não gerenciado, que ativa o objeto COM criado pelo exemplo anterior.  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  

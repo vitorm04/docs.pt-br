@@ -2,12 +2,12 @@
 title: 'Passo a passo: acessando a Web usando async e await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 8a97521bae7f5f16841aa4c8e4a157384739ee61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f06bf93f1de4de2aa70c761e1bfb101d4dde48a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453275"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127141"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Passo a passo: acessando a Web usando async e await (C#)
 
@@ -137,8 +137,7 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assin
         }
 
         // Display the total count for all of the web addresses.
-        resultsTextBox.Text +=
-            string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+        resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
     }
 
     private List<string> SetUpURLList()
@@ -192,7 +191,7 @@ Se não quiser compilar os aplicativos, você poderá baixar o [Exemplo de assin
         var bytes = content.Length;
         // Strip off the "https://".
         var displayURL = url.Replace("https://", "");
-        resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+        resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
     }
     ```
 
@@ -500,7 +499,7 @@ namespace AsyncExampleWPF
             }
             // Display the total count for all of the websites.
             resultsTextBox.Text +=
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
 
         private List<string> SetUpURLList()
@@ -566,7 +565,7 @@ namespace AsyncExampleWPF
             var bytes = content.Length;
             // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
     }
 }
@@ -654,7 +653,7 @@ namespace AsyncExampleWPF
 
             // Display the total count for all of the websites.
             resultsTextBox.Text +=
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }
 
         private List<string> SetUpURLList()
@@ -683,7 +682,7 @@ namespace AsyncExampleWPF
             var bytes = content.Length;
             // Strip off the "https://".
             var displayURL = url.Replace("https://", "");
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }
     }
 }
@@ -698,4 +697,4 @@ namespace AsyncExampleWPF
 - [Tipos de retorno assíncronos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [TAP (programação assíncrona baseada em tarefas)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
 - [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Como fazer várias solicitações da Web em paralelo, usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Como fazer várias solicitações da Web em paralelo e usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

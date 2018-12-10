@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122845"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147168"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 O cache pode melhorar consideravelmente o desempenho das páginas da Web que solicitam repetidamente os mesmos valores do banco de dados. Meça o desempenho da página e o acesso a dados antes de aplicar o cache e somente aplique o cache quando houver necessidade de melhoria. O cache consome recursos de memória do servidor Web e aumenta a complexidade do aplicativo, portanto, é importante que você não se apresse em otimizar usando essa técnica.
 
 >[!div class="step-by-step"]
-[Anterior](develop-asp-net-core-mvc-apps.md)
-[Próximo](test-asp-net-core-mvc-apps.md)
+>[Anterior](develop-asp-net-core-mvc-apps.md)
+>[Próximo](test-asp-net-core-mvc-apps.md)

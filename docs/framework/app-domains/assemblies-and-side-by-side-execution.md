@@ -8,11 +8,11 @@ ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e192266aa7b98637cb05f400901f51afd3046a72
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "49415192"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142704"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Assemblies e execução lado a lado
 Execução lado a lado é a capacidade de armazenar e executar várias versões de um aplicativo ou componente no mesmo computador. Isso significa que você pode ter várias versões do tempo de execução e várias versões de aplicativos e componentes que usam uma versão do tempo de execução no mesmo computador ao mesmo tempo. A execução lado a lado confere mais controle sobre a quais versões de um componente um aplicativo está associado e mais controle sobre qual versão do tempo de execução um aplicativo usa.  

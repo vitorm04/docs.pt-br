@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844898"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146935"
 ---
  # <a name="when-c-reference"></a>when (Referência de C#)
 
@@ -23,10 +23,10 @@ Você pode usar a palavra-chave contextual `when` para especificar uma condiçã
 
 ## <a name="when-in-a-catch-statement"></a>`when` em uma instrução `catch`
 
-Começando com o C# 6, `When` pode ser usado em uma instrução `catch` para especificar uma condição que deve ser verdadeira para o manipulador para uma exceção específica a ser executada. A sintaxe é:
+Começando com o C# 6, `when` pode ser usado em uma instrução `catch` para especificar uma condição que deve ser verdadeira para o manipulador para uma exceção específica a ser executada. A sintaxe é:
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
 em que *expr* é uma expressão que é avaliada como um valor booliano. Se ele retornar `true`, o manipulador de exceção será executado, se `false`, não executará. 
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
 ms.openlocfilehash: 4c7449568ff250c8de521e7afb71178536f52657
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980769"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129799"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfaces genéricas (Guia de Programação em C#)
 Muitas vezes, é útil definir interfaces para classes de coleção genéricas ou para as classe genéricas que representam itens na coleção. Para classes genéricas, prefere-se usar interfaces genéricas, como <xref:System.IComparable%601> em vez de <xref:System.IComparable>, a fim de evitar operações de conversão boxing e unboxing em tipos de valor. A biblioteca de classes .NET Framework define várias interfaces genéricas para uso com as classes de coleção no namespace <xref:System.Collections.Generic>.  

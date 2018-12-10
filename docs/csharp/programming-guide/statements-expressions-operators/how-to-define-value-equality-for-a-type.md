@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
-- Equals method [C#] , overriding
+- Equals method [C#], overriding
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042615"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126777"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como definir a igualdade de valor para um tipo (Guia de Programação em C#)
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  

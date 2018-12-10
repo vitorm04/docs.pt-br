@@ -8,11 +8,11 @@ ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b33bb37758236c0dcce1fced2e7e7c6cf493ab34
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192573"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128629"
 ---
 # <a name="enhanced-strong-naming"></a>Nomeação forte aprimorada
 Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework para identificar os assemblies. É uma assinatura digital de chave pública que normalmente é usada para verificar a integridade dos dados que são passados de um remetente (assinante) para um destinatário (verificador). Essa assinatura é usada como uma identidade exclusiva para um assembly e garante que as referências ao assembly não sejam ambíguas. O assembly é assinado como parte do processo de compilação e verificado ao ser carregado.  

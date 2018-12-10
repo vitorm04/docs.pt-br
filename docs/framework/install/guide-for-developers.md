@@ -11,11 +11,11 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146726"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 

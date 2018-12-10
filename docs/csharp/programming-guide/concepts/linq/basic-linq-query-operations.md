@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 8b8237a09b36114f7100c90cee0bd753236789fd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60b9e1862c7ffd212f19cdc331930e3b5d120763
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522614"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131283"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operações de consulta LINQ básica (C#)
 Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
@@ -90,7 +90,7 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
   
  Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa usar `join` com a mesma frequência que o faz no SQL, porque as chaves estrangeiras em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são representados no modelo do objeto como propriedades que mantêm uma coleção de itens. Por exemplo, um objeto `Customer` que contém uma coleção de objetos `Order`. Em vez de executar uma junção, você pode acessar os pedidos usando notação de ponto:  
   
-```  
+```csharp
 from order in Customer.Orders...  
 ```  
   

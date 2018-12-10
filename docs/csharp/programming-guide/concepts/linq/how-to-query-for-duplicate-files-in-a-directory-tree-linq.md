@@ -2,12 +2,12 @@
 title: Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 09ce574c68cbf11c0ee50df663692fd207038758
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66bdcf1b713a80f2a7cda753cb0f39c016178b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189229"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126595"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
 Às vezes, arquivos que têm o mesmo nome podem ser localizados em mais de uma pasta. Por exemplo, sob a pasta de instalação do Visual Studio, várias pastas têm um arquivo readme.htm. Este exemplo mostra como consultar esses nomes de arquivos duplicados sob uma pasta raiz especificada. O segundo exemplo mostra como consultar arquivos cujo tamanho e tempos de criação também correspondem.  
@@ -74,12 +74,12 @@ class QueryDuplicateFileNames
   
         public override int GetHashCode()  
         {  
-            string str = String.Format("{0}{1}{2}", this.CreationTime, this.Length, this.Name);  
+            string str = $"{this.CreationTime}{this.Length}{this.Name}";
             return str.GetHashCode();  
         }  
         public override string ToString()  
         {  
-            return String.Format("{0} {1} {2}", this.Name, this.Length, this.CreationTime);  
+            return $"{this.Name} {this.Length} {this.CreationTime}";
         }  
     }  
     static void QueryDuplicates2()  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582873"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127388"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
@@ -94,7 +94,7 @@ Uma cadeia de caracteres de formato de data e hora define a representação de t
 |"/"|O separador de data.<br /><br /> Mais informações: [Especificador de formato personalizado "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
 |"*string*"<br /><br /> '*string*'|Delimitador de cadeia de caracteres literal.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Define o caractere seguinte como um especificador de formato personalizado.<br /><br /> Mais informações:[Usar especificadores de formato personalizado simples](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
-|\\|O caractere de escape.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals) e [Como usar o caractere de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
+|&#92;|O caractere de escape.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals) e [Como usar o caractere de escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
 |Qualquer outro caractere|O caractere é copiado, inalterado, para a cadeia de caracteres de resultado.<br /><br /> Para saber mais: [Literais de cadeia de caracteres](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
  As seções a seguir oferecem informações adicionais sobre cada especificador de formato de data e hora personalizado. A menos que observado do contrário, cada especificador produz uma representação de cadeia de caracteres idêntica independente de ela ser usada com um valor <xref:System.DateTime> ou um valor <xref:System.DateTimeOffset>.

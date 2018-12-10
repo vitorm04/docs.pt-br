@@ -4,12 +4,12 @@ description: Recomendações de melhores práticas para controle de versão de b
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187852"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144553"
 ---
 # <a name="versioning"></a>Controle de versão
 
@@ -97,5 +97,5 @@ A versão informativa do assembly é usada para registrar informações adiciona
 > Permita a SourceLink gerar automaticamente a versão que contém metadados de controle do código-fonte e NuGet.
 
 >[!div class="step-by-step"]
-[Anterior](./publish-nuget-package.md)
-[Próximo](./breaking-changes.md)
+>[Anterior](publish-nuget-package.md)
+>[Próximo](breaking-changes.md)

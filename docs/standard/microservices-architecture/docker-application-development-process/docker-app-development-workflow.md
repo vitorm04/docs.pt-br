@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/05/2018
-ms.openlocfilehash: 00cffde7e7eb548f755b60f64aa596210b570d07
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: bc6b1796ed7b12a04affc521ac2efee515c48ae2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297511"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150544"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -447,5 +447,5 @@ RUN powershell add-windowsfeature web-asp-net45
    [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Próximo](../net-core-single-containers-linux-windows-server-hosts/index.md)
+>[Anterior](index.md)
+>[Próximo](../multi-container-microservice-net-applications/index.md)

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038299"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127440"
 ---
 # <a name="methods"></a>Métodos #
 
@@ -158,7 +158,7 @@ O exemplo a seguir define um método, `ExampleMethod`, que tem um parâmetro obr
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Se um método com vários argumentos opcionais for invocado usando argumentos posicionais, o chamador deverá fornecer um argumento para todos os parâmetros opcionais do primeiro ao último para o qual um argumento é fornecido. No caso do método `ExampleMethod`, por exemplo, se o chamador fornecer um argumento para o parâmetro `description`, ele deverá fornecer também um para o parâmetro `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` é uma chamada de método válida, `opt.ExampleMethod(2, , "Addition of 2 and 0);` gera um erro do compilador de “Argumento ausente”.
+Se um método com vários argumentos opcionais for invocado usando argumentos posicionais, o chamador deverá fornecer um argumento para todos os parâmetros opcionais do primeiro ao último para o qual um argumento é fornecido. No caso do método `ExampleMethod`, por exemplo, se o chamador fornecer um argumento para o parâmetro `description`, ele deverá fornecer também um para o parâmetro `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` é uma chamada de método válida, `opt.ExampleMethod(2, , "Addition of 2 and 0");` gera um erro do compilador de “Argumento ausente”.
 
 Se um método for chamado usando argumentos nomeados ou uma combinação de argumentos posicionais e nomeados, o chamador poderá omitir todos os argumentos após o último argumento posicional na chamada do método.
 

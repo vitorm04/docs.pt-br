@@ -3,12 +3,12 @@ title: Estrutura de um programa em C# - um tour pela linguagem C#
 description: Saiba mais sobre os blocos de construção básicos de um programa em C#
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565745"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131021"
 ---
 # <a name="program-structure"></a>Estrutura do programa
 
@@ -52,5 +52,5 @@ Isso cria um assembly executável denominado `example.exe`, que, quando executad
 O C# permite que o texto de origem de um programa seja armazenado em vários arquivos de origem. Quando um programa em C# com vários arquivo é compilado, todos os arquivos de origem são processados juntos e os arquivos de origem podem referenciar livremente uns aos outros. Conceitualmente, é como se todos os arquivos de origem fossem concatenados em um arquivo grande antes de serem processados. Declarações de encaminhamento nunca são necessárias em C#, porque, com poucas exceções, a ordem de declaração é insignificante. O C# não limita um arquivo de origem para declarar somente um tipo público nem requer o nome do arquivo de origem para corresponder a um tipo declarado no arquivo de origem.
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Próximo](types-and-variables.md)
+>[Anterior](index.md)
+>[Próximo](types-and-variables.md)

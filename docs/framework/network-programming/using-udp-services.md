@@ -18,11 +18,11 @@ helpviewer_keywords:
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296809"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126557"
 ---
 # <a name="using-udp-services"></a>Usando os serviços UDP
 A classe <xref:System.Net.Sockets.UdpClient> se comunica com os serviços de rede usando o UDP. As propriedades e os métodos da classe <xref:System.Net.Sockets.UdpClient> abstraem os detalhes da criação de um <xref:System.Net.Sockets.Socket> para solicitar e receber dados usando o UDP.

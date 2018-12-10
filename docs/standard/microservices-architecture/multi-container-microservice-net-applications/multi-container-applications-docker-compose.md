@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297173"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145248"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml 
 
@@ -471,5 +471,5 @@ As imagens de tempo de execução também fornecem configuração automática de
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Anterior](data-driven-crud-microservice.md)
-[Próximo](database-server-container.md)
+>[Anterior](data-driven-crud-microservice.md)
+>[Próximo](database-server-container.md)

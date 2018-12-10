@@ -4,12 +4,12 @@ description: Saiba como você pode implementar do zero, as repetições de chama
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: c323b8c4e783ed18c601562cfb25e1ca4986d499
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878584"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145092"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Explorar repetições de chamadas HTTP personalizadas com retirada exponencial
 
@@ -116,7 +116,6 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 Lembre-se de que esse código é adequado apenas para prova de conceito. As próximas seções explicam como usar abordagens mais sofisticadas, embora mais simples, usando o HttpClientFactory.
 O HttpClientFactory está disponível desde o .NET Core 2.1, com bibliotecas de resiliência comprovadas, como a Polly. 
 
-
 >[!div class="step-by-step"]
-[Anterior](implement-resilient-entity-framework-core-sql-connections.md)
-[Próximo](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Anterior](implement-resilient-entity-framework-core-sql-connections.md)
+>[Próximo](use-httpclientfactory-to-implement-resilient-http-requests.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cacc703e40f268c1dbca4174dc866ecae83cbd6c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850095"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125750"
 ---
 # <a name="lock-statement-c-reference"></a>Instrução lock (referência em C#)
 
@@ -62,7 +62,7 @@ O exemplo a seguir define uma classe `Account` que sincroniza o acesso com seu c
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
@@ -74,5 +74,4 @@ O exemplo a seguir define uma classe `Account` que sincroniza o acesso com seu c
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)
 - [Palavras-chave de instrução](statement-keywords.md)
-- [Operações interconectadas](../../../standard/threading/interlocked-operations.md)
 - [Visão geral dos primitivos de sincronização](../../../standard/threading/overview-of-synchronization-primitives.md)

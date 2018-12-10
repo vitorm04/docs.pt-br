@@ -3,12 +3,12 @@ title: Structs em C# - um tour pela linguagem C#
 description: Aprenda os conceitos básicos dos tipos de valor C#, chamados de structs
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323091"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142730"
 ---
 # <a name="structs"></a>Structs
 
@@ -35,5 +35,5 @@ Se `Point` for uma classe, a saída será 20 porque a e b referenciam o mesmo ob
 O exemplo anterior destaca duas das limitações dos structs. Primeiro, copiar um struct inteiro é, geralmente, menos eficiente do que copiar uma referência de objeto, então a passagem de atribuição e de valor do parâmetro pode ser mais custosa com structs que com tipos de referência. Segundo, com exceção dos parâmetros `in`, `ref` e `out`, não é possível criar referências para structs, o que rege o uso em diversas situações.
 
 >[!div class="step-by-step"]
-[Anterior](classes-and-objects.md)
-[Próximo](arrays.md)
+>[Anterior](classes-and-objects.md)
+>[Próximo](arrays.md)

@@ -10,11 +10,11 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185242"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151402"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membros obsoletos no .NET Framework
 As tabelas deste artigo listam os membros de tipo obsoletos no .NET Framework 4.5 e em versões posteriores, organizados por assembly. Use os links a seguir para ver uma lista dos membros obsoletos e as alternativas recomendadas em cada assembly. Este tópico não lista os membros de tipos obsoletos. Para obter uma lista de tipos obsoletos, consulte [Tipos obsoletos](../../../docs/framework/whats-new/obsolete-types.md).  

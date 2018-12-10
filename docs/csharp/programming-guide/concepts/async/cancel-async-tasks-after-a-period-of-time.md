@@ -2,12 +2,12 @@
 title: Cancelar tarefas assíncronas após um período (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 157b1de664254e9bdf9e4a5a381f8f35eeb10e9a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48d3d41e8c4e2d696065c11245279e49142afa07
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453314"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125763"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Cancelar tarefas assíncronas após um período (C#)
 
@@ -184,7 +184,7 @@ namespace CancelAfterTime
                 byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
 
                 resultsTextBox.Text +=
-                    String.Format("\r\nLength of the downloaded string: {0}.\r\n", urlContents.Length);
+                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
             }
         }
 
@@ -221,4 +221,4 @@ namespace CancelAfterTime
 - [Passo a passo: acessando a Web e usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Exemplo de assincronia: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

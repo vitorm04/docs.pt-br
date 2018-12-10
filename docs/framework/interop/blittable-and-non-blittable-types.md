@@ -8,11 +8,11 @@ ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b4c1d213c2ed87126fc5eb9995050e14f9214bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199832"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155334"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos blittable e não blittable
 A maioria dos tipos de dados tem uma representação comum na memória gerenciada e não gerenciada e não exige manipulação especial pelo marshaler de interoperabilidade. Esses tipos são chamados *tipos blittable* porque não exigem conversão quando são passados entre o código gerenciado e não gerenciado.  

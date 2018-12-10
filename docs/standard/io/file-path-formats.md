@@ -2,18 +2,21 @@
 title: Formatos de caminho de arquivo em sistemas Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296822"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144852"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -203,30 +206,14 @@ Uma peculiaridade do sistema de arquivos do Windows que usuários e desenvolvedo
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 cria um diretório chamado TeStDiReCtOrY. Se você renomear um diretório ou arquivo para alterar as maiúsculas e minúsculas, o nome do diretório ou do arquivo refletirá a cadeia de caracteres usadas ao renomeá-los. Por exemplo, o código a seguir renomeia o arquivo test.txt como Test.txt:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 No entanto, as comparações entre o nome do diretório e do arquivo não diferenciam maiúsculas e minúsculas. Se você pesquisar por um arquivo com o nome "test.txt", as APIs do sistema de arquivos do .NET ignorarão a comparação entre maiúsculas e minúsculas. Test.txt, TEST.TXT, test.TXT e qualquer outra combinação de maiúsculas e minúsculas corresponderão a "test.txt".

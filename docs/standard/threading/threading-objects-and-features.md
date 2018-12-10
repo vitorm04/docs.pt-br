@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9a355c2e996ddb00dad804dfeb22987923d91aa6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873301"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144514"
 ---
 # <a name="threading-objects-and-features"></a>Objetos e recursos de threading
 
@@ -26,8 +26,6 @@ Juntamente com a classe <xref:System.Threading.Thread?displayProperty=nameWithTy
 |[Visão geral dos primitivos de sincronização](overview-of-synchronization-primitives.md)|Descreve os tipos que podem ser usados para sincronizar o acesso a um recurso compartilhado ou uma interação de thread de controle.|
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Descreve os identificadores de espera de eventos gerenciados, que são usados para sincronizar atividades de thread, sinalizando e aguardando sinais.|
 |[Mutexes](mutexes.md)|Descreve <xref:System.Threading.Mutex?displayProperty=nameWithType>, que concede acesso exclusivo a um recurso compartilhado.|
-|[Operações interconectadas](interlocked-operations.md)|Descreve a classe <xref:System.Threading.Interlocked?displayProperty=nameWithType>, que fornece operações atômicas para variáveis que são compartilhadas por vários threads.|
-|[Bloqueios de leitor-gravador](reader-writer-locks.md)|Descreve a classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, que fornece acesso de gravador único/leitores múltiplos a um recurso compartilhado.|
 |[Semaphore e SemaphoreSlim](semaphore-and-semaphoreslim.md)|Descreve a classe <xref:System.Threading.Semaphore?displayProperty=nameWithType>, que limita o número de threads que podem acessar um recurso compartilhado ou um pool de recursos simultaneamente.|
 |[Barreira](barrier.md)|Descreve a classe <xref:System.Threading.Barrier?displayProperty=nameWithType> que implementa o padrão de barreira para coordenação de threads em operações em fases.|
 |[SpinLock](spinlock.md)|Descreve a estrutura <xref:System.Threading.SpinLock?displayProperty=nameWithType>, que é uma alternativa leve à classe <xref:System.Threading.Monitor?displayProperty=nameWithType> para certos cenários de bloqueio de nível baixo.|

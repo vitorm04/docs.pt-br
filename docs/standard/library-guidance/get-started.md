@@ -4,12 +4,12 @@ description: Introdução à criação de bibliotecas do .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201237"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145719"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -46,5 +46,5 @@ Boas bibliotecas do .NET evoluem ao longo do tempo, adicionando recursos, corrig
 É importante que uma biblioteca .NET encontre um equilíbrio entre a estabilidade para usuários existentes e a inovação para o futuro. Saiba mais sobre os diferentes tipos de alterações da falha e estratégias para adição de novos recursos, ao mesmo tempo mantendo a compatibilidade com versões anteriores.
 
 >[!div class="step-by-step"]
-[Anterior](./index.md)
-[Próximo](./cross-platform-targeting.md)
+>[Anterior](index.md)
+>[Próximo](cross-platform-targeting.md)

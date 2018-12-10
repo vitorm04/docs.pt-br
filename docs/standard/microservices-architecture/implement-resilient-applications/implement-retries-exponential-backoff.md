@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: a5ab15299ecb501691c26bbc6d377e22a38ee51e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e0758ee8fe28cb45ecd35ad07ddc738c12614973
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874358"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148763"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implementar repetição com retirada exponencial
 
@@ -17,7 +17,6 @@ ms.locfileid: "37874358"
 
 Há muitas abordagens para implementar a lógica de repetições com retirada exponencial.
 
-
 >[!div class="step-by-step"]
-[Anterior](partial-failure-strategies.md)
-[Próximo](implement-resilient-entity-framework-core-sql-connections.md)
+>[Anterior](partial-failure-strategies.md)
+>[Próximo](implement-resilient-entity-framework-core-sql-connections.md)
