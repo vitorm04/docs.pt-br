@@ -4,21 +4,21 @@ description: Saiba como inspecionar valores de dados intermediários reais duran
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: cd229c120f7599c9a304a84a1669947e613fc917
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297583"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151532"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="ca695-103">Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET</span><span class="sxs-lookup"><span data-stu-id="ca695-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="81831-103">Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET</span><span class="sxs-lookup"><span data-stu-id="81831-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
 
-<span data-ttu-id="ca695-104">Durante o experimento, talvez você deseje observar e validar os resultados do processamento de dados em determinado momento.</span><span class="sxs-lookup"><span data-stu-id="ca695-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="ca695-105">Isso não é fácil, pois as operações do ML.NET são lentas, construindo objetos que são 'promessas' de dados.</span><span class="sxs-lookup"><span data-stu-id="ca695-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
+<span data-ttu-id="81831-104">Durante o experimento, talvez você deseje observar e validar os resultados do processamento de dados em determinado momento.</span><span class="sxs-lookup"><span data-stu-id="81831-104">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="81831-105">Isso não é fácil, pois as operações do ML.NET são lentas, construindo objetos que são 'promessas' de dados.</span><span class="sxs-lookup"><span data-stu-id="81831-105">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
 
-<span data-ttu-id="ca695-106">O método de extensão `GetColumn<T>` permite que você inspecione os dados intermediários.</span><span class="sxs-lookup"><span data-stu-id="ca695-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="ca695-107">Ele retorna o conteúdo de uma coluna de dados como um `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="ca695-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
+<span data-ttu-id="81831-106">O método de extensão `GetColumn<T>` permite que você inspecione os dados intermediários.</span><span class="sxs-lookup"><span data-stu-id="81831-106">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="81831-107">Ele retorna o conteúdo de uma coluna de dados como um `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="81831-107">It returns the contents of one data column as an `IEnumerable`.</span></span>
 
-<span data-ttu-id="ca695-108">O seguinte exemplo mostra como usar o método de extensão `GetColumn<T>`:</span><span class="sxs-lookup"><span data-stu-id="ca695-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
+<span data-ttu-id="81831-108">O seguinte exemplo mostra como usar o método de extensão `GetColumn<T>`:</span><span class="sxs-lookup"><span data-stu-id="81831-108">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
 
-<span data-ttu-id="ca695-109">[Arquivo de exemplo](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="ca695-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="81831-109">[Arquivo de exemplo](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="81831-109">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -28,7 +28,7 @@ Label   Workclass   education   marital-status
 
 ```
 
-<span data-ttu-id="ca695-110">Nossa classe é definida da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="ca695-110">Our class is defined as follows:</span></span>
+<span data-ttu-id="81831-110">Nossa classe é definida da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="81831-110">Our class is defined as follows:</span></span>
 
 ```csharp
 private class InspectedRow

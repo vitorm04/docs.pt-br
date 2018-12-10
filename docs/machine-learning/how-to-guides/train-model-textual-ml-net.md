@@ -4,26 +4,26 @@ description: Saiba como aplicar a engenharia de funcionalidades ao treinamento d
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: ed24561c8cc821ece8a21ca61e22a11bda2516d1
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297633"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152156"
 ---
-# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="d383c-103">Aplicar a engenharia de funcionalidades ao treinamento de modelo de machine learning em dados textuais com o ML.NET</span><span class="sxs-lookup"><span data-stu-id="d383c-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
+# <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a><span data-ttu-id="72306-103">Aplicar a engenharia de funcionalidades ao treinamento de modelo de machine learning em dados textuais com o ML.NET</span><span class="sxs-lookup"><span data-stu-id="72306-103">Apply feature engineering for machine learning model training on textual data with ML.NET</span></span>
 
-<span data-ttu-id="d383c-104">Você precisa converter os dados não float em tipos de dados `float`, pois todos os `learners` do ML.NET esperam as funcionalidades como um `float vector`.</span><span class="sxs-lookup"><span data-stu-id="d383c-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+<span data-ttu-id="72306-104">Você precisa converter os dados não float em tipos de dados `float`, pois todos os `learners` do ML.NET esperam as funcionalidades como um `float vector`.</span><span class="sxs-lookup"><span data-stu-id="72306-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="d383c-105">Para aprender mais sobre os dados textuais, você precisará extrair as funcionalidades de texto.</span><span class="sxs-lookup"><span data-stu-id="d383c-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="d383c-106">O ML.NET tem alguns mecanismos básicos de extração de funcionalidades de texto:</span><span class="sxs-lookup"><span data-stu-id="d383c-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
+<span data-ttu-id="72306-105">Para aprender mais sobre os dados textuais, você precisará extrair as funcionalidades de texto.</span><span class="sxs-lookup"><span data-stu-id="72306-105">To learn on textual data, you need to extract text features.</span></span> <span data-ttu-id="72306-106">O ML.NET tem alguns mecanismos básicos de extração de funcionalidades de texto:</span><span class="sxs-lookup"><span data-stu-id="72306-106">ML.NET has some basic text feature extraction mechanisms:</span></span>
 
-- <span data-ttu-id="d383c-107">`Text normalization` (remoção de pontuação, diacríticos, alternância para minúsculas, etc.)</span><span class="sxs-lookup"><span data-stu-id="d383c-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
-- <span data-ttu-id="d383c-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="d383c-108">`Separator-based tokenization`.</span></span>
-- <span data-ttu-id="d383c-109">Remoção de `Stopword`.</span><span class="sxs-lookup"><span data-stu-id="d383c-109">`Stopword` removal.</span></span>
-- <span data-ttu-id="d383c-110">Extração de `Ngram` e `skip-gram`.</span><span class="sxs-lookup"><span data-stu-id="d383c-110">`Ngram` and `skip-gram` extraction.</span></span>
-- <span data-ttu-id="d383c-111">Redimensionamento de`TF-IDF`.</span><span class="sxs-lookup"><span data-stu-id="d383c-111">`TF-IDF` rescaling.</span></span>
-- <span data-ttu-id="d383c-112">Conversão de `Bag of words`.</span><span class="sxs-lookup"><span data-stu-id="d383c-112">`Bag of words` conversion.</span></span>
+- <span data-ttu-id="72306-107">`Text normalization` (remoção de pontuação, diacríticos, alternância para minúsculas, etc.)</span><span class="sxs-lookup"><span data-stu-id="72306-107">`Text normalization` (removing punctuation, diacritics, switching to lowercase etc.)</span></span>
+- <span data-ttu-id="72306-108">`Separator-based tokenization`.</span><span class="sxs-lookup"><span data-stu-id="72306-108">`Separator-based tokenization`.</span></span>
+- <span data-ttu-id="72306-109">Remoção de `Stopword`.</span><span class="sxs-lookup"><span data-stu-id="72306-109">`Stopword` removal.</span></span>
+- <span data-ttu-id="72306-110">Extração de `Ngram` e `skip-gram`.</span><span class="sxs-lookup"><span data-stu-id="72306-110">`Ngram` and `skip-gram` extraction.</span></span>
+- <span data-ttu-id="72306-111">Redimensionamento de`TF-IDF`.</span><span class="sxs-lookup"><span data-stu-id="72306-111">`TF-IDF` rescaling.</span></span>
+- <span data-ttu-id="72306-112">Conversão de `Bag of words`.</span><span class="sxs-lookup"><span data-stu-id="72306-112">`Bag of words` conversion.</span></span>
 
-<span data-ttu-id="d383c-113">O seguinte exemplo demonstra os mecanismos de extração de funcionalidades de texto do ML.NET usando o [conjunto de dados detox do Wikipédia](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="d383c-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
+<span data-ttu-id="72306-113">O seguinte exemplo demonstra os mecanismos de extração de funcionalidades de texto do ML.NET usando o [conjunto de dados detox do Wikipédia](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span><span class="sxs-lookup"><span data-stu-id="72306-113">The following example demonstrates ML.NET text feature extraction mechanisms using the [Wikipedia detox dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv):</span></span>
 
 ```console
 Sentiment   SentimentText
