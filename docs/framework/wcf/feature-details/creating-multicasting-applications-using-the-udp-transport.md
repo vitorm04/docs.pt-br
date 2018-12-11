@@ -2,12 +2,12 @@
 title: Criando aplicativos multicasting usando o transporte UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324747"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241847"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Criando aplicativos multicasting usando o transporte UDP
 Aplicativos de difusão seletiva enviam mensagens pequenas para um grande número de destinatários ao mesmo tempo sem a necessidade de estabelecer conexões ponto a ponto. A ênfase tais aplicativos é a velocidade ao longo de confiabilidade. Em outras palavras, é mais importante enviar dados em tempo hábil que assegurar que qualquer mensagem específica é realmente recebida. O WCF agora dá suporte a escrever aplicativos multicasting usando o <xref:System.ServiceModel.UdpBinding>. Esse transporte é útil em cenários em que um serviço precisa para enviar mensagens pequenas para um número de clientes simultaneamente. Um aplicativo de cotação da bolsa é um exemplo de um serviço.  
@@ -15,7 +15,7 @@ Aplicativos de difusão seletiva enviam mensagens pequenas para um grande númer
 ## <a name="implementing-a-multicast-application"></a>Implementando um aplicativo de Multicast  
  Para implementar um aplicativo de multicast, definir um contrato de serviço e para cada componente de software que precisa para responder às mensagens de difusão seletiva, implemente o contrato de serviço. Por exemplo, um aplicativo de cotação da bolsa pode definir um contrato de serviço:  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  Cada aplicativo que deseja receber mensagens de multicast deve hospedar um serviço que expõe essa interface.  Por exemplo, aqui está um exemplo de código que ilustra como receber mensagens de multicast:  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  Nesse tipo de cenário é o cliente que, na verdade, envia mensagens de multicast. Cada serviço que está escutando no endereço correto UDP receberá as mensagens de multicast. Aqui está um exemplo de um cliente que envia mensagens de multicast:  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>Mensagens de Multicast bidirecional  
  Enquanto as mensagens de multicast são geralmente unidirecionais, o UdpBinding oferece suporte à troca de mensagens de solicitação/resposta. As mensagens enviadas usando o transporte UDP contêm dois um From e ao endereço. Deve-se ter cuidado ao usar o endereço de quanto poderia ser maliciosamente alterado na rota.  O endereço pode ser verificado usando o seguinte código:  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4

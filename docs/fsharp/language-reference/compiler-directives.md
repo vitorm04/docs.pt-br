@@ -1,13 +1,13 @@
 ---
 title: Diretivas de compilador (F#)
 description: Saiba mais sobre F# diretivas de pré-processador de linguagem, diretivas de compilação condicional, diretivas de linha e diretivas de compilador.
-ms.date: 05/16/2016
-ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: 7344785e37454d367aa4dfcfa1bacd01b68363d5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126946"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239690"
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 
@@ -21,7 +21,7 @@ A tabela a seguir lista as diretivas de pré-processador que estão disponíveis
 
 |Diretiva|Descrição|
 |---------|-----------|
-|`#if` *symbol*|Dá suporte à compilação condicional. Código na seção após o `#if` está incluído se o *símbolo* é definido.|
+|`#if` *symbol*|Dá suporte à compilação condicional. Código na seção após o `#if` está incluído se o *símbolo* é definido. O símbolo também pode ser negado com `!`.|
 |`#else`|Dá suporte à compilação condicional. Marca uma seção de código para incluir se o símbolo usado com o anterior `#if` não está definido.|
 |`#endif`|Dá suporte à compilação condicional. Marca o final de uma seção condicional do código.|
 |`#`[linha] *int*,<br/>`#`[linha] *int* *cadeia de caracteres*,<br/>`#`[linha] *int* *cadeia de caracteres textuais*|Indica o nome original da fonte código linha e o arquivo, para depuração. Esse recurso é fornecido para as ferramentas que geram F# código-fonte.|
@@ -46,6 +46,16 @@ Não há nenhuma `#define` diretiva de pré-processador em F#. Você deve usar a
 
 Diretivas de compilação condicional podem ser aninhadas. Recuo não é significativo para diretivas de pré-processador.
 
+Você também pode negar um símbolo com `!`. Neste exemplo, o valor da cadeia de caracteres é algo somente quando _não_ depuração:
+
+```fsharp
+#if !DEBUG
+let str = "Not debugging!"
+#else
+let str = "Debugging!"
+#endif
+```
+
 ## <a name="line-directives"></a>Diretivas de linha
 
 Durante a criação, o compilador relata erros em F# números de código, fazendo referência a linha na qual ocorre a cada erro. Esses números de linha iniciam em 1 para a primeira linha em um arquivo. No entanto, se você estiver gerando F# código-fonte da ferramenta de outro, os números de linha no código gerado geralmente não são de interesse, pois os erros no gerado F# código provavelmente são provenientes de outra fonte. O `#line` diretiva fornece uma maneira para autores de ferramentas que geram F# código-fonte para passar informações sobre a linha original números e arquivos de origem para o gerado F# código.
@@ -65,6 +75,7 @@ A tabela a seguir lista a diretiva de compilador que está disponível no F#.
 |Diretiva|Descrição|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Habilita ou desabilita a sintaxe leve, para compatibilidade com outras versões do ML. Por padrão, a sintaxe leve está habilitada. Sintaxe detalhada está sempre habilitado. Portanto, você pode usar a sintaxe leve e a sintaxe detalhada. A diretiva `#light` por si só é equivalente a `#light "on"`. Se você especificar `#light "off"`, você deve usar a sintaxe detalhada para todas as construções de linguagem. Sintaxe na documentação do F# é apresentado com a suposição de que você está usando a sintaxe leve. Para obter mais informações, consulte [sintaxe detalhada](verbose-syntax.md).|
+
 Para diretivas de interpretador (fsi.exe), consulte [programação interativa com F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Consulte também

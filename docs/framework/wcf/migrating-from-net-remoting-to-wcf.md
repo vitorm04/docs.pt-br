@@ -2,12 +2,12 @@
 title: Migrando de .NET Remoting para o WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200092"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245672"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa o .NET Remoting para usar o Windows Communication Foundation (WCF). Ele compara conceitos semelhantes entre esses produtos e, em seguida, descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -89,8 +89,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
     serviceHost.AddServiceEndpoint(typeof(IWCFServer), binding, baseAddress);  
     serviceHost.Open();  
   
-    Console.WriteLine(String.Format("The WCF server is ready at {0}.",  
-                                    baseAddress));  
+    Console.WriteLine($"The WCF server is ready at {baseAddress}.");
     Console.WriteLine("Press <ENTER> to terminate service...");  
     Console.WriteLine();  
     Console.ReadLine();  
@@ -102,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Há várias maneiras para configurar e hospedar serviços WCF. Isso é apenas um exemplo, conhecido como "auto-hospedado". Para mais informações, consulte os seguintes tópicos:  
   
--   [Como definir um contrato de serviço](how-to-define-a-wcf-service-contract.md)  
+-   [Como: Definir um contrato de serviço](how-to-define-a-wcf-service-contract.md)  
   
 -   [Configurando serviços usando arquivos de configuração](configuring-services-using-configuration-files.md)  
   
@@ -121,8 +120,7 @@ RemotingServer server = (RemotingServer)Activator.GetObject(
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("Customer {0} {1} received.",   
-                                 customer.FirstName, customer.LastName));  
+Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  A instância de RemotingServer retornada de Activator.GetObject() é conhecida como um "proxy transparente". Ele implementa a API pública para o tipo de RemotingServer no cliente, mas todos os métodos chamam o objeto de servidor em execução em um computador ou processo diferente.  
@@ -139,15 +137,14 @@ ChannelFactory<IWCFServer> channelFactory =
 IWCFServer server = channelFactory.CreateChannel();  
   
 Customer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-                    customer.FirstName, customer.LastName));  
+Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  Este exemplo mostra como ele é mais semelhante ao exemplo a comunicação remota de programação no nível do canal. Também está disponível de **adicionar referência de serviço** abordagem no Visual Studio que gera código para simplificar a programação do cliente. Para mais informações, consulte os seguintes tópicos:  
   
 -   [Programação de nível de canal do cliente](./extending/client-channel-level-programming.md)  
   
--   [Como: adicionar, atualizar ou remover uma referência de serviço](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [Como: Adicionar, atualizar ou remover uma referência de serviço](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Uso de serialização  
  Comunicação remota do .NET e o WCF usam a serialização para enviar objetos entre cliente e servidor, mas elas diferem das seguintes maneiras importantes:  
@@ -269,8 +266,7 @@ try
 }  
 catch (FaultException<CustomerServiceFault> fault)  
 {  
-    Console.WriteLine(String.Format("Fault received: {0}",  
-    fault.Detail.ErrorMessage));  
+    Console.WriteLine($"Fault received: {fault.Detail.ErrorMessage}");
 }  
 ```  
   
@@ -307,7 +303,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **Crie o contrato de falha (opcional).** Crie os tipos que serão trocados entre cliente e servidor quando forem encontrados erros. Marca esses tipos com [DataContract] e [DataMember] para torná-las serializável. Todas as operações de serviço que é marcado com [OperationContract], também marcá-los com [FaultContract] para indicar quais erros, eles podem retornar.  
   
--   **Configurar e hospedar o serviço.** Quando o contrato de serviço tiver sido criado, a próxima etapa é configurar uma associação para expor o serviço em um ponto de extremidade. Para obter mais informações, consulte [pontos de extremidade: endereços, associações e contratos](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
+-   **Configurar e hospedar o serviço.** Quando o contrato de serviço tiver sido criado, a próxima etapa é configurar uma associação para expor o serviço em um ponto de extremidade. Para obter mais informações, consulte [pontos de extremidade: Endereços, associações e contratos](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
   
  Depois que um aplicativo de comunicação remota tiver sido migrado para o WCF, ele ainda é importante remover dependências em .NET Remoting. Isso garante que quaisquer vulnerabilidades de comunicação remota são removidas do aplicativo. Essas etapas incluem o seguinte:  
   
@@ -343,7 +339,7 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
-#### <a name="scenario-1-service-returns-an-object-by-value"></a>Cenário 1: O serviço retorna um objeto por valor  
+#### <a name="scenario-1-service-returns-an-object-by-value"></a>Cenário 1: Serviço retorna um objeto por valor  
  Este cenário demonstra um servidor retornando um objeto para o cliente por valor. WCF sempre retorna objetos do servidor por valor, portanto, simplesmente, as etapas a seguir descrevem como criar um serviço WCF normal.  
   
 1.  Comece definindo uma interface pública para o serviço WCF e marcá-lo com o atributo [ServiceContract]. Usamos [OperationContract] para identificar os métodos do lado do servidor que chamará nosso cliente.  
@@ -442,7 +438,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     Para obter mais informações sobre como usar **adicionar referência de serviço**, consulte [como: adicionar, atualizar ou remover uma referência de serviço](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
+     Para obter mais informações sobre como usar **adicionar referência de serviço**, consulte [como: Adicionar, atualizar ou remover uma referência de serviço](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
   
 7.  Agora podemos chamar o serviço WCF do cliente. Fazemos isso criando uma fábrica de canais para o serviço, solicitando que ele de um canal e chamar diretamente o método que queremos naquele canal. Podemos fazer isso porque o canal implementa a interface do serviço e manipula a lógica subjacente de solicitação/resposta para nós. O valor de retorno dessa chamada de método é a cópia desserializada da resposta do servidor.  
   
@@ -451,13 +447,12 @@ public class RemotingServer : MarshalByRefObject
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
    Customer customer = service.GetCustomer(42);  
-   Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-           customer.FirstName, customer.LastName));  
+   Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
  Os objetos retornados pelo WCF do servidor para o cliente são sempre por valor. Os objetos são cópias desserializadas dos dados enviados pelo servidor. O cliente pode chamar métodos nessas cópias locais sem qualquer perigo de invocar o código do servidor por meio de retornos de chamada.  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Cenário 2: O servidor retorna um objeto por referência  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Cenário 2: Servidor retorna um objeto por referência  
  Este cenário demonstra o servidor que fornece um objeto para o cliente por referência. No .NET Remoting, isso é manipulado automaticamente para qualquer tipo derivado de MarshalByRefObject, que é serializado por referência. Um exemplo desse cenário é permitir que vários clientes têm objetos independentes de sessão no servidor. Como mencionado anteriormente, os objetos retornados por um serviço WCF não são sempre por valor, portanto, não há nenhum equivalente direto de um objeto por referência, mas é possível obter algo semelhante ao uso de semântica por referência um <xref:System.ServiceModel.EndpointAddress10> objeto. Isso é um objeto serializável por valor que pode ser usado pelo cliente para obter um objeto por referência de sessão no servidor. Isso permite que o cenário de ter vários clientes com objetos de servidor de sessão independentes.  
   
 1.  Primeiro, precisamos definir um contrato de serviço WCF que corresponde ao objeto de sessão.  
@@ -640,7 +635,7 @@ public class RemotingServer : MarshalByRefObject
   
  O WCF sempre retorna objetos por valor, mas é possível suportar o equivalente a semântica por referência com o uso de EndpointAddress10. Isso permite que o cliente solicite uma instância de serviço WCF sessão, após o qual ele pode interagir com ele como qualquer outro serviço do WCF.  
   
-#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Cenário 3: O cliente envia servidor uma instância por valor  
+#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Cenário 3: O cliente envia ao servidor uma instância por valor  
  Este cenário demonstra o cliente enviar uma instância de objeto não primitivos para o servidor por valor. Porque o WCF envia apenas objetos por valor, este cenário demonstra o uso normal do WCF.  
   
 1.  Use o mesmo serviço de WCF do cenário 1.  
@@ -657,7 +652,7 @@ public class RemotingServer : MarshalByRefObject
    CustomerId = 43,   
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
-   Console.WriteLine(String.Format("  Server returned {0}.", success));  
+   Console.WriteLine($"  Server returned {success}.");
    ```  
   
      O objeto de cliente será serializado e enviado ao servidor, onde ele é desserializado em uma nova cópia desse objeto.  
