@@ -1,15 +1,15 @@
 ---
-title: Diretrizes da biblioteca de software livre
+title: Diretrizes da biblioteca .NET de software livre
 description: Práticas recomendadas para que os desenvolvedores criem bibliotecas .NET de alta qualidade.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128064"
 ---
 # <a name="open-source-library-guidance"></a>Diretrizes da biblioteca de software livre
 
@@ -48,4 +48,4 @@ Por fim, as recomendações **Não fazer** indicam algo que você quase nunca de
 **❌ NÃO FAZER** a publicação de versões de nome forte e sem nome forte da biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[Avançar](./get-started.md)
+>[Avançar](get-started.md)

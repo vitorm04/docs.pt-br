@@ -4,14 +4,15 @@ description: Siga os tutoriais para aprender como criar aplicativos e biblioteca
 author: richlander
 ms.author: mairaw
 ms.date: 03/16/2017
-ms.openlocfilehash: 858fc0b95772d4be14363a1dbcfcd533040b8040
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210140"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130722"
 ---
-# <a name="net-core-tutorials"></a>Tutoriais do .NET Core
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Confira estes tutoriais para conhecer o .NET Core e as ferramentas do SDK do .NET Core
 
 Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 

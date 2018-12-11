@@ -1,17 +1,17 @@
 ---
-title: Arquitetando aplicativos baseados em contêineres e em microsserviços
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Arquitetando aplicativos baseados em contêineres e em microsserviços
+title: Como arquitetar aplicativos baseados em contêineres e em microsserviços
+description: Arquitetar aplicativos baseados em contêineres e em microsserviços não é simples e deve ser levado a sério. Aprenda os conceitos principais neste capítulo.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: f7933cc25a5fde13113d0c9c278e9bd1730d4f9d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.date: 09/20/2018
+ms.openlocfilehash: 6b1d5f7f0ab18e4f1d4b5c2200ac0c6f40c701ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155412"
 ---
-# <a name="architecting-container--and-microservice-based-applications"></a>Arquitetando aplicativos baseados em contêineres e em microsserviços
+# <a name="architecting-container-and-microservice-based-applications"></a>Como arquitetar aplicativos baseados em contêineres e em microsserviços
 
 *Os microsserviços oferecem grandes benefícios, mas também geram novos grandes desafios. Os padrões da arquitetura de microsserviços são pilares fundamentais durante a criação de um aplicativo baseado em microsserviço.*
 
@@ -23,13 +23,12 @@ Os aplicativos corporativos podem ser complexos e geralmente são compostos de v
 
 No modelo de contêiner, uma instância de imagem de contêiner representa um único processo. Definindo uma imagem de contêiner como um limite de processo, você pode criar primitivas que podem ser usadas para dimensionar o processo ou criar um lote.
 
-Ao criar uma imagem de contêiner, você verá uma definição [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/) no Dockerfile. Ela define o processo cujo tempo de vida controla o tempo de vida do contêiner. Quando o processo for concluído, o ciclo de vida do contêiner será encerrado. Os contêineres podem representar processos de longa execução como servidores Web, mas também podem representar processos de curta duração, como trabalhos em lotes, que anteriormente talvez eram implementados como Azure [WebJobs](https://docs.microsoft.com/azure/app-service-web/websites-webjobs-resources).
+Ao criar uma imagem de contêiner, você verá uma definição [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) no Dockerfile. Ela define o processo cujo tempo de vida controla o tempo de vida do contêiner. Quando o processo for concluído, o ciclo de vida do contêiner será encerrado. Os contêineres podem representar processos de longa execução como servidores Web, mas também podem representar processos de curta duração, como trabalhos em lotes, que anteriormente talvez eram implementados como Azure [WebJobs](https://github.com/Azure/azure-webjobs-sdk/wiki).
 
 Se o processo falhar, o contêiner é encerrado e o orquestrador assume. Se o orquestrador foi configurado para manter cinco instâncias em execução e uma falhar, ele criará outra instância de contêiner para substituir o processo com falha. Em um trabalho em lotes, o processo é iniciado com parâmetros. Quando o processo é concluído, o trabalho é concluído. Mais tarde, este guia faz drill-down em orquestradores.
 
 Você pode encontrar um cenário em que deseje vários processos em execução em um único contêiner. Para esse cenário, como pode haver apenas um ponto de entrada por contêiner, você poderá executar um script dentro do contêiner para iniciar quantos programas forem necessários. Por exemplo, você pode usar o [Supervisor](http://supervisord.org/) ou uma ferramenta semelhante para cuidar da inicialização de vários processos dentro de um único contêiner. No entanto, mesmo que seja possível encontrar arquiteturas com vários processos por contêiner, essa abordagem não é muito comum.
 
-
 >[!div class="step-by-step"]
-[Anterior](../net-core-net-framework-containers/official-net-docker-images.md)
-[Próximo](containerize-monolithic-applications.md)
+>[Anterior](../net-core-net-framework-containers/official-net-docker-images.md)
+>[Próximo](containerize-monolithic-applications.md)

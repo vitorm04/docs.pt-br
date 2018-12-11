@@ -1,17 +1,18 @@
 ---
-title: Controle de versão do .NET Core
-description: Compreenda como o controle de versão do .NET Core funciona.
+title: Como controlar a versão do SDK e do Tempo de Execução do .NET Core
+description: Este artigo ensina como controlar a versão do SDK do .NET Core (semelhante ao controle de versão semântico).
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 12bb270584eb0f63973acf40afd3f6a30363c9c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188463"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126045"
 ---
-# <a name="net-core-versioning"></a>Controle de versão do .NET Core
+# <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
 O .NET Core refere-se ao Tempo de Execução do .NET Core e ao SDK do .NET Core, que contém as ferramentas que necessárias para desenvolver aplicativos. Os SDKs do .NET Core são projetados para funcionar com qualquer versão anterior do Tempo de Execução do .NET Core. Este artigo explica o tempo de execução e a estratégia de versão do SDK. Uma explicação de números de versão do .NET Standard pode ser encontrada no artigo que faz a introdução do [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 

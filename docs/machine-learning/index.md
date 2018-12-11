@@ -1,39 +1,51 @@
 ---
-title: Guia do ML.NET
+title: Guia de conteúdo do ML.NET
 description: Saiba como criar soluções de IA personalizadas e integrá-las aos seus aplicativos do .NET usando o ML.NET.
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.date: 11/06/2018
+ms.custom: seodec18
+ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34862299"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126244"
 ---
-# <a name="mlnet-guide"></a>Guia do ML.NET
+# <a name="mlnet-content-guide"></a>Guia de conteúdo do ML.NET
 
-O ML.NET é uma estrutura de machine learning grátis, de software livre e multiplataforma que permite a criação de soluções de machine learning personalizadas e a integração delas aos seus aplicativos do .NET. Este guia oferece muitos recursos sobre como trabalhar com o ML.NET.
+Este guia explica conceitos básicos e fornece tutoriais e uma referência de API para trabalhar com o ML.NET.
 
-Para obter mais informações sobre o ML.NET, consulte a postagem [Introducing ML.NET: Cross-platform, Proven and Open Source Machine Learning Framework](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) (Apresentando o ML.NET: estrutura de aprendizado de máquina de plataforma cruzada, comprovada e de software livre) no blog do .NET.
+> [!NOTE]
+> Esta documentação refere-se ao ML.NET, que está atualmente em versão prévia. O material pode estar sujeito a alterações. Para obter mais informações, confira a [Introdução ao ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="get-started"></a>Introdução
 
-Para começar a usar o ML.NET, confira o [Guia rápido do Iris Petal Prediction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started) ou [tutorais](tutorials/index.md) mais detalhados.
+Para instalar e começar a desenvolver no ML.NET, siga o [Tutorial de introdução](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).
 
-Se você não conhece o machine learning, analise as [Noções básicas do machine learning](resources/basics.md) para encontrar recursos de machine learning que podem auxiliá-lo.
+Para saber mais sobre ML.NET, confira [O que é ML.NET?](what-is-mldotnet.md)
 
-## <a name="how-the-mlnet-guide-is-organized"></a>Como o guia do ML.NET é organizado
+Para entender os conceitos básicos, veja [Conceitos básicos do treinamento de modelo em ML.NET](basic-concepts-model-training-in-mldotnet.md).
 
-Há várias seções no Guia do ML.NET. Você pode lê-los em ordem ou ir diretamente para os que lhe interessam mais.
+## <a name="tutorials"></a>Tutoriais
 
-**[Tutoriais](tutorials/index.md)**
+[Análise de sentimento usando um modelo de classificação binária](tutorials/sentiment-analysis.md) mostra como criar um aplicativo que determina se o sentimento é positivo ou negativo.
 
-Nesta seção, você encontrará tutoriais passo a passo que o orientam na criação de modelos de machine learning personalizados para cenários comuns de desenvolvedor.
+[Previsão do valor da corrida do táxi usando um modelo de regressão](tutorials/taxi-fare.md) mostra como criar um aplicativo de previsão que usa diversos fatores de dados históricos para determinar a resposta.
 
-**[Glossário](resources/glossary.md)**
+[Classificação de flores íris por características ](tutorials/iris-clustering.md) mostra como usar um modelo de clustering para analisar o conjunto de dados da íris. 
 
-Localize uma lista de terminologia do machine learning e suas definições.
+## <a name="how-to-guide"></a>Guia de instruções
+
+[Criação de um aplicativo de lista de campeonato com Infer.NET e programação probabilística](how-to-guides/matchup-app-infer-net.md) mostra como compilar uma versão simplificada de um aplicativo de correspondência como você veria em um jogo do Xbox.
+
+## <a name="resources"></a>Recursos
+
+[Glossário de aprendizado de máquina](resources/glossary.md) define a terminologia essencial.
+
+[Tarefas de aprendizado de máquina](resources/tasks.md) descreve tarefas, como classificação e detecção de anomalias. 
+
+[Transformações de dados](resources/transforms.md) descreve os recursos de preparação de dados do ML.NET.
+
 
 ## <a name="api-reference"></a>Reference API
 
-Confira a [Referência de API do ML.NET](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) para ver a variedade de APIs disponíveis.
+[Referência de API do ML.NET](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) descreve a variedade de APIs disponíveis.

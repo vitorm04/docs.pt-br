@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fcff6d701b177d125eddaffe74383446f5f7b2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577222"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154902"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 Dados semelhantes podem normalmente ser tratados com mais eficiência quando armazenados e manipulados como uma coleção. Você pode usar a classe ou as classes <xref:System.Array?displayProperty=nameWithType> nos namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable para adicionar, remover e modificar elementos individuais ou um intervalo de elementos em uma coleção.  
@@ -60,9 +60,10 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Escolhendo uma coleção  
  Em geral, você deve usar coleções genéricas. A tabela a seguir descreve alguns cenários comuns de coleção e as classes de coleção que você pode usar para esses cenários. Se você for inexperiente com coleções genéricas, esta tabela o ajudará a escolher a coleção genérica adequada para a tarefa.  
+ 
 |Eu quero…|Opções de coleção genérica|Opções de coleção não genérica|Opções de coleção thread-safe ou imutável|  
 |-|-|-|-|  
-|Armazenar itens como pares chave/valor para consulta rápida por chave|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Um conjunto de pares chave/valor que são organizados com base no código hash da chave).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|Armazenar itens como pares chave/valor para consulta rápida por chave|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Um conjunto de pares chave/valor que são organizados com base no código hash da chave.)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
 |Itens de acesso por índice|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
 |Usar itens primeiro a entrar, primeiro a sair (PEPS)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
 |Usar dados último a entrar, primeiro a sair (UEPS)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  

@@ -5,12 +5,12 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567257"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154327"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Os analisadores do Roslyn
 
@@ -33,5 +33,6 @@ Os analisadores do Roslyn relatam problemas potenciais como erros, avisos ou inf
 
 Os analisadores a seguir são abordados nesta seção:
 
-[Analisador de API](api-analyzer.md): este analisador verifica se há em seu código possíveis riscos de compatibilidade ou usos de APIs obsoletas.    
-[Analisador de estrutura](framework-analyzer.md): este analisador examina seu código para garantir que ele segue as diretrizes dos aplicativos do .NET Framework. Essas regras incluem várias recomendações com base em segurança.
+* [Analisador de API](api-analyzer.md): este analisador verifica se há em seu código possíveis riscos de compatibilidade ou usos de APIs obsoletas.    
+* [Analisador de estrutura](framework-analyzer.md): este analisador examina seu código para garantir que ele segue as diretrizes dos aplicativos do .NET Framework. Essas regras incluem várias recomendações com base em segurança.
+* [.NET Portability Analyzer](portability-analyzer.md): esse analisador examina seu código para ver a quantidade de trabalho necessário para tornar o aplicativo compatível com outras implementações do .NET e perfis, incluindo .NET Core, .NET Standard, UWP e Xamarin para iOS, Android e Mac. 

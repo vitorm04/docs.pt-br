@@ -1,27 +1,30 @@
 ---
 title: Implantação do .NET Core Application
-description: Implantação de um aplicativo .NET Core.
+description: Conheça maneiras de implantar um aplicativo .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144709"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
-Você pode criar dois tipos de implantações de aplicativos do .NET Core:
+É possível criar três tipos de implantações de aplicativos do .NET Core:
 
 - Implantação dependente de estrutura. Como o nome indica, a FDD (implantação dependente de estrutura) se baseia na presença de uma versão compartilhada em todo o sistema do .NET Core no sistema de destino. Como o .NET Core já está presente, seu aplicativo também é portátil entre instalações do .NET Core. Seu aplicativo conterá somente seu próprio código e as dependências de terceiros que estiverem fora de bibliotecas .NET Core. As FDDs contêm arquivos *.dll* que podem ser iniciados por meio do [utilitário dotnet](../tools/dotnet.md) na linha de comando. Por exemplo, `dotnet app.dll` executa um aplicativo chamado `app`.
 
 - Implantação autocontida. Ao contrário da FDD, a SCD (implantação autocontida) não se baseia na presença de componentes compartilhados no sistema de destino. Todos os componentes, inclusive as bibliotecas e o tempo de execução do .NET Core, são incluídos com o aplicativo e isolados de outros aplicativos .NET Core. As SCDs incluem um arquivo executável (como o *app.exe* em plataformas Windows para um aplicativo chamado `app`), que é uma versão renomeada do host específico da plataforma .NET Core, e um arquivo *.dll* (como *app.dll*), que é o aplicativo real.
 
+- Arquivos executáveis dependentes de estrutura. Produz um arquivo executável que é executado em uma plataforma de destino. Semelhante a FDDs, os arquivos executáveis dependentes de estrutura (FDE) são específicos da plataforma e não são independentes. Essas implantações ainda dependem da presença de uma versão do .NET Core compartilhada em todo o sistema para serem executadas. Ao contrário de um SCD, seu aplicativo conterá apenas seu código e as dependências de terceiros que estiverem fora de bibliotecas .NET Core. FDEs produzem um arquivo executável que é executado na plataforma de destino.
+
 ## <a name="framework-dependent-deployments-fdd"></a>FDD (implantação dependente de estrutura)
 
-Para uma FDD, seu aplicativo é implantado apenas em dependências de terceiros. Você não precisa implantar o .NET Core, pois o aplicativo usará a versão do .NET Core presente no sistema de destino. Esse é o modelo de implantação padrão para aplicativos .NET Core e ASP.NET Core direcionados ao .NET Core.
+Para uma FDD, seu aplicativo é implantado apenas em dependências de terceiros. Seu aplicativo usará a versão do .NET Core presente no sistema de destino. Esse é o modelo de implantação padrão para aplicativos .NET Core e ASP.NET Core direcionados ao .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Por que criar uma implantação dependente de estrutura?
 
@@ -31,11 +34,13 @@ Implantar uma FDD traz uma série de vantagens:
 
 - O tamanho do seu pacote de implantação é pequeno. Você deve implantar apenas o aplicativo e as respectivas dependências, mas não o .NET Core em si.
 
+- A menos que substituídas, as FDDs usarão o tempo de execução mais recente instalado no sistema de destino. Isso permite que seu aplicativo use a versão corrigida mais atual do tempo de execução do .NET Core. 
+
 - Vários aplicativos usam a mesma instalação do .NET Core, o que reduz o uso de memória e espaço em disco nos sistemas host.
 
 Contudo, também há algumas desvantagens:
 
-- Seu aplicativo poderá ser executado somente se a versão do .NET Core de destino, ou uma versão posterior, já estiver instalada no sistema host.
+- Seu aplicativo poderá ser executado somente se a versão do .NET Core que seu aplicativo visa, [ou uma versão posterior](../versions/selection.md#framework-dependent-apps-roll-forward), já estiver instalada no sistema host.
 
 - É possível que o tempo de execução e as bibliotecas do .NET Core sejam alteradas em versões futuras, sem seu conhecimento. Em casos raros, isso pode alterar o comportamento do seu aplicativo.
 
@@ -65,9 +70,31 @@ Ela também apresenta algumas desvantagens:
 
 - Implantar vários aplicativos .NET Core autocontidos em um sistema pode consumir um volume significativo de espaço em disco, visto que cada aplicativo duplica os arquivos do .NET Core.
 
+## <a name="framework-dependent-executables-fde"></a>Arquivos executáveis dependentes de estrutura (FDE)
+
+A partir do .NET Core 2.2, você pode implantar seu aplicativo como um FDE, juntamente com quaisquer dependências de terceiros necessárias. Seu aplicativo usará a versão do .NET Core instalada no sistema de destino.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>Por que implantar um arquivo executável dependente de estrutura?
+
+Implantar um FDE traz uma série de vantagens:
+
+- O tamanho do seu pacote de implantação é pequeno. Você deve implantar apenas o aplicativo e as respectivas dependências, mas não o .NET Core em si.
+
+- Vários aplicativos usam a mesma instalação do .NET Core, o que reduz o uso de memória e espaço em disco nos sistemas host.
+
+- Seu aplicativo pode ser executado chamando o arquivo executável publicado sem invocar o utilitário `dotnet` diretamente.
+
+Contudo, também há algumas desvantagens:
+
+- Seu aplicativo poderá ser executado somente se a versão do .NET Core que seu aplicativo visa, [ou uma versão posterior](../versions/selection.md#framework-dependent-apps-roll-forward), já estiver instalada no sistema host.
+
+- É possível que o tempo de execução e as bibliotecas do .NET Core sejam alteradas em versões futuras, sem seu conhecimento. Em casos raros, isso pode alterar o comportamento do seu aplicativo.
+
+- Você deve publicar seu aplicativo para cada plataforma de destino.
+
 ## <a name="step-by-step-examples"></a>Exemplos passo a passo
 
-Para obter exemplos passo a passo de como implantar aplicativos .NET Core com ferramentas da CLI, confira o artigo [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md). Para obter exemplos passo a passo de como implantar aplicativos .NET Core com o Visual Studio, confira o artigo [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md). Cada tópico inclui exemplos das seguintes implantações:
+Para obter exemplos passo a passo de como implantar aplicativos .NET Core com ferramentas da CLI, confira o artigo [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md). Para obter exemplos passo a passo de como implantar aplicativos .NET Core com o Visual Studio, confira o artigo [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md). Cada artigo inclui exemplos das seguintes implantações:
 
 - Implantação dependente de estrutura
 - Implantação dependente de estrutura com dependências de terceiros

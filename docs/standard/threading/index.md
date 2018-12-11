@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1226f51143b912f85e94146948091891376e49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589913"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147444"
 ---
 # <a name="managed-threading"></a>Threading gerenciado
 Quer você esteja desenvolvendo para computadores com um processador, quer para com vários, é conveniente que seu aplicativo forneça uma interação mais dinâmica com o usuário, mesmo se o aplicativo, no momento, estiver realizando outro trabalho. Usar vários threads de execução é uma das maneiras mais eficazes de manter seu aplicativo responsivo ao usuário e, ao mesmo tempo, usar o processador entre ou, até mesmo, durante os eventos do usuário. Embora esta seção introduza os conceitos básicos de threading, ele se concentra nos conceitos de threading gerenciado e em como usá-lo.  
@@ -29,7 +29,7 @@ Quer você esteja desenvolvendo para computadores com um processador, quer para 
  Explica como criar, iniciar, pausar, retomar e abortar threads.  
   
  [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Aborda os níveis de sincronização, como evitar deadlocks e condições de corrida, computadores com único processador e vários processadores, além de outros problemas de threading.  
+ Aborda os níveis de sincronização, como evitar deadlocks e condições de corrida, além de outros problemas de threading.  
   
  [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)  
  Descreve as classes gerenciadas que você pode usar para sincronizar as atividades de threads e os dados de objetos acessados em threads diferentes, bem como fornece uma visão geral dos threads de pool do thread.  

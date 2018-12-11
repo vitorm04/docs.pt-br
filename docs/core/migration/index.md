@@ -1,23 +1,25 @@
 ---
-title: Migração do .NET Core para o formato csproj
-description: Migração do project.json para o csproj do .NET Core
+title: Migração do .NET Core com project.json
+description: Saiba como migrar um projeto .NET Core mais antigo usando project.json
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584308"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143279"
 ---
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migrando projetos do .NET Core no formato .csproj
+# <a name="migrating-net-core-projects-from-projectjson"></a>Migração de projetos do .NET Core com project.json
 
 Este documento abrange cenários de migração para projetos do .NET Core e examina os três seguintes cenários de migração:
 
 1. [Migração de um esquema válido mais recente do *project.json* para o *csproj*](#migration-from-projectjson-to-csproj)
 2. [Migração do DNX para o csproj](#migration-from-dnx-to-csproj)
 3. [Migração do RC3 e de projetos csproj anteriores do .NET Core para o formato final](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+
+Este documento só é aplicável a projetos .NET Core mais antigos que ainda usam project.json. Ele não se aplica à migração de .NET Framework para .NET Core.
 
 ## <a name="migration-from-projectjson-to-csproj"></a>Migração do project.json para o csproj
 

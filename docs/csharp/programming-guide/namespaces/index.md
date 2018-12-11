@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151103"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (Guia de Programação em C#)
 
@@ -38,8 +38,8 @@ Os namespaces têm as seguintes propriedades:
   
 - Eles organizam projetos de códigos grandes.  
 - Eles são delimitados usando o operador `.`.  
-- O `using directive` elimina a necessidade de especificar o nome do namespace para cada classe.  
-- O namespace `global` é o namespace "raiz": `global::System` sempre fará referência ao namespace do .NET Framework `System`.  
+- A diretiva `using` elimina a necessidade de especificar o nome do namespace para cada classe.  
+- O namespace `global` é o namespace "raiz": `global::System` sempre fará referência ao namespace do .NET <xref:System>.  
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#
 
@@ -56,4 +56,3 @@ Os namespaces têm as seguintes propriedades:
 - [Diretiva using](../../language-reference/keywords/using-directive.md)  
 - [Operador ::](../../language-reference/operators/namespace-alias-qualifer.md)  
 - [. ??](../../language-reference/operators/member-access-operator.md)
->>>>>>> adicionar regras de nomenclatura de identificadores

@@ -1,15 +1,15 @@
 ---
 title: Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Entender a arquitetura externa para projetar e desenvolver aplicativos .NET baseados em microsserviço e em vários contêineres.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104472"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144137"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Projetando e desenvolvendo aplicativos .NET baseados em microsserviço e em vários contêineres
 
@@ -19,7 +19,6 @@ Anteriormente, fizemos a pergunta "O Docker é necessário ao criar uma arquitet
 
 No entanto, se você souber como projetar e desenvolver um aplicativo baseado em microsserviços que também seja baseado em contêineres do Docker, será possível projetar e desenvolver qualquer outro modelo de aplicativo mais simples. Por exemplo, você pode projetar um aplicativo de três camadas que também exija uma abordagem de vários contêineres. Por esse motivo e como as arquiteturas de microsserviço são uma tendência importante no campo dos contêineres, esta seção concentra-se em uma implementação de arquitetura de microsserviço que usa contêineres do Docker.
 
-
 >[!div class="step-by-step"]
-[Anterior](../containerize-net-framework-applications/index.md)
-[Próximo](microservice-application-design.md)
+>[Anterior](../docker-application-development-process/docker-app-development-workflow.md)
+>[Próximo](microservice-application-design.md)
