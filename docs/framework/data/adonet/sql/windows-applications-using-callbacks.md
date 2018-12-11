@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: c80f65ad2a4c7c48e32615c3cfdf754996f91bc1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6fb1883812237c778e1ecfab3e86fb57de52efc5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187865"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237955"
 ---
-# <a name="windows-applications-using-callbacks"></a><span data-ttu-id="b54e4-102">Aplicativos do Windows usando retornos de chamada</span><span class="sxs-lookup"><span data-stu-id="b54e4-102">Windows Applications Using Callbacks</span></span>
-<span data-ttu-id="b54e4-103">Na maioria dos cenários de processamento assíncrono, você deseja iniciar uma operação de banco de dados e continuar a outros processos em execução sem aguardar a conclusão da operação de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="b54e4-103">In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete.</span></span> <span data-ttu-id="b54e4-104">No entanto, muitos cenários exigem fazendo algo depois que a operação de banco de dados foi encerrada.</span><span class="sxs-lookup"><span data-stu-id="b54e4-104">However, many scenarios require doing something once the database operation has ended.</span></span> <span data-ttu-id="b54e4-105">Em um aplicativo do Windows, por exemplo, você talvez queira delegar a operação de longa execução a um thread em segundo plano, permitindo que o thread da interface do usuário continuar responsiva.</span><span class="sxs-lookup"><span data-stu-id="b54e4-105">In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive.</span></span> <span data-ttu-id="b54e4-106">No entanto, quando a operação de banco de dados for concluída, você deseja usar os resultados para preencher o formulário.</span><span class="sxs-lookup"><span data-stu-id="b54e4-106">However, when the database operation is complete, you want to use the results to populate the form.</span></span> <span data-ttu-id="b54e4-107">Esse tipo de cenário é implementado da melhor forma com um retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="b54e4-107">This type of scenario is best implemented with a callback.</span></span>  
+# <a name="windows-applications-using-callbacks"></a><span data-ttu-id="e8c69-102">Aplicativos do Windows usando retornos de chamada</span><span class="sxs-lookup"><span data-stu-id="e8c69-102">Windows Applications Using Callbacks</span></span>
+<span data-ttu-id="e8c69-103">Na maioria dos cenários de processamento assíncrono, você deseja iniciar uma operação de banco de dados e continuar a outros processos em execução sem aguardar a conclusão da operação de banco de dados.</span><span class="sxs-lookup"><span data-stu-id="e8c69-103">In most asynchronous processing scenarios, you want to start a database operation and continue running other processes without waiting for the database operation to complete.</span></span> <span data-ttu-id="e8c69-104">No entanto, muitos cenários exigem fazendo algo depois que a operação de banco de dados foi encerrada.</span><span class="sxs-lookup"><span data-stu-id="e8c69-104">However, many scenarios require doing something once the database operation has ended.</span></span> <span data-ttu-id="e8c69-105">Em um aplicativo do Windows, por exemplo, você talvez queira delegar a operação de longa execução a um thread em segundo plano, permitindo que o thread da interface do usuário continuar responsiva.</span><span class="sxs-lookup"><span data-stu-id="e8c69-105">In a Windows application, for example, you may want to delegate the long-running operation to a background thread while allowing the user interface thread to remain responsive.</span></span> <span data-ttu-id="e8c69-106">No entanto, quando a operação de banco de dados for concluída, você deseja usar os resultados para preencher o formulário.</span><span class="sxs-lookup"><span data-stu-id="e8c69-106">However, when the database operation is complete, you want to use the results to populate the form.</span></span> <span data-ttu-id="e8c69-107">Esse tipo de cenário é implementado da melhor forma com um retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="e8c69-107">This type of scenario is best implemented with a callback.</span></span>  
   
- <span data-ttu-id="b54e4-108">Definir um retorno de chamada, especificando um <xref:System.AsyncCallback> delegada na <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, ou <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> método.</span><span class="sxs-lookup"><span data-stu-id="b54e4-108">You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method.</span></span> <span data-ttu-id="b54e4-109">O delegado é chamado quando a operação for concluída.</span><span class="sxs-lookup"><span data-stu-id="b54e4-109">The delegate is called when the operation is complete.</span></span> <span data-ttu-id="b54e4-110">Você pode passar uma referência para o delegado a <xref:System.Data.SqlClient.SqlCommand> propriamente dito, facilitando o acesso a <xref:System.Data.SqlClient.SqlCommand> do objeto e chamar o `End` método sem precisar usar uma variável global.</span><span class="sxs-lookup"><span data-stu-id="b54e4-110">You can pass the delegate a reference to the <xref:System.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:System.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.</span></span>  
+ <span data-ttu-id="e8c69-108">Definir um retorno de chamada, especificando um <xref:System.AsyncCallback> delegada na <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, ou <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> método.</span><span class="sxs-lookup"><span data-stu-id="e8c69-108">You define a callback by specifying an <xref:System.AsyncCallback> delegate in the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, or <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> method.</span></span> <span data-ttu-id="e8c69-109">O delegado é chamado quando a operação for concluída.</span><span class="sxs-lookup"><span data-stu-id="e8c69-109">The delegate is called when the operation is complete.</span></span> <span data-ttu-id="e8c69-110">Você pode passar uma referência para o delegado a <xref:System.Data.SqlClient.SqlCommand> propriamente dito, facilitando o acesso a <xref:System.Data.SqlClient.SqlCommand> do objeto e chamar o `End` método sem precisar usar uma variável global.</span><span class="sxs-lookup"><span data-stu-id="e8c69-110">You can pass the delegate a reference to the <xref:System.Data.SqlClient.SqlCommand> itself, making it easy to access the <xref:System.Data.SqlClient.SqlCommand> object and call the appropriate `End` method without having to use a global variable.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b54e4-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b54e4-111">Example</span></span>  
- <span data-ttu-id="b54e4-112">O aplicativo Windows a seguir demonstra o uso do <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> método, executando uma instrução Transact-SQL que inclui um atraso de alguns segundos (emulando um comando de execução longa).</span><span class="sxs-lookup"><span data-stu-id="b54e4-112">The following Windows application demonstrates the use of the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).</span></span>  
+## <a name="example"></a><span data-ttu-id="e8c69-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e8c69-111">Example</span></span>  
+ <span data-ttu-id="e8c69-112">O aplicativo Windows a seguir demonstra o uso do <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> método, executando uma instrução Transact-SQL que inclui um atraso de alguns segundos (emulando um comando de execução longa).</span><span class="sxs-lookup"><span data-stu-id="e8c69-112">The following Windows application demonstrates the use of the <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> method, executing a Transact-SQL statement that includes a delay of a few seconds (emulating a long-running command).</span></span>  
   
- <span data-ttu-id="b54e4-113">Este exemplo demonstra várias técnicas importantes, inclusive chamar um método que interage com o formulário de um thread separado.</span><span class="sxs-lookup"><span data-stu-id="b54e4-113">This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread.</span></span> <span data-ttu-id="b54e4-114">Além disso, este exemplo demonstra como você deve impedir que os usuários ao mesmo tempo executando um comando várias vezes, e como você deve garantir que o formulário não fecha antes do procedimento de retorno de chamada é chamado.</span><span class="sxs-lookup"><span data-stu-id="b54e4-114">In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.</span></span>  
+ <span data-ttu-id="e8c69-113">Este exemplo demonstra várias técnicas importantes, inclusive chamar um método que interage com o formulário de um thread separado.</span><span class="sxs-lookup"><span data-stu-id="e8c69-113">This example demonstrates a number of important techniques, including calling a method that interacts with the form from a separate thread.</span></span> <span data-ttu-id="e8c69-114">Além disso, este exemplo demonstra como você deve impedir que os usuários ao mesmo tempo executando um comando várias vezes, e como você deve garantir que o formulário não fecha antes do procedimento de retorno de chamada é chamado.</span><span class="sxs-lookup"><span data-stu-id="e8c69-114">In addition, this example demonstrates how you must block users from concurrently executing a command multiple times, and how you must ensure that the form does not close before the callback procedure is called.</span></span>  
   
- <span data-ttu-id="b54e4-115">Para configurar este exemplo, crie um novo aplicativo do Windows.</span><span class="sxs-lookup"><span data-stu-id="b54e4-115">To set up this example, create a new Windows application.</span></span> <span data-ttu-id="b54e4-116">Coloque um <xref:System.Windows.Forms.Button> controle e dois <xref:System.Windows.Forms.Label> controles no formulário (aceitar o nome padrão para cada controle).</span><span class="sxs-lookup"><span data-stu-id="b54e4-116">Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control).</span></span> <span data-ttu-id="b54e4-117">Adicione o seguinte código à classe do formulário, modificando a cadeia de caracteres de conexão conforme necessário para seu ambiente.</span><span class="sxs-lookup"><span data-stu-id="b54e4-117">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
+ <span data-ttu-id="e8c69-115">Para configurar este exemplo, crie um novo aplicativo do Windows.</span><span class="sxs-lookup"><span data-stu-id="e8c69-115">To set up this example, create a new Windows application.</span></span> <span data-ttu-id="e8c69-116">Coloque um <xref:System.Windows.Forms.Button> controle e dois <xref:System.Windows.Forms.Label> controles no formulário (aceitar o nome padrão para cada controle).</span><span class="sxs-lookup"><span data-stu-id="e8c69-116">Place a <xref:System.Windows.Forms.Button> control and two <xref:System.Windows.Forms.Label> controls on the form (accepting the default name for each control).</span></span> <span data-ttu-id="e8c69-117">Adicione o seguinte código à classe do formulário, modificando a cadeia de caracteres de conexão conforme necessário para seu ambiente.</span><span class="sxs-lookup"><span data-stu-id="e8c69-117">Add the following code to the form's class, modifying the connection string as necessary for your environment.</span></span>  
   
 ```vb  
 ' Add these to the top of the class:  
@@ -127,9 +127,7 @@ Imports System.Data.SqlClient
   
             Catch ex As Exception  
                 isExecuting = False  
-                DisplayStatus( _  
-                    String.Format("Ready (last error: {0})", _  
-                    ex.Message))  
+                DisplayStatus($"Ready (last error: {ex.Message})")
                 If connection IsNot Nothing Then  
                     connection.Close()  
                 End If  
@@ -183,7 +181,7 @@ Imports System.Data.SqlClient
             ' invoke it, like this:  
             Me.Invoke(New _  
                 DisplayInfoDelegate(AddressOf DisplayStatus), _  
-                String.Format("Ready(last error: {0}", ex.Message))  
+                $"Ready (last error: {ex.Message}")
         Finally  
             isExecuting = False  
             If connection IsNot Nothing Then  
@@ -301,8 +299,7 @@ private void button1_Click(object sender, System.EventArgs e)
         catch (Exception ex)  
         {  
             isExecuting = false;  
-            DisplayStatus(   
-             string.Format("Ready (last error: {0})", ex.Message));  
+            DisplayStatus($"Ready (last error: {ex.Message})");
             if (connection != null)  
             {  
                 connection.Close();  
@@ -358,7 +355,7 @@ private void HandleCallback(IAsyncResult result)
         // You can create the delegate instance as you   
         // invoke it, like this:  
         this.Invoke(new DisplayInfoDelegate(DisplayStatus),  
-        String.Format("Ready(last error: {0}", ex.Message));  
+            $"Ready (last error: {ex.Message}");
     }  
     finally  
     {  
@@ -378,6 +375,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b54e4-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b54e4-118">See Also</span></span>  
- [<span data-ttu-id="b54e4-119">Operações assíncronas</span><span class="sxs-lookup"><span data-stu-id="b54e4-119">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- <span data-ttu-id="b54e4-120">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="b54e4-120">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8c69-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e8c69-118">See Also</span></span>  
+ [<span data-ttu-id="e8c69-119">Operações assíncronas</span><span class="sxs-lookup"><span data-stu-id="e8c69-119">Asynchronous Operations</span></span>](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ <span data-ttu-id="e8c69-120">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="e8c69-120">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
