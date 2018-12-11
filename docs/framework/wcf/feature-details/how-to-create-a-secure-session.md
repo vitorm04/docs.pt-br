@@ -1,5 +1,5 @@
 ---
-title: Como criar uma sessão segura
+title: 'Como: Criar uma sessão segura'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297108"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147587"
 ---
-# <a name="how-to-create-a-secure-session"></a>Como criar uma sessão segura
+# <a name="how-to-create-a-secure-session"></a>Como: Criar uma sessão segura
 Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) de associação, as associações fornecidas pelo sistema no Windows Communication Foundation (WCF) automaticamente usam sessões seguras quando a segurança de mensagens está habilitada.  
   
- Por padrão, sessões seguras não sobrevivem a um servidor Web que é reciclado. Quando uma sessão segura é estabelecida, o cliente e o serviço de cache a chave que está associada com a sessão segura. Como as mensagens são trocadas, apenas um identificador para a chave armazenada em cache é trocado. Se o servidor Web for reciclado, o cache é reciclado, também, de modo que o servidor Web não é possível recuperar a chave armazenada em cache para o identificador. Se isso acontecer, uma exceção será devolvida ao cliente. Sessões seguras que usam um token de contexto de segurança com monitoração de estado (SCT) possam sobreviver a um servidor Web que está sendo reciclado. Para obter mais informações sobre como usar um SCT com monitoração de estado em uma sessão segura, consulte [como: criar um Token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+ Por padrão, sessões seguras não sobrevivem a um servidor Web que é reciclado. Quando uma sessão segura é estabelecida, o cliente e o serviço de cache a chave que está associada com a sessão segura. Como as mensagens são trocadas, apenas um identificador para a chave armazenada em cache é trocado. Se o servidor Web for reciclado, o cache é reciclado, também, de modo que o servidor Web não é possível recuperar a chave armazenada em cache para o identificador. Se isso acontecer, uma exceção será devolvida ao cliente. Sessões seguras que usam um token de contexto de segurança com monitoração de estado (SCT) possam sobreviver a um servidor Web que está sendo reciclado. Para obter mais informações sobre como usar um SCT com monitoração de estado em uma sessão segura, consulte [como: Criar um contexto de segurança para uma sessão segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>Para especificar que um serviço usa sessões seguras usando uma das associações fornecidas pelo sistema  
   
@@ -60,7 +60,7 @@ Com exceção do [ \<basicHttpBinding >](../../../../docs/framework/configure-ap
   
 -   Crie uma ligação personalizada que especifica que as mensagens SOAP são protegidas por uma sessão segura.  
   
-     Para obter mais informações sobre como criar uma ligação personalizada, consulte [como: personalizar uma associação System-Provided](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+     Para obter mais informações sobre como criar uma ligação personalizada, consulte [como: Personalizar uma associação fornecida pelo sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
      O exemplo de código a seguir usa a configuração para especificar uma associação que as mensagens usando uma sessão segura personalizada.  
   

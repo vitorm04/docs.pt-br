@@ -3,11 +3,11 @@ title: 'Passo a passo: Geração SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672011"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149036"
 ---
 # <a name="walkthrough-sql-generation"></a>Passo a passo: Geração SQL
 Este tópico ilustra como a geração de SQL ocorre na [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). A seguinte consulta SQL Entity usa o modelo que está incluído com o provedor exemplo:  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primeiro estágio de geração SQL: Visitar a árvore de expressão  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Primeira fase de geração SQL: Visitar a árvore de expressão  
  A figura a seguir ilustra o inicial vazio o estado do visitante.  Em todo este tópico, somente as propriedades relevantes da explicação passo a passo são mostradas.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Para Join3, IsParentAJoin retorna false e precisa-o de iniciar um novo SqlSelectStatement (SelectStatement1) e de empurrá-lo na pilha. O processamento continua como fez com o anterior o anterior, se associa um novo escopo é empurrado na pilha e os filhos são processados. O filho esquerdo é uma extensão (Extent3) e o filho adequado é uma união (Join2) que também precisa iniciar um novo SqlSelectStatement: SelectStatement2. Os filhos em Join2 são extensões e também são agregados em SelectStatement2.  
+ Para Join3, IsParentAJoin retorna false e precisa-o de iniciar um novo SqlSelectStatement (SelectStatement1) e de empurrá-lo na pilha. O processamento continua como fez com o anterior o anterior, se associa um novo escopo é empurrado na pilha e os filhos são processados. O filho esquerdo é uma extensão (Extent3) e o filho à direita é uma união (Join2) que também precisa iniciar um novo SqlSelectStatement: SelectStatement2. Os filhos em Join2 são extensões e também são agregados em SelectStatement2.  
   
  O estado do visitante right after Join2 está visitado, mas antes que o após processamento (ProcessJoinInputResult) é feito é mostrado na figura a seguir:  
   
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segundo fase de geração SQL: Gerando o comando de cadeia de caracteres  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de geração SQL: Gerando o comando de cadeia de caracteres  
  A segunda etapa gerencie nomes reais dos símbolos, e nós centramo-nos apenas sobre os símbolos que representam as colunas chamadas “OrderID”, porque nesse caso um conflito precisa ser resolvido. Esses são realçadas no SqlSelectStatement. Observe que os sufixos usados na figura são enfatizar somente essas instâncias são diferentes, não para representar os novos nomes, porque seus nomes finais (possivelmente formulário diferente os nomes originais) não foram atribuídos nesse estágio ainda.  
   
  O primeiro símbolo encontrado que precisa ser renomeado é <symbol_OrderID>. O novo nome é atribuído como “OrderID1”, 1 é marcado como o último usou o sufixo” para “OrderID e o símbolo é marcado como não precisando renomear. Em seguida, o primeiro uso <de symbol_OrderID_2> for encontrado. É renomeado para usar o sufixo disponível a OrderID2 (“”) e marcado como novamente não precisando renomear, de modo que as próximas vezes onde ela é usado não pegue renomeado. Isso é feito para <symbol_OrderID_3> muito.  

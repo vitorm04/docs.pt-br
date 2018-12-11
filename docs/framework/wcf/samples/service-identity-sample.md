@@ -3,11 +3,11 @@ title: Exemplo de identidade de serviço
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
 ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49633905"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152707"
 ---
 # <a name="service-identity-sample"></a>Exemplo de identidade de serviço
 Este exemplo de identidade de serviço demonstra como definir a identidade de um serviço. Em tempo de design, um cliente pode recuperar a identidade usando metadados do serviço e, em seguida, em tempo de execução, o cliente pode autenticar a identidade do serviço. O conceito de identidade de serviço é permitir que um cliente autenticar um serviço antes de chamar qualquer uma de suas operações, protegendo, assim, o cliente de chamadas não autenticadas. Em uma conexão segura o serviço também autentica as credenciais de um cliente antes de permitir acesso ele, mas isso não é o foco deste exemplo. Consulte os exemplos na [cliente](../../../../docs/framework/wcf/samples/client.md) que mostram a autenticação do servidor.
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1.  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importar o arquivo de certificado Identity.pfx na pasta da solução de identidade para o repositório de LocalMachine/meu certificado (pessoal) usando a ferramenta de snap-in do MMC. Esse arquivo é protegido por senha. Durante a importação, você será solicitado para uma senha. Tipo `xyz` na caixa de senha. Para obter mais informações, consulte o [como: exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tópico. Depois que isso for feito, execute Setup. bat em um prompt de comando Visual Studio com privilégios de administrador, que copia esse certificado no repositório de pessoas confiáveis CurrentUser para uso no cliente.
+1.  Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importar o arquivo de certificado Identity.pfx na pasta da solução de identidade para o repositório de LocalMachine/meu certificado (pessoal) usando a ferramenta de snap-in do MMC. Esse arquivo é protegido por senha. Durante a importação, você será solicitado para uma senha. Tipo `xyz` na caixa de senha. Para obter mais informações, consulte o [como: Exibir certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) tópico. Depois que isso for feito, execute Setup. bat em um prompt de comando Visual Studio com privilégios de administrador, que copia esse certificado no repositório de pessoas confiáveis CurrentUser para uso no cliente.
 
 2.  Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], execute Setup. bat a partir da pasta de instalação de exemplo dentro de um prompt de comando do Visual Studio 2012 com privilégios de administrador. Essa opção instala todos os certificados necessários para executar o exemplo.
 
@@ -157,6 +157,6 @@ class CustomIdentityVerifier : IdentityVerifier
 -   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
     > [!NOTE]
-    >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="see-also"></a>Consulte também

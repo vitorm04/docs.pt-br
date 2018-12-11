@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202849"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147288"
 ---
 # <a name="manage-production-docker-environments"></a>Gerenciar ambientes de produção do Docker
 
@@ -23,7 +23,7 @@ Você implanta esses clusters usando conjuntos de dimensionamento de máquina Vi
 
 Tabela 6-1 lista as ferramentas de gerenciamento comuns relacionadas à sua plataforma clustering, agendadores e orquestradores.
 
-Tabela 6-1: as ferramentas de gerenciamento do Docker
+Tabela 6-1: Ferramentas de gerenciamento do docker
 
 
 | Ferramentas de gerenciamento      | Descrição           | Orquestradores relacionados |
@@ -44,7 +44,6 @@ A seguir está as ferramentas de gerenciamento do Service Fabric:
 
 -   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) é uma ferramenta de interface do usuário web especializado que fornece insights e determinadas operações em um cluster do Service Fabric do ponto de vista de nós/VMs e de aplicativos e serviços de ponto de vista.
 
-
 >[!div class="step-by-step"]
-[Anterior](run-microservices-based-applications-in-production.md)
-[Próximo](monitor-containerized-application-services.md)
+>[Anterior](run-microservices-based-applications-in-production.md)
+>[Próximo](monitor-containerized-application-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ee575cacbc51fc910770cca145a4280f97b66db
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393075"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144424"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`. Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.  
@@ -55,7 +55,7 @@ O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se 
 ## <a name="example"></a>Exemplo  
  O seguinte exemplo de código demonstra uma situação que pode ativar esse MDA:  
   
-```  
+```csharp
 using System.Reflection;  
 namespace ConsoleApplication1  
 {  

@@ -1,6 +1,6 @@
 ---
 title: Design de classe abstrata
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, abstract classes
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d3646e6d-5c1f-4922-8fb0-ec5effb30d60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5b9dacc4995a126e1ee3f6062dca796194d4882
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+author: KrzysztofCwalina
+ms.openlocfilehash: 1982c7c97802dedd1d49c770be5a7ac00944cbfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493484"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130857"
 ---
 # <a name="abstract-class-design"></a>Design de classe abstrata
 **X DO NOT** definir construtores internos públicos ou privados em tipos abstratos.  
@@ -36,7 +35,7 @@ ms.locfileid: "46493484"
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

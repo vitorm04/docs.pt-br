@@ -2,12 +2,12 @@
 title: Ferramenta de Definição de Esquema XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 23dea344b123b377224aad5816137aa246b8f596
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01f980162a2d356c6c3ff31e4a0c01644b74d461
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143929"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou classes de common language runtime de arquivos XDR, XML e XSD files, ou de classes em um assembly de tempo de execução.  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/h**[**elp**]|Exibe sintaxe de comando e opções para a ferramenta.|  
-|**/o**[**utputdir**]**:***directory*|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|  
+|**/o**[**utputdir**]**:**_directory_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/P[arameters]:** *file.xml*|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é '/p:'. Para obter mais informações, consulte a seção Comentários a seguir.|  
   
@@ -51,22 +51,22 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/e**[**lementar**] **: * * * elemento*|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|  
+|**/e**[**lement**]**:**_element_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|  
 |**/enableDataBinding**|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos gerados para habilitar a associação de dados. A forma curta é `/edb`.|  
 |**/enableLinqDataSet**|(Forma abreviada: `/eld`.) Especifica que o DataSet gerado pode ser consultado usando LINQ to DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre como usar o LINQ, consulte [LINQ (Consulta Integrada à Linguagem)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Gera campos em vez de propriedades. Por padrão, as propriedades são geradas.|  
-|**/l**[**anguage**] **: * * * idioma*|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
-|**/n**[**amespace**]**:***namespace*|Especifica o namespace de tempo de execução para os tipos gerados. O namespace padrão é `Schemas`.|  
+|**/l**[**anguage**]**:**_language_|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/n**[**amespace**]**:**_namespace_|Especifica o namespace de tempo de execução para os tipos gerados. O namespace padrão é `Schemas`.|  
 |**/nologo**|Suprime o banner.|  
 |**/order**|Gera identificadores de pedido explícito em todos os membros de partícula.|  
 |**/o[ut]:** *directoryName*|Especifica o diretório de saída no qual colocar os arquivos. O padrão é o diretório atual.|  
-|**/u**[**ri**]**:***uri*|Especifica o URI para os elementos no esquema para o qual gerar código. Esse URI, se houver, aplica-se a todos os elementos especificados com a opção `/element`.|  
+|**/u**[**ri**]**:**_uri_|Especifica o URI para os elementos no esquema para o qual gerar código. Esse URI, se houver, aplica-se a todos os elementos especificados com a opção `/element`.|  
   
 ## <a name="dll-and-exe-file-options"></a>Opções de arquivo DLL e EXE  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/t**[**IPO**] **: * * * typename*|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|  
+|**/t**[**ype**]**:**_typename_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|  
   
 ## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra as operações que o Xsd.exe realiza.  

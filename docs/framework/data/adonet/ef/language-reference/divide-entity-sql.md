@@ -2,12 +2,12 @@
 title: '- (Divisão) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: 506553de78ce9fbdf5f3710805906ee8cd5b8757
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38feaf4509ea2ed2838efe4daa257cdff144e863
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760434"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147682"
 ---
 # <a name="-divide-entity-sql"></a>/ (Divisão) (Entity SQL)
 Divide um número por outro.  
@@ -26,12 +26,12 @@ dividend / divisor
  A expressão numérica para dividir pelo dividendo. `divisor` é qualquer expressão válida de ambos os tipos de dados numéricos.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- O tipo de dados que resulta da promoção de tipos implícito dos dois argumentos. Para obter mais informações sobre a promoção de tipo implícito, consulte [sistema de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  
+ O tipo de dados que resulta da promoção de tipos implícito dos dois argumentos. Para obter mais informações sobre a promoção de tipos implícito, consulte [sistema de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  
   
 ## <a name="example"></a>Exemplo  
- A seguinte consulta SQL Entity usa operador/aritmético para dividir um numer por outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
+ A seguinte consulta SQL Entity usa o / aritmético operador dividir um número por outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento [como: executar uma consulta que retorna resultados de StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados Structuraltype](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

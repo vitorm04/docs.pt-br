@@ -1,6 +1,6 @@
 ---
 title: Diretrizes de Design de membro
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+author: KrzysztofCwalina
+ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155256"
 ---
 # <a name="member-design-guidelines"></a>Diretrizes de Design de membro
 Métodos, propriedades, eventos, construtores e campos são coletivamente denominados membros. Os membros são, por fim, o meio pelo qual funcionalidade do framework é exposta aos usuários finais de uma estrutura.  
@@ -35,7 +34,7 @@ Métodos, propriedades, eventos, construtores e campos são coletivamente denomi
  [Design de parâmetro](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

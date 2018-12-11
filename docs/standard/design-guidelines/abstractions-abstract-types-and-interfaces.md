@@ -1,6 +1,6 @@
 ---
 title: Abstrações (tipos e Interfaces abstratos)
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ad8b2dd3dbf2a7a75c98a3115d4351dfea4e1a0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+author: KrzysztofCwalina
+ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480676"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149907"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstrações (tipos e Interfaces abstratos)
 Uma abstração é um tipo que descreve um contrato, mas não fornece uma implementação completa do contrato. Abstrações geralmente são implementadas como classes abstratas ou interfaces, e entram com um conjunto bem definido de documentação de referência que descreve a semântica necessária dos tipos de implementação do contrato. Algumas das abstrações mais importantes no .NET Framework incluem <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, e <xref:System.Object>.  
@@ -36,7 +35,7 @@ Uma abstração é um tipo que descreve um contrato, mas não fornece uma implem
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 
