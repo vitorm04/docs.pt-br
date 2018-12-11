@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149894"
 ---
 # <a name="arrays-in-visual-basic"></a>Matrizes no Visual Basic
 
@@ -126,7 +126,7 @@ Assim como para matrizes unidimensionais, você pode contar com inferência de t
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Para obter exemplos adicionais, consulte [Como inicializar uma variável de matriz no Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+Para obter exemplos adicionais, consulte [como: Inicializar uma variável de matriz no Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Iterando por uma matriz
 
@@ -299,9 +299,9 @@ Para obter mais informações sobre coleções, consulte [Coleções](../../conc
 |Termo|Definição|
 |----------|----------------|
 |[Dimensões de matriz no Visual Basic](../../language-features/arrays/array-dimensions.md)|Explica a classificação e as dimensões em matrizes.|
-|[Como inicializar uma variável de matriz no Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Descreve como preencher matrizes com valores iniciais.|
-|[Como classificar uma matriz no Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Mostra como classificar os elementos de uma matriz em ordem alfabética.|
-|[Como atribuir uma matriz a outra matriz](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Descreve as regras e as etapas para atribuir uma matriz a outra variável de matriz.|
+|[Como: Inicializar uma variável de matriz no Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Descreve como preencher matrizes com valores iniciais.|
+|[Como: Classificar uma matriz no Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Mostra como classificar os elementos de uma matriz em ordem alfabética.|
+|[Como: Atribuir uma matriz a outra matriz](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Descreve as regras e as etapas para atribuir uma matriz a outra variável de matriz.|
 |[Solução de problemas de matrizes](../../language-features/arrays/troubleshooting-arrays.md)|Aborda alguns problemas comuns que surgem ao trabalhar com matrizes.|
 
 ## <a name="see-also"></a>Consulte também

@@ -1,49 +1,49 @@
 ---
 title: Migrar para cenários de nuvem híbrida
-description: Modernizar aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure | Migrar para cenários de nuvem híbrida
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Migrar para cenários de nuvem híbrida
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8885ee8fce4f8c11c14ee8936f3ee0ffd89ece04
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957886"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147327"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrar para cenários de nuvem híbrida
 
-Algumas organizações e empresas não podem migrar alguns de seus aplicativos para nuvens públicas, como o Microsoft Azure ou qualquer nuvem pública devido a normas ou suas próprias políticas. No entanto, é provável que qualquer organização pode se beneficiar de ter alguns de seus aplicativos na nuvem pública e outros aplicativos no local. Mas um ambiente misto pode levar a complexidade excessiva em ambientes devido a diferentes plataformas e tecnologias usadas em nuvens públicas versus ambientes locais.
+Algumas organizações e empresas não podem migrar alguns de seus aplicativos para nuvens públicas, como o Microsoft Azure ou qualquer outra nuvem pública devido a normas ou suas próprias políticas. No entanto, é provável que qualquer organização pode se beneficiar de alguns de seus aplicativos na nuvem pública e outros aplicativos no local. Mas um ambiente misto pode levar a complexidade excessiva em ambientes devido a diferentes plataformas e tecnologias usadas em nuvens públicas versus ambientes locais.
 
-A Microsoft fornece a melhor solução de nuvem híbrida, um em que você pode otimizar seus ativos locais e na nuvem pública, enquanto você garante a consistência em uma nuvem híbrida do Azure. Você pode maximizar os recursos existentes e obter uma abordagem flexível e unificada para a criação de aplicativos que podem ser executados na nuvem ou no local, graças a pilha do Azure (local) e o Azure (nuvem pública).
+A Microsoft fornece a melhor solução de nuvem híbrida, uma na qual você pode otimizar os ativos existentes no local e na nuvem pública, enquanto você garante a consistência em uma nuvem híbrida do Azure. Você pode maximizar as habilidades existentes e obtenha uma abordagem flexível e unificada para compilar aplicativos que podem ser executados na nuvem ou no local, graças ao Azure Stack (local) e o Azure (nuvem pública).
 
-Quando se trata de segurança, você pode centralizar o gerenciamento e segurança em sua nuvem híbrida. Você pode obter controle sobre todos os ativos, do Data Center na nuvem, fornecendo logon único no local e aplicativos de nuvem. Fazer isso, estendendo o Active Directory para uma nuvem híbrida e usando o gerenciamento de identidade.
+Quando se trata de segurança, você pode centralizar o gerenciamento e segurança em sua nuvem híbrida. Você pode obter controle sobre todos os ativos, do seu datacenter para a nuvem, fornecendo logon único para o local e aplicativos de nuvem. Fazer isso, estendendo o Active Directory para uma nuvem híbrida e usando o gerenciamento de identidade.
 
-Por fim, você pode distribuir e analisar dados diretamente, usar as mesmas linguagens de consulta para ativos de nuvem e local e aplicar análises e profundo de aprendizagem no Azure para enriquecer seus dados, independentemente de sua origem.
+Por fim, você pode distribuir e analise dados perfeitamente, usa as mesmas linguagens de consulta para ativos locais e de nuvem e aplique análise e aprendizagem aprofundada no Azure para enriquecer seus dados, independentemente de sua fonte.
 
-## <a name="azure-stack"></a>Pilha do Azure
+## <a name="azure-stack"></a>O Azure Stack
 
-A pilha do Azure é uma plataforma de nuvem híbrida que lhe permite oferecer serviços do Azure do datacenter de sua organização. A pilha do Azure foi projetada para dar suporte a novas opções para seus aplicativos modernos em cenários mais importantes, como borda e desconectado de ambientes ou requisitos específicos de segurança e conformidade reunião.
+O Azure Stack é uma plataforma de nuvem híbrida que possibilita entregar serviços do Azure do datacenter da sua organização. O Azure Stack foi projetado para dar suporte a novas opções para seus aplicativos modernos em cenários-chave, como borda e desconectadas ambientes ou requisitos específicos de segurança e conformidade reunião.
 
-Figura 4-13 mostra uma visão geral da plataforma de nuvem híbrida true oferecidas pela Microsoft.
+Figura 4-13 mostra uma visão geral da plataforma em nuvem híbrida real oferecidas pela Microsoft.
 
-![Plataforma de nuvem híbrida Microsoft com a pilha do Azure e o Azure](./media/image13.jpg)
+![Plataforma de nuvem híbrida Microsoft com o Azure Stack e o Azure](./media/image13.jpg)
 
-> **Figura 4-13.** Plataforma de nuvem híbrida Microsoft com a pilha do Azure e o Azure
+> **Figura 4-13.** Plataforma de nuvem híbrida Microsoft com o Azure Stack e o Azure
 
-A pilha do Azure é oferecida em duas opções de implantação para atender às suas necessidades:
+O Azure Stack é oferecido em duas opções de implantação para atender às suas necessidades:
 
--   Sistemas de pilha integrado do Azure
+-   Sistemas integrados do Azure Stack
 
--   Kit de desenvolvimento de pilha do Azure
+-   Kit de Desenvolvimento do Azure Stack
 
-### <a name="azure-stack-integrated-systems"></a>Sistemas de pilha integrado do Azure
+### <a name="azure-stack-integrated-systems"></a>Sistemas integrados do Azure Stack
 
-Sistemas de pilha integrado do Azure são oferecidos por meio de uma parceria de parceiros da Microsoft e de hardware. A parceria cria uma solução que oferece inovação individual de nuvem que é equilibrada com simplicidade no gerenciamento. Como pilha do Azure é oferecida como um sistema integrado de hardware e software, você obtém a quantidade certa de flexibilidade e controle, enquanto ainda adotando inovação da nuvem. Sistemas de pilha integrado do Azure variam em tamanho de 4 a 12 nós e têm suporte em conjunto de parceiros de hardware e da Microsoft. Use sistemas de pilha do Azure integradas para implementar novos cenários para suas cargas de trabalho de produção.
+Sistemas de pilha integrado do Azure são oferecidos por meio de uma parceria de parceiros da Microsoft e de hardware. A parceria cria uma solução que oferece inovação conduzida a nuvem que é equilibrada com simplicidade no gerenciamento. Porque o Azure Stack é oferecido como um sistema integrado de hardware e software, você obtém a quantidade certa de flexibilidade e controle, enquanto ainda adotando a inovação da nuvem. Sistemas de pilha integrado do Azure variam de tamanho de 4 a 12 nós e têm suporte em conjunto pela Microsoft e parceiros de hardware. Use sistemas integrados do Azure Stack para implementação de novos cenários para suas cargas de trabalho de produção.
 
-### <a name="azure-stack-development-kit"></a>Kit de desenvolvimento de pilha do Azure
+### <a name="azure-stack-development-kit"></a>Kit de Desenvolvimento do Azure Stack
 
-Kit de desenvolvimento de pilha do Microsoft Azure é uma implantação de nó único da pilha do Azure, que você pode usar para avaliar e saber mais sobre a pilha do Azure. Você também pode usar o Kit de desenvolvimento de pilha do Azure como um ambiente de desenvolvedor, onde você pode desenvolver usando APIs e ferramentas que são consistentes com o Azure. Kit de desenvolvimento de pilha do Azure não se destina a ser usado como um ambiente de produção.
+Kit de desenvolvimento do Microsoft Azure Stack é uma implantação de nó único do Azure Stack, que você pode usar para avaliar e saber mais sobre o Azure Stack. Você também pode usar o Kit de desenvolvimento do Azure Stack como um ambiente de desenvolvedor, onde você pode desenvolver usando as APIs e ferramentas que são consistentes com o Azure. Kit de desenvolvimento do Azure Stack não se destina a ser usado como um ambiente de produção.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
@@ -59,14 +59,14 @@ Kit de desenvolvimento de pilha do Microsoft Azure é uma implantação de nó �
 
     [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
--   **Criar um contêiner com o suporte do Active Directory**
+-   **Criar um contêiner com suporte do Active Directory**
 
     [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
--   **Licenciamento de benefício híbrido do Azure**
+-   **Licenciamento do benefício híbrido do Azure**
 
     [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
-[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
-[Próximo](../walkthroughs-technical-get-started-overview.md)
+>[Anterior](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Próximo](../walkthroughs-technical-get-started-overview.md)

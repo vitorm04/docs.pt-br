@@ -4,12 +4,12 @@ description: Exploração de várias arquiteturas e aplicativos que são compat�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369599"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150297"
 ---
 # <a name="serverless-architecture"></a>Arquitetura sem servidor
 
@@ -42,7 +42,7 @@ Um desafio comum está migrando um aplicativo monolítico existente para a nuvem
 
 ![Migração de monólito sem servidor](./media/serverless-monolith-migration.png)
 
-Para saber mais sobre essa abordagem, assista ao vídeo: [traga seu aplicativo para a nuvem com o Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
+Para saber mais sobre essa abordagem, assista ao vídeo: [Traga o seu aplicativo para a nuvem com o Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Aplicativos Web
 
@@ -74,5 +74,5 @@ O volume total de dispositivos e informações geralmente determina uma arquitet
 A abrangência do IoT resultou em vários produtos sem servidor que se concentram especificamente em questões de IoT, tais como [IoT Hub do Azure](https://docs.microsoft.com/azure/iot-hub). Serverless automatiza tarefas, como o registro de dispositivos, imposição de política, acompanhamento e até mesma implantação de código nos dispositivos em *borda*. A borda refere-se aos dispositivos, como sensores e atuadores que estão conectados ao, mas não uma Active Directory faz parte da Internet.
 
 >[!div class="step-by-step"]
-[Anterior](architecture-approaches.md)
-[Próximo](serverless-architecture-considerations.md)
+>[Anterior](architecture-approaches.md)
+>[Próximo](serverless-architecture-considerations.md)

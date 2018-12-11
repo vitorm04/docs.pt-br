@@ -4,12 +4,12 @@ description: As funções duráveis do Azure estendem o tempo de execução do A
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 03197ad57813b8132fe592f4e555c6a35edbd9bd
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147295"
 ---
 # <a name="durable-azure-functions"></a>Funções duráveis do Azure
 
@@ -101,5 +101,5 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 * [Gerenciar instâncias nas funções duráveis](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
-[Anterior](event-grid.md)
-[Próximo](orchestration-patterns.md)
+>[Anterior](event-grid.md)
+>[Próximo](orchestration-patterns.md)

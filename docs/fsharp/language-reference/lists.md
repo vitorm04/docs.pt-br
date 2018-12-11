@@ -3,11 +3,11 @@ title: Listas (F#)
 description: Saiba mais sobre F# lista uma série imutável, ordenada, de elementos do mesmo tipo.
 ms.date: 05/16/2016
 ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297498"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152741"
 ---
 # <a name="lists"></a>Listas
 

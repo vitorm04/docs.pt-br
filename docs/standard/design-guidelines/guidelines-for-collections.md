@@ -1,16 +1,15 @@
 ---
 title: Diretrizes para coleções
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145576"
 ---
 # <a name="guidelines-for-collections"></a>Diretrizes para coleções
 Qualquer tipo projetado especificamente para manipular um grupo de objetos que têm algumas características comuns pode ser considerado uma coleção. Quase sempre é apropriado para esses tipos implementar <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, portanto, nesta seção consideramos apenas tipos que implementam uma ou ambas dessas interfaces para ser coleções.  
@@ -109,7 +108,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos que t
  **X DO NOT** herdam coleções não genéricas de base como `CollectionBase`. Use `Collection<T>`, `ReadOnlyCollection<T>`, e `KeyedCollection<TKey,TItem>` em vez disso.  
   
 ### <a name="naming-custom-collections"></a>Coleções personalizadas de nomenclatura  
- Coleções (tipos que implementam `IEnumerable`) são criados basicamente por dois motivos: (1) para criar uma nova estrutura de dados com operações específicas de estrutura e muitas vezes diferentes características de desempenho que estruturas de dados existentes (por exemplo, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) e (2) para criar uma coleção especializada para manter um conjunto específico de itens (por exemplo, <xref:System.Collections.Specialized.StringCollection>). Estruturas de dados geralmente são usadas na implementação interna de aplicativos e bibliotecas. Coleções especializadas principalmente devem ser expostos nas APIs (como tipos de propriedade e de parâmetro).  
+ Coleções (tipos que implementam `IEnumerable`) são criados basicamente por dois motivos: (1) para criar uma nova estrutura de dados com operações específicas de estrutura e muitas vezes diferentes características de desempenho que estruturas de dados existentes (por exemplo, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) e (2) para criar uma coleção especializada para mantendo um conjunto específico de itens (por exemplo, <xref:System.Collections.Specialized.StringCollection>). Estruturas de dados geralmente são usadas na implementação interna de aplicativos e bibliotecas. Coleções especializadas principalmente devem ser expostos nas APIs (como tipos de propriedade e de parâmetro).  
   
  **✓ DO** utilize o sufixo "Dicionário" em nomes de abstrações implementando `IDictionary` ou `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ Qualquer tipo projetado especificamente para manipular um grupo de objetos que t
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

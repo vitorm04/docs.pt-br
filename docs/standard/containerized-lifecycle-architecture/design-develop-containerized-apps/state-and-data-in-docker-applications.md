@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123222"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154171"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado e dados em aplicativos do Docker
 
@@ -39,7 +39,7 @@ Figura 4-5 mostra que os volumes Docker regulares podem ser colocados em armazen
 
 ![](./media/image5.png)
 
-Figura 4-5: volumes de dados e fontes de dados externas para aplicativos de contêineres/contêineres
+Figura 4-5: Volumes de dados e fontes de dados externas para aplicativos de contêineres/contêineres
 
 Devido à incapacidade de gerenciar dados compartilhados entre contêineres executados em hosts físicos separados, é recomendável que você não use volumes para dados de negócios, a menos que o host do Docker é uma host fixa/VM, porque ao usar contêineres do Docker em um orquestrador, contêineres devem ser movidos de um para outro host, dependendo das otimizações a ser executada pelo cluster.
 
@@ -49,7 +49,6 @@ Portanto, os volumes de dados regulares são um bom mecanismo para trabalhar com
 
 Fontes de dados remotas e caches, como banco de dados SQL, DocumentDB ou um cache remoto como o Redis seria o mesmo que o desenvolvimento sem contêineres. Essa é uma das maneiras preferenciais e comprovadas, para armazenar dados de aplicativo de negócios.
 
-
 >[!div class="step-by-step"]
-[Anterior](monolithic-applications.md)
-[Próximo](soa-applications.md)
+>[Anterior](monolithic-applications.md)
+>[Próximo](soa-applications.md)

@@ -2,17 +2,17 @@
 title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514746"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129383"
 ---
 # <a name="dataviews"></a>DataViews
 Um <xref:System.Data.DataView> permite que você crie diferentes exibições dos dados armazenados em um <xref:System.Data.DataTable>, um recurso que é geralmente usado em aplicativos de vinculação de dados. Usando um **DataView**, você pode expor os dados em uma tabela com diferentes ordens de classificação, e você pode filtrar os dados por estado de linha ou com base em uma expressão de filtro.  
   
- Um **DataView** fornece uma exibição dinâmica de dados subjacente **DataTable**: o conteúdo, ordenação e associação refletem as alterações conforme elas ocorrem. Esse comportamento difere do **selecionar** método da **DataTable**, que retorna um <xref:System.Data.DataRow> matriz de uma tabela com base em uma ordem específica de filtro e/ou classificação: thiscontent reflete as alterações para o subjacente da tabela, mas sua associação e ordenação permanecem estáticas. Os recursos dinâmicos do **DataView** o tornam ideal para aplicativos de vinculação de dados.  
+ Um **DataView** fornece uma exibição dinâmica de dados subjacente **DataTable**: o conteúdo, ordenação e associação refletem as alterações conforme elas ocorrem. Esse comportamento difere do **selecionar** método da **DataTable**, que retorna um <xref:System.Data.DataRow> matriz de uma tabela com base em uma ordem específica de filtro e/ou classificação: este conteúdo reflete as alterações a subjacente da tabela, mas sua associação e ordenação permanecem estáticas. Os recursos dinâmicos do **DataView** o tornam ideal para aplicativos de vinculação de dados.  
   
  Um **DataView** fornece uma exibição dinâmica de um único conjunto de dados, como um modo de exibição de banco de dados ao qual você pode aplicar diferentes de classificação e critérios de filtragem. Ao contrário de uma exibição de banco de dados, no entanto, uma **DataView** não pode ser tratado como uma tabela e não pode fornecer uma exibição de tabelas unidas. Você também não pode excluir as colunas que existem na tabela de origem nem pode acrescentar colunas, como as colunas computacionais, que não existem na tabela de origem.  
   

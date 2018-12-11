@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5777e275fd7c48f7125b9e0315b08d3095c373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ce0f75ddfbf9f3b62917aa67f4d97140bbdc42
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357800"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153327"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>MDA dateTimeInvalidLocalFormat
 O MDA `dateTimeInvalidLocalFormat` é ativado quando uma instância <xref:System.DateTime> que é armazenada como um UTC (Horário Coordenado Universal) é formatada com um formato que se destina a ser usado apenas em instâncias <xref:System.DateTime> locais. Esse MDA não é ativado em instâncias <xref:System.DateTime> não especificadas ou padrão.  
@@ -27,7 +27,7 @@ O MDA `dateTimeInvalidLocalFormat` é ativado quando uma instância <xref:System
 ## <a name="symptom"></a>Sintoma  
  Um aplicativo está serializando uma instância <xref:System.DateTime> UTC manualmente usando um formato de local:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
@@ -38,14 +38,14 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ### <a name="resolution"></a>Resolução  
  As instâncias <xref:System.DateTime> UTC devem ser formatadas de modo que indiquem que são UTC. O formato recomendado para horas UTC é usar um “z” para indicar a hora UTC:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
  Também há um formato “o” que serializa uma <xref:System.DateTime>, fazendo uso da propriedade <xref:System.DateTime.Kind%2A> que serializa corretamente, independentemente se a instância é local, UTC ou não especificada:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
@@ -69,7 +69,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="example"></a>Exemplo  
  Considere um aplicativo que está serializando o valor <xref:System.DateTime> UTC indiretamente usando a classe <xref:System.Xml.XmlConvert> ou <xref:System.Data.DataSet>, conforme mostrado a seguir.  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
@@ -80,7 +80,7 @@ String serialized = XMLConvert.ToString(myDateTime);
   
  Se estiver usando um <xref:System.Data.DataSet>, defina a propriedade <xref:System.Data.DataColumn.DateTimeMode%2A> no objeto <xref:System.Data.DataColumn> como <xref:System.Data.DataSetDateTime.Utc>.  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XmlConvert.ToString(myDateTime,   
     XmlDateTimeSerializationMode.RoundtripKind);  

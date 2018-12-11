@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211834"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145800"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas no LINQ to DataSet
 Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], você sempre trabalha com objetos de programação.  
@@ -23,7 +23,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
   
  Em uma consulta, que retorna uma sequência de valores, a variável de consulta nunca contém os resultados da consulta e armazena somente os comandos da consulta. A execução da consulta é adiada até que a variável da consulta seja iterada em um loop `foreach` ou `For Each`. Isso é chamado *execução adiada*; ou seja, execução da consulta ocorre algum tempo depois que a consulta é construída. Isso significa que você pode executar uma consulta com a frequência que desejar. Isso é útil quando, por exemplo, você tem um banco de dados que está sendo atualizado por outros aplicativos. Em seu aplicativo, você pode criar uma consulta para recuperar as informações mais recentes e executar a consulta repetidamente, retornando informações atualizadas sempre.  
   
- Em comparação com as consultas adiadas, que retornam uma sequência de valores, as consultas que retornam um valor singleton são executadas imediatamente. Alguns exemplos de consultas singleton são <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.First%2A>. Essas consultas são executadas imediatamente porque os resultados da consulta são necessários para calcular o resultado singleton. Por exemplo, para localizar a média dos resultados da consulta, a consulta deve ser executada para que a função de média tenha os dados de entrada com os quais trabalhar. Você também pode usar o método <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A> em uma consulta para forçar a execução imediata de uma consulta que não produz um valor singleton. Essas técnicas para forçar a execução imediata podem ser úteis quando você deseja armazenar os resultados de uma consulta em cache. Para obter mais informações sobre a execução de consultas adiadas e imediatas, consulte [Introdução ao LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
+ Em comparação com as consultas adiadas, que retornam uma sequência de valores, as consultas que retornam um valor singleton são executadas imediatamente. Alguns exemplos de consultas singleton são <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.First%2A>. Essas consultas são executadas imediatamente porque os resultados da consulta são necessários para calcular o resultado singleton. Por exemplo, para localizar a média dos resultados da consulta, a consulta deve ser executada para que a função de média tenha os dados de entrada com os quais trabalhar. Você também pode usar o método <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A> em uma consulta para forçar a execução imediata de uma consulta que não produz um valor singleton. Essas técnicas para forçar a execução imediata podem ser úteis quando você deseja armazenar os resultados de uma consulta em cache.
   
 ## <a name="queries"></a>Consultas  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] as consultas podem ser formuladas em duas sintaxes diferentes: sintaxe de expressão consulta e sintaxe de consulta com base em método.  

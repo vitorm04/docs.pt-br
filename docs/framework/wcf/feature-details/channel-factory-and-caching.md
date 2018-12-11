@@ -2,12 +2,12 @@
 title: Cache e fábrica de canal
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 1bf8e3fe4833b662f16bd6311056fda8609dd9d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa333d3ffa0063e226405eb8e715f9ee99f68432
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490985"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151324"
 ---
 # <a name="channel-factory-and-caching"></a>Cache e fábrica de canal
 Os aplicativos cliente do WCF usam a classe <xref:System.ServiceModel.ChannelFactory%601> para criar um canal de comunicação com um serviço WCF.  Criar instâncias de <xref:System.ServiceModel.ChannelFactory%601> resulta em alguma sobrecarga porque envolve as seguintes operações:  
@@ -23,22 +23,22 @@ Os aplicativos cliente do WCF usam a classe <xref:System.ServiceModel.ChannelFac
  Para ajudar a minimizar a sobrecarga, o WCF pode armazenar em cache fábricas de canal quando você está usando um proxy de cliente WCF.  
   
 > [!TIP]
->  Você tem controle direto sobre a criação da fábrica de canal, quando você usa o <xref:System.ServiceModel.ChannelFactory%601> classe diretamente.  
+>  Você tem controle direto sobre criação de fábrica de canal quando você usa o <xref:System.ServiceModel.ChannelFactory%601> classe diretamente.  
   
- Os proxies de cliente WCF gerados com [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) são derivados de <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> define um estático <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> propriedade que define o comportamento de cache de fábrica de canal. Configurações de cache são feitas para um tipo específico. Por exemplo, definindo `ClientBase<ITest>.CacheSettings` para um dos valores definidos abaixo afetará apenas esses proxy/ClientBase do tipo `ITest`. A configuração de cache para um determinado <xref:System.ServiceModel.ClientBase%601> é imutável, assim que a primeira instância de proxy/ClientBase é criada.  
+ Os proxies de cliente WCF gerados com [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derivados <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> define um estático <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> propriedade que define o comportamento de cache de fábrica de canal. Configurações de cache são feitas para um tipo específico. Por exemplo, definindo `ClientBase<ITest>.CacheSettings` a um dos valores definidos abaixo afetará apenas essas proxy/ClientBase do tipo `ITest`. A configuração de cache para um determinado <xref:System.ServiceModel.ClientBase%601> é imutável, assim que a primeira instância de proxy/ClientBase é criada.  
   
-## <a name="specifying-caching-behavior"></a>Especificar o comportamento do cache  
- Comportamento do cache é especificado pela configuração de <xref:System.ServiceModel.ClientBase%601.CacheSetting> propriedade para um dos valores a seguir.  
+## <a name="specifying-caching-behavior"></a>Especificando o comportamento de cache  
+ Comportamento de cache é especificado pela configuração de <xref:System.ServiceModel.ClientBase%601.CacheSetting> propriedade para um dos valores a seguir.  
   
-|Definir o valor de cache|Descrição|  
+|Valor de configuração de cache|Descrição|  
 |-------------------------|-----------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Todas as instâncias de <xref:System.ServiceModel.ClientBase%601> dentro do domínio de aplicativo podem participar em cache. O desenvolvedor determinou que não há nenhum implicações de segurança adversas para armazenamento em cache. O cache será não desativado propriedades mesmo que "segurança" <xref:System.ServiceModel.ClientBase%601> são acessados. As propriedades de "segurança" de <xref:System.ServiceModel.ClientBase%601> são <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> e <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
-|<xref:System.ServiceModel.CacheSetting.Default>|Apenas instâncias do <xref:System.ServiceModel.ClientBase%601> criado a partir de pontos de extremidade definidos na configuração de participarem de arquivos no cache de dentro do domínio de aplicativo. Todas as instâncias de <xref:System.ServiceModel.ClientBase%601> criado por meio de programação dentro desse domínio de aplicativo não participará no cache. Além disso, o cache será desabilitado para uma instância de <xref:System.ServiceModel.ClientBase%601> quando qualquer uma de suas propriedades de "segurança" é acessada.|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|O cache é desativado para todas as instâncias de <xref:System.ServiceModel.ClientBase%601> de um tipo específico dentro do aplicativo-domínio em questão.|  
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Todas as instâncias de <xref:System.ServiceModel.ClientBase%601> dentro do domínio de aplicativo podem participar em cache. O desenvolvedor determinou que não há nenhum implicações de segurança adversos para armazenamento em cache. Armazenamento em cache será não ser desativado propriedades mesmo se "sensível à segurança" no <xref:System.ServiceModel.ClientBase%601> são acessados. As propriedades de "segurança" de <xref:System.ServiceModel.ClientBase%601> estão <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> e <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
+|<xref:System.ServiceModel.CacheSetting.Default>|Somente instâncias de <xref:System.ServiceModel.ClientBase%601> criado a partir de pontos de extremidade definidos na configuração de participarem de arquivos em cache dentro do domínio de aplicativo. Todas as instâncias do <xref:System.ServiceModel.ClientBase%601> criado por meio de programação dentro desse domínio de aplicativo não participará de cache. Além disso, o cache será desabilitado para uma instância do <xref:System.ServiceModel.ClientBase%601> depois de qualquer uma de suas propriedades de "segurança" é acessada.|  
+|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Armazenamento em cache é desativado para todas as instâncias de <xref:System.ServiceModel.ClientBase%601> de um tipo específico dentro do aplicativo-domínio em questão.|  
   
  Os trechos de código a seguir ilustram como usar o <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> propriedade.  
   
-```  
+```csharp  
 class Program   
 {   
    static void Main(string[] args)   
@@ -61,7 +61,7 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest { }
   
  No código acima, todas as instâncias de `TestClient` usará a mesma fábrica de canais.  
   
-```  
+```csharp  
 class Program   
 {   
    static void Main(string[] args)   
@@ -87,9 +87,9 @@ class Program
 public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
 ```  
   
- No exemplo acima, todas as instâncias de `TestClient` seria usar a mesma fábrica de canais exceto instância #4. Instância #4 usaria uma fábrica de canais que é criada especificamente para seu uso. Essa configuração funciona para cenários em que um determinado ponto de extremidade precisa de configurações de segurança diferente de outros pontos de extremidade do mesmo tipo de fábrica de canal (neste caso `ITest`).  
+ No exemplo acima, todas as instâncias de `TestClient` usaria a mesma fábrica de canais, exceto instância #4. Instância #4 usaria uma fábrica de canais que é criada especificamente para seu uso. Essa configuração funciona para cenários em que um ponto de extremidade específico precisa diferentes configurações de segurança de outros pontos de extremidade do mesmo tipo de fábrica de canal (nesse caso, `ITest`).  
   
-```  
+```csharp  
 class Program   
 {   
    static void Main(string[] args)   
@@ -116,4 +116,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
  [Compilando clientes](../../../../docs/framework/wcf/building-clients.md)  
  [Clientes](../../../../docs/framework/wcf/feature-details/clients.md)  
  [Usando um cliente do WCF para acessar serviços](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Como usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [Como: Usar o ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

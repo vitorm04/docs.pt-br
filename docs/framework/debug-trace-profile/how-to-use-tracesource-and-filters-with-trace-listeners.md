@@ -1,5 +1,5 @@
 ---
-title: Como usar TraceSource e filtros com ouvintes de rastreamento
+title: 'Como: Usar TraceSource e filtros com ouvintes de rastreamento'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7a912386d93e727a1f4cd2253ad06be76ae3385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc81e1e13f942f5db4fec5cc607264d499b63629
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388336"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146073"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Como usar TraceSource e filtros com ouvintes de rastreamento
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Como: Usar TraceSource e filtros com ouvintes de rastreamento
 Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreamento aprimorado. A premissa básica permanece inalterada: mensagens de rastreamento são enviadas por meio de comutadores para ouvintes, que relatam os dados para um meio de saída associado. Uma diferença principal para a versão 2.0 é que os rastreamentos podem ser iniciados por meio de instâncias da classe <xref:System.Diagnostics.TraceSource>. A <xref:System.Diagnostics.TraceSource> destina-se a funcionar como um sistema de rastreamento aprimorado e pode ser usada no lugar dos métodos estáticos das classes de rastreamento antigas <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug>. As classes <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> familiares ainda existem, mas a prática recomendada é usar a classe <xref:System.Diagnostics.TraceSource> para o rastreamento.  
   
- Este tópico descreve o uso de um <xref:System.Diagnostics.TraceSource> juntamente com um arquivo de configuração de aplicativo.  É possível, embora não recomendado, rastrear usando um <xref:System.Diagnostics.TraceSource> sem o uso de um arquivo de configuração. Para obter informações sobre rastreamento sem um arquivo de configuração, consulte [Como criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
+ Este tópico descreve o uso de um <xref:System.Diagnostics.TraceSource> juntamente com um arquivo de configuração de aplicativo.  É possível, embora não recomendado, rastrear usando um <xref:System.Diagnostics.TraceSource> sem o uso de um arquivo de configuração. Para obter informações sobre rastreamento sem um arquivo de configuração, consulte [como: Criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>Criar e inicializar a origem do rastreamento  
   
 1.  A primeira etapa para instrumentar um aplicativo com o rastreamento é criar uma origem do rastreamento. Em projetos grandes com vários componentes, você pode criar uma origem do rastreamento separada para cada componente. A prática recomendada é usar o nome do aplicativo como o nome da origem do rastreamento. Isso tornará mais fácil manter os rastreamentos diferentes separados. O código a seguir cria uma nova origem do rastreamento (`mySource)`) e chama um método (`Activity1`) que rastreia eventos.  As mensagens de rastreamento são gravadas pelo ouvinte de rastreamento padrão.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -101,7 +101,7 @@ Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreament
   
 1.  O arquivo de configuração inicializa as configurações para a origem de rastreamento no momento em que o aplicativo é inicializado. Para alterar essas configurações, você deve alterar o arquivo de configuração e reiniciar o aplicativo ou atualizar o aplicativo de forma programática usando o método <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. O aplicativo pode alterar dinamicamente as propriedades definidas pelo arquivo de configuração para substituir as configurações especificadas pelo usuário.  Por exemplo, talvez você deseje assegurar que as mensagens críticas sejam sempre enviadas para um arquivo de texto, independentemente das definições de configuração atuais.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -168,5 +168,5 @@ Um dos novos recursos do .NET Framework versão 2.0 é um sistema de rastreament
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [Como criar e inicializar fontes de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Como: Criar e inicializar origens de rastreamento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [Ouvintes de rastreamento](../../../docs/framework/debug-trace-profile/trace-listeners.md)

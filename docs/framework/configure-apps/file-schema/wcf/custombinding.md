@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123820"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153898"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Fornece controle total sobre a pilha de mensagens para o usuário.  
@@ -290,9 +290,8 @@ Fornece controle total sobre a pilha de mensagens para o usuário.
   
  Além disso, você pode definir seus próprios elementos de associação e inseri-los entre qualquer uma das camadas anteriores definidas.  
   
- Para obter uma discussão sobre como usar uma associação para modificar uma associação fornecida pelo sistema personalizada, consulte [como: personalizar uma associação System-Provided](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
-  
-1.  
+ Para obter uma discussão sobre como usar uma associação para modificar uma associação fornecida pelo sistema personalizada, consulte [como: Personalizar uma associação fornecida pelo sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+    
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.Binding>  

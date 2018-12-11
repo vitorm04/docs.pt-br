@@ -1,5 +1,5 @@
 ---
-title: Como hospedar e executar um serviço básico do Windows Communication Foundation
+title: 'Como: Hospedar e executar um serviço básico do Windows Communication Foundation'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562288"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129370"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Como hospedar e executar um serviço básico do Windows Communication Foundation
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Como: Hospedar e executar um serviço básico do Windows Communication Foundation
 
 Esta é a terceira de seis tarefas necessárias para criação de um aplicativo do WCF (Windows Communication Foundation). Para obter uma visão geral de todas as seis tarefas, confira o tópico [Tutorial de introdução](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -149,7 +149,7 @@ End Module
 
 **Etapa 4** – habilitar a troca de metadados. Os clientes usarão a troca de metadados para gerar os proxies que serão usados para chamar as operações de serviço. Para permitir que a troca de metadados crie uma instância de <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, defina sua propriedade <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> como `true` e adicione o comportamento à coleção de <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` da instância <xref:System.ServiceModel.ServiceHost>.
 
-**Etapa 5** – abra o <xref:System.ServiceModel.ServiceHost> para escutar as mensagens de entrada. Observe que o código aguarda o usuário pressionar ENTER. Se você não fizer isso, o aplicativo será fechado imediatamente e o serviço será encerrado. Observe também que um bloco try/catch foi usado. Após o <xref:System.ServiceModel.ServiceHost> ter sido instanciado, todos os outros códigos serão colocados em um bloco try/catch. Para obter mais informações sobre a captura segura de exceções geradas por <xref:System.ServiceModel.ServiceHost>, confira [Evitando problemas com a instrução using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)
+**Etapa 5** – abra o <xref:System.ServiceModel.ServiceHost> para escutar as mensagens de entrada. Observe que o código aguarda o usuário pressionar ENTER. Se você não fizer isso, o aplicativo será fechado imediatamente e o serviço será encerrado. Observe também que um bloco try/catch foi usado. Após o <xref:System.ServiceModel.ServiceHost> ter sido instanciado, todos os outros códigos serão colocados em um bloco try/catch. Para obter mais informações sobre como capturar com segurança exceções geradas pelo <xref:System.ServiceModel.ServiceHost>, consulte [uso Close e Abort para liberar os recursos de cliente do WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Edite App. config em GettingStartedLib para refletir as alterações feitas no código:
@@ -403,7 +403,7 @@ End Module
 Agora o serviço está sendo executado. A próxima tarefa, você criará um cliente WCF.
 
 > [!div class="nextstepaction"]
-> [Como: criar um cliente WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Como: Criar um cliente WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 Para obter informações sobre solução de problemas, confira [Solução de problemas do tutorial de introdução](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
 

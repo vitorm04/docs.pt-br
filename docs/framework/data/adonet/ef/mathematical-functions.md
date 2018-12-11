@@ -2,16 +2,16 @@
 title: Funções matemáticas
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837304"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143669"
 ---
 # <a name="mathematical-functions"></a>Funções matemáticas
 
-O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as funções matemáticas que executam cálculos nos valores de entrada que são fornecidos como argumentos, e retorna um resultado de valor numérico. Essas funções estão no namespace SqlServer, que está disponível quando você usa o SqlClient. A propriedade de namespace de um provedor permite que Entity Framework descobrir que prefixo é usado por esse provedor para compilações específicas, como tipos e funções. A tabela a seguir descreve as funções matemáticas SqlClient.  
+O provedor de dados. NET Framework para SQL Server (SqlClient) fornece as funções matemáticas que executam cálculos nos valores de entrada que são fornecidos como argumentos, e retorna um resultado de valor numérico. Essas funções estão no namespace SqlServer, que está disponível quando você usa o SqlClient. A propriedade de namespace de um provedor permite que o Entity Framework descubra qual prefixo é usado por esse provedor para construções específicas, como tipos e funções. A tabela a seguir descreve as funções matemáticas SqlClient.  
   
 ## <a name="absexpression"></a>Abs(Expression)
 
@@ -35,7 +35,7 @@ Retorna o valor de arccosine de expressão especificada.
 
 **Argumentos**
 
-`expression`: `Double`.
+`expression`: UM `Double`.
 
 **Valor retornado**
 
@@ -51,7 +51,7 @@ Retorna o valor de arcsine de expressão especificada.
 
 **Argumentos**
 
-`expression`: `Double`.
+`expression`: UM `Double`.
 
 **Valor retornado**
 
@@ -67,7 +67,7 @@ Retorna o valor de arctangent de expressão numérica especificada.
 
 **Argumentos**
 
-`expression`: `Double`.
+`expression`: UM `Double`.
 
 **Valor retornado**
 
@@ -83,7 +83,7 @@ Retorna o ângulo, em radianos, cuja tangente é entre as duas expressões numé
 
 **Argumentos**
 
-`expression`: `Double`.
+`expression`: UM `Double`.
 
 **Valor retornado**
 
@@ -116,7 +116,7 @@ Calcula o cosseno trigonométricas do ângulo especificado em radianos.
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -132,7 +132,7 @@ Calcula o cotangente trigonométricas do ângulo especificado em radianos.
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -164,7 +164,7 @@ Calcula o valor exponencialmente de uma expressão numérica especificada.
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -178,7 +178,7 @@ Converte a expressão especificada para o inteiro maior menor ou igual a ele.
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -195,7 +195,7 @@ Calcula o logaritmo natural da expressão especificada de `float` .
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -211,7 +211,7 @@ Retorna o logaritmo base-10 de expressão especificada de `Double` .
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -326,7 +326,7 @@ Calcula o seno trigonométricas do ângulo especificado em radianos, e retorna u
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -340,7 +340,7 @@ Retorna a raiz quadrada de expressão especificada.
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -354,7 +354,7 @@ Retorna o quadrado de expressão especificada.
 
 **Argumentos** 
 
-`expression`: `Double`. 
+`expression`: UM `Double`. 
 
 **Valor retornado** 
 
@@ -384,8 +384,8 @@ Calcula a tangente de uma expressão especificada.
 
 Para obter mais informações sobre as funções matemáticas que suporta SqlClient, consulte a documentação para a versão do SQL Server que você especificou no manifesto do provedor SqlClient:  
   
-**SQL Server 2005:** [funções matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [funções matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 e posterior:** [funções matemáticas (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005:** [Funções matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008:** [Funções matemáticas (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 e posterior:** [Funções matemáticas (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [SqlClient para funções de Entity Framework](sqlclient-for-ef-functions.md)

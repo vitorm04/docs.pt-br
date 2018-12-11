@@ -1,17 +1,17 @@
 ---
-title: 'Exceções: a expressão try...with (F#)'
-description: Saiba como usar a expressão F# 'try... com' para manipulação de exceção.
+title: 'Exceções: A instrução try... with expressão (F#)'
+description: Saiba como usar o F# 'try... com' expressão para manipulação de exceção.
 ms.date: 05/16/2016
-ms.openlocfilehash: 588960c0f8ccedb431c37d0f1314bf1a293b638c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 946cf56f7abc4bd5e3a9f9acc52b868bd6c7f84a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44042160"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127401"
 ---
-# <a name="exceptions-the-trywith-expression"></a>Exceções: a expressão try...with
+# <a name="exceptions-the-trywith-expression"></a>Exceções: A expressão try...with
 
-Este tópico descreve o `try...with` expressão, a expressão que é usada para tratamento de exceções na linguagem F#.
+Este tópico descreve o `try...with` expressão, a expressão que é usada para manipulação de exceção no F# idioma.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,7 +32,7 @@ Com frequência, o fato de que ocorreu um erro também significa que não há ne
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
 
-As exceções podem ser exceções .NET, ou podem ser exceções de F#. Você pode definir exceções de F#, usando o `exception` palavra-chave.
+As exceções podem ser exceções .NET, ou podem ser F# exceções. Você pode definir F# exceções usando o `exception` palavra-chave.
 
 Você pode usar uma variedade de padrões para filtrar o tipo de exceção e outras condições; as opções são resumidas na tabela a seguir.
 
@@ -40,8 +40,8 @@ Você pode usar uma variedade de padrões para filtrar o tipo de exceção e out
 |-------|-----------|
 |:? *tipo de exceção*|Corresponde ao tipo de exceção .NET especificado.|
 |:? *tipo de exceção* como *identificador*|Corresponde ao tipo de exceção .NET especificado, mas oferece a exceção de um valor nomeado.|
-|*nome da exceção*(*argumentos*)|Corresponde a um tipo de exceção do F# e associa os argumentos.|
-|*identifier*|Corresponde a qualquer exceção e associa o nome para o objeto de exceção. Equivalente a **:? System. Exception como * * * identificador*|
+|*nome da exceção*(*argumentos*)|Correspondências de um F# tipo de exceção e associa os argumentos.|
+|*identifier*|Corresponde a qualquer exceção e associa o nome para o objeto de exceção. Equivalente a **:? System. Exception como**_identificador_|
 |*identificador* quando *condição*|Corresponde a qualquer exceção se a condição for verdadeira.|
 
 ## <a name="examples"></a>Exemplos
@@ -50,14 +50,14 @@ Os exemplos de código a seguir ilustram o uso de vários padrões de manipulado
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5602.fs)]
 
->[!NOTE]
-O `try...with` construção é uma expressão separada do `try...finally` expressão. Portanto, se seu código requer tanto uma `with` bloco e um `finally` bloco, será necessário aninhar as duas expressões.
+> [!NOTE]
+> O `try...with` construção é uma expressão separada do `try...finally` expressão. Portanto, se seu código requer tanto uma `with` bloco e um `finally` bloco, será necessário aninhar as duas expressões.
 
->[!NOTE]
-Você pode usar `try...with` nos fluxos de trabalho assíncronos e outras expressões de computação, nesse caso, uma versão personalizada do `try...with` expressão é usada. Para obter mais informações, consulte [fluxos de trabalho assíncronos](../asynchronous-workflows.md), e [expressões de computação](../computation-expressions.md).
+> [!NOTE]
+> Você pode usar `try...with` nos fluxos de trabalho assíncronos e outras expressões de computação, nesse caso, uma versão personalizada do `try...with` expressão é usada. Para obter mais informações, consulte [fluxos de trabalho assíncronos](../asynchronous-workflows.md), e [expressões de computação](../computation-expressions.md).
 
 ## <a name="see-also"></a>Consulte também
 
 - [Tratamento de Exceção](index.md)
 - [Tipos de Exceção](exception-types.md)
-- [Exceções: a expressão `try...finally`](the-try-finally-expression.md)
+- [Exceções: O `try...finally` expressão](the-try-finally-expression.md)

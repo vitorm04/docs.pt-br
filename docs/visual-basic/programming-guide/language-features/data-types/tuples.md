@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: d76c14aa83fcf47faea41946614e83cfbc8ad57b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0198cde88b66f5e115c82b5454bd8a32db7ef96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195496"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143708"
 ---
 # <a name="tuples-visual-basic"></a>Tuplas (Visual Basic)
 
@@ -50,7 +50,7 @@ Como variáveis e os elementos têm o mesmo nome, o compilador do Visual Basic p
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Para habilitar os nomes de elemento de tupla interred, você deve definir a versão do compilador do Visual Basic para usar em seu projeto do Visual Basic (\*. vbproj) arquivo: 
+Para habilitar os nomes de elemento de tupla inferidos, você deve definir a versão do compilador do Visual Basic para usar em seu projeto do Visual Basic (\*. vbproj) arquivo: 
 
 ```xml 
 <PropertyGroup> 

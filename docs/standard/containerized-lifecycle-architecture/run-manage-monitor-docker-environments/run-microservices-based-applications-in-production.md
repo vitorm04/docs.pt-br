@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123144"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126296"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Executar aplicativos compostos e baseados em microsserviços em ambientes de produção
 
@@ -33,7 +33,6 @@ Quando aplicativos são escalados horizontalmente em vários sistemas de host, a
 
 Os recursos fornecidos pelo orquestradores e agendadores são muito complexos para desenvolver e criar do zero e, portanto, você geralmente desejam fazer uso de orquestração soluções oferecidas pelos fornecedores.
 
-
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Próximo](manage-production-docker-environments.md)
+>[Anterior](index.md)
+>[Próximo](manage-production-docker-environments.md)

@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232918"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153911"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorar os serviços de aplicativo em contêineres
 
@@ -25,7 +25,7 @@ Pois ela pertence ao Docker, você pode criar um gráfico eventos de ciclo de vi
 
 ![exemplo](./media/image1.png)
 
-Figura 6-1: Application Insights, monitoramento de contêineres e hosts do Docker
+Figura 6-1: Monitoramento de contêineres e hosts do Docker do Application Insights
 
 Quando você executa o [imagem do Docker do aplicativo Insights](https://hub.docker.com/r/microsoft/applicationinsights/) no host do Docker, que você beneficie dos seguintes:
 
@@ -60,7 +60,7 @@ Além de fornecer serviços importantes por conta própria, a solução de cont�
 
 ![](./media/image2.png)
 
-Figura 6-2: informações sobre contêineres do Docker mostrado pelo Operations Management Suite
+Figura 6-2: Informações sobre contêineres do Docker mostrado pelo Operations Management Suite
 
 O Application Insights e Operations Management Suite enfocam monitorar as atividades; No entanto, Application Insights se concentra mais nos aplicativos próprios graças ao seu SDK em execução dentro do aplicativo de monitoramento. No entanto, Operations Management Suite concentra-se muito mais na infraestrutura em torno de hosts, além de oferecer uma análise profunda em logs em grande escala, fornecendo um sistema muito flexível de pesquisa/consulta controlada por dados.
 
@@ -90,12 +90,12 @@ Você pode ver informações sobre o desempenho executando consultas como tipo =
 
 ![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
-Figura 6-3: métricas de desempenho de hosts do Docker mostrados pelo Operations Management Suite
+Figura 6-3: Métricas de desempenho de hosts do Docker mostrados pelo Operations Management Suite
 
 Salvar consultas também é um recurso padrão do Operations Management Suite e pode ajudar a manter você considerar úteis e descobrir tendências no seu sistema de consultas.
 
 **Obter mais informações** para encontrar informações sobre como instalar e configurar o Docker solução de contêiner no [Operations Management Suite](https://microsoft.com/oms), acesse <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Anterior](manage-production-docker-environments.md)
-[Próximo](../key-takeaways/index.md)
+>[Anterior](manage-production-docker-environments.md)
+>[Próximo](../key-takeaways/index.md)

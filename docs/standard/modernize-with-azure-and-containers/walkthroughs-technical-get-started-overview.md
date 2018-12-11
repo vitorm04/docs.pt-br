@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372845"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150583"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Instruções passo a passo e técnico obtém visão de geral de Introdução
 
@@ -36,7 +36,7 @@ Cada as instruções a seguir usa os novo eShopLegacy e eShopModernizing aplicat
 - **Implantar seus aplicativos baseados em contêineres do Windows no Azure Service Fabric**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Passo a passo 1: Tour eShop de aplicativos herdados
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Passo a passo 1: Tour de aplicativos herdados do eShop
 
 ### <a name="technical-walkthrough-availability"></a>Disponibilidade de passo a passo técnico
 
@@ -55,7 +55,7 @@ Todos esses aplicativos estão disponíveis na [repositório do GitHub eShopMode
 
 A principal meta deste passo a passo é simplesmente para se familiarizar com esses aplicativos e seu código e a configuração. Você pode configurar os aplicativos para que eles geram e usam dados fictícios, sem usar o banco de dados SQL, para fins de teste. Essa configuração opcional se baseia na injeção de dependência, de forma desacoplada.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Cenário 1: Aplicativos de Web do ASP.NET
+### <a name="scenario-1-aspnet-web-apps"></a>Cenário 1: Aplicativos Web do ASP.NET
 
 A figura a seguir mostra o cenário simples dos aplicativos de web ASP.NET herdados originais.
 
@@ -70,7 +70,7 @@ A próxima figura mostra as capturas de tela inicial do aplicativo.
 
 Dependências no ASP.NET 4. x ou versões anteriores (seja para MVC ou Web Forms) significa que esses aplicativos não serão executados no .NET Core, a menos que o código é totalmente reescrito usando o ASP.NET Core MVC. 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Cenário 2: Serviço do WCF e aplicativo de cliente de WinForms (aplicativo de camada 3)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Cenário 2: Serviço WCF e o aplicativo de cliente de WinForms (aplicativo de camada 3)
 
 A figura a seguir mostra o cenário simples do aplicativo herdado de 3 camadas original.
 
@@ -79,7 +79,7 @@ A figura a seguir mostra o cenário simples do aplicativo herdado de 3 camadas o
 
 ### <a name="benefits"></a>Benefícios
 
-Os benefícios deste passo a passo são simples: basta se familiarizar com o código e aplicativos inicias.
+Os benefícios deste passo a passo são simples: Basta se familiarizar com os aplicativos inicias e o código.
 
 ### <a name="next-steps"></a>Próximas etapas
 
@@ -107,7 +107,7 @@ O objetivo deste passo a passo é mostrar a você várias opções para colocar 
 
 Este passo a passo se concentra nas ferramentas do Visual Studio 2017 para a abordagem de Docker, mas as outras duas abordagens são bastante semelhantes em relação ao uso Dockerfiles.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Cenário 1: Aplicativos de web do ASP.NET em contêineres
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Cenário 1: Em contêineres aplicativos web em ASP.NET
 
 Figura a seguir mostra o cenário para aplicativos de aplicativos web herdados eShop em contêineres.
 
@@ -159,19 +159,19 @@ O objetivo deste passo a passo é mostrar as várias alternativas que você tem 
 
 Vários cenários são abordados neste passo a passo.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Cenário a: a implantar uma VM do Azure a partir de um PC de desenvolvimento por meio de conexão do mecanismo do Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Cenário a: Implantar em uma VM do Azure a partir de um PC de desenvolvimento por meio de conexão do mecanismo do Docker
 
 ![Implantar em uma VM do Azure a partir de um PC de desenvolvimento por meio de uma conexão do mecanismo do Docker](./media/image5-4.png)
 
 > **Figura 5-4.** Implantar em uma VM do Azure a partir de um PC de desenvolvimento por meio de uma conexão do mecanismo do Docker
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Cenário b: implantar uma VM do Azure por meio de um registro de Docker
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Cenário b: Implantar em uma VM do Azure por meio de um registro de Docker
 
 ![Implantar em uma VM do Azure por meio de um registro de Docker](./media/image5-5.png)
 
 > **Figura 5-5.** Implantar em uma VM do Azure por meio de um registro de Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Cenário c: implantar uma VM do Azure de pipelines de CI/CD nos serviços de DevOps do Azure
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Cenário de c: Implantar em uma VM do Azure a partir de pipelines de CI/CD nos serviços de DevOps do Azure
 
 ![Implantar em uma VM do Azure a partir de pipelines de CI/CD nos serviços de DevOps do Azure](./media/image5-6.png)
 
@@ -254,13 +254,13 @@ O objetivo deste passo a passo é aprender como implantar um aplicativo baseado 
 
 ### <a name="scenarios"></a>Cenários
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Cenário a: implantar diretamente a um cluster Kubernetes a partir de um ambiente de desenvolvimento
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Cenário a: Implantar diretamente a um cluster Kubernetes em um ambiente de desenvolvimento
 
 ![Implantar diretamente a um cluster Kubernetes de um ambiente de desenvolvimento](./media/image5-7.png)
 
 > **Figura 5-7.** Implantar diretamente a um cluster Kubernetes de um ambiente de desenvolvimento
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Cenário b: implantar um cluster Kubernetes de CI/CD pipelines nos serviços de DevOps do Azure
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Cenário b: Implantar um cluster Kubernetes de pipelines de CI/CD nos serviços de DevOps do Azure
 
 ![Implantar um cluster Kubernetes de pipelines de CI/CD nos serviços de DevOps do Azure](./media/image5-8.png)
 
@@ -314,13 +314,13 @@ O objetivo deste passo a passo é aprender como implantar um aplicativo baseado 
 
 ### <a name="scenarios"></a>Cenários
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Cenário a: implantar diretamente para um cluster do Service Fabric a partir de um ambiente de desenvolvimento
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Cenário a: Implantar diretamente em um cluster do Service Fabric de um ambiente de desenvolvimento
 
 ![Implantar diretamente em um cluster do Service Fabric de um ambiente de desenvolvimento](./media/image5-9.png)
 
 > **Figura 5-9.** Implantar diretamente em um cluster do Service Fabric de um ambiente de desenvolvimento
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Cenário b: implantar um cluster do Service Fabric de CI/CD pipelines nos serviços de DevOps do Azure
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Cenário b: Implantar um cluster do Service Fabric de pipelines de CI/CD nos serviços de DevOps do Azure
 
 ![Implantar um cluster do Service Fabric de pipelines de CI/CD nos serviços de DevOps do Azure](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Explore este conteúdo mais detalhado no wiki do GitHub:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[Próximo](conclusions.md)
+>[Anterior](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[Próximo](conclusions.md)

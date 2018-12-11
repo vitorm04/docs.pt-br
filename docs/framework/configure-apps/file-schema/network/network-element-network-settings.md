@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 242ee42ded339b349cb9e4eb93750b9f5db29b51
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 8e5f44c5e915f63dbcc34ccd985d69c7e5551fb8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135226"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144475"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;rede&gt; (configurações de rede)
 Configura as opções de rede para um servidor de transporte protocolo SMTP (Simple Mail) externo.  
@@ -110,7 +110,7 @@ Configura as opções de rede para um servidor de transporte protocolo SMTP (Sim
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

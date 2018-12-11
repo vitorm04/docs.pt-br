@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173116"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153521"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Gerando chaves para criptografia e descriptografia
 Criação e gerenciamento de chaves é uma parte importante do processo de criptografia. Algoritmos simétricos exigem a criação de uma chave e um vetor de inicialização (IV). A chave deve ser mantida em segredo, qualquer pessoa que não deve descriptografar os dados. O IV não tem que ser secreta, mas deve ser alterado para cada sessão. Algoritmos assimétricos exigem a criação de uma chave pública e uma chave privada. A chave pública pode se tornar pública para qualquer pessoa, enquanto a chave privada deve conhecidos apenas pelo participante que descriptografará os dados criptografados com a chave pública. Esta seção descreve como gerar e gerenciar chaves simétricas e assimétricas algoritmos.  
@@ -43,7 +43,7 @@ TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();
   
  Quando o código anterior é executado, uma nova chave e IV são geradas e colocadas na **chave** e **IV** propriedades, respectivamente.  
   
- Às vezes, talvez seja necessário gerar várias chaves. Nessa situação, você pode criar uma nova instância de uma classe que implementa um algoritmo simétrico e, em seguida, crie uma nova chave e IV chamando o **GenerateKey** e **GenerateIV** métodos. O exemplo de código a seguir ilustra como criar novas chaves e IVs depois que uma nova instância da classe de criptografia assimétrica é feita.  
+ Às vezes, talvez seja necessário gerar várias chaves. Nessa situação, você pode criar uma nova instância de uma classe que implementa um algoritmo simétrico e, em seguida, crie uma nova chave e IV chamando o **GenerateKey** e **GenerateIV** métodos. O exemplo de código a seguir ilustra como criar novas chaves e IVs depois que uma nova instância da classe de criptografia simétrica é feita.  
   
 ```vb  
 Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
@@ -93,4 +93,4 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
 - [Criptografando dados](../../../docs/standard/security/encrypting-data.md)  
 - [Descriptografando dados](../../../docs/standard/security/decrypting-data.md)  
 - [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)  
-- [Como armazenar chaves assimétricas em um contêiner de chaves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Como: Chaves assimétricas Store em um contêiner de chave](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

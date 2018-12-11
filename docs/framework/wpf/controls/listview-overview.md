@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562275"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148906"
 ---
 # <a name="listview-overview"></a>Visão geral de ListView
 O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para exibir um conjunto de itens de dados em diferentes layouts ou modos de exibição. Por exemplo, talvez um usuário queira exibir itens de dados em uma tabela e classificar suas colunas.  
@@ -75,13 +75,11 @@ O <xref:System.Windows.Controls.ListView> controle fornece a infraestrutura para
 ## <a name="sharing-the-same-view-mode"></a>Compartilhando o mesmo modo de exibição  
  Dois <xref:System.Windows.Controls.ListView> controles não podem compartilhar o mesmo modo de exibição ao mesmo tempo. Se você tentar usar o mesmo modo de exibição com mais de um <xref:System.Windows.Controls.ListView> controlar, ocorre uma exceção.  
   
- Para especificar um modo de exibição pode ser usado simultaneamente por mais de um <xref:System.Windows.Controls.ListView>, use modelos ou estilos. Para obter um exemplo de como definir exibições como <xref:System.Windows.FrameworkElement.Resources%2A>, consulte [ListView com várias exibições de exemplo](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Para especificar um modo de exibição pode ser usado simultaneamente por mais de um <xref:System.Windows.Controls.ListView>, use modelos ou estilos.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Criando um modo de exibição personalizada  
- Exibições personalizadas como <xref:System.Windows.Controls.GridView> são derivados de <xref:System.Windows.Controls.ViewBase> classe, que fornece as ferramentas para exibir itens de dados que são representados como abstrata <xref:System.Windows.Controls.ListViewItem> objetos.  
-  
- Para obter um exemplo de um modo de exibição personalizado, consulte [ListView com várias exibições de exemplo](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Exibições personalizadas como <xref:System.Windows.Controls.GridView> são derivados de <xref:System.Windows.Controls.ViewBase> classe, que fornece as ferramentas para exibir itens de dados que são representados como abstrata <xref:System.Windows.Controls.ListViewItem> objetos.    
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Controls.GridView>  

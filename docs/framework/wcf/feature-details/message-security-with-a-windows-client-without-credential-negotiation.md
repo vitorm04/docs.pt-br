@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 09ca073a39322e54433c25321e3a9ef44c9efe90
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296913"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145813"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Segurança de mensagem com um cliente Windows sem negociação de credencial
 O cenário a seguir mostra um serviço protegido pelo protocolo Kerberos e o cliente do Windows Communication Foundation (WCF).  

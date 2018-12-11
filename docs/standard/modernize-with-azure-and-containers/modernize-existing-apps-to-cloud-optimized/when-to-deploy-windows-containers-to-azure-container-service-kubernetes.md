@@ -1,28 +1,28 @@
 ---
-title: Quando implantar contêineres do Windows para serviço de contêiner do Azure (ou seja, Kubernetes)
-description: Modernizar aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure | Quando implantar contêineres do Windows para serviço de contêiner do Azure (ou seja, Kubernetes)
+title: Quando implantar contêineres do Windows para o serviço de contêiner do Azure (ou seja, Kubernetes)
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Quando implantar contêineres do Windows para o serviço de contêiner do Azure (ou seja, Kubernetes)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: b7f106e2b79a2c6bb24733debf7f4828505d66a6
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 0b803b104f905fddac7939d7b070c206aabffeda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144787"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Quando implantar contêineres do Windows para serviço de contêiner do Azure (ou seja, Kubernetes)
+# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Quando implantar contêineres do Windows para o serviço de contêiner do Azure (ou seja, Kubernetes)
 
-Serviço de contêiner do Azure otimiza a configuração de tecnologias e ferramentas de código aberto populares especificamente para o Azure. Você obtém uma solução aberta que oferece portabilidade para seus contêineres e sua configuração de aplicativo. Você seleciona o tamanho, o número de hosts e as ferramentas do orchestrator. Serviço de contêiner do Azure lida com a infraestrutura para você.
+O serviço de contêiner do Azure otimiza a configuração de tecnologias e ferramentas de código-fonte aberto populares especialmente para o Azure. Você obtém uma solução aberta que oferece portabilidade para seus contêineres e sua configuração de aplicativo. Você selecionar o tamanho, o número de hosts e as ferramentas do orchestrator. O serviço de contêiner do Azure lida com a infraestrutura para você.
 
-Se você já estiver trabalhando com código-fonte aberto orchestrators como Kubernetes, Docker Swarm ou DC/sistema operacional, você não precisa alterar suas práticas de gerenciamento existente para mover cargas de trabalho do contêiner para a nuvem. Use as ferramentas de gerenciamento de aplicativo que você já estiver familiarizado com e conectar-se por meio de pontos de extremidade de API padrão para o orquestrador de sua escolha.
+Se você já estiver trabalhando com código-fonte aberto orquestradores como Kubernetes, Docker Swarm ou DC/SO, você não precisa alterar suas práticas de gerenciamento existente para mover cargas de trabalho de contêiner para a nuvem. Use as ferramentas de gerenciamento de aplicativo que você já conhece e conectar-se por meio de pontos de extremidade de API padrão para o orquestrador de sua escolha.
 
-Todos esses orchestrators são ambientes maduras, se você estiver usando contêineres do Docker do Linux, mas só pode estar em estado de visualização para contêineres do Windows.
+Todos esses orquestradores são ambientes de maduros se você estiver usando contêineres do Docker do Linux, mas só pode estar em estado de visualização para contêineres do Windows.
 
-Por exemplo, em Kubernetes, o suporte para contêineres é nativo (cidadão de primeira classe), portanto, usar contêineres do Windows em Kubernetes também é efetivo (em visualização no ACS a partir do início 2018).
+Por exemplo, no Kubernetes, suporte para contêineres é nativo (cidadão de primeira classe), portanto, usar contêineres do Windows no Kubernetes também é eficaz (em visualização no ACS a partir do início de 2018).
 
-Observação importante: O evoluído e "mais PaaS" versão do ACS (serviço de contêiner do Azure) para Kubernetes é AKS (serviço de Kubernetes do Azure), no entanto, os contêineres do Windows ainda não há suporte para a partir de Q2 2018, mas terá suporte em breve.
+Observação importante: O evoluído e "mais PaaS" versão do ACS (serviço de contêiner do Azure) para o Kubernetes é AKS (serviço de Kubernetes do Azure), no entanto, contêineres do Windows ainda não há suporte para a partir do Q2 2018, mas terá suporte em breve.
 
 >[!div class="step-by-step"]
-[Anterior](when-to-deploy-windows-containers-to-service-fabric.md)
-[Próximo](choosing-azure-compute-options-for-container-based-applications.md)
+>[Anterior](when-to-deploy-windows-containers-to-service-fabric.md)
+>[Próximo](choosing-azure-compute-options-for-container-based-applications.md)

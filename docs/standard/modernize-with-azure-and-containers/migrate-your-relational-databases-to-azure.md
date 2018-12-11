@@ -1,116 +1,116 @@
 ---
 title: Migrar seus bancos de dados relacionais para o azure
-description: Modernizar aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure | migrar seus bancos de dados relacionais para o azure
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | migrar seus bancos de dados relacionais para o azure
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956079"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153755"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrar seus bancos de dados relacionais para o azure
 
 Visão: O Azure oferece a migração de banco de dados mais abrangente.
 
-No Azure, você pode migrar os servidores de banco de dados diretamente para as VMs de IaaS (puro comparar e deslocar) ou você pode migrar para o banco de dados SQL Azure, para benefícios adicionais. Banco de dados do SQL Azure oferece as opções de (DBaaS) de completo banco de dados-como um serviço e instância gerenciada. Figura 3-1 mostra o banco de dados relacional vários caminhos de migração disponíveis no Azure.
+No Azure, você pode migrar seus servidores de banco de dados diretamente para as VMs de IaaS (puro comparar e deslocar) ou você pode migrar para o banco de dados SQL Azure, para benefícios adicionais. Banco de dados SQL do Azure oferece a instância gerenciada e opções do completo banco de dados-como-um-serviço (DBaaS). Figura 3-1 mostra o banco de dados relacional de vários caminhos de migração disponíveis no Azure.
 
-![Caminhos de migração do banco de dados no Azure](./media/image3-1.png)
+![Caminhos de migração de banco de dados no Azure](./media/image3-1.png)
 
-> **Figura 3-1.** Caminhos de migração do banco de dados no Azure
+> **Figura 3-1.** Caminhos de migração de banco de dados no Azure
 
-## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Quando a migração para gerenciados instância do banco de dados do SQL Azure
+## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Quando migrar para o banco de dados de instância gerenciada do SQL
 
-Na maioria dos casos, a instância gerenciada do Azure SQL Database será a melhor opção deve ser considerado ao migrar seus dados para o Azure. Se você estiver migrando bancos de dados do SQL Server e precisar quase 100% garantia que você não precisará Refaça a arquitetura de seu aplicativo ou fazer alterações em seus dados ou o código de acesso a dados, escolha o recurso de instância gerenciada do banco de dados do SQL Azure.
+Na maioria dos casos, o banco de dados de instância gerenciada do SQL será a melhor opção a considerar ao migrar seus dados para o Azure. Se você estiver migrando bancos de dados do SQL Server e precisar quase 100% assurance que você não precisará refazer a arquitetura de seu aplicativo ou fazer alterações em seus dados ou o código de acesso a dados, escolha o recurso de instância gerenciada do banco de dados SQL.
 
-Instância de gerenciados do banco de dados de SQL do Azure é a melhor opção se você tiver requisitos adicionais para a funcionalidade de nível de instância do SQL Server ou requisitos de isolamento, além dos recursos fornecidos em um padrão do Azure SQL Database (modelo de banco de dados único). Esse último é a escolha mais orientado a PaaS, mas ele não oferece os mesmos recursos que um SQL server tradicional. Migração pode superfície frictions.
+Instância de gerenciada do banco de dados de SQL do Azure é a melhor opção se você tiver requisitos adicionais para a funcionalidade de nível de instância do SQL Server ou requisitos de isolamento além dos recursos fornecidos em um Azure SQL Database (modelo de banco de dados individual) padrão. Este último é a escolha mais orientado a PaaS, mas ele não oferece os mesmos recursos de um SQL server tradicional. Migração venham a surgir fricções.
 
-Por exemplo, uma organização que investiu profundo de recursos de nível de instância do SQL Server pode se beneficiar da migração para a instância gerenciada do SQL. Exemplos de recursos do nível de instância do SQL Server incluem SQL integração common language runtime (CLR), SQL Server Agent e consultar dados. Suporte para esses recursos não está disponível no padrão do Azure SQL Database (um modelo de banco de dados único).
+Por exemplo, uma organização que já fez investimentos profundos em recursos do nível de instância do SQL Server pode se beneficiar da migração para a instância gerenciada do SQL. Exemplos de recursos do nível de instância do SQL Server incluem SQL integração common language runtime (CLR), SQL Server Agent e consultar bancos de dados. Suporte para esses recursos não está disponível no Azure SQL Database standard (um modelo de banco de dados único).
 
-Uma organização que opera em um setor altamente regulamentado e que precisam manter o isolamento para fins de segurança, também pode se beneficiar escolhendo o modelo de instância gerenciada do SQL.
+Uma organização que opera em um setor altamente controlado, e o que precisa manter o isolamento para fins de segurança, também pode se beneficiar escolhendo o modelo de instância gerenciada do SQL.
 
-Instância gerenciada no banco de dados SQL tem as seguintes características:
+A instância gerenciada SQL do Azure tem as seguintes características:
 
 - Isolamento de segurança por meio da rede Virtual do Azure
 
-- Superfície compatibilidade de aplicativos, com estes recursos:
+- Superfície compatibilidade de aplicativos, com esses recursos:
 
   - SQL Server Agent e o SQL Server Profiler
 
-  - Replicação de referências e consultas de SQL CLR, bancos de dados, change data capture (CDC) e do Service Broker
+  - Referências e consultas de SQL CLR, a replicação entre bancos de dados, o change data capture (CDC) e o Service Broker
 
-- Até 35 TB de tamanho de banco de dados
+- Tamanhos de banco de dados de até 35 TB
 
-- Migração de tempo de inatividade mínimo, com estes recursos:
+- Migração para o tempo de inatividade mínimo, com esses recursos:
 
-  - Serviço de migração do banco de dados do Azure
+  - Serviço de migração de banco de dados do Azure
 
   - Envio de logs, restauração e backup nativo
 
-Com esses recursos, ao migrar bancos de dados de aplicativo existentes para o banco de dados SQL Azure, o modelo de instância gerenciada oferece quase 100% dos benefícios de Paas para o SQL Server. Instância gerenciada é um ambiente de SQL Server onde você continuar a usar os recursos de nível de instância sem alterar o design do aplicativo.
+Com esses recursos, ao migrar bancos de dados de aplicativo existente para o banco de dados SQL Azure, o modelo de instância gerenciada oferece quase 100% dos benefícios de Paas para o SQL Server. Instância gerenciada é um ambiente do SQL Server no qual você continua usando os recursos de nível de instância sem alterar o design do aplicativo.
 
-Instância gerenciada provavelmente é a melhor opção para empresas que atualmente estão usando o SQL Server e que necessitam de flexibilidade a segurança de rede na nuvem. É como ter uma rede virtual privada para bancos de dados SQL.
+A instância gerenciada é provavelmente a melhor opção para empresas que atualmente estão usando o SQL Server e requerem a flexibilidade para sua segurança de rede na nuvem. É como ter uma rede virtual privada para seus bancos de dados SQL.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Quando a migração para o banco de dados do SQL Azure
+## <a name="when-to-migrate-to-azure-sql-database"></a>Quando migrar para o banco de dados SQL
 
-Conforme mencionado, o banco de dados padrão do SQL Azure é um DBaaS totalmente gerenciado, relacionais. Banco de dados SQL no momento gerencia milhões de bancos de dados de produção, em data 38 centers, em todo o mundo. Ele dá suporte a uma ampla gama de aplicativos e cargas de trabalho do gerenciamento de dados transacionais simples, para direcionar os aplicativos com uso intensivo de dados de missão crítica que exigem processamento avançado de dados em uma escala global.
+Conforme mencionado, o banco de dados padrão do SQL Azure é um DBaaS relacional, totalmente gerenciado. Atualmente, o banco de dados SQL gerencia milhões de bancos de dados de produção, em 38 datacenters, em todo o mundo. Ele dá suporte a uma ampla gama de aplicativos e cargas de trabalho do gerenciamento de dados transacionais simples, orientando os aplicativos mais intensivo de dados de missão crítica que exigem processamento de dados avançado em escala global.
 
-Devido a seus recursos completos de PaaS, melhor preços- e, finalmente, reduzir o custo-você deve mover o banco de dados do SQL Azure padrão sua escolha"por padrão" Se você tiver um aplicativo que usa basic, standard bancos de dados SQL e nenhum recurso de instância adicional. Não há suporte para recursos do SQL Server como a integração CLR do SQL, SQL Server Agent e consulta de bancos de dados no banco de dados padrão do SQL Azure. Esses recursos estão disponíveis apenas no modelo de instância gerenciada do Azure SQL Database.
+Devido a seus recursos de PaaS completos, melhor preço- e, por fim, reduzir o custo-você deve mover o banco de dados do SQL Azure padrão como sua escolha"por padrão" Se você tiver um aplicativo que usa básico, standard bancos de dados SQL e nenhum recurso de instância adicional. Recursos do SQL Server, como integração CLR do SQL, SQL Server Agent e consultar entre bancos de dados não têm suporte no banco de dados do SQL Azure padrão. Esses recursos estão disponíveis apenas no modelo de banco de dados instância gerenciada do SQL.
 
-Banco de dados do SQL Azure é o serviço de banco de dados de nuvem apenas inteligente que é criado para os desenvolvedores de aplicativos. Também é o único serviço de banco de dados de nuvem que pode ser expandido em rapidamente, sem tempo de inatividade, para ajudá-lo a fornecer com eficiência os aplicativos multilocatários. Por fim, o banco de dados do Azure SQL deixa mais tempo para inovar e ele reduz o tempo de mercado. Você pode criar aplicativos seguros e se conectar ao banco de dados SQL usando as linguagens e plataformas que você preferir.
+Banco de dados SQL do Azure é o serviço de banco de dados de nuvem apenas inteligente que é criado para desenvolvedores de aplicativos. Também é o único serviço de banco de dados de nuvem que pode ser dimensionado em imediatamente, sem tempo de inatividade, para ajudá-lo a entregar aplicativos multilocatários com eficiência. Por fim, o banco de dados do Azure SQL deixa mais tempo para inovar e ele reduz o tempo de colocação no mercado. Você pode criar aplicativos seguros e se conectar ao banco de dados SQL usando as linguagens e plataformas que preferir.
 
-Banco de dados do SQL Azure oferece os seguintes benefícios:
+Banco de dados SQL do Azure oferece os seguintes benefícios:
 
 - Inteligência interna (aprendizado de máquina) que aprende e se adapta ao seu aplicativo
 
-- Provisionamento do banco de dados sob demanda
+- Provisionamento de banco de dados sob demanda
 
-- Um intervalo de ofertas para todas as cargas de trabalho
+- Uma variedade de ofertas para todas as cargas de trabalho
 
-- disponibilidade de 99,99% SLA, zero manutenção
+- disponibilidade de 99,99% SLA, manutenção zero
 
 - Serviços de replicação geográfica e restauração para proteção de dados
 
-- Ponto de banco de dados do SQL Azure no recurso de restauração pontual
+- Ponto de banco de dados SQL do Azure no recurso de restauração pontual
 
 - Compatibilidade com o SQL Server 2016, incluindo híbrida e migração
 
-Banco de dados padrão do SQL Azure está mais próximo PaaS de gerenciado instância do banco de dados do SQL Azure. Preferir banco de dados padrão do SQL Azure, porque você terá mais benefícios de uma nuvem gerenciada. No entanto, o banco de dados do Azure SQL tem algumas das principais diferenças de regular e instâncias do SQL Server local. Dependendo de requisitos de banco de dados do seu aplicativo existente e seus requisitos de empresa e políticas, talvez não seja a melhor opção quando você estiver planejando a migração para a nuvem.
+O banco de dados do SQL Azure standard é mais próximo do PaaS que banco de dados de instância gerenciada do SQL. Prefira o banco de dados do SQL Azure padrão porque você obterá mais benefícios de uma nuvem gerenciada. No entanto, o banco de dados do Azure SQL tem algumas das principais diferenças de regular e instâncias do SQL Server local. Dependendo de requisitos de banco de dados do seu aplicativo existente e seus requisitos empresariais e políticas, ele não pode ser a melhor opção quando você estiver planejando sua migração para a nuvem.
 
-## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>Ao mover o RDBMS original para uma VM (IaaS)
+## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>Quando mover seu RDBMS original para uma VM (IaaS)
 
-Uma das suas opções de migração é mover seu original sistema de gerenciamento do banco de dados relacional (RDBMS), inclusive Oracle, IBM DB2, MySQL, PostgreSQL ou SQL Server, para um servidor semelhante que está em execução em uma VM do Azure. Se você tiver aplicativos existentes que exigem a migração mais rápida para a nuvem com alterações mínimas ou nenhuma alteração em todos os, uma migração direta para IaaS na nuvem pode ser uma opção razoável. Ele não pode ser a melhor maneira de aproveitar os benefícios de todos os da nuvem, mas provavelmente é o caminho inicial mais rápido.
+Uma das suas opções de migração é mover seu original sistema de gerenciamento do banco de dados relacional (RDBMS), inclusive Oracle, IBM DB2, MySQL, PostgreSQL ou SQL Server, para um servidor semelhante que está em execução em uma VM do Azure. Se você tiver aplicativos existentes que requerem a migração mais rápida para a nuvem com alterações mínimas ou nenhuma alteração alguma, uma migração direta para o IaaS na nuvem pode ser uma opção razoável. Pode não ser a melhor maneira de tirar proveito dos benefícios de todos os da nuvem, mas provavelmente é o caminho inicial mais rápido.
 
-Atualmente, o Microsoft Azure suporta até [331 servidores de banco de dados diferente](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) implantadas como VMs de IaaS. Isso inclui RDBMS populares como o SQL Server, Oracle, MySQL, PostgreSQL e IBM DB2 e muitos outros bancos de dados NoSQL como MongoDB, Cassandra, DataStax, MariaDB e Cloudera.
+Atualmente, o Microsoft Azure suporta até [servidores de banco de dados diferente 331](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) implantadas como VMs de IaaS. Eles incluem RDBMS populares, como o SQL Server, Oracle, MySQL, PostgreSQL e IBM DB2 e muitos outros bancos de dados NoSQL como o MongoDB, Cassandra, DataStax, MariaDB e Cloudera.
 
 > [!NOTE]
-> Embora mover seu RDBMS para uma VM do Azure pode ser a maneira mais rápida para migrar seus dados para a nuvem (porque IaaS), essa abordagem requer um investimento significativo em suas equipes de TI (administradores de banco de dados e os profissionais de TI). Equipes de empresa precisam ser capaz de configurar e gerenciar a alta disponibilidade, recuperação de desastres e a aplicação de patch do SQL Server. Esse contexto também precisa de um ambiente personalizado, com direitos administrativos completos.
+> Embora a movimentação de seu RDBMS para uma VM do Azure pode ser a maneira mais rápida para migrar seus dados para a nuvem (porque ele é IaaS), essa abordagem exige um investimento significativo em suas equipes de TI (administradores de banco de dados e os profissionais de TI). Equipes da empresa precisam ser capaz de configurar e gerenciar a alta disponibilidade, recuperação de desastres e aplicação de patch para o SQL Server. Nesse contexto também precisa de um ambiente personalizado, com direitos administrativos completos.
 
 ## <a name="when-to-migrate-to-sql-server-as-a-vm-iaas"></a>Quando migrar para o SQL Server como uma VM (IaaS)
 
-Pode haver alguns casos em que você ainda precisa migrar para o SQL Server como uma VM regular. Um cenário de exemplo é se você precisa usar o SQL Server Reporting Services. Na maioria dos casos, porém, gerenciados instância do banco de dados do SQL Azure pode fornecer tudo o que você precisa para migrar dos servidores do SQL local, para a migração para uma VM do SQL Server deve ser o último recurso para experimentar.
+Pode haver alguns casos em que você ainda precisará migrar para o SQL Server como uma VM regular. Um cenário de exemplo é se você precisa usar o SQL Server Reporting Services. Na maioria dos casos, no entanto, banco de dados de instância gerenciada do SQL pode fornecer tudo o que você precisa para migrar de servidores do SQL local, portanto, a migração para uma VM do SQL Server deve ser o último recurso para tentar.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Use o serviço de migração de banco de dados do Azure para migrar seus bancos de dados relacionais para o Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Usar o serviço de migração de banco de dados do Azure para migrar seus bancos de dados relacionais para o Azure 
 
-Você pode usar o serviço de migração de banco de dados do Azure para migrar bancos de dados relacionais, como o SQL Server, Oracle e MySQL para o Azure, se seu banco de dados de destino é o banco de dados do SQL Azure, gerenciados instância do banco de dados do SQL Azure ou SQL Server em uma VM do Azure.
+Você pode usar o serviço de migração de banco de dados do Azure para migrar bancos de dados relacionais como SQL Server, Oracle e MySQL para o Azure, se seu banco de dados de destino é o banco de dados SQL, banco de dados de instância gerenciada do SQL ou SQL Server em uma VM do Azure.
 
-O fluxo de trabalho automatizado, com os relatórios de avaliação, orientará você durante as alterações que você precisa fazer antes de migrar o banco de dados. Quando você estiver pronto, o serviço migra o banco de dados de origem para o Azure.
+O fluxo de trabalho automatizado com o relatório de avaliação, o orienta durante as alterações que você precisa fazer antes de migrar o banco de dados. Quando você estiver pronto, o serviço migra o banco de dados de origem para o Azure.
 
-Sempre que alterar um RDBMS original, você precisará testar novamente. Você também pode precisar alterar a frases SQL ou código de mapeamento relacional de objeto (ORM) em seu aplicativo, dependendo dos resultados de testes.
+Sempre que você alterar um RDBMS original, você precisa testar novamente. Você também precisará alterar o código de mapeamento relacional de objeto (ORM) em seu aplicativo, dependendo dos resultados de testes ou frases SQL.
 
-Se você tiver qualquer outro banco de dados (por exemplo, IBM DB2) e você optar por uma abordagem de comparar e deslocar, deseja continuar usando esses bancos de dados como VMs de IaaS no Azure, a menos que você pretende executar uma migração de dados mais complexa. Migração de dados mais complexa exige esforço adicional, pois você poderia ser migrando para um tipo de banco de dados diferente com o novo esquema e as bibliotecas de programação diferentes.
+Se você tiver qualquer outro banco de dados (por exemplo, IBM DB2) e você optar por uma abordagem de lift- and -shift, você poderá continuar usando esses bancos de dados como VMs de IaaS no Azure, a menos que você está disposto a executar uma migração de dados mais complexa. Uma migração de dados mais complexa exigirão esforço adicional porque você poderia ser migrando para um tipo de banco de dados diferente com o novo esquema e as bibliotecas de programação diferentes.
 
-Para saber como migrar bancos de dados usando o serviço de migração de banco de dados do Azure, consulte [Get para a nuvem mais rápida com gerenciado instância do banco de dados do SQL Azure e o serviço de migração de banco de dados do Azure](https://channel9.msdn.com/Events/Build/2017/P4008).
+Para saber como migrar bancos de dados usando o serviço de migração de banco de dados do Azure, consulte [chegar à nuvem mais rápido com o serviço de migração de banco de dados do Azure e o banco de dados de instância gerenciada do SQL](https://channel9.msdn.com/Events/Build/2017/P4008).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Escolha uma opção do SQL Server de nuvem: banco de dados do SQL do Azure (PaaS) ou o SQL Server na VM do Azure (IaaS)**
+- **Escolha uma opção do SQL Server de nuvem: Banco de dados SQL do Azure (PaaS) ou o SQL Server na VM do Azure (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
-- **Obter para a nuvem mais rápida com o serviço de migração do banco de dados e instância gerenciada do Azure SQL DB**
+- **Introdução à nuvem mais rapidamente com a instância gerenciada do Azure SQL DB e o serviço de migração de banco de dados**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
@@ -127,5 +127,5 @@ Para saber como migrar bancos de dados usando o serviço de migração de banco 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
 >[!div class="step-by-step"]
-[Anterior](lift-and-shift-existing-apps-azure-iaas.md)
-[Próximo](modernize-existing-apps-to-cloud-optimized/index.md)
+>[Anterior](lift-and-shift-existing-apps-azure-iaas.md)
+>[Próximo](modernize-existing-apps-to-cloud-optimized/index.md)

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 03a9580bee6308ef53c7d2bc6e9dbe619c2048f7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808426"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152624"
 ---
 # <a name="wcf-client-overview"></a>Visão geral do cliente WCF
-Esta seção descreve o que fazem aplicativos cliente, como configurar, criar e usar um cliente Windows Communication Foundation (WCF) e como proteger aplicativos cliente.  
+Esta seção descreve o que fazem aplicativos cliente, como configurar, criar e usar um cliente do Windows Communication Foundation (WCF) e como proteger aplicativos cliente.  
   
 ## <a name="using-wcf-client-objects"></a>Usando objetos de cliente WCF  
- Um aplicativo cliente é um aplicativo gerenciado que usa um cliente WCF para se comunicar com outro aplicativo. Para criar um cliente de aplicativo para um serviço WCF exige as seguintes etapas:  
+ Um aplicativo cliente é um aplicativo gerenciado que usa um cliente WCF para se comunicar com outro aplicativo. Para criar um cliente de aplicativo para um serviço WCF requer as seguintes etapas:  
   
 1.  Obter o contrato de serviço, as associações e as informações de endereço de um ponto de extremidade de serviço.  
   
@@ -41,48 +41,48 @@ Esta seção descreve o que fazem aplicativos cliente, como configurar, criar e 
 -   Chamando serviços por meio de canais de cliente.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Obter o contrato de serviço, as associações e os endereços  
- No WCF, serviços e clientes modelo contratos usando atributos gerenciados, interfaces e métodos. Para se conectar a um serviço em um aplicativo cliente, é necessário obter as informações de tipo do contrato de serviço. Normalmente, você faz isso usando o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), que baixa os metadados do serviço, converte-o em um arquivo de código fonte gerenciado no idioma de sua escolha e cria um cliente arquivo de configuração do aplicativo que você pode usar para configurar seu objeto de cliente do WCF. Por exemplo, se você pretende criar um objeto de cliente do WCF para invocar um `MyCalculatorService`, e você souber que os metadados para esse serviço é publicado em `http://computerName/MyCalculatorService/Service.svc?wsdl`, em seguida, o exemplo de código a seguir mostra como usar o Svcutil.exe para obter um `ClientCode.vb` arquivo contém o contrato de serviço em código gerenciado.  
+ No WCF, serviços e clientes do modelo contratos usando atributos gerenciados, interfaces e métodos. Para se conectar a um serviço em um aplicativo cliente, é necessário obter as informações de tipo do contrato de serviço. Normalmente, você faz isso usando o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), que baixa metadados do serviço, converte-o em um arquivo de código fonte gerenciado na linguagem de sua escolha e cria um cliente arquivo de configuração do aplicativo que você pode usar para configurar o objeto de cliente do WCF. Por exemplo, se você pretende criar um objeto de cliente WCF para invocar um `MyCalculatorService`, e você souber que os metadados para o serviço é publicado ao `http://computerName/MyCalculatorService/Service.svc?wsdl`, em seguida, o exemplo de código a seguir mostra como usar Svcutil.exe para obter um `ClientCode.vb` de arquivos que contém o contrato de serviço em código gerenciado.  
   
 ```  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
- Você também pode compilar este código de contrato no aplicativo cliente ou em outro assembly que o aplicativo cliente pode usar para criar um objeto de cliente do WCF. Você pode usar o arquivo de configuração para configurar o objeto de cliente para se conectar corretamente ao serviço.  
+ Você pode compilar esse código de contrato no aplicativo cliente ou em outro assembly que o aplicativo cliente, em seguida, pode usar para criar um objeto de cliente do WCF. Você pode usar o arquivo de configuração para configurar o objeto de cliente para se conectar corretamente ao serviço.  
   
- Para obter um exemplo desse processo, consulte [como: criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Para obter mais informações sobre contratos, consulte [contratos](../../../docs/framework/wcf/feature-details/contracts.md).  
+ Para obter um exemplo desse processo, consulte [como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Para obter informações mais completas sobre os contratos, consulte [contratos](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 ## <a name="create-a-wcf-client-object"></a>Criar um novo objeto de cliente WCF  
- Um cliente do WCF é um objeto local que representa um serviço WCF de forma que o cliente pode usar para se comunicar com o serviço remoto. Tipos de cliente do WCF implementam o serviço de destino de contrato, portanto, quando você criá-lo e configurá-lo, você pode usar o objeto cliente diretamente para chamar operações de serviço. O tempo de execução do WCF converte chamadas de método em mensagens, envia para o serviço, escuta para a resposta e retorna esses valores para o objeto de cliente do WCF como valores de retorno ou `out` ou `ref` parâmetros.  
+ Um cliente do WCF é um objeto local que representa um serviço WCF em um formulário que o cliente pode usar para se comunicar com o serviço remoto. Tipos de cliente WCF implementam o serviço de destino de contrato, portanto, quando você cria um e configurá-lo, em seguida, você pode usar o objeto de cliente diretamente para chamar as operações de serviço. O tempo de execução do WCF converte as chamadas de método em mensagens, envia-os para o serviço, escuta a resposta e retorna os valores para o objeto de cliente do WCF como valores de retorno ou `out` ou `ref` parâmetros.  
   
- Você também pode usar objetos de canal do cliente WCF para se conectar e usar os serviços. Para obter detalhes, consulte [arquitetura do cliente WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ Você também pode usar objetos de canal de cliente do WCF para se conectar e usar os serviços. Para obter detalhes, consulte [arquitetura de cliente WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 #### <a name="creating-a-new-wcf-object"></a>Criando um novo objeto do WCF  
  Para ilustrar o uso de uma classe <xref:System.ServiceModel.ClientBase%601>, suponha que o seguinte contrato de serviço simples foi gerado em um aplicativo de serviço.  
   
 > [!NOTE]
->  Se você estiver usando o Visual Studio para criar o cliente WCF, os objetos são carregados automaticamente no Pesquisador de objetos quando você adiciona uma referência de serviço ao seu projeto.  
+>  Se você estiver usando o Visual Studio para criar seu cliente do WCF, os objetos são carregados automaticamente no Pesquisador de objetos quando você adiciona uma referência de serviço ao seu projeto.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Se você não estiver usando o Visual Studio, examine o código de contrato gerado para localizar o tipo estende <xref:System.ServiceModel.ClientBase%601> e a interface de contrato de serviço `ISampleService`. Nesse caso, esse tipo terá a seguinte aparência:  
+ Se você não estiver usando o Visual Studio, examine o código de contrato gerado para localizar o tipo que estende <xref:System.ServiceModel.ClientBase%601> e a interface de contrato de serviço `ISampleService`. Nesse caso, esse tipo terá a seguinte aparência:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
  Essa classe pode ser criada como um objeto local usando um dos construtores, configurada e, em seguida, usada para se conectar a um serviço do tipo `ISampleService`.  
   
- É recomendável que você crie o objeto de cliente WCF pela primeira vez e, em seguida, usá-lo e fechá-lo dentro de um bloco try/catch único. Você não deve usar o `using` instrução (`Using` no Visual Basic) porque ele pode mascarar exceções em certos modos de falha. Para obter mais informações, consulte as seções a seguir, bem como [evitando problemas com a instrução Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ É recomendável que você crie o objeto de cliente do WCF em primeiro lugar e, em seguida, usá-lo e fechá-lo em um bloco try/catch único. Você não deve usar o `using` instrução (`Using` no Visual Basic) porque isso pode mascarar exceções em determinados modos de falha. Para obter mais informações, consulte as seções a seguir, bem como [uso Close e Abort para liberar os recursos de cliente do WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Contratos, associações e endereços  
- Antes de criar um objeto de cliente do WCF, você deve configurar o objeto de cliente. Especificamente, ele deve ter um serviço *ponto de extremidade* usar. O ponto de extremidade é a combinação de um contrato de serviço, uma associação e um endereço. (Para obter mais informações sobre pontos de extremidade, consulte [pontos de extremidade: endereços, associações e contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Normalmente, essas informações estão localizadas no [ \<ponto de extremidade >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) elemento em um arquivo de configuração do aplicativo cliente, como o a ferramenta Svcutil.exe gera e é carregada automaticamente quando você cria seu cliente objeto. Os dois tipos de cliente do WCF também têm sobrecargas que permitem que você especifique programaticamente essas informações.  
+ Antes de criar um objeto de cliente do WCF, você deve configurar o objeto de cliente. Especificamente, ele deve ter um serviço *ponto de extremidade* usar. O ponto de extremidade é a combinação de um contrato de serviço, uma associação e um endereço. (Para obter mais informações sobre pontos de extremidade, consulte [pontos de extremidade: Endereços, associações e contratos](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) Normalmente, essas informações estão localizadas na [ \<ponto de extremidade >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) elemento em um arquivo de configuração do aplicativo cliente, como a ferramenta Svcutil.exe gera e é carregada automaticamente quando você cria seu cliente objeto. Ambos os tipos de cliente WCF também têm sobrecargas que permitem que você especificar essas informações de forma programática.  
   
  Por exemplo, um arquivo de configuração gerado de um `ISampleService` usado nos exemplos anteriores contém as seguintes informações de ponto de extremidade.  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Esse arquivo de configuração especifica um ponto de extremidade de destino no elemento `<client>`. Para obter mais informações sobre como usar vários pontos de extremidade de destino, consulte o <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> construtores.  
+ Esse arquivo de configuração especifica um ponto de extremidade de destino no elemento `<client>`. Para obter mais informações sobre como usar vários pontos de extremidade de destino, consulte o <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> ou o <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> construtores.  
   
 ## <a name="calling-operations"></a>Chamando operações  
- Uma vez você tem um objeto de cliente criado e configurado, crie um bloco try/catch, chamar operações da mesma maneira que faria se o objeto local e fechar o objeto de cliente do WCF. Quando o aplicativo cliente chama a primeira operação, WCF abre automaticamente o canal subjacente e o canal subjacente é fechado quando o objeto é reciclado. (Como alternativa, você também pode abrir e fechar explicitamente o canal antes ou após chamar outras operações.)  
+ Uma vez você tem um objeto de cliente criado e configurado, criar um bloco try/catch, chame as operações da mesma maneira que faria se o objeto fosse local e fechar o objeto de cliente do WCF. Quando o aplicativo cliente chama a primeira operação, WCF abre automaticamente o canal subjacente e o canal subjacente é fechado quando o objeto é reciclado. (Como alternativa, você também pode abrir e fechar explicitamente o canal antes ou após chamar outras operações.)  
   
  Por exemplo, se você tiver o seguinte contrato de serviço:  
   
@@ -127,12 +127,12 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Você pode chamar operações, criando um objeto de cliente do WCF e chamar seus métodos, como o exemplo de código a seguir demonstra. Observe que a abertura, a chamada e o fechamento do objeto de cliente WCF ocorre dentro de um bloco try/catch único. Para obter mais informações, consulte [Acessando serviços usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) e [evitando problemas com a instrução Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Você pode chamar as operações com a criação de um objeto de cliente do WCF e chamando seus métodos, como o exemplo de código a seguir demonstra. Observe que a abertura, a chamada e o fechamento do objeto de cliente WCF ocorre dentro de um bloco try/catch único. Para obter mais informações, consulte [serviços de acesso usando um cliente WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) e [uso Close e Abort para liberar os recursos de cliente do WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>Manipulando erros  
- Poderão ocorrer exceções em um aplicativo cliente quando o canal de cliente subjacente for aberto (explícita ou automaticamente, durante o chamamento de uma operação), o objeto de cliente ou de canal for usado para chamar operações, ou o canal de cliente subjacente for fechado. É recomendável que os aplicativos possam, pelo menos, manipular as exceções <xref:System.TimeoutException?displayProperty=nameWithType> e <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> possíveis, além de qualquer objeto <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> lançado como resultado de falhas de SOAP retornadas pelas operações. As falhas de SOAP especificadas no contrato de operação são geradas para aplicativos cliente como <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>, em que o parâmetro de tipo é o tipo de detalhe da falha de SOAP. Para obter mais informações sobre como lidar com condições de erro em um aplicativo cliente, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para um conjunto completo de exemplo o mostra como tratar erros em um cliente, consulte [esperado exceções](../../../docs/framework/wcf/samples/expected-exceptions.md).  
+ Poderão ocorrer exceções em um aplicativo cliente quando o canal de cliente subjacente for aberto (explícita ou automaticamente, durante o chamamento de uma operação), o objeto de cliente ou de canal for usado para chamar operações, ou o canal de cliente subjacente for fechado. É recomendável que os aplicativos possam, pelo menos, manipular as exceções <xref:System.TimeoutException?displayProperty=nameWithType> e <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> possíveis, além de qualquer objeto <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> lançado como resultado de falhas de SOAP retornadas pelas operações. As falhas de SOAP especificadas no contrato de operação são geradas para aplicativos cliente como <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>, em que o parâmetro de tipo é o tipo de detalhe da falha de SOAP. Para obter mais informações sobre como lidar com condições de erro em um aplicativo cliente, consulte [enviando e recebendo falhas](../../../docs/framework/wcf/sending-and-receiving-faults.md). Para um exemplo completo que mostra como tratar erros em um cliente, consulte [esperado exceções](../../../docs/framework/wcf/samples/expected-exceptions.md).  
   
 ## <a name="configuring-and-securing-clients"></a>Configurando e protegendo clientes  
  A configuração de um cliente começa com o carregamento obrigatório das informações de ponto de extremidade de destino do objeto de cliente ou de canal, geralmente em um arquivo de configuração, embora você também pode carregar essas informações de modo programático, usando as propriedades e os construtores de cliente. No entanto, são necessárias etapas adicionais de configuração em vários cenários de segurança e para habilitar determinado comportamento de cliente.  
@@ -148,11 +148,11 @@ End Interface
   
 -   Implementar uma classe de contrato de retorno de chamada.  
   
--   Criar uma instância da classe de implementação do contrato de retorno de chamada e usá-lo para criar o <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> objeto que você passa para o construtor de cliente do WCF.  
+-   Crie uma instância da classe de implementação de contrato de retorno de chamada e usá-lo para criar o <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> objeto que você passa para o construtor de cliente do WCF.  
   
 -   Chamar operações e manipular retornos de chamada de operação.  
   
- Função de objetos de cliente WCF duplex como suas contrapartes nonduplex, com exceção de que elas exponham a funcionalidade necessária para dar suporte a retornos de chamada, incluindo a configuração do serviço de retorno de chamada.  
+ Função duplex de objetos de cliente WCF como suas contrapartes nonduplex, com exceção de que eles expõem a funcionalidade necessária para dar suporte a retornos de chamada, incluindo a configuração do serviço de retorno de chamada.  
   
  Por exemplo, você pode controlar vários aspectos do comportamento de tempo de execução do objeto de retorno de chamada usando as propriedades do atributo <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> da classe de retorno de chamada. Outro exemplo é o uso da classe <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> para habilitar o retorno das informações de exceção para serviços que chamam o objeto de retorno de chamada. Para obter mais informações, consulte [serviços Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md). Para obter um exemplo completo, consulte [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
   
@@ -166,10 +166,10 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Chamando serviços de modo assíncrono  
- A maneira como as operações serão chamadas fica totalmente a cargo do desenvolvedor do cliente. Isso acontece porque as mensagens que compõem uma operação podem ser mapeadas para métodos síncronos ou assíncronos quando expressas em código gerenciado. Portanto, se você quiser compilar um cliente que chama operações de forma assíncrona, use o Svcutil.exe para gerar um código de cliente assíncrono usando a opção `/async`. Para obter mais informações, consulte [como: chamar operações de serviço assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ A maneira como as operações serão chamadas fica totalmente a cargo do desenvolvedor do cliente. Isso acontece porque as mensagens que compõem uma operação podem ser mapeadas para métodos síncronos ou assíncronos quando expressas em código gerenciado. Portanto, se você quiser compilar um cliente que chama operações de forma assíncrona, use o Svcutil.exe para gerar um código de cliente assíncrono usando a opção `/async`. Para obter mais informações, consulte [como: Chamar operações de serviço de forma assíncrona](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Chamando serviços por meio de canais de cliente WCF  
- Estendem os tipos de cliente WCF <xref:System.ServiceModel.ClientBase%601>, que deriva de <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interface para expor o sistema de canal subjacente. Você pode chamar serviços usando o contrato de serviço de destino com a classe <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obter detalhes, consulte [arquitetura do cliente WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ Estendem os tipos de cliente WCF <xref:System.ServiceModel.ClientBase%601>, que é derivada de <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> interface para expor o sistema de canal subjacente. Você pode chamar serviços usando o contrato de serviço de destino com a classe <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obter detalhes, consulte [arquitetura de cliente WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

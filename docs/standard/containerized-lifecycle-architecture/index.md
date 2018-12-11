@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148815"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introdução aos contêineres e ao Docker
 
@@ -23,14 +23,13 @@ Cada contêiner pode executar um aplicativo Web ou um serviço inteiro, conforme
 
 ![](./media/image1.png)
 
-Figura 1-1: vários contêineres em execução em um host de contêiner
+Figura 1-1: Vários contêineres em execução em um host de contêiner
 
 Neste exemplo, o Host do Docker é um host de contêiner e App1, App2, Svc 1 e Svc 2 são aplicativos ou serviços em contêineres.
 
-Outra vantagem do uso de contêineres é a escalabilidade. É possível expandir rapidamente criando novos contêineres para tarefas de curto prazo. Do ponto de vista do aplicativo, *criar uma instância de uma imagem* (criar um contêiner) é semelhante a criar uma instância de um processo, como um serviço ou aplicativo Web. No entanto, para assegurar a confiabilidade, ao executar várias instâncias da mesma imagem em vários servidores host, geralmente é melhor que cada contêiner (instância da imagem) seja executado em um servidor host ou em uma VM diferente em domínios de falha diferentes.
+Outra vantagem do uso de contêineres é a escalabilidade. É possível expandir rapidamente criando novos contêineres para tarefas de curto prazo. Do ponto de vista do aplicativo, *criar uma instância de uma imagem* (criar um contêiner) é semelhante a criar uma instância de um processo, como um serviço ou aplicativo Web. Para a confiabilidade, no entanto, quando você executa várias instâncias da mesma imagem em vários servidores de host, você normalmente deseja cada contêiner (instância de imagem) para ser executado em um servidor de host diferente ou a VM em diferentes domínios de falha.
 
 Resumindo, os contêineres oferecem os benefícios de isolamento, portabilidade, agilidade, escalabilidade e controle em todo o fluxo de trabalho do ciclo de vida do aplicativo. O benefício mais importante é o isolamento fornecido entre desenvolvimento e operações.
 
-
 >[!div class="step-by-step"]
-[Avançar](what-is-docker.md)
+>[Avançar](what-is-docker.md)

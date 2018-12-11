@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183796"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143603"
 ---
 # <a name="adonet-code-examples"></a>Exemplos de código do ADO.NET
 As listagens de código neste tópico demonstram como recuperar dados de um banco de dados usando as seguintes tecnologias do ADO.NET:
@@ -63,7 +63,7 @@ O código neste exemplo pressupõe uma conexão a DEMO.CUSTOMER em um servidor O
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Exemplos do Entity Framework
-As seguintes listagens de código demonstram como recuperar dados de uma fonte de dados consultando entidades em um EDM (Modelo de Dados de Entidade). Esses exemplos usam o [modelo do Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Para obter mais informações, consulte [visão geral do Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
+As seguintes listagens de código demonstram como recuperar dados de uma fonte de dados consultando entidades em um EDM (Modelo de Dados de Entidade). Esses exemplos usam um modelo baseado em dados de exemplo Northwind. Para obter mais informações sobre o Entity Framework, consulte [visão geral do Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
 O código neste exemplo usa uma consulta LINQ para retornar dados como objetos Categories, que são projetados como um tipo anônimo que contém somente as propriedades CategoryID e CategoryName. Para obter mais informações, consulte [LINQ para visão geral de entidades](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
@@ -348,5 +348,5 @@ End Class
  [Retrieving and Modifying Data in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  [Criando aplicativos de dados](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Consultando um modelo de dados de entidade (Entity Framework tarefas)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Como: executar uma consulta que retorna objetos de tipo anônimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Como: Executar uma consulta que retorna objetos de tipo anônimo](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)  

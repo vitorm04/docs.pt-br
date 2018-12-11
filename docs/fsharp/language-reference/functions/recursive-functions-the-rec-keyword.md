@@ -1,15 +1,15 @@
 ---
-title: 'Funções recursivas: a palavra-chave rec (F#)'
-description: Saiba como a palavra-chave F# 'rec' é usada com a palavra-chave 'let' para definir uma função recursiva.
+title: 'Funções recursivas: A palavra-chave rec (F#)'
+description: Saiba como o F# palavra-chave 'rec' é usado com a palavra-chave 'let' para definir uma função recursiva.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0db3ed7f85a1380654f2827b4773985b661589c7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48024513"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127726"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Funções recursivas: a palavra-chave rec
+# <a name="recursive-functions-the-rec-keyword"></a>Funções recursivas: A palavra-chave rec
 
 O `rec` palavra-chave é usada junto com o `let` palavra-chave para definir uma função recursiva.
 
@@ -30,14 +30,14 @@ function2-body
 
 ## <a name="remarks"></a>Comentários
 
-Funções recursivas, funções que chamam seu site, são identificadas explicitamente na linguagem F#. Isso disponibiliza o identificador que está sendo definido no escopo da função.
+Funções recursivas, funções que chamam seu site, são identificadas explicitamente no F# idioma. Isso disponibiliza o identificador que está sendo definido no escopo da função.
 
 O código a seguir ilustra uma função recursiva que calcula a *n*<sup>th</sup> número Fibonacci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
->[!NOTE]
-Na prática, o código acima como esse é um desperdício de tempo do processador e memória porque ela envolve o recálculo dos valores computados anteriormente.
+> [!NOTE]
+> Na prática, o código acima como esse é um desperdício de tempo do processador e memória porque ela envolve o recálculo dos valores computados anteriormente.
 
 Métodos são implicitamente recursivos dentro do tipo; não é necessário adicionar o `rec` palavra-chave. Associações Let em classes não são implicitamente recursivos.
 

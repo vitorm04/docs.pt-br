@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152871"
 ---
 # <a name="common-container-design-principles"></a>Princípios de design comuns do contêiner
 
@@ -21,7 +21,6 @@ No modelo de contêiner, um contêiner representa um único processo. Definindo 
 
 Você pode encontrar um cenário no qual você deseja que vários processos em execução em um único contêiner. Em qualquer documento de arquitetura, nunca há um "nunca", nem sempre há um "sempre". Para cenários que exigem vários processos, um padrão comum é usar [Supervisor](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Anterior](design-docker-applications.md)
-[Próximo](monolithic-applications.md)
+>[Anterior](design-docker-applications.md)
+>[Próximo](monolithic-applications.md)

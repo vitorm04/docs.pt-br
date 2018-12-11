@@ -1,18 +1,18 @@
 ---
-title: 'Declarações de importação: a palavra-chave open (F#)'
-description: Saiba mais sobre declarações de importação do F# e como elas especificam um módulo ou namespace cujos elementos que você pode referenciar sem usar um nome totalmente qualificado.
+title: 'Declarações de importação: A palavra-chave open (F#)'
+description: Saiba mais sobre F# importar declarações e como elas especificam um módulo ou namespace cujos elementos que você pode referenciar sem usar um nome totalmente qualificado.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1f6fa791f993459178646687195037563da82540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46586617"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127297"
 ---
-# <a name="import-declarations-the-open-keyword"></a>Declarações de importação: A `open` palavra-chave
+# <a name="import-declarations-the-open-keyword"></a>Declarações de importação: O `open` palavra-chave
 
 > [!NOTE]
-Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
+> Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
 Uma *declaração da importação* Especifica um módulo ou namespace cujos elementos que você pode referenciar sem usar um nome totalmente qualificado.
 
@@ -36,7 +36,7 @@ O código a seguir mostra o uso do `open` palavra-chave para simplificar o códi
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-O compilador F# não emite um erro ou aviso quando ambiguidades ocorrem quando o mesmo nome ocorre em mais de um namespace ou módulo aberto. Quando ocorrem as ambiguidades, F# dá preferência para o namespace ou módulo abertos mais recentemente. Por exemplo, no código a seguir, `empty` significa `Seq.empty`, embora `empty` está localizado em ambos os `List` e `Seq` módulos.
+O F# compilador não emite um erro ou aviso quando ambiguidades ocorrem quando o mesmo nome ocorre em mais de um namespace ou módulo aberto. Quando ambiguidades ocorrem, F# dá preferência para o namespace ou módulo abertos mais recentemente. Por exemplo, no código a seguir, `empty` significa `Seq.empty`, embora `empty` está localizado em ambos os `List` e `Seq` módulos.
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ Portanto, tenha cuidado ao abrir módulos ou namespaces, como `List` ou `Seq` qu
 
 ## <a name="namespaces-that-are-open-by-default"></a>Namespaces que estão abertos por padrão
 
-Alguns namespaces são usados com tanta frequência no código F# que eles sejam abertos implicitamente sem a necessidade de uma declaração de importação explícita. A tabela a seguir mostra os namespaces que estão abertos por padrão.
+Alguns namespaces com tanta frequência são usados em F# que são abertas implicitamente sem a necessidade de uma declaração de importação explícita do código. A tabela a seguir mostra os namespaces que estão abertos por padrão.
 
 |Namespace|Descrição|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Contém básicas definições de tipo F# para tipos internos, como `int` e `float`.|
+|`Microsoft.FSharp.Core`|Contém o básico F# digite definições para tipos internos, como `int` e `float`.|
 |`Microsoft.FSharp.Core.Operators`|Contém operações aritméticas básicas, como `+` e `*`.|
 |`Microsoft.FSharp.Collections`|Contém classes de coleção imutável, como `List` e `Array`.|
 |`Microsoft.FSharp.Control`|Contém tipos para construções de controle, como a avaliação lenta e fluxos de trabalho assíncronos.|

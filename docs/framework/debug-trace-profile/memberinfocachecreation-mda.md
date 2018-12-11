@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392080"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145196"
 ---
 # <a name="memberinfocachecreation-mda"></a>MDA memberInfoCacheCreation
 O MDA (Assistente de Depuração Gerenciado) de `memberInfoCacheCreation` é ativado quando um cache de <xref:System.Reflection.MemberInfo> é criado. Isso é uma indicação forte de um programa que está fazendo uso de recursos de reflexão com consumo elevado de recursos computacionais.  
@@ -52,7 +52,7 @@ O MDA (Assistente de Depuração Gerenciado) de `memberInfoCacheCreation` é ati
 ## <a name="example"></a>Exemplo  
  Esse código de exemplo ativará o MDA `memberInfoCacheCreation`.  
   
-```  
+```csharp
 using System;  
   
 public class Exe  

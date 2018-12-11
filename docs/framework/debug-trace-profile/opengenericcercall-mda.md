@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 486c3c44b69c69a472b7405b6c14f9d27a29d756
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2cb99a1bda8223ddece4b4aff4a87d95357d90e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387514"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153690"
 ---
 # <a name="opengenericcercall-mda"></a>MDA openGenericCERCall
 O Assistente de Depuração Gerenciado de `openGenericCERCall` é ativado para avisar que um gráfico de CER (região de execução restrita) com variáveis de tipo genérico no método raiz está sendo processado em tempo de compilação JIT ou tempo de geração de imagem nativa e pelo menos uma das variáveis de tipo genérico é um tipo de referência de objeto.  
@@ -64,7 +64,7 @@ O Assistente de Depuração Gerenciado de `openGenericCERCall` é ativado para a
 ## <a name="example"></a>Exemplo  
  O código CER não é executado.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Runtime.CompilerServices;  

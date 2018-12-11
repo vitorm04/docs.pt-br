@@ -12,14 +12,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 93248823284389a865111f9ab47cdac026be55b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837476"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143201"
 ---
 # <a name="network-settings-schema"></a>Esquema de configurações de rede
 As configurações de rede especificam como o .NET Framework se conecta à Internet. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
@@ -42,5 +40,5 @@ As configurações de rede especificam como o .NET Framework se conecta à Inter
 |[\<schemeSettings> Element (Uri Settings)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md) [Elemento schemeSettings> (configurações de URI)]|Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando aplicativos da Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Configurando aplicativos da Internet](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

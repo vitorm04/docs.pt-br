@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 721693166c561babb9d7825f480e92d14a5f347c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308546"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154431"
 ---
 # <a name="code-contracts"></a>Contratos de código
 Os contratos de código fornecem uma maneira de especificar pré-condições, pós-condições e invariáveis de objeto no código. As pré-condições são requisitos que devem ser atendidos ao inserir um método ou uma propriedade. As pós-condições descrevem as expectativas no momento em que o código do método ou da propriedade é fechado. As invariáveis de objeto descrevem o estado esperado de uma classe que está em um bom estado.  
@@ -23,13 +23,13 @@ Os contratos de código fornecem uma maneira de especificar pré-condições, p�
   
  Os benefícios dos contratos de código incluem os seguintes:  
   
--   Testes aprimorados: os contratos de código fornecem verificação de contrato estático, verificação de tempo de execução e geração de documentação.  
+-   Testes aprimorados: Contratos de código fornecem verificação de contrato estático, a verificação de tempo de execução e geração de documentação.  
   
--   Ferramentas de teste automático: use contratos de código para gerar testes de unidade mais significativos filtrando argumentos de teste sem sentido que não atendem às pré-condições.  
+-   Ferramentas de teste automático: Você pode usar contratos de código para gerar testes de unidade mais significativos filtrando argumentos de teste sem sentido que não atendem às pré-condições.  
   
--   Verificação estática: o verificador estático pode decidir se há violações de contrato sem executar o programa. Ele verifica se há contratos implícitos, como desreferências nulas e limites da matriz, além de contratos explícitos.  
+-   Verificação estática: O verificador estático pode decidir se há violações de contrato sem executar o programa. Ele verifica se há contratos implícitos, como desreferências nulas e limites da matriz, além de contratos explícitos.  
   
--   Documentação de referência: o gerador de documentação amplia os arquivos de documentação XML existentes com informações de contrato. Também há folhas de estilos que podem ser usadas com o [Sandcastle](https://github.com/EWSoftware/SHFB) para que as páginas de documentação geradas tenham seções de contrato.  
+-   Documentação de referência: O gerador de documentação amplia os arquivos de documentação XML existentes com informações de contrato. Também há folhas de estilos que podem ser usadas com o [Sandcastle](https://github.com/EWSoftware/SHFB) para que as páginas de documentação geradas tenham seções de contrato.  
   
  Todas as linguagens do .NET Framework podem aproveitar os contratos; imediatamente: não é necessário escrever um analisador ou compilador especial. Um suplemento do Visual Studio permite especificar o nível da análise do contrato de código a ser executado. Os analisadores podem confirmar se os contratos estão bem formados (verificação de tipo e resolução de nomes) e podem produzir um formato compilado dos contratos no formato da MSIL (Microsoft Intermediate Language). A criação de contratos no Visual Studio permite aproveitar o IntelliSense padrão fornecido pela ferramenta.  
   
@@ -42,11 +42,15 @@ Os contratos de código fornecem uma maneira de especificar pré-condições, p�
   
  Por exemplo, a pré-condição a seguir expressa que o parâmetro `x` não deve ser nulo.  
   
- `Contract.Requires( x != null );`  
+ ```csharp
+ Contract.Requires(x != null);
+ ```
   
  Se o código precisar gerar uma exceção específica em caso de falha de uma pré-condição, use a sobrecarga genérica de <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, conforme mostrado a seguir.  
   
- `Contract.Requires<ArgumentNullException>( x != null, "x" );`  
+ ```csharp
+ Contract.Requires<ArgumentNullException>(x != null, "x");
+ ```
   
 ### <a name="legacy-requires-statements"></a>Instruções Requires herdadas  
  A maior parte do código contém alguma validação de parâmetro na forma do código `if`-`then`-`throw`. As ferramentas de contrato reconhecem essas instruções como pré-condições nos seguintes casos:  
@@ -57,12 +61,12 @@ Os contratos de código fornecem uma maneira de especificar pré-condições, p�
   
  Quando as instruções `if`-`then`-`throw` aparecem neste formato, as ferramentas as reconhecem como instruções `requires` herdadas. Se nenhum outro contrato seguir a sequência `if`-`then`-`throw`, encerre o código com o método <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>.  
   
-```  
-if ( x == null ) throw new ...  
-Contract.EndContractBlock(); // All previous "if" checks are preconditions  
-```  
+```csharp
+if (x == null) throw new ...
+Contract.EndContractBlock(); // All previous "if" checks are preconditions
+```
   
- Observe que a condição no teste anterior é uma pré-condição negada. (A pré-condição real será `x != null`.) Uma pré-condição negada é altamente restrita: ela deve ser escrita conforme mostrado no exemplo anterior; ou seja, não deve conter cláusulas `else` e o corpo da cláusula `then` deve ser uma única instrução `throw`. O teste `if` está sujeito às regras de pureza e visibilidade (consulte [Diretrizes de uso](#usage_guidelines)), mas a expressão `throw` está sujeita apenas às regras de pureza. No entanto, o tipo da exceção gerada deve estar tão visível quanto o método no qual ocorre o contrato.  
+ Observe que a condição no teste anterior é uma pré-condição negada. (A pré-condição real será `x != null`.) Uma pré-condição negada é altamente restrita: Ele deve ser escrito como mostrado no exemplo anterior; ou seja, não deve conter `else` cláusulas e o corpo do `then` cláusula deve ser um único `throw` instrução. O teste `if` está sujeito às regras de pureza e visibilidade (consulte [Diretrizes de uso](#usage_guidelines)), mas a expressão `throw` está sujeita apenas às regras de pureza. No entanto, o tipo da exceção gerada deve estar tão visível quanto o método no qual ocorre o contrato.  
   
 ## <a name="postconditions"></a>Pós-condições  
  Pós-condições são contratos para o estado de um método quando ele termina. A pós-condição é verificada logo antes do fechamento de um método. O comportamento em tempo de execução de pós-condições com falha é determinado pelo analisador de tempo de execução.  
@@ -72,12 +76,16 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="standard-postconditions"></a>Pós-condições padrão  
  É possível expressar pós-condições padrão usando o método <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>. As pós-condições expressam uma condição que deve ser `true` após o término normal do método.  
   
- `Contract.Ensures( this.F > 0 );`  
+ ```csharp
+ Contract.Ensures(this.F > 0);
+ ```
   
 ### <a name="exceptional-postconditions"></a>Pós-condições excepcionais  
  Pós-condições excepcionais são pós-condições que devem ser `true` quando uma exceção específica é gerada por um método. É possível especificar essas pós-condições usando o método <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>, como mostra o exemplo a seguir.  
   
- `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
+ ```csharp
+ Contract.EnsuresOnThrow<T>(this.F > 0);
+ ```
   
  O argumento é a condição que deve ser `true` sempre que uma exceção que é um subtipo de `T` é gerada.  
   
@@ -86,7 +94,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="special-postconditions"></a>Pós-condições especiais  
  Os seguintes métodos podem ser usados apenas em pós-condições:  
   
--   É possível se referir aos valores retornados do método nas pós-condições usando a expressão `Contract.Result<T>()`, em que `T` é substituído pelo tipo de retorno do método. Quando o compilador não puder inferir o tipo, você deverá fornecê-lo explicitamente. Por exemplo, o compilador do C# não pode inferir tipos de métodos que não usam nenhum argumento. Portanto, ele exige a seguinte pós-condição: métodos `Contract.Ensures(0 <Contract.Result<int>())` com um tipo de retorno `void` não podem se referir a `Contract.Result<T>()` em suas pós-condições.  
+-   É possível se referir aos valores retornados do método nas pós-condições usando a expressão `Contract.Result<T>()`, em que `T` é substituído pelo tipo de retorno do método. Quando o compilador não puder inferir o tipo, você deverá fornecê-lo explicitamente. Por exemplo, o C# compilador é capaz de inferir tipos de métodos que não usa argumentos, portanto, ele exige a seguinte pós-condição: `Contract.Ensures(0 <Contract.Result<int>())` Métodos com um tipo de retorno `void` não pode se referir ao `Contract.Result<T>()` em suas pós-condições.  
   
 -   Um valor de pré-estado em uma pós-condição refere-se ao valor de uma expressão no início de um método ou uma propriedade. Ele usa a expressão `Contract.OldValue<T>(e)`, em que `T` é o tipo de `e`. É possível omitir o argumento de tipo genérico sempre que o compilador pode inferir seu tipo. (Por exemplo, o compilador do C# sempre infere o tipo porque ele usa um argumento.) Há várias restrições sobre o que pode ocorrer em `e` e os contextos nos quais uma expressão antiga pode aparecer. Uma expressão antiga não pode conter outra expressão antiga. O mais importante é que uma expressão antiga deve se referir a um valor que existia no estado de pré-condição do método. Em outras palavras, ela deve ser uma expressão que possa ser avaliada, desde que a pré-condição do método seja `true`. Veja a seguir várias instâncias dessa regra.  
   
@@ -94,7 +102,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   Não é possível se referir ao valor retornado do método em uma expressão antiga:  
   
-        ```  
+        ```csharp
         Contract.OldValue(Contract.Result<int>() + x) // ERROR  
         ```  
   
@@ -102,30 +110,31 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   Uma expressão antiga não poderá depender da variável associada de um quantificador se o intervalo do quantificador depender do valor retornado do método:  
   
-        ```  
-        Contract. ForAll (0,Contract. Result<int>(),  
-        i => Contract.OldValue(xs[i]) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, Contract.Result<int>(), i => Contract.OldValue(xs[i]) > 3); // ERROR
         ```  
   
     -   Uma expressão antiga não pode se referir ao parâmetro do representante anônimo em uma chamada <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> ou <xref:System.Diagnostics.Contracts.Contract.Exists%2A>, a menos que ela seja usada como um indexador ou um argumento para uma chamada de método:  
   
-        ```  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(xs[i]) > 3); // OK  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(i) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(xs[i]) > 3); // OK
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(i) > 3); // ERROR
         ```  
   
     -   Uma expressão antiga não pode ocorrer no corpo de um representante anônimo se o valor da expressão antiga depender de um dos parâmetros do representante anônimo, a menos que o representante anônimo seja um argumento para o método <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> ou <xref:System.Diagnostics.Contracts.Contract.Exists%2A>:  
   
-        ```  
-        Method( ... (T t) => Contract.OldValue(... t ...) ... ); // ERROR  
+        ```csharp
+        Method(... (T t) => Contract.OldValue(... t ...) ...); // ERROR
         ```  
   
     -   Os parâmetros `Out` apresentam um problema porque os contratos aparecem antes do corpo do método e a maioria dos compiladores não permite referências aos parâmetros `out` em pós-condições. Para resolver esse problema, a classe <xref:System.Diagnostics.Contracts.Contract> fornece o método <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>, que permite uma pós-condição com base em um parâmetro `out`.  
   
-        ```  
-        public void OutParam(out int x) f  
-        Contract.Ensures(Contract.ValueAtReturn(out x) == 3);  
-        x = 3;  
+        ```csharp
+        public void OutParam(out int x)
+        {
+            Contract.Ensures(Contract.ValueAtReturn(out x) == 3);
+            x = 3;
+        }
         ```  
   
          Assim como ocorre com o método <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>, é possível omitir o parâmetro de tipo genérico sempre que o compilador pode inferir seu tipo. O reescritor de contrato substitui a chamada de método pelo valor do parâmetro `out`. O método <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> pode aparecer somente em pós-condições. O argumento para o método deve ser um parâmetro `out` ou um campo de um parâmetro `out` de estrutura. Esse último também é útil ao se referir a campos na pós-condição de um construtor de estrutura.  
@@ -138,14 +147,14 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
  Os métodos invariáveis são identificados sendo marcados com o atributo <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute>. Os métodos invariáveis não devem conter nenhum código, exceto uma sequência de chamadas ao método <xref:System.Diagnostics.Contracts.Contract.Invariant%2A>, cada uma delas especificando uma invariável individual, conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp
 [ContractInvariantMethod]  
 protected void ObjectInvariant ()   
 {  
-Contract.Invariant(this.y >= 0);  
-Contract.Invariant(this.x > this.y);  
-...  
-}  
+    Contract.Invariant(this.y >= 0);
+    Contract.Invariant(this.x > this.y);
+    ...
+}
 ```  
   
  As invariáveis são definidas condicionalmente pelo símbolo do pré-processador CONTRACTS_FULL. Durante a verificação em tempo de execução, as invariáveis são verificadas ao final de cada método público. Se uma invariável mencionar um método público na mesma classe, a verificação de invariáveis que normalmente ocorre ao final do método público será desabilitada. Em vez disso, a verificação ocorrerá somente ao final da chamada de método externa para essa classe. Isso também ocorrerá se a classe for inserida novamente devido a uma chamada a um método em outra classe. As invariáveis não são verificadas para um finalizador do objeto e um <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementação.  

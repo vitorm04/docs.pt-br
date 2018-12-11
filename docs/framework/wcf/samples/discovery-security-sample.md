@@ -3,11 +3,11 @@ title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041200"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129344"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 A especificação de descoberta não requer que os pontos de extremidade que participam do processo de descoberta para ser seguro. Aprimorando as mensagens de descoberta com segurança atenua os vários tipos de ataques (negação de serviço, a alteração da mensagem, reproduzir, falsificação). Este exemplo implementa canais personalizados de computação e verifique se as assinaturas de mensagem usando o formato de assinatura compact (descrito na seção 8.2 da especificação WS-Discovery). O exemplo dá suporte a ambos os [especificação de descoberta de 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e o [versão 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ A especificação de descoberta não requer que os pontos de extremidade que par
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O exemplo inclui uma biblioteca e 4 aplicativos de console:  
   
--   **DiscoverySecurityChannels**: uma biblioteca que expõe a associação de segurança. A biblioteca computa e verifica a assinatura compact para mensagens de entrada/saída.  
+-   **DiscoverySecurityChannels**: Uma biblioteca que expõe a associação de segurança. A biblioteca computa e verifica a assinatura compact para mensagens de entrada/saída.  
   
--   **Serviço**: um serviço que expõe o contrato ICalculatorService, Self-host. O serviço está marcado como detectável. O usuário Especifica os detalhes do certificado usado para assinar as mensagens, especificando o local do repositório e o nome e o nome da entidade ou outro identificador exclusivo para o certificado e o armazenamento onde os certificados de cliente estão localizados (os certificados usados para verificar a assinatura para mensagens de entrada). Com base nesses detalhes, um UdpDiscoveryEndpoint com segurança adicional é criado e usado.  
+-   **Serviço**: Um serviço que expõe o contrato ICalculatorService, auto-hospedado. O serviço está marcado como detectável. O usuário Especifica os detalhes do certificado usado para assinar as mensagens, especificando o local do repositório e o nome e o nome da entidade ou outro identificador exclusivo para o certificado e o armazenamento onde os certificados de cliente estão localizados (os certificados usados para verificar a assinatura para mensagens de entrada). Com base nesses detalhes, um UdpDiscoveryEndpoint com segurança adicional é criado e usado.  
   
--   **Cliente**: esta classe tenta descobrir um ICalculatorService e para chamar métodos no serviço. Novamente, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> com adicionado a segurança é criada e usada para assinar e verificar as mensagens.  
+-   **Cliente**: Esta classe tenta descobrir um ICalculatorService e para chamar métodos no serviço. Novamente, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> com adicionado a segurança é criada e usada para assinar e verificar as mensagens.  
   
--   **AnnouncementListener**: um serviço auto-hospedado que escuta anúncios online e offline e usa o ponto de extremidade de comunicado de seguro.  
+-   **AnnouncementListener**: Um serviço auto-hospedado que escuta anúncios online e offline e usa o ponto de extremidade de comunicado de seguro.  
   
 > [!NOTE]
 >  Se o Setup. bat for executado várias vezes, o Gerenciador de certificados solicitará a escolha de um certificado para adicionar, pois há certificados duplicados. Nesse caso, o Setup. bat deve ser anulada e Cleanup deve ser chamado, porque as duplicatas já foram criadas. CleanUp também solicitará que você escolha um certificado a ser excluído. Selecione um certificado na lista e continuar a executar CleanUp até que nenhum certificado restantes.  

@@ -2,12 +2,12 @@
 title: Bases de dados de exemplo de transferência (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a98dd4e3d2ff113d3a5374d97fe30cec9524c095
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502809"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125555"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Bases de dados de exemplo de transferência (LINQ to DataSet)
 Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentação usam o banco de dados de exemplo AdventureWorks. Você pode baixar o produto gratuitamente do site de download da Microsoft. Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentação use SQL Server como o armazenamento de dados. O SQL Server Express edition, que está disponível sem carregamento, também pode ser usada como o armazenamento de dados em vez do SQL Server.  
@@ -56,7 +56,7 @@ Os exemplos e explicações passo a passo no [!INCLUDE[linq_dataset](../../../..
   
 2.  Anexar arquivos de base de dados AdventureWorks a uma instância do SQL Server executando o seguinte script SQLCMD ou o SQL Server Management Studio:  
   
-    ```  
+    ```sql
     exec sp_attach_db @dbname=N'AdventureWorks', @filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_Data.mdf', @filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_log.ldf'  
     ```  
   

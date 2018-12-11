@@ -1,13 +1,13 @@
 ---
 title: Expressões de computação (F#)
-description: Saiba como criar uma sintaxe conveniente para criar cálculos em F# que podem ser sequenciados e combinados usando construções de fluxo de controle e associações.
+description: Saiba como criar uma sintaxe conveniente para criar cálculos F# que pode ser sequenciado e combinados usando o controle construções de fluxo e associações.
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839863"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169840"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -22,7 +22,7 @@ Computações podem assumir várias formas. A forma mais comum de computação �
 * Computações effectful
 * Computações produtivas
 
-De modo geral, há *contextual* cálculos que você deve executar em determinadas partes de um aplicativo. Escrever o código sensível ao contexto pode ser um desafio, pois é fácil de computações "vaze" fora de um determinado contexto sem abstrações para impedir que você fazer isso. Essas abstrações geralmente são um desafio para escrever por conta própria, por isso, o F# tem uma maneira generalizada fazer chamados **expressões de computação**.
+De modo geral, há *contextual* cálculos que você deve executar em determinadas partes de um aplicativo. Escrever o código sensível ao contexto pode ser um desafio, pois é fácil de computações "vaze" fora de um determinado contexto sem abstrações para impedir que você fazer isso. Essas abstrações geralmente são um desafio para escrever por conta própria, razão pela qual F# tem uma maneira generalizada fazer chamados **expressões de computação**.
 
 Expressões de computação oferecem um modelo uniforme de sintaxe e abstração para codificação de cálculos sensíveis ao contexto.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Cada uma dessas palavras-chave e outros F# palavras-chave padrão só estão disponíveis em uma expressão de computação se eles tiverem sido definidos no tipo de construtor de backup. É a única exceção a isso `match!`, que é a própria açúcar sintático para o uso de `let!` seguido por uma correspondência de padrões no resultado.
+Cada uma dessas palavras-chave e outro standard F# palavras-chave só estão disponíveis em uma expressão de computação se eles tiverem sido definidos no tipo de construtor de backup. É a única exceção a isso `match!`, que é a própria açúcar sintático para o uso de `let!` seguido por uma correspondência de padrões no resultado.
 
-O tipo de construtor é um objeto que define os métodos especiais que regem a forma como os fragmentos da expressão de computação são combinados; ou seja, a seus métodos controlam o comportamento da expressão de computação. Outra maneira de descrever uma classe de construtor é dizer que ele permite que você personalize a operação de várias construções no F#, como loops e associações.
+O tipo de construtor é um objeto que define os métodos especiais que regem a forma como os fragmentos da expressão de computação são combinados; ou seja, a seus métodos controlam o comportamento da expressão de computação. Outra maneira de descrever uma classe de construtor é dizer que ele permite que você personalize a operação de vários F# construções como loops e associações.
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-Começando com o F# 4.5, o `match!` palavra-chave permite que você embutir uma chamada para outra correspondência de expressão e o padrão de computação em seu resultado:
+Começando com F# 4.5, o `match!` palavra-chave permite que você embutir uma chamada para outra correspondência de expressão e o padrão de computação em seu resultado:
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ Ao chamar uma expressão de computação com `match!`, ele obterá o resultado d
 
 ## <a name="built-in-computation-expressions"></a>Expressões de computação interna
 
-A biblioteca principal F# define três expressões de computação interna: [expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de consulta](query-expressions.md).
+O F# biblioteca principal define três expressões de computação interna: [Expressões de sequência](sequences.md), [fluxos de trabalho assíncronos](asynchronous-workflows.md), e [expressões de consulta](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Criar um novo tipo de expressão de computação
 
@@ -227,7 +227,7 @@ A expressão aninhada é da seguinte forma:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não estão definidos na classe de construtor de expressão de computação. O corpo da expressão de computação, aqui é denotado como `{| cexpr |}`, é convertida em chamadas envolvendo os métodos da classe de construtor pelas conversões descritas na tabela a seguir. A expressão de cálculo `{| cexpr |}` é definido recursivamente acordo com essas traduções em que `expr` é uma expressão F# e `cexpr` é uma expressão de computação.
+No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não estão definidos na classe de construtor de expressão de computação. O corpo da expressão de computação, aqui é denotado como `{| cexpr |}`, é convertida em chamadas envolvendo os métodos da classe de construtor pelas conversões descritas na tabela a seguir. A expressão de cálculo `{| cexpr |}` é definido recursivamente acordo com essas traduções em que `expr` é um F# expressão e `cexpr` é uma expressão de computação.
 
 |Expressão|Conversão|
 |----------|-----------|
@@ -251,6 +251,7 @@ No código acima, as chamadas para `Run` e `Delay` são omitidos se eles não es
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 Na tabela anterior, `other-expr` descreve uma expressão que não esteja listada na tabela de caso contrário. Uma classe de construtor não precisa implementar todos os métodos e dar suporte a todas as conversões listadas na tabela anterior. Essas construções que não são implementadas não estão disponíveis em expressões de computação desse tipo. Por exemplo, se você não deseja oferecer suporte a `use` palavra-chave em suas expressões de computação, você pode omitir a definição de `Use` em sua classe de construtor.
 
 O exemplo de código a seguir mostra uma expressão de computação que encapsula uma computação de uma série de etapas que podem ser avaliadas uma etapa por vez. Um tipo de união de discriminada `OkOrException`, codifica o estado de erro da expressão, conforme avaliado até o momento. Esse código demonstra vários padrões típicos que você pode usar em suas expressões de computação, como as implementações de texto clichê de alguns dos métodos de construtor.
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 Uma expressão de computação tem um tipo subjacente, que retorna a expressão. O tipo subjacente pode representar um resultado calculado ou uma computação atrasada que pode ser executada ou ela pode fornecer uma maneira para iterar por meio de algum tipo de coleção. No exemplo anterior, o tipo subjacente foi **eventualmente**. Uma expressão de sequência, o tipo subjacente é <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Uma expressão de consulta, o tipo subjacente é <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Para um fluxo de trabalho assíncrono, o tipo subjacente é [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). O `Async` objeto representa o trabalho seja realizado para calcular o resultado. Por exemplo, você chama [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para executar um cálculo e retornar o resultado.

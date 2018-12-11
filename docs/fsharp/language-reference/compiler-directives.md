@@ -3,11 +3,11 @@ title: Diretivas de compilador (F#)
 description: Saiba mais sobre F# diretivas de pré-processador de linguagem, diretivas de compilação condicional, diretivas de linha e diretivas de compilador.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672089"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126946"
 ---
 # <a name="compiler-directives"></a>Diretivas de compilador
 

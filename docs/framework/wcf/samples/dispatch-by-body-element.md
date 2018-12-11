@@ -2,12 +2,12 @@
 title: Expedição por elemento Body
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143149"
 ---
 # <a name="dispatch-by-body-element"></a>Expedição por elemento Body
 Este exemplo demonstra como implementar um algoritmo alternativo para a atribuição de mensagens de entrada para operações.  
@@ -20,7 +20,7 @@ Este exemplo demonstra como implementar um algoritmo alternativo para a atribui�
   
  O construtor da classe espera que um dicionário preenchido com pares de `XmlQualifiedName` e cadeias de caracteres, na qual os nomes qualificados indicam o nome do primeiro filho do corpo SOAP e as cadeias de caracteres indicam o nome da operação correspondente. O `defaultOperationName` é o nome da operação que recebe todas as mensagens que não podem ser comparadas com este dicionário:  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> as implementações são muito simples compilar, pois não há apenas um método na interface: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. O trabalho desse método é para inspecionar uma mensagem de entrada e retornar uma cadeia de caracteres que é igual ao nome de um método no contrato de serviço para o ponto de extremidade atual.  
   
  Neste exemplo, o seletor de operação adquire uma <xref:System.Xml.XmlDictionaryReader> para a mensagem de entrada do corpo usando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Esse método já posiciona o leitor no primeiro filho do corpo da mensagem, para que ele seja suficiente obter o nome do elemento atual e o URI de namespace e combiná-los em um `XmlQualifiedName` que é usada para pesquisar a operação correspondente das dicionário mantido pelo seletor de operação.  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  Acessando o corpo da mensagem com <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> ou qualquer um dos outros métodos que fornecem acesso ao conteúdo do corpo da mensagem faz com que a mensagem a ser marcado como "leitura", o que significa que a mensagem é inválida para qualquer processamento adicional. Portanto, o seletor de operação cria uma cópia da mensagem de entrada com o método mostrado no código a seguir. Porque a posição do leitor não tiver sido alterada durante a inspeção, ele pode ser referenciado pela mensagem recém-criado para o qual as propriedades da mensagem e os cabeçalhos da mensagem também são copiados, que resulta em um clone exato da mensagem original:  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  Para resumir, o trecho de código a seguir mostra apenas a implementação do método <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, que afeta as alterações de configuração para o dispatcher neste exemplo. Os outros métodos não são mostrados porque eles retornarem ao chamador sem fazer qualquer trabalho.  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  Depois que o dicionário é preenchido, um novo `DispatchByBodyElementOperationSelector` é construído com essas informações e definido como o seletor de operação do tempo de execução de expedição:  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  Como o seletor de operação expede exclusivamente com base no elemento de corpo de mensagem e ignora a "ação", é necessário informar o tempo de execução para não verificar o cabeçalho de "Ação" nas respostas retornadas por meio da atribuição o curinga "*" para o `ReplyAction` propriedade de <xref:System.ServiceModel.OperationContractAttribute>. Além disso, é necessário ter uma operação de padrão que tem a propriedade "Ação" definida como o curinga "\*". A operação padrão recebe todas as mensagens que não podem ser expedidas e não tem um `DispatchBodyElementAttribute`:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

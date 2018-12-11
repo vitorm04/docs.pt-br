@@ -1,13 +1,13 @@
 ---
 title: Genéricos (F#)
-description: Saiba como usar as funções genéricas do F# e tipos que permitem que você escreva código que funciona com uma variedade de tipos sem repetir o código.
+description: Saiba como usar F# tipos que permitem que você escreva código que funciona com uma variedade de tipos sem repetir o código e as funções genéricas.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084956"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146999"
 ---
 # <a name="generics"></a>Genéricos
 
@@ -71,8 +71,8 @@ O código a seguir mostra o uso das funções definidas nas seções anteriores.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-Há duas maneiras de se referir a um tipo genérico por nome. Por exemplo, `list<int>` e `int list` são duas maneiras de se referir a um tipo genérico `list` que tem um único argumento de tipo `int`. A segunda forma é usada apenas com tipos internos de F#, como `list` e `option`. Se houver vários argumentos de tipo, você normalmente usará a sintaxe `Dictionary<int, string>`, mas também é possível usar a sintaxe `(int, string) Dictionary`.
+> [!NOTE]
+> Há duas maneiras de se referir a um tipo genérico por nome. Por exemplo, `list<int>` e `int list` são duas maneiras de se referir a um tipo genérico `list` que tem um único argumento de tipo `int`. A segunda forma é usada apenas com tipos internos de F#, como `list` e `option`. Se houver vários argumentos de tipo, você normalmente usará a sintaxe `Dictionary<int, string>`, mas também é possível usar a sintaxe `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Caracteres curinga como argumentos de tipo
 

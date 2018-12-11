@@ -1,40 +1,40 @@
 ---
-title: Quando implantar contêineres do Windows para serviço de malha
-description: Modernizar aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure | Quando implantar contêineres do Windows para serviço de malha
+title: Quando implantar contêineres do Windows para o Service Fabric
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Quando implantar contêineres do Windows para o Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c41db8b37c883f9369a6b8d1f8bccbc0535f504c
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957906"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129500"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Quando implantar contêineres do Windows para serviço de malha
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Quando implantar contêineres do Windows para o Service Fabric
 
-Aplicativos que são baseados em contêineres do Windows precisará rapidamente usam as plataformas que ainda mais afastar de VMs de IaaS. Isso é para maior escalabilidade automatizada e alta escalabilidade e obter melhorias significativas em uma experiência completa de gerenciamento para implantações, atualizações, monitoramento de integridade, reversões e controle de versão. Você pode alcançar essas metas com o orquestrador de malha do serviço do Azure, disponível na nuvem do Microsoft Azure, mas também no local, ou até mesmo em outra nuvem.
+Aplicativos que são baseados em contêineres do Windows rapidamente precisará usar as plataformas ainda mais afastar das VMs de IaaS. Isso é para alta escalabilidade e melhor escalabilidade automatizada, e obter melhorias significativas em uma experiência de gerenciamento completa para implantações, atualizações, controle de versão, reversões e monitoramento de integridade. Para atingir essas metas com o orchestrator do Azure Service Fabric, disponível na nuvem do Microsoft Azure, mas também no local, ou até mesmo em outra nuvem.
 
-Muitas organizações estão levantar e deslocamento existentes monolíticos aplicativos contêineres por dois motivos:
+Muitas organizações estão levantar e dos aplicativos monolíticos existentes em contêineres por duas razões:
 
--   Redução de custos, devido a remoção do hardware existente ou de aplicativos em execução em uma maior densidade e consolidação.
+-   Reduções de custos, devido à consolidação e a remoção de hardware existente ou de aplicativos em execução em uma densidade mais alta.
 
 -   Um contrato de implantação consistente entre o desenvolvimento e operações.
 
-Buscar reduções de custos é entendido e é provável que todas as organizações são caça a registros essa meta. Implantação consistente é mais difícil para avaliar, mas é igualmente importante. Um contrato de implantação consistente diz que os desenvolvedores estão livres para optar por usar a tecnologia que atenda às-los, e a equipe de operações é uma maneira simples para implantar e gerenciar aplicativos. Este contrato elimina a dificuldade de ter que lidar com a complexidade das muitas tecnologias diferentes operações ou forçar os desenvolvedores a funcionam apenas com algumas tecnologias. Essencialmente, cada aplicativo está em contêineres em uma imagem de implantação autossuficiente.
+Buscando reduções de custo é compreensível, e é provável que todas as organizações estão perseguindo esse objetivo. Implantação consistente é mais difícil avaliar, mas é igualmente importante. Um contrato de implantação consistente diz que os desenvolvedores são livres para optar por usar a tecnologia que é ideal para eles, e a equipe de operações obtém uma única maneira de implantar e gerenciar aplicativos. Este contrato alivia a dificuldade de ter operações que lidam com a complexidade das muitas tecnologias diferentes, ou forçar os desenvolvedores trabalhem apenas com determinadas tecnologias. Essencialmente, cada aplicativo está em contêineres em uma imagem de implantação autocontida.
 
-Algumas organizações continuará modernizar adicionando microservices (aplicativos de nuvem nativo), mas muitas outras organizações serão interrompido aqui (otimização de nuvem aplicativos). Conforme mostrado na Figura 4-8, essas organizações não mova para arquiteturas microservices porque eles talvez não precise. Em qualquer caso, eles já obter os benefícios que usando contêineres de adição do Service Fabric experiência fornece um gerenciamento completo que inclui a implantação, atualizações, controle de versão, reversões e monitoramento de integridade.
+Algumas organizações continuarão Modernizando adicionando microsserviços (aplicativos nativos de nuvem), mas muitas outras organizações parar aqui (aplicativos otimizados para a nuvem). Conforme mostrado na Figura 4 a 8, essas organizações não se moverá para arquiteturas de microsserviços porque eles talvez não precise. Em qualquer caso, já que eles obtém os benefícios que usar contêineres além do Service Fabric fornece uma experiência completa de gerenciamento que inclui a implantação, atualiza, controle de versão, reversões e monitoramento de integridade.
 
 > ![Comparar e Deslocar um aplicativo do Service Fabric](./media/image8.png)
 >
-> **Figura 4-8.** Comparar e Deslocar um aplicativo do Service Fabric
+> **Figura 4 a 8.** Comparar e Deslocar um aplicativo do Service Fabric
 
-Uma abordagem chave para Service Fabric é reutilizar o código existente e comparar e deslocar. Portanto, você pode migrar seus aplicativos do .NET Framework atuais, usando os contêineres do Windows e implantá-los ao Service Fabric. Será mais fácil manter vai modernizar, eventualmente, adicionando nova microservices.
+Uma abordagem chave para o Service Fabric é reutilizar o código existente e comparar e deslocar. Portanto, você pode migrar seus aplicativos atuais do .NET Framework, usando os contêineres do Windows e implantá-los para o Service Fabric. Será mais fácil manter vai modernização, eventualmente, adicionando novos microsserviços.
 
-Ao comparar o Service Fabric para outros orchestrators, é importante destacar que o Service Fabric é desenvolvido a execução de serviços e aplicativos baseados no Windows. Execução do Service Fabric serviços baseados em Windows e aplicativos, incluindo o nível 1 de missão crítica produtos da Microsoft por anos. Era o orchestrator primeiro ter disponibilidade geral para contêineres do Windows. Outros contêineres, como Kubernetes, o controlador de domínio/sistema operacional e o Docker Swarm, são mais maduros no Linux, mas menos maduro que contêineres do Windows e aplicativos baseados em malha do serviço do Windows.
+Ao comparar o Service Fabric para outros orquestradores, é importante destacar que o Service Fabric é maduro na execução de serviços e aplicativos baseados em Windows. Execução do Service Fabric serviços baseados em Windows e aplicativos, incluindo o nível 1 de missão crítica de produtos da Microsoft há anos. Ele era o orquestrador primeiro para ter disponibilidade geral para contêineres do Windows. Outros contêineres, como Kubernetes, DC/SO e Docker Swarm, são mais maduros no Linux, mas menos maduro que aplicativos baseados no Service Fabric para Windows e contêineres do Windows.
 
-A meta do Service Fabric é reduzir as complexidades de criação de aplicativos usando uma abordagem de microservices. Eventualmente, você deseja um microservices para certos tipos de aplicativos para evitar reformulações caras. Você pode começar pequeno, dimensionar quando necessário, substituir os serviços, adicionar novos serviços e desenvolver seu aplicativo com o uso do cliente. Há muitos outros problemas que ainda precisam ser resolvidos para tornar microservices mais acessível para a maioria dos desenvolvedores. Se você atualmente é apenas levantar e deslocamento de um aplicativo com contêineres do Windows, mas você está pensando em Adicionar microservices com base em contêineres no futuro, que é o ponto de ideal de malha do serviço.
+O objetivo final do Service Fabric é reduzir a complexidade da criação de aplicativos usando uma abordagem de microsserviços. Eventualmente, você deseja um microsserviços para determinados tipos de aplicativos para evitar reformulações dispendiosas. Você pode começar pequeno, dimensionar quando necessário, substituir serviços, adicionar novos serviços e evoluir seu aplicativo com o uso do cliente. Há muitos outros problemas que ainda precisam ser resolvidos para tornar os microsserviços mais acessíveis para a maioria dos desenvolvedores. Se atualmente você estiver apenas levantar e Deslocar um aplicativo com contêineres do Windows, mas você está pensando em Adicionar microsserviços com base em contêineres no futuro, que é o ponto ideal do Service Fabric.
 
 >[!div class="step-by-step"]
-[Anterior](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-[Próximo](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[Anterior](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[Próximo](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

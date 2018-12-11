@@ -2,12 +2,12 @@
 title: Ativação de processo do Windows
 ms.date: 03/30/2017
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
-ms.openlocfilehash: fcfca1d58b7672cd9bcc7f8ba9afa861d140e3b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcac3a9860dd03ed048bc27969fa1e1f070e788a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501514"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154785"
 ---
 # <a name="windows-process-activation"></a>Ativação de processo do Windows
 Esta seção contém exemplos que demonstram a ativação do serviço por meio de protocolos de rede.  
@@ -17,4 +17,7 @@ Esta seção contém exemplos que demonstram a ativação do serviço por meio d
  Demonstra como hospedar um serviço que usa o serviço de ativação de processos do Windows (WAS) para ativar um serviço que se comunica por pipes de nomes.  
   
  [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- Demonstra como hospedar um serviço que usa serviços de ativação de processos do Windows (WAS) para ativar um serviço que se comunica através do protocolo NET. TCP.
+ Demonstra como hospedar um serviço que usa Windows processo WAS (Activation Services) para ativar um serviço que se comunica através do protocolo NET. TCP.
+
+ [Ativação de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ Demonstra como hospedar um serviço que usa Windows processo WAS (Activation Services) para ativar um serviço que se comunica através do protocolo NET. MSMQ.

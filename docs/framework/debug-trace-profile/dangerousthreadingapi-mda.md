@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02f16bd9560346cca9b24d4e5b8e760fdb3afd18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357307"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149361"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA dangerousThreadingAPI
 O MDA (assistente para depuração gerenciada) `dangerousThreadingAPI` é ativado quando o método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> é chamado em um thread que não seja o thread atual.  
@@ -54,7 +54,7 @@ O MDA (assistente para depuração gerenciada) `dangerousThreadingAPI` é ativad
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra uma chamada ao método <xref:System.Threading.Thread.Suspend%2A> que causa a ativação da `dangerousThreadingAPI`.  
   
-```  
+```csharp
 using System.Threading;  
 void FireMda()  
 {  

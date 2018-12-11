@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197672"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152702"
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197672"
 
 ![](./media/image2.png)
 
-Figura 1-2-Docker implanta contêineres em todas as camadas da nuvem híbrida
+Figura 1-2: O Docker implanta contêineres em todas as camadas da nuvem híbrida
 
 Os contêineres de imagem do Docker podem ser executados nativamente no Linux e no Windows. No entanto, imagens do Windows podem executar somente em hosts do Windows e imagens do Linux podem ser executado apenas em hosts do Linux, que significa que um servidor de host ou em uma VM.
 
@@ -49,9 +49,8 @@ Ao usar o Docker, você não verá os desenvolvedores dizem, "Funciona no meu co
 
 ![](./media/image3.png)
 
-Figura 1 a 3: comparação das VMs tradicionais para contêineres do Docker
-
+Figura 1 a 3: Comparação das VMs tradicionais para contêineres do Docker
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Próximo](docker-terminology.md)
+>[Anterior](index.md)
+>[Próximo](docker-terminology.md)

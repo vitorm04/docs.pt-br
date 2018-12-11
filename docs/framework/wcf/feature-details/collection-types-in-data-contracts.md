@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850870"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155178"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipos de coleção em contratos de dados
 Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], essas listas podem ser representadas usando matrizes ou uma variedade de outros tipos (lista genérico, genéricos <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, ou <xref:System.Collections.ArrayList>). Por exemplo, uma coleção pode conter uma lista de endereços para um determinado cliente. Essas coleções são chamadas *listar coleções*, independentemente de seu tipo real.  
@@ -87,7 +87,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
   
 -   Quando o <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atributo não for aplicado, o nome padrão e o namespace para tipos de coleção dependem de nomes e namespaces de tipos contidos na coleção. Eles não são afetados pelo nome e namespace do tipo de coleção em si. Para obter um exemplo, consulte os seguintes tipos.  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -249,7 +249,7 @@ Um *coleção* é uma lista de itens de um determinado tipo. No [!INCLUDE[dnprdn
   
  Por exemplo, para fazer com que todas as listas a serem importados como genérico <xref:System.Collections.Generic.List%601>.  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   

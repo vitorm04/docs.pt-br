@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702901"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129474"
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
@@ -60,7 +60,7 @@ O cenário mais comum em que o WPF define uma propriedade anexada é quando um e
 
 ## Propriedades anexadas em código <a name="attached_properties_code"></a>
 
-Propriedades anexadas no WPF não tem o típico [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] métodos de "wrapper" para acesso get/set fácil. Isso ocorre porque a propriedade anexada não faz parte, necessariamente, do namespace [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para as instâncias em que a propriedade foi definida. No entanto, um processador XAML deve ser capaz de definir esses valores quando o XAML for analisado. Para dar suporte a um uso efetivo da propriedade anexada, o tipo de proprietário da propriedade anexada deve implementar métodos de acesso dedicados no formulário **obter * PropertyName*** e **definir*PropertyName * * *. Esses métodos de acesso dedicados também são úteis para obter ou definir a propriedade anexada em código. De uma perspectiva de código, uma propriedade anexada é semelhante a um campo de suporte que tem métodos de acesso em vez de acessadores de propriedade; além disso, o campo de suporte pode existir em qualquer objeto, sem precisar ser definido especificamente.
+Propriedades anexadas no WPF não tem o típico [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] métodos de "wrapper" para acesso get/set fácil. Isso ocorre porque a propriedade anexada não faz parte, necessariamente, do namespace [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para as instâncias em que a propriedade foi definida. No entanto, um processador XAML deve ser capaz de definir esses valores quando o XAML for analisado. Para dar suporte a um uso efetivo da propriedade anexada, o tipo de proprietário da propriedade anexada deve implementar métodos de acesso dedicados no formulário **Get_PropertyName_** e **Set_PropertyName_**. Esses métodos de acesso dedicados também são úteis para obter ou definir a propriedade anexada em código. De uma perspectiva de código, uma propriedade anexada é semelhante a um campo de suporte que tem métodos de acesso em vez de acessadores de propriedade; além disso, o campo de suporte pode existir em qualquer objeto, sem precisar ser definido especificamente.
 
 O exemplo a seguir mostra como você pode definir uma propriedade anexada em código. Neste exemplo, `myCheckBox` é uma instância do <xref:System.Windows.Controls.CheckBox> classe.
 
@@ -91,14 +91,14 @@ Como mencionado anteriormente, será necessário registrar como propriedade anex
 
 Se sua classe estiver definindo a propriedade anexada estritamente para uso em outros tipos, a classe não precisa derivar de <xref:System.Windows.DependencyObject>. Mas você precisará derivar de <xref:System.Windows.DependencyObject> se você seguir o modelo geral do WPF do que a propriedade anexada também ser uma propriedade de dependência.
 
-Defina a propriedade anexada como uma propriedade de dependência, declarando uma `public static readonly` campo do tipo <xref:System.Windows.DependencyProperty>. Esse campo é definido usando o valor de retorno de <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método. O nome do campo deve corresponder ao nome da propriedade anexada, concatenado com a cadeia de caracteres `Property`, seguir o padrão do WPF estabelecido de nomenclatura os campos de identificação versus as propriedades que eles representam. O provedor de propriedade anexada também deve fornecer estático **obter * PropertyName*** e **definir * PropertyName*** métodos como acessadores para a propriedade anexada; Falha ao fazer isso resultará na propriedade sistema que não conseguem usar sua propriedade anexada.
+Defina a propriedade anexada como uma propriedade de dependência, declarando uma `public static readonly` campo do tipo <xref:System.Windows.DependencyProperty>. Esse campo é definido usando o valor de retorno de <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método. O nome do campo deve corresponder ao nome da propriedade anexada, concatenado com a cadeia de caracteres `Property`, seguir o padrão do WPF estabelecido de nomenclatura os campos de identificação versus as propriedades que eles representam. O provedor de propriedade anexada também deve fornecer estático **Get_PropertyName_** e **Set_PropertyName_** métodos como acessadores para a propriedade anexada; Falha ao fazer isso resultará na propriedade sistema que não conseguem usar sua propriedade anexada.
 
 > [!NOTE]
 > Se você omitir o acessador get da propriedade anexada, associação de dados na propriedade não funcionará em ferramentas de design, como o Visual Studio e Expression Blend.
 
 #### <a name="the-get-accessor"></a>O acessador get
 
-A assinatura para o **obter * PropertyName*** acessador deve ser:
+A assinatura para o **Get_PropertyName_** acessador deve ser:
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ A assinatura para o **obter * PropertyName*** acessador deve ser:
 
 #### <a name="the-set-accessor"></a>O acessador set
 
-A assinatura para o **definir * PropertyName*** acessador deve ser:
+A assinatura para o **Set_PropertyName_** acessador deve ser:
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ A assinatura para o **definir * PropertyName*** acessador deve ser:
 
 -   O objeto `value` pode ser especificado como um tipo mais específico na sua implementação. Por exemplo, o <xref:System.Windows.Controls.DockPanel.SetDock%2A> tipos de método, como <xref:System.Windows.Controls.Dock>, porque o valor só pode ser definido para essa enumeração. Lembre-se de que o valor para esse método é a entrada proveniente do carregador de XAML, quando ele encontra a propriedade anexada em um uso da propriedade anexada na marcação. Essa entrada é o valor especificado como um valor de atributo XAML na marcação. Portanto, deve haver conversão de tipo, serializador de valores ou suporte à extensão de marcação para o tipo que usar, de modo que o tipo adequado possa ser criado por meio do valor do atributo (que é, basicamente, apenas uma cadeia de caracteres).
 
-O exemplo a seguir mostra o registro de propriedade de dependência (usando o <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método), bem como o **obter * PropertyName*** e **definir * PropertyName*** acessadores. No exemplo, o nome da propriedade anexada é `IsBubbleSource`. Portanto, os acessadores devem ser nomeados como `GetIsBubbleSource` e `SetIsBubbleSource`.
+O exemplo a seguir mostra o registro de propriedade de dependência (usando o <xref:System.Windows.DependencyProperty.RegisterAttached%2A> método), bem como o **Get_PropertyName_** e **Set_PropertyName_** acessadores. No exemplo, o nome da propriedade anexada é `IsBubbleSource`. Portanto, os acessadores devem ser nomeados como `GetIsBubbleSource` e `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

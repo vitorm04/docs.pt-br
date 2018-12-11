@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514957"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147665"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -31,7 +31,7 @@ Para se conectar a um servidor de banco de dados, existem, normalmente, várias 
   
  No exemplo de C# a seguir, três novos objetos <xref:System.Data.SqlClient.SqlConnection> são criados, mas apenas dois pools de conexões são necessários para gerenciá-los. Observe que a primeira e a segunda cadeias de conexão diferem pelo valor atribuído para `Initial Catalog`.  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  O pool de conexões atende às solicitações de conexões realocando-as à medida que são retornadas ao pool. Se o tamanho máximo de pool for atingido e nenhuma conexão útil estiver disponível, a solicitação será colocada na fila. Em seguida, o pooler tentará recuperar conexões até que o tempo limite seja esgotado (o padrão é de 15 segundos). Se o pooler não puder atender à solicitação antes que se esgote o tempo limite de conexão, uma exceção será gerada.  
   
 > [!CAUTION]
->  É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando o `Close` ou `Dispose` métodos do `Connection` de objeto ou abrindo todas as conexões dentro de uma `using` instrução em c#, ou um `Using` instrução no Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, consulte [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) ou [como: descartar um recurso de sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para o Visual Basic.  
+>  É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando o `Close` ou `Dispose` métodos do `Connection` de objeto ou abrindo todas as conexões dentro de uma `using` instrução em c#, ou um `Using` instrução no Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, consulte [usando a instrução](~/docs/csharp/language-reference/keywords/using-statement.md) ou [como: Descartar um recurso de sistema](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para o Visual Basic.  
   
 > [!NOTE]
 >  Não chame `Close` nem `Dispose` em um objeto `Connection`, em um `DataReader` nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../../docs/standard/garbage-collection/index.md).  

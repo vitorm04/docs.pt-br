@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-author: BrucePerlerMS
-ms.openlocfilehash: e26665b76518e33de266c73600e1da918eb2a51d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 76accbccc1f65bb44b7e710f3f24dc2bae17eeda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203492"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154993"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Segurança de mensagem com um nome de usuário cliente
 A ilustração a seguir mostra um serviço Windows Communication Foundation (WCF) e o cliente protegido usando a segurança em nível de mensagem. O serviço é autenticado com um certificado X.509. O cliente é autenticado usando um nome de usuário e senha.  

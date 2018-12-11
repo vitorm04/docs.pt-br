@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dce345e049a1b89b85a340b8e9078f39882a45fb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193507"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148491"
 ---
 # <a name="short-data-type-visual-basic"></a>Tipo de dados curto (Visual Basic)
 Armazena inteiros de 16 bits (2 bytes) que variam de -32.768 a 32.767.  
@@ -54,7 +54,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Literais numéricos também podem incluir o `S` [caractere de tipo](../../programming-guide\language-features\data-types/type-characters.md) para denotar o `Short` tipo de dados, como mostra o exemplo a seguir.
+Literais numéricos também podem incluir o `S` [caractere de tipo](../../programming-guide/language-features/data-types/type-characters.md) para denotar o `Short` tipo de dados, como mostra o exemplo a seguir.
 
 ```vb
 Dim number = &H_3264S

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584293"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150830"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Gerando comandos com CommandBuilders
 Quando a propriedade `SelectCommand` é especificada dinamicamente em tempo de execução, como através de uma ferramenta de consulta que usa um comando textual do usuário, você não poderá especificar o `InsertCommand`, `UpdateCommand` ou `DeleteCommand` apropriado em tempo de design. Se seu <xref:System.Data.DataTable> mapear para ou for gerado a partir de uma única tabela do banco de dados, você poderá aproveitar o objeto <xref:System.Data.Common.DbCommandBuilder> para gerar automaticamente o `DeleteCommand`, `InsertCommand` e `UpdateCommand` do <xref:System.Data.Common.DbDataAdapter>.  
@@ -82,9 +82,13 @@ builder.QuoteSuffix = "]";
   
  O exemplo de código a seguir grava no console o comando de atualização que foi gerado automaticamente.  
   
-```  
+```vb
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
-```  
+```
+
+```csharp
+Console.WriteLine(builder.GetUpdateCommand().CommandText);
+```
   
  O exemplo a seguir recria a tabela `Customers` no conjunto de dados do `custDS`. O **RefreshSchema** método é chamado para atualizar os comandos gerados automaticamente com essas novas informações de coluna.  
   

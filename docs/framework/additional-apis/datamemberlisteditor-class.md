@@ -15,11 +15,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980590"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129357"
 ---
 # <a name="datamemberlisteditor-class"></a>Classe DataMemberListEditor
 
@@ -42,7 +42,7 @@ internal class DataMemberListEditor : UITypeEditor
   
 **Assembly:** System (em dll)  
   
-**Versões do .NET framework:** disponível desde o 2.0.  
+**Versões do .NET framework:** Disponível desde o 2.0.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,12 +4,12 @@ description: Modernizar aplicativos .NET existentes com contêineres do Windows 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070773"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128174"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernize o ciclo de vida do seu aplicativo com pipelines de CI/CD e ferramentas de DevOps na nuvem
 
@@ -36,5 +36,5 @@ Figura 4-12 mostra um pipeline de implantação contínua que implanta em um clu
 > **Figura 4 a 12.** Pipeline de implantação contínua de serviços de DevOps do Azure, implantar um cluster Kubernetes
 
 >[!div class="step-by-step"]
-[Anterior](modernize-your-apps-with-monitoring-and-telemetry.md)
-[Próximo](migrate-to-hybrid-cloud-scenarios.md)
+>[Anterior](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[Próximo](migrate-to-hybrid-cloud-scenarios.md)

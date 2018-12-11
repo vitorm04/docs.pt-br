@@ -1,16 +1,16 @@
 ---
-title: 'Serviço: falhas de autenticação e validação de segurança'
+title: 'Serviço: Falhas de autenticação e validação de segurança'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
 ms.openlocfilehash: ba8da3ae6be6bd089690359f19e153da1e0b54fc
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744243"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150895"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a>Serviço: falhas de autenticação e validação de segurança
-Nome do contador: falhas de autenticação e validação de segurança  
+# <a name="service-security-validation-and-authentication-failures"></a>Serviço: Falhas de autenticação e validação de segurança
+Nome do contador: Falhas de autenticação e validação de segurança  
   
 ## <a name="description"></a>Descrição  
  Esse contador é incrementado sempre que uma mensagem foi rejeitada devido a um problema de segurança não coberto pelo contador "Chamadas de segurança não autorizado". Esses problemas incluem:  

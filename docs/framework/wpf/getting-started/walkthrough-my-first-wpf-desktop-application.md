@@ -1,6 +1,6 @@
 ---
 title: Criar um aplicativo WPF no Visual Studio
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007250"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150739"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF
 
-Este artigo mostra como desenvolver um aplicativo simples do Windows Presentation Foundation (WPF) que inclui os elementos que são comuns à maioria dos aplicativos do WPF: marcação de de Extensible Application Markup Language (XAML), código-behind, definições de aplicativo, controles, layout, vinculação de dados e estilos.
+Este artigo mostra como desenvolver um aplicativo simples do Windows Presentation Foundation (WPF) que inclui os elementos que são comuns à maioria dos aplicativos do WPF: Extensible Application Markup Language (XAML) marcação, code-behind, definições de aplicativo, controles, layout, vinculação de dados e estilos.
 
 Este passo a passo inclui as seguintes etapas:
 
@@ -43,7 +43,7 @@ Ao final do passo a passo, você será criado um aplicativo do Windows que permi
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Visual Studio 2012 ou posterior (Este artigo se baseia no Visual Studio 2017)
+- Visual Studio 2017 ou posterior
 
    Para obter mais informações sobre como instalar a versão mais recente do Visual Studio, consulte [instalar o Visual Studio](/visualstudio/install/install-visual-studio).
 
@@ -57,7 +57,7 @@ A primeira etapa é criar a infraestrutura de aplicativo, que inclui uma defini�
 
       O **novo projeto** caixa de diálogo é aberta.
 
-   2. Sob o **instalados** categoria, expanda o **Visual c#** ou **Visual Basic** nó e, em seguida, selecione **área de trabalho clássica do Windows**.
+   2. Sob o **instalados** categoria, expanda o **Visual C#**  ou **Visual Basic** nó e, em seguida, selecione **área de trabalho do Windows**.
 
    3. Selecione o **aplicativo WPF (.NET Framework)** modelo. Insira o nome **`ExpenseIt`** e, em seguida, selecione **Okey**.
 
@@ -66,7 +66,7 @@ A primeira etapa é criar a infraestrutura de aplicativo, que inclui uma defini�
       Visual Studio cria o projeto e abre o designer para a janela do aplicativo padrão chamado **MainWindow. XAML**.
 
    > [!NOTE]
-   > Este passo a passo usa o <xref:System.Windows.Controls.DataGrid> controle que está disponível no .NET Framework 4 e posterior. Ser-se de que seu projeto tem como alvo o .NET Framework 4 ou posterior. Para obter mais informações, consulte [Como definir uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+   > Este passo a passo usa o <xref:System.Windows.Controls.DataGrid> controle que está disponível no .NET Framework 4 e posterior. Ser-se de que seu projeto tem como alvo o .NET Framework 4 ou posterior. Para obter mais informações, consulte [como: Uma versão do .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 2. Abra *Application. XAML* (Visual Basic) ou *App. XAML* (c#).
 
@@ -254,7 +254,7 @@ Na seção, você criar uma tabela de coluna única com três linhas e uma marge
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    O <xref:System.Windows.Controls.RowDefinition.Height%2A> de duas linhas é definido como <xref:System.Windows.GridLength.Auto%2A>, que significa que as linhas são dimensionadas de base no conteúdo de linhas. O padrão <xref:System.Windows.Controls.RowDefinition.Height%2A> é <xref:System.Windows.GridUnitType.Star> dimensionamento, o que significa que a altura da linha é uma proporção ponderada do espaço disponível. Por exemplo, se duas linhas tiverem uma <xref:System.Windows.Controls.RowDefinition.Height%2A> de "*", cada um deles tem uma altura que será a metade do espaço disponível.
+    O <xref:System.Windows.Controls.RowDefinition.Height%2A> de duas linhas é definido como <xref:System.Windows.GridLength.Auto%2A>, o que significa que as linhas são dimensionadas com base no conteúdo de linhas. O padrão <xref:System.Windows.Controls.RowDefinition.Height%2A> é <xref:System.Windows.GridUnitType.Star> dimensionamento, o que significa que a altura da linha é uma proporção ponderada do espaço disponível. Por exemplo, se duas linhas tiverem uma <xref:System.Windows.Controls.RowDefinition.Height%2A> de "*", cada um deles tem uma altura que será a metade do espaço disponível.
 
     Seu <xref:System.Windows.Controls.Grid> deve agora parecer como o XAML a seguir:
 
@@ -327,7 +327,7 @@ A ilustração a seguir mostra os resultados de que você acabou de adicionar:
 
 1. Abra *`ExpenseItHome.xaml`*.
 
-2. Adicionar um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos para o <xref:System.Windows.Controls.Button> elemento. Para obter mais informações, consulte [como: criar um manipulador de eventos simples](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Adicionar um <xref:System.Windows.Controls.Primitives.ButtonBase.Click> manipulador de eventos para o <xref:System.Windows.Controls.Button> elemento. Para obter mais informações, consulte [como: Crie um manipulador de eventos simples](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ A ilustração a seguir mostra os resultados de que você acabou de adicionar:
 3. Crie e execute o aplicativo.
 
     > [!NOTE]
-    > Se você receber um erro que o <xref:System.Windows.Controls.DataGrid> não foi encontrado ou não existir, certifique-se de que seu projeto direcionado ao .NET Framework 4 ou posterior. Para obter mais informações, consulte [Como definir uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Se você receber um erro que o <xref:System.Windows.Controls.DataGrid> não foi encontrado ou não existir, certifique-se de que seu projeto direcionado ao .NET Framework 4 ou posterior. Para obter mais informações, consulte [como: Uma versão do .NET Framework de destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. Selecione o **exibição** botão.
 
@@ -375,13 +375,13 @@ A aparência de vários elementos geralmente é o mesmo para todos os elementos 
 
     Esse XAML adiciona os seguintes estilos:
 
-    - `headerTextStyle`: para formatar o título da página <xref:System.Windows.Controls.Label>.
+    - `headerTextStyle`: Para formatar o título da página <xref:System.Windows.Controls.Label>.
 
-    - `labelStyle`: para formatar os controles <xref:System.Windows.Controls.Label>.
+    - `labelStyle`: Para formatar o <xref:System.Windows.Controls.Label> controles.
 
-    - `columnHeaderStyle`: para formatar o <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
+    - `columnHeaderStyle`: Para formatar o <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
 
-    - `listHeaderStyle`: para formatar os controles <xref:System.Windows.Controls.Border> do cabeçalho da lista.
+    - `listHeaderStyle`: Para formatar o cabeçalho da lista <xref:System.Windows.Controls.Border> controles.
 
     - `listHeaderTextStyle`: Para formatar o cabeçalho da lista <xref:System.Windows.Controls.Label>.
 

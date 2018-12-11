@@ -10,14 +10,14 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297160"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153378"
 ---
-# <a name="walkthrough-handling-events-visual-basic"></a>Instruções passo a passo: tratando eventos (Visual Basic)
-Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O primeiro tópico, [instruções passo a passo: declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), mostra como declarar e acionar eventos. Esta seção usa o formulário e a classe esse passo a passo para mostrar como manipular eventos quando eles ocorrem.  
+# <a name="walkthrough-handling-events-visual-basic"></a>Passo a passo: Manipulação de eventos (Visual Basic)
+Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O primeiro tópico, [passo a passo: Declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), mostra como declarar e acionar eventos. Esta seção usa o formulário e a classe esse passo a passo para mostrar como manipular eventos quando eles ocorrem.  
   
  O `Widget` usa o exemplo de classe tradicionais instruções de manipulação de eventos. Visual Basic fornece outras técnicas para trabalhar com eventos. Como um exercício, você pode modificar esse exemplo para usar o `AddHandler` e `Handles` instruções.  
   
@@ -117,5 +117,5 @@ Este é o segundo dos dois tópicos que demonstram como trabalhar com eventos. O
 >  Você pode declarar tantos `WithEvents` variáveis que você precisam. Porém, matrizes de `WithEvents` variáveis não são suportadas.  
   
 ## <a name="see-also"></a>Consulte também  
- [Instruções passo a passo: declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ [Passo a passo: Declarando e acionando eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -2,12 +2,12 @@
 title: Referência de símbolos e operadores (F#)
 description: Saiba mais sobre os símbolos e operadores que são usados no F# linguagem de programação.
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297292"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169866"
 ---
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores
 
@@ -50,8 +50,8 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`-`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Subtrai o lado direito do lado esquerdo, quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
 |`->`|[Funções](../functions/index.md)<br /><br />[Expressões Match](../match-expressions.md)|<ul><li>Em tipos de função, delimita argumentos e valores de retorno.<br /></li><li>Gera uma expressão (em expressões de sequência); equivalente à palavra-chave `yield`.<br /></li><li>Usado em expressões de correspondência<br /></li></ul>|
 |`.`|[Membros](../members/index.md)<br /><br />[Tipos Primitivos](../primitive-types.md)|<ul><li>Acessa um membro e separa nomes individuais em um nome totalmente qualificado.<br /></li><li>Especifica um ponto decimal em números de ponto flutuante.<br /></li></ul>|
-|`..`|[Loops: `for...in` expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo.<br /></li></ul>|
-|`.. ..`|[Loops: `for...in` expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo com um incremento.<br /></li></ul>|
+|`..`|[Loops: `for...in` Expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo.<br /></li></ul>|
+|`.. ..`|[Loops: `for...in` Expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo com um incremento.<br /></li></ul>|
 |`.[...]`|[Matrizes](../arrays.md)|<ul><li>Acessa um elemento de matriz.<br /></li></ul>|
 |`/`|[Operadores Aritméticos](arithmetic-operators.md)<br /><br />[Unidades de Medida](../units-of-measure.md)|<ul><li>Divide o lado esquerdo (numerador) pelo direito (denominador).<br /></li><li>Usado em unidades de tipos de medida.<br /></li></ul>|
 |`/?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Divide o lado esquerdo pelo lado direito, quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
@@ -61,8 +61,8 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`::`|[Listas](../lists.md)<br /><br />[Expressões Match](../match-expressions.md)|<ul><li>Cria uma lista. O elemento no lado esquerdo é anexado à lista no lado direito.<br /></li><li>Usado na correspondência de padrões para separar as partes de uma lista.<br /></li></ul>|
 |`:=`|[Células de Referência](../reference-cells.md)|<ul><li>Atribui um valor a uma célula de referência.<br /></li></ul>|
 |`:>`|[Conversões Cast e conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja superior na hierarquia.<br /></li></ul>|
-|`:?`|[Expressões Match](../match-expressions.md)|<ul><li>Retorna `true` se o valor corresponder ao tipo especificado; caso contrário, retorna `false` (operador de teste do tipo).<br /></li></ul>|
-|`:?>`|[Conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja inferior na hierarquia.<br /></li></ul>|
+|`:?`|[Expressões Match](../match-expressions.md)|<ul><li>Retorna `true` se o valor corresponde ao tipo especificado (incluindo se ele é um subtipo); caso contrário, retornará `false` (operador de teste de tipo).<br /></li></ul>|
+|`:?>`|[Conversões Cast e conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja inferior na hierarquia.<br /></li></ul>|
 |`;`|[Sintaxe Detalhada](../verbose-syntax.md)<br /><br />[Listas](../lists.md)<br /><br />[Registros](../records.md)|<ul><li>Separa expressões (usadas principalmente na sintaxe detalhada).<br /></li><li>Separa elementos de uma lista.<br /></li><li>Separa campos de um registro.<br /></li></ul>|
 |`<`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Calcula a operação menor que.<br /></li></ul>|
 |`<?`|[Operadores Anuláveis](nullable-operators.md)|Calcula a operação menor que, quando o lado direito for um tipo que permite valor nulo.|
@@ -146,6 +146,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`.`|Esquerda |
 |`f(x)`|Esquerda|
 |`f<`*tipos*`>`|Esquerda|
+
 F# oferece suporte à sobrecarga de operador personalizado. Isso significa que você pode definir seus próprio operadores. Na tabela anterior, *op* pode ser qualquer sequência (possivelmente vazia) válida de caracteres de operador, internos ou definidos pelo usuário. Dessa forma, é possível usar esta tabela para determinar qual sequência de caracteres usar para que um operador personalizado atinja o nível desejado de precedência. Os caracteres `.` à esquerda são ignorados quando o compilador determina a precedência.
 
 ## <a name="see-also"></a>Consulte também

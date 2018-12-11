@@ -4,12 +4,12 @@ description: Saiba mais sem servidor com uma abordagem prática acessando amostr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369600"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153781"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Casos de uso e cenários de negócios sem servidor
 
@@ -27,7 +27,7 @@ Um aplicativo separado de página única (SPA) chama uma função sem servidor p
 
 ![Galeria de imagens automatizado](./media/automated-image-gallery.png)
 
-O repositório completo e instruções para criar o aplicativo lógico estão disponíveis aqui: [cola de grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue).
+O repositório completo e instruções para criar o aplicativo lógico estão disponíveis aqui: [Cola de grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Cliente móvel de plataforma cruzada usando xamarin. Forms e funções
 
@@ -55,7 +55,7 @@ O aplicativo usa o recurso de proxies do Azure Functions para permitir a refator
 
 O proxy fornece um ponto de extremidade de API único que é atualizado para redirecionar solicitações individuais conforme eles são movidos para funções sem servidor.
 
-Você pode exibir um vídeo que orienta durante a migração inteira: [Lift- and -shift com o Azure functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102). Acessar o código de exemplo: [traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Você pode exibir um vídeo que orienta durante a migração inteira: [Lift- and -shift com o Azure functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102). Acesse o código de exemplo: [Traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analisar um arquivo CSV e inserir em um banco de dados
 
@@ -77,7 +77,7 @@ Em seguida, você pode criar um painel do Power BI para reunir informações sob
 
 ![Exemplo do Power BI](./media/power-bi-example.png)
 
-O repositório de shortener link completo com instruções está disponível aqui: [Serverless URL shortener](https://github.com/jeremylikness/serverless-url-shortener). Você pode ler sobre uma versão simplificada aqui: [armazenamento do Azure para aplicativos .NET sem servidor em questão de minutos](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+O repositório de shortener link completo com instruções está disponível aqui: [Serverless URL shortener](https://github.com/jeremylikness/serverless-url-shortener). Você pode ler sobre uma versão simplificada aqui: [Armazenamento do Azure para aplicativos .NET sem servidor em questão de minutos](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Verificar a conectividade do dispositivo usando um ping
 
@@ -98,5 +98,5 @@ Para obter mais informações, consulte [ping do IoT Hub do Azure](https://azure
 * [Serverless URL shortener](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[Anterior](orchestration-patterns.md)
-[Próximo](serverless-conclusion.md)
+>[Anterior](orchestration-patterns.md)
+>[Próximo](serverless-conclusion.md)

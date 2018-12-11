@@ -3,11 +3,11 @@ title: Programação orientada a objeto (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153912"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Programação orientada a objeto (Visual Basic)
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-Para obter mais informações, consulte: [tempo de vida do objeto: como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Para obter mais informações, consulte: [Tempo de vida do objeto: Como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Destruidores
 
@@ -254,7 +254,7 @@ Dim sampleObject = New SampleClass With
 Para obter mais informações, consulte:
 
 - [Operador New](../../../visual-basic/language-reference/operators/new-operator.md)
-- [Inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
 ### <a name="shared-classes-and-members"></a>Classes compartilhadas e membros
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Para obter mais informações, consulte [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Para obter mais informações, consulte: [Tipos anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Herança
 

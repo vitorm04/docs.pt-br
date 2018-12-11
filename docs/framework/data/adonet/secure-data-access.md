@@ -2,12 +2,12 @@
 title: Proteger o acesso a dados
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129188"
 ---
 # <a name="secure-data-access"></a>Proteger o acesso a dados
 Para escrever código seguro do ADO.NET, você precisa compreender os mecanismos de segurança disponíveis no armazenamento de dados subjacente ou banco de dados. Você também precisa considerar as implicações de segurança de outros recursos ou componentes que seu aplicativo pode conter.  
@@ -66,11 +66,8 @@ Para escrever código seguro do ADO.NET, você precisa compreender os mecanismos
 |Recurso|Descrição|  
 |--------------|-----------------|  
 |[Considerações de segurança e diretrizes para o Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Descreve técnicas de segurança para o Access 2007 tais criptografando arquivos, administrando as senhas, convertendo os bancos de dados para os novos formatos ACCDB e ACCDE e usando outras opções de segurança.|  
-|[Ajudar a proteger um banco de dados do Access com segurança de nível de usuário (MDB)](https://go.microsoft.com/fwlink/?LinkId=47697)|Aplica-se para o Access 2003. Fornece instruções para a implementação de segurança em nível de usuário para proteger os dados no Access 2003.|  
 |[Noções básicas sobre a função de arquivos de informações do grupo de trabalho na segurança de acesso](https://support.microsoft.com/kb/305542)|Explica a função e a relação do arquivo de informações do grupo de trabalho de segurança do Access 2003.|  
 |[Com frequência frequentes perguntas sobre segurança do Microsoft Access para versões do Microsoft Access 2.0 até 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versão para download perguntas frequentes sobre o Microsoft Access Security.|  
-|[Solucionar problemas de segurança e proteção](https://go.microsoft.com/fwlink/?LinkId=47703)|Apresenta soluções para problemas comuns com segurança no Excel 2003.|  
-  
 ## <a name="enterprise-services"></a>O Enterprise Services  
  COM+ contém seu próprio modelo de segurança que se baseia em contas do Windows NT e a representação de processo/thread. O <xref:System.EnterpriseServices> namespace fornece wrappers que permitem que os aplicativos .NET para integrar o código gerenciado com serviços de segurança COM+ por meio de <xref:System.EnterpriseServices.ServicedComponent> classe.  
   
@@ -87,9 +84,9 @@ Para escrever código seguro do ADO.NET, você precisa compreender os mecanismos
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)|Contém tópicos que descrevem como expor componentes COM para o .NET Framework e como expor os componentes do .NET Framework a com.&lt;1}|  
-|[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|Contém tópicos avançados, como assemblies de interoperabilidade primários, threading e marshaling personalizado.|  
-  
+|[Interoperação com código não gerenciado](../../../../docs/framework/interop/index.md)|Contém tópicos que descrevem como expor componentes COM para o .NET Framework e como expor os componentes do .NET Framework a com.&lt;1}|
+|[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contém tópicos avançados, como assemblies de interoperabilidade primários, threading e marshaling personalizado.|
+
 ## <a name="see-also"></a>Consulte também  
  [Securing ADO.NET Applications](../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
  [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md) (Segurança do SQL Server)  

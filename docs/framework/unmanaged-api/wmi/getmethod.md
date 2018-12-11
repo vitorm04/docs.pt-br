@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773953"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152312"
 ---
 # <a name="getmethod-function"></a>Função GetMethod
 Recupera informações sobre o método especifico.
@@ -77,10 +77,10 @@ Essa função encapsula uma chamada para o [IWbemClassObject::GetMethod](/window
 
 Gerenciamento do Windows pode definir as [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponteiro para `null` se o método não tem em parâmetros.
 
-Na `ppInSignature` e `ppOutSignature` descrevem em parâmetros e out, respectivamente, como propriedades em um `IWbemClassObject` instância da classe system [parametry](/windows/desktop/WmiSdk/--parameters). As propriedades na `ppInsignature` são denominados **Param * * * n*, onde *n* é a posição do parâmetro na assinatura do método (como `Param1`, `Param2`, etc.). As propriedades na `ppOutSignature` também são nomeados **Param * * * n*, e o valor de retorno é denominado **ReturnValue**. Para obter mais informações e um exemplo, consulte [IWbemClassObject::GetMethod método](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+Na `ppInSignature` e `ppOutSignature` descrevem em parâmetros e out, respectivamente, como propriedades em um `IWbemClassObject` instância da classe system [parametry](/windows/desktop/WmiSdk/--parameters). As propriedades na `ppInsignature` são nomeados `Param` *n*, onde *n* é a posição do parâmetro na assinatura do método (como `Param1`, `Param2`, etc.). As propriedades na `ppOutSignature` também são nomeadas `Param` *n*, e o valor de retorno é denominado `ReturnValue`. Para obter mais informações e um exemplo, consulte [IWbemClassObject::GetMethod método](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   

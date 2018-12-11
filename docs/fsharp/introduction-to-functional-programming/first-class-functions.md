@@ -2,12 +2,12 @@
 title: Funções de primeira classe
 description: Saiba mais sobre funções de primeira classe e como eles são importantes para programação funcional em F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: 1459049c9c1c77f4eefd2a83945335b33ca22ab9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148621"
 ---
 # <a name="first-class-functions"></a>Funções de primeira classe
 
@@ -27,7 +27,7 @@ As duas últimas medidas definem o que é conhecido como *operações de ordem s
 
 ## <a name="give-the-value-a-name"></a>Nomeie o valor
 
-Se uma função é um valor de primeira classe, você deve ser capaz de nomeá-lo, assim como você pode nomear inteiros, cadeias de caracteres e outros tipos internos. Isso é chamado na literatura de programação funcional como um identificador para um valor de associação. F# usa [ `let` associações](../language-reference/functions/let-bindings.md) associar nomes a valores: `let <identifier> = <value>`. O código a seguir mostra dois exemplos.
+Se uma função é um valor de primeira classe, você deve ser capaz de nomeá-lo, assim como você pode nomear inteiros, cadeias de caracteres e outros tipos internos. Isso é chamado na literatura de programação funcional como um identificador para um valor de associação. F#usa [ `let` associações](../language-reference/functions/let-bindings.md) associar nomes a valores: `let <identifier> = <value>`. O código a seguir mostra dois exemplos.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -35,7 +35,7 @@ Você pode nomear uma função tão facilmente. O exemplo a seguir define uma fu
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
 
-F# fornece a seguinte sintaxe mais concisa para alcançar o mesmo resultado com menos digitação.
+F#fornece a seguinte sintaxe mais concisa para alcançar o mesmo resultado com menos digitação.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
 
@@ -69,7 +69,7 @@ No exemplo a seguir, a função `applyIt` tem dois parâmetros, `op` e `arg`. Se
 
 A capacidade de enviar uma função como um argumento para outra função serve como base as abstrações comuns em linguagens de programação funcionais, como operações de mapa ou filtro. Uma operação de mapeamento, por exemplo, é uma função de ordem superior que captura a computação compartilhada por funções que percorrer uma lista, fazer algo para cada elemento e, em seguida, retornam uma lista de resultados. Você talvez queira incrementar a cada elemento em uma lista de inteiros, ou quadrado de cada elemento ou alterar cada elemento em uma lista de cadeias de caracteres em maiusculas. A parte propenso a erro de cálculo é o processo de recursiva que percorre a lista e cria uma lista de resultados a serem retornados. Essa parte é capturada na função de mapeamento. Tudo o que você precisa escrever para um aplicativo específico é a função que você deseja aplicar a cada elemento da lista individualmente (adição, quadrado, caso a alteração). Que função é enviada como um argumento para a função de mapeamento, assim como `squareIt` é enviado ao `applyIt` no exemplo anterior.
 
-F# fornece métodos de mapa para a maioria dos tipos de coleção, inclusive [listas](../language-reference/lists.md), [matrizes](../language-reference/arrays.md), e [sequências](../language-reference/sequences.md). Os exemplos seguintes usam listas. A sintaxe é `List.map <the function> <the list>`.
+F#fornece métodos de mapa para a maioria dos tipos de coleção, inclusive [listas](../language-reference/lists.md), [matrizes](../language-reference/arrays.md), e [sequências](../language-reference/sequences.md). Os exemplos seguintes usam listas. A sintaxe é `List.map <the function> <the list>`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -99,19 +99,19 @@ O seguinte código usa `checkFor` para criar uma nova função que usa um argume
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet33.fs)]
 
-O exemplo a seguir usa o status de primeira classe das funções em F# para declarar uma função, `compose`, que retorna uma composição dos dois argumentos de função.
+O exemplo a seguir usa o status de primeira classe das funções no F# para declarar uma função `compose`, que retorna uma composição dos dois argumentos de função.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
->[!NOTE]
-Para obter uma versão ainda mais curta, consulte a seção a seguir, "Funções Curried".
+> [!NOTE]
+> Para obter uma versão ainda mais curta, consulte a seção a seguir, "Funções Curried".
 
 O código a seguir envia duas funções como argumentos para `compose`, ambos do que usam um único argumento do mesmo tipo. O valor de retorno é uma nova função que é uma composição dos argumentos da função de dois.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
->[!NOTE]
-F# fornece dois operadores, `<<` e `>>`, que compõem a funções. Por exemplo, `let squareAndDouble2 = doubleIt << squareIt` é equivalente a `let squareAndDouble = compose doubleIt squareIt` no exemplo anterior.
+> [!NOTE]
+> F#fornece dois operadores, `<<` e `>>`, que compõem a funções. Por exemplo, `let squareAndDouble2 = doubleIt << squareIt` é equivalente a `let squareAndDouble = compose doubleIt squareIt` no exemplo anterior.
 
 O exemplo de retorno de uma função como o valor de uma chamada de função a seguir cria um simples jogo de adivinhação. Para criar um jogo, chame `makeGame` com o valor que você deseja que alguém adivinhar enviado para `target`. O valor de retorno da função `makeGame` é uma função que usa um argumento (o Palpite) e informa se o Palpite está correto.
 
@@ -123,7 +123,7 @@ O código a seguir chama `makeGame`, enviando o valor `7` para `target`. Identif
 
 ## <a name="curried-functions"></a>Funções via currying
 
-Muitos dos exemplos na seção anterior podem ser gravados mais concisa, aproveitando o implícita *currying* em declarações de função em F#. Currying é um processo que transforma uma função que tem mais de um parâmetro em uma série de funções internas, cada um deles tem um único parâmetro. No F#, inerentemente via currying funções que têm mais de um parâmetro. Por exemplo, `compose` da seção anterior pode ser escrito como mostrado no seguinte estilo conciso, com três parâmetros.
+Muitos dos exemplos na seção anterior podem ser gravados mais concisa, aproveitando o implícita *currying* em F# declarações de função. Currying é um processo que transforma uma função que tem mais de um parâmetro em uma série de funções internas, cada um deles tem um único parâmetro. No F#, inerentemente são via currying funções que têm mais de um parâmetro. Por exemplo, `compose` da seção anterior pode ser escrito como mostrado no seguinte estilo conciso, com três parâmetros.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -139,8 +139,8 @@ Para verificar se a função ainda funciona como antes, tente os casos de teste 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
 
->[!NOTE]
-Você pode restringir currying colocando parâmetros em tuplas. Para obter mais informações, consulte "Padrões de parâmetro" em [parâmetros e argumentos](../language-reference/parameters-and-arguments.md).
+> [!NOTE]
+> Você pode restringir currying colocando parâmetros em tuplas. Para obter mais informações, consulte "Padrões de parâmetro" em [parâmetros e argumentos](../language-reference/parameters-and-arguments.md).
 
 O exemplo a seguir usa currying implícita para gravar uma versão mais curta `makeGame`. Os detalhes de como `makeGame` constrói e retorna o `game` função são menos explícita neste formato, mas você pode verificar usando os casos de teste originais que o resultado é o mesmo.
 
@@ -162,7 +162,7 @@ Para ir um pouco além disso, substitua o valor que `applyIt` associada de `appl
 
 ## <a name="functions-are-first-class-values-in-f"></a>Funções são valores de primeira classe no F\#
 
-Os exemplos nas seções anteriores demonstram que funções em F# satisfaçam os critérios para valores de primeira classe em F#:
+Os exemplos nas seções anteriores demonstram o que funciona no F# satisfazem os critérios para valores de primeira classe no F#:
 
 - Você pode associar um identificador para uma definição de função.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
@@ -176,7 +176,7 @@ Os exemplos nas seções anteriores demonstram que funções em F# satisfaçam o
 - Você pode retornar uma função como o valor de uma chamada de função.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-Para obter mais informações sobre o F#, consulte o [referência da linguagem F#](../language-reference/index.md).
+Para obter mais informações sobre F#, consulte o [ F# referência de linguagem](../language-reference/index.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -194,4 +194,4 @@ O código a seguir contém todos os exemplos neste tópico.
 - [Tuplas](../language-reference/tuples.md)
 - [Funções](../language-reference/functions/index.md)
 - [`let` Associações](../language-reference/functions/let-bindings.md)
-- [Expressões lambda: A `fun` palavra-chave](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Expressões lambda: O `fun` palavra-chave](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

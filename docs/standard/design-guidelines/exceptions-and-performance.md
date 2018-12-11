@@ -1,6 +1,6 @@
 ---
 title: Exceções e desempenho
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - tester-doer pattern
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d664b7b61394bd9bfe6d0abd7130f9f0191e7a03
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: ab125117836545b9a2436347375ed0e08c591c7b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083540"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153742"
 ---
 # <a name="exceptions-and-performance"></a>Exceções e desempenho
 Uma preocupação comuns relacionada às exceções é que, se as exceções são usadas para o código que rotineiramente falha, o desempenho da implementação será inaceitável. Isso é uma preocupação válida. Quando um membro lança uma exceção, seu desempenho pode ser ordens de magnitude mais lentas. No entanto, é possível atingir um bom desempenho enquanto estritamente aderindo às diretrizes exceção que não é permitido usar códigos de erro. Dois padrões descritos nesta seção sugerem maneiras de fazer isso.  
@@ -71,7 +70,7 @@ public struct DateTime {
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

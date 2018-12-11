@@ -1,6 +1,6 @@
 ---
 title: Diretrizes de nomenclatura
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], about naming guidelines
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+author: KrzysztofCwalina
+ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120902"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127700"
 ---
 # <a name="naming-guidelines"></a>Diretrizes de nomenclatura
 Um conjunto consistente de convenções de nomenclatura no desenvolvimento de uma estrutura a seguir pode ser uma contribuição importante para facilidade de uso da estrutura. Ele permite que a estrutura a ser usado por muitos desenvolvedores em projetos amplamente separados. Além da consistência do formulário, os nomes de elementos de estrutura devem ser compreendidos com facilidade e devem transmitir a função de cada elemento.  
@@ -38,7 +37,7 @@ Um conjunto consistente de convenções de nomenclatura no desenvolvimento de um
  [Recursos de nomenclatura](../../../docs/standard/design-guidelines/naming-resources.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

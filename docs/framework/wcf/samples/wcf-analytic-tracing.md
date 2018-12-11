@@ -3,11 +3,11 @@ title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181651"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147418"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que grava ETW no Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Rastreamentos de analíticos destinam-se tornar mais fácil de obter visibilidade em seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar o <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para eventos de gravação que se integram com os serviços WCF.  
@@ -106,7 +106,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 4.  Clique em **limpar** para limpar os eventos.  
   
 ## <a name="known-issue"></a>Problema conhecido  
- Há um problema conhecido na **Visualizador de eventos** onde ele pode não decodifica eventos ETW. Você poderá ver uma mensagem de erro que diz: "a descrição para a ID de evento \<id > Microsoft-Windows-aplicativos de servidor de origem não podem ser encontrados. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local." Se você encontrar esse erro, selecione **Refresh** da **ações** menu. O evento, em seguida, deve decodificar corretamente.  
+ Há um problema conhecido na **Visualizador de eventos** onde ele pode não decodifica eventos ETW. Você poderá ver uma mensagem de erro que diz: "A descrição para a ID de evento \<id > da fonte Microsoft-Windows-aplicativos de servidor não podem ser encontrados. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local." Se você encontrar esse erro, selecione **Refresh** da **ações** menu. O evento, em seguida, deve decodificar corretamente.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

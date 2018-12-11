@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845366"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151155"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Adicione&gt; elemento para &lt;sharedListeners&gt;
 Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners` é uma coleção de ouvintes que quaisquer [ \<fonte >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<rastreamento >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) pode fazer referência.  Por padrão, os ouvintes na `sharedListeners` coleção não são colocados em um `Listeners` coleção. Eles devem ser adicionados por nome para o [ \<fonte >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<rastreamento >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Não é possível obter os ouvintes no `sharedListeners` coleção no código em tempo de execução.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<sharedListeners > elemento  
-\<add>  
+&nbsp;&nbsp;\<System. Diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > elemento  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Adicionar >  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
@@ -43,7 +45,8 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners` é uma col
 |`name`|Atributo obrigatório.<br /><br /> Especifica o nome do ouvinte que é usado para adicionar o ouvinte compartilhado para um `Listeners` coleção.|  
 |`type`|Atributo obrigatório.<br /><br /> Especifica o tipo do ouvinte. Você deve usar uma cadeia de caracteres que atenda aos requisitos especificados em [especificando nomes de tipo totalmente qualificados](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Atributo opcional.<br /><br /> A cadeia de caracteres passada para o construtor para a classe especificada.|  
-  
+|`traceOutputOptions`|Atributo opcional.<br/><br/>A representação de cadeia de caracteres de um ou mais <xref:System.Diagnostics.TraceOptions> membros de enumeração que indica os dados a serem gravados na saída de rastreamento. Vários itens são separados por vírgulas. O valor padrão é "None".|
+
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  

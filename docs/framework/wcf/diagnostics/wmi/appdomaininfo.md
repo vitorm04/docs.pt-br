@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170218"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127076"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Informações de domínio de aplicativo  
@@ -41,84 +41,84 @@ class AppDomainInfo
 ### <a name="appdomainid"></a>AppDomainId  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  A Id do appdomain.  
   
 ### <a name="isdefault"></a>IsDefault  
  Tipo de dados: boolean  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Indica se o appdomain é o appdomain padrão.  
   
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Tipo de dados: boolean  
   
- Tipo de acesso: leitura/gravação  
+ Tipo de acesso: Leitura/gravação  
   
  Um valor que especifica se mensagens malformadas são registradas.  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Tipo de dados: boolean  
   
- Tipo de acesso: leitura/gravação  
+ Tipo de acesso: Leitura/gravação  
   
  Um valor que especifica se as mensagens são rastreadas no nível de serviço (antes da criptografia e transformações de transporte).  
   
 ### <a name="logmessagesattransportlevel"></a>Logmessagesattransportlevel como  
  Tipo de dados: boolean  
   
- Tipo de acesso: leitura/gravação  
+ Tipo de acesso: Leitura/gravação  
   
  Um valor que especifica se as mensagens são rastreadas no nível do transporte.  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- Tipo de dados: matriz TraceListener  
+ Tipo de dados: Matriz de TraceListener  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Os ouvintes de rastreamento da coleção que escutam à origem de rastreamento System.Wmi.MessageLogging.  
   
 ### <a name="name"></a>Nome  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O nome do appdomain.  
   
 ### <a name="performancecounters"></a>PerformanceCounters  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O escopo dos contadores de desempenho do Active Directory no appdomain.  
   
 ### <a name="processid"></a>ProcessId  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O processo de identificação.  
   
 ### <a name="serviceconfigpath"></a>ServiceConfigPath  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O caminho para a configuração do serviço.  
   
 ### <a name="tracelevel"></a>TraceLevel  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: leitura/gravação  
+ Tipo de acesso: Leitura/gravação  
   
  O nível de rastreamento da origem de rastreamento de System.  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- Tipo de dados: matriz TraceListener  
+ Tipo de dados: Matriz de TraceListener  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Uma coleção de ouvintes da origem de rastreamento de System. ServiceModel.  
   

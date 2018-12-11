@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b86ffdd242a95a0c5c34efb3f38b3501f3f2ba6c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197793"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129241"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
 
@@ -36,7 +36,7 @@ Especifica a quais versões do Common Language Runtime o aplicativo oferece supo
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` atributo, consulte a [valores de "versão de tempo de execução"](#version) seção. **Observação:** por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. A partir do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], somente os números das versões principal e secundária são necessários (isto é, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|  
+|**version**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a versão do Common Language Runtime (CLR) a qual esse aplicativo oferece suporte. Para obter valores válidos do `version` atributo, consulte a [valores de "versão de tempo de execução"](#version) seção. **Observação:**  Por meio do .NET Framework 3.5, o "*versão de tempo de execução*" valor assume a forma *principais*. *pequenas*. *criar*. A partir do [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], somente os números das versões principal e secundária são necessários (isto é, "v4.0" em vez de "v4.0.30319"). A cadeia de caracteres mais curta é recomendada.|  
 |**sku**|Atributo opcional.<br /><br /> Um valor de cadeia de caracteres que especifica a unidade de manutenção de estoque (SKU), que por sua vez Especifica qual versão do .NET Framework dá suporte a esse aplicativo.<br /><br /> Começando com o .NET Framework 4.0, o uso do `sku` atributo é recomendado.  Quando presente, indica a versão do .NET Framework que o destino do aplicativo.<br /><br /> Para obter valores válidos do atributo sku, consulte o [valores de "id de sku"](#sku) seção.|  
   
 ## <a name="remarks"></a>Comentários
@@ -77,12 +77,12 @@ O `sku` atributo usa um moniker de estrutura de destino (TFM) para indicar a ver
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0, o perfil de cliente|".NETFramework,Version=v4.0,Profile=Client"|  
-|atualização 1 da plataforma 4.0,|.NETFramework,Version=v4.0.1|  
-|4.0, o perfil de cliente, a atualização 1|.NETFramework,Version=v4.0.1,Profile=Client|  
-|atualização da plataforma do 4.0, 2|.NETFramework,Version=v4.0.2|  
-|4.0, o perfil de cliente, atualização 2|.NETFramework,Version=v4.0.2,Profile=Client|  
-|atualização da plataforma do 4.0, 3|.NETFramework,Version=v4.0.3|  
-|4.0, o perfil de cliente, a atualização 3|.NETFramework,Version=v4.0.3,Profile=Client|  
+|atualização 1 da plataforma 4.0,|". NETFramework, versão = 4.0.1 "|  
+|4.0, o perfil de cliente, a atualização 1|". NETFramework, versão 4.0.1, perfil de = = cliente "|  
+|atualização da plataforma do 4.0, 2|". NETFramework, versão = 4.0.2 "|  
+|4.0, o perfil de cliente, atualização 2|". NETFramework, versão = 4.0.2, perfil = cliente "|  
+|atualização da plataforma do 4.0, 3|". NETFramework, versão = verze 4.0.3 "|  
+|4.0, o perfil de cliente, a atualização 3|". NETFramework, versão = verze 4.0.3, perfil = cliente "|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  

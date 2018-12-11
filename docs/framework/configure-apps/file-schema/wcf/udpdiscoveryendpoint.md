@@ -2,15 +2,15 @@
 title: '&lt;UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 95c6550352d8f100c8674c2e7f630fcf55da01e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144748"
 ---
 # <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
-Este elemento de configuração define um ponto de extremidade padrão que é pré-configurado para operações de descoberta através de um UDP associação multicast. Esse ponto de extremidade tem um contrato fixo e dá suporte a duas versões do protocolo WS-Discovery. Além disso, ele tem uma associação fixa do UDP e um endereço padrão conforme especificado nas especificações do WS-Discovery (WS-Discovery de abril de 2005 ou v 1.1 do WS-Discovery).  
+Este elemento de configuração define um ponto de extremidade padrão que é pré-configurado para operações de descoberta através de um UDP multicast de associação. Esse ponto de extremidade tem um contrato fixo e oferece suporte a duas versões do protocolo WS-Discovery. Além disso, ele tem uma associação de UDP fixa e um endereço padrão, conforme as especificações do WS-Discovery (WS-Discovery de abril de 2005 ou WS-Discovery V1.1).  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -30,10 +30,10 @@ Este elemento de configuração define um ponto de extremidade padrão que é pr
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|discoveryMode|Uma cadeia de caracteres que especifica o modo de protocolo de descoberta. Os valores válidos são "Ad hoc" e "Gerenciado". No modo gerenciado o protocolo depende de um Proxy de descoberta, que atua como um repositório de serviços podem ser descobertos. Modo ad hoc requer o protocolo a usar UDP multicast mecanismo para localizar serviços disponíveis. Esse valor é do tipo <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.|  
-|discoveryVersion|Uma cadeia de caracteres que especifica uma das duas versões do protocolo WS-Discovery. Os valores válidos são WSDiscovery11 e WSDiscoveryApril2005. Esse valor é do tipo <xref:System.ServiceModel.Discovery.DiscoveryVersion>.|  
-|maxResponseDelay|Um valor Timespan que especifica o valor máximo para o protocolo de descoberta de atraso aguardará antes de enviar determinadas mensagens, como teste de correspondência ou resolva.<br /><br /> Se todas as ProbeMatches forem enviados ao mesmo tempo, pode resultar uma profusão de rede. Para evitar que isso ocorra, ProbeMatches são enviadas com um atraso aleatório entre cada ProbeMatch. É o atraso aleatório no intervalo de 0 até o valor definido por este atributo. Se esse atributo é definido como 0, as mensagens de ProbeMatches são enviadas em um loop estreito sem atraso. Caso contrário, as mensagens de ProbeMatches são enviadas com algum atraso aleatório, de modo que o tempo total gasto para enviar todas as mensagens de ProbeMatches não exceda o maxResponseDelay. Esse valor só é relevante para serviços, ele não é usado por clientes.|  
-|multicastAddress|Um Uri que especifica um endereço de multicast para usar para enviar e receber mensagens de descoberta. O valor padrão é o endereço multicast como compatível com a especificação do protocolo.|  
+|discoveryMode|Uma cadeia de caracteres que especifica o modo do protocolo de descoberta. Os valores válidos são "Adhoc" e "Gerenciado". No modo gerenciado o protocolo se baseia em um Proxy de descoberta, que atua como um repositório de serviços podem ser descobertos. Modo ad hoc requer o protocolo a usar o UDP multicast mecanismo para localizar os serviços disponíveis. Esse valor é do tipo <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>.|  
+|DiscoveryVersion|Uma cadeia de caracteres que especifica uma das duas versões do protocolo WS-Discovery. Os valores válidos são WSDiscovery11 e WSDiscoveryApril2005. Esse valor é do tipo <xref:System.ServiceModel.Discovery.DiscoveryVersion>.|  
+|maxResponseDelay|Um valor de Timespan que especifica o valor máximo para o atraso, o protocolo de descoberta irá esperar antes de enviar determinadas mensagens, como correspondência de investigação ou resolver.<br /><br /> Se todas as ProbeMatches forem enviadas ao mesmo tempo, pode resultar uma tempestade de rede. Para evitar que isso ocorra, ProbeMatches são enviados com um atraso aleatório entre cada ProbeMatch. É o atraso aleatório no intervalo de 0 até o valor definido por este atributo. Se esse atributo é definido como 0, as ProbeMatches de mensagens são enviadas em um loop estreito sem demora. Caso contrário, as mensagens de ProbeMatches são enviadas com algum atraso aleatório, de modo que o tempo total decorrido para enviar mensagens de todas as ProbeMatches não exceda o maxResponseDelay. Esse valor só é relevante para os serviços, ele não é usado pelos clientes.|  
+|multicastAddress|Um Uri que especifica um endereço de multicast a ser usado para enviar e receber as mensagens de descoberta. O valor padrão é o endereço multicast como em conformidade com a especificação do protocolo.|  
 |`name`|Uma cadeia de caracteres que especifica o nome da configuração do ponto de extremidade padrão. O nome é usado no `endpointConfiguration` atributo do ponto de extremidade de serviço para vincular a um ponto de extremidade padrão para sua configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -46,10 +46,10 @@ Este elemento de configuração define um ponto de extremidade padrão que é pr
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são predefinidas pontos de extremidade com um ou mais de suas propriedades (endereço, associação, contrato) fixo.|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são definidos previamente os pontos de extremidade com um ou mais das suas propriedades (endereço, associação, contrato) fixo.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra um serviço de escuta de mensagens de descoberta através de um UDP multicast de transporte.  
+ O exemplo a seguir demonstra um serviço de escuta para mensagens de descoberta através de um UDP multicast de transporte.  
   
 ```xml
 <services>  

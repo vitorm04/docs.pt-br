@@ -4,12 +4,12 @@ description: Solicitação de pull de funções duráveis do Azure
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 241eff4f30e63b2bb34664d6f783f854a000e7fd
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c3b9dbe473ba9272a8c8c07cec86e11fcd9fc12d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49369679"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129305"
 ---
 # <a name="orchestration-patterns"></a>Padrões de orquestração
 
@@ -157,5 +157,5 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 * [Teste de unidade no .NET Core e no .NET Standard](https://docs.microsoft.com/dotnet/core/testing/)
 
 >[!div class="step-by-step"]
-[Anterior](durable-azure-functions.md)
-[Próximo](serverless-business-scenarios.md)
+>[Anterior](durable-azure-functions.md)
+>[Próximo](serverless-business-scenarios.md)

@@ -4,22 +4,21 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 276071a5d55015f2feecc27020ad614684907b4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7f88daaf0787cf780e7ab9602f35ae4e6ab8308c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155308"
 ---
 # <a name="soa-applications"></a>Aplicativos de SOA
 
-SOA foi um termo com uso excessivo e deve muitas coisas diferentes para pessoas diferentes. Mas, no mínimo e um denominador comum, a SOA, ou a orientação de serviço, a média você estrutura a arquitetura do seu aplicativo, decompondo-la em vários serviços (mais comumente, como serviços HTTP) que podem ser classificados em tipos diferentes, como subsistemas ou, em outros casos, como camadas.
+SOA era um termo usado de maneira exagerado e significava tantas coisas diferentes para pessoas diferentes. Mas, pelo menos e como um denominador comum, a SOA, ou a orientação por serviços, a média, você estrutura da arquitetura de seu aplicativo decompondo-o em vários serviços (mais comumente, como serviços HTTP) que podem ser classificados em diferentes tipos como subsistemas ou, em outros casos, como camadas.
 
-Atualmente, você pode implantar esses serviços como contêineres do Docker, que resolve problemas relacionados à implantação, porque todas as dependências são incluídas na imagem do contêiner. No entanto, quando você precisar de expansão SOAs, você pode encontrar desafios se você estiver implantando com base em instâncias únicas. Isso é onde um Docker clustering software ou orchestrator ajudará. Vamos examinar isso mais detalhadamente na próxima seção quando analisamos microservices abordagens.
+Hoje, você pode implantar esses serviços como contêineres do Docker, que resolve problemas relacionados à implantação, porque todas as dependências são incluídas na imagem de contêiner. No entanto, quando você precisar SOAs de escalabilidade horizontal, você pode encontrar desafios se você estiver implantando com base em instâncias únicas. Isso é onde um Docker softwares de clustering ou orquestrador ajudará. Vamos examinar isso mais detalhadamente na próxima seção quando examinamos as abordagens de microsserviços.
 
-No final do dia, as soluções de clustering do contêiner são úteis para os dois uma arquitetura SOA tradicional ou uma arquitetura microservices mais avançada no qual cada microsserviço possui seu modelo de dados. E, graças aos vários bancos de dados, você também pode expansão a camada de dados em vez de trabalhar com bancos de dados monolíticos compartilhados pelos serviços de SOA. No entanto, a discussão sobre os dados de divisão é puramente sobre a arquitetura e design.
-
+No final do dia, as soluções de clustering de contêiner são úteis para os dois uma arquitetura SOA tradicional ou para uma arquitetura de microsserviços mais avançada em que cada microsserviço tem seu modelo de dados. E, graças aos vários bancos de dados, você também pode expandir a camada de dados em vez de trabalhar com bancos de dados monolíticos compartilhados pelos serviços de SOA. No entanto, a discussão sobre dividindo os dados é puramente sobre arquitetura e design.
 
 >[!div class="step-by-step"]
-[Anterior](state-and-data-in-docker-applications.md)
-[Próximo](orchestrate-high-scalability-availability.md)
+>[Anterior](state-and-data-in-docker-applications.md)
+>[Próximo](orchestrate-high-scalability-availability.md)

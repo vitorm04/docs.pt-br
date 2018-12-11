@@ -2,12 +2,12 @@
 title: Execução lado a lado no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042147"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126608"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Execução lado a lado no ADO.NET
 Execução lado a lado na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é a capacidade de executar um aplicativo em um computador que tem várias versões do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] instalado, exclusivamente usando a versão para o qual o aplicativo foi compilado. Para obter informações detalhadas sobre como configurar a execução lado a lado, consulte [execução lado a lado](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -47,7 +47,7 @@ Execução lado a lado na [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshor
   
  Considere o seguinte lote de comandos executados em uma chamada para <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM dbo.Customers;
   
  Para aplicativos que são executados em versões anteriores e posteriores do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], você pode escrever seu código para certificar-se de que o comportamento é o mesmo, independentemente da versão que você estiver executando em. Se você quiser garantir que um comando modifica o estado da conexão para todos os comandos subsequentes, é recomendável que você execute o comando usando <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Se você quiser garantir que um comando não modifica a conexão para todos os comandos subsequentes, é recomendável que você inclua os comandos para redefinir o estado da conexão em seu comando. Por exemplo:  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 SET NOCOUNT OFF;  

@@ -1,27 +1,27 @@
 ---
-title: 'Como: gerar manualmente as Classes de serviço de dados do cliente (WCF Data Services)'
+title: 'Como: Gerar manualmente as Classes de serviço de dados do cliente (WCF Data Services)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 332c04f50e104a5e1c8bd18c05581b6c0472f82f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fbf3a3a2ee52df95780f715e1358a042eb7dd02c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501315"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128655"
 ---
-# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Como: gerar manualmente as Classes de serviço de dados do cliente (WCF Data Services)
-WCF Data Services se integra com o Visual Studio para que você possa gerar classes de serviço de dados do cliente automaticamente quando você usa o **adicionar referência de serviço** caixa de diálogo para adicionar uma referência a um serviço de dados em um projeto do Visual Studio. Para obter mais informações, consulte [como: adicionar uma referência de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Você pode gerar também manualmente as mesmas classes de serviço de dados do cliente usando a ferramenta de geração de código, `DataSvcUtil.exe`. Essa ferramenta, que está incluída com o WCF Data Services, gera classes do .NET Framework da definição de serviço de dados. Ele também pode ser usado para gerar classes de serviço de dados do arquivo de modelo conceitual (. CSDL) e do arquivo. edmx que representa um modelo do Entity Framework em um projeto do Visual Studio.
+# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Como: Gerar manualmente as Classes de serviço de dados do cliente (WCF Data Services)
+WCF Data Services se integra com o Visual Studio para que você possa gerar classes de serviço de dados do cliente automaticamente quando você usa o **adicionar referência de serviço** caixa de diálogo para adicionar uma referência a um serviço de dados em um projeto do Visual Studio. Para obter mais informações, consulte [como: Adicionar uma referência de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). Você pode gerar também manualmente as mesmas classes de serviço de dados do cliente usando a ferramenta de geração de código, `DataSvcUtil.exe`. Essa ferramenta, que está incluída com o WCF Data Services, gera classes do .NET Framework da definição de serviço de dados. Ele também pode ser usado para gerar classes de serviço de dados do arquivo de modelo conceitual (. CSDL) e do arquivo. edmx que representa um modelo do Entity Framework em um projeto do Visual Studio.
 
- O exemplo neste tópico cria classes de serviço de dados do cliente com base no serviço de dados de exemplo Northwind. Esse serviço é criado quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Alguns exemplos neste tópico requerem o arquivo de modelo conceitual para o modelo do Northwind. Para obter mais informações, consulte [como: Use EdmGen.exe para gerar arquivos de modelo e mapeamento](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Alguns exemplos neste tópico exigem o arquivo. edmx para o modelo do Northwind. Para obter mais informações, consulte [visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).
+ O exemplo neste tópico cria classes de serviço de dados do cliente com base no serviço de dados de exemplo Northwind. Esse serviço é criado quando você concluir o [início rápido do WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Alguns exemplos neste tópico requerem o arquivo de modelo conceitual para o modelo do Northwind. Para obter mais informações, consulte [como: Use EdmGen.exe para gerar o modelo e arquivos de mapeamento](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Alguns exemplos neste tópico exigem o arquivo. edmx para o modelo do Northwind. Para obter mais informações, consulte [visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Para gerar classes c# que dão suporte à vinculação de dados
 
 -   No prompt de comando, execute o seguinte comando sem quebras de linha:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -32,7 +32,7 @@ WCF Data Services se integra com o Visual Studio para que você possa gerar clas
 
 -   No prompt de comando, execute o seguinte comando sem quebras de linha:
 
-    ```
+    ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
     ```
 
@@ -96,5 +96,5 @@ WCF Data Services se integra com o Visual Studio para que você possa gerar clas
 ## <a name="see-also"></a>Consulte também
 
 - [Generating the Data Service Client Library](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md) (Gerando a biblioteca de clientes do serviço de dados)
-- [Como adicionar uma referência de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [Como: Adicionar uma referência de serviço de dados](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
 - [Utilitário de cliente do WCF Data Service (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)

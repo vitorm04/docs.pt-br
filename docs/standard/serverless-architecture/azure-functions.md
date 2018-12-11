@@ -4,12 +4,12 @@ description: O Azure functions fornece funcionalidades sem servidor em vários i
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145157"
 ---
 # <a name="azure-functions"></a>Verificação de
 
@@ -17,17 +17,17 @@ O Azure functions fornece uma experiência de computação sem servidor. Uma fun
 
 ![Logotipo do Azure functions](./media/azure-functions-logo.png)
 
-Há duas versões do framework do Azure Functions. A versão herdada dá suporte ao .NET Framework completo e o novo tempo de execução dá suporte a aplicativos do .NET Core de plataforma cruzada. Há suporte para idiomas adicionais além do c#, como JavaScript, Java e F #. As funções criadas no portal do fornecem uma sintaxe de script avançada. Funções criadas como projetos autônomos podem ser implantadas com os recursos e suporte de plataforma completo.
+Há duas versões do framework do Azure Functions. A versão herdada dá suporte ao .NET Framework completo e o novo tempo de execução dá suporte a aplicativos do .NET Core de plataforma cruzada. Idiomas adicionais além do C# , como JavaScript, F#, e Java são suportados. As funções criadas no portal do fornecem uma sintaxe de script avançada. Funções criadas como projetos autônomos podem ser implantadas com os recursos e suporte de plataforma completo.
 
 Para obter mais informações, consulte [documentação do Azure Functions](https://docs.microsoft.com/azure/azure-functions).
 
 ## <a name="functions-v1-vs-v2"></a>Funções v1 e v2
 
-Há duas versões do tempo de execução do Azure Functions: 1.x e 2.x. Versão 1.x já está disponível (GA). Ele dá suporte ao desenvolvimento de .NET do portal ou as máquinas do Windows e usa o .NET Framework. 1. x dá suporte a c#, JavaScript e F #, com o suporte experimental para Python, PHP, TypeScript, Batch, Bash e PowerShell.
+Há duas versões do tempo de execução do Azure Functions: 1.x e 2.x. Versão 1.x já está disponível (GA). Ele dá suporte ao desenvolvimento de .NET do portal ou as máquinas do Windows e usa o .NET Framework. 1.x dá suporte ao C#, JavaScript, e F#, com o suporte experimental para Python, PHP, TypeScript, Batch, Bash e PowerShell.
 
 Versão 2.x está em versão prévia. Ele aproveita o .NET Core e dá suporte ao desenvolvimento de plataforma cruzada em máquinas Linux, macOS e Windows. 2.x adiciona suporte de primeira classe para Java, mas não ainda suporta diretamente qualquer uma das linguagens experimentais. Versão 2.x usa um novo modelo de extensibilidade de associação que permite que extensões de terceiros para a plataforma, o controle de versão independente de associações, e uma mais simples de ambiente de execução.
 
-> **Há um problema conhecido no 1.x com [suporte de redirecionamento de associação](https://github.com/Azure/azure-functions-host/issues/992).** O problema é específico para o desenvolvimento de .NET. Projetos com dependências em bibliotecas que são uma versão diferente do que as bibliotecas incluídas no tempo de execução são afetados. A equipe de funções se comprometeu a progredindo concretas sobre o problema. A equipe abordará os redirecionamentos de associação no 2.x antes que ele fique em disponibilidade geral. A declaração oficial da equipe com correções sugeridas e soluções alternativas está disponível aqui: [resolução de Assembly no Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **Há um problema conhecido no 1.x com [suporte de redirecionamento de associação](https://github.com/Azure/azure-functions-host/issues/992).** O problema é específico para o desenvolvimento de .NET. Projetos com dependências em bibliotecas que são uma versão diferente do que as bibliotecas incluídas no tempo de execução são afetados. A equipe de funções se comprometeu a progredindo concretas sobre o problema. A equipe abordará os redirecionamentos de associação no 2.x antes que ele fique em disponibilidade geral. A declaração oficial da equipe com correções sugeridas e soluções alternativas está disponível aqui: [Resolução de assembly no Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
 Para obter mais informações, consulte [comparar 1.x e 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
@@ -175,10 +175,10 @@ O `Domain Redirect` proxy usa uma rota reduzida e mapeia-os para o recurso de fu
 
 O `Root` proxy usa qualquer coisa enviadas para a URL da raiz (`https://--shorturl--/`) e o redireciona para o site de documentação.
 
-Um exemplo do uso de proxies é mostrado no vídeo [Azure: traga seu aplicativo para a nuvem com o Azure Functions sem servidor](https://channel9.msdn.com/events/Connect/2017/E102). Em tempo real, um aplicativo ASP.NET Core em execução no SQL Server local é migrado para a nuvem do Azure. Os proxies são usados para ajudar a refatorar um projeto de API da Web tradicional para usar funções.
+Um exemplo do uso de proxies é mostrado no vídeo [Azure: Traga o seu aplicativo para a nuvem com o Azure Functions sem servidor](https://channel9.msdn.com/events/Connect/2017/E102). Em tempo real, um aplicativo ASP.NET Core em execução no SQL Server local é migrado para a nuvem do Azure. Os proxies são usados para ajudar a refatorar um projeto de API da Web tradicional para usar funções.
 
 Para obter mais informações sobre Proxies, consulte [trabalhar com Proxies do Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
-[Anterior](azure-serverless-platform.md)
-[Próximo](application-insights.md)
+>[Anterior](azure-serverless-platform.md)
+>[Próximo](application-insights.md)

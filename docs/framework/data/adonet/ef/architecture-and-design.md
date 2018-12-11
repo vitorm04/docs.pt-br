@@ -2,17 +2,17 @@
 title: Arquitetura e design
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530464"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154250"
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
-O módulo de geração de SQL no [provedor de exemplo](https://go.microsoft.com/fwlink/?LinkId=180616) é implementado como um visitante na árvore de expressão que representa a árvore de comando. A geração é feita em uma única passada sobre a árvore de expressão.  
+O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) é implementado como um visitante na árvore de expressão que representa a árvore de comando. A geração é feita em uma única passada sobre a árvore de expressão.  
   
- Os nós de árvore são processados a partir de baixo. Primeiro, uma estrutura intermediária é gerada: SqlSelectStatement ou SqlBuilder, ambos que implementam ISqlFragment. Em seguida, a instrução SQL de cadeia de caracteres é gerado dessa estrutura. Há dois motivos para a estrutura intermediário:  
+ Os nós de árvore são processados a partir de baixo. Primeiro, uma estrutura intermediária é produzida: SqlSelectStatement ou SqlBuilder, ambos que implementam ISqlFragment. Em seguida, a instrução SQL de cadeia de caracteres é gerado dessa estrutura. Há dois motivos para a estrutura intermediário:  
   
 -   Logicamente, uma instrução SQL SELECT está fora de serviço preenchido. Os nós que participam na cláusula são visitados antes que os nós que participam em WHERE GRUPO, PERTO, e a cláusula ORDER BY.  
   
@@ -25,7 +25,7 @@ O módulo de geração de SQL no [provedor de exemplo](https://go.microsoft.com/
  Na segunda etapa, para gerar a cadeia de caracteres real, o alias são renomeados.  
   
 ## <a name="data-structures"></a>Estruturas de dados  
- Esta seção discute os tipos usados na [provedor de exemplo](https://go.microsoft.com/fwlink/?LinkId=180616) que você usa para criar uma instrução SQL.  
+ Esta seção discute os tipos usados na [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) que você usa para criar uma instrução SQL.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  Esta seção aborda as classes que implementam a interface de ISqlFragment, que serve duas finalidades:  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  Adição a ajuste alias é obtido quando visitar um DbPropertyExpression como descrito na seção intitulou DbPropertyExpression.  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>Renomear alias o nome da coluna e de extensão  
- A entrada de renomeação alias o nome da coluna e de extensão é abordada usando os símbolos que obtêm somente substituído com alias na segunda etapa de geração descrito na seção denominada segundo fase de geração SQL: Gerando o comando de cadeia de caracteres.  
+ O problema de nome de coluna e renomear alias de extensão é resolvido usando símbolos que obtêm somente substituídos com alias na segunda fase de geração descrito na seção intitulada fase segundo de geração de SQL: Gerando o comando de cadeia de caracteres.  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Primeiro estágio de geração SQL: Visitar a árvore de expressão  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Primeira fase de geração SQL: Visitar a árvore de expressão  
  Esta seção descreve a primeira etapa de geração SQL, quando a expressão que representa a consulta é visitada e uma estrutura intermediária é gerada, um SqlSelectStatement ou um SqlBuilder.  
   
  Esta seção descreve as noções básicas de visitar categorias diferentes de nó da expressão, e os detalhes de visitar a expressão específica tipo.  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segundo fase de geração SQL: Gerando o comando de cadeia de caracteres  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Segunda fase de geração SQL: Gerando o comando de cadeia de caracteres  
  Para gerar um comando SQL de cadeia de caracteres, o SqlSelectStatement gerencia alias reais dos símbolos, que tratam a introdução para renomear alias o nome da coluna e de extensão.  
   
  Renomear alias de extensão ocorre ao escrever o objeto de SqlSelectStatement em uma cadeia de caracteres. Primeiro crie uma lista de todas as aliases usadas por extensões externos. Cada símbolo no FromExtents (ou em AllJoinExtents se é não-nulo), é renomeado se colidir com quaisquer das extensões externos. Se renomear for necessário, não será em conflito com quaisquer das extensões coletadas em AllExtentNames.  

@@ -3,11 +3,11 @@ title: Criação de atividade de fluxo de trabalho usando a classe de CodeActivi
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 4954dfa5dba03823d119a456149f0f16cf5ed410
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296133"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127089"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Criação de atividade de fluxo de trabalho usando a classe de CodeActivity
 As atividades criadas por herança de <xref:System.Activities.CodeActivity> podem implementar o comportamento básico obrigatório substituindo o método de <xref:System.Activities.CodeActivity.Execute%2A> .

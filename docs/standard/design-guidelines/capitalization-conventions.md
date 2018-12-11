@@ -1,6 +1,6 @@
 ---
 title: Convenções de maiusculas e minúsculas
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - camel-case names [.NET Framework]
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+author: KrzysztofCwalina
+ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089017"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131086"
 ---
 # <a name="capitalization-conventions"></a>Convenções de maiusculas e minúsculas
 As diretrizes neste capítulo dispor de um método simples para usar o caso, que, quando aplicadas de forma consistente, os identificadores de marca para tipos, membros e parâmetros de fácil leitura.  
@@ -103,7 +102,7 @@ As diretrizes neste capítulo dispor de um método simples para usar o caso, que
   
  *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

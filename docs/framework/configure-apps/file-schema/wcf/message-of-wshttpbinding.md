@@ -3,11 +3,11 @@ title: '&lt;mensagem&gt; de &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
 ms.openlocfilehash: db0825d0abe05564d040903304d8654fa75ed0ee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184771"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126218"
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>&lt;mensagem&gt; de &lt;wsHttpBinding&gt;
 Define as configurações de segurança em nível de mensagem do [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -41,7 +41,7 @@ Define as configurações de segurança em nível de mensagem do [ \<wsHttpBindi
 |---------------|-----------------|  
 |algorithmSuite|Define a mensagem de algoritmos de criptografia e encapsulamento de chave. Os algoritmos e os tamanhos de chave são determinados pelo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> classe. Esses algoritmos são mapeados para aqueles especificados na especificação da linguagem de política de segurança (WS-SecurityPolicy).<br /><br /> O valor padrão é `Basic256`.|  
 |clientCredentialType|Opcional. Especifica o tipo de credencial a ser usada quando for executar autenticação de cliente usando o modo de segurança `Message` ou `TransportWithMessageCredentials`. Consulte os valores de enumeração a seguir. O padrão é `Windows`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.MessageCredentialType>.|  
-|establishSecurityContext|Um valor booliano que determina se o canal de segurança estabelece uma sessão segura. Uma sessão segura estabelece um Token de contexto do Security (SCT) antes da troca de mensagens do aplicativo. Quando o SCT é estabelecido, o canal de segurança oferece uma <xref:System.ServiceModel.Channels.ISession> interface para os canais superiores. Para obter mais informações sobre como usar sessões seguras, consulte [como: criar uma sessão segura](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> O valor padrão é `true`.|  
+|establishSecurityContext|Um valor booliano que determina se o canal de segurança estabelece uma sessão segura. Uma sessão segura estabelece um Token de contexto do Security (SCT) antes da troca de mensagens do aplicativo. Quando o SCT é estabelecido, o canal de segurança oferece uma <xref:System.ServiceModel.Channels.ISession> interface para os canais superiores. Para obter mais informações sobre como usar sessões seguras, consulte [como: Criar uma sessão segura](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> O valor padrão é `true`.|  
 |negotiateServiceCredential|Opcional. Um valor booliano que especifica se a credencial de serviço é provisionada no cliente fora de banda ou obtida do serviço ao cliente por meio de um processo de negociação. Dessa negociação é um precursor para a troca de mensagens comum.<br /><br /> Se o `clientCredentialType` atributo é igual a nenhum nome de usuário ou certificado, definir esse atributo como `false` implica que o certificado de serviço está disponível no cliente fora da banda e que o cliente precisa especificar o certificado de serviço (usando o [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) na [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) comportamento de serviço. Esse modo é interoperável com pilhas SOAP que implementam o WS-Trust e WS-SecureConversation.<br /><br /> Se o `ClientCredentialType` atributo é definido como `Windows`, definir esse atributo como `false` Especifica a autenticação baseada em Kerberos. Isso significa que o cliente e o serviço devem ser parte do mesmo domínio do Kerberos. Esse modo é interoperável com pilhas SOAP que implementam o perfil de token do Kerberos (conforme definido na OASIS WSS TC), bem como o WS-Trust e WS-SecureConversation.<br /><br /> Quando esse atributo é `true`, faz com que uma negociação SOAP do .NET que túneis SPNego exchange sobre mensagens SOAP.<br /><br /> O padrão é `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite atributo  

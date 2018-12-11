@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 14e70a07469d6bb2701884d8646d161c78e65dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883916"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126270"
 ---
 # <a name="event-statement"></a>Instrução Event
 Declara um evento definido pelo usuário.  
@@ -91,7 +91,7 @@ End Event
   
  Você pode usar `Event` apenas no nível de módulo. Isso significa que o *contexto de declaração* para um evento deve ser uma classe, estrutura, módulo ou interface e não pode ser um arquivo de origem, namespace, procedimento ou bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Na maioria das circunstâncias, você pode usar a primeira sintaxe na seção sintaxe deste tópico para declarar eventos. No entanto, alguns cenários exigem que você tenha mais controle sobre o comportamento detalhado do evento. A última sintaxe na seção Sintaxe neste tópico, que usa o `Custom` palavra-chave, fornece esse controle, permitindo que você defina eventos personalizados. Em um evento personalizado, você pode especificar exatamente o que ocorre quando o código adiciona ou remove um manipulador de eventos ou a partir do evento, ou quando o código gera o evento. Para obter exemplos, consulte [como: declarar eventos de personalizado para memória conservar](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) e [como: declarar personalizado eventos para evitar bloqueio](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
+ Na maioria das circunstâncias, você pode usar a primeira sintaxe na seção sintaxe deste tópico para declarar eventos. No entanto, alguns cenários exigem que você tenha mais controle sobre o comportamento detalhado do evento. A última sintaxe na seção Sintaxe neste tópico, que usa o `Custom` palavra-chave, fornece esse controle, permitindo que você defina eventos personalizados. Em um evento personalizado, você pode especificar exatamente o que ocorre quando o código adiciona ou remove um manipulador de eventos ou a partir do evento, ou quando o código gera o evento. Para obter exemplos, consulte [como: Declarar eventos personalizados para conservar memória](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) e [como: Declarar eventos personalizados para evitar o bloqueio](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa os eventos a contagem regressiva de 10 segundos para 0. O código ilustra vários dos métodos relacionados a eventos, propriedades e instruções. Isso inclui o `RaiseEvent` instrução.  
@@ -115,7 +115,7 @@ End Event
  Pressione F5 para executar o exemplo anterior e clique no botão rotulado **iniciar**. A primeira caixa de texto começa a contagem regressiva de segundos. Depois de decorrido o tempo total (10 segundos), a primeira caixa de texto exibe "Concluído".  
   
 > [!NOTE]
->  O `My.Application.DoEvents` método não processa os eventos da mesma maneira que faz o formulário. Para habilitar o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading](../../programming-guide/concepts/threading/index.md).  
+>  O `My.Application.DoEvents` método não processa os eventos da mesma maneira que faz o formulário. Para habilitar o formulário manipular os eventos diretamente, você pode usar multithreading. Para obter mais informações, consulte [Threading gerenciado](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
@@ -125,7 +125,7 @@ End Event
  [Instrução RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
  [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
  [Instrução Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Como declarar eventos personalizados para conservar memória](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
- [Como declarar eventos personalizados para evitar bloqueio](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
+ [Como: Declarar eventos personalizados para conservar memória](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)  
+ [Como: Declarar eventos personalizados para evitar bloqueio](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)  
  [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)  
  [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)

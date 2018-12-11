@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196610"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143156"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; elemento
 Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.  
@@ -76,8 +76,8 @@ Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
- [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Mapeando identificadores de objeto para algoritmos de criptografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [Mapeando identificadores de objeto para algoritmos de criptografia](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

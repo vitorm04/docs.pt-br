@@ -1,18 +1,18 @@
 ---
 title: Literais (F#)
-description: Saiba mais sobre os tipos de literais na linguagem de programação F#.
+description: Saiba mais sobre os tipos de literais no F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131333"
 ---
 # <a name="literals"></a>Literais
 
 > [!NOTE]
-Os links de referência de API neste artigo você será levado ao MSDN (por enquanto).
+> Os links de referência de API neste artigo você será levado ao MSDN (por enquanto).
 
 Este tópico fornece uma tabela que mostra como especificar o tipo de um literal em F#.
 
@@ -47,20 +47,20 @@ A tabela a seguir mostra os tipos de literais no F#. Caracteres que representam 
 
 Cadeias de caracteres Unicode podem conter as codificações explícitas que você pode especificar usando `\u` seguido por um código hexadecimal de 16 bits ou codificações UTF-32 que você pode especificar usando `\U` seguido por um código hexadecimal de 32 bits que representa a Unicode par substituto.
 
-A partir do F# 3.1, você pode usar o `+` entrar para combinar literais de cadeia de caracteres. Você também pode usar o bit a bit ou (`|||`) operador para combinar sinalizadores de enum. Por exemplo, o código a seguir é legal no F# 3.1:
+Como de F# 3.1, você pode usar o `+` entrar para combinar literais de cadeia de caracteres. Você também pode usar o bit a bit ou (`|||`) operador para combinar sinalizadores de enum. Por exemplo, o código a seguir é legal no F# 3.1:
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Não é permitido o uso de outros operadores bit a bit.
@@ -82,14 +82,14 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sublinhados em literais numéricos
 
-Começando com o F# 4.1, você pode separar dígitos com o caractere de sublinhado (`_`).
+Começando com F# 4.1, você pode separar dígitos com o caractere de sublinhado (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Consulte também

@@ -2,12 +2,12 @@
 title: Geração de alteração SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836893"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127063"
 ---
 # <a name="modification-sql-generation"></a>Geração de alteração SQL
 Esta seção discute como desenvolver um módulo de geração SQL de alteração para o seu (SQL: provedor de base de dados compliant 1999). Este módulo é responsável para converter uma árvore de comando de alteração apropriadas nas instruções SQL INSERT, UPDATE ou DELETE.  
@@ -83,11 +83,11 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Geração SQL alteração no provedor exemplo  
- O [provedor de exemplo do Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) demonstra os componentes de provedores de dados ADO.NET que dão suporte a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tem como alvo um base de dados do SQL Server 2005 e é implementado como um wrapper sobre o provedor de dados do ADO.NET .NET 2.0.  
+ O [provedor de exemplo do Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) demonstra os componentes de provedores de dados ADO.NET que dão suporte a [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tem como alvo um base de dados do SQL Server 2005 e é implementado como um wrapper sobre o provedor de dados do ADO.NET .NET 2.0.  
   
  O módulo de geração SQL de alteração do provedor de exemplo (localizado na geração SQL do arquivo DmlSqlGenerator.cs \) usa uma entrada DbModificationCommandTree e gerencia uma única instrução SQL de alteração seguida possivelmente por uma instrução select para retornar um leitor se especificado pelo DbModificationCommandTree. Observe que a forma de comandos gerados é afetada por base de dados SQL Server de destino.  
   
-### <a name="helper-classes-expressiontranslator"></a>Classes auxiliar: ExpressionTranslator  
+### <a name="helper-classes-expressiontranslator"></a>Classes auxiliares: ExpressionTranslator  
  Serve de ExpressionTranslator como um tradutor leve comum para todas as propriedades da árvore de comando de alteração de tipo DbExpression. Oferece suporte à conversão de tipos somente da expressão às propriedades de árvore de comando de alteração são restritas e é compilado com as restrições específicos em mente.  
   
  As informações a seguir descreve tipos específicos de visita de expressões (os nós com traduções triviais são omitidos.)  

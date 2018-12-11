@@ -4,12 +4,12 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: be9c3fe165be32df43073919904b85120c52d595
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50034443"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148846"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento de loop interno para aplicativos do Docker
 
@@ -17,7 +17,7 @@ Antes de disparar o fluxo de trabalho de loop externo que abrangem o DevOps todo
 
 ![](./media/image18.png)
 
-Figura 4 a 14: contexto de desenvolvimento de loop interno
+Figura 4 a 14: Contexto de desenvolvimento de loop interno
 
 O contêiner ou uma instância de uma imagem de Docker conterá esses componentes:
 
@@ -39,9 +39,9 @@ Figura 4-15 mostra as etapas básicas que você normalmente precisará realizar 
 
 ![](./media/image19.png)
 
-Figura 4-15: aplicativos usando a CLI do Docker em contêineres de fluxo de trabalho de alto nível para o ciclo de vida para o Docker
+Figura 4-15: Fluxo de trabalho de alto nível para o ciclo de vida de aplicativos do Docker em contêineres usando a CLI do Docker
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Etapa 1: Iniciar a codificação no Visual Studio Code e criar a linha de base inicial/serviço de aplicativo
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Etapa 1: Iniciar a codificação no Visual Studio Code e crie sua linha de base inicial/serviço de aplicativo
 
 A maneira que você desenvolve seu aplicativo é muito semelhante à forma como você pode fazê-lo sem o Docker. A diferença é que, durante o desenvolvimento, você está implantando e testando o aplicativo ou serviços em execução em contêineres do Docker colocados no seu ambiente local (como uma VM do Linux ou Windows).
 
@@ -61,11 +61,11 @@ A Microsoft fornece o Visual Studio Code, que é um editor de código leve que t
 
 Você pode trabalhar com a CLI do Docker e escrever seu código usando qualquer editor de código, mas se você usar o Visual Studio Code, faz a autor Dockerfile e docker-Compose. yml arquivos em seu espaço de trabalho. Além disso, você pode executar tarefas do Visual Studio Code do IDE que solicitará que os scripts que podem executar operações elaboradas usando a CLI do Docker abaixo.
 
-Visual Studio Code é fornecido por uma extensão, que você precisará instalar. Para fazer isso, pressione Ctrl + Shift + P, digite **ext instalar**, e, em seguida, executar as extensões: comando Instalar extensão para abrir a lista de extensões do Marketplace. Em seguida, digite **docker** para filtrar os resultados e, em seguida, selecione o Dockerfile e Docker Compose arquivo (yml) a extensão de suporte, conforme ilustrado na Figura 4 a 16.
+Visual Studio Code é fornecido por uma extensão, que você precisará instalar. Para fazer isso, pressione Ctrl + Shift + P, digite **ext instalar**, e, em seguida, executar as extensões: Instale o comando de extensão para abrir a lista de extensões do Marketplace. Em seguida, digite **docker** para filtrar os resultados e, em seguida, selecione o Dockerfile e Docker Compose arquivo (yml) a extensão de suporte, conforme ilustrado na Figura 4 a 16.
 
 ![](./media/image20.png)
 
-Figura 4 a 16: instalar a extensão do Docker no Visual Studio Code
+Figura 4 a 16: Instalando a extensão do Docker no Visual Studio Code
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Etapa 2: Criar um DockerFile relacionado a uma imagem existente (sem formatação do sistema operacional ou ambientes de desenvolvimento, como Ruby, Node. js e .NET Core)
 
@@ -92,7 +92,7 @@ Figura 4-18: yo docker com um existentes do .NET Core de projeto em vigor
 
 O DockerFile, você especifica qual imagem base do Docker, você vai usar (como usando "de microsoft/dotnet:1.0.0-core"). Normalmente, você irá criar sua imagem personalizada na parte superior de uma imagem de base que pode ser de qualquer repositório oficial na [registro de Hub do Docker](https://hub.docker.com/) (como um [imagem para o .NET Core](https://hub.docker.com/r/microsoft/dotnet/) ou um [para Node. js](https://hub.docker.com/_/node/)).
 
-***Opção de r: Use uma imagem de Docker oficial existente***
+***Opção a: Usar uma imagem de Docker oficial existente***
 
 Usando um repositório oficial de uma pilha de idiomas com um número de versão garante que os mesmos recursos de idioma estão disponíveis em todos os computadores (incluindo desenvolvimento, teste e produção).
 
@@ -128,7 +128,7 @@ Para saber mais sobre como criar suas próprias imagens, acesse [ https://docs.d
 
 Como contêineres do Windows mais usado ultimamente, um único repositório pode conter variantes de plataforma, como uma imagem do Linux e Windows. Isso é um novo recurso do Docker que torna possível usar um único repositório para abranger várias plataformas, como os fornecedores [microsoft/aspdotnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) repositório, que está disponível no registro do DockerHub. Como o recurso se torna ativo, extraindo essa imagem de um host Windows efetuará pull a variante do Windows, enquanto recebendo o mesmo nome de imagem de um host Linux efetuará o pull da variante do Linux.
 
-***Opção b: criar sua imagem base do zero***
+***Opção b: Criar sua imagem de base a partir do zero***
 
 Você pode criar sua própria imagem base do Docker do zero, conforme explicado neste [artigo](https://docs.docker.com/engine/userguide/eng-image/baseimages/) do Docker. Esse é um cenário que provavelmente não é melhor para você se você estiver apenas começando com o Docker, mas se você quiser definir as partes específicas de sua própria imagem base, você pode fazê-lo.
 
@@ -147,7 +147,7 @@ Para criar uma imagem no seu ambiente local e usando o DockerFile, você pode us
 
 ![](./media/image25.png)
 
-Figura 4-19: executar build do docker
+Figura 4-19: Compilação do docker em execução
 
 Opcionalmente, em vez de executar diretamente o docker build na pasta do projeto, você primeiro pode gerar uma pasta implantável com as bibliotecas .NET necessárias usando a execução do dotnet publicar comando e, em seguida, executar build do docker.
 
@@ -157,9 +157,9 @@ Você pode encontrar imagens existentes no seu repositório local (computador de
 
 ![](./media/image26.png)
 
-Figura 4 a 20: exibindo imagens existentes usando imagens do docker
+Figura 4 a 20: Visualização das imagens existentes usando imagens do docker
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Etapa 4: (Opcional) definir seus serviços no docker-Compose. yml ao compilar um aplicativo composto do Docker com vários serviços
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Etapa 4: (Opcional) Definir os serviços no docker-Compose. yml ao compilar um aplicativo composto do Docker com vários serviços
 
 Com o arquivo docker-Compose. yml, você pode definir um conjunto de serviços relacionados para ser implantado como um aplicativo composto com os comandos de implantação, explicados na seção próxima etapa.
 
@@ -196,7 +196,7 @@ O serviço do redis usa o [imagem mais recente do redis público](https://hub.do
 
 Se seu aplicativo tem apenas um único contêiner, basta executá-lo Implantando-o em seu Host do Docker (VM ou servidor físico). No entanto, se seu aplicativo é composto por vários serviços, você precisará *compô-la*também. Vamos ver as diferentes opções.
 
-***Opção de execução de r: um único contêiner ou serviço***
+***Opção a: Executar um único contêiner ou serviço***
 
 Você pode executar a imagem do Docker usando o comando docker run, conforme mostrado aqui:
 
@@ -207,13 +207,13 @@ cesardl/netcore-webapi-microservice-docker:first
 
 Observe que, para essa implantação específica, podemos vai ser redirecionar as solicitações enviadas para a porta 80 para a porta interna 5000. Agora, o aplicativo está escutando na porta 80 no nível do host externa.
 
-***Opção b: compor e executar um aplicativo de vários contêineres***
+***Opção b: Compor e executar um aplicativo de vários contêineres***
 
 Na maioria dos cenários empresariais, um aplicativo do Docker será ser composto de vários serviços. Nesses casos, você pode executar o comando docker-compose para cima (Figura 4-21), que usará o arquivo docker-Compose. yml que talvez você tenha criado anteriormente. Executar esse comando implanta um aplicativo composto com todos os seus contêineres relacionados.
 
 ![](./media/image27.png)
 
-Figura 4-21: resultados da execução do comando "docker-compose up"
+Figura 4-21: Resultados da execução do comando "docker-compose up"
 
 Depois de executar docker-compose, você implantar seu aplicativo e seus contêineres relacionados no Host do Docker, conforme ilustrado na Figura 4-22, na representação de VM.
 
@@ -239,7 +239,7 @@ No host do Docker, abra um navegador e navegue até o site; Você deve ver seu a
 
 ![](./media/image29.png)
 
-Figura 4 a 23: Testando seu aplicativo do Docker localmente usando localhost
+Figura 4 a 23: Teste seu aplicativo do Docker localmente usando localhost
 
 Observe que ele está usando a porta 80, mas internamente estava sendo redirecionado para a porta 5000, pois é como ele foi implantado com docker run, conforme explicado anteriormente.
 
@@ -257,7 +257,6 @@ Você também pode depurar contêineres do .NET Core no Docker ao usar o Visual 
 
 **Obter mais informações:** para saber mais sobre a depuração de contêineres do Docker do Node. js, acesse <https://blog.docker.com/2016/07/live-debugging-docker/> e [ https://blogs.msdn.microsoft.com/\ usuário\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-big-Debugging-Updates-Rich-Object-hover-Conditional-Breakpoints-Node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
-
 >[!div class="step-by-step"]
-[Anterior](docker-apps-development-environment.md)
-[Próximo](visual-studio-tools-for-docker.md)
+>[Anterior](docker-apps-development-environment.md)
+>[Próximo](visual-studio-tools-for-docker.md)

@@ -1,28 +1,28 @@
 ---
-title: Modernizar aplicativos existentes do .NET para aplicativos com otimização de nuvem
+title: Modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 description: Modernizar aplicativos .NET existentes com contêineres do Windows e da Nuvem do Azure.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: ba4610e7f5276f6c033a53ea78fb30bce50bc304
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957916"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151493"
 ---
-# <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizar aplicativos existentes do .NET para aplicativos com otimização de nuvem
+# <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernizar aplicativos existentes do .NET para aplicativos otimizados para a nuvem
 
-> Visão: Modernize seus aplicativos existentes do .NET Framework para aplicativos de nuvem otimizado para melhorar drasticamente a agilidade sua implantação, você pode enviar mais rapidamente e reduzir os custos de entrega do aplicativo.
+> Visão: Modernize seus aplicativos existentes do .NET Framework para aplicativos otimizados para a nuvem para melhorar drasticamente a agilidade da implantação, portanto, você pode enviar mais rapidamente e reduzir os custos de entrega do aplicativo.
 
 Para aproveitar as vantagens da nuvem e novas tecnologias como contêineres, você deve modernizar seus aplicativos existentes do .NET pelo menos parcialmente. Por fim, modernizar os aplicativos corporativos reduzirá o custo total de propriedade.
 
-Um aplicativo para modernizar parcialmente não significa necessariamente uma migração completa e a reestruturação. Você pode inicialmente modernizar seus aplicativos existentes com fácil modernização mas importantes. Você pode manter seu código base atual, escrito em versões existentes do .NET Framework, com todas as dependências do Windows e do IIS. Figura 4-1 realça os aplicativos como otimização de nuvem são posicionados em modelos de vencimento de modernização do aplicativo do Azure.
+Modernizar parcialmente um aplicativo não significa necessariamente que uma migração completa e a nova arquitetura. Inicialmente, você pode modernizar seus aplicativos existentes com importantes, mas fácil de fazer a modernização. Você pode manter seu código base atual, escrito em versões existentes do .NET Framework, com todas as dependências do Windows e do IIS. Figura 4-1 destaca como otimização para nuvem aplicativos são posicionados em modelos de maturidade de modernização de aplicativo do Azure.
 
-![Posicionamento de aplicativos com otimização de nuvem](./media/image1.png)
+![Posicionamento de aplicativos otimizados para a nuvem](./media/image1.png)
 
-> **Figura 4-1.** Posicionamento de aplicativos com otimização de nuvem
+> **Figura 4-1.** Posicionamento de aplicativos otimizados para a nuvem
 
 >[!div class="step-by-step"]
-[Anterior](../migrate-your-relational-databases-to-azure.md)
-[Próximo](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
+>[Anterior](../migrate-your-relational-databases-to-azure.md)
+>[Próximo](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)

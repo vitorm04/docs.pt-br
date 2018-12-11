@@ -1,18 +1,18 @@
 ---
 title: Sequências (F#)
-description: Saiba como usar sequências de F#, quando você tiver uma grande coleção ordenada de dados, mas necessariamente não espera usar todos os elementos.
+description: Saiba como usar F# sequências, quando você tem uma grande coleção ordenada de dados, mas não necessariamente pretende usar todos os elementos.
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838893"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129201"
 ---
 # <a name="sequences"></a>Sequências
 
 > [!NOTE]
-Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
+> Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
 Um *sequência* é uma série de lógica de elementos todos de um tipo. As sequências são particularmente úteis quando você tiver uma grande coleção ordenada de dados, mas não necessariamente espera usar todos os elementos. Sequência individual elementos são computados apenas como necessário, para que uma sequência pode fornecer desempenho melhor do que uma lista em situações em que nem todos os elementos são usados. As sequências são representadas pela `seq<'T>` tipo, que é um alias para `System.Collections.Generic.IEnumerable`. Portanto, qualquer tipo .NET Framework que implementa `System.IEnumerable` pode ser usado como uma sequência. O [módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornece suporte para as manipulações que envolvem sequências.
 
@@ -22,7 +22,7 @@ Um *expressão de sequência* é uma expressão que é avaliada como uma sequên
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Expressões de sequência são compostas de expressões em F# que produzem valores da sequência. Eles podem usar o `yield` palavra-chave para produzir valores se tornam parte da sequência.
+Expressões de sequência são compostas de F# expressões que produzem valores da sequência. Eles podem usar o `yield` palavra-chave para produzir valores se tornam parte da sequência.
 
 A seguir está um exemplo.
 
@@ -62,7 +62,7 @@ O exemplo a seguir demonstra o uso de `yield!` combinar sequências individuais 
 
 Sequências dão suporte a muitas das mesmas funções como [lista](lists.md). Sequências também dão suporte a operações como agrupamento e contagem por meio de funções de geração de chave. Sequências também dão suporte a funções mais diversificadas para extração de subsequências.
 
-Muitos tipos de dados, como listas, matrizes, conjuntos e mapas são implicitamente sequências porque elas são coleções enumeráveis. Uma função que usa uma sequência como um argumento funciona com qualquer uma de F# tipos de dados comuns, além disso a qualquer tipo de dados do .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare isso para uma função que usa uma lista como um argumento, o que pode levar apenas listas. O tipo `seq<'T>` é uma abreviação de tipo de `IEnumerable<'T>`. Isso significa que qualquer tipo que implementa o genérico `System.Collections.Generic.IEnumerable<'T>`, que inclui matrizes, listas, define e mapas em F# e também a maioria dos tipos do .NET Framework coleção, é compatível com o `seq` de tipo e pode ser usado sempre que uma sequência é esperada.
+Muitos tipos de dados, como listas, matrizes, conjuntos e mapas são implicitamente sequências porque elas são coleções enumeráveis. Uma função que usa uma sequência como um argumento funciona com qualquer um dos comuns F# tipos de dados, além de qualquer tipo de dados do .NET Framework que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare isso para uma função que usa uma lista como um argumento, o que pode levar apenas listas. O tipo `seq<'T>` é uma abreviação de tipo de `IEnumerable<'T>`. Isso significa que qualquer tipo que implementa o genérico `System.Collections.Generic.IEnumerable<'T>`, que inclui matrizes, listas, define e mapas em F#e também a maioria dos tipos do .NET Framework coleção, é compatível com o `seq` de tipo e pode ser usado sempre que uma sequência é esperada .
 
 ## <a name="module-functions"></a>Funções do módulo
 
@@ -120,7 +120,7 @@ O código a seguir é um exemplo que usa muitas das funções do módulo sequên
 
 ## <a name="searching-and-finding-elements"></a>Pesquisar e localizar elementos
 
-Sequências de dar suporte à funcionalidade disponível com listas: [SEQ. Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [SEQ. Find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [SEQ. FindIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [ SEQ. Pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [SEQ. tryfind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), e [SEQ. tryfindindex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). As versões dessas funções que estão disponíveis para sequências de avaliam a sequência apenas até o elemento que está sendo pesquisado. Para obter exemplos, consulte [lista](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Sequências de dar suporte a funcionalidade disponível com listas: [SEQ. Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [SEQ. Find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [SEQ. FindIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [SEQ. Pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [SEQ. tryfind ](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), e [SEQ. tryfindindex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). As versões dessas funções que estão disponíveis para sequências de avaliam a sequência apenas até o elemento que está sendo pesquisado. Para obter exemplos, consulte [lista](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
 
 ## <a name="obtaining-subsequences"></a>Obtenção de subsequências
 

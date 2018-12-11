@@ -2,12 +2,12 @@
 title: Protocolos de mensagens
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183848"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129747"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 
@@ -47,7 +47,18 @@ Especificação/documento:
 
 Os seguintes namespaces XML e prefixos associados são usados ao longo deste tópico:
 
-| Prefixo | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` | | s12 | `http://www.w3.org/2003/05/soap-envelope` | | wsa | `http://www.w3.org/2004/08/addressing` | | wsam | `http://www.w3.org/2007/05/addressing/metadata` | | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 | `http://www.w3.org/2005/08/addressing` | | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` | | xop | `http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | DP |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| Prefixo | Namespace Uniform Resource Identifier (URI) |
+|------------|---------------------------------------------------|
+| s11 | `http://schemas.xmlsoap.org/soap/envelope` |
+| s12 |`http://www.w3.org/2003/05/soap-envelope` |
+| wsa |`http://www.w3.org/2004/08/addressing` |
+| wsam |`http://www.w3.org/2007/05/addressing/metadata` |
+| wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` |
+| wsa10 |`http://www.w3.org/2005/08/addressing` |
+| wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
+| XOP |`http://www.w3.org/2004/08/xop/include` |
+| xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
+| ponto de distribuição |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 e SOAP 1.2
 
@@ -63,11 +74,11 @@ Uma mensagem que entra a pilha de canais do WCF é processada por canais individ
 
 Como em camadas de processamento permite a separação entre as camadas de infraestrutura e aplicativo do nó SOAP:
 
-- B1111: Os cabeçalhos que não são compreendidos são detectados depois que a mensagem é processada pela pilha de canal de infraestrutura do WCF, mas antes de ser processada pelo aplicativo
+- B1111: Cabeçalhos que não são compreendidos são detectados depois que a mensagem é processada pela pilha de canal de infraestrutura do WCF, mas antes de ser processada pelo aplicativo
 
      O `mustUnderstand` difere do valor de cabeçalho entre SOAP 1.1 e SOAP 1.2. Basic Profile 1.1 requer que o `mustUnderstand` valor ser 0 ou 1 para mensagens SOAP 1.1. SOAP 1.2 permite 0, 1, `false`, e `true` como valores, mas recomenda emitindo uma representação canônica do `xs:boolean` valores (`false`, `true`).
 
-- B1112: Emite de WCF `mustUnderstand` valores 0 e 1 para versões de SOAP 1.1 e SOAP 1.2 do envelope SOAP. WCF aceita o espaço de todo o valor de `xs:boolean` para o `mustUnderstand` cabeçalho (0, 1, `false`, `true`)
+- B1112: WCF emite `mustUnderstand` valores 0 e 1 para versões de SOAP 1.1 e SOAP 1.2 do envelope SOAP. WCF aceita o espaço de todo o valor de `xs:boolean` para o `mustUnderstand` cabeçalho (0, 1, `false`, `true`)
 
 #### <a name="soap-faults"></a>Falhas de SOAP
 A seguir está uma lista das implementações de falhas SOAP específicas do WCF.
@@ -83,7 +94,7 @@ O WCF implementa a associação HTTP SOAP1.1 seguindo a seção 3.4 com os segui
 
 - B2211: Serviço do WCF não implementa o redirecionamento de solicitações HTTP POST.
 
-- B2212: Clientes do WCF dão suporte a Cookies HTTP de acordo com a 3.4.8.
+- B2212: Clientes do WCF dão suporte a Cookies HTTP de acordo com 3.4.8.
 
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 associação de HTTP
 O WCF implementa associação SOAP 1.2 HTTP, conforme descrito na SOAP 1.2-parte 2 (SOAP12Part2) especificação com os seguintes esclarecimentos.
@@ -156,7 +167,7 @@ Aplicativos que interagem com aplicativos do WCF podem adicionar que esses cabe�
 
 O WCF implementa o processamento de parâmetros de referência do ponto de extremidade e propriedades de referência de acordo com as respectivas especificações.
 
-B3221: Quando configurado para usar 08/2004 de WS-Addressing, pontos de extremidade do WCF não fazem distinção entre o processamento de propriedades de referência e parâmetros de referência.
+B3221: Quando configurado para usar 08/2004 de WS-Addressing, pontos de extremidade do WCF não fazem distinção entre as propriedades de referência e parâmetros de referência de processamento.
 
 ### <a name="message-exchange-patterns"></a>Padrões de troca de mensagem
 A sequência das mensagens envolvidas na invocação de operação do serviço Web é conhecida como o *padrão de troca de mensagem*. Padrões de troca de mensagem duplex, solicitação-resposta e dá suporte a WCF unidirecional. Esta seção explica os requisitos, dependendo do padrão de troca de mensagem que está sendo usado de processamento de mensagens WS-Addressing.
@@ -174,7 +185,7 @@ Quando um ponto de extremidade do WCF está configurado para dar suporte a mensa
 
      Quando o transporte HTTP está em uso e o contrato de operação declara uma mensagem unidirecional, a resposta HTTP ainda pode ser usada para enviar mensagens de infraestrutura — por exemplo, o sistema de mensagens confiável pode enviar um `SequenceAcknowledgement` mensagem em uma resposta HTTP.
 
-- B3314: O Respondente do WCF não envia uma mensagem de falha em resposta a uma mensagem unidirecional.
+- B3314: O respondente do WCF não envia uma mensagem de falha em resposta a uma mensagem unidirecional.
 
 #### <a name="request-reply"></a>Solicitação-resposta
 Quando um ponto de extremidade do WCF é configurado para uma mensagem com um determinado `Action` para seguir o padrão de solicitação-resposta, o ponto de extremidade do WCF segue os comportamentos e os requisitos abaixo. A menos que especificado o contrário, comportamentos e as regras se aplicam a ambas as versões do WS-Addressing tem suportada no WCF:
@@ -183,9 +194,9 @@ Quando um ponto de extremidade do WCF é configurado para uma mensagem com um de
 
 - R3322: Quando 08/2004 de WS-Addressing é usado, `ReplyTo` também deve ser incluído na solicitação.
 
-- R3323: Quando o WS-Addressing 1.0 é usado e `ReplyTo` não está presente na solicitação, uma referência de ponto de extremidade padrão com a propriedade [endereço] igual a `http://www.w3.org/2005/08/addressing/anonymous` é usado.
+- R3323: Quando é usado o WS-Addressing 1.0 e `ReplyTo` não está presente na solicitação, uma referência de ponto de extremidade padrão com a propriedade [endereço] igual a `http://www.w3.org/2005/08/addressing/anonymous` é usado.
 
-- R3324: O solicitante deve incluir `wsa:To`, `wsa:Action`, e `wsa:RelatesTo` cabeçalhos na mensagem de resposta, bem como os cabeçalhos para todos os parâmetros de referência ou referência propriedades (ou ambos) especificado pelo `ReplyTo` referência de ponto de extremidade no solicitação.
+- R3324: O solicitante deve incluir `wsa:To`, `wsa:Action`, e `wsa:RelatesTo` cabeçalhos na mensagem de resposta, bem como os cabeçalhos para todos os parâmetros de referência ou referência propriedades (ou ambos) especificado pelo `ReplyTo` referência de ponto de extremidade na solicitação.
 
 ### <a name="web-services-addressing-faults"></a>Falhas de endereçamento de serviços da Web
 R3411: O WCF gera as seguintes falhas definidas pelo 08/2004 de WS-Addressing.
@@ -284,7 +295,7 @@ A instrução anterior leva aos requisitos a seguir o `wsa:ReplyTo` cabeçalho p
 
 - R3515: Solicitar que as mensagens enviadas para um ponto de extremidade devem ter uma `ReplyTo` cabeçalho com o `[address]` propriedade igual a `http://www.w3.org/2005/08/addressing/anonymous`, ou não tem um `ReplyTo` cabeçalho no lugar, se o ponto de extremidade usa uma associação de HTTP do 1.x WSDL 1.1 SOAP e tem uma alternativa de política com `wsap10:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex` asserção anexada.
 
-- R3516: Solicitar que as mensagens enviadas para um ponto de extremidade devem ter uma `ReplyTo` cabeçalho com um `[address]` propriedade igual a `http://www.w3.org/2005/08/addressing/anonymous` se o ponto de extremidade usa uma associação de HTTP do 1.x WSDL 1.1 SOAP e tem uma alternativa de política com `wsap:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex`asserção anexada.
+- R3516: Solicitar que as mensagens enviadas para um ponto de extremidade devem ter uma `ReplyTo` cabeçalho com um `[address]` propriedade igual a `http://www.w3.org/2005/08/addressing/anonymous` se o ponto de extremidade usa uma associação de HTTP do 1.x WSDL 1.1 SOAP e tem uma alternativa de política com `wsap:UsingAddressing` asserção e nenhum `cdp:CompositeDuplex` asserção anexada.
 
 A especificação de WS-addressing WSDL tenta descrever as associações do protocolo semelhante com a introdução de um elemento `<wsaw:Anonymous/>` com três valores textuais (obrigatórios, opcionais e proibidos) para indicar requisitos sobre o `wsa:ReplyTo` cabeçalho (seção 3.2). Infelizmente, essa definição de elemento não é particularmente útil como uma asserção no contexto do WS-Policy, porque ele requer extensões específicas de domínio para dar suporte a interseção de alternativas usando esse elemento como uma asserção. Essa definição de elemento também indica o valor da `ReplyTo` cabeçalho em vez do comportamento de ponto de extremidade durante a transmissão, o que torna específico ao transporte HTTP.
 
@@ -297,7 +308,7 @@ A única diferença entre os dois é a semântica de padrão de ação padrão d
 
 Para resolver esta controvérsia incrível, o WCF oferece suporte a uma única versão do `Action` atributo.
 
-B3521: WCF usa o `wsaw10:Action` atributo `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementos conforme definido em WS-ADDR10 WSDL para determinar o `Action` URI para as mensagens correspondentes independentemente da versão do WS-Addressing usadas pelo ponto de extremidade.
+B3521: O WCF usa o `wsaw10:Action` atributo `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementos conforme definido em WS-ADDR10 WSDL para determinar o `Action` URI para as mensagens correspondentes independentemente da versão do WS-Addressing usadas pelo ponto de extremidade.
 
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Porta de WSDL de dentro do uso ponto de extremidade de referência
 WS-ADDR10-WSDL seção 4.1 estende o `wsdl:port` elemento para incluir o `<wsa10:EndpointReference…/>` elemento filho para descrever o ponto de extremidade em termos de WS-Addressing. WCF expande esse utilitário em 2004 de WS-Addressing/08, permitindo `<wsa:EndpointReference…/>` apareça como um elemento filho de `wsdl:port`.
@@ -320,9 +331,9 @@ Quando o WS-Security é usado para proteção de integridade da mensagem, WS-Add
 #### <a name="one-way-message"></a>Mensagem unidirecional
 Nesse cenário, o remetente envia uma mensagem unidirecional para o receptor. W3C WS-Addressing 1.0, HTTP 1.1 e SOAP 1.2 são usados.
 
-A estrutura de mensagens de solicitação: Os cabeçalhos de mensagem incluem `wsa10:To` e `wsa10:Action` elementos. O corpo da mensagem inclui um determinado `<app:Ping>` elemento do namespace do aplicativo.
+A estrutura de mensagens de solicitação: Incluem os cabeçalhos da mensagem `wsa10:To` e `wsa10:Action` elementos. O corpo da mensagem inclui um determinado `<app:Ping>` elemento do namespace do aplicativo.
 
-Cabeçalhos HTTP: O destino na POSTAGEM corresponda ao URI no `wsa10:To` elemento.
+Cabeçalhos HTTP: O destino na POSTAGEM corresponde ao URI no `wsa10:To` elemento.
 
 O cabeçalho Content-Type tem o valor de `application/soap+xml` conforme solicitado pelo SOAP 1.2. Parâmetros `charset` e `action` são incluídos. O `action` parâmetro do cabeçalho Content-Type corresponde ao valor do `wsa10:Action` cabeçalho da mensagem.
 
@@ -449,7 +460,7 @@ Embora o requisito para usar as aspas duplas não seja explícito na RFC 2387, o
 
 - R4135: Um cabeçalho HTTP Content-Type para uma mensagem codificada em SOAP 1.2 MTOM deve incluir o parâmetro de informações de início com o valor de `application/soap+xml`, colocado entre aspas duplas.
 
-- R4136: O cabeçalho HTTP Content-Type para uma mensagem codificada por MTOM do SOAP 1. x deve ter o parâmetro de limite com o valor de (delimitado por aspas duplas) que corresponde ao limite MIME que BNF definido no RFC 2046, seção 5.1.1
+- R4136: Cabeçalho HTTP Content-Type para uma mensagem codificada por MTOM do SOAP 1. x deve ter o parâmetro de limite com o valor de (delimitado por aspas duplas) que corresponde ao limite MIME que BNF definido no RFC 2046, seção 5.1.1
 
     ```
     boundary := 0*69<bchars> bcharsnospace 
@@ -481,9 +492,9 @@ Embora o requisito para usar as aspas duplas não seja explícito na RFC 2387, o
 #### <a name="infoset-mime-part"></a>Parte do MIME Infoset
 O SOAP 1.x Envelope é encapsulado como parte do pacote XOP MIME raiz e geralmente é chamado de `infoset` parte.
 
-- R4141: O SOAP 1.x Envelope deve ser encapsulado como parte da raiz do pacote XOP MIME, chamado o `infoset` parte e referenciado de tipo de conteúdo HTTP.
+- R4141: O SOAP 1.x Envelope deve ser encapsulado como parte da raiz do pacote XOP MIME, chamado de `infoset` parte e referenciado de tipo de conteúdo HTTP.
 
-- R4142: SOAP `Infoset` parte deve incluir os seguintes cabeçalhos MIME: `Content-ID`, `Content-Transfer-Encoding`, e `Content-Type`.
+- R4142: O SOAP `Infoset` parte deve incluir os seguintes cabeçalhos MIME: `Content-ID`, `Content-Transfer-Encoding`, e `Content-Type`.
 
 O formato do cabeçalho Content-ID é definido por RFC 2045 como
 
@@ -524,7 +535,7 @@ MIME (RFC 2045) fornece o cabeçalho Content-Transfer-Encoding para comunicar a 
 
 - [XOP] seção 5, de acordo com
 
-- R4148: Uma parte de Infoset SOAP1.1 deve conter o cabeçalho Content-Type com o tipo de mídia application/xop + xml e parâmetros de tipo = "text/xml" e o conjunto de caracteres
+- R4148: Parte de Infoset SOAP1.1 deve conter o cabeçalho Content-Type com o tipo de mídia application/xop + xml e parâmetros de tipo = "text/xml" e o conjunto de caracteres
 
     ```
     Content-Type: application/xop+xml;
@@ -545,7 +556,7 @@ MIME (RFC 2045) fornece o cabeçalho Content-Transfer-Encoding para comunicar a 
 #### <a name="wcf-endpoint-support-for-mtom"></a>Suporte de ponto de extremidade do WCF para MTOM
 A finalidade do MTOM é codificar uma mensagem SOAP para otimizar o dados codificados em base64. A seguir está uma lista de restrições:
 
-- R4151: Qualquer item de informações do elemento que contém dados codificados em base64 pode ser otimizado.
+- R4151: Qualquer item de informações do elemento que contém dados codificados em base64 que pode ser otimizada.
 
 - B4152: WCF otimiza os itens de informações do elemento que contêm dados codificados em base64 e excederem 1.024 bytes de comprimento.
 

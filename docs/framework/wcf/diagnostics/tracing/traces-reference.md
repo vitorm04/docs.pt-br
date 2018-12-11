@@ -2,12 +2,12 @@
 title: Referência de rastreamentos
 ms.date: 03/30/2017
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
-ms.openlocfilehash: 4883bd5a38efee5cfeefddf76cbc3e53cf0b5d9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9165cac070b94fcdf9be5b3182a2a7bd91bc451
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487916"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145891"
 ---
 # <a name="traces-reference"></a>Referência de rastreamentos
 Esta seção lista todos os rastreamentos gerados pelo Windows Communication Foundation (WCF).  
@@ -638,6 +638,8 @@ Esta seção lista todos os rastreamentos gerados pelo Windows Communication Fou
  [System.ServiceModel.MetadataExchangeClientReceiveReply](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-metadataexchangeclientreceivereply.md)  
   
  [System.ServiceModel.WarnHelpPageEnabledNoBaseAddress](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-warnhelppageenablednobaseaddress.md)  
+
+ [System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-warnservicehealthenablednobaseaddress.md)
   
  `Activation`  
   

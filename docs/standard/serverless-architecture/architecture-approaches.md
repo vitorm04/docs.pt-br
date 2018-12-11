@@ -4,12 +4,12 @@ description: Uma introdução à arquitetura de abordagens para criar aplicativo
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "49369667"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126739"
 ---
 # <a name="architecture-approaches"></a>Abordagens de arquitetura
 
@@ -97,5 +97,5 @@ Microsserviços vêm com seus próprios desafios, incluindo:
 Finalmente, há soluções para atender a todos esses desafios, incluindo tocar os benefícios sem servidor que serão discutidos posteriormente.
 
 >[!div class="step-by-step"]
-[Anterior](index.md)
-[Próximo](architecture-deployment-approaches.md)
+>[Anterior](index.md)
+>[Próximo](architecture-deployment-approaches.md)

@@ -4,12 +4,12 @@ description: Compreenda os desafios da arquitetura de aplicativos sem servidor, 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "49369618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155058"
 ---
 # <a name="serverless-architecture-considerations"></a>Considerações sobre a arquitetura sem servidor
 
@@ -71,7 +71,7 @@ Uma arquitetura sem servidor pode incluir funções que dependem de outras funç
 
 ## <a name="managing-failure-and-providing-resiliency"></a>Gerenciamento de falhas e fornecendo resiliência
 
-Também é importante considerar as *padrão de disjuntor*: se, por algum motivo, um serviço continua a falhar, não é aconselhável para chamar esse serviço repetidamente. Em vez disso, um serviço alternativo é chamado ou uma mensagem retornada até que a integridade do serviço dependente seja restabelecida. A arquitetura sem servidor precisa levar em conta a estratégia para resolver e gerenciamento de dependências entre serviços.
+Também é importante considerar as *padrão de disjuntor*: Se, por algum motivo, um serviço continua a falhar, não é aconselhável para chamar esse serviço repetidamente. Em vez disso, um serviço alternativo é chamado ou uma mensagem retornada até que a integridade do serviço dependente seja restabelecida. A arquitetura sem servidor precisa levar em conta a estratégia para resolver e gerenciamento de dependências entre serviços.
 
 Para continuar o padrão de Disjuntor, serviços precisam ser tolerante a falhas e resiliente. Tolerância refere-se à capacidade de seu aplicativo para continuar executando mesmo após exceções inesperadas ou estados inválidos são encontrados. Tolerância a falhas normalmente é uma função do próprio código e como ele escreveu lidar com exceções. Resiliência se refere a como compatíveis com o aplicativo está em recuperação de falhas. Resiliência geralmente é gerenciada pela plataforma sem servidor. A plataforma deve conseguir crie uma nova instância de função sem servidor quando existente falha. A plataforma também deve ser inteligente o bastante para parar de girar novas instâncias quando a falha de cada nova instância.
 
@@ -82,5 +82,5 @@ Para obter mais informações, consulte [Implementando o padrão de disjuntor](.
 Uma grande vantagem do uso sem servidor é a capacidade de atualizar uma função específica sem precisar reimplantar o aplicativo inteiro. Para atualizações para ser bem-sucedido, funções devem ser com controle de versão para que os serviços de chamá-los são roteados para a versão correta do código. Uma estratégia de implantação de novas versões também é importante. Uma abordagem comum é usar "verde/azul implantações." A implantação verde é a função atual. Uma nova versão de "blue" é implantada para produção e testada. Quando o teste é aprovado, as versões de verdes e azuis são trocadas para que a nova versão é fornecido em tempo real. Se ocorrerem problemas, eles podem ser trocados novamente. Suporte a controle de versão e implantações de verde/azul requer uma combinação de criação de funções para acomodar as alterações de versão e trabalhar com a plataforma sem servidor para lidar com implantações. Uma abordagem possível é usar proxies, que são descritos na [plataforma sem servidor do Azure](azure-functions.md#proxies) capítulo.
 
 >[!div class="step-by-step"]
-[Anterior](serverless-architecture.md)
-[Próximo](serverless-design-examples.md)
+>[Anterior](serverless-architecture.md)
+>[Próximo](serverless-design-examples.md)

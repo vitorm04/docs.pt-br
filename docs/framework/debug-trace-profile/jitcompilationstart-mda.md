@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387030"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150661"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA jitCompilationStart
 O MDA (Assistente de Depuração Gerenciado) de `jitCompilationStart` é ativado para relatar quando o compilador JIT (Just-In-Time) começa a compilar uma função.  
@@ -39,7 +39,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Configuração  
- O arquivo de configuração a seguir mostra uma variedade de filtros que podem ser utilizados para filtrar quais métodos são relatados quando eles são compilados via JIT pela primeira vez. Você pode especificar que todos os métodos sejam relatados, definindo o valor do atributo name para *.  
+ O arquivo de configuração a seguir mostra uma variedade de filtros que podem ser utilizados para filtrar quais métodos são relatados quando eles são compilados via JIT pela primeira vez. Você pode especificar que todos os métodos sejam relatados, definindo o valor do atributo name para \*.  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir destina-se a ser usado com o arquivo de configuração anterior.  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  

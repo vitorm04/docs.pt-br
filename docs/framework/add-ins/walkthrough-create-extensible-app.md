@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: criando um aplicativo extensível'
+title: 'Passo a passo: Criando um aplicativo extensível'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744607"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155071"
 ---
-# <a name="walkthrough-creating-an-extensible-application"></a>Instruções passo a passo: criando um aplicativo extensível
+# <a name="walkthrough-creating-an-extensible-application"></a>Passo a passo: Criando um aplicativo extensível
 Este passo a passo descreve como criar um pipeline para um suplemento que executa funções de calculadora simples. Ele não Demonstre um cenário do mundo real; em vez disso, ele demonstra a funcionalidade básica de um pipeline e como um suplemento pode fornecer serviços para um host.  
   
  Este passo a passo descreve as seguintes tarefas:  
@@ -43,11 +43,11 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
   
 -   Executando o aplicativo host.  
   
- Esse pipeline passa apenas tipos serializáveis (<xref:System.Double> e <xref:System.String>), entre o host e o suplemento. Para obter um exemplo que mostra como passar coleções de tipos de dados complexos, consulte [instruções passo a passo: passando coleções entre Hosts e suplementos](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Esse pipeline passa apenas tipos serializáveis (<xref:System.Double> e <xref:System.String>), entre o host e o suplemento. Para obter um exemplo que mostra como passar coleções de tipos de dados complexos, consulte [passo a passo: Transmitindo coleções entre Hosts e suplementos](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  O contrato para este pipeline define um modelo de objeto das quatro operações aritméticas: adicionar, subtrair, multiplicar e dividir. O host fornece o suplemento com uma equação para calcular como 2 + 2, e o suplemento retorna o resultado para o host.  
   
- Versão 2 do suplemento Calculadora fornece o cálculo mais possibilidades e demonstra o controle de versão. Ele é descrito em [instruções passo a passo: Habilitando a compatibilidade com versões anteriores como seu Host é alterado](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Versão 2 do suplemento Calculadora fornece o cálculo mais possibilidades e demonstra o controle de versão. Ela é descrita no [passo a passo: Habilitando a compatibilidade com versões anteriores como o Host é alterado](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
  Você precisa dos seguintes itens para concluir esta explicação:  
@@ -86,7 +86,7 @@ Este passo a passo descreve como criar um pipeline para um suplemento que execut
      Não é necessário colocar a estrutura de pastas do pipeline na pasta do aplicativo; Isso é feito aqui apenas para conveniência. A etapa apropriado, o passo a passo explica como alterar o código quando a estrutura de pastas do pipeline está em um local diferente. Veja a discussão de requisitos de diretório do pipeline na [requisitos de desenvolvimento de Pipeline](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  O `CalcV2` pasta não é usada neste passo a passo; ele é um espaço reservado [passo a passo: Habilitando a compatibilidade com versões anteriores como seu Host é alterado](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  O `CalcV2` pasta não é usada neste passo a passo; ele é um espaço reservado para [passo a passo: Habilitando a compatibilidade com versões anteriores como o Host é alterado](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Criando o contrato e modos de exibição  
  O segmento de contrato para este pipeline define o `ICalc1Contract` interface, que define quatro métodos: `add`, `subtract`, `multiply`, e `divide`.  

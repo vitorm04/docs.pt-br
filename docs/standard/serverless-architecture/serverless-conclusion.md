@@ -4,12 +4,12 @@ description: Sem servidor oferece muitos benefícios e tem seus próprios desafi
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369563"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128837"
 ---
 # <a name="conclusion"></a>Conclusão
 
@@ -30,4 +30,4 @@ As principais lições a seguir estão as conclusões mais importantes deste gui
 **Sem servidor como uma ferramenta, não a caixa de ferramentas.** Sem servidor é não a solução exclusiva para a arquitetura do aplicativo. É uma ferramenta que pode ser utilizada como parte de um aplicativo híbrido que pode conter camadas tradicionais, monólito back-ends e contêineres. Sem servidor pode ser usado para aprimorar soluções existentes e não é uma abordagem tudo ou nada para desenvolvimento de aplicativos.
 
 >[!div class="step-by-step"]
-[Anterior](serverless-business-scenarios.md)
+>[Anterior](serverless-business-scenarios.md)

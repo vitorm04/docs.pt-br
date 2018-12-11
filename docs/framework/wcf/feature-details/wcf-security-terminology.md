@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297056"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126816"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada ao falar sobre segurança pode não ser familiar. Este tópico fornece explicações curtas sobre alguns dos termos de segurança, mas não se destina a fornecer uma documentação abrangente para cada item.  
@@ -120,7 +120,7 @@ Parte da terminologia usada ao falar sobre segurança pode não ser familiar. Es
  A autoridade de certificação na parte superior de uma hierarquia de autoridade de certificação. A autoridade raiz certifica CAs no próximo nível da hierarquia.  
   
  Algoritmo de Hash seguro (SHA)  
- Um algoritmo de hash que gera um resumo da mensagem. SHA é usado com a assinatura de algoritmo de DSA (Digital) na Assinatura Digital Standard (DSS), entre outros lugares. Existem quatro variedades de SHA: SHA-1, SHA-256, SHA-384 e SHA-512. SHA-1 gera um resumo da mensagem de 160 bits. SHA-256, SHA-384 e SHA-512 geram 256 e 384 bits e resumos de mensagem de 512 bits, respectivamente. SHA foi desenvolvido pelo Instituto Nacional de padrões e tecnologia (NIST) e pelo National Security Agency (NSA).  
+ Um algoritmo de hash que gera um resumo da mensagem. SHA é usado com a assinatura de algoritmo de DSA (Digital) na Assinatura Digital Standard (DSS), entre outros lugares. Há quatro variedades de SHA: SHA-1, SHA-256, SHA-384 e SHA-512. SHA-1 gera um resumo da mensagem de 160 bits. SHA-256, SHA-384 e SHA-512 geram 256 e 384 bits e resumos de mensagem de 512 bits, respectivamente. SHA foi desenvolvido pelo Instituto Nacional de padrões e tecnologia (NIST) e pelo National Security Agency (NSA).  
   
  Secure Sockets Layer (SSL)  
  Um protocolo para comunicação de rede segura usando uma combinação de tecnologia de chave secreta e pública.  

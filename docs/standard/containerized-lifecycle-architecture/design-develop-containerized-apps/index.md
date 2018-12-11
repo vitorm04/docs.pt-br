@@ -4,20 +4,19 @@ description: Containerized Docker Application Lifecycle with Microsoft Platform 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: b8f2924b658b7e2eeb295adc3c89a1ed576bba60
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 2f8e969ce48a448a293efafccbce1d62b059640d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104684"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155217"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Projeto e desenvolvimento de aplicativos em contêineres usando o Docker e o Microsoft Azure
 
-Visão: projetar e desenvolver soluções escalonáveis tendo o Docker em mente.
+Visão: Projetar e desenvolver soluções escalonáveis com o Docker em mente.
 
 Há muitos casos de uso adequados para contêineres, não apenas para arquiteturas orientadas a microsserviços, mas também quando você tem serviços ou aplicativos Web regulares para executar e você deseja reduzir as fricções entre as implantações dos ambientes de desenvolvimento e de produção.
 
-
 >[!div class="step-by-step"]
-[Prev](../Microsoft-platform-tools-containerized-apps/index.md)
-[Avançar](design-docker-applications.md)
+>[Anterior](../Microsoft-platform-tools-containerized-apps/index.md)
+>[Próximo](design-docker-applications.md)

@@ -1,52 +1,53 @@
 ---
-title: Crie serviços resilientes prontos para a nuvem. Adotar as falhas transitórias na nuvem
-description: Modernizar aplicativos existentes do .NET com contêineres do Windows e de nuvem do Azure | Crie serviços resilientes prontos para a nuvem. Adotar as falhas transitórias na nuvem
+title: Compile serviços resilientes prontos para a nuvem. Adotar falhas transitórias na nuvem
+description: Modernizar aplicativos .NET existentes com contêineres do Windows e de nuvem do Azure | Compile serviços resilientes prontos para a nuvem. Adotar falhas transitórias na nuvem
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 1df21d0f647b96c315686921276be3526f66bbc8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128850"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Criar serviços resilientes prontos para a nuvem: adotar falhas transitórias na nuvem
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Compile serviços resilientes prontos para a nuvem: Adotar falhas transitórias na nuvem
 
-A resiliência é a capacidade de recuperar de falhas e continuar a funcionar. Resiliência não é sobre como evitar falhas, mas aceitando o fato de que as falhas ocorrerão e, em seguida, responder a eles de maneira que evita o tempo de inatividade ou perda de dados. A meta de resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
+A resiliência é a capacidade de recuperar de falhas e continuar a funcionar. A resiliência não é sobre como evitar falhas, mas aceitar o fato de que as falhas ocorrerão e, em seguida, responder a elas de uma maneira que evite o tempo de inatividade ou perda de dados. A meta de resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
 
-O aplicativo está pronto para a nuvem quando, no mínimo, ele implementa um modelo baseado em software de resiliência, em vez de um modelo baseado em hardware. Seu aplicativo de nuvem deve compreender as falhas parciais que certamente ocorrerá. O design ou parcialmente refatorar seu aplicativo para obter resiliência com falhas parciais esperadas. Deve ser projetado para lidar com falhas parciais, como interrupções de rede transitório e nós ou VMs falhas na nuvem. Contêineres mesmo sendo movidos para outro nó em um cluster do orchestrator podem causar falhas intermitentes de curtas dentro do aplicativo.
+Seu aplicativo está pronto para a nuvem quando, no mínimo, ele implementa um modelo baseado em software de resiliência, em vez de um modelo baseado em hardware. Seu aplicativo de nuvem deve compreender as falhas parciais que certamente ocorrerá. Design ou parcialmente refatorar seu aplicativo para obter resiliência com falhas parciais esperadas. Ele deve ser projetado para lidar com falhas parciais, como interrupções de rede transitórios e nós ou VMs falhando na nuvem. Até mesmo contêineres que estão sendo movidos para outro nó em um cluster do orquestrador podem causar falhas curtas intermitentes no aplicativo.
 
 ## <a name="handling-partial-failure"></a>Tratando falha parcial
 
-Em um aplicativo baseado em nuvem, há um risco de falha parcial de sempre presente. Por exemplo, uma instância de site único ou um contêiner pode falhar, ou ele pode estar indisponível ou não responder por um curto período. Ou, um único servidor ou VM pode falhar.
+Em um aplicativo baseado em nuvem, há um risco de sempre presente de falha parcial. Por exemplo, uma instância de site único ou um contêiner pode falhar, ou ele pode estar indisponível ou não responder por um curto período. Ou, um único servidor ou VM pode falhar.
 
-Como os clientes e serviços são processos separados, um serviço não poderá responder de maneira oportuna a solicitação do cliente. O serviço pode estar sobrecarregado e lenta responder às solicitações, ou ele pode não estar acessível por um curto período devido a problemas de rede.
+Como os clientes e serviços são processos separados, um serviço pode não ser capaz de responder de maneira oportuna a uma solicitação do cliente. O serviço pode estar sobrecarregado e responder lentamente às solicitações, ou ele pode não estar acessível por um curto período devido a problemas de rede.
 
-Por exemplo, considere um aplicativo .NET monolítico que acessa um banco de dados no banco de dados do SQL Azure. Se o banco de dados do SQL Azure ou qualquer outro serviço de terceiros não está respondendo para um breve tempo (um banco de dados do SQL Azure pode ser movido para um nó diferente ou servidor e ficar sem resposta por alguns segundos), quando o usuário tenta realizar qualquer ação, o aplicativo pode falhar e mostrar w uma exceção ao mesmo tempo.
+Por exemplo, considere um aplicativo .NET monolítico que acessa um banco de dados SQL do Azure. Se o banco de dados SQL do Azure ou qualquer outro serviço de terceiros não está respondendo para um breve momento (um banco de dados SQL do Azure pode ser movido para um nó diferente ou servidor e ficar sem resposta por alguns segundos), quando o usuário tenta realizar nenhuma ação, o aplicativo pode falhar e mostrar w uma exceção no mesmo momento.
 
 Um cenário semelhante pode ocorrer em um aplicativo que consome serviços HTTP. A rede ou o próprio serviço pode não estar disponível na nuvem durante uma falha transitória, curta.
 
-Um aplicativo resiliente, como mostrado na Figura 4-9 deve implementar técnicas, como "repetições com retirada exponencial" para que o aplicativo tenha a oportunidade para lidar com falhas transitórias de recursos. Você também deve usar "disjuntores" em seus aplicativos. Um disjuntor interrompe um aplicativo tentar acessar um recurso quando ela é realmente uma falha de longo prazo. Ao usar um disjuntor, o aplicativo evita provocar uma negação de serviço para si mesmo.
+Um aplicativo resiliente semelhante à mostrada na Figura 4 a 9 deve implementar técnicas como "novas tentativas com retirada exponencial" para dar ao aplicativo uma oportunidade de lidar com falhas transitórias nos recursos. Você também deve usar "disjuntores" em seus aplicativos. Um disjuntor interrompe um aplicativo tentar acessar um recurso quando ele é, na verdade, uma falha de longo prazo. Ao usar um disjuntor, o aplicativo evita provocar uma negação de serviço a mesmo.
 
-![Falhas parciais tratadas pelas novas tentativas com retirada exponencial](./media/image9.png)
+![Falhas parciais manipuladas por novas tentativas com retirada exponencial](./media/image9.png)
 
-> **Figura 4-9.** Falhas parciais tratadas pelas novas tentativas com retirada exponencial
+> **Figura 4 a 9.** Falhas parciais manipuladas por novas tentativas com retirada exponencial
 
-Você pode usar essas técnicas em recursos HTTP e nos recursos de banco de dados. Na Figura 4-9, o aplicativo é baseado em uma arquitetura de camada 3, portanto, você precisa estas técnicas no nível de serviços (HTTP) e no nível da camada de dados (TCP). Em um aplicativo monolítico que usa somente uma camada de aplicativo único além do banco de dados (não há serviços adicionais ou microservices), tratar falhas temporárias no nível de conexão do banco de dados pode ser suficiente. Nesse cenário, é necessária apenas uma configuração específica de conexão de banco de dados.
+Você pode usar essas técnicas nos recursos HTTP e nos recursos de banco de dados. Na Figura 4 a 9, o aplicativo se baseia em uma arquitetura de camada 3, portanto, você precisa dessas técnicas no nível de serviços (HTTP) e no nível da camada de dados (TCP). Em um aplicativo monolítico que usa apenas uma camada de aplicativo único, além do banco de dados (sem serviços adicionais nem microsserviços), tratamento de falhas transitórias no nível de conexão do banco de dados pode ser suficiente. Nesse cenário, é necessária apenas uma configuração específica de conexão de banco de dados.
 
-Ao implementar comunicações resilientes que acessam o banco de dados, dependendo da versão do .NET que você está usando, ele pode ser simples (por exemplo, [com o Entity Framework 6 ou posterior](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), é apenas uma questão de configurar o conexão de banco de dados). Ou, talvez seja necessário usar as bibliotecas adicionais como o [Transient Fault Handling Application Block](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (para versões anteriores do .NET), ou até mesmo implementar sua própria biblioteca.
+Quando a implementação da comunicação resiliente que acessam o banco de dados, dependendo da versão do .NET que você está usando, pode ser simples (por exemplo, [com o Entity Framework 6 ou posterior](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), ele é apenas uma questão de configurar o conexão de banco de dados). Ou, talvez seja necessário usar bibliotecas adicionais, como o [Transient Fault Handling Application Block](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (para versões anteriores do .NET), ou até mesmo implementar sua própria biblioteca.
 
-Ao implementar tentativas HTTP e disjuntores, a recomendação para .NET é usar o [Polly](https://github.com/App-vNext/Polly) biblioteca, que tem como alvo o .NET Framework 4.0, .NET Framework 4.5 e .NET padrão 1.1, que inclui suporte ao .NET Core.
+Ao implementar novas tentativas HTTP e os disjuntores, a recomendação para .NET é usar o [Polly](https://github.com/App-vNext/Polly) biblioteca, que tem como alvo o .NET Framework 4.0, .NET Framework 4.5 e .NET Standard 1.1, que inclui suporte ao .NET Core.
 
-Para saber como implementar estratégias para lidar com falhas parciais na nuvem, consulte as seguintes referências.
+Para saber como implementar estratégias para tratar falhas parciais na nuvem, consulte as referências a seguir.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
--   **Implementar a comunicação flexível para lidar com falhas parciais**
+-   **Implementando comunicação resiliente para lidar com falhas parciais**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework conexão resiliência lógica e repetição (versão 6 e posterior)**
+-   **Entity Framework conexão resiliência e lógica de repetição (versão 6 e posterior)**
 
     [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
@@ -54,10 +55,10 @@ Para saber como implementar estratégias para lidar com falhas parciais na nuvem
 
 -   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 
--   **Biblioteca de Polly para comunicação de HTTP resiliente**
+-   **Biblioteca Polly para comunicação resiliente de HTTP**
 
     https://github.com/App-vNext/Polly
 
 >[!div class="step-by-step"]
-[Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-[Próximo](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[Anterior](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[Próximo](modernize-your-apps-with-monitoring-and-telemetry.md)

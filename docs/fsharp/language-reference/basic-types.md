@@ -1,17 +1,17 @@
 ---
 title: Tipos básicos (F#)
-description: Descubra os tipos básicos fundamentais que são usados na linguagem F#.
+description: Descobrir os tipos básicos fundamentais que são usados no F# idioma.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026926"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145118"
 ---
 # <a name="basic-types"></a>Tipos básicos
 
-Este tópico lista os tipos básicos que são definidos na linguagem F#. Esses tipos são mais fundamental em F#, que formam a base para quase todos os programas do F#. Eles são um subconjunto de tipos primitivos do .NET.
+Este tópico lista os tipos básicos que são definidos no F# idioma. Esses tipos são mais fundamental no F#, que formam a base para quase todos F# programa. Eles são um subconjunto de tipos primitivos do .NET.
 
 |Tipo|Tipo .NET|Descrição|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ Este tópico lista os tipos básicos que são definidos na linguagem F#. Esses t
 |`float32`, `single`|<xref:System.Single>|Um tipo de ponto flutuante de 32 bits.|
 |`float`, `double`|<xref:System.Double>|Um tipo de ponto flutuante de 64 bits.|
 
->[!NOTE]
-Você pode executar cálculos com números inteiros grandes demais para o tipo de inteiro de 64 bits usando o [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` não é considerado um tipo básico; ele é uma abreviação de `System.Numerics.BigInteger`.
+> [!NOTE]
+> Você pode executar cálculos com números inteiros grandes demais para o tipo de inteiro de 64 bits usando o [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) tipo. `bigint` não é considerado um tipo básico; ele é uma abreviação de `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Consulte também
 

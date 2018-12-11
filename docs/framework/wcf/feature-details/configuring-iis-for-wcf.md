@@ -2,12 +2,12 @@
 title: Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 13fd068f7a058a0fbf4e15fc99a8de91671fb2d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1cbc11e65453cb9aeb020f3f12e3ca0156a6d6d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664612"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127648"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurando os Serviços de informação da internet 7.0 para o Windows Communication Foundation
 
@@ -56,23 +56,19 @@ Serviços de informações da Internet (IIS) 7.0 tem um design modular que permi
 ## <a name="request-limits"></a>Limites de solicitações
  Na [!INCLUDE[wv](../../../../includes/wv-md.md)] com o valor padrão do IIS 7 da `maxUri` e `maxQueryStringSize` configurações foram alteradas. Por padrão, a filtragem de solicitações no IIS 7.0 permite que um comprimento de URL de 4096 caracteres e um comprimento de cadeia de caracteres de consulta de 2048 caracteres. Para alterar esses padrões adicione o seguinte XML ao seu arquivo App. config.
 
- `<system.webServer>`
-
- `<security>`
-
- `<requestFiltering>`
-
- `<requestLimits maxUrl="8192" maxQueryString="8192" />`
-
- `</requestFiltering>`
-
- `</security>`
-
- `</system.webServer>`
+```xml
+ <system.webServer>
+    <security>
+        <requestFiltering>
+            <requestLimits maxUrl="8192" maxQueryString="8192" />
+        </requestFiltering>
+    </security>
+ </system.webServer>
+ ```
 
 ## <a name="see-also"></a>Consulte também
 
 - [Arquitetura de ativação WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Como instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Como: Instalar e configurar os componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
 - [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

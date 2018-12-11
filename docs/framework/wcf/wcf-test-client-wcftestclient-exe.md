@@ -3,11 +3,11 @@ title: Cliente de Teste do WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181586"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148997"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de Teste do WCF (WcfTestClient.exe)
 Cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient.exe) é uma ferramenta de GUI que permite aos usuários inserir parâmetros de teste, enviem essa entrada para o serviço e exibir a resposta que o serviço envia de volta. Ele fornece um serviço perfeito experiência quando combinado com o Host de serviço WCF em teste.  
@@ -136,7 +136,7 @@ Cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient.exe) �
 ## <a name="features-supported-by-wcf-test-client"></a>Recursos suportados pelo Cliente de Teste do WCF  
  A seguir está uma lista dos recursos suportados pelo cliente de teste do WCF:  
   
--   Chamada de serviço: solicitação/resposta e mensagem unidirecional.  
+-   Invocação de serviço: Solicitação/resposta e mensagem unidirecional.  
   
 -   Associações: todas as associações suportadas por Svcutil.exe.  
   
@@ -156,7 +156,7 @@ Cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient.exe) �
   
 -   Segurança: [!INCLUDE[infocard](../../../includes/infocard-md.md)], certificado e nome de usuário/senha.  
   
--   Associações: WSFederationbinding, algumas associações de contexto e associação HTTPS, WebHttpbinding (suporte a mensagem de resposta de Json).  
+-   Associações: WSFederationbinding, quaisquer associações de contexto e associação de Https, WebHttpbinding (suporte de mensagem de resposta Json).  
   
 ## <a name="closing-wcf-test-client"></a>Fechando o Cliente de Teste do WCF  
  Você pode fechar o cliente de teste do WCF das seguintes maneiras:  

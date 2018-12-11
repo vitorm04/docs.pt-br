@@ -1,19 +1,19 @@
 ---
-title: 'Exemplos de sintaxe da consulta baseada em método: projeção'
+title: 'Exemplos de sintaxe de consulta com base em método: Projeção'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
-ms.openlocfilehash: 81484f729b2282678b3fa1a92b5050cf7a502db5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c1cad442ba2e6d2567c2e4936d7d8b3cd49b0424
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739149"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152404"
 ---
-# <a name="method-based-query-syntax-examples-projection"></a>Exemplos de sintaxe da consulta baseada em método: projeção
-Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> consulta de métodos para o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
+# <a name="method-based-query-syntax-examples-projection"></a>Exemplos de sintaxe de consulta com base em método: Projeção
+Os exemplos neste tópico demonstram como usar o <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> métodos para consultar o [modelo de vendas AdventureWorks](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) usando a sintaxe de consulta com base em método. O Modelo de vendas AdventureWorks usado nesses exemplos é criado a partir das tabelas Contact, Address, Product, SalesOrderHeader e SalesOrderDetail no banco de dados de exemplo AdventureWorks.  
   
  Os exemplos neste tópico usam o seguinte `using` / `Imports` instruções:  
   

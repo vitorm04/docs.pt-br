@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aea903a7b16491a84998d8290270044e167b79f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2e725ecb2208256f6d0e025d4cc79339f385cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387855"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130111"
 ---
 # <a name="reentrancy-mda"></a>MDA reentrancy
 O MDA (Assistente de Depuração Gerenciado) de `reentrancy` é ativado quando é feita uma tentativa de transição de código nativo para gerenciado em casos nos quais um comutador anterior do código gerenciado para nativo não foi executado por meio de uma transição ordenada.  
@@ -69,7 +69,7 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ## <a name="example"></a>Exemplo  
  O código de exemplo a seguir faz com que uma <xref:System.AccessViolationException> seja lançada.  Em versões do Windows que dão suporte à manipulação de exceção em vetor, isso fará com que o manipulador de exceção em vetor gerenciado seja chamado.  Se o MDA `reentrancy` estiver habilitado, o MDA será ativado durante a tentativa de chamada para `MyHandler` do código de suporte de manipulação de exceção em vetor do sistema operacional.  
   
-```  
+```csharp
 using System;  
 public delegate int ExceptionHandler(IntPtr ptrExceptionInfo);  
   
