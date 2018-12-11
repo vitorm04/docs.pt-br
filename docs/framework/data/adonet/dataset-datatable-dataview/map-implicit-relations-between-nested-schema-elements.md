@@ -3,26 +3,26 @@ title: Mapear relações implícita entre elementos de esquema aninhados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
 ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744322"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128694"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="91e4e-102">Mapear relações implícita entre elementos de esquema aninhados</span><span class="sxs-lookup"><span data-stu-id="91e4e-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="91e4e-103">Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexos aninhados dentro uma da outra.</span><span class="sxs-lookup"><span data-stu-id="91e4e-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="91e4e-104">Nesse caso, o processo de mapeamento se aplica o mapeamento padrão e cria o seguinte no <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="91e4e-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="32c2a-102">Mapear relações implícita entre elementos de esquema aninhados</span><span class="sxs-lookup"><span data-stu-id="32c2a-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="32c2a-103">Um esquema XSD (linguagem) de definição de esquema XML pode ter tipos complexos aninhados dentro uma da outra.</span><span class="sxs-lookup"><span data-stu-id="32c2a-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="32c2a-104">Nesse caso, o processo de mapeamento se aplica o mapeamento padrão e cria o seguinte no <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="32c2a-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
--   <span data-ttu-id="91e4e-105">Uma tabela para cada um dos tipos complexos (pai e filho).</span><span class="sxs-lookup"><span data-stu-id="91e4e-105">One table for each of the complex types (parent and child).</span></span>  
+-   <span data-ttu-id="32c2a-105">Uma tabela para cada um dos tipos complexos (pai e filho).</span><span class="sxs-lookup"><span data-stu-id="32c2a-105">One table for each of the complex types (parent and child).</span></span>  
   
--   <span data-ttu-id="91e4e-106">Não se existir nenhuma restrição exclusiva no pai, a coluna de chave primária adicional um acordo com a definição de tabela denominada *TableName*ID onde *TableName* é o nome da tabela pai.</span><span class="sxs-lookup"><span data-stu-id="91e4e-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+-   <span data-ttu-id="32c2a-106">Não se existir nenhuma restrição exclusiva no pai, a coluna de chave primária adicional um acordo com a definição de tabela denominada *TableName*ID onde *TableName* é o nome da tabela pai.</span><span class="sxs-lookup"><span data-stu-id="32c2a-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
--   <span data-ttu-id="91e4e-107">Uma restrição de chave primária na tabela pai que identifica a coluna adicional, como a chave primária (definindo o **IsPrimaryKey** propriedade **verdadeiro**).</span><span class="sxs-lookup"><span data-stu-id="91e4e-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="91e4e-108">A restrição é denominada restrição\# onde \# é 1, 2, 3 e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="91e4e-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="91e4e-109">Por exemplo, o nome padrão para a primeira restrição é Constraint1.</span><span class="sxs-lookup"><span data-stu-id="91e4e-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+-   <span data-ttu-id="32c2a-107">Uma restrição de chave primária na tabela pai que identifica a coluna adicional, como a chave primária (definindo o **IsPrimaryKey** propriedade **verdadeiro**).</span><span class="sxs-lookup"><span data-stu-id="32c2a-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="32c2a-108">A restrição é denominada restrição\# onde \# é 1, 2, 3 e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="32c2a-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="32c2a-109">Por exemplo, o nome padrão para a primeira restrição é Constraint1.</span><span class="sxs-lookup"><span data-stu-id="32c2a-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
--   <span data-ttu-id="91e4e-110">Uma restrição de chave estrangeira na tabela filho que identifica a coluna adicional, como a chave estrangeira referindo-se para a chave primária da tabela pai.</span><span class="sxs-lookup"><span data-stu-id="91e4e-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="91e4e-111">A restrição é nomeada *ParentTable_ChildTable* onde *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.</span><span class="sxs-lookup"><span data-stu-id="91e4e-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+-   <span data-ttu-id="32c2a-110">Uma restrição de chave estrangeira na tabela filho que identifica a coluna adicional, como a chave estrangeira referindo-se para a chave primária da tabela pai.</span><span class="sxs-lookup"><span data-stu-id="32c2a-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="32c2a-111">A restrição é nomeada *ParentTable_ChildTable* onde *ParentTable* é o nome da tabela pai e *ChildTable* é o nome da tabela filho.</span><span class="sxs-lookup"><span data-stu-id="32c2a-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
--   <span data-ttu-id="91e4e-112">Uma relação de dados entre as tabelas pai e filho.</span><span class="sxs-lookup"><span data-stu-id="91e4e-112">A data relation between the parent and child tables.</span></span>  
+-   <span data-ttu-id="32c2a-112">Uma relação de dados entre as tabelas pai e filho.</span><span class="sxs-lookup"><span data-stu-id="32c2a-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="91e4e-113">O exemplo a seguir mostra um esquema no qual **OrderDetail** é um elemento filho do **ordem**.</span><span class="sxs-lookup"><span data-stu-id="91e4e-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="32c2a-113">O exemplo a seguir mostra um esquema no qual **OrderDetail** é um elemento filho do **ordem**.</span><span class="sxs-lookup"><span data-stu-id="32c2a-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ ms.locfileid: "50744322"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="91e4e-114">O processo de mapeamento de esquema XML cria o seguinte a **conjunto de dados**:</span><span class="sxs-lookup"><span data-stu-id="91e4e-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="32c2a-114">O processo de mapeamento de esquema XML cria o seguinte a **conjunto de dados**:</span><span class="sxs-lookup"><span data-stu-id="32c2a-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
--   <span data-ttu-id="91e4e-115">Uma **ordem** e uma **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="91e4e-115">An **Order** and an **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="32c2a-115">Uma **ordem** e uma **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="32c2a-115">An **Order** and an **OrderDetail** table.</span></span>  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   <span data-ttu-id="91e4e-116">Uma restrição exclusiva na **ordem** tabela.</span><span class="sxs-lookup"><span data-stu-id="91e4e-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="91e4e-117">Observe que o **IsPrimaryKey** estiver definida como **verdadeiro**.</span><span class="sxs-lookup"><span data-stu-id="91e4e-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+-   <span data-ttu-id="32c2a-116">Uma restrição exclusiva na **ordem** tabela.</span><span class="sxs-lookup"><span data-stu-id="32c2a-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="32c2a-117">Observe que o **IsPrimaryKey** estiver definida como **verdadeiro**.</span><span class="sxs-lookup"><span data-stu-id="32c2a-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ ms.locfileid: "50744322"
     IsPrimaryKey: True  
     ```  
   
--   <span data-ttu-id="91e4e-118">Uma restrição de chave estrangeira na **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="91e4e-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+-   <span data-ttu-id="32c2a-118">Uma restrição de chave estrangeira na **OrderDetail** tabela.</span><span class="sxs-lookup"><span data-stu-id="32c2a-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ ms.locfileid: "50744322"
     RelatedColumns: Order_Id   
     ```  
   
--   <span data-ttu-id="91e4e-119">Uma relação entre o **ordem** e **OrderDetail** tabelas.</span><span class="sxs-lookup"><span data-stu-id="91e4e-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="91e4e-120">O **Nested** propriedade para essa relação é definida como **verdadeiro** porque o **ordem** e **OrderDetail** elementos são aninhados no esquema .</span><span class="sxs-lookup"><span data-stu-id="91e4e-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+-   <span data-ttu-id="32c2a-119">Uma relação entre o **ordem** e **OrderDetail** tabelas.</span><span class="sxs-lookup"><span data-stu-id="32c2a-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="32c2a-120">O **Nested** propriedade para essa relação é definida como **verdadeiro** porque o **ordem** e **OrderDetail** elementos são aninhados no esquema .</span><span class="sxs-lookup"><span data-stu-id="32c2a-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
     ```  
     ParentTable: Order  
@@ -97,7 +97,7 @@ ms.locfileid: "50744322"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="91e4e-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="91e4e-121">See Also</span></span>  
- [<span data-ttu-id="91e4e-122">Gerando relações de conjunto de dados do esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="91e4e-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="91e4e-123">Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="91e4e-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- <span data-ttu-id="91e4e-124">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="91e4e-124">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
+## <a name="see-also"></a><span data-ttu-id="32c2a-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32c2a-121">See Also</span></span>  
+ [<span data-ttu-id="32c2a-122">Gerando relações de conjunto de dados do esquema XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="32c2a-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="32c2a-123">Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados</span><span class="sxs-lookup"><span data-stu-id="32c2a-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="32c2a-124">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="32c2a-124">[ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)</span></span>
