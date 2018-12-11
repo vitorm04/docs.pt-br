@@ -1,13 +1,13 @@
 ---
 title: Restrições (F#)
-description: Saiba mais sobre restrições de F# que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.
+description: Saiba mais sobre F# restrições que se aplicam a parâmetros de tipo genérico para especificar os requisitos para um argumento de tipo em um tipo genérico ou uma função.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2dfc99e0ef41a224fbd03f325582365b7caab78b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48837344"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152481"
 ---
 # <a name="constraints"></a>Restrições
 
@@ -36,11 +36,12 @@ Há várias restrições diferentes que você pode aplicar para limitar os tipos
 |Restrição de comparação|: comparação|O tipo fornecido deve oferecer suporte à comparação.|
 |Restrição de igualdade|: igualdade|O tipo fornecido deve dar suporte à igualdade.|
 |Restrição não gerenciada|: não gerenciado|O tipo fornecido deve ser um tipo não gerenciado. Tipos não gerenciados são determinados tipos de primitivos (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, ou `decimal`), tipos de enumeração, `nativeptr<_>`, ou uma estrutura de não-genérica cujos campos são todos os tipos não gerenciados.|
+
 Você precisa adicionar uma restrição quando seu código precisa usar um recurso que está disponível no tipo de restrição mas não em tipos em geral. Por exemplo, se você usar a restrição de tipo para especificar um tipo de classe, você pode usar qualquer um dos métodos da classe na função genérica ou tipo.
 
 Especifica as restrições às vezes, é necessário ao escrever os parâmetros de tipo explicitamente, porque sem uma restrição, o compilador tem uma forma de verificar que os recursos que você está usando serão disponibilizado em qualquer tipo que pode ser fornecido em tempo de execução para o tipo de parâmetro.
 
-As restrições mais comuns que você usa no código F# são restrições de tipo que especificam a interfaces ou classes base. As outras restrições são usadas pela biblioteca de F# para implementar algumas funcionalidades, como a restrição de membro explícito, que é usada para implementar o sobrecarregamento de operadores aritméticos ou é fornecida principalmente como F# oferece suporte completo conjunto de restrições que é compatível com o common language runtime.
+As restrições mais comuns de usar no F# código são restrições de tipo que especificam a interfaces ou classes base. As outras restrições são usadas pelo F# biblioteca para implementar algumas funcionalidades, como a restrição de membro explícito, que é usada para implementar o sobrecarregamento de operadores aritméticos ou é fornecida principalmente porque F# dá suporte ao conjunto completo de restrições que é compatível com o common language runtime.
 
 Durante o processo de inferência de tipo, algumas restrições são inferidas automaticamente pelo compilador. Por exemplo, se você usar o `+` operador em uma função, o compilador infere uma restrição de membro explícito em tipos de variáveis que são usadas na expressão.
 
