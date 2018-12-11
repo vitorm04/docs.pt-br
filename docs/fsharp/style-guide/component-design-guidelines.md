@@ -74,7 +74,7 @@ A tabela a seguir segue as convenções de nomenclatura e capitalização do .NE
 |-----------|------|------|----------|-------|
 | Tipos concretos | PascalCase | Substantivo / adjetivas | Lista, Double, complexo | Tipos concretos são estruturas, classes, enumerações, delegados, registros e uniões. Embora os nomes de tipo são tradicionalmente minúsculos no OCaml, F# adotou o esquema de nomenclatura do .NET para tipos.
 | DLLs           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Marcas de união     | PascalCase | Substantivo | Alguns, adicionar, sucesso | Não use um prefixo em APIs públicas. Opcionalmente, use um prefixo ao internos, como ' Digite equipes = TAlpha | TBeta | TDelta.' |
+| Marcas de união     | PascalCase | Substantivo | Alguns, adicionar, sucesso | Não use um prefixo em APIs públicas. Opcionalmente, use um prefixo ao internos, como `Digite equipes = TAlpha | TBeta | TDelta.` |
 | evento          | PascalCase | Verbo | ValueChanged / ValueChanging |  |
 | Exceções     | PascalCase |      | WebException | Nome deve terminar com "Exception". |
 | Campo          | PascalCase | Substantivo | CurrentName  | |
