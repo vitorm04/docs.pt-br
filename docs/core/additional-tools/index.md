@@ -1,20 +1,19 @@
 ---
-title: Ferramentas de CLI adicionais do .NET Core – .NET Core
+title: Ferramentas adicionais da CLI do .NET Core
 description: Uma visão geral das ferramentas adicionais que você pode instalar que oferecem suporte e estendem a funcionalidade do .NET Core.
 author: mlacouture
-ms.author: johalex
-ms.date: 01/19/2018
-ms.custom: seodec18
-ms.openlocfilehash: 695d1accba6d25d8b587dc86ad028e2281ff82e9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/27/2018
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147837"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243573"
 ---
 # <a name="net-core-additional-tools-overview"></a>Visão geral das ferramentas adicionais do .NET Core
 
-Esta seção compila uma lista de ferramentas de suporte e estender a funcionalidade do .NET Core, além das ferramentas da [CLI (interface de linha de comando) do .NET Core](../tools/index.md).
+Esta seção compila uma lista de ferramentas de suporte e estende a funcionalidade do .NET Core, além das ferramentas da [CLI (interface de linha de comando) do .NET Core](../tools/index.md).
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Ferramenta WCF Web Service Reference](wcf-web-service-reference-guide.md)
 
@@ -22,11 +21,12 @@ O WCF (Windows Communication Foundation) Web Service Reference é um provedor de
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Ferramenta dotnet-svcutil do WCF](dotnet-svcutil-guide.md)
 
-A ferramenta dotnet-svcutil do WCF (Windows Communication Foundation) é uma ferramenta da CLI do .NET Core que recupera metadados de um serviço Web em um local de rede ou de um arquivo WSDL e gera um arquivo de origem compatível com o .NET Core, definindo uma classe proxy do WCF com métodos que você pode usar para acessar as operações do serviço Web. A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de serviços conectados do Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que foi primeiramente fornecido com o Visual Studio 2017 v15.5. A ferramenta **dotnet-svcutil**, como uma ferramenta da CLI do .NET Core, é a multiplataforma disponível no Linux, no macOS e no Windows.
+A ferramenta dotnet-svcutil do WCF (Windows Communication Foundation) é uma ferramenta da CLI do .NET Core que recupera metadados de um serviço Web em um local de rede ou de um arquivo WSDL e gera um arquivo de origem compatível com o .NET Core, definindo uma classe proxy do WCF com métodos que você pode usar para acessar as operações do serviço Web.
+A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de serviços conectados do Visual Studio [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) que foi primeiramente fornecido com o Visual Studio 2017 v15.5. A ferramenta **dotnet-svcutil**, como uma ferramenta da CLI do .NET Core, é a multiplataforma disponível no Linux, no macOS e no Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Ferramenta dotnet-svcutil.xmlserializer da WCF](dotnet-svcutil.xmlserializer-guide.md)
 
-No .NET Framework, é possível gerar previamente um assembly de serialização usando a ferramenta svcutil. O pacote do NuGet dotnet svcutil.xmlserializer fornece funcionalidade semelhante no .NET Core. Ele gera código de serialização C# para os tipos no aplicativo cliente, que são usados pelo Contrato de Serviço da WCF e podem ser serializados pelo <xref:System.Xml.Serialization.XmlSerializer>. Isso melhora o desempenho de inicialização da serialização de XML ao serializar ou desserializar objetos desses tipos.
+No .NET Framework, é possível gerar previamente um assembly de serialização usando a ferramenta svcutil. O pacote do NuGet dotnet svcutil.xmlserializer fornece funcionalidade semelhante no .NET Core. Ele gera previamente o código de serialização C# para os tipos no aplicativo cliente, que são usados pelo Contrato de Serviço da WCF e podem ser serializados pelo <xref:System.Xml.Serialization.XmlSerializer>. Isso melhora o desempenho de inicialização da serialização de XML ao serializar ou desserializar objetos desses tipos.
 
 ## <a name="xml-serializer-generatorxml-serializer-generatormd"></a>[XML Serializer Generator](xml-serializer-generator.md)
 

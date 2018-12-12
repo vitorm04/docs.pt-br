@@ -6,12 +6,12 @@ title: Documentação .NET
 description: Aprenda a usar o .NET para criar uma variedade de aplicativos em qualquer plataforma usando C#, Visual Basic e F#. Procure referência de API, código de exemplo, tutoriais e muito mais.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127336"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240249"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127336"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Introdução ao C#</h3>
+                                    <h3>Aprenda C#</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ ms.locfileid: "53127336"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guia do C#</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Aprenda C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Tour do C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Novidades no C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Referência da linguagem C#</a></p>
                                             </div>
                                         </div>
@@ -664,7 +664,7 @@ ms.locfileid: "53127336"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Machine Learning e IA</a>
+                        <a href="#ml-ai">Aprendizado de máquina e IA</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

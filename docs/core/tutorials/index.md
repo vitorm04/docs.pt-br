@@ -2,15 +2,15 @@
 title: Tutoriais do .NET Core
 description: Siga os tutoriais para aprender como criar aplicativos e bibliotecas do .NET Core no Windows, Mac e Linux.
 author: richlander
-ms.author: mairaw
 ms.date: 03/16/2017
+titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130722"
+ms.locfileid: "53168735"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Confira estes tutoriais para conhecer o .NET Core e as ferramentas do SDK do .NET Core
 
@@ -26,7 +26,7 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Testing a class library](testing-library-with-visual-studio.md) (Testando uma biblioteca de classes)
 - [Consuming a class library](consuming-library-with-visual-studio.md) (Consumindo uma biblioteca de classes)
 - [Compilando uma solução completa do .NET Core no Windows](using-on-windows-full-solution.md)
-- [Azure Cosmos DB: Introdução ao .NET Core e à API do SQL](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: introdução ao .NET Core e à API do SQL](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
 
