@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503608"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286553"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Conceitos fundamentais do Windows Communication Foundation
 Este documento fornece uma visão geral da arquitetura do Windows Communication Foundation (WCF). Ele destina-se a explicar os principais conceitos e como eles se adaptam entre si. Para obter um tutorial sobre como criar a versão mais simples de um serviço WCF e um cliente, consulte [Tutorial de Introdução](../../../docs/framework/wcf/getting-started-tutorial.md). Para aprender a programação de WCF, consulte [programação WCF básica](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -55,7 +55,7 @@ Este documento fornece uma visão geral da arquitetura do Windows Communication 
  Uma construção que expõe um ou mais pontos de extremidade, com cada ponto de extremidade expondo uma ou mais operações de serviço.  
   
  ponto de extremidade  
- Uma construção na qual as mensagens são enviadas ou recebidas (ou ambos). Inclui um local (um endereço) que define onde as mensagens podem ser enviadas, uma especificação do mecanismo de comunicação (uma associação) que descreve como as mensagens devem ser enviadas e uma definição para um conjunto de mensagens que pode ser enviado ou recebido (ou ambas) naquele local (um contrato de serviço) que descreve qual mensagem pode ser enviada.  
+ Uma construção na qual as mensagens são enviadas ou recebidas (ou ambos). Ele consiste em um local (um endereço) que define onde as mensagens podem ser enviadas, uma especificação do mecanismo de comunicação (uma associação) que descreve como as mensagens devem ser enviadas, e uma definição para um conjunto de mensagens que podem ser enviadas ou recebidas (ou ambos) em que local (um contrato de serviço) que descreve qual mensagem pode ser enviada.  
   
  Um serviço WCF é exposto ao mundo como uma coleção de pontos de extremidade.  
   
@@ -144,7 +144,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Especifica que a confidencialidade, a integridade e a autenticação são fornecidas pelos mecanismos da camada de transporte (como HTTPS). Ao usar um transporte como HTTPS, esse modo tem a vantagem de ser eficiente no desempenho, além de bem-compreendido devido à sua predominância na Internet. A desvantagem é que esse tipo de segurança é aplicado separadamente em cada salto no caminho de comunicação, tornando a comunicação suscetível a um ataque de intermediários.  
   
  modo de segurança de mensagem  
- Especifica que a segurança é fornecida implementando uma ou mais das especificações de segurança, como a especificação denominada [Web Services Security: segurança de mensagem SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se tornam parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (elas são denominadas *declarações*). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.  
+ Especifica que a segurança é fornecida implementando uma ou mais das especificações de segurança, como a especificação denominada [Web Services Security: Segurança de mensagem SOAP](https://go.microsoft.com/fwlink/?LinkId=94684). Cada mensagem contém os mecanismos necessários para fornecer segurança durante seu trânsito e ativar os destinatários para detectar violação e descriptografar as mensagens. Nesse sentido, a segurança é encapsulada dentro de cada mensagem, fornecendo segurança de ponta a ponta em vários saltos. Como as informações de segurança se tornam parte da mensagem, também é possível incluir vários tipos de credenciais com a mensagem (elas são denominadas *declarações*). Essa abordagem também tem a vantagem de permitir que a mensagem viaje com segurança em qualquer transporte, incluindo vários transportes entre sua origem e o destino. A desvantagem dessa abordagem é a complexidade dos mecanismos de criptografia empregados, resultando em implicações de desempenho.  
   
  transporte com modo de segurança de credencial de mensagem  
  Especifica o uso da camada de transporte para fornecer confidencialidade, autenticação e integridade de mensagens, embora cada uma das mensagens possa conter várias credenciais (reivindicações) exigidas pelos destinatários da mensagem.  

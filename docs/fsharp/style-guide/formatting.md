@@ -1,27 +1,27 @@
 ---
-title: Código F# diretrizes de formatação
-description: Aprenda diretrizes para a formatação de código F#.
-ms.date: 05/14/2018
-ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F#diretrizes de formatação de código
+description: Aprenda diretrizes de formatação F# código.
+ms.date: 11/26/2018
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43857999"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286540"
 ---
-# <a name="f-code-formatting-guidelines"></a>Código F# diretrizes de formatação
+# <a name="f-code-formatting-guidelines"></a>F#diretrizes de formatação de código
 
-Este artigo oferece diretrizes para formatar seu código para que seu código F# é:
+Este artigo oferece diretrizes para formatar seu código, de modo que seu F# é de código:
 
 * Geralmente é visto como mais legível
 * Está de acordo com as convenções aplicadas por ferramentas de formatação no Visual Studio e outros editores
 * Semelhante a outro código online
 
-Essas diretrizes se baseiam [um guia abrangente para convenções de formatação do F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) pela [Anh-Dung Phan](https://github.com/dungpa).
+Essas diretrizes se baseiam [um guia abrangente para F# convenções de formatação](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) por [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Regras gerais para recuo
 
-F# usa o espaço em branco significativo por padrão. As diretrizes a seguir destinam-se a fornecer orientação sobre como manipular alguns desafios que isso pode impor.
+F#Por padrão, usa o espaço em branco significativo. As diretrizes a seguir destinam-se a fornecer orientação sobre como manipular alguns desafios que isso pode impor.
 
 ### <a name="using-spaces"></a>Uso de espaços
 
@@ -30,6 +30,63 @@ Quando recuo é necessário, você deve usar espaços, tabulações não. Pelo m
 **Recomendamos 4 espaços por recuo.**
 
 Dito isso, o recuo dos programas é uma questão subjetiva. Variações são Okey, mas é a primeira regra que você deve seguir *consistência de recuo*. Escolha um estilo de recuo de geralmente aceito e usá-lo sistematicamente em toda a sua base de código.
+
+## <a name="formatting-white-space"></a>Formatação de espaço em branco
+
+F#espaço em branco são confidenciais. Embora a maioria das semânticas de espaço em branco são cobertas pelo recuo adequado, há algumas outras coisas a considerar.
+
+### <a name="formatting-operators-in-arithmetic-expressions"></a>Formatação de operadores em expressões aritméticas
+
+Sempre use o espaço em branco em torno das expressões aritméticas binários:
+
+```fsharp
+let subtractThenAdd x = x - 1 + 3
+```
+
+Unário `-` operadores sempre devem ter o valor que eles são negando seguem imediatamente:
+
+```fsharp
+// OK
+let negate x = -x
+
+// Bad
+let negateBad x = - x
+```
+
+Adição de um caractere de espaço em branco após o `-` operador pode causar confusão para outras pessoas.
+
+Em resumo, é importante sempre:
+
+* Operadores binários de surround com espaço em branco
+* Nunca ter espaço em branco à direita após um operador unário
+
+A diretriz de binário operador aritmético é especialmente importante. Falha ao colocar um binário `-` operador, quando combinado com determinadas opções de formatação, pode levar a Interpretando-o como um unário `-`.
+
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Coloque uma definição de operador personalizado com espaço em branco
+
+Sempre use o espaço em branco ao redor de uma definição de operador:
+
+```fsharp
+// OK
+let ( !> ) x f = f x
+
+// Bad
+let (!>) x f = f x
+```
+
+Para qualquer operador personalizado que começa com `*`, você precisará adicionar um espaço em branco para o início da definição para evitar uma ambiguidade de compilador. Por isso, é recomendável que você simplesmente colocar as definições de todos os operadores com um único caractere de espaço em branco.
+
+### <a name="surround-function-parameter-arrows-with-white-space"></a>Coloque as setas de parâmetro de função com espaço em branco
+
+Ao definir a assinatura de uma função, use o espaço em branco em torno de `->` símbolo:
+
+```fsharp
+// OK
+type MyFun = int -> int -> string
+
+// Bad
+type MyFunBad = int->int->string
+```
 
 ## <a name="formatting-blank-lines"></a>Formatação de linhas em branco
 
@@ -62,7 +119,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Use camelCase para valores de limite de classe, expressão ligada à e padrão de associação e funções
 
-É comum e aceitos F# estilo use camelCase para todos os nomes associados como variáveis locais ou em correspondências de padrões e as definições de função.
+É comum e aceitos F# estilo a ser usado em camelCase para todos os nomes associados como variáveis locais ou em correspondências de padrões e as definições de função.
 
 ```fsharp
 // OK
@@ -165,13 +222,13 @@ Namespaces, exceções, eventos e projeto /`.dll` nomes também devem usar Pasca
 
 ### <a name="avoid-underscores-in-names"></a>Evite sublinhados em nomes
 
-Historicamente, algumas bibliotecas do F# usaram sublinhados em nomes. No entanto, isso não é mais amplamente é aceito, em parte porque ele estiver em conflito com as convenções de nomenclatura do .NET. Dito isso, alguns programadores em F# usam sublinhados intensamente, em parte por razões históricas e tolerância e respeito é importante. No entanto, lembre-se de que o estilo é geralmente disliked por outras pessoas que têm uma opção sobre se deve usá-lo.
+Historicamente, alguns F# bibliotecas usou sublinhados em nomes. No entanto, isso não é mais amplamente é aceito, em parte porque ele estiver em conflito com as convenções de nomenclatura do .NET. Dito isso, alguns F# os programadores usam sublinhados intensamente, em parte a razões históricas e tolerância e respeito é importante. No entanto, lembre-se de que o estilo é geralmente disliked por outras pessoas que têm uma opção sobre se deve usá-lo.
 
 Algumas exceções inclui interoperar com componentes nativos, onde os sublinhados são muito comuns.
 
-### <a name="use-standard-f-operators"></a>Usar operadores de padrão F#
+### <a name="use-standard-f-operators"></a>Padrão de uso F# operadores
 
-Os operadores a seguir são definidos na biblioteca padrão do F# e devem ser usados em vez de definir equivalentes. Usar esses operadores é recomendável como ele tende a tornar o código mais legível e expressões idiomáticas. Os desenvolvedores com experiência em OCaml ou outra linguagem de programação funcional talvez esteja acostumados a idiomas diferentes. A lista a seguir resume os operadores de F# recomendados.
+Os operadores a seguir são definidos no F# biblioteca padrão e deve ser usado em vez de definir equivalentes. Usar esses operadores é recomendável como ele tende a tornar o código mais legível e expressões idiomáticas. Os desenvolvedores com experiência em OCaml ou outra linguagem de programação funcional talvez esteja acostumados a idiomas diferentes. A lista a seguir resume o recomendado F# operadores.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +250,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Use a sintaxe de prefixo para genéricos (`Foo<T>`) em preferência a sintaxe de sufixo (`T Foo`)
 
-F# herda de ambos os o estilo de ML sufixo de nomeação de tipos genéricos (por exemplo, `int list`), bem como o prefixo de estilo do .NET (por exemplo, `list<int>`). Preferir o estilo de .NET, exceto para quatro tipos específicos:
+F#herda de ambos os o estilo de ML sufixo de nomeação de tipos genéricos (por exemplo, `int list`), bem como o prefixo de estilo do .NET (por exemplo, `list<int>`). Preferir o estilo de .NET, exceto para quatro tipos específicos:
 
-1. Para listas do F#, use a forma pós-fixada: `int list` em vez de `list<int>`.
-2. Para opções de F#, use a forma pós-fixada: `int option` em vez de `option<int>`.
-3. Para matrizes F#, use o nome sintático `int[]` em vez de `int array` ou `array<int>`.
+1. Para F# listas, use o formulário de sufixo: `int list` vez `list<int>`.
+2. Para F# opções, use o formulário de sufixo: `int option` vez `option<int>`.
+3. Para F# matrizes, use o nome sintático `int[]` vez `int array` ou `array<int>`.
 4. Para as células de referência, use `int ref` em vez de `ref<int>` ou `Ref<int>`.
 
 Para todos os outros tipos, use o formulário de prefixo.
@@ -286,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Colocando o token de abertura na mesma linha e o token de fechamento em uma nova linha também é bom, mas lembre-se de que você precisa usar o [sintaxe detalhada](../language-reference/verbose-syntax.md) para definir os membros (o `with` palavra-chave):
+Colocar o token de abertura em uma nova linha e o token de fechamento em uma nova linha é preferencial se você está declarando a implementações de interface ou membros no registro:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Formatação de registros
@@ -314,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Também é bom colocar o token de abertura na mesma linha e o token de fechamento em uma nova linha:
+Colocando a abertura guias do token em uma nova linha, o conteúdo em um escopo, e o token de fechamento em uma nova linha é preferencial se você for:
+
+* Movimentação de registros no código com escopos diferentes de recuo
+* Direcionando-os em uma função
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 As mesmas regras se aplicam para elementos list e array.
 
 ## <a name="formatting-lists-and-arrays"></a>Formatando listas e matrizes
 
-Gravar `x :: l` com espaços em torno de `::` operador (`::` é um operador de infixo, portanto, cercado por espaços) e `[1; 2; 3]` (`;` é um delimitador, portanto, seguido por um espaço).
+Gravar `x :: l` com espaços em torno de `::` operador (`::` é um operador de infixo, portanto, cercado por espaços).
+
+Lista e matrizes declaradas em uma única linha devem ter um espaço após o colchete de abertura e antes do colchete de fechamento:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Sempre use pelo menos um espaço entre os dois operadores semelhante de chave distintos. Por exemplo, deixar um espaço entre um `[` e um `{`.
 
@@ -357,18 +445,21 @@ Sempre use pelo menos um espaço entre os dois operadores semelhante de chave di
 Listas e matrizes que são dividem em várias linhas seguem uma regra semelhante como registros:
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+E assim como acontece com registros, declarando os colchetes de abertura e fechamento em sua própria linha facilitará mudança de um código ao redor e tubulação em funções.
 
 ## <a name="formatting-if-expressions"></a>Formatação se expressões
 
@@ -411,13 +502,13 @@ Use um `|` para cada cláusula de uma correspondência com nenhum recuo. Se a ex
 ```fsharp
 // OK
 match l with
-| { him = x; her = "Posh" } :: tail -> _
+| { him = x; her = "Posh" } :: tail -> x
 | _ :: tail -> findDavid tail
 | [] -> failwith "Couldn't find David"
 
 // Not OK
 match l with
-    | { him = x; her = "Posh" } :: tail -> _
+    | { him = x; her = "Posh" } :: tail -> x
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
 ```
@@ -591,7 +682,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Formatação de espaço em branco em expressões
 
-Evite espaço em branco estranhos em expressões de F#.
+Evite espaço em branco estranhos na F# expressões.
 
 ```fsharp
 // OK
@@ -610,3 +701,59 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
+
+## <a name="formatting-attributes"></a>Atributos de formatação
+
+[Atributos](../language-reference/attributes.md) são colocados acima uma construção:
+
+```fsharp
+[<SomeAttribute>]
+type MyClass() = ...
+
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
+
+[<Struct>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+### <a name="formatting-attributes-on-parameters"></a>Atributos em parâmetros de formatação
+
+Atributos também podem ser locais nos parâmetros. Nesse caso, coloque-os na mesma linha como o parâmetro e antes do nome:
+
+```fsharp
+// Defines a class that takes an optional value as input defaulting to false.
+type C() =
+    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+```
+
+### <a name="formatting-multiple-attributes"></a>Vários atributos de formatação
+
+Quando vários atributos são aplicados a uma construção que não é um parâmetro, eles devem ser colocados, de modo que há um atributo por linha:
+
+```fsharp
+[<Struct>]
+[<IsByRefLike>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+Quando aplicado a um parâmetro, elas devem estar na mesma linha e separados por um `;` separador.
+
+## <a name="formatting-literals"></a>Literais de formatação
+
+[F#literais](../language-reference/literals.md) usando o `Literal` atributo deve deve colocar o atributo em sua própria linha e usar a nomenclatura camelCase:
+
+```fsharp
+[<Literal>]
+let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let myUrl = "www.mywebsitethatiamworkingwith.com"
+```
+
+Evite colocar o atributo na mesma linha como o valor.
