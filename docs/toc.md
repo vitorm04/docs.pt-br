@@ -128,7 +128,6 @@
 ### [Saída publicada de teste de unidade](core/testing/unit-testing-published-output.md)
 ### [Testando projetos do .NET Core em unidade ao vivo com o Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Controle de versão](core/versions/index.md)
-### [Histórico de versão do .NET Core](core/versions/version-history.md)
 ### [Seleção de versão do .NET Core](core/versions/selection.md)
 ### [Removendo SDKs e tempos de execução desatualizados](core/versions/remove-runtime-sdk-versions.md)
 ## [Catálogo de Identificador de Tempo de Execução](core/rid-catalog.md)
@@ -1200,7 +1199,7 @@
 ## Referência
 ### [Referência de API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)
 ## [Recursos](machine-learning/resources/index.md)
-### [Glossário do aprendizado de máquina](machine-learning/resources/glossary.md)
+### [Glossário do machine learning](machine-learning/resources/glossary.md)
 ### [Tarefas do aprendizado de máquina](machine-learning/resources/tasks.md)
 ### [Transformações de dados](machine-learning/resources/transforms.md)
 
