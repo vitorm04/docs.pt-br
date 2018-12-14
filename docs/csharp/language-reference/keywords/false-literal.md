@@ -1,31 +1,27 @@
 ---
 title: Literal false (Referência de C#)
-ms.date: 07/20/2015
+ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: f0743ead2836a4570d1b2dc0fc4cf20d2343a9a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 62329e40abb709b047d60fc2be27ef0d2c92d8ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147892"
 ---
-# <a name="false-literal-c-reference"></a><span data-ttu-id="e2dfe-102">Literal false (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="e2dfe-102">false literal (C# Reference)</span></span>
+# <a name="false-literal-c-reference"></a><span data-ttu-id="81a37-102">Literal false (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="81a37-102">false literal (C# Reference)</span></span>
 
-<span data-ttu-id="e2dfe-103">Representa o valor booliano false.</span><span class="sxs-lookup"><span data-stu-id="e2dfe-103">Represents the boolean value false.</span></span>
+<span data-ttu-id="81a37-103">Representa o valor [bool](bool.md)`false`:</span><span class="sxs-lookup"><span data-stu-id="81a37-103">Represents the [bool](bool.md) value `false`:</span></span>
 
-## <a name="example"></a><span data-ttu-id="e2dfe-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e2dfe-104">Example</span></span>
+[!code-csharp-interactive[false literal example](~/samples/snippets/csharp/keywords/TrueFalseLiteralsExamples.cs#FalseLiteral)]
 
-[!code-csharp[csrefKeywordsOperator#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#3)]
+## <a name="see-also"></a><span data-ttu-id="81a37-104">Consulte também</span><span class="sxs-lookup"><span data-stu-id="81a37-104">See also</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="e2dfe-105">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="e2dfe-105">C# language specification</span></span>
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a><span data-ttu-id="e2dfe-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e2dfe-106">See also</span></span>
-
-- [<span data-ttu-id="e2dfe-107">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="e2dfe-107">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="e2dfe-108">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="e2dfe-108">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="e2dfe-109">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="e2dfe-109">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="e2dfe-110">true</span><span class="sxs-lookup"><span data-stu-id="e2dfe-110">true</span></span>](true.md)  
+- [<span data-ttu-id="81a37-105">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="81a37-105">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="81a37-106">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="81a37-106">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="81a37-107">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="81a37-107">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="81a37-108">Operador false</span><span class="sxs-lookup"><span data-stu-id="81a37-108">false operator</span></span>](false-operator.md)
+- [<span data-ttu-id="81a37-109">true</span><span class="sxs-lookup"><span data-stu-id="81a37-109">true</span></span>](true.md)
+- [<span data-ttu-id="81a37-110">Operador ?:</span><span class="sxs-lookup"><span data-stu-id="81a37-110">?: Operator</span></span>](../operators/conditional-operator.md)

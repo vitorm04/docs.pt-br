@@ -1,32 +1,53 @@
 ---
 title: Operador -- (Referência de C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - --_CSharpKeyword
 helpviewer_keywords:
 - -- operator [C#]
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
-ms.openlocfilehash: 615b100447233856ab3740d075d69e3ae19285fd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0858321d6fe192a55bc548f169c558542238a981
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45648776"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153326"
 ---
-# <a name="---operator-c-reference"></a><span data-ttu-id="3ed0b-102">Operador -- (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="3ed0b-102">-- Operator (C# Reference)</span></span>
-<span data-ttu-id="3ed0b-103">O operador de decremento (`--`) decrementa o operando em 1.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-103">The decrement operator (`--`) decrements its operand by 1.</span></span> <span data-ttu-id="3ed0b-104">O operador de decremento pode aparecer antes ou depois de seu operando: `--variable` e `variable--`.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-104">The decrement operator can appear before or after its operand: `--variable` and `variable--`.</span></span> <span data-ttu-id="3ed0b-105">A primeira forma é uma operação de decremento de prefixo.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-105">The first form is a prefix decrement operation.</span></span> <span data-ttu-id="3ed0b-106">O resultado da operação será o valor do operando "depois" que ele for decrementado.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-106">The result of the operation is the value of the operand "after" it has been decremented.</span></span> <span data-ttu-id="3ed0b-107">A segunda forma é uma operação de decremento sufixo.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-107">The second form is a postfix decrement operation.</span></span> <span data-ttu-id="3ed0b-108">O resultado da operação será o valor do operando "antes" de ser decrementado.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-108">The result of the operation is the value of the operand "before" it has been decremented.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="3ed0b-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="3ed0b-109">Remarks</span></span>  
- <span data-ttu-id="3ed0b-110">Tipos numéricos e de enumeração têm operadores de decremento predefinidos.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-110">Numeric and enumeration types have predefined decrement operators.</span></span>  
-  
- <span data-ttu-id="3ed0b-111">Os tipos definidos pelo usuário podem sobrecarregar o operador `--` (consulte [operador](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="3ed0b-111">User-defined types can overload the `--` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="3ed0b-112">As operações em tipos integrais geralmente são permitidas na enumeração.</span><span class="sxs-lookup"><span data-stu-id="3ed0b-112">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="3ed0b-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3ed0b-113">Example</span></span>  
- [!code-csharp[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="3ed0b-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3ed0b-114">See Also</span></span>
+# <a name="---operator-c-reference"></a><span data-ttu-id="41178-102">Operador -- (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="41178-102">-- Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="3ed0b-115">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="3ed0b-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3ed0b-116">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="3ed0b-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3ed0b-117">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="3ed0b-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="41178-103">O operador de decremento unário `--` decrementa o operando em 1.</span><span class="sxs-lookup"><span data-stu-id="41178-103">The unary decrement operator `--` decrements its operand by 1.</span></span> <span data-ttu-id="41178-104">Há duas formas de suporte: o operador de decremento pós-fixado, `x--`, e o operador de decremento de prefixo, `--x`.</span><span class="sxs-lookup"><span data-stu-id="41178-104">It's supported in two forms: the postfix decrement operator, `x--`, and the prefix decrement operator, `--x`.</span></span>
+
+## <a name="postfix-decrement-operator"></a><span data-ttu-id="41178-105">Operador de decremento pós-fixado</span><span class="sxs-lookup"><span data-stu-id="41178-105">Postfix decrement operator</span></span>
+
+<span data-ttu-id="41178-106">O resultado de `x--` é o valor de `x` *antes* da operação, como mostra o exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="41178-106">The result of `x--` is the value of `x` *before* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[postfix decrement](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PostfixDecrement)]
+
+## <a name="prefix-decrement-operator"></a><span data-ttu-id="41178-107">Operador de decremento de prefixo</span><span class="sxs-lookup"><span data-stu-id="41178-107">Prefix decrement operator</span></span>
+
+<span data-ttu-id="41178-108">O resultado de `--x` é o valor de `x` *após* a operação, como mostra o exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="41178-108">The result of `--x` is the value of `x` *after* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[prefix decrement](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PrefixDecrement)]
+
+## <a name="remarks"></a><span data-ttu-id="41178-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="41178-109">Remarks</span></span>
+
+<span data-ttu-id="41178-110">O operador de decremento é predefinido para todos os [tipos integrais](../keywords/integral-types-table.md) (incluindo o tipo [char](../keywords/char.md)), [tipos de ponto flutuante](../keywords/floating-point-types-table.md) e qualquer tipo [enum](../keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="41178-110">The decrement operator is predefined for all [integral types](../keywords/integral-types-table.md) (including the [char](../keywords/char.md) type), [floating-point types](../keywords/floating-point-types-table.md), and any [enum](../keywords/enum.md) type.</span></span>
+
+<span data-ttu-id="41178-111">O operando do operador de decremento deve ser uma variável, um acesso à [propriedade](../../programming-guide/classes-and-structs/properties.md) ou um acesso ao [indexador](../../../csharp/programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="41178-111">An operand of the decrement operator must be a variable, a [property](../../programming-guide/classes-and-structs/properties.md) access, or an [indexer](../../../csharp/programming-guide/indexers/index.md) access.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="41178-112">Capacidade de sobrecarga do operador</span><span class="sxs-lookup"><span data-stu-id="41178-112">Operator overloadability</span></span>
+
+<span data-ttu-id="41178-113">Tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) o operador `--`.</span><span class="sxs-lookup"><span data-stu-id="41178-113">User-defined types can [overload](../keywords/operator.md) the `--` operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="41178-114">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="41178-114">C# language specification</span></span>
+
+<span data-ttu-id="41178-115">Para obter mais informações, confira as seções [operadores de incremento e de decremento pré-fixados](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) e [operadores de incremento e decremento de prefixo](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) da [Especificação da linguagem C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="41178-115">For more information, see the [Postfix increment and decrement operators](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) and [Prefix increment and decrement operators](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="41178-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="41178-116">See also</span></span>
+
+- [<span data-ttu-id="41178-117">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="41178-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="41178-118">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="41178-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="41178-119">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="41178-119">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="41178-120">Operador ++</span><span class="sxs-lookup"><span data-stu-id="41178-120">++ Operator</span></span>](increment-operator.md)
+- [<span data-ttu-id="41178-121">Como incrementar e diminuir ponteiros</span><span class="sxs-lookup"><span data-stu-id="41178-121">How to: increment and decrement pointers</span></span>](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
