@@ -1,17 +1,18 @@
 ---
-title: Seleção de versão do .NET Core
-description: Saiba como o .NET Core localiza e escolhe versões de tempo de execução para o seu programa.
+title: Selecionar qual versão do .NET Core usar
+description: Saiba como o .NET Core localiza e escolhe automaticamente versões de tempo de execução para o seu programa. Além disso, este artigo ensina como forçar uma versão específica.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841534"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127232"
 ---
-# <a name="net-core-version-selection"></a>Seleção de versão do .NET Core
+# <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ As estruturas de destino do .NET Standard também são limitadas à estrutura de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll foward de aplicativos dependentes da estrutura
 
-Execute um aplicativo da origem com [`dotnet run`](../tools/dotnet-run.md). O `dotnet run` compila e executa um aplicativo. O executável `dotnet` é o **host** do aplicativo em ambientes de desenvolvimento.
+Quando você executa um aplicativo da fonte com [`dotnet run`](../tools/dotnet-run.md), de uma [**implantação dependente de estrutura**](../deploying/index.md#framework-dependent-deployments-fdd) com [`dotnet myapp.dll`](../tools/dotnet.md#description) ou de um [**arquivo executável dependente de estrutura**](../deploying/index.md#framework-dependent-executables-fde) com `myapp.exe`, o arquivo executável `dotnet` é o **host** do aplicativo.
 
 O host escolhe a versão de patch mais recente instalada no computador. Por exemplo, se você especificar `netcoreapp2.0` em seu arquivo de projeto e `2.0.4` for o tempo de execução mais recente do .NET instalado, o tempo de execução `2.0.4` será usado.
 

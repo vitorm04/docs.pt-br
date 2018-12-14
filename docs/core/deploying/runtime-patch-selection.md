@@ -1,19 +1,20 @@
 ---
-title: Roll forward de tempo de execução de implantação autossuficiente
+title: Efetuar roll forward de tempo de execução para implantações autocontidas do .NET Core.
 description: Saiba mais as alterações de dotnet publish em implantações autossuficientes.
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071026"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126673"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Roll forward de tempo de execução de implantação autossuficiente
 
-As [implantações de aplicativo autossuficientes](index.md) do .NET Core incluem as bibliotecas e o tempo de execução do .NET Core. A partir do SDK do .NET Core 2.1.300 (.NET Core 2.1), uma implantação de aplicativo autossuficiente [publica o tempo de execução de patch mais recente no computador](https://github.com/dotnet/designs/pull/36). Por padrão, [`dotnet publish`](../tools/dotnet-publish.md) para uma implantação autossuficiente seleciona a última versão instalada como parte do SDK no computador de publicação. Isso permite que o aplicativo implantado seja executado com correções de segurança (e outras correções) disponíveis durante `publish`. O aplicativo precisa ser publicado novamente para obter um novo patch. Os aplicativos autossuficientes são criados pela especificação de `-r <RID>` no comando `dotnet publish`, pela especificação do [RID (identificador de tempo de execução)](../rid-catalog.md) no arquivo de projeto (csproj/vbproj) ou na linha de comando.
+As [implantações de aplicativo autossuficientes](index.md) do .NET Core incluem as bibliotecas e o tempo de execução do .NET Core. A partir do SDK do .NET Core 2.1 (.NET Core 2.1.300), uma implantação de aplicativo autocontida [publica o tempo de execução de patch mais recente no computador](https://github.com/dotnet/designs/pull/36). Por padrão, [`dotnet publish`](../tools/dotnet-publish.md) para uma implantação autossuficiente seleciona a última versão instalada como parte do SDK no computador de publicação. Isso permite que o aplicativo implantado seja executado com correções de segurança (e outras correções) disponíveis durante `publish`. O aplicativo precisa ser publicado novamente para obter um novo patch. Os aplicativos autocontidos são criados pela especificação de `-r <RID>` no comando `dotnet publish`, pela especificação do [RID (identificador de tempo de execução)](../rid-catalog.md) no arquivo de projeto (csproj/vbproj) ou na linha de comando.
 
 ## <a name="patch-version-roll-forward-overview"></a>Visão geral do roll forward da versão de patch
 

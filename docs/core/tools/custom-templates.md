@@ -4,12 +4,12 @@ description: Saiba mais sobre modelos personalizados para qualquer tipo de proje
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126257"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Para desinstalar um modelo de um arquivo nupkg local
 
-Quando você desejar desinstalar o modelo, não tente usar o caminho para o arquivo *nupkg*. *A tentativa de desinstalar um modelo usando `dotnet new -u <PATH_TO_NUPKG_FILE>` falha.* Referencie o pacote por seu `id`:
+Para desinstalar o modelo, não tente usar o caminho para o arquivo *nupkg*. A tentativa de desinstalar um modelo usando `dotnet new -u <PATH_TO_NUPKG_FILE>` falha. Referencie o pacote por seu `id`:
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Para desinstalar um modelo de um diretório de sistema de arquivos
 
-O `FILE_SYSTEM_DIRECTORY` é a pasta de projeto que contém o projeto e a pasta *.template.config*:
+O `FILE_SYSTEM_DIRECTORY` é a pasta de projeto que contém o projeto e a pasta *.template.config*. O caminho fornecido deve ser o caminho absoluto. A tentativa de desinstalar um modelo usando um caminho relativo falha. Para saber mais, confira o artigo [dotnet new](dotnet-new.md).
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Consulte também
 
-* [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/create-custom-template.md)  
-* [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)  
-* [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-* [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)  
+* [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/create-custom-template.md)
+* [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)
+* [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
+* [Como criar seus próprios modelos para dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [Esquema *template.json* no Repositório de Esquema JSON](http://json.schemastore.org/template)

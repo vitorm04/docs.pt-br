@@ -3,12 +3,12 @@ title: Tipos de tupla – Guia C#
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186025"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155126"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla do C# #
 
@@ -88,7 +88,7 @@ Essas situações não causam erros de compilador porque essa seria uma alteraç
 
 ## <a name="equality-and-tuples"></a>Igualdade e tuplas
 
-Começando com o C# 7.3, os tipos de tupla oferecem suporte aos operadores `==` e `!=`. Esses operadores comparam cada membro do argumento da esquerda com cada membro do argumento da direita na ordem. Essas comparações são de curto-circuito. O operador `==` interromperá a avaliação de membros assim que um par não for igual. O operador `!=` interromperá a avaliação de membros assim que um par for igual. O código a seguir exemplifica o uso de `==`, mas todas as regras de comparação se aplicam a `!=`. O exemplo de código a seguir mostra uma comparação de igualdade de dois pares de inteiros:
+Começando com o C# 7.3, os tipos de tupla oferecem suporte aos operadores `==` e `!=`. Esses operadores comparam cada membro do argumento da esquerda com cada membro do argumento da direita na ordem. Essas comparações são de curto-circuito. Elas interromperão a avaliação de membros assim que um par não for igual. O código a seguir exemplifica o uso de `==`, mas todas as regras de comparação se aplicam a `!=`. O exemplo de código a seguir mostra uma comparação de igualdade de dois pares de inteiros:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 

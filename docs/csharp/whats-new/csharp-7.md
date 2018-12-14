@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos que virão na futura versão 7 da linguagem C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237378"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155282"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -22,7 +22,7 @@ O C# 7.0 adiciona vários recursos novos à linguagem C#:
 * [Correspondência Padrão](#pattern-matching)
     - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
 * [locais e retornos de `ref`](#ref-locals-and-returns)
-    - Argumentos de método e variáveis locais podem ser referências a outros armazenamentos.
+    - As variáveis locais do método e os valores de retorno podem ser referências a outros armazenamentos.
 * [Funções Locais](#local-functions)
     - Você pode aninhar funções dentro de outras funções para limitar seu escopo e visibilidade.
 * [Mais membros aptos para expressão](#more-expression-bodied-members)
@@ -280,6 +280,8 @@ A linguagem C# tem outras três regras que protegem contra o uso indevido de loc
 A adição de locais de ref e retornos de ref habilita algoritmos que são mais eficientes evitando copiar valores ou executar operações de desreferenciamento várias vezes.
 
 Adicionar `ref` ao valor retornado é uma [alteração compatível com a origem](version-update-considerations.md#source-compatible-changes). O código existente é compilado, mas o valor retornado ref é copiado quando atribuído. Os chamadores devem atualizar o armazenamento para o valor retornado para uma variável local `ref` para armazenar o retorno como uma referência.
+
+Para saber mais, confira o artigo [Palavra-chave ref](../language-reference/keywords/ref.md).
 
 ## <a name="local-functions"></a>Funções locais
 

@@ -1,19 +1,20 @@
 ---
-title: Portabilidade para o .NET Core – Bibliotecas
+title: Portabilidade de bibliotecas para o .NET Core
 description: Saiba como realizar a portabilidade de projetos de biblioteca do .NET Framework para o .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199845"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143578"
 ---
-# <a name="porting-to-net-core---libraries"></a>Portabilidade para o .NET Core – Bibliotecas
+# <a name="port-net-framework-libraries-to-net-core"></a>Portabilidade de bibliotecas do .NET Framework para o .NET Core
 
-Este artigo discute a portabilidade do código de biblioteca para .NET Core, de modo que seja executado entre plataformas.
+Saiba como fazer a portabilidade do código da biblioteca do .NET Framework para o .NET Core, a fim de executar em plataformas cruzadas e expandir o alcance dos aplicativos que a utilizam.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -73,34 +74,17 @@ Assim como a CAS, a Transparência de Segurança permite a separação do códig
 
 Use limites de segurança fornecidos pelo sistema operacional, como virtualização, contêineres ou contas de usuário para executar processos com o conjunto mínimo de privilégios.
 
-## <a name="converting-a-pcl-project"></a>Converter um projeto de PCL
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Redirecionar seu código do .NET Framework para o .NET Framework 4.7.2
 
-Você pode converter os destinos de um projeto de PCL para .NET Standard carregando a biblioteca no Visual Studio 2017 e executando as seguintes etapas:
-
-1. Clique com o botão direito do mouse no arquivo do projeto e selecione **Propriedades**.
-1. Em **Biblioteca**, selecione **Direcionar .NET Platform Standard**.
-
-Se os seus pacotes derem suporte a NuGet 3.0, o projeto será redirecionado para o .NET Standard.
-
-Se os seus pacotes não derem suporte a NuGet 3.0, você receberá uma caixa de diálogo do Visual Studio solicitando a desinstalação dos pacotes atuais. Se você receber esse aviso, execute as seguintes etapas:
-
-1. Clique com o botão direito do mouse no projeto e escolha **Gerenciar Pacotes NuGet**.
-1. Anote os pacotes do projeto.
-1. Desinstale os pacotes um por um.
-1. Talvez seja necessário reiniciar o Visual Studio para concluir o processo de desinstalação. Nesse caso, um botão **Reiniciar** será apresentado na janela **Gerenciador de Pacotes NuGet**.
-1. Quando o projeto é recarregado, ele é direcionado para o .NET Standard. Adicione os pacotes que você precisou desinstalar.
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>Redirecionar seu código do .NET Framework para o .NET Framework 4.6.2
-
-Se o seu código não estiver direcionando para o .NET Framework 4.6.2, recomendamos o redirecionamento para o .NET Framework 4.6.2. Isso garante a disponibilidade das alternativas de API mais recentes para casos em que o .NET Standard não dá suporte a APIs existentes.
+Se o seu código não estiver direcionando para o .NET Framework 4.7.2, recomendamos o redirecionamento para o .NET Framework 4.7.2. Isso garante a disponibilidade das alternativas de API mais recentes para casos em que o .NET Standard não dá suporte a APIs existentes.
 
 Faça o seguinte para cada um dos projetos no Visual Studio que você desejar portar:
 
-1. Clique com o botão direito do mouse no projeto e selecione Propriedades.
-1. Na lista suspensa **Estrutura de Destino**, selecione **.NET Framework 4.6.2**.
+1. Clique com o botão direito no projeto e selecione **Propriedades**.
+1. Na lista suspensa **Estrutura de Destino**, selecione **.NET Framework 4.7.2**.
 1. Recompile seus projetos.
 
-Como seus projetos agora são direcionados ao .NET Framework 4.6.2, use essa versão do .NET Framework como sua base de portabilidade de código.
+Como seus projetos agora são direcionados ao .NET Framework 4.7.2, use essa versão do .NET Framework como sua base de portabilidade de código.
 
 ## <a name="determining-the-portability-of-your-code"></a>Determinar a portabilidade do código
 
@@ -151,7 +135,7 @@ Essa abordagem pode ser a melhor para projetos maiores e mais complexos, nos qua
  
 A fase de análise pode demorar algum tempo dependendo do tamanho de sua base de código. Dedique tempo a essa fase para compreender profundamente o escopo das mudanças necessárias e como desenvolver um plano normalmente economiza tempo em longo prazo, especialmente se você tiver uma base de código complexa.
 
-Seu plano pode envolver alterações significativas na sua base de código enquanto ainda é direcionado para o .NET Framework 4.6.2, tornando essa uma versão mais estruturada da abordagem anterior. A maneira de executar o plano depende de sua base de código.
+Seu plano pode envolver alterações significativas na sua base de código enquanto ainda é direcionado para o .NET Framework 4.7.2, tornando essa uma versão mais estruturada da abordagem anterior. A maneira de executar o plano depende de sua base de código.
 
 ### <a name="mixing-approaches"></a>Combinação de abordagens
 

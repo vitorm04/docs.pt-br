@@ -1,15 +1,13 @@
 ---
 title: Comando dotnet build – CLI do .NET Core
 description: O comando dotnet build compila um projeto e todas as suas dependências.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 5d47fdfca14d20b3f2a134a8e734f76b1c86c498
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200542"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149153"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -47,10 +45,6 @@ A compilação exige o arquivo *project.assets.json*, que lista as dependências
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
-
-Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `-p` para configurar propriedades ou `-l` para definir um agente. Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
-
 O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto. O seguinte exemplo mostra um projeto que produz um código executável:
 
 ```xml
@@ -60,6 +54,14 @@ O fato de o projeto ser executável ou não é determinado pela propriedade `<Ou
 ```
 
 Para produzir uma biblioteca, omita a propriedade `<OutputType>`. A diferença principal na saída da compilação é que a DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.
+
+### <a name="msbuild"></a>MSBuild
+
+O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
+
+Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `-p` para configurar propriedades ou `-l` para definir um agente. Para obter mais informações sobre essas opções, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). Ou você também pode usar o comando [dotnet msbuild](dotnet-msbuild.md).
+
+A execução de `dotnet build` é equivalente a `dotnet msbuild -restore -target:Build`.
 
 ## <a name="arguments"></a>Arguments
 
@@ -71,104 +73,118 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de projeto não
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Define a configuração da compilação. O valor padrão é `Debug`.
+  Define a configuração da compilação. O valor padrão é `Debug`.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Compila para uma [estrutura](../../standard/frameworks.md) específica. A estrutura precisa ser definida no [arquivo de projeto](csproj.md).
+  Compila para uma [estrutura](../../standard/frameworks.md) específica. A estrutura precisa ser definida no [arquivo de projeto](csproj.md).
 
-`--force`
+* **`--force`**
 
-Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
+  Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime uma ajuda breve para o comando.
+  Imprime uma ajuda breve para o comando.
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
+  Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
 
-`--no-incremental`
+* **`--no-incremental`**
 
-Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
+  Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
 
-`--no-restore`
+* **`--no-restore`**
 
-Não executa uma restauração implícita durante o build.
+  Não executa uma restauração implícita durante o build.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Diretório no qual os binários compilados são colocados. Você também precisa definir `--framework` ao especificar essa opção.
+  Diretório no qual os binários compilados são colocados. Você também precisa definir `--framework` ao especificar essa opção. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-Especifica o tempo de execução de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
+  Especifica o tempo de execução de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Define o sufixo da versão para um asterisco (`*`) no campo de versão do arquivo de projeto. O formato segue as diretrizes de versão do NuGet.
+  Define o sufixo da versão para um asterisco (`*`) no campo de versão do arquivo de projeto. O formato segue as diretrizes de versão do NuGet.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Define a configuração da compilação. O valor padrão é `Debug`.
+  Define a configuração da compilação. O valor padrão é `Debug`.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Compila para uma [estrutura](../../standard/frameworks.md) específica. A estrutura precisa ser definida no [arquivo de projeto](csproj.md).
+  Compila para uma [estrutura](../../standard/frameworks.md) específica. A estrutura precisa ser definida no [arquivo de projeto](csproj.md).
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime uma ajuda breve para o comando.
+  Imprime uma ajuda breve para o comando.
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
+  Ignora as referências P2P (projeto a projeto) e compila apenas o projeto raiz especificado.
 
-`--no-incremental`
+* **`--no-incremental`**
 
-Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
+  Marca o build como não segura para build incremental. Esse sinalizador desativa a compilação incremental e força uma nova recompilação do grafo de dependência do projeto.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Diretório no qual os binários compilados são colocados. Você também precisa definir `--framework` ao especificar essa opção.
+  Diretório no qual os binários compilados são colocados. Você também precisa definir `--framework` ao especificar essa opção.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-Especifica o tempo de execução de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
+  Especifica o tempo de execução de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Define o sufixo da versão para um asterisco (`*`) no campo de versão do arquivo de projeto. O formato segue as diretrizes de versão do NuGet.
+  Define o sufixo da versão para um asterisco (`*`) no campo de versão do arquivo de projeto. O formato segue as diretrizes de versão do NuGet.
 
 ---
 
 ## <a name="examples"></a>Exemplos
 
-Compile um projeto e suas dependências:
+* Compile um projeto e suas dependências:
 
-`dotnet build`
+  ```console
+  dotnet build
+  ```
 
-Compile um projeto e suas dependências usando a configuração da Versão:
+* Compile um projeto e suas dependências usando a configuração da Versão:
 
-`dotnet build --configuration Release`
+  ```console
+  dotnet build --configuration Release
+  ```
 
-Compile um projeto e suas dependências para um tempo de execução específico (nesse exemplo, Ubuntu 16.04):
+* Compile um projeto e suas dependências para um tempo de execução específico (nesse exemplo, Ubuntu 16.04):
 
-`dotnet build --runtime ubuntu.16.04-x64`
+  ```console
+  dotnet build --runtime ubuntu.16.04-x64
+  ```
 
-Compile o projeto e use a origem do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
+* Compile o projeto e use a fonte do pacote NuGet especificada durante a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
 
-`dotnet build --source c:\packages\mypackages`
+  ```console
+  dotnet build --source c:\packages\mypackages
+  ```
+
+* Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação:
+
+  ```console
+  dotnet build -p:Version=1.2.3.4
+  ```

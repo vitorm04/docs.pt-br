@@ -1,20 +1,21 @@
 ---
-title: Implantação de aplicativos .NET Core com as ferramentas da CLI
-description: Aprenda a implantação de aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
+title: Implantar aplicativos .NET Core com ferramentas de CLI (interface de linha de comando)
+description: Aprender a implantar um aplicativo .NET Core com ferramentas de CLI (interface de linha de comando)
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454441"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151090"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Implantando aplicativos .NET Core com ferramentas da CLI (interface de linha de comando)
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Implantar aplicativos .NET Core com ferramentas de CLI (interface de linha de comando)
 
 Você pode implantar um aplicativo .NET Core como uma *implantação dependente de estrutura*, que inclui os binários do seu aplicativo, mas depende da presença do .NET Core no sistema de destino, ou como uma *implantação autocontida*, que inclui os binários do seu aplicativo e do .NET Core. Para obter uma visão geral, consulte [Implantação de aplicativos .NET Core](index.md).
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194014"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146908"
 ---
 # <a name="introducing-pluggable-protocols"></a>Apresentando protocolos conectáveis
 O Microsoft .NET Framework fornece uma implementação dos serviços de Internet em camadas, extensível e gerenciada que pode ser rápida e facilmente integrada aos aplicativos. Classes de acesso à Internet nos namespaces <xref:System.Net> e <xref:System.Net.Sockets> podem ser usadas para implementar tanto aplicativos baseados na Web quanto baseados na Internet.  
@@ -40,7 +40,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  O aplicativo cliente faz uma solicitação identificando o recurso da Internet solicitado e o protocolo de comunicação a usar para a solicitação e resposta. Se necessário, o cliente também fornece quaisquer dados adicionais necessários para concluir a solicitação, assim como autenticação ou local de informações de proxy (nome de usuário, senha e assim por diante). Depois que a solicitação é formada, ela pode ser enviada ao servidor.  
   
 ## <a name="identifying-resources"></a>Identificar os recursos  
- O .NET Framework usa URI (Uniform Resource Identifier) para identificar o protocolo de comunicação e recursos de Internet solicitado. O URI consiste em pelo menos três, possivelmente quatro fragmentos: o identificador do esquema, que identifica o protocolo de comunicação de solicitação e resposta; o identificador do servidor, que consiste em um nome de host do sistema de nome de domínio (DNS) ou um endereço TCP que identifica exclusivamente o servidor na Internet; o identificador do caminho, que localiza as informações solicitadas no servidor e, por fim, uma cadeia de caracteres de consulta opcional, que passa informações do cliente para o servidor. Por exemplo, o URI `http://www.contoso.com/whatsnew.aspx?date=today` consiste no identificador de esquema "http", no identificador de servidor "www.contoso.com", no caminho "/whatsnew.aspx" e na cadeia de caracteres de consulta "?date=today".  
+ O .NET Framework usa URI (Uniform Resource Identifier) para identificar o protocolo de comunicação e recursos de Internet solicitado. O URI consiste em pelo menos três, possivelmente quatro fragmentos: o identificador do esquema, que identifica o protocolo de comunicação de solicitação e resposta; o identificador do servidor, que consiste em um nome de host do sistema de nome de domínio (DNS) ou um endereço TCP que identifica exclusivamente o servidor na Internet; o identificador do caminho, que localiza as informações solicitadas no servidor e, por fim, uma cadeia de caracteres de consulta opcional, que passa informações do cliente para o servidor. Por exemplo, o URI `http://www.contoso.com/whatsnew.aspx?date=today` é composto pelo identificador de esquema `http`, o identificador de servidor `www.contoso.com`, o caminho `/whatsnew.aspx` e a cadeia de caracteres de consulta `?date=today`.  
   
  Após o servidor ter recebido a solicitação e processado a resposta, ele retorna a resposta ao aplicativo cliente. A resposta inclui informações complementares, como o tipo de conteúdo (texto não processado ou dados XML, por exemplo).  
   

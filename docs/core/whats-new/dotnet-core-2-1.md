@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127544"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -79,7 +79,7 @@ Uma vez instalada, a ferramenta pode ser executada a partir da linha de comando,
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>Gerenciamento de ferramentas com o comando `dotnet tool`
 
-No SDK do .NET Core 2.1 (v 2.1.300), todas as operações de ferramentas usam o comando `dotnet tool`. As seguintes opções estão disponíveis:
+No SDK do .NET Core 2.1, todas as operações de ferramentas usam o comando `dotnet tool`. As seguintes opções estão disponíveis:
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) para instalar uma ferramenta.
 

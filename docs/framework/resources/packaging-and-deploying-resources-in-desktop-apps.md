@@ -1,5 +1,5 @@
 ---
-title: Empacotando e implantando recursos em aplicativos de área de trabalho
+title: Empacotar e implantar recursos em aplicativos .NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,14 +28,14 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485697"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131528"
 ---
-# <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empacotando e implantando recursos em aplicativos de área de trabalho
+# <a name="packaging-and-deploying-resources-in-net-apps"></a>Empacotar e implantar recursos em aplicativos .NET
 Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representado pela classe <xref:System.Resources.ResourceManager>, para recuperar os recursos localizados. O Gerenciador de Recursos pressupõe que um modelo de hub e spoke é usado para empacotar e implantar recursos. O hub é o principal assembly que contém o código executável não localizável e os recursos para uma única cultura, chamada de cultura neutra ou padrão. O padrão é a cultura de fallback para o aplicativo; é a cultura que tem os recursos utilizados quando não há recursos localizados disponíveis. Cada spoke conecta-se a um assembly satélite que contém os recursos para uma única cultura, mas não contém nenhum código.  
   
  Há várias vantagens para este modelo:  
@@ -64,16 +64,17 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
   
  Para melhorar o desempenho da pesquisa, aplique o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para seu assembly principal e passe o nome da linguagem neutra que funcione com o assembly principal.  
   
+### <a name="net-framework-resource-fallback-process"></a>Processo de fallback do recurso do .NET Framework
+ O processo de fallback de recurso do .NET Framework envolve as seguintes etapas:
+
 > [!TIP]
 >  Você poderá usar o elemento de configuração [\<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) para otimizar o processo de fallback de recurso e o processo pelo qual o tempo de execução testa assemblies de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).  
-  
- O processo de fallback de recurso envolve as seguintes etapas:  
   
 1.  O tempo de execução primeiro verifica o [cache de assembly global](../../../docs/framework/app-domains/gac.md) para um assembly que coincide com a cultura solicitada para seu aplicativo.  
   
      O cache de assembly global pode armazenar assemblies de recursos que são compartilhados por vários aplicativos. Isso faz com que você não precise incluir conjuntos de recursos específicos na estrutura de diretórios de cada aplicativo que você criar. Se o tempo de execução encontra uma referência ao assembly, ele pesquisa o assembly para o recurso solicitado. Se ele encontrar a entrada no assembly, ele usa o recurso solicitado. Se não encontrar a entrada, ele continua a pesquisa.  
   
-2.  Em seguida, o tempo de execução verifica no diretório do assembly em execução se há um diretório que corresponda à cultura solicitada. Se ele encontrar o diretório, ele procurará nesse diretório um assembly satélite válido para a cultura solicitada. O tempo de execução, em seguida, procura o assembly satélite para o recurso solicitado. Se encontrar o recurso no assembly, ele o utiliza. Se não encontrar o recurso, ele continua a pesquisa.  
+2.  Em seguida, o tempo de execução verifica no diretório do assembly em execução se há um subdiretório que corresponda à cultura solicitada. Se ele encontrar o subdiretório, procurará nesse subdiretório um assembly satélite válido para a cultura solicitada. O tempo de execução, em seguida, procura o assembly satélite para o recurso solicitado. Se encontrar o recurso no assembly, ele o utiliza. Se não encontrar o recurso, ele continua a pesquisa.
   
 3.  Em seguida, o tempo de execução consulta o Windows Installer para determinar se o assembly satélite deve ser instalado sob demanda. Se sim, ele faz a instalação, carrega o assembly e as pesquisa o assembly satélite ou o recurso solicitado. Se encontrar o recurso no assembly, ele o utiliza. Se não encontrar o recurso, ele continua a pesquisa.  
   
@@ -81,7 +82,7 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
   
 5.  Em seguida, o tempo de execução pesquisa o cache de assembly global novamente, desta vez para o assembly pai da cultura solicitada. Se o assembly pai existe no cache de assembly global, o tempo de execução procura o assembly para o recurso solicitado.  
   
-     A cultura pai é definida como a cultura de fallback apropriada. Considere a cultura pai como candidata de fallback, pois fornecer qualquer recurso é preferível para lançar uma exceção. Esse processo também permite a reutilização de recursos. Você deve incluir um recurso específico no nível pai somente se a cultura filho não precisa localizar o recurso solicitado. Por exemplo, se você fornecer assemblies de satélite para en (inglês neutro), en-GB (inglês falado no Reino Unido) e en-US (inglês falado nos Estados Unidos), o satélite en conteria a terminologia comum e os satélites en-GB e en-US poderiam fornecer substitutos somente para os termos que são diferentes.  
+     A cultura pai é definida como a cultura de fallback apropriada. Considere a cultura pai como candidata de fallback, pois fornecer qualquer recurso é preferível para lançar uma exceção. Esse processo também permite a reutilização de recursos. Você deve incluir um recurso específico no nível pai somente se a cultura filho não precisa localizar o recurso solicitado. Por exemplo, se você fornecer assemblies de satélite para `en` (inglês neutro), `en-GB` (inglês falado no Reino Unido) e `en-US` (inglês falado nos Estados Unidos), o satélite `en` conteria a terminologia comum, e os satélites `en-GB` e `en-US` poderiam fornecer substitutos somente para os termos que são diferentes.
   
 6.  Em seguida, o tempo de execução verifica no diretório do assembly em execução se este contém um diretório pai. Se houver um diretório pai, o tempo de execução procura no diretório um assembly satélite válido para a cultura pai. Se encontrar o assembly, o tempo de execução pesquisa o assembly para o recurso solicitado. Se encontrar o recurso, ele o utiliza. Se não encontrar o recurso, ele continua a pesquisa.  
   
@@ -94,14 +95,14 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
 10. Se a cultura originalmente especificada e todos os pais foram pesquisados e o recurso ainda não foi encontrado, o recurso para a cultura (fallback) padrão será usado. Normalmente, os recursos para a cultura padrão são incluídos no assembly do aplicativo principal. No entanto, você pode especificar um valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> para a propriedade <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> do atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para indicar que o local de fallback final de recursos é um assembly satélite, em vez de um assembly principal.  
   
     > [!NOTE]
-    >  O recurso padrão é o único recurso que pode ser compilado com o assembly principal. A menos que você especifique um assembly satélite usando o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute>, ele é o fallback final (pai final). Portanto, é recomendável que você sempre inclua um conjunto padrão de recursos no seu assembly principal. Isso ajuda a evitar que exceções sejam lançadas. Com a inclusão de um arquivo de recurso padrão você fornece um fallback para todos os recursos e garante que pelo menos um recurso está sempre presente para o usuário, mesmo se este não for específico de nenhuma cultura.  
+    >  O recurso padrão é o único recurso que pode ser compilado com o assembly principal. A menos que você especifique um assembly satélite usando o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute>, ele é o fallback final (pai final). Portanto, é recomendável que você sempre inclua um conjunto padrão de recursos no seu assembly principal. Isso ajuda a evitar que exceções sejam lançadas. Com a inclusão de um arquivo de recurso padrão você fornece um fallback para todos os recursos e garante que pelo menos um recurso está sempre presente para o usuário, mesmo se este não for específico de nenhuma cultura.
   
 11. Por fim, se o tempo de execução não encontrar um recurso para uma cultura (fallback) padrão, uma exceção <xref:System.Resources.MissingManifestResourceException> ou <xref:System.Resources.MissingSatelliteAssemblyException> será gerada para indicar que o recurso não pôde ser encontrado.  
   
- Por exemplo, suponha que o aplicativo solicite um recurso localizado para espanhol (México) (a cultura es-MX). O tempo de execução primeiro procura o cache de assembly global para o assembly correspondente a es-MX, mas não encontra-o. O tempo de execução, em seguida, procura no diretório do assembly em execução por um diretório de es-MX. Em caso de falha, o tempo de execução procura o cache de assembly global novamente por um assembly pai que reflita a cultura de fallback apropriada — neste caso, es (espanhol). Se o assembly pai não for encontrado, o tempo de execução procura todos os níveis possíveis de assemblies pai para a cultura es-MX até encontrar um recurso correspondente. Se um recurso não for encontrado, o tempo de execução usa o recurso para a cultura padrão.  
+ Por exemplo, suponha que o aplicativo solicite um recurso localizado para espanhol (México) (a cultura `es-MX`). O tempo de execução primeiro procura o cache de assembly global para o assembly correspondente a `es-MX`, mas não encontra-o. O tempo de execução, em seguida, procura no diretório do assembly em execução por um diretório de `es-MX`. Em caso de falha, o tempo de execução procura o cache de assembly global novamente por um assembly pai que reflita a cultura de fallback apropriada — neste caso, `es`(espanhol). Se o assembly pai não for encontrado, o tempo de execução procura todos os níveis possíveis de assemblies pai para a cultura `es-MX` até encontrar um recurso correspondente. Se um recurso não for encontrado, o tempo de execução usa o recurso para a cultura padrão.
   
 <a name="Optimizing"></a>   
-### <a name="optimizing-the-resource-fallback-process"></a>Otimizando o Processo de Fallback do Recurso  
+#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>Otimizar o processo de fallback do recurso do .NET Framework
  Sob as seguintes condições, você pode otimizar o processo pelo qual o tempo de execução procura recursos em assemblies satélites  
   
 -   Assemblies satélite são implantados no mesmo local que o assembly de código. Se o assembly de código estiver instalado no [Cache de Assembly Global](../../../docs/framework/app-domains/gac.md), os assemblies satélites também são instalados no cache de assembly global. Se o assembly de código é instalado em um diretório, os assemblies satélite são instalados em pastas específicas de cultura do diretório.  
@@ -128,10 +129,44 @@ Aplicativos se baseiam no Gerenciador de Recursos do .NET Framework, representad
   
 -   Se a investigação de um assembly de recurso específico falhar, o tempo de execução não gerará o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
+
+### <a name="net-core-resource-fallback-process"></a>O Processo de fallback do recurso do .NET Core
+ O processo de fallback de recurso do .NET CORE envolve as seguintes etapas:
+
+1.  O tempo de execução tenta carregar um assembly satélite para a cultura solicitada.
+     * Verifica no diretório do assembly em execução se há um diretório que corresponda à cultura solicitada. Se ele encontrar o subdiretório, procurará nesse subdiretório um assembly satélite válido para a cultura solicitada e o carregará.
+
+       > [!NOTE]
+       >  Em sistemas operacionais com sistemas de arquivos que diferenciam maiúscula de minúscula (ou seja, Linux e macOS), a pesquisa de subdiretório de nome de cultura diferenciará maiúsculas de minúsculas.  O nome do subdiretório deve corresponder exatamente à capitalização do <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (por exemplo, `es` ou `es-MX`).
+
+       > [!NOTE]
+       > Se o programador tiver derivado um contexto de carregamento de assembly personalizado do <xref:System.Runtime.Loader.AssemblyLoadContext>, a situação será complicada.  Se o assembly em execução tiver sido carregado no contexto personalizado, o tempo de execução carregará o assembly satélite no contexto personalizado.  Os detalhes estão fora do escopo deste documento.  Consulte <xref:System.Runtime.Loader.AssemblyLoadContext>.
+
+     * Se um assembly satélite não for encontrado, o <xref:System.Runtime.Loader.AssemblyLoadContext> gerará o evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> para indicar que não é possível localizar o assembly satélite. Se você optar por tratar do evento, o manipulador de eventos poderá carregar e retornar uma referência ao assembly satélite.
+     * Se um assembly satélite ainda não tiver sido encontrado, o AssemblyLoadContext fará com que o AppDomain dispare um evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que não é capaz de localizar o assembly satélite. Se você optar por tratar do evento, o manipulador de eventos poderá carregar e retornar uma referência ao assembly satélite.
+
+2. Se o assembly satélite for encontrado, o tempo de execução pesquisará o recurso solicitado. Se encontrar o recurso no assembly, ele o utiliza. Se não encontrar o recurso, ele continua a pesquisa.
+
+     > [!NOTE]
+     >  Para localizar um recurso dentro do assembly satélite, o tempo de execução procura o arquivo de recurso solicitado pelo <xref:System.Resources.ResourceManager> para o <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> atual.  No arquivo de recurso, ele pesquisa o nome do recurso solicitado.  Se nenhum for encontrado, o recurso será tratado como não encontrado.
+
+3. Em seguida, o tempo de execução procura os assemblies de cultura pai em vários níveis possíveis, cada vez repetindo as etapas 1 e 2.
+
+     A cultura pai é definida como a cultura de fallback apropriada. Considere a cultura pai como candidata de fallback, pois fornecer qualquer recurso é preferível para lançar uma exceção. Esse processo também permite a reutilização de recursos. Você deve incluir um recurso específico no nível pai somente se a cultura filho não precisa localizar o recurso solicitado. Por exemplo, se você fornecer assemblies de satélite para `en` (inglês neutro), `en-GB` (inglês falado no Reino Unido) e `en-US` (inglês falado nos Estados Unidos), o satélite `en` conteria a terminologia comum e os satélites `en-GB` e `en-US` forneceriam substitutos somente para os termos diferentes.
+
+     Cada cultura tem apenas um pai, que é definido pela propriedade <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, mas um pai pode ter seu próprio pai. A pesquisa de culturas pai para quando a propriedade <xref:System.Globalization.CultureInfo.Parent%2A> de uma cultura retornar <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Para o fallback do recurso, a cultura invariável não é considerada uma cultura pai ou uma cultura que pode ter recursos.
+
+4. Se a cultura originalmente especificada e todos os pais foram pesquisados e o recurso ainda não foi encontrado, o recurso para a cultura (fallback) padrão será usado. Normalmente, os recursos para a cultura padrão são incluídos no assembly do aplicativo principal. No entanto, você pode especificar um valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> para a propriedade <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> para indicar que o local de fallback final de recursos é um assembly satélite, em vez de um assembly principal.
+
+    > [!NOTE]
+    >  O recurso padrão é o único recurso que pode ser compilado com o assembly principal. A menos que você especifique um assembly satélite usando o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute>, ele é o fallback final (pai final). Portanto, é recomendável que você sempre inclua um conjunto padrão de recursos no seu assembly principal. Isso ajuda a evitar que exceções sejam lançadas. Com a inclusão de um arquivo de recurso padrão você fornece um fallback para todos os recursos e garante que pelo menos um recurso está sempre presente para o usuário, mesmo se este não for específico de nenhuma cultura.
+
+5. Por fim, se o tempo de execução não encontrar um arquivo de recurso para uma cultura (fallback) padrão, uma exceção <xref:System.Resources.MissingManifestResourceException> ou <xref:System.Resources.MissingSatelliteAssemblyException> será gerada para indicar que o recurso não pôde ser encontrado.  Se o arquivo de recurso for encontrado, mas o recurso solicitado não estiver presente, a solicitação retornará `null`.
+
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Fallback Final para Assembly Satélite  
  Você pode, opcionalmente, remover recursos do assembly principal e especificar que o tempo de execução deve carregar os recursos de fallback finais a partir de um assembly satélite que corresponda a uma cultura específica. Para controlar o processo de fallback, você deve usar o construtor <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> e fornecer um valor para o parâmetro <xref:System.Resources.UltimateResourceFallbackLocation> que especifica se o Gerenciador de Recursos deve extrair os recursos de fallback do assembly principal ou de um assembly satélite.  
   
- O exemplo a seguir usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para armazenar recursos de fallback do aplicativo em um assembly satélite para o idioma francês (fr).  O exemplo possui dois arquivos de recurso com base em texto que definem um recurso de cadeia de caracteres único chamado `Greeting`. O primeiro, resources.fr.txt, contém um recurso de idioma francês.  
+ O exemplo de .NET Framework a seguir usa o atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> para armazenar recursos de fallback do aplicativo em um assembly satélite para o idioma francês (`fr`).  O exemplo possui dois arquivos de recurso com base em texto que definem um recurso de cadeia de caracteres único chamado `Greeting`. O primeiro, resources.fr.txt, contém um recurso de idioma francês.
   
 ```  
 Greeting=Bon jour!  
@@ -183,7 +218,6 @@ vbc Example1.vb
 ```  
 Bon jour!  
 ```  
-  
 ## <a name="suggested-packaging-alternative"></a>Alternativa de Empacotamento Sugerida  
  Restrições de tempo ou orçamento podem impedir a criação de um conjunto de recursos para cada subcultura suportada pelo seu aplicativo. Em vez disso, você pode criar um assembly satélite único para uma cultura pai que todos as subculturas relacionadas podem usar. Por exemplo, você pode fornecer um único assembly satélite em inglês (en) que é recuperado por usuários que solicitam recursos em inglês específicos de região e um único assembly satélite alemão (de) para os usuários que solicitam recursos em alemão específica da região. Por exemplo, as solicitações para alemão falado na Alemanha (de-DE), Áustria (de-AT) e da Suíça (de-CH) fariam fallback para o assembly satélite alemão (de). Os recursos padrão são o fallback final e, portanto, devem ser os recursos que serão solicitados pela maioria dos usuários do seu aplicativo, então escolha cuidadosamente esses recursos. Essa abordagem implanta recursos que são menos culturalmente específicos, mas podem reduzir significativamente os custos de localização do seu aplicativo.  
   

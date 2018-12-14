@@ -1,14 +1,14 @@
 ---
 title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
-ms.date: 03/28/2017
+ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086746"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126312"
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
@@ -24,7 +24,7 @@ Você aprenderá essas técnicas ao compilar um aplicativo que demonstra uma das
 
 Os mágicos usam essa técnica porque cada carta é fica em um local conhecido após o embaralhamento e a ordem é um padrão de repetição. 
 
-Para nossos propósitos, vamos examinar rapidamente as sequências de manipulação de dados. O aplicativo que você criará construirá um baralho de cartas e, em seguida, executará uma sequência de embaralhamento, sempre gravando a sequência de saída. Você também comparará a ordem atualizada com a ordem original.
+Para os seus propósitos, vamos examinar rapidamente as sequências de manipulação de dados. O aplicativo que você criará construirá um baralho de cartas e, em seguida, executará uma sequência de embaralhamento, sempre gravando a sequência de saída. Você também comparará a ordem atualizada com a ordem original.
 
 Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também poderá ver o [exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) no repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -40,26 +40,23 @@ Se você nunca usou C# antes, [este tutorial](console-teleprompter.md) explicar�
 
 ## <a name="creating-the-data-set"></a>Criando o arquivo de dados
 
-Vamos começar criando um baralho. Você fará isso usando uma consulta LINQ com duas fontes (uma para os quatro naipes, uma para os treze valores). Você combinará essas fontes em um baralho com 52 cartas. Uma instrução `Console.WriteLine` dentro de um loop `foreach` exibe as cartas.
-
-Aqui está a consulta:
+Antes de começar, verifique se as linhas a seguir estão na parte superior do arquivo `Program.cs` gerado pelo `dotnet new console`:
 
 ```csharp
-var startingDeck = from s in Suits()
-                   from r in Ranks()
-                   select new { Suit = s, Rank = r };
-
-foreach (var c in startingDeck)
-{
-    Console.WriteLine(c);
-}
+// Program.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
 ```
 
-As várias cláusulas `from` produzem um `SelectMany`, que cria uma única sequência da combinação entre cada elemento na primeira sequência com cada elemento na segunda sequência. A ordem é importante para nossos objetivos. O primeiro elemento na primeira sequência de fonte (naipes) é combinado com cada elemento na segunda sequência (valores). Isso produz todas as treze cartas do primeiro naipe. Esse processo é repetido com cada elemento na primeira sequência (naipes). O resultado final é um baralho ordenado por naipes, seguido pelos valores.
+Se essas três linhas (instruções `using`) não estiverem na parte superior do arquivo, nosso programa não será compilado.
 
-Em seguida, você precisará compilar os métodos Suits() e Ranks(). Vamos começar com um conjunto muito simples de *métodos de iterador* que gera a sequência como um enumerável de cadeias de caracteres:
+Agora que você tem todas as referências necessárias, considere o que forma um baralho de cartas. Um baralho de cartas costuma ter quatro naipes, e cada naipe tem treze valores. Normalmente, talvez você pense em criar uma classe `Card` logo de cara e preencher uma coleção de objetos `Card` manualmente. Com o LINQ, dá para ser mais conciso do que a forma comum de criação de um baralho de cartas. Em vez de criar uma classe `Card`, você pode criar duas sequências para representar naipes e valores, respectivamente. Você vai criar um par muito simples de [*métodos iteradores*](../iterators.md#enumeration-sources-with-iterator-methods) que gerará as valores e naipes como <xref:System.Collections.Generic.IEnumerable%601>s de cadeias de caracteres:
 
 ```csharp
+// Program.cs
+// The Main() method
+
 static IEnumerable<string> Suits()
 {
     yield return "clubs";
@@ -85,64 +82,96 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+Coloque-as sob o método `Main` em seu arquivo `Program.cs`. Esses dois métodos utilizam a sintaxe `yield return` para produzir uma sequência à medida que eles são executados. O compilador compila um objeto que implementa <xref:System.Collections.Generic.IEnumerable%601> e gera a sequência de cadeias de caracteres conforme solicitado.
 
-Esses dois métodos utilizam a sintaxe `yield return` para produzir uma sequência à medida que eles são executados. O compilador compila um objeto que implementa `IEnumerable<T>` e gera a sequência de cadeias de caracteres conforme solicitado.
-
-Para que isso seja compilado, será necessário adicionar as duas linhas a seguir na parte superior do arquivo:
+Agora, use esses métodos iteradores para criar o baralho de cartas. Você colocará a consulta do LINQ em nosso método `Main`. Dê uma olhada:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
+// Program.cs
+static void Main(string[] args)
+{
+    var startingDeck = from s in Suits()
+                       from r in Ranks()
+                       select new { Suit = s, Rank = r };
+
+    // Display each card that we've generated and placed in startingDeck in the console
+    foreach (var card in startingDeck)
+    {
+        Console.WriteLine(card);
+    } 
+}
 ```
 
-Vá em frente e execute o exemplo que você criou neste momento. Ele exibirá todas as 52 cartas do baralho. Talvez seja muito útil executar esse exemplo em um depurador para observar como os métodos `Suits()` e `Values()` são executados. Você pode ver claramente que cada cadeia de caracteres em cada sequência é gerada apenas conforme o necessário.
+As várias cláusulas `from` produzem um <xref:System.Linq.Enumerable.SelectMany%2A>, que cria uma única sequência da combinação entre cada elemento na primeira sequência com cada elemento na segunda sequência. A ordem é importante para nossos objetivos. O primeiro elemento na primeira sequência de fonte (Naipes) é combinado com cada elemento na segunda sequência (Valores). Isso produz todas as treze cartas do primeiro naipe. Esse processo é repetido com cada elemento na primeira sequência (naipes). O resultado final é um baralho ordenado por naipes, seguido pelos valores.
+
+É importante lembrar que se você optar por escrever seu LINQ na sintaxe de consulta usada acima, ou se decidir usar a sintaxe de método, sempre será possível alternar entre as formas de sintaxe. A consulta acima escrita em sintaxe de consulta pode ser escrita na sintaxe de método como:
+```csharp
+var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
+```
+O compilador traduz instruções LINQ escritas com a sintaxe de consulta na sintaxe de chamada do método equivalente. Portanto, independentemente de sua escolha de sintaxe, as duas versões da consulta produzem o mesmo resultado. Escolha qual sintaxe funciona melhor para a sua situação: por exemplo, se você estiver trabalhando em uma equipe em que alguns dos membros têm dificuldade com a sintaxe de método, prefira usar a sintaxe de consulta.
+
+Vá em frente e execute o exemplo que você criou neste momento. Ele exibirá todas as 52 cartas do baralho. Talvez seja muito útil executar esse exemplo em um depurador para observar como os métodos `Suits()` e `Ranks()` são executados. Você pode ver claramente que cada cadeia de caracteres em cada sequência é gerada apenas conforme o necessário.
 
 ![Janela de console mostrando o aplicativo gravando 52 cartas](./media/working-with-linq/console.png)
 
 ## <a name="manipulating-the-order"></a>Manipulando a ordem
 
-Em seguida, vamos criar um método de utilitário que pode executar o embaralhamento. A primeira etapa é dividir o baralho em dois. Os métodos `Take()` e `Skip()` que fazem parte das APIs do LINQ fornecem esse recurso para nós:
+Em seguida, concentre-se em como você vai embaralhar as cartas no baralho. A primeira etapa de qualquer embaralhada é dividir o baralho em dois. Os métodos <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> que fazem parte das APIs do LINQ fornecem esse recurso para você. Coloque-os sob o loop `foreach`:
 
 ```csharp
-var top = startingDeck.Take(26);
-var bottom = startingDeck.Skip(26);
+// Program.cs
+public static void Main(string[] args)
+{
+    var startingDeck = from s in Suits()
+                       from r in Ranks()
+                       select new { Suit = s, Rank = r };
+
+    foreach (var c in startingDeck)
+    {
+        Console.WriteLine(c);
+    }
+
+    // 52 cards in a deck, so 52 / 2 = 26    
+    var top = startingDeck.Take(26);
+    var bottom = startingDeck.Skip(26);
+}
 ```
 
-O método de embaralhamento não existe na biblioteca padrão, portanto você precisará escrever o seu. Esse novo método ilustra várias técnicas que você usará com programas baseados em LINQ. Vamos explicar cada parte do método em etapas.
+No entanto, não há método de embaralhamento na biblioteca padrão, portanto, você precisará escrever o seu. O método de embaralhamento que você criará ilustra várias técnicas que você usará com programas baseados em LINQ. Portanto, cada parte desse processo será explicado nas etapas.
 
-A assinatura do método cria um *método de extensão*:
+Para adicionar funcionalidade ao seu modo de interação com o <xref:System.Collections.Generic.IEnumerable%601> recebido de volta das consultas do LINQ, precisará escrever alguns tipos especiais de métodos chamados [métodos de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md). Em resumo, um método de extensão é um *método estático* de objetivo especial que adiciona novas funcionalidades a um tipo já existentes, sem ter que modificar o tipo original ao qual você deseja adicionar funcionalidade.
 
-```csharp
-public static IEnumerable<T> InterleaveSequenceWith<T>
-    (this IEnumerable<T> first, IEnumerable<T> second)
-```
-
-Um método de extensão é um *método estático* de objetivo especial. Você pode ver a adição do modificador `this` no primeiro argumento para o método. Isso significa que você chama o método como se fosse um método de membro do tipo do primeiro argumento.
-
-Os métodos de extensão podem ser declarados somente dentro de classes `static`, então vamos criar uma nova classe estática chamada `extensions` para essa funcionalidade. É necessário adicionar mais métodos de extensão nesse tutorial, e eles serão colocados na mesma classe.
-
-Esta declaração de método também segue um idioma padrão no qual os tipos de entrada e saídas são `IEnumerable<T>`. Essa prática permite que os métodos LINQ sejam encadeados para executar consultas mais complexas.
+Dê aos seus métodos de extensão uma nova casa adicionando um novo arquivo de classe *estático* ao seu programa chamado `Extensions.cs`, depois, comece a criar o primeiro método de extensão: 
 
 ```csharp
+// Extensions.cs
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LinqFaroShuffle
 {
     public static class Extensions
     {
-        public static IEnumerable<T> InterleaveSequenceWith<T>
-            (this IEnumerable<T> first, IEnumerable<T> second)
+        public static IEnumerable<T> InterleaveSequenceWith<T>(this IEnumerable<T> first, IEnumerable<T> second)
         {
-            // implementation coming.
+            // Your implementation will go here soon enough
         }
     }
 }
 ```
 
-Você enumerará as duas sequências de uma vez, intercalando os elementos e criando um objeto.  Escrever um método LINQ que funciona com duas sequências exige que você compreenda como `IEnumerable` funciona.
+Examine a assinatura do método por um momento, principalmente os parâmetros:
 
-A interface `IEnumerable` tem um método: `GetEnumerator()`. O objeto retornado por `GetEnumerator()` tem um método para mover para o próximo elemento e uma propriedade que recupera o elemento atual na sequência. Você usará esses dois membros para enumerar a coleção e retornar os elementos. Esse método de Intercalação será um método iterador, portanto, em vez de criar uma coleção e retornar a coleção, você usará a sintaxe `yield return` mostrada acima. 
+```csharp
+public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> first, IEnumerable<T> second)
+```
+
+Você pode ver a adição do modificador `this` no primeiro argumento para o método. Isso significa que você chama o método como se fosse um método de membro do tipo do primeiro argumento. Esta declaração de método também segue um idioma padrão no qual os tipos de entrada e saídas são `IEnumerable<T>`. Essa prática permite que os métodos LINQ sejam encadeados para executar consultas mais complexas.
+
+Naturalmente, como você dividiu o baralho em metades, precisará unir essas metades. No código, isso significa que você vai enumerar as duas sequências adquiridas por meio de <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> ao mesmo tempo, *`interleaving`* os elementos e criará uma sequência: seu baralho não embaralhado. Escrever um método LINQ que funciona com duas sequências exige que você compreenda como <xref:System.Collections.Generic.IEnumerable%601> funciona.
+
+A interface <xref:System.Collections.Generic.IEnumerable%601> tem um método: <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>. O objeto retornado por <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> tem um método para mover para o próximo elemento e uma propriedade que recupera o elemento atual na sequência. Você usará esses dois membros para enumerar a coleção e retornar os elementos. Esse método de Intercalação será um método iterador, portanto, em vez de criar uma coleção e retornar a coleção, você usará a sintaxe `yield return` mostrada acima.
 
 Aqui está a implementação desse método:
 
@@ -151,6 +180,7 @@ Aqui está a implementação desse método:
 Agora que você escreveu esse método, vá até o método `Main` e embaralhe uma vez:
 
 ```csharp
+// Program.cs
 public static void Main(string[] args)
 {
     var startingDeck = from s in Suits()
@@ -175,41 +205,49 @@ public static void Main(string[] args)
 
 ## <a name="comparisons"></a>Comparações
 
-Vamos ver quantos embaralhamentos são necessários para colocar o baralho em sua ordem original. Você precisará escrever um método que determina se duas sequências são iguais. Depois de ter esse método, você precisará colocar o código de embaralhamento em um loop e verificar quando a apresentação estiver na ordem.
+Quantos embaralhamentos são necessários para colocar o baralho em sua ordem original? Para descobrir, você precisará escrever um método que determina se duas sequências são iguais. Depois de ter esse método, você precisará colocar o código de embaralhamento em um loop e verificar quando a apresentação estiver na ordem.
 
-Escrever um método para determinar se as duas sequências são iguais deve ser simples. É uma estrutura semelhante para o método que você escreveu para embaralhar as cartas. Somente desta vez, em vez de o rendimento retornar cada elemento, você comparará os elementos correspondentes de cada sequência. Quando toda a sequência tiver sido enumerada, se os elementos corresponderem, as sequências serão as mesmas:
+Escrever um método para determinar se as duas sequências são iguais deve ser simples. É uma estrutura semelhante para o método que você escreveu para embaralhar as cartas. Somente desta vez, em vez de o `yield return`rendimento retornar cada elemento, você comparará os elementos correspondentes de cada sequência. Quando toda a sequência tiver sido enumerada, se os elementos corresponderem, as sequências serão as mesmas:
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Isso mostra uma segunda linguagem LINQ: métodos de terminal. Eles consideram uma sequência como entrada (ou, neste caso, duas sequências) e retornam um único valor escalar. Esses métodos, quando são usados, sempre são o método final de uma consulta. (Portanto, o nome). 
+Isso mostra uma segunda linguagem LINQ: métodos de terminal. Eles consideram uma sequência como entrada (ou, neste caso, duas sequências) e retornam um único valor escalar. Ao usar métodos de terminal, eles são sempre o método final em uma cadeia de métodos para uma consulta LINQ, por isso, o nome "terminal". 
 
 Você pode ver isso em ação ao usá-lo para determinar quando o baralho está em sua ordem original. Coloque o código de embaralhamento dentro de um loop e pare quando a sequência estiver em sua ordem original, aplicando o método `SequenceEquals()`. Você pode ver que esse sempre será o método final em qualquer consulta, porque ele retorna um valor único em vez de uma sequência:
 
 ```csharp
-var times = 0;
-var shuffle = startingDeck;
-
-do
+// Program.cs
+static void Main(string[] args)
 {
-    shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
+    // Query for building the deck
 
-    foreach (var c in shuffle)
+    // Shuffling using InterleaveSequenceWith<T>();
+
+    var times = 0;
+    // We can re-use the shuffle variable from earlier, or you can make a new one
+    shuffle = startingDeck;
+    do
     {
-        Console.WriteLine(c);
-    }
+        shuffle = shuffle.Take(26).InterleaveSequenceWith(shuffle.Skip(26));
 
-    Console.WriteLine();
-    times++;
-} while (!startingDeck.SequenceEquals(shuffle));
+        foreach (var card in shuffle)
+        {
+            Console.WriteLine(card);
+        }
+        Console.WriteLine();
+        times++;
 
-Console.WriteLine(times);
+    } while (!startingDeck.SequenceEquals(shuffle));
+
+    Console.WriteLine(times);
+}
 ```
 
-Execute o exemplo e veja como o baralho é reorganizado em cada embaralhamento até que ele retorne à sua configuração original após 8 iterações.
+Execute o código que obtivemos até agora e observe como o baralho é reorganizado em cada embaralhamento. Após 8 embaralhamentos (iterações do loop do-while), o baralho retorna à configuração original que estava quando você o criou pela primeira vez a partir da consulta LINQ inicial.
 
 ## <a name="optimizations"></a>Otimizações
 
-O exemplo que você compilou até agora executa um *embaralhamento externo*, no qual as cartas superiores e inferiores permanecem as mesmas em cada execução. Vamos fazer uma alteração e executar um *embaralhamento interno*, no qual todas as 52 cartas trocam de posição. Para um embaralhamento interno, intercale o baralho para que a primeira carta da metade inferior torne-se a primeira carta do baralho. Isso significa que a última carta na metade superior torna-se a carta inferior. Isso é apenas uma alteração de uma linha. Atualize a chamada de embaralhamento para alterar a ordem das metades superior e inferior do baralho:
+O exemplo que você compilou até agora executa um *embaralhamento externo*, no qual as cartas superiores e inferiores permanecem as mesmas em cada execução. Vamos fazer uma alteração: em vez disso, usaremos um *embaralhamento interno*, em que todas as 52 cartas trocam de posição. Para um embaralhamento interno, intercale o baralho para que a primeira carta da metade inferior torne-se a primeira carta do baralho. Isso significa que a última carta na metade superior torna-se a carta inferior. Essa é uma alteração simples em uma única linha de código. Atualize a consulta atual de embaralhamento, alternando as posições de <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A>. Isso alterará a ordem das metades superior e inferior do baralho:
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -217,19 +255,20 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Execute o programa novamente e você verá que leva 52 iterações para o baralho ser reordenado. Você também começará a observar algumas degradações de desempenho graves à medida que o programa continuar a ser executado.
 
-Existem muitas razões para isso. Vamos analisar uma das principais causas: uso ineficiente de *avaliação lenta*.
+Existem muitas razões para isso. Você pode abordar uma das principais causas dessa queda de desempenho: uso ineficiente da [*avaliação lenta*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
-Consultas LINQ são avaliadas lentamente. As sequências são geradas somente quando os elementos são solicitados. Geralmente, esse é o principal benefício do LINQ. No entanto, em uso como esse programa, isso causa um crescimento exponencial no tempo de execução.
+Em resumo, a avaliação lenta informa que a avaliação de uma instrução não será executada até que seu valor seja necessário. Consultas LINQ são instruções avaliadas lentamente. As sequências são geradas somente quando os elementos são solicitados. Geralmente, esse é o principal benefício do LINQ. No entanto, em uso como esse programa, isso causa um crescimento exponencial no tempo de execução.
 
-O baralho original foi gerado usando uma consulta LINQ. Cada embaralhamento é gerado executando três consultas LINQ no baralho anterior. Todos eles são executados lentamente. Isso também significa que eles são executados novamente sempre que a sequência é solicitada. Ao obter a 52ª iteração, você estará regenerando o baralho original muitas e muitas vezes. Vamos escrever um log para demonstrar esse comportamento. Em seguida, você poderá corrigir isso.
+Lembre-se de que geramos o baralho original usando uma consulta LINQ. Cada embaralhamento é gerado executando três consultas LINQ no baralho anterior. Todos eles são executados lentamente. Isso também significa que eles são executados novamente sempre que a sequência é solicitada. Ao obter a 52ª iteração, você estará regenerando o baralho original muitas e muitas vezes. Vamos escrever um log para demonstrar esse comportamento. Em seguida, você poderá corrigir isso.
 
-Este é um método de log que pode ser anexado a qualquer consulta para marcar a consulta executada.
+Em seu arquivo `Extensions.cs`, digite ou copie o método a seguir. Esse método de extensão cria um novo arquivo chamado `debug.log` em seu diretório do projeto, e registra qual consulta está sendo executada atualmente para o arquivo de log. Este método de extensão pode ser anexado a qualquer consulta para marcar que a consulta foi executada.
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Em seguida, instrumente a definição de cada consulta com uma mensagem de log:
 
 ```csharp
+// Program.cs
 public static void Main(string[] args)
 {
     var startingDeck = (from s in Suits().LogQuery("Suit Generation")
@@ -247,6 +286,7 @@ public static void Main(string[] args)
 
     do
     {
+        // Out shuffle
         /*
         shuffle = shuffle.Take(26)
             .LogQuery("Top Half")
@@ -255,10 +295,10 @@ public static void Main(string[] args)
             .LogQuery("Shuffle");
         */
 
-        shuffle = shuffle.Skip(26)
-            .LogQuery("Bottom Half")
-            .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
-            .LogQuery("Shuffle");
+        // In shuffle
+        shuffle = shuffle.Skip(26).LogQuery("Bottom Half")
+                .InterleaveSequenceWith(shuffle.Take(26).LogQuery("Top Half"))
+                .LogQuery("Shuffle");
 
         foreach (var c in shuffle)
         {
@@ -275,62 +315,31 @@ public static void Main(string[] args)
 
 Observe que você não precisa fazer o registro sempre que acessar uma consulta. Você faz o registro ao criar a consulta original. O programa ainda leva muito tempo para ser executado, mas agora você pode ver o motivo. Se você não tiver paciência para executar o embaralhamento interno com o registro em log ativado, volte para o embaralhamento externo. Você ainda verá os efeitos da avaliação lenta. Em uma execução, ele faz 2592 consultas, incluindo a geração de todos os valores e naipes.
 
-Há uma maneira fácil de atualizar este programa para evitar todas essas execuções. Há métodos LINQ `ToArray()` e `ToList()` que causam a execução da consulta e armazenam os resultados em uma matriz ou lista, respectivamente. Você pode usar estes métodos para armazenar em cache os resultados de dados de uma consulta em vez de executar a consulta de origem novamente.  Acrescente as consultas que geram os baralhos com uma chamada para `ToArray()` e execute a consulta novamente:
+Aqui, você pode melhorar o desempenho do código para reduzir o número de execuções feitas. Uma correção simples possível é *armazenar em cache* os resultados da consulta do LINQ original que constrói o baralho de cartas. Atualmente, você executa as consultas novamente sempre que o loop do-while passa por uma iteração, construindo novamente o baralho de cartas e o embaralhamento de novo todas as vezes. Para armazenar em cache o baralho de cartas, aproveite os métodos LINQ <xref:System.Linq.Enumerable.ToArray%2A> e <xref:System.Linq.Enumerable.ToList%2A>; ao anexá-los às consultas, eles executarão as mesmas ações paras quais foram instruídos, mas agora armazenarão os resultados em uma matriz ou lista, dependendo de qual método você optar por chamar. Anexe o método LINQ <xref:System.Linq.Enumerable.ToArray%2A> às duas consultas e execute o programa novamente:
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Execute novamente, e o embaralhamento externo será de até 30 consultas. Execute novamente com o embaralhamento interno e você verá melhorias semelhantes. (Ele agora executa 162 consultas).
+Agora, o embaralhamento externo contém 30 consultas. Execute novamente com o embaralhamento interno e você verá melhorias semelhantes: agora, executa 162 consultas.
 
-Não interprete incorretamente esse exemplo pensando que todas as consultas devem ser executadas cuidadosamente. Este exemplo é projetado para realçar os casos de uso em que a avaliação lenta pode causar problemas de desempenho. Isso ocorre porque cada nova disposição do baralho de cartas é criada com base na disposição anterior. Usar a avaliação lenta significa que cada nova disposição do baralho é criada do baralho original, até mesmo a execução do código que criou o `startingDeck`. Isso causa uma grande quantidade de trabalho extra. 
+Observe que esse exemplo é **projetado** para realçar os casos de uso em que a avaliação lenta pode causar problemas de desempenho. Embora seja importante ver onde a avaliação lenta pode afetar o desempenho do código, é igualmente importante entender que nem todas as consultas devem ser executadas avidamente. O desempenho incorrido sem usar <xref:System.Linq.Enumerable.ToArray%2A> ocorre porque cada nova disposição do baralho de cartas é criada com base na disposição anterior. Usar a avaliação lenta significa que cada nova disposição do baralho é criada do baralho original, até mesmo a execução do código que criou o `startingDeck`. Isso causa uma grande quantidade de trabalho extra. 
 
-Na prática, alguns algoritmos são muito melhores executados usando a avaliação rápida e outros executam muito melhor usando a avaliação lenta. (Em geral, a avaliação lenta é uma opção muito melhor quando a fonte de dados é um processo separado, como um mecanismo de banco de dados. Nesses casos, a avaliação lenta permite que consultas mais complexas executem apenas uma viagem de ida e volta e para o processo de banco de dados.) O LINQ permite uma avaliação lenta e rápida. Meça e escolha a melhor opção.
-
-## <a name="preparing-for-new-features"></a>Preparação para novos recursos
-
-O código que você escreveu para este exemplo é um exemplo de como criar um protótipo simples que faz o trabalho. Isso é uma ótima maneira de explorar um espaço problemático e, para muitos recursos, pode ser a melhor solução permanente. Você terá aproveitado *tipos anônimos* para as cartas e cada carta será representada por cadeias de caracteres.
-
-Os *tipos anônimos* têm muitas vantagens de produtividade. Você não precisa definir uma classe para representar o armazenamento. O compilador gera o tipo para você. O tipo gerado pelo compilador utiliza várias das melhores práticas para objetos de dados simples. Ele é *imutável*, o que significa que nenhuma de suas propriedades pode ser alterada depois que ele for construído. Os tipos anônimos são internos para um assembly, então eles não são vistos como parte da API pública para esse assembly. Os tipos anônimos também contêm uma substituição do método `ToString()` que retorna uma cadeia de caracteres formatada com cada um dos valores.
-
-Os tipos anônimos também têm desvantagens. Eles não têm nomes acessíveis, portanto você não pode usá-los como argumentos ou valores de retorno. Você notará que todos os métodos acima que usaram esses tipos anônimos são métodos genéricos. A substituição de `ToString()` pode não ser o que você deseja à medida que o aplicativo cria mais recursos. 
-
-O exemplo também usa cadeias de caracteres para o naipe e a classificação de cada carta. Isso é bastante ilimitado. O sistema de tipo C# pode nos ajudar a tornar o código melhor, aproveitando tipos `enum` para esses valores.
-
-Comece com os naipes. Este é o momento perfeito para usar um `enum`:
-
-[!CODE-csharp[Suit enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet2)]
-
-O método `Suits()` também altera o tipo e a implementação:
-
-[!CODE-csharp[Suit IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet4)]
-
-Em seguida, faça a mesma alteração com a classificação das cartas:
-
-[!CODE-csharp[Rank enum](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet3)]
-
-E o método que gera as cartas:
-
-[!CODE-csharp[Rank IEnumerable](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet5)]
-
-Como limpeza final, vamos criar um tipo para representar a carta, em vez de depender de um tipo anônimo. Os tipos anônimos são ótimos para tipos simples e locais, mas, neste exemplo, a carta do jogo é um dos principais conceitos. Ela deve ser de um tipo concreto.
-
-[!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
-
-Esse tipo usa *propriedades somente leitura autoimplementadas* que são definidas no construtor e não podem ser modificadas. Ele também usa o recurso de [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) que facilita a formatação da saída da cadeia de caracteres.
-
-Atualize a consulta que gera o baralho inicial para usar o novo tipo:
-
-```csharp
-var startingDeck = (from s in Suits().LogQuery("Suit Generation")
-                    from r in Ranks().LogQuery("Value Generation")
-                    select new PlayingCard(s, r))
-                    .LogQuery("Starting Deck")
-                    .ToArray();
-```
-
-Compile e execute novamente. A saída é um pouco mais limpa e o código é um pouco mais claro e pode ser estendido mais facilmente.
+Na prática, alguns algoritmos funcionam bem usando a avaliação detalhada, e outros executam funcionam melhor usando a avaliação lenta. Para o uso diário, a avaliação lenta é uma opção melhor quando a fonte de dados é um processo separado, como um mecanismo de banco de dados. Para os bancos de dados, a avaliação lenta permite que as consultas mais complexas executem apenas uma viagem de ida e volta para o processo de banco de dados e de volta para o restante do seu código. O LINQ é flexível, não importa se você optar por utilizar a avaliação lenta ou detalhada, portanto, meça seus processos e escolha o tipo de avaliação que ofereça o melhor desempenho.
 
 ## <a name="conclusion"></a>Conclusão
 
-Esta amostra mostrou alguns dos métodos usados em LINQ e como criar seus próprios métodos que serão usados com facilidade com o código habilitado para LINQ. Ele também mostrou as diferenças entre a avaliação lenta e a rápida e o impacto que a decisão pode ter no desempenho.
+Neste projeto, abordamos:
+* o uso de consultas LINQ para agregar dados em uma sequência significativa
+* a produção de métodos de Extensão para adicionar nossa própria funcionalidade personalizada a consultas LINQ
+* a localização de áreas em nosso código nas quais nossas consultas LINQ podem enfrentar problemas de desempenho, como diminuição da velocidade
+* avaliação lenta e detalhada com relação às consultas LINQ, e as implicações que elas podem ter no desempenho da consulta
 
-Você aprendeu um pouco sobre uma técnica dos mágicos. Os mágicos usam o embaralhamento porque eles podem controlar onde cada carta fica no baralho. Em alguns truques, o mágico escolha uma pessoa para colocar a carta no topo do baralho e embaralha as cartas algumas vezes, sabendo onde a carta escolhida está. Outras ilusões exigem que o baralho esteja disposto de uma determinada maneira. Um mágico fará a disposição do baralho antes de realizar o truque. Em seguida, ela embaralhará as cartas 5 vezes usando o embaralhamento externo. No palco, ele pode mostrar como é o embaralhamento e embaralhar mais três vezes e ter o baralho definido exatamente como deseja.
+Além do LINQ, você aprendeu um pouco sobre uma técnica usada por mágicos para truques de carta. Os mágicos usam o embaralhamento Faro porque podem controlar onde cada carta fica no baralho. Agora que você sabe, não conte para os outros!
+
+Para saber mais sobre o LINQ, consulte:
+* [LINQ (Consulta Integrada à Linguagem)](../programming-guide/concepts/linq/index.md)
+    * [Introdução ao LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+    * [Introdução a LINQ em C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+        - [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+        - [Transformações de dados com LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+        - [Sintaxe de consulta e sintaxe de método em LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+        - [Recursos do C# que dão suporte a LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

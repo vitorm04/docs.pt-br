@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994462"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129019"
 ---
 # <a name="do-c-reference"></a>do (Referência de C#)
 
@@ -30,15 +30,14 @@ O exemplo a seguir mostra o uso da instrução `do`. Selecione **Executar** para
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para saber mais, confira a seção [A instrução do](~/_csharplang/spec/statements.md#the-do-statement) na [Especificação da linguagem C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../index.md)  
-- [Guia de Programação em C#](../../programming-guide/index.md)  
-- [Palavras-chave do C#](index.md)  
-- [Instrução do-while (C++)](/cpp/cpp/do-while-statement-cpp)  
-- [Instruções de iteração](iteration-statements.md)  
-- [instrução while](while.md)  
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](index.md)
+- [Instruções de iteração](iteration-statements.md)
+- [instrução while](while.md)

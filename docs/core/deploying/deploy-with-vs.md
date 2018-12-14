@@ -1,21 +1,21 @@
 ---
-title: Implantação de aplicativos .NET Core com o Visual Studio
-description: Aprenda a implantação de aplicativos .NET Core com o Visual Studio
+title: Implantar aplicativos .NET Core com o Visual Studio
+description: Saiba como implantar um aplicativo .NET Core com o Visual Studio.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584371"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127102"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Implantando aplicativos .NET Core com o Visual Studio
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
 Você pode implantar um aplicativo .NET Core como uma *implantação dependente de estrutura*, que inclui os binários do seu aplicativo, mas depende da presença do .NET Core no sistema de destino, ou como uma *implantação autocontida*, que inclui os binários do seu aplicativo e do .NET Core. Para obter uma visão geral da implantação de aplicativos .NET Core, consulte [Implantação de aplicativos .NET Core](index.md).
 
@@ -144,7 +144,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
-      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações do perfil são mostradas na seção **Resumo** da guia. Tempo de Execução de Destino identifica qual tempo de execução foi publicado e **Local de Destino** identifica o local em que os arquivos da implantação autocontida foram gravados.
+      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações do perfil são mostradas na seção **Resumo** da guia. **Tempo de Execução de Destino** identifica qual tempo de execução foi publicado e **Local de Destino** identifica o local em que os arquivos da implantação autocontida foram gravados.
 
       1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada tempo de execução de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 

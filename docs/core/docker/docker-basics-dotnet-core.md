@@ -1,19 +1,17 @@
 ---
-title: Aprenda noções básicas do Docker com o .NET Core
-description: Um tutorial básico do Docker e do .NET Core
-author: jralexander
-ms.author: johalex
-ms.date: 11/06/2017
+title: Colocar em contêiner um aplicativo com o Docker – .NET Core
+description: Este tutorial ensina como criar um aplicativo básico do .NET Core e a colocá-lo em contêiner com o Docker.
+ms.date: 10/11/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615294"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126362"
 ---
-# <a name="learn-docker-basics-with-net-core"></a>Aprenda noções básicas do Docker com o .NET Core
+# <a name="how-to-containerize-a-net-core-application"></a>Como colocar em contêiner um aplicativo .NET Core
 
 Este tutorial ensina as tarefas de build e implantação de contêiner do Docker para um aplicativo .NET Core. A [plataforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) usa o [Mecanismo do Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) para criar e empacotar aplicativos com agilidade [imagens do Docker](https://docs.docker.com/glossary/?term=image). Essas imagens são gravadas no formato [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) para serem implantadas e executadas em um [contêiner em camadas](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
@@ -38,38 +36,38 @@ Criar contêineres do Windows e Linux com [marcas baseadas em vários arcos](htt
 
 Para concluir este tutorial:
 
-#### <a name="net-core-20-sdk"></a>SDK do .NET Core 2.0
+#### <a name="net-core-sdk"></a>SDK do .NET Core
 
-* Instale o [SDK do .NET Core 2.0](https://www.microsoft.com/net/core).
+* Instale o [SDK do .NET Core 2.1](https://www.microsoft.com/net/download) ou posterior.
 
-Consulte [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) (Versões de sistema operacional com suporte pelo .NET Core 2.x) para obter a lista completa de sistemas operacionais com suporte pelo .NET Core 2.x., versões de sistema operacional fora de suporte e links para a política de ciclo de vida.
+Consulte [Versões de sistema operacional compatíveis com .NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) para obter a lista completa de sistemas operacionais compatíveis com .NET Core 2.1, versões de sistema operacional não compatíveis e links para a política de ciclo de vida.
 
 * Instale seu editor de código favorito, caso ainda não tenha um.
 
 > [!TIP]
-> Precisa instalar um editor de código? Experimente o [Visual Studio](https://visualstudio.com/downloads)!
+> Precisa instalar um editor de código? Experimente o [Visual Studio Code](https://code.visualstudio.com/download)!
 
 #### <a name="installing-docker-client"></a>Instalando o Cliente do Docker
 
-Instale o [Docker 17.06](https://docs.docker.com/release-notes/docker-ce/) ou posterior do cliente do Docker.
+Instale o [Docker 18.06](https://docs.docker.com/release-notes/docker-ce/) ou cliente do Docker posterior.
 
 O cliente do Docker pode ser instalado em:
 
 * Distribuições Linux
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/).
+* [Windows](https://docs.docker.com/docker-for-windows/install/).
 
-### <a name="create-a-net-core-20-console-app-for-dockerization"></a>Criar um aplicativo de console .NET Core 2.0 para colocá-lo no Docker
+### <a name="create-a-net-core-21-console-app-for-dockerization"></a>Criar um aplicativo de console .NET Core 2.1 para colocá-lo no Docker
 
 Abra um prompt de comando e crie uma pasta chamada *Hello*. Navegue para a pasta criada e digite os seguintes comandos:
 
@@ -83,13 +81,13 @@ Vejamos um breve passo a passo:
 1. `$ dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) cria um arquivo de projeto `Hello.csproj` atualizado com as dependências necessárias para criar um aplicativo de console.  Ele também cria um `Program.cs`, um arquivo básico que contém o ponto de entrada para o aplicativo.
-   
+
    `Hello.csproj`:
 
    O arquivo de projeto especifica tudo o que é necessário para restaurar as dependências e compilar o programa.
 
    * A marca `OutputType` especifica que estamos copilando um executável, em outras palavras, um aplicativo de console.
-   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar para as estruturas especificadas em uma única operação. Neste tutorial, compilamos para o .NET Core 2.0.
+   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar para as estruturas especificadas em uma única operação. Neste tutorial, compilamos para o .NET Core 2.1.
 
    `Program.cs`:
 
@@ -97,26 +95,21 @@ Vejamos um breve passo a passo:
 
    Em seguida, definimos um namespace chamado `Hello`. Altere o namespace para o nome desejado. Uma classe chamada `Program` é definida dentro desse namespace, com um método `Main` que usa uma matriz de cadeias de caracteres como argumento. Essa matriz contém a lista de argumentos passados quando o programa compilado é chamado. Em nosso exemplo, o programa grava apenas “Olá, Mundo!” no console.
 
-2. `$ dotnet restore`
-
-   No .NET Core 2.x, **dotnet new** executa o comando [`dotnet restore`](../tools/dotnet-restore.md). **Dotnet restore** restaura a árvore de dependências com uma chamada ao [NuGet](https://www.nuget.org/) (gerenciador de pacotes do .NET).
+   **dotnet new** executa o comando [`dotnet restore`](../tools/dotnet-restore.md). **Dotnet restore** restaura a árvore de dependências com uma chamada ao [NuGet](https://www.nuget.org/) (gerenciador de pacotes do .NET).
    O NuGet executa as seguintes tarefas:
-   * analisa o arquivo *Hello.csproj* 
-   * baixa as dependências de arquivo (ou captura-as do cache do computador)
-   * grava o arquivo *obj/project.assets.json*
+   * analisa o arquivo *Hello.csproj*.
+   * baixa as dependências de arquivo (ou as captura do cache do computador).
+   * grava o arquivo *obj/project.assets.json*.
 
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-   
    O arquivo *project.assets.json* é um conjunto completo do gráfico de dependências do NuGet, das resoluções de associação e de outros metadados do aplicativo. Esse arquivo obrigatório é usado por outras ferramentas, como [`dotnet build`](../tools/dotnet-build.md) e [`dotnet run`](../tools/dotnet-run.md), para processar o código-fonte corretamente.
-   
-3. `$ dotnet run`
+
+2. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) chama [`dotnet build`](../tools/dotnet-build.md) para confirmar um build bem-sucedido e, em seguida, chama `dotnet <assembly.dll>` para executar o aplicativo.
-   
+
     ```console
     $ dotnet run
-    
+
     Hello World!
     ```
 
@@ -133,7 +126,7 @@ Abra o editor de texto e vamos começar! Ainda estamos trabalhando no diretório
 Adicione as instruções do Docker a seguir para [Contêineres do Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) ou do Linux a um novo arquivo. Quando terminar, salve-o na raiz do diretório Hello como um **Dockerfile**, sem extensão (talvez seja necessário definir o tipo de arquivo como `All types (*.*)` ou algo semelhante).
 
 ```Dockerfile
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 WORKDIR /app
 
 # copy csproj and restore as distinct layers
@@ -148,10 +141,10 @@ ENTRYPOINT ["dotnet", "out/Hello.dll"]
 
 O Dockerfile contém instruções de build do Docker que são executadas sequencialmente.
 
-A primeira instrução deve ser [**FROM**](https://docs.docker.com/engine/reference/builder/#from). Essa instrução inicializa um novo estágio de build e define a imagem Base para as instruções restantes. As marcas de vários arcos efetuam pull de contêineres do Windows ou Linux, dependendo do [modo de contêiner](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers) do Docker para Windows. A imagem Base de nossa amostra é a imagem 2.0-sdk do repositório microsoft/dotnet.
+A primeira instrução deve ser [**FROM**](https://docs.docker.com/engine/reference/builder/#from). Essa instrução inicializa um novo estágio de build e define a imagem Base para as instruções restantes. As marcas de vários arcos efetuam pull de contêineres do Windows ou Linux, dependendo do [modo de contêiner](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers) do Docker para Windows. A Imagem Base de nossa amostra é a imagem 2.1-sdk do repositório microsoft/dotnet.
 
 ```Dockerfile
-FROM microsoft/dotnet:2.0-sdk
+FROM microsoft/dotnet:2.1-sdk
 ```
 
 A instrução [**WORKDIR**](https://docs.docker.com/engine/reference/builder/#workdir) define o diretório de trabalho para as instruções restantes RUN, CMD, ENTRYPOINT, COPY e ADD do Dockerfile. Se o diretório não existir, ele será criado. Nesse caso, WORKDIR é definido como o diretório do aplicativo.
@@ -178,7 +171,7 @@ Essa instrução **COPY** copia o restante dos arquivos em nosso contêiner para
 COPY . ./
 ```
 
-Estamos publicando o aplicativo com essa instrução **RUN**. O comando [**dotnet publish**](../tools/dotnet-publish.md) compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto resultante de arquivos em um diretório. Nosso aplicativo é publicado com uma configuração **Versão** e uma saída para o diretório padrão.
+Estamos publicando o aplicativo com essa instrução **RUN**. O comando [**dotnet publish**](../tools/dotnet-publish.md) compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto resultantes de arquivos em um diretório. Nosso aplicativo é publicado com uma configuração **Versão** e uma saída para o diretório padrão.
 
 ```Dockerfile
 RUN dotnet publish -c Release -o out
@@ -196,7 +189,7 @@ Agora você tem um Dockerfile que:
 * as dependências do aplicativo para a imagem
 * compila o aplicativo para ser executado como um executável
 
-### <a name="build-and-run-the-hello-net-core-20-app"></a>Compilar e executar o aplicativo Hello .NET Core 2.0
+### <a name="build-and-run-the-hello-net-core-app"></a>Compilar e executar o aplicativo Hello .NET Core
 
 #### <a name="essential-docker-commands"></a>Comandos essenciais do Docker
 
@@ -222,9 +215,9 @@ docker run --rm dotnetapp-dev Hello from Docker
 A saída do comando `docker build` deverá ser semelhante à seguinte saída de console:
 
 ```console
-Sending build context to Docker daemon   72.7kB
-Step 1/7 : FROM microsoft/dotnet:2.0-sdk
- ---> d84f64b126a6
+Sending build context to Docker daemon   173.1kB
+Step 1/7 : FROM microsoft/dotnet:2.1-sdk
+ ---> 288f8c45f7c2
 Step 2/7 : WORKDIR /app
  ---> Using cache
  ---> 9af1fbdc7972
@@ -243,7 +236,7 @@ Step 6/7 : RUN dotnet publish -c Release -o out
 Step 7/7 : ENTRYPOINT dotnet out/Hello.dll
  ---> Using cache
  ---> 53c337887e18
-Successfully built 53c337887e18
+Successfully built 46db075bd98d
 Successfully tagged dotnetapp-dev:latest
 ```
 
@@ -261,14 +254,12 @@ Parabéns! Você acabou de:
 > * criar um Dockerfile para criar seu primeiro contêiner
 > * criar e executar seu aplicativo no Docker
 
-
-
 ## <a name="next-steps"></a>Próximas etapas
 
 Estas são algumas das próximas etapas que podem ser realizadas:
 
 * [Vídeo de introdução às imagens do Docker do .NET](https://channel9.msdn.com/Shows/Code-Conversations/Introduction-to-NET-Docker-Images-with-Kendra-Havens?term=docker)
-* [Visual Studio, Docker e Instâncias de Contêiner do Azure melhor juntos!](https://blogs.msdn.microsoft.com/alimaz/2017/08/17/visual-studio-docker-azure-container-instances-better-together/)
+* [Visual Studio, Docker e Instâncias de Contêiner do Azure melhor juntos!](https://medium.com/@AliMazaheri/visual-studio-docker-azure-container-instances-better-together-bf8c2f0419ae)
 * [Guias de início rápido do Docker para Azure](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Implantar seu aplicativo no Docker para Azure](https://docs.docker.com/docker-for-azure/deploy/)
 
@@ -279,7 +270,7 @@ Estas são algumas das próximas etapas que podem ser realizadas:
 
 As seguintes imagens do Docker são usadas nesta amostra
 
-* [`microsoft/dotnet:2.0-sdk`](https://hub.docker.com/r/microsoft/dotnet)
+* [`microsoft/dotnet:2.1-sdk`](https://hub.docker.com/r/microsoft/dotnet)
 
 ## <a name="related-resources"></a>Recursos relacionados
 

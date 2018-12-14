@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270468"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151129"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -28,9 +28,9 @@ A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](.
  Para obter mais informações sobre nomes fortes e assemblies com nome forte, consulte [Assemblies com nome forte](../../../docs/framework/app-domains/strong-named-assemblies.md) e [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
  A ferramenta Nome Forte é instalada automaticamente com o Visual Studio. Para iniciar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
 > [!NOTE]
->  Em computadores 64 bits, execute a versão 32 bits do Sn.exe usando o Prompt de Comando do Visual Studio e a versão 64 bits usando o Prompt de Comando Win64 do Visual Studio x64.  
+>  Em computadores 64 bits, execute a versão 32 bits do Sn.exe usando o Prompt de Comando do Visual Studio e a versão 64 bits usando o Prompt de Comando Win64 do Visual Studio x64. 
   
  No prompt de comando, digite o seguinte:  
   
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Para parâmetros (por exemplo, –**Vr**) gravados em recursos protegidos como, por exemplo, o Registro, execute SN.exe como um administrador.  
   
+A ferramenta Nome Forte pressupõe que os pares de chaves pública/privada são gerados com o identificador de algoritmo `AT_SIGNATURE`. Os pares de chaves pública/privada gerados com o algoritmo `AT_KEYEXCHANGE` geram um erro. 
+
 ## <a name="examples"></a>Exemplos  
  O comando a seguir cria um novo par de chaves aleatório e o armazena em `keyPair.snk`.  
   

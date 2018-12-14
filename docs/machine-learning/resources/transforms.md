@@ -1,15 +1,16 @@
 ---
-title: Transformações de dados
+title: Transformações de dados no ML.NET
 description: Explore as diferentes transformações de dados com suporte do ML.NET.
+author: JRAlexander
 ms.date: 10/16/2018
-ms.openlocfilehash: 5df4598de6fcd08689d72c378f51d792860ef49c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187735"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143942"
 ---
-# <a name="data-transforms"></a>Transformações de dados
+# <a name="data-transforms-in-mlnet"></a>Transformações de dados no ML.NET
 
 As tabelas a seguir contêm informações sobre todas as transformações de dados com suporte do ML.NET (selecione o tipo de transformação de dados para navegar para a tabela correspondente):
 

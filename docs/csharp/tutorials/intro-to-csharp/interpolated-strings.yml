@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Coleções em C#
-  ms.openlocfilehash: f1262beab39b78966d2be10fc983dfe1d4be998b
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200136"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53149205"
 items:
 - durationInMinutes: 2
   content: >
@@ -96,4 +96,8 @@ items:
     > [!NOTE]
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Você concluiu o guia de início rápido de interpolação de cadeias de caracteres. \n\nVocê pode continuar esses guias de início rápido em seu próprio ambiente de desenvolvimento local. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e selecione um início rápido. Você pode experimentar este guia de início rápido, ir diretamente ao próximo guia de início rápido ou começar novamente com o guia início rápido sobre [Números em C#](numbers-in-csharp-local.md).\n\nPara obter mais informações, confira o tópico [Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres no C#](../../tutorials/string-interpolation.md)."
+- content: >-
+    Você concluiu o tutorial interativo de interpolação de cadeias de caracteres. Clique no link **Coleções em C#** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A etapa "Continuar aprendendo" leva você de volta a esses tutoriais.
+
+
+    Para saber mais, confira [Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md).

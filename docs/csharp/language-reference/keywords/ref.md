@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195964"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
@@ -92,7 +92,7 @@ Para que o chamador modifique o estado do objeto, o valor retornado de referênc
 
 O método chamado também poderá declarar o valor retornado como `ref readonly` para retornar o valor por referência e, em seguida, impor que o código de chamada não possa modificar o valor retornado. O método de chamada pode evitar a cópia retornada com um valor ao armazenar o valor em um local [ref readonly](#ref-readonly-locals) variável.
 
-Para obter um exemplo, consulte [Um exemplo de ref returns e ref locals](#a-ref-returns-and-ref-locals-example)
+Para obter um exemplo, consulte [Um exemplo de ref returns e ref locals](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Ref locals
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Observe que, nos dois exemplos, a palavra-chave `ref` deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "Não é possível inicializar uma variável por referência com um valor".
+
+A partir do C# 7.3, a variável de iteração da instrução `foreach` pode ser ref local ou a variável local ref readonly. Para saber mais, confira o artigo [Instrução foreach](foreach-in.md).
 
 ## <a name="ref-readonly-locals"></a>Locais somente leitura de referência
 
@@ -145,13 +147,16 @@ Essas restrições garantem que você não use acidentalmente um `ref struct` de
 
 Você pode combinar modificadores para declarar um struct como `readonly ref`. Um `readonly ref struct` combina os benefícios e as restrições de declarações `ref struct` e `readonly struct`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Gravação de código segura e eficiente](../../write-safe-efficient-code.md)  
+- [Escrever código eficiente seguro](../../write-safe-efficient-code.md)  
+- [Retornos de ref e locais de ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
+- [Operador de atribuição ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Parâmetros de método](method-parameters.md)  
 - [Referência de C#](../index.md)  

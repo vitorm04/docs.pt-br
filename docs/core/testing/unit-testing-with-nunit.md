@@ -3,12 +3,12 @@ title: Teste de unidade em C# com NUnit e .NET Core
 description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de uma experiência interativa, criando passo a passo uma solução de exemplo, usando dotnet test e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746738"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146936"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
@@ -16,7 +16,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [O SDK do .NET Core 2.1 (v. 2.1.400)](https://www.microsoft.com/net/download) ou versões posteriores.
+- [SDK do .NET Core 2.1](https://www.microsoft.com/net/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.
 
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem

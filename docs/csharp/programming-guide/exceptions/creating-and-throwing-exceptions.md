@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260065"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145589"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
 As exceções são usadas para indicar que ocorreu um erro durante a execução do programa. Objetos de exceção que descrevem um erro são criados e, em seguida, *lançados* com a palavra-chave [throw](../../../csharp/language-reference/keywords/throw.md). Então, o tempo de execução procura o manipulador de exceção mais compatível.  
@@ -41,7 +41,7 @@ As exceções são usadas para indicar que ocorreu um erro durante a execução 
   
  Todas as exceções contêm uma propriedade chamada <xref:System.Exception.Message%2A>. Essa cadeia de caracteres deve ser definida para explicar o motivo da exceção. Observe que as informações que são sensíveis à segurança não devem ser colocadas no texto da mensagem. Além <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contém uma propriedade chamada <xref:System.ArgumentException.ParamName%2A> que deve ser definida como o nome do argumento que causou a exceção a ser lançada. No caso de um setter de propriedade <xref:System.ArgumentException.ParamName%2A> deve ser definido como `value`.  
   
- Os membros de métodos públicos e protegidos devem lançar exceções sempre que não puderem concluir suas funções pretendidas. A classe de exceção que é lançada deve ser a exceção mais específica disponível que se adapta às condições do erro. Essas exceções devem ser documentadas como parte da funcionalidade de classe e as classes derivadas ou as atualizações da classe original devem manter o mesmo comportamento para compatibilidade com versões anteriores.  
+ Os métodos públicos e protegidos devem lançar exceções sempre que não puderem concluir suas funções pretendidas. A classe de exceção que é lançada deve ser a exceção mais específica disponível que se adapta às condições do erro. Essas exceções devem ser documentadas como parte da funcionalidade de classe e as classes derivadas ou as atualizações da classe original devem manter o mesmo comportamento para compatibilidade com versões anteriores.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Coisas a serem evitadas ao lançar exceções  
  A lista a seguir identifica as práticas a serem evitadas ao lançar exceções:  

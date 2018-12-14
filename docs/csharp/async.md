@@ -4,12 +4,12 @@ description: Saiba mais sobre o modelo de programação assíncrona em nível li
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349089"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126491"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -108,7 +108,7 @@ Aqui estão duas perguntas que devem ser feitas antes de escrever qualquer códi
     
 Se o seu trabalho for **vinculado à E/S**, use `async` e `await` *sem* `Task.Run`.  Você *não deve* usar a biblioteca de paralelismo de tarefas.  A razão para isso está descrita no [artigo Programação assíncrona em detalhes](../standard/async-in-depth.md).
 
-Se o seu trabalho for **vinculado à CPU** e você se importa com a capacidade de resposta, use `async` e `await`, mas gere o trabalho em outro thread *com* `Task.Run`.  Se o trabalho for adequado para a simultaneidade e paralelismo, você também deverá considerar o uso da biblioteca de paralelismo de tarefas.
+Se o seu trabalho for **vinculado à CPU** e você se importa com a capacidade de resposta, use `async` e `await`, mas gere o trabalho em outro thread *com* `Task.Run`.  Se o trabalho for adequado para a simultaneidade e paralelismo, você também deverá considerar o uso da [Biblioteca de paralelismo de tarefas](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 Além disso, você sempre deve medir a execução do seu código.  Por exemplo, talvez você tenha uma situação em que seu trabalho vinculado à CPU não é caro o suficiente em comparação com os custos gerais das trocas de contexto ao realizar o multithreading.  Cada opção tem vantagens e desvantagens e você deve escolher o que é correto para a sua situação.
 

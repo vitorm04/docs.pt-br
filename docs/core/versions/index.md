@@ -4,18 +4,18 @@ description: Este artigo ensina como controlar a versão do SDK do .NET Core (se
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170711"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334802"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
 O .NET Core refere-se ao Tempo de Execução do .NET Core e ao SDK do .NET Core, que contém as ferramentas que necessárias para desenvolver aplicativos. Os SDKs do .NET Core são projetados para funcionar com qualquer versão anterior do Tempo de Execução do .NET Core. Este artigo explica o tempo de execução e a estratégia de versão do SDK. Uma explicação de números de versão do .NET Standard pode ser encontrada no artigo que faz a introdução do [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
-O Tempo de Execução do .NET Core e o SDK do .NET Core adicionam novos recursos em uma taxa diferente – em geral, o SDK do .NET Core fornece ferramentas atualizadas mais rapidamente do que o Tempo de Execução do .NET Core altera o tempo de execução que você usa em produção. Infelizmente, esse problema resultou em várias estratégias de controle de versão nos últimos anos. Você pode aprender sobre o histórico no artigo sobre [Controle de versão do .NET Core](version-history.md).
+O Tempo de Execução do .NET Core e o SDK do .NET Core adicionam novos recursos em uma taxa diferente – em geral, o SDK do .NET Core fornece ferramentas atualizadas mais rapidamente do que o Tempo de Execução do .NET Core altera o tempo de execução que você usa em produção.
 
 ## <a name="versioning-details"></a>Detalhes de controle de versão
 
@@ -32,7 +32,7 @@ A terceira posição do número de versão do SDK comunica o número de patch e 
 | Tempo de Execução e Patch do SDK | 2.2.1             | 2.2.102           |
 | Alteração de Recurso do SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Este gráfico usa um Tempo de Execução do .NET Core 2.2 futuro como exemplo porque um artefato de histórico que significou o primeiro SDK para .NET Core 2.1 é 2.1.300. Para obter mais informações, consulte o [histórico de controle de versão do .NET Core](version-history.md).
+(\*) Este gráfico usa um Tempo de Execução do .NET Core 2.2 futuro como exemplo porque um artefato de histórico que significou o primeiro SDK para .NET Core 2.1 é 2.1.300. Para obter mais informações, veja a [seleção de versão do .NET Core](selection.md).
 
 OBSERVAÇÕES:
 

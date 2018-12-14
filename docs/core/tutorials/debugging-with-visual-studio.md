@@ -1,20 +1,18 @@
 ---
-title: Depurar seu aplicativo Olá, Mundo em C# ou Visual Basic com .NET Core no Visual Studio 2017
+title: Depurar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 description: Saiba como depurar um aplicativo Olá, Mundo escrito em C# ou no Visual Basic com o Visual Studio 2017.
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200118"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147522"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Depurar seu aplicativo Olá, Mundo com o Visual Studio 2017
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017
 
-Até agora, você seguiu as etapas em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](.\with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017) para criar e executar um aplicativo de console simples. Após escrever e compilar seu aplicativo, você pode começar a testá-lo. O Visual Studio inclui um conjunto abrangente de ferramentas de depuração que você pode usar ao testar e solucionar problemas de seu aplicativo.
+Até agora, você seguiu as etapas em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017) para criar e executar um aplicativo de console simples. Após escrever e compilar seu aplicativo, você pode começar a testá-lo. O Visual Studio inclui um conjunto abrangente de ferramentas de depuração que você pode usar ao testar e solucionar problemas de seu aplicativo.
 
 ## <a name="debugging-in-debug-mode"></a>Depurando no modo de depuração
 
@@ -228,4 +226,4 @@ Para compilar e testar a versão de lançamento do seu aplicativo de console, al
 
 Ao pressionar F5 ou escolher **Compilar Solução** no menu **Compilar**, o Visual Studio compila a versão de lançamento do seu aplicativo de console. Você pode testá-lo como fez com a versão de depuração do aplicativo.
 
-Quando terminar de depurar seu aplicativo, a próxima etapa será publicar uma versão implantável do seu aplicativo. Para obter informações sobre como fazer isso, consulte [Publish the Hello World application with Visual Studio 2017](./publishing-with-visual-studio.md) (Publicar o aplicativo Olá, Mundo com o Visual Studio 2017).
+Quando terminar de depurar seu aplicativo, a próxima etapa será publicar uma versão implantável do seu aplicativo. Para obter informações sobre como fazer isso, consulte [Publish the Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicar o aplicativo Olá, Mundo com o Visual Studio 2017).

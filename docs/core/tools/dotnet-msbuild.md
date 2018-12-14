@@ -1,15 +1,13 @@
 ---
 title: Comando dotnet msbuild – CLI do .NET Core
 description: O comando dotnet msbuild fornece acesso à linha de comando MSBuild.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 76165590478b0e76d19d546c87e012da4716b6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 12/03/2018
+ms.openlocfilehash: 93471ded9614502ab89d5afb19dd9992f068ef80
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583688"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128041"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -27,22 +25,32 @@ ms.locfileid: "48583688"
 
 O comando `dotnet msbuild` permite o acesso a um MSBuild totalmente funcional.
 
-O comando tem exatamente os mesmos recursos do cliente de linha de comando existente do MSBuild. As opções são todas iguais. Para obter mais informações sobre as opções disponíveis, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+O comando tem exatamente os mesmos recursos do cliente de linha de comando existente do MSBuild somente para projetos no estilo SDK. As opções são todas iguais. Para obter mais informações sobre as opções disponíveis, confira a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+
+O comando [dotnet build](dotnet-build.md) é equivalente ao comando `dotnet msbuild -restore -target:Build`. `dotnet build` é mais comumente usado na criação de projetos, mas `dotnet msbuild` oferece mais controle. Por exemplo, se houver um destino específico que você deseja executar (sem executar o destino do build), convém usar `dotnet msbuild`.
 
 ## <a name="examples"></a>Exemplos
 
-Compile um projeto e suas dependências:
+* Compile um projeto e suas dependências:
 
-`dotnet msbuild`
+  ```console
+  dotnet msbuild
+  ```
 
-Compile um projeto e suas dependências usando a configuração da Versão:
+* Compile um projeto e suas dependências usando a configuração da Versão:
 
-`dotnet msbuild -p:Configuration=Release`
+  ```console
+  dotnet msbuild -p:Configuration=Release
+  ```
 
-Execute o destino de publicação e publique para o RID `osx.10.11-x64`:
+* Execute o destino de publicação e publique para o RID `osx.10.11-x64`:
 
-`dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64`
+  ```console
+  dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
+  ```
 
-Confira o projeto inteiro com todos os destinos incluídos pelo SDK:
+* Confira o projeto inteiro com todos os destinos incluídos pelo SDK:
 
-`dotnet msbuild -pp`
+  ```console
+  dotnet msbuild -pp
+  ```

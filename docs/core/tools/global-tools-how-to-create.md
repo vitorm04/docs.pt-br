@@ -4,12 +4,12 @@ description: Descreve como criar uma Ferramenta Global. A Ferramenta Global é u
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231193"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144567"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Criar uma Ferramenta Global do .NET Core usando a CLI do .NET Core
 
@@ -162,7 +162,7 @@ Em seguida, crie um pacote NuGet para seu aplicativo.
 dotnet pack
 ```
 
-O arquivo `botsay.1.0.0.nupkg` é criado na pasta identificada pelo valor XML `<PackageOutputPath>` do arquivo `botsay.csproj`, que neste exemplo é a pasta `./nupkg`. Isso torna mais fácil instalar e testar. Quando você desejar liberar uma ferramenta para o público, carregue-a para [https://www.nuget.org](https://www.nuget.org).
+O arquivo `botsay.1.0.0.nupkg` é criado na pasta identificada pelo valor XML `<PackageOutputPath>` do arquivo `botsay.csproj`, que neste exemplo é a pasta `./nupkg`. Isso torna mais fácil instalar e testar. Quando você desejar liberar uma ferramenta para o público, carregue-a para [https://www.nuget.org](https://www.nuget.org). Quando a ferramenta estiver disponível no NuGet, os desenvolvedores podem executar uma instalação da ferramenta em todo o usuário usando a opção `--global` do comando [dotnet tool install](dotnet-tool-install.md).
 
 Agora que você tem um pacote, instale a ferramenta desse pacote: 
 

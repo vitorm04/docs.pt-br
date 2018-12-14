@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509272"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146830"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -20,7 +20,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-O tipo especificado antes do `*` em um tipo de ponteiro é chamado de **tipo referrent**. Qualquer um dos tipos a seguir pode ser do tipo referrent:
+O tipo especificado antes do `*` em um tipo de ponteiro é chamado de **tipo referent**. Qualquer um dos tipos a seguir pode ser do tipo referent:
 
 - Qualquer tipo integral: [sbyte](../../language-reference/keywords/sbyte.md), [byte](../../language-reference/keywords/byte.md), [short](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [long](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).
 - Qualquer tipo de ponto flutuante: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).

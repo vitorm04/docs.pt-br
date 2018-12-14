@@ -1,23 +1,32 @@
 ---
-title: Como remover o SDK e o tempo de execução do .NET
-description: Instruções para remover os componentes do SDK e do Tempo de Execução do .NET Core no Windows, Mac e Linux
+title: Remover o SDK e o tempo de execução do .NET Core
+description: Este artigo descreve como determinar quais versões do tempo de execução e do SDK do .NET Core estão instaladas e, em seguida, como removê-las no Windows, Mac e Linux.
 ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
-ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989806"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129695"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Como remover o SDK e o Tempo de Execução do .NET Core
 
 Ao longo do tempo, ao instalar as versões atualizadas do tempo de execução e do SDK do .NET Core, você poderá desejar remover versões desatualizadas do .NET Core do seu computador. Remover versões mais antigas do tempo de execução pode mudar o tempo de execução escolhido para executar aplicativos de estrutura compartilhada, conforme detalhado no artigo [Seleção de versão do .NET Core](selection.md).
 
+## <a name="should-i-remove-a-version"></a>Devo remover uma versão?
+
+Os comportamentos de [seleção de versão do .NET Core](selection.md) e a compatibilidade do tempo de execução do .NET Core com as atualizações permitem a remoção segura de versões anteriores. As atualizações de tempo de execução do .NET core são compatíveis com uma “banda” de versão principal como 1.x e 2.x. Além disso, versões mais recentes do SDK do .NET Core geralmente mantêm a capacidade de compilar aplicativos destinados a versões anteriores do tempo de execução de uma maneira compatível.
+
+Em geral, você precisa apenas do SDK mais recente e da versão de patch mais recente dos tempos de execução necessários para seu aplicativo. Instâncias em que se deve reter versões mais antigas do SDK ou do tempo de execução incluem a manutenção de aplicativos baseados em **project.json**. A menos que seu aplicativo tenha motivos específicos para tempos de execução ou SDKs anteriores, você pode remover com segurança as versões mais antigas.
+
+## <a name="determine-what-is-installed"></a>Determinar o que está instalado
+
 Começando com o .NET Core 2.1, a CLI do .NET tem as opções que você pode usar para listar as versões do SDK e do tempo de execução que estão instaladas em seu computador.  Use [`dotnet --list-sdks`](../tools/dotnet.md#options) para ver a lista dos SDKs instalados em seu computador. Use [`dotnet --list-runtimes`](../tools/dotnet.md#options) para ver a lista dos tempos de execução instalados em seu computador. O texto a seguir mostra a saída típica para Windows, macOS ou Linux:
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -55,7 +64,7 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 ```console
 $ dotnet --list-sdks
@@ -89,7 +98,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 ```console
 $ dotnet --list-sdks
@@ -127,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstalling-net-core"></a>Desinstalando o .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 O .NET Core usa a caixa de diálogo **Adicionar ou Remover Programas** do Windows para remover as versões do SDK e do tempo de execução do .NET Core. A figura a seguir mostra a caixa de diálogo **Adicionar ou Remover Programas** com várias versões do tempo de execução e do SDK do .NET instaladas.
 
@@ -135,7 +144,7 @@ O .NET Core usa a caixa de diálogo **Adicionar ou Remover Programas** do Window
 
 Selecione todas as versões que você deseja remover do seu computador e clique em **Desinstalar**.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Há mais opções para desinstalar o .NET Core (SDK ou tempo de execução) no Linux. A melhor maneira para desinstalar o .NET Core é espelhar a ação que você usou para instalar o .NET Core. As especificações dependem de sua distribuição escolhida e do método de instalação.
 
@@ -178,7 +187,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Os diretórios pais para o SDK e o tempo de execução são listados na saída dos comandos `dotnet --list-sdks` e `dotnet --list-runtimes`, conforme mostrado na tabela anterior.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 No Mac, você remove os SDKs e os tempos de execução separadamente, removendo o diretório que contém essa versão. Por exemplo, para remover o SDK 1.0.1 e o tempo de execução, você usaria os seguintes comandos de bash:
 
@@ -190,7 +199,5 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 ```
 
 Os diretórios pais para o SDK e o tempo de execução são listados na saída dos comandos `dotnet --list-sdks` e `dotnet --list-runtimes`, conforme mostrado na tabela anterior.
-
-Começando com o .NET Core 2.1, não há necessidade de desinstalar o SDK do .NET Core ao atualizá-lo usando um gerenciador de pacotes. Os comandos `update` ou `refresh` do gerenciador de pacotes removerão automaticamente a versão mais antiga após a instalação bem-sucedida de uma versão mais recente.
 
 ---

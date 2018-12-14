@@ -4,12 +4,12 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c8c6688b7b29c7e65c723e1f1ff31b3bd4c8c1ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129136"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -52,7 +52,7 @@ O recurso coleta os seguintes dados:
 
 &#8224;Essa métrica é publicada.
 
-A partir do SDK 2.0 do .NET Core, os novos pontos de dados são coletados:
+A partir do SDK do .NET Core 2.0, novos pontos de dados são coletados:
 
 - opções e argumentos de comando do `dotnet`: somente argumentos e opções conhecidos são coletados (não cadeias de caracteres arbitrárias).
 - Se o SDK está em execução em um contêiner.

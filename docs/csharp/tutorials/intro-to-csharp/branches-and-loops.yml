@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: Interpolação de cadeias de caracteres em C#
-  ms.openlocfilehash: 492922177cf213400629fac79da30a51bdbf46e5
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: a3db445f522bc3360629c17386cad4423fcd1b43
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50201657"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53147155"
 items:
 - durationInMinutes: 1
   content: >
@@ -32,7 +32,7 @@ items:
   content: "Outro conceito importante para criar programas maiores são os **loops**. Você usará loops para repetir as instruções que deseja executar mais de uma vez. Experimente este código na janela interativa:\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\nA instrução `while` verifica uma condição e executa a instrução após `while`. Ela repetirá a verificação da condição e executará essas instruções até que a condição seja false.\n\nHá outro operador novo neste exemplo. O `++` após a variável `counter` é o operador **increment**. Ele adiciona 1 ao valor do contador e armazena esse valor na variável do contador.\n\n> [!IMPORTANT]\n> Verifique se a condição de loop `while` muda para false quando ao executar o código. Caso contrário, crie um **loop infinito**, para que seu programa nunca termine. Não vamos demonstrar isso porque o mecanismo que executa o código ultrapassará o tempo limite, e você não verá uma saída de seu programa.\n\nO loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. É semelhante ao seguinte:\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\nEsse loop `do` e o loop `while` anterior funcionam da mesma maneira. \n\nVamos passar para a última instrução de loop.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Trabalhar com o loop for
   durationInMinutes: 5
-  content: "Outra instrução de loop comum que você verá no código C# é o loop `for`. Experimente este código na janela interativa:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nEle faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona. \n\nA primeira parte é o **inicializador for**: `for counter = 0;` declara que `counter` é a variável do loop, e define seu valor inicial como `0`.\n\nA parte central é a **condição for**: `counter < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.\n\nA parte final é o **iterador for**: `counter++` especifica como modificar a variável de loop depois de executar o bloco após a instrução `for`. Aqui, ela especifica que `counter` deve ser incrementado com 1 sempre que o bloco for executado.\n\nExperimente você mesmo. Tente o seguinte:\n\n- Altere o inicializador para iniciar em um valor diferente.\n- Altere a condição para parar em um valor diferente.\n\nQuando terminar, vamos escrever um código para usar o que você aprendeu.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "Outra instrução de loop comum que você verá no código C# é o loop `for`. Experimente este código na janela interativa:\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nEle faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona. \n\nA primeira parte é o **inicializador for**: `int counter = 0;` declara que `counter` é a variável do loop, e define seu valor inicial como `0`.\n\nA parte central é a **condição for**: `counter < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.\n\nA parte final é o **iterador for**: `counter++` especifica como modificar a variável de loop depois de executar o bloco após a instrução `for`. Aqui, ela especifica que `counter` deve ser incrementado com 1 sempre que o bloco for executado.\n\nExperimente você mesmo. Tente o seguinte:\n\n- Altere o inicializador para iniciar em um valor diferente.\n- Altere a condição para parar em um valor diferente.\n\nQuando terminar, vamos escrever um código para usar o que você aprendeu.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Combinar branches e loops
   durationInMinutes: 12
   content: >
@@ -80,4 +80,17 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Parabéns!
-  content: "Você concluiu o tutorial \"branches e loops\". \n\nVocê pode continuar esses tutoriais em seu próprio ambiente de desenvolvimento. Conheça os fundamentos do [desenvolvimento local](local-environment.md) e selecione um tutorial. Você pode tentar esse mesmo exercício, ir diretamente para o próximo tutorial ou voltar ao início da série com o tutorial de [números em C#](numbers-in-csharp-local.md).\n\nSaiba mais sobre esses conceitos nestes tópicos:\n\n[Instrução If e else](../../language-reference/keywords/if-else.md)   \n[Instrução while](../../language-reference/keywords/while.md)   \n[Instrução Do](../../language-reference/keywords/do.md)   \n[Instrução for](../../language-reference/keywords/for.md)"
+  content: >-
+    Você concluiu o tutorial interativo "branches e loops". Clique no link **Cadeias de caracteres interpoladas** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A etapa "Continuar aprendendo" leva você de volta a esses tutoriais.
+
+
+    Saiba mais sobre esses conceitos nestes tópicos:
+
+
+    - [Instrução If e else](../../language-reference/keywords/if-else.md)
+
+    - [Instrução while](../../language-reference/keywords/while.md)
+
+    - [Instrução Do](../../language-reference/keywords/do.md)
+
+    - [Instrução for](../../language-reference/keywords/for.md)

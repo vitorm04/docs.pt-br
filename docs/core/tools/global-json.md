@@ -3,14 +3,14 @@ title: Visão geral do global.json
 description: Saiba como usar o arquivo global.json para definir a versão do SDK do .NET Core ao executar comandos de CLI do .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/30/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838072"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150843"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
@@ -46,14 +46,14 @@ O exemplo a seguir mostra o conteúdo de um arquivo *global.json*:
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json e CLI do .NET Core
 
-É bom saber quais versões estão disponíveis para definir um arquivo *global.json*. Encontre a lista completa de SDKs com suporte disponíveis no site [Downloads do .NET](https://www.microsoft.com/net/download/all). Começando com o .NET Core SDK 2.1, você pode executar o comando a seguir para verificar quais versões do SDK já estão instaladas em seu computador:
+É bom saber quais versões estão disponíveis para definir um arquivo *global.json*. Encontre a lista completa de SDKs com suporte disponíveis no site [Downloads do .NET](https://www.microsoft.com/net/download/all). A partir do SDK do .NET Core 2.1, você pode executar o comando a seguir para verificar quais versões do SDK já estão instaladas em seu computador:
 
 ```console
 dotnet --list-sdks
@@ -64,7 +64,7 @@ Para instalar versões adicionais do SDK do .NET Core em seu computador, visite 
 Você pode criar um novo arquivo *global.json* no diretório atual executando o comando [dotnet new](dotnet-new.md), como no exemplo a seguir:
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>Regras de correspondência
@@ -103,8 +103,8 @@ Este aviso indica que seu projeto está sendo compilado usando uma versão prév
 > [!WARNING]
 > O projeto de inicialização '{startupProject}' é direcionado à estrutura '.NETCoreApp' versão '{targetFrameworkVersion}'. Essa versão das ferramentas de linha de comando do .NET do Entity Framework Core são compatíveis apenas com a versão 2.0 ou superiores. Para obter informações de como usar as versões mais antigas das ferramentas, confira <https://go.microsoft.com/fwlink/?linkid=871254>
 
-Começando com o SDK do .NET Core 2.1 (v. 2.1.300), o comando `dotnet ef` vem incluído no SDK. Este aviso indica que o projeto é direcionado ao EF Core 1.0 ou 1.1, que não é compatível com o .NET Core SDK 2.1 e as versões posteriores. Para compilar seu projeto, instale o SDK do .NET Core 2.0 (v. 2.1.201) e versões anteriores em seu computador e defina a versão do SDK desejada usando o arquivo *global.json*. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
+A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Este aviso indica que o projeto é direcionado ao EF Core 1.0 ou 1.1, que não é compatível com o SDk do .NET Core 2.1 e versões posteriores. Para compilar seu projeto, instale o SDK do .NET Core 2.0 (versão 2.1.201) e versões anteriores em seu computador e defina a versão do SDK desejada usando o arquivo *global.json*. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Consulte também
 
-* [Como os SDKs do projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Como os SDKs do projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

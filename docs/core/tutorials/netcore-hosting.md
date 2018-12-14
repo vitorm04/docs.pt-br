@@ -1,17 +1,18 @@
 ---
-title: Hospedando o .NET Core
-description: Hospedando o tempo de execução do .NET Core com base no código nativo
+title: Escrever um host de tempo de execução personalizado do .NET Core
+description: Saiba como hospedar o tempo de execução do .NET Core a partir do código nativo para dar suporte a cenários avançados que exigem o controle de como o tempo de execução do .NET Core funciona.
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218600"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146934"
 ---
-# <a name="hosting-net-core"></a>Hospedando o .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escreva um host personalizado do .NET Core para controlar o tempo de execução do .NET a partir de seu código nativo
 
 Como todo código gerenciado, os aplicativos .NET Core são executados por um host. O host é responsável por iniciar o tempo de execução (incluindo componentes como JIT e coletor de lixo), criar AppDomains e invocar pontos de entrada gerenciados.
 
@@ -82,7 +83,6 @@ As propriedades comuns de AppDomain incluem:
 *  `APP_NI_PATHS` Essa lista é muito semelhante a APP_PATHS, com exceção de que foi projetada para serem caminhos que serão investigados quanto a imagens nativas.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Essa propriedade é uma lista de caminhos que o carregador deverá investigar ao procurar DLLs nativas chamadas por meio de p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Essa lista inclui caminhos a serem investigados quanto a assemblies satélite de recursos (em subdiretórios específicos à cultura).
-*  `AppDomainCompatSwitch` Essa cadeia de caracteres especifica quais particularidades de compatibilidade deverão ser usadas para assemblies sem um Moniker de Estrutura de Destino explícito (um atributo no nível de assembly que indica em qual Estrutura um assembly deve ser executado). Normalmente, isso deve ser definido como `"UseLatestBehaviorWhenTFMNotSpecified"`, mas alguns hosts podem preferir obter particularidades de compatibilidade do Silverlight ou do Windows Phone mais antigas.
 
 Em nosso [host de exemplo simples](https://github.com/dotnet/samples/tree/master/core/hosting), essas propriedades são configuradas da seguinte maneira:
 

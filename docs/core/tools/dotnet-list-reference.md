@@ -1,15 +1,13 @@
 ---
 title: Comando dotnet list reference – CLI do .NET Core
 description: O comando dotnet list reference fornece uma opção conveniente para listar referências projeto a projeto.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/03/2018
+ms.openlocfilehash: 58b4e07abfe95d1febdd54d117825ecedf502e61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697177"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152586"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -25,26 +23,30 @@ ms.locfileid: "34697177"
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet list reference` fornece uma opção conveniente para listar as referências de projeto de determinado projeto.
+O comando `dotnet list reference` fornece uma opção conveniente para listar as referências de projeto de determinado projeto ou solução.
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+* **`PROJECT`**
 
-Especifica o arquivo de projeto para usar para listar referências. Se não é especificado, o comando pesquisa um arquivo de projeto no diretório atual.
+  Especifica o arquivo de projeto para usar para listar referências. Se não é especificado, o comando pesquisa um arquivo de projeto no diretório atual.
 
 ## <a name="options"></a>Opções
 
-`-h|--help`
+* **`-h|--help`**
 
-Imprime uma ajuda breve para o comando.
+  Imprime uma ajuda breve para o comando.
 
 ## <a name="examples"></a>Exemplos
 
-Listar as referências de projeto do projeto especificado:
+* Listar as referências de projeto do projeto especificado:
 
-`dotnet list app/app.csproj reference`
+  ```console
+  dotnet list app/app.csproj reference
+  ```
 
-Listar as referências de projeto do projeto no diretório atual:
+* Listar as referências de projeto do projeto no diretório atual:
 
-`dotnet list reference`
+  ```console
+  dotnet list reference
+  ```

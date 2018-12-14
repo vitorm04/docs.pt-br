@@ -1,18 +1,18 @@
 ---
-title: Glossário de aprendizado de máquina
-description: Um glossário de termos de aprendizado de máquina.
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: Glossário de aprendizado de máquina – ML.NET
+description: Um glossário de termos essenciais sobre o aprendizado de máquina, que são úteis ao criar seus modelos personalizados no ML.NET.
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453197"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150570"
 ---
-# <a name="machine-learning-glossary"></a>Glossário de aprendizado de máquina
+# <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
-A lista a seguir é uma compilação de importantes termos de aprendizado de máquina que são úteis ao criar seus modelos personalizados.
+A lista a seguir é uma compilação de termos essenciais sobre o aprendizado de máquina, que são úteis ao criar seus modelos personalizados no ML.NET.
 
 ## <a name="accuracy"></a>Precisão
 

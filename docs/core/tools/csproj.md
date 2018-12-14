@@ -4,12 +4,12 @@ description: Saiba mais sobre as diferenças entre arquivos existentes e de cspr
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203950"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143695"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -75,9 +75,6 @@ Para desabilitar **todos os globs implícitos**, defina a propriedade `<EnableDe
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Recomendação
-Com o csproj, recomendamos remover os globs padrão do projeto e adicionar apenas os caminhos de arquivo com globs para esses artefatos que são necessários para o aplicativo ou a biblioteca para vários cenários (por exemplo, tempo de execução e Empacotamento NuGet).
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Como ver o projeto inteiro conforme exibido pelo MSBuild
 
@@ -195,8 +192,12 @@ Um título amigável do pacote, geralmente usado em exibições de interface do 
 ### <a name="authors"></a>Autores
 Uma lista separada por ponto e vírgula de autores de pacotes, que correspondem aos nomes de perfil em nuget.org. Eles são exibidos na Galeria do NuGet em nuget.org e são usados para fazer referência cruzada aos pacotes dos mesmos autores.
 
-### <a name="description"></a>Descrição
+### <a name="packagedescription"></a>PackageDescription
+
 Uma descrição longa do pacote para exibição de interface do usuário.
+
+### <a name="description"></a>Descrição
+Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificada, essa propriedade também será usada como a descrição do pacote.
 
 ### <a name="copyright"></a>Copyright
 Detalhes sobre direitos autorais do pacote.

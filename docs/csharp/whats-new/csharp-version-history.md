@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316253"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145326"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -33,7 +33,7 @@ Os principais recursos do C# 1.0 incluíam:
 - [Expressões](../programming-guide/statements-expressions-operators/expressions.md)
 - [Instruções](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
-- Literais
+- [Literais](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# versão 1.2
 
@@ -72,9 +72,9 @@ O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, p
 - [Propriedades autoimplementadas](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Expressões de consulta](../linq/query-expression-basics.md)
-- [Expressão lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [Árvores de expressão](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [Métodos de extensão](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Expressões lambda](../lambda-expressions.md)
+- [Árvores de expressão](../expression-trees.md)
+- [Métodos de extensão](../programming-guide/classes-and-structs/extension-methods.md)
 - [Variáveis locais implicitamente tipadas](../language-reference/keywords/var.md)
 - [Métodos parciais](../language-reference/keywords/partial-method.md)
 - [Inicializadores de objeto e de coleção](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -96,7 +96,7 @@ A próxima versão introduziu alguns novos recursos interessantes:
 - [Associação dinâmica](../language-reference/keywords/dynamic.md)
 - [Argumentos opcionais/nomeados](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Genérico covariante e contravariante](../../standard/generics/covariance-and-contravariance.md)
-- [Tipos de interoperabilidade inseridos](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [Tipos de interoperabilidade inseridos](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 Os tipos de interoperabilidade inseridos atenuaram um problema de implantação. A contravariância e a covariância genérica oferecem maior capacidade para usar genéricos, mas eles são um tanto acadêmicos e provavelmente mais apreciados por autores de estruturas e bibliotecas. Os parâmetros nomeados e opcionais permitem eliminar várias sobrecargas de método e oferecem conveniência. Mas nenhum desses recursos é exatamente uma alteração de paradigma.
 
@@ -123,13 +123,13 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Na versão 6.0, ele abre mão de um recurso arrasador dominante liberando, em vez disso, muitos recursos menores que tornam a programação em C# mais produtiva. Aqui estão alguns deles:
 
-- [Importações estáticas](../language-reference/keywords/using-static.md)
-- [Filtros de exceção](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [Inicializadores de propriedade](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [Membros aptos para expressão](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Propagador nulo](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md)
-- [Operador nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
+- [Importações estáticas](./csharp-6.md#using-static)
+- [Filtros de exceção](./csharp-6.md#exception-filters)
+- [Inicializadores de propriedade automática](./csharp-6.md#auto-property-initializers)
+- [Membros aptos para expressão](./csharp-6.md#expression-bodied-function-members)
+- [Propagador nulo](./csharp-6.md#null-conditional-operators)
+- [Interpolação de cadeia de caracteres](./csharp-6.md#string-interpolation)
+- [Operador nameof](./csharp-6.md#the-nameof-expression)
 - [Inicializadores de índice](csharp-6.md#index-initializers)
 
 Outros novos recursos incluem:
@@ -145,20 +145,19 @@ Fizeram ainda outra coisa com esta versão, embora não seja um recurso de lingu
 
 A versão principal mais recente do C# é a versão 7.0. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
 
-- [Variáveis Out](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [Tuplas e desconstrução](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Variáveis Out](./csharp-7.md#out-variables)
+- [Tuplas e desconstrução](./csharp-7.md#tuples)
 - [Correspondência de padrões](./csharp-7.md#pattern-matching)
-- [Funções locais](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Funções locais](./csharp-7.md#local-functions)
 - [Membros aptos para expressão expandidos](./csharp-7.md#more-expression-bodied-members)
 - [Locais e retornos de ref](./csharp-7.md#ref-locals-and-returns)
 
 Outros recursos incluíam:
 
-- [Descarta](../discards.md)
-- [Literais binários](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [Separadores de dígito](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- Locais e retornos de ref
-- [Expressões throw](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [Descarta](./csharp-7.md#discards)
+- [Literais binários e os separadores de dígito](./csharp-7.md#numeric-literal-syntax-improvements)
+- [Locais e retornos de ref](./csharp-7.md#ref-locals-and-returns)
+- [Expressões throw](./csharp-7.md#throw-expressions)
 
 Todas essas funcionalidades oferecem novos recursos interessantes para desenvolvedores e a oportunidade de escrever um código mais limpo do que nunca. Um ponto alto é a condensação da declaração de variáveis a serem usadas com a palavra-chave `out` e a permissão de vários valores retornados por meio de tupla.
 
