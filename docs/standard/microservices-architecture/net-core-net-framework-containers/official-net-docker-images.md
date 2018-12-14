@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075561"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131372"
 ---
 # <a name="official-net-docker-images"></a>Imagens oficiais do .NET Docker
 
@@ -41,7 +41,7 @@ O que é importante na produção é a rapidez com que é possível implantar e 
 
 Nesta imagem otimizada você colocar somente os binários e outro conteúdo necessário para executar o aplicativo. Por exemplo, o conteúdo criado pelo dotnet publish contém apenas os binários do .NET compilados, imagens e arquivos .js e .css. Ao longo do tempo, você verá imagens que contêm pacotes pré-compilados (compilação de IL para nativa que ocorre em tempo de execução).
 
-Embora haja várias versões das imagens do .NET Core e do ASP.NET Core, todas elas compartilham uma ou mais camadas, incluindo a camada base. Portanto, a quantidade de espaço em disco necessário para armazenar uma imagem é pequena; ela é composta apenas pelo delta entre sua imagem personalizada e sua imagem de base. O resultado é que é rápido extrair a imagem do Registro.
+Embora haja várias versões das imagens do .NET Core e do ASP.NET Core, todas elas compartilham uma ou mais camadas, incluindo a camada base. Portanto, a quantidade de espaço em disco necessário para armazenar uma imagem é pequena, ela é composta apenas pelo delta entre sua imagem personalizada e sua imagem de base. O resultado é que é rápido extrair a imagem do Registro.
 
 Quando você explorar os repositórios de imagem do .NET no Hub do Docker, encontrará várias versões de imagem confidenciais ou marcadas. Essas marcas ajudam a decidir qual usar, dependendo da versão de que você precisa, como as que estão na tabela a seguir:
 
@@ -50,7 +50,6 @@ Quando você explorar os repositórios de imagem do .NET no Hub do Docker, encon
 | microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, somente com tempo de execução e otimizações de ASP.NET Core, no Linux e no Windows (várias arquiteturas) |
 | microsoft/dotnet:**2.1-sdk**                | .NET Core, com SDKs incluídos, no Linux e no Windows (várias arquiteturas)                                  |
 
-
 >[!div class="step-by-step"]
-[Anterior](net-container-os-targets.md)
-[Próximo](../architect-microservice-container-applications/index.md)
+>[Anterior](net-container-os-targets.md)
+>[Próximo](../architect-microservice-container-applications/index.md)

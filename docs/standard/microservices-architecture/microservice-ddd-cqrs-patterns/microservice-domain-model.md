@@ -1,19 +1,19 @@
 ---
 title: Criando um modelo de domínio de microsserviço
-description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Criando um modelo de domínio de microsserviço
+description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os principais conceitos ao projetar um modelo de domínio orientado a DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143595"
 ---
-# <a name="designing-a-microservice-domain-model"></a>Criando um modelo de domínio de microsserviço
+# <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
 
-*Definir um modelo de domínio avançado para cada microsserviço de negócios ou Contexto Limitado*
+*Definir um modelo de domínio avançado para cada microsserviço empresarial ou Contexto Limitado.*
 
 Sua meta é criar um único modelo de domínio coeso para cada microsserviço de negócios ou BC (Contexto Limitado). No entanto, tenha em mente que um microsserviço de BC ou de continuidade de negócios, às vezes, pode ser composto por vários serviços físicos que compartilham um único modelo de domínio. O modelo de domínio precisa capturar as regras, o comportamento, a linguagem de negócios e as restrições do único Contexto Limitado ou microsserviço de negócios que ele representa.
 
@@ -23,19 +23,19 @@ As entidades representam objetos de domínio e são definidas principalmente pel
 
 *A identidade de uma entidade pode cruzar vários microsserviços ou contextos limitados.*
 
-A mesma identidade (mas não a mesma entidade) pode ser modelada em vários Contextos Limitados ou microsserviços. No entanto, isso não significa que a mesma entidade, com os mesmos atributos e a mesma lógica, possa ser implementada em vários Contextos Limitados. Nesse caso, as entidades em cada Contexto Limitado limitam seus atributos e comportamentos aos que são necessários no domínio do Contexto Limitado.
+A mesma identidade (ou seja, o mesmo valor `Id`, embora talvez não a mesma entidade de domínio) pode ser modelada em vários Contextos Limitados ou microsserviços. No entanto, isso não significa que a mesma entidade, com os mesmos atributos e a mesma lógica, possa ser implementada em vários Contextos Limitados. Nesse caso, as entidades em cada Contexto Limitado limitam seus atributos e comportamentos aos que são necessários no domínio do Contexto Limitado.
 
 Por exemplo, a entidade de comprador talvez tenha a maioria dos atributos de uma pessoa que estão definidos na entidade de usuário no microsserviço de perfil ou de identidade, incluindo a identidade. Mas a entidade de comprador no microsserviço de pedidos pode ter menos atributos, porque somente determinados dados do comprador estão relacionados ao processo de pedido. O contexto de cada microsserviço ou o Contexto Limitado afeta o modelo de domínio.
 
-*As entidades de domínio precisam implementar o comportamento, além de implementar os atributos de dados*
+*As entidades de domínio precisam implementar o comportamento, além de implementar os atributos de dados.*
 
 Uma entidade de domínio no DDD precisa implementar a lógica do domínio ou o comportamento relacionado aos dados da entidade (o objeto acessado na memória). Por exemplo, como parte de uma classe de entidade de pedido, você precisa ter a lógica de negócios e as operações implementadas como métodos para tarefas como adicionar um item de pedido, validação de dados e cálculo de total. Os métodos da entidade encarregam-se das invariáveis e das regras da entidade em vez de disseminar essas regras na camada de aplicativo.
 
-A Figura 9-8 mostra uma entidade de domínio que, além de implementar os atributos de dados, também implementa as operações ou os métodos com a lógica de domínio relacionada.
+A Figura 7-8 mostra uma entidade de domínio que, além de implementar os atributos de dados, também implementa as operações ou os métodos com a lógica de domínio relacionada.
 
-![](./media/image9.png)
+![Uma entidade de modelo de domínio implementa comportamentos por meio de métodos, ou seja, não é um modelo "anêmico".](./media/image9.png)
 
-**Figura 9-8**. Exemplo de um projeto de entidade de domínio implementando dados e também comportamento
+**Figura 7-8**. Exemplo de um projeto de entidade de domínio implementando dados e também comportamento
 
 Obviamente, também é possível haver entidades que não implementam nenhuma lógica como parte da classe da entidade. Isso poderá ocorrer em entidades filhas dentro de uma agregação se a entidade filha não tiver nenhuma lógica especial porque a maioria da lógica está definida na raiz da agregação. Se houver um microsserviço complexo com muita lógica implementada em classes de serviço e não nas entidades de domínio, você poderá cair no modelo de domínio anêmico, que será explicado na próxima seção.
 
@@ -57,15 +57,14 @@ Algumas pessoas dizem que o modelo de domínio anêmico é um antipadrão. Isso 
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **DevIQ. Entidade de domínio**
-    [*https://deviq.com/entity/*](https://deviq.com/entity/)
+- **DevIQ. Entidade de domínio** \
+  [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
--   **Martin Fowler. O modelo de domínio**
-    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+- **Martin Fowler. O modelo de domínio** \
+  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler. The Anemic Domain Model** (O modelo de domínio anêmico)
-
-    <https://martinfowler.com/bliki/AnemicDomainModel.html>
+- **Martin Fowler. The Anemic Domain Model** \ (O modelo de domínio anêmico)
+  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>O padrão de objeto de valor
 
@@ -79,18 +78,20 @@ Uma pessoa com um nome e um sobrenome geralmente é uma entidade, porque a pesso
 
 Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e em ORMs, como o EF, mas em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
 
+O EF Core 2.0 inclui o recurso [Entidades de Propriedade](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que torna mais fácil lidar com objetos de valor, como veremos em detalhes posteriormente.
+
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Martin Fowler. Padrão de objeto de valor**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler. Padrão de objeto de valor**
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Objeto de valor**
-    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- **Objeto de valor**
+  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
--   **Objetos de valor no Desenvolvimento Orientado por Testes**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- **Objetos de valor no Desenvolvimento Orientado por Testes**
+  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Design orientado por domínio: lidando com a complexidade no núcleo do software).** (Livro; inclui uma discussão sobre objetos de valor) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>O padrão de agregação
 
@@ -104,15 +105,15 @@ Pode ser difícil identificar agregações. Uma agregação é um grupo de objet
 
 Uma agregação é composta por pelo menos uma entidade: a raiz de agregação, também chamada de entidade raiz ou entidade principal. Além disso, ela pode ter várias entidades filhas e objetos de valor, com todas as entidades e os objetos trabalhando juntos para implementar as transações e os comportamentos necessários.
 
-A finalidade de uma raiz de agregação é garantir a consistência da agregação. Ela deve ser o único ponto de entrada para as atualizações da agregação por meio de métodos ou operações na classe raiz de agregação. Você deve fazer alterações nas entidades na agregação apenas por meio da raiz de agregação. Ela é a proteção da consistência da agregação, levando em conta todas as invariáveis e as regras de consistência que devem ser obedecidas na agregação. Se você alterar uma entidade filha ou um objeto de valor de forma independente, a raiz de agregação não poderá garantir que a agregação esteja em um estado válido. Isso seria semelhante a uma tabela com um segmento flexível. Manter a consistência é o principal objetivo da raiz de agregação.
+A finalidade de uma raiz de agregação é garantir a consistência da agregação. Ela deve ser o único ponto de entrada para as atualizações da agregação por meio de métodos ou operações na classe raiz de agregação. Você deve fazer alterações nas entidades na agregação apenas por meio da raiz de agregação. Ela é a proteção da consistência da agregação, considerando todas as invariáveis e as regras de consistência que devem ser obedecidas na agregação. Se você alterar uma entidade filha ou um objeto de valor de forma independente, a raiz de agregação não poderá garantir que a agregação esteja em um estado válido. Isso seria semelhante a uma tabela com um segmento flexível. Manter a consistência é o principal objetivo da raiz de agregação.
 
-Na Figura 9-9, veja as agregações de exemplo, como a agregação de comprador, que contém uma única entidade (a raiz de agregação de comprador). A agregação de pedido contém várias entidades e um objeto de valor.
+Na Figura 7-9, veja as agregações de exemplo, como a agregação de comprador, que contém uma única entidade (a raiz de agregação de comprador). A agregação de pedido contém várias entidades e um objeto de valor.
 
-![](./media/image10.png)
+![Um modelo de domínio de DDD é composto por agregações, uma agregação pode ter uma única entidade ou mais e pode incluir também objetos de valor.](./media/image10.png)
 
-**Figura 9-9**. Exemplo de agregações com uma única entidade ou com várias entidades
+**Figura 7-9**. Exemplo de agregações com uma única entidade ou com várias entidades
 
-Observe que a agregação de comprador poderá ter entidades filhas adicionais, dependendo do domínio, como ocorre no microsserviço de pedidos no aplicativo eShopOnContainers de referência. A Figura 9-9 apenas ilustra um caso em que o comprador tem uma única entidade, como exemplo de uma agregação que contém somente uma raiz de agregação.
+Observe que a agregação de comprador poderá ter entidades filhas adicionais, dependendo do domínio, como ocorre no microsserviço de pedidos no aplicativo eShopOnContainers de referência. A Figura 7-9 apenas ilustra um caso em que o comprador tem uma única entidade, como exemplo de uma agregação que contém somente uma raiz de agregação.
 
 Para manter a separação de agregações e manter limites claros entre elas, uma prática recomendada em um modelo de domínio de DDD é não permitir a navegação direta entre as agregações e ter apenas o campo de FK (chave estrangeira), como foi implementado no [Modelo de domínio do microsserviço de pedidos](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) no eShopOnContainers. A entidade de pedido tem apenas um campo FK para o comprador, mas não uma propriedade de navegação do EF Core, conforme é mostrado no código a seguir:
 
@@ -133,24 +134,24 @@ Para identificar e trabalhar com agregações é necessário fazer pesquisas e t
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **Vaughn Vernon. Design de agregação eficaz – parte I: modelando uma única agregação**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon. Design de agregação eficaz – parte I: modelando uma única agregação** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Design de agregação eficaz – parte II: fazendo com que agregações trabalhem em conjunto**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon. Design de agregação eficaz – parte II: fazendo com que agregações trabalhem em conjunto** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon. Design de agregação eficaz – parte III: obtendo insights por meio da descoberta**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon. Design de agregação eficaz – parte III: obtendo insights por meio da descoberta** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
--   **Sergey Grybniak. Padrões de design tático em DDD**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+- **Sergey Grybniak. Padrões de design tático em DDD** \
+  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+- **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações** \
+  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. O padrão de agregação**
-    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+- **DevIQ. O padrão de agregação** \
+  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
-[Anterior](ddd-oriented-microservice.md)
-[Próximo](net-core-microservice-domain-model.md)
+>[Anterior](ddd-oriented-microservice.md)
+>[Próximo](net-core-microservice-domain-model.md)

@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308585"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152768"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -83,7 +83,7 @@ O ASP.NET Core tem suporte interno para uma técnica conhecida como [injeção d
 
 A adesão estática ocorre quando as classes fazem chamadas a métodos estáticos ou acessam propriedades estáticas que têm efeitos colaterais ou dependências na infraestrutura. Por exemplo, se você tiver um método que chama um método estático, que, por sua vez, grava em um banco de dados, o método terá um acoplamento rígido com o banco de dados. Qualquer coisa que interrompa essa chamada de banco de dados interromperá o método. O teste desses métodos é notoriamente difícil, pois testes desse tipo exigem bibliotecas fictícias comerciais para simular as chamadas estáticas ou podem ser testados somente com um banco de dados de teste em vigor. As chamadas estáticas que não têm nenhuma dependência na infraestrutura, especialmente aquelas que estão completamente sem estado, têm a permissão de chamar e não têm nenhum impacto sobre o acoplamento ou a capacidade de teste (além do acoplamento do código com a própria chamada estática).
 
-Muitos desenvolvedores entendem os riscos da adesão estática e do estado global, mas ainda acoplarão rigidamente o código com implementações específicas por meio da criação de instância direta. A frase "new é associação" deve ser um lembrete desse acoplamento e não uma reprovação geral do uso da palavra-chave new. Assim como ocorre com chamadas de método estático, novas instâncias de tipos que não têm nenhuma dependência externa normalmente não acoplam rigidamente o código com detalhes de implementação nem dificultam mais o teste. No entanto, sempre que for criada uma instância para uma classe, reserve um breve momento para considerar se faz sentido embutir essa instância específica em código em um local específico ou se é um melhor design solicitar essa instância como uma dependência.
+Muitos desenvolvedores entendem os riscos da adesão estática e do estado global, mas ainda acoplarão rigidamente o código com implementações específicas por meio da criação de instância direta. A frase "new é associação" deve ser um lembrete desse acoplamento e não uma reprovação geral do uso da palavra-chave `new`. Assim como ocorre com chamadas de método estático, novas instâncias de tipos que não têm nenhuma dependência externa normalmente não acoplam rigidamente o código com detalhes de implementação nem dificultam mais o teste. No entanto, sempre que for criada uma instância para uma classe, reserve um breve momento para considerar se faz sentido embutir essa instância específica em código em um local específico ou se é um melhor design solicitar essa instância como uma dependência.
 
 ### <a name="declare-your-dependencies"></a>Declarar as dependências
 
@@ -559,5 +559,5 @@ _Saiba mais sobre as opções de implantação do Azure no [Capítulo 10](develo
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Anterior](common-client-side-web-technologies.md)
-[Próximo](work-with-data-in-asp-net-core-apps.md)
+>[Anterior](common-client-side-web-technologies.md)
+>[Próximo](work-with-data-in-asp-net-core-apps.md)

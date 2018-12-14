@@ -3,15 +3,15 @@ title: Frameworks de destino
 description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
 author: richlander
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7418c07a211333655501dd9f3d16e72e40564ffd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842095"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147445"
 ---
 # <a name="target-frameworks"></a>Frameworks de destino
 
@@ -32,7 +32,7 @@ A tabela a seguir define as estruturas de destino mais comuns, como elas são re
 | Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/D                                     |
-| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
+| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versões de estrutura de destino com suporte
@@ -42,7 +42,7 @@ Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seg
 | Estrutura de Destino           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seg
 
 ## <a name="how-to-specify-target-frameworks"></a>Como especificar estruturas de destino
 
-As estruturas de destino são especificadas no arquivo de projeto. Quando uma única estrutura de destino é especificada, use o elemento **TargetFramework**. O seguinte arquivo de projeto de aplicativo do console demonstra como destinar ao .NET Core 2.0:
+As estruturas de destino são especificadas no arquivo de projeto. Quando uma única estrutura de destino é especificada, use o elemento **TargetFramework**. O seguinte arquivo de projeto de aplicativo do console demonstra como destinar ao .NET Core 2.2:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
 </Project>

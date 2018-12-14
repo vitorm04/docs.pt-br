@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404613"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154197"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -219,7 +219,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 Para aplicativos ASP.NET Core, a classe TestServer facilita muito a gravação de testes funcionais. É possível configurar um TestServer usando um WebHostBuilder diretamente (assim como você normalmente para seu aplicativo) ou com o tipo WebApplicationFactory (disponível no 2.1). Você deve tentar corresponder o host de teste ao host de produção ao máximo possível, para que seus testes exerçam um comportamento semelhante ao que o aplicativo exercerá em produção. A classe WebApplicationFactory é útil para a configuração de ContentRoot do TestServer, que é usado pelo ASP.NET Core para localizar recursos estáticos, como Exibições.
 
-Você pode criar testes funcionais simples criando uma classe de teste que implementa IClassFixture<WebApplicationFactory<TEntry>> em que TEntry é a classe de inicialização do aplicativo Web. Com isso em vigor, o acessório de teste pode criar um cliente usando o método CreateClient do alocador:
+Você pode criar testes funcionais simples criando uma classe de teste que implementa IClassFixture\<WebApplicationFactory\<TEntry>>, em que TEntry é a classe de inicialização do aplicativo Web. Com isso em vigor, o acessório de teste pode criar um cliente usando o método CreateClient do alocador:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -347,5 +347,5 @@ namespace FunctionalTests.WebRazorPages
 Esse teste funcional emprega a pilha completa do aplicativo ASP.NET Core MVC/Razor Pages, incluindo todos os middlewares, filtros, associadores e outros que possam estar em vigor. Ele verifica se uma determinada rota ("/") retorna o código de status de êxito esperado e a saída HTML. Ele faz isso sem configurar um servidor Web real e, portanto, evita grande parte da fragilidade decorrente do uso de um servidor Web real (por exemplo, problemas com as configurações de firewall). Em geral, os testes funcionais executados no TestServer são mais lentos do que os testes de integração e de unidade, mas são muito mais rápidos do que os testes que seriam executados na rede em um servidor Web de teste. Use os testes funcionais para garantir a que pilha de front-end do aplicativo esteja funcionando conforme o esperado. Esses testes são úteis principalmente quando você encontra duplicação em seus controladores ou páginas e soluciona a duplicação adicionando filtros. O ideal é que essa refatoração não altere o comportamento do aplicativo e um conjunto de testes funcionais pode verificar se isso ocorreu.
 
 >[!div class="step-by-step"]
-[Anterior](work-with-data-in-asp-net-core-apps.md)
-[Próximo](development-process-for-azure.md)
+>[Anterior](work-with-data-in-asp-net-core-apps.md)
+>[Próximo](development-process-for-azure.md)

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105940"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143864"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>Armazenando segredos de aplicativo com segurança durante o desenvolvimento
 
@@ -41,7 +41,7 @@ Observe que as variáveis de ambiente geralmente são armazenadas como texto sem
 
 A ferramenta [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) do ASP.NET Core oferece outro método de manter segredos fora do código-fonte. Para usar a ferramenta Secret Manager, inclua uma referência de ferramentas (DotNetCliToolReference) ao pacote Microsoft.Extensions.SecretManager.Tools em seu arquivo de projeto. Quando essa dependência estiver presente e tiver sido restaurada, o comando dotnet user-secrets poderá ser usado para definir o valor de segredos na linha de comando. Esses segredos serão armazenados em um arquivo JSON no diretório do perfil do usuário (os detalhes variam de acordo com o sistema operacional), fora do código-fonte.
 
-Os segredos definidos pela ferramenta Secret Manager são organizados pela propriedade UserSecretsId do projeto que está usando os segredos. Portanto, é necessário definir a propriedade UserSecretsId em seu arquivo de projeto (conforme mostrado no trecho de código abaixo). A cadeia de caracteres real usada como a ID não é importante, desde que seja exclusiva no projeto.
+Os segredos definidos pela ferramenta Secret Manager são organizados pela propriedade UserSecretsId do projeto que está usando os segredos. Portanto, é necessário definir a propriedade UserSecretsId em seu arquivo de projeto (conforme mostrado no snippet abaixo). A cadeia de caracteres real usada como a ID não é importante, desde que seja exclusiva no projeto.
 
 ```xml
 <PropertyGroup>
@@ -53,5 +53,5 @@ Usar os segredos armazenados com o Secret Manager em um aplicativo é realizado 
 
 
 >[!div class="step-by-step"]
-[Anterior](authorization-net-microservices-web-applications.md)
-[Próximo](azure-key-vault-protects-secrets.md)
+>[Anterior](authorization-net-microservices-web-applications.md)
+>[Próximo](azure-key-vault-protects-secrets.md)

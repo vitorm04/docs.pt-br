@@ -4,12 +4,12 @@ description: Recomendações de melhor prática para o empacotamento com o NuGet
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185609"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129604"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -37,8 +37,6 @@ Há duas maneiras principais de criar um pacote do NuGet. A maneira recomendada 
 A maneira mais antiga de criar um pacote do NuGet é com um arquivo `*.nuspec` e a ferramenta de linha de comando `nuget.exe`. Um arquivo nuspec dá excelente controle, mas você deve especificar com cuidado quais assemblies e destinos incluir no pacote final do NuGet. É fácil cometer um erro ou alguém se esquecer de atualizar o nuspec ao fazer alterações. A vantagem de um nuspec é que você pode usá-lo criar pacotes do NuGet para estruturas que ainda não dão suporte a um arquivo de projeto de estilo do SDK.
 
 **✔️ CONSIDERE** usar um arquivo de projeto no estilo SDK para criar o pacote do NuGet.
-
-**✔️ CONSIDERE** configurar SourceLink para adicionar metadados de controle do código-fonte aos seus assemblies e pacote do NuGet.
 
 ## <a name="package-dependencies"></a>Dependências do pacote
 
@@ -73,6 +71,12 @@ Um pacote do NuGet dá suporte a muitas [propriedades de metadados](/nuget/refer
 
 **✔️ FAÇA** uso de uma imagem de ícone do pacote de 64 x 64 e com um segundo plano transparente para melhor visualização dos resultados.
 
+**✔️ CONSIDERE** configurar o [SourceLink](./sourcelink.md) para adicionar metadados de controle do código-fonte aos seus assemblies e pacote do NuGet.
+
+> O SourceLink adiciona automaticamente os metadados `RepositoryUrl` e `RepositoryType` ao pacote do NuGet.
+> O SourceLink também adiciona informações sobre o código-fonte exato do qual o pacote foi criado.
+> Por exemplo, um pacote criado de um repositório Git terá o hash de confirmação adicionado como metadados.
+
 ## <a name="pre-release-packages"></a>Pacotes de pré-lançamento
 
 Pacotes do NuGet com um sufixo de versão são considerados [pré-lançamento](/nuget/create-packages/prerelease-packages). Por padrão, a interface do usuário do Gerenciador de Pacotes do NuGet mostra versões estáveis, a menos que um usuário aceite pacotes de pré-lançamento, tornando os pacotes de pré-lançamento ideais para testes de usuários limitados.
@@ -92,9 +96,14 @@ Pacotes do NuGet com um sufixo de versão são considerados [pré-lançamento](/
 
 ## <a name="symbol-packages"></a>Pacotes de símbolo
 
-Arquivos de símbolo (`*.pdb`) são produzidos pelo compilador do .NET junto com assemblies. Arquivos de símbolo mapeiam locais de execução para o código-fonte original para que você possa percorrer o código-fonte conforme ele é executado usando um depurador. O NuGet dá suporte para [gerar um pacote de símbolos separado](/nuget/create-packages/symbol-packages) contendo arquivos de símbolo junto com o pacote principal contendo assemblies do .NET. A ideia de pacotes de símbolos é que eles estão hospedados em um servidor de símbolos e são baixados somente por uma ferramenta como o Visual Studio sob demanda.
+Arquivos de símbolo (`*.pdb`) são produzidos pelo compilador do .NET junto com assemblies. Arquivos de símbolo mapeiam locais de execução para o código-fonte original para que você possa percorrer o código-fonte conforme ele é executado usando um depurador. O NuGet é compatível com a [geração de um pacote de símbolos separado (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg) contendo arquivos de símbolo junto com o pacote principal contendo assemblies do .NET. A ideia de pacotes de símbolos é que eles estão hospedados em um servidor de símbolos e são baixados somente por uma ferramenta como o Visual Studio sob demanda.
 
-No momento, o principal host público para símbolos – [SymbolSource](http://www.symbolsource.org/) – não dá suporte a novos [arquivos de símbolo portáteis](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) criados por projetos no estilo SDK e pacotes de símbolos não são úteis. Até que haja um host recomendado para pacotes de símbolos, arquivos de símbolo podem ser inseridos no pacote NuGet principal. Se você estiver criando seu pacote do NuGet usando um projeto de estilo do SDK, poderá inserir arquivos de símbolo definindo a propriedade `AllowedOutputExtensionsInPackageBuildOutputFolder`: 
+O NuGet.org hospeda seu próprio [repositório do servidor de símbolos](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Os desenvolvedores podem usar os símbolos publicados no servidor de símbolos do NuGet.org adicionando `https://symbols.nuget.org/download/symbols` às suas [fontes de símbolos no Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+
+> [!IMPORTANT]
+> O servidor de símbolos do NuGet.org é compatível apenas com novos [arquivos de símbolo portátil](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) criados por projetos no estilo de SDK.
+
+Uma alternativa para criar um pacote de símbolos é inserir arquivos de símbolo no pacote do NuGet principal. O pacote do NuGet principal será maior, mas os arquivos de símbolos inseridos significam que os desenvolvedores não precisam configurar o servidor de símbolos do NuGet.org. Se você estiver criando seu pacote do NuGet usando um projeto de estilo do SDK, poderá inserir arquivos de símbolo definindo a propriedade `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -107,8 +116,10 @@ No momento, o principal host público para símbolos – [SymbolSource](http://w
 
 **✔️ CONSIDERE** inserir arquivos de símbolo no pacote NuGet principal.
 
-**❌ EVITE** criar um pacote de símbolos contendo arquivos de símbolo.
+> Inserir arquivos de símbolo no pacote do NuGet principal oferece aos desenvolvedores em uma experiência de depuração melhor por padrão. Eles não precisam encontrar e configurar o servidor de símbolos do NuGet no seu IDE para obter os arquivos de símbolo.
+>
+> A desvantagem de arquivos de símbolo inseridos é que eles aumentam o tamanho do pacote em cerca de 30% para bibliotecas do .NET compiladas usando os projetos de estilo de SDK. Se o tamanho do pacote é uma preocupação, você deve publicar símbolos em um pacote de símbolos em vez disso.
 
 >[!div class="step-by-step"]
-[Anterior](./strong-naming.md)
-[Próximo](./dependencies.md)
+>[Anterior](strong-naming.md)
+>[Próximo](dependencies.md)

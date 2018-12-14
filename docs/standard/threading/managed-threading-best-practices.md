@@ -1,6 +1,6 @@
 ---
 title: Práticas recomendadas de threading gerenciado
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562366"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150609"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 O multithreading requer programação cuidadosa. Para a maioria das tarefas, você pode reduzir a complexidade ao enfileirar solicitações para a execução por parte de threads de pool. Este tópico aborda situações mais difíceis, como coordenar o trabalho de vários threads ou manipular threads que bloqueiam.  
@@ -70,37 +70,18 @@ else {
   
  Condições de corrida também podem ocorrer quando você sincroniza as atividades de vários threads. Sempre que você escreve uma linha de código, é preciso considerar o que poderia acontecer se um thread fosse impedido antes de executar a linha (ou antes de qualquer uma das instruções de máquina individuais que compõem a linha) e outro thread o substituísse.  
   
-## <a name="number-of-processors"></a>Número de processadores  
- A maioria dos computadores agora tem vários processadores (também chamados de núcleos), até mesmo pequenos dispositivos como tablets e telefones. Se você souber que está desenvolvendo software que também será executado em computadores com um só processador, saiba que o multithreading soluciona problemas diferentes para computadores com um processador e computadores multiprocessadores.  
-  
-### <a name="multiprocessor-computers"></a>Computadores multiprocessadores  
- O multithreading oferece uma taxa de transferência maior. Dez processadores podem fazer dez vezes o trabalho de um, mas somente se o trabalho for dividido de forma que os dez possam trabalhar ao mesmo tempo; threads oferecem uma maneira fácil de dividir o trabalho e explorar a capacidade de processamento adicional. Se você usar multithreading em um computador multiprocessador:  
-  
--   O número de threads que podem ser executados simultaneamente é limitado pelo número de processadores.  
-  
--   Um thread em segundo plano é executado somente quando o número de threads de primeiro plano em execução é menor do que o número de processadores.  
-  
--   Quando você chama o método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> em um thread, esse thread pode ou não começar a execução imediatamente, dependendo do número de processadores e do número de threads que estão aguardando para serem executados.  
-  
--   Condições de corrida podem ocorrer não só porque threads são apropriados inesperadamente, mas também porque dois threads em execução em diferentes processadores podem estar correndo para alcançar o mesmo bloco de código.  
-  
-### <a name="single-processor-computers"></a>Computadores de um processador  
- O multithreading oferece maior capacidade de resposta para o usuário do computador e usa o tempo ocioso para tarefas em segundo plano. Se você usar multithreading em um computador de um processador:  
-  
--   Apenas um thread será executado em qualquer momento.  
-  
--   Um thread em segundo plano será executado somente quando o thread do usuário principal estiver ocioso. Um thread de primeiro plano que é executado constantemente consome o tempo de processamento de threads de segundo plano.  
-  
--   Quando você chama o método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> em um thread, esse thread não começa a ser executado até que o thread atual seja suspenso ou apropriado pelo sistema operacional.  
-  
--   Condições de corrida normalmente ocorrem porque o programador não antecipou o fato de que um thread pudesse ser apropriado em um momento inadequado, às vezes permitindo que outro thread alcance um bloco de código primeiro.  
-  
 ## <a name="static-members-and-static-constructors"></a>Membros estáticos e construtores estáticos  
  Uma classe não é inicializada até que o construtor de classe (construtor `static` em C#, `Shared Sub New` no Visual Basic) tenha terminado de ser executado. Para impedir a execução de código em um tipo não inicializado, o Common Language Runtime bloqueia todas as chamadas de outros threads para membros `static` da classe (membros `Shared` no Visual Basic) até que o construtor da classe tenha concluído sua execução.  
   
  Por exemplo, se um construtor de classe iniciar um novo thread, e o procedimento do thread chamar um membro `static` da classe, o novo thread bloqueia até que o construtor da classe seja concluído.  
   
  Isso se aplica a qualquer tipo que possa ter um construtor `static`.  
+
+## <a name="number-of-processors"></a>Número de processadores
+
+A existência de apenas um ou de vários processadores disponíveis em um sistema pode influenciar a arquitetura de vários threads. Para obter mais informações, veja [Número de processadores](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+
+Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> para determinar o número de processadores disponíveis no tempo de execução.
   
 ## <a name="general-recommendations"></a>Recomendações gerais  
  Ao usar vários threads, considere as seguintes diretrizes:  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  No .NET Framework versão 2.0, o método <xref:System.Threading.Interlocked.Add%2A> fornece atualizações atômicas em incrementos maiores do que 1.  
+    > No .NET Framework 2.0 e posteriores, use o método <xref:System.Threading.Interlocked.Add%2A> para incrementos atômicos maiores do que 1.  
   
      No segundo exemplo, uma variável de tipo de referência é atualizada somente se ela for uma referência nula (`Nothing` no Visual Basic).  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  No .NET Framework versão 2.0, o método <xref:System.Threading.Interlocked.CompareExchange%2A> tem uma sobrecarga genérica que pode ser usada para a substituição fortemente tipada de qualquer tipo de referência.  
+    > Começando com o .NET Framework 2.0, a sobrecarga do método <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> fornece uma alternativa fortemente tipada para tipos de referência.
   
 ## <a name="recommendations-for-class-libraries"></a>Recomendações para bibliotecas de classes  
  Considere as seguintes diretrizes ao criar bibliotecas de classes para multithreading:  

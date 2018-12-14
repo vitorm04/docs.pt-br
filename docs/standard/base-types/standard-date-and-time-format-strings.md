@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873726"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151285"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 Uma cadeia de caracteres de formato de data e hora padrão usa um especificador de formato único para definir a representação do texto de um valor de data e hora. Qualquer cadeia de caracteres de formato de data e hora que contém mais de um caractere, incluindo espaço em branco, é interpretada como uma cadeia de caracteres de formato de data e hora personalizado. Para obter mais informações, consulte [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Uma cadeia de caracteres de formato padrão ou personalizado pode ser usada de duas maneiras:  
@@ -255,7 +255,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
   
 -   Os valores de data e hora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> não têm informações de fuso horário.  
   
- Como o especificador de formato padrão O" ou "o" está de acordo com um padrão internacional, a operação de formatação ou análise que usa o especificador sempre usa a cultura invariável e o calendário gregoriano.  
+ Como o especificador de formato padrão "O" ou "o" está de acordo com um padrão internacional, a operação de formatação ou análise que usa o especificador sempre usa a cultura invariável e o calendário gregoriano.  
   
  As cadeias de caracteres passadas para os métodos `Parse`, `TryParse`, `ParseExact` e `TryParseExact` de <xref:System.DateTime> e <xref:System.DateTimeOffset> podem ser analisadas usando o especificador de formato "O" ou "o", caso estejam em um desses formatos. No caso de objetos <xref:System.DateTime>, a sobrecarga de análise chamada também inclui um parâmetro `styles` com um valor de <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Se chamar um método de análise com a cadeia de caracteres de formato personalizado correspondente ao especificador de formato "O" ou "o", você não terá os mesmos resultados de "O" ou "o". Isso porque os métodos de análise que usam uma cadeia de caracteres de formato personalizado não podem analisar a representação da cadeia de caracteres de valores de data e hora que não tenham um componente de fuso horário ou usem "Z" para indicar o UTC.  
   

@@ -1,27 +1,27 @@
 ---
 title: Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
-description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Implementação de comunicação baseada em evento entre microsserviços (eventos de integração)
+description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entender eventos de integração para implementar comunicação baseada em evento entre microsserviços.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 6a365c284d66ea24a9bb4caae51c63f22c79877b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194040"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147249"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 
-Conforme descrito anteriormente, quando você usa comunicação baseada em evento, um microsserviço publica um evento quando algo importante acontece, como quando ele atualiza uma entidade de negócios. Outros microsserviços assinam esses eventos. Quando um microsserviço recebe um evento, ele pode atualizar suas próprias entidades de negócios, o que pode levar à publicação de mais eventos. Este sistema de publicação/assinatura normalmente é executado por meio de uma implementação de um barramento de evento. O barramento de evento pode ser criado como uma interface com a API necessária para assinar e cancelar a assinatura de eventos e eventos de publicação. Também pode ter uma ou mais implementações com base em qualquer comunicação de mensagens ou entre processos, como uma fila de mensagens ou um barramento de serviço que seja compatível com a comunicação assíncrona e um modelo de publicação/assinatura.
+Conforme descrito anteriormente, quando você usa comunicação baseada em evento, um microsserviço publica um evento quando algo importante acontece, como quando ele atualiza uma entidade de negócios. Outros microsserviços assinam esses eventos. Quando um microsserviço recebe um evento, ele pode atualizar suas próprias entidades de negócios, o que pode levar à publicação de mais eventos. Essa é a essência do conceito de consistência eventual. Este sistema de publicação/assinatura normalmente é executado por meio de uma implementação de um barramento de evento. O barramento de evento pode ser criado como uma interface com a API necessária para assinar e cancelar a assinatura de eventos e eventos de publicação. Também pode ter uma ou mais implementações com base em qualquer comunicação de mensagens ou entre processos, como uma fila de mensagens ou um barramento de serviço que seja compatível com a comunicação assíncrona e um modelo de publicação/assinatura.
 
 Você pode usar eventos para implementar transações comerciais que abranjam vários serviços, o que lhe dá consistência eventual entre esses serviços. Uma transação eventualmente consistente consiste em uma série de ações distribuídas. Em cada ação, o microsserviço atualiza uma entidade de negócios e publica um evento que dispara a próxima ação.
 
-![](./media/image19.PNG)
+![O microsserviço Catálogo usando comunicação controlada por eventos por meio de um barramento de eventos, a fim de obter uma consistência eventual com Carrinho de compras e outros microsserviços.](./media/image19.png)
 
-**Figura 8-18**. Comunicação controlada por evento com base em um barramento de evento
+**Figura 6-18**. Comunicação controlada por evento com base em um barramento de evento
 
-Esta seção descreve como você pode implementar esse tipo de comunicação com o .NET usando uma interface de barramento de evento genérico, conforme mostra a Figura 8-18. Há várias implementações possíveis, cada uma usando uma tecnologia ou infraestrutura diferente, como RabbitMQ, Barramento de Serviço do Azure ou qualquer outro software livre de terceiros ou barramento de serviço comercial.
+Esta seção descreve como você faz para implementar esse tipo de comunicação com o .NET usando uma interface de barramento de evento genérica, conforme mostra a Figura 6-18. Há várias implementações possíveis, cada uma usando uma tecnologia ou infraestrutura diferente, como RabbitMQ, Barramento de Serviço do Azure ou qualquer outro software livre de terceiros ou barramento de serviço comercial.
 
 ## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>Usando agentes de mensagem e barramentos de serviços para sistemas de produção
 
@@ -32,6 +32,8 @@ Para implementar apenas uma prova de conceito de barramento de evento para seu a
 Se você precisar de abstrações de alto nível e os recursos mais avançados, como [Sagas](https://docs.particular.net/nservicebus/sagas/), para processos de execução longa que facilitam o desenvolvimento distribuído barramentos, valerá a pena avaliar outros barramentos de serviço comerciais e de software livre como NServiceBus, MassTransit e Brighter. Nesse caso, as abstrações e a API a serem usadas em geral serão seriam diretamente aquelas fornecidas por esses barramentos de serviço de alto nível, em vez das suas próprias abstrações (como [abstrações de barramento de evento simples fornecidas no eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Para isso, você pode pesquisar o [eShopOnContainers bifurcado usando NServiceBus](https://go.particular.net/eShopOnContainers) (amostra derivada adicional implementada pelo Software Específico)
 
 Obviamente, você sempre pode criar seus próprios recursos de barramento de serviço sobre tecnologias de nível inferior, como RabbitMQ e o Docker, mas o trabalho necessário para "reinventar a roda" pode ser muito alto para um aplicativo empresarial personalizado.
+
+Para reiterar: as abstrações do barramento de evento de exemplo e a implementação apresentada no exemplo do eShopOnContainers devem ser usados apenas como uma prova de conceito. Quando decidir que deseja ter comunicação assíncrona e controlada por evento, conforme explicado na seção atual, você deve escolher o produto de barramento de serviço que melhor atenda às suas necessidades de produção.
 
 ## <a name="integration-events"></a>Eventos de integração
 
@@ -62,11 +64,11 @@ Há apenas alguns tipos de bibliotecas que você deve compartilhar entre micross
 
 ## <a name="the-event-bus"></a>O barramento de evento
 
-Um barramento de evento permite comunicação no estilo publicar/assinar entre microsserviços sem a necessidade de os componentes explicitamente estarem cientes uns dos outros, como mostra a Figura 8-19.
+Um barramento de evento permite comunicação no estilo publicar/assinar entre microsserviços sem a necessidade de os componentes explicitamente estarem cientes uns dos outros, como mostra a Figura 6-19.
 
-![](./media/image20.png)
+![Padrão básico pub/sub, o Microsserviço A publica no Barramento de Evento, que distribui para os microsserviços B e C assinantes, sem que o publicador saiba quem são os assinantes.](./media/image20.png)
 
-**Figura 8-19**. Noções básicas sobre publicação/assinatura com um barramento de evento
+**Figura 6-19**. Noções básicas sobre publicação/assinatura com um barramento de evento
 
 O barramento de evento está relacionado ao padrão Observador e ao padrão de publicação/assinatura.
 
@@ -74,9 +76,9 @@ O barramento de evento está relacionado ao padrão Observador e ao padrão de p
 
 No [padrão Observador](https://en.wikipedia.org/wiki/Observer_pattern), seu objeto primário (conhecido como o Observável) notifica outros objetos de interessados (conhecidos como Observadores) com informações relevantes (eventos).
 
-### <a name="publish-subscribe-pubsub-pattern"></a>Padrão de publicação/assinatura (Pub/Sub) 
+### <a name="publishsubscribe-pubsub-pattern"></a>Padrão Pub/Sub (Publicar/Assinar) 
 
-O objetivo do [padrão Pub/Sub](https://msdn.microsoft.com/library/ff649664.aspx) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão de observador, a difusão é executada diretamente do observável para os observadores, de modo que eles "conhecem" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
+O objetivo do [padrão Publicar/Assinar](https://msdn.microsoft.com/library/ff649664.aspx) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão de observador, a difusão é executada diretamente do observável para os observadores, de modo que eles "conhecem" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
 
 ### <a name="the-middleman-or-event-bus"></a>O barramento de evento ou intermediário 
 
@@ -88,15 +90,15 @@ Um barramento de evento normalmente é composto por duas partes:
 
 -   Uma ou mais implementações.
 
-Na Figura 8-19, você pode ver como, de um ponto de vista de aplicativo, o barramento de evento é nada mais que um canal Pub/Sub. A maneira como você implementa essa comunicação assíncrona pode variar. Eles podem ter várias implementações, assim, você pode alternar entre elas, dependendo dos requisitos do ambiente (por exemplo, produção versus ambientes de desenvolvimento).
+Na Figura 6-19, você pode ver como, de um ponto de vista de aplicativo, o barramento de evento é nada mais que um canal Pub/Sub. A maneira como você implementa essa comunicação assíncrona pode variar. Eles podem ter várias implementações, assim, você pode alternar entre elas, dependendo dos requisitos do ambiente (por exemplo, produção versus ambientes de desenvolvimento).
 
-Na Figura 8-20, você pode ver uma abstração de um barramento de evento com várias implementações baseadas nas tecnologias de mensagem de infraestrutura, como RabbitMQ, Barramento de Serviço do Azure ou outro agente de mensagem/evento. 
+Na Figura 6-20, você pode ver uma abstração de um barramento de evento com várias implementações baseadas nas tecnologias de mensagem de infraestrutura, como RabbitMQ, Barramento de Serviço do Azure ou outro agente de mensagem/evento.
 
-![](./media/image21.png)
+![É bom ter o barramento de evento definido por meio de uma interface para que ele possa ser implementado com várias tecnologias, como o Barramento de Serviço do Azure, o RabbitMQ ou outros.](./media/image21.png)
 
-**Figura 8- 20.** Várias implementações de um barramento de evento
+**Figura 6- 20.** Várias implementações de um barramento de evento
 
-No entanto, conforme mencionado anteriormente, usar suas próprias abstrações (a interface de barramento do evento) será bom somente se você precisar de recursos de barramento de evento básicos compatíveis com as suas abstrações. Se você precisar de recursos mais avançados de barramento de serviço, provavelmente deverá usar a API e as abstrações fornecidas pelo seu barramento de serviço comercial preferido, em vez das suas próprias abstrações. 
+No entanto, conforme mencionado anteriormente, usar suas próprias abstrações (a interface de barramento do evento) será bom somente se você precisar de recursos de barramento de evento básicos compatíveis com as suas abstrações. Se você precisar de recursos mais avançados de barramento de serviço, provavelmente deverá usar a API e as abstrações fornecidas pelo seu barramento de serviço comercial preferido, em vez das suas próprias abstrações.
 
 ### <a name="defining-an-event-bus-interface"></a>Definir uma interface de barramento de evento
 
@@ -127,7 +129,6 @@ O método `Publish` é simples. O barramento de evento difundirá o evento de in
 
 Os métodos `Subscribe` (você pode ter várias implementações, dependendo dos argumentos) são usados pelos microsserviços que desejam receber eventos. Esse método tem dois argumentos. O primeiro é o evento de integração a assinar (`IntegrationEvent`). O segundo argumento é o manipulador de eventos de integração (ou método de retorno de chamada), denominado `IIntegrationEventHandler<T>`, a ser executado quando o microsserviço receptor obtiver essa mensagem de evento de integração.
 
-
 >[!div class="step-by-step"]
-[Anterior](database-server-container.md)
-[Próximo](rabbitmq-event-bus-development-test-environment.md)
+>[Anterior](database-server-container.md)
+>[Próximo](rabbitmq-event-bus-development-test-environment.md)

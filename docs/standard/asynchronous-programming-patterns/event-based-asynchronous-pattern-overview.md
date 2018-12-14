@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 2ef25c3d7db3f445ddf7f925eb73c85760f34dc5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 492542743b27c709901267d5fd4e066a65158b85
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211925"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129630"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Visão geral do padrão assíncrono baseado em evento
 Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanecem responsivos para interação com o usuário, geralmente exigem um projeto que utilize vários threads. O namespace <xref:System.Threading> oferece todas as ferramentas necessárias para criar aplicativos commulti-thread de alto desempenho. No entanto, usar essas ferramentas de maneira eficaz requer um nível de experiência significativo com engenharia de software com multi-thread. Para aplicativos com multi-thread relativamente simples, o componente <xref:System.ComponentModel.BackgroundWorker> oferece uma solução direta. Para aplicativos assíncronos mais sofisticados, considere implementar uma classe que adere ao Padrão Assíncrono baseado em Evento.  
@@ -36,7 +36,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
   
 -   Comunicar-se com operações assíncronas pendentes usando o modelo familiar de eventos e representantes. Para saber mais sobre como usar manipuladores e representantes de eventos, confira [Eventos](../../../docs/standard/events/index.md).  
   
- Uma classe com suporte ao Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados *MethodName***Async**. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento *MethodName***Completed** e pode ter um método *MethodName***AsyncCancel** (ou simplesmente **CancelAsync**).  
+ Uma classe compatível com o Padrão Assíncrono baseado em Evento terá um ou mais métodos denominados _MethodName_**Async**. Esses métodos podem espelhar versões síncronas, que realizam a mesma operação no thread atual. A classe também pode ter um evento _MethodName_**Completed** e pode ter um método _MethodName_**AsyncCancel** (ou simplesmente **CancelAsync**).  
   
  <xref:System.Windows.Forms.PictureBox> é um componente típico que oferece suporte ao Padrão Assíncrono baseado em Evento. Você pode baixar uma imagem de maneira síncrona chamando seu método <xref:System.Windows.Forms.PictureBox.Load%2A>, mas se a imagem for grande, ou se a conexão da rede estiver lenta, seu aplicativo será interrompido (ficará em "espera") até que a operação de download seja concluída e a chamada para <xref:System.Windows.Forms.PictureBox.Load%2A> retorne.  
   
@@ -48,7 +48,7 @@ Aplicativos que realizam várias tarefas simultaneamente, mas que ainda permanec
 >  É possível que o download termine assim que a solicitação <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> seja enviada, por isso, <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> pode não refletir a solicitação de cancelamento. Isso é chamado de *condição de corrida* e é um problema comum na programação com multi-thread. Para saber mais sobre problemas de programação multi-thread, confira [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características do Padrão Assíncrono baseado em Evento  
- O Padrão Assíncrono baseado em Evento pode assumir diversos formatos, dependendo da complexidade das operações compatíveis com uma classe específica. As classes mais simples podem ter um único método *MethodName***Async** e um evento *MethodName***Completed** correspondente. Classes mais complexas podem ter vários métodos *MethodName***Async**, cada um com um evento *MethodName***Completed** correspondente, bem como versões síncronas desses métodos. As classes podem opcionalmente oferecer suporte a cancelamento, relatórios de progresso e resultados incrementais para cada método assíncrono.  
+ O Padrão Assíncrono baseado em Evento pode assumir diversos formatos, dependendo da complexidade das operações compatíveis com uma classe específica. As classes mais simples podem ter um único método _MethodName_**Async** e um evento _MethodName_**Completed** correspondente. Classes mais complexas podem ter vários métodos _MethodName_**Async**, cada um com um evento _MethodName_**Completed** correspondente, bem como versões síncronas desses métodos. As classes podem opcionalmente oferecer suporte a cancelamento, relatórios de progresso e resultados incrementais para cada método assíncrono.  
   
  Um método assíncrono também pode oferecer suporte a várias chamadas pendentes (várias invocações simultâneas), permitindo que seu código o chame quantas vezes desejar antes de concluir outras operações pendentes. Lidar da maneira correta com essa situação pode exigir que seu aplicativo acompanhe a conclusão de cada operação.  
   
@@ -118,14 +118,14 @@ public class AsyncExample
 >  Você deve ter o cuidado de fornecer um valor exclusivo para `userState` em suas chamadas para sobrecargas de invocação múltipla. IDs de tarefa não exclusivos farão com que a classe assíncrona lance um <xref:System.ArgumentException>.  
   
 ### <a name="canceling-pending-operations"></a>Cancelando Operações Pendentes  
- É importante poder cancelar operações assíncronas a qualquer momento antes de sua conclusão. Classes que implementam o Padrão Assíncrono baseado em Evento terão um método `CancelAsync` (se houver somente um método assíncrono) ou um método *MethodName***AsyncCancel** (se houver vários métodos assíncronos).  
+ É importante poder cancelar operações assíncronas a qualquer momento antes de sua conclusão. Classes que implementam o Padrão Assíncrono baseado em Evento terão um método `CancelAsync` (se houver somente um método assíncrono) ou um método _MethodName_**AsyncCancel** (se houver vários métodos assíncronos).  
   
  Métodos que permitem várias invocações assumem um parâmetro `userState`, que pode ser usado para acompanhar o tempo de vida de cada tarefa. `CancelAsync` utiliza um parâmetro `userState`, que permite o cancelamento de tarefas pendentes específicas.  
   
  Métodos com suporte a somente uma única operação pendente por vez, como `Method1Async(string param)`, não podem ser cancelados.  
   
 ### <a name="receiving-progress-updates-and-incremental-results"></a>Recebendo Atualizações de Andamento e Resultados Incrementais  
- Uma classe que adere ao Padrão Assíncrono baseado em Evento pode opcionalmente oferecer um evento para acompanhar o andamento e os resultados incrementais. Ele geralmente será denominado `ProgressChanged` ou *MethodName***ProgressChanged**, e seu manipulador de evento correspondente assumirá um parâmetro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
+ Uma classe que adere ao Padrão Assíncrono baseado em Evento pode opcionalmente oferecer um evento para acompanhar o andamento e os resultados incrementais. Ele geralmente será denominado `ProgressChanged` ou _MethodName_**ProgressChanged** e seu manipulador de evento correspondente assumirá um parâmetro <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
  O manipulador de evento para o evento `ProgressChanged` pode examinar a propriedade <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> para determinar qual porcentagem de uma tarefa assíncrona foi concluída. Essa propriedade estará entre 0 e 100, e pode ser usada para atualizar a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A> de um <xref:System.Windows.Forms.ProgressBar>. Se várias operações assíncronas estiverem pendentes, você poderá usar a propriedade <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> para distinguir qual operação está relatando o andamento.  
   

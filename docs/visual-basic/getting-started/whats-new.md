@@ -1,6 +1,6 @@
 ---
 title: Novidades do Visual Basic
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194053"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146151"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -21,10 +21,13 @@ Este tópico lista os nomes dos principais recursos para cada versão do Visual 
   
 ## <a name="current-version"></a>Versão atual
 
-Visual Basic 15.5/Visual Studio 2017 versão 15.5  
-Para as novas funcionalidades, consulte [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.8 / Visual Studio 2017 Versão 15.8  
+Para as novas funcionalidades, consulte [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Versões anteriores
+
+Visual Basic 15.5/Visual Studio 2017 versão 15.5  
+Para as novas funcionalidades, consulte [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3/Visual Studio 2017 versão 15.3  
 Para as novas funcionalidades, consulte [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Operadores bit shift, declaração de variável de loop
 
 Visual Basic / Visual Studio .NET 2002   
 A primeira versão do Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**Ponto flutuante otimizado para a conversão de inteiro**
+
+Nas versões anteriores do Visual Basic, a conversão de valores [Duplos](../language-reference/data-types/double-data-type.md) e [Únicos](../language-reference/data-types/single-data-type.md) como inteiros apresentava um desempenho relativamente baixo. O Visual Basic 15.8 melhora significativamente o desempenho das conversões de ponto flutuante para inteiros quando você passa o valor retornado por qualquer um dos seguintes métodos para uma das [funções de conversão de inteiros intrínsecas do Visual Basic](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) ou quando o valor retornado por qualquer um dos métodos a seguir é implicitamente convertido em um tipo integral quando [Opção Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) está definida como `Off`:
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Essa otimização permite que o código seja executado mais rapidamente – até duas vezes mais rápido para o código que faz um grande número de conversões para tipos de inteiro. O exemplo a seguir ilustra algumas chamadas de método simples que são afetadas por essa otimização:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Observe que isso trunca em vez de arredondar os valores de ponto flutuante.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

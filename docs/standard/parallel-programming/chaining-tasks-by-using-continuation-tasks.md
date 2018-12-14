@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77be620180f1e19c01f47d8ab5cabe3e7d021aca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129657"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
 Na programação assíncrona, é muito comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, isso foi feito usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
@@ -118,7 +118,7 @@ Na programação assíncrona, é muito comum para uma operação assíncrona, ap
 ## <a name="associating-state-with-continuations"></a>Associação de estado a continuações  
  Você pode associar o estado arbitrário a uma continuação da tarefa. O método <xref:System.Threading.Tasks.Task.ContinueWith%2A> fornece versões sobrecarregadas que utilizam um valor <xref:System.Object> que representa o estado de continuação. Mais tarde, você pode acessar esse objeto de estado usando a propriedade <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>. Esse objeto de estado será `null` se você não fornecer um valor.  
   
- O estado de continuação é útil quando você converte o código existente que usa o [APM (Modelo de Programação Assíncrona)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para usar o TPL. No APM, você normalmente fornece o estado do objeto no método **Begin***Method* e acessa posteriormente esse estado usando a propriedade <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Usando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A>, você pode preservar esse estado ao converter o código que usa o APM para usar a TPL.  
+ O estado de continuação é útil quando você converte o código existente que usa o [APM (Modelo de Programação Assíncrona)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) para usar o TPL. No APM, você normalmente fornece o estado do objeto no método **Begin**_Method_ e acessa posteriormente esse estado usando a propriedade <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. Usando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A>, você pode preservar esse estado ao converter o código que usa o APM para usar a TPL.  
   
  O estado de continuação também pode ser útil quando você trabalha com objetos <xref:System.Threading.Tasks.Task> no depurador do Visual Studio. Por exemplo, na janela **Tarefas Paralelas**, a coluna **Tarefa** exibe a representação de cadeia de caracteres do objeto de estado para cada tarefa. Para saber mais sobre a janela **Tarefas Paralelas**, veja [Uso da janela Tarefas](/visualstudio/debugger/using-the-tasks-window).  
   

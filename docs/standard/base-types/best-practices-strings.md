@@ -1,5 +1,6 @@
 ---
 title: Práticas recomendadas para o uso de cadeias de caracteres no .NET
+description: Saiba como usar cadeias de caracteres com eficiência em aplicativos .NET.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080332"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150961"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 <a name="top"></a> O .NET dá um amplo suporte para desenvolvimento de aplicativos localizados e globalizados e torna mais fácil aplicar as convenções da cultura atual ou de uma cultura específica ao executar operações comuns, como a classificação e a exibição cadeias de caracteres. Mas a classificação ou a comparação de cadeias de caracteres nem sempre é uma operação que leva em conta a cultura. Por exemplo, cadeias de caracteres que são usadas internamente por um aplicativo normalmente devem ser manipuladas de maneira idêntica em todas as culturas. Quando os dados de cadeias de caracteres culturalmente independentes, como marcações XML, marcações HTML, nomes de usuário, caminhos de arquivo e nomes de objetos do sistema, são interpretados como se levassem em conta a cultura, o código do aplicativo pode estar sujeito a bugs sutis, desempenho ruim e, em alguns casos, problemas de segurança.  
@@ -242,8 +244,8 @@ Além disso, comparações de cadeia de caracteres usando versões diferentes do
 |----------|--------------|-----------------------------------------------------|  
 |Identificadores internos que diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que diferenciam maiúsculas e minúsculas nos padrões como XML e HTTP.<br /><br /> Configurações relacionadas à segurança que diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que bytes correspondem exatamente.|<xref:System.StringComparison.Ordinal>|  
 |Identificadores internos que não diferenciam maiúsculas de minúsculas.<br /><br /> Identificadores que não diferenciam maiúsculas e minúsculas em padrões como XML e HTTP.<br /><br /> Caminhos de arquivo.<br /><br /> Chaves do Registro e valores.<br /><br /> Variáveis de ambiente.<br /><br /> Identificadores de recurso (por exemplo, nomes de identificador).<br /><br /> Configurações relacionadas à segurança que não diferenciam maiúsculas de minúsculas.|Um identificador não linguístico, em que as maiúsculas e minúsculas são irrelevantes; especialmente, dados armazenados na maioria dos serviços de sistema do Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> -ou-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Alguns dados persistentes, linguisticamente relevantes.<br /><br /> Exibição de dados linguísticos que requer uma ordem de classificação fixa.|Dados independentes de cultura que ainda são linguisticamente relevantes.|<xref:System.StringComparison.InvariantCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Dados exibidos para o usuário.<br /><br /> A maioria das entradas do usuário.|Dados que exigem os costumes linguísticos locais.|<xref:System.StringComparison.CurrentCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Voltar ao início](#top)  
   

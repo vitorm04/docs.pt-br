@@ -4,11 +4,11 @@ description: Melhores práticas para gerenciar as dependências do NuGet em bibl
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400505"
 ---
 # <a name="dependencies"></a>Dependências
@@ -92,10 +92,12 @@ Pacotes de origem compartilhado têm algumas limitações. Eles só podem ser re
 
 > Tipos de origem compartilhada são compilados no assembly de referência e não podem ser trocados entre os limites de assembly. Por exemplo, um tipo `IRepository` de origem compartilhada em um projeto é um tipo separado do mesmo `IRepository` de origem compartilhada em outro projeto. Tipos em pacotes de origem compartilhados devem ter uma visibilidade `internal`.
 
-**❌ NÃO** publique pacotes de origem compartilhados em nuget.org.
+**❌ NÃO** publique pacotes de origem compartilhados em NuGet.org.
 
 > Pacotes de origem compartilhados contêm código-fonte e só podem ser usados por projetos com o mesmo tipo de linguagem. Por exemplo, um pacote de origem compartilhado em C# não pode ser usado por um aplicativo em F#.
+>
+> Publicar pacotes de origem compartilhados em um [feed local ou no MyGet](./publish-nuget-package.md) para consumi-los internamente dentro de seu projeto.
 
 >[!div class="step-by-step"]
-[Anterior](./nuget.md)
-[Próximo](./sourcelink.md)
+>[Anterior](nuget.md)
+>[Próximo](sourcelink.md)

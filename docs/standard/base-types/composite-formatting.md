@@ -1,6 +1,6 @@
 ---
 title: Formatação composta
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126855"
 ---
 # <a name="composite-formatting"></a>Formatação composta
+
 O recurso de formatação de composição do .NET utiliza uma lista de objetos e uma cadeia de caracteres de formato de composição como entrada. Uma cadeia de formato de composição consiste em um texto fixo intercalado com espaços reservados indexados, chamados de itens de formato, que correspondem aos objetos na lista. A operação de formatação produz uma cadeia de caracteres de resultado que consiste no texto fixo original intercalado com a representação de cadeia de caracteres dos objetos na lista.  
   
- O recurso de formatação de composição tem suporte de métodos como:  
+> [!IMPORTANT]
+> Em vez de usar cadeias de caracteres de formato composto, você pode usar *cadeias de caracteres interpoladas* se o idioma e a versão de idioma que você está usando são compatíveis com elas. Uma cadeia de caracteres interpolada é uma cadeia de caracteres que contém *expressões interpoladas*. Cada expressão interpolada é resolvida com o valor da expressão e incluída na cadeia de caracteres resultante quando a cadeia de caracteres é atribuída. Para saber mais, confira [Interpolação de cadeia de caracteres (Referência de C#)](../../csharp/language-reference/tokens/interpolated.md) ou [Cadeias de caracteres interpoladas (Referência do Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+O recurso de formatação de composição tem suporte de métodos como:  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, que retorna uma cadeia de caracteres de resultado formatada.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, que retorna uma cadeia de caracteres de resultado formatada.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, que acrescenta uma cadeia de caracteres de resultado formatada a um objeto <xref:System.Text.StringBuilder>.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, que acrescenta uma cadeia de caracteres de resultado formatada a um objeto <xref:System.Text.StringBuilder>.   
+- Algumas sobrecargas do método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, as quais exibem uma cadeia de caracteres de resultado formatada para o console.  
   
--   Algumas sobrecargas do método <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, as quais exibem uma cadeia de caracteres de resultado formatada para o console.  
+- Algumas sobrecargas do método <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, as quais escrevem a cadeia de caracteres de resultado formatada em um fluxo ou arquivo. As classes derivadas de <xref:System.IO.TextWriter>, como <xref:System.IO.StreamWriter> e <xref:System.Web.UI.HtmlTextWriter>, também têm essa funcionalidade.  
   
--   Algumas sobrecargas do método <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, as quais escrevem a cadeia de caracteres de resultado formatada em um fluxo ou arquivo. As classes derivadas de <xref:System.IO.TextWriter>, como <xref:System.IO.StreamWriter> e <xref:System.Web.UI.HtmlTextWriter>, também têm essa funcionalidade.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que gera uma mensagem formatada para rastrear ouvintes.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que gera uma mensagem formatada para rastrear ouvintes.  
+- Os métodos <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, os quais produzem mensagens formatadas rastrear ouvintes.  
   
--   Os métodos <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, os quais produzem mensagens formatadas rastrear ouvintes.  
-  
--   O método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que grava um método informativo para rastrear ouvintes.  
+- O método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que grava um método informativo para rastrear ouvintes.  
   
 ## <a name="composite-format-string"></a>Cadeia de formato de composição  
  Uma cadeia de formato de composição e uma lista de objetos são usadas como argumentos dos métodos que dão suporte ao recurso de formatação de composição. Uma cadeia de formato de composição consiste em zero ou mais sequências de texto fixo intercaladas com um ou mais itens de formato. O texto fixo é qualquer cadeia de caracteres que você escolher e cada item de formato corresponde a um objeto ou a uma estrutura demarcada na lista. O recurso de formatação de composição retorna uma nova cadeia de caracteres de resultado em que cada item de formato é substituído pela representação de cadeia de caracteres do objeto correspondente na lista.  

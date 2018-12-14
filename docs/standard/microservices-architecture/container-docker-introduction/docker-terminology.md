@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 39a3c0e0aac2980e67a1c87a472d1a77baed6113
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216845"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150648"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -51,7 +51,6 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Orquestrador**: uma ferramenta que simplifica o gerenciamento de clusters e hosts do Docker. Os orquestradores permitem gerenciar imagens, contêineres e hosts por meio de uma CLI (interface de linha de comando) ou uma interface do usuário gráfica. É possível gerenciar a rede de contêiner, configurações, balanceamento de carga, descoberta de serviço, alta disponibilidade, configuração de host do Docker e muito mais. Um orquestrador é responsável por executar, distribuir, dimensionar e reparar de cargas de trabalho em uma coleção de nós. Normalmente, produtos de orquestrador são os mesmos que fornecem infraestrutura de cluster, como Kubernetes e Azure Service Fabric, além de outras ofertas no mercado. 
 
-
 >[!div class="step-by-step"]
-[Anterior](docker-defined.md)
-[Próximo](docker-containers-images-registries.md)
+>[Anterior](docker-defined.md)
+>[Próximo](docker-containers-images-registries.md)

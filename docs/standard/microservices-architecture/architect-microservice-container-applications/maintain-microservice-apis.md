@@ -1,15 +1,15 @@
 ---
 title: Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
+description: Crie contratos e APIs de microsserviço levando em conta a evolução e o controle de versão, porque a alteração é necessária.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 5d3e031217159a695b67f67859b8cf412a4419c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105687"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152533"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Criando, evoluindo e fazendo o controle de versão de APIs e de contratos de microsserviços
 
@@ -17,7 +17,7 @@ Uma API de microsserviço é um contrato entre o serviço e seus clientes. Você
 
 A natureza da definição de API depende do protocolo que você está usando. Por exemplo, se você estiver usando mensagens (como [AMQP](https://www.amqp.org/)), a API consistirá nos tipos de mensagem. Se você estiver usando serviços HTTP e RESTful, a API consistirá nas URLs e nos formatos JSON de solicitação e de resposta.
 
-No entanto, mesmo se você estiver em dúvida sobre seu contrato inicial, uma API de serviço precisará ser alterada com o tempo. Quando isso acontecer – e, principalmente, se a sua API for uma API pública consumida por vários aplicativos cliente – normalmente não será possível forçar todos os clientes a atualizarem para seu novo contrato de API. Geralmente, é necessário implantar novas versões de um serviço de forma incremental de maneira que versões novas e antigas de um contrato de serviço estejam em execução simultaneamente. Portanto, é importante ter uma estratégia para o controle de versão do serviço.
+No entanto, mesmo se você estiver em dúvida sobre seu contrato inicial, uma API de serviço precisará ser alterada com o tempo. Quando isso acontecer – e, principalmente, se a API for uma API pública consumida por vários aplicativos cliente – normalmente não será possível forçar todos os clientes a atualizarem para seu novo contrato de API. Geralmente, é necessário implantar novas versões de um serviço de forma incremental de maneira que versões novas e antigas de um contrato de serviço estejam em execução simultaneamente. Portanto, é importante ter uma estratégia para o controle de versão do serviço.
 
 Quando as alterações na API forem pequenas, como adicionar atributos ou parâmetros à sua API, os clientes que usam uma API mais antiga devem mudar e trabalhar com a nova versão do serviço. Talvez seja possível fornecer valores padrão para quaisquer atributos ausentes que sejam necessários, e os clientes talvez podem ignorar quaisquer atributos de resposta extra.
 
@@ -27,16 +27,15 @@ Por fim, se você estiver usando uma arquitetura REST, o [Hypermedia](https://ww
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Scott Hanselman. Facilitando o controle de versão da API Web RESTful do ASP.NET Core**
-    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+- **Scott Hanselman. Facilitando o controle de versão da API Web RESTful do ASP.NET Core** \
+  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Controle de versão de uma API Web RESTful**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+- **Controle de versão de uma API Web RESTful** \
+  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Controle de versão, hipermídia e REST**
-    <https://www.infoq.com/articles/roy-fielding-on-versioning>
-
+- **Roy Fielding. Controle de versão, hipermídia e REST** \
+  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
-[Anterior](asynchronous-message-based-communication.md)
-[Próximo](microservices-addressability-service-registry.md)
+>[Anterior](asynchronous-message-based-communication.md)
+>[Próximo](microservices-addressability-service-registry.md)

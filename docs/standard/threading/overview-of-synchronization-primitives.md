@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146570"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Visão geral dos primitivos de sincronização
 
@@ -79,9 +79,9 @@ Para obter mais informações sobre as vantagens e as desvantagens do uso do blo
 
 ### <a name="readerwriterlockslim-class"></a>Classe ReaderWriterLockSlim
 
-A classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede acesso exclusivo a um recurso compartilhado para gravação e permite que vários threads acessem o recurso simultaneamente para leitura. Você talvez queira usar <xref:System.Threading.ReaderWriterLockSlim> para sincronizar o acesso a uma estrutura de dados compartilhada que dá suporte a operações de leitura thread-safe, mas requer acesso exclusivo para realizar a operação de gravação. Quando um thread solicita acesso exclusivo (por exemplo, ao chamar o método <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), o leitor subsequente solicita o bloqueio até que todos os leitores existentes tenham saído do bloqueio e o gravador tenha entrado e saído do bloqueio.
+A classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> concede acesso exclusivo a um recurso compartilhado para gravação e permite que vários threads acessem o recurso simultaneamente para leitura. Você talvez queira usar <xref:System.Threading.ReaderWriterLockSlim> para sincronizar o acesso a uma estrutura de dados compartilhada que dá suporte a operações de leitura thread-safe, mas requer acesso exclusivo para realizar a operação de gravação. Quando um thread solicita acesso exclusivo (por exemplo, ao chamar o método <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), o leitor subsequente solicita o bloqueio até que todos os leitores e gravadores existentes tenham saído do bloqueio e o gravador tenha entrado e saído do bloqueio.
   
-Para obter mais informações, veja o artigo [Bloqueios de leitor-gravador](reader-writer-locks.md) e a referência à API <xref:System.Threading.ReaderWriterLockSlim>.
+Para obter mais informações, veja a referência de API <xref:System.Threading.ReaderWriterLockSlim>.
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Classes Semaphore e SemaphoreSlim
 
@@ -134,7 +134,7 @@ Para obter mais informações, veja o artigo [Barreira](barrier.md) e a referên
 
 A classe <xref:System.Threading.Interlocked?displayProperty=nameWithType> fornece métodos estáticos que executam operações atômicas simples em uma variável. Essas operações atômicas incluem adição, incremento e decremento, troca e troca condicional que depende de uma comparação e operação de leitura de um valor inteiro de 64 bits.
 
-Para obter mais informações, veja o artigo [operações interligadas](interlocked-operations.md) e a referência à API <xref:System.Threading.Interlocked>.
+Para obter mais informações, veja a referência de API <xref:System.Threading.Interlocked>.
 
 ## <a name="spinwait-structure"></a>Estrutura SpinWait
 

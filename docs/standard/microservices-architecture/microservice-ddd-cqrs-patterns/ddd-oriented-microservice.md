@@ -1,17 +1,17 @@
 ---
 title: Projetando um microsserviço orientado a DDD
-description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Criar um microsserviço orientado a DDD
+description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda o design do microsserviço de pedidos orientado a DDD e suas camadas de aplicativo.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183497"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145602"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Projetando um microsserviço orientado a DDD
+# <a name="design-a-ddd-oriented-microservice"></a>Projetar um microsserviço orientado a DDD
 
 O DDD (design orientado a domínio) defende modelagem com base na realidade dos negócios conforme relevante para os seus casos de uso. No contexto da criação de aplicativos, o DDD fala sobre problemas como domínios. Ele descreve as áreas de problema independentes como Contextos Limitados (cada Contexto Limitado se correlaciona a um microsserviço) e enfatiza uma linguagem comum para falar sobre esses problemas. Também sugere muitos conceitos técnicos e padrões, como entidades de domínio com regras de modelos avançados (nenhum [modelo de domínio anêmico](https://martinfowler.com/bliki/AnemicDomainModel.html)), objetos de valor, agregações e raiz de agregação (ou entidade raiz) para dar suporte à implementação interna. Esta seção apresenta o design e a implementação desses padrões internos.
 
@@ -33,21 +33,21 @@ A maioria dos aplicativos empresariais com complexidade de negócios e técnica 
 
 Por exemplo, uma entidade pode ser carregada do banco de dados. Em seguida, parte dessas informações ou uma agregação de informações, incluindo dados adicionais de outras entidades, podem ser enviadas para uma interface do usuário do cliente por meio de uma API da Web REST. O ponto aqui é que a entidade de domínio está contida na camada de modelo de domínio e não deve ser propagada para outras áreas às quais ela não pertence, como a camada de apresentação.
 
-Além disso, você precisa ter entidades sempre válidas (consulte a seção [Criar validações na camada de modelo de domínio](#designing-validations-in-the-domain-model-layer)) controlada por raízes agregadas (entidades raiz). Portanto, as entidades não devem ser associadas aos modos de exibição do cliente pois, no nível da interface do usuário, alguns dados podem ainda não ter sido validados. É para isso que serve o ViewModel. O ViewModel é um modelo de dados exclusivamente para necessidades de camada de apresentação. As entidades de domínio não pertencem diretamente ao ViewModel. Em vez disso, você precisa converter entre entidades de domínio e ViewModels e vice-versa.
+Além disso, você precisa ter entidades sempre válidas (consulte a seção [Criar validações na camada de modelo de domínio](domain-model-layer-validations.md)) controlada por raízes agregadas (entidades raiz). Portanto, as entidades não devem ser associadas aos modos de exibição do cliente pois, no nível da interface do usuário, alguns dados podem ainda não ter sido validados. É para isso que serve o ViewModel. O ViewModel é um modelo de dados exclusivamente para necessidades de camada de apresentação. As entidades de domínio não pertencem diretamente ao ViewModel. Em vez disso, você precisa converter entre entidades de domínio e ViewModels e vice-versa.
 
 Ao lidar com complexidade, é importante ter um modelo de domínio controlado por raízes agregadas que garantam que todas as invariáveis e regras relacionadas àquele grupo de entidades (agregação) sejam executadas por meio de um único ponto de entrada ou porta, a raiz de agregação.
 
-A Figura 9-5 mostra como um design em camadas é implementado no aplicativo eShopOnContainers.
+A Figura 7-5 mostra como um design em camadas é implementado no aplicativo eShopOnContainers.
 
-![](./media/image6.png)
+![As três camadas em um microsserviço de DDD como o de pedidos. Cada camada é um projeto do VS: a camada de aplicativo é Ordering.API, a camada de domínio é Ordering.Domain e a camada de infraestrutura é Ordering.Infrastructure.](./media/image6.png)
 
-**Figura 9-5**. Camadas DDD no microsserviço de ordenação em eShopOnContainers
+**Figura 7-5**. Camadas DDD no microsserviço de ordenação em eShopOnContainers
 
-Você deseja criar o sistema de modo que cada camada se comunique apenas com determinadas outras camadas. Isso poderá ser mais fácil de impor se as camadas forem implementadas como bibliotecas de classes diferentes, porque você pode identificar claramente que dependências são definidas entre bibliotecas. Por exemplo, a camada de modelo de domínio não deve receber uma dependência de nenhuma outra camada (as classes de modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) ou Plain Old CLR Objects). Conforme mostrado na Figura 9-6, a biblioteca de camada **Ordering.Domain** tem dependências apenas de bibliotecas .NET Core ou pacotes NuGet, mas não de nenhuma outra biblioteca personalizada, como a biblioteca de dados ou a biblioteca de persistência.
+Você deseja criar o sistema de modo que cada camada se comunique apenas com determinadas outras camadas. Isso poderá ser mais fácil de impor se as camadas forem implementadas como bibliotecas de classes diferentes, porque você pode identificar claramente que dependências são definidas entre bibliotecas. Por exemplo, a camada de modelo de domínio não deve receber uma dependência de nenhuma outra camada (as classes de modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) ou Plain Old CLR Objects). Conforme mostrado na Figura 7-6, a biblioteca de camada **Ordering.Domain** tem dependências apenas de bibliotecas .NET Core ou pacotes NuGet, mas não de nenhuma outra biblioteca personalizada, como a biblioteca de dados ou a biblioteca de persistência.
 
-![](./media/image7.PNG)
+![A exibição do Gerenciador de Soluções das dependências de Ordering.Domain, mostrá-la depende apenas de bibliotecas do .NET Core.](./media/image7.png)
 
-**Figura 9-6**. Camadas implementadas como bibliotecas permitem melhor controle de dependências entre as camadas
+**Figura 7-6**. Camadas implementadas como bibliotecas permitem melhor controle de dependências entre as camadas
 
 ### <a name="the-domain-model-layer"></a>A camada de modelo de domínio
 
@@ -85,26 +85,25 @@ A camada de infraestrutura é como os dados inicialmente mantidos em entidades d
 
 Conforme mencionado anteriormente nos princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), a camada de infraestrutura não deve ser "contaminar" a camada de modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
 
-Assim, suas camadas ou bibliotecas e projetos de classes devem, por fim, depender da sua camada de modelo de domínio (biblioteca), não vice-versa, conforme mostra a Figura 9-7.
+Assim, suas camadas ou bibliotecas e projetos de classes devem, por fim, depender da sua camada de modelo de domínio (biblioteca), não vice-versa, conforme mostra a Figura 7-7.
 
-![](./media/image8.png)
+![Dependências em um serviço de DDD, a camada de aplicativo depende do domínio e da infraestrutura e a infraestrutura depende do domínio, mas o domínio não depende de nenhuma camada.](./media/image8.png)
 
-**Figura 9-7**. Dependências entre camadas em DDD
+**Figura 7-7**. Dependências entre camadas em DDD
 
 Esse design de camada deve ser independente de cada microsserviço. Conforme observado anteriormente, você pode implementar os microsserviços mais complexos seguindo padrões DDD ao mesmo tempo em que implementa microsserviços conduzidos por dados mais simples (CRUD simples em uma única camada) de maneira mais simples.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
--   **DevIQ. Princípio de Ignorância de persistência**
-    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+- **DevIQ. Princípio de Ignorância de persistência** \
+  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Ignorância de infraestrutura**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+- **Oren Eini. Ignorância de infraestrutura** \
+  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Arquitetura em camadas no design controlado por domínio**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
-
+- **Angel Lopez. Arquitetura em camadas no design controlado por domínio** \
+  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[Anterior](cqrs-microservice-reads.md)
-[Próximo](microservice-domain-model.md)
+>[Anterior](cqrs-microservice-reads.md)
+>[Próximo](microservice-domain-model.md)

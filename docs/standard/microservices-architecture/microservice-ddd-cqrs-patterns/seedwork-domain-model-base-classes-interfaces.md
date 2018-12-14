@@ -1,31 +1,31 @@
 ---
 title: Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
+description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o conceito de seedwork como ponto de partida para iniciar a implementação para um modelo de domínio orientado para DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 7a38d90caab2232c17d8d58ca0c57d5bb56b3ce9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198375"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152215"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 
-A pasta de solução contém uma pasta *SeedWork*. A pasta *SeedWork* contém classes base personalizadas que podem ser usadas como uma base para suas entidades de domínio e objetos de valor. Use essas classes base para que você não tenha código redundante na classe de objeto de cada domínio. A pasta para esses tipos de classes é chamada *SeedWork* e não algo como *Framework*. Ela é chamada *SeedWork*, porque a pasta contém apenas um pequeno subconjunto de classes reutilizáveis que realmente não podem ser consideradas uma estrutura. *Seedwork* é um termo introduzido por [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) e popularizado por [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html), mas você também pode nomear essa pasta Common, SharedKernel, ou semelhantes.
+A pasta de solução contém uma pasta *SeedWork*. Essa pasta contém classes base personalizadas que podem ser usadas como uma base para suas entidades de domínio e objetos de valor. Use essas classes base para que você não tenha código redundante na classe de objeto de cada domínio. A pasta para esses tipos de classes é chamada *SeedWork* e não algo como *Framework*. Ela é chamada *SeedWork*, porque a pasta contém apenas um pequeno subconjunto de classes reutilizáveis que realmente não podem ser consideradas uma estrutura. *Seedwork* é um termo introduzido por [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) e popularizado por [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html), mas você também pode nomear essa pasta Common, SharedKernel, ou semelhantes.
 
-A Figura 9-12 mostra as classes que formam o seedwork do modelo de domínio no microsserviço de ordenação. Ele tem algumas classes base personalizadas como Entity, ValueObject e Enumeration, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de Injeção de dependência da camada de aplicativo.
+A figura 7-12 mostra as classes que formam o seedwork do modelo de domínio no microsserviço de ordenação. Ele tem algumas classes base personalizadas como Entity, ValueObject e Enumeration, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de Injeção de dependência da camada de aplicativo.
 
-![](./media/image13.PNG)
+![O conteúdo detalhado da pasta SeedWork, que contém interfaces e classes base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
 
-**Figura 9-12**. Um exemplo do conjunto de interfaces e de classes base "seedwork" do modelo de domínio
+**Figura 7-12**. Um exemplo do conjunto de interfaces e de classes base "seedwork" do modelo de domínio
 
 Esse é o tipo de reutilização de copiar e colar que muitos desenvolvedores compartilham entre projetos, não uma estrutura formal. É possível ter seedworks em qualquer camada ou biblioteca. No entanto, se o conjunto de classes e interfaces ficar grande o bastante, crie uma biblioteca de classes individual.
 
 ## <a name="the-custom-entity-base-class"></a>A classe base Entity personalizada
 
-O código a seguir é um exemplo de uma classe base Entity em que é possível inserir o código que pode ser usado da mesma maneira por qualquer entidade de domínio, como a ID da entidade, [operadores de igualdade](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), uma lista de eventos de domínio por entidade, etc.
+O código a seguir é um exemplo de uma classe base Entity em que é possível inserir o código que pode ser usado da mesma maneira por qualquer entidade de domínio, como a ID da entidade, [operadores de igualdade](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator), uma lista de eventos de domínio por entidade, etc.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -105,13 +105,13 @@ public abstract class Entity
 }
 ```
 
-O código anterior que usa uma lista de eventos de domínio por entidade será explicado nas próximas seções ao abordar eventos de domínio. 
+O código anterior que usa uma lista de eventos de domínio por entidade será explicado nas próximas seções ao abordar eventos de domínio.
 
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Contratos de repositório (interfaces) na camada de modelo de domínio
 
-Os contratos de repositório são simplesmente interfaces .NET que expressam os requisitos do contrato dos repositórios a serem usados para cada agregação. 
+Os contratos de repositório são simplesmente interfaces .NET que expressam os requisitos do contrato dos repositórios a serem usados para cada agregação.
 
-Os repositórios em si, com código do EF Core ou quaisquer outras dependências de infraestrutura e código (LINQ, SQL, etc.), não devem ser implementados no modelo de domínio; os repositórios só deverão implementar as interfaces que você definir. 
+Os repositórios em si, com código do EF Core ou quaisquer outras dependências de infraestrutura e código (LINQ, SQL, etc.), não devem ser implementados no modelo de domínio; os repositórios só deverão implementar as interfaces que você definir no modelo de domínio.
 
 Um padrão relacionado a essa prática (inserir as interfaces de repositório na camada do modelo de domínio) é o padrão Interface separada. Como [explicado](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler "Use a Interface separada para definir uma interface em um pacote, mas a implemente em outro. Dessa forma, um cliente que precisa da dependência com a interface pode não estar completamente ciente da implementação."
 
@@ -124,7 +124,7 @@ Por exemplo, o exemplo a seguir com a interface IOrderRepository define quais op
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
-        
+
     void Update(Order order);
 
     Task<Order> GetAsync(int orderId);
@@ -139,10 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Martin Fowler. Interface separada.**
-    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
-
+- **Martin Fowler. Interface separada.** \
+  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
-[Anterior](net-core-microservice-domain-model.md)
-[Próximo](implement-value-objects.md)
+>[Anterior](net-core-microservice-domain-model.md)
+>[Próximo](implement-value-objects.md)
