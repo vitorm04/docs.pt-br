@@ -1,15 +1,15 @@
 ---
-title: Direcionamento multiplataforma
+title: Direcionamento para bibliotecas do .NET multiplataforma
 description: Recomendações de melhores práticas para a criação de bibliotecas do .NET multiplataforma.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202810"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129708"
 ---
 # <a name="cross-platform-targeting"></a>Direcionamento multiplataforma
 
@@ -33,7 +33,7 @@ Ter como destino o .NET Standard e compilar com êxito o projeto não assegura q
 
 > A maioria das bibliotecas de uso não deve precisar de APIs fora do .NET Standard 2.0. O .NET standard 2.0 é compatível com todas as plataformas modernas e é a maneira recomendada de dar suporte a várias plataformas com um destino.
 
-**❌ EVITE** incluir um destino `netstandard1.x`.
+ **EVITE** incluir um destino `netstandard1.x`.
 
 > O .NET standard 1.x é distribuído como um conjunto granular de pacotes do NuGet, que cria um grande grafo de dependência de pacote e resulta em os desenvolvedores baixarem muitos pacotes durante o build. Plataformas .NET modernas, incluindo .NET Framework 4.6.1, UWP e Xamarin, dão suporte para .NET Standard 2.0. Você somente deverá direcionar o .NET Standard 1.x se precisar especificamente ter como destino uma plataforma mais antiga.
 
@@ -41,7 +41,7 @@ Ter como destino o .NET Standard e compilar com êxito o projeto não assegura q
 
 > Todas as plataformas que dão suporte a .NET Standard 2.0 usarão o destino `netstandard2.0` e se beneficiarão de um grafo de pacote menor, enquanto plataformas mais antigas ainda funcionarão e farão fallback usando o destino `netstandard1.x`.
 
-**❌ NÃO** inclua um destino do .NET Standard se a biblioteca se basear em um modelo de aplicativo específico da plataforma.
+ **NÃO** inclua um destino do .NET Standard se a biblioteca se basear em um modelo de aplicativo específico da plataforma.
 
 > Por exemplo, uma biblioteca do kit de ferramentas de controle UWP depende de um modelo de aplicativo disponível apenas em UWP. APIs específicas do modelo de aplicativo não estarão disponíveis no .NET Standard.
 
@@ -59,7 +59,7 @@ Para proteger seus consumidores de precisarem criar estrutura individuais, você
 >
 > Não remova o suporte para o .NET Standard ao fazer isso. Em vez disso, geram da implementação e oferecem APIs de funcionalidade. Dessa forma, sua biblioteca pode ser usada em qualquer lugar e dá suporte à iluminação em tempo de execução de recursos.
 
-**❌ EVITE** usar multi-targeting com o .NET Standard se o código-fonte for o mesmo para todos os destinos.
+ **EVITE** usar multi-targeting, bem como o direcionamento do .NET Standard se o código-fonte for o mesmo para todos os destinos.
 
 > O assembly .NET padrão será usado automaticamente pelo NuGet. Ter como destino implementações do .NET individuais aumenta o tamanho de `*.nupkg` sem nenhum benefício.
 
@@ -88,12 +88,12 @@ Para proteger seus consumidores de precisarem criar estrutura individuais, você
 
 O .NET dá suporte a ter como destino versões do .NET Framework que há muito tempo estão sem suporte, bem como plataformas que não são mais usadas comumente. Embora haja valor fazer sua biblioteca funcionar no máximo possível de destinos, precisar contornar APIs ausentes pode adicionar sobrecarga significativa. Acreditamos que não vale mais a pena ter determinadas estruturas como destino, considerando seu alcance e limitações.
 
-**❌ NÃO** inclua um destino de PCL (Biblioteca de Classes Portátil). Por exemplo, `portable-net45+win8+wpa81+wp8`.
+ **NÃO** inclua um destino de PCL (Biblioteca de Classes Portátil). Por exemplo, `portable-net45+win8+wpa81+wp8`.
 
 > O .NET standard é a maneira moderna de dar suporte a bibliotecas do .NET multiplataforma e substitui PCLs.
 
-**❌ NÃO** inclua destinos para plataformas do .NET que não têm mais suporte. Por exemplo, `SL4`, `WP`.
+ **NÃO** inclua destinos para plataformas do .NET que não têm mais suporte. Por exemplo, `SL4`, `WP`.
 
 >[!div class="step-by-step"]
-[Anterior](./get-started.md)
-[Próximo](./strong-naming.md)
+>[Anterior](get-started.md)
+>[Próximo](strong-naming.md)
