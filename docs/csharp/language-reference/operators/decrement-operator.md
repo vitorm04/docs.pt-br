@@ -1,5 +1,6 @@
 ---
-title: Operador -- (Referência de C#)
+title: Operador -- – Referência de C#
+ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - --_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -- operator [C#]
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
-ms.openlocfilehash: 0858321d6fe192a55bc548f169c558542238a981
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4fba014e8dabc13cd874e17f23515dc29d93f24b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153326"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236915"
 ---
 # <a name="---operator-c-reference"></a>Operador -- (Referência de C#)
 
@@ -42,7 +43,7 @@ Tipos definidos pelo usuário podem [sobrecarregar](../keywords/operator.md) o o
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para obter mais informações, confira as seções [operadores de incremento e de decremento pré-fixados](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) e [operadores de incremento e decremento de prefixo](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) da [Especificação da linguagem C#](../language-specification/index.md).
+Para saber mais, confira as seções [Operadores de incremento e de decremento pré-fixados](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) e [Operadores de incremento e decremento de prefixo](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) da [especificação da linguagem C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Consulte também
 

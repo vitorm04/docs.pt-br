@@ -1,17 +1,18 @@
 ---
-title: Operadores (Guia de Programação em C#)
+title: Operadores – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150960"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238995"
 ---
 # <a name="operators-c-programming-guide"></a>Operadores (Guia de Programação em C#)
 Em C#, um *operador* é um elemento de programa aplicado a um ou mais *operandos* em uma expressão ou instrução. Os operadores que usam um operando, como o operador de incremento (`++`) ou `new`, são referidos como operadores *unários*. Os operadores que usam dois operandos, como operadores aritméticos (`+`,`-`,`*`,`/`), são referidos como operadores *binários*. Um operador, o operador condicional (`?:`), usa três operandos e é o único operador ternário em C#.  

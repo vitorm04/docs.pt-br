@@ -1,5 +1,6 @@
 ---
-title: await (Referência de C#)
+title: await – Referência de C#
+ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - await_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147379"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239677"
 ---
 # <a name="await-c-reference"></a>await (Referência de C#)
 O operador `await` é aplicado a uma tarefa em um método assíncrono para inserir um ponto de suspensão na execução do método até que a tarefa aguardada seja concluída. A tarefa representa um trabalho em andamento.  
@@ -30,7 +31,7 @@ A tarefa à qual o operador `await` é aplicado, normalmente é retornada por um
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Para obter o exemplo completo, consulte [Passo a passo: acessando a Web usando async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
+>  Para o exemplo completo, confira o [Passo a passo: Como acessar a Web usando Async e Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Você pode baixar o exemplo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) no site da Microsoft. O exemplo está no projeto AsyncWalkthrough_HttpClient.  
   
 Conforme mostrado no exemplo anterior, se `await` for aplicado ao resultado de uma chamada de método que retorna uma `Task<TResult>`, o tipo da expressão `await` será `TResult`. Se `await` for aplicado ao resultado de uma chamada de método que retorna uma `Task`, o tipo da expressão `await` será `void`. O exemplo a seguir ilustra a diferença.  
   
@@ -69,5 +70,5 @@ O exemplo anterior usa o C# 7.1, que oferece suporte ao método [`async` `Main`]
 
 ## <a name="see-also"></a>Consulte também  
 - [Programação assíncrona com async e await](../../../csharp/programming-guide/concepts/async/index.md)   
-- [Instruções passo a passo: acessando a Web e usando Async e Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [Passo a passo: Como acessar a Web usando Async e Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 - [async](../../../csharp/language-reference/keywords/async.md)

@@ -3,16 +3,28 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145326"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245594"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
-Qual era a aparência da linguagem nas primeiras versões? E como ela evoluiu com o passar dos anos?
+Este artigo fornece um histórico de cada versão principal da linguagem C#. A equipe C# continua a inovar e a adicionar novos recursos. Os status detalhados do recurso de linguagem, incluindo os recursos considerados para as versões futuras, podem ser encontrados [no repositório dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) no GitHub.
+
+> [!IMPORTANT]
+> A linguagem C# depende de tipos e métodos nos quais a especificação C# é definida como uma *biblioteca padrão* para alguns dos recursos. A plataforma .NET fornece esses tipos e métodos em alguns pacotes. Um exemplo é o processamento de exceção. Cada instrução ou expressão `throw` é verificada para garantir que o objeto que está sendo gerado é derivado de <xref:System.Exception>. Da mesma forma, cada `catch` é verificado para garantir que o tipo que está sendo capturado é derivado de <xref:System.Exception>. Cada versão pode adicionar novos requisitos. Para usar os recursos de linguagem mais recentes em ambientes mais antigos, talvez seja necessário instalar bibliotecas específicas. Essas dependências estão documentadas na página de cada versão específica. Saiba mais sobre as [relações entre linguagem e biblioteca](relationships-between-language-and-library.md) para obter informações sobre essa dependência.
+
+As ferramentas de compilação do C# consideram a versão mais recente da linguagem principal como a versão padrão da linguagem. Pode haver versões de ponto entre as versões principais, detalhadas em outros artigos nesta seção. Para usar as últimas funcionalidades em uma versão de ponto, você precisa [configurar a versão da linguagem do compilador](../language-reference/configure-language-version.md) e selecionar a versão. Já houve três versões de ponto desde o C# 7.0:
+
+* [C# 7.3](csharp-7-3.md):
+  - O C# 7.3 está disponível atualmente no [Visual Studio 2017 versão 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) e no [SDK 2.1.300 do .NET Core 2.1 RC1](../../core/whats-new/index.md).
+* [C# 7.2](csharp-7-2.md):
+  - O C#7.2 está disponível atualmente no [Visual Studio 2017 versão 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
+* [C# 7.1](csharp-7-1.md):
+  - Esses recursos foram adicionados no [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) e no [SDK do .NET Core 2.0](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
@@ -113,7 +125,7 @@ O C# versão 5.0 era uma versão focada da linguagem. Quase todo o esforço para
 
 ### <a name="see-also"></a>Consulte também
 
-* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Code Project: Atributos de informações do chamador em C# 5.0)
+* [Projeto de código: Atributos de informações do chamador no C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 O atributo de informações do chamador permite facilmente recuperar informações sobre o contexto no qual você está executando sem recorrer a uma infinidade de código de reflexão clichê. Ele tem muitos usos em diagnóstico e tarefas de registro em log.
 

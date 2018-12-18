@@ -3,20 +3,20 @@ title: Trabalhando com LINQ
 description: Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126312"
+ms.locfileid: "53170802"
 ---
 # <a name="working-with-linq"></a>Trabalhando com LINQ
 
 ## <a name="introduction"></a>Introdução
 
-Este tutorial ensina vários recursos no .NET Core e da linguagem C#. Você aprenderá:
+Este tutorial ensina os recursos no .NET Core e da linguagem C#. Você aprenderá:
 
-*   Como gerar sequências com LINQ
+*   Como gerar sequências com LINQ.
 *   Como escrever métodos que podem ser facilmente usados em consultas LINQ.
 *   Como distinguir entre uma avaliação lenta e uma detalhada.
 

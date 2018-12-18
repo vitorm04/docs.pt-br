@@ -1,15 +1,16 @@
 ---
-title: Tipos de ponteiro (Guia de Programação em C#)
+title: Tipos de ponteiro – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5474d179005742c610d29ccd9dac7bf1dc94c9d2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146830"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239395"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -98,4 +99,4 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 - [unsafe](../../language-reference/keywords/unsafe.md)  
 - [Instrução fixed](../../language-reference/keywords/fixed-statement.md)  
 - [stackalloc](../../language-reference/keywords/stackalloc.md)  
-- [Conversão boxing e unboxing](../types/boxing-and-unboxing.md)
+- [Conversões boxing e unboxing](../types/boxing-and-unboxing.md)

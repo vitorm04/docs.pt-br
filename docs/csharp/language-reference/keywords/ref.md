@@ -1,5 +1,6 @@
 ---
-title: Palavra-chave ref (Referência de C#)
+title: Palavra-chave ref – Referência de C#
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195964"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236311"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -62,7 +63,7 @@ No entanto, os métodos podem ser sobrecarregados quando um método tem um parâ
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
 - Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: um exemplo
+## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: Um exemplo
 
 Os exemplos anteriores passam tipos de valor por referência. Você também pode usar a palavra-chave `ref` para passar tipos de referência por referência. Passar um tipo de referência por referência permite que o método chamado substitua o objeto ao qual se refere o parâmetro de referência no chamador. O local de armazenamento do objeto é passado para o método como o valor do parâmetro de referência. Se você alterar o valor no local de armazenamento do parâmetro (para apontar para um novo objeto), irá alterar também o local de armazenamento ao qual se refere o chamador. O exemplo a seguir passa uma instância de um tipo de referência como um parâmetro `ref`.
   

@@ -1,22 +1,23 @@
 ---
-title: Palavras-chave de instrução (Referência de C#)
+title: Palavras-chave de instrução – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 7b28a81f9e9e2683e53406a247732241e3bcb15b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: edc4211818051d4be3afa02dc260f64c8f2c2d34
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125438"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237682"
 ---
 # <a name="statement-keywords-c-reference"></a>Palavras-chave de instrução (Referência de C#)
 
 As instruções são instruções do programa. Exceto conforme descrito nos tópicos referenciados na tabela a seguir, as instruções são executadas em sequência. A tabela a seguir lista as palavras-chave da instrução C#. Para obter mais informações sobre instruções que não são expressos com qualquer palavra-chave, consulte [Instruções](../../programming-guide/statements-expressions-operators/statements.md).
 
-|Categoria|Palavras-chave de C#|
+|Categoria|Palavras-chave do C#|
 |--------------|------------------|
 |[Instruções de seleção](selection-statements.md)|[if](if-else.md), [else](if-else.md), [switch](switch.md), [case](switch.md)|
 |[Instruções de iteração](iteration-statements.md)|[do](do.md), [for](for.md), [foreach](foreach-in.md), [in](foreach-in.md), [while](while.md)|
