@@ -1,5 +1,6 @@
 ---
-title: Hello World -- seu primeiro programa (Guia de Programação em C#)
+title: Olá, Mundo -- seu primeiro programa – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593034"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236382"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
 O procedimento a seguir cria uma versão de C# do programa tradicional "Hello World!" programa. O programa exibe a cadeia de caracteres `Hello World!`  
@@ -42,7 +43,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
      [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  Pressione a tecla F5 para executar o projeto. Uma janela do Prompt de Comando aparece, contendo a linha `Hello World!`  
+7.  Escolha a tecla F5 para executar o projeto. Uma janela do Prompt de Comando aparece, contendo a linha `Hello World!`  
   
  Em seguida, as partes importantes desse programa são examinadas.  
   
@@ -72,13 +73,13 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
      [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
-     -ou-  
+     - ou -  
   
      [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  O parâmetro do método `Main`, `args`, é um matriz `string` que contém os argumentos de linha de comando usados para invocar o programa. Ao contrário do C++, a matriz não inclui o nome do arquivo executável (exe).  
   
- Para obter mais informações sobre como usar argumentos de linha de comando, consulte os exemplos em [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Como criar e usar assemblies usando a linha de comando](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Para saber mais sobre como usar argumentos de linha de comando, confira os exemplos em [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md) e [Como criar e usar assemblies usando a linha de comando](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
  A chamada para <xref:System.Console.ReadKey%2A> ao final do método `Main` impede que a janela de console seja fechada antes que você tenha a oportunidade de ler a saída, ao executar o programa no modo de depuração, pressionando F5.  
   
@@ -110,7 +111,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
     -   Habilitar builds de linha de comando em uma janela de Prompt de Comando padrão.  
   
-         Consulte [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         Confira [Como configurar variáveis de ambiente para a linha de comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
 3.  Na janela do prompt de comando, navegue até a pasta que contém seu arquivo `Hello.cs`.  
   

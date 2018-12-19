@@ -1,5 +1,5 @@
 ---
-title: 'Como: configurar variáveis de ambiente para a linha de comando do Visual Studio'
+title: 'Como: configurar variáveis de ambiente para a linha de comando do Visual Studio.'
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3563f668dfd4610e1c5cd7d7f8633943c654f193
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857843"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286436"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Como: configurar variáveis de ambiente para a linha de comando do Visual Studio
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Como: configurar variáveis de ambiente para a linha de comando do Visual Studio.
 
-O arquivo VsDevCmd.bat define as variáveis de ambiente adequadas para habilitar builds de linha de comando. Para obter mais informações sobre VsDevCmd.bat, consulte [Artigo da base de dados de conhecimento Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut).  
+O arquivo VsDevCmd.bat define as variáveis de ambiente adequadas para habilitar builds de linha de comando.
 
 > [!NOTE]
 > O arquivo VsDevCmd.bat é um novo arquivo fornecido com o Visual Studio 2017. O Visual Studio 2015 e versões anteriores usavam o VSVARS32.bat para a mesma finalidade. Esse arquivo era armazenado em \Arquivos de Programas\Microsoft Visual Studio\\*Versão*\Common7\Tools ou Arquivos de Programas (x86)\Microsoft Visual Studio\\*Versão*\Common7\Tools.
@@ -41,7 +41,14 @@ Se a versão atual do Visual Studio estiver instalada em um computador que tamb�
   
     > [!CAUTION]
     >  O VsDevCmd.bat pode variar de um computador para outro. Não substitua um arquivo VsDevCmd.bat não encontrado ou danificado por um VsDevCmd.bat de outro computador. Em vez disso, execute novamente a instalação para substituir o arquivo não encontrado.  
-  
+
+### <a name="available-options-for-vsdevcmdbat"></a>Opções disponíveis para o VsDevCmd.BAT
+
+Para ver as opções disponíveis para VsDevCmd.BAT, execute o comando com a opção `-help`:
+```console
+VsDevCmd.bat -help
+```
+
 ## <a name="see-also"></a>Consulte também  
 
 - [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
