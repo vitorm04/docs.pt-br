@@ -1,18 +1,19 @@
 ---
-title: Como definir propriedades abstract (Guia de Programação em C#)
+title: 'Como: definir propriedades abstract – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 549867cac99784ce885b8fce8a1638c40ad88cec
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 70f344fb4e5a74940219688190324beb8183d32b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002977"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237305"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como definir propriedades abstract (Guia de Programação em C#)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como: definir propriedades abstract (Guia de Programação em C#)
 O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/language-reference/keywords/abstract.md). Uma declaração de propriedade abstract não fornece uma implementação dos acessadores da propriedade – ela declara que a classe dá suporte às propriedades, mas deixa a implementação do acessador para classes derivadas. O exemplo a seguir demonstra como implementar as propriedades abstract herdadas de uma classe base.  
   
  Esse exemplo consiste em três arquivos, cada um deles é compilado individualmente e seu assembly resultante é referenciado pela próxima compilação:  
@@ -58,4 +59,4 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../../csharp/l
 - [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [Classes e membros de classes abstract e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Como criar e usar assemblies usando a linha de comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Como: criar e usar assemblies usando a linha de comando](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).

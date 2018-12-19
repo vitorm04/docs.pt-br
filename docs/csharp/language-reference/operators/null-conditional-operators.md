@@ -1,17 +1,18 @@
 ---
-title: Operadores condicionais nulos (referência de C#)
+title: Operadores condicionais nulos – Referência de C#
+ms.custom: seodec18
 ms.date: 04/03/2015
 helpviewer_keywords:
 - null-conditional operators [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 823b9dc886bf2448ca9da4ac640bfe56f90d3ff3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4189b07fd280192a4cb39400e4e77cef702c9d08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194846"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239547"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. Operadores condicionais nulos ?. e ?[] (C# e Visual Basic)
 Testa o valor do operando esquerdo para nulo antes de executar um acesso de membro (`?.`) ou uma operação de índice (`?[]`); retorna `null` se o operando esquerdo é avaliado como `null`. 
@@ -49,7 +50,8 @@ PropertyChanged?.Invoke(…)
  A nova forma é thread-safe porque o compilador gera código para avaliar `PropertyChanged` somente uma vez, mantendo o resultado em uma variável temporária. Você precisa chamar explicitamente o método `Invoke` porque não há nenhuma sintaxe de invocação de delegado condicional nulo `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Especificações da linguagem  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Para saber mais, confira [Operador condicional nulo](~/_csharplang/spec/expressions.md#null-conditional-operator) na [Especificação da linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 

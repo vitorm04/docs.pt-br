@@ -1,5 +1,6 @@
 ---
-title: Operador () (Referência de C#)
+title: Operador () – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ()_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 29097dc4aa0bf712b9b2beda4450820a66472ba7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179660"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236447"
 ---
 # <a name="-operator-c-reference"></a>Operador () (Referência de C#)
 Além de serem usados para especificar a ordem das operações em uma expressão, os parênteses são usados para realizar as seguintes tarefas:  

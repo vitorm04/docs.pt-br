@@ -1,16 +1,17 @@
 ---
-title: Delegados genéricos (Guia de Programação em C#)
+title: Delegados genéricos – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 7596ace0ea404cc345d73c0979fa7bd03a26b047
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 56e715aa0be91c250e243a3a37195e7ee037de82
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857530"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241068"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegados genéricos (Guia de Programação em C#)
 Um [delegado](../../../csharp/language-reference/keywords/delegate.md) pode definir seus próprios parâmetros de tipo. O código que referencia o delegado genérico pode especificar o argumento de tipo para criar um tipo construído fechado, assim como quando uma classe genérica é instanciada ou quando um método genérico é chamado, conforme mostrado no exemplo a seguir:  

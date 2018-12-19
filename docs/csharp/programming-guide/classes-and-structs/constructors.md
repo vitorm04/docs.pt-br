@@ -1,17 +1,18 @@
 ---
-title: Construtores (Guia de Programação em C#)
+title: Construtores – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 3d07fe5f6164885a994838376887edccc260e291
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 79b000952ed03e5dc28d1c33bd2cba14708fb26a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593953"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235326"
 ---
 # <a name="constructors-c-programming-guide"></a>Construtores (Guia de Programação em C#)
 Sempre que uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é criada, o construtor é chamado. Uma classe ou struct pode ter vários construtores que usam argumentos diferentes. Os construtores permitem que o programador defina valores padrão, limite a instanciação e grave códigos flexíveis e fáceis de ler. Para obter mais informações e exemplos, consulte [Usando Construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) e [Construtores de Instância](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
@@ -53,7 +54,7 @@ Para obter mais informações e exemplos, consulte [Construtores Estáticos](../
   
  [Construtores estáticos](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
   
- [Como escrever um construtor de cópia](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
+ [Como: escrever um construtor de cópia](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Consulte também
 

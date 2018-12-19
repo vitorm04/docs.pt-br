@@ -1,5 +1,6 @@
 ---
-title: Cláusula group (Referência de C#)
+title: Cláusula group – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584345"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238163"
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
 
@@ -53,7 +54,7 @@ O exemplo a seguir mostra o uso de um valor booliano para uma chave dividir os r
 
 ### <a name="grouping-by-numeric-range"></a>Agrupar por alcance numérico
 
-O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para obter mais informações sobre como usar métodos com segurança em expressões de consulta, consulte [Como Manipular Exceções em Expressões de Consulta](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para saber mais sobre como usar métodos com segurança em expressões de consulta, confira [Como manipular exceções em expressões de consulta](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +66,7 @@ Use uma chave composta para agrupar elementos de acordo com mais de uma chave. U
 group person by new {name = person.surname, city = person.city};
 ```
 
-Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [Como implementar uma classe leve com propriedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
+Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Confira mais informações em [Como implementar uma classe leve com propriedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
 
 ## <a name="example"></a>Exemplo
 

@@ -1,5 +1,6 @@
 ---
-title: Argumentos nomeados e opcionais (Guia de Programação em C#)
+title: Argumentos nomeados e opcionais – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857976"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244902"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos nomeados e opcionais (Guia de Programação em C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] apresenta argumentos nomeados e opcionais. *Argumentos nomeados* permitem especificar um argumento para um parâmetro específico associando o argumento ao nome do parâmetro e não com à posição do parâmetro na lista de parâmetros. *Argumentos opcionais* permitem omitir argumentos para alguns parâmetros. Ambas as técnicas podem ser usadas com os métodos, indexadores, construtores e delegados.  
@@ -114,7 +115,7 @@ Parâmetros de AutoFormat
   
  [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
- Para obter mais informações e exemplos, consulte [Como usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) e [Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Para obter mais informações e exemplos, confira [Como usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) e [Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Resolução de sobrecarga  
  O uso de argumentos nomeados e opcionais afeta a resolução de sobrecarga das seguintes maneiras:  
@@ -130,7 +131,7 @@ Parâmetros de AutoFormat
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Como: usar argumentos nomeados e opcionais na programação do Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
 - [Usando o tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Usando construtores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
 - [Usando indexadores](../../../csharp/programming-guide/indexers/using-indexers.md)

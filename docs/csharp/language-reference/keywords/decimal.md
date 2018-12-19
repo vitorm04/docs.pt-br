@@ -1,5 +1,6 @@
 ---
-title: Palavra-chave decimal (Referência de C#)
+title: Palavra-chave decimal – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506513"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239453"
 ---
 # <a name="decimal-c-reference"></a>decimal (Referência de C#)
 
@@ -90,7 +91,7 @@ Neste exemplo, a saída é formatada usando a cadeia de caracteres de formato de
 
 [!code-csharp[csrefKeywordsTypes#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#7)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -1,5 +1,6 @@
 ---
-title: event (Referência de C#)
+title: event – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -9,18 +10,18 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259695"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240522"
 ---
 # <a name="event-c-reference"></a>event (Referência de C#)
 A palavra-chave `event` é usada para declarar um evento em uma classe publicadora.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como declarar e acionar um evento que usa o <xref:System.EventHandler> como o tipo delegado subjacente. Para obter o exemplo de código completo, que também mostra como usar o tipo delegado <xref:System.EventHandler%601> genérico e como assinar um evento e criar um método de manipulador de eventos, consulte [Como publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
+ O exemplo a seguir mostra como declarar e acionar um evento que usa o <xref:System.EventHandler> como o tipo delegado subjacente. Para obter o exemplo de código completo, que também mostra como usar o tipo delegado <xref:System.EventHandler%601> genérico e como assinar um evento e criar um método de manipulador de eventos, confira [Como publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
  [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
@@ -53,4 +54,4 @@ A palavra-chave `event` é usada para declarar um evento em uma classe publicado
 - [add](../../../csharp/language-reference/keywords/add.md)  
 - [remove](../../../csharp/language-reference/keywords/remove.md)  
 - [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)  
-- [Como combinar delegados (delegados multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Como: combinar delegados (delegados multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

@@ -1,15 +1,16 @@
 ---
-title: Palavras-chave contextuais (Referência de C#)
+title: Palavras-chave contextuais – Referência de C#
+ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232944"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241390"
 ---
 # <a name="contextual-keywords-c-reference"></a>Palavras-chave contextuais (Referência de C#)
 Uma palavra-chave contextual é usada para fornecer um significado específico no código, mas não é uma palavra reservada no C#. As seguintes palavras-chave contextuais são apresentadas nesta seção:  

@@ -1,17 +1,18 @@
 ---
-title: Como acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)
+title: 'Como: acessar argumentos de linha de comando usando foreach – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 811ee09aec7afac70f3f2c2fe5fb002232935028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511330"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242423"
 ---
-# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Como acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)
+# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Como: acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)
 Outra abordagem para iterar na matriz é usar a instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md), conforme mostrado neste exemplo. A instrução `foreach` pode ser usada para iterar em uma matriz, em uma classe de coleção do .NET Framework ou em qualquer classe ou struct que implementa a interface <xref:System.Collections.IEnumerable>.  
   
 > [!NOTE]
@@ -32,5 +33,5 @@ Outra abordagem para iterar na matriz é usar a instrução [foreach](../../../c
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
 - [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
 - [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Como exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Como: exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
 - [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

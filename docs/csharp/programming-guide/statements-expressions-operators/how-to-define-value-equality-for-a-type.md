@@ -1,5 +1,6 @@
 ---
-title: Como definir a igualdade de valor para um tipo (Guia de Programação em C#)
+title: 'Como: definir a igualdade de valor para um tipo – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126777"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244421"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como definir a igualdade de valor para um tipo (Guia de Programação em C#)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como: definir a igualdade de valor para um tipo (Guia de Programação em C#)
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  
   
 1.  `x.Equals(x)` retorna `true`. Isso é chamado de propriedade reflexiva.  
@@ -36,11 +37,11 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
 2.  Implemente a interface <xref:System.IEquatable%601?displayProperty=nameWithType> fornecendo um método `Equals` específico do tipo. Isso é o local em que a comparação de equivalência de fato é realizada. Por exemplo, você pode decidir definir a igualdade comparando apenas um ou dois campos em seu tipo. Não lance exceções de `Equals`. Para classes somente: esse método deve examinar somente os campos que são declarados na classe. Ele deve chamar `base.Equals` para examinar os campos que estão na classe base. (Não faça isso se o tipo herda diretamente de <xref:System.Object>, pois a implementação <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> executa uma verificação de igualdade de referência.)  
   
-3.  Opcional, mas recomendado: sobrecarregue os operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Opcional, mas recomendável: Sobrecarregar os operadores [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [! =](../../../csharp/language-reference/operators/not-equal-operator.md).  
   
 4.  Substitua <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> para que os dois objetos que têm a igualdade de valor produzam o mesmo código hash.  
   
-5.  Opcional: para dar suporte às definições para “maior que” ou “menor que”, implemente a interface <xref:System.IComparable%601> para seu tipo e também sobrecarregue os operadores [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5.  Opcionais: para dar suporte às definições para “maior que” ou “menor que”, implemente a interface <xref:System.IComparable%601> para seu tipo e também sobrecarregue os operadores [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
  O primeiro exemplo a seguir mostra uma implementação da classe. O segundo exemplo mostra uma implementação de struct.  
   

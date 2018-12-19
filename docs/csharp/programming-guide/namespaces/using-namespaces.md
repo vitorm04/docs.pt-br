@@ -1,5 +1,6 @@
 ---
-title: Usando namespaces (Guia de Programação em C#)
+title: Usando namespaces – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123391"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235766"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 Os namespaces são usados intensamente em programas em C# de duas maneiras. Em primeiro lugar, as classes do .NET Framework usam namespaces para organizar suas muitas classes. Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o escopo dos nomes de classe e de método em projetos de programação maiores.  
@@ -85,13 +86,13 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  Isso funciona, mas se um tipo nomeado `Alias` fosse subsequentemente introduzido, `Alias.` se associaria a esse tipo. Usar `Alias::Exception` assegura que `Alias` seja tratado como um alias de namespace e não seja confundido com um tipo.  
   
- Consulte o tópico [Como usar o alias de namespace global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) para obter mais informações sobre o alias `global`.  
+ Confira o tópico [Como usar o alias de namespace global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) para obter mais informações sobre o alias `global`.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
 - [Palavras-chave de namespace](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [. Operador .](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [. ??](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

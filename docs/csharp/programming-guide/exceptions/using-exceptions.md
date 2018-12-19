@@ -1,16 +1,17 @@
 ---
-title: Usando exceções (Guia de Programação em C#)
+title: Usando exceções – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 7b60ad4ce20a1977d309b275b530d03cbb8e1f7d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 64e62d9c6cfcffb9ea5c0b0e05a546753278e186
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514680"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240184"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Usando exceções (Guia de Programação em C#)
 No C#, os erros no programa em tempo de execução são propagados pelo programa usando um mecanismo chamado exceções. As exceções são geradas pelo código que encontra um erro e capturadas pelo código que pode corrigir o erro. As exceções podem ser geradas pelo CLR (Common Language Runtime) do .NET Framework ou pelo código em um programa. Uma vez que uma exceção é gerada, ela é propagada acima na pilha de chamadas até uma instrução `catch` para a exceção ser encontrada. As exceções não capturadas são tratadas por um manipulador de exceção genérico fornecido pelo sistema que exibe uma caixa de diálogo.  

@@ -1,17 +1,18 @@
 ---
-title: Métodos anônimos (Guia de Programação em C#)
+title: Métodos anônimos – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 26d4b7f46783b9aa41035775928a4fe322d0af44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506651"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243967"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Métodos anônimos (Guia de Programação em C#)
 Nas versões anteriores ao C# 2.0, a única maneira de declarar um [delegado](../../../csharp/language-reference/keywords/delegate.md) era usar [métodos nomeados](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). O C# 2.0 apresentou os métodos anônimos e no C# 3.0 e versões posteriores, as expressões lambda substituem os métodos anônimos como a melhor maneira de gravar código embutido. No entanto, as informações sobre os métodos anônimos apresentadas neste tópico também se aplicam às expressões lambda. Há um caso em que um método anônimo fornece uma funcionalidade não encontrada em expressões lambda. Métodos anônimos habilitam a omissão da lista de parâmetros. Isso significa que um método anônimo pode ser convertido em delegados com uma variedade de assinaturas. Isso não é possível com expressões lambda. Para obter mais informações específicas sobre as expressões lambda, consulte [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  

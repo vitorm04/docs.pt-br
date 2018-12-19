@@ -1,16 +1,17 @@
 ---
-title: Processando o arquivo XML (Guia de Programação em C#)
+title: Processando o arquivo XML – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 1cc5925f33c2d06054e7a88c6c6f90ef026f4dee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b5699535553629fb22e4e5789538fd9d598c9f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235079"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Processando o arquivo XML (Guia de Programação em C#)
 O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [Marcas recomendadas para comentários da documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) A cadeia de identificação identifica exclusivamente o constructo. Programas que processam o arquivo XML podem usar a cadeia de identificação para identificar o item de metadados/reflexão do .NET Framework correspondente ao qual a documentação se aplica.  

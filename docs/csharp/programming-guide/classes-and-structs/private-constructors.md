@@ -1,16 +1,17 @@
 ---
-title: Construtores particulares (Guia de Programação em C#)
+title: Construtores particulares – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 5b387447046e4755287fc9f6a8813a19752799c2
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a0ff8f69f7725b40eaac01acef74857c2a99247c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980710"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240496"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Construtores particulares (Guia de Programação em C#)
 Um construtor particular é um construtor de instância especial. Normalmente, ele é usado em classes que contêm apenas membros estáticos. Se uma classe tiver um ou mais construtores particulares e nenhum construtor público, outras classes (exceto as classes aninhadas) não poderão criar instâncias dessa classe. Por exemplo:  

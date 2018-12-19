@@ -1,19 +1,20 @@
 ---
-title: Como realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
+title: 'Como: realizar e cancelar a assinatura de eventos – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241081"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como: realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Para assinar eventos usando o IDE do Visual Studio  
@@ -69,7 +70,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
     }  
     ```  
   
-     Para obter mais informações, consulte [Como usar expressões lambda fora do LINQ (C#)](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     Confira mais informações em [Como: usar expressões lambda fora do LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Para assinar eventos usando um método anônimo  
   
@@ -102,6 +103,6 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
 
 - [Eventos](../../../csharp/programming-guide/events/index.md)  
 - [event](../../../csharp/language-reference/keywords/event.md)  
-- [Como publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
 - [Operador -= (referência do C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
 - [Operador +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

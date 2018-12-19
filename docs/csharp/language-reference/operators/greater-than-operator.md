@@ -1,5 +1,6 @@
 ---
-title: Operador &gt; (Referência de C#)
+title: '&gt;Operador – Referência de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '>_CSharpKeyword'
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - '> operator [C#]'
 - greater than operator (>) [C#]
 ms.assetid: 26d3cb69-9c0b-4cc5-858b-5be1abd6659d
-ms.openlocfilehash: 08fe174c7e4351edc1d1c8cdb13d736b98242795
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 13ec8aa8a98984bc43a349369dd16364edf5cbf3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510120"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239579"
 ---
 # <a name="gt-operator-c-reference"></a>Operador &gt; (Referência de C#)
 Todos os tipos numéricos e de enumeração definem um operador relacional "maior que" (`>`) que retornará `true` se o primeiro operando for maior que o segundo, caso contrário, `false`.  

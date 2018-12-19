@@ -1,17 +1,18 @@
 ---
-title: where (restrição de tipo genérico) (Referência de C#)
+title: where (restrição de tipo genérico) – Referência de C#
+ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d6c1fba87ef1c4344bd150b2af2f5d1ad019695
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500818"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235706"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restrição de tipo genérico) (Referência de C#)
 
@@ -58,7 +59,7 @@ Para obter informações sobre delegados genéricos, consulte [Delegados genéri
 
 Para obter detalhes sobre a sintaxe e o uso de restrições, consulte [Restrições a parâmetros de tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

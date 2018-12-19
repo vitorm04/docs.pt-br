@@ -1,5 +1,6 @@
 ---
-title: $ – interpolação de cadeia de caracteres (Referência de C#)
+title: $ – interpolação de cadeia de caracteres – Referência de C#
+ms.custom: seodec18
 description: A interpolação de cadeia de caracteres oferece uma sintaxe mais legível e conveniente para formatar a saída de cadeia de caracteres de formatação do que a tradicional formatação composta da cadeia de caracteres.
 ms.date: 03/26/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196972"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244798"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 

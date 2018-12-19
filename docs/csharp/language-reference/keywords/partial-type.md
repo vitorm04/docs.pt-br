@@ -1,5 +1,6 @@
 ---
-title: tipo parcial (Referência em C#)
+title: tipo parcial – Referência em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - partialtype
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 365d00d2c53d3efe1cd4330bdd3ec48740a49c53
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ed3e18c5981fa52dc2c6ef09bfb666cfa705fede
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208270"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239560"
 ---
 # <a name="partial-type-c-reference"></a>tipo parcial (Referência em C#)
 
@@ -30,7 +31,7 @@ Em *File2.cs*, a declaração:
 
 Dividir um tipo de classe, struct ou interface em vários arquivos pode ser útil quando você está trabalhando com projetos grandes ou com o código gerado automaticamente, como o código fornecido pelo [Designer de Formulários do Windows](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Um tipo parcial pode conter um [método parcial](partial-method.md). Para obter mais informações, consulte [Classes e métodos parciais](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

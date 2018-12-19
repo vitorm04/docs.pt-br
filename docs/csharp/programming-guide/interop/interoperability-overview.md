@@ -1,5 +1,6 @@
 ---
-title: Visão geral sobre interoperabilidade (Guia de Programação em C#)
+title: Visão geral sobre interoperabilidade – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d19f238136ed4ce1eb9b9821ef12c6305c06e429
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150025"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238657"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -21,7 +22,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
 ## <a name="platform-invoke"></a>Invocação de plataforma  
  A *invocação de plataforma* é um serviço que habilita o código gerenciado a chamar funções não gerenciadas que são implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Win32 da Microsoft. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
   
- Para obter mais informações, consulte [Consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md) e [Como usar a invocação de plataforma para reproduzir um arquivo wave](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
+ Para saber mais, veja [Consumo de funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md) e [Como usar a invocação de plataforma para reproduzir um arquivo wave](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
 >  O [CLR](../../../standard/clr.md) (Common Language Runtime) gerencia o acesso aos recursos do sistema. Chamar código não gerenciado que esteja fora do CLR ignora esse mecanismo de segurança e, portanto, apresenta um risco de segurança. Por exemplo, o código não gerenciado pode chamar recursos diretamente em código não gerenciado, ignorando os mecanismos de segurança do CLR. Para obter mais informações, confira [Segurança no .NET](../../../standard/security/index.md).  

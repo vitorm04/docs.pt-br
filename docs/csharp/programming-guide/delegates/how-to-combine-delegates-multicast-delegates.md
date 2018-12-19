@@ -1,18 +1,19 @@
 ---
-title: Como combinar delegados (delegados multicast) (Guia de Programação em C#)
+title: 'Como: combinar delegados (delegados multicast) – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
-ms.openlocfilehash: e3cc3f9082bd86004a7821b64c01253408c07641
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d835f9b22fef550d6e73cbd620a283bd71e393ec
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083271"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237786"
 ---
-# <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Como combinar delegados (delegados multicast) (Guia de Programação em C#)
+# <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Como: combinar delegados (delegados multicast) (Guia de Programação em C#)
 Este exemplo demonstra como criar delegados multicast. Uma propriedade útil de objetos [delegados](../../../csharp/language-reference/keywords/delegate.md) é que vários objetos podem ser atribuídos a uma instância delegada usando o operador `+`. O delegado multicast contém uma lista dos delegados atribuídos. Quando o delegado multicast é chamado, ele invoca os delegados da lista, em ordem. Apenas os delegados do mesmo tipo podem ser combinados.  
   
  O operador `-` pode ser usado para remover um delegado de componente de um delegado multicast.  

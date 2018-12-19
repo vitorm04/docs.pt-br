@@ -1,5 +1,6 @@
 ---
-title: Palavra-chave double (Referência de C#)
+title: Palavra-chave double – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - double
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 3354f22f5d1c1f1807388542c4ada5e67a9d5a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3c0fbe4f03edb829321971831c47f669d75f4d8c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192701"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240366"
 ---
 # <a name="double-c-reference"></a>double (Referência de C#)
 
@@ -56,7 +57,7 @@ No exemplo a seguir, um [int](../../../csharp/language-reference/keywords/int.md
 
 [!code-csharp[csrefKeywordsTypes#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#9)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

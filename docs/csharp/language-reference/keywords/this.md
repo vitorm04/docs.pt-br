@@ -1,5 +1,6 @@
 ---
-title: Palavra-chave this (Referência de C#)
+title: Palavra-chave this – Referência de C#
+ms.custom: seodec18
 description: Palavra-chave this (Referência de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 52e7fce0ebeeccfbf5f56dbbcade9fae2890dfe1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: af39ba6e20fb1a7c9e1a356ef5015afd885dbbca
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130803"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241162"
 ---
 # <a name="this-c-reference"></a>this (Referência de C#)
 

@@ -1,5 +1,6 @@
 ---
-title: Palavra-chave explicit (Referência de C#)
+title: Palavra-chave explicit – Referência de C#
+ms.custom: seodec18
 ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b5e03ffa0f956d7404c7c41f04aef1bfd8769df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238553"
 ---
 # <a name="explicit-c-reference"></a>explicit (Referência de C#)
 
@@ -44,7 +45,7 @@ O exemplo a seguir define um struct `Digit`, que representa um único dígito de
 
 [!code-csharp[csrefKeywordsConversion#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#4)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
@@ -55,5 +56,5 @@ O exemplo a seguir define um struct `Digit`, que representa um único dígito de
 - [Palavras-chave do C#](index.md)  
 - [implicit](implicit.md)  
 - [operator (Referência de C#)](operator.md)  
-- [Como implementar conversões definidas pelo usuário entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Como: implementar conversões definidas pelo usuário entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
 - [Conversões explícitas encadeadas definidas pelo usuário em C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  

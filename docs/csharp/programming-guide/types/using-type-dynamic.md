@@ -1,16 +1,17 @@
 ---
-title: Usando o tipo dynamic (Guia de Programação em C#)
+title: Usando o tipo dynamic – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: b1ea9240da66b77723c002c6527135339af9e352
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c4e2aac613397fbd44f4594f96ddebfb75d0c3f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "43502527"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243745"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Usando o tipo dynamic (Guia de Programação em C#)
 
@@ -77,5 +78,5 @@ Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno
 |-----------|-----------------|
 |[dynamic](../../language-reference/keywords/dynamic.md)|Descreve o uso da palavra-chave `dynamic`.|
 |[Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Fornece uma visão geral do DLR, que é um ambiente de tempo de execução que adiciona um conjunto de serviços para as linguagens dinâmicas para o CLR (Common Language Runtime).|
-|[Passo a passo: Criando e usando objetos dinâmicos](walkthrough-creating-and-using-dynamic-objects.md)|Fornece instruções passo a passo para criar um objeto dinâmico personalizado e para criar um projeto que acessa uma biblioteca `IronPython`.|
-|[Como acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../interop/how-to-access-office-onterop-objects.md)|Demonstra como criar um projeto que usa argumentos nomeados e opcionais, o tipo `dynamic` e outros aprimoramentos que simplificam o acesso aos objetos de API do Office.|
+|[Passo a passo: Criar e usar objetos dinâmicos](walkthrough-creating-and-using-dynamic-objects.md)|Fornece instruções passo a passo para criar um objeto dinâmico personalizado e para criar um projeto que acessa uma biblioteca `IronPython`.|
+|[Como: acessar objetos de interoperabilidade do Office usando recursos do Visual C#](../interop/how-to-access-office-onterop-objects.md)|Demonstra como criar um projeto que usa argumentos nomeados e opcionais, o tipo `dynamic` e outros aprimoramentos que simplificam o acesso aos objetos de API do Office.|

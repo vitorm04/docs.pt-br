@@ -1,5 +1,6 @@
 ---
-title: Palavra-chave operator (referência em C#)
+title: Palavra-chave operator – Referência de C#
+ms.custom: seodec18
 description: Saiba como sobrecarregar um operador interno de C#
 ms.date: 08/27/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cdc052da4457a59cc66848780e944ccf203acf39
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47209366"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235575"
 ---
 # <a name="operator-c-reference"></a>operator (Referência de C#)
 
@@ -35,7 +36,7 @@ O exemplo a seguir define um tipo `Fraction` que representa números fracionári
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
@@ -47,4 +48,4 @@ O exemplo a seguir define um tipo `Fraction` que representa números fracionári
 - [implicit](implicit.md)
 - [explicit](explicit.md)
 - [Operadores sobrecarregáveis](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [Como implementar conversões definidas pelo usuário entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Como: implementar conversões definidas pelo usuário entre structs](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

@@ -1,16 +1,17 @@
 ---
-title: Palavra-chave out (modificador genérico) (Referência de C#)
+title: palavra-chave out (modificador genérico) – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, out keyword [C#]
 - out keyword [C#]
 ms.assetid: f8c20dec-a8bc-426a-9882-4076b1db1e00
-ms.openlocfilehash: fedbdb12c1da108d17636770fb5c628195dce0d4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8ad190e8653063f1461e4ff61a62310e59f48cf7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582691"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239492"
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (modificador genérico) (Referência de C#)
 
@@ -47,7 +48,7 @@ O exemplo a seguir mostra como declarar, instanciar e invocar um delegado genér
 
 Um delegado genérico, um tipo pode ser declarado covariante se for usado apenas como um tipo de retorno do método e não usado para argumentos de método.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

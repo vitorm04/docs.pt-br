@@ -1,16 +1,17 @@
 ---
-title: Tipos anônimos (Guia de Programação em C#)
+title: Tipos anônimos – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: b732de508c8738de5e5e55168a6e17a1d88a3b02
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 234190beb2cde69906df9d5c5f468689b7399535
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259815"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235979"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anônimos (Guia de Programação em C#)
 Os tipos anônimos fornecem um modo conveniente de encapsular um conjunto de propriedades somente leitura em um único objeto sem a necessidade de primeiro definir explicitamente um tipo. O nome do tipo é gerado pelo compilador e não está disponível no nível do código-fonte. O tipo de cada propriedade é inferido pelo compilador.  

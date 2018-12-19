@@ -1,5 +1,6 @@
 ---
-title: Como ler um arquivo de texto (Guia de Programação em C#)
+title: 'Como: ler um arquivo de texto – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084111"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240301"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Como ler um arquivo de texto (Guia de Programação em C#)
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Como: ler um arquivo de texto (Guia de Programação em C#)
 Este exemplo lê o conteúdo de um arquivo de texto usando os métodos estáticos <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> da classe <xref:System.IO.File?displayProperty=nameWithType>.  
   
- Para obter um exemplo que usa o <xref:System.IO.StreamReader>, consulte [Como ler um arquivo de texto uma linha de cada vez](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
+ Para obter um exemplo que use <xref:System.IO.StreamReader>, confira [Como ler um arquivo de texto uma linha de cada vez](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
->  Os arquivos usados neste exemplo são criados no tópico [Como gravar em um arquivo de texto](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
+>  Os arquivos usados neste exemplo são criados no tópico [Como gravar em um arquivo de texto](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md)  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
@@ -30,7 +31,7 @@ Este exemplo lê o conteúdo de um arquivo de texto usando os métodos estático
 ## <a name="compiling-the-code"></a>Compilando o código  
  Copie o código e cole-o em um aplicativo de console em C#.  
   
- Se não estiver usando os arquivos de texto de [Como gravar em um arquivo de texto](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), substitua o argumento de `ReadAllText` e `ReadAllLines` pelo nome de arquivo e pelo caminho adequado em seu computador.  
+ Se você não estiver usando os arquivos de texto de [Como gravar em um arquivo de texto](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), substitua o argumento de `ReadAllText` e `ReadAllLines` pelo nome de arquivo e pelo caminho adequado em seu computador.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
