@@ -1,0 +1,45 @@
+---
+title: Operadores true e false – Referência de C#
+ms.custom: seodec18
+ms.date: 12/10/2018
+helpviewer_keywords:
+- false operator [C#]
+- true operator [C#]
+ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
+ms.openlocfilehash: 0a75566fdb6222157ecda12a50fd78e22f92fcb4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245727"
+---
+# <a name="true-and-false-operators-c-reference"></a><span data-ttu-id="42326-102">Operadores true e false (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="42326-102">true and false operators (C# Reference)</span></span>
+
+<span data-ttu-id="42326-103">O operador `true` retorna o valor [bool](bool.md) `true` para indicar que um operando é definitivamente true.</span><span class="sxs-lookup"><span data-stu-id="42326-103">The `true` operator returns the [bool](bool.md) value `true` to indicate that an operand is definitely true.</span></span> <span data-ttu-id="42326-104">O operador `false` retorna o valor `bool` `true` para indicar que um operando é definitivamente false.</span><span class="sxs-lookup"><span data-stu-id="42326-104">The `false` operator returns the `bool` value `true` to indicate that an operand is definitely false.</span></span> <span data-ttu-id="42326-105">Não há garantia de que os operadores `true` e `false` se complementarão.</span><span class="sxs-lookup"><span data-stu-id="42326-105">The `true` and `false` operators are not guaranteed to complement each other.</span></span> <span data-ttu-id="42326-106">Ou seja, ambos os operadores `true` e `false` podem retornar o valor `bool` `false` para o mesmo operando.</span><span class="sxs-lookup"><span data-stu-id="42326-106">That is, both the `true` and `false` operator might return the `bool` value `false` for the same operand.</span></span> <span data-ttu-id="42326-107">Se um tipo define um dos dois operadores, ele também deve definir outro operador.</span><span class="sxs-lookup"><span data-stu-id="42326-107">If a type defines one of the two operators, it must also define another operator.</span></span>
+
+<span data-ttu-id="42326-108">Se um tipo com os operadores `true` e `false` definidos [sobrecarregar](operator.md) o [operador OR lógico](../operators/or-operator.md) `|` ou o [operador AND lógico](../operators/and-operator.md) `&` de uma determinada maneira, o [operador OR lógico condicional](../operators/conditional-or-operator.md) `||` ou [operador AND lógico condicional](../operators/conditional-and-operator.md) `&&`, respectivamente, poderá ser avaliado para os operandos desse tipo.</span><span class="sxs-lookup"><span data-stu-id="42326-108">If a type with the defined `true` and `false` operators [overloads](operator.md) the [logical OR operator](../operators/or-operator.md) `|` or the [logical AND operator](../operators/and-operator.md) `&` in a certain way, the [conditional logical OR operator](../operators/conditional-or-operator.md) `||` or [conditional logical AND operator](../operators/conditional-and-operator.md) `&&`, respectively, can be evaluated for the operands of that type.</span></span> <span data-ttu-id="42326-109">Para obter mais informações, veja a seção [Operadores lógicos condicionais definidos pelo usuário](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) na [especificação da linguagem C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="42326-109">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+<span data-ttu-id="42326-110">Um tipo com o operador `true` definido pode ser o tipo de resultado de uma expressão condicional de controle nas instruções [if](if-else.md), [do](do.md), [while](while.md) e [for](for.md) e no [operador condicional `?:` ](../operators/conditional-operator.md).</span><span class="sxs-lookup"><span data-stu-id="42326-110">A type with the defined `true` operator can be the type of a result of a controlling conditional expression in the [if](if-else.md), [do](do.md), [while](while.md), and [for](for.md) statements and in the [conditional operator `?:`](../operators/conditional-operator.md).</span></span> <span data-ttu-id="42326-111">Para saber mais, confira a seção [Expressões boolianas](~/_csharplang/spec/expressions.md#boolean-expressions) da [Especificação da linguagem C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="42326-111">For more information, see the [Boolean expressions](~/_csharplang/spec/expressions.md#boolean-expressions) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+> [!TIP]
+> <span data-ttu-id="42326-112">Use o tipo `bool?`, se você precisar oferecer suporte à lógica de três valores, por exemplo, ao trabalhar com bancos de dados que dão suporte a um tipo de lógico de três valores.</span><span class="sxs-lookup"><span data-stu-id="42326-112">Use the `bool?` type, if you need to support the three-valued logic, for example, when you work with databases that support a three-valued logical type.</span></span> <span data-ttu-id="42326-113">Para saber mais, confira a seção [O tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) do artigo [Como usar tipos que permitem valor nulo](../../programming-guide/nullable-types/using-nullable-types.md).</span><span class="sxs-lookup"><span data-stu-id="42326-113">For more information, see [The bool? type](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) section of the [Using nullable types](../../programming-guide/nullable-types/using-nullable-types.md) article.</span></span>
+
+<span data-ttu-id="42326-114">O exemplo a seguir apresenta o tipo que define os dois operadores, `true` e `false`.</span><span class="sxs-lookup"><span data-stu-id="42326-114">The following example presents the type that defines both `true` and `false` operators.</span></span> <span data-ttu-id="42326-115">Além disso, ele sobrecarrega o operador AND lógico `&` de uma forma que o operador `&&` também possa ser avaliado para os operandos desse tipo.</span><span class="sxs-lookup"><span data-stu-id="42326-115">Moreover, it overloads the logical AND operator `&` in such a way that the operator `&&` also can be evaluated for the operands of that type.</span></span>
+
+[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
+
+<span data-ttu-id="42326-116">Observe o comportamento de curto-circuito do operador `&&`.</span><span class="sxs-lookup"><span data-stu-id="42326-116">Notice the short-circuiting behavior of the `&&` operator.</span></span> <span data-ttu-id="42326-117">Quando o método `GetFuelLaunchStatus` retorna `LaunchStatus.Red`, o segundo operando do operador `&&` não é avaliado.</span><span class="sxs-lookup"><span data-stu-id="42326-117">When the `GetFuelLaunchStatus` method returns `LaunchStatus.Red`, the second operand of the `&&` operator is not evaluated.</span></span> <span data-ttu-id="42326-118">Isso ocorre porque `LaunchStatus.Red` é, definitivamente, false.</span><span class="sxs-lookup"><span data-stu-id="42326-118">That is because `LaunchStatus.Red` is definitely false.</span></span> <span data-ttu-id="42326-119">Depois, o resultado do AND lógico não depende do valor do segundo operando.</span><span class="sxs-lookup"><span data-stu-id="42326-119">Then the result of the logical AND doesn't depend on the value of the second operand.</span></span> <span data-ttu-id="42326-120">A saída do exemplo é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="42326-120">The output of the example is as follows:</span></span>
+
+```console
+Getting fuel launch status...
+Wait!
+```
+
+## <a name="see-also"></a><span data-ttu-id="42326-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="42326-121">See also</span></span>
+
+- [<span data-ttu-id="42326-122">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="42326-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="42326-123">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="42326-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="42326-124">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="42326-124">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="42326-125">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="42326-125">C# Operators</span></span>](../operators/index.md)
+- [<span data-ttu-id="42326-126">`true` literal</span><span class="sxs-lookup"><span data-stu-id="42326-126">`true` literal</span></span>](true-literal.md)
+- [<span data-ttu-id="42326-127">`false` literal</span><span class="sxs-lookup"><span data-stu-id="42326-127">`false` literal</span></span>](false-literal.md)
