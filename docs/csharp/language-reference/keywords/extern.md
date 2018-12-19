@@ -1,5 +1,6 @@
 ---
-title: Modificador extern (Referência de C#)
+title: Modificador extern – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - extern_CSharpKeyword
@@ -8,39 +9,39 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 92ba2324345a6fc196dc3702e5f84886fba09ffc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 89c5ec7713c6420060310b5df90acec0cc3b088b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "43892753"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237858"
 ---
-# <a name="extern-c-reference"></a><span data-ttu-id="2be76-102">extern (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="2be76-102">extern (C# Reference)</span></span>
+# <a name="extern-c-reference"></a><span data-ttu-id="963ff-102">extern (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="963ff-102">extern (C# Reference)</span></span>
 
-<span data-ttu-id="2be76-103">O modificador `extern` é usado para declarar um método implementado externamente.</span><span class="sxs-lookup"><span data-stu-id="2be76-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="2be76-104">Um uso comum do modificador `extern` é com o atributo `DllImport` quando você está usando serviços Interop para chamar código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="2be76-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="2be76-105">Nesse caso, o método também deve ser declarado como `static` conforme mostrado no seguinte exemplo:</span><span class="sxs-lookup"><span data-stu-id="2be76-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>
+<span data-ttu-id="963ff-103">O modificador `extern` é usado para declarar um método implementado externamente.</span><span class="sxs-lookup"><span data-stu-id="963ff-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="963ff-104">Um uso comum do modificador `extern` é com o atributo `DllImport` quando você está usando serviços Interop para chamar código não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="963ff-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="963ff-105">Nesse caso, o método também deve ser declarado como `static` conforme mostrado no seguinte exemplo:</span><span class="sxs-lookup"><span data-stu-id="963ff-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>
 
 ```csharp
 [DllImport("avifil32.dll")]
 private static extern void AVIFileInit();
 ```
 
-<span data-ttu-id="2be76-106">A palavra-chave `extern` também pode definir um alias de assembly externo que possibilita referenciar diferentes versões do mesmo componente de dentro de um único assembly.</span><span class="sxs-lookup"><span data-stu-id="2be76-106">The `extern` keyword can also define an external assembly alias, which makes it possible to reference different versions of the same component from within a single assembly.</span></span> <span data-ttu-id="2be76-107">Para obter mais informações, consulte [alias extern](extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="2be76-107">For more information, see [extern alias](extern-alias.md).</span></span>
+<span data-ttu-id="963ff-106">A palavra-chave `extern` também pode definir um alias de assembly externo que possibilita referenciar diferentes versões do mesmo componente de dentro de um único assembly.</span><span class="sxs-lookup"><span data-stu-id="963ff-106">The `extern` keyword can also define an external assembly alias, which makes it possible to reference different versions of the same component from within a single assembly.</span></span> <span data-ttu-id="963ff-107">Para obter mais informações, consulte [alias extern](extern-alias.md).</span><span class="sxs-lookup"><span data-stu-id="963ff-107">For more information, see [extern alias](extern-alias.md).</span></span>
 
-<span data-ttu-id="2be76-108">É um erro usar os modificadores [abstract](abstract.md) e `extern` juntos para modificar o mesmo membro.</span><span class="sxs-lookup"><span data-stu-id="2be76-108">It is an error to use the [abstract](abstract.md) and `extern` modifiers together to modify the same member.</span></span> <span data-ttu-id="2be76-109">Usar o modificador `extern` significa que esse método é implementado fora do código C#, enquanto que usar o modificador `abstract` significa que a implementação do método não é fornecida na classe.</span><span class="sxs-lookup"><span data-stu-id="2be76-109">Using the `extern` modifier means that the method is implemented outside the C# code, whereas using the `abstract` modifier means that the method implementation is not provided in the class.</span></span>
+<span data-ttu-id="963ff-108">É um erro usar os modificadores [abstract](abstract.md) e `extern` juntos para modificar o mesmo membro.</span><span class="sxs-lookup"><span data-stu-id="963ff-108">It is an error to use the [abstract](abstract.md) and `extern` modifiers together to modify the same member.</span></span> <span data-ttu-id="963ff-109">Usar o modificador `extern` significa que esse método é implementado fora do código C#, enquanto que usar o modificador `abstract` significa que a implementação do método não é fornecida na classe.</span><span class="sxs-lookup"><span data-stu-id="963ff-109">Using the `extern` modifier means that the method is implemented outside the C# code, whereas using the `abstract` modifier means that the method implementation is not provided in the class.</span></span>
 
-<span data-ttu-id="2be76-110">A palavra-chave extern possui utilizações mais limitadas em C# do que em C++.</span><span class="sxs-lookup"><span data-stu-id="2be76-110">The extern keyword has more limited uses in C# than in C++.</span></span> <span data-ttu-id="2be76-111">Para comparar a palavra-chave de C# com a palavra-chave de C++, consulte Usando extern para especificar vínculos na referência da linguagem C++.</span><span class="sxs-lookup"><span data-stu-id="2be76-111">To compare the C# keyword with the C++ keyword, see Using extern to Specify Linkage in the C++ Language Reference.</span></span>
+<span data-ttu-id="963ff-110">A palavra-chave extern possui utilizações mais limitadas em C# do que em C++.</span><span class="sxs-lookup"><span data-stu-id="963ff-110">The extern keyword has more limited uses in C# than in C++.</span></span> <span data-ttu-id="963ff-111">Para comparar a palavra-chave de C# com a palavra-chave de C++, consulte Usando extern para especificar vínculos na referência da linguagem C++.</span><span class="sxs-lookup"><span data-stu-id="963ff-111">To compare the C# keyword with the C++ keyword, see Using extern to Specify Linkage in the C++ Language Reference.</span></span>
 
-## <a name="example-1"></a><span data-ttu-id="2be76-112">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="2be76-112">Example 1</span></span>
+## <a name="example-1"></a><span data-ttu-id="963ff-112">Exemplo 1</span><span class="sxs-lookup"><span data-stu-id="963ff-112">Example 1</span></span>
 
-<span data-ttu-id="2be76-113">Neste exemplo, o programa recebe uma cadeia de caracteres do usuário e a exibe dentro de uma caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="2be76-113">In this example, the program receives a string from the user and displays it inside a message box.</span></span> <span data-ttu-id="2be76-114">O programa usa o método `MessageBox` importado da biblioteca User32.dll.</span><span class="sxs-lookup"><span data-stu-id="2be76-114">The program uses the `MessageBox` method imported from the User32.dll library.</span></span>
+<span data-ttu-id="963ff-113">Neste exemplo, o programa recebe uma cadeia de caracteres do usuário e a exibe dentro de uma caixa de mensagem.</span><span class="sxs-lookup"><span data-stu-id="963ff-113">In this example, the program receives a string from the user and displays it inside a message box.</span></span> <span data-ttu-id="963ff-114">O programa usa o método `MessageBox` importado da biblioteca User32.dll.</span><span class="sxs-lookup"><span data-stu-id="963ff-114">The program uses the `MessageBox` method imported from the User32.dll library.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
-## <a name="example-2"></a><span data-ttu-id="2be76-115">Exemplo 2</span><span class="sxs-lookup"><span data-stu-id="2be76-115">Example 2</span></span>
+## <a name="example-2"></a><span data-ttu-id="963ff-115">Exemplo 2</span><span class="sxs-lookup"><span data-stu-id="963ff-115">Example 2</span></span>
 
-<span data-ttu-id="2be76-116">Este exemplo ilustra um programa C# que chama uma biblioteca em C (uma DLL nativa).</span><span class="sxs-lookup"><span data-stu-id="2be76-116">This example illustrates a C# program that calls into a C library (a native DLL).</span></span>
+<span data-ttu-id="963ff-116">Este exemplo ilustra um programa C# que chama uma biblioteca em C (uma DLL nativa).</span><span class="sxs-lookup"><span data-stu-id="963ff-116">This example illustrates a C# program that calls into a C library (a native DLL).</span></span>
 
-1. <span data-ttu-id="2be76-117">Crie o seguinte arquivo em C e atribua o nome `cmdll.c`:</span><span class="sxs-lookup"><span data-stu-id="2be76-117">Create the following C file and name it `cmdll.c`:</span></span>
+1. <span data-ttu-id="963ff-117">Crie o seguinte arquivo em C e atribua o nome `cmdll.c`:</span><span class="sxs-lookup"><span data-stu-id="963ff-117">Create the following C file and name it `cmdll.c`:</span></span>
 
 ```c
 // cmdll.c
@@ -51,9 +52,9 @@ int __declspec(dllexport) SampleMethod(int i)
 }
 ```
 
-2. <span data-ttu-id="2be76-118">Abra uma janela do Prompt de Comando de Ferramentas Nativas do Visual Studio x64 (ou x32) do diretório de instalação do Visual Studio e compile o arquivo `cmdll.c` digitando **cl -LD cmdll.c** no prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="2be76-118">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cmdll.c` file by typing **cl -LD cmdll.c** at the command prompt.</span></span>
+2. <span data-ttu-id="963ff-118">Abra uma janela do Prompt de Comando de Ferramentas Nativas do Visual Studio x64 (ou x32) do diretório de instalação do Visual Studio e compile o arquivo `cmdll.c` digitando **cl -LD cmdll.c** no prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="963ff-118">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cmdll.c` file by typing **cl -LD cmdll.c** at the command prompt.</span></span>
 
-3. <span data-ttu-id="2be76-119">No mesmo diretório, crie o seguinte arquivo em C# e atribua o nome `cm.cs`:</span><span class="sxs-lookup"><span data-stu-id="2be76-119">In the same directory, create the following C# file and name it `cm.cs`:</span></span>
+3. <span data-ttu-id="963ff-119">No mesmo diretório, crie o seguinte arquivo em C# e atribua o nome `cm.cs`:</span><span class="sxs-lookup"><span data-stu-id="963ff-119">In the same directory, create the following C# file and name it `cm.cs`:</span></span>
 
 ```csharp
 // cm.cs
@@ -71,26 +72,26 @@ public class MainClass
 }
 ```
 
-4. <span data-ttu-id="2be76-120">Abra uma janela do Prompt de Comando de Ferramentas Nativas do Visual Studio x64 (ou x32) do diretório de instalação do Visual Studio e compile o arquivo `cm.cs` ao digitar:</span><span class="sxs-lookup"><span data-stu-id="2be76-120">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cm.cs` file by typing:</span></span>
+4. <span data-ttu-id="963ff-120">Abra uma janela do Prompt de Comando de Ferramentas Nativas do Visual Studio x64 (ou x32) do diretório de instalação do Visual Studio e compile o arquivo `cm.cs` ao digitar:</span><span class="sxs-lookup"><span data-stu-id="963ff-120">Open a Visual Studio x64 (or x32) Native Tools Command Prompt window from the Visual Studio installation directory and compile the `cm.cs` file by typing:</span></span>
 
-> <span data-ttu-id="2be76-121">**csc cm.cs** (para o prompt de comando do x64) – ou – **csc -platform:x86 cm.cs** (para o prompt de comando do x32)</span><span class="sxs-lookup"><span data-stu-id="2be76-121">**csc cm.cs** (for the x64 command prompt) —or— **csc -platform:x86 cm.cs** (for the x32 command prompt)</span></span>
+> <span data-ttu-id="963ff-121">**csc cm.cs** (para o prompt de comando do x64) – ou – **csc -platform:x86 cm.cs** (para o prompt de comando do x32)</span><span class="sxs-lookup"><span data-stu-id="963ff-121">**csc cm.cs** (for the x64 command prompt) —or— **csc -platform:x86 cm.cs** (for the x32 command prompt)</span></span>
 
-<span data-ttu-id="2be76-122">Isso criará o arquivo executável `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="2be76-122">This will create the executable file `cm.exe`.</span></span>
+<span data-ttu-id="963ff-122">Isso criará o arquivo executável `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="963ff-122">This will create the executable file `cm.exe`.</span></span>
 
-5. <span data-ttu-id="2be76-123">Execute `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="2be76-123">Run `cm.exe`.</span></span> <span data-ttu-id="2be76-124">O método `SampleMethod` passa o valor 5 ao arquivo de DLL que retorna o valor multiplicado por 10.</span><span class="sxs-lookup"><span data-stu-id="2be76-124">The `SampleMethod` method passes the value 5 to the DLL file, which returns the value multiplied by 10.</span></span>  <span data-ttu-id="2be76-125">O programa produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="2be76-125">The program produces the following output:</span></span>
+5. <span data-ttu-id="963ff-123">Execute `cm.exe`.</span><span class="sxs-lookup"><span data-stu-id="963ff-123">Run `cm.exe`.</span></span> <span data-ttu-id="963ff-124">O método `SampleMethod` passa o valor 5 ao arquivo de DLL que retorna o valor multiplicado por 10.</span><span class="sxs-lookup"><span data-stu-id="963ff-124">The `SampleMethod` method passes the value 5 to the DLL file, which returns the value multiplied by 10.</span></span>  <span data-ttu-id="963ff-125">O programa produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="963ff-125">The program produces the following output:</span></span>
 
 ```
 SampleMethod() returns 50.
 ```
 
-## <a name="c-language-specification"></a><span data-ttu-id="2be76-126">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="2be76-126">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="963ff-126">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="963ff-126">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="2be76-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2be76-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="963ff-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="963ff-127">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
-- [<span data-ttu-id="2be76-128">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="2be76-128">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="2be76-129">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="2be76-129">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="2be76-130">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="2be76-130">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="2be76-131">Modificadores</span><span class="sxs-lookup"><span data-stu-id="2be76-131">Modifiers</span></span>](modifiers.md)  
+- [<span data-ttu-id="963ff-128">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="963ff-128">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="963ff-129">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="963ff-129">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="963ff-130">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="963ff-130">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="963ff-131">Modificadores</span><span class="sxs-lookup"><span data-stu-id="963ff-131">Modifiers</span></span>](modifiers.md)  

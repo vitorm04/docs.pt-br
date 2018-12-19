@@ -1,47 +1,48 @@
 ---
-title: '#soma de verificação pragma (Referência de C#)'
+title: '#pragma checksum – Referência de C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024539"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235612"
 ---
-# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="310e8-102">#pragma checksum (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="310e8-102">#pragma checksum (C# Reference)</span></span>
-<span data-ttu-id="310e8-103">Gera somas de verificação para os arquivos de origem para ajudar na depuração de páginas do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="310e8-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+# <a name="pragma-checksum-c-reference"></a><span data-ttu-id="48fd6-102">#pragma checksum (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="48fd6-102">#pragma checksum (C# Reference)</span></span>
+<span data-ttu-id="48fd6-103">Gera somas de verificação para os arquivos de origem para ajudar na depuração de páginas do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48fd6-103">Generates checksums for source files to aid with debugging [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="310e8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="310e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48fd6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="48fd6-104">Syntax</span></span>  
   
 ```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="310e8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="310e8-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="48fd6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="48fd6-105">Parameters</span></span>  
  `"filename"`  
- <span data-ttu-id="310e8-106">O nome do arquivo que exige o monitoramento de alterações ou atualizações.</span><span class="sxs-lookup"><span data-stu-id="310e8-106">The name of the file that requires monitoring for changes or updates.</span></span>  
+ <span data-ttu-id="48fd6-106">O nome do arquivo que exige o monitoramento de alterações ou atualizações.</span><span class="sxs-lookup"><span data-stu-id="48fd6-106">The name of the file that requires monitoring for changes or updates.</span></span>  
   
  `"{guid}"`  
- <span data-ttu-id="310e8-107">O GUID (identificador global exclusivo) do algoritmo de hash.</span><span class="sxs-lookup"><span data-stu-id="310e8-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
+ <span data-ttu-id="48fd6-107">O GUID (identificador global exclusivo) do algoritmo de hash.</span><span class="sxs-lookup"><span data-stu-id="48fd6-107">The Globally Unique Identifier (GUID) for the hash algorithm.</span></span>  
   
  `"checksum_bytes"`  
- <span data-ttu-id="310e8-108">A cadeia de caracteres de dígitos hexadecimais que representa os bytes da soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="310e8-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="310e8-109">Deve ser um número par de dígitos hexadecimais.</span><span class="sxs-lookup"><span data-stu-id="310e8-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="310e8-110">Um número ímpar de dígitos resulta em um aviso em tempo de compilação e a diretiva é ignorada.</span><span class="sxs-lookup"><span data-stu-id="310e8-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
+ <span data-ttu-id="48fd6-108">A cadeia de caracteres de dígitos hexadecimais que representa os bytes da soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="48fd6-108">The string of hexadecimal digits representing the bytes of the checksum.</span></span> <span data-ttu-id="48fd6-109">Deve ser um número par de dígitos hexadecimais.</span><span class="sxs-lookup"><span data-stu-id="48fd6-109">Must be an even number of hexadecimal digits.</span></span> <span data-ttu-id="48fd6-110">Um número ímpar de dígitos resulta em um aviso em tempo de compilação e a diretiva é ignorada.</span><span class="sxs-lookup"><span data-stu-id="48fd6-110">An odd number of digits results in a compile-time warning, and the directive are ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="310e8-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="310e8-111">Remarks</span></span>  
- <span data-ttu-id="310e8-112">O depurador do Visual Studio usa uma soma de verificação para certificar-se de sempre encontrar a fonte correta.</span><span class="sxs-lookup"><span data-stu-id="310e8-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="310e8-113">O compilador calcula a soma de verificação para um arquivo de origem e, em seguida, emite a saída no arquivo PDB (banco de dados do programa).</span><span class="sxs-lookup"><span data-stu-id="310e8-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="310e8-114">Em seguida, o depurador usa o PDB para comparar com a soma de verificação que ele calcula para o arquivo de origem.</span><span class="sxs-lookup"><span data-stu-id="310e8-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="48fd6-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="48fd6-111">Remarks</span></span>  
+ <span data-ttu-id="48fd6-112">O depurador do Visual Studio usa uma soma de verificação para certificar-se de sempre encontrar a fonte correta.</span><span class="sxs-lookup"><span data-stu-id="48fd6-112">The Visual Studio debugger uses a checksum to make sure  that it always finds the right source.</span></span> <span data-ttu-id="48fd6-113">O compilador calcula a soma de verificação para um arquivo de origem e, em seguida, emite a saída no arquivo PDB (banco de dados do programa).</span><span class="sxs-lookup"><span data-stu-id="48fd6-113">The compiler computes the checksum for a source file, and then emits the output to the program database (PDB) file.</span></span> <span data-ttu-id="48fd6-114">Em seguida, o depurador usa o PDB para comparar com a soma de verificação que ele calcula para o arquivo de origem.</span><span class="sxs-lookup"><span data-stu-id="48fd6-114">The debugger then uses the PDB to compare against the checksum that it computes for the source file.</span></span>  
   
- <span data-ttu-id="310e8-115">Essa solução não funciona para projetos [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], porque é a soma de verificação calculada é para o arquivo de origem gerado e não para o arquivo .aspx.</span><span class="sxs-lookup"><span data-stu-id="310e8-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="310e8-116">Para resolver esse problema, a `#pragma checksum` fornece suporte à soma de verificação para páginas do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="310e8-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
+ <span data-ttu-id="48fd6-115">Essa solução não funciona para projetos [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], porque é a soma de verificação calculada é para o arquivo de origem gerado e não para o arquivo .aspx.</span><span class="sxs-lookup"><span data-stu-id="48fd6-115">This solution does not work for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projects, because the computed checksum is for the generated source file, rather than the .aspx file.</span></span> <span data-ttu-id="48fd6-116">Para resolver esse problema, a `#pragma checksum` fornece suporte à soma de verificação para páginas do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48fd6-116">To address this problem, `#pragma checksum` provides checksum support for [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] pages.</span></span>  
   
- <span data-ttu-id="310e8-117">Quando você cria um projeto do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] em Visual C#, o arquivo de origem gerado contém uma soma de verificação para o arquivo .aspx, do qual a fonte é gerada.</span><span class="sxs-lookup"><span data-stu-id="310e8-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="310e8-118">Então, o compilador grava essas informações no arquivo PDB.</span><span class="sxs-lookup"><span data-stu-id="310e8-118">The compiler then writes this information into the PDB file.</span></span>  
+ <span data-ttu-id="48fd6-117">Quando você cria um projeto do [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] em Visual C#, o arquivo de origem gerado contém uma soma de verificação para o arquivo .aspx, do qual a fonte é gerada.</span><span class="sxs-lookup"><span data-stu-id="48fd6-117">When you create an [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] project in Visual C#, the generated source file contains a checksum for the .aspx file, from which the source is generated.</span></span> <span data-ttu-id="48fd6-118">Então, o compilador grava essas informações no arquivo PDB.</span><span class="sxs-lookup"><span data-stu-id="48fd6-118">The compiler then writes this information into the PDB file.</span></span>  
   
- <span data-ttu-id="310e8-119">Se o compilador não encontrar uma diretiva `#pragma checksum` no arquivo, ele calcula a soma de verificação e grava o valor no arquivo PDB.</span><span class="sxs-lookup"><span data-stu-id="310e8-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
+ <span data-ttu-id="48fd6-119">Se o compilador não encontrar uma diretiva `#pragma checksum` no arquivo, ele calcula a soma de verificação e grava o valor no arquivo PDB.</span><span class="sxs-lookup"><span data-stu-id="48fd6-119">If the compiler encounters no `#pragma checksum` directive in the file, it computes the checksum and writes the value to the PDB file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="310e8-120">Exemplo</span><span class="sxs-lookup"><span data-stu-id="310e8-120">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="48fd6-120">Exemplo</span><span class="sxs-lookup"><span data-stu-id="48fd6-120">Example</span></span>  
   
 ```csharp
 class TestClass  
@@ -53,8 +54,8 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="310e8-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="310e8-121">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48fd6-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="48fd6-121">See Also</span></span>
 
-- [<span data-ttu-id="310e8-122">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="310e8-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="310e8-123">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="310e8-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="310e8-124">Diretivas do pré-processador do C#</span><span class="sxs-lookup"><span data-stu-id="310e8-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="48fd6-122">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="48fd6-122">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="48fd6-123">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="48fd6-123">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="48fd6-124">Diretivas do pré-processador do C#</span><span class="sxs-lookup"><span data-stu-id="48fd6-124">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

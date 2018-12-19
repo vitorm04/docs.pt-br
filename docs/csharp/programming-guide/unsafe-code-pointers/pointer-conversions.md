@@ -1,49 +1,50 @@
 ---
-title: Conversões de ponteiro (Guia de Programação em C#)
+title: Conversões de ponteiro – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: db809fa9e086351184adcac43d67f53e9456894c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13330e5417f75a3108e31af415465c2ed6f118d9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43777371"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241951"
 ---
-# <a name="pointer-conversions-c-programming-guide"></a><span data-ttu-id="17022-102">Conversões de ponteiro (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="17022-102">Pointer Conversions (C# Programming Guide)</span></span>
-<span data-ttu-id="17022-103">A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas.</span><span class="sxs-lookup"><span data-stu-id="17022-103">The following table shows the predefined implicit pointer conversions.</span></span> <span data-ttu-id="17022-104">As conversões implícitas podem ocorrer em diversas situações, incluindo instruções de atribuição e invocações de método.</span><span class="sxs-lookup"><span data-stu-id="17022-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  
+# <a name="pointer-conversions-c-programming-guide"></a><span data-ttu-id="01f79-102">Conversões de ponteiro (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="01f79-102">Pointer Conversions (C# Programming Guide)</span></span>
+<span data-ttu-id="01f79-103">A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas.</span><span class="sxs-lookup"><span data-stu-id="01f79-103">The following table shows the predefined implicit pointer conversions.</span></span> <span data-ttu-id="01f79-104">As conversões implícitas podem ocorrer em diversas situações, incluindo instruções de atribuição e invocações de método.</span><span class="sxs-lookup"><span data-stu-id="01f79-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  
   
-## <a name="implicit-pointer-conversions"></a><span data-ttu-id="17022-105">Conversões de ponteiro implícitas</span><span class="sxs-lookup"><span data-stu-id="17022-105">Implicit pointer conversions</span></span>  
+## <a name="implicit-pointer-conversions"></a><span data-ttu-id="01f79-105">Conversões de ponteiro implícitas</span><span class="sxs-lookup"><span data-stu-id="01f79-105">Implicit pointer conversions</span></span>  
   
-|<span data-ttu-id="17022-106">De</span><span class="sxs-lookup"><span data-stu-id="17022-106">From</span></span>|<span data-ttu-id="17022-107">Para</span><span class="sxs-lookup"><span data-stu-id="17022-107">To</span></span>|  
+|<span data-ttu-id="01f79-106">De</span><span class="sxs-lookup"><span data-stu-id="01f79-106">From</span></span>|<span data-ttu-id="01f79-107">Para</span><span class="sxs-lookup"><span data-stu-id="01f79-107">To</span></span>|  
 |----------|--------|  
-|<span data-ttu-id="17022-108">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-108">Any pointer type</span></span>|<span data-ttu-id="17022-109">void\*</span><span class="sxs-lookup"><span data-stu-id="17022-109">void\*</span></span>|  
-|<span data-ttu-id="17022-110">nulo</span><span class="sxs-lookup"><span data-stu-id="17022-110">null</span></span>|<span data-ttu-id="17022-111">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-111">Any pointer type</span></span>|  
+|<span data-ttu-id="01f79-108">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-108">Any pointer type</span></span>|<span data-ttu-id="01f79-109">void\*</span><span class="sxs-lookup"><span data-stu-id="01f79-109">void\*</span></span>|  
+|<span data-ttu-id="01f79-110">nulo</span><span class="sxs-lookup"><span data-stu-id="01f79-110">null</span></span>|<span data-ttu-id="01f79-111">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-111">Any pointer type</span></span>|  
   
- <span data-ttu-id="17022-112">A conversão explícita de ponteiro é usada para realizar conversões para as quais não há conversão implícita, usando uma expressão de conversão.</span><span class="sxs-lookup"><span data-stu-id="17022-112">Explicit pointer conversion is used to perform conversions, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="17022-113">A tabela a seguir mostra essas conversões.</span><span class="sxs-lookup"><span data-stu-id="17022-113">The following table shows these conversions.</span></span>  
+ <span data-ttu-id="01f79-112">A conversão explícita de ponteiro é usada para realizar conversões para as quais não há conversão implícita, usando uma expressão de conversão.</span><span class="sxs-lookup"><span data-stu-id="01f79-112">Explicit pointer conversion is used to perform conversions, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="01f79-113">A tabela a seguir mostra essas conversões.</span><span class="sxs-lookup"><span data-stu-id="01f79-113">The following table shows these conversions.</span></span>  
   
-## <a name="explicit-pointer-conversions"></a><span data-ttu-id="17022-114">Conversões de ponteiro explícitas</span><span class="sxs-lookup"><span data-stu-id="17022-114">Explicit pointer conversions</span></span>  
+## <a name="explicit-pointer-conversions"></a><span data-ttu-id="01f79-114">Conversões de ponteiro explícitas</span><span class="sxs-lookup"><span data-stu-id="01f79-114">Explicit pointer conversions</span></span>  
   
-|<span data-ttu-id="17022-115">De</span><span class="sxs-lookup"><span data-stu-id="17022-115">From</span></span>|<span data-ttu-id="17022-116">Para</span><span class="sxs-lookup"><span data-stu-id="17022-116">To</span></span>|  
+|<span data-ttu-id="01f79-115">De</span><span class="sxs-lookup"><span data-stu-id="01f79-115">From</span></span>|<span data-ttu-id="01f79-116">Para</span><span class="sxs-lookup"><span data-stu-id="01f79-116">To</span></span>|  
 |----------|--------|  
-|<span data-ttu-id="17022-117">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-117">Any pointer type</span></span>|<span data-ttu-id="17022-118">Qualquer outro tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-118">Any other pointer type</span></span>|  
-|<span data-ttu-id="17022-119">sbyte, byte, short, ushort, int, uint, long ou ulong</span><span class="sxs-lookup"><span data-stu-id="17022-119">sbyte, byte, short, ushort, int, uint, long, or ulong</span></span>|<span data-ttu-id="17022-120">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-120">Any pointer type</span></span>|  
-|<span data-ttu-id="17022-121">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-121">Any pointer type</span></span>|<span data-ttu-id="17022-122">sbyte, byte, short, ushort, int, uint, long ou ulong</span><span class="sxs-lookup"><span data-stu-id="17022-122">sbyte, byte, short, ushort, int, uint, long, or ulong</span></span>|  
+|<span data-ttu-id="01f79-117">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-117">Any pointer type</span></span>|<span data-ttu-id="01f79-118">Qualquer outro tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-118">Any other pointer type</span></span>|  
+|<span data-ttu-id="01f79-119">sbyte, byte, short, ushort, int, uint, long ou ulong</span><span class="sxs-lookup"><span data-stu-id="01f79-119">sbyte, byte, short, ushort, int, uint, long, or ulong</span></span>|<span data-ttu-id="01f79-120">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-120">Any pointer type</span></span>|  
+|<span data-ttu-id="01f79-121">Qualquer tipo de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-121">Any pointer type</span></span>|<span data-ttu-id="01f79-122">sbyte, byte, short, ushort, int, uint, long ou ulong</span><span class="sxs-lookup"><span data-stu-id="01f79-122">sbyte, byte, short, ushort, int, uint, long, or ulong</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="17022-123">Exemplo</span><span class="sxs-lookup"><span data-stu-id="17022-123">Example</span></span>  
- <span data-ttu-id="17022-124">No exemplo a seguir, um ponteiro para `int` é convertido em um ponteiro para `byte`.</span><span class="sxs-lookup"><span data-stu-id="17022-124">In the following example, a pointer to `int` is converted to a pointer to `byte`.</span></span> <span data-ttu-id="17022-125">Observe que o ponteiro aponta para o menor byte endereçado da variável.</span><span class="sxs-lookup"><span data-stu-id="17022-125">Notice that the pointer points to the lowest addressed byte of the variable.</span></span> <span data-ttu-id="17022-126">Quando você incrementar sucessivamente o resultado, até o tamanho de `int` (4 bytes), você poderá exibir os bytes restantes da variável.</span><span class="sxs-lookup"><span data-stu-id="17022-126">When you successively increment the result, up to the size of `int` (4 bytes), you can display the remaining bytes of the variable.</span></span>  
+## <a name="example"></a><span data-ttu-id="01f79-123">Exemplo</span><span class="sxs-lookup"><span data-stu-id="01f79-123">Example</span></span>  
+ <span data-ttu-id="01f79-124">No exemplo a seguir, um ponteiro para `int` é convertido em um ponteiro para `byte`.</span><span class="sxs-lookup"><span data-stu-id="01f79-124">In the following example, a pointer to `int` is converted to a pointer to `byte`.</span></span> <span data-ttu-id="01f79-125">Observe que o ponteiro aponta para o menor byte endereçado da variável.</span><span class="sxs-lookup"><span data-stu-id="01f79-125">Notice that the pointer points to the lowest addressed byte of the variable.</span></span> <span data-ttu-id="01f79-126">Quando você incrementar sucessivamente o resultado, até o tamanho de `int` (4 bytes), você poderá exibir os bytes restantes da variável.</span><span class="sxs-lookup"><span data-stu-id="01f79-126">When you successively increment the result, up to the size of `int` (4 bytes), you can display the remaining bytes of the variable.</span></span>  
   
  [!code-csharp[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_1.cs)]  
   
  [!code-csharp[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="17022-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="17022-127">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01f79-127">Consulte também</span><span class="sxs-lookup"><span data-stu-id="01f79-127">See Also</span></span>
 
-- [<span data-ttu-id="17022-128">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="17022-128">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="17022-129">Expressões de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-129">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [<span data-ttu-id="17022-130">Tipos de ponteiro</span><span class="sxs-lookup"><span data-stu-id="17022-130">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [<span data-ttu-id="17022-131">Tipos</span><span class="sxs-lookup"><span data-stu-id="17022-131">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="17022-132">unsafe</span><span class="sxs-lookup"><span data-stu-id="17022-132">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="17022-133">Instrução fixed</span><span class="sxs-lookup"><span data-stu-id="17022-133">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
-- [<span data-ttu-id="17022-134">stackalloc</span><span class="sxs-lookup"><span data-stu-id="17022-134">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
+- [<span data-ttu-id="01f79-128">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="01f79-128">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="01f79-129">Expressões de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-129">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [<span data-ttu-id="01f79-130">Tipos de ponteiro</span><span class="sxs-lookup"><span data-stu-id="01f79-130">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [<span data-ttu-id="01f79-131">Tipos</span><span class="sxs-lookup"><span data-stu-id="01f79-131">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
+- [<span data-ttu-id="01f79-132">unsafe</span><span class="sxs-lookup"><span data-stu-id="01f79-132">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
+- [<span data-ttu-id="01f79-133">Instrução fixed</span><span class="sxs-lookup"><span data-stu-id="01f79-133">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [<span data-ttu-id="01f79-134">stackalloc</span><span class="sxs-lookup"><span data-stu-id="01f79-134">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
