@@ -50,7 +50,7 @@ ms.locfileid: "44041610"
   
 |Caractere com escape|Descrição|Padrão|Correspondências|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Corresponde a um caractere de campainha, \u0007.|`\a`|“\u0007” em “Error!” + ‘\u0007’|  
+|`\a`|Corresponde a um caractere de campainha, \u0007.|`\a`|“\u0007” em “Error!” + "\u0007"|  
 |`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|"\b\b\b\b" em "\b\b\b\b"|  
 |`\t`|Corresponde a uma tabulação, \u0009.|`(\w+)\t`|“item1\t”, “item2\t” em “item1\titem2\t”|  
 |`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|“\r\nThese” em “\r\nThese are\ntwo lines.”|  
@@ -105,7 +105,7 @@ ms.locfileid: "44041610"
  [Voltar ao início](#top)  
   
 <a name="grouping_constructs"></a>   
-## <a name="grouping-constructs"></a>Agrupando construtores  
+## <a name="grouping-constructs"></a>Constructos de agrupamento  
  Os constructos de agrupamento delineiam subexpressões de uma expressão regular e, em geral, capturam subcadeias de caracteres de uma cadeia de caracteres de entrada. Os constructos de agrupamento incluem os elementos de linguagem listados na tabela a seguir. Para saber mais, confira [Constructos de agrupamento](grouping-constructs-in-regular-expressions.md).  
   
 |Constructo de agrupamento|Descrição|Padrão|Correspondências|  
@@ -207,7 +207,7 @@ ms.locfileid: "44041610"
  [Voltar ao início](#top)  
   
 <a name="miscellaneous_constructs"></a>   
-## <a name="miscellaneous-constructs"></a>Diversos construtores  
+## <a name="miscellaneous-constructs"></a>Constructos diversos  
  Os constructos diversos modificam um expressão regular padrão ou fornecem informações sobre ela. A tabela a seguir lista os constructos diversos que têm suporte no .NET. Para saber mais, confira [Constructos diversos](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Constructo|Definição|Exemplo|  
