@@ -1,29 +1,29 @@
 ---
-title: Unidade &#39; &lt;drivename&gt; &#39; não encontrado
+title: Unidade '&lt;drivename&gt;' não encontrado
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: a2417c8aa940034f75e37d9edfd7454b4f414199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a4c7b914d2d869731fb6b174a8df91c168670c8
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637511"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53775272"
 ---
-# <a name="drive-39ltdrivenamegt39-not-found"></a><span data-ttu-id="a7657-102">Unidade &#39; &lt;drivename&gt; &#39; não encontrado</span><span class="sxs-lookup"><span data-stu-id="a7657-102">Drive &#39;&lt;drivename&gt;&#39; not found</span></span>
-<span data-ttu-id="a7657-103">A unidade não pode ser encontrada.</span><span class="sxs-lookup"><span data-stu-id="a7657-103">The drive cannot be found.</span></span> <span data-ttu-id="a7657-104">Sua conexão de rede foi perdida ou a unidade que você está tentando acessar está offline ou não existe.</span><span class="sxs-lookup"><span data-stu-id="a7657-104">Either your network connection has been lost, or the drive you are trying to access is offline or does not exist.</span></span>  
+# <a name="drive-ltdrivenamegt-not-found"></a><span data-ttu-id="1e955-102">Unidade '&lt;drivename&gt;' não encontrado</span><span class="sxs-lookup"><span data-stu-id="1e955-102">Drive '&lt;drivename&gt;' not found</span></span>
+<span data-ttu-id="1e955-103">A unidade não pode ser encontrada.</span><span class="sxs-lookup"><span data-stu-id="1e955-103">The drive cannot be found.</span></span> <span data-ttu-id="1e955-104">Sua conexão de rede foi perdida ou a unidade que você está tentando acessar está offline ou não existe.</span><span class="sxs-lookup"><span data-stu-id="1e955-104">Either your network connection has been lost, or the drive you are trying to access is offline or does not exist.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a7657-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="a7657-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1e955-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1e955-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="a7657-106">Verifique a unidade de energia.</span><span class="sxs-lookup"><span data-stu-id="a7657-106">Check power to the drive.</span></span>  
+1.  <span data-ttu-id="1e955-106">Verifique a alimentação para a unidade.</span><span class="sxs-lookup"><span data-stu-id="1e955-106">Check power to the drive.</span></span>  
   
-2.  <span data-ttu-id="a7657-107">Certifique-se de que os cabos que conectam o computador à rede estão conectados corretamente.</span><span class="sxs-lookup"><span data-stu-id="a7657-107">Ensure that any cables connecting your computer to the network are properly attached.</span></span>  
+2.  <span data-ttu-id="1e955-107">Certifique-se de que os cabos que conectam o computador à rede estão conectados corretamente.</span><span class="sxs-lookup"><span data-stu-id="1e955-107">Ensure that any cables connecting your computer to the network are properly attached.</span></span>  
   
-3.  <span data-ttu-id="a7657-108">Para acessar uma unidade em uma rede, verifique se há uma conexão lógica entre o computador e a unidade.</span><span class="sxs-lookup"><span data-stu-id="a7657-108">To access a drive over a network, ensure that a logical connection exists between your computer and the drive.</span></span>  
+3.  <span data-ttu-id="1e955-108">Para acessar uma unidade em uma rede, certifique-se de que uma conexão lógica existe entre o computador e a unidade.</span><span class="sxs-lookup"><span data-stu-id="1e955-108">To access a drive over a network, ensure that a logical connection exists between your computer and the drive.</span></span>  
   
-4.  <span data-ttu-id="a7657-109">Reconectar-se à rede e tente novamente.</span><span class="sxs-lookup"><span data-stu-id="a7657-109">Reconnect to the network and try again.</span></span>  
+4.  <span data-ttu-id="1e955-109">Reconectar-se à rede e tente novamente.</span><span class="sxs-lookup"><span data-stu-id="1e955-109">Reconnect to the network and try again.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a7657-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a7657-110">See Also</span></span>  
- [<span data-ttu-id="a7657-111">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="a7657-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+## <a name="see-also"></a><span data-ttu-id="1e955-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1e955-110">See Also</span></span>  
+ [<span data-ttu-id="1e955-111">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="1e955-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
 
