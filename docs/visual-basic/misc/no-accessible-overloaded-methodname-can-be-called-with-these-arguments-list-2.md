@@ -1,17 +1,17 @@
 ---
-title: 'Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão redutora: &lt;lista&gt;'
+title: "Não acessível '&lt;methodname&gt;' pode ser chamado com estes argumentos sem uma conversão redutora: &lt;lista&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
-ms.openlocfilehash: c298f996322f5ad80b4e76ecf2dd33b4205e3f42
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: fcb73e21527f373499f879ea8e354373493f123f
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332630"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53758063"
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão redutora: &lt;lista&gt;
+# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-narrowing-conversion-ltlistgt"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com estes argumentos sem uma conversão redutora: &lt;lista&gt;
 Um método sobrecarregado foi chamado, mas o método não pode ser correspondido com a lista de argumentos fornecidos sem uma conversão de estreitamento.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

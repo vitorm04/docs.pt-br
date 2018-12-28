@@ -12,21 +12,21 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 2e5d133a4744124723c0373e3d5974b505936190
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402095"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397027"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
-<a name="Introduction"></a> O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que deem suporte a extensibilidade de suplemento. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também devem exibir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que são fornecidas por suplementos. Este tópico mostra como o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar estes cenários, a arquitetura por trás dele, seus benefícios e suas limitações.  
+<a name="Introduction"></a> O .NET Framework inclui um modelo de suplemento que os desenvolvedores podem usar para criar aplicativos que dão suporte à extensibilidade de suplementos. Esse modelo permite a criação de suplementos que integram e estendem a funcionalidade do aplicativo. Em alguns cenários, os aplicativos também precisam exibam interfaces de usuário que são fornecidas pelos suplementos. Este tópico mostra como o WPF aumenta a modelo suplemento do .NET Framework para habilitar estes cenários, a arquitetura por trás, seus benefícios e suas limitações.  
   
 
   
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Pré-requisitos  
- A familiaridade com o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é requerida. Para obter mais informações, consulte [Suplementos e extensibilidade](../../../../docs/framework/add-ins/index.md).  
+ Familiaridade com o modelo de suplemento do .NET Framework é necessária. Para obter mais informações, consulte [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="AddInsOverview"></a>   
 ## <a name="add-ins-overview"></a>Visão geral dos suplementos  
@@ -48,48 +48,48 @@ ms.locfileid: "43402095"
   
  Para que suplementos possam ser usados, é necessário que eles sejam localizados e carregados em tempo de execução pelos aplicativos host. Consequentemente, os aplicativos que dão suporte a suplementos têm as seguintes responsabilidades adicionais:  
   
--   **Descoberta**: encontrar suplementos que aderem a contratos com suporte por aplicativos host.  
+-   **Descoberta**: Localizando suplementos que aderem a contratos suportados por aplicativos host.  
   
--   **Ativação**: carregar, executar e estabelecer comunicação com suplementos.  
+-   **Ativação**: Carregando, executando e estabelecer comunicação com suplementos.  
   
--   **Isolamento**: usar domínios do aplicativo ou processos para estabelecer limites de isolamento que protegem aplicativos de possíveis problemas de execução e segurança com suplementos.  
+-   **Isolamento**: Usando domínios de aplicativo ou processos para estabelecer limites de isolamento que protegem aplicativos de possíveis problemas de segurança e execução com suplementos.  
   
--   **Comunicação**: permitir, por meio da chamada de métodos e transmissão de dados, que suplementos e aplicativos host se comuniquem uns com os outros através de limites de isolamento.  
+-   **Comunicação**: Permitindo que os suplementos e aplicativos host se comuniquem entre si por limites de isolamento pela chamada de métodos e transmissão de dados.  
   
--   **Gerenciamento de tempo de vida**: Carregando e descarregando domínios do aplicativo e processos de uma maneira limpa e previsível (consulte [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Gerenciamento de tempo de vida**: Carregar e descarregar domínios de aplicativos e processos de uma maneira limpa e previsível (consulte [domínios de aplicativo](../../../../docs/framework/app-domains/application-domains.md)).  
   
--   **Controle de versão**: garantir que os aplicativos host e suplementos possam se comunicar quando novas versões de qualquer um deles forem criadas.  
+-   **Controle de versão**: Garantindo que os aplicativos host e suplementos podem se comunicar quando novas versões de ambos são criadas.  
   
- Por fim, desenvolver um modelo de suplemento robusto é uma tarefa não trivial. Por esse motivo, o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornece uma infraestrutura para o build de modelos de suplementos.  
+ Por fim, desenvolver um modelo de suplemento robusto é uma tarefa não trivial. Por esse motivo, o .NET Framework fornece uma infra-estrutura para a criação de modelos de suplementos.  
   
 > [!NOTE]
->  Para obter informações mais detalhadas sobre suplementos, consulte [Suplementos e extensibilidade](../../../../docs/framework/add-ins/index.md).  
+>  Para obter informações mais detalhadas sobre suplementos, consulte [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="NETFrameworkAddInModelOverview"></a>   
 ## <a name="net-framework-add-in-model-overview"></a>Visão geral de modelo de suplemento do .NET Framework  
- O [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] suplemento do modelo, encontrado no <xref:System.AddIn> namespace, contém um conjunto de tipos que são projetados para simplificar o desenvolvimento da extensibilidade de suplementos. A unidade fundamental do modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] é o *contrato*, que define como um aplicativo host e um suplemento se comunicam um com o outro. Um contrato é exposto a um aplicativo host utilizando uma *exibição* do contrato específica do aplicativo host. Da mesma forma, uma *exibição* do contrato específica do suplemento é exposta ao suplemento. Um *adaptador* é usado para permitir que um aplicativo host e um suplemento se comuniquem entre suas respectivas exibições do contrato. Contratos, exibições e adaptadores são referidos como segmentos, enquanto um conjunto de segmentos relacionados constitui um *pipeline*. Pipelines são a base sobre a qual o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dá suporte à descoberta, ativação, isolamento de segurança, isolamento de execução (usando tanto processos quanto domínios do aplicativo), comunicação, gerenciamento de tempo de vida e controle de versão.  
+ O modelo do .NET Framework suplemento, encontrado no <xref:System.AddIn> namespace, contém um conjunto de tipos que são projetados para simplificar o desenvolvimento da extensibilidade de suplementos. A unidade fundamental de modelo de suplemento do .NET Framework é o *contrato*, que define como um aplicativo host e um suplemento se comunicam entre si. Um contrato é exposto a um aplicativo host utilizando uma *exibição* do contrato específica do aplicativo host. Da mesma forma, uma *exibição* do contrato específica do suplemento é exposta ao suplemento. Um *adaptador* é usado para permitir que um aplicativo host e um suplemento se comuniquem entre suas respectivas exibições do contrato. Contratos, exibições e adaptadores são referidos como segmentos, enquanto um conjunto de segmentos relacionados constitui um *pipeline*. Pipelines são a base sobre a qual o modelo de suplemento do .NET Framework dá suporte à descoberta, ativação, isolamento de segurança, isolamento de execução (usando domínios de aplicativos e processos), comunicação, gerenciamento de tempo de vida e controle de versão.  
   
- A soma desse suporte permite aos desenvolvedores compilar suplementos que se integram com a funcionalidade de um aplicativo host. No entanto, alguns cenários exigem que os aplicativos host exibam [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fornecidas pelos suplementos. Já que cada tecnologia de apresentação no [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tem seu próprio modelo para implementação de [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] não dá suporte a nenhuma tecnologia de apresentação específica. Em vez disso, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] com suporte da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a suplementos.  
+ A soma desse suporte permite aos desenvolvedores compilar suplementos que se integram com a funcionalidade de um aplicativo host. No entanto, alguns cenários exigem aplicativos host exibam interfaces de usuário fornecidas pelos suplementos. Como cada tecnologia de apresentação no .NET Framework tem seu próprio modelo para a implementação de interfaces do usuário, o modelo de suplemento do .NET Framework não dá suporte a nenhuma tecnologia de apresentação específico. Em vez disso, o WPF estende o modelo do .NET Framework suplemento com o suporte de interface do usuário para suplementos.  
   
 <a name="WPFAddInModel"></a>   
 ## <a name="wpf-add-ins"></a>Suplementos do WPF  
- O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], em conjunto com o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], permite que você direcione uma ampla variedade de cenários que exigem que os aplicativos de host para exibir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] dos suplementos. Em particular, estes cenários são endereçados pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] com os dois modelos de programação a seguir:  
+ O WPF, junto com o .NET Framework suplemento do modelo, permite que você direcione uma ampla variedade de cenários que exigem aplicativos host exibam interfaces de usuário dos suplementos. Em particular, estes cenários são endereçados pelo WPF com os dois modelos de programação a seguir:  
   
-1.  **O suplemento retorna uma interface do usuário**. Um suplemento retorna uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ao aplicativo host via uma chamada de método, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
+1.  **O suplemento retorna uma interface do usuário**. Um suplemento retorna uma interface do usuário para o aplicativo host via uma chamada de método, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
   
-    -   A aparência de uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que é retornada por um suplemento é dependente de dados ou condições que existem somente em tempo de execução, por exemplo, relatórios gerados dinamicamente.  
+    -   A aparência de uma interface do usuário que é retornado por um suplemento é dependente de dados ou condições que existem somente em tempo de execução, tais como dinamicamente relatórios gerados.  
   
-    -   A [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para serviços fornecidos por um suplemento difere da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dos aplicativos host que podem usar o suplemento.  
+    -   A interface do usuário para serviços fornecidos por um suplemento difere da interface do usuário dos aplicativos host que pode usar o suplemento.  
   
-    -   Como funções principais, o suplemento executa um serviço para o aplicativo host e relata o status ao aplicativo host com uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+    -   O suplemento principalmente executa um serviço para o aplicativo host e relata o status para o aplicativo host com uma interface do usuário.  
   
-2.  **O suplemento é uma interface do usuário**. Um suplemento é uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
+2.  **O suplemento é uma interface do usuário**. Um suplemento é uma interface do usuário, conforme definido pelo contrato. Esse cenário é utilizado nos seguintes casos:  
   
     -   Um suplemento não fornece nenhum serviço além de ser exibido, por exemplo, um anúncio.  
   
-    -   A [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para serviços fornecidos por um suplemento é comum a todos os aplicativos host que podem usar esse suplemento, por exemplo, uma calculadora ou um seletor de cor.  
+    -   A interface do usuário para serviços fornecidos por um suplemento é comum a todos os aplicativos host que podem usar esse suplemento, como uma calculadora ou um seletor de cores.  
   
- Esses cenários exigem que objetos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] possam ser passados entre aplicativos host e domínios do aplicativo do suplemento. Uma vez que o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] depende da comunicação remota para a comunicação entre domínios do aplicativo, os objetos que são passados entre eles devem ser remotos.  
+ Esses cenários exigem que os objetos de interface do usuário podem ser passados entre aplicativos host e domínios de aplicativo do suplemento. Desde o modelo de suplemento depende da comunicação remota para se comunicar entre domínios de aplicativos do .NET Framework, os objetos que são passados entre eles devem ser remotos.  
   
  Um objeto remoto é uma instância de uma classe que satisfaz uma ou mais das condições a seguir:  
   
@@ -100,13 +100,13 @@ ms.locfileid: "43402095"
 -   Tem o <xref:System.SerializableAttribute> atributo aplicado.  
   
 > [!NOTE]
->  Para obter mais informações sobre a criação de objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remotos, consulte [Transformar os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Para obter mais informações sobre a criação de objetos do .NET Framework que devem ser remotos, consulte [tornando os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
- Os tipos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não são remotos. Para resolver o problema, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para habilitar uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] criada pelos suplementos para ser exibida de aplicativos host. Esse suporte é fornecido por [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] por dois tipos: o <xref:System.AddIn.Contract.INativeHandleContract> interface e dois métodos estáticos implementados pela <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Em um nível elevado, esses tipos e métodos são usados da seguinte maneira:  
+ Os tipos de UI WPF não são remotos. Para resolver o problema, o WPF estende o modelo do .NET Framework suplemento para habilitar o WPF UI criadas por suplementos a ser exibida de aplicativos host. Esse suporte é fornecido pelo WPF por dois tipos: o <xref:System.AddIn.Contract.INativeHandleContract> interface e dois métodos estáticos implementados pela <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Em um nível elevado, esses tipos e métodos são usados da seguinte maneira:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] requer que [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fornecidos por suplementos são classes que derivam direta ou indiretamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuário, painéis de layout e páginas.  
+1.  WPF exige que as interfaces de usuário fornecidas pelos suplementos sejam classes que derivam direta ou indiretamente de <xref:System.Windows.FrameworkElement>, como formas, controles, controles de usuário, painéis de layout e páginas.  
   
-2.  Aonde o contrato declarar que uma interface do usuário será transmitida entre o suplemento e o aplicativo host, ele deve ser declarado como um <xref:System.AddIn.Contract.INativeHandleContract> (não um <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> é uma representação remota do suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que pode ser passada entre limites de isolamento.  
+2.  Aonde o contrato declarar que uma interface do usuário será transmitida entre o suplemento e o aplicativo host, ele deve ser declarado como um <xref:System.AddIn.Contract.INativeHandleContract> (não um <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> é uma representação remota do suplemento a interface do usuário que pode ser passada entre limites de isolamento.  
   
 3.  Antes de ser transmitido do domínio de aplicativo do suplemento, um <xref:System.Windows.FrameworkElement> é empacotado como um <xref:System.AddIn.Contract.INativeHandleContract> chamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43402095"
   
 <a name="ReturnUIFromAddInContract"></a>   
 ## <a name="add-in-returns-a-user-interface"></a>O suplemento retorna uma interface do usuário  
- Para um suplemento retornar uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para um aplicativo host, é necessário o seguinte:  
+ Para um suplemento retornar uma interface do usuário para um aplicativo host, são necessários:  
   
-1.  O aplicativo host, o suplemento e o pipeline devem ser criados, conforme descrito pela documentação [Suplementos e extensibilidade](../../../../docs/framework/add-ins/index.md) do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+1.  O aplicativo host, suplemento e pipeline devem ser criados, conforme descrito pelo .NET Framework [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação.  
   
-2.  O contrato deve implementar <xref:System.AddIn.Contract.IContract> e, para retornar um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], o contrato deve declarar um método com um valor de retorno do tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
+2.  O contrato deve implementar <xref:System.AddIn.Contract.IContract> e, para retornar uma interface do usuário, o contrato deve declarar um método com um valor de retorno do tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que é passado entre o suplemento e o host de aplicativo deve derivar direta ou indiretamente de <xref:System.Windows.FrameworkElement>.  
+3.  A interface do usuário que é passado entre o suplemento e o aplicativo host deve derivar diretamente ou indiretamente de <xref:System.Windows.FrameworkElement>.  
   
-4.  O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que é retornado pelo suplemento deve ser convertido de um <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento.  
+4.  A interface do usuário que é retornado pelo suplemento deve ser convertido de um <xref:System.Windows.FrameworkElement> para um <xref:System.AddIn.Contract.INativeHandleContract> antes de cruzar o limite de isolamento.  
   
-5.  O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que é retornado deve ser convertido de um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento.  
+5.  A interface do usuário que é retornado deve ser convertido de um <xref:System.AddIn.Contract.INativeHandleContract> para um <xref:System.Windows.FrameworkElement> depois de cruzar o limite de isolamento.  
   
 6.  O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
   
- Para obter um exemplo que demonstra como implementar um suplemento que retorna um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Criar um suplemento que retorna uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Para obter um exemplo que demonstra como implementar um suplemento que retorna uma interface do usuário, consulte [criar um suplemento que retorna uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>O suplemento é uma interface do usuário  
- Quando um suplemento é uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], há os requisitos a seguir:  
+ Quando um suplemento é uma interface do usuário, são necessários os seguintes:  
   
-1.  O aplicativo host, o suplemento e o pipeline devem ser criados, conforme descrito pela documentação [Suplementos e extensibilidade](../../../../docs/framework/add-ins/index.md) do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+1.  O aplicativo host, suplemento e pipeline devem ser criados, conforme descrito pelo .NET Framework [suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentação.  
   
 2.  A interface de contrato para o suplemento deve implementar <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "43402095"
   
 6.  O aplicativo host exibe retornado <xref:System.Windows.FrameworkElement>.  
   
- Para obter um exemplo que demonstra como implementar um suplemento que é uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Criar um suplemento que é uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Para obter um exemplo que demonstra como implementar um suplemento que é uma interface do usuário, consulte [criar um suplemento que é uma interface do usuário](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Retornando múltiplas interfaces do usuário de um suplemento  
- Suplementos muitas vezes fornecem várias [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] para serem exibidas por aplicativos de host. Por exemplo, considere um suplemento que é uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que também fornece informações de status ao aplicativo host, também como uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Um suplemento como esse pode ser implementado pelo uso de uma combinação de técnicas de ambos os modelos [O suplemento retorna uma interface do usuário](#ReturnUIFromAddInContract) e [O suplemento é uma interface do usuário](#AddInIsAUI).  
+ Suplementos muitas vezes fornecem várias interfaces de usuário para aplicativos host exibam. Por exemplo, considere um suplemento que é uma interface do usuário que também fornece informações de status ao aplicativo host, também como uma interface do usuário. Um suplemento como esse pode ser implementado pelo uso de uma combinação de técnicas de ambos os modelos [O suplemento retorna uma interface do usuário](#ReturnUIFromAddInContract) e [O suplemento é uma interface do usuário](#AddInIsAUI).  
   
 <a name="AddInsAndXBAPs"></a>   
 ## <a name="add-ins-and-xaml-browser-applications"></a>Suplementos e aplicativos de navegação XAML  
@@ -171,7 +171,7 @@ ms.locfileid: "43402095"
   
  Consequentemente, a primeira etapa é compilar o assembly do suplemento e do pipeline para a raiz do projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], definindo a saída de build de cada projeto de assembly do pipeline e do suplemento. A tabela a seguir mostra os caminhos de saída de build para projetos de assembly do pipeline e projetos de assembly do suplemento que estão na mesma solução e pasta raiz que o projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] host.  
   
- Tabela 1: caminhos de saída de build para os assemblies do pipeline hospedados por um XBAP  
+ Tabela 1: Criar caminhos de saída para os Assemblies do Pipeline que são hospedados por um XBAP  
   
 |Projeto de assembly do pipeline|Caminho de saída de build|  
 |-------------------------------|-----------------------|  
@@ -194,7 +194,7 @@ ms.locfileid: "43402095"
 2.  Na caixa de diálogo **Arquivos de Aplicativo**, defina o **Status da Publicação** de cada DLL de suplemento e de pipeline a **Incluir (Auto)** e defina o **Grupo de Download** para cada DLL de pipeline e de suplemento para **(Obrigatório)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Usando o pipeline e o suplemento da base de aplicativo  
- Quando o pipeline e o suplemento são configurados para a implantação do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], eles são baixados para a mesma pasta de cache do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar o pipeline e o suplemento por meio do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], o código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve obtê-los da base de aplicativo. Os diversos tipos e membros do modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para usar pipelines e suplementos dão suporte especial para esse cenário. Em primeiro lugar, o caminho é identificado pelo <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeração. Você pode usar esse valor com sobrecargas de membros de suplemento pertinentes para usar pipelines que incluem o seguinte:  
+ Quando o pipeline e o suplemento são configurados para a implantação do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], eles são baixados para a mesma pasta de cache do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar o pipeline e o suplemento por meio do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], o código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve obtê-los da base de aplicativo. Os diversos tipos e membros do modelo do .NET Framework suplemento para usar pipelines e suplementos fornecem suporte especial para esse cenário. Em primeiro lugar, o caminho é identificado pelo <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valor de enumeração. Você pode usar esse valor com sobrecargas de membros de suplemento pertinentes para usar pipelines que incluem o seguinte:  
   
 -   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
@@ -209,82 +209,82 @@ ms.locfileid: "43402095"
   
 <a name="WPFAddInModelArchitecture"></a>   
 ## <a name="wpf-add-in-architecture"></a>Arquitetura de suplemento do WPF  
- O nível mais alto, como vimos, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] habilita [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] suplementos para implementar [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] (que derivam direta ou indiretamente <xref:System.Windows.FrameworkElement>) usando <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. O resultado é que o aplicativo host é retornado um <xref:System.Windows.FrameworkElement> que é exibido da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no aplicativo host.  
+ O nível mais alto, como vimos, o WPF permite suplementos do .NET Framework implementar interfaces do usuário (que derivam direta ou indiretamente <xref:System.Windows.FrameworkElement>) usando <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. O resultado é que o aplicativo host é retornado um <xref:System.Windows.FrameworkElement> que é exibido na interface do usuário no aplicativo host.  
   
- Para cenários de suplemento de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] simples, isso é o máximo de detalhamento de que um desenvolvedor precisa. Para cenários mais complexos, especialmente aqueles que tentam utilizar serviços [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] adicionais como o layout, recursos e associação de dados, um conhecimento mais detalhado de como o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] com suporte à [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é necessário para entender seus benefícios e limitações.  
+ Para cenários simples, da interface do usuário suplementar, isso é o máximo de detalhes que um desenvolvedor precisa. Para cenários mais complexos, especialmente aqueles que tentam utilizar serviços adicionais do WPF como layout, recursos e associação de dados, dados de conhecimento mais detalhado de como o WPF estende o modelo do .NET Framework suplemento com o suporte de interface do usuário é necessária para compreender seus benefícios e limitações.  
   
- Fundamentalmente, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] não transmite uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um suplemento para um aplicativo host; em vez disso, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] passa o identificador de janela do Win32 para a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] usando a interoperabilidade do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Assim, quando uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um suplemento é transmitida ao aplicativo host, ocorre o seguinte:  
+ Fundamentalmente, WPF não passa uma interface do usuário de um suplemento para um aplicativo host; em vez disso, o WPF passa o identificador de janela Win32 para a interface do usuário por meio da interoperabilidade do WPF. Assim, quando uma interface do usuário de um suplemento é passado para um aplicativo host, ocorre o seguinte:  
   
--   No lado do suplemento, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] adquire um identificador de janela para a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que será exibida pelo aplicativo host. O identificador de janela é encapsulado por interno [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] classe que deriva <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e é empacotada do domínio de aplicativo do suplemento ao domínio de aplicativo do aplicativo host.  
+-   No lado do suplemento, o WPF adquire um identificador de janela para a interface do usuário que será exibido pelo aplicativo host. O identificador de janela é encapsulado por uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e é empacotada do domínio de aplicativo do suplemento ao domínio de aplicativo do aplicativo host.  
   
--   No lado do aplicativo de host [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] reempacota o <xref:System.Windows.Interop.HwndSource> como interno [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] classe que deriva de <xref:System.Windows.Interop.HwndHost> e consome <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para o aplicativo host.  
+-   No lado do aplicativo host, o WPF reempacota os <xref:System.Windows.Interop.HwndSource> como uma classe interna do WPF que deriva <xref:System.Windows.Interop.HwndHost> e consome <xref:System.AddIn.Contract.INativeHandleContract>. Uma instância dessa classe é retornada por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para o aplicativo host.  
   
- <xref:System.Windows.Interop.HwndHost> existe para exibir [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identificadas por identificadores de janela de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Para obter mais informações, consulte [Interoperação Win32 e WPF](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> existe para exibir as interfaces do usuário, identificados por identificadores de janela WPF de interfaces do usuário. Para obter mais informações, consulte [Interoperação Win32 e WPF](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
- Em resumo, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existem para permitir que o identificador de janela para um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] seja transmitido de um suplemento para um aplicativo host, onde ele é encapsulado por um <xref:System.Windows.Interop.HwndHost> e exibido o host aplicativo [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ Em resumo, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existem para permitir que o identificador de janela para uma UI do WPF a ser passado de um suplemento para um aplicativo host, onde ele é encapsulado por um <xref:System.Windows.Interop.HwndHost> e exibidas da interface do usuário do aplicativo host.  
   
 > [!NOTE]
 >  Como o aplicativo host recebe um <xref:System.Windows.Interop.HwndHost>, o aplicativo host não é possível converter o objeto que é retornado por <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> para o tipo é implementado pelo suplemento (por exemplo, um <xref:System.Windows.Controls.UserControl>).  
   
- Por sua natureza, <xref:System.Windows.Interop.HwndHost> tem certas limitações que afetam como aplicativos host podem utilizá-los. No entanto, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] estende <xref:System.Windows.Interop.HwndHost> com vários recursos para cenários de suplemento. Essas limitações e benefícios são descritos abaixo.  
+ Por sua natureza, <xref:System.Windows.Interop.HwndHost> tem certas limitações que afetam como aplicativos host podem utilizá-los. No entanto, o WPF estende <xref:System.Windows.Interop.HwndHost> com vários recursos para cenários de suplemento. Essas limitações e benefícios são descritos abaixo.  
   
 <a name="WPFAddInModelBenefits"></a>   
 ## <a name="wpf-add-in-benefits"></a>Benefícios de suplementos do WPF  
- Porque [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] suplemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] são exibidas em aplicativos host usando uma classe interna que deriva <xref:System.Windows.Interop.HwndHost>, aqueles [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] são limitadas pelas funcionalidades da <xref:System.Windows.Interop.HwndHost> com relação ao [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] serviços como o layout, renderização, vinculação de dados, estilos, modelos e recursos. No entanto, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta sua interno <xref:System.Windows.Interop.HwndHost> subclasse com recursos adicionais que incluem o seguinte:  
+ Como interfaces de usuário em suplementos do WPF são exibidos em aplicativos host usando uma classe interna que deriva de <xref:System.Windows.Interop.HwndHost>, essas interfaces de usuário são limitadas pelas funcionalidades de <xref:System.Windows.Interop.HwndHost> em relação aos serviços de UI WPF, como o layout, renderização, vinculação de dados, estilos, modelos e recursos. No entanto, o WPF aumenta sua interno <xref:System.Windows.Interop.HwndHost> subclasse com recursos adicionais que incluem o seguinte:  
   
--   Navegar com a tecla tab entre a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um aplicativo host e a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um suplemento. Observe que o "suplemento é um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" modelo de programação requer que o adaptador do lado do suplemento substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar tabulações, seja o suplemento é totalmente confiável ou parcialmente confiável.  
+-   Uso da tecla TAB entre a interface do usuário de um aplicativo host e interface do usuário de um suplemento. Observe que o modelo de programação "suplemento é uma interface do usuário" requer que o adaptador do lado do suplemento substituir <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar tabulações, seja o suplemento é totalmente confiável ou parcialmente confiável.  
   
--   Respeitar requisitos de acessibilidade para [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de suplemento que são exibidas em [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] do aplicativo host.  
+-   Respeitar requisitos de acessibilidade para interfaces do usuário do suplemento que são exibidos a partir de interfaces de usuário do aplicativo host.  
   
--   Habilitar a execução segura dos aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] em vários cenários de domínio do aplicativo.  
+-   Permitindo que os aplicativos do WPF executar com segurança em vários cenários de domínio de aplicativo.  
   
--   Impedir o acesso a identificadores de janela da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do suplemento quando os suplementos são executados com isolamento de segurança (ou seja, uma área restrita de confiança parcial). Chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garante essa segurança:  
+-   Impedir o acesso para interface do usuário do suplemento identificadores de janela ao executar os suplementos com isolamento de segurança (ou seja, uma proteção de segurança de confiança parcial). Chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garante essa segurança:  
   
-    -   Para o "suplemento retorna uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" modelo de programação, a única maneira de passar o identificador de janela para um suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] entre o isolamento de limite é chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    -   Para o modelo de programação "suplemento retorna uma interface do usuário", a única maneira de passar o identificador de janela para uma interface de usuário além do limite de isolamento é chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Para o "suplemento é um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" de programação de modelo, substituindo <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> no adaptador do lado do suplemento e chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (conforme mostrado nos exemplos anteriores) é necessária, como é chamar o adaptador lado do suplemento `QueryContract` implementação do adaptador do host.  
+    -   Para o modelo de programação "suplemento é uma interface do usuário", substituindo <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> no adaptador do lado do suplemento e chamar <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (conforme mostrado nos exemplos anteriores) é necessária, como é chamar o adaptador lado do suplemento `QueryContract` implementação desde o adaptador do lado do host.  
   
--   Fornecer proteção contra múltiplas execuções de domínio do aplicativo. Devido a limitações com domínios do aplicativo, as exceções sem tratamento que forem lançadas em domínios do aplicativo do suplemento fazem com que todo o aplicativo falhe, mesmo com a existência do limite de isolamento. No entanto, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e o modelo de suplemento do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] oferecem uma forma simples de solucionar esse problema e melhorar a estabilidade do aplicativo. Um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] suplemento que exibe uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] cria um <xref:System.Windows.Threading.Dispatcher> para o thread que o domínio de aplicativo é executado, se o aplicativo host é um [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativo. Você pode detectar exceções sem tratamento que ocorrem no domínio do aplicativo manipulando o <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] suplemento <xref:System.Windows.Threading.Dispatcher>. Você pode obter o <xref:System.Windows.Threading.Dispatcher> do <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> propriedade.  
+-   Fornecer proteção contra múltiplas execuções de domínio do aplicativo. Devido a limitações com domínios do aplicativo, as exceções sem tratamento que forem lançadas em domínios do aplicativo do suplemento fazem com que todo o aplicativo falhe, mesmo com a existência do limite de isolamento. No entanto, o WPF e o modelo de suplemento do .NET Framework fornecem uma maneira simples de contornar esse problema e melhorar a estabilidade do aplicativo. Um suplemento do WPF que exibe uma interface do usuário cria um <xref:System.Windows.Threading.Dispatcher> para o thread que o domínio de aplicativo é executado, se o aplicativo host é um aplicativo WPF. Você pode detectar exceções sem tratamento que ocorrem no domínio do aplicativo manipulando o <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventos do WPF adicionar-in <xref:System.Windows.Threading.Dispatcher>. Você pode obter o <xref:System.Windows.Threading.Dispatcher> do <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> propriedade.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Limitações de suplementos WPF  
- Além dos benefícios que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] adiciona os comportamentos padrão fornecidos pelo <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>e identificadores de janela, também há limitações para suplemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que são exibidas em aplicativos host:  
+ Além dos benefícios que o WPF adiciona os comportamentos padrão fornecidos pelo <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>e identificadores de janela, também há limitações para interfaces do usuário do suplemento que são exibidas em aplicativos host:  
   
--   As [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de suplemento exibidas de um aplicativo host não respeitam o comportamento de recorte do aplicativo host.  
+-   Interfaces de usuário em suplementos exibidos a partir de um aplicativo host não respeitam o comportamento de recorte do aplicativo host.  
   
 -   O conceito de *espaço aéreo* em cenários de interoperabilidade também se aplica a suplementos (consulte [Visão geral das regiões de tecnologia](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
   
--   Os serviços de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de um aplicativo host, tais como herança de recursos, associação de dados e comandos, não estão automaticamente disponíveis para [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] de suplemento. Para fornecer esses serviços para o suplemento, você precisa atualizar o pipeline.  
+-   Serviços de interface do usuário de um aplicativo host, como herança de recursos, associação de dados e comandos, não estão automaticamente disponíveis para o suplemento interfaces do usuário. Para fornecer esses serviços para o suplemento, você precisa atualizar o pipeline.  
   
--   Uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de suplemento não pode ser girada, dimensionada, distorcida e nem ser afetada de nenhuma outra forma por uma transformação (consulte [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Uma interface de usuário não pode ser girada, dimensionada, distorcida ou contrário é afetado por uma transformação (consulte [visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
   
--   Conteúdo dentro do suplemento [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] que é renderizado por operações de desenho a <xref:System.Drawing> namespace pode incluir combinação alfa. No entanto, tanto uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de suplemento quanto a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do aplicativo host que o contém devem ser 100% opacas; em outras palavras, a propriedade `Opacity` em ambas deve ser definida como 1.  
+-   Conteúdo dentro de interfaces do usuário do suplemento que é renderizado por operações de desenho a <xref:System.Drawing> namespace pode incluir combinação alfa. No entanto, uma interface de usuário e o aplicativo de host da interface do usuário que o contém devem ser 100% opaco; em outras palavras, o `Opacity` propriedade nos dois deve ser definida como 1.  
   
--   Se o <xref:System.Windows.Window.AllowsTransparency%2A> propriedade de uma janela no aplicativo host que contém um suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é definido como `true`, o suplemento é invisível. Isso será verdadeiro mesmo se a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do suplemento for 100% opaca (ou seja, se a propriedade `Opacity` tiver um valor de 1).  
+-   Se o <xref:System.Windows.Window.AllowsTransparency%2A> de uma janela no aplicativo host que contém uma interface de usuário estiver definida como `true`, o suplemento é invisível. Isso é verdadeiro mesmo se a interface do usuário suplemento for 100% opaco (ou seja, o `Opacity` propriedade tem um valor de 1).  
   
--   Uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de suplemento deve aparecer sobre outros elementos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na mesma janela de nível superior.  
+-   Uma interface de usuário deve aparecer sobre outros elementos do WPF na mesma janela de nível superior.  
   
--   Nenhuma parte de um suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pode ser renderizado usando um <xref:System.Windows.Media.VisualBrush>. Em vez disso, o suplemento poderá tirar um instantâneo da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gerada para criar um bitmap que poderá ser passado para o aplicativo host usando métodos definidos pelo contrato.  
+-   Nenhuma parte de interface do usuário de um suplemento pode ser renderizado usando um <xref:System.Windows.Media.VisualBrush>. Em vez disso, o suplemento pode tirar um instantâneo da interface do usuário gerada para criar um bitmap que pode ser passado para o aplicativo host usando métodos definidos pelo contrato.  
   
--   Arquivos de mídia não podem ser executados de um <xref:System.Windows.Controls.MediaElement> em um suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   Arquivos de mídia não podem ser executados de um <xref:System.Windows.Controls.MediaElement> em uma interface de usuário.  
   
--   Eventos do mouse gerados para a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de suplemento não são recebidos nem gerados pelo aplicativo host e a propriedade `IsMouseOver` da [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do aplicativo host tem um valor de `false`.  
+-   Eventos de mouse gerados para o suplemento da interface do usuário não são recebidos nem gerados pelo aplicativo host e o `IsMouseOver` propriedade para a interface do usuário do aplicativo host tem um valor de `false`.  
   
--   Quando o foco alterna entre os controles em uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de suplemento, os eventos `GotFocus` e `LostFocus` não são recebidos nem acionados pelo aplicativo host.  
+-   Quando o foco alterna entre os controles em um suplemento da interface do usuário, o `GotFocus` e `LostFocus` eventos não são recebidos nem gerados pelo aplicativo host.  
   
--   A parte de um aplicativo host que contém uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de suplemento aparece em branco quando impressa.  
+-   A parte de um aplicativo host que contém uma interface de usuário é exibida em branco quando impressa.  
   
--   Todos os dispatchers (consulte <xref:System.Windows.Threading.Dispatcher>) criado pelo suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] devem ser desligados manualmente antes que o suplemento proprietário seja descarregado se o aplicativo host continua a execução. O contrato pode implementar métodos que permitam que o aplicativo host sinalize o suplemento antes que este seja descarregado, permitindo assim que a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] do suplemento desligue seus dispatchers.  
+-   Todos os dispatchers (consulte <xref:System.Windows.Threading.Dispatcher>) criado pelo suplemento interface do usuário deve ser desligado manualmente antes que o suplemento proprietário seja descarregado se o aplicativo host continua a execução. O contrato pode implementar métodos que permitem que o aplicativo host sinalize o suplemento antes que o suplemento seja descarregado, permitindo assim que a interface do suplemento desligue seus dispatchers.  
   
--   Se um suplemento [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] é um <xref:System.Windows.Controls.InkCanvas> ou contém um <xref:System.Windows.Controls.InkCanvas>, é possível descarregar o suplemento.  
+-   Se uma interface de usuário é um <xref:System.Windows.Controls.InkCanvas> ou contém um <xref:System.Windows.Controls.InkCanvas>, é possível descarregar o suplemento.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Otimização do desempenho  
- Por padrão, quando vários domínios do aplicativo são usados, os diversos assemblies do [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] exigidos por cada aplicativo são todos carregados nesse domínio do aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, o [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornece uma maneira de reduzir os tempos de inicialização instruindo os aplicativos a compartilhar assemblies entre domínios do aplicativo se eles já estão carregados. Você pode fazer isso usando o <xref:System.LoaderOptimizationAttribute> atributo, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Por padrão, quando vários domínios de aplicativo são usados, os vários assemblies do .NET Framework necessários para cada aplicativo são todos carregados no domínio do aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, o .NET Framework fornece uma maneira de reduzir os tempos de inicialização instruindo os aplicativos a compartilhar assemblies entre domínios de aplicativo se eles já estiverem carregados. Você pode fazer isso usando o <xref:System.LoaderOptimizationAttribute> atributo, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.LoaderOptimizationAttribute>  
- [Suplementos e extensibilidade](../../../../docs/framework/add-ins/index.md)  
+ [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [Domínios do aplicativo](../../../../docs/framework/app-domains/application-domains.md)  
  [Visão geral de comunicação remota do .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Tornando os objetos em remotos](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  

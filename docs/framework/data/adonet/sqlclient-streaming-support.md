@@ -2,12 +2,12 @@
 title: Suporte de streaming do SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152884"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612992"
 ---
 # <a name="sqlclient-streaming-support"></a>Suporte de streaming do SqlClient
 Suporte a streaming entre o SQL Server e um aplicativo (novo no [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) dá suporte a dados não estruturados no servidor (documentos, imagens e arquivos de mídia). Um banco de dados do SQL Server pode armazenar objetos binários grandes (BLOBs), mas recuperar BLOBS pode usar muita memória.  

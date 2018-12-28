@@ -1,13 +1,13 @@
 ---
-title: Opções (F#)
-description: Saiba como usar a opção de F# tipos quando um valor real podem não existir para um valor nomeado ou uma variável.
+title: Opções
+description: Saiba como usar F# tipos de opção quando um valor real pode não existir para um valor nomeado ou uma variável.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46479514"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613499"
 ---
 # <a name="options"></a>Opções
 
@@ -33,7 +33,7 @@ As opções são comumente usadas durante uma pesquisa não retorna um resultado
 
 No código anterior, uma lista é pesquisado recursivamente. A função `tryFindMatch` usa uma função de predicado `pred` que retorna um valor booliano e uma lista de pesquisa. Se um elemento que satisfaz o predicado for encontrado, a recursão termina e a função retorna o valor como uma opção na expressão `Some(head)`. A recursão termina quando uma lista vazia é correspondida. Nesse ponto, o valor `head` não foi encontrado, e `None` é retornado.
 
-Muitos F# funções da biblioteca que pesquisar uma coleção para um valor que pode ou não existir retorno o `option` tipo. Por convenção, essas funções começam com o `try` prefixo, por exemplo, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Muitos F# funções de biblioteca que pesquisar uma coleção para um valor que pode ou não existir retornar o `option` tipo. Por convenção, essas funções começam com o `try` prefixo, por exemplo, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Opções também podem ser úteis quando um valor pode não existir, por exemplo, se for possível que uma exceção será gerada quando você tenta construir um valor. O exemplo de código a seguir ilustra isso.
 

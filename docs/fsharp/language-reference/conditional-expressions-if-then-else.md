@@ -1,13 +1,13 @@
 ---
-title: 'Expressões condicionais: if...then...else (F#)'
-description: Saiba como escrever expressões condicionais em F# para executar diferentes ramificações do código.
+title: 'Expressões condicionais: if... then... else'
+description: Aprenda a escrever expressões condicionais no F# para executar diferentes ramificações do código.
 ms.date: 05/16/2016
-ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: eade8c20c1b62a2e9a54700550d832798308f368
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44177595"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614034"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>Expressões condicionais: `if...then...else`
 

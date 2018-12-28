@@ -1,24 +1,24 @@
 ---
-title: 'Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão de ampliação: &lt;lista&gt;'
+title: "Não acessível '&lt;methodname&gt;' pode ser chamado com estes argumentos sem uma conversão de ampliação: &lt;lista&gt;"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
 ms.assetid: 5e74f5cf-80bd-4b48-b58a-465f981ec694
-ms.openlocfilehash: 48514398e9ee5eafb16f4838bb2c2b08fe61aff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c305cbc4c91cd1a4df19933e771c640c11184339
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636792"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779113"
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Não acessível &#39; &lt;methodname&gt; &#39; pode ser chamado com estes argumentos sem uma conversão de ampliação: &lt;lista&gt;
-Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista dos argumentos fornecidos sem uma conversão de ampliação.  
+# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com estes argumentos sem uma conversão de ampliação: &lt;lista&gt;
+Um método sobrecarregado foi chamado, mas nenhum método poderia ser compatível com a lista de argumentos fornecidos sem uma conversão de ampliação.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
 -   Especifique `Option Strict Off`.  
   
--   Altere os argumentos para coincidir com as assinaturas do método sobrecarregado.  
+-   Altere os argumentos para corresponder a uma das assinaturas do método sobrecarregado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversões de Widening e Narrowing](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  

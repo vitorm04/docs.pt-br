@@ -1,13 +1,13 @@
 ---
-title: Parâmetros e argumentos (F#)
-description: Saiba mais sobre o suporte de linguagem F# para definir parâmetros e passar argumentos para funções, métodos e propriedades.
+title: Parâmetros e argumentos
+description: Saiba mais sobre F# suporte ao idioma para definir parâmetros e passar argumentos para funções, métodos e propriedades.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744451"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612472"
 ---
 # <a name="parameters-and-arguments"></a>Parâmetros e argumentos
 
@@ -109,7 +109,7 @@ Para obter mais informações, consulte [construtores (F#)](https://msdn.microso
 
 ## <a name="optional-parameters"></a>Parâmetros opcionais
 
-Você pode especificar um parâmetro opcional para um método por meio de um ponto de interrogação na frente do nome do parâmetro. Parâmetros opcionais são interpretados como o tipo de opção F#, portanto, você pode consultá-los da maneira normal, tipos de opção são consultados, usando um `match` expressão com `Some` e `None`. Parâmetros opcionais são permitidos apenas em membros, não em funções criadas com `let` associações.
+Você pode especificar um parâmetro opcional para um método por meio de um ponto de interrogação na frente do nome do parâmetro. Parâmetros opcionais são interpretados como o F# opção de tipo, portanto, você pode consultá-los da maneira normal, tipos de opção são consultados, usando um `match` expressão com `Some` e `None`. Parâmetros opcionais são permitidos apenas em membros, não em funções criadas com `let` associações.
 
 Você pode passar valores opcionais existentes para o método pelo nome do parâmetro, como `?arg=None` ou `?arg=Some(3)` ou `?arg=arg`. Isso pode ser útil quando a criação de um método que passa argumentos opcionais para outro método.
 
@@ -151,7 +151,7 @@ Nesse caso, o compilador gera um aviso e ignorará os dois atributos completamen
 
 ## <a name="passing-by-reference"></a>Passagem por referência
 
-Um valor de F# a passagem por referência envolve [byrefs](byrefs.md), que são tipos de ponteiro gerenciado. Diretrizes para qual tipo usar é o seguinte:
+Passando um F# valor por referência envolve [byrefs](byrefs.md), que são tipos de ponteiro gerenciado. Diretrizes para qual tipo usar é o seguinte:
 
 * Use `inref<'T>` se você precisar ler o ponteiro.
 * Use `outref<'T>` se você só precisa escrever para o ponteiro.
@@ -190,7 +190,7 @@ No F#, matrizes de parâmetros só podem ser definidas nos métodos. Eles não p
 
 Você define uma matriz de parâmetros usando o `ParamArray` atributo. O `ParamArray` atributo só pode ser aplicado ao último parâmetro.
 
-O código a seguir ilustra as duas chamando um método do .NET que usa uma matriz de parâmetros e a definição de um tipo em F# que tem um método que usa uma matriz de parâmetros.
+O código a seguir ilustra ambas as chamando um método do .NET que usa uma matriz de parâmetros e a definição de um tipo no F# que tem um método que usa uma matriz de parâmetros.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

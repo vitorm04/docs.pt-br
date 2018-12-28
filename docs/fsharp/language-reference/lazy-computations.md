@@ -1,13 +1,13 @@
 ---
-title: Computações lentas (F#)
-description: Saiba como as computações lentas do F# podem melhorar o desempenho de seus aplicativos e bibliotecas.
+title: Computações lentas
+description: Saiba como F# computações lentas podem melhorar o desempenho de seus aplicativos e bibliotecas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 35f4a3f7a88ef1650497e0c943234b3574d13b38
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698202"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610067"
 ---
 # <a name="lazy-computations"></a>Computações lentas
 

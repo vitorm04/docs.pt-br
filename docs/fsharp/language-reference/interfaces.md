@@ -1,13 +1,13 @@
 ---
-title: Interfaces (F#)
-description: Saiba como o F# Interfaces especificar conjuntos de membros relacionados que implementam a outras classes.
+title: Interfaces
+description: Saiba como F# Interfaces especificam conjuntos de membros relacionados que implementam a outras classes.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 85b5506d96c26be5e52670c0c62d27cae047d1a6
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231434"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610548"
 ---
 # <a name="interfaces"></a>Interfaces
 
@@ -47,7 +47,7 @@ Declarações de interface se parecer com declarações de classe, exceto que n�
 
 A acessibilidade padrão para interfaces é `public`.
 
-Você pode, opcionalmente, nomeie cada parâmetro de método usando a sintaxe normal da F#:
+Você pode, opcionalmente, nomeie cada parâmetro de método normal usando o F# sintaxe:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

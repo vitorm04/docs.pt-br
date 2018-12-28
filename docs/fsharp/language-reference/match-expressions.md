@@ -1,13 +1,13 @@
 ---
-title: Expressões de correspondência (F#)
-description: Saiba como a expressão de correspondência do F# fornece controle de ramificação com base na comparação de uma expressão com um conjunto de padrões.
+title: Expressões de correspondência
+description: Saiba como o F# expressão de correspondência fornece controle de ramificação com base na comparação de uma expressão com um conjunto de padrões.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221838"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611562"
 ---
 # <a name="match-expressions"></a>Expressões de correspondência
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Para obter mais informações sobre expressões lambda, consulte [expressões Lambda: A `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md).
+Para obter mais informações sobre expressões lambda, consulte [expressões Lambda: O `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md).
 
 O conjunto completo de padrões deve abranger todas as correspondências possíveis a variável de entrada. Frequentemente, você pode usar o padrão de curinga (`_`) como o último padrão para coincidir com quaisquer valores de entrada sem correspondência anteriormente.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência da Linguagem F#](index.md)  
-- [Padrões Ativos](active-patterns.md)  
-- [Correspondência Padrão](pattern-matching.md)  
+- [Referência da Linguagem F#](index.md)
+- [Padrões Ativos](active-patterns.md)
+- [Correspondência Padrão](pattern-matching.md)

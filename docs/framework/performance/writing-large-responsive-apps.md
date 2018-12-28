@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195886"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613512"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do .NET Framework ou aplicativos que processam um grande volume de dados, como arquivos ou bancos de dados. Essas dicas vêm da nova gravação de compiladores do C# e do Visual Basic em código gerenciado, e este artigo inclui diversos exemplos reais do compilador do C#. 
@@ -28,20 +28,20 @@ Este artigo apresenta dicas para melhorar o desempenho de grandes aplicativos do
 ## <a name="just-the-facts"></a>Aos fatos  
  Considere estes fatos ao ajustar o desempenho e criar aplicativos do .NET Framework ágeis na resposta. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Fato 1: não otimize de forma prematura  
+### <a name="fact-1-dont-prematurely-optimize"></a>Fato 1: Não otimize antes  
  Gravar um código mais complexo do que o necessário acarreta custos de manutenção, depuração e acabamento. Os programadores experientes têm uma compreensão intuitiva de como resolver problemas de codificação e gravar um código mais eficiente. Porém, às vezes, eles otimizam o código antes. Por exemplo, eles usam uma tabela hash quando uma simples matriz bastaria ou usam um cache complicado que pode causar perda de memória, em vez de simplesmente recalcular os valores. Mesmo que não seja um programador experiente, você deve testar o desempenho e analisar o código quando encontrar problemas. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fato 2: se você não está medindo, está adivinhando  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fato 2: Se você não está medindo, está adivinhando  
  Os perfis e as medidas não mentem. Os perfis mostram se a CPU está totalmente carregada ou se há um bloqueio na E/S do disco. Os perfis informam o tipo e a quantidade de memória que está sendo alocada e se a CPU está gastando muito tempo no [GC](../../../docs/standard/garbage-collection/index.md) (coleta de lixo). 
   
  Estabeleça metas de desempenho para experiências ou cenários importantes do cliente no aplicativo e gravar testes para avaliar o desempenho. Investigue testes com falha aplicando o método científico: use perfis para orientá-lo, crie hipóteses sobre qual seria o problema e teste as hipóteses com um experimento ou uma alteração feita no código. Estabeleça medidas de desempenho de linha de base com o passar do tempo, usando testes regulares para que seja possível isolar as alterações que causam regressões no desempenho. Abordando o trabalho de desempenho de maneira rigorosa, você evitará a perda de tempo com atualizações desnecessárias de código. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Fato 3: boas ferramentas fazem toda a diferença  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Fato 3: Boas ferramentas fazem toda a diferença  
  As boas ferramentas permitem chegar rapidamente aos maiores problemas de desempenho (CPU, memória ou disco) e ajudam a alocar o código que causa esses gargalos. A Microsoft fornece uma variedade de ferramentas de desempenho, como [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Ferramenta de Análise do Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) e [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView é uma ferramenta gratuita e incrivelmente eficiente que ajuda você a se concentrar em problemas intensos, como E/S de disco, eventos de GC e memória. Capture eventos [ETW](../../../docs/framework/wcf/samples/etw-tracing.md) (Rastreamento de Eventos para Windows) relacionados ao desempenho e exiba informações por aplicativo, processo, pilha e thread com facilidade. O PerfView mostra quanto e que tipo de memória o aplicativo aloca, além de quais funções ou pilhas de chamadas contribuem para a quantidade de alocações da memória. Para obter detalhes, consulte os tópicos avançados da ajuda, as demonstrações e os vídeos incluídos com a ferramenta (como os [tutoriais do PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) no Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Fato 4: é tudo uma questão de alocação  
+### <a name="fact-4-its-all-about-allocations"></a>Fato 4: É tudo uma questão de alocação  
  Convém pensar que compilar um aplicativo do .NET Framework ágil na resposta é uma questão de algoritmos, como usar a classificação rápida em vez da classificação de bolhas, mas não é esse o caso. O maior fator na compilação de um aplicativo ágil na resposta é alocar memória, especialmente quando o aplicativo é muito grande ou processa grandes volumes de dados. 
   
  Praticamente todo o trabalho de compilação de experiências IDE ágeis na resposta com as APIs do novo compilador envolveu evitar alocações e gerenciar estratégias de cache. Os rastreamentos do PerfView mostram que o desempenho dos novos compiladores do C# e do Visual Basic raramente está associado à CPU. Os compiladores podem estar associados à E/S na leitura de milhares ou milhões de linhas de código, de metadados ou na emissão de código gerenciado. Os atrasos do thread da interface do usuário são praticamente todos por conta da coleta de lixo. A GC do .NET Framework está totalmente ajustada para o desempenho e faz boa parte de seu trabalho junto com a execução do código do aplicativo. Porém, uma única alocação pode disparar uma coleta [gen2](../../../docs/standard/garbage-collection/fundamentals.md) cara, interrompendo todos os threads. 
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ e lambdas  
 Integrada à linguagem LINQ (consulta), junto com as expressões lambda, é um exemplo de um recurso de produtividade. No entanto, seu uso pode ter um impacto significativo no desempenho ao longo do tempo, e você pode achar que precisa reescrever o código.
   
- **Exemplo 5: Lambdas, List\<T> e IEnumerable\<T>**  
+ **Exemplo 5: Lambdas, List\<T > e IEnumerable\<T >**  
   
  Esse exemplo usa [o LINQ e um código de estilo funcional](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  Esse código não usa métodos de extensão LINQ, lambdas ou enumeradores, e não acarreta alocações. Não há alocações porque o compilador pode ver que a coleção `symbols` é um <xref:System.Collections.Generic.List%601> e pode associar o enumerador resultante (uma estrutura) a uma variável local com o tipo certo para evitar a conversão boxing. A versão original dessa função era um ótimo exemplo da potência expressiva do C# e da produtividade do .NET Framework. Essa versão nova e mais eficiente preserva essas qualidades sem adicionar nenhum código complexo de manutenção. 
   
 ### <a name="async-method-caching"></a>Cache de método assíncrono  
- O próximo exemplo mostra um problema comum quando você tenta usar os resultados armazenados em cache em um método [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7). 
+
+O próximo exemplo mostra um problema comum quando você tenta usar os resultados armazenados em cache em um método [async](../../csharp/programming-guide/concepts/async/index.md).
   
  **Exemplo 6: cache em métodos assíncronos**  
   

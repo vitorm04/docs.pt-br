@@ -1,15 +1,15 @@
 ---
-title: 'Exceções: a função invalidArg (F#)'
-description: Saiba como a função 'invalidArg' F# gera uma exceção de argumento.
+title: 'Exceções: A função invalidArg'
+description: Saiba como o F# 'invalidArg' função gera uma exceção de argumento.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44180313"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613330"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Exceções: a função invalidArg
+# <a name="exceptions-the-invalidarg-function"></a>Exceções: A função invalidArg
 
 O `invalidArg` função gera uma exceção de argumento.
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Tratamento de Exceção](index.md)
 - [Tipos de Exceção](exception-types.md)
-- [Exceções: a expressão `try...with`](the-try-with-expression.md)
-- [Exceções: a expressão `try...finally`](the-try-finally-expression.md)
+- [Exceções: O `try...with` expressão](the-try-with-expression.md)
+- [Exceções: O `try...finally` expressão](the-try-finally-expression.md)
 - [Exceções: a função `raise`](the-raise-function.md)
-- [Exceções: a função `failwith`](the-failwith-function.md)
+- [Exceções: O `failwith` função](the-failwith-function.md)

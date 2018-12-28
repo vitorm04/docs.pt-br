@@ -1,13 +1,13 @@
 ---
-title: Células de referência (F#)
-description: Saiba como células de referência em F# são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.
+title: Células de referência
+description: Saiba como F# células de referência são locais de armazenamento que permitem criar valores mutáveis com semântica de referência.
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192243"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612758"
 ---
 # <a name="reference-cells"></a>Células de referência
 
@@ -57,6 +57,7 @@ A tabela a seguir mostra os recursos disponíveis na célula de referência.
 |`ref` (operador)|Encapsula um valor em uma nova célula de referência.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (propriedade)|Obtém ou define o valor subjacente.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (campo de registro)|Obtém ou define o valor subjacente.|`'a`|`let ref x = { contents = x }`|
+
 Existem várias maneiras de acessar o valor subjacente. O valor retornado pelo operador de desreferência (`!`) não é um valor atribuível. Portanto, se estiver modificando o valor subjacente, você deverá usar o operador de atribuição (`:=`) em vez disso.
 
 A propriedade `Value` e o campo `contents` são valores atribuíveis. Portanto, é possível usá-los para acessar ou alterar o valor subjacente, conforme mostrado no código a seguir.
@@ -74,7 +75,7 @@ A saída é a seguinte.
 
 O campo `contents` é fornecido para compatibilidade com outras versões do ML e produzirá um aviso durante a compilação. Para desabilitar o aviso, use a opção do compilador `--mlcompatibility`. Para obter mais informações, consulte [Opções do compilador](compiler-options.md).
 
-Programadores de c# devem saber que `ref` em c# não é a mesma coisa que `ref` em F#. As construções equivalentes em F# são [byrefs](byrefs.md), que são um conceito diferente das células de referência.
+C#os programadores devem saber que `ref` em C# não é a mesma coisa que `ref` em F#. O equivalente construções em F# são [byrefs](byrefs.md), que são um conceito diferente das células de referência.
 
 Valores marcados como `mutable`pode ser elevada automaticamente a `'a ref` se capturados por um fechamento; veja [valores](values/index.md).
 

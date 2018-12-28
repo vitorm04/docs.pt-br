@@ -1,13 +1,13 @@
 ---
-title: Herança (F#)
-description: Saiba como especificar relações de herança F# usando a palavra-chave 'inherit'.
+title: Herança
+description: Saiba como especificar F# relações de herança usando a palavra-chave 'inherit'.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864463"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610132"
 ---
 # <a name="inheritance"></a>Herança
 
@@ -34,7 +34,7 @@ A palavra-chave `base` está disponível em classes derivadas e refere-se à ins
 
 ## <a name="virtual-methods-and-overrides"></a>Substituições e métodos virtuais
 
-Métodos virtuais (e propriedades) funcionam um pouco diferente no F# em comparação com outras linguagens .NET. Para declarar um novo membro virtual, você deve usar o `abstract` palavra-chave. Para fazer isso, independentemente se você fornecer uma implementação padrão para esse método. Portanto, uma definição completa de um método virtual em uma classe base segue este padrão:
+Métodos virtuais (e propriedades) funcionam de forma um pouco diferente em F# em comparação com outras linguagens .NET. Para declarar um novo membro virtual, você deve usar o `abstract` palavra-chave. Para fazer isso, independentemente se você fornecer uma implementação padrão para esse método. Portanto, uma definição completa de um método virtual em uma classe base segue este padrão:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -62,7 +62,7 @@ O código a seguir mostra uma classe base e uma classe derivada, em que a classe
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-No caso de vários construtores, o código a seguir pode ser usado. A primeira linha dos construtores de classe derivada é o `inherit` cláusula e os campos aparecem como campos explícitos são declarados com o `val` palavra-chave. Para obter mais informações, consulte [campos explícitos: A `val` palavra-chave](members/explicit-fields-the-val-keyword.md).
+No caso de vários construtores, o código a seguir pode ser usado. A primeira linha dos construtores de classe derivada é o `inherit` cláusula e os campos aparecem como campos explícitos são declarados com o `val` palavra-chave. Para obter mais informações, consulte [campos explícitos: O `val` palavra-chave](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =

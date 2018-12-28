@@ -1,13 +1,13 @@
 ---
-title: Uniões discriminadas (F#)
+title: Uniões discriminadas
 description: Saiba como usar F# uniões discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154405"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611835"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 

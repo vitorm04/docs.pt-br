@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746170"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612030"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;assemblyBinding&gt; elemento para &lt;tempo de execução&gt;
 Contém informações sobre o redirecionamento de versão e os locais dos assemblies.  
@@ -40,14 +40,14 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**xmlns**|Atributo obrigatório.<br /><br /> Especifica o namespace XML necessário para a associação de assembly. Use a cadeia de caracteres "urn: schemas-microsoft-v1" como o valor.|  
-|**appliesTo**|Especifica a versão de tempo de execução que se aplica o redirecionamento de assembly do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar qual versão aplica-se a. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework. O **appliesTo** atributo foi introduzido no .NET Framework versão 1.1; ele será ignorado pelo .NET Framework versão 1.0. Isso significa que todos os elementos **\<assemblyBinding>** são aplicados ao usar o .NET Framework versão 1.0, mesmo se um atributo **appliesTo** for especificado.|  
+|**Aplica-se**|Especifica a versão de tempo de execução, a que o redirecionamento de assembly do .NET Framework se aplica. Esse atributo opcional usa um número de versão do .NET Framework para indicar qual versão ele se aplica ao. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework. O **appliesTo** atributo foi introduzido no .NET Framework versão 1.1; ele será ignorado pelo .NET Framework versão 1.0. Isso significa que todos os elementos **\<assemblyBinding>** são aplicados ao usar o .NET Framework versão 1.0, mesmo se um atributo **appliesTo** for especificado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)|Encapsula o local de assembly e política de associação para um assembly. Use um  **\<dependentAssembly >** marca para cada assembly.|  
-|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Especifica os subdiretórios do common language runtime procura ao carregar assemblies.|  
+|[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Especifica os subdiretórios que o common language runtime procura ao carregar assemblies.|  
 |[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Especifica se o tempo de execução aplica a política do editor.|  
 |[\<qualifyAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md)|Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.|  
   
@@ -59,7 +59,7 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como redirecionar uma versão de assembly para outro e fornecer uma base de código.  
+ O exemplo a seguir mostra como redirecionar uma versão do assembly para outra e fornecer uma base de código.  
   
 ```xml  
 <configuration>  
@@ -93,6 +93,6 @@ Contém informações sobre o redirecionamento de versão e os locais dos assemb
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

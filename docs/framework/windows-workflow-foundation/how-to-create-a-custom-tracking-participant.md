@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156710"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611849"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Como: Criar um personalizado de participante de acompanhamento
 O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execução do fluxo de trabalho. O tempo de execução do fluxo de trabalho emite os registros de rastreamento que descrevem os eventos de ciclo de vida do fluxo de trabalho, os eventos de ciclo de vida da atividade, os reinícios do indicador e as falhas. Esses registros de rastreamento são consumidos pelos participantes. Windows Workflow Foundation (WF) inclui um participante de rastreamento padrão que grava registros de rastreamento como eventos do Event Tracing for Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado. Esta etapa do tutorial descreve como criar um participante de rastreamento personalizado e um perfil de rastreamento que captura a saída das atividades `WriteLine` de forma que elas possam ser exibidas para o usuário.  
@@ -18,17 +18,7 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
 > [!NOTE]
 >  Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, primeiro você deve concluir os tópicos anteriores. Para baixar uma versão completa ou exibir uma vídeo passo a passo do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-## <a name="in-this-topic"></a>Neste tópico  
-  
--   [Para criar o participante de rastreamento personalizado](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
-  
--   [Para criar o perfil de rastreamento e registrar o participante de rastreamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
-  
--   [Para exibir as informações de rastreamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
-  
--   [Para compilar e executar o aplicativo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
-  
-###  <a name="BKMK_CustomTrackingParticipant"></a> Para criar o participante de rastreamento personalizado  
+## <a name="to-create-the-custom-tracking-participant"></a>Para criar o participante de rastreamento personalizado  
   
 1.  Clique com botão direito **NumberGuessWorkflowHost** na **Gerenciador de soluções** e escolha **Add**, **classe**. Tipo de `StatusTrackingParticipant` para o **nome** caixa e, em seguida, clique em **Add**.  
   
@@ -104,7 +94,7 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
   
      Quando nenhum perfil de rastreamento for especificado, o perfil padrão de rastreamento será usado. Quando o perfil padrão do rastreamento for usado, os registros de rastreamento serão emitidos para todos os `ActivityStates`. Como somente precisamos capturar o texto uma vez durante o ciclo de vida da atividade `WriteLine`, somente extraímos o texto do estado `ActivityStates.Executing`. Na [para criar o perfil de rastreamento e registrar o participante de rastreamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), um perfil de rastreamento é criado que especifica que somente `WriteLine` `ActivityStates.Executing` registros de rastreamento são emitidas.  
   
-###  <a name="BKMK_TrackingProfile"></a> Para criar o perfil de rastreamento e registrar o participante de rastreamento  
+## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>Para criar o perfil de rastreamento e registrar o participante do rastreamento  
   
 1.  Clique com botão direito **WorkflowHostForm** na **Gerenciador de soluções** e escolha **Exibir código**.  
   
@@ -225,7 +215,7 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a> Para exibir as informações de rastreamento  
+## <a name="to-display-the-tracking-information"></a>Para exibir as informações de rastreamento  
   
 1.  Clique com botão direito **WorkflowHostForm** na **Gerenciador de soluções** e escolha **Exibir código**.  
   
@@ -320,7 +310,7 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Para compilar e executar o aplicativo  
+## <a name="to-build-and-run-the-application"></a>Para compilar e executar o aplicativo  
   
 1.  Pressione Ctrl+Shift+B para criar o aplicativo.  
   
@@ -329,21 +319,27 @@ O rastreamento de fluxo de trabalho fornece a visibilidade ao status da execuç�
 3.  Selecionar um intervalo para o jogo de estimativa e o tipo de fluxo de trabalho para iniciar e, em seguida, clique em **novo jogo**. Insira um Palpite na **Palpite** caixa e clique em **vá** para enviar seu palpite. Observe que o status do fluxo de trabalho é exibido na janela de status. Essa saída é capturada das atividades `WriteLine`. Alternar para um fluxo de trabalho diferente selecionando um dos **Id da instância de fluxo de trabalho** caixa de combinação e observe que o status do fluxo de trabalho atual é removido. Alterne novamente para o fluxo de trabalho e observe que o status é restaurado, semelhante ao exemplo a seguir.  
   
     > [!NOTE]
-    >  Se você alternar para um fluxo de trabalho que foi iniciado antes que o rastreamento foi habilitado, nenhum status será exibido. No entanto, se você fizer previsões adicionais, seu status será salvo porque o rastreamento agora estará habilitado.  
+    > Se você alternar para um fluxo de trabalho que foi iniciado antes que o rastreamento foi habilitado, nenhum status será exibido. No entanto, se você fizer previsões adicionais, seu status será salvo porque o rastreamento agora estará habilitado.  
   
- **Insira um número entre 1 e 10**  
-**Sua estimativa é muito alta.**   
-**Insira um número entre 1 e 10**    
-
+    ```output
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    ```
+    
     > [!NOTE]
-    >  Essas informações são úteis para determinar o intervalo do número aleatório, mas ele não contém informações sobre os palpites que já foram feitos anteriormente. Essas informações estão na próxima etapa, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
-  
-     Faça uma anotação da ID de instância de fluxo de trabalho e jogue até o final.  
+    > Essas informações são úteis para determinar o intervalo do número aleatório, mas ele não contém informações sobre os palpites que já foram feitos anteriormente. Essas informações estão na próxima etapa, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+
+    Faça uma anotação da ID de instância de fluxo de trabalho e jogue até o final.
   
 4.  Abra o Windows Explorer e navegue até a **NumberGuessWorkflowHost\bin\debug** pasta (ou **bin\release** dependendo de suas configurações de projeto). Observe que, além dos arquivos executáveis de projeto, há arquivos com nomes de arquivo de GUID. Identifique o que corresponde à ID da instância do fluxo de trabalho concluído na etapa anterior e abra-o no Bloco De Notas. As informações de rastreamento contêm informações semelhantes ao seguinte.  
   
- **Insira um número entre 1 e 10**  
-**Sua estimativa é muito alta.**   
-**Insira um número entre 1 e 10**   
-**Sua estimativa é muito alta.**   
-**Insira um número entre 1 e 10** além da ausência de palpites do usuário, esses dados de rastreamento não contém informações sobre o Palpite final do fluxo de trabalho. Isso ocorre porque as informações de rastreamento consistem apenas na saída de `WriteLine` do fluxo de trabalho, e a mensagem final que é exibida é feita a partir do manipulador `Completed` depois que o fluxo de trabalho é concluído. Na próxima etapa do tutorial, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` atividades são alteradas para exibir as previsões do usuário e uma outra `WriteLine` atividade é adicionada que exibe os resultados finais. Depois que essas alterações são integradas, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) demonstra como hospedar várias versões de um fluxo de trabalho ao mesmo tempo.
+    ```output
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    ```
+
+    Além da ausência de palpites do usuário, esses dados de rastreamento não contêm informações sobre o palpite final do fluxo de trabalho. Isso ocorre porque as informações de rastreamento consistem apenas na saída de `WriteLine` do fluxo de trabalho, e a mensagem final que é exibida é feita a partir do manipulador `Completed` depois que o fluxo de trabalho é concluído. Na próxima etapa do tutorial, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existente `WriteLine` atividades são alteradas para exibir as previsões do usuário e uma outra `WriteLine` atividade é adicionada que exibe os resultados finais. Depois que essas alterações são integradas, [como: Hospedar várias versões de uma fluxo de trabalho lado a lado](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) demonstra como hospedar várias versões de um fluxo de trabalho ao mesmo tempo.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0332a642f9377eed2769ea5aedb1be85853274
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122736"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614279"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; elemento
 Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.  
@@ -79,5 +79,5 @@ Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas im
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [/AppConfig (opções do compilador c#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
- [Visão geral da Unificação de assemblies do framework .NET](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+- [/AppConfig (opções do compilador c#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+- [Visão geral da Unificação de assemblies do framework .NET](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

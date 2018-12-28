@@ -1,13 +1,13 @@
 ---
-title: Expressões de consulta (F#)
+title: Expressões de consulta
 description: Saiba mais sobre o suporte de expressão de consulta do LINQ no F# linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143747"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611367"
 ---
 # <a name="query-expressions"></a>Expressões de consulta
 

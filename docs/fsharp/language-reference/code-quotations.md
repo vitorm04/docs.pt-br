@@ -1,13 +1,13 @@
 ---
-title: Citações de código (F#)
+title: Citações de código
 description: Saiba mais sobre F# citações de código, um recurso de linguagem que permite que você gere e trabalhar com F# expressões de código por meio de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 565fd2a07c617d156f1d43f94a7cb98fc22f1401
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150766"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614292"
 ---
 # <a name="code-quotations"></a>Citações de código
 

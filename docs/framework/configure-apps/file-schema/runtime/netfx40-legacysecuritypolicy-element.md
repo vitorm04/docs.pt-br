@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9312d25842ccfcdf84e678d34b9bfde3fe7dd0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7045623872364160d76f4bc0c1522b0450a81bd2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753977"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611588"
 ---
 # <a name="ltnetfx40legacysecuritypolicygt-element"></a>&lt;NetFx40_LegacySecurityPolicy&gt; elemento
 Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.  
@@ -35,14 +35,14 @@ Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução usa a política de CAS legada.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução usa a política CAS herdada.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O tempo de execução não usa a política de CAS legada. Esse é o padrão.|  
-|`true`|O tempo de execução usa a política de CAS legada.|  
+|`false`|O tempo de execução não usa a política CAS herdada. Esse é o padrão.|  
+|`true`|O tempo de execução usa a política CAS herdada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,26 +55,26 @@ Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Na versão do .NET Framework 3.5 e versões anteriores, a política de CAS está sempre em vigor. No [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], política de CAS deve ser habilitada.  
+ No .NET Framework versão 3.5 e versões anteriores, a política de CAS está sempre em vigor. No [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], política de CAS deve estar habilitada.  
   
- Política de CAS é específico da versão. Políticas personalizadas de autoridades de certificação que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Política de CAS é específico da versão. As políticas personalizadas do CAS que existem nas versões anteriores do .NET Framework devem ser especificadas novamente no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- Aplicar o `<NetFx40_LegacySecurityPolicy>` elemento para uma [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] não afeta o assembly [código transparente de segurança](../../../../../docs/framework/misc/security-transparent-code.md); as regras de transparência ainda se aplicam.  
+ Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento para um [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] assembly não afeta [código transparente de segurança](../../../../../docs/framework/misc/security-transparent-code.md); as regras de transparência ainda se aplicam.  
   
 > [!IMPORTANT]
->  Aplicar o `<NetFx40_LegacySecurityPolicy>` elemento pode resultar em penalidades de desempenho significativos para assemblies de imagem nativa criados pelo [gerador de imagem nativa (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que não estão instalados no [cache de assembly global ](../../../../../docs/framework/app-domains/gac.md). A degradação do desempenho é causada por uma incapacidade de tempo de execução para carregar os assemblies como imagens nativas quando o atributo é aplicado, resultando em seus sendo carregados assemblies como just-in-time.  
+>  Aplicando o `<NetFx40_LegacySecurityPolicy>` elemento pode resultar em penalidades de desempenho significativos para os assemblies de imagem nativa criados pelo [gerador de imagem nativa (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que não estão instaladas no [cache de assembly global ](../../../../../docs/framework/app-domains/gac.md). A degradação do desempenho é causada pela incapacidade do tempo de execução para carregar os assemblies como imagens nativas, quando o atributo é aplicado, resultando em seus que está sendo carregado assemblies como just-in-time.  
   
 > [!NOTE]
->  Se você especificar uma versão do .NET Framework de destino que é anterior a [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão. No entanto, você não poderá usar os novos [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] tipos e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização no seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).  
+>  Se você especificar uma versão do .NET Framework de destino que é anterior a [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] nas configurações do projeto para o seu projeto do Visual Studio, política de CAS será habilitada, incluindo as políticas personalizadas de CAS especificado para essa versão. No entanto, você não poderá usar um novo [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] tipos e membros. Você também pode especificar uma versão anterior do .NET Framework usando o [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) no esquema de configurações de inicialização em seu [arquivo de configuração de aplicativo](../../../../../docs/framework/configure-apps/index.md).  
   
 > [!NOTE]
->  Sintaxe do arquivo de configuração diferencia maiusculas de minúsculas. Você deve usar a sintaxe fornecidos nas seções de sintaxe e exemplo.  
+>  Sintaxe do arquivo de configuração diferencia maiusculas de minúsculas. Você deve usar a sintaxe conforme fornecidos nas seções de sintaxe e exemplo.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como habilitar a política de CAS legada para um aplicativo.  
+ O exemplo a seguir mostra como habilitar a política CAS herdada para um aplicativo.  
   
 ```xml  
 <configuration>  
@@ -85,5 +85,5 @@ Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
