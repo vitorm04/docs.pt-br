@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17f521be31fa4082d9418c7dad734e37994bbb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cf56a2720ab407d05b8356280913445c15a17020
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752813"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611068"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; elemento
-Determina se a data e hora métodos usam um conjunto de regras de ajustada para analisar cadeias de caracteres de data que contêm um dia, mês, hora e designator AM/PM.  
+Determina se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm um dia, mês, hora e designador AM/PM.  
   
  \<configuration>  
  \<runtime>  
@@ -31,14 +31,14 @@ Determina se a data e hora métodos usam um conjunto de regras de ajustada para 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se a data e hora métodos usarem um conjunto de regras de ajustada para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designator AM/PM.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se a data e hora de métodos de análise usam um conjunto de regras ajustado para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.|  
   
 ### <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|0|Data e hora métodos não usar regras ajustadas para analisar cadeias de caracteres que contêm apenas um dia, mês, hora e designator AM/PM.|  
-|1|Data e hora métodos usam regras ajustadas para analisar cadeias de caracteres que contêm apenas um dia, mês, hora e designator AM/PM.|  
+|0|Data e hora de métodos de análise não usam regras ajustadas para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.|  
+|1|Data e hora métodos de análise usam regras ajustadas para analisar cadeias de caracteres de data que contêm somente um dia, mês, hora e designador AM/PM.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -51,7 +51,7 @@ Determina se a data e hora métodos usam um conjunto de regras de ajustada para 
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<EnableAmPmParseAdjustment>` elemento controla como os métodos a seguir analisar uma cadeia de caracteres de data que contém um dia numérico e seguido por um designador de AM/PM (por exemplo, "6 de 4 a 10 AM") e uma hora do mês:  
+ O `<EnableAmPmParseAdjustment>` elemento controla como os métodos a seguir analisar uma cadeia de caracteres de data que contém um dia numérico e o mês, seguido por uma hora e um designador AM/PM (por exemplo, "10 4 6 AM"):  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
@@ -63,24 +63,24 @@ Determina se a data e hora métodos usam um conjunto de regras de ajustada para 
   
 -   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
- Não há outros padrões são afetados.  
+ Outros padrões não são afetados.  
   
- O `<EnableAmPmParseAdjustment>` elemento não tem nenhum efeito o <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> métodos.  
+ O `<EnableAmPmParseAdjustment>` elemento não tem efeito sobre a <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> métodos.  
   
 > [!IMPORTANT]
->  No .NET Core e .NET nativo, as regras de análise de AM/PM ajustadas são habilitadas por padrão.  
+>  No .NET Core e .NET Native, regras de análise ajustadas do AM/PM são habilitadas por padrão.  
   
- Se a regra de ajuste a análise não estiver habilitada, o primeiro dígito da cadeia de caracteres é interpretado como a hora do relógio de 12 horas, e o restante da cadeia de caracteres, exceto o designador de AM/PM é ignorado. A data e hora retornada pelo método de análise consiste a data atual e a hora do dia extraído da cadeia de caracteres de data.  
+ Se a regra de análise de ajuste não estiver habilitada, o primeiro dígito da cadeia de caracteres é interpretado como a hora do relógio de 12 horas, e o restante da cadeia de caracteres, exceto o designador AM/PM é ignorado. A data e hora retornado pelo método de análise consiste da data atual e a hora do dia extraído da cadeia de caracteres de data.  
   
- Se a regra de ajuste a análise está habilitada, análise do método interpretar o dia e mês como pertencentes ao ano atual e interpretar a hora como a hora do relógio de 12 horas.  
+ Se a regra de análise de ajuste está habilitada, método de análise interpretar o dia e mês como pertencentes ao ano atual e interpretar a hora como a hora do relógio de 12 horas.  
   
- A tabela a seguir ilustra a diferença no <xref:System.DateTime> valor quando o <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método é usado para analisar a cadeia de caracteres "" 4/10 6 AM"com o `<EnableAmPmParseAdjustment>` do elemento `enabled` propriedade definida como"0"ou"1". Ele pressupõe que a data de hoje é 5 de janeiro de 2017 e exibe a data em que ele é formatado usando a cadeia de caracteres do formato da cultura especificada "G".  
+ A tabela a seguir ilustra a diferença no <xref:System.DateTime> valor quando o <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> método é usado para analisar a cadeia de caracteres "" 4/10 6 AM"com o `<EnableAmPmParseAdjustment>` do elemento `enabled` propriedade definida como"0"ou"1". Ele pressupõe que hoje é dia 5 de janeiro de 2017 e exibe a data como se ele é formatado usando a cadeia de caracteres de formato de "G" da cultura especificada.  
   
-|Nome da cultura|ativado = "0"|ativado = "1"|  
+|Nome da cultura|habilitado = "0"|habilitado = "1"|  
 |------------------|------------------|------------------|  
-|en-US|1/5/2017 4:00:00 AM|10/4/2017 6:00:00 AM|  
+|en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Consulte também  
- [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
+- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

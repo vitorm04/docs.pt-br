@@ -1,15 +1,15 @@
 ---
-title: 'Campos explícitos: a palavra-chave val (F#)'
-description: Saiba mais sobre o F# 'val' palavra-chave, que é usada para declarar um local para armazenar um valor em um tipo de classe ou estrutura sem inicializar o tipo.
+title: 'Campos explícitos: O val palavra-chave'
+description: Saiba mais sobre o F# 'val' palavra-chave que é usada para declarar um local para armazenar um valor em um tipo de classe ou estrutura sem inicializar o tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746349"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773621"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: a palavra-chave val
+# <a name="explicit-fields-the-val-keyword"></a>Campos explícitos: O val palavra-chave
 
 O `val` palavra-chave é usada para declarar um local para armazenar um valor em um tipo de classe ou estrutura, sem inicializá-la. Locais de armazenamento declarados dessa maneira são chamadas *campos explícitos*. Outro uso do `val` palavra-chave é em conjunto com o `member` palavra-chave para declarar uma propriedade implementada automaticamente. Para obter mais informações sobre Propriedades autoimplementadas, consulte [propriedades](properties.md).
 
@@ -65,7 +65,11 @@ O código a seguir mostra o uso de campos explícitos em uma estrutura. Como uma
 
 A saída é `11 xyz`.
 
-Campos explícitos não se destinam ao uso de rotina. Em geral, quando for possível usar um `let` de associação em uma classe em vez de um campo explícitas. Campos explícitos são úteis em determinados cenários de interoperabilidade, como quando for necessário definir uma estrutura que será usada em uma invocação de plataforma chamada a uma API nativa, ou em cenários de interoperabilidade COM. Para obter mais informações, consulte [funções externas](../functions/external-functions.md). Outra situação em que um campo explícito pode ser necessário é quando você estiver trabalhando com um gerador de código F# que emite classes sem um construtor primário. Campos explícitos também são úteis para variáveis de thread estático ou construções semelhantes. Para obter mais informações, consulte `System.ThreadStaticAttribute`.
+**Lembre-se**, se você pretende inicializar sua estrutura com `mutable` campos sem `mutable` palavra-chave, suas atribuições funcionará em uma cópia da estrutura que será descartada logo após a atribuição. Portanto, sua estrutura não será alterado.
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
+
+Campos explícitos não se destinam ao uso de rotina. Em geral, quando for possível usar um `let` de associação em uma classe em vez de um campo explícitas. Campos explícitos são úteis em determinados cenários de interoperabilidade, como quando for necessário definir uma estrutura que será usada em uma invocação de plataforma chamada a uma API nativa, ou em cenários de interoperabilidade COM. Para obter mais informações, consulte [funções externas](../functions/external-functions.md). Outra situação em que um campo explícito pode ser necessário é quando você estiver trabalhando com um F# gerador de código que emite classes sem um construtor primário. Campos explícitos também são úteis para variáveis de thread estático ou construções semelhantes. Para obter mais informações, consulte `System.ThreadStaticAttribute`.
 
 Quando as palavras-chave `member val` aparecem juntos em uma definição de tipo, ele é uma definição de uma propriedade implementada automaticamente. Para obter mais informações, consulte [Propriedades](properties.md).
 

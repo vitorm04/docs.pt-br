@@ -1,5 +1,5 @@
 ---
-title: Como criar um modo de exibição personalizado para um ListView
+title: 'Como: Criar um modo de exibição personalizado para um ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 239fb2e9a364bd0265ff7cf644ee296878280cf3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d39f8829e7bdc89c05cda0f586298518908683f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081802"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613018"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Como criar um modo de exibição personalizado para um ListView
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Como: Criar um modo de exibição personalizado para um ListView
 Este exemplo mostra como criar um personalizado <xref:System.Windows.Controls.ListView.View%2A> modo para um <xref:System.Windows.Controls.ListView> controle.  
   
 ## <a name="example"></a>Exemplo  
@@ -40,7 +40,7 @@ Este exemplo mostra como criar um personalizado <xref:System.Windows.Controls.Li
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- Para obter um exemplo completo, consulte [ListView com várias exibições de exemplo](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Para o exemplo completo, consulte [ListView com várias exibições (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) ou [ListView com várias Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Controls.ListView>  
