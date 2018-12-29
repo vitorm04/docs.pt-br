@@ -50,7 +50,7 @@ ms.locfileid: "44041610"
   
 |Caractere com escape|Descrição|Padrão|Correspondências|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Corresponde a um caractere de campainha, \u0007.|`\a`|“\u0007” em “Error!” + "\u0007"|  
+|`\a`|Corresponde a um caractere de campainha, \u0007.|`\a`|“\u0007” em “Error!” + ‘\u0007’|  
 |`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|"\b\b\b\b" em "\b\b\b\b"|  
 |`\t`|Corresponde a uma tabulação, \u0009.|`(\w+)\t`|“item1\t”, “item2\t” em “item1\titem2\t”|  
 |`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|“\r\nThese” em “\r\nThese are\ntwo lines.”|  
