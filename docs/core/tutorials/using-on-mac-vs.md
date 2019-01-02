@@ -2,14 +2,14 @@
 title: Introdução ao .NET Core em macOS usando o Visual Studio para Mac
 description: Este tópico explica como compilar um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
 author: guardrex
-ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f751e7532e9627de3d3733476f7214654089e468
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 471bdfdaa10b2d66c19177ae36b8bd18ce19e468
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150791"
+ms.locfileid: "53169567"
 ---
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introdução ao .NET Core em macOS usando o Visual Studio para Mac
 
@@ -34,25 +34,25 @@ Baixe o [Instalador do Visual Studio para Mac](https://visualstudio.microsoft.co
 
 1. Escolha **Novo Projeto** na tela de Boas-vindas.
 
-   ![Botão Novo Projeto na tela de Boas-vindas do Visual Studio para Mac](./media/using-on-mac-vs/vsmac1.png)
+   ![Botão Novo Projeto na tela de Boas-vindas do Visual Studio para Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. Na caixa de diálogo **Novo Projeto**, selecione **Aplicativo** sob o nó **.NET Core**. Selecione o modelo **Aplicativo de Console** e logo depois **Avançar**.
 
-   ![Lista de modelos de novo projeto](./media/using-on-mac-vs/vsmac2.png)
+   ![Lista de modelos de novo projeto](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
 1. Digite "HelloWorld" para o **Nome do Projeto**. Selecione **Criar**.
 
-   ![Configurar a caixa de diálogo Novo Aplicativo de Console](./media/using-on-mac-vs/vsmac3.png)
+   ![Configurar a caixa de diálogo Novo Aplicativo de Console](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
 1. Aguarde enquanto as dependências do projeto são restauradas. O projeto tem um único arquivo em C#, *Program.cs*, que contém uma classe `Program` com um método `Main`. A instrução `Console.WriteLine` produzirá "Hello World!" no console quando o aplicativo for executado.
 
-   ![Janela principal com o arquivo Program.cs aberto](./media/using-on-mac-vs/vsmac4.png)
+   ![Janela principal com o arquivo Program.cs aberto](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
 ## <a name="run-the-application"></a>Executar o aplicativo
 
 Execute o aplicativo no modo Depuração usando <kbd>F5</kbd> ou no modo Versão usando <kbd>CTRL</kbd>+<kbd>F5</kbd>.
 
-![O painel Saída do Aplicativo mostra Hello World!](./media/using-on-mac-vs/vsmac5.png)
+![O painel Saída do Aplicativo mostra Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 
 ## <a name="next-step"></a>Próximas etapas
 

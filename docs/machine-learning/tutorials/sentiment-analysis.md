@@ -1,15 +1,15 @@
 ---
 title: Usar o ML.NET em um cenário de classificação binária de análise de sentimento
 description: Descubra como usar o ML.NET em um cenário de classificação binária para entender como usar a previsão de sentimentos para executar a ação apropriada.
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149647"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779126"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Usar o ML.NET em um cenário de classificação binária de análise de sentimento
 
@@ -122,7 +122,7 @@ Você precisa criar três campos ​​globais para manter os caminhos dos arqui
 * `_trainDataPath` tem o demarcador para o conjunto de dados usado para treinar o modelo.
 * `_testDataPath` tem o demarcador para o conjunto de dados usado para avaliar o modelo.
 * `_modelPath` tem o demarcador em que o modelo treinado é salvo.
-* O `_reader` é o <xref:Microsoft.ML.Runtime.Data.TextLoader> usado para carregar e transformar os conjuntos de dados.
+* O `_textLoader` é o <xref:Microsoft.ML.Runtime.Data.TextLoader> usado para carregar e transformar os conjuntos de dados.
 
 Adicione o seguinte código à linha logo acima do método `Main` para especificar estes caminhos e a variável `_textLoader`:
 
@@ -216,7 +216,7 @@ Adicione o seguinte código ao método `Train`:
 
 ## <a name="train-the-model"></a>Treinar o modelo
 
-Você treina o modelo, <xref:Microsoft.ML.Runtime.Data.TransformerChain%601>, com base no conjunto de dados que foi carregado e transformado. Depois que o avaliador tiver sido definido, treine o modelo usando o <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> e forneça os dados de treinamento já carregados. Isso retornará um modelo que será usado nas previsões. `pipeline.Fit()` treina o pipeline e retorna um `Transformer` com base no `DataView` passado. O experimento não será executado até que isso ocorra.
+Você treina o modelo, <xref:Microsoft.ML.Data.TransformerChain%601>, com base no conjunto de dados que foi carregado e transformado. Depois que o avaliador tiver sido definido, treine o modelo usando o <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> e forneça os dados de treinamento já carregados. Isso retornará um modelo que será usado nas previsões. `pipeline.Fit()` treina o pipeline e retorna um `Transformer` com base no `DataView` passado. O experimento não será executado até que isso ocorra.
 
 Adicione o seguinte código ao método `Train`:
 

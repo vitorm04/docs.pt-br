@@ -6,16 +6,16 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 341cea349984afd404c2a3b79e864e016fc6a95c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 825d7d950726c4f416624653704a51fb405325e3
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "33571989"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53765210"
 ---
 # <a name="get-started"></a>Introdução
 
-Há várias formas para começar a trabalhar com o .NET.  Como .NET é uma plataforma enorme, há vários artigos nesta documentação que mostram como você pode começar a trabalhar com o .NET, cada um com uma perspectiva diferente.
+Há várias formas para começar a trabalhar com o .NET. Como .NET é uma plataforma enorme, há vários artigos nesta documentação que mostram como você pode começar a trabalhar com o .NET, cada um com uma perspectiva diferente.
 
 ## <a name="get-started-using-net-languages"></a>Introdução ao uso de linguagens .NET
 

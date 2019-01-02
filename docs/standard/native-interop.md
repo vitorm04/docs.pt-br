@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 14dfe7639a160af64e925018a4fd9e2bd44d4fe1
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143175"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396806"
 ---
 # <a name="native-interoperability"></a>Interoperabilidade nativa
 
@@ -260,7 +260,7 @@ Os exemplos acima dependem de parâmetros e, em ambos os casos, os parâmetros s
 
 **Marshalling** é o processo de transformar tipos quando precisam atravessar o limite gerenciado para nativo e vice-versa.
 
-O marshalling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem uma `String`; no mundo não gerenciado, as cadeias de caracteres podem ser Unicode ("larga"), não Unicode, terminada em nulo, ASCII, etc. Por padrão, o subsistema do P/Invoke tentará fazer a coisa certa com base no [comportamento padrão](../../docs/framework/interop/default-marshaling-behavior.md). Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se quisermos que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI finalizada com null, poderemos fazer o seguinte:
+O marshalling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem uma `String`; no mundo não gerenciado, as cadeias de caracteres podem ser Unicode ("larga"), não Unicode, terminada em nulo, ASCII, etc. Por padrão, o subsistema do P/Invoke tentará fazer a coisa certa com base no [comportamento padrão](../../docs/framework/interop/default-marshaling-behavior.md). Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se quisermos que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI finalizada com null, poderemos fazer o seguinte:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

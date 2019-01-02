@@ -2,14 +2,14 @@
 title: Reduzindo as dependências de pacote com o project.json
 description: Reduza as dependências do pacote ao criar bibliotecas com base no project.json.
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152326"
+ms.locfileid: "53168265"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
 
