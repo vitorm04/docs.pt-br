@@ -2,14 +2,14 @@
 title: Criar um modelo personalizado para dotnet new
 description: Saiba como criar um modelo personalizado para o comando dotnet new neste divertido tutorial.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516647"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169723"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Criar um modelo personalizado para dotnet new
 
@@ -64,7 +64,7 @@ O modelo foi concluído. Neste momento, você tem duas opções para a distribui
 1. Copie o conteúdo da pasta do seu projeto, juntamente com seu arquivo *.template.config/template.json* para a pasta *conteúdo* criada.
 1. Ao lado da pasta *conteúdo*, adicione um arquivo [*nuspec*](/nuget/create-packages/creating-a-package). O arquivo nuspec é um arquivo de manifesto XML que descreve o conteúdo de um pacote e orienta o processo de criação do pacote NuGet.
 
-   ![Estrutura de diretórios que mostra o layout do pacote NuGet](./media/create-custom-template/nugetdirectorylayout.png)
+   ![Estrutura de diretórios que mostra o layout do pacote NuGet](./media/create-custom-template/nuget-directory-layout.png)
 
 1. Dentro de um elemento **\<packageTypes>** no arquivo *nuspec*, inclua um elemento **\<packageType>** com um valor de atributo `name` de `Template`. Tanto a pasta *conteúdo* quanto o arquivo *nuspec* devem residir no mesmo diretório. A tabela mostra os elementos mínimos do arquivo *nuspec* necessários para produzir um modelo como um pacote NuGet.
 
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 Quando você lista os modelos com `dotnet new -l`, você vê o *Projeto de teste do NUnit 3* com um nome curto de *nunit* na lista de modelos. Você está pronto para usar o modelo na próxima seção.
 
-![Janela do console que mostra o modelo do NUnit listado com outros modelos instalados](./media/create-custom-template/nunit1.png)
+![Janela do console mostrando o modelo do NUnit com outros modelos](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>Criar um projeto com base no modelo
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 O console mostra que o projeto é criado e que os pacotes do projeto são restaurados. Depois que o comando for executado, o projeto estará pronto para uso.
 
-![Janela do console que mostra a saída do comando dotnet new enquanto ela cria o projeto NUnit e restaura as dependências do projeto](./media/create-custom-template/nunit2.png)
+![A janela do console mostra a saída do dotnet new do NUnit, incluindo a restauração das dependências do projeto](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Para desinstalar um modelo de um pacote NuGet armazenado em nuget.org
 

@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130501"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236343"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever as tarifas de táxi em Nova York usando um aprendiz de regressão com o ML.NET
 
@@ -68,13 +68,13 @@ O **rótulo** é o identificador da coluna que você quer prever. Os **recursos*
 
 O conjunto de dados fornecido contém as seguintes colunas:
 
-* **vendor_id:** o ID do taxista é um recurso.
-* **rate_code:** o tipo de tarifa da viagem de táxi é um recurso.
-* **passenger_count:** o número de passageiros na viagem é um recurso.
-* **trip_time_in_secs:** a quantidade de tempo que a viagem levou. Você deseja prever a tarifa da viagem antes de sua conclusão. No momento, você não sabe a duração da viagem. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
-* **trip_distance:** a distância da viagem é um recurso.
-* **payment_type:** o método de pagamento (dinheiro ou cartão de crédito) é um recurso.
-* **fare_amount:** a tarifa total de táxi paga é o rótulo.
+* **vendor_id:** A ID do taxista é um recurso.
+* **rate_code:** O tipo de tarifa da corrida de táxi é um recurso.
+* **passenger_count:** O número de passageiros na corrida é um recurso.
+* **trip_time_in_secs:** O tempo que levou a corrida. Você deseja prever a tarifa da viagem antes de sua conclusão. No momento, você não sabe a duração da viagem. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
+* **trip_distance:** A distância da corrida é um recurso.
+* **payment_type:** A forma de pagamento (dinheiro ou cartão de crédito) é um recurso.
+* **fare_amount:** A tarifa total de táxi paga é o rótulo.
 
 ## <a name="create-data-classes"></a>Criar classes de dados
 
@@ -112,7 +112,7 @@ Adicione o seguinte código logo acima do método `Main` para especificar estes 
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
-Ao criar um modelo com o ML.NET, comece criando um Contexto de aprendizado de máquina. Isso é comparável conceitualmente ao uso de `DbContext` no Entity Framework. O ambiente fornece um contexto para seu trabalho de aprendizado de máquina que pode ser usado na exceção do acompanhamento e registro em log.
+Ao criar um modelo com o ML.NET, comece criando um Contexto de ML. Isso é comparável conceitualmente ao uso de `DbContext` no Entity Framework. O ambiente fornece um contexto para seu trabalho de aprendizado de máquina que pode ser usado na exceção do acompanhamento e registro em log.
 
 ### <a name="initialize-variables-in-main"></a>Inicializar variáveis em Main
 
@@ -177,7 +177,7 @@ A última etapa na preparação de dados combina todas as colunas de recursos na
 
 ## <a name="choose-a-learning-algorithm"></a>Escolher um algoritmo de aprendizado
 
-Após adicionar os dados ao pipeline e transformá-los no formato de entrada correto, escolhemos um algoritmo de aprendizado (**aprendiz**). O aprendiz treina o modelo. Você escolheu uma tarefa de **regressão** para esse problema, portanto, usamos um aprendiz `FastTreeRegressionTrainer`, que é um dos aprendizes de regressão fornecidos pelo ML.NET.
+Após adicionar os dados ao pipeline e transformá-los no formato de entrada correto, escolhemos um algoritmo de aprendizado (**aprendiz**). O aprendiz treina o modelo. Escolhemos uma tarefa de **regressão** para esse problema; portanto, usamos um aprendiz `FastTreeRegressionTrainer`, que é um dos aprendizes de regressão fornecidos pelo ML.NET.
 
 O aprendiz `FastTreeRegressionTrainer` utiliza o aumento de gradiente. O aumento de gradiente é uma técnica de aprendizado de máquina para problemas de regressão. Ele cria cada árvore de regressão por etapas. Ele usa uma função de perda predefinida para medir o erro em cada etapa e corrigi-lo no próximo. O resultado é um modelo de previsão que é, na verdade, um conjunto de modelos de previsão mais fracos. Para obter mais informações sobre o aumento de gradiente, consulte [Regressão da árvore de decisão aumentada](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453470"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396988"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Detecte](#detecting-the-language-packs) se os pacotes de idiomas já estão instalados no computador do usuário.
 
-- Se quiser controlar a implantação, inicialize e monitore silenciosamente o processo de instalação do .NET Framework (consulte [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Caso deseje controlar a implantação, inicie e acompanhe silenciosamente o processo de instalação do .NET Framework (confira [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Se estiver implantando o instalador offline, [encadeie os pacotes de idiomas separadamente](#chain_langpack).
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Versão|Valor da liberação de DWORD|
 |-------------|--------------------------------|
-|.NET framework 4.7.2 instalado na Atualização de outubro de 2018 para o Windows 10|461814|
 |O .NET framework 4.7.2 instalado na Atualização de abril de 2018 para o Windows 10 e no Windows Server, versão 1803|461808|
-|O .NET framework 4.7.2 instalado em todas as versões de sistema operacional diferentes da Atualização de outubro de 2018 para o Windows 10, Atualização de abril de 2018 para o Windows 10 e Windows Server versão 1803|461814|
+|O .NET Framework 4.7.2 instalado em todas as versões de sistema operacional diferentes da Atualização de abril de 2018 para o Windows 10 e do Windows Server, versão 1803. Isso inclui a Atualização de outubro de 2018 do Windows 10. |461814|
 |O .NET framework 4.7.1 instalado no Windows 10 Fall Creators Update e no Windows Server, versão 1709|461308|
 |O .NET framework 4.7.1 instalado em todas as versões de sistema operacional diferentes do Windows 10 Fall Creators Update e do Windows Server, versão 1709|461310|
 |.NET Framework 4.7 instalado no Windows 10 Creators Update|460798|
@@ -360,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
 |**/chainingpackage** `packageName`|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"**. Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|
-|**/LCID** `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:** use essa opção somente com o instalador da Web.|
+|**/LCID** `LCID`<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:**  Use essa opção somente com o instalador da Web.|
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se essa opção for usada, o aplicativo de encadeamento precisa capturar o código de retorno e lidar com a reinicialização (consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN).|
@@ -409,4 +408,4 @@ A tabela a seguir lista os pacotes de idiomas do .NET Framework disponíveis par
 - [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)  
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
 - [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
-- [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

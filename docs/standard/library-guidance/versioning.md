@@ -3,13 +3,13 @@ title: Bibliotecas de controle de versão e .NET
 description: Recomendações de melhores práticas para controle de versão de bibliotecas do .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144553"
+ms.locfileid: "53169593"
 ---
 # <a name="versioning"></a>Controle de versão
 
@@ -77,12 +77,13 @@ A versão de arquivo do assembly é usada para exibir uma versão de arquivo no 
 
 ![Windows Explorer](./media/versioning/win-properties.png "Windows Explorer")
 
-> [!NOTE]
-> Um aviso de compilação inócuo será gerado se essa versão não seguir o formato `Major.Minor.Build.Revision`. O aviso pode ser ignorado com segurança.
-
 **✔️ CONSIDERE** incluir um número de build de integração contínua como a revisão AssemblyFileVersion.
 
 > Por exemplo, você está criando a versão 1.0.0 do seu projeto e o número de build de integração contínua é 99, portanto, sua AssemblyFileVersion é 1.0.0.99.
+
+**✔️** Use o formato `Major.Minor.Build.Revision` para a versão de arquivo.
+
+> Embora a versão de arquivo nunca seja usada pelo .NET, o [Windows espera que a versão de arquivo](/windows/desktop/menurc/versioninfo-resource) esteja no formato `Major.Minor.Build.Revision`. Um aviso é acionado se a versão não segue esse formato.
 
 ### <a name="assembly-informational-version"></a>Versão informativa do assembly
 
@@ -91,6 +92,9 @@ A versão informativa do assembly é usada para registrar informações adiciona
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> As versões mais antigas do Visual Studio acionam um aviso de build caso essa versão não siga o formato `Major.Minor.Build.Revision`. O aviso pode ser ignorado com segurança.
 
 **❌ EVITE** definir a versão informativa do assembly você mesmo.
 

@@ -24,7 +24,7 @@ Acompanhamos os problemas e as tarefas desses repositórios aqui.
 
 Você precisa de uma compreensão básica do [Git e do GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Etapa 1:** ignore esta etapa para pequenas alterações. Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
+**Etapa 1:** Ignore esta etapa para pequenas alterações. Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
 O conteúdo dentro da pasta **docs** é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
 
 - ou -
@@ -39,11 +39,11 @@ Também é possível escolher entre as questões existentes, para as quais contr
 
 Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição. 
 
-**Etapa 2:** bifurque os repositórios `/dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` conforme necessário e crie um branch para suas alterações.
+**Etapa 2:** Crie fork dos repositórios `/dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs`, conforme necessário, e crie um branch para as alterações.
 
 Para pequenas alterações, você pode usar a interface da Web do GitHub. Basta clicar em **Editar o arquivo na sua bifurcação deste projeto** no arquivo que você deseja alterar. O GitHub cria o novo branch para você após enviar as alterações.
 
-**Etapa 3:** fazer as alterações nesse novo branch.
+**Etapa 3:** Faça as alterações nesse novo branch.
 
 Se for um novo tópico, você poderá usar esse [arquivo de modelo](./styleguide/template.md) como ponto de partida. Ele contém as diretrizes de escrita e também explica os metadados necessários para cada artigo, como informações do autor.
 
@@ -66,7 +66,9 @@ Siga a sintaxe de Markdown apropriada. Para saber mais, confira o [guia de estil
             /porting-overview
                 portability_report.png
 
-**Etapa 4:** envie uma PR (Pull Request, solicitação de pull) do branch para `dotnet/docs/master`.
+**Etapa 4:** Envie uma PR (solicitação de pull) de seu branch `dotnet/docs/master`.
+
+A PR deve *sempre* ser direcionada ao branch mestre. Você *nunca* deve abrir uma PR direcionada ao branch dinâmico.
 
 Cada PR normalmente deve lidar com uma questão por vez. A PR pode modificar um ou vários arquivos. Se você está abordando várias correções em diferentes arquivos, é preferível usar PRs separadas.
 
@@ -74,7 +76,7 @@ Se a PR estiver resolvendo um problema existente, adicione a palavra-chave `Fixe
 
 A equipe do .NET examinará a PR e informará se outras atualizações/alterações são necessárias para aprová-la.
 
-**Etapa 5:** faça as atualizações necessárias no branch, conforme discutido com a equipe.
+**Etapa 5:** Faça as atualizações necessárias no branch, conforme discutido com a equipe.
 
 Os mantenedores mesclarão sua PR no branch mestre depois que os comentários forem aplicados e sua alteração for aprovada.
 

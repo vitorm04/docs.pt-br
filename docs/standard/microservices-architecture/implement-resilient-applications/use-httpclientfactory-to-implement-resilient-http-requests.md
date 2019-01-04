@@ -4,12 +4,12 @@ description: HttpClientFactory é um alocador "teimoso", disponível desde o .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145105"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611029"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usar HttpClientFactory implementar solicitações HTTP resilientes
 
@@ -71,7 +71,7 @@ Basta adicionar suas classes de cliente tipado com AddHttpClient(), para que sem
 
 ### <a name="httpclient-lifetimes"></a>Tempos de vida de HttpClient
 
-Sempre que você receber um objeto `HttpClient` do IHttpClientFactory, uma nova instância de um `HttpClient` será retornada. Haverá um HttpMessageHandler** para cada cliente nomeado tipado. O `IHttpClientFactory` fará o pool das instâncias de HttpMessageHandler criadas pelo alocador para reduzir o consumo de recursos. Uma instância de HttpMessageHandler poderá ser reutilizada do pool quando uma nova instância de `HttpClient` for criada e seu tempo de vida ainda não tiver expirado.
+Sempre que você receber um objeto `HttpClient` do IHttpClientFactory, uma nova instância de um `HttpClient` será retornada. Haverá um **HttpMessageHandler** para cada cliente nomeado tipado. O `IHttpClientFactory` fará o pool das instâncias de HttpMessageHandler criadas pelo alocador para reduzir o consumo de recursos. Uma instância de HttpMessageHandler poderá ser reutilizada do pool quando uma nova instância de `HttpClient` for criada e seu tempo de vida ainda não tiver expirado.
 
 O pooling de manipuladores é interessante porque cada manipulador normalmente gerencia suas próprias conexões de HTTP subjacentes. Criar mais manipuladores do que o necessário pode resultar em atrasos de conexão. Alguns manipuladores também mantêm as conexões abertas indefinidamente, o que pode impedir que o manipulador reaja a alterações de DNS.
 

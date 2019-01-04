@@ -1,14 +1,14 @@
 ---
-title: Comando dotnet nuget push – CLI do .NET Core
+title: Comando dotnet nuget push
 description: O comando dotnet nuget push efetua push de um pacote no servidor e o publica.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f0d127d8b9f37b1c381d8981f54035a2fc3b0e5
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143055"
+ms.locfileid: "53169346"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 

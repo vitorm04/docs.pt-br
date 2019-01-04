@@ -3,12 +3,13 @@ title: Teste de unidade em C# com NUnit e .NET Core
 description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de uma experiência interativa, criando passo a passo uma solução de exemplo, usando dotnet test e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146936"
+ms.locfileid: "53169011"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
@@ -166,7 +167,7 @@ No diretório *unit-testing-using-nunit*, execute `dotnet test` novamente. O com
 
 ## <a name="adding-more-features"></a>Adicionando mais recursos
 
-Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0, -1. Você pode adicionar novos testes com o atributo `[Test]`, mas isso se torna entediante rapidamente. Há outros atributos de NUnit que permitem que você grave um pacote com testes semelhantes.  Um atributo `[TestCase]` é usado para criar um pacote com testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `[TestCase]` para especificar valores para essas entradas.
+Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0 e -1. Você pode adicionar novos testes com o atributo `[Test]`, mas isso se torna entediante rapidamente. Há outros atributos de NUnit que permitem que você grave um pacote com testes semelhantes.  Um atributo `[TestCase]` é usado para criar um pacote com testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `[TestCase]` para especificar valores para essas entradas.
 
 Em vez de criar novos testes, aplique esse atributo para criar um único teste controlado por dados. O teste controlado por dados é um método que testa vários valores menores que dois, que é o menor número primo:
 

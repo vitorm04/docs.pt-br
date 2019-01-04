@@ -1,23 +1,24 @@
 ---
 title: Melhores práticas para escrever testes de unidade
-description: Conheça as melhores práticas para escrever testes de unidade que promovem a qualidade e resiliência do código
+description: Conheça as melhores práticas para escrever testes de unidade que promovem a qualidade e a resiliência do código em projetos .NET Core e .NET Standard.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240717"
 ---
-# <a name="unit-testing-best-practices"></a>Melhores práticas de teste de unidade
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
-Por [John Reese](http://reesespieces.io) com agradecimentos especiais a [Roy Osherove](http://osherove.com/)
-
-Há diversas vantagens para escrever testes de unidade; eles ajudam com a regressão, fornecem a documentação e facilitam o bom design. No entanto, testes de unidade difíceis de ler e frágeis podem causar estragos na sua base de código.
+Há diversas vantagens para escrever testes de unidade; eles ajudam com a regressão, fornecem a documentação e facilitam o bom design. No entanto, testes de unidade difíceis de ler e frágeis podem causar estragos na sua base de código. Este artigo descreve algumas melhores práticas com relação ao design de teste de unidade para projetos .NET Core e .NET Standard.
 
 Neste guia, você aprenderá algumas melhores práticas ao escrever testes de unidade para manter seus testes resilientes e fáceis de entender.
+
+Por [John Reese](http://reesespieces.io) com agradecimentos especiais a [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Por que o teste de unidade?
 
@@ -32,7 +33,7 @@ Defeitos de regressão são defeitos introduzidos quando uma alteração foi fei
 Com o teste de unidade, é possível executar novamente todo o conjunto de testes após todo build ou até mesmo após a alteração de uma linha de código. Você poderá confiar que o novo código não interromperá a funcionalidade existente.
 
 ### <a name="executable-documentation"></a>Documentação executável
-Nem sempre pode ser óbvio o que um método específico faz ou como ele se comporta diante de uma determinada entrada. Você pode se perguntar: como este método se comportará se eu passar uma cadeia de caracteres em branco? Nulo?
+Nem sempre pode ser óbvio o que um método específico faz ou como ele se comporta diante de uma determinada entrada. Você pode se perguntar: Como esse método se comportará se eu passar uma cadeia de caracteres em branco? Nulo?
 
 Quando você tem um conjunto de testes de unidade bem nomeados, cada teste deve ser capaz de explicar claramente a saída esperada de uma determinada entrada. Além disso, ele deve ser capaz de verificar se isso realmente funciona.
 

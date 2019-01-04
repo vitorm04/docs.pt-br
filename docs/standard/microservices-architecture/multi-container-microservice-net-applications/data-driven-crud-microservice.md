@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços .NET para aplicativos .NET em contê
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c6316717f78dffb672afdf79e919fd1bd7874b52
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32a0e55b17c51a9aa5b7c1fd70a42456c03c186d
+ms.sourcegitcommit: 5b831a3200f835cb9a69f8aae99129bdda8b2ca1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149563"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786212"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -257,7 +257,7 @@ Os arquivos docker-compose.yml no nível da solução não são apenas mais flex
 
 Por fim, você pode obter esse valor do código usando Configuration\["ConnectionString"\], como foi mostrado no método ConfigureServices em um exemplo de código anterior.
 
-No entanto, para ambientes de produção, é recomendável explorar outras maneiras de armazenar segredos como as cadeias de conexão. Uma excelente maneira de gerenciar segredos do aplicativo é usar o [Azure Key Vault}(https://azure.microsoft.com/services/key-vault/).
+No entanto, para ambientes de produção, é recomendável explorar outras maneiras de armazenar segredos como as cadeias de conexão. Uma excelente maneira de gerenciar segredos do aplicativo é usar o [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
 O Azure Key Vault ajuda a armazenar e proteger as chaves de criptografia e os segredos usados por aplicativos e serviços de nuvem. Um segredo é qualquer coisa sobre a qual você deseja manter controle estrito, como chaves de API, cadeias de conexão, senhas, etc., e o controle estrito inclui log de uso, definição de expiração, gerenciamento de acesso, <span class="underline">entre outros</span>.
 

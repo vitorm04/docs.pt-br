@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041610"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779380"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares - referência rápida
 <a name="top"></a> Uma expressão regular é um padrão ao qual o mecanismo de expressões regulares tenta corresponder no texto de entrada. Um padrão consiste em um ou mais literais de caracteres, operadores ou constructos.  Para ver uma breve introdução, confira [Expressões regulares no .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041610"
   
  [Escapes de caracteres](#character_escapes)  
  [Classes de caracteres](#character_classes)  
- [Âncoras](#atomic_zerowidth_assertions)  
+ [Âncoras](#anchors)  
  [Constructos de agrupamento](#grouping_constructs)  
  [Quantificadores](#quantifiers)  
  [Constructos de referência inversa](#backreference_constructs)  
@@ -73,9 +73,9 @@ ms.locfileid: "44041610"
 |Classe de caractere|Descrição|Padrão|Correspondências|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Corresponde a qualquer caractere único em *character_group*. Por padrão, a correspondência diferencia maiúsculas de minúsculas.|`[ae]`|“a” em “gray”<br /><br /> “a”, “e” em “lane”|  
-|`[^` *character_group* `]`|Negação: corresponde a qualquer caractere único que não esteja em *character_group*. Por padrão, caracteres em *character_group* diferenciam maiúsculas de minúsculas.|`[^aei]`|“r”, “g”, “n” em “reign”|  
-|`[` *first* `-` *last* `]`|Intervalo de caracteres: corresponde a qualquer caractere único no intervalo entre *first* e *last*.|`[A-Z]`|“A”, “B” em “AB123”|  
-|`.`|Curinga: corresponde a qualquer caractere único, exceto \n.<br /><br /> Para corresponder a um caractere literal de ponto (. ou `\u002E`), você deve precedê-lo com o caractere de escape (`\.`).|`a.e`|"ave" em "nave"<br /><br /> "ate" em "water"|  
+|`[^` *character_group* `]`|Negação: Encontra a correspondência de qualquer caractere individual que não esteja em *character_group*. Por padrão, caracteres em *character_group* diferenciam maiúsculas de minúsculas.|`[^aei]`|“r”, “g”, “n” em “reign”|  
+|`[` *first* `-` *last* `]`|Intervalo de caracteres: Encontra a correspondência de qualquer caractere individual no intervalo de *first* a *last*.|`[A-Z]`|“A”, “B” em “AB123”|  
+|`.`|Curinga: Encontra a correspondência de qualquer caractere individual, exceto \n.<br /><br /> Para corresponder a um caractere literal de ponto (. ou `\u002E`), você deve precedê-lo com o caractere de escape (`\.`).|`a.e`|"ave" em "nave"<br /><br /> "ate" em "water"|  
 |`\p{` *name* `}`|Corresponde a qualquer caractere único na categoria geral Unicode ou no bloco nomeado especificado por *name*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"C", "L" em "City Lights"<br /><br /> "Д", "Ж" em "ДЖem"|  
 |`\P{` *name* `}`|Corresponde a qualquer caractere único que não esteja na categoria geral Unicode ou no bloco nomeado especificado por *name*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"i", "t", "y" em "City"<br /><br /> "e", "m" em "ДЖem"|  
 |`\w`|Corresponde a qualquer caractere de palavra.|`\w`|“I”, “D”, “A”, “1”, “3” em “ID A1.3”|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041610"
   
  [Voltar ao início](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Âncoras  
  Âncoras ou asserções atômicas de largura zero, fazem com que uma correspondência tenha êxito ou falha dependendo da posição atual na cadeia de caracteres, mas não fazem com que o mecanismo avance na cadeia de caracteres ou consuma caracteres. Os metacaracteres listados na tabela a seguir são âncoras. Para saber mais, confira [Âncoras](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
@@ -179,7 +178,7 @@ ms.locfileid: "44041610"
 |`$&`|Substitui uma cópia da correspondência inteira.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Substitui todo o texto da cadeia de caracteres de entrada antes da correspondência.|`B+`|<code>$`</code>|“AABBCC”|“AAAACC”|  
 |`$'`|Substitui todo o texto da cadeia de caracteres de entrada após a correspondência.|`B+`|`$'`|“AABBCC”|“AACCCC”|  
-|`$+`|Substitui o último grupo que foi capturado.|`B+(C+)`|`$+`|“AABBCCDD”|AACCDD|  
+|`$+`|Substitui o último grupo que foi capturado.|`B+(C+)`|`$+`|“AABBCCDD”|“AACCDD”|  
 |`$_`|Substitui a cadeia de caracteres de entrada inteira.|`B+`|`$_`|“AABBCC”|“AAAABBCCCC”|  
   
  [Voltar ao início](#top)  

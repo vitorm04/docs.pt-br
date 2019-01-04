@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147314"
+ms.locfileid: "53168878"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Consumir uma biblioteca .NET Standard no Visual Studio 2017
 
@@ -32,19 +32,19 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 
 1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual C#** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
 
-   ![Caixa de diálogo Adicionar Novo Projeto](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Caixa de diálogo Adicionar Novo Projeto do Visual Studio – C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **ShowCase** e selecione **Definir como Projeto de Inicialização** no menu de contexto. 
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **ShowCase** e selecione **Definir como Projeto de Inicialização** no menu de contexto.
 
-   ![Menu de contexto de ShowCase](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Menu de contexto do projeto do Visual Studio para definir o projeto de inicialização – C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Inicialmente, seu projeto não tem acesso à sua biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, você cria uma referência à biblioteca de classes. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto `ShowCase` e selecione **Adicionar Referência**.
 
-   ![Menu de contexto Dependências de ShowCase](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Menu de contexto Adicionar referência do projeto do Visual Studio – C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Na caixa de diálogo **Gerenciador de Referências**, selecione **StringLibrary**, seu projeto de biblioteca de classes, e selecione o botão **OK**.
 
-   ![Gerenciador de referências](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Caixa de diálogo Gerenciar referências do Visual Studio – C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. Na janela de código para o arquivo *Program.cs*, substitua todo o código pelo seguinte código:
 
@@ -56,25 +56,25 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 
 1. Se necessário, altere a barra de ferramentas para compilar a versão de **Depuração** do projeto `ShowCase`. Compile e execute o programa selecionando a seta verde no botão **ShowCase**.
 
-   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Barra de ferramentas do projeto do Visual Studio mostrando o botão Depurar – C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Abra a solução `ClassLibraryProjects` criada no tópico [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) (Compilando uma biblioteca de classes com o Visual Basic e com o .NET Core no Visual Studio 2017). No **Gerenciador de Soluções**, clique com o botão direito do mouse na solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto** no menu de contexto.
 
 1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "ShowCase" e selecione o botão **OK**.
 
-   ![Caixa de diálogo Adicionar Novo Projeto](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Caixa de diálogo Adicionar Novo Projeto do Visual Studio – Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **ShowCase** e selecione **Definir como Projeto de Inicialização** no menu de contexto. 
 
-   ![Menu de contexto de ShowCase](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Menu de contexto do projeto do Visual Studio para definir o projeto de inicialização – Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Inicialmente, seu projeto não tem acesso à sua biblioteca de classes. Para permitir que ele chame métodos na biblioteca de classes, você cria uma referência à biblioteca de classes. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto `ShowCase` e selecione **Adicionar Referência**.
 
-   ![Menu de contexto Dependências de ShowCase](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Menu de contexto Adicionar referência do projeto do Visual Studio – Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Na caixa de diálogo **Gerenciador de Referências**, selecione **StringLibrary**, seu projeto de biblioteca de classes, e selecione o botão **OK**.
 
-   ![Gerenciador de referências](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Caixa de diálogo Gerenciar referências do Visual Studio – Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. Na janela de código do arquivo *Program.vb*, substitua todo o código pelo seguinte código:
 
@@ -86,7 +86,7 @@ Assim como você incluiu os testes de unidade na mesma solução que nossa bibli
 
 1. Se necessário, altere a barra de ferramentas para compilar a versão de **Depuração** do projeto `ShowCase`. Compile e execute o programa selecionando a seta verde no botão **ShowCase**.
 
-   ![Image](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Depuração na barra de ferramentas – Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 É possível depurar e publicar o aplicativo que usa essa biblioteca seguindo as etapas em [Debugging your Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) (Depurar um aplicativo Olá, Mundo com o Visual Studio 2017) e em [Publishing your Hello World Application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicar um aplicativo Olá, Mundo com o Visual Studio 2017).

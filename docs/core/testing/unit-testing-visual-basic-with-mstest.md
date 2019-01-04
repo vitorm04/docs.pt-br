@@ -1,17 +1,18 @@
 ---
-title: Visual Basic de teste de unidade no .NET Core usando dotnet test e MSTest
+title: Teste de unidade do Visual Basic no .NET Core com dotnet test e MSTest
 description: Aprenda os conceitos de teste de unidade no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo do Visual Basic usando MSTest.
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 dev_langs:
 - vb
-ms.openlocfilehash: 501bbedca28af1eaaadb0848bfcffc93a7aac92a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215145"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242458"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e MSTest
 
@@ -131,7 +132,7 @@ No diretório *unit-testing-vb-mstest*, execute `dotnet test` novamente. O coman
 
 ## <a name="adding-more-features"></a>Adicionando mais recursos
 
-Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0, -1. Você pode adicionar esses casos como novos testes com o atributo `<TestMethod>`, mas isso se torna entediante rapidamente. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um atributo `<DataTestMethod>` representa um pacote de testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `<DataRow>` para especificar valores para essas entradas.
+Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0 e -1. Você pode adicionar esses casos como novos testes com o atributo `<TestMethod>`, mas isso se torna entediante rapidamente. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um atributo `<DataTestMethod>` representa um pacote de testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `<DataRow>` para especificar valores para essas entradas.
 
 Em vez de criar novos testes, aplique esses dois atributos para criar uma única teoria. A teoria é um método que testa vários valores inferiores a dois, que é o número primo mais baixo:
 

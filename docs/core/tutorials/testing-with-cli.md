@@ -2,14 +2,14 @@
 title: Organizando e testando projetos com a linha de comando do .NET Core
 description: Este tutorial explica como organizar e testar projetos do .NET Core por meio da linha de comando.
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415218"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242693"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
 
@@ -97,25 +97,25 @@ Woof!
 Meow!
 ```
 
-Exercício opcional: você pode adicionar um novo tipo de animal de estimação, como um `Bird`, estendendo esse projeto. Faça com que o método `TalkToOwner` de pássaro dê um `Tweet!` para o proprietário. Execute o aplicativo novamente. A saída incluirá `Tweet!`
+Exercício opcional: Adicione um novo tipo de animal de estimação, como um `Bird`, estendendo esse projeto. Faça com que o método `TalkToOwner` de pássaro dê um `Tweet!` para o proprietário. Execute o aplicativo novamente. A saída incluirá `Tweet!`
 
 ### <a name="testing-the-sample"></a>Testando o exemplo
 
 O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipos relacionados a animais de estimação em uma pasta. Em seguida, crie seu projeto de teste e comece a escrever testes com a estrutura de teste [xUnit](https://xunit.github.io/). O teste de unidade permite que você verifique automaticamente o comportamento dos seus tipos de animal de estimação para confirmar se eles estão funcionando corretamente.
 
-Crie uma pasta *test* com a pasta *NewTypesTests* nela. Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`. Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.
+Navegue de volta para a pasta *src* e crie uma pasta *test* com uma pasta *NewTypesTests* dentro dela. Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`. Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.
 
 No momento, o projeto de teste não pode testar os tipos no `NewTypes` e requer uma referência de projeto para o projeto `NewTypes`. Para adicionar uma referência de projeto, use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-Você também tem a opção de adicionar manualmente a referência de projeto adicionando um nó `<ItemGroup>` ao arquivo *NewTypesTests.csproj*:
+Se preferir, adicione manualmente a referência de projeto adicionando um nó `<ItemGroup>` ao arquivo *NewTypesTests.csproj*:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-Exercício opcional: se você adicionou um tipo `Bird` anteriormente que produz um `Tweet!` para o proprietário, adicione um método de teste ao arquivo *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, para verificar se o método `TalkToOwner` funciona corretamente para o tipo `Bird`.
+Exercício opcional: Se você já tiver adicionado um tipo `Bird` anteriormente que produz um `Tweet!` para o proprietário, adicione um método de teste ao arquivo *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, para verificar se o método `TalkToOwner` funciona corretamente para o tipo `Bird`.
 
 > [!NOTE]
 > Embora você espere que os valores `expected` e `actual` sejam iguais, uma declaração inicial com a verificação `Assert.NotEqual` especifica que esses valores *não são iguais*. Sempre crie inicialmente os testes para falhar para verificar a lógica do teste. Depois de confirmar que o teste falhou, ajuste a declaração para permitir que o teste seja aprovado.

@@ -1,15 +1,13 @@
 ---
-title: Comando dotnet test – CLI do .NET Core
+title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "46696450"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170828"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -138,7 +136,7 @@ Argumentos passados como configurações RunSettings para o teste. Os argumentos
 
 Exemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-Confira mais informações sobre RunSettings em [vstest.console.exe: passando args RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+Para obter mais informações sobre RunSettings, confira [vstest.console.exe: Passando args de RunSettings](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

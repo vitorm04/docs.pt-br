@@ -1,13 +1,13 @@
 ---
-title: Comando dotnet help – CLI do .NET Core
+title: Comando dotnet help
 description: O comando dotnet help mostra uma documentação mais detalhada online para o comando especificado.
 ms.date: 12/04/2018
-ms.openlocfilehash: 60d1cc706ca5c78fa3be877bd679888181213e88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 44274b698ed83bd3cdb58787f433eeb5c555bc6d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152169"
+ms.locfileid: "53168943"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
