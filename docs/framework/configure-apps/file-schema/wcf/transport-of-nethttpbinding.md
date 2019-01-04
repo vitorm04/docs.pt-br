@@ -2,12 +2,12 @@
 title: '&lt;transporte&gt; de &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3a35be198a4e60922861c49e911bd498d44c974f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842639"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030315"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;transporte&gt; de &lt;netHttpBinding&gt;
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
@@ -65,8 +65,8 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|-Mensagens não são protegidas durante a transferência.|  
-|Basic|Especifica autenticação básica, conforme definido pelo RFC 2617 – autenticação HTTP: autenticação básica e Digest.|  
-|Digest|Especifica a autenticação digest, conforme definido pelo RFC 2617 – autenticação HTTP: autenticação básica e Digest.|  
+|Basic|Especifica autenticação básica, conforme definido pelo RFC 2617 – autenticação HTTP: Básica e autenticação Digest.|  
+|Digest|Especifica a autenticação digest, conforme definido pelo RFC 2617 – autenticação HTTP: Básica e autenticação Digest.|  
 |NTLM|Especifica a autenticação NTLM quando possível, e se a autenticação do Windows falhar.|  
 |Windows|Especifica a autenticação integrada do Windows.|  
 |Certificado|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o `Mode` atributo do pai `security` elemento é definido como transporte e não funcionará se ele for definido como TransportCredentialOnly.|  
@@ -96,8 +96,8 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
   </services>  
   <bindings>  
     <netHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
+      <!-- Configure basicHttpBinding with Transport security -->  
+      <!-- mode and clientCredentialType set to None. -->  
       <binding name="Binding1">  
         <security mode="Transport">  
           <transport clientCredentialType="None"  

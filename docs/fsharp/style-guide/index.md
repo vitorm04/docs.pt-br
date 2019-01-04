@@ -2,12 +2,12 @@
 title: F#Guia de estilo
 description: Aprenda os princípios de cinco bom F# código.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168944"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030263"
 ---
 # <a name="f-style-guide"></a>F#Guia de estilo
 
@@ -21,7 +21,7 @@ Tenha os seguintes princípios em mente que sempre que você escrever F# código
 
 1. **BOM F# código está sucinta, expressiva e passível de composição**
 
-    F#tem muitos recursos que permitem que você expressar as ações em menos linhas de código e reutilizar a funcionalidade genérica. O F# biblioteca principal também contém vários tipos úteis e funções para trabalhar com coleções comuns de dados. Composição de suas próprias funções e aqueles no F# biblioteca principal (ou outras bibliotecas) é uma parte da rotina de expressões idiomática F# de programação. Como regra geral, se você puder expressar uma solução para um problema em menos linhas de código, outros desenvolvedores (ou seu futuro self) será apreciativo. É também é altamente recomendável que você use uma biblioteca como FSharp. Core, o [vastas bibliotecas do .NET](https://docs.microsoft.com/dotnet/api/) que F# for executado, ou um pacote de produtos de terceiros no [NuGet](https://www.nuget.org/) quando você precisa executar uma tarefa não trivial.
+    F#tem muitos recursos que permitem que você expressar as ações em menos linhas de código e reutilizar a funcionalidade genérica. O F# biblioteca principal também contém vários tipos úteis e funções para trabalhar com coleções comuns de dados. Composição de suas próprias funções e aqueles no F# biblioteca principal (ou outras bibliotecas) é uma parte da rotina de expressões idiomática F# de programação. Como regra geral, se você puder expressar uma solução para um problema em menos linhas de código, outros desenvolvedores (ou seu futuro self) será apreciativo. É também é altamente recomendável que você use uma biblioteca como FSharp. Core, o [vastas bibliotecas do .NET](../../../api/index.md) que F# for executado, ou um pacote de produtos de terceiros no [NuGet](https://www.nuget.org/) quando você precisa executar uma tarefa não trivial.
 
 2. **BOM F# código é interoperável**
 

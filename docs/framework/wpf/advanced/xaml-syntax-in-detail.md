@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485723"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030289"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -258,7 +258,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  Aqui, `StaticResource` identifica o <xref:System.Windows.StaticResourceExtension> classe que fornece a implementação de extensão de marcação. A próxima cadeia de caracteres `MyStyle` é usado como entrada para o não-padrão <xref:System.Windows.StaticResourceExtension> construtor, em que o parâmetro conforme obtido da cadeia de caracteres de extensão declara o solicitada <xref:System.Windows.ResourceKey>. `MyStyle` deve ser o [X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) valor de um <xref:System.Windows.Style> definido como um recurso. O [extensão de marcação StaticResource](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) uso solicita que o recurso seja usado para fornecer o <xref:System.Windows.Style> valor da propriedade por meio de lógica de pesquisa de recurso estático no tempo de carregamento.  
   
- Para obter mais informações sobre extensões de marcação, consulte [Extensões de marcação e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Para obter uma referência de extensões de marcação e outros recursos de programação em XAML habilitados na implementação geral do XAML no .NET, consulte [Recursos de linguagem (x:) do namespace XAML](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Para extensões de marcação específicas de WPF, consulte [Extensões XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
+ Para obter mais informações sobre extensões de marcação, consulte [Extensões de marcação e XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Para obter uma referência de extensões de marcação e outro recursos habilitados na implementação do .NET XAML geral de programação de XAML, consulte [Namespace de XAML (x) Recursos de linguagem](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Para extensões de marcação específicas de WPF, consulte [Extensões XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>Propriedades anexadas  
@@ -288,7 +288,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>Usos de XAML opcionais e não recomendados  
- As seções a seguir descrevem os usos de XAML que tem tecnicamente suporte em processadores XAML, mas que produzem detalhamento ou outros problemas estéticos que interferem com arquivos XAML, permanecendo legíveis quando você desenvolve aplicativos que contêm códigos-fonte XAML.  
+ As seções a seguir descrevem os usos XAML que tem tecnicamente suporte pelos processadores XAML, mas que produzem detalhamento ou outros problemas estéticos que interferem com arquivos XAML, permanecendo legíveis quando você desenvolve aplicativos que contêm fontes de XAML.  
   
 ### <a name="optional-property-element-usages"></a>Usos de elemento de propriedade opcional  
  Usos de elemento de propriedade opcional incluem escrever explicitamente propriedades de conteúdo de elemento que o processador XAML considera implícitas. Por exemplo, quando você declara o conteúdo de um <xref:System.Windows.Controls.Menu>, você poderia escolher declarar explicitamente a <xref:System.Windows.Controls.ItemsControl.Items%2A> coleção da <xref:System.Windows.Controls.Menu> como um `<Menu.Items>` marca de elemento de propriedade e colocar cada <xref:System.Windows.Controls.MenuItem> dentro `<Menu.Items>`, em vez disso que usar o comportamento implícito do processador XAML que todos os elementos filho de um <xref:System.Windows.Controls.Menu> deve ser um <xref:System.Windows.Controls.MenuItem> e são colocados no <xref:System.Windows.Controls.ItemsControl.Items%2A> coleção. Às vezes os usos opcionais podem ajudar a esclarecer visualmente a estrutura do objeto conforme representada na marcação. Ou, às vezes, um uso de elemento de propriedade explícito pode evitar uma marcação que é tecnicamente funcional, mas visualmente confusa, assim como extensões de marcação aninhadas dentro de um valor de atributo.  
@@ -317,7 +317,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Recursos da linguagem (x:) do namespace de XAML](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [Namespace de XAML (x) Recursos de linguagem](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Extensões XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Visão geral das propriedades da dependência](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters e XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
