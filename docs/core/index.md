@@ -4,12 +4,12 @@ description: O .NET core é uma implementação modular de alto desempenho do .N
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170256"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030276"
 ---
 # <a name="net-core-guide"></a>Guia do .NET Core
 
@@ -19,15 +19,15 @@ Consulte [Sobre o .NET Core](about.md) para saber mais sobre o .NET Core, inclui
 
 Consulte os [Tutoriais do .NET Core](tutorials/index.md) para aprender a criar um aplicativo .NET Core simples. Bastam apenas alguns minutos para colocar seu primeiro aplicativo em funcionamento. Consulte o tutorial online [Números em C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml) caso deseje experimentar o .NET Core no seu navegador.
 
-## <a name="download-net-core-21"></a>Faça o download do .NET Core 2.1
+## <a name="download-net-core-22"></a>Baixe o .NET Core 2.2
 
-Faça o download do [SDK do .NET Core 2.1](https://www.microsoft.com/net/download) para experimentar o .NET Core em seu computador Windows, macOS ou Linux. Visite [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) se preferir usar contêineres do Docker.
+Baixe o [SDK do .NET Core 2.2](https://www.microsoft.com/net/download) para experimentar o .NET Core em seu computador Windows, macOS ou Linux. Visite [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) se preferir usar contêineres do Docker.
 
 Todas as versões do .NET Core estão disponíveis em [Downloads do .NET Core](https://www.microsoft.com/net/download/archives) se você estiver procurando por outra versão.
 
-## <a name="net-core-21"></a>.NET Core 2.1
+## <a name="net-core-22"></a>.NET Core 2.2
 
-O [.NET Core 2.1](whats-new/dotnet-core-2-1.md) é a versão mais recente. Os novos recursos incluem: ferramentas globais, APIs de alto desempenho (como <xref:System.Span%601?displayProperty=nameWithType>), compilação JIT em camadas, [build](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) e [melhorias de desempenho no tempo de execução](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/), e suporte para Alpine e ARM32.
+O [.NET Core 2.2](whats-new/dotnet-core-2-2.md) é a versão mais recente. Os novos recursos incluem: implantações dependentes de estrutura, ganchos de inicialização, autenticação do AAD com o Azure SQL e suporte para Windows para ARM32.
 
 ## <a name="create-your-first-application"></a>Criar seu primeiro aplicativo
 

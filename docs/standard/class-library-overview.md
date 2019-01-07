@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185843"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029864"
 ---
 # <a name="net-class-library-overview"></a>Visão geral da biblioteca de classes do .NET
 
@@ -89,12 +89,12 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
 |Categoria|Nome da classe|Descrição|Tipo de dados em Visual Basic|Tipo de dados em C#|Tipo de dados de C++/CLI|Tipo de dados de F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Inteiro|<xref:System.Byte>|Um inteiro de 8 bits sem sinal.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Um inteiro de 8 bits com sinal.<br /><br /> Não compatível com CLS.|**SByte**|**sbyte**|**char**<br /> -ou-<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|Um inteiro de 8 bits com sinal.<br /><br /> Não compatível com CLS.|**SByte**|**sbyte**|**char**<br /> - ou -<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|Um inteiro de 16 bits com sinal.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Um inteiro com sinal de 32 bits.|**Integer**|**int**|**int**<br /><br /> -ou-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Um inteiro com sinal de 32 bits.|**Integer**|**int**|**int**<br /><br /> - ou -<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Um inteiro com sinal de 64 bits.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Um inteiro de 16 bits sem sinal.<br /><br /> Não compatível com CLS.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|Um inteiro sem sinal de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> -ou-<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|Um inteiro sem sinal de 32 bits.<br /><br /> Não compatível com CLS.|**UInteger**|**uint**|**unsigned int**<br /> - ou -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Um inteiro sem sinal de 64 bits.<br /><br /> Não compatível com CLS.|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |Ponto flutuante|<xref:System.Single>|Um número de ponto flutuante de precisão simples (32 bits).|**Simples**|**float**|**float**|**float32**</br> ou</br>**single**|  
 ||<xref:System.Double>|Um número de ponto flutuante de precisão dupla (64 bits).|**Duplo**|**double**|**double**|**float**</br> ou </br> **double**|  
@@ -113,5 +113,5 @@ As implementações do .NET incluem classes, interfaces, delegados e tipos de va
 ## <a name="see-also"></a>Consulte também
 
 - [Common Type System](../../docs/standard/base-types/common-type-system.md)  
-- [Navegador de API do .NET](https://docs.microsoft.com/dotnet/api)  
+- [Navegador de API do .NET](../../api/index.md)  
 - [Visão geral](../../docs/framework/get-started/overview.md)

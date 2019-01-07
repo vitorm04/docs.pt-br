@@ -3,12 +3,12 @@ title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170399"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058549"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -95,7 +95,7 @@ O .NET foi anunciado pela primeira vez pela Microsoft em 2000 e continuou evolui
 
 Principais diferenças entre o .NET Core e o .NET Framework:
 
-- **Modelos de aplicativo** – o .NET Core não dá suporte a todos os modelos de aplicativo do .NET Framework. Especificamente, ele não dá suporte ao ASP.NET Web Forms e ao MVC. Foi anunciado que o [.NET Core 3 dará suporte ao WPF e ao Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Modelos de aplicativo** – o .NET Core não dá suporte a todos os modelos de aplicativo do .NET Framework. Ele não dá suporte especificamente a Web Forms do ASP.NET e a ASP.NET MVC, mas dá suporte ao ASP.NET Core MVC. Foi anunciado que o [.NET Core 3 dará suporte ao WPF e ao Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
 - **APIs** – o .NET Core contém um grande subconjunto da biblioteca de classes base .NET Framework, com aspectos diferentes (os nomes de assembly são diferentes, os membros expostos nos tipos são diferentes em casos principais). Essas diferenças exigem alterações para portar o código para o .NET Core em alguns casos (confira [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). O .NET Core implementa a especificação de API [.NET Standard](../standard/net-standard.md).
 - **Subsistemas** – O.NET Core implementa um subconjunto dos subsistemas no .NET Framework com o objetivo de proporcionar uma implementação e um modelo de programação mais simples. Por exemplo, não há suporte para CAS (Segurança de Acesso do Código), porém há suporte para reflexão.
 - **Plataformas** – O .NET Framework dá suporte a Windows e Windows Server, enquanto o .NET Core também dá suporte a macOS e Linux.

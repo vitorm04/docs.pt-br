@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e0d5e53b255ab59eabace01e69784d88aec8aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575525"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058315"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
-O [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever novo código, use as classes de coleção simultâneas sempre que a coleção for gravada em vários threads simultaneamente. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o tempo de execução do .NET Framework 1.1 ou anterior.  
+O [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o tempo de execução do .NET Framework 1.1 ou anterior.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronização de thread nas coleções do .NET Framework 1.0 e 2.0  
  As coleções introduzidas no .NET Framework 1.0 são encontradas no namespace <xref:System.Collections?displayProperty=nameWithType>. Essas coleções, que incluem os comumente usados <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable>, fornecem algum acesso thread-safe por meio da propriedade `Synchronized`, que retorna um wrapper thread-safe em torno da coleção. O wrapper funciona bloqueando toda a coleção a cada operação de adição ou remoção. Portanto, cada thread que está tentando acessar a coleção deve aguardar por sua vez para receber esse bloqueio. Isso não é escalonável e pode causar degradação significativa no desempenho para coleções grandes. Além disso, o design não é totalmente protegido contra condições de corrida. Para saber mais, confira [Synchronization in Generic Collections](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/) (Sincronização em coleções genéricas).  
@@ -48,12 +48,12 @@ O [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduz o
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Este tópico descreve a funcionalidade fornecida pelo tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Como Adicionar e Remover Itens de um ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
-|[Como Adicionar e Retirar Itens Individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descreve como adicionar e recuperar itens de uma coleta de bloqueio sem usar o enumerador de somente leitura.|  
-|[Como Adicionar a Funcionalidade de Delimitação e Bloqueio a uma Coleção](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descreve como usar qualquer classe de coleção como o mecanismo de armazenamento subjacente para uma coleção <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Como Usar ForEach para Remover Itens de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descreve como usar `foreach` (`For Each` no Visual Basic) para remover todos os itens em uma coleção de bloqueios.|  
-|[Como Usar Matrizes de Coleções Blocking em um Pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descreve como usar várias coleções de bloqueio ao mesmo tempo para implementar um pipeline.|  
-|[Como Criar um Pool de Objetos Usando um ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Mostra como usar um recipiente simultâneo para melhorar o desempenho em cenários nos quais, em vez de criar novos objetos continuamente, você pode reutilizá-los.|  
+|[Como: Adicionar e remover itens de um ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Como: Adicionar e remover itens individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descreve como adicionar e recuperar itens de uma coleta de bloqueio sem usar o enumerador de somente leitura.|  
+|[Como: Adicionar a funcionalidade de delimitação e bloqueio a uma coleção](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descreve como usar qualquer classe de coleção como o mecanismo de armazenamento subjacente para uma coleção <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
+|[Como: Usar ForEach para remover itens de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descreve como usar `foreach` (`For Each` no Visual Basic) para remover todos os itens em uma coleção de bloqueios.|  
+|[Como: Usar matrizes de coleções Blocking em um pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descreve como usar várias coleções de bloqueio ao mesmo tempo para implementar um pipeline.|  
+|[Como: Criar um pool de objetos, usando um ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Mostra como usar um recipiente simultâneo para melhorar o desempenho em cenários nos quais, em vez de criar novos objetos continuamente, você pode reutilizá-los.|  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

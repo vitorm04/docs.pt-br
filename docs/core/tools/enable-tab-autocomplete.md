@@ -4,14 +4,14 @@ description: Este artigo ensina você a habilitar o preenchimento com TAB na CLI
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 10b2e13aad9821295efc5c36d1cad04f1a95477c
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53784385"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029600"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Como habilitar o preenchimento com TAB na CLI do .NET Core
+# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Como habilitar o preenchimento com TAB para a CLI do .NET Core
 
 Começando no SDK do .NET Core 2.0, a CLI do .NET Core dá suporte ao preenchimento com TAB. Este artigo descreve como configurar o preenchimento com TAB para três shells: PowerShell, Bash e zsh. Outros shells podem ter suporte para preenchimento automático. Veja a documentação deles para saber como configurar o preenchimento automático. As etapas devem ser semelhantes às etapas descritas neste artigo.
 
@@ -28,7 +28,7 @@ migrate
 pack
 ```
 
-Se esse comando não funcionar, verifique se esse SDK do .NET Core 2.0 ou superior está instalado. Se ele estiver instalado, mas esse comando ainda não funcionar, verifique se o comando `dotnet` é resolvido para uma versão do .NET Core 2.0 e superior. Use o comando `dotnet --version` para ver para qual versão do `dotnet` o caminho atual está sendo resolvido. Para obter mais informações, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md).
+Se esse comando não funcionar, verifique se esse SDK do .NET Core 2.0 ou superior está instalado. Se ele está instalado, mas esse comando ainda não funciona, verifique se o comando `dotnet` é resolvido para uma versão do SDK do .NET Core 2.0 e superior. Use o comando `dotnet --version` para ver para qual versão do `dotnet` o caminho atual está sendo resolvido. Para obter mais informações, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md).
 
 ### <a name="examples"></a>Exemplos
 

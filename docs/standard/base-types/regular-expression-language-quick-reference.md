@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779380"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030393"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares - referência rápida
 <a name="top"></a> Uma expressão regular é um padrão ao qual o mecanismo de expressões regulares tenta corresponder no texto de entrada. Um padrão consiste em um ou mais literais de caracteres, operadores ou constructos.  Para ver uma breve introdução, confira [Expressões regulares no .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -50,11 +50,11 @@ ms.locfileid: "53779380"
   
 |Caractere com escape|Descrição|Padrão|Correspondências|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Corresponde a um caractere de campainha, \u0007.|`\a`|“\u0007” em “Error!” + ‘\u0007’|  
-|`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|"\b\b\b\b" em "\b\b\b\b"|  
+|`\a`|Corresponde a um caractere de sino, \u0007.|`\a`|“\u0007” em “Error!” + ‘\u0007’|  
+|`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|“\b\b\b\b” em “\b\b\b\b”|  
 |`\t`|Corresponde a uma tabulação, \u0009.|`(\w+)\t`|“item1\t”, “item2\t” em “item1\titem2\t”|  
 |`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|“\r\nThese” em “\r\nThese are\ntwo lines.”|  
-|`\v`|Corresponde a uma tabulação vertical, \u000B.|`[\v]{2,}`|"\v\v\v" em "\v\v\v"|  
+|`\v`|Corresponde a uma tabulação vertical, \u000B.|`[\v]{2,}`|“\v\v\v” em “\v\v\v”|  
 |`\f`|Corresponde a um avanço de página, \u000C.|`[\f]{2,}`|“\f\f\f” em “\f\f\f”|  
 |`\n`|Corresponde a uma nova linha, \u000A.|`\r\n(\w+)`|“\r\nThese” em “\r\nThese are\ntwo lines.”|  
 |`\e`|Corresponde a um escape, \u001B.|`\e`|“\x001B” em “\x001B”|  
@@ -83,7 +83,7 @@ ms.locfileid: "53779380"
 |`\s`|Corresponde a qualquer caractere de espaço em branco.|`\w\s`|“D “ em “ID A1.3”|  
 |`\S`|Corresponde a qualquer caractere que não seja um caractere de espaço em branco.|`\s\S`|" _" em "int \__ctr"|  
 |`\d`|Corresponde a qualquer dígito decimal.|`\d`|“4” em “4 = IV”|  
-|`\D`|Corresponde a qualquer caractere que não seja um dígito decimal.|`\D`|“ ”, “=”, “ ”, “I”, “V” em “4 = IV”|  
+|`\D`|Corresponde a qualquer caractere que não seja uma dígito decimal|`\D`|“ ”, “=”, “ ”, “I”, “V” em “4 = IV”|  
   
  [Voltar ao início](#top)  
   
@@ -130,13 +130,13 @@ ms.locfileid: "53779380"
 |----------------|-----------------|-------------|-------------|  
 |`*`|Corresponde ao elemento anterior zero ou mais vezes.|`\d*\.\d`|“.0”, “19.9”, “219.9”|  
 |`+`|Corresponde ao elemento anterior uma ou mais vezes.|`"be+"`|“bee” em “been”, “be” em “bent”|  
-|`?`|Corresponde ao elemento anterior zero vezes ou uma vez.|`"rai?n"`|“ran”, “rain”|  
+|`?`|Corresponde ao elemento anterior zero ou uma vez.|`"rai?n"`|“ran”, “rain”|  
 |`{` *n* `}`|Corresponde ao elemento anterior exatamente *n* vezes.|`",\d{3}"`|“.043” em “1.043.6”, “.876”, “.543” e “.210” em “9.876.543.210”|  
 |`{` *n* `,}`|Corresponde ao elemento anterior pelo menos *n* vezes.|`"\d{2,}"`|“166”, “29”, “1930”|  
 |`{` *n* `,` *m* `}`|Corresponde ao elemento anterior pelo menos *n* vezes, mas não mais do que *m* vezes.|`"\d{3,5}"`|"166", "17668"<br /><br /> "19302" em "193024"|  
-|`*?`|Corresponde ao elemento anterior zero vezes ou mais, mas o menor número de vezes possível.|`\d*?\.\d`|“.0”, “19.9”, “219.9”|  
-|`+?`|Corresponde ao elemento anterior uma ou mais vezes, mas o menor número de vezes possível.|`"be+?"`|"be" em "been", "be" em "bent"|  
-|`??`|Corresponde ao elemento anterior zero vezes ou uma vez, mas o menor número de vezes possível.|`"rai??n"`|“ran”, “rain”|  
+|`*?`|Corresponde ao elemento anterior zero ou mais vezes, mas o menor número de vezes possível.|`\d*?\.\d`|“.0”, “19.9”, “219.9”|  
+|`+?`|Corresponde ao elemento anterior uma ou mais vezes, mas o menor número de vezes possível.|`"be+?"`|“be” em “been”, “be” em “bent”|  
+|`??`|Corresponde ao elemento anterior zero ou uma vez, mas o menor número de vezes possível.|`"rai??n"`|“ran”, “rain”|  
 |`{` *n* `}?`|Corresponde ao elemento anterior exatamente *n* vezes.|`",\d{3}?"`|“.043” em “1.043.6”, “.876”, “.543” e “.210” em “9.876.543.210”|  
 |`{` *n* `,}?`|Corresponde ao elemento anterior pelo menos *n* vezes, mas o menor número de vezes possível.|`"\d{2,}?"`|“166”, “29”, “1930”|  
 |`{` *n* `,` *m* `}?`|Corresponde ao elemento anterior entre *n* e *m* vezes, mas o menor número de vezes possível.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" em "193024"|  
@@ -176,7 +176,7 @@ ms.locfileid: "53779380"
 |`${` *name* `}`|Substitui a subcadeia de caracteres correspondida pelo grupo chamado *name*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|“one two”|“two one”|  
 |`$$`|Substitui um literal “$”.|`\b(\d+)\s?USD`|`$$$1`|“103 USD”|"$103"|  
 |`$&`|Substitui uma cópia da correspondência inteira.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Substitui todo o texto da cadeia de caracteres de entrada antes da correspondência.|`B+`|<code>$`</code>|“AABBCC”|“AAAACC”|  
+|``$` ``|Substitui todo o texto da cadeia de caracteres de entrada antes da correspondência.|`B+`|``$` ``|“AABBCC”|“AAAACC”|  
 |`$'`|Substitui todo o texto da cadeia de caracteres de entrada após a correspondência.|`B+`|`$'`|“AABBCC”|“AACCCC”|  
 |`$+`|Substitui o último grupo que foi capturado.|`B+(C+)`|`$+`|“AABBCCDD”|“AACCDD”|  
 |`$_`|Substitui a cadeia de caracteres de entrada inteira.|`B+`|`$_`|“AABBCC”|“AAAABBCCCC”|  
