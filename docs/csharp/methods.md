@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cb47d1c7eecebca42a65557b61d782a76266c2f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127440"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030172"
 ---
 # <a name="methods"></a>Métodos #
 
@@ -197,10 +197,7 @@ Usar uma variável local, nesse caso, `result`, para armazenar um valor é opcio
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +205,7 @@ O chamador pode então consumir a tupla retornada com o código semelhante ao se
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 Os nomes também podem ser atribuídos aos elementos da tupla na definição de tipo de tupla. O exemplo a seguir mostra uma versão alternativa do método `GetPersonalInfo` que usa elementos nomeados:
@@ -218,10 +214,7 @@ Os nomes também podem ser atribuídos aos elementos da tupla na definição de 
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,8 +222,7 @@ A chamada anterior para o método `GetPersonInfo` pode ser modificada da seguint
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Se um método passa uma matriz como um argumento e modifica o valor de elementos individuais, o método não precisa retornar a matriz, embora você possa optar por fazer isso para obter um bom estilo ou um fluxo de valores funcional.  Isso ocorre porque o C# passa todos os tipos de referência por valor e o valor de uma referência de matriz é o ponteiro para a matriz. No exemplo a seguir, as alterações no conteúdo da matriz `values` realizados pelo método `DoubleValues` são observáveis por qualquer código que faz referência à matriz.

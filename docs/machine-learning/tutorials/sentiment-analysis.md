@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de classificação biná
 ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: c6ef4da7f429b92591c90daa3fb06f367d8a578a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779126"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030147"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Usar o ML.NET em um cenário de classificação binária de análise de sentimento
 
@@ -364,7 +364,9 @@ Adicione alguns comentários para testar as previsões do modelo treinado no mé
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#26 "Create test data for predictions")]
 
-Carregar o modelo [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
+Carregar o modelo
+
+[!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
 Agora que você tem um modelo, pode usá-lo para prever o sentimento tóxico ou não tóxico dos dados do comentário usando o método <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)>. Para obter uma previsão, use `Predict` em novos dados. Observe que os dados de entrada são uma cadeia de caracteres e o modelo inclui a personalização. Seu pipeline está em sincronia durante o treinamento e a previsão. Você não precisou escrever código de pré-processamento/personalização especificamente para previsões, e a mesma API cuida das previsões de lote e de uso único. Adicione o código a seguir ao método `PredictWithModelLoadedFromFile` para as previsões:
 

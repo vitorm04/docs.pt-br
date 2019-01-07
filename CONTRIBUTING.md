@@ -39,7 +39,7 @@ Também é possível escolher entre as questões existentes, para as quais contr
 
 Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição. 
 
-**Etapa 2:** Crie fork dos repositórios `/dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs`, conforme necessário, e crie um branch para as alterações.
+**Etapa 2:** Crie fork dos repositórios `dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs`, conforme necessário, e crie um branch para as alterações.
 
 Para pequenas alterações, você pode usar a interface da Web do GitHub. Basta clicar em **Editar o arquivo na sua bifurcação deste projeto** no arquivo que você deseja alterar. O GitHub cria o novo branch para você após enviar as alterações.
 
@@ -101,7 +101,7 @@ Além disso, todas as amostras nas pastas *core* e *standard* devem ser compilad
 Podemos expandir esses diretórios conforme seja adicionado conteúdo no repositório docs. Por exemplo, adicionaremos diretórios do Xamarin, como `xamarin-ios` e `xamarin-android`.
 
 Cada amostra completa que você cria deve conter um arquivo *leiame.md*. Esse arquivo deve conter uma breve descrição da amostra (um ou dois parágrafos). O *leiame.md* deve informar aos leitores o que eles aprenderão ao explorar essa amostra. O arquivo *leiame.md* também deve conter um link para o documento ativo no [site de documentação do .NET](https://docs.microsoft.com/dotnet/welcome).
-Para definir o local de mapeamento de determinado arquivo no repositório para esse site, substitua `/docs` no caminho do repositório por `http://docs.microsoft.com/dotnet/articles`.
+Para definir o local de mapeamento de determinado arquivo no repositório para esse site, substitua `/docs` no caminho do repositório por `https://docs.microsoft.com/dotnet`.
 
 Seu tópico também conterá links para a amostra. Crie um link diretamente para a pasta da amostra no GitHub.
 

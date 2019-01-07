@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: 80c40e1b711af0dbd434d1837b9bcc1cf7c90069
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7330325b885b7ad7bc9cb9421f815a6922a01200
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236870"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396832"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabela de tipos de ponto flutuante (referência em C#)
 
@@ -24,7 +24,7 @@ A tabela a seguir mostra a precisão e os intervalos aproximados dos tipos de po
 |[float](float.md)|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|Aproximadamente de 6 a 9 dígitos|  
 |[double](double.md)|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|Aproximadamente de 15 a 17 dígitos|  
 |[decimal](decimal.md)|±1,0 x 10<sup>-28</sup> para ±7,9228 x 10<sup>28</sup>|28 a 29 dígitos|  
-  
+
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
@@ -35,3 +35,5 @@ A tabela a seguir mostra a precisão e os intervalos aproximados dos tipos de po
 - [Tabela de valores padrão](default-values-table.md)
 - [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)
+- [Numéricos no .NET](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

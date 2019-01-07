@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236343"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030250"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutorial: Prever as tarifas de táxi em Nova York usando um aprendiz de regressão com o ML.NET
 
@@ -99,7 +99,9 @@ A classe `TaxiTripFarePrediction` representa os resultados previstos. Ela tem um
 
 ## <a name="define-data-and-model-paths"></a>Definir dados e caminhos de modelo
 
-Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*: [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*:
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 Você precisa criar três campos para conter os caminhos para os arquivos com conjuntos de dados e o arquivo para salvar o modelo e uma variável global para o `TextLoader`:
 
