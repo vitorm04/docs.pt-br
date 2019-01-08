@@ -4,12 +4,12 @@ description: Entenda as diferenças e os usos do padrão de gateway de API e da 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152637"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030536"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Padrão de gateway de API versus comunicação direta de cliente com microsserviço
 
@@ -41,7 +41,7 @@ Interagir com vários microsserviços para criar uma única tela de interface do
 
 Implementar preocupações relativas a segurança e abrangentes, como segurança e autorização em cada microsserviço, pode exigir um esforço significativo de desenvolvimento. Uma abordagem possível é ter esses serviços no host do Docker ou no cluster interno para restringir o acesso direto a eles do lado de fora e implementar esses interesses paralelos em um local centralizado, como um Gateway de API.
 
-- Como os aplicativos cliente podem se comunicar com serviços que usam protocolos não amigáveis à Internet?*
+- *Como os aplicativos cliente podem se comunicar com serviços que usam protocolos não amigáveis à Internet?*
 
 Protocolos usados no lado do servidor (como AMQP ou protocolos binários) geralmente não são compatíveis com aplicativos cliente. Portanto, as solicitações devem ser executadas por meio de protocolos como HTTP/HTTPS e convertidas em outros protocolos posteriormente. Uma abordagem *man-in-the-middle* pode ajudar nessa situação.
 
@@ -59,9 +59,9 @@ Portanto, ter um nível intermediário ou indireto (Gateway) pode ser muito conv
 
 - **Muitas viagens de ida e volta**: uma única página/tela no aplicativo cliente pode exigir diversas chamadas para vários serviços. Isso pode resultar em várias viagens de ida e volta na rede entre o cliente e o servidor, adicionando uma latência significativa. A agregação manipulada em um nível intermediário pode melhorar o desempenho e a experiência do usuário para o aplicativo cliente.
 
-- **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao "mundo externo", tornando a superfície de ataque maior do que se você ocultar microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
+- **Problemas de segurança**: sem um gateway, todos os microsserviços precisam ser expostos ao “mundo externo”, tornando a superfície de ataque maior do que se você ocultar os microsserviços internos que não são usados ​​diretamente pelos aplicativos cliente. Quanto menor a superfície de ataque, mais segura sua aplicação pode ser.
 
-- **Interesses paralelos**: cada microsserviço publicado publicamente deve tratar de interesses como autorização, SSL etc. Em muitas situações, esses interessas podem ser tratados em uma única camada para que os microsserviços internos sejam simplificados.
+- **Interesses paralelos**: cada microsserviço publicado abertamente deve tratar de interesses como autorização, SSL, etc. Em muitas situações, esses interessas podem ser tratados em uma única camada para que os microsserviços internos sejam simplificados.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Por que o padrão de Gateway de API?
 
@@ -172,7 +172,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Charles Richardson. Padrão: Gateway de API/Back-end para Front-end** \
+- **Charles Richardson. Padrão: gateway de API/back-end para front-end** \
   [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 - **Padrão de Gateway de API** \

@@ -1,18 +1,18 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500566"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656343"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
 Determina como uma classe de atributo personalizado pode ser usada. <xref:System.AttributeUsageAttribute> é um atributo aplicado a definições de atributo personalizado. O atributo `AttributeUsage` permite que você controle:
 
-- A quais elementos do programa o atributo pode ser aplicado. A menos que você restrinja seu uso, um atributo pode ser aplicado a um dos seguintes elementos do programa:
+- A quais elementos do programa o atributo pode ser aplicado. A menos que você restrinja seu uso, um atributo poderá ser aplicado a qualquer um dos seguintes elementos do programa:
   - assembly
   - module
   - campo

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235248"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058458"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas implícitas (Referência de C#)
 
@@ -23,14 +23,14 @@ A tabela a seguir mostra as conversões implícitas predefinidas entre tipos num
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` ou `decimal`|  
 |[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|  
 |[short](short.md)|`int`, `long`, `float`, `double` ou `decimal`|  
 |[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|  
 |[int](int.md)|`long`, `float`, `double` ou `decimal`|  
 |[uint](uint.md)|`long`, `ulong`, `float`, `double` ou `decimal`|  
 |[long](long.md)|`float`, `double` ou `decimal`|  
-|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`, `double` ou `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Comentários  
 
@@ -38,9 +38,11 @@ A tabela a seguir mostra as conversões implícitas predefinidas entre tipos num
 
 - A precisão, mas não a magnitude, poderá ser perdida nas conversões de `int`, `uint`, `long` ou `ulong` em `float` e de `long` ou `ulong` em `double`.  
   
-- Não há conversões implícitas para o tipo `char`.  
+- Não há nenhuma conversão implícita para os tipos `char`, `byte` e `sbyte`.  
+
+- Não há nenhuma conversão implícita dos tipos `char`, `double` e `decimal`.
   
-- Não há conversões implícitas entre os tipos `float` e `double` e o tipo `decimal`.  
+- Não há nenhuma conversão implícita entre os tipos `decimal` e `float` ou os tipos `double`.  
   
 - Um valor de uma expressão de constante de tipo `int` (por exemplo, um valor representado por um literal integral) pode ser convertido em `sbyte`, `byte`, `short`, `ushort`, `uint` ou `ulong`, contanto que esteja dentro do intervalo do tipo de destino:
 
