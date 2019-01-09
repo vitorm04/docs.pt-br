@@ -2,34 +2,33 @@
 title: '&lt;IssuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 9a8d701e0806aae0a17a1c5ff7284606dd080f85
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750226"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150182"
 ---
 # <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
-Especifica um token personalizado usado para autenticar um cliente para um serviço.  
+Especifica um token personalizado usado para autenticar um cliente a um serviço.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
-\<comportamento >  
+\<comportamento de >  
 \<clientCredentials>  
 \<issuedToken >  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<issuedToken   
-   cacheIssuedTokens="Boolean"  
-   defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"  
-   issuedTokenRenewalThresholdPercentage = "0 to 100"  
-   issuerChannelBehaviors="String"  
-      localIssuerChannelBehaviors="String"  
-   maxIssuedTokenCachingTime="TimeSpan"  
-</issuedToken>  
+<issuedToken cacheIssuedTokens="Boolean"
+             defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+             issuedTokenRenewalThresholdPercentage = "0 to 100"
+             issuerChannelBehaviors="String"
+             localIssuerChannelBehaviors="String"
+             maxIssuedTokenCachingTime="TimeSpan">
+</issuedToken>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -41,10 +40,10 @@ seção endpointBehaviors
 |---------------|-----------------|  
 |`cacheIssuedTokens`|Atributo booleano opcional que especifica se tokens são armazenados em cache. O padrão é `true`.|  
 |`defaultKeyEntropyMode`|Atributo de cadeia de caracteres opcional que especifica quais valores aleatórios (entropias) são usados para operações de handshake. Os valores incluem `ClientEntropy`, `ServerEntropy`, e `CombinedEntropy`, o padrão é `CombinedEntropy`. Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|`issuedTokenRenewalThresholdPercentage`|Atributo inteiro opcional que especifica a porcentagem de um período válido (fornecido pelo emissor de token) que pode decorrer antes que um token seja renovado. Os valores são de 0 a 100. O padrão é 60, que especifica a 60% de tempo passa antes de tentar uma renovação.|  
-|`issuerChannelBehaviors`|Atributo opcional que especifica os comportamentos de canal para usar ao se comunicar com o emissor.|  
-|`localIssuerChannelBehaviors`|Atributo opcional que especifica os comportamentos de canal para usar ao se comunicar com o emissor local.|  
-|`maxIssuedTokenCachingTime`|Atributo Timespan opcional que especifica a duração que tokens emitidos são armazenados em cache quando o emissor do token (um STS) não especificar uma hora. O padrão é "10675199.02:48:05.4775807".|  
+|`issuedTokenRenewalThresholdPercentage`|Atributo inteiro opcional que especifica a porcentagem de um período válido (fornecido pelo emissor de token) que pode decorrer antes que um token seja renovado. Os valores são de 0 a 100. O padrão é 60, que especifica a 60% de tempo passa antes da tentativa de uma renovação.|  
+|`issuerChannelBehaviors`|Atributo opcional que especifica os comportamentos do canal para usar ao se comunicar com o emissor.|  
+|`localIssuerChannelBehaviors`|Atributo opcional que especifica os comportamentos do canal para usar ao se comunicar com o emissor local.|  
+|`maxIssuedTokenCachingTime`|Atributo Timespan opcional que especifica a duração que tokens emitidos são armazenados em cache quando o emissor do token (STS) não especifica uma hora. O padrão é "10675199.02:48:05.4775807".|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -60,9 +59,9 @@ seção endpointBehaviors
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica as credenciais usadas para autenticar um cliente para um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- Um token emitido é um tipo de credencial personalizada usado, por exemplo, durante a autenticação com um Token STS (serviço seguro) em um cenário federado. Por padrão, o token é um token SAML. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). e [federação e Tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Um token emitido é um tipo de credencial personalizada usado, por exemplo, ao autenticar com um Secure Token Service (STS) em um cenário federado. Por padrão, o token é um token SAML. Para obter mais informações, consulte [federação e Tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). e [federação e Tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
- Esta seção contém os elementos usados para configurar um emissor local de tokens ou comportamentos usados com um serviço de token de segurança. Para obter instruções sobre como configurar um cliente para usar um emissor local, consulte [como: configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Esta seção contém os elementos usados para configurar um emissor local de tokens ou comportamentos usados com um serviço de token de segurança. Para obter instruções sobre como configurar um cliente para usar um emissor local, consulte [como: Configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  
@@ -75,6 +74,6 @@ seção endpointBehaviors
  [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)  
- [Como criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Como configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Como: Criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Como: Configurar um emissor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Federação e tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

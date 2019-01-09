@@ -1,16 +1,16 @@
 ---
-title: '&lt;Unidirecional&gt;'
+title: '&lt;oneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f9a5631501b3879463606f526485314efd5eff2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746716"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150572"
 ---
-# <a name="ltonewaygt"></a>&lt;Unidirecional&gt;
-Permite que o roteamento de pacotes e o uso de métodos unidirecionais para uma associação personalizada.  
+# <a name="ltonewaygt"></a>&lt;oneWay&gt;
+Habilita o roteamento de pacotes e o uso de métodos unidirecionais para uma associação personalizada.  
   
  \<system.serviceModel>  
 \<associações >  
@@ -21,15 +21,11 @@ Permite que o roteamento de pacotes e o uso de métodos unidirecionais para uma 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<oneWay packetRoutable="Boolean">  
-        <channelPoolSettings  
-           idleTimeout"TimeSpan"  
-          leaseTimeout"TimeSpan"  
-          maxOutboundConnectionsPerEndpopint="Integer" />  
-```  
-  
-```xml  
-</oneWay>  
+<oneWay packetRoutable="Boolean">
+  <channelPoolSettings idleTimeout="TimeSpan"
+                       leaseTimeout="TimeSpan"
+                       maxOutboundConnectionsPerEndpopint="Integer" />
+</oneWay>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -39,7 +35,7 @@ Permite que o roteamento de pacotes e o uso de métodos unidirecionais para uma 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`packetRoutable`|Um valor booleano que especifica se o roteamento de pacotes está habilitado. O padrão é `false`.|  
+|`packetRoutable`|Um valor booliano que especifica se o roteamento de pacotes está habilitado. O padrão é `false`.|  
 |`MaxAcceptedChannels`|Um inteiro que especifica o número máximo de canais que podem ser aceitos.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -52,10 +48,10 @@ Permite que o roteamento de pacotes e o uso de métodos unidirecionais para uma 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- Para habilitar o roteamento de pacotes, uma camada de conversão unidirecional é necessária, que fornece este elemento. Um usuário pode criar uma associação personalizada que camadas essa ligação por um transporte de reconhecimento de sessão ou de solicitação-resposta para torná-lo pacote roteável. Esse elemento também é útil quando você deseja expor métodos unidirecionais de forma mais nativo. Mais transformações podem ser aplicadas por essa camada, como Duplex compostos e sistema de mensagens confiável.  
+ Para habilitar o roteamento de pacotes, uma camada de conversão unidirecional é necessária, que fornece esse elemento. Um usuário pode criar uma ligação personalizada que esta associação de camadas em um transporte para torná-lo pacote roteável de reconhecimento de sessão ou de solicitação-resposta. Esse elemento também é útil quando você deseja expor métodos unidirecionais de forma mais nativa. Mais transformações podem ser aplicadas nessa camada, como Duplex composto e sistema de mensagens confiável.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.OneWayBindingElement>  

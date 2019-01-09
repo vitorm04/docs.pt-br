@@ -2,15 +2,15 @@
 title: '&lt;wsdlImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 33c2b0e4286ce746f745e4aebe10fd4bbd96810f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43c1a50c740cd9c75ee641e4ac4d0fa8ea3ca36b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754896"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144984"
 ---
 # <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
-Especifica todos os importadores WSDL que importa os metadados de WSDL Web Services Description Language () 1.1 com anexos de WS-Policy.  
+Especifica todos os importadores WSDL que importa os metadados de descrição linguagem WSDL (Web Services) 1.1 com anexos WS-Policy.  
   
 \<system.ServiceModel>  
 \<client>  
@@ -21,11 +21,11 @@ Especifica todos os importadores WSDL que importa os metadados de WSDL Web Servi
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<metadata>  
-  <wsdlImporters>  
-    <wsdlImporter type="string" />  
-  </wsdlImporters>  
-</metadata>  
+<metadata>
+  <wsdlImporters>
+    <wsdlImporter type="string" />
+  </wsdlImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -35,7 +35,7 @@ Especifica todos os importadores WSDL que importa os metadados de WSDL Web Servi
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`type`|O tipo de elemento.|  
+|`type`|O tipo deste elemento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -44,10 +44,10 @@ Especifica todos os importadores WSDL que importa os metadados de WSDL Web Servi
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Especifica todos os importadores WSDL que importa os metadados de WSDL Web Services Description Language () 1.1 com anexos de WS-Policy.|  
+|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|Especifica todos os importadores WSDL que importa os metadados de descrição linguagem WSDL (Web Services) 1.1 com anexos WS-Policy.|  
   
 ## <a name="remarks"></a>Comentários  
- O importador de WSDL é usado para importar metadados, bem como converter que informações em várias classes que representam o contrato e informações de ponto de extremidade. Seletivamente pode importar informações de contrato e o ponto de extremidade e propriedades que expõem os erros de importação e aceitam informações relevantes para o processo de importação e a conversão do tipo. Ele também oferece suporte a importação de informações de associação e propriedades que fornecem acesso a todos os documentos de política, documentos WSDL, extensões WSDL e documentos de esquema XML.  
+ Um importador WSDL é usado para importar metadados, bem como converter essa informações em várias classes que representam o contrato e informações de ponto de extremidade. Ele seletivamente pode importar informações de contrato e o ponto de extremidade e propriedades que expõem os erros de importação e aceitar informações relevantes para o processo de importação e a conversão do tipo. Ele também dá suporte a importação de informações de associação e propriedades que fornecem acesso a todos os documentos de política, documentos WSDL, extensões WSDL e documentos de esquema XML.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.WsdlImporterElement>  

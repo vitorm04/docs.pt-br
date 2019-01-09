@@ -2,12 +2,12 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747974"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150122"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 Especifica que o resolvedor PNRP (Peer Name Resolution Protocol) deve ser usado como um resolvedor. Esse elemento é opcional porque o PNRP é o resolvedor padrão.  
@@ -21,7 +21,7 @@ Especifica que o resolvedor PNRP (Peer Name Resolution Protocol) deve ser usado 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -31,7 +31,7 @@ Especifica que o resolvedor PNRP (Peer Name Resolution Protocol) deve ser usado 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|resolverType|Uma cadeia de caracteres que especifica o resolvedor a ser usado. Esse atributo é opcional. Se não for definido, ou se ele for definido como uma cadeia de caracteres vazia, o PNRP é usado.|  
+|objeto resolverType|Uma cadeia de caracteres que especifica o resolvedor a ser usado. Esse atributo é opcional. Se não for definido, ou se ele for definido como uma cadeia de caracteres vazia, o PNRP é usado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -40,12 +40,12 @@ Especifica que o resolvedor PNRP (Peer Name Resolution Protocol) deve ser usado 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="example"></a>Exemplo  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="see-also"></a>Consulte também  
