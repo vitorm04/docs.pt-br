@@ -4,16 +4,16 @@ description: A grade de eventos do Azure é uma solução sem servidor para entr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143656"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145857"
 ---
 # <a name="event-grid"></a>Grade de eventos
 
-[A grade de eventos do Azure](/azure-event-grid/overview) fornece infraestrutura sem servidor para aplicativos baseados em eventos. Você pode publicar na grade de eventos de qualquer origem e consumir mensagens de qualquer plataforma. Grade de eventos também tem suporte interno para eventos de recursos do Azure para simplificar a integração com seus aplicativos. Por exemplo, você pode assinar eventos de armazenamento de blob para notificar seu aplicativo quando um arquivo for carregado. Seu aplicativo, em seguida, pode publicar uma mensagem de grade de evento personalizado que é consumida por outra nuvem ou aplicativos locais. Grade de eventos foi criada para lidar com confiança de grande escala. Você obtém os benefícios da publicação e assinar mensagens sem a sobrecarga de configurar a infraestrutura necessária.
+[A grade de eventos do Azure](/azure/event-grid/overview) fornece infraestrutura sem servidor para aplicativos baseados em eventos. Você pode publicar na grade de eventos de qualquer origem e consumir mensagens de qualquer plataforma. Grade de eventos também tem suporte interno para eventos de recursos do Azure para simplificar a integração com seus aplicativos. Por exemplo, você pode assinar eventos de armazenamento de blob para notificar seu aplicativo quando um arquivo for carregado. Seu aplicativo, em seguida, pode publicar uma mensagem de grade de evento personalizado que é consumida por outra nuvem ou aplicativos locais. Grade de eventos foi criada para lidar com confiança de grande escala. Você obtém os benefícios da publicação e assinar mensagens sem a sobrecarga de configurar a infraestrutura necessária.
 
 ![Logotipo da grade de eventos](./media/event-grid-logo.png)
 

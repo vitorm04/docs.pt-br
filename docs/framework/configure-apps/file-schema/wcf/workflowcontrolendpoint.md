@@ -1,16 +1,16 @@
 ---
-title: '&lt;WorkflowControlEndpoint&gt;'
+title: '&lt;workflowControlEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 87c745cfb8f7cd98c25cd34fc1aa94a26a5ba507
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 178ccc8ac35b0ac76d74c818dce43dcffc5c0835
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754779"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144945"
 ---
-# <a name="ltworkflowcontrolendpointgt"></a>&lt;WorkflowControlEndpoint&gt;
-Este elemento de configuração define um ponto de extremidade padrão para controlar a execução de instâncias de fluxo de trabalho (criar, executar, suspender, terminar, etc).  
+# <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
+Este elemento de configuração define um ponto de extremidade padrão para controlar a execução de instâncias de fluxo de trabalho (criar, executar, suspender, finalizar, etc).  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,13 +18,13 @@ Este elemento de configuração define um ponto de extremidade padrão para cont
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <workflowControlEndpoint>
       <standardEndpoint name="String" />
     </workflowControlEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -43,7 +43,7 @@ Este elemento de configuração define um ponto de extremidade padrão para cont
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são predefinidas pontos de extremidade com um ou mais de suas propriedades (endereço, associação, contrato) fixo.|  
+|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Uma coleção de pontos de extremidade padrão que são definidos previamente os pontos de extremidade com um ou mais das suas propriedades (endereço, associação, contrato) fixo.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

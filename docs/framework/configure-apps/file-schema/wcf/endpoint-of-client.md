@@ -2,15 +2,15 @@
 title: '&lt;ponto de extremidade&gt; do &lt;cliente&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146999"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;ponto de extremidade&gt; do &lt;cliente&gt;
-Especifica o contrato, associação e propriedades de endereço do ponto de extremidade de canal, que é usado pelos clientes para se conectar a pontos de extremidade de serviço no servidor.  
+Especifica o contrato, associação e propriedades de endereço do ponto de extremidade de canal, que é usado pelos clientes para se conectar aos pontos de extremidade de serviço no servidor.  
   
  \<system.ServiceModel>  
 \<client>  
@@ -19,13 +19,15 @@ Especifica o contrato, associação e propriedades de endereço do ponto de extr
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   contract="String"   endpointConfiguration="String"   kind="String"  
-   name="String"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          contract="String"
+          endpointConfiguration="String"
+          kind="String"
+          name="String">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -35,21 +37,21 @@ Especifica o contrato, associação e propriedades de endereço do ponto de extr
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|endereço|Atributo de cadeia de caracteres obrigatória.<br /><br /> Especifica o endereço do ponto de extremidade. O padrão é uma cadeia de caracteres vazia. O endereço deve ser um URI absoluto.|  
-|behaviorConfiguration|Uma cadeia de caracteres que contém o nome do comportamento do comportamento a ser usado para instanciar o ponto de extremidade. O nome do comportamento deve estar no escopo no ponto em que o serviço está definido. O padrão é uma cadeia de caracteres vazia.|  
-|associação|Atributo de cadeia de caracteres obrigatória.<br /><br /> Uma cadeia de caracteres que indica o tipo de associação a ser usada. O tipo deve ter uma seção de configuração registrado para ser referenciado. O tipo é registrado pelo nome da seção, em vez de pelo nome do tipo de associação.|  
-|bindingConfiguration|Opcional. Uma cadeia de caracteres que contém o nome da configuração de associação a ser usado quando o ponto de extremidade é instanciado. A configuração de associação deve estar no escopo no ponto de que extremidade é definida. O padrão é uma cadeia de caracteres vazia.<br /><br /> Este atributo é usado em conjunto com `binding` para fazer referência a uma configuração de associação específica no arquivo de configuração. Defina esse atributo, se você está tentando usar uma associação personalizada. Caso contrário, uma exceção pode ser lançada.|  
-|contrato|Atributo de cadeia de caracteres obrigatória.<br /><br /> Uma cadeia de caracteres que indica qual contrato este ponto de extremidade está expondo. O assembly deve implementar o tipo de contrato.|  
-|endpointConfiguration|Uma cadeia de caracteres que especifica o nome do ponto de extremidade padrão que é definido pelo `kind` atributo, o que faz referência às informações adicionais de configuração do ponto de extremidade padrão. O mesmo nome deve ser definido na `<standardEndpoints>` seção.|  
-|tipo|Uma cadeia de caracteres que especifica o tipo de ponto de extremidade padrão aplicado. O tipo deve ser registrado na seção `<extensions>` ou em machine.config. Se nada for especificado, um ponto de extremidade de canal comum será criado.|  
-|name|Atributo de cadeia de caracteres opcional. Este atributo identifica exclusivamente um ponto de extremidade para um dado contrato. Você pode definir vários clientes para um determinado tipo de contrato. Cada definição deve ser diferenciada por um nome exclusivo. Se esse atributo for omitido, o ponto de extremidade correspondente é usado como o ponto de extremidade padrão associado ao tipo de contrato especificado. O padrão é uma cadeia de caracteres vazia.<br /><br /> O `name` atributo de uma associação é usado para exportação de definição através de WSDL.|  
+|endereço|Atributo de cadeia de caracteres obrigatório.<br /><br /> Especifica o endereço do ponto de extremidade. O padrão é uma cadeia de caracteres vazia. O endereço deve ser um URI absoluto.|  
+|behaviorConfiguration|Uma cadeia de caracteres que contém o nome do comportamento do comportamento a ser usado para instanciar o ponto de extremidade. O nome deve estar no escopo no ponto em que o serviço está definido. O padrão é uma cadeia de caracteres vazia.|  
+|associação|Atributo de cadeia de caracteres obrigatório.<br /><br /> Uma cadeia de caracteres que indica o tipo de associação a ser usada. O tipo deve ter uma seção de configuração registrado para ser referenciado. O tipo é registrado pelo nome da seção, em vez de pelo nome do tipo da associação.|  
+|bindingConfiguration|Opcional. Uma cadeia de caracteres que contém o nome da configuração de associação a ser usado quando o ponto de extremidade é instanciado. A configuração de associação deve estar no escopo no ponto de que extremidade é definido. O padrão é uma cadeia de caracteres vazia.<br /><br /> Esse atributo é usado em conjunto com `binding` para fazer referência a uma configuração de associação específica no arquivo de configuração. Defina esse atributo, se você está tentando usar uma associação personalizada. Caso contrário, uma exceção pode ser lançada.|  
+|contrato|Atributo de cadeia de caracteres obrigatório.<br /><br /> Uma cadeia de caracteres que indica qual contrato este ponto de extremidade está expondo. O assembly deve implementar o tipo de contrato.|  
+|endpointConfiguration|Uma cadeia de caracteres que especifica o nome do ponto de extremidade padrão que é definido pelo `kind` atributo, o que faz referência às informações de configuração adicionais deste ponto de extremidade padrão. O mesmo nome deve ser definido no `<standardEndpoints>` seção.|  
+|Tipo|Uma cadeia de caracteres que especifica o tipo de ponto de extremidade padrão aplicado. O tipo deve ser registrado na seção `<extensions>` ou em machine.config. Se nada for especificado, um ponto de extremidade de canal comum será criado.|  
+|name|Atributo de cadeia de caracteres opcional. Este atributo identifica exclusivamente um ponto de extremidade para um determinado contrato. Você pode definir vários clientes para um determinado tipo de contrato. Cada definição deve ser diferenciada por um nome de configuração exclusivas. Se esse atributo for omitido, o ponto de extremidade correspondente é usado como o ponto de extremidade padrão associado ao tipo de contrato especificado. O padrão é uma cadeia de caracteres vazia.<br /><br /> O `name` atributo de uma associação é usado para exportação de definição por meio de WSDL.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<cabeçalhos >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Uma coleção de cabeçalhos de endereço.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Uma identidade que permite a autenticação de um ponto de extremidade por outros pontos de extremidade de troca de mensagens com ele.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Uma identidade que permite a autenticação de um ponto de extremidade por outros pontos de extremidade trocando mensagens com ele.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -61,12 +63,12 @@ Especifica o contrato, associação e propriedades de endereço do ponto de extr
  Este é um exemplo de uma configuração de ponto de extremidade de canal.  
   
 ```xml  
-<endpoint address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    name="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          name="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>Consulte também  

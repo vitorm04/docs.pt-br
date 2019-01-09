@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349627"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146531"
 ---
 # <a name="connection-class"></a>Classe de Conexão
 
-O `Connection` respostas do servidor analisa classe e solicitações da fila de solicitações de pipeline.
+O `Connection` classe analisa respostas do servidor, solicitações da fila e solicitações de pipeline.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -30,7 +30,7 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> O `Connection` classe é interno e não se destina a ser usado diretamente no seu código.
+> O `Connection` classe é interno e não se destina a ser usado diretamente em seu código.
 > 
 > Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
 
@@ -38,6 +38,6 @@ internal class Connection : PooledStream
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** sistema (em System. dll)
+**Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** disponível desde o 2.0.
+**Versões do .NET framework:** Disponível desde o 2.0.

@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio'
+title: 'Passo a passo: Criando um controle de formulários do Windows que tira proveito dos recursos de tempo de Design do Visual Studio'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865859"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146271"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Passo a passo: Criando um controle de formulários do Windows que tira proveito dos recursos de tempo de Design do Visual Studio
 A experiência de tempo de design para um controle personalizado pode ser aprimorada por meio da criação de um designer personalizado associado.  
   
  Este passo a passo ilustra como criar um designer personalizado para um controle personalizado. Você implementará um tipo `MarqueeControl` e uma classe de designer associado, chamada `MarqueeControlRootDesigner`.  
@@ -60,7 +60,7 @@ A experiência de tempo de design para um controle personalizado pode ser aprimo
   
  ![Uma possível disposição de MarqueeControl](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")  
   
- Para obter a listagem de códigos completa, consulte [Como criar um controle dos Windows Forms que aproveita funcionalidades de tempo de design](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Para a listagem de código completo, consulte [como: Criar um controle de formulários do Windows que aproveita os recursos de tempo de Design do](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -84,18 +84,18 @@ A experiência de tempo de design para um controle personalizado pode ser aprimo
   
 1.  Adicione um projeto de biblioteca de controles dos Windows Forms à solução. Nomeie o projeto "MarqueeControlLibrary".  
   
-2.  Usando o **Gerenciador de Soluções**, exclua o controle padrão do projeto, excluindo o arquivo de origem denominado "UserControl1.cs" ou "UserControl1.vb", dependendo da linguagem de sua escolha. Para obter mais informações, consulte [NIB: como remover, apagar e excluir itens](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  Usando o **Gerenciador de Soluções**, exclua o controle padrão do projeto, excluindo o arquivo de origem denominado "UserControl1.cs" ou "UserControl1.vb", dependendo da linguagem de sua escolha. Para obter mais informações, confira [Como: Remover, apagar e excluir itens](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Adicione um novo <xref:System.Windows.Forms.UserControl> de item para o `MarqueeControlLibrary` projeto. Dê ao novo arquivo de origem o nome base "MarqueeControl".  
   
-4.  Usando o **Gerenciador de Soluções**, crie uma nova pasta no projeto `MarqueeControlLibrary`. Para obter mais informações, consulte [NIB: como adicionar novos itens do projeto](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nomeie a nova pasta como "Design".  
+4.  Usando o **Gerenciador de Soluções**, crie uma nova pasta no projeto `MarqueeControlLibrary`. Para obter mais informações, confira [Como: Adicionar novos itens de projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Nomeie a nova pasta como "Design".  
   
 5.  Clique com o botão direito do mouse na pasta **Design** e adicione uma nova classe. Dê ao novo arquivo de origem o nome base "MarqueeControlRootDesigner".  
   
 6.  Você precisará usar tipos do assembly System.Design, então adicione essa referência ao projeto `MarqueeControlLibrary`.  
   
     > [!NOTE]
-    >  Para usar o assembly System.Design, seu projeto deve usar como destino a versão completa do .NET Framework e não do .NET Framework Client Profile. Para alterar a estrutura de destino, consulte [Como definir uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).  
+    >  Para usar o assembly System.Design, seu projeto deve usar como destino a versão completa do .NET Framework e não do .NET Framework Client Profile. Para alterar a estrutura de destino, consulte [como: Direcionar a uma versão do .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).  
   
 ## <a name="referencing-the-custom-control-project"></a>Referenciar o projeto de controle personalizado  
  Você usará o projeto `MarqueeControlTest` para testar o controle personalizado. O projeto de teste fará o reconhecimento do controle personalizado quando você adicionar uma referência do projeto ao assembly `MarqueeControlLibrary`.  
@@ -168,7 +168,7 @@ using MarqueeControlLibrary;
 5.  Compile o projeto.  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>Configurar o Projeto para Depuração em Tempo de Design  
- Quando você estiver desenvolvendo uma experiência de tempo de design personalizada, será necessário depurar seus controles e componentes. Há uma maneira simples de configurar seu projeto para permitir a depuração em tempo de design. Para obter mais informações, consulte [Passo a passo: depurando controles dos Windows Forms personalizados em tempo de design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Quando você estiver desenvolvendo uma experiência de tempo de design personalizada, será necessário depurar seus controles e componentes. Há uma maneira simples de configurar seu projeto para permitir a depuração em tempo de design. Para obter mais informações, confira [Passo a passo: Depurando Windows personalizado do Forms a controles em tempo de Design](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>Para configurar o projeto para depuração em tempo de design  
   
@@ -219,9 +219,9 @@ using MarqueeControlLibrary;
 ## <a name="creating-a-child-control-for-your-custom-control"></a>Criar um controle filho para o seu controle personalizado  
  O `MarqueeControl` hospedará os dois tipos de controle filho: o controle `MarqueeBorder` e o controle `MarqueeText`.  
   
--   `MarqueeBorder`: esse controle pinta uma borda de "luzes" em torno das próprias bordas. As luzes piscam em sequência, por isso elas parecem se mover em torno da borda. A velocidade na qual as luzes piscam é controlada por uma propriedade chamada `UpdatePeriod`. Várias outras propriedades personalizadas determinam outros aspectos da aparência do controle. Dois métodos, chamados `StartMarquee` e `StopMarquee`, controlam quando a animação começa e para.  
+-   `MarqueeBorder`: Esse controle pinta uma borda de "luzes" em torno de suas bordas. As luzes piscam em sequência, por isso elas parecem se mover em torno da borda. A velocidade na qual as luzes piscam é controlada por uma propriedade chamada `UpdatePeriod`. Várias outras propriedades personalizadas determinam outros aspectos da aparência do controle. Dois métodos, chamados `StartMarquee` e `StopMarquee`, controlam quando a animação começa e para.  
   
--   `MarqueeText`: esse controle pinta uma cadeia de caracteres piscando. Assim como o controle `MarqueeBorder`, a velocidade na qual o texto pisca é controlada pela propriedade `UpdatePeriod`. O controle `MarqueeText` também tem os métodos `StartMarquee` e `StopMarquee` em comum com o controle `MarqueeBorder`.  
+-   `MarqueeText`: Esse controle pinta uma cadeia de caracteres pisca. Assim como o controle `MarqueeBorder`, a velocidade na qual o texto pisca é controlada pela propriedade `UpdatePeriod`. O controle `MarqueeText` também tem os métodos `StartMarquee` e `StopMarquee` em comum com o controle `MarqueeBorder`.  
   
  Em tempo de design, o `MarqueeControlRootDesigner` permite que esses tipos de controle sejam adicionados a um `MarqueeControl` em qualquer combinação.  
   
@@ -459,7 +459,7 @@ using MarqueeControlLibrary;
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>Adicionar verbos do designer a seu designer personalizado  
  Um verbo do designer é um comando de menu vinculado a um manipulador de eventos. Verbos do designer são adicionados ao menu de atalho de um componente em tempo de design. Para obter mais informações, consulte <xref:System.ComponentModel.Design.DesignerVerb>.  
   
- Você adicionará dois verbos do designer a seus designers: **Executar Teste** e **Parar Teste**. Esses verbos permitirão que você exiba o comportamento em tempo de execução de `MarqueeControl` em tempo de design. Esses verbos serão adicionados ao `MarqueeControlRootDesigner`.  
+ Você adicionará dois verbos do designer a seus designers: **Executar teste** e **interromper teste**. Esses verbos permitirão que você exiba o comportamento em tempo de execução de `MarqueeControl` em tempo de design. Esses verbos serão adicionados ao `MarqueeControlRootDesigner`.  
   
  Quando **Executar Teste** é invocado, o manipulador de eventos de verbo chamará o método `StartMarquee` no `MarqueeControl`. Quando **Parar Teste** é invocado, o manipulador de eventos de verbo chamará o método `StopMarquee` no `MarqueeControl`. A implementação dos métodos `StartMarquee` e `StopMarquee` chama esses métodos nos controles contidos que implementam `IMarqueeWidget`, de modo que quaisquer controles `IMarqueeWidget` independentes também participam do teste.  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>Criar um UITypeEditor personalizado  
- Quando você cria uma experiência de tempo de design personalizada para os usuários, geralmente é desejável criar uma interação personalizada com a janela Propriedades. Você pode fazer isso criando um <xref:System.Drawing.Design.UITypeEditor>. Para obter mais informações, consulte [Como criar um editor de tipo de interface do usuário](https://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd).  
+ Quando você cria uma experiência de tempo de design personalizada para os usuários, geralmente é desejável criar uma interação personalizada com a janela Propriedades. Você pode fazer isso criando um <xref:System.Drawing.Design.UITypeEditor>. Para obter mais informações, confira [Como: Criar um Editor de tipo de interface do usuário](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120)).  
   
  O controle `MarqueeBorder` expõe várias propriedades na janela Propriedades. Duas dessas propriedades, `MarqueeSpinDirection` e `MarqueeLightShape`, são representadas por enumerações. Para ilustrar o uso de um editor de tipos de interface do usuário, o `MarqueeLightShape` propriedade tenha um associado <xref:System.Drawing.Design.UITypeEditor> classe.  
   
@@ -628,19 +628,19 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   Personalize ainda mais a experiência de tempo de design. Você pode tentar o sombreamento mais propriedades do que <xref:System.Windows.Forms.Control.Enabled%2A> e <xref:System.Windows.Forms.Control.Visible%2A>, e você poderá adicionar novas propriedades. Adicione novos verbos do designer para simplificar tarefas comuns, como encaixar controles filho.  
   
--   Licencie o `MarqueeControl`. Para obter mais informações, consulte [Como licenciar componentes e controles](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).  
+-   Licencie o `MarqueeControl`. Para obter mais informações, confira [Como: Licenciar componentes e controles](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).  
   
 -   Controle o modo como os controles são serializados e como o código é gerado para eles. Para obter mais informações, consulte [Geração e compilação de código-fonte dinâmico](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.UserControl>  
- <xref:System.Windows.Forms.Design.ParentControlDesigner>  
- <xref:System.Windows.Forms.Design.DocumentDesigner>  
- <xref:System.ComponentModel.Design.IRootDesigner>  
- <xref:System.ComponentModel.Design.DesignerVerb>  
- <xref:System.Drawing.Design.UITypeEditor>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Como criar um controle dos Windows Forms que aproveita recursos de tempo de design](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
- [Estendendo o suporte ao tempo de design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Designers personalizados](https://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
- [Biblioteca de formas .NET: um Designer de exemplo](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a>Consulte também
+
+- <xref:System.Windows.Forms.UserControl>
+- <xref:System.Windows.Forms.Design.ParentControlDesigner>
+- <xref:System.Windows.Forms.Design.DocumentDesigner>
+- <xref:System.ComponentModel.Design.IRootDesigner>
+- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.Drawing.Design.UITypeEditor>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [Como: Criar um controle de formulários do Windows que tira proveito dos recursos de tempo de Design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [Designers personalizados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

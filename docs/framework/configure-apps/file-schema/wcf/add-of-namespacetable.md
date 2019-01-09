@@ -2,15 +2,15 @@
 title: '&lt;adicionar&gt; &lt;namespaceTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 5ae672f12a2ef58efc9738624c113855e59e02b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ef4f1c46a0ee3b94e5548b752e4e0a6a759fd45b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748627"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149508"
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;adicionar&gt; &lt;namespaceTable&gt;
-Representa um elemento de configuração que contém o namespace para mapeamento de prefixo que pode ser usado em filtros de XPath para roteamento.  
+Representa um elemento de configuração que contém um namespace para o prefixo de mapeamento que pode ser usado em filtros de XPath para roteamento.  
   
  \<system.serviceModel>  
 \<roteamento >  
@@ -20,8 +20,12 @@ Representa um elemento de configuração que contém o namespace para mapeamento
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-   <routing>   <namespaceTable>  
-     <add namespace="String" prefix="String" />    </namespaceTable></routing>  
+<routing>
+  <namespaceTable>
+    <add namespace="String"
+         prefix="String" />
+  </namespaceTable>
+</routing>
 ```  
   
 ```csharp  
@@ -35,7 +39,7 @@ Representa um elemento de configuração que contém o namespace para mapeamento
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |namespace|Uma cadeia de caracteres que contém o namespace.|  
-|Prefixo|Uma cadeia de caracteres que contém o prefixo para esse namespace.|  
+|Prefixo|Uma cadeia de caracteres que contém o prefixo para este namespace.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -44,7 +48,7 @@ Representa um elemento de configuração que contém o namespace para mapeamento
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<namespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Representa uma seção de configuração para definir um conjunto de elementos que contêm namespace para mapeamentos de prefixo que podem ser usadas em filtros de XPath para roteamento.|  
+|[\<namespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|Representa uma seção de configuração para definir um conjunto de elementos que contêm namespace para mapeamentos de prefixo que pode ser usado em filtros de XPath para roteamento.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    

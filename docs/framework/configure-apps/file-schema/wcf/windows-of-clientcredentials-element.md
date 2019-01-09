@@ -2,12 +2,12 @@
 title: '&lt;windows&gt; do elemento &lt;clientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 9badcfafff4bc09a16b0b9a565a9ea5c01e26bb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 780d73b747feae5495ad08cb2324e7d8f8de0d7d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767057"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147467"
 ---
 # <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; do elemento &lt;clientCredentials&gt;
 Especifica as configurações para uma credencial do Windows a ser usado para representar o cliente.  
@@ -15,17 +15,15 @@ Especifica as configurações para uma credencial do Windows a ser usado para re
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento >  
+\<comportamento de >  
 \<clientCredentials>  
 \<Windows >  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<windows   
-    allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"  
-        allowNtlm="Boolean"  
-/>  
+<windows allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"
+         allowNtlm="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -35,8 +33,8 @@ Especifica as configurações para uma credencial do Windows a ser usado para re
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem o seguinte:<br /><br /> -Identificação: O servidor pode obter a identidade e os privilégios do cliente, mas não é possível representar o cliente.<br />-Representação: O servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegação: O servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônima: O servidor não pode representar ou identificar o cliente.<br />-Nenhum: Um nível de representação não está atribuído.<br /><br /> O padrão é a identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Definir essa propriedade como `true` permite que a autenticação rebaixar para NTLM se Kerberos não estiver disponível.<br /><br /> Definir essa propriedade como `false` faz com que o Windows Communication Foundation (WCF) para fazer um esforço para lançar uma exceção se NTLM é usado. Observe que a definição dessa propriedade `false` talvez não impeçam que as credenciais do NTLM seja enviado pela conexão.|  
+|`allowedImpersonationLevel`|Define a preferência de representação que o cliente se comunica com o servidor. O modo de representação que o cliente seleciona não é imposto no servidor. Os valores válidos incluem o seguinte:<br /><br /> -Identificação: O servidor pode obter a identidade e os privilégios do cliente, mas não pode representar o cliente.<br />-Representação: O servidor pode representar o contexto de segurança do cliente no sistema local.<br />-Delegação: O servidor pode representar o contexto de segurança do cliente em sistemas remotos.<br />-Anônimo: O servidor não pode representar ou identificar o cliente.<br />-None: Não há um nível de representação atribuído.<br /><br /> O padrão é a identificação. Esse atributo é do tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Definir essa propriedade como `true` permite a autenticação rebaixar para NTLM se Kerberos não estiver disponível.<br /><br /> Definir essa propriedade como `false` faz com que o Windows Communication Foundation (WCF) para fazer um esforço para lançar uma exceção se NTLM for usado. Observe que a definição dessa propriedade `false` talvez não impeçam que as credenciais do NTLM sejam enviados durante a transmissão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

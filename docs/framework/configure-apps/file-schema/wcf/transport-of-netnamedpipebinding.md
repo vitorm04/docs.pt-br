@@ -2,12 +2,12 @@
 title: '&lt;transporte&gt; de &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837044"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148975"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transporte&gt; de &lt;netNamedPipeBinding&gt;
 Define as configurações de segurança de transporte para um pipe nomeado.  
@@ -22,13 +22,13 @@ Define as configurações de segurança de transporte para um pipe nomeado.
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding>  
-      <security mode="None/Transport">  
-            <transport protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -38,7 +38,7 @@ Define as configurações de segurança de transporte para um pipe nomeado.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|protectionLevel|Define o nível de proteção de pipe nomeado. Assinar mensagens minimiza o risco de um terceiro violação da mensagem enquanto estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
+|protectionLevel|Define o nível de proteção de pipe nomeado. Assinar mensagens minimiza o risco de um terceiro violação da mensagem enquanto estão sendo transferidos. A criptografia fornece privacidade de nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -None: Sem proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  

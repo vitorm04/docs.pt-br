@@ -2,15 +2,15 @@
 title: '&lt;bookmarkResumptionQueries&gt; do WCF'
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147639"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146076"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; do WCF
-
+  
 Representa uma coleção de consultas que são usados para controlar a continuação de um indicador dentro de uma instância de fluxo de trabalho. A consulta é necessária para um participante de rastreamento assinar os registros de continuação do indicador.  
   
 Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
@@ -25,7 +25,7 @@ Para obter mais informações sobre consultas de perfil de controle, consulte [p
   
 ## <a name="syntax"></a>Sintaxe  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,15 +36,15 @@ Para obter mais informações sobre consultas de perfil de controle, consulte [p
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>Atributos e elementos
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>Atributos e elementos  
+  
 As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
-### <a name="attributes"></a>Atributos
-
+### <a name="attributes"></a>Atributos  
+  
 nenhuma.  
   
 ### <a name="child-elements"></a>Elementos filho  

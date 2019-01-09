@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 50cc8fdbf175a7148795078e4d243df21d34a40e
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c2f4a0787f6027d7f57891d4e219758c4a7054ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308507"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145842"
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;System. ServiceModel&gt;
 Esta seção de configuração contém todos os elementos de configuração de ServiceModel do Windows Communication Foundation (WCF).  
@@ -21,34 +21,34 @@ Esta seção de configuração contém todos os elementos de configuração de S
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<system.serviceModel>  
-  <behaviors>  
-  </behaviors>  
-  <bindings>  
-  </bindings>  
-  <client>  
-  </client>  
-  <comContracts>  
-  </comContracts>  
-  <commonBehaviors>  
-  </commonBehaviors>  
-  <diagnostics>  
-  </diagnostics>  
-  <extensions>  
+<system.serviceModel>
+  <behaviors>
+  </behaviors>
+  <bindings>
+  </bindings>
+  <client>
+  </client>
+  <comContracts>
+  </comContracts>
+  <commonBehaviors>
+  </commonBehaviors>
+  <diagnostics>
+  </diagnostics>
+  <extensions>
   </extensions>
   <protocolMapping>
   </protocolMapping>
   <routing>
-  </routing>  
-  <serviceHostingEnvironment>  
-  </serviceHostingEnvironment>  
-  <services>  
+  </routing>
+  <serviceHostingEnvironment>
+  </serviceHostingEnvironment>
+  <services>
   </services>
-  <standardEndpoints>  
+  <standardEndpoints>
   </standardEndpoints>
   <tracking>
   </tracking>
-</system.serviceModel>  
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -98,31 +98,33 @@ Esta seção de configuração contém todos os elementos de configuração de S
  Este é um exemplo de um arquivo de configuração do WCF.  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-    <system.serviceModel>  
-        <behaviors>  
-           <!-- List of Behaviors -->  
-        </behaviors>  
-        <client>  
-           <!-- List of Endpoints -->  
-        </client>  
-        <diagnostics wmiProviderEnabled="false" performanceCountersEnabled="false" tracingEnabled="false">  
-        </diagnostics>  
-        <serviceHostingEnvironment>  
-           <!-- List of entries -->  
-        </serviceHostingEnvironment>  
-        <comContracts>  
-           <!-- List of COM+ Contracts -->  
-        </comContracts>          
-        <services>  
-           <!-- List of Services -->  
-        </services>  
-        <bindings>  
-           <!-- List of Bindings -->  
-        </bindings>  
-    </system.serviceModel>  
-</configuration>  
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <behaviors>
+      <!-- List of Behaviors -->
+    </behaviors>
+    <client>
+      <!-- List of Endpoints -->
+    </client>
+    <diagnostics wmiProviderEnabled="false"
+                 performanceCountersEnabled="false"
+                 tracingEnabled="false">
+    </diagnostics>
+    <serviceHostingEnvironment>
+      <!-- List of entries -->
+    </serviceHostingEnvironment>
+    <comContracts>
+      <!-- List of COM+ Contracts -->
+    </comContracts>
+    <services>
+      <!-- List of Services -->
+    </services>
+    <bindings>
+      <!-- List of Bindings -->
+    </bindings>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Consulte também  

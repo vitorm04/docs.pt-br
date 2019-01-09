@@ -2,15 +2,15 @@
 title: '&lt;BaseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 8de962cc70e1399dd1e9459473055651f9aca5fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0af5dee41c6adf560c90874e6e9a44b62c5decc6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747480"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147338"
 ---
 # <a name="ltbaseaddressesgt"></a>&lt;BaseAddresses&gt;
-Representa uma coleção de `baseAddress` elementos, que são endereços de base para um host de serviço em um ambiente de hospedagem interna. Se um endereço base estiver presente, os pontos de extremidade podem ser configurados com endereços em relação ao endereço base.  
+Representa uma coleção de `baseAddress` elementos, que são os endereços base para um host de serviço em um ambiente auto-hospedado. Se um endereço base estiver presente, os pontos de extremidade podem ser configurados com endereços em relação ao endereço base.  
   
  \<system.ServiceModel>  
 \<client>  
@@ -21,9 +21,9 @@ Representa uma coleção de `baseAddress` elementos, que são endereços de base
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<baseAddresses>  
-   <add baseAddress="string" />  
-</baseAddresses>  
+<baseAddresses>
+  <add baseAddress="string" />
+</baseAddresses>
 ```  
   
 ## <a name="type"></a>Tipo  

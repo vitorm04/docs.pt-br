@@ -2,12 +2,12 @@
 title: '&lt;privacyNoticeAt&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: 2914a3716b9e2adb6ebc47fd73ccee027a3b65da
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 104b2b6399ea31273045e43be716947db110715d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749238"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147311"
 ---
 # <a name="ltprivacynoticeatgt"></a>&lt;privacyNoticeAt&gt;
 Representa um elemento de configuração que especifica um aviso de privacidade usado na associação `wsFederationHttp`.  
@@ -21,8 +21,8 @@ Representa um elemento de configuração que especifica um aviso de privacidade 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<privacyNotice url="String"  
-        version="Integer" />  
+<privacyNotice url="String"
+               version="Integer" />
 ```  
   
 ## <a name="type"></a>Tipo  
@@ -45,7 +45,7 @@ Representa um elemento de configuração que especifica um aviso de privacidade 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>  

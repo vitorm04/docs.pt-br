@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149594"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Define um transporte que faz com que um canal transferir mensagens usando pipes nomeados quando ele é incluído em uma associação personalizada.  
@@ -20,22 +20,22 @@ Define um transporte que faz com que um canal transferir mensagens usando pipes 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```xml
-<namedPipeTransport channelInitializationTimeout="TimeSpan"   
-                    connectionBufferSize="Integer"   
-                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-                    manualAddressing="Boolean"   
-                    maxBufferPoolSize="Integer"  
-                    maxBufferSize="Integer"  
-                    maxOutputDelay="TimeSpan"  
-                    maxPendingAccepts="Integer"   
-                    maxPendingConnections="Integer"  
-                    maxReceivedMessageSize="Integer"   
-                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">  
-  <connectionPoolSettings groupName="String" 
-                          idleTimeout"TimeSpan"  
-                          maxOutboundConnectionsPerEndpopint="Integer" />  
-</namedPipeTransport>  
+```xml  
+<namedPipeTransport channelInitializationTimeout="TimeSpan"
+                    connectionBufferSize="Integer"
+                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+                    manualAddressing="Boolean"
+                    maxBufferPoolSize="Integer"
+                    maxBufferSize="Integer"
+                    maxOutputDelay="TimeSpan"
+                    maxPendingAccepts="Integer"
+                    maxPendingConnections="Integer"
+                    maxReceivedMessageSize="Integer"
+                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</namedPipeTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -48,7 +48,7 @@ nenhuma.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Obtém ou define um <xref:System.TimeSpan> que determina o tempo máximo que um canal pode estar com o status de inicialização antes de ser desconectado.|  
+|channelInitializationTimeout|Obtém ou define um <xref:System.TimeSpan> que determina o tempo máximo que um canal pode estar com o status de inicialização antes de ser desconectado.|  
 |connectionBufferSize|Obtém ou define o tamanho do buffer usado para transmitir uma parte da mensagem serializada na conexão do cliente ou do serviço.|  
 |hostNameComparisonMode|Obtém ou define um valor que indica se o nome do host é usado para alcançar o serviço ao fazer correspondência no URI.|  
 |manualAddressing|Obtém ou define um valor que indica se o endereçamento manual da mensagem é necessário.|  
@@ -65,12 +65,12 @@ nenhuma.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
-Esse transporte usa URIs no formato "net.pipe://hostname/path". Outros componentes do URI são opcionais.  
+Esse transporte usa URIs do formulário "net.pipe://hostname/path". Outros componentes do URI são opcionais.  
   
-O `namedPipeTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte de pipes nomeados. Esse transporte é usado para em computadores Windows Communication Foundation (WCF) - para - comunicação WCF.  
+O `namedPipeTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte de pipes nomeados. Esse transporte é usada para em computadores Windows Communication Foundation (WCF) - para - comunicação WCF.  
   
 ## <a name="see-also"></a>Consulte também  
 <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
@@ -78,7 +78,7 @@ O `namedPipeTransport` elemento é o ponto de partida para criar uma associaçã
 <xref:System.ServiceModel.Channels.TransportBindingElement>   
 <xref:System.ServiceModel.Channels.CustomBinding>   
 [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)   
-[Selecionando um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
+[Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
 [Associações](../../../../../docs/framework/wcf/bindings.md)   
 [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
 [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)   

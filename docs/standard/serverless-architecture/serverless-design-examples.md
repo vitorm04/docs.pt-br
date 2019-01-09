@@ -4,12 +4,12 @@ description: Entenda a variedade de cenários com suporte pelo arquiteturas sem 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146700"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149671"
 ---
 # <a name="serverless-design-examples"></a>Exemplos de design sem servidor
 
@@ -65,7 +65,7 @@ Funções sem servidor podem ser usadas para facilitar a um pipeline de dados. N
 
 ## <a name="stream-processing"></a>Processamento de Stream
 
-Dispositivos e sensores geralmente geram fluxos de dados que devem ser processados em tempo real. Há várias tecnologias que podem capturar mensagens e fluxos a partir de [dos Hubs de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) e [IoT Hub](https://docs.microsoft.com/azure/iot-hub) para [do barramento de serviço](/service-bus). Independentemente do transporte, sem servidor é um mecanismo ideal para processar as mensagens e os fluxos de dados conforme eles chegam. Sem servidor pode ser dimensionados rapidamente para atender à demanda de grandes volumes de dados. O código sem servidor pode aplicar a lógica de negócios para analisar os dados e a saída em um formato estruturado para análise e ação.
+Dispositivos e sensores geralmente geram fluxos de dados que devem ser processados em tempo real. Há várias tecnologias que podem capturar mensagens e fluxos a partir de [dos Hubs de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) e [IoT Hub](https://docs.microsoft.com/azure/iot-hub) para [do barramento de serviço](https://docs.microsoft.com/azure/service-bus). Independentemente do transporte, sem servidor é um mecanismo ideal para processar as mensagens e os fluxos de dados conforme eles chegam. Sem servidor pode ser dimensionados rapidamente para atender à demanda de grandes volumes de dados. O código sem servidor pode aplicar a lógica de negócios para analisar os dados e a saída em um formato estruturado para análise e ação.
 
 ![Processamento de fluxo sem servidor](./media/serverless-stream-processing.png)
 

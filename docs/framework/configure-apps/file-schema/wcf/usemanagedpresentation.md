@@ -2,15 +2,15 @@
 title: '&lt;useManagedPresentation&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 35af7f5e10594617807384c20ab706ad675d11ef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a60e1e16b9b41cc5df4ded51cc05d6109dd7b3dc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755286"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147701"
 ---
 # <a name="ltusemanagedpresentationgt"></a>&lt;useManagedPresentation&gt;
-Um elemento de associação usado para comunicar-se com um serviço de token de segurança de CardSpace que dá suporte ao perfil CardSpace de WS-Trust. Esse elemento não tem nenhum atributo e está presente como uma chave vazia.  
+Um elemento de associação usado para comunicar-se com um serviço de token de segurança de CardSpace que dá suporte ao perfil CardSpace de WS-Trust. Esse elemento não tem nenhum atributo e está presente como um comutador vazio.  
   
  \<system.serviceModel>  
 \<associações >  
@@ -21,7 +21,7 @@ Um elemento de associação usado para comunicar-se com um serviço de token de 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<useManagedPresentation/>  
+<useManagedPresentation />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -37,10 +37,10 @@ Um elemento de associação usado para comunicar-se com um serviço de token de 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento é usado por um provedor de identidade para expressar em sua política o fato de que ele oferece suporte o perfil CardSpace de WS-Trust. Provedores de identidade que uma declaração de política desse tipo de publicação devem ser capazes de emitir tokens com base no perfil CardSpace.  
+ Esse elemento é usado por um provedor de identidade para expressar em sua diretiva, o fato de que ele oferece suporte a perfil CardSpace de WS-Trust. Provedores de identidade que tal uma declaração de política de publicação devem ser capazes de emitir tokens com base no perfil CardSpace.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>  
