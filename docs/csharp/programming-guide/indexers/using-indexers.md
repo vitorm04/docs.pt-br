@@ -1,15 +1,16 @@
 ---
-title: Usando indexadores (Guia de Programação em C#)
+title: Como usar indexadores – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 0bb7b848f5484b78e8dae0c40320e7945b78eea0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8c0d145fab69e60a12ebb8b28f087ab643e508b9
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873447"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397053"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Usando indexadores (Guia de Programação em C#)
 
@@ -56,7 +57,7 @@ O exemplo a seguir mostra como declarar um campo de matriz privada, `temps` e um
   
 ## <a name="indexing-using-other-values"></a>Indexando usando outros valores
 
-O C# não limita o tipo de índice ao inteiro. Por exemplo, talvez seja útil usar uma cadeia de caracteres com um indexador. Esse indexador pode ser implementado pesquisando a cadeia de caracteres na coleção e retornando o valor adequado. Como os acessadores podem ser sobrecarregados, as versões do inteiro e da cadeia de caracteres podem coexistir.  
+O C# não limita o tipo de parâmetro do indexador ao inteiro. Por exemplo, talvez seja útil usar uma cadeia de caracteres com um indexador. Esse indexador pode ser implementado pesquisando a cadeia de caracteres na coleção e retornando o valor adequado. Como os acessadores podem ser sobrecarregados, as versões do inteiro e da cadeia de caracteres podem coexistir.  
   
 ## <a name="example-2"></a>Exemplo 2  
   

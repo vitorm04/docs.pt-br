@@ -1,17 +1,15 @@
 ---
-title: Visão geral de imagens do Docker – .NET Core
+title: Visão geral das imagens do Docker
 description: Saiba como usar as imagens publicadas do Docker do .NET Core no Registro do Docker. Você também aprenderá a efetuar pull de imagens e compilar suas próprias imagens.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145826"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656031"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>Saiba mais sobre imagens do Docker para .NET Core
 
@@ -36,11 +34,11 @@ Ao criar imagens do Docker para desenvolvedores, nos concentramos em três cená
 Por que três imagens?
 Ao desenvolver, compilar e executar aplicativos em contêineres, temos prioridades diferentes.
 
-* **Desenvolvimento:** a prioridade enfoca em iterar alterações rapidamente e na capacidade de depurar as alterações. O tamanho da imagem não é tão importante. Em vez disso, você pode fazer alterações no código e observá-las rapidamente?
+* **Desenvolvimento:**  A prioridade tem como foco a rápida iteração de alterações e a capacidade de depurá-las. O tamanho da imagem não é tão importante. Em vez disso, você pode fazer alterações no código e observá-las rapidamente?
 
-* **Build:** essa imagem contém tudo o que é necessário para compilar o aplicativo, que inclui o compilador e outras dependências para otimizar os binários.  Use a imagem de build para criar os ativos colocados em uma imagem de produção. A imagem de build será usada para a integração contínua ou em um ambiente de build. Essa abordagem permite que um agente de build compile o aplicativo (com todas as dependências necessárias) em uma instância de imagem de build. O agente de build precisa saber apenas como executar essa imagem do Docker.
+* **Build:** Essa imagem contém tudo o que é necessário para compilar o aplicativo, que inclui o compilador e outras dependências para otimizar os binários.  Use a imagem de build para criar os ativos colocados em uma imagem de produção. A imagem de build será usada para a integração contínua ou em um ambiente de build. Essa abordagem permite que um agente de build compile o aplicativo (com todas as dependências necessárias) em uma instância de imagem de build. O agente de build precisa saber apenas como executar essa imagem do Docker.
 
-* **Produção:** em quanto tempo você pode implantar e iniciar a imagem? Essa imagem é pequena e, portanto, o desempenho de rede do Registro do Docker para os hosts do Docker é otimizado. O conteúdo está pronto para ser executado e habilitar o tempo mais rápido possível da execução do Docker até o processamento de resultados. A compilação de código dinâmico não é necessária no modelo do Docker. O conteúdo colocado nesta imagem ficaria limitado aos binários e conteúdos necessários para executar o aplicativo.
+* **Produção:** Em quanto tempo você pode implantar e iniciar a imagem? Essa imagem é pequena e, portanto, o desempenho de rede do Registro do Docker para os hosts do Docker é otimizado. O conteúdo está pronto para ser executado e habilitar o tempo mais rápido possível da execução do Docker até o processamento de resultados. A compilação de código dinâmico não é necessária no modelo do Docker. O conteúdo colocado nesta imagem ficaria limitado aos binários e conteúdos necessários para executar o aplicativo.
 
     Por exemplo, a saída `dotnet publish` contém:
 
@@ -63,13 +61,13 @@ Para atingir as metas descritas acima, fornecemos variantes de imagem em [`micro
 > [!TIP]
 > Caso não tenha certeza sobre suas necessidades, é recomendável usar a imagem `microsoft/dotnet:<version>-sdk`. Como a imagem “de fato”, ela foi projetada para ser usada como um contêiner de descarte (montar o código-fonte e iniciar o contêiner para iniciar o aplicativo) e como a imagem base para criar outras imagens.
 
-* `microsoft/dotnet:<version>-runtime`: essa imagem contém o .NET Core (tempo de execução e bibliotecas) e é otimizada para executar aplicativos .NET Core em **produção**.
+* `microsoft/dotnet:<version>-runtime`: Essa imagem contém o .NET Core (tempo de execução e bibliotecas) e é otimizada para executar aplicativos .NET Core em **produção**.
 
 ## <a name="alternative-images"></a>Imagens alternativas
 
 Além dos cenários otimizados de desenvolvimento, build e produção, fornecemos imagens adicionais:
 
-* `microsoft/dotnet:<version>-runtime-deps`: a imagem **runtime-deps** contém o sistema operacional com todas as dependências nativas exigidas pelo .NET Core. Essa imagem destina-se a [aplicativos autossuficientes](../deploying/index.md).
+* `microsoft/dotnet:<version>-runtime-deps`: A imagem **runtime-deps** contém o sistema operacional com todas as dependências nativas necessárias para o .NET Core. Essa imagem destina-se a [aplicativos autossuficientes](../deploying/index.md).
 
 Versões mais recentes de cada variante:
 

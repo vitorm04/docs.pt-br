@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 77caa7c84f63f90ae83df5685f93ba6d18f7436f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ede7bc8a6c2a45630c48417c7ab90eb8decdc39
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548260"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029431"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
-Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> origem de associação a ser usado dentro de um [extensão de marcação de associação](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), ou ao definir o <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedade de um <xref:System.Windows.Data.Binding> elemento estabelecido em XAML.  
+Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> origem da associação, a ser usado dentro de uma [extensão de marcação de associação](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), ou ao configurar o <xref:System.Windows.Data.Binding.RelativeSource%2A> propriedade de um <xref:System.Windows.Data.Binding> elemento estabelecido em XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Uso do Atributo XAML  
   
@@ -37,7 +37,9 @@ Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> orige
     <RelativeSource Mode="modeEnumValue"/>  
   </Binding.RelativeSource>  
 </Binding>  
-- or   
+```
+-ou-  
+```xml
 <Binding>  
   <Binding.RelativeSource>  
     <RelativeSource  
@@ -63,7 +65,7 @@ Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> orige
   
  O `{RelativeSource FindAncestor}` é usado principalmente em modelos de controle ou em composições de interface do usuário independentes previsíveis para casos em que um controle deve estar sempre em uma árvore visual de um determinado tipo de ancestral. Por exemplo, os itens de um controle de itens podem utilizar os usos `FindAncestor` para se associar às propriedades do ancestral pai do controle de itens. Ou, os elementos que fazem parte da composição de controle em um modelo podem usar associações `FindAncestor` para elementos pai na mesma estrutura da composição.  
   
- Na sintaxe de elemento de objeto do modo `FindAncestor` exibida nas seções de Sintaxe XAML, a segunda sintaxe de elemento de objeto é usada especificamente para o modo `FindAncestor`. O modo `FindAncestor` requer um valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Você deve definir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> como um atributo usando um [x: tipo de extensão de marcação](../../../../docs/framework/xaml-services/x-type-markup-extension.md) referência para o tipo de ancestral a ser procurado. O valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A> é usado quando a requisição de associação é processada em tempo de execução.  
+ Na sintaxe de elemento de objeto do modo `FindAncestor` exibida nas seções de Sintaxe XAML, a segunda sintaxe de elemento de objeto é usada especificamente para o modo `FindAncestor`. O modo `FindAncestor` requer um valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Você deve definir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> como um atributo usando um [extensão de marcação X:Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) referência para o tipo de ancestral a ser procurado. O valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A> é usado quando a requisição de associação é processada em tempo de execução.  
   
  Para o modo `FindAncestor`, a propriedade opcional <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> pode ajudar a desambiguar a consulta de ancestral em casos em que exista possivelmente mais de um ancestral daquele tipo na árvore de elemento.  
   
@@ -75,7 +77,7 @@ Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> orige
   
  O `{RelativeSource PreviousData}` é útil em modelos de dados ou em casos em que as associações estão usando uma coleção como a fonte de dados. Você pode usar `{RelativeSource PreviousData}` para realçar relacionamentos entre itens de dados adjacentes na coleção. Uma técnica relacionada é estabelecer um <xref:System.Windows.Data.MultiBinding> entre os itens atuais e anteriores na fonte de dados, e usar um conversor nessa associação para determinar a diferença entre os dois itens e suas propriedades.  
   
- No exemplo a seguir, o primeiro <xref:System.Windows.Controls.TextBlock> no modelo de itens exibe o número atual. A segunda <xref:System.Windows.Controls.TextBlock> associação é uma <xref:System.Windows.Data.MultiBinding> que tem duas uma <xref:System.Windows.Data.Binding> consistuents: o registro atual e uma associação que deliberadamente usa o registro de dados anterior usando `{RelativeSource PreviousData}`. Em seguida, um conversor em <xref:System.Windows.Data.MultiBinding> calcula a diferença e retorne à associação.  
+ No exemplo a seguir, o primeiro <xref:System.Windows.Controls.TextBlock> no modelo de itens exibe o número atual. A segunda <xref:System.Windows.Controls.TextBlock> associação é um <xref:System.Windows.Data.MultiBinding> que tem dois <xref:System.Windows.Data.Binding> constituintes: o registro atual e uma associação que usa deliberadamente o registro de dados anterior usando `{RelativeSource PreviousData}`. Em seguida, um conversor em <xref:System.Windows.Data.MultiBinding> calcula a diferença e retorne à associação.  
   
 ```xml  
 <ListBox Name="fibolist">  
@@ -99,7 +101,7 @@ Especifica as propriedades de um <xref:System.Windows.Data.RelativeSource> orige
   
  A descrição de vinculação de dados como um conceito não é abordado aqui; consulte [Visão geral de vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementação do processador XAML, o tratamento para esta extensão de marcação é definida pelo <xref:System.Windows.Data.RelativeSource> classe.  
+ No [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementação do processador XAML, o tratamento para essa extensão de marcação é definido pelo <xref:System.Windows.Data.RelativeSource> classe.  
   
  `RelativeSource` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres `{` e `}` na sintaxe de atributo, que é a convenção pela qual o processador XAML reconhece que uma extensão de marcação precisa processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f90853a93b40eeb72f07ad9b1849aa99c8e8bf3d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c0d71bef4ad68c2fea63cec413e8bd17b78df1d0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745182"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614319"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; Element
 Especifica que a identidade do Windows não flua entre pontos assíncronos, independentemente das configurações de fluxo para o contexto de execução no thread atual.  
@@ -38,14 +38,14 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica que o <xref:System.Security.Principal.WindowsIdentity> não fluem pelos pontos assíncronos, independentemente do <xref:System.Threading.ExecutionContext> fluxo configurações no thread atual.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica que o <xref:System.Security.Principal.WindowsIdentity> não flua entre pontos assíncronos, independentemente do <xref:System.Threading.ExecutionContext> configurações no thread atual de fluxo.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity> fluxos pelos pontos assíncronos, dependendo do modo de <xref:System.Threading.ExecutionContext> fluxo configurações para o thread atual. Esse é o padrão.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity> fluxo não pelos pontos assíncronos, independentemente do <xref:System.Threading.ExecutionContext> fluxo configurações no thread atual.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> fluxos entre pontos assíncronos de acordo com o <xref:System.Threading.ExecutionContext> configurações para o thread atual de fluxo. Esse é o padrão.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> não flua entre pontos assíncronos, independentemente do <xref:System.Threading.ExecutionContext> configurações no thread atual de fluxo.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -58,31 +58,31 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Nas versões do .NET Framework 1.0 e 1.1, o <xref:System.Security.Principal.WindowsIdentity> não flua por quaisquer pontos assíncronos definido pelo usuário. Iniciando com o .NET Framework versão 2.0, há um <xref:System.Threading.ExecutionContext> fluxos de objeto que contém informações sobre o thread em execução no momento e pelos pontos assíncronos dentro de um domínio de aplicativo. O <xref:System.Security.Principal.WindowsIdentity> está incluído neste contexto de execução e, portanto, também passa pelos pontos assíncronos, que significa que se existir um contexto de representação, ele irá fluir também.  
+ Nas versões do .NET Framework 1.0 e 1.1, o <xref:System.Security.Principal.WindowsIdentity> não flua entre quaisquer pontos assíncronos definidos pelo usuário. Começando com o .NET Framework versão 2.0, há um <xref:System.Threading.ExecutionContext> objeto que contém informações sobre o thread em execução no momento e ele flua entre pontos assíncronos dentro de um domínio de aplicativo. O <xref:System.Security.Principal.WindowsIdentity> está incluído neste contexto de execução e, portanto, também flui entre pontos assíncronos, que significa que se um contexto de representação existir, ele fará o fluxo também.  
   
- Começando com o .NET Framework 2.0, você pode usar o `<legacyImpersonationPolicy>` elemento para especificar que <xref:System.Security.Principal.WindowsIdentity> não fluem pelos pontos assíncronos.  
+ Começando com o .NET Framework 2.0, você pode usar o `<legacyImpersonationPolicy>` elemento para especificar que <xref:System.Security.Principal.WindowsIdentity> não flua entre pontos assíncronos.  
   
 > [!NOTE]
->  O common language runtime (CLR) está ciente das operações executadas usando somente código gerenciado, não de representação executada fora do código gerenciado, como por meio da plataforma chamar código não gerenciado ou por meio de chamadas diretas para funções do Win32 de representação. Somente gerenciado <xref:System.Security.Principal.WindowsIdentity> objetos possam fluir entre pontos assíncronos, a menos que o `alwaysFlowImpersonationPolicy` elemento foi definido como true (`<alwaysFlowImpersonationPolicy enabled="true"/>`). Definindo o `alwaysFlowImpersonationPolicy` elemento como true especifica que a identidade do Windows sempre flui pelos pontos assíncronos, independentemente de como a representação foi executada. Para obter mais informações sobre o fluxo não gerenciado a representação pelos pontos assíncronos, consulte [ \<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
+>  O common language runtime (CLR) está ciente da representação de invocação de operações executadas usando apenas código gerenciado, não de representação executada fora do código gerenciado, como por meio de plataforma para código não gerenciado ou por meio de chamadas diretas a funções do Win32. Somente gerenciado <xref:System.Security.Principal.WindowsIdentity> objetos possam fluir entre pontos assíncronos, a menos que o `alwaysFlowImpersonationPolicy` elemento tiver sido definido como true (`<alwaysFlowImpersonationPolicy enabled="true"/>`). Definindo o `alwaysFlowImpersonationPolicy` elemento como true especifica que a identidade do Windows sempre fluirá por pontos assíncronos, independentemente de como a representação foi executada. Para obter mais informações sobre o fluxo não gerenciados a representação entre pontos assíncronos, consulte [ \<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
   
- Você pode alterar esse comportamento padrão de duas outras maneiras:  
+ Você pode alterar esse comportamento padrão de outras duas maneiras:  
   
 1.  No código gerenciado em uma base por thread.  
   
-     Você pode suprimir o fluxo em uma base por thread, modificando o <xref:System.Threading.ExecutionContext> e <xref:System.Security.SecurityContext> configurações usando o <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> ou <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> método.  
+     Você pode suprimir o fluxo em uma base por thread, modificando o <xref:System.Threading.ExecutionContext> e <xref:System.Security.SecurityContext> as configurações usando o <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> ou <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> método.  
   
 2.  Na chamada para a interface de hospedagem não gerenciada para carregar o common language runtime (CLR).  
   
-     Se uma interface de hospedagem não gerenciada (em vez de um executável gerenciado simple) é usada para carregar o CLR, você pode especificar um sinalizador especial na chamada para o [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) função. Para habilitar o modo de compatibilidade para todo o processo, defina o `flags` parâmetro [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) para STARTUP_LEGACY_IMPERSONATION.  
+     Se uma interface de hospedagem não gerenciada (em vez de um executável gerenciado simple) é usada para carregar o CLR, você pode especificar um sinalizador especial na chamada para o [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) função. Para habilitar o modo de compatibilidade para todo o processo, defina as `flags` parâmetro para [função CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) para STARTUP_LEGACY_IMPERSONATION.  
   
  Para obter mais informações, consulte o [ \<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Em um aplicativo do .NET Framework, esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.  
   
- Para um aplicativo ASP.NET, o fluxo de representação pode ser configurado no arquivo ASPNET encontrado na \<pasta Windows > \Microsoft.NET\Framework\vx.x.xxxx directory.  
+ Para um aplicativo ASP.NET, o fluxo de representação pode ser configurado no arquivo ASPNET config localizado no \<pasta Windows > \Microsoft.NET\Framework\vx.x.xxxx directory.  
   
- ASP.NET por padrão desabilita o fluxo de representação no arquivo ASPNET usando as seguintes configurações:  
+ ASP.NET por padrão desabilita o fluxo de representação no arquivo ASPNET config usando as seguintes configurações:  
   
 ``` xml
 <configuration>  
@@ -93,7 +93,7 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
 </configuration>  
 ```  
   
- No ASP.NET, se quiser permitir que o fluxo de representação em vez disso, você deve usar explicitamente as seguintes configurações:  
+ No ASP.NET, se você quiser permitir o fluxo de representação em vez disso, você deve usar explicitamente as seguintes configurações:  
   
 ```xml  
 <configuration>  
@@ -105,7 +105,7 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar o comportamento herdado que não passa a identidade do Windows por meio de pontos assíncronos.  
+ O exemplo a seguir mostra como especificar o comportamento herdado que não passa a identidade do Windows entre pontos assíncronos.  
   
 ```xml  
 <configuration>  
@@ -116,6 +116,6 @@ Especifica que a identidade do Windows não flua entre pontos assíncronos, inde
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<alwaysFlowImpersonationPolicy > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

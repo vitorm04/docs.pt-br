@@ -1,15 +1,16 @@
 ---
-title: Modificador new (referência em C#)
+title: Modificador new – Referência em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 496339a7c3b95f16fd13479b096d90058b0799d4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244954"
 ---
 # <a name="new-modifier-c-reference"></a>Modificador new (referência em C#)
 
@@ -51,7 +52,7 @@ Se você remover o modificador `new`, o programa ainda será compilado e executa
 The keyword new is required on 'MyDerivedC.x' because it hides inherited member 'MyBaseC.x'.
 ```
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

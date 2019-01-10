@@ -2,12 +2,12 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 0138eab4db42a64a74212d5c68f693916d7b702a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6299100a5dd29bed8d4a30bcb4fbc9631d7bf967
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582535"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145856"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Define um elemento de associação que é usado para configurar pontos de extremidade para serviços Web do Windows Communication Foundation (WCF) que respondem às solicitações HTTP em vez de mensagens SOAP.  
@@ -19,35 +19,34 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<webHttpBinding>  
-  <binding   
-    allowCookies="Boolean"  
-    bypassProxyOnLocal="Boolean"  
-    closeTimeout="TimeSpan"  
-    hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-    maxBufferPoolSize="integer"  
-    maxBufferSize="integer"  
-    maxReceivedMessageSize="Integer"  
-    name="string"  
-    openTimeout="TimeSpan"   
-    proxyAddress="URI"  
-    receiveTimeout="TimeSpan"  
-    sendTimeout="TimeSpan"  
-    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-    useDefaultWebProxy="Boolean" 
-    writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding">  
-  <security mode="None/Transport/TransportCredentialOnly">  
-    <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-               proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-               realm="string" />  
-  </security>  
-  <readerQuotas maxArrayLength="Integer" 
-                maxBytesPerRead="Integer" 
-                maxDepth="Integer" 
-                maxNameTableCharCount="Integer" 
-                maxStringContentLength="Integer" />  
-  </binding>  
-</webHttpBinding>  
+<webHttpBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="integer"
+           maxBufferSize="integer"
+           maxReceivedMessageSize="Integer"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
+           useDefaultWebProxy="Boolean"
+           writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding">
+    <security mode="None/Transport/TransportCredentialOnly">
+      <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                 proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                 realm="string" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</webHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -63,7 +62,7 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |hostnameComparisonMode|Especifica o modo de comparação de nome de host HTTP usado para analisar URIs. Esse atributo é do tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica se o nome do host é usado para acessar o serviço ao fazer a correspondência no URI. O valor padrão é <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que ignora o nome do host na correspondência.|  
 |maxBufferPoolSize|Um inteiro que especifica o tamanho do pool de buffer máximo para esta associação. O padrão é 524.288 bytes (512 * 1024). Muitas partes do Windows Communication Foundation (WCF) usam buffers. Criação e destruição de buffers de cada vez que elas são usadas são caro e coleta de lixo para buffers também é dispendiosa. Com os pools de buffer, usar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Portanto, a sobrecarga na criação e destruição de buffers é evitada.|  
 |maxBufferSize|Um inteiro que especifica a quantidade máxima de memória alocada para uso pelo Gerenciador dos buffers de mensagem que recebem mensagens do canal. O valor padrão é 524.288 (0x80000) bytes.|  
-|maxReceivedMessageSize|Um inteiro positivo que especifica o tamanho máximo da mensagem, em bytes, incluindo os cabeçalhos, que podem ser recebidos em um canal configurado com essa associação. O remetente de uma mensagem exceder esse limite receberá uma falha. O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536. **Observação:** aumentar esse valor sozinho não é suficiente no modo compatível com o ASP.NET. Você também deve aumentar o valor de `httpRuntime` (consulte [httpRuntime Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)).|  
+|maxReceivedMessageSize|Um inteiro positivo que especifica o tamanho máximo da mensagem, em bytes, incluindo os cabeçalhos, que podem ser recebidos em um canal configurado com essa associação. O remetente de uma mensagem exceder esse limite receberá uma falha. O receptor descartará a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536. **Observação:**  Aumentar esse valor sozinho não é suficiente no modo compatível com o ASP.NET. Você também deve aumentar o valor de `httpRuntime` (consulte [httpRuntime Element (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)).|  
 |name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque ele é usado como identificação para a associação. Começando com [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre a configuração padrão e sem nome associações e comportamentos, consulte [configuração simplificado](../../../../../docs/framework/wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para a conclusão de uma operação open. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
 |proxyAddress|Um URI que especifica o endereço do proxy HTTP. Se `useSystemWebProxy` está `true`, essa configuração deve ser `null`. O padrão é `null`.|  
@@ -71,7 +70,7 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |sendTimeout|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
 |transferMode.|Um <xref:System.ServiceModel.TransferMode> valor que indica se o serviço configurado com a associação usa transmitidos ou armazenados em buffer (ou ambos) modos de transferência de mensagens. O padrão é `Buffered`.|  
 |useDefaultWebProxy|Um valor booliano que especifica se o proxy HTTP configurado automaticamente do sistema é usado. O padrão é `true`.|  
-|writeEncoding|Especifica a codificação de caracteres é usada para o texto da mensagem. Os valores válidos incluem o seguinte:<br /><br /> UnicodeFffeTextEncoding: O Unicode BigEndian de codificação.<br /><br /> Utf16TextEncoding: codificação de 16 bits.<br /><br /> Utf8TextEncoding: codificação de 8 bits.<br /><br /> O padrão é Utf8TextEncoding.|  
+|writeEncoding|Especifica a codificação de caracteres é usada para o texto da mensagem. Os valores válidos incluem o seguinte:<br /><br /> UnicodeFffeTextEncoding: Unicode BigEndian de codificação.<br /><br /> Utf16TextEncoding: codificação de 16 bits.<br /><br /> Utf8TextEncoding: codificação de 8 bits.<br /><br /> O padrão é Utf8TextEncoding.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   

@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152215"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058536"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 
@@ -17,7 +17,7 @@ A pasta de solução contém uma pasta *SeedWork*. Essa pasta contém classes ba
 
 A figura 7-12 mostra as classes que formam o seedwork do modelo de domínio no microsserviço de ordenação. Ele tem algumas classes base personalizadas como Entity, ValueObject e Enumeration, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de Injeção de dependência da camada de aplicativo.
 
-![O conteúdo detalhado da pasta SeedWork, que contém interfaces e classes base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
+![O conteúdo detalhado da pasta SeedWork, contendo classes base e interfaces: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
 
 **Figura 7-12**. Um exemplo do conjunto de interfaces e de classes base "seedwork" do modelo de domínio
 
@@ -25,7 +25,7 @@ Esse é o tipo de reutilização de copiar e colar que muitos desenvolvedores co
 
 ## <a name="the-custom-entity-base-class"></a>A classe base Entity personalizada
 
-O código a seguir é um exemplo de uma classe base Entity em que é possível inserir o código que pode ser usado da mesma maneira por qualquer entidade de domínio, como a ID da entidade, [operadores de igualdade](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator), uma lista de eventos de domínio por entidade, etc.
+O código a seguir é um exemplo de uma classe base Entity em que é possível inserir o código que pode ser usado da mesma maneira por qualquer entidade de domínio, como a ID da entidade, [operadores de igualdade](~/docs/csharp/language-reference/operators/equality-comparison-operator.md), uma lista de eventos de domínio por entidade, etc.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

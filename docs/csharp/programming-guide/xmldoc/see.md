@@ -1,5 +1,6 @@
 ---
-title: '&lt;see&gt; (Guia de Programação em C#)'
+title: '&lt;see&gt; – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: c37ad869b3eb904377cd4470a85cd557f6560290
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 63476ff77f1a8286730f29149bb5b6b87779f144
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45749668"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058406"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -26,7 +27,7 @@ ms.locfileid: "45749668"
   
 #### <a name="parameters"></a>Parâmetros  
  cref = " `member`"  
- Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída.Coloque o *membro* entre aspas duplas (" ").  
+ Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída. Coloque *member* entre aspas duplas (“ ”).  
   
 ## <a name="remarks"></a>Comentários  
  Use a marca \<see> para especificar um link de dentro do texto. Use [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) para indicar que o texto deve ser colocado em uma seção Consulte também. Use o [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para criar hyperlinks internos para páginas de documentação para elementos de código.  

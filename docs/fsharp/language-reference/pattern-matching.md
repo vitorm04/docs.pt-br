@@ -1,21 +1,21 @@
 ---
-title: Correspondência padrão (F#)
-description: Saiba como os padrões são usados em F# para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.
+title: Correspondência padrão
+description: Saiba como os padrões são usados no F# para comparar dados com estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991418"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613577"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
-Os padrões são regras para transformar dados de entrada. Eles são usados em toda a linguagem F# para comparar dados com um ou mais estruturas lógicas, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.
+Os padrões são regras para transformar dados de entrada. Eles são usados em todo o F# linguagem para comparar dados com uma estrutura lógica ou estruturas, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.
 
 ## <a name="remarks"></a>Comentários
 
-Padrões são usados em muitas construções de linguagem, tais como o `match` expressão. Eles são usados quando você estiver processando argumentos para funções em `let` associações, expressões lambda e nos manipuladores de exceção associados com o `try...with` expressão. Para obter mais informações, consulte [expressões de correspondência](match-expressions.md), [associações let](functions/let-bindings.md), [expressões Lambda: A `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md), e [exceções: A `try...with` Expressão](exception-handling/the-try-with-expression.md).
+Padrões são usados em muitas construções de linguagem, tais como o `match` expressão. Eles são usados quando você estiver processando argumentos para funções em `let` associações, expressões lambda e nos manipuladores de exceção associados com o `try...with` expressão. Para obter mais informações, consulte [expressões de correspondência](match-expressions.md), [associações let](functions/let-bindings.md), [expressões Lambda: O `fun` palavra-chave](functions/lambda-expressions-the-fun-keyword.md), e [exceções: O `try...with` expressão](exception-handling/the-try-with-expression.md).
 
 Por exemplo, nos `match` expressão, o *padrão* é o que segue o símbolo de pipe.
 
@@ -103,7 +103,7 @@ match shape with
 
 Padrões ativos permitem que você defina a correspondência de padrão personalizado mais complexa. Para obter mais informações sobre padrões ativos, consulte [padrões ativos](active-patterns.md).
 
-O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de exceções, consulte [exceções: A `try...with` expressão](exception-handling/the-try-with-expression.md).
+O caso em que o identificador é uma exceção é usado na correspondência de padrões no contexto de manipuladores de exceção. Para obter informações sobre correspondência de padrões no tratamento de exceções, consulte [exceções: O `try...with` expressão](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Padrões variáveis
 

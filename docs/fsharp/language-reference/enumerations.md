@@ -1,13 +1,13 @@
 ---
-title: Enumerações (F#)
-description: Saiba como usar F# enumerações no lugar de literais para tornar seu código mais legível e sustentável.
+title: Enumerações
+description: Saiba como usar F# enumerações no lugar de literais para tornar o código mais legível e sustentável.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46003159"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611719"
 ---
 # <a name="enumerations"></a>Enumerações
 
@@ -40,7 +40,7 @@ Você pode converter facilmente enumerações para o tipo subjacente, usando o o
 
 Tipos enumerados podem ter um dos seguintes tipos de base: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, e `char`. Tipos de enumeração são representados no .NET Framework como tipos que são herdados de `System.Enum`, que por sua vez é herdado da `System.ValueType`. Assim, eles são tipos de valor que estão localizados na pilha ou embutido no objeto recipiente e qualquer valor do tipo subjacente é um valor válido da enumeração. Isso é significativo quando valores de correspondência de padrões na enumeração, porque você precisa fornecer um padrão que captura os valores sem nome.
 
-O `enum` função na biblioteca do F# pode ser usada para gerar um valor de enumeração, até mesmo um valor diferente de predefinida, valores nomeados. Você usa o `enum` funcionam da seguinte maneira.
+O `enum` funcionar a F# biblioteca pode ser usada para gerar um valor de enumeração, até mesmo um valor diferente de predefinida, valores nomeados. Você usa o `enum` funcionam da seguinte maneira.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

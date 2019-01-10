@@ -1,16 +1,17 @@
 ---
-title: Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
+title: Teste de unidade do F# no .NET Core com dotnet test e NUnit
 description: Aprenda os conceitos de teste de unidade para F# no .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo usando dotnet test e NUnit.
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: f8088dadbe92c10e2aad9cd5c3ce289612bd1a28
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241756"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171940"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612290"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Desmarque&gt; elemento para &lt;namedCaches&gt;
 Limpa todos os `namedCache` entradas na `namedCaches` coleção para um cache de memória.  
@@ -53,4 +53,4 @@ Limpa todos os `namedCache` entradas na `namedCaches` coleção para um cache de
  O `clear` elemento limpa todos os `namedCache` entradas na coleção para um cache de memória cache nomeado. Você pode usar o `clear` elemento antes de usar o `add` elemento para adicionar uma nova entrada de cache nomeado para ter certeza de que há em nenhum outro chamado caches na coleção.  
   
 ## <a name="see-also"></a>Consulte também  
- [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > (configurações de Cache)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

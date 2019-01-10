@@ -1,5 +1,5 @@
 ---
-title: '&lt;sondando&gt; elemento'
+title: '&lt;investigação&gt; elemento'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cab16e83466b5954bfebac07dd79c9a8b5e4594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744997"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612291"
 ---
-# <a name="ltprobinggt-element"></a>&lt;sondando&gt; elemento
-Especifica os subdiretórios do aplicativo base para o common language runtime pesquisar durante o carregamento de assemblies.  
+# <a name="ltprobinggt-element"></a>&lt;investigação&gt; elemento
+Especifica os subdiretórios do aplicativo base para o common language runtime quando o carregamento de assemblies de pesquisa.  
   
  \<configuration>  
 \<runtime>  
 \<assemblyBinding>  
-\<sondando >  
+\<investigação >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime p
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`privatePath`|Atributo obrigatório.<br /><br /> Especifica os subdiretórios do diretório de base do aplicativo que podem conter assemblies. Delimite cada subpasta com um ponto e vírgula.|  
+|`privatePath`|Atributo obrigatório.<br /><br /> Especifica os subdiretórios do diretório de base do aplicativo que podem conter assemblies. Delimite cada subdiretório com um ponto e vírgula.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -53,7 +53,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime p
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como especificar o tempo de execução deve procurar por assemblies de subdiretórios base do aplicativo.  
+ O exemplo a seguir mostra como especificar o tempo de execução deve procurar assemblies de base e subdiretórios do aplicativo.  
   
 ```xml  
 <configuration>  
@@ -66,7 +66,7 @@ Especifica os subdiretórios do aplicativo base para o common language runtime p
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Especificando o local de um assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Especificando o local de um assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

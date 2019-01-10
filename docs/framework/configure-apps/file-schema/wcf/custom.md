@@ -2,12 +2,12 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1978c898039a6ff9ab3303427951c214cde96e24
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838944"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145739"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 Especifica configurações para um serviço de resolvedor de pares personalizado.  
@@ -21,12 +21,12 @@ Especifica configurações para um serviço de resolvedor de pares personalizado
   
 ## <a name="syntax"></a>Sintaxe  
   
-```xml
-<custom address="Uri" 
-        resolverType="String">  
-  <headers/>  
-  <identity/>  
-</custom>  
+```xml  
+<custom address="Uri"
+        resolverType="String">
+  <headers/>
+  <identity/>
+</custom>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  

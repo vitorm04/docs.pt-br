@@ -2,15 +2,15 @@
 title: '&lt;transporte&gt; de &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756417"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148937"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transporte&gt; de &lt;peerTransport&gt;
-Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurados com essa associação.  
+Especifica o tipo de transporte para mensagens protegidas enviadas pelos pares configurados com essa associação.  
   
  \<system.serviceModel>  
 \<associações >  
@@ -23,13 +23,13 @@ Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurad
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<security>  
-   <transport credentialType="Certificate/Password" />  
-</security>         
+<security>
+  <transport credentialType="Certificate/Password" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os elementos pai de atributos e elementos filho  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -41,7 +41,7 @@ Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurad
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|certificado|A autenticação do transporte de canal par requer um certificado X509.|  
+|Certificado|A autenticação do transporte de canal par requer um certificado X509.|  
 |Senha|A autenticação do transporte de canal par requer uma senha correta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -54,7 +54,7 @@ Especifica o tipo de transporte seguro mensagens enviadas pelos pares configurad
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Define as configurações de segurança para um transporte de par.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento é definido somente se o atributo de modo de [ \<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) é definido como `Transport` ou `TransportWithMessageCredential`.  
+ Esse elemento será definido somente se o atributo do modo de [ \<segurança >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) é definido como `Transport` ou `TransportWithMessageCredential`.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  

@@ -1,13 +1,13 @@
 ---
-title: Arquivos de assinatura (F#)
-description: Saiba como usar arquivos de assinatura do F# para manter informações sobre as assinaturas públicas de um conjunto de F# elementos do programa, como tipos, namespaces e módulos.
+title: Arquivos de assinatura
+description: Saiba como usar F# arquivos de assinatura para manter informações sobre as assinaturas públicas de um conjunto de F# elementos, como tipos, namespaces e módulos do programa.
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991227"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613408"
 ---
 # <a name="signatures"></a>Assinaturas
 
@@ -15,13 +15,13 @@ Um arquivo de assinatura contém informações sobre as assinaturas públicas de
 
 ## <a name="remarks"></a>Comentários
 
-Para cada arquivo de código F#, você pode ter um *arquivo de assinatura*, que é um arquivo que tem o mesmo nome que o arquivo de código, mas com o. FSI de extensão em vez de. FS. Arquivos de assinatura também podem ser adicionados à compilação de linha de comando se você estiver usando a linha de comando diretamente. Para distinguir entre arquivos de código e arquivos de assinatura, arquivos de código são às vezes chamados de *arquivos de implementação*. Em um projeto, o arquivo de assinatura deve preceder o arquivo de código associado.
+Para cada F# arquivo de código, você pode ter um *arquivo de assinatura*, que é um arquivo que tem o mesmo nome que o arquivo de código, mas com o. FSI de extensão em vez de. FS. Arquivos de assinatura também podem ser adicionados à compilação de linha de comando se você estiver usando a linha de comando diretamente. Para distinguir entre arquivos de código e arquivos de assinatura, arquivos de código são às vezes chamados de *arquivos de implementação*. Em um projeto, o arquivo de assinatura deve preceder o arquivo de código associado.
 
 Um arquivo de assinatura descreve os namespaces, módulos, tipos e membros no arquivo de implementação correspondente. Use as informações em um arquivo de assinatura para especificar quais partes do código na implementação correspondente arquivo pode ser acessado pelo código fora do arquivo de implementação e quais partes são internos ao arquivo de implementação. Os namespaces, módulos e tipos que são incluídos no arquivo de assinatura devem ser um subconjunto dos namespaces, módulos e tipos que são incluídos no arquivo de implementação. Com algumas exceções indicadas neste tópico, os elementos de linguagem que não estão listados no arquivo de assinatura são considerados particulares para o arquivo de implementação. Se nenhum arquivo de assinatura for encontrado no projeto ou na linha de comando, a acessibilidade padrão será usada.
 
 Para obter mais informações sobre a acessibilidade padrão, consulte [controle de acesso](access-control.md).
 
-Em um arquivo de assinatura, você não se repetem a definição dos tipos e as implementações de cada método ou função. Em vez disso, você deve usar a assinatura para cada método e a função, que atua como uma especificação completa da funcionalidade que é implementada por um fragmento de um módulo ou namespace. A sintaxe para uma assinatura de tipo é o mesmo usado em declarações de método abstrato em interfaces e classes abstratas e também é mostrada a IntelliSense e pelo fsi.exe interpretador F# quando ela for exibida corretamente compilado de entrada.
+Em um arquivo de assinatura, você não se repetem a definição dos tipos e as implementações de cada método ou função. Em vez disso, você deve usar a assinatura para cada método e a função, que atua como uma especificação completa da funcionalidade que é implementada por um fragmento de um módulo ou namespace. A sintaxe para uma assinatura de tipo é o mesmo usado em declarações de método abstrato em interfaces e classes abstratas e também é mostrada pelo IntelliSense e pelo F# interpretador fsi.exe quando ela for exibida corretamente compilado de entrada.
 
 Se não há informações suficientes na assinatura de tipo para indicar se um tipo seja selado ou se ele é um tipo de interface, você deve adicionar um atributo que indica a natureza do tipo para o compilador. Atributos que você pode usar para essa finalidade são descritos na tabela a seguir.
 
@@ -29,6 +29,7 @@ Se não há informações suficientes na assinatura de tipo para indicar se um t
 |---------|-----------|
 |`[<Sealed>]`|Um tipo que não tem nenhum membro abstrato, ou que não deve ser estendido.|
 |`[<Interface>]`|Um tipo que é uma interface.|
+
 O compilador produz um erro se os atributos não são consistentes entre a assinatura e a declaração no arquivo de implementação.
 
 Use a palavra-chave `val` para criar uma assinatura para um valor ou o valor da função. A palavra-chave `type` apresenta uma assinatura de tipo.

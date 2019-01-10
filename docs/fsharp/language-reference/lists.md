@@ -1,13 +1,13 @@
 ---
-title: Listas (F#)
+title: Listas
 description: Saiba mais sobre F# lista uma série imutável, ordenada, de elementos do mesmo tipo.
 ms.date: 05/16/2016
-ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152741"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656330"
 ---
 # <a name="lists"></a>Listas
 
@@ -70,6 +70,7 @@ O tipo de lista oferece suporte às seguintes propriedades:
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|O elemento no índice especificado (com base em zero).|
 |[Comprimento](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|O número de elementos.|
 |[Parte final](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|A lista sem o primeiro elemento.|
+
 A seguir, alguns exemplos de como usar essas propriedades.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]

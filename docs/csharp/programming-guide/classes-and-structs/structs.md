@@ -1,16 +1,17 @@
 ---
-title: Structs (Guia de Programação em C#)
+title: Structs – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 27d4b0d7edf1b5e89e84ac1df5783d68ebb4efe0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259473"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240379"
 ---
 # <a name="structs-c-programming-guide"></a>Structs (Guia de Programação em C#)
 
@@ -37,8 +38,8 @@ Para saber mais:
 - [Usando structs](using-structs.md)
 - [Construtores](constructors.md)
 - [Tipos que permitem valor nulo](../nullable-types/index.md)
-- [Como saber a diferença entre passar um struct e passar uma referência de classe para um método](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
-- [Como implementar conversões definidas pelo usuário entre structs](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Como: saber a diferença entre passar um struct e passar uma referência de classe para um método](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [Como: implementar conversões definidas pelo usuário entre structs](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 
 ## <a name="see-also"></a>Consulte também
 

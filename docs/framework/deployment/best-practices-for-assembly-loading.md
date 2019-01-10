@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201576"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397040"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Práticas recomendadas para carregamento de assemblies
 Este artigo descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros. O artigo aborda as seguintes recomendações:  
@@ -44,7 +44,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
 -   O contexto de origem de carregamento contém assemblies carregados a partir de locais que não são pesquisados pelo carregador. Por exemplo, suplementos podem ser instalados em um diretório que não está no caminho do aplicativo. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> e <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> são exemplos de métodos que carregam pelo caminho.  
   
--   O contexto somente para reflexão contém assemblies carregados com os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. O código neste contexto não pode ser executado, portanto, não é discutido aqui. Para obter mais informações, consulte [Como carregar assemblies no contexto de somente para reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   O contexto somente para reflexão contém assemblies carregados com os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. O código neste contexto não pode ser executado, portanto, não é discutido aqui. Para obter mais informações, confira [Como: carregar assemblies no contexto somente de reflexão](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 -   Se você gerou um assembly dinâmico transitório usando a emissão de reflexo, o assembly não está em nenhum contexto. Além disso, a maioria dos assemblies carregados usando o método <xref:System.Reflection.Assembly.LoadFile%2A> são carregados sem contexto e os assemblies carregados de matrizes de bytes são carregados sem contexto, a menos que sua identidade (depois que a política é aplicada) estabeleça que estão no cache de assembly global.  
   
@@ -154,7 +154,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
  Se não for possível colocar todos os assemblies no caminho de investigação, considere alternativas como usar o modelo de suplemento do .NET Framework, colocar os assemblies no cache de assembly global ou criar domínios de aplicativo.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Considere usar o modelo de suplemento do Framework .NET  
- Se você estiver usando o contexto de carregamento para implementar suplementos, que normalmente não são instalados na base de aplicativo, use o modelo de suplemento do .NET Framework. Esse modelo fornece isolamento no nível de domínio ou processo do aplicativo, sem a necessidade de gerenciar domínios do aplicativo por conta própria. Para obter informações sobre o modelo de suplemento, consulte [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md).  
+ Se você estiver usando o contexto de carregamento para implementar suplementos, que normalmente não são instalados na base de aplicativo, use o modelo de suplemento do .NET Framework. Esse modelo fornece isolamento no nível de domínio ou processo do aplicativo, sem a necessidade de gerenciar domínios do aplicativo por conta própria. Para obter informações sobre o modelo de suplemento, consulte [Suplementos e extensibilidade](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Considere usar o cache de assembly global  
  Coloque os assemblies no cache de assembly global para obter o benefício de um caminho de assembly compartilhado que está fora da base de aplicativo, sem perder as vantagens do contexto de carregamento padrão ou assumir as desvantagens dos outros contextos.  
@@ -170,4 +170,3 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Suplementos e extensibilidade](../../../docs/framework/add-ins/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cfd8c971edd4537de6e073c49f128f86eb8a042
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 49dc991fd1f30bce6c328725a794750c753145cd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748991"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613278"
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; elemento
 Especifica se o tempo de execução corrige automaticamente declarações de invocação de plataforma incorretas em tempo de execução, às custas de transições mais lentas entre o código gerenciado e não gerenciado.  
@@ -40,8 +40,8 @@ Especifica se o tempo de execução corrige automaticamente declarações de inv
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`0`|O tempo de execução usa o mais rápido interop marshaling arquitetura introduzida no [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], que não detecta e declarações de invocação de plataforma incorreta de correção. Esse é o padrão.|  
-|`1`|Declarações de invocação de tempo de execução usa mais lentas transições que detectam e corrigir plataforma incorreta.|  
+|`0`|O tempo de execução usa a arquitetura introduzida de marshaling de interoperabilidade mais rápida a [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], que não o detecta e declarações de invocação de plataforma incorreta de correção. Esse é o padrão.|  
+|`1`|Declarações de invocação de tempo de execução usa mais lentas transições que detectam e corrigir a plataforma incorreta.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -54,19 +54,19 @@ Especifica se o tempo de execução corrige automaticamente declarações de inv
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Esse elemento permite trocar o marshaling de interoperabilidade mais rápido para resiliência de tempo de execução na plataforma incorreta de invocação de declarações.  
+ Esse elemento permite que você troque o marshaling de interoperabilidade mais rápido para declarações de invocação de resiliência de tempo de execução na plataforma incorreta.  
   
- Começando com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], um simplificada interop marshaling arquitetura fornece uma melhoria significativa de desempenho para transições do código gerenciado para código não gerenciado. Em versões anteriores do .NET Framework, a plataforma incorreta de camada detectada marshaling invocar declarações em plataformas de 32 bits e corrigidas automaticamente a pilha. A nova arquitetura de marshaling elimina essa etapa. Como resultado, as transições são muito rápidas, mas a declaração de invocação de uma plataforma incorreta pode causar uma falha de programa.  
+ Começando com o [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], uma arquitetura de marshaling de interoperabilidade simplificada fornece uma melhoria significativa de desempenho para transições do código gerenciado para código não gerenciado. Em versões anteriores do .NET Framework, a plataforma incorreta de camada detectada marshaling declarações em plataformas de 32 bits de invocação e corrigidas automaticamente a pilha. A nova arquitetura de marshaling elimina essa etapa. Como resultado, as transições são muito rápidas, mas a declaração de invocação de uma plataforma incorreta pode causar uma falha no programa.  
   
- Para facilitar a detectar declarações incorretas durante o desenvolvimento, a experiência de depuração do Visual Studio foi aprimorado. O [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Assistente de depuração gerenciado (MDA) notifica você plataforma incorreta invoca declarações quando seu aplicativo está em execução com o depurador anexado.  
+ Para que seja fácil detectar declarações incorretas durante o desenvolvimento, a experiência de depuração do Visual Studio foi aprimorado. O [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Assistente para depuração gerenciada (MDA) notifica você da plataforma incorreta de declarações de invocação quando seu aplicativo está em execução com o depurador anexado.  
   
- Para lidar com cenários em que o seu aplicativo usa os componentes que não é possível recompilar e que têm incorretova invocação de plataforma declarações, você pode usar o `NetFx40_PInvokeStackResilience` elemento. Adicionar esse elemento para o arquivo de configuração de aplicativo com `enabled="1"` aceita em um modo de compatibilidade com o comportamento de versões anteriores do .NET Framework, às custas de transições mais lentas. Assemblies que foram compilados em versões anteriores do .NET Framework são aceitos automaticamente para este modo de compatibilidade e não é necessário para este elemento.  
+ Para lidar com cenários em que o seu aplicativo usa os componentes que você não pode recompilar e que têm invocação de plataforma incorretas declarações, você pode usar o `NetFx40_PInvokeStackResilience` elemento. Adição deste elemento ao arquivo de configuração de aplicativo com `enabled="1"` aceitar um modo de compatibilidade com o comportamento de versões anteriores do .NET Framework, às custas de transições mais lentas. Assemblies que foram compilados em relação a versões anteriores do .NET Framework são aceitos automaticamente esse modo de compatibilidade e não é necessário para esse elemento.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- A exemplo a seguir mostra como declarações para um aplicativo, às custas de mais lentos transições entre uma invocação de plataforma para optar pelo maior resiliência contra incorreto gerenciado e código não gerenciado.  
+ A exemplo a seguir mostra como as declarações para um aplicativo, às custas de transições mais lentas entre de invocação de plataforma para aceitar o aumento da resiliência contra incorreto gerenciado e código não gerenciado.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Especifica se o tempo de execução corrige automaticamente declarações de inv
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

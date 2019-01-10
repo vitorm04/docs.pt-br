@@ -2,12 +2,12 @@
 title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517069"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152080"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP fornece os elementos básicos necessários para compilar serviços WEB HTTP com WCF. Serviços WCF WEB HTTP são projetados para ser acessado por mais ampla gama de possíveis clientes, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -26,7 +26,7 @@ O modelo de programação WEB do Windows Communication Foundation (WCF) HTTP for
 >  Serviços escritos com o modelo de programação WCF WEB HTTP não usa mensagens SOAP. Como SOAP não é usado, os recursos de segurança fornecidos pelo WCF não podem ser usados. No entanto você pode usar segurança baseada no transporte ao hospedar seu serviço com HTTPS. Para obter mais informações sobre a segurança do WCF, consulte [visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Instalando a extensão WebDAV para IIS pode fazer com que os serviços Web HTTP retornar um erro HTTP 405 como o WebDAV extensão tenta manipular todas as solicitações PUT. Para contornar esse problema, você pode desinstalar a extensão WebDAV ou desabilitar a extensão WebDAV para seu site da web. Para obter mais informações, consulte [IIS e WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Instalando a extensão WebDAV para IIS pode fazer com que os serviços Web HTTP retornar um erro HTTP 405 como o WebDAV extensão tenta manipular todas as solicitações PUT. Para contornar esse problema, você pode desinstalar a extensão WebDAV ou desabilitar a extensão WebDAV para seu site da web. Para obter mais informações, consulte [IIS e WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>URI de processamento com UriTemplate e UriTemplateTable  
  Os modelos URI fornecem uma sintaxe eficiente para expressar conjuntos grandes de URIs estruturalmente semelhantes. Por exemplo, o modelo a seguir expressa o conjunto de URIs de todos os três segmentos que começam com "a" e terminar com "c" sem levar em consideração o valor do segmento intermediário: um / / c de {segmento}  
@@ -96,7 +96,7 @@ interface ICustomer
 }  
 ```  
   
- Para ver um exemplo completo de um serviço WCF que usa o modelo de programação WCF WEB HTTP, consulte [como: criar um serviço de Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ Para ver um exemplo completo de um serviço WCF que usa o modelo de programação WCF WEB HTTP, consulte [como: Criar um serviço de Web HTTP WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>URLs e parâmetros de cadeia de caracteres de consulta de UriTemplate  
  Serviços de estilo da Web podem ser chamados em um navegador da Web, digitando uma URL que está associada uma operação de serviço. Essas operações de serviço podem levar a parâmetros de cadeia de caracteres de consulta que devem ser especificados em um formulário de cadeia de caracteres na URL. A tabela a seguir mostra os tipos que podem ser passados em uma URL e o formato usado.  

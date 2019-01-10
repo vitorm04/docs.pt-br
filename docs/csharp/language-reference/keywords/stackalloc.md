@@ -1,17 +1,18 @@
 ---
-title: Palavra-chave stackalloc (referência de C#)
+title: Palavra-chave stackalloc – Referência de C#
+ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 16b2933423599e985ce57257595d67026dba93ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 31fdbacb01d1f6052c86d40c0bffc903130f216c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245503"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referência de C#)
 
@@ -60,7 +61,7 @@ O exemplo a seguir inicializa uma matriz `stackalloc` de inteiros em uma máscar
 
 O código não seguro é menos seguro do que as alternativas seguras. No entanto, o uso de `stackalloc` habilita automaticamente os recursos de detecção de estouro de buffer no CLR (Common Language Runtime). Se for detectada uma estouro de buffer, o processo será encerrado assim que possível para minimizar a chance de o código mal-intencionado ser executado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

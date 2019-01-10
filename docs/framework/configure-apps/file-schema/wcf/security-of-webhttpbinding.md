@@ -2,12 +2,12 @@
 title: '&lt;segurança&gt; de &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: fbf9ac87da0d23930d589a40a9335acc34c4e94d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12477c36c2771621e5f8b88ce245746c6f5ec120
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194367"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145400"
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;segurança&gt; de &lt;webHttpBinding&gt;
 Especifica os requisitos de segurança para um ponto de extremidade configurado com um [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -21,19 +21,19 @@ Especifica os requisitos de segurança para um ponto de extremidade configurado 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<system.ServiceModel>  
-    <bindings>  
-        <webHttpBinding>  
-            <binding name = "string">  
-              <security mode="None/Transport/TransportCredentialOnly">  
-                                    <transport clientCredentialType =   
-                                     "Basic/Certificate/Digest/None/Ntlm/Windows"  
-                                     proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                                     realm="string" />  
-              </security>  
-        </webHttpBinding>  
-    </bindings>  
-</system.ServiceModel>  
+<system.ServiceModel>
+  <bindings>
+    <webHttpBinding>
+      <binding name = "String">
+        <security mode="None/Transport/TransportCredentialOnly">
+          <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                     proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                     realm="String" />
+        </security>
+      </binding>
+    </webHttpBinding>
+  </bindings>
+</system.ServiceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  

@@ -2,12 +2,12 @@
 title: '&lt;mensagem&gt; de &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3b8b2bae4b28b58a24e32cc1e6927d0ed940af1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: efd2edd96e695216f8c31128b6cf670668cd0da8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873184"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148494"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;mensagem&gt; de &lt;ws2007HttpBinding&gt;
 Define as configurações de segurança em nível de mensagem do [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elemento.  
@@ -22,18 +22,17 @@ Define as configurações de segurança em nível de mensagem do [ \<ws2007HttpB
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<ws2007HttpBinding>  
- <binding >  
-  <security>  
-   <message clientCredentialType =  
-    "None/Windows/UserName/Certificate/IssuedToken"  
-    establishSecurityContext="Boolean"  
-    negotiateServiceCredential="Boolean"  
-    algorithmSuite= Enumeration. See algorithmSuite Attribute below.  
-    defaultProtectionLevel="None/Sign/EncryptionAndSign" />  
-  </security>  
- </binding>  
-</ws2007HttpBinding>  
+<ws2007HttpBinding>
+  <binding>
+    <security>
+      <message clientCredentialType="None/Windows/UserName/Certificate/IssuedToken"
+               establishSecurityContext="Boolean"
+               negotiateServiceCredential="Boolean"
+               algorithmSuite="Enumeration. See algorithmSuite Attribute below."
+               defaultProtectionLevel="None/Sign/EncryptionAndSign" />
+    </security>
+  </binding>
+</ws2007HttpBinding>
 ```  
   
 ## <a name="type"></a>Tipo  
@@ -48,7 +47,7 @@ Define as configurações de segurança em nível de mensagem do [ \<ws2007HttpB
 |---------------|-----------------|  
 |`algorithmSuite`|Define a mensagem de algoritmos de criptografia e encapsulamento de chave. Os algoritmos e os tamanhos de chave são determinados pelo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> classe. Esses algoritmos são mapeados para aqueles especificados na especificação da linguagem de política de segurança (WS-SecurityPolicy).<br /><br /> O valor padrão é Basic256.|  
 |`clientCredentialType`|Opcional. Especifica o tipo de credencial a ser usada ao executar a autenticação de cliente usando o modo de segurança `Message` ou `TransportWithMessageCredentials`. Consulte os valores de enumeração na tabela a seguir. O padrão é Windows.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.MessageCredentialType>.|  
-|`establishSecurityContext`|Um valor que determina se o canal de segurança estabelece uma sessão segura. Uma sessão segura estabelece um token de contexto de segurança (SCT) antes da troca de mensagens do aplicativo. Quando o SCT é estabelecido, o canal de segurança oferece uma <xref:System.ServiceModel.Channels.ISession> interface para os canais superiores. Para obter mais informações sobre como usar sessões seguras, consulte [como: criar uma sessão segura](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> O valor padrão é `true`.|  
+|`establishSecurityContext`|Um valor que determina se o canal de segurança estabelece uma sessão segura. Uma sessão segura estabelece um token de contexto de segurança (SCT) antes da troca de mensagens do aplicativo. Quando o SCT é estabelecido, o canal de segurança oferece uma <xref:System.ServiceModel.Channels.ISession> interface para os canais superiores. Para obter mais informações sobre como usar sessões seguras, consulte [como: Criar uma sessão segura](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> O valor padrão é `true`.|  
 |`negotiateServiceCredential`|Opcional. Um valor que especifica se a credencial de serviço é provisionada no cliente fora de banda ou obtida do serviço ao cliente por meio de um processo de negociação. Dessa negociação é um precursor para a troca de mensagens comum.<br /><br /> Se o `clientCredentialType` atributo é igual a nenhum nome de usuário ou certificado, definir esse atributo como `false` implica que o certificado de serviço está disponível no cliente fora da banda e que o cliente deve especificar o certificado de serviço (usando o [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) na [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) comportamento de serviço. Esse modo é interoperável com pilhas SOAP que implementam o WS-Trust e WS-SecureConversation.<br /><br /> Se o `ClientCredentialType` atributo é definido como `Windows`, definir esse atributo como `false` Especifica a autenticação baseada em Kerberos. Isso significa que o cliente e o serviço devem ser parte do mesmo domínio do Kerberos. Esse modo é interoperável com pilhas SOAP que implementam o perfil de token do Kerberos (conforme definido na OASIS WSS TC), bem como o WS-Trust e WS-SecureConversation.<br /><br /> Quando esse atributo está `true`, faz com que uma negociação de SOAP .NET túneis <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> exchange sobre mensagens SOAP.<br /><br /> O padrão é `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite atributo  

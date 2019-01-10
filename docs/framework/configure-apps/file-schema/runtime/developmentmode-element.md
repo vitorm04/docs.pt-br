@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71b4eb1dfb50774cea2f7a50d5e5350b0338f41e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745494"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612043"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt; elemento
 Especifica se o tempo de execução pesquisa por assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
@@ -44,8 +44,8 @@ Especifica se o tempo de execução pesquisa por assemblies em diretórios espec
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|**true**|Procura assemblies nos diretórios especificados pela variável de ambiente DEVPATH.|  
-|**false**|Não procurar por assemblies nos diretórios especificados pela variável de ambiente DEVPATH. Esse é o padrão|  
+|**true**|Procura por assemblies em diretórios especificados pela variável de ambiente DEVPATH.|  
+|**false**|Não procura por assemblies em diretórios especificados pela variável de ambiente DEVPATH. Esse é o padrão|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -58,10 +58,10 @@ Especifica se o tempo de execução pesquisa por assemblies em diretórios espec
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Use essa configuração somente em tempo de desenvolvimento. O tempo de execução não verifica as versões em assemblies de nomes fortes encontrados no DEVPATH. Ele simplesmente usa o primeiro conjunto que encontrar.  
+ Use essa configuração somente em tempo de desenvolvimento. O tempo de execução não verifica as versões de assemblies de nome forte encontrados no DEVPATH. Ela simplesmente usa o assembly primeiro que ele localiza.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como fazer com que o tempo de execução procurar por assemblies nos diretórios especificados pela variável de ambiente DEVPATH.  
+ O exemplo a seguir mostra como fazer com que o tempo de execução pesquisa dos assemblies em diretórios especificados pela variável de ambiente DEVPATH.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ Especifica se o tempo de execução pesquisa por assemblies em diretórios espec
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Como localizar assemblies usando DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Como: Localizar Assemblies usando DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

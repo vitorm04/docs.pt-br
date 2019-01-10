@@ -2,12 +2,12 @@
 title: '&lt;clientVia&gt;'
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: 6218bb3f205f2825eb3f10fabf834cfd0396ac87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 48e56b79f47e84122ddd4d7f55d50044510bfa66
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754126"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149045"
 ---
 # <a name="ltclientviagt"></a>&lt;clientVia&gt;
 Especifica o URI para o qual o canal de transporte deve ser criado. Para obter mais informações, consulte <xref:System.ServiceModel.Description.ClientViaBehavior>.  
@@ -15,13 +15,13 @@ Especifica o URI para o qual o canal de transporte deve ser criado. Para obter m
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento >  
+\<comportamento de >  
 \<clientVia >  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<clientVia viaUri="String"/>  
+<clientVia viaUri="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -40,7 +40,7 @@ Especifica o URI para o qual o canal de transporte deve ser criado. Para obter m
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
+|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.ClientViaElement>  

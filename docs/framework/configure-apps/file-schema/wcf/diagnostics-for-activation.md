@@ -2,12 +2,12 @@
 title: '&lt;diagnósticos&gt; de ativação'
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 4e5332eed87ded51cebcd614f45cbc8e80e570fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 28f051a7ab06dbc1b40f804c56071818eb37e88b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747925"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144971"
 ---
 # <a name="ltdiagnosticsgt-for-activation"></a>&lt;diagnósticos&gt; de ativação
 Configura as funcionalidades de diagnóstico do ouvinte do Windows Communication Foundation (WCF).  
@@ -18,11 +18,11 @@ Configura as funcionalidades de diagnóstico do ouvinte do Windows Communication
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <diagnostics performanceCountersEnabled="Boolean" />  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <diagnostics performanceCountersEnabled="Boolean" />
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>Tipo  
@@ -44,7 +44,7 @@ Configura as funcionalidades de diagnóstico do ouvinte do Windows Communication
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo do ouvinte SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contém definições de configuração para o processo de escuta SMSvcHost.exe.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

@@ -3,13 +3,13 @@ title: Pré-requisitos para o .NET Core no Linux
 description: Versões do Linux e dependências do .NET Core com suporte para desenvolver, implantar e executar aplicativos .NET Core em computadores Linux.
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2018
-ms.openlocfilehash: e250158d10c6a03535f4e693e74954747f860a3c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148310"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656044"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Pré-requisitos para o .NET Core no Linux
 
@@ -61,6 +61,34 @@ O .NET Core 1.x é suportado nas seguintes distribuições/versões de 64 bits d
 
 Consulte [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) (Versões de sistema operacional com suporte pelo .NET Core 1.x) para obter a lista completa de sistemas operacionais com suporte pelo .NET Core 1.x., versões de sistema operacional fora de suporte e links para a política de ciclo de vida.
 
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Versão Prévia 1](#tab/netcore30)
+
+O .NET Core 3.0 Versão Prévia 1 trata o Linux como um único sistema operacional. Há um único build do Linux (por arquitetura de chip) para distribuições Linux com suporte. 
+
+Para obter links de download e mais informações, confira [Downloads do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+
+Há suporte para o .NET Core 3.0 Versão Prévia 1 nas versões/distribuições do Linux a seguir. 
+
+Sistema operacional                            | Versão               | Arquiteturas  
+------------------------------|-----------------------|----------------
+Red Hat Enterprise Linux      | 6                     | X64
+Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
+Fedora                        | 28                    | X64
+Debian                        | 9                     | x64, ARM32\*, ARM64\*
+Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
+Linux Mint                    | 18                    | X64
+openSUSE                      | 42.3+                 | X64
+SLES (SUSE Linux Enterprise Server)  | 12 SP2+               | X64
+Alpine Linux                  | 3.8+                  | x64, ARM64
+
+\* O suporte ao ARM32 e ARM64 começa no Debian 9 e no Ubuntu 16.04. Não há suporte para versões anteriores dessas distribuições em chips ARM.
+
+Confira [Versões de sistema operacional compatíveis com o .NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) para obter a lista completa de sistemas operacionais, versões e distribuições compatíveis com o.NET Core 3.0, versões de sistema operacional sem suporte e links para a política de ciclo de vida.
+
+Para obter mais informações sobre como instalar o .NET Core 3.0 no ARM64, confira [Instalando o .NET Core 3.0 no Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+
+
+
 ---
 
 ## <a name="linux-distribution-dependencies"></a>Dependências de distribuição do Linux
@@ -97,7 +125,7 @@ As distribuições do CentOS requerem que as seguintes bibliotecas estejam insta
 * libicu
 * zlib
 
-Usuários do Fedora: se sua versão do OpenSSL for >= 1.1, será necessário instalar compat-openssl10.
+Usuários do Fedora: Se a versão do OpenSSL for >= 1.1, será necessário instalar compat-openssl10.
 
 Para versões anteriores ao .NET Core 2.1, as seguintes dependências também são necessárias:
 

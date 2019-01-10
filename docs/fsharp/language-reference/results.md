@@ -1,17 +1,17 @@
 ---
-title: Resultados (F#)
-description: Saiba como usar o F# 'Resultado' tipo para ajudar você a escrever código tolerante a erros.
+title: Resultados
+description: Saiba como usar o F# 'Result' de tipo para ajudá-lo a escrever código tolerante a erros.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213034"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612706"
 ---
 # <a name="results"></a>Resultados
 
-A partir do F# 4.1, há um `Result<'T,'TFailure>` tipo que você pode usar para escrever código tolerante a erros que pode ser composto.
+Começando com F# 4.1, há uma `Result<'T,'TFailure>` tipo de que você pode usar para escrever código tolerante a erros que pode ser composto.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ type Result<'T,'TError> =
 
 Observe que o tipo de resultado é um [união discriminada de struct](discriminated-unions.md#struct-discriminated-unions), que é outro recurso introduzido no F# 4.1.  Semântica de igualdade estrutural se aplicam aqui.
 
-O `Result` tipo normalmente é usado em monadic tratamento de erros, que geralmente é conhecido como [programação orientada a ferrovia](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro da comunidade do F#.  O exemplo simples a seguir demonstra essa abordagem.
+O `Result` tipo normalmente é usado em monadic tratamento de erros, que geralmente é conhecido como [programação orientada a ferrovia](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) dentro de F# comunidade.  O exemplo simples a seguir demonstra essa abordagem.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

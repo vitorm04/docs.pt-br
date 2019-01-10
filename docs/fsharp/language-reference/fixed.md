@@ -1,17 +1,17 @@
 ---
-title: A palavra-chave Fixed (F#)
-description: Saiba como você pode "pin" um local para a pilha para evitar a coleta com o F# 'fixed' palavra-chave.
+title: A palavra-chave fixed
+description: Saiba como você pode "pin" em um local para a pilha para evitar a coleta com o F# 'fixed' a palavra-chave.
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624503"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614320"
 ---
-# <a name="the-fixed-keyword"></a>A palavra-chave Fixed
+# <a name="the-fixed-keyword"></a>A palavra-chave fixed
 
-F# 4.1 apresenta o `fixed` palavra-chave, que permite que você "fixar" em um local para a pilha para impedir que ele seja coletado ou movido durante a coleta de lixo.  Ele é usado para cenários de programação de nível baixo.
+F#4.1 apresenta o `fixed` palavra-chave, que permite que você "fixar" em um local para a pilha para impedir que ele seja coletado ou movido durante a coleta de lixo.  Ele é usado para cenários de programação de nível baixo.
 
 ## <a name="syntax"></a>Sintaxe
 

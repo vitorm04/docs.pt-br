@@ -1,15 +1,16 @@
 ---
-title: Programação assíncrona
+title: Programação assíncrona – C#
 description: Saiba mais sobre o modelo de programação assíncrona em nível linguagem do C# fornecido pelo .NET Core.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126491"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612121"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -29,7 +30,7 @@ Para o código vinculado à CPU, você `await` uma operação que é iniciada em
 
 Existem outras maneiras de abordar o código assíncrono, diferentes de `async` e `await`, como mencionado no artigo TAP no link acima, mas este documento se concentrará nos constructos de nível de linguagem daqui em diante.
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Exemplo vinculado à E/S: baixar dados de um serviço Web
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Exemplo vinculado à E/S: Baixando dados de um serviço Web
 
 Talvez você queira baixar alguns dados de um serviço Web quando um botão for pressionado, mas não deseja bloquear o thread da interface do usuário. Isso pode ser realizado simplesmente assim:
 
@@ -49,7 +50,7 @@ downloadButton.Clicked += async (o, e) =>
 
 E pronto! O código expressa a intenção (baixar alguns dados de forma assíncrona) sem enroscar na interação com objetos de tarefa.
 
-### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Exemplo vinculado à CPU: executar um cálculo para um jogo
+### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Exemplo vinculado à CPU: Executando um cálculo para um jogo
 
 Digamos que você está escrevendo um jogo para dispositivo móvel em que, ao pressionar um botão, poderá causar danos a muitos inimigos na tela.  A realização do cálculo de dano pode ser dispendiosa e fazê-lo no thread da interface do usuário faria com que o jogo parecesse pausar durante a realização do cálculo!
 
@@ -264,5 +265,5 @@ Uma meta recomendada é alcançar a [Transparência referencial](https://en.wiki
 ## <a name="other-resources"></a>Outros recursos
 
 * A [Programação assíncrona em detalhes](../standard/async-in-depth.md) fornece mais informações sobre o funcionamento de Tarefas.
-* [Programação assíncrona com async e await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Programação assíncrona com async e await (C#)](./programming-guide/concepts/async/index.md)
 * [Seis dicas essenciais para a programação assíncrona](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) de Lucian Wischik é um ótimo recurso para a programação assíncrona

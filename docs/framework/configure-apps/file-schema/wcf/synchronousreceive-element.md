@@ -2,26 +2,26 @@
 title: elemento &lt;synchronousReceive&gt;
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: af1ca2ee1fe3c03c33f05e0c30c7b843b3720a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753255"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147376"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>elemento &lt;synchronousReceive&gt;
-Este elemento de configuração é usado para especificar o comportamento de tempo de execução para receber mensagens em um cliente ou serviço de aplicativo. Ele não tem atributos ou elementos filho.  
+Este elemento de configuração é usado para especificar o comportamento de tempo de execução para receber mensagens em um cliente ou serviço de aplicativo. Ele não tem nenhum atributo ou elemento filho.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento >  
+\<comportamento de >  
 \<synchronousReceive >  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<synchronousReceive />  
+<synchronousReceive />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -37,10 +37,10 @@ Este elemento de configuração é usado para especificar o comportamento de tem
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
+|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um comportamento de ponto de extremidade.|  
   
 ## <a name="remarks"></a>Comentários  
- Use esse comportamento para instruir o ouvinte de canal para usar um síncrono receber, em vez do padrão assíncrono. Windows Communication Foundation (WCF) emite um novo thread para a bomba de cada canal aceito. Se houver muita canais, há a possibilidade de falta de threads.  
+ Use esse comportamento para instruir o ouvinte de canais para receber um síncrono de uso, em vez do padrão, assíncrono. Windows Communication Foundation (WCF) emite um novo thread para a bomba para cada canal aceito. Se houver muitos canais, há a possibilidade de falta de threads.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  

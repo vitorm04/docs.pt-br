@@ -3,12 +3,12 @@ title: Controle de versão de C# – Guia de C#
 description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243485"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C# #
 
@@ -38,12 +38,12 @@ Uma nova versão da biblioteca será compatível com a origem de uma versão ant
 
 Aqui estão algumas coisas a serem consideradas ao tentar manter a compatibilidade com versões mais antigas de sua biblioteca:
 
-* Métodos virtuais: quando você torna um método em virtual não virtual na nova versão, significa que projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
-* Assinaturas de método: quando atualizar o comportamento de um método exigir que você altere também sua assinatura, você deve criar uma sobrecarga para que o código que chamar esse método ainda funcione.
+* Métodos virtuais: Quando você transforma um método virtual em não virtual na nova versão, isso significa que os projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
+* Assinaturas de método: Quando a atualização do comportamento de um método exige a alteração de sua assinatura também, você deve criar uma sobrecarga, de modo que o código que chamar esse método ainda funcione.
 Você sempre pode manipular a assinatura de método antiga para chamar a nova assinatura de método para que a implementação permaneça consistente.
-* [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): você pode usar esse atributo no seu código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras.
+* [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Use esse atributo no código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras.
 Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
-* Argumentos de método opcionais: quando você tornar argumentos de método que antes eram opcionais em compulsórios ou alterar seu valor padrão, todo código que não fornece esses argumentos precisará ser atualizado.
+* Argumentos de método opcionais: Quando você tornar argumentos de método que antes eram opcionais em obrigatórios ou alterar seu valor padrão, todo o código que não fornecer esses argumentos precisará ser atualizado.
 > [!NOTE]
 > Tornar argumentos compulsórios em opcionais deve ter muito pouco efeito, especialmente se não alterar o comportamento do método.
 
@@ -62,7 +62,7 @@ Para sua sorte, o ecossistema do C# e do .NET tem recursos e técnicas que permi
 
 ### <a name="assembly-binding-redirection"></a>Redirecionamento de associação de assembly
 
-Você pode usar o arquivo `app.config` para atualizar a versão de uma biblioteca que seu aplicativo usa. Adicionando o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem ter que recompilar seu aplicativo. O exemplo a seguir mostra como atualizar o arquivo `app.config` de seu aplicativo para uso com a versão de patch `1.0.1` do `ReferencedLibrary` em vez da versão `1.0.0` com que ele foi compilado originalmente.
+Você pode usar o arquivo `app.config` para atualizar a versão de uma biblioteca que seu aplicativo usa. Adicionando o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem precisar recompilar o aplicativo. O exemplo a seguir mostra como atualizar o arquivo `app.config` de seu aplicativo para uso com a versão de patch `1.0.1` do `ReferencedLibrary` em vez da versão `1.0.0` com que ele foi compilado originalmente.
 
 ```xml
 <dependentAssembly>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742473"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058588"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -99,7 +99,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
 1.  EVITE criar os tipos especificamente para a Serialização XML, a menos que você tenha um motivo muito forte para controlar o formato do XML gerado Essa tecnologia de serialização foi substituída pela serialização do contrato de dados abordada na seção anterior.  
   
-     Em outras palavras, não aplique atributos do namespace <xref:System.Runtime.Serialization> a novos tipos, a menos que você saiba que o tipo será usado com a Serialização XML. O exemplo a seguir mostra como **System.Xml.Serialization** pode ser usado para controlar a forma do XML gerado.  
+     Em outras palavras, não aplique atributos do namespace <xref:System.Xml.Serialization> a novos tipos, a menos que você saiba que o tipo será usado com a Serialização XML. O exemplo a seguir mostra como **System.Xml.Serialization** pode ser usado para controlar a forma do XML gerado.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  

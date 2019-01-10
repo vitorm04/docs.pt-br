@@ -2,14 +2,14 @@
 title: Migrando do DNX para a CLI do .NET Core
 description: Migre para mudar do uso de ferramentas de DNX para ferramentas da CLI do .NET Core.
 author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: dd3c31b88b619799e6b2e2596127d64d84918ca0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.custom: seodec18
+ms.openlocfilehash: 26cf812bdce565b5278b00c6965a61b6135e3df7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388768"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170698"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrando do DNX para a CLI do .NET Core (project.json)
 
@@ -102,7 +102,7 @@ Para atualizar o arquivo `global.json`, remova a propriedade ou defina-a para a 
 ### <a name="migrating-the-project-file"></a>Migrando o arquivo de projeto
 A CLI e o DNX usam o mesmo sistema de projeto básico com base no arquivo `project.json`. A sintaxe e a semântica do arquivo de projeto são praticamente as mesmas, com pequenas diferenças dependendo dos cenários. Também há algumas alterações no esquema que podem ser vistas no [arquivo de esquema](http://json.schemastore.org/project).
 
-Se você estiver criando um aplicativo de console, precisará adicionar o trecho de código a seguir ao arquivo de projeto:
+Se você estiver criando um aplicativo de console, precisará adicionar o snippet a seguir ao arquivo de projeto:
 
 ```json
 "buildOptions": {
@@ -110,7 +110,7 @@ Se você estiver criando um aplicativo de console, precisará adicionar o trecho
 }
 ```
 
-Isso instrui o `dotnet build` a emitir um ponto de entrada para seu aplicativo, tornando o código efetivamente executável. Se você estiver criando uma biblioteca de classes, basta omita a seção acima. É claro que, uma vez adicionado o trecho de código acima ao `project.json` arquivo, você precisa adicionar um ponto de entrada estático. Ao deixar de usar o DNX, os serviços de DI fornecidos por ele não estão mais disponíveis e, portanto, esse deve ser um ponto de entrada .NET básico: `static void Main()`.
+Isso instrui o `dotnet build` a emitir um ponto de entrada para seu aplicativo, tornando o código efetivamente executável. Se você estiver criando uma biblioteca de classes, basta omita a seção acima. É claro que, uma vez adicionado o snippet acima ao `project.json` arquivo, você precisa adicionar um ponto de entrada estático. Ao deixar de usar o DNX, os serviços de DI fornecidos por ele não estão mais disponíveis e, portanto, esse deve ser um ponto de entrada .NET básico: `static void Main()`.
 
 Se você tiver uma seção "commands" em seu `project.json`, poderá removê-la. Alguns dos comandos que existiam como comandos DNU, como comandos da CLI do Entity Framework, estão sendo portados para extensões por projeto para a CLI. Se você compilou seus próprios comandos que estão sendo usados em seus projetos, será necessário substituí-los por extensões CLI. Nesse caso, o nó `commands` em `project.json` precisa ser substituído pelo nó `tools` e ele precisa listar as dependências de ferramentas. 
 
@@ -125,7 +125,7 @@ Se você estiver usando outros destinos `dnx` como o `dnx451`, será necessário
 
 Seu `project.json` agora está quase pronto. Você precisa examinar a lista de dependências e atualizá-las para suas versões mais recentes, especialmente se estiver usando dependências ASP.NET Core. Se estiver usando pacotes separados para as APIs BCL, poderá usar o pacote de tempo de execução, conforme explicado no documento [tipo de portabilidade do aplicativo](../deploying/index.md). 
 
-Quando estiver pronto, tente fazer a restauração com `dotnet restore` ([veja observação](#dotnet-restore-note)). Dependendo da versão das suas dependências, você poderá encontrar erros se o NuGet não puder resolvê-las para um das estruturas de destino acima. Este é um problema “pontual”, pois à medida que o tempo passa, cada vez mais pacotes incluirão suporte a essas estruturas. Por enquanto, se você enfrentar isso, poderá usar a instrução `imports` dentro do nó `framework` para especificar para o NuGet que ele pode restaurar os pacotes direcionando a estrutura dentro da instrução "imports". Os erros de restauração obtidos nesse caso devem fornecer informações suficientes para indicar quais estruturas você precisa importar. Se você ficar um pouco confuso ou não tiver experiência nisso, especificar `dnxcore50` e `portable-net45+win8` na instrução `imports` geralmente é suficiente. O trecho de código JSON a seguir mostra como isso se parece:
+Quando estiver pronto, tente fazer a restauração com `dotnet restore` ([veja observação](#dotnet-restore-note)). Dependendo da versão das suas dependências, você poderá encontrar erros se o NuGet não puder resolvê-las para um das estruturas de destino acima. Este é um problema “pontual”, pois à medida que o tempo passa, cada vez mais pacotes incluirão suporte a essas estruturas. Por enquanto, se você enfrentar isso, poderá usar a instrução `imports` dentro do nó `framework` para especificar para o NuGet que ele pode restaurar os pacotes direcionando a estrutura dentro da instrução "imports". Os erros de restauração obtidos nesse caso devem fornecer informações suficientes para indicar quais estruturas você precisa importar. Se você ficar um pouco confuso ou não tiver experiência nisso, especificar `dnxcore50` e `portable-net45+win8` na instrução `imports` geralmente é suficiente. O snippet JSON a seguir mostra como isso se parece:
 
 ```json
     "frameworks": {

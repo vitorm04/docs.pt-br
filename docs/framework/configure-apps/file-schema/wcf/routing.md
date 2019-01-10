@@ -2,44 +2,44 @@
 title: '&lt;Roteamento&gt;'
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 1771d8a2603a8f61af6ba6e2acf6243d2fd073f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 220c18ab8ea6222fcf7d9fb8a93950281c9de796
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747714"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145140"
 ---
 # <a name="ltroutinggt"></a>&lt;Roteamento&gt;
 
-Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como o roteamento de tabelas que definem os pontos de extremidade de destino para envie mensagens para quando houver correspondência de filtro.
+Representa uma seção de configuração para definir um conjunto de filtros de roteamento, que determinam o tipo do Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> a ser usada ao avaliar mensagens recebidas, bem como roteamento de tabelas que definem os pontos de extremidade de destino para envie mensagens para quando um filtro corresponde.
 
 [**\<System. ServiceModel >**](system-servicemodel.md)   
 &nbsp;&nbsp;**\<roteamento >**
-
-## <a name="syntax"></a>Sintaxe
-
-```xml
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```xml  
 <system.serviceModel>
   <routing>
     <filters>
-      <filter customType="String" 
-              filterData="String" 
-              filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath" 
+      <filter customType="String"
+              filterData="String"
+              filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath"
               name="String" />
     </filters>
     <routingTables>
       <table name="String">
         <entries>
-          <add endpoint="String" 
-               filterName="String" 
+          <add endpoint="String"
+               filterName="String"
                priority="Integer" />
         </entries>
       </table>
     </routingTables>
   </routing>
 </system.serviceModel>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
 As seções a seguir descrevem atributos, elementos filho e elementos pai.
@@ -53,7 +53,7 @@ Nenhum
 |     | Descrição |
 | --- | ----------- |
 | [**\<Filtros >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Contém um conjunto de filtros de roteamento que determinam que o tipo de MessageFilter do Windows Communication Foundation (WCF) será usado ao avaliar mensagens recebidas. |
-| [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Contém os mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para especificar qual ponto de extremidade a ser usado ao correspondências de filtro. |
+| [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Contém mapeamentos entre os filtros de roteamento e os pontos de extremidade de destino para especificar qual ponto de extremidade usado quando o filtro corresponde. |
 
 ### <a name="parent-elements"></a>Elementos pai
 

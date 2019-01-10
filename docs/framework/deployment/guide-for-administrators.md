@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129812"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53776721"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 Este artigo passo a passo descreve como um administrador de sistemas pode implantar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e suas dependências de sistema pela rede usando o Microsoft System Center Configuration Manager. Este artigo pressupõe que todos os computadores clientes de destino atendem aos requisitos mínimos do .NET Framework. Para obter uma lista dos requisitos de hardware e software para instalar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos do sistema](../../../docs/framework/get-started/system-requirements.md).  
@@ -114,9 +114,9 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
   
     2.  **Linha de comando:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (as opções de linha de comando são descritas na tabela após estas etapas)  
   
-    3.  **Executar:** escolha **Oculto**.  
+    3.  **Executar:** Escolha **Oculto**.  
   
-    4.  **O programa pode ser executado:** escolha a opção que especifica que o programa pode ser executado independentemente de um usuário estar conectado.  
+    4.  **O programa pode ser executado:** Escolha a opção que especifica que o programa pode ser executado independentemente de um usuário estar conectado.  
   
 8.  Na página **Requisitos**, escolha **Avançar** para aceitar os valores padrão e conclua o assistente.  
   
@@ -177,7 +177,7 @@ Este artigo passo a passo descreve como um administrador de sistemas pode implan
 9. Na página **Experiência do Usuário** do assistente, use os valores padrão e escolha **Avançar**.  
   
 > [!WARNING]
-> O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, confira [Propriedades de nome de anúncio: guia Agendamento](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+> O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, confira [Propriedades de nome de anúncio: Guia Agendamento](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. Na página **Pontos de Distribuição** do assistente, use os valores padrão e escolha **Avançar**.  
   

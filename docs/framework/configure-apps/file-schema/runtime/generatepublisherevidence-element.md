@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f56bbef6ed6decf6be4246f649665db4cf0f766
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b2cd047367820d249272ca220669835975dbf2d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746014"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611159"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt; elemento
-Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher> evidência de segurança de acesso ao código (CAS).  
+Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher> evidência de segurança de acesso do código (CAS).  
   
  \<configuration>  
 \<runtime>  
@@ -41,7 +41,7 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Não criar <xref:System.Security.Policy.Publisher> evidência.|  
+|`false`|Não cria <xref:System.Security.Policy.Publisher> evidência.|  
 |`true`|Cria <xref:System.Security.Policy.Publisher> evidência. Esse é o padrão.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -57,12 +57,12 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  No [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versões posteriores, esse elemento não tem efeito sobre os tempos de carregamento de assembly. Para obter mais informações, consulte a seção "Simplificação de política de segurança" [alterações de segurança](../../../../../docs/framework/security/security-changes.md).  
+>  No [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] e versões posteriores, esse elemento não tem efeito sobre os tempos de carregamento de assembly. Para obter mais informações, consulte a seção de "Simplificação de política de segurança" em [alterações de segurança](../../../../../docs/framework/security/security-changes.md).  
   
- O common language runtime (CLR) tenta verificar a assinatura Authenticode em tempo de carga para criar <xref:System.Security.Policy.Publisher> evidência para o assembly. No entanto, por padrão, a maioria dos aplicativos não precisarem <xref:System.Security.Policy.Publisher> evidência. Política de CAS padrão não depende de <xref:System.Security.Policy.PublisherMembershipCondition>. Você deve evitar o custo de inicialização desnecessários associado ao verificar a assinatura do publicador, a menos que seu aplicativo é executado em um computador com a política de CAS personalizada ou é destinado atender às demandas de <xref:System.Security.Permissions.PublisherIdentityPermission> em um ambiente de confiança parcial. (Demandas de permissões de identidade sempre terá êxito em um ambiente de confiança total).  
+ O common language runtime (CLR) tenta verificar a assinatura Authenticode no tempo de carregamento para criar <xref:System.Security.Policy.Publisher> evidência para o assembly. No entanto, por padrão, a maioria dos aplicativos não precisam <xref:System.Security.Policy.Publisher> evidência. Política de CAS padrão não depende do <xref:System.Security.Policy.PublisherMembershipCondition>. Você deve evitar o custo de inicialização desnecessários associado ao verificar a assinatura do publicador, a menos que seu aplicativo é executado em um computador com a política de CAS personalizada ou pretende atender às demandas de <xref:System.Security.Permissions.PublisherIdentityPermission> em um ambiente de confiança parcial. (Demandas de permissões de identidade sempre terá êxito em um ambiente de confiança total).  
   
 > [!NOTE]
->  É recomendável que serviços usam o `<generatePublisherEvidence>` elemento para melhorar o desempenho de inicialização.  Usar esse elemento também pode ajudar a evitar atrasos que podem causar um tempo limite e o cancelamento da inicialização do serviço.  
+>  É recomendável que os serviços usam o `<generatePublisherEvidence>` elemento para melhorar o desempenho de inicialização.  Usar esse elemento também pode ajudar a evitar atrasos que podem causar um tempo limite e o cancelamento da inicialização do serviço.  
   
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado apenas no arquivo de configuração do aplicativo.  
@@ -79,5 +79,5 @@ Especifica se o tempo de execução cria <xref:System.Security.Policy.Publisher>
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

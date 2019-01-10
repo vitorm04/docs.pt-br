@@ -40,7 +40,7 @@ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oferece suporte a vários
 
     -   Recursos que simplesmente encapsulam a API do sistema operacional também serão removidos, pois o [!INCLUDE[wrt](../../../includes/wrt-md.md)] é fácil chamar do código gerenciado.
 
-     Para ler mais sobre o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consulte o [visão geral de aplicativos .NET para Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx). Para ler sobre o processo de seleção de API, consulte o [.NET para aplicativos estilo Metro](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) entrada no blog do .NET.
+     Para ler mais sobre o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consulte o [visão geral de aplicativos .NET para Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx). Para ler sobre o processo de seleção de API, consulte o [.NET para aplicativos estilo Modern UI](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) entrada no blog do .NET.
 
 -   O [tempo de execução do Windows](/uwp/api/) fornece elementos da interface do usuário para a compilação [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicativos e fornece acesso aos recursos do sistema operacional. Como o .NET Framework, o [!INCLUDE[wrt](../../../includes/wrt-md.md)] tem os metadados que permite que os compiladores c# e Visual Basic usar o [!INCLUDE[wrt](../../../includes/wrt-md.md)] bibliotecas de classes a maneira como eles usam o .NET Framework. O .NET Framework torna mais fácil de usar o [!INCLUDE[wrt](../../../includes/wrt-md.md)] , ocultando algumas diferenças:
 

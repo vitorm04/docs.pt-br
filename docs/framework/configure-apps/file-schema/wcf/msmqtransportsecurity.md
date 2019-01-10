@@ -2,12 +2,12 @@
 title: '&lt;msmqTransportSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: f178ac3132e3c5880daef1d59480edae88f1d27e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ed7402ac7ec50a98b7d685813448edb173266d9
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180972"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151989"
 ---
 # <a name="ltmsmqtransportsecuritygt"></a>&lt;msmqTransportSecurity&gt;
 Especifica as configurações de segurança do transporte MSMQ para uma associação personalizada.  
@@ -22,12 +22,11 @@ Especifica as configurações de segurança do transporte MSMQ para uma associa�
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<msmqTransportSecurity>  
-   msmqAuthenticationMode="None/Windows/Certificate"  
-   msmqEncryptionAlgorithm="RC4Stream/AES"  
-   msmqProtectionLevel="None/Sign/EncryptAndSign"  
-   msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-</msmqTransportSecurity>  
+<msmqTransportSecurity msmqAuthenticationMode="None/Windows/Certificate"
+                       msmqEncryptionAlgorithm="RC4Stream/AES"
+                       msmqProtectionLevel="None/Sign/EncryptAndSign"
+                       msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+</msmqTransportSecurity>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -39,7 +38,7 @@ Especifica as configurações de segurança do transporte MSMQ para uma associa�
 |---------------|-----------------|  
 |`msmqAuthenticationMode`|Especifica como a mensagem deve ser autenticada pelo transporte MSMQ. Se isso for definido como `None`, o valor da `msmqProtectionLevel` atributo também deve ser definido como `None`.<br /><br /> Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma autenticação.<br />-Windows: O mecanismo de autenticação usa o Active Directory para obter o certificado X.509 para o SID associado à mensagem. Em seguida, isso é usado para verificar a ACL da fila para garantir que o usuário tem permissão para gravar na fila.<br />-Certificado: O canal obtém o certificado do repositório de certificados.<br /><br /> O valor padrão é Windows. Esse atributo é do tipo <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Especifica o algoritmo a ser usado para criptografia de mensagem no fio durante a transferência de mensagens entre os gerenciadores de fila de mensagem. Os valores válidos incluem o seguinte:<br /><br /> -RC4Stream<br />-AES<br /><br /> O valor padrão é RC4Stream. Esse atributo é do tipo <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Especifica como a mensagem é protegida no nível do transporte MSMQ. Criptografia assegura a integridade da mensagem enquanto EncryptAndSign garante a integridade da mensagem e não-repúdio; ou seja, a mensagem é proveniente, de fato, o remetente e o remetente é quem diz que ser. Os valores válidos incluem o seguinte:<br /><br /> -None: Nenhuma proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é o sinal. Esse atributo é do tipo <xref:System.Net.Security.ProtectionLevel>.|  
+|`msmqProtectionLevel`|Especifica como a mensagem é protegida no nível do transporte MSMQ. Criptografia assegura a integridade da mensagem enquanto EncryptAndSign garante a integridade da mensagem e não-repúdio; ou seja, a mensagem é proveniente, de fato, o remetente e o remetente é quem diz que ser. Os valores válidos incluem o seguinte:<br /><br /> -None: Sem proteção.<br />-Sinal: As mensagens são assinadas.<br />-EncryptAndSign: As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é o sinal. Esse atributo é do tipo <xref:System.Net.Security.ProtectionLevel>.|  
 |`msmqSecureHashAlgorithm`|Especifica o algoritmo a ser usado no cálculo do resumo como parte das assinaturas. Os valores válidos incluem o seguinte:<br /><br /> -   MD5<br />-SHA1<br />-   SHA256<br />-   SHA512<br /><br /> O valor padrão é SHA1. Esse atributo é do tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Elementos filho  

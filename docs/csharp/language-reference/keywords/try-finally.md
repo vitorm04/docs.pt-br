@@ -1,5 +1,6 @@
 ---
-title: try-finally (Referência de C#)
+title: try-finally – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 227c880aab89d0ada4431dc50148c36ce00cfda8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2bfdc4e94f5c5dc613eac06efcd69407576b0db4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155152"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239258"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (Referência de C#)
 
@@ -50,4 +51,4 @@ C# também contém a [instrução using](using-statement.md), que fornece uma fu
 - [Instruções para manipulação de exceções](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
-- [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [Como: Gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -2,14 +2,14 @@
 title: Como gerenciar versões de dependência de pacote para o .NET Core 1.0
 description: Saiba mais sobre o gerenciamento de versão de dependência de pacote para seus aplicativos e bibliotecas do .NET Core.
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 96d154f045303e32de606475e77ab2e6b4f7bcda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 7d7133ddb8717db1b830e531955454925c31a728
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211332"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168605"
 ---
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>Como gerenciar versões de dependência de pacote para o .NET Core 1.0
 

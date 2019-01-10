@@ -1,17 +1,17 @@
 ---
-title: Associações let em classes (F#)
-description: Saiba como definir campos particulares e funções privadas para classes de F# por meio de associações 'let' na definição de classe.
+title: Associações let em classes
+description: Saiba como definir campos particulares e funções privadas para F# classes usando 'let' associações na definição de classe.
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033214"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611120"
 ---
 # <a name="let-bindings-in-classes"></a>Associações let em classes
 
-Você pode definir campos particulares e funções privadas para classes de F# usando `let` associações na definição de classe.
+Você pode definir campos particulares e funções privadas para F# classes usando `let` associações na definição de classe.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,7 +45,7 @@ A saída é a seguinte.
 
 ## <a name="alternative-ways-to-create-fields"></a>Maneiras alternativas de criar campos
 
-Você também pode usar o `val` palavra-chave para criar um campo particular. Ao usar o `val` palavra-chave, o campo não recebe um valor quando o objeto é criado, mas em vez disso, é inicializado com um valor padrão. Para obter mais informações, consulte [campos explícitos: A val palavra-chave](explicit-fields-the-val-keyword.md).
+Você também pode usar o `val` palavra-chave para criar um campo particular. Ao usar o `val` palavra-chave, o campo não recebe um valor quando o objeto é criado, mas em vez disso, é inicializado com um valor padrão. Para obter mais informações, consulte [campos explícitos: O val palavra-chave](explicit-fields-the-val-keyword.md).
 
 Você também pode definir campos privados em uma classe usando uma definição de membro e adicionando a palavra-chave `private` à definição. Isso pode ser útil se você pretende alterar a acessibilidade de um membro sem reescrever seu código. Para saber mais, veja [Controle de acesso](../access-control.md).
 

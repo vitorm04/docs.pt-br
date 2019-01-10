@@ -1,5 +1,5 @@
 ---
-title: s_isDebuggerCheckDisabledForTestPurposes campo
+title: Campo de s_isDebuggerCheckDisabledForTestPurposes
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-wpf
@@ -10,17 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-robots: noindex,nofollow
-ms.openlocfilehash: fbbd8d33ea163efaad1417ab4a1435df729e4897
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f490ccb4675a434e3f3336723e321f256b10093d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752190"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149170"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes campo
+# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>Campo de s_isDebuggerCheckDisabledForTestPurposes
 
-Este campo privado no `System.Windows.Diagnostics.VisualDiagnostics` pelo Visual Studio, a classe é usada para determinar se uma verificação interna de um depurador ativo será executada.
+Esse campo particular no `System.Windows.Diagnostics.VisualDiagnostics` classe é usada pelo Visual Studio para determinar se uma verificação interna de um depurador ativo será executada.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -29,14 +28,14 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
   
 > [!WARNING]
->  API no `System.Windows.Diagnostics.VisualDiagnostics` classe estão disponíveis somente quando um aplicativo está em execução em um depurador. Definir `s_isDebuggerCheckDisabledForTestPurposes` para `true` para acessar as APIs fora de um depurador.  
+>  API no `System.Windows.Diagnostics.VisualDiagnostics` classe só estão disponíveis quando um aplicativo está em execução em um depurador. Definir `s_isDebuggerCheckDisabledForTestPurposes` para `true` para acessar as APIs fora de um depurador.  
 >   
->  Microsoft não suporta o uso desse campo em um aplicativo de produção sob nenhuma circunstância.  
+>  Microsoft não suporta o uso deste campo em um aplicativo de produção sob nenhuma circunstância.  
 
 ## <a name="requirements"></a>Requisitos
 
 **Namespace:** <xref:System.Windows.Diagnostics>
 
-**Assembly:** PresentationCore (em PresentationCore.dll)
+**Assembly:** PresentationCore (em PresentationCore. dll)
 
-**Versões do .NET framework:** disponível desde o 4.6.
+**Versões do .NET framework:** Disponível desde o 4.6.

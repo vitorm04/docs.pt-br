@@ -2,18 +2,18 @@
 title: Visão geral de descoberta do WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 24d758502e360a8368be25c506b8648b12a3eb20
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494246"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084934"
 ---
 # <a name="wcf-discovery-overview"></a>Visão geral de descoberta do WCF
 As APIs de descoberta fornecem um modelo de programação unificado para a publicação dinâmica e a descoberta de serviços da Web usando o protocolo WS-Discovery. Essas APIs permitem que os serviços publicar em si e os clientes localizem serviços publicados. Depois que um serviço é feito detectável, o serviço tem a capacidade de enviar mensagens de comunicado, bem como ouvir e responder às solicitações de descoberta. Serviços podem ser descobertos podem enviar mensagens de saudação anunciar sua chegada em uma rede e Bye anunciar sua saída de uma rede. Para localizar um serviço, os clientes enviam uma `Probe` solicitação que contém critérios específicos, como o tipo de contrato de serviço, as palavras-chave e o escopo na rede. Serviços de recebem o `Probe` solicitar e determinar se eles correspondem aos critérios. Se corresponder a um serviço, ele responde enviando um `ProbeMatch` mensagem de volta para o cliente com as informações necessárias para contatar o serviço. Os clientes também podem enviar `Resolve` solicitações que lhes permitem encontrar os serviços que podem ter sido alteradas seu endereço de ponto de extremidade. Serviços correspondentes respondem às `Resolve` solicitações enviando um `ResolveMatch` mensagem de volta ao cliente.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Modos gerenciados e Ad Hoc  
- A descoberta de API dá suporte a dois modos diferentes: gerenciados e Ad Hoc. No modo gerenciado, há um servidor centralizado chamado um proxy de descoberta que mantém informações sobre os serviços disponíveis. O proxy de descoberta pode ser preenchido com informações sobre os serviços em uma variedade de formas. Por exemplo, os serviços podem enviar mensagens de comunicado durante o início até o proxy de descoberta ou o proxy pode ler os dados de um banco de dados ou um arquivo de configuração para determinar quais serviços estão disponíveis. Como o proxy de descoberta é preenchido completamente é responsabilidade do desenvolvedor. Clientes usam o proxy de descoberta para recuperar informações sobre os serviços disponíveis. Quando um cliente pesquisa um serviço ele envia um `Probe` mensagem para o proxy de descoberta e o proxy determina se qualquer um dos serviços que ele sabe sobre correspondem ao serviço que o cliente está procurando. Se não houver correspondências dos envios de proxy de descoberta uma `ProbeMatch` resposta de volta ao cliente. O cliente pode, em seguida, entre em contato com o serviço diretamente usando as informações de serviço retornadas do proxy. O princípio fundamental por trás de modo gerenciado é que as solicitações de descoberta são enviadas de uma maneira de unicast para uma autoridade, o proxy de descoberta. O .NET Framework contém componentes-chave que permitem que você crie seus próprios proxy. Os clientes e serviços podem localizar o proxy por vários métodos:  
+ A API de descoberta dá suporte a dois modos diferentes: Gerenciado e Ad Hoc. No modo gerenciado, há um servidor centralizado chamado um proxy de descoberta que mantém informações sobre os serviços disponíveis. O proxy de descoberta pode ser preenchido com informações sobre os serviços em uma variedade de formas. Por exemplo, os serviços podem enviar mensagens de comunicado durante o início até o proxy de descoberta ou o proxy pode ler os dados de um banco de dados ou um arquivo de configuração para determinar quais serviços estão disponíveis. Como o proxy de descoberta é preenchido completamente é responsabilidade do desenvolvedor. Clientes usam o proxy de descoberta para recuperar informações sobre os serviços disponíveis. Quando um cliente pesquisa um serviço ele envia um `Probe` mensagem para o proxy de descoberta e o proxy determina se qualquer um dos serviços que ele sabe sobre correspondem ao serviço que o cliente está procurando. Se não houver correspondências dos envios de proxy de descoberta uma `ProbeMatch` resposta de volta ao cliente. O cliente pode, em seguida, entre em contato com o serviço diretamente usando as informações de serviço retornadas do proxy. O princípio fundamental por trás de modo gerenciado é que as solicitações de descoberta são enviadas de uma maneira de unicast para uma autoridade, o proxy de descoberta. O .NET Framework contém componentes-chave que permitem que você crie seus próprios proxy. Os clientes e serviços podem localizar o proxy por vários métodos:  
   
 -   O proxy pode responder a mensagens ad hoc.  
   
@@ -74,7 +74,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
     // ** DISCOVERY ** //
     // Make the service discoverable by adding the discovery behavior
     ServiceDiscoveryBehavior discoveryBehavior = new ServiceDiscoveryBehavior();
-    serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
+    serviceHost.Description.Behaviors.Add(discoveryBehavior);
 
     // Send announcements on UDP multicast transport
     discoveryBehavior.AnnouncementEndpoints.Add(
@@ -155,7 +155,7 @@ class Client
   
 2.  Usar um proxy de descoberta para se comunicar em nome do serviço  
   
- O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço a ser iniciado antes de receber todas as mensagens. Com essa Auto-Start definido, um IIS / WAS hospedado serviço pode ser configurado para ser descoberto. Para obter mais informações sobre o Auto-Start recurso, consulte [recurso de início automático do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Junto com a ativar o recurso Auto-Start, você deve configurar o serviço para descoberta. Para obter mais informações, consulte [como: programaticamente adicionar capacidade de descoberta para um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configuring Discovery em um arquivo de configuração](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço a ser iniciado antes de receber todas as mensagens. Com essa Auto-Start definido, um IIS / WAS hospedado serviço pode ser configurado para ser descoberto. Para obter mais informações sobre o Auto-Start recurso, consulte [recurso de início automático do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Junto com a ativar o recurso Auto-Start, você deve configurar o serviço para descoberta. Para obter mais informações, confira [Como: Adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configurando a descoberta em um arquivo de configuração](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Um proxy de descoberta pode ser usado para comunicar-se em nome do serviço WCF quando o serviço não está em execução. O proxy pode escutar investigação ou resolver mensagens e responder ao cliente. O cliente pode enviar mensagens diretamente para o serviço. Quando o cliente envia uma mensagem para o serviço, ele será instanciado para responder à mensagem. Para obter mais informações sobre como implementar uma descoberta proxy, consulte [implementando um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

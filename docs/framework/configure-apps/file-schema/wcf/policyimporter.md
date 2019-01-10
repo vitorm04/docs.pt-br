@@ -2,15 +2,15 @@
 title: '&lt;policyImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 7483a95accef0a4bc956d919087379363b4762ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 22d90ff9d0cd5325300cf42437836f075cbf8c31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753021"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148481"
 ---
 # <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
-Especifica um importador de política que controla a importação de declarações de políticas personalizadas sobre associações.  
+Especifica um importador de política que controla a importação de declarações de política personalizada sobre associações.  
   
  \<system.ServiceModel>  
 \<client>  
@@ -21,11 +21,11 @@ Especifica um importador de política que controla a importação de declaraçõ
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<metadata>  
-   <policyImporters>  
-      <policyImporter type="string" />  
-   </policyImporters>  
-</metadata>  
+<metadata>
+  <policyImporters>
+    <policyImporter type="String" />
+  </policyImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -35,7 +35,7 @@ Especifica um importador de política que controla a importação de declaraçõ
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`type`|O tipo de elemento.|  
+|`type`|O tipo deste elemento.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -44,10 +44,10 @@ Especifica um importador de política que controla a importação de declaraçõ
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Especifica todos os importadores de políticas que controlam a importação de declarações de políticas personalizadas sobre associações.|  
+|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Especifica todos os importadores de políticas que controlam a importação de declarações de política personalizada sobre associações.|  
   
 ## <a name="remarks"></a>Comentários  
- Um importador de política é usado para declarações de políticas personalizadas sobre associação de recursos de pesquisa, bem como anexar um elemento de associação personalizada que implementa os recursos que requer a asserção.  
+ Um importador de política é usado para pesquisar as declarações de política personalizadas sobre recursos de associação, bem como anexar a um elemento de associação personalizado que implementa os recursos que exige que a asserção.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  

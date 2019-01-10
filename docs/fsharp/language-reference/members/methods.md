@@ -1,13 +1,13 @@
 ---
-title: Métodos (F#)
-description: Saiba como um método de F# é uma função associada com um tipo que são usados para expor e implementar a funcionalidade e o comportamento de objetos e tipos.
+title: Métodos
+description: Saiba como um F# método é uma função associada com um tipo que são usados para expor e implementar a funcionalidade e o comportamento de objetos e tipos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44253202"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614019"
 ---
 # <a name="methods"></a>Métodos
 
@@ -59,7 +59,7 @@ Métodos embutidos não podem ser usado recursivamente dentro do tipo; não é n
 
 ## <a name="instance-methods"></a>Métodos de instância
 
-Métodos de instância são declarados com o `member` palavra-chave e uma *identificador Self*, seguido por um ponto (.) e o nome do método e parâmetros. Como é o caso para `let` associações, o *lista de parâmetros* pode ser um padrão. Normalmente, você coloque método parâmetros entre parênteses em um formulário de tupla, que é os forma como os métodos são exibidos em F# quando eles são criados em outras linguagens do .NET Framework. No entanto, o formulário na forma curried (parâmetros separados por espaços) também é comum, e outros padrões são suportados também.
+Métodos de instância são declarados com o `member` palavra-chave e uma *identificador Self*, seguido por um ponto (.) e o nome do método e parâmetros. Como é o caso para `let` associações, o *lista de parâmetros* pode ser um padrão. Normalmente, coloque o método parâmetros entre parênteses em um formulário de tupla, que é os forma como os métodos aparecem na F# quando eles são criados em outras linguagens do .NET Framework. No entanto, o formulário na forma curried (parâmetros separados por espaços) também é comum, e outros padrões são suportados também.
 
 O exemplo a seguir ilustra a definição e uso de um método de instância não-abstrata.
 
@@ -97,11 +97,11 @@ O exemplo a seguir ilustra uma classe derivada que substitui um método de class
 
 ## <a name="overloaded-methods"></a>Métodos Sobrecarregados
 
-Métodos sobrecarregados são métodos que tenham nomes idênticos em um determinado tipo, mas que têm diferentes argumentos. No F#, os argumentos opcionais são geralmente usados em vez de métodos sobrecarregados. No entanto, os métodos sobrecarregados são permitidos na linguagem, desde que os argumentos estão na forma de tupla, não na forma curried formulário.
+Métodos sobrecarregados são métodos que tenham nomes idênticos em um determinado tipo, mas que têm diferentes argumentos. No F#, argumentos opcionais são geralmente usados em vez de métodos sobrecarregados. No entanto, os métodos sobrecarregados são permitidos na linguagem, desde que os argumentos estão na forma de tupla, não na forma curried formulário.
 
 ## <a name="optional-arguments"></a>Argumentos opcionais
 
-Começando com o F# 4.1, você também pode ter argumentos opcionais com um valor de parâmetro padrão nos métodos.  Isso é para ajudar a facilitar a interoperação com código c#.  O exemplo a seguir demonstra a sintaxe:
+Começando com F# 4.1, você também pode ter argumentos opcionais com um valor de parâmetro padrão nos métodos.  Isso é para ajudar a facilitar a interoperação com código c#.  O exemplo a seguir demonstra a sintaxe:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.

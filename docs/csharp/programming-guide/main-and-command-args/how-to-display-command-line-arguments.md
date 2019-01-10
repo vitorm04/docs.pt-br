@@ -1,17 +1,18 @@
 ---
-title: Como exibir argumentos de linha de comando (Guia de Programação em C#)
+title: 'Como: exibir argumentos de linha de comando – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: a6067482b4a225abc31592affb2cfab38847cd53
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b09f5a1991ab5545ab31b1879f30c383a0e9a9f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502666"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236525"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Como exibir argumentos de linha de comando (Guia de Programação em C#)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Como: exibir argumentos de linha de comando (Guia de Programação em C#)
 Os argumentos fornecidos a um executável na linha de comando são acessíveis por meio de um parâmetro opcional para `Main`. Os argumentos são fornecidos na forma de uma matriz de cadeias de caracteres. Cada elemento da matriz contém um argumento. O espaço em branco entre os argumentos é removido. Por exemplo, considere essas invocações de linha de comando de um executável fictício:  
   
 |Entrada na linha de comando|Matriz de cadeias de caracteres passada a Main|  
@@ -33,5 +34,5 @@ Os argumentos fornecidos a um executável na linha de comando são acessíveis p
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
 - [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
 - [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Como acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Como: acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
 - [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

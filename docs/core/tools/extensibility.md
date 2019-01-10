@@ -2,14 +2,14 @@
 title: Modelo de extensibilidade da CLI do .NET Core
 description: Saiba como você pode estender as ferramentas da CLI (interface de linha de comando).
 author: blackdwarf
-ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842730"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170230"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidade das ferramentas da CLI do .NET Core
 

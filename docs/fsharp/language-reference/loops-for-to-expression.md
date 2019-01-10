@@ -1,13 +1,13 @@
 ---
-title: 'Loops: expressão for...to (F#)'
+title: 'Loops: expressão for...to'
 description: Veja como o F# loop for... a expressão é usado para iterar em um loop em um intervalo de valores de uma variável de loop.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800463"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612316"
 ---
 # <a name="loops-forto-expression"></a>Loops: expressão for...to
 
@@ -39,5 +39,5 @@ A saída do código anterior está a seguir.
 ## <a name="see-also"></a>Consulte também
 
 - [Referência da Linguagem F#](index.md)
-- [Loops: `for...in` expressão](loops-for-in-expression.md)
-- [Loops: `while...do` expressão](loops-while-do-expression.md)
+- [Loops: `for...in` Expressão](loops-for-in-expression.md)
+- [Loops: `while...do` Expressão](loops-while-do-expression.md)

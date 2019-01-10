@@ -2,12 +2,12 @@
 title: '&lt;activityStateQueries&gt; do WCF'
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 081dc297912ed5735dd51111936b85b61f463d2d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2dabfdd248006de60b5e84e739f78e03f364dde3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123235"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146180"
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>&lt;activityStateQueries&gt; do WCF
 
@@ -24,7 +24,7 @@ Para obter mais informações sobre consultas de perfil de controle, consulte [p
 
 ## <a name="syntax"></a>Sintaxe  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -32,13 +32,13 @@ Para obter mais informações sobre consultas de perfil de controle, consulte [p
         <activityStateQueries>
           <activityStateQuery activityName="String">
             <arguments>
-              <argument name="String"/>
+              <argument name="String" />
             </arguments>
             <states>
-              <state name="String"/>
+              <state name="String" />
             </states>
             <variables>
-              <variable name="String"/>
+              <variable name="String" />
             </variables>
           </activityStateQuery>
         </activityStateQueries>

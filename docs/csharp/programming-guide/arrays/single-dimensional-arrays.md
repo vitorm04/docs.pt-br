@@ -1,16 +1,17 @@
 ---
-title: Matrizes unidimensionais (Guia de Programação em C#)
+title: Matrizes unidimensionais – Guia de Programação em C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 316f8f59b86294b1f344b31f7355017ebd992362
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027122"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334750"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrizes unidimensionais (Guia de Programação em C#)
 
@@ -26,7 +27,7 @@ ms.locfileid: "48027122"
   
 ## <a name="array-initialization"></a>Inicialização de Matriz
 
- É possível inicializar uma matriz na declaração. Nesse caso, o especificador de classificação não é necessário, porque ele já é fornecido pelo número de elementos na lista de inicialização. Por exemplo:  
+ É possível inicializar uma matriz na declaração. Nesse caso, o especificador de comprimento não é necessário porque ele já é fornecido pelo número de elementos na lista de inicialização. Por exemplo:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   

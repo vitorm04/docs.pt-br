@@ -2,12 +2,12 @@
 title: elemento de &lt;mensagem&gt; de &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 21c14c64648540eb7b6ecf00b0a37e6fc2800031
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7af8cd9d36b56093eee2b53873c0fe0775a33430
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839015"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146154"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>elemento de &lt;mensagem&gt; de &lt;netTcpBinding&gt;
 Define o tipo de requisitos de segurança de nível de mensagem para um ponto de extremidade configurado com o [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -22,9 +22,8 @@ Define o tipo de requisitos de segurança de nível de mensagem para um ponto de
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<message   
-      algorithmSuite=System.Servicemodel.Security.SecurityAlgorithmsuite  
-    clientCredentialType="None/Windows/UserName/Certificate/IssuedToken"/>  
+<message algorithmSuite="System.Servicemodel.Security.SecurityAlgorithmsuite"
+         clientCredentialType="None/Windows/UserName/Certificate/IssuedToken" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  

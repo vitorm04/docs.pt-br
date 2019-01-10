@@ -2,12 +2,12 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1eef89290b4fda08dd7145c0615edde2fa56676c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210124"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152002"
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -18,19 +18,19 @@ Define o comportamento de ponto de extremidade de cliente usado para realizar ma
 &nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comportamento de >**   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
-
-## <a name="syntax"></a>Sintaxe
-
-```xml
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```xml  
 <soapProcessing processMessages="true|false" />
-```
-
-## <a name="attributes-and-elements"></a>Atributos e elementos
-
-As seções a seguir descrevem atributos, elementos filho e elementos pai.
-
-### <a name="attributes"></a>Atributos
-
+```  
+  
+## <a name="attributes-and-elements"></a>Atributos e elementos  
+  
+As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+  
+### <a name="attributes"></a>Atributos  
+  
 |                   | Descrição |
 | ----------------- | ----------- |
 | `processMessages` | Um valor booliano que especifica se as mensagens devem passar por marshaling entre versões de mensagem SOAP. |

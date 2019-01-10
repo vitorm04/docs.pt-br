@@ -1,13 +1,13 @@
 ---
-title: Comando dotnet clean – CLI do .NET Core
+title: Comando dotnet clean
 description: O comando dotnet clean limpa o diretório atual.
 ms.date: 12/04/2018
-ms.openlocfilehash: 9930d2905f234e7125f27367cda36aa85ae23b87
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144449"
+ms.locfileid: "53169853"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 

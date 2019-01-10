@@ -1,17 +1,17 @@
 ---
-title: Unidades de medida (F#)
-description: Saiba como flutuante ponto e valores de inteiro com sinal em F# podem ter associadas a unidades de medida, que normalmente são usadas para indicar o comprimento, volume e em massa.
+title: Unidades de medida
+description: Saiba de ponto flutuante como e assinado valores inteiros F# podem ter associadas a unidades de medida, que normalmente são usadas para indicar o comprimento, volume e em massa.
 ms.date: 05/16/2016
-ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45972497"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610977"
 ---
 # <a name="units-of-measure"></a>Unidades de medida
 
-Flutuante ponto e valores de inteiro com sinal em F# pode ter associadas unidades de medida, que normalmente são usadas para indicar o comprimento, volume, em massa, e assim por diante. Ao usar as quantidades com unidades, você habilita o compilador verificar se o aritméticas relações tem as unidades corretas, que ajuda a evitar erros de programação.
+Ponto flutuante e assinado valores inteiros F# podem ter associadas a unidades de medida, que normalmente são usadas para indicar o comprimento, volume, em massa e assim por diante. Ao usar as quantidades com unidades, você habilita o compilador verificar se o aritméticas relações tem as unidades corretas, que ajuda a evitar erros de programação.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -113,7 +113,7 @@ Para converter um valor sem unidade em um valor que tem as unidades, você pode 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Unidades de medida na biblioteca do F# Core
+## <a name="units-of-measure-in-the-f-core-library"></a>Unidades de medida no F# biblioteca principal
 
 Uma biblioteca de unidade está disponível no `FSharp.Data.UnitSystems.SI` namespace. Ele inclui as unidades de SI em sua forma do símbolo (como `m` de medidor) na `UnitSymbols` namespace secundário e seu nome completo (como `meter` de medidor) na `UnitNames` namespace secundário.
 

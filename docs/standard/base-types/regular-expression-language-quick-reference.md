@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041610"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030393"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Linguagem de expressões regulares - referência rápida
 <a name="top"></a> Uma expressão regular é um padrão ao qual o mecanismo de expressões regulares tenta corresponder no texto de entrada. Um padrão consiste em um ou mais literais de caracteres, operadores ou constructos.  Para ver uma breve introdução, confira [Expressões regulares no .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041610"
   
  [Escapes de caracteres](#character_escapes)  
  [Classes de caracteres](#character_classes)  
- [Âncoras](#atomic_zerowidth_assertions)  
+ [Âncoras](#anchors)  
  [Constructos de agrupamento](#grouping_constructs)  
  [Quantificadores](#quantifiers)  
  [Constructos de referência inversa](#backreference_constructs)  
@@ -50,7 +50,7 @@ ms.locfileid: "44041610"
   
 |Caractere com escape|Descrição|Padrão|Correspondências|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Corresponde a um caractere de campainha, \u0007.|`\a`|"\u0007" em "Error!" + '\u0007'|  
+|`\a`|Corresponde a um caractere de sino, \u0007.|`\a`|"\u0007" em "Error!" + '\u0007'|  
 |`\b`|Em uma classe de caractere, corresponde a um backspace, \ u0008.|`[\b]{3,}`|"\b\b\b\b" em "\b\b\b\b"|  
 |`\t`|Corresponde a uma tabulação, \u0009.|`(\w+)\t`|"item1\t", "item2\t" em "item1\titem2\t"|  
 |`\r`|Corresponde a um retorno de carro, \u000D. (`\r` não é equivalente ao caractere newline, `\n`.)|`\r\n(\w+)`|"\r\nThese" em "\r\nThese are\ntwo lines."|  
@@ -73,9 +73,9 @@ ms.locfileid: "44041610"
 |Classe de caractere|Descrição|Padrão|Correspondências|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Corresponde a qualquer caractere único em *character_group*. Por padrão, a correspondência diferencia maiúsculas de minúsculas.|`[ae]`|"a" em "gray"<br /><br /> "a", "e" em "lane"|  
-|`[^` *character_group* `]`|Negação: corresponde a qualquer caractere único que não esteja em *character_group*. Por padrão, caracteres em *character_group* diferenciam maiúsculas de minúsculas.|`[^aei]`|"r", "g", "n" em "reign"|  
-|`[` *first* `-` *last* `]`|Intervalo de caracteres: corresponde a qualquer caractere único no intervalo entre *first* e *last*.|`[A-Z]`|"A", "B" em "AB123"|  
-|`.`|Curinga: corresponde a qualquer caractere único, exceto \n.<br /><br /> Para corresponder a um caractere literal de ponto (. ou `\u002E`), você deve precedê-lo com o caractere de escape (`\.`).|`a.e`|"ave" em "nave"<br /><br /> "ate" em "water"|  
+|`[^` *character_group* `]`|Negação: Encontra a correspondência de qualquer caractere individual que não esteja em *character_group*. Por padrão, caracteres em *character_group* diferenciam maiúsculas de minúsculas.|`[^aei]`|"r", "g", "n" em "reign"|  
+|`[` *first* `-` *last* `]`|Intervalo de caracteres: Encontra a correspondência de qualquer caractere individual no intervalo de *first* a *last*.|`[A-Z]`|"A", "B" em "AB123"|  
+|`.`|Curinga: Encontra a correspondência de qualquer caractere individual, exceto \n.<br /><br /> Para corresponder a um caractere literal de ponto (. ou `\u002E`), você deve precedê-lo com o caractere de escape (`\.`).|`a.e`|"ave" em "nave"<br /><br /> "ate" em "water"|  
 |`\p{` *name* `}`|Corresponde a qualquer caractere único na categoria geral Unicode ou no bloco nomeado especificado por *name*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"C", "L" em "City Lights"<br /><br /> "Д", "Ж" em "ДЖem"|  
 |`\P{` *name* `}`|Corresponde a qualquer caractere único que não esteja na categoria geral Unicode ou no bloco nomeado especificado por *name*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"i", "t", "y" em "City"<br /><br /> "e", "m" em "ДЖem"|  
 |`\w`|Corresponde a qualquer caractere de palavra.|`\w`|"I", "D", "A", "1", "3" em "ID A1.3"|  
@@ -83,11 +83,10 @@ ms.locfileid: "44041610"
 |`\s`|Corresponde a qualquer caractere de espaço em branco.|`\w\s`|"D " em "ID A1.3"|  
 |`\S`|Corresponde a qualquer caractere que não seja um caractere de espaço em branco.|`\s\S`|" _" em "int \__ctr"|  
 |`\d`|Corresponde a qualquer dígito decimal.|`\d`|"4" em "4 = IV"|  
-|`\D`|Corresponde a qualquer caractere que não seja um dígito decimal.|`\D`|" ", "=", " ", "I", "V" em "4 = IV"|  
+|`\D`|Corresponde a qualquer caractere que não seja uma dígito decimal.|`\D`|" ", "=", " ", "I", "V" em "4 = IV"|  
   
  [Voltar ao início](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Âncoras  
  Âncoras ou asserções atômicas de largura zero, fazem com que uma correspondência tenha êxito ou falha dependendo da posição atual na cadeia de caracteres, mas não fazem com que o mecanismo avance na cadeia de caracteres ou consuma caracteres. Os metacaracteres listados na tabela a seguir são âncoras. Para saber mais, confira [Âncoras](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
@@ -131,15 +130,15 @@ ms.locfileid: "44041610"
 |----------------|-----------------|-------------|-------------|  
 |`*`|Corresponde ao elemento anterior zero ou mais vezes.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Corresponde ao elemento anterior uma ou mais vezes.|`"be+"`|"bee" em "been", "be" em "bent"|  
-|`?`|Corresponde ao elemento anterior zero vezes ou uma vez.|`"rai?n"`|"ran", "rain"|  
+|`?`|Corresponde ao elemento anterior zero ou uma vez.|`"rai?n"`|"ran", "rain"|  
 |`{` *n* `}`|Corresponde ao elemento anterior exatamente *n* vezes.|`",\d{3}"`|".043" em "1.043.6", ".876", ".543" e ".210" em "9.876.543.210"|  
 |`{` *n* `,}`|Corresponde ao elemento anterior pelo menos *n* vezes.|`"\d{2,}"`|"166", "29", "1930"|  
 |`{` *n* `,` *m* `}`|Corresponde ao elemento anterior pelo menos *n* vezes, mas não mais do que *m* vezes.|`"\d{3,5}"`|"166", "17668"<br /><br /> "19302" em "193024"|  
-|`*?`|Corresponde ao elemento anterior zero vezes ou mais, mas o menor número de vezes possível.|`\d*?\.\d`|".0", "19.9", "219.9"|  
+|`*?`|Corresponde ao elemento anterior zero ou mais vezes, mas o menor número de vezes possível.|`\d*?\.\d`|".0", "19.9", "219.9"|  
 |`+?`|Corresponde ao elemento anterior uma ou mais vezes, mas o menor número de vezes possível.|`"be+?"`|"be" em "been", "be" em "bent"|  
-|`??`|Corresponde ao elemento anterior zero vezes ou uma vez, mas o menor número de vezes possível.|`"rai??n"`|"ran", "rain"|  
+|`??`|Corresponde ao elemento anterior zero ou uma vez, mas o menor número de vezes possível.|`"rai??n"`|"ran", "rain"|  
 |`{` *n* `}?`|Corresponde ao elemento anterior exatamente *n* vezes.|`",\d{3}?"`|".043" em "1.043.6", ".876", ".543" e ".210" em "9.876.543.210"|  
-|`{` *n* `,}?`|Corresponde ao elemento anterior pelo menos *n* vezes, mas o menor número de vezes possível.|`"\d{2,}?"`|"166", "29", "1930"|  
+|`{` *n* `,}?`|Corresponde ao elemento anterior pelo menos *n* vezes, mas o menor número de vezes possível.|`"\d{2,}?"`|"166", "29", "1930"| 
 |`{` *n* `,` *m* `}?`|Corresponde ao elemento anterior entre *n* e *m* vezes, mas o menor número de vezes possível.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" em "193024"|  
   
  [Voltar ao início](#top)  
@@ -177,7 +176,7 @@ ms.locfileid: "44041610"
 |`${` *name* `}`|Substitui a subcadeia de caracteres correspondida pelo grupo chamado *name*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|Substitui um literal "$".|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Substitui uma cópia da correspondência inteira.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Substitui todo o texto da cadeia de caracteres de entrada antes da correspondência.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|Substitui todo o texto da cadeia de caracteres de entrada antes da correspondência.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|Substitui todo o texto da cadeia de caracteres de entrada após a correspondência.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|Substitui o último grupo que foi capturado.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Substitui a cadeia de caracteres de entrada inteira.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  

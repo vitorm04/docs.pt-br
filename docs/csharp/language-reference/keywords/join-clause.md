@@ -1,5 +1,6 @@
 ---
-title: Cláusula join (Referência de C#)
+title: Cláusula join – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237157"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236278"
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
 
@@ -73,7 +74,7 @@ Você pode realizar junções por não igualdade, uniões cruzadas e outras oper
 
 Em uma expressão de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], as operações de junção são realizadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], cláusulas `join` explícitas só são necessárias quando duas sequências de origem não são ligadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.
 
-Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], consulte [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Para saber mais sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], confira [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Chaves compostas
 

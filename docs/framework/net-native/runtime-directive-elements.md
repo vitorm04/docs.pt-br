@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b4e8f0902e0d3ebd010ff639b329707881c29fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398008"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084804"
 ---
 # <a name="runtime-directive-elements"></a>Elementos da diretiva de tempo de execução
 O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seguintes elementos de diretiva de tempo de execução. Consulte a [Referência do arquivo de configuração (rd.xml) de diretivas de tempo de execução](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) para uma representação hierárquica.  
@@ -18,7 +18,7 @@ O formato do arquivo de diretivas (rd.xml) do tempo de execução suporta os seg
  Aplica a política de reflexão de tempo de execução a todos os tipos usados pelo aplicativo e serve como um contêiner para tipos amplos de aplicativos e membros de tipo cujos metadados estão disponíveis para reflexão no tempo de execução. Este é um filho do elemento [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md).  
   
  [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)  
- Aplica a política de tempo de execução para todos os tipos em um assembly. Esse é um filho dos elementos [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ Aplica a política de tempo de execução a todos os tipos em um assembly. Esse é um filho dos elementos [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) e [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
  Se sua diretiva recipiente [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) for um atributo, ela se aplicará à política de tempo de execução para elementos de código aos quais esse atributo é aplicado.  

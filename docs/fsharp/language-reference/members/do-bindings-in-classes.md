@@ -1,13 +1,13 @@
 ---
-title: Associações do em classes (F#)
-description: Saiba como usar F# 'do' associação em uma definição de classe, que executa ações quando o objeto é criado ou quando o tipo é usado pela primeira vez.
+title: Associações do em classes
+description: Saiba como usar um F# 'do' associação em uma definição de classe, que executa ações quando o objeto é criado ou quando o tipo é usado pela primeira vez.
 ms.date: 05/16/2016
-ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43801510"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613109"
 ---
 # <a name="do-bindings-in-classes"></a>Associações do em classes
 

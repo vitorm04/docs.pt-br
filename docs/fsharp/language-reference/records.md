@@ -1,17 +1,17 @@
 ---
-title: Registros (F#)
-description: Saiba como o F# registros representam agregações simples de valores nomeados, opcionalmente com membros.
+title: Registros
+description: Saiba como F# registros representam agregações simples de valores nomeados, opcionalmente com membros.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261284"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656135"
 ---
 # <a name="records"></a>Registros
 
-Registros representam agregações simples de valores nomeados, opcionalmente com membros.  Começando com o F# 4.1, eles podem ser structs ou tipos de referência.  Eles são tipos de referência por padrão.
+Registros representam agregações simples de valores nomeados, opcionalmente com membros.  Começando com F# 4.1, eles podem ser structs ou tipos de referência.  Eles são tipos de referência por padrão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>Criando mutuamente recursivas registros
+
+Em algum momento durante a criação de um registro, você talvez queira fazer com que ele depende de outro tipo que você deseja definir posteriormente. Esse é um erro de compilação, a menos que você defina os tipos de registro para ser mutuamente recursivas.
+
+Definir mutuamente recursivas registros é feito com o `and` palavra-chave. Isso lhe permite vincular 2 ou mais registros de tipos.
+
+Por exemplo, o código a seguir define uma `Person` e `Address` tipo como mutuamente recursivas:
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Se você definir o exemplo anterior sem o `and` palavra-chave, em seguida, ele não seria compilado. O `and` palavra-chave é necessária para mutuamente recursivas definições.
 
 ## <a name="pattern-matching-with-records"></a>Correspondência de padrões com registros
 

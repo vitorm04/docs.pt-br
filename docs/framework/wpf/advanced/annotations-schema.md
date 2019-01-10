@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542009"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029834"
 ---
 # <a name="annotations-schema"></a>Esquema de anotações
 Este tópico descreve a definição de esquema XML (XSD) usada pelo Microsoft Annotations Framework para salvar e recuperar dados de anotação do usuário.  
@@ -24,13 +24,13 @@ Este tópico descreve a definição de esquema XML (XSD) usada pelo Microsoft An
   
 -   O esquema base de XML de anotações (Esquema base).  
   
- O esquema principal define a estrutura XML primária de uma <xref:System.Windows.Annotations.Annotation>.  A maioria dos elementos XML definidos no esquema principal correspondem aos tipos no <xref:System.Windows.Annotations> namespace.  O esquema principal expõe três pontos de extensão, no qual os aplicativos podem adicionar seus próprios dados XML.  Esses pontos de extensão incluem o <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e "Conteúdo".  (Conteúdo de elementos são fornecidos na forma de um <xref:System.Xml.XmlElement> lista.)  
+ O esquema principal define a estrutura XML primária de um <xref:System.Windows.Annotations.Annotation>.  A maioria dos elementos XML definidos no esquema principal correspondem aos tipos no <xref:System.Windows.Annotations> namespace.  O esquema principal expõe três pontos de extensão, no qual os aplicativos podem adicionar seus próprios dados XML.  Esses pontos de extensão incluem o <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e "Conteúdo".  (Conteúdo de elementos são fornecidos na forma de um <xref:System.Xml.XmlElement> lista.)  
   
  O esquema básico descrito neste tópico define as extensões para o <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>e tipos incluídos com a versão inicial do Windows Presentation Foundation (WPF) de conteúdo.  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Esquema principal de XML de anotações  
- O esquema de núcleo de XML de anotações define a estrutura XML que é usada para armazenar <xref:System.Windows.Annotations.Annotation> objetos.  
+ O esquema de principal de XML de anotações define a estrutura XML que é usada para armazenar <xref:System.Windows.Annotations.Annotation> objetos.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ Este tópico descreve a definição de esquema XML (XSD) usada pelo Microsoft An
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ Este tópico descreve a definição de esquema XML (XSD) usada pelo Microsoft An
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ Este tópico descreve a definição de esquema XML (XSD) usada pelo Microsoft An
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Exemplo de XML produzido por XmlStreamStore de anotações  
- O XML a seguir mostra a saída de uma anotação <xref:System.Windows.Annotations.Storage.XmlStreamStore> e a organização de um arquivo de exemplo que contém três anotações - um realce, um texto-IT e um POST-IT à tinta.  
+ O XML a seguir mostra a saída de uma anotação <xref:System.Windows.Annotations.Storage.XmlStreamStore> e a organização de um arquivo de exemplo que contém três anotações: um realce, uma nota autoadesiva de texto – e uma nota autoadesiva de tinta.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

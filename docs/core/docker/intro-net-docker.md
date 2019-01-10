@@ -1,22 +1,20 @@
 ---
-title: Introdução ao Docker – .NET Core
+title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1655d4652c4e9b48c48a2a22c2a1bf6cdd459088
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148859"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656161"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
 Este artigo fornece uma introdução e uma base conceitual para trabalhar com o .NET no Docker.
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: empacotar seus aplicativos para implantar e executar em qualquer lugar
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: Empacotando seus aplicativos para implantá-los e executá-los em qualquer lugar
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) é uma plataforma aberta que permite aos desenvolvedores e administradores compilar [imagens](https://docs.docker.com/glossary/?term=image), enviar e executar aplicativos distribuídos em um ambiente isolado de forma flexível chamado de [contêiner](https://www.docker.com/what-container). Essa abordagem permite um gerenciamento eficiente do ciclo de vida do aplicativo entre ambientes de desenvolvimento, garantia de qualidade e produção.
  
@@ -28,7 +26,7 @@ A [relação entre contêineres, imagens e registros do Docker](../../standard/m
 
 ### <a name="further-reading-and-watching"></a>Leituras (e vídeos) adicionais
 
-* [Contêineres baseados em Windows: desenvolvimento de aplicativos modernos com controle de nível empresarial.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
+* [Contêineres baseados no Windows: Desenvolvimento de aplicativos modernos com controle de nível empresarial.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Visão geral do docker](https://docs.docker.com/engine/docker-overview/)
 * [Dockerfile em contêineres do Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Práticas recomendadas para escrever Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)

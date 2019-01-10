@@ -1,17 +1,17 @@
 ---
-title: Introdução ao F# com ferramentas de linha de comando
-description: Saiba como criar uma solução multiprojeto simples em F# usando a CLI do .NET Core em qualquer sistema operacional (Windows, macOs ou Linux).
+title: Introdução ao F# com as ferramentas de linha de comando
+description: Saiba como criar uma solução multiprojeto simple no F# usando a CLI do .NET Core em qualquer sistema operacional (Windows, macOs ou Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673903"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152093"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F# com a CLI do .NET Core
 
-Este artigo aborda como você pode começar com o F# em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core. Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.
+Este artigo aborda como você pode começar com F# em qualquer sistema operacional (Windows, macOS ou Linux) com a CLI do .NET Core. Ele percorre a criação de uma solução multiprojeto com uma biblioteca de classes que é chamada por um aplicativo de console.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -131,7 +131,7 @@ Adicione a `App` do projeto para o `FSNetCore` solução usando o `dotnet sln ad
 dotnet sln add src/App/App.fsproj
 ```
 
-Restaure as dependências do NuGet `dotnet restore` ([veja Observação](#dotnet-restore-note)) e execute `dotnet build` para compilar o projeto.
+Restaure as dependências do NuGet `dotnet restore` e execute `dotnet build` para compilar o projeto.
 
 Altere o diretório para o `src/App` projeto de console e executar o projeto passando `Hello World` como argumentos:
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Em seguida, confira a [Tour do F#](../tour.md) para saber mais sobre os diferentes recursos do F#.
+Em seguida, confira a [Tour do F# ](../tour.md) para saber mais sobre diferentes F# recursos.

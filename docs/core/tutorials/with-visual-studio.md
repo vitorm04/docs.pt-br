@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b28c1523196650c30a54ccaa86fe23ed60e96f9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129617"
+ms.locfileid: "53168917"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em C# com o SDK do .NET Core no Visual Studio 2017
 
@@ -26,13 +26,13 @@ Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Cor
 
 Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas:
 
-1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
+1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto*\*, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
 
-   ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/with-visual-studio/newproject.png)
+   ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/with-visual-studio/visual-studio-new-project.png)
    
 1. O Visual Studio usa o modelo para criar seu projeto. O modelo de aplicativo do console C# para o .NET Core automaticamente define uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo tempo de execução quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
 
-   ![O Visual Studio e o novo projeto HelloWorld](./media/with-visual-studio/devenv.png)
+   ![O Visual Studio e o novo projeto HelloWorld](./media/with-visual-studio/visual-studio-main-window.png)
 
    O modelo cria um simples aplicativo “Olá, Mundo”. Ele chama o método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para exibir a cadeia de caracteres literal "Hello World!" na janela do console. Ao selecionar o botão **HelloWorld** com a seta verde na barra de ferramentas, você pode executar o programa no modo de depuração. Se fizer isso, a janela do console será visível somente por um breve intervalo antes de ser fechada. Isso ocorre porque o método `Main` é encerrado e o aplicativo é fechado assim que a única instrução no método `Main` é executada.
 
@@ -48,7 +48,7 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
 
 1. Execute o programa selecionando o botão **HelloWorld** com a seta verde na barra de ferramentas.
 
-   ![Janela de console mostrando Hello World Press any key to continue](./media/with-visual-studio/helloworld1.png)
+   ![Janela de console mostrando Hello World Press any key to continue](./media/with-visual-studio/hello-world-console.png)
 
 1. Pressione qualquer tecla para fechar a janela de console.
 
@@ -62,7 +62,7 @@ Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com
 
    Esse código substitui as instruções <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> e <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> existentes.
 
-   ![Arquivo C-Sharp do programa do Visual Studio com o método Main atualizado](./media/with-visual-studio/codewindow.png)
+   ![Arquivo C-Sharp do programa do Visual Studio com o método Main atualizado](./media/with-visual-studio/visual-csharp-code-window.png)
 
    Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida da tecla Enter. Ele armazena essa cadeia de caracteres a uma variável chamada `name`. Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=nameWithType>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele usa uma [cadeia de caracteres interpolada](../../csharp/language-reference/tokens/interpolated.md) para exibir esses valores na janela do console.
 
@@ -70,7 +70,7 @@ Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com
 
 1. Execute o programa no modo de Depuração no Visual Studio selecionando a seta verde na barra de ferramentas, pressionando F5 ou escolhendo o item de menu **Depurar** > **Iniciar Depuração**. Responda à solicitação inserindo um nome e pressionando a tecla Enter.
 
-   ![Janela de console com saída de programa modificada](./media/with-visual-studio/helloworld2.png)
+   ![Janela de console com saída de programa modificada](./media/with-visual-studio/hello-world-update.png)
 
 1. Pressione qualquer tecla para fechar a janela de console.
 

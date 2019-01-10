@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144696"
+ms.locfileid: "53168826"
 ---
 # <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Compilar uma biblioteca de classes com Visual Basic e o .SDK do NET Core no Visual Studio 2017
 
@@ -31,7 +31,7 @@ Comece criando uma solução para seu projeto de biblioteca de classes e seus pr
 
 1. Na caixa de diálogo **Novo Projeto**, expanda o nó **Outros Tipos de Projeto** e selecione **Soluções Visual Studio**. Nomeie a solução "ClassLibraryProjects" e selecione o botão **OK**.
 
-   ![Caixa de diálogo Novo projeto](./media/library-with-visual-studio/newproject.png)
+   ![Caixa de diálogo Criar projeto de teste do Visual Studio](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Criar o projeto de biblioteca de classes
 
@@ -41,15 +41,15 @@ Crie seu projeto de biblioteca de classes:
 
 1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual Basic** e selecione o nó **.NET Standard** seguido pelo modelo de projeto **Biblioteca de classes (.NET Standard)**. Na caixa de texto **Nome**, digite "StringLibrary" como o nome do projeto. Selecione **OK** para criar o projeto de biblioteca de classes.
 
-   ![Caixa de diálogo Adicionar Novo Projeto](./media/vb-library-with-visual-studio/libproject.png)
+   ![Caixa de diálogo Adicionar novo projeto de biblioteca do Visual Studio](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    Em seguida, a janela de código é aberta no ambiente de desenvolvimento do Visual Studio. 
  
-   ![Janela do aplicativo do Visual Studio mostrando o código de modelo de biblioteca de classes padrão](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![Janela do aplicativo do Visual Studio mostrando o código de modelo de biblioteca de classes padrão](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. Certifique-se de que a biblioteca direciona a versão correta do .NET Standard. Clique com o botão direito do mouse no projeto da biblioteca na janela **Gerenciador de Soluções** e, em seguida, selecione **Propriedades**. A caixa de texto **Estrutura de Destino** mostra que estamos direcionando o .NET Standard 2.0.
 
-   ![Propriedades do projeto da biblioteca de classes](./media/library-with-visual-studio/properties.png)
+   ![Propriedades do projeto da biblioteca de classes](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Ainda na caixa de diálogo **Propriedades**, apague o texto na caixa de texto **Namespace raiz**. Para cada projeto, o Visual Basic cria automaticamente um namespace que corresponde ao nome do projeto e quaisquer namespaces definidos nos arquivos do código-fonte são pais desse namespace. Queremos definir um namespace de nível superior usando a palavra-chave [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md).
   
@@ -61,7 +61,7 @@ Crie seu projeto de biblioteca de classes:
 
 1. Na barra de menus, selecione **Compilar** > **Compilar Solução**. O projeto deve ser compilado sem erros.
 
-   ![Painel de saída mostrando que o build foi bem-sucedido](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Painel de saída mostrando que o build foi bem-sucedido](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

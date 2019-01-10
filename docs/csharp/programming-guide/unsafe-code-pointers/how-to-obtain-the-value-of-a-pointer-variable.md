@@ -1,5 +1,6 @@
 ---
-title: Como obter o valor de uma variável de ponteiro (Guia de Programação em C#)
+title: 'Como: obter o valor de uma variável de ponteiro – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointer expressions [C#], indirection
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b20642344b34b5426512ef64bde2ab33d55136b9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746582"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236629"
 ---
-# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Como obter o valor de uma variável de ponteiro (Guia de Programação em C#)
+# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Como: obter o valor de uma variável de ponteiro (Guia de Programação em C#)
 Use o operador de indireção de ponteiro para obter a variável no local apontado por um ponteiro. A expressão usa o seguinte formato, em que `p` é um tipo de ponteiro:  
   
 ```  

@@ -1,17 +1,18 @@
 ---
-title: Como implementar e chamar um método de extensão personalizado (Guia de Programação em C#)
+title: 'Como: implementar e chamar um método de extensão personalizado – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 7a09fa34b88c024bdaa0197bf82471a6bd6c2ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9f1f7994043288f8896b48a3f12d1c7ee93c3661
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739227"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245542"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como implementar e chamar um método de extensão personalizado (Guia de Programação em C#)
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como: implementar e chamar um método de extensão personalizado (Guia de Programação em C#)
 Este tópico mostra como implementar seus próprios métodos de extensão para qualquer tipo do .NET. O código de cliente pode usar seus métodos de extensão, adicionando uma referência à DLL que os contém e adicionando uma diretiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifica o namespace no qual os métodos de extensão são definidos.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Para definir e chamar o método de extensão  

@@ -2,20 +2,20 @@
 title: '&lt;useRequestHeadersForMetadataAddress&gt;'
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: 7e661570f8b94b979595a615b3f6819d41ed5e35
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcbf1c633e0796c6056759dfbb55014838e0e293
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766693"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151396"
 ---
 # <a name="ltuserequestheadersformetadataaddressgt"></a>&lt;useRequestHeadersForMetadataAddress&gt;
-Permite a recuperação de informações de endereço de metadados de cabeçalhos de mensagem de solicitação.  
+Habilita a recuperação de informações de endereço de metadados dos cabeçalhos de mensagem de solicitação.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
 \<serviceBehaviors >  
-\<comportamento >  
+\<comportamento de >  
 \<useRequestHeadersForMetadataAddress >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -23,9 +23,10 @@ Permite a recuperação de informações de endereço de metadados de cabeçalho
 ```xml  
 <useRequestHeadersForMetadataAddress>
   <defaultPorts>
-    <add scheme="http" port="integer" />
+    <add scheme="http"
+         port="integer" />
   </defaultPorts>
-</useRequestHeadersForMetadataAddress>  
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -44,7 +45,7 @@ Permite a recuperação de informações de endereço de metadados de cabeçalho
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>

@@ -1,15 +1,16 @@
 ---
-title: Operador new (Referência em C#)
+title: Operador new – Referência em C#
+ms.custom: seodec18
 ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 362217b247bd2ab7a2eec2f86cbaaf1a0652a3ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839599"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239846"
 ---
 # <a name="new-operator-c-reference"></a>Operador new (Referência em C#)
 
@@ -56,7 +57,7 @@ No exemplo a seguir, um objeto `struct` e um objeto de classe são criados e ini
 
 Observe, no exemplo, que o valor padrão de uma cadeia de caracteres é `null`. Portanto, ele não é exibido.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

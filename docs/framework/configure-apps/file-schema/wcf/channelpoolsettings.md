@@ -1,16 +1,16 @@
 ---
-title: '&lt;channelPoolSettings&gt;'
+title: '&lt;ChannelPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e55d3a989ae35d6e29062337cc79114a204608bb
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747230"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149092"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
-Especifica as configurações de pool do canal para uma associação personalizada.  
+# <a name="ltchannelpoolsettingsgt"></a>&lt;ChannelPoolSettings&gt;
+Especifica as configurações de pool de canal para uma associação personalizada.  
   
  \<system.serviceModel>  
 \<associações >  
@@ -22,10 +22,9 @@ Especifica as configurações de pool do canal para uma associação personaliza
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<channelPoolSettings  
-    idleTimeout"TimeSpan"  
-        leaseTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<channelPoolSettings idleTimeout="TimeSpan"
+                     leaseTimeout="TimeSpan"
+                     maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -36,7 +35,7 @@ Especifica as configurações de pool do canal para uma associação personaliza
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |`idleTimeout`|Um positivo <xref:System.TimeSpan> que especifica o tempo máximo de canais no pool podem ficar ociosos antes de ser desconectada. O padrão é 00:02:00.|  
-|`leaseTimeout`|Um <xref:System.TimeSpan> que especifica o intervalo de tempo após o qual um canal, quando retornado para o pool está fechado. O padrão é 00:10:00.|  
+|`leaseTimeout`|Um <xref:System.TimeSpan> que especifica o intervalo de tempo após o qual um canal, quando retornado para o pool está fechado. O padrão é 10:00:00.|  
 |`maxOutboundChannelsPerEndpoint`|Um inteiro positivo que especifica o número máximo de canais que podem ser armazenados no pool para cada ponto de extremidade remoto. O padrão é 10.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -46,18 +45,18 @@ Especifica as configurações de pool do canal para uma associação personaliza
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Permite que o roteamento de pacotes para uma associação personalizada.|  
+|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|Habilita o roteamento de pacotes para uma associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
- As cotas são usadas como um mecanismo de política para evitar o consumo de recursos em excesso. Elas impedem ataques de negação de serviço (DOS) que são mal-intencionados ou não intencionais. Use esse elemento ao definir cotas de canal em um canal personalizado.  
+ As cotas são usadas como um mecanismo de diretiva para impedir o consumo de recursos em excesso. Elas impedir ataques de negação de serviço (DOS) que são mal-intencionados ou não intencionais. Use esse elemento ao definir cotas de canal em um canal personalizado.  
   
  `ChannelPoolSettings` Especifica as cotas de três:  
   
--   O `idleTimeout` cota é usada para reduzir os ataques de negação de serviço (DOS) no servidor que se baseiam na prender os recursos por um longo período de tempo. No cliente, definir o valor correto pode aumentar a confiabilidade de conexão com o serviço. O valor padrão baseia-se em uma forma prudente modesta alocação de recursos. Ele é adequado para um ambiente de desenvolvimento e cenários de instalação pequeno. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas apesar da disponibilidade dos recursos adicionais.  
+-   O `idleTimeout` cota é usada para reduzir os ataques de negação de serviço (DOS) no servidor que dependem de prender os recursos por um longo período de tempo. No cliente, definir o valor correto pode aumentar a confiabilidade de conexão com o serviço. O valor padrão se baseia em uma forma prudente modesta alocação de recursos. Ele é adequado para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
--   O `leaseTimeout` cota é usada para integração com balanceadores de carga e para melhorar a confiabilidade. O valor padrão baseia-se em uma alocação de recursos de conservadora. Ele é adequado para um ambiente de desenvolvimento e cenários de instalação pequeno. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas apesar da disponibilidade dos recursos adicionais.  
+-   O `leaseTimeout` cota é usada para integração com os balanceadores de carga e aumentar a confiabilidade. O valor padrão se baseia em uma alocação conservadora de recursos. Ele é adequado para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
--   O `maxOutboundChannelsPerEndpoint` cota define limites de cache no servidor e o cliente e é usada para melhorar a confiabilidade. O valor padrão baseia-se em uma forma prudente modesta alocação de recursos que é adequada para um ambiente de desenvolvimento e cenários de instalação pequeno. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas apesar da disponibilidade dos recursos adicionais.  
+-   O `maxOutboundChannelsPerEndpoint` cota define limites de cache no servidor e o cliente e é usada para melhorar a confiabilidade. O valor padrão se baseia em uma forma prudente modesta alocação de recursos que é adequada para cenários de instalação pequeno e um ambiente de desenvolvimento. Os administradores de serviço devem examinar o valor se uma instalação está ficando sem recursos ou se as conexões estão sendo limitadas, apesar da disponibilidade de recursos adicionais.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  

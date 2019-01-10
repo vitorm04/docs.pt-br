@@ -2,25 +2,24 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126972"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058549"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
 O .NET Core tem as seguintes características:
 
-- **Multiplataforma:** é executado nos [sistemas operacionais](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS e Linux.
-- **Consistente entre arquiteturas:** executa o código com o mesmo comportamento em várias arquiteturas, incluindo x64, x86 e ARM.
-- **Ferramentas de Linha de Comando:** inclui ferramentas de linha de comando fáceis de usar, para desenvolvimento local e em cenários de integração contínua.
-- **Implantação flexível:** o .NET Core pode ser incluído no seu aplicativo ou instalado lado a lado no usuário ou em todos os computadores. Pode ser usado com os [contêineres do Docker](docker/index.md).
+- **Multiplataforma:** Executado nos [sistemas operacionais](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS e Linux.
+- **Consistente entre arquiteturas:** Executa o código com o mesmo comportamento em várias arquiteturas, incluindo x64, x86 e ARM.
+- **Ferramentas de linha de comando:**  Inclui ferramentas de linha de comando fáceis de usar, para desenvolvimento local e em cenários de integração contínua.
+- **Implantação flexível:** Pode ser incluído no aplicativo ou instalado lado a lado no usuário ou em todos os computadores. Pode ser usado com os [contêineres do Docker](docker/index.md).
 - **Compatível:** o .NET Core é compatível com o .NET Framework, o Xamarin e o Mono por meio do [.NET Standard](../standard/net-standard.md).
-- **Código-fonte aberto:** a plataforma do .NET Core é um software livre que usa licenças do MIT e Apache 2. O .NET Core é um projeto do [.NET Foundation](https://dotnetfoundation.org/).
+- **Software livre:** A plataforma .NET Core é um software livre que usa licenças do MIT e Apache 2. O .NET Core é um projeto do [.NET Foundation](https://dotnetfoundation.org/).
 - **Suporte da Microsoft:** a Microsoft dá suporte ao .NET Core por meio do [Suporte do .NET Core](https://www.microsoft.com/net/core/support/).
 
 ## <a name="languages"></a>Linguagens
@@ -74,7 +73,7 @@ O produto é dividido em várias partes que podem se adaptar a novas plataformas
 
 As pessoas geralmente perguntam como o .NET Core é implementado para dar suporte a vários sistemas operacionais. Eles normalmente perguntam se há implementações separadas ou se a [compilação condicional](https://en.wikipedia.org/wiki/Conditional_compilation) é usada. A resposta é ambas, com uma forte tendência para a compilação condicional.
 
-Você pode ver no gráfico abaixo que a maior parte do [CoreFX](https://github.com/dotnet/corefx) é um código neutro compartilhado entre todas as plataformas. O código neutro com relação à plataforma pode ser implementado como um único assembly portátil usado em todas as plataformas.
+Você pode ver no gráfico abaixo que a maior parte do [CoreFX](https://github.com/dotnet/corefx) é um código neutro compartilhado entre todas as plataformas. O código neutro de plataforma pode ser implementado como um único assembly portátil usado em todas as plataformas.
 
 ![CoreFX: Linhas de código por plataforma](../images/corefx-platforms-loc.png)
 
@@ -96,7 +95,7 @@ O .NET foi anunciado pela primeira vez pela Microsoft em 2000 e continuou evolui
 
 Principais diferenças entre o .NET Core e o .NET Framework:
 
-- **Modelos de aplicativo** – o .NET Core não dá suporte a todos os modelos de aplicativo do .NET Framework. Especificamente, ele não dá suporte ao ASP.NET Web Forms e ao MVC. Foi anunciado que o [.NET Core 3 dará suporte ao WPF e ao Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Modelos de aplicativo** – o .NET Core não dá suporte a todos os modelos de aplicativo do .NET Framework. Ele não dá suporte especificamente a Web Forms do ASP.NET e a ASP.NET MVC, mas dá suporte ao ASP.NET Core MVC. Foi anunciado que o [.NET Core 3 dará suporte ao WPF e ao Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
 - **APIs** – o .NET Core contém um grande subconjunto da biblioteca de classes base .NET Framework, com aspectos diferentes (os nomes de assembly são diferentes, os membros expostos nos tipos são diferentes em casos principais). Essas diferenças exigem alterações para portar o código para o .NET Core em alguns casos (confira [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). O .NET Core implementa a especificação de API [.NET Standard](../standard/net-standard.md).
 - **Subsistemas** – O.NET Core implementa um subconjunto dos subsistemas no .NET Framework com o objetivo de proporcionar uma implementação e um modelo de programação mais simples. Por exemplo, não há suporte para CAS (Segurança de Acesso do Código), porém há suporte para reflexão.
 - **Plataformas** – O .NET Framework dá suporte a Windows e Windows Server, enquanto o .NET Core também dá suporte a macOS e Linux.

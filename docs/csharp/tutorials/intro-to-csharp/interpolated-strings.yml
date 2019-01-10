@@ -11,22 +11,102 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Coleções em C#
-  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: c5d9ba80df952a58740ac2557bfc0011ef2ea539
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53149205"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54030406"
 items:
 - durationInMinutes: 2
   content: >
     Este tutorial ensina como usar a [interpolação de cadeias de caracteres](../../language-reference/tokens/interpolated.md) para inserir valores em uma única cadeia de caracteres. Você também aprenderá a controlar a formatação de texto da cadeia de caracteres do resultado. Use o navegador para escrever e executar código C# e os resultados poderão ser vistos imediatamente.
 - title: Criar uma cadeia de caracteres interpolada
   durationInMinutes: 2
-  content: "Execute o seguinte código na janela interativa. Para fazer isso, digite o código na janela interativa (substitua \"`<name>`\" por seu nome) e selecione **Executar**:\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\nQuando o código é executado, **Saída** exibe uma cadeia de caracteres que inclui seu nome na saudação. O argumento de cadeia de caracteres da chamada de método <xref:System.Console.WriteLine%2A> é uma *cadeia de caracteres interpolada*. Ela é um tipo de modelo que permite que você construa uma única cadeia de caracteres (chamado de *cadeia de caracteres de resultado*) com base em uma cadeia de caracteres que inclui o código inserido. Cadeias de caracteres interpoladas são particularmente úteis para inserir valores em uma cadeia de caracteres ou para concatenar (unir) várias cadeias de caracteres. \n\nO exemplo acima contém os dois elementos que toda cadeia de caracteres interpolada deve ter: \n\n- Um literal de cadeia de caracteres que começa com o caractere `$` antes do caractere de aspas de abertura. Não pode haver nenhum espaço entre o símbolo `$` e o caractere de aspas. (Se quiser ver o que acontece ao incluir um espaço, insira um após o caractere `$` na janela interativa e execute o código atualizado. O compilador do C# informará: \"Caractere '$' inesperado\"). \n\n- Uma ou mais *expressões interpoladas*. Uma expressão interpolada é indicada por chaves de abertura e fechamento (`{` e `}`). Você pode colocar qualquer expressão de C# que retorne um valor (incluindo `null`) dentro das chaves. \n\nVamos testar mais alguns exemplos de interpolação de cadeias de caracteres com outros tipos de dados.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Execute o seguinte código na janela interativa. Para fazer isso, digite o código na janela interativa (substitua "`<name>`" por seu nome) e selecione **Executar**:
+
+
+    ```csharp
+
+    var name = "<name>";
+
+    Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+
+    ```
+
+
+    Quando o código é executado, **Saída** exibe uma cadeia de caracteres que inclui seu nome na saudação. O argumento de cadeia de caracteres da chamada de método <xref:System.Console.WriteLine%2A> é uma *cadeia de caracteres interpolada*. Ela é um tipo de modelo que permite que você construa uma única cadeia de caracteres (chamado de *cadeia de caracteres de resultado*) com base em uma cadeia de caracteres que inclui o código inserido. Cadeias de caracteres interpoladas são particularmente úteis para inserir valores em uma cadeia de caracteres ou para concatenar (unir) várias cadeias de caracteres.
+
+
+    O exemplo acima contém os dois elementos que toda cadeia de caracteres interpolada deve ter:
+
+
+    - Um literal de cadeia de caracteres que começa com o caractere `$` antes do caractere de aspas de abertura. Não pode haver nenhum espaço entre o símbolo `$` e o caractere de aspas. (Se quiser ver o que acontece ao incluir um espaço, insira um após o caractere `$` na janela interativa e execute o código atualizado. O compilador do C# informará: "Caractere '$' inesperado").
+
+
+    - Uma ou mais *expressões interpoladas*. Uma expressão interpolada é indicada por chaves de abertura e fechamento (`{` e `}`). Você pode colocar qualquer expressão de C# que retorne um valor (incluindo `null`) dentro das chaves.
+
+
+    Vamos testar mais alguns exemplos de interpolação de cadeias de caracteres com outros tipos de dados.
+
+
+    > [!NOTE]
+
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Incluir diferentes tipos de dados
   durationInMinutes: 5
-  content: "Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Entretanto, o resultado de uma expressão interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de vários tipos de dados em uma cadeia de caracteres interpolada. \n\nNo exemplo a seguir, primeiramente definimos um tipo de dados de [classe](../../programming-guide/classes-and-structs/classes.md) `Vegetable` que tem uma [propriedade](../../properties.md) `Name` e um [método](../../methods.md) `ToString`, que [substitui](../../language-reference/keywords/override.md) o comportamento do método <xref:System.Object.ToString?displayProperty=nameWithType>. O [modificador de acesso `public`](../../language-reference/keywords/public.md) disponibiliza esse método para qualquer código de cliente para obter a representação de cadeia de caracteres de uma instância de `Vegetable`. No exemplo, o método `Vegetable.ToString` retorna o valor da propriedade `Name` que é inicializada no [construtor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`: `Vegetable(string name) => Name = name;`. Em seguida, criamos uma instância da classe `Vegetable` chamada `item` usando a [palavra-chave `new`](../../language-reference/keywords/new-operator.md) e fornecendo um nome para o construtor `Vegetable`. Por fim, incluímos essa instância em uma cadeia de caracteres interpolada que também contém um valor <xref:System.DateTime>, um valor <xref:System.Decimal> e um valor de [enumeração](../../programming-guide/enumeration-types.md) `Unit`. Execute o seguinte código na janela interativa:\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic enum Unit { item, kilogram, gram, dozen };\n\nvar item = new Vegetable(\"eggplant\");\nvar date = DateTime.Now;\nvar price = 1.99m;\nvar unit = Unit.item;\nConsole.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n```\n\nObserve que a expressão interpolada `item` na cadeia de caracteres interpolada é resolvida como o texto \"eggplant\" na cadeia de caracteres de resultado. Isso ocorre porque, quando o tipo do resultado da expressão não é uma cadeia de caracteres, o resultado é resolvido como uma cadeia de caracteres da seguinte maneira:\n\n- Se a expressão interpolada for avaliada como `null`, uma cadeia de caracteres vazia (\"\" ou <xref:System.String.Empty?displayProperty=nameWithType>) será usada.\n\n- Se a expressão interpolada não foi avaliada como `null`, normalmente o método `ToString` do tipo de resultado será chamado. Você pode testar isso atualizando a implementação do método `Vegetable.ToString`. Talvez nem seja necessário implementar o método `ToString`, pois cada tipo tem algum modo de implementação desse método. Para testar isso, comente a definição do método `Vegetable.ToString` no exemplo (para isso, coloque o símbolo de comentário `//` na frente dele). Na saída, a cadeia de caracteres \"eggplant\" é substituída pelo nome de tipo totalmente qualificado (o namespace definido pelo REPL do C# junto com o nome de tipo), que é o comportamento padrão do método <xref:System.Object.ToString?displayProperty=nameWithType>. O comportamento padrão do método `ToString` para um valor de enumeração é retornar a representação de cadeia de caracteres do valor.    \n\nNa saída deste exemplo, a data é muito precisa (o preço de \"eggplant\" não muda a cada segundo) e o valor do preço não indica uma unidade monetária. Na próxima etapa, você aprenderá a corrigir esses problemas controlando o formato das representações das cadeias de caracteres dos resultados de expressão.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Entretanto, o resultado de uma expressão interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de vários tipos de dados em uma cadeia de caracteres interpolada.
+
+
+    No exemplo a seguir, primeiramente definimos um tipo de dados de [classe](../../programming-guide/classes-and-structs/classes.md) `Vegetable` que tem uma [propriedade](../../properties.md) `Name` e um [método](../../methods.md) `ToString`, que [substitui](../../language-reference/keywords/override.md) o comportamento do método <xref:System.Object.ToString?displayProperty=nameWithType>. O [modificador de acesso `public`](../../language-reference/keywords/public.md) disponibiliza esse método para qualquer código de cliente para obter a representação de cadeia de caracteres de uma instância de `Vegetable`. No exemplo, o método `Vegetable.ToString` retorna o valor da propriedade `Name` que é inicializada no [construtor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`: `Vegetable(string name) => Name = name;`. Em seguida, criamos uma instância da classe `Vegetable` chamada `item` usando a [palavra-chave `new`](../../language-reference/keywords/new-operator.md) e fornecendo um nome para o construtor `Vegetable`. Por fim, incluímos essa instância em uma cadeia de caracteres interpolada que também contém um valor <xref:System.DateTime>, um valor <xref:System.Decimal> e um valor de [enumeração](../../programming-guide/enumeration-types.md) `Unit`. Execute o seguinte código na janela interativa:
+
+
+    ```csharp
+
+    public class Vegetable
+
+    {
+       public Vegetable(string name) => Name = name;
+
+       public string Name { get; }
+
+       public override string ToString() => Name;
+    }
+
+
+    public enum Unit { item, kilogram, gram, dozen };
+
+
+    var item = new Vegetable("eggplant");
+
+    var date = DateTime.Now;
+
+    var price = 1.99m;
+
+    var unit = Unit.item;
+
+    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
+
+    ```
+
+
+    Observe que a expressão interpolada `item` na cadeia de caracteres interpolada é resolvida como o texto "eggplant" na cadeia de caracteres de resultado. Isso ocorre porque, quando o tipo do resultado da expressão não é uma cadeia de caracteres, o resultado é resolvido como uma cadeia de caracteres da seguinte maneira:
+
+
+    - Se a expressão interpolada for avaliada como `null`, uma cadeia de caracteres vazia ("" ou <xref:System.String.Empty?displayProperty=nameWithType>) será usada.
+
+
+    - Se a expressão interpolada não foi avaliada como `null`, normalmente o método `ToString` do tipo de resultado será chamado. Você pode testar isso atualizando a implementação do método `Vegetable.ToString`. Talvez nem seja necessário implementar o método `ToString`, pois cada tipo tem algum modo de implementação desse método. Para testar isso, comente a definição do método `Vegetable.ToString` no exemplo (para isso, coloque o símbolo de comentário `//` na frente dele). Na saída, a cadeia de caracteres "eggplant" é substituída pelo nome de tipo totalmente qualificado (o namespace definido pelo REPL do C# junto com o nome de tipo), que é o comportamento padrão do método <xref:System.Object.ToString?displayProperty=nameWithType>. O comportamento padrão do método `ToString` para um valor de enumeração é retornar a representação de cadeia de caracteres do valor.
+
+
+    Na saída deste exemplo, a data é muito precisa (o preço de "eggplant" não muda a cada segundo) e o valor do preço não indica uma unidade monetária. Na próxima etapa, você aprenderá a corrigir esses problemas controlando o formato das representações das cadeias de caracteres dos resultados de expressão.
+
+
+    > [!NOTE]
+
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Controlar a formatação de expressões interpoladas
   durationInMinutes: 5
   content: >

@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 15a86c1df3e7d6a9d8ddd102bd34aede46c08ba8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746079"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612082"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; elemento
-Determina se o common language runtime calcula os códigos de hash para cadeias de caracteres em um por cada domínio de aplicativo.  
+Determina se o common language runtime calcula códigos hash para cadeias de caracteres em uma base de domínio do aplicativo.  
   
  \<configuration>  
 \<runtime>  
@@ -38,14 +38,14 @@ Determina se o common language runtime calcula os códigos de hash para cadeias 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se os códigos de hash para cadeias de caracteres são calculados em um por cada domínio de aplicativo.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se os códigos de hash para cadeias de caracteres são calculados em uma base de domínio do aplicativo.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`0`|O common language runtime não computa códigos hash para cadeias de caracteres em um por cada domínio de aplicativo; um único algoritmo é usado para calcular os códigos de hash da cadeia de caracteres. Esse é o padrão.|  
-|`1`|O common language runtime calcula os códigos de hash para cadeias de caracteres em um por cada domínio de aplicativo. Cadeias de caracteres idênticas em diferentes domínios de aplicativo em diferentes processos terão códigos hash diferente.|  
+|`0`|O common language runtime não calcula códigos hash para cadeias de caracteres em uma base de domínio de aplicativo; um único algoritmo é usado para calcular códigos hash de cadeia de caracteres. Esse é o padrão.|  
+|`1`|O common language runtime computa código hash para cadeias de caracteres em uma base de domínio do aplicativo. Cadeias de caracteres idênticas em domínios de aplicativos e processos diferentes terão códigos hash diferentes.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -58,26 +58,26 @@ Determina se o common language runtime calcula os códigos de hash para cadeias 
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método usa um único algoritmo de hash que gera um código hash consistente entre domínios de aplicativo. Isso é equivalente à configuração de `enabled` atributo do `<UseRandomizedStringHashAlgorithm>` elemento `0`. Este é o algoritmo de hash usado no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ Por padrão, o <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método usar um único algoritmo de hash que gera um código hash consistente entre domínios de aplicativo. Isso equivale a definir as `enabled` atributo do `<UseRandomizedStringHashAlgorithm>` elemento a ser `0`. Este é o algoritmo de hash usado no [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
   
- O <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método também pode usar outro algoritmo de hash que calcula códigos hash em um por cada domínio de aplicativo. Como resultado, os códigos de hash para cadeias de caracteres equivalentes variam entre domínios de aplicativo. Esse é um recurso de aceitação; para tirar proveito dele, você deve definir o `enabled` atributo do `<UseRandomizedStringHashAlgorithm>` elemento `1`.  
+ O <xref:System.StringComparer> classe e o <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método também pode usar um algoritmo de hash diferente que Compute códigos hash em uma base de domínio do aplicativo. Como resultado, os códigos de hash para cadeias de caracteres equivalentes serão diferente entre domínios de aplicativo. Esse é um recurso no consentimento; para tirar proveito dele, você deve definir a `enabled` atributo o `<UseRandomizedStringHashAlgorithm>` elemento a ser `1`.  
   
- A pesquisa de cadeia de caracteres em uma tabela de hash é normalmente uma operação de (1). No entanto, quando um grande número de conflitos ocorrerem, a pesquisa pode se tornar um O (n<sup>2</sup>) operação. Você pode usar o `<UseRandomizedStringHashAlgorithm>` elemento de configuração para gerar um algoritmo de hash aleatório por domínio de aplicativo, que por sua vez limita o número de conflitos potenciais, especialmente quando as chaves do qual os códigos de hash são calculados se baseiam em dados de entrada por usuários.  
+ Normalmente, a pesquisa de cadeia de caracteres em uma tabela de hash é uma operação de (1). No entanto, quando um grande número de colisões ocorre, a pesquisa pode se tornar um O (n<sup>2</sup>) operação. Você pode usar o `<UseRandomizedStringHashAlgorithm>` elemento de configuração para gerar um algoritmo de hash aleatório por domínio de aplicativo, que por sua vez limita o número de conflitos em potencial, especialmente quando as chaves do qual os códigos de hash são calculados são com base na entrada de dados por usuários.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define uma `DisplayString` classe que inclui uma constante de cadeia de caracteres privada, `s`, cujo valor é "É uma cadeia de caracteres." Ele também inclui um `ShowStringHashCode` método que exibe o valor de cadeia de caracteres e o código de hash junto com o nome do domínio do aplicativo no qual o método está em execução.  
+ O exemplo a seguir define uma `DisplayString` classe que inclui uma constante de cadeia de caracteres privados, `s`, cujo valor é "Esta é uma cadeia de caracteres." Ele também inclui um `ShowStringHashCode` método que exibe o valor de cadeia de caracteres e seu código de hash junto com o nome do domínio do aplicativo no qual o método está sendo executado.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- Quando você executa o exemplo sem fornecer um arquivo de configuração, ele exibe a saída semelhante à seguinte. Observe que os códigos de hash para a cadeia de caracteres são idênticos nos domínios de aplicativo de dois.  
+ Quando você executar o exemplo sem fornecer um arquivo de configuração, ele exibe a saída semelhante à seguinte. Observe que os códigos hash para a cadeia de caracteres são idênticos em dois domínios de aplicativo.  
   
 ```  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
 ```  
   
- No entanto, se você adicionar o seguinte arquivo de configuração para o diretório de exemplo e, em seguida, executa o exemplo, os códigos de hash para a mesma cadeia de caracteres serão diferentes por domínio de aplicativo.  
+ No entanto, se você adicionar o seguinte arquivo de configuração para o diretório de exemplo e, em seguida, executar o exemplo, os códigos hash para a mesma cadeia de caracteres diferirão de acordo com o domínio de aplicativo.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -96,6 +96,6 @@ String 'This is a string.' in domain 'NewDomain': 75CC8236
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

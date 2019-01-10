@@ -1,20 +1,19 @@
 ---
-title: Executar testes de unidade seletivos – .NET Core
+title: Executar testes de unidade seletivos
 description: Como usar uma expressão de filtro para executar testes de unidade seletivos com o comando de teste do dotnet no .NET Core.
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c24fb8cc5024399ae523801373b0fd8eff85f45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151740"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239937"
 ---
 # <a name="running-selective-unit-tests"></a>Executar testes de unidade seletivos
 
-Os exemplos a seguir usam `dotnet test`. Se você estiver usando `vstest.console.exe`, substitua `--filter ` por `--testcasefilter:`.
+Com o comando `dotnet test` no .NET Core, use uma expressão de filtro para executar testes seletivos. Este artigo demonstra como filtrar os testes que são executados. Os exemplos a seguir usam `dotnet test`. Se você estiver usando `vstest.console.exe`, substitua `--filter ` por `--testcasefilter:`.
 
 ## <a name="mstest"></a>MSTest
 
@@ -46,7 +45,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | Executa testes cujo `FullyQualifiedName` contém `Method`. Disponível em `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Executa testes cujo nome contém `TestMethod1`. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Executa testes que estão na classe `MSTestNamespace.UnitTest1`.<br>**Observação:** o valor `ClassName` deve ter um namespace, portanto `ClassName=UnitTest1` não funcionará. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Executa testes que estão na classe `MSTestNamespace.UnitTest1`.<br>**Observação:** O valor `ClassName` deve ter um namespace; portanto, `ClassName=UnitTest1` não funcionará. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Executa todos os testes, exceto `MSTestNamespace.UnitTest1.TestMethod1`. |
 | `dotnet test --filter TestCategory=CategoryA` | Executa testes que são anotados com `[TestCategory("CategoryA")]`. |
 | `dotnet test --filter Priority=2` | Executa testes que são anotados com `[Priority(2)]`.<br>

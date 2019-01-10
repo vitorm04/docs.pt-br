@@ -4,12 +4,12 @@ description: HttpClientFactory é um alocador "teimoso", disponível desde o .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0d08346dc59b6f6227e719658909c174e67d4a61
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145105"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030354"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usar HttpClientFactory implementar solicitações HTTP resilientes
 
@@ -21,7 +21,7 @@ A classe [HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.http
 
 Como um primeiro problema, embora essa classe seja descartável, usá-la com a instrução `using` não é a melhor opção porque, mesmo quando você descarta o objeto `HttpClient`, o soquete subjacente não é liberado imediatamente e pode causar um problema sério chamado 'esgotamento de soquetes'. Para obter mais informações sobre esse problema, confira a postagem no blog [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) (Você está usando o HttpClient de forma errada e ele está desestabilizando o software).
 
-Portanto, `HttpClient` deve ser instanciado uma única vez e reutilizado durante a vida útil de um aplicativo. A criação de uma instância de uma classe `HttpClient` para cada solicitação esgotará o número de soquetes disponíveis em condições de carga pesada. Esse problema resultará em erros de `SocketException`. Abordagens possíveis para resolver o problema baseiam-se na criação do objeto `HttpClient` como singleton ou estático, conforme é explicado neste [artigo da Microsoft sobre o uso do HttpClient](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
+Portanto, `HttpClient` deve ser instanciado uma única vez e reutilizado durante a vida útil de um aplicativo. A criação de uma instância de uma classe `HttpClient` para cada solicitação esgotará o número de soquetes disponíveis em condições de carga pesada. Esse problema resultará em erros de `SocketException`. Abordagens possíveis para resolver o problema baseiam-se na criação do objeto `HttpClient` como singleton ou estático, conforme é explicado neste [artigo da Microsoft sobre o uso do HttpClient](../../../csharp/tutorials/console-webapiclient.md). 
 
 Mas há um segundo problema com o `HttpClient` que pode ocorrer quando ele é usado como um objeto singleton ou estático. Nesse caso, um `HttpClient` singleton ou estático não respeita as alterações de DNS, conforme é explicado neste [problema no repositório do GitHub do .NET Core](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -71,7 +71,7 @@ Basta adicionar suas classes de cliente tipado com AddHttpClient(), para que sem
 
 ### <a name="httpclient-lifetimes"></a>Tempos de vida de HttpClient
 
-Sempre que você receber um objeto `HttpClient` do IHttpClientFactory, uma nova instância de um `HttpClient` será retornada. Haverá um HttpMessageHandler** para cada cliente nomeado tipado. O `IHttpClientFactory` fará o pool das instâncias de HttpMessageHandler criadas pelo alocador para reduzir o consumo de recursos. Uma instância de HttpMessageHandler poderá ser reutilizada do pool quando uma nova instância de `HttpClient` for criada e seu tempo de vida ainda não tiver expirado.
+Sempre que você receber um objeto `HttpClient` do IHttpClientFactory, uma nova instância de um `HttpClient` será retornada. Haverá um **HttpMessageHandler** para cada cliente nomeado tipado. O `IHttpClientFactory` fará o pool das instâncias de HttpMessageHandler criadas pelo alocador para reduzir o consumo de recursos. Uma instância de HttpMessageHandler poderá ser reutilizada do pool quando uma nova instância de `HttpClient` for criada e seu tempo de vida ainda não tiver expirado.
 
 O pooling de manipuladores é interessante porque cada manipulador normalmente gerencia suas próprias conexões de HTTP subjacentes. Criar mais manipuladores do que o necessário pode resultar em atrasos de conexão. Alguns manipuladores também mantêm as conexões abertas indefinidamente, o que pode impedir que o manipulador reaja a alterações de DNS.
 

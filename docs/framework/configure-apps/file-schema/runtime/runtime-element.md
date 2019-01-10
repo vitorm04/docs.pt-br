@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863618"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610665"
 ---
 # <a name="ltruntimegt-element"></a>&lt;tempo de execução&gt; elemento
 Fornece informações usadas pelo common language runtime para configurar os aplicativos.  
@@ -92,5 +92,5 @@ Fornece informações usadas pelo common language runtime para configurar os apl
  Os elementos na [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção são lidas automaticamente pelo common language runtime na inicialização do aplicativo. Você também pode definir o arquivo de configuração para um domínio de aplicativo não padrão, fornecendo seu nome para o <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propriedade; suas configurações são lidas automaticamente quando o domínio do aplicativo é carregado. Raramente, ou nunca, que a necessidade de ler diretamente as configurações de [ \<tempo de execução >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção no arquivo de configuração do seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 750b0dbc925ec484dd80e1796ba991435e354709
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745221"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611406"
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; elemento
 Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tamanho total.  
@@ -41,8 +41,8 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|Matrizes com mais de 2 GB de tamanho total não estão habilitados. Esse é o padrão.|  
-|`true`|Maiores que 2 GB de tamanho total de matrizes são habilitados em plataformas de 64 bits.|  
+|`false`|Matrizes maiores que 2 GB de tamanho total não estão habilitados. Esse é o padrão.|  
+|`true`|Matrizes maiores que 2 GB de tamanho total são habilitadas em plataformas de 64 bits.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -55,16 +55,16 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
 |`runtime`|Contém informações sobre opções de inicialização do tempo de execução.|  
   
 ## <a name="remarks"></a>Comentários  
- Usar esse elemento no arquivo de configuração de aplicativo permite que as matrizes que são maiores do que 2 GB de tamanho, mas não alterar outros limites de tamanho do objeto ou o tamanho da matriz:  
+ Usando esse elemento em seu arquivo de configuração de aplicativo permite matrizes que são maiores que 2 GB de tamanho, mas não altere outros limites de tamanho do objeto ou matriz:  
   
 -   O número máximo de elementos em uma matriz é <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
 -   O índice máximo em uma única dimensão é 2,147,483,591 (0x7FFFFFC7) para matrizes de bytes e matrizes de estruturas de byte único e 2,146,435,071 (0X7FEFFFFF) para outros tipos.  
   
--   O tamanho máximo de cadeias de caracteres e outros objetos de matriz não é alterado.  
+-   O tamanho máximo de cadeias de caracteres e outros objetos não matriz não é alterado.  
   
 > [!CAUTION]
->  Antes de habilitar esse recurso, certifique-se de que seu aplicativo não incluir o código não seguro que pressupõe que todas as matrizes são menores que 2 GB de tamanho. Por exemplo, o código não seguro que usa matrizes como buffers pode ser suscetível a saturações de buffer se ele está escrito na suposição de que matrizes não deve exceder 2 GB.  
+>  Antes de habilitar esse recurso, certifique-se de que seu aplicativo não inclui o código não seguro que pressupõe que todas as matrizes são menores que 2 GB de tamanho. Por exemplo, o código não seguro que usa matrizes como buffers pode ser suscetível a estouros de buffer se ele é gravado na suposição de que matrizes não deve exceder 2 GB.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como habilitar esse recurso para um aplicativo.  
@@ -78,5 +78,5 @@ Em plataformas de 64 bits, habilita matrizes com mais de 2 gigabytes (GB) de tam
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,5 +1,6 @@
 ---
-title: struct (Referência de C#)
+title: struct – Referência de C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - struct_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 46cf0b66a50685a717818fe762ad4f1de36d6156
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d0cba75e067e4d75ca5b544a664d7dede153c73
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185739"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237526"
 ---
 # <a name="struct-c-reference"></a>struct (Referência de C#)
 
@@ -41,7 +42,7 @@ Para obter mais informações, consulte [Structs](../../programming-guide/classe
 
 Para obter exemplos e mais informações, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter exemplos, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 

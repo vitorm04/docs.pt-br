@@ -1,19 +1,20 @@
 ---
-title: Como usar o alias de namespace global (Guia de Programação em C#)
+title: 'Como: usar o alias de namespace global – Guia de Programação em C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "44514612"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236597"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Como usar o alias de namespace global (Guia de Programação em C#)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Como: usar o alias de namespace global (Guia de Programação em C#)
 A capacidade de acessar um membro no [namespace](../../../csharp/language-reference/keywords/namespace.md) global é útil quando o membro estiver oculto por outra entidade com o mesmo nome.  
   
  Por exemplo, no código a seguir, `Console` resolve para `TestApp.Console` em vez de para o tipo `Console` no namespace <xref:System>.  
@@ -49,6 +50,6 @@ A capacidade de acessar um membro no [namespace](../../../csharp/language-refere
 
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
-- [. Operador .](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [. ??](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: ??](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 898da3136bef51d0f8541da3829e55598b16781c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452947"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145699"
 ---
 # <a name="datamemberfieldeditor-class"></a>Classe DataMemberFieldEditor
 
@@ -42,7 +42,7 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 **Assembly:** System (em dll)  
   
-**Versões do .NET framework:** disponível desde o 2.0.  
+**Versões do .NET framework:** Disponível desde o 2.0.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999436"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030367"
 ---
 # <a name="freezable-objects-overview"></a>Visão geral de objetos congeláveis
 Este tópico descreve como usar com eficiência e criar <xref:System.Windows.Freezable> objetos, que oferecem recursos especiais que podem ajudar a melhorar o desempenho do aplicativo. Exemplos de objetos congeláveis incluem pincéis, canetas, transformações, geometrias e animações.  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Acesso thread-safe: um congelado <xref:System.Windows.Freezable> pode ser compartilhado entre threads.  
   
--   Notificação de alteração detalhada: ao contrário de outras <xref:System.Windows.DependencyObject>s, objetos congeláveis fornecem notificações de alteração quando valores da subpropriedade são alteram.  
+-   Notificação de alteração detalhada: Ao contrário de outras <xref:System.Windows.DependencyObject>s, objetos congeláveis fornecem notificações de alteração quando valores da subpropriedade são alteram.  
   
 -   Fácil clonagem: a classe Congelável tem vários métodos já implementados que produzem clones profundos.  
   
@@ -154,7 +154,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Chamar o <xref:System.Windows.Freezable.WritePostscript%2A> método antes de sair de métodos que gravam em membros de dados de propriedade não são de dependência.  
   
- Se sua classe contém os membros de dados de propriedade de dependência não são <xref:System.Windows.DependencyObject> objetos, você também deve chamar o <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> método cada vez que fizer alterações em seus valores, mesmo se você estiver configurando o membro `null`.  
+ Se sua classe contém os membros de dados de propriedade de dependência não são <xref:System.Windows.DependencyObject> objetos, você também deve chamar o <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> método sempre que você alterar um dos seus valores, mesmo se você estiver configurando o membro `null`.  
   
 > [!NOTE]
 >  É muito importante que você comece cada <xref:System.Windows.Freezable> método substituir com uma chamada para a implementação base.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087324"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030146"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 <a name="Top"></a> As substituições são elementos de linguagem que são reconhecidos apenas em padrões de substituição. Eles usam um padrão de expressão regular para definir o todo ou parte do texto que substitui o texto correspondente na cadeia de caracteres de entrada. O padrão de substituição pode consistir em uma ou mais substituições junto com caracteres literais. Padrões de substituição são fornecidos para sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que têm um parâmetro `replacement` e para o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Os métodos substituem o padrão correspondente pelo padrão que é definido pelo parâmetro `replacement`.  
@@ -33,7 +33,7 @@ ms.locfileid: "47087324"
 |`${` *name* `}`|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado que é designado por `(?<`*name*`> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo nomeado](#Named).|  
 |`$$`|Inclui um único literal “$” na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um símbolo "$"](#DollarSign).|  
 |`$&`|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a correspondência inteira](#EntireMatch).|  
-|<code>$\`</code>|Inclui todo o texto da cadeia de caracteres de entrada antes da correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto antes da correspondência](#BeforeMatch).|  
+|``$` ``|Inclui todo o texto da cadeia de caracteres de entrada antes da correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto antes da correspondência](#BeforeMatch).|  
 |`$'`|Inclui todo o texto da cadeia de caracteres de entrada após a correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto após a correspondência](#AfterMatch).|  
 |`$+`|O inclui o último grupo capturado na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o último grupo capturado](#LastGroup).|  
 |`$_`|Inclui a cadeia de entrada inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a cadeia de caracteres de entrada inteira](#EntireString).|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087324"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Substituindo texto antes da correspondência  
- A substituição <code>$\`</code> substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(O exemplo fornece uma ilustração.\) Se não houver correspondência, a substituição <code>$\`</code> não terá efeito.  
+ A substituição ``$` `` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(O exemplo fornece uma ilustração.\) Se não houver correspondência, a substituição ``$` `` não terá efeito.  
   
- O exemplo a seguir usa o padrão de expressão regular `\d+` para corresponder a uma sequência de um ou mais dígitos decimais na cadeia de caracteres de entrada. A cadeia de caracteres de substituição <code>$`</code> substitui esses dígitos pelo texto que precede a correspondência.  
+ O exemplo a seguir usa o padrão de expressão regular `\d+` para corresponder a uma sequência de um ou mais dígitos decimais na cadeia de caracteres de entrada. A cadeia de caracteres de substituição ``$` `` substitui esses dígitos pelo texto que precede a correspondência.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- Neste exemplo, a cadeia de caracteres de entrada `"aa1bb2cc3dd4ee5"` contém cinco correspondências. A tabela a seguir ilustra como a substituição <code>$`</code> faz com que o mecanismo de expressão regular substitua cada correspondência na cadeia de caracteres de entrada. O texto inserido é mostrado em negrito na coluna de resultados.  
+ Neste exemplo, a cadeia de caracteres de entrada `"aa1bb2cc3dd4ee5"` contém cinco correspondências. A tabela a seguir ilustra como a substituição ``$` `` faz com que o mecanismo de expressão regular substitua cada correspondência na cadeia de caracteres de entrada. O texto inserido é mostrado em negrito na coluna de resultados.  
   
 |Corresponder a|Posição|Cadeia de caracteres antes da correspondência|Cadeia de caracteres de resultado|  
 |-----------|--------------|-------------------------|-------------------|  

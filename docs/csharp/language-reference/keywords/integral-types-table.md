@@ -1,5 +1,6 @@
 ---
-title: Tabela de tipos integrais (Referência em C#)
+title: Tabela de tipos integrais – Referência em C#
+ms.custom: seodec18
 description: Visão geral dos tipos integrais em C# internos
 ms.date: 08/20/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078842"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396780"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela de tipos integrais (Referência em C#)
 
@@ -35,7 +36,7 @@ A tabela a seguir mostra os tamanhos e os intervalos de tipos integrais, que con
   
 Se o valor representado por um literal inteiro exceder <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilador [CS1021](../../misc/cs1021.md).
 
-Use a classe <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para representar um inteiro com sinal arbitrariamente grande.
+Use a estrutura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para declarar um inteiro com sinal arbitrariamente grande.
   
 ## <a name="see-also"></a>Consulte também
 
@@ -47,3 +48,4 @@ Use a classe <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para
 - [Tabela de valores padrão](default-values-table.md)
 - [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md)
 - [Tabela de tipos internos](built-in-types-table.md)
+- [Numéricos no .NET](../../../standard/numerics.md)

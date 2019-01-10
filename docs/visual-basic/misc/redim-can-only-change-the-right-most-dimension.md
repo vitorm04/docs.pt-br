@@ -1,17 +1,17 @@
 ---
-title: '&#39;ReDim&#39; só pode alterar a dimensão mais à direita'
+title: "'ReDim' só pode alterar a dimensão mais à direita"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_TypeMismatch
 ms.assetid: d53cf41b-7a7a-466c-a29a-920d99698fa9
-ms.openlocfilehash: 94e0fe81f7e750a67943b68f2db700e3a7831da1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5b4f054c5d1dfad52ce19e1a9f9d246945866703
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502580"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53767382"
 ---
-# <a name="39redim39-can-only-change-the-right-most-dimension"></a>&#39;ReDim&#39; só pode alterar a dimensão mais à direita
+# <a name="redim-can-only-change-the-right-most-dimension"></a>'ReDim' só pode alterar a dimensão mais à direita
 Um `ReDim` instrução tentou usar o `Preserve` palavra-chave para alterar uma dimensão de uma matriz que não seja a última dimensão. Ao usar `Preserve`, você pode redimensionar a última dimensão de uma matriz. Para todas as outras dimensões, você deve especificar o mesmo tamanho de matriz existente.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  

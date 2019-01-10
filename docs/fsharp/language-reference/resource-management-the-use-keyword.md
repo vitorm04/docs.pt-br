@@ -1,13 +1,13 @@
 ---
-title: 'Gerenciamento de recursos: A palavra-chave use (F#)'
+title: 'Gerenciamento de recursos: A palavra-chave use'
 description: Saiba mais sobre o F# palavra-chave 'use' e a função 'using', o que pode controlar a inicialização e a liberação de recursos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147626"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613083"
 ---
 # <a name="resource-management-the-use-keyword"></a>Gerenciamento de recursos: A palavra-chave use
 

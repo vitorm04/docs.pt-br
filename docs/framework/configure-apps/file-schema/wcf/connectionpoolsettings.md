@@ -1,15 +1,15 @@
 ---
-title: '&lt;ConnectionPoolSettings&gt;'
+title: '&lt;connectionPoolSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 87fcbf08d897cf8d9e1924a8a5ed2b5b20945638
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d79b3e28d1a80011cba7c515d979ae0037785a5
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748146"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149521"
 ---
-# <a name="ltconnectionpoolsettingsgt"></a>&lt;ConnectionPoolSettings&gt;
+# <a name="ltconnectionpoolsettingsgt"></a>&lt;connectionPoolSettings&gt;
 Especifica as configurações do pool de conexão adicionais para uma associação de Pipe nomeado.  
   
  \<system.serviceModel>  
@@ -22,10 +22,9 @@ Especifica as configurações do pool de conexão adicionais para uma associaç�
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<connectionPoolSettings  
-        groupName="String"  
-    idleTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -35,9 +34,9 @@ Especifica as configurações do pool de conexão adicionais para uma associaç�
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`groupName`|Uma cadeia de caracteres que define o nome do pool de conexão usado para canais de saída. No modo de fluxo, conexões não são compartilhados, o que significa que o pool de conexão está desabilitado. O padrão é uma cadeia de caracteres "padrão". Você pode modificar esse valor para isolar as conexões para um determinado cliente em grupos separados.|  
+|`groupName`|Uma cadeia de caracteres que define o nome do pool de conexão usado para canais de saída. No modo de streaming, as conexões não são compartilhadas, o que significa que o pooling de conexão está desabilitado. O padrão é uma cadeia de caracteres "default". Você pode modificar esse valor para isolar as conexões para um determinado cliente em grupos separados.|  
 |`idleTimeout`|Um positivo <xref:System.TimeSpan> que especifica o tempo máximo que a conexão pode ficar ociosa antes de ser desconectada. O padrão é 00:02:00.|  
-|`maxOutboundConnectionsPerEndpoint`|Um inteiro positivo que especifica o número máximo de conexões para um ponto de extremidade remoto iniciado pelo serviço. Conexões ultrapassem o limite são enfileiradas até que um espaço abaixo do limite se torne disponível. O `idleTimeout` limita a duração em que conexões permanecem na fila antes de uma exceção será lançada. O padrão é 10.<br /><br /> Esse atributo limita o número de conexões ativas simultâneas do cliente para um ponto de extremidade de serviço específico. Se esse valor for excedido fazendo mais ativas conexões de cliente, o serviço pode parecer não estar respondendo ao cliente. Nesse caso, esse valor deverá ser ajustado para exceder o número máximo de conexões de cliente simultâneas esperado para um ponto de extremidade específico.|  
+|`maxOutboundConnectionsPerEndpoint`|Um inteiro positivo que especifica o número máximo de conexões para um ponto de extremidade remoto iniciado pelo serviço. Conexões além do limite são enfileiradas até que um espaço abaixo do limite fica disponível. O `idleTimeout` limita a duração em que as conexões permanecem na fila antes que uma exceção seja lançada. O padrão é 10.<br /><br /> Esse atributo limita o número de conexões ativas simultâneas do cliente para um ponto de extremidade de serviço específico. Se esse valor for excedido, fazendo com que as conexões de cliente mais ativas, o serviço pode parecer não estar respondendo ao cliente. Nesse caso, esse valor deve ser ajustado para exceder o número máximo de conexões de cliente esperado para um ponto de extremidade específico.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  

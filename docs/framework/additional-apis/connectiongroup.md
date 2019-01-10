@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 420925f9f257bff5a788cd5af918e33c96882674
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8fddc2cd537963ad2aa1e0858476e7b9b9c6c032
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753594"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144685"
 ---
 # <a name="connectiongroup-class"></a>Classe ConnectionGroup
 
-O `ConnectionGroup` uma lista de conexões dentro de grupos de classe a <xref:System.Net.ServicePoint> contexto e é usado para manter o contexto para recursos de rede (por exemplo, proxies e clientes separados).
+O `ConnectionGroup` uma lista de conexões dentro de grupos de classe a <xref:System.Net.ServicePoint> contexto e é usado para manter o contexto para os recursos de rede (por exemplo, proxies e clientes separados).
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -30,7 +30,7 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> O `ConnectionGroup` classe é interno e não se destina a ser usado diretamente no seu código.
+> O `ConnectionGroup` classe é interno e não se destina a ser usado diretamente em seu código.
 > 
 > Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
 
@@ -38,6 +38,6 @@ internal class ConnectionGroup
 
 **Namespace:** <xref:System.Net>
 
-**Assembly:** sistema (em System. dll)
+**Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** disponível desde o 2.0.
+**Versões do .NET framework:** Disponível desde o 2.0.

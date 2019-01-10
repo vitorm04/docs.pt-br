@@ -1,18 +1,18 @@
 ---
-title: '&#39;ReDim&#39; não é possível alterar o número de dimensões'
+title: "'ReDim' não é possível alterar o número de dimensões"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
-ms.openlocfilehash: bfd4096141833b85a2126340ef549e1e1d1f8e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba3e389e3732d39f16e2c8ae884fae4e935e6ac9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640374"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53778717"
 ---
-# <a name="39redim39-cannot-change-the-number-of-dimensions"></a>&#39;ReDim&#39; não é possível alterar o número de dimensões
-Uma operação tenta usar o `ReDim` instrução para alterar a classificação (número de dimensões) de uma matriz. `ReDim` pode alterar o tamanho de uma ou mais dimensões de uma matriz que já tenha sido formalmente declarado, mas ele não pode alterar a classificação de matriz.  
+# <a name="redim-cannot-change-the-number-of-dimensions"></a>'ReDim' não é possível alterar o número de dimensões
+Uma operação tenta usar o `ReDim` instrução para alterar a classificação (número de dimensões) de uma matriz. `ReDim` pode alterar o tamanho de uma ou mais dimensões de uma matriz que já foi formalmente declarado, mas ele não é possível alterar a classificação de matriz.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   

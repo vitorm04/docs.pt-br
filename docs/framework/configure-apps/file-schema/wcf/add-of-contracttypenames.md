@@ -2,15 +2,15 @@
 title: '&lt;adicionar&gt; &lt;contractTypeNames&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 159ab5a40a69c075b648a0c161babe604d13377b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 79972eaea6918b3fe923c963b6a219fd8f972516
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750187"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145608"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;adicionar&gt; &lt;contractTypeNames&gt;
-Um elemento de configuração que especifica o nome do contrato dos serviços que está sendo pesquisados e os critérios usados normalmente durante a pesquisa de um serviço. Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondente a todos os contratos responderá. Observe que no Windows Communication Foundation (WCF), um ponto de extremidade suporta apenas um contrato.  
+Um elemento de configuração que especifica o nome do contrato de serviços que está sendo pesquisados e os critérios normalmente usados durante a pesquisa para um serviço. Se mais de um nome de contrato for especificado, somente pontos de extremidade correspondentes a todos os contratos responderá. Observe que no Windows Communication Foundation (WCF), um ponto de extremidade pode apenas suporta um contrato.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,9 +18,27 @@ Um elemento de configuração que especifica o nome do contrato dos serviços qu
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<system.serviceModel>  
-    <standardEndpoints>       <dynamicEndpoint>           <standardEndpoint>             <discoveryClientSettings discoveryEndpoint="String" >               <findCriteria duration="TimeSpan"                  maxResults="Integer"                   scopeMatchBy="Uri" >                  <contractTypeNames>                     <add name="String" namespace="String" />                  <contractTypeNames>                  <extensions />                  <scopes>                    <add scope="URI"/>                  </scopes>               </findCriteria>             </discoveryClientSettings>          <standardEndpoint>       </dynamicEndpoint>            </standardEndpoints>  
-</system.serviceModel>  
+<system.serviceModel>
+  <standardEndpoints>
+    <dynamicEndpoint>
+      <standardEndpoint>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String" namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI"/>
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
+      <standardEndpoint>
+    </dynamicEndpoint>
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  

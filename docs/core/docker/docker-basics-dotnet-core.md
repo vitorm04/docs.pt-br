@@ -1,15 +1,15 @@
 ---
-title: Colocar em contêiner um aplicativo com o Docker – .NET Core
+title: Colocar um aplicativo em contêiner com o Docker
 description: Este tutorial ensina como criar um aplicativo básico do .NET Core e a colocá-lo em contêiner com o Docker.
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126362"
+ms.locfileid: "53169580"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Como colocar em contêiner um aplicativo .NET Core
 
@@ -22,7 +22,7 @@ Durante este tutorial, você aprenderá:
 > * Como criar um aplicativo .NET Core.
 > * Como implantar seu aplicativo em um contêiner do Docker.
 
-## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: a maneira mais fácil para começar a usar
+## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: A maneira mais fácil para começar
 
 Antes de criar a imagem do Docker, é necessário ter um aplicativo para colocá-lo em contêiner. Crie-o no Linux, MacOS ou Windows. A maneira mais rápida e fácil de fazer isso é usando o .NET Core.
 
