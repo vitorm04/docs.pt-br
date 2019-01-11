@@ -2,12 +2,12 @@
 title: Associação HTTP de federação do WS 2007
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513056"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221278"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Associação HTTP de federação do WS 2007
 Este exemplo demonstra o uso de <xref:System.ServiceModel.WS2007FederationHttpBinding>, um padrão de associação que você pode usar para criar cenários federados esse suporte de versão 1.3 da especificação WS-Trust.  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Abra um prompt de comando do Visual Studio com privilégios de administrador e execute o arquivo Setup. bat para criar os certificados necessários.  
+2.  Abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador e execute o arquivo Setup. bat para criar os certificados necessários.  
   
  Esse arquivo em lotes usa Certmgr.exe e Makecert.exe, que são distribuídos com o SDK do Windows. No entanto, você deve executar o Setup. bat de dentro de um prompt de comando do Visual Studio para habilitar o script localizar essas ferramentas.  
   

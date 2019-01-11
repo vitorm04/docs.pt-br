@@ -2,12 +2,12 @@
 title: Token personalizado
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e743be961de2c6d7b09805e6f91d7710efe227e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243043"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223085"
 ---
 # <a name="custom-token"></a>Token personalizado
 Este exemplo demonstra como adicionar uma implementação personalizada de token em um aplicativo do Windows Communication Foundation (WCF). O exemplo usa um `CreditCardToken` passar com segurança as informações sobre cartões de crédito do cliente para o serviço. O token é passado no cabeçalho da mensagem do WS-Security e é assinado e criptografado usando o elemento de associação de segurança simétrica juntamente com outros cabeçalhos de mensagem e o corpo da mensagem. Isso é útil em casos em que os tokens internos não são suficientes. Este exemplo demonstra como fornecer um token de segurança personalizada para um serviço em vez de usar um dos tokens internos. O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2.  Copie os arquivos de programa de serviço para o diretório de serviço no computador do serviço. Não se esqueça de copiar CreditCardFile.txt; Caso contrário, o autenticador de cartão de crédito não é possível validar as informações de cartão de crédito enviadas do cliente. Também copie os arquivos Setup. bat e Cleanup para o computador do serviço.  
   
-3.  Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. Você pode criar um usando o Setup. bat se você alterar o `%SERVER_NAME%` variável ao nome totalmente qualificado do computador onde o serviço está hospedado. Observe que o arquivo Setup. bat deve ser executado em um prompt de comando do Visual Studio aberto com privilégios de administrador.  
+3.  Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. Você pode criar um usando o Setup. bat se você alterar o `%SERVER_NAME%` variável ao nome totalmente qualificado do computador onde o serviço está hospedado. Observe que o arquivo Setup. bat deve ser executado em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador.  
   
 4.  Copie o certificado do servidor para o repositório CurrentUser TrustedPeople no cliente. Você deve fazer isso somente se o certificado do servidor não foi emitido por um emissor confiável.  
   

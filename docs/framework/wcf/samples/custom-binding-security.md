@@ -2,12 +2,12 @@
 title: Segurança de associação personalizada
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192883"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221694"
 ---
 # <a name="custom-binding-security"></a>Segurança de associação personalizada
 Este exemplo demonstra como configurar a segurança por meio de uma associação personalizada. Ele mostra como usar uma ligação personalizada para habilitar a segurança em nível de mensagem junto com um transporte seguro. Isso é útil quando um transporte seguro é necessária para transmitir as mensagens entre o cliente e o serviço e ao mesmo tempo as mensagens devem ser seguras no nível da mensagem. Essa configuração não é suportada por associações fornecidas pelo sistema.
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador
 
-1.  Abra uma janela de Prompt de comando do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.
+1.  Abra um Prompt de comando do desenvolvedor para a janela do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.
 
     > [!NOTE]
     >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2012 Prompt de comando. A variável de ambiente PATH definido dentro de pontos de Prompt de comando do Visual Studio 2012 para o diretório que contém executáveis exigido pelo script de Setup. bat.  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Copie os arquivos Setup. bat e Cleanup no computador de serviço.  
   
-    4.  Execute o seguinte comando em um prompt de comando do Visual Studio é aberto com privilégios de administrador: `Setup.bat service`. Isso cria o certificado de serviço com o nome da entidade que corresponde ao nome do computador em que o arquivo em lotes foi executado em.  
+    4.  Execute o seguinte comando em um Prompt de comando do desenvolvedor para Visual Studio é aberto com privilégios de administrador: `Setup.bat service`. Isso cria o certificado de serviço com o nome da entidade que corresponde ao nome do computador em que o arquivo em lotes foi executado em.  
   
         > [!NOTE]
         >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Visual Studio 2010 Prompt de comando. Ele requer que a variável de ambiente path apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Visual Studio 2010 Prompt de comando.
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  Execute CleanUp para remover todos os certificados antigos de amostras anteriores.
 
-    3.  Exportar o certificado do serviço abrindo um prompt de comando do Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` com o nome totalmente qualificado do computador onde o serviço está em execução):
+    3.  Exportar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador do serviço (substitua `%SERVER_NAME%` com o nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  Copie %SERVER_NAME%.cer para o computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador onde o serviço está em execução).
 
-    5.  Importar o certificado do serviço abrindo um prompt de comando do Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador onde o serviço está em execução):
+    5.  Importar o certificado do serviço abrindo um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e executando o seguinte comando no computador cliente (substitua % SERVER_NAME % com o nome totalmente qualificado do computador em que o serviço está em execução):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

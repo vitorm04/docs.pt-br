@@ -2,12 +2,12 @@
 title: Provedor de função e associação
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 716aeeb57dc78ea9ff9205f75880b974d63fe39b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864022"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221239"
 ---
 # <a name="membership-and-role-provider"></a>Provedor de função e associação
 O provedor de função e associação que demonstra como um serviço pode usar o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provedores de associação e funções para autenticar e autorizar clientes.  
@@ -114,7 +114,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
 </system.serviceModel>  
 ```  
   
- Quando você executar o exemplo, o cliente chama as várias operações de serviço em três diferentes contas de usuário: Alice e Bob Charlie. As respostas e solicitações de operação são exibidas na janela do console de cliente. Todas as quatro chamadas feitas como usuário "Alice" deve ser bem-sucedida. O usuário "Bob" obterá um erro de acesso negado ao tentar chamar o método de divisão. O usuário "Charlie" obterá um erro de acesso negado ao tentar chamar o método Multiply. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executar o exemplo, o cliente chama as várias operações de serviço em três diferentes contas de usuário: Charlie, Bob e Alice. As respostas e solicitações de operação são exibidas na janela do console de cliente. Todas as quatro chamadas feitas como usuário "Alice" deve ser bem-sucedida. O usuário "Bob" obterá um erro de acesso negado ao tentar chamar o método de divisão. O usuário "Charlie" obterá um erro de acesso negado ao tentar chamar o método Multiply. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -134,9 +134,9 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
 1.  Certifique-se de que o caminho inclui a pasta onde se encontra Makecert.exe.  
   
-2.  Execute Setup. bat da pasta de instalação de exemplo em um prompt de comando do Visual Studio executar com privilégios de administrador. Isso instala os certificados de serviço necessários para executar o exemplo.  
+2.  Execute Setup. bat da pasta de instalação de exemplo em um Prompt de comando do desenvolvedor para Visual Studio executar com privilégios de administrador. Isso instala os certificados de serviço necessários para executar o exemplo.  
   
-3.  Inicie o Client.exe no \Client\Bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
+3.  Inicie o Client.exe no \client\bin. Atividade do cliente é exibida no aplicativo de console do cliente.  
   
 4.  Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -150,7 +150,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
 4.  Copie os arquivos de programa do cliente para o diretório do cliente no computador cliente. Também copie os arquivos Setup. bat, CleanUp e ImportServiceCert.bat ao cliente.  
   
-5.  No servidor, abra um prompt de comando do Visual Studio com privilégios administrativos e execute `setup.bat service`. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
+5.  No servidor, abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e execute `setup.bat service`. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
   
 6.  Editar o Web. config para refletir o novo nome do certificado (na `findValue` de atributo no [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que é igual ao nome de domínio totalmente qualificado do computador.  
   
@@ -158,7 +158,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
   
 8.  No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço.  
   
-9. No cliente, abra um prompt de comando do Visual Studio com privilégios administrativos e execute ImportServiceCert.bat. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
+9. No cliente, abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos e execute ImportServiceCert.bat. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
   
 10. No computador cliente, inicie Client.exe em um prompt de comando. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -167,7 +167,7 @@ O provedor de função e associação que demonstra como um serviço pode usar o
 -   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
 > [!NOTE]
->  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>O arquivo de lote  
  O arquivo em lotes de Setup. bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo hospedado internamente que exige a segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar entre computadores ou para trabalhar em um caso de não hospedados.  

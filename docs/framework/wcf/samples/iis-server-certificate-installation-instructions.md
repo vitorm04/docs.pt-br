@@ -2,18 +2,18 @@
 title: Instruções da instalação do certificado de servidor dos Serviços de Informações da Internet (IIS)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a89d907b9be25c83a74f0c5d60d184637552f297
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838241"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221096"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instruções da instalação do certificado de servidor dos Serviços de Informações da Internet (IIS)
 Para executar os exemplos que comunicam com segurança com o IIS (Serviços de Informações da Internet), você deverá criar e instalar um certificado do servidor.  
   
 ## <a name="step-1-creating-certificates"></a>Etapa 1. Criando certificados  
- Para criar um certificado para o seu computador, abra um prompt de comando do Visual Studio com privilégios de administrador e execute o Setup.bat que está incluído em cada um dos exemplos que usam a comunicação segura com o IIS. Verifique se o caminho inclui a pasta que contém Makecert.exe antes de executar este arquivo em lote. O comando a seguir é usado para criar o certificado em Setup.bat.  
+ Para criar um certificado para seu computador, abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador e execute o Setup. bat que está incluído em cada um dos exemplos que usam a comunicação segura com o IIS. Verifique se o caminho inclui a pasta que contém Makecert.exe antes de executar este arquivo em lote. O comando a seguir é usado para criar o certificado em Setup.bat.  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  

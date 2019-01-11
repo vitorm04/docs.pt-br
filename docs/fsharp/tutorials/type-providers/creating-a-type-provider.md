@@ -2,12 +2,12 @@
 title: 'Tutorial: Criar um provedor de tipo'
 description: Saiba como criar seu próprio F# digite provedores no F# 3.0, examinando a vários provedores de tipo simples para ilustrar os conceitos básicos.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614526"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223202"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Criar um provedor de tipo
 
@@ -156,7 +156,7 @@ Para depurar este provedor usando as instruções print, fazer com que um script
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-Para depurar este provedor usando o Visual Studio, abra o prompt de comando do Visual Studio com credenciais administrativas e execute o seguinte comando:
+Para depurar este provedor usando o Visual Studio, abra o Prompt de comando do desenvolvedor para Visual Studio com credenciais administrativas e execute o seguinte comando:
 
 ```fsharp
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx

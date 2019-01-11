@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 376106ff6c5c19c517c9e116112319b6e9d08c51
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181560"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222292"
 ---
 # <a name="message-security-certificate"></a>Certificado de mensagem de segurança
 Este exemplo demonstra como implementar um aplicativo que usa WS-Security com autenticação de certificado X.509 v3 para o cliente e requer autenticação de servidor usando o certificado do servidor x. 509 v3. Este exemplo usa as configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e servidor assinadas e criptografadas. Este exemplo se baseia a [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) e consiste em um programa de console do cliente e uma biblioteca de serviço hospedado pelo Internet Information Services (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -202,7 +202,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- O arquivo em lotes de Setup. bat incluído com os exemplos de segurança de mensagem permite que você configure o cliente e servidor com certificados relevantes para executar um aplicativo hospedado que exige a segurança baseada em certificado. O arquivo em lotes pode ser executado em três modos. Para ser executado no tipo de computador único modo **Setup. bat** em um Prompt de comando Visual Studio; para o tipo de modo de serviço **serviço de Setup. bat**; e para o tipo de modo de cliente **cliente Setup. bat** . Use o modo de cliente e servidor ao executar a amostra entre computadores. Consulte o procedimento de instalação no final deste tópico para obter detalhes. O exemplo a seguir fornece uma visão geral das seções diferentes dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada:  
+ O arquivo em lotes de Setup. bat incluído com os exemplos de segurança de mensagem permite que você configure o cliente e servidor com certificados relevantes para executar um aplicativo hospedado que exige a segurança baseada em certificado. O arquivo em lotes pode ser executado em três modos. Para executar no tipo de computador único modo **Setup. bat** em um Prompt de comando desenvolvedor para Visual Studio; para o tipo de modo de serviço **serviço Setup. bat**; e para o tipo de modo cliente **Setup. bat cliente**. Use o modo de cliente e servidor ao executar a amostra entre computadores. Consulte o procedimento de instalação no final deste tópico para obter detalhes. O exemplo a seguir fornece uma visão geral das seções diferentes dos arquivos de lote para que eles podem ser modificados para executar a configuração apropriada:  
   
 -   Criando o certificado do cliente.  
   
@@ -269,7 +269,7 @@ Press <ENTER> to terminate client.
     >  Se você estiver usando um fora dos EUA Edição em inglês do Windows, você deve editar o Setup. bat de arquivo e substitua o nome da conta "NT AUTHORITY\NETWORK SERVICE" com seu equivalente regional.  
   
 > [!NOTE]
->  As ferramentas usadas nesse arquivo em lotes estão localizadas em C:\Program Files\Microsoft Visual Studio 8\Common7\tools ou C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. Um desses diretórios deve estar no caminho do sistema. Se você tiver instalado o Visual Studio, a maneira mais fácil de obter esse diretório em seu caminho é abrir o Prompt de comando do Visual Studio. Clique em **inicie**e, em seguida, selecione **todos os programas**, **Visual Studio 2012**, **ferramentas**. Esse prompt de comando tem os caminhos adequados já configurados. Caso contrário, você deve adicionar o diretório apropriado ao seu caminho manualmente.  
+>  As ferramentas usadas nesse arquivo em lotes estão localizadas em C:\Program Files\Microsoft Visual Studio 8\Common7\tools ou C:\Program Files\Microsoft SDKs\Windows\v6.0\bin. Um desses diretórios deve estar no caminho do sistema. Se você tiver instalado o Visual Studio, a maneira mais fácil de obter esse diretório em seu caminho é abrir o Prompt de comando do desenvolvedor para Visual Studio. Clique em **inicie**e, em seguida, selecione **todos os programas**, **Visual Studio 2012**, **ferramentas**. Esse prompt de comando tem os caminhos adequados já configurados. Caso contrário, você deve adicionar o diretório apropriado ao seu caminho manualmente.  
   
 > [!IMPORTANT]
 >  Os exemplos podem mais ser instalados no seu computador. Verificar o seguinte diretório (padrão) antes de continuar:  
@@ -288,10 +288,10 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador  
   
-1.  Abra um Prompt de comando do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.  
+1.  Abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.  
   
     > [!NOTE]
-    >  O arquivo em lotes de Setup. bat foi projetado para ser executado em um Prompt de comando Visual Studio. Ele requer que a variável de ambiente path apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Visual Studio Command Prompt (2010).  
+    >  O arquivo em lotes de Setup. bat foi projetado para ser executado a partir de um Prompt de comando do desenvolvedor para Visual Studio. Ele requer que a variável de ambiente path apontar para o diretório onde o SDK está instalado. Essa variável de ambiente é definido automaticamente dentro de um Prompt de comando do desenvolvedor para Visual Studio (2010).  
   
 2.  Verificar o acesso ao serviço usando um navegador, inserindo o endereço `http://localhost/servicemodelsamples/service.svc`.  
   
@@ -309,21 +309,21 @@ Press <ENTER> to terminate client.
   
 4.  Copie os arquivos de programa do cliente para o diretório do cliente no computador cliente. Também copie os arquivos Setup. bat, CleanUp e ImportServiceCert.bat ao cliente.  
   
-5.  No servidor, execute **Setup. bat serviço** em um prompt de comando do Visual Studio com privilégios de administrador. Executando **Setup. bat** com o **service** argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
+5.  No servidor, execute **Setup. bat serviço** em um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador. Executando **Setup. bat** com o **service** argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
   
 6.  Editar o Web. config para refletir o novo nome do certificado (na `findValue` de atributo no [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que é igual ao nome de domínio totalmente qualificado do computador.  
   
 7.  Copie o arquivo de Service.cer do diretório de serviço para o diretório do cliente no computador cliente.  
   
-8.  No cliente, execute **Setup. bat cliente** em um prompt de comando do Visual Studio com privilégios de administrador. Executando **Setup. bat** com o **cliente** argumento cria um certificado de cliente chamado client.com e exporta o certificado de cliente para um arquivo chamado da CER.  
+8.  No cliente, execute **Setup. bat cliente** em um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador. Executando **Setup. bat** com o **cliente** argumento cria um certificado de cliente chamado client.com e exporta o certificado de cliente para um arquivo chamado da CER.  
   
 9. No arquivo Client.exe.config no computador cliente, altere o valor do endereço do ponto de extremidade para coincidir com o novo endereço do seu serviço. Fazer isso, substitua localhost pelo nome de domínio totalmente qualificado do servidor.  
   
 10. Copie o arquivo de Client. cer do diretório do cliente para o diretório de serviço no servidor.  
   
-11. No cliente, execute ImportServiceCert.bat em um prompt de comando do Visual Studio com privilégios administrativos. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
+11. No cliente, execute ImportServiceCert.bat em um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
   
-12. No servidor, execute ImportClientCert.bat em um prompt de comando do Visual Studio com privilégios administrativos. Isso importa o certificado do cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
+12. No servidor, execute ImportClientCert.bat em um Prompt de comando do desenvolvedor para Visual Studio com privilégios administrativos. Isso importa o certificado do cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
   
 13. No computador cliente, inicie Client.exe em uma janela do prompt de comando. Se o cliente e o serviço não for capazes de se comunicar, consulte [dicas de solução de problemas](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
@@ -332,6 +332,6 @@ Press <ENTER> to terminate client.
 -   Execute CleanUp na pasta exemplos depois de concluir a execução do exemplo.  
   
     > [!NOTE]
-    >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Esse script não remove os certificados de serviço em um cliente ao executar este exemplo entre computadores. Se você executou os exemplos do Windows Communication Foundation (WCF) que usam certificados em computadores, certifique-se de limpar os certificados de serviço que foram instalados no CurrentUser - TrustedPeople store. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Consulte também

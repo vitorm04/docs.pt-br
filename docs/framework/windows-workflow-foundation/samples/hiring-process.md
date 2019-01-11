@@ -2,12 +2,12 @@
 title: Processo de aluguer
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520632"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223215"
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
@@ -131,13 +131,13 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 ## <a name="data-storage"></a>Armazenamento de dados  
  Os dados são armazenados em uma base de dados SQL Server (chamado `ContosoHR` script para criar este base de dados está localizado na pasta de `DbSetup` ). As instâncias de fluxo de trabalho são armazenadas em uma base de dados SQL Server (chamado `InstanceStore` os scripts para criar o armazenamento de instância são parte de distribuição de [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ).  
   
- Ambos os bancos de dados são criados ao executar o script de Setup. cmd em um prompt de comando do Visual Studio.  
+ Ambos os bancos de dados são criados ao executar o script de Setup. cmd de um Prompt de comando do desenvolvedor para Visual Studio.  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
   
 #### <a name="to-create-the-databases"></a>Para criar os bases de dados  
   
-1.  Abra um prompt de comando do Visual Studio.  
+1.  Abra um Prompt de comando do desenvolvedor para Visual Studio.  
   
 2.  Navegue até a pasta de exemplo.  
   

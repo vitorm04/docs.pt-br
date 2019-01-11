@@ -1,5 +1,5 @@
 ---
-title: Como invocar o compilador de linha de comando (Visual Basic)
+title: 'Como: Invocar o compilador de linha de comando (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932148"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221837"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Como invocar o compilador de linha de comando (Visual Basic)
-Você pode invocar o compilador de linha de comando, digitando o nome do seu arquivo executável na linha de comando, também conhecido como prompt do MS-DOS. Se você compilar do Prompt de comando do Windows padrão, você deve digitar o caminho totalmente qualificado para o arquivo executável. Para substituir esse comportamento padrão, você pode usar o Prompt de comando do Visual Studio ou modificar a variável de ambiente PATH. Ambos permitem que você compile de qualquer diretório simplesmente digitando o nome do compilador.  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Como: Invocar o compilador de linha de comando (Visual Basic)
+Você pode invocar o compilador de linha de comando, digitando o nome do seu arquivo executável na linha de comando, também conhecido como prompt do MS-DOS. Se você compilar do Prompt de comando do Windows padrão, você deve digitar o caminho totalmente qualificado para o arquivo executável. Para substituir esse comportamento padrão, você pode usar o Prompt de comando do desenvolvedor para Visual Studio ou modificar a variável de ambiente PATH. Ambos permitem que você compile de qualquer diretório simplesmente digitando o nome do compilador.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Para chamar o compilador usando o Prompt de comando do Visual Studio  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Para chamar o compilador usando o Prompt de comando do desenvolvedor para Visual Studio  
   
 1.  Abra a pasta do programa de ferramentas do Visual Studio dentro do grupo de programas do Microsoft Visual Studio.  
   
-2.  Você pode usar o Prompt de comando do Visual Studio para acessar o compilador a partir de qualquer diretório em seu computador, se o Visual Studio está instalado.  
+2.  Você pode usar o Prompt de comando do desenvolvedor para Visual Studio para acessar o compilador a partir de qualquer diretório em seu computador, se o Visual Studio está instalado.  
   
-3.  Invocar o Prompt de comando do Visual Studio.  
+3.  Invocar o Prompt de comando do desenvolvedor para Visual Studio.  
   
 4.  Na linha de comando, digite `vbc.exe` *sourceFileName* e, em seguida, pressione ENTER.  
   

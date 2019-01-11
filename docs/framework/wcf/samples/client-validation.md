@@ -2,12 +2,12 @@
 title: Validação de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 3f8b5ec3f8652ef50bbda3456669f2abf456472b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae322dbaebb07846fec3379b897114dac328817f
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003952"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221330"
 ---
 # <a name="client-validation"></a>Validação de cliente
 Com frequência, os serviços publicam metadados para habilitar a geração automática e a configuração de tipos de proxy de cliente. Quando o serviço não for confiável, os aplicativos cliente devem validar que os metadados estão em conformidade com a política do aplicativo cliente em relação à segurança, transações, o tipo de contrato de serviço e assim por diante. O exemplo a seguir demonstra como escrever um cliente de comportamento de ponto de extremidade que valida o ponto de extremidade de serviço para garantir que esse ponto de extremidade de serviço é seguro usar.  
@@ -22,7 +22,7 @@ Com frequência, os serviços publicam metadados para habilitar a geração auto
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador  
   
-1.  Abra um prompt de comando do Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.  
+1.  Abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador e execute Setup. bat da pasta de instalação de exemplo. Essa opção instala todos os certificados necessários para executar o exemplo.  
   
 2.  Execute o aplicativo de serviço do \service\bin\Debug.  
   
@@ -34,21 +34,21 @@ Com frequência, os serviços publicam metadados para habilitar a geração auto
   
 ### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo em computadores  
   
-1.  No servidor, em um prompt de comando do Visual Studio executar com privilégios de administrador, digite `setup.bat service`. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
+1.  No servidor, em um Prompt de comando do desenvolvedor para Visual Studio executar com privilégios de administrador, digite `setup.bat service`. Executando `setup.bat` com o `service` argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service.cer.  
   
 2.  No servidor, edite App. config para refletir o novo nome do certificado. Ou seja, alterar o `findValue` de atributo em de [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elemento para o nome de domínio totalmente qualificado do computador.  
   
 3.  Copie o arquivo de Service.cer do diretório de serviço para o diretório do cliente no computador cliente.  
   
-4.  No cliente, abra um prompt de comando do Visual Studio com privilégios de administrador e digite `setup.bat client`. Executando `setup.bat` com o `client` argumento cria um certificado de cliente chamado Client.com e exporta o certificado de cliente para um arquivo chamado da CER.  
+4.  No cliente, abra um Prompt de comando do desenvolvedor para Visual Studio com privilégios de administrador e digite `setup.bat client`. Executando `setup.bat` com o `client` argumento cria um certificado de cliente chamado Client.com e exporta o certificado de cliente para um arquivo chamado da CER.  
   
 5.  No arquivo client.cs, altere o valor do endereço do ponto de extremidade MEX e o `findValue` para definir o certificado do servidor padrão para coincidir com o novo endereço do seu serviço. Você pode fazer isso substituindo o localhost com o nome de domínio totalmente qualificado do servidor. Recompile.  
   
 6.  Copie o arquivo de Client. cer do diretório do cliente para o diretório de serviço no servidor.  
   
-7.  No cliente, execute ImportServiceCert.bat em um prompt de comando do Visual Studio aberto com privilégios de administrador. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
+7.  No cliente, execute ImportServiceCert.bat em um Prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. Isso importa o certificado de serviço do arquivo Service.cer para CurrentUser - TrustedPeople store.  
   
-8.  No servidor, execute ImportClientCert.bat em um prompt de comando do Visual Studio aberto com privilégios de administrador. Isso importa o certificado do cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
+8.  No servidor, execute ImportClientCert.bat em um Prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. Isso importa o certificado do cliente do arquivo CER para o repositório de LocalMachine - TrustedPeople.  
   
 9. No computador do serviço, compile o projeto de serviço no Visual Studio e execute service.exe.  
   

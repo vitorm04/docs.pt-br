@@ -1,18 +1,18 @@
 ---
-title: 'Instruções passo a passo: localizando um aplicativo híbrido'
+title: 'Passo a passo: Localizando um aplicativo híbrido'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402692"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222996"
 ---
-# <a name="walkthrough-localizing-a-hybrid-application"></a>Instruções passo a passo: localizando um aplicativo híbrido
+# <a name="walkthrough-localizing-a-hybrid-application"></a>Passo a passo: Localizando um aplicativo híbrido
 
 Este passo a passo mostra como localizar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementos em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-com base em aplicativo híbrido.
 
@@ -48,7 +48,7 @@ A primeira etapa é criar o [!INCLUDE[TLA#tla_winforms](../../../../includes/tla
 
 2.  Adicionar um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> elemento chamado `SimpleControl` ao projeto.
 
-3.  Use o <xref:System.Windows.Forms.Integration.ElementHost> controle para colocar um `SimpleControl` elemento no formulário. Para obter mais informações, consulte [instruções passo a passo: hospedando um controle composto do WPF 3D nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Use o <xref:System.Windows.Forms.Integration.ElementHost> controle para colocar um `SimpleControl` elemento no formulário. Para obter mais informações, confira [Passo a passo: Hospedando um controle composto do WPF 3D nos Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Adicionando conteúdo localizável
 
@@ -118,7 +118,7 @@ Você pode mapear o conteúdo localizável para assemblies de recursos usando id
 
 ### <a name="to-assign-resource-identifiers"></a>Para atribuir identificadores de recursos
 
-1.  No Menu Iniciar, abra o Prompt de comando do Visual Studio.
+1.  No Menu Iniciar, abra o Prompt de comando do desenvolvedor para Visual Studio.
 
 2.  Use o comando a seguir para atribuir identificadores de recurso ao seu conteúdo localizável.
 
