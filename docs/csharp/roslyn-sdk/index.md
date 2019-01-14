@@ -3,17 +3,17 @@ title: O SDK do .NET Compiler Platform (APIs do Roslyn)
 description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925025"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249132"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
 Os compiladores criam um modelo detalhado do código do aplicativo conforme validam a sintaxe e a semântica do código. O uso desse modelo para criar a saída executável do código-fonte. O SDK do .NET Compiler Platform fornece acesso a esse modelo. Cada vez mais, contamos com recursos do IDE (ambiente de desenvolvimento integrado), como IntelliSense, refatoração, renomeação inteligente, "Localizar todas as referências" e "Ir para definição" para aumentar nossa produtividade. Contamos com ferramentas de análise de código para melhorar a qualidade e com geradores de código para ajudar na criação do aplicativo. À medida que essas ferramentas ficam mais inteligentes, elas precisam de acesso a cada vez mais do modelo que somente os compiladores podem criar conforme processam o código do aplicativo. Este é o objetivo principal das APIs do Roslyn: abrir as caixas pretas e permitir que as ferramentas e os usuários finais compartilhem a riqueza de informações que os compiladores têm sobre nosso código.
-Em vez de ser meros conversores de código-fonte e objeto-código-saída, por meio do Roslyn, os compiladores se tornam plataformas: as APIs que você pode usar para as tarefas relacionadas ao código em seus aplicativos e ferramentas.
+Em vez de serem tradutores opacos, que aceitam código-fonte e produzem código-objeto, com a Roslyn os compiladores se tornam plataformas: APIs que você pode usar para as tarefas relacionadas ao código em seus aplicativos e ferramentas.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>Conceitos do SDK do .NET Compiler Platform
 
@@ -31,7 +31,7 @@ Há três cenários principais para escrever analisadores e correções de códi
 
 1. [*Impor padrões de codificação à equipe*](#enforce-team-coding-standards)
 1. [*Fornecer diretrizes com pacotes de biblioteca*](#provide-guidance-with-library-packages)
-1. [*Fornecer diretrizes gerais de codificação*](#provide-general-coding-guidance)
+1. [*Fornecer diretrizes gerais*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>Impor padrões de codificação à equipe
 
@@ -60,13 +60,13 @@ Esses analisadores podem ser carregados no [Visual Studio Marketplace](https://m
 
 O SDK do .NET Compiler Platform inclui os modelos de objeto de linguagem mais recentes para geração de código, análise e refatoração. Esta seção fornece uma visão geral conceitual do SDK do .NET Compiler Platform. Mais detalhes podem ser encontrados nas seções de inícios rápidos, de exemplos e de tutoriais.
 
-Você pode saber mais sobre os conceitos no SDK do .NET Compiler Platform nestes quatro tópicos:
+Você pode saber mais sobre os conceitos no SDK do .NET Compiler Platform nestes cinco tópicos:
 
  - [Explorar código com o visualizador de sintaxe](syntax-visualizer.md)
  - [Entender o modelo de API do compilador](compiler-api-model.md)
  - [Trabalhar com sintaxe](work-with-syntax.md)
  - [Trabalhar com semântica](work-with-semantics.md)
- - [Trabalhar com um espaço de trabalho](work-with-workspace.md)
+ - [Trabalhar com um workspace](work-with-workspace.md)
  
 Para começar, será necessário instalar o **SDK do .NET Compiler Platform**:
 
