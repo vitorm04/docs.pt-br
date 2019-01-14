@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580441"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221382"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
@@ -49,7 +49,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
 ### <a name="match-zero-or-more-times-"></a>Corresponder a zero ou mais vezes: *  
  O quantificador `*` corresponde ao elemento anterior zero ou mais vezes. É equivalente ao quantificador `{0,}`. `*` é um quantificador Greedy, cujo equivalente lento é `*?`.  
   
- O exemplo a seguir ilustra essa expressão regular. Dentre os nove dígitos na cadeia de caracteres de entrada, cinco correspondem ao padrão e quatro (`95`, `929`, `9129` e `9919`) não.  
+ O exemplo a seguir ilustra essa expressão regular. Dentre os nove dígitos na cadeia de caracteres de entrada, cinco correspondem ao padrão e quatro (`95`, `929`, `9219` e `9919`) não.  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  

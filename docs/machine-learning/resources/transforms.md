@@ -4,12 +4,12 @@ description: Explore os componentes de engenharia de recursos com suporte no ML.
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451086"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249119"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformações de dados do aprendizado de máquina – ML.NET
 
@@ -103,7 +103,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Remove valores ausentes de colunas. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Cria uma coluna de saída booliana com o mesmo número de slots da coluna de entrada, em que o valor de saída é true se o valor na coluna de entrada está ausente. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Trata valores ausentes substituindo-os pelo valor padrão ou pelo valor médio/mín./máx. (apenas para colunas que não são de texto). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Cria uma coluna de saída booliana com o mesmo número de slots da coluna de entrada, em que o valor de saída é true se o valor na coluna de entrada está ausente. |
 
 ## <a name="normalization"></a>Normalização
 

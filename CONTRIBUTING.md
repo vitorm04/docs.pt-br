@@ -140,7 +140,7 @@ A lista a seguir mostra algumas regras de orientação que você deve considerar
 
 ## <a name="contributor-license-agreement"></a>Contrato de licença do colaborador
 
-Você deve assinar o [CLA (Contrato de Licença de Contribuição) da .NET Foundation](https://cla.dotnetfoundation.org) antes de sua solicitação de pull ser mesclada. Isso é um requisito a ser cumprido uma única vez para projetos na .NET Foundation. Você pode ler mais sobre [CLAs (Contratos de Licença de Contribuição)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) na Wikipédia.
+Você deve assinar o [CLA (Contrato de Licença de Contribuição) da .NET Foundation](https://cla.dotnetfoundation.org) antes de sua solicitação de pull ser mesclada. Isso é um requisito a ser cumprido uma única vez para projetos na .NET Foundation. Você pode ler mais sobre [CLAs (Contratos de Licença de Contribuição)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) na Wikipédia.
 
 O contrato: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

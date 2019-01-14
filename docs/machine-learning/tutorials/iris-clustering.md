@@ -3,15 +3,15 @@ title: Agrupar flores íris usando um aprendiz de clustering – ML.NET
 description: Saiba como usar o ML.NET em um cenário de clustering
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 012cea471c69f66ad9a61db858b4575606b31f74
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656317"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249067"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Agrupar flores íris usando um aprendiz de clustering com o ML.NET
 
@@ -56,7 +56,7 @@ Como você não sabe a qual grupo cada flor pertence, escolha a tarefa [aprendiz
 
 ## <a name="prepare-the-data"></a>Preparar os dados
 
-1. Baixe o conjunto de dados [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) e salve-o na pasta *Dados* que você criou na etapa anterior. Para obter mais informações sobre o conjunto de dados Iris, confira a página da Wikipédia [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) (Conjunto de dados de flor Iris) e a página [Iris Data Set](http://archive.ics.uci.edu/ml/datasets/Iris) (Conjunto de dados Iris), que é a fonte do conjunto de dados.
+1. Baixe o conjunto de dados [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) e salve-o na pasta *Dados* que você criou na etapa anterior. Para obter mais informações sobre o conjunto de dados Iris, confira a página da Wikipédia [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) (Conjunto de dados de flor Iris) e a página [Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris) (Conjunto de dados Iris), que é a fonte do conjunto de dados.
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo *iris.data* e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
 
@@ -84,9 +84,9 @@ Remova a definição de classe existente e adicione o código a seguir, que defi
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` é a classe de dados de entrada e tem definições de cada característica provenientes do conjunto de dados. Use o atributo [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute) para especificar os índices das colunas de origem no arquivo de conjunto de dados.
+`IrisData` é a classe de dados de entrada e tem definições de cada característica provenientes do conjunto de dados. Use o atributo [Column](xref:Microsoft.ML.Data.ColumnAttribute) para especificar os índices das colunas de origem no arquivo de conjunto de dados.
 
-A classe `ClusterPrediction` representa a saída do modelo de clustering aplicado a uma instância de `IrisData`. Use o atributo [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute) para associar os campos `PredictedClusterId` e `Distances` às colunas **PredictedLabel** e **Score**, respectivamente. No caso da tarefa clustering, essas colunas têm o seguinte significado:
+A classe `ClusterPrediction` representa a saída do modelo de clustering aplicado a uma instância de `IrisData`. Use o atributo [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) para associar os campos `PredictedClusterId` e `Distances` às colunas **PredictedLabel** e **Score**, respectivamente. No caso da tarefa clustering, essas colunas têm o seguinte significado:
 
 - A coluna **PredictedLabel** contém a ID do cluster previsto.
 - A coluna **Score** contém uma matriz com as distâncias euclidianas quadradas para os centroides de cluster. O comprimento da matriz é igual ao número de clusters.
@@ -127,9 +127,9 @@ Adicione o seguinte código ao método `Main` para configurar a forma de carrega
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Observe que os nomes de coluna e os índices correspondem ao esquema definido pela classe `IrisData`. O valor <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> especifica o tipo `float`.
+Observe que os nomes de coluna e os índices correspondem ao esquema definido pela classe `IrisData`. O valor <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> especifica o tipo `float`.
 
-Use a instância <xref:Microsoft.ML.Runtime.Data.TextLoader> criada para criar uma instância <xref:Microsoft.ML.Runtime.Data.IDataView>, que representa a fonte de dados do conjunto de dados de treinamento:
+Use a instância <xref:Microsoft.ML.Data.TextLoader> criada para criar uma instância <xref:Microsoft.ML.Data.IDataView>, que representa a fonte de dados do conjunto de dados de treinamento:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ Neste ponto, você tem um modelo que pode ser integrado em qualquer um dos seus 
 
 ## <a name="use-the-model-for-predictions"></a>Usar o modelo para previsões
 
-Para fazer previsões, use a classe <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> que usa instâncias do tipo de entrada por meio do pipeline transformador e produz instâncias do tipo de saída. Adicione a seguinte linha ao método `Main` para criar uma instância dessa classe:
+Para fazer previsões, use a classe <xref:Microsoft.ML.PredictionEngine%602> que usa instâncias do tipo de entrada por meio do pipeline transformador e produz instâncias do tipo de saída. Adicione a seguinte linha ao método `Main` para criar uma instância dessa classe:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

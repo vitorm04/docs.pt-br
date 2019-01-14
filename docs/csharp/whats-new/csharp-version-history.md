@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245594"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186222"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C# #
 
@@ -28,7 +28,7 @@ As ferramentas de compilação do C# consideram a versão mais recente da lingua
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
-Ao olhar para o passado, a C# versão 1.0 parecia muito com o Java. Como [parte de suas metas de design declaradas para ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
+Ao olhar para o passado, a C# versão 1.0 parecia muito com o Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
 
 Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Carecia das funcionalidades assíncronas internas e algumas das funcionalidades relacionadas a genéricos que você nem valoriza. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam alguns anos para sair.
 
@@ -142,7 +142,7 @@ Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma li
 - [Propagador nulo](./csharp-6.md#null-conditional-operators)
 - [Interpolação de cadeia de caracteres](./csharp-6.md#string-interpolation)
 - [Operador nameof](./csharp-6.md#the-nameof-expression)
-- [Inicializadores de índice](csharp-6.md#index-initializers)
+- [Inicializadores de índice](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Outros novos recursos incluem:
 
@@ -168,7 +168,6 @@ Outros recursos incluíam:
 
 - [Descarta](./csharp-7.md#discards)
 - [Literais binários e os separadores de dígito](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Locais e retornos de ref](./csharp-7.md#ref-locals-and-returns)
 - [Expressões throw](./csharp-7.md#throw-expressions)
 
 Todas essas funcionalidades oferecem novos recursos interessantes para desenvolvedores e a oportunidade de escrever um código mais limpo do que nunca. Um ponto alto é a condensação da declaração de variáveis a serem usadas com a palavra-chave `out` e a permissão de vários valores retornados por meio de tupla.
