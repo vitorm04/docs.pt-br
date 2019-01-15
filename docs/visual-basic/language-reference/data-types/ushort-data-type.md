@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: f1ccb2f2e297ecac8f5ac96c0af42ff6bfb9363b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146037"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307390"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de dados UShort (Visual Basic)
 
@@ -33,7 +33,7 @@ Armazena inteiros sem sinal de 16 bits (2 bytes) que variam de 0 a 65.535.
   
  O valor padrão de `UShort` é 0.  
 
-# <a name="literal-assignments"></a>Atribuições de literal
+## <a name="literal-assignments"></a>Atribuições de literal
 
 Você pode declarar e inicializar um `UShort` variável atribuindo a ela um literal decimal, um literal hexadecimal, um literal octal, ou (começando com o Visual Basic 2017) um literal binário. Se o literal inteiro estiver fora do intervalo de `UShort` (ou seja, se for menor que <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou maior que <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilação.
 

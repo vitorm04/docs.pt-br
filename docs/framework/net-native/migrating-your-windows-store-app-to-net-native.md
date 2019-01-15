@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 126276840ee12bdba99f5ce1c164762340bb580c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 27903899ca31166e160f32ca0175e353e54676cc
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155269"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307559"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
 .NET native fornece compilação estática dos aplicativos na Store do Windows ou no computador do desenvolvedor. Isso difere da compilação dinâmica realizada para Aplicativos da Windows Store pelo compilador JIT (just-in-time) ou o [Gerador de Imagem Nativa (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) no dispositivo. Apesar das diferenças, o .NET Native tenta manter a compatibilidade com o [aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). Na maior parte, as coisas que funcionam em aplicativos do .NET para Windows Store também funcionam com o .NET Native.  No entanto, em alguns casos, você pode encontrar alterações de comportamento. Este documento aborda essas diferenças entre os aplicativos padrão do .NET para Windows Store e o .NET nativo nas seguintes áreas:  
@@ -380,7 +380,7 @@ Outros recursos de interoperabilidade sem suporte incluem:
   
  **RTC (System.Net.Http.Rtc)**  
   
- O <xref:System.Net.Http.RtcRequestFactory?displayProperty=nameWithType> classe não tem suporte no .NET Native.  
+ O `System.Net.Http.RtcRequestFactory` classe não tem suporte no .NET Native.  
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
