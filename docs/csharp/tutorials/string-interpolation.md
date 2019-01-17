@@ -3,12 +3,12 @@ title: Interpolação de cadeias de caracteres em C#
 description: Saiba como incluir resultados de expressão formatada em uma cadeia de caracteres de resultado em C# com a interpolação de cadeia de caracteres.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188632"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222487"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolação de cadeias de caracteres em C# #
 
@@ -31,6 +31,8 @@ Como mostra o exemplo, você inclui uma expressão em uma cadeia de caracteres i
 ```
 
 No tempo de compilação, normalmente uma cadeia de caracteres interpolada é transformada em uma chamada de método <xref:System.String.Format%2A?displayProperty=nameWithType>. Isso disponibiliza todas as funcionalidades do recurso [formatação composta de cadeia de caracteres](../../standard/base-types/composite-formatting.md) para uso com cadeias de caracteres interpoladas também.
+
+O compilador poderá substituir um <xref:System.String.Format%2A?displayProperty=nameWithType> por <xref:System.String.Concat%2A?displayProperty=nameWithType> se o comportamento analisado for equivalente à concatenação.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Como especificar uma cadeia de caracteres de formato para uma expressão interpolada
 

@@ -4,12 +4,12 @@ description: Arquitetura de Microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151181"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152106"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -19,7 +19,7 @@ Conforme mencionado anteriormente, a camada de aplicativo pode ser implementada 
 
 Por exemplo, o código da camada de aplicativo do microsserviço de ordenação é implementado diretamente como parte do projeto **Ordering.API** (um projeto da API Web ASP.NET Core), como mostrado na Figura 7-23.
 
-![A exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta Aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.](./media/image20.png)
+![O modo de exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta do aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.](./media/image20.png)
 
 **Figura 7-23**. A camada de aplicativo no projeto Ordering.API da API Web ASP.NET Core
 
@@ -183,7 +183,7 @@ O padrão Command é intrinsecamente relacionado ao padrão CQRS, apresentado an
 
 Conforme mostrado na Figura 7-24, o padrão é baseado em aceitar comandos do lado do cliente, processá-los com base nas regras do modelo de domínio e, por fim, persistir os estados com as transações.
 
-![O modo de exibição de alto nível do lado das gravações em CQRS: o aplicativo de interface do usuário envia um comando por meio da API que é um CommandHandler, que depende do modelo de domínio e da infraestrutura para atualizar o banco de dados.](./media/image21.png)
+![O modo de exibição de alto nível do lado das gravações em CQRS: o aplicativo de interface do usuário envia um comando por meio da API que chega a um CommandHandler, que depende do modelo de domínio e da infraestrutura para atualizar o banco de dados.](./media/image21.png)
 
 **Figura 7-24**. Exibição de alto nível dos comandos ou do "lado transacional" em um padrão CQRS
 
@@ -397,7 +397,7 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 #### <a name="additional-resources"></a>Recursos adicionais
 
 - **Mark Seemann. Nos limites, os aplicativos não são orientados a objeto** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Comandos e eventos** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
@@ -812,7 +812,7 @@ De maneira semelhante, você pode implementar outros comportamentos para aspecto
 - **CQRS com MediatR e AutoMapper** \
   [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
-- **Coloque os controladores de dieta: POSTs e comandos.** \
+- **Put your controllers on a diet: POSTs and commands.** (Coloque os controladores em dieta: POSTs e comandos) \
   [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
 - **Lidando com preocupações paralelas com um pipeline de mediadores** \

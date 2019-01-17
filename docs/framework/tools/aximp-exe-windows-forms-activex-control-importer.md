@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: befc4484324fb28b0fe55ef49f038712bc81e913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e06f8e42e4ca6da80286c9aa329ee99b02fcf4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409587"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222136"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de Controle ActiveX do Windows Forms)
 O Importador de Controle ActiveX converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
@@ -24,7 +24,7 @@ O Importador de Controle ActiveX converte definições de tipo em uma biblioteca
   
  Para hospedar o controle ActiveX, você deve gerar um controle wrapper derivado de <xref:System.Windows.Forms.AxHost>. Esse controle de wrapper contém uma instância do controle ActiveX subjacente. Ele sabe como se comunicar com o controle ActiveX, mas é exibido como um controle do Windows Forms. Esse controle gerado hospeda o controle ActiveX e expõe suas propriedades, métodos e eventos como os do controle gerado.  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
@@ -70,7 +70,7 @@ aximp [options]{file.dll | file.ocx}
   
  Quando você executar Aximp.exe em shdocvw.dll, ele sempre criará outro arquivo chamado shdocvw.dll no diretório no qual a ferramenta é executada. Se esse arquivo gerado for colocado no diretório Documents and Settings, isso causará problemas para Microsoft Internet Explorer e Windows Explorer. Quando o computador é reinicializado, o Windows examina o diretório Documents and Settings antes do diretório system32 para encontrar uma cópia de shdocvw.dll. Ele usará a cópia encontrada em Documents and Settings e tentará carregar os wrappers gerenciados. O Internet Explorer e o Windows Explorer não funcionarão corretamente porque dependem do mecanismo de renderização na versão de shdocvw.dll localizado no diretório system32. Se esse problema ocorrer, exclua a cópia de shdocvw.dll no diretório Documents and Settings e reinicie o computador.  
   
- O uso de Aximp.exe com shdocvw.dll para criar um assembly do .NET. a ser usado no desenvolvimento de aplicativos também pode causar problemas. Nesse caso, o aplicativo carregará a versão do sistema de shdocvw.dll e a versão gerada, além de poder atribuir a prioridade à versão do sistema. Nesse caso, quando você tentar carregar uma página da Web no controle ActiveX WebBrowser, os usuários poderão ser avisados com uma caixa de diálogo Abrir/Salvar. Quando o usuário clica em **Abrir**, a página da Web é aberta no Internet Explorer. Isso ocorre apenas com computadores que estão executando o Internet Explorer versão 6 ou anterior. Para evitar esse problema, use o controle gerenciado <xref:System.Windows.Forms.WebBrowser> ou o Visual Studio para gerar o shdocvw.dll gerenciado conforme descrito em [Como adicionar referências a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
+ O uso de Aximp.exe com shdocvw.dll para criar um assembly do .NET. a ser usado no desenvolvimento de aplicativos também pode causar problemas. Nesse caso, o aplicativo carregará a versão do sistema de shdocvw.dll e a versão gerada, além de poder atribuir a prioridade à versão do sistema. Nesse caso, quando você tentar carregar uma página da Web no controle ActiveX WebBrowser, os usuários poderão ser avisados com uma caixa de diálogo Abrir/Salvar. Quando o usuário clica em **Abrir**, a página da Web é aberta no Internet Explorer. Isso ocorre apenas com computadores que estão executando o Internet Explorer versão 6 ou anterior. Para evitar esse problema, use o controle gerenciado <xref:System.Windows.Forms.WebBrowser> ou use o Visual Studio para gerar o shdocvw.dll gerenciado, conforme descrito em [Como adicionar referências a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Exemplo  
  O comando a seguir gera MediaPlayer.dll e AxMediaPlayer.dll para o controle `msdxm.ocx` do Media Player.  

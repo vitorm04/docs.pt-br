@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409104"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221733"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
 O IL Disassembler é uma ferramenta complementar ao IL Assembler (*Ilasm.exe*). O *Ildasm.exe* usa um arquivo PE que contém o código IL (linguagem intermediária) e cria um arquivo de texto adequado como entrada para *Ilasm.exe*.
 
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 No prompt de comando, digite o seguinte:
 
@@ -155,7 +155,7 @@ O comando a seguir desmonta o arquivo `MyFile.exe` e exibe o texto do IL Assembl
 ildasm MyFile.exe /text
 ```
 
-Se o arquivo `MyApp.exe` contiver recursos gerenciados não gerenciados inseridos, o comando a seguir produzirá quatro arquivos: *MyApp.il*, *MyApp.res*, *Icons.resources* e *Message.resources*:
+Se o arquivo `MyApp.exe` contiver recursos gerenciados e não gerenciados inseridos, o seguinte comando produzirá quatro arquivos: *MyApp.il*, *MyApp.res*, *Icons.resources* e *Message.resources*:
 
 ```console
 ildasm MyApp.exe /output:MyApp.il

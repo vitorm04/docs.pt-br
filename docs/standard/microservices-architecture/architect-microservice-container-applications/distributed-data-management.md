@@ -4,16 +4,16 @@ description: Saiba quais são os desafios e soluções de gerenciamento de dados
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: adfb3c0be33d18a991ee552a99a2d02cc3ec7bb3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151025"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145985"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Desafio \#1: Como definir os limites de cada microsserviço
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Desafio \#1: como definir os limites de cada microsserviço
 
 Definir os limites dos microsserviços provavelmente é o primeiro desafio que qualquer pessoa encontra. Cada microsserviço deve ser uma parte do aplicativo e cada microsserviço deve ser autônomo com todos os benefícios e desafios que ele abrange. Mas como identificar esses limites?
 
@@ -21,7 +21,7 @@ Primeiro, você precisa se concentrar nos modelos de domínio lógicos do aplica
 
 Sua forma de identificar os limites entre vários contextos de aplicativo com um domínio diferente para cada contexto é exatamente a forma que você pode usar para identificar os limites de cada microsserviço de negócios, além de seu modelo de domínio e seus dados relacionados. Você sempre deve tentar minimizar o acoplamento entre esses microsserviços. Mais adiante, este guia apresentará mais detalhes sobre essa identificação e esse design de modelo de domínio na seção [Identificando limites de modelo de domínio para cada microsserviço](identify-microservice-domain-model-boundaries.md).
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Desafio \#2: Como criar consultas que recuperam dados de vários microsserviços
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Desafio \#2: como criar consultas que recuperam dados de vários microsserviços
 
 Um segundo desafio é como implementar consultas que recuperam dados de vários microsserviços, evitando a comunicação intensa dos aplicativos clientes remotos com os microsserviços. Um exemplo pode ser uma única tela de um aplicativo móvel que precisa mostrar microsserviços de informações do usuário que pertencem ao carrinho de compras, de catálogo e de identidade do usuário. Outro exemplo seria um relatório complexo envolvendo diversas tabelas localizadas em vários microsserviços. A solução certa depende da complexidade das consultas. Mas em qualquer caso, será necessária uma maneira de agregar informações se você desejar melhorar a eficiência nas comunicações do sistema. As soluções mais comuns são as seguintes.
 
@@ -39,7 +39,7 @@ Tenha em mente que esse banco de dados centralizado deve ser usado somente para 
 
 No entanto, se o design do aplicativo envolver a agregação constante de informações de vários microsserviços para consultas complexas, esse poderá ser um sintoma de design ruim, pois um microsserviço deve estar o mais isolado possível dos outros microsserviços. (Isso exclui relatórios/análises que sempre devem usar bancos de dados centrais de dados frios). A ocorrência frequente desse problema pode ser um motivo para mesclar os microsserviços. Você precisa equilibrar a autonomia de evolução e a implantação de cada microsserviço com dependências fortes, coesão e agregação de dados.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Desafio \#3: Como obter consistência entre vários microsserviços
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Desafio \#3: como obter consistência entre vários microsserviços
 
 Como mencionado anteriormente, os dados pertencentes a cada microsserviço são privados desse microsserviço e só podem ser acessados usando a API desse microsserviço. Portanto, um desafio apresentado é como implementar processos de negócios de ponta a ponta, mantendo a consistência entre vários microsserviços.
 
@@ -53,7 +53,7 @@ No entanto, em um aplicativo baseado em microsserviços, as tabelas de Produto e
 
 **Figura 4-9**. Um microsserviço não pode acessar diretamente uma tabela em outro microsserviço
 
-O microsserviço de Catálogo não deve atualizar a tabela de Carrinho de compras diretamente, porque a tabela de Carrinho de compras é de propriedade do microsserviço de Carrinho de compras. Para fazer uma atualização no microsserviço de Carrinho de compras, o microsserviço de Catálogo deve usar a consistência eventual provavelmente com base comunicação assíncrona, assim como em eventos de integração (comunicação baseada em mensagem e em evento). É assim que o aplicativo de referência [eShopOnContainers](http://aka.ms/eshoponcontainers) executa esse tipo de consistência entre microsserviços.
+O microsserviço de Catálogo não deve atualizar a tabela de Carrinho de compras diretamente, porque a tabela de Carrinho de compras é de propriedade do microsserviço de Carrinho de compras. Para fazer uma atualização no microsserviço de Carrinho de compras, o microsserviço de Catálogo deve usar a consistência eventual provavelmente com base comunicação assíncrona, assim como em eventos de integração (comunicação baseada em mensagem e em evento). É assim que o aplicativo de referência [eShopOnContainers](https://aka.ms/eshoponcontainers) executa esse tipo de consistência entre microsserviços.
 
 Conforme indicado pelo [Teorema CAP](https://en.wikipedia.org/wiki/CAP_theorem), é necessário escolher entre a disponibilidade e a coerência forte de ACID. A maioria dos cenários baseados em microsserviço exigem disponibilidade e alta escalabilidade em vez de coerência forte. Os aplicativos críticos precisam permanecer em funcionamento e os desenvolvedores podem contornar a coerência forte usando técnicas para trabalhar com consistência eventual ou fraca. Essa é a abordagem usada pela maioria das arquiteturas baseadas em microsserviço.
 
@@ -61,7 +61,7 @@ Além de o estilo ACID ou as transações de confirmação de duas fases serem c
 
 Uma boa solução para esse problema é usar a consistência eventual entre os microsserviços, articulada pela comunicação controlada por evento e por um sistema de publicação e assinatura. Esses tópicos serão abordados na seção [Comunicação controlada por evento assíncrono](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) mais adiante neste guia.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Desafio \#4: Como projetar a comunicação entre os limites dos microsserviços
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Desafio \#4: como projetar a comunicação entre os limites dos microsserviços
 
 A comunicação entre os limites dos microsserviços é realmente um grande desafio. Nesse contexto, a comunicação não se refere a qual protocolo você deve usar (HTTP e REST, AMQP, mensagens e assim por diante). Nesse caso, ela aborda qual estilo de comunicação você deve usar e, principalmente, que nível de acoplamento os microsserviços devem ter. Dependendo do nível de acoplamento, quando ocorrer uma falha, o impacto dessa falha no sistema poderá variar significativamente.
 
@@ -100,8 +100,8 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 - **Exibição materializada** \
   [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
-- **Charles Roe. ACID vs. BASE: a mudança de pH no processamento de transações de banco de dados** \
-  [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+- **Charles Roe. ACID vs. BASE: The Shifting pH of Database Transaction Processing** \ (ACID versus BASE: a mudança de pH no processamento de transações de banco de dados)
+  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **Transação de compensação** \
   [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)

@@ -3,12 +3,12 @@ title: Documentando seu código com comentários em XML
 description: Saiba como documentar seu código com comentários de documentação XML e gerar um arquivo de documentação XML em tempo de compilação.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129656"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151001"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -136,7 +136,7 @@ Pode ser qualquer tipo definido no projeto ou um assembly referenciado.
 
 ### <a name="ltparamgt"></a>&lt;param&gt;
 
-Você usa a marca `<param>` para descrever os parâmetros de um método. Este é um exemplo do método `Add` duplo: o parâmetro que a marca descreve é especificado no atributo `name` **obrigatório**.
+Você usa a marca `<param>` para descrever os parâmetros de um método. Aqui está um exemplo do método duplo `Add`: O parâmetro que a marca descreve é especificado no atributo `name` **necessário**.
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -205,7 +205,7 @@ O atributo `id` que pode ser usado no lugar de `name` representa a ID da marca q
 ### <a name="user-defined-tags"></a>Marcas definidas pelo usuário
 
 Todas as marcas descritas acima representam as marcas que são reconhecidas pelo compilador C#. No entanto, o usuário é livre para definir suas próprias marcas.
-Ferramentas como o Sandcastle dão suporte para marcas extras, como [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) e até mesmo à [documentação de namespaces](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Ferramentas como o Sandcastle dão suporte para marcas extras, como [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) e até mesmo à [documentação de namespaces](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Ferramentas de geração de documentação internas ou personalizadas também podem ser usadas com as marcas padrão e vários formatos de saída, de HTML a PDF, podem ter suporte.
 
 ## <a name="recommendations"></a>Recomendações

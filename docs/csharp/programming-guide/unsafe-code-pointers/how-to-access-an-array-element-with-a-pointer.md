@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 57b1bebb95c1b3f24e550d554fe369d931d6f6b4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4f5d82e0ccdffcb694e3030aabe58b8da687a5e1
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241795"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084791"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Como acessar um elemento de matriz com um ponteiro (Guia de Programação em C#)
 
@@ -24,7 +24,7 @@ for (int i = 65; i < 123; i++)
 }
 ```
 
-A expressão entre colchetes deve ser implicitamente conversível para `int`, `uint`, `long` ou `ulong`. A operação p[e] é equivalente a \*(p+e). Assim como no C e no C++, o acesso de elemento de ponteiro não verifica erros fora dos limites.
+A expressão entre colchetes deve ser implicitamente conversível para `int`, `uint`, `long` ou `ulong`. A operação `p[e]` é equivalente à `*(p+e)`. Assim como no C e no C++, o acesso de elemento de ponteiro não verifica erros fora dos limites.
 
 ## <a name="example"></a>Exemplo
 

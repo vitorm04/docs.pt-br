@@ -1,5 +1,5 @@
 ---
-title: 'Como: Executar ações quando um bloco de fluxo de dados recebe dados'
+title: 'Como: executar ações quando um bloco de fluxo de dados recebe dados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217185"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221057"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: Executar ações quando um bloco de fluxo de dados recebe dados
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: executar ações quando um bloco de fluxo de dados recebe dados
 Os tipos de *Blocos de fluxo de dados de execução* chamam um representante fornecido pelo usuário ao receber dados. As classes <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> são tipos de blocos de fluxo de dados de execução. Você pode usar a palavra-chave `delegate` (`Sub` em Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> ou uma expressão lambda ao fornecer uma função de trabalho a um bloco de fluxo de dados de execução. Este documento descreve como usar <xref:System.Func%602> e as expressões lambda para executar a ação em blocos de execução.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,7 +34,7 @@ Os tipos de *Blocos de fluxo de dados de execução* chamam um representante for
  A seção Resumo de tipos de representantes no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) resume os tipos de representantes que você pode oferecer aos objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. A tabela também especifica se o tipo de representante opera de forma síncrona ou assíncrona.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Copie o código de exemplo e cole-o em um projeto do Visual Studio, ou cole-o em um arquivo chamado `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` para Visual Basic) e, em seguida, execute o seguinte comando em uma janela do prompt de comando do Visual Studio.  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` para Visual Basic) e, em seguida, execute o seguinte comando em uma janela do Prompt de Comando do Desenvolvedor para Visual Studio.  
   
  Visual C#  
   

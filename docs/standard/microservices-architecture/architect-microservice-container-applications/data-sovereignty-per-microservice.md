@@ -4,12 +4,12 @@ description: Soberania de dados por microsserviço é um dos pontos principais d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126842"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144896"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Soberania de dados por microsserviço
 
@@ -27,7 +27,7 @@ Por outro lado, a abordagem tradicional (dados monolíticos) usada em diversos a
 
 A abordagem de banco de dados centralizado aparenta ser mais simples inicialmente e parece permitir a reutilização de entidades em subsistemas diferentes para tornar tudo consistente. Mas a realidade é que você acaba com uma quantidade enorme de tabelas que servem para muitos subsistemas diferentes e incluem atributos e colunas que não são necessárias na maioria dos casos. É como tentar usar o mesmo mapa físico para uma caminhada em uma trilha pequena, uma viagem de carro de um dia e para aprender geografia.
 
-Um aplicativo monolítico com um banco de dados relacional único conta com duas vantagens: [transações ACID](https://en.wikipedia.org/wiki/ACID) e a linguagem SQL, ambas em funcionamento em todas as tabelas e dados relacionados ao aplicativo. Essa abordagem é uma maneira fácil de gravar consultas que combinam dados de diversas tabelas.
+Um aplicativo monolítico com normalmente um único banco de dados relacional tem dois benefícios importantes: [Transações ACID](https://en.wikipedia.org/wiki/ACID) e a linguagem SQL, ambas funcionando em todas as tabelas e dados relacionados ao aplicativo. Essa abordagem é uma maneira fácil de gravar consultas que combinam dados de diversas tabelas.
 
 No entanto, o acesso a dados se torna muito mais complexo ao migrar para uma arquitetura de microsserviços. Porém, mesmo quando as transações ACID podem ou devem ser usadas no âmbito de um microsserviço ou Contexto Delimitado, os dados de propriedade de cada microsserviço são privados e só podem ser acessados por meio de suas APIs. Encapsular os dados garante que os microsserviços sejam acoplados de forma flexível e evoluam de modo independente. Se vários serviços acessarem os mesmos dados, as atualizações de esquema exigirão atualizações coordenadas de todos os serviços. Isso interrompe a autonomia do ciclo de vida do microsserviço. Entretanto, as estruturas de dados distribuídos impedem você de realizar transações ACID nos microsserviços. Por sua vez, isso significa que é necessário utilizar consistência eventual quando um processo de negócios abrange vários microsserviços. Isso é muito mais difícil de implementar do que junções SQL, porque você não pode criar restrições de integridade nem usar transações distribuídas entre bancos de dados separados, conforme explicaremos mais adiante. Da mesma forma, muitos outros recursos do banco de dados relacional não estão disponíveis em vários microsserviços.
 
@@ -37,7 +37,7 @@ Uma arquitetura particionada e de persistência poliglota para armazenamento de 
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>A relação entre os microsserviços e o padrão do Contexto Delimitado
 
-O conceito de microsserviço tem origem no [padrão de BC (Contexto Delimitado)](http://martinfowler.com/bliki/BoundedContext.html) na [DDD (design controlado por domínio)](https://en.wikipedia.org/wiki/Domain-driven_design). A DDD aborda modelos grandes dividindo-os em vários BCs e explicitando seus limites. Cada BC precisa ter um modelo e banco de dados próprios. Da mesma forma, cada microsserviço tem seus próprios dados relacionados. Além disso, cada BC geralmente tem uma [linguagem ubíqua](http://martinfowler.com/bliki/UbiquitousLanguage.html) própria para ajudar na comunicação entre desenvolvedores de software e especialistas em domínio.
+O conceito de microsserviço tem origem no [padrão de BC (Contexto Delimitado)](https://martinfowler.com/bliki/BoundedContext.html) na [DDD (design controlado por domínio)](https://en.wikipedia.org/wiki/Domain-driven_design). A DDD aborda modelos grandes dividindo-os em vários BCs e explicitando seus limites. Cada BC precisa ter um modelo e banco de dados próprios. Da mesma forma, cada microsserviço tem seus próprios dados relacionados. Além disso, cada BC geralmente tem uma [linguagem ubíqua](https://martinfowler.com/bliki/UbiquitousLanguage.html) própria para ajudar na comunicação entre desenvolvedores de software e especialistas em domínio.
 
 Esses termos (principalmente entidades de domínio) na linguagem ubíqua podem ter nomes diferentes em Contextos Delimitados distintos, mesmo quando entidades de domínio diferentes compartilham a mesma identidade (ou seja, a ID exclusiva utilizada para ler a entidade do armazenamento). Por exemplo, em um Contexto Delimitado de perfil de usuário, a entidade de domínio Usuário pode compartilhar a identidade com a entidade de domínio Comprador no Contexto Delimitado de pedido.
 
@@ -49,7 +49,7 @@ A DDD se beneficia dos microsserviços ao obter limites reais na forma de micros
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão: banco de dados por serviço** \
+- **Chris Richardson. Padrão: Database per service** \ (Padrão: banco de dados por serviço)
   [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler. BoundedContext** \

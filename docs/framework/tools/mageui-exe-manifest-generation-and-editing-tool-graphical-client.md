@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 9037e03398aa29d496f1a689e0e57bdb60fea5b9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a4dfd1bab04f32eefe82a6777ce6864d5a162e23
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584372"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221863"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 
 MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI.exe têm o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Adicionando ou removendo assemblies de um manifesto ou assinando novamente manifestos existente, MageUI.exe não atualiza o manifesto com o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).
 
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
  Duas versões de Mage.exe e de MageUI.exe estão incluídas como um componente do Visual Studio. Para consultar informações da versão, execute MageUI.exe, selecione **Ajuda** e **Sobre**. Esta documentação descreve a versão 4.0.x.x de Mage.exe e de MageUI.exe.
 
@@ -120,7 +120,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Popular**|Adiciona todos os arquivos no diretório e subdiretórios do aplicativo ao manifesto do aplicativo. Se MageUI.exe localizar um único arquivo executável no diretório, ele o marcará automaticamente como o Ponto de Entrada, que é o arquivo executado primeiro quando o aplicativo ClickOnce é inicializado no cliente.|  
 |**Arquivos de Aplicativo**|Lista todos os arquivos no aplicativo. Cada arquivo tem três atributos editáveis, discutidos abaixo.|  
 |**Tipo de Arquivo**|O Tipo de Arquivo pode ser um dos quatro valores:<br /><br /> – Nenhum.<br />– Ponto de Entrada. O executável principal do aplicativo. Apenas um arquivo executável pode ser marcado como o ponto de entrada.<br />– Arquivo de Dados. Um arquivo, como um arquivo XML, que fornece dados para o aplicativo.<br />– Arquivo de Ícone. Um ícone do aplicativo, como aparece na área de trabalho ou no canto da janela do aplicativo.|  
-|**Opcional**|Arquivos marcados como opcionais não são baixados na instalação inicial ou na atualização, mas podem ser baixados em tempo de execução usando a API sob demanda System.Deployment. Para obter mais informações, consulte [Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer) (Instruções passo a passo: baixando assemblies sob demanda com a API de implantação do ClickOnce usando o designer).|  
+|**Opcional**|Arquivos marcados como opcionais não são baixados na instalação inicial ou na atualização, mas podem ser baixados em tempo de execução usando a API sob demanda System.Deployment. Para obter mais informações, confira [Passo a passo: como baixar assemblies sob demanda com a API de implantação ClickOnce usando o designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grupo**|Um rótulo para um conjunto de arquivos opcionais. Você pode aplicar um rótulo Grupo a um conjunto de arquivos e usar a API sob demanda para baixar um lote de arquivos com uma única chamada à API.|  
   
 ### <a name="permissions-required-tab"></a>Guia Permissões Necessárias  
@@ -128,7 +128,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 |Elemento da Interface do Usuário|Descrição|  
 |----------------|-----------------|  
-|**Permission set type (Tipo do conjunto de permissões)**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, consulte [NIB: conjuntos de permissões nomeadas](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Permission set type (Tipo do conjunto de permissões)**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, confira [NIB: conjuntos de permissões nomeadas](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Detalhes**|O XML criado para o manifesto do aplicativo para representar o conjunto de permissões. A menos que tenha um bom entendimento do formato XML do manifesto do aplicativo, você não deve editar esse XML manualmente. Para obter mais informações, consulte [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest) (Manifesto do aplicativo ClickOnce).|  
   
 ### <a name="deployment-manifest-tab"></a>Guia Manifesto de Implantação  
@@ -179,7 +179,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |----------------|-----------------|  
 |**This application should check for updates (Este aplicativo deve procurar atualizações)**|Especifica se [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve verificar se há atualizações de aplicativo. Se essa caixa de seleção não estiver selecionada, o aplicativo não verificará se há atualizações, a menos que você o atualize programaticamente usando as APIs no namespace <xref:System.Deployment.Application>.|  
 |**Escolha quando o aplicativo deve verificar se há atualizações**|Fornece duas opções para verificações de atualização:<br /><br /> -   **Antes do aplicativo ser inicializado**. A verificação de atualização é executada antes da execução do aplicativo.<br />-   **Depois de o aplicativo ser inicializado**. A verificação de atualização começa quando o formulário principal do aplicativo é inicializado e será executada na próxima vez que o aplicativo for iniciado.|  
-|**Update check frequency (Frequência de verificação de atualização)**|Determina a frequência com que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve verificar se há atualizações:<br /><br /> -   **Verificar toda vez que o aplicativo for executado**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] executará uma verificação de atualização sempre que o usuário abrir o aplicativo.<br />-   **Verificar a cada**: selecione um intervalo e uma unidade (horas, dias ou semanas) que deve decorrer antes de verificar se há atualizações.|  
+|**Update check frequency (Frequência de verificação de atualização)**|Determina a frequência com que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] deve verificar se há atualizações:<br /><br /> -   **Verificar toda vez que o aplicativo for executado**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] executará uma verificação de atualização sempre que o usuário abrir o aplicativo.<br />-   **Verifique cada**: selecione um intervalo de tempo e uma unidade (horas, dias ou semanas) que precisam ser percorridos antes da verificação de atualizações.|  
 |**Especifique a versão mínima necessária para este aplicativo**|Opcional. Especifica que uma versão específica do seu aplicativo é uma instalação obrigatória, impedindo que os usuários trabalhem com uma versão anterior.|  
 |**Versão**|Necessário se a caixa de seleção **Especifique a versão mínima necessária para este aplicativo** estiver marcada. O número de versão fornecido deve estar no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
   
@@ -192,5 +192,5 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 ## <a name="see-also"></a>Consulte também  
  [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Passo a passo: Como implantar manualmente aplicativos ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe (Manifest Generation and Editing Tool)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

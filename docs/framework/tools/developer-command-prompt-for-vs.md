@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cded8ce271ea0f3d1dbb8fc3d9a072ee4a23d1ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149166"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221226"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt de Comando do Desenvolvedor para o Visual Studio
 
@@ -34,7 +34,7 @@ O Prompt de Comando do Desenvolvedor para Visual Studio permite que você use fe
 
 1. Na caixa de pesquisa na barra de tarefas, comece a digitar o nome da ferramenta, como `dev` ou `developer command prompt`. Isso abre uma lista de aplicativos instalados que correspondem ao seu padrão de pesquisa. Se você estiver procurando por um prompt de comando diferente, experimente digitar um termo de pesquisa diferente, como `prompt`.
 
-2. Escolha o **Prompt de Comando do Desenvolvedor** (ou o prompt de comando que você deseja usar).
+2. Escolha o **Prompt de Comando do Desenvolvedor para Visual Studio** (ou o prompt de comando que você deseja usar).
 
 ### <a name="in-windows-81"></a>No Windows 8.1
 

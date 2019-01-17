@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar tarefas pré-computadas'
+title: 'Como: criar tarefas pré-computadas'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47e4c5d721b37388a4008d100f5212057477c638
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211652"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222084"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>Como: Criar tarefas pré-computadas
+# <a name="how-to-create-pre-computed-tasks"></a>Como: criar tarefas pré-computadas
 Esse documento descreve como usar o método <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> para recuperar os resultados das operações de download assíncronas armazenados em um cache. O método <xref:System.Threading.Tasks.Task.FromResult%2A> retorna um objeto <xref:System.Threading.Tasks.Task%601> que contém o valor fornecido como sua propriedade <xref:System.Threading.Tasks.Task%601.Result%2A>. Este método é útil quando você executa uma operação assíncrona que retorna um objeto <xref:System.Threading.Tasks.Task%601> e o resultado do objeto <xref:System.Threading.Tasks.Task%601> já está calculado.  
   
 ## <a name="example"></a>Exemplo  
@@ -29,7 +29,7 @@ Esse documento descreve como usar o método <xref:System.Threading.Tasks.Task.Fr
  Esse exemplo calcula o tempo necessário para baixar várias cadeias de caracteres duas vezes. O segundo conjunto de operações de download deve levar menos tempo do que o primeiro conjunto porque os resultados são mantidos no cache. O método <xref:System.Threading.Tasks.Task.FromResult%2A> permite que o método `DownloadStringAsync` crie objetos <xref:System.Threading.Tasks.Task%601> que contêm esses resultados pré-computados.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Copie o código de exemplo e cole-o em um projeto do Visual Studio, ou cole-o em um arquivo chamado `CachedDownloads.cs` (`CachedDownloads.vb` para Visual Basic) e, em seguida, execute o seguinte comando em uma janela do prompt de comando do Visual Studio.  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `CachedDownloads.cs` (`CachedDownloads.vb` para Visual Basic) e, em seguida, execute o seguinte comando em uma janela do Prompt de Comando do Desenvolvedor para Visual Studio.  
   
  Visual C#  
   

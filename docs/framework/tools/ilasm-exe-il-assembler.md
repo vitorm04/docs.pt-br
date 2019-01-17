@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409783"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221746"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL Assembler)
 
 O IL Assembler gera um arquivo PE (Portable Executable) com base em IL (Intermediate Language). (Para obter mais informações sobre IL, consulte [Processo de execução gerenciada](../../../docs/standard/managed-execution-process.md).) É possível executar o executável resultante, que contém IL e os metadados obrigatórios, para determinar se a IL é executada conforme esperado.
 
-Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 No prompt de comando, digite o seguinte:
 
@@ -38,7 +38,7 @@ ilasm [options] filename [[options]filename...]
 
 | Argumento | Descrição |
 | -------- | ----------- |
-|`filename`|O nome do arquivo de origem .il. Esse arquivo consiste em diretivas de declaração de metadados e instruções de IL simbólicas. Vários argumentos do arquivo de origem podem ser fornecidos para produzir um único arquivo PE com *Ilasm.exe*. **Observação:** verifique se a última linha de código no arquivo de origem .il tem um espaço em branco à direita ou um caractere de final de linha.|
+|`filename`|O nome do arquivo de origem .il. Esse arquivo consiste em diretivas de declaração de metadados e instruções de IL simbólicas. Vários argumentos do arquivo de origem podem ser fornecidos para produzir um único arquivo PE com *Ilasm.exe*. **Observação:** Verifique se a última linha do código no arquivo de origem .il tem espaço em branco à direita ou um caractere de final de linha.|
 
 | Opção | Descrição |
 | ------ | ----------- |
@@ -47,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/appcontainer**|Produz um arquivo *.dll* ou *.exe* que é executado no contêiner do aplicativo do Windows, como saída.|
 |**/arm**|Especifica o ARM (Advanced RISC Machine) como o processador de destino.<br /><br /> Se nenhum número de bit da imagem for especificado, o padrão será **/32bitpreferred**.|
 |**/base:** `integer`|Define ImageBase como o valor especificado por `integer` no cabeçalho Opcional do NT. Se a diretiva IL .imagebase for especificada no arquivo, essa opção a substituirá.|
-|**/clock**|Mede e relata os seguintes tempos de compilação em milissegundos para o arquivo de origem .il especificado:<br /><br /> **Total Run**: o tempo total gasto na realização de todas as operações específicas que seguem.<br /><br /> **Startup**: carregando e abrindo o arquivo.<br /><br /> **Emitting MD**: emitindo metadados.<br /><br /> **Ref to Def Resolution**: resolvendo referências para definições no arquivo.<br /><br /> **CEE File Generation**: gerando a imagem do arquivo na memória.<br /><br /> **PE File Writing**: gravando a imagem em um arquivo PE.|
+|**/clock**|Mede e relata os seguintes tempos de compilação em milissegundos para o arquivo de origem .il especificado:<br /><br /> **Total de execução**: o tempo total gasto na realização de todas as operações específicas que seguem.<br /><br /> **Inicialização**: carregar e abrir o arquivo.<br /><br /> **Emitir MD**: emitir metadados.<br /><br /> **Resolução de referência para definição**: resolver referências para definições no arquivo.<br /><br /> **Geração do arquivo CEE**: gerar a imagem do arquivo na memória.<br /><br /> **Gravação do arquivo PE**: gravação da imagem em um arquivo PE.|
 |**/debug**[:**IMPL**&#124;**OPT**]|Inclui informações de depuração (variável local e nomes de argumento, além de números da linha). Cria um arquivo PDB.<br /><br /> **/debug** sem valor adicional desabilita a otimização JIT e usa pontos de sequência do arquivo PDB.<br /><br /> **IMPL** desabilita a otimização JIT e usa pontos de sequência implícitos.<br /><br /> **OPT** habilita a otimização JIT e usa pontos de sequência implícitos.|
 |**/dll**|Produz um arquivo *.dll* como saída.|
 |**/enc:** `file`|Cria deltas Editar e Continuar com base no arquivo de origem especificado.<br /><br /> Este argumento se destina apenas ao uso acadêmico e não é compatível com uso comercial.|

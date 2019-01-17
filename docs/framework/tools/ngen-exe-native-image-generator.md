@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463e31ff286b0022ac55f4f9f8e2a4478cceadc9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49400470"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222162"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho de aplicativos gerenciados. Ngen.exe cria imagens nativas, que são arquivos que contém o código de máquina específico do processamento compilado e as instala no cache de imagem nativa do computador local. O tempo de execução pode usar imagens nativas do cache em vez de usar o compilador JIT (Just-In-Time) para compilar o assembly original.  
@@ -55,7 +55,7 @@ O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho
 > [!NOTE]
 >  A sintaxe de Ngen.exe para as versões 1.0 e 1.1 do .NET Framework pode ser encontrada em [Sintaxe herdada do Gerador de Imagens Nativas (Ngen.exe)](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
@@ -75,10 +75,10 @@ ngen /? | /help
 |Ação|Descrição|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Gere imagens nativas para um assembly e suas dependências e instale as imagens no cache de imagem nativa.<br /><br /> Se `/queue` for especificado, a ação será enfileirada para o serviço de imagem nativa. A prioridade padrão é 3. Confira a tabela [Níveis de Prioridade](#PriorityTable).|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Exclua as imagens nativas de um assembly e suas dependências do cache de imagem nativa.<br /><br /> Para desinstalar uma única imagem e suas dependências, use os mesmos argumentos de linha de comando que foram usados para instalar a imagem. **Observação:** a partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a ação `uninstall` * não tem mais suporte.|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Exclua as imagens nativas de um assembly e suas dependências do cache de imagem nativa.<br /><br /> Para desinstalar uma única imagem e suas dependências, use os mesmos argumentos de linha de comando que foram usados para instalar a imagem. **Observação:**  começando com o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], não há mais suporte para a ação `uninstall` *.|  
 |`update` [`/queue`]|Atualize imagens nativas que se tornaram inválidas.<br /><br /> Se `/queue` for especificado, as atualizações serão enfileiradas para o serviço de imagem nativa. Como as atualizações estão sempre programadas na prioridade 3, elas são executadas quando o computador está ocioso.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Exiba o estado das imagens nativas para um assembly e suas dependências.<br /><br /> Se nenhum argumento for fornecido, tudo no cache de imagem nativa será exibido.|  
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -ou-<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - ou -<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Pause o serviço de imagem nativa, deixe o serviço pausado continuar ou consulte o status do serviço.|  
   
 <a name="ArgumentTable"></a>   
@@ -86,7 +86,7 @@ ngen /? | /help
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|`assemblyName`|O nome para exibição completo do assembly. Por exemplo, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Observação:** é possível fornecer um nome de assembly parcial, por exemplo, `myAssembly` para as ações `display` e `uninstall`. <br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|  
+|`assemblyName`|O nome para exibição completo do assembly. Por exemplo, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Observação:**  É possível fornecer um nome de assembly parcial como, por exemplo, `myAssembly` para as ações `display` e `uninstall`. <br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|  
 |`assemblyPath`|O caminho explícito do assembly. É possível especificar um caminho completo ou relativo.<br /><br /> Se você especificar um nome de arquivo sem um caminho, o assembly deverá estar localizado no diretório atual.<br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|  
   
 <a name="PriorityTable"></a>   
@@ -122,7 +122,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|Suprima a exibição do banner de inicialização da Microsoft.|  
 |`/silent`|Suprima a exibição das mensagens de êxito.|  
-|`/verbose`|Exiba informações detalhadas da depuração. **Observação:** devido a limitações de sistema operacional, essa opção não exibe o máximo de informações adicionais sobre Windows 98 e Windows Millennium.|  
+|`/verbose`|Exiba informações detalhadas da depuração. **Observação:**  devido a limitações do sistema operacional, essa opção não exibe tantas informações adicionais no Windows 98 e no Windows Millennium.|  
 |`/help`, `/?`|Exiba a sintaxe de comando e as opções da versão atual.|  
   
 ## <a name="remarks"></a>Comentários  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410141"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221941"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Ferramenta de Instalação)
 A ferramenta Instalador é um utilitário de linha de comando que permite instalar e desinstalar recursos de servidor executando-se os componentes do instalador em assemblies especificados. Essa ferramenta funciona com classes no namespace <xref:System.Configuration.Install>.  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
@@ -46,8 +46,8 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|`/h[elp]`<br /><br /> -ou-<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|  
-|`/help` *assembly*<br /><br /> -ou-<br /><br /> `/?` *assembly*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|  
+|`/h[elp]`<br /><br /> - ou -<br /><br /> `/?`|Exibe sintaxe de comando e opções para a ferramenta.|  
+|`/help` *assembly*<br /><br /> - ou -<br /><br /> `/?` *assembly*|Exibe opções adicionais reconhecidas por instaladores individuais dentro do assembly especificado, com a sintaxe do comando e as opções de InstallUtil.exe. Essa opção adiciona o texto retornado pela propriedade <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> de cada componente do instalador para o texto de ajuda de InstallUtil.exe.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Especifica o nome forte de um assembly, que deve ser registrado no cache de assembly global. O nome do assembly deve ser totalmente qualificado com a versão, a cultura e o token de chave pública do assembly. O nome totalmente qualificado deve estar entre aspas.<br /><br /> Por exemplo, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" é um nome de assembly totalmente qualificado.|  
 |`/InstallStateDir=[` *directoryName* `]`|Especifica o diretório do arquivo .InstallState que contém os dados usados para desinstalar o assembly. O padrão é o diretório que contém o assembly.|  
 |`/LogFile=`[*filename*]|Especifica o nome do arquivo de log em que o andamento da instalação é registrado. Por padrão, se a opção `/LogFile` for omitida, um arquivo de log chamado *assemblyname*.InstallLog será criado. Se *filename* for omitido, nenhum arquivo de log será gerado.|  

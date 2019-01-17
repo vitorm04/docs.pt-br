@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188606"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084713"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -59,7 +59,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo case (<case label>) para outro".
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo case (<case label>) para outro."
 
 ```csharp
 switch (caseSwitch)
@@ -88,7 +88,7 @@ Para obter informações sobre a instrução `switch` e a correspondência de pa
 
 Como o C# 6 dá suporte apenas ao padrão de constante e não permite a repetição de valores de constantes, os rótulos case definem valores mutuamente exclusivos e apenas um padrão pode corresponder à expressão de correspondência. Como resultado, a ordem na qual as instruções `case` aparecem não é importante.
 
-No entanto, no C# 7.0, como há suporte para outros padrões, os rótulos case não precisam definir valores mutuamente exclusivos e vários padrões podem corresponder à expressão de correspondência. Como apenas as instruções na seção switch que contém o primeiro padrão de correspondência são executadas, a ordem na qual as instruções `case` aparecem agora é importante. Se o C# detecta uma seção switch cujas instruções case são equivalentes ou são subconjuntos de instruções anteriores, ele gera um erro do compilador, CS8120, “O switch case já foi tratado por um case anterior”.
+No entanto, no C# 7.0, como há suporte para outros padrões, os rótulos case não precisam definir valores mutuamente exclusivos e vários padrões podem corresponder à expressão de correspondência. Como são executadas apenas as instruções na primeira seção switch que contém o primeiro padrão de correspondência, a ordem na qual as instruções `case` aparecem agora é importante. Se o C# detecta uma seção switch cujas instruções case são equivalentes ou são subconjuntos de instruções anteriores, ele gera um erro do compilador, CS8120, “O switch case já foi tratado por um case anterior”.
 
 O exemplo a seguir ilustra uma instrução `switch` que usa uma variedade de padrões não mutuamente exclusivos. Se você mover a seção switch `case 0:` para que ela não seja mais a primeira seção na instrução `switch`, o C# gera um erro do compilador porque um inteiro cujo valor é zero é um subconjunto de todos os inteiros, que é o padrão definido pela instrução `case int val`.
 
@@ -187,7 +187,7 @@ O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que de
 
 Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` é `null` não é executada. O padrão de tipo correto para testar um `null` é `case null:`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 

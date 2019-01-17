@@ -1,5 +1,5 @@
 ---
-title: Como assinar um assembly com um nome forte
+title: 'Como: assinar um assembly com um nome forte'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191058"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221252"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como assinar um assembly com um nome forte
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como: assinar um assembly com um nome forte
 Há vários modos de assinar um assembly com um nome forte:  
   
 -   Usando a guia **Assinatura** na caixa de diálogo **Propriedades** de um projeto no Visual Studio. Esta é a forma mais fácil e conveniente de assinar um assembly com um nome forte.  
@@ -31,7 +31,7 @@ Há vários modos de assinar um assembly com um nome forte:
   
 -   Usando opções do compilador.  
   
- Você deve ter um par de chaves de criptografia para assinar um assembly com um nome forte. Para saber mais sobre como criar um par de chaves, veja [Como criar um par de chaves pública-privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Você deve ter um par de chaves de criptografia para assinar um assembly com um nome forte. Para obter mais informações de como criar um par de chaves, confira [Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Para criar e assinar um assembly com um nome forte usando o Visual Studio.  
   
@@ -45,7 +45,7 @@ Há vários modos de assinar um assembly com um nome forte:
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Para criar e assinar um assembly com um nome forte usando o Vinculador de Assembly.  
   
--   No [prompt de comando do Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digite o seguinte comando:  
+-   Com o [Prompt de Comando do Desenvolvedor para Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), digite o seguinte comando:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -99,7 +99,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ## <a name="see-also"></a>Consulte também  
 - [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Como: criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
 - [Assinar um assembly com atraso](../../../docs/framework/app-domains/delay-sign-assembly.md)  
 - [Gerenciando Assinatura de Assembly e Manifesto](/visualstudio/ide/managing-assembly-and-manifest-signing)  

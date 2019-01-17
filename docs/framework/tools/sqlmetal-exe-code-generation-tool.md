@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9bdffe76aaf9f41bfbba99bae9d2d3fa9b329d4a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002886"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221824"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
 A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Aplicando-se opções exibidas mais à frente neste tópico, é possível instruir SqlMetal para executar diversas ações diferentes, dentre as quais estão:  
@@ -30,7 +30,7 @@ A ferramenta de linha de comando SqlMetal gera o código e o mapeamento para o c
 > [!NOTE]
 >  Os desenvolvedores que usam o Visual Studio também podem usar [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] para gerar classes da entidade. A abordagem de linha de comando é bem dimensionada para bancos de dados grandes. Como SqlMetal é uma ferramenta de linha de comando, é possível usá-lo em um processo de compilação.  
   
- Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md). No prompt de comando, digite o seguinte:  
+ Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md). No prompt de comando, digite o seguinte:  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,8 +47,8 @@ sqlmetal [options] [<input file>]
 |------------|-----------------|  
 |**/server:** *\<name>*|Especifica o nome do servidor do banco de dados.|  
 |**/database:** *\<name>*|Especifica o catálogo do banco de dados no servidor.|  
-|**/user:** *\<name>*|Especifica a ID do usuário de logon. Valor padrão: Usar autenticação do Windows.|  
-|**/password:** *\<password>*|Especifica a senha de logon. Valor padrão: Usar autenticação do Windows.|  
+|**/user:** *\<name>*|Especifica a ID do usuário de logon. Valor padrão: usar a autenticação do Windows.|  
+|**/password:** *\<password>*|Especifica a senha de logon. Valor padrão: usar a autenticação do Windows.|  
 |**/conn:** *\<connection string>*|Especifica a cadeia de conexão do banco de dados. Não pode ser usada com as opções **/server**, **/database**, **/user** ou **/password**.<br /><br /> Não inclua o nome do arquivo na cadeia de conexão. Em vez disso, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Por exemplo, a seguinte linha especifica “c:\northwnd.mdf” como o arquivo de entrada: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
 |**/timeout:** *\<seconds>*|Especifica o valor de tempo limite em que SqlMetal acessa o banco de dados. Valor padrão: 0 (ou seja, sem tempo limite).|  
   
@@ -72,12 +72,12 @@ sqlmetal [options] [<input file>]
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/language:** *\<language>*|Especifica a linguagem do código-fonte.<br /><br /> Valid *\<language>*: vb, csharp.<br /><br /> Valor padrão: Derivado da extensão no nome de arquivo do código.|  
+|**/language:** *\<language>*|Especifica a linguagem do código-fonte.<br /><br /> Valid *\<language>*: vb, csharp.<br /><br /> Valor padrão: derivado da extensão de nome de arquivo de código.|  
 |**/namespace:** *\<name>*|Especifica o namespace do código gerado. Valor padrão: sem namespace.|  
-|**/context:** *\<type>*|Especifica o nome da classe de contexto dos dados. Valor padrão: Derivado do nome do banco de dados.|  
-|**/entitybase:** *\<type>*|Especifica a classe base das classes de entidade no código gerado. Valor padrão: Entidades não têm classe base.|  
+|**/context:** *\<type>*|Especifica o nome da classe de contexto dos dados. Valor padrão: derivado do nome do banco de dados.|  
+|**/entitybase:** *\<type>*|Especifica a classe base das classes de entidade no código gerado. Valor padrão: as entidades não têm classe base.|  
 |**/pluralize**|Pluraliza ou singulariza automaticamente nomes de classe e de membro.<br /><br /> Essa opção só está disponível na versão em inglês  dos EUA.|  
-|**/serialization:** *\<option>*|Gera classes serializáveis.<br /><br /> Valid *\<option>*: None, Unidirectional. Valor padrão: Nenhum.<br /><br /> Para obter mais informações, consulte [Serialização](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<option>*|Gera classes serializáveis.<br /><br /> *\<opção>* válida: nenhum, unidirecional. Valor padrão: nenhuma.<br /><br /> Para obter mais informações, consulte [Serialização](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Arquivo de Entrada**  
   
@@ -133,6 +133,6 @@ sqlmetal [options] [<input file>]
 >  Ao usar a opção **/pluralize** com o banco de dados de exemplo Northwind, observe o comportamento a seguir. Quando SqlMetal cria nomes de tipo de linha para tabelas, os nomes de tabela são singulares. Quando ele cria propriedades <xref:System.Data.Linq.DataContext> para tabelas, os nomes de tabela serão plurais. Coincidentemente, as tabelas no banco de dados de exemplo Northwind já são plurais. Por isso, você não vê essa parte funcionando. Embora seja uma prática comum nomear tabelas de banco de dados singulares, também é uma prática comum no .NET nomear as coleções plurais.  
   
 ## <a name="see-also"></a>Consulte também  
- [Como gerar o modelo de objeto em Visual Basic ou C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
+ [Como: gerar o modelo de objeto em Visual Basic ou em C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
  [Geração de código em LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [Mapeamento Externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

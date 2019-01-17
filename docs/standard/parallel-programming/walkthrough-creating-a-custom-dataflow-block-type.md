@@ -1,5 +1,5 @@
 ---
-title: 'Explicação passo a passo: Criando um tipo de bloco de fluxo de dados personalizado'
+title: 'Passo a passo: criando um tipo de bloco de fluxo de dados personalizado'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 380bcb6d2a2846d09267eeb3a0d637469ce9fba5
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868611"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221083"
 ---
-# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Explicação passo a passo: Criando um tipo de bloco de fluxo de dados personalizado
+# <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Passo a passo: criando um tipo de bloco de fluxo de dados personalizado
 Embora a biblioteca de fluxo de dados TPL forneça vários tipos de bloco de fluxo de dados que permitem uma gama de funcionalidades, também é possível criar tipos de blocos personalizados. Este documento mostra como criar um tipo de bloco de fluxo de dados que implanta comportamentos personalizados.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
@@ -53,7 +53,7 @@ Embora a biblioteca de fluxo de dados TPL forneça vários tipos de bloco de flu
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Copie o código de exemplo e cole-o em um projeto do Visual Studio, ou cole-o em um arquivo chamado `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` para Visual Basic) e, em seguida, execute o seguinte comando em uma janela do prompt de comando do Visual Studio.  
+ Copie o código de exemplo e cole-o em um projeto do Visual Studio ou cole-o em um arquivo chamado `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` para Visual Basic) e, em seguida, execute o seguinte comando em uma janela do Prompt de Comando do Desenvolvedor para Visual Studio.  
   
  Visual C#  
   

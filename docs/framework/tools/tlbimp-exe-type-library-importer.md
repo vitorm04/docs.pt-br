@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409822"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221720"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importador de Biblioteca de Tipos)
 O Importador da Biblioteca de Tipos converte as definições de tipo encontradas dentro de uma biblioteca de tipos COM em definições equivalentes em um assembly do Common Language Runtime. A saída de Tlbimp.exe é um arquivo binário (um assembly) que contém os metadados do tempo de execução para os tipos definidos na biblioteca de tipos original. É possível examinar esse arquivo com ferramentas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
