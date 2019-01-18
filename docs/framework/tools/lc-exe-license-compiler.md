@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6daa696ecd7b91c6d53edaa447f2d64bca0fd7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409072"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221200"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
 O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  
@@ -26,7 +26,7 @@ O Compilador de Licença lê arquivos de texto que contêm informações de lice
   
  A compilação cruzada entre 32 e 64 bits não é compatível quando você usa o Compilador de Licença ao compilar o projeto. Isso porque o Compilador de Licença precisa carregar assemblies, e o carregamento de assemblies 64 bits de um aplicativo 32 bits não é permitido, e vice-versa. Nesse caso, use o Compilador de Licença na linha de comando para compilar manualmente a licença e especificar a arquitetura correspondente.  
   
- Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  No prompt de comando, digite o seguinte:  
   
