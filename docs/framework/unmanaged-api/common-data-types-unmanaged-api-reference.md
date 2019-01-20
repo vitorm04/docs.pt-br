@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 561a6a5a8e778ab59a0d0f1f7f5327104ead2c79
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e0d3a9039c6dc5d72ca740d6eaaf8a4d565e2647
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185528"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415267"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de dados comuns (referência API não gerenciada)
 Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas para o .NET Framework que são definidas por instruções `typedef` do C/C++. Esses tipos de dados são geralmente aliases para tipos de dados primitivos do C/C++. Geralmente, os valores desses tipos de dados são opacos, ou seja, eles são retornados por uma função ou um método específico para que possam ser transmitidos para outras funções ou métodos sem modificação.  
@@ -18,14 +18,15 @@ Este tópico lista tipos de dados simples usados pelas APIs não gerenciadas par
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|O identificador de um domínio de aplicativo.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|O identificador de um assembly.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|O identificador de uma classe gerenciada.|  
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|O identificador de uma classe gerenciada.|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Indisponível|Um endereço de memória de 64 bits.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|O identificador de conexão para um thread que está conectado a uma instância do Microsoft SQL Server.|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|O identificador do contexto associado a um thread gerenciado específico.|  
 |COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|Um identificador opaco que representa informações sobre um registro de ativação específico.|  
 |COR_PRF_FRAME_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|Um identificador opaco que aponta para um registro de ativação. Ele é válido somente durante o retorno de chamada para o qual é transmitido.|  
 |CORDB_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|Um endereço na memória.|  
 |CORDB_CONTINUE_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|O status de continuação.|  
-|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|O valor de um registro da CPU.|  
+|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|O valor de um registro da CPU.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|O identificador de uma função ou um método.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Um identificador da coleta de lixo.|  
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|Um token de metadados (uma linha em uma tabela de metadados).|  

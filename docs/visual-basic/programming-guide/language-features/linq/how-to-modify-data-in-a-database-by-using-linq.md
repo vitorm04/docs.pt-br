@@ -1,5 +1,5 @@
 ---
-title: Como modificar dados em um banco de dados usando LINQ (Visual Basic)
+title: 'Como: Modificar dados em um banco de dados usando LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 02aaf2924c6230615d7d1cbcceac72265419b541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520682"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415202"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Como modificar dados em um banco de dados usando LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Como: Modificar dados em um banco de dados usando LINQ (Visual Basic)
 Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as informações de banco de dados e modificar valores no banco de dados.  
   
  O exemplo a seguir mostra como criar um novo aplicativo que recupera e atualiza as informações em um banco de dados do SQL Server.  
@@ -122,7 +122,10 @@ Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as in
       Dim updateCust = (From cust In db.Customers   
                         Where cust.CustomerID = "JILLF").ToList()(0)  
   
-      updateCust.ContactName = "Jill Shrader"  
+      updateCust.ContactName = "Jill Shrader"
+      updateCust.Country = "Wales"
+      updateCust.CompanyName = "Red Yonder Airlines"
+      updateCust.City = "Cardiff"
   
       Try  
         db.SubmitChanges()  
@@ -162,4 +165,4 @@ Consultas integradas à linguagem de consulta (LINQ) tornam fácil acessar as in
  [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Como atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

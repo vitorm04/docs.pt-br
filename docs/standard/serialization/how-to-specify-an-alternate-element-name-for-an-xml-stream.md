@@ -1,5 +1,5 @@
 ---
-title: Como especificar um nome de elemento alternativo para um fluxo XML
+title: 'Como: Especifique um nome de elemento alternativo para um Stream XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582366"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415085"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Como especificar um nome de elemento alternativo para um fluxo XML
-[Exemplo de código](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Como: Especifique um nome de elemento alternativo para um Stream XML
   
- Usando o [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), você pode gerar mais de um fluxo XML com o mesmo conjunto de classes. Você deve querer fazer isso porque dois diferentes serviços Web XML exigem as mesmas informações básicas, com apenas poucas diferenças. Por exemplo, imagine dois serviços Web XML que processam pedidos para livros e, portanto, exigem números ISBN. Um serviço usa a marca \<ISBN>, enquanto o segundo usa a marca \<BookID>. Você tem uma classe nomeada `Book` que contém um campo nomeado `ISBN`. Quando uma instância da classe `Book` é serializada, ela, por padrão, usará o nome de membro (ISBN) como o nome de elemento da marca. Para o primeiro serviço Web XML, esse é o esperado. Mas, para enviar o fluxo XML para o segundo serviço Web XML, você deverá sobrescrever a serialização para que o nome do elemento da marca seja `BookID`.  
+Usando o [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), você pode gerar mais de um fluxo XML com o mesmo conjunto de classes. Você deve querer fazer isso porque dois diferentes serviços Web XML exigem as mesmas informações básicas, com apenas poucas diferenças. Por exemplo, imagine dois serviços Web XML que processam pedidos para livros e, portanto, exigem números ISBN. Um serviço usa a marca \<ISBN>, enquanto o segundo usa a marca \<BookID>. Você tem uma classe nomeada `Book` que contém um campo nomeado `ISBN`. Quando uma instância da classe `Book` é serializada, ela, por padrão, usará o nome de membro (ISBN) como o nome de elemento da marca. Para o primeiro serviço Web XML, esse é o esperado. Mas, para enviar o fluxo XML para o segundo serviço Web XML, você deverá sobrescrever a serialização para que o nome do elemento da marca seja `BookID`.  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Para criar um fluxo XML com um nome de elemento alternativo  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Para criar um fluxo XML com um nome de elemento alternativo  
   
 1.  Crie uma instância da classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
@@ -99,6 +98,6 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>  
 - [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 - [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -2,12 +2,12 @@
 title: Migrando de .NET Remoting para o WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245672"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415969"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrando de .NET Remoting para o WCF
 Este artigo descreve como migrar um aplicativo que usa o .NET Remoting para usar o Windows Communication Foundation (WCF). Ele compara conceitos semelhantes entre esses produtos e, em seguida, descreve como realizar vários cenários comuns de comunicação remota no WCF.  
@@ -19,7 +19,7 @@ Este artigo descreve como migrar um aplicativo que usa o .NET Remoting para usar
   
 ||Comunicação remota .NET|WCF|  
 |-|-------------------|---------|  
-|Tipo de servidor|Subclasse MarshalByRefObject|Marcar com o atributo [ServiceContract]|  
+|Tipo de servidor|Subclass MarshalByRefObject|Marcar com o atributo [ServiceContract]|  
 |Operações de serviço|Métodos públicos no tipo de servidor|Marcar com o atributo [OperationContract]|  
 |Serialização|ISerializable ou [Serializable]|O DataContractSerializer ou o XmlSerializer|  
 |Objetos passados|Por valor ou por referência|Por valor apenas|  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  Depois que um aplicativo de comunicação remota tiver sido migrado para o WCF, ele ainda é importante remover dependências em .NET Remoting. Isso garante que quaisquer vulnerabilidades de comunicação remota são removidas do aplicativo. Essas etapas incluem o seguinte:  
   
--   **Descontinuar o uso do MarshalByRefObject.** O tipo de MarshalByRefObject existe apenas para comunicação remota e não é usado pelo WCF. Qualquer tipo de aplicativo na subclasse MarshalByRefObject deve ser removido ou alterado. O tipo de MarshalByRefObject existe apenas para comunicação remota e não é usado pelo WCF. Qualquer tipo de aplicativo na subclasse MarshalByRefObject deve ser removido ou alterado.  
+-   **Descontinuar o uso do MarshalByRefObject.** O tipo de MarshalByRefObject existe apenas para comunicação remota e não é usado pelo WCF. Qualquer tipo de aplicativo na subclasse MarshalByRefObject deve ser removido ou alterado.  
   
--   **Descontinuar o uso de [Serializable] e ISerializable.** O atributo [Serializable] e a interface ISerializable foram originalmente criados para serializar os tipos em ambientes confiáveis, e eles são usados pela comunicação remota. Serialização no WCF se baseia em tipos que estão sendo marcados com [DataContract] e [DataMember]. Tipos de dados usados por um aplicativo devem ser modificados para usar [DataContract] e não usar ISerializable ou [Serializable]. O atributo [Serializable] e a interface ISerializable foram originalmente criados para serializar os tipos em ambientes confiáveis, e eles são usados pela comunicação remota. Serialização no WCF se baseia em tipos que estão sendo marcados com [DataContract] e [DataMember]. Tipos de dados usados por um aplicativo devem ser modificados para usar [DataContract] e não usar ISerializable ou [Serializable].  
+-   **Descontinuar o uso de [Serializable] e ISerializable.** O atributo [Serializable] e a interface ISerializable foram originalmente criados para serializar os tipos em ambientes confiáveis, e eles são usados pela comunicação remota. Serialização no WCF se baseia em tipos que estão sendo marcados com [DataContract] e [DataMember]. Tipos de dados usados por um aplicativo devem ser modificados para usar [DataContract] e não usar ISerializable ou [Serializable].  
   
 ### <a name="migration-scenarios"></a>Cenários de migração  
  Agora vamos ver como realizar os seguintes cenários comuns de comunicação remota no WCF:  

@@ -1,22 +1,22 @@
 ---
-title: Como criar um fluxo de trabalho de fluxograma
+title: 'Como: Criar um fluxo de trabalho de fluxograma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502145"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415241"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Como criar um fluxo de trabalho de fluxograma
-Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.Flowchart> atividade e atividades personalizadas do anterior [como: criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
+# <a name="how-to-create-a-flowchart-workflow"></a>Como: Criar um fluxo de trabalho de fluxograma
+Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico orienta a criação de um fluxo de trabalho usa atividades internas, como o <xref:System.Activities.Statements.Flowchart> atividade e atividades personalizadas do anterior [como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
->  Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
+>  Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
 >  Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) - Tutorial de Introdução](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -67,7 +67,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 1.  Arraste um **atribuir** a atividade do **primitivos** seção o **caixa de ferramentas** e passe o mouse sobre o **iniciar** nó, que é na parte superior do fluxograma. Quando o **atribuir** atividade está sobre o **iniciar** nó, três triângulos aparecerão em torno do **iniciar** nó. Descartar os **atribuir** atividade no triângulo que está diretamente abaixo de **iniciar** nó. Isso vinculará os dois itens juntos e designa a **atribuir** atividade como a primeira atividade no fluxograma.  
   
     > [!NOTE]
-    >  As atividades também podem ser indicadas como a atividade de início no fluxo de trabalho manualmente vinculando-as ao nó de origem. Para fazer isso, passe o mouse sobre o **inicie** nó, clique em um dos retângulos que aparecem quando o mouse está sobre o **iniciar** nó e arraste a conectar-se da linha até a atividade desejada e solte-o em um dos os retângulos que aparecem. Você também pode designar e atividade como a atividade de início clicando duas vezes o it e escolhendo **definido como nó de início**.  
+    >  As atividades também podem ser indicadas como a atividade de início no fluxo de trabalho manualmente vinculando-as ao nó de origem. Para fazer isso, passe o mouse sobre o **inicie** nó, clique em um dos retângulos que aparecem quando o mouse está sobre o **iniciar** nó e arraste a conectar-se da linha até a atividade desejada e solte-o em um dos os retângulos que aparecem. Você também pode designar uma atividade como a atividade de início clicando duas vezes o it e escolhendo **definido como nó de início**.  
   
 2.  Tipo `Target` para o **para** caixa e a seguinte expressão na **insira uma expressão c#** ou **insira uma expressão VB** caixa.  
   
@@ -148,7 +148,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 1.  Pressione CTRL+SHIFT+B para criar a solução.  
   
-     Para obter instruções sobre como executar o fluxo de trabalho, o próximo tópico, consulte [como: executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Se você já tiver concluído a [como: executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) passo a passo com um estilo diferente de fluxo de trabalho e quiser executá-lo usando o fluxo de trabalho de fluxograma dessa etapa, pule para a [para compilar e executar o aplicativo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)seção de [como: executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Se você já tiver concluído o [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) passo a passo com um estilo diferente de fluxo de trabalho e quiser executá-lo usando o fluxo de trabalho de fluxograma dessa etapa, pule para a [para compilar e executar o aplicativo](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) seção [como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Activities.Statements.Flowchart>  
@@ -156,5 +156,5 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
  [Programação do Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Criando fluxos de trabalho](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Tutorial de Introdução](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Como criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Como executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [Como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Como: Executar um fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
