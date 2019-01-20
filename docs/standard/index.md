@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105166"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415397"
 ---
 # <a name="net-guide"></a>Guia do .NET
 
@@ -49,7 +49,7 @@ Se você estiver interessado em alguns dos principais conceitos do .NET, consult
 
 * [Componentes de arquitetura do .NET](components.md)
 * [.NET Standard](net-standard.md)
-* [Interoperabilidade Nativa](native-interop.md)
+* [Interoperabilidade Nativa](native-interop/index.md)
 * [Coleta de lixo](garbagecollection/index.md)
 * [Tipos Base no .NET](base-types/index.md)
 * [Coleções](collections/index.md)
