@@ -2,54 +2,54 @@
 title: Amostras de programação de rede
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: b9b53085cccf834c6c2e5dcce63b12bd29eff7a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55d4403f1b51674a6ee5a58eebdbeaffef1cd857
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181638"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307299"
 ---
 # <a name="network-programming-samples"></a>Amostras de programação de rede
 Esta seção contém descrições e links para amostras de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> e <xref:System.Net.Sockets>, e em outros relacionados. 
   
 > [!NOTE]
-> Todas as amostras estão disponíveis no [Download das amostras do SDK do .NET Framework versão 2.0](https://www.microsoft.com/en-us/download/confirmation.aspx?id=22181), que foi lançado para o .NET Framework 2.0 e podem estar desatualizadas.
+> Todas as amostras estão disponíveis no [Download das amostras do SDK do .NET Framework versão 2.0](https://www.microsoft.com/download/confirmation.aspx?id=22181), que foi lançado para o .NET Framework 2.0 e podem estar desatualizadas.
 
 ## <a name="in-this-section"></a>Nesta seção  
- [Baixe a amostra de tecnologia de indicador de progresso](https://msdn.microsoft.com/en-us/library/t8w6294a(v=vs.85).aspx)  
+ [Baixe a amostra de tecnologia de indicador de progresso](https://msdn.microsoft.com/library/t8w6294a(v=vs.85).aspx)  
  Mostra como exibir o andamento de um download de arquivo.  
   
- [Amostra de tecnologia de cliente FTP](https://msdn.microsoft.com/en-us/library/b7810t5c(v=vs.85).aspx)  
+ [Amostra de tecnologia de cliente FTP](https://msdn.microsoft.com/library/b7810t5c(v=vs.85).aspx)  
  Mostra como carregar e baixar arquivos de e para um servidor FTP.  
   
- [Amostra de tecnologia HttpListener](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
+ [Amostra de tecnologia HttpListener](https://msdn.microsoft.com/library/y7cbb2y2(v=vs.85).aspx)  
  Mostra como processar solicitações HTTP de dentro de um aplicativo.  
  
  [Amostra de aplicativo host ASPX HttpListener](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
  Demonstra como usar os recursos da classe <xref:System.Net.HttpListener?displayProperty=nameWithType> para criar um servidor HTTP que roteia as chamadas para um aplicativo ASP.NET hospedado.
   
- [Amostra de tecnologia de mensageiro](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  
+ [Amostra de tecnologia de mensageiro](https://msdn.microsoft.com/library/whw7xbk2(v=vs.85).aspx)  
  Mostra como enviar mensagens de email de um aplicativo cliente.  
   
- [Amostra de tecnologia de ferramenta NetStat](https://msdn.microsoft.com/en-us/library/ks32hs88(v=vs.85).aspx)  
+ [Amostra de tecnologia de ferramenta NetStat](https://msdn.microsoft.com/library/ks32hs88(v=vs.85).aspx)  
  Demonstra a ferramenta de informações de rede NCLNetStat.  
   
- [Amostra de tecnologia da informação de rede](https://msdn.microsoft.com/en-us/library/2xatedhd(v=vs.85).aspx)  
+ [Amostra de tecnologia da informação de rede](https://msdn.microsoft.com/library/2xatedhd(v=vs.85).aspx)  
  Mostra como monitorar e exibir informações de rede.  
   
- [Amostra de tecnologia de cliente de ping](https://msdn.microsoft.com/en-us/library/5253acs7(v=vs.85).aspx)  
+ [Amostra de tecnologia de cliente de ping](https://msdn.microsoft.com/library/5253acs7(v=vs.85).aspx)  
  Demonstra um aplicativo cliente que pode executar ping em um host remoto.  
   
- [Amostra de tecnologia de cliente WebClient](https://msdn.microsoft.com/en-us/library/fxk992zc(v=vs.85).aspx)  
+ [Amostra de tecnologia de cliente WebClient](https://msdn.microsoft.com/library/fxk992zc(v=vs.85).aspx)  
  Demonstra como executar operações comuns, como o upload ou download de arquivos ou dados.  
   
- [Amostra de fluxos seguros](https://msdn.microsoft.com/en-us/library/ms180980(v=vs.85).aspx)  
+ [Amostra de fluxos seguros](https://msdn.microsoft.com/library/ms180980(v=vs.85).aspx)  
  Mostra como usar um fluxo seguro para comunicação entre um cliente e um servidor.  
   
- [Amostra de soquetes IPv6](https://msdn.microsoft.com/en-us/library/ms180981(v=vs.85).aspx)  
+ [Amostra de soquetes IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
  Demonstra como usar soquetes quando o IPv6 está habilitado.  
   
- [Amostra de tecnologia do Gerenciador de FTP](https://msdn.microsoft.com/en-us/library/ms233623(v=vs.85).aspx)  
+ [Amostra de tecnologia do Gerenciador de FTP](https://msdn.microsoft.com/library/ms233623(v=vs.85).aspx)  
  Demonstra como listar o conteúdo de um servidor FTP.  
   
   

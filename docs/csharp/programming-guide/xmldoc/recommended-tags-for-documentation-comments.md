@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: fb4d8d4dde38d7cbe1b0434c290dd922b2e328a3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7b2988273e7598b8653b3481c0ea713c5bb0f632
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245581"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415228"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>marcações recomendadas para comentários de documentação (Guia de Programação em C#)
 O compilador do C# processa comentários de documentação em seu código e os formata como XML em um arquivo, cujo nome você especifica na opção de linha de comando **/doc**. Para criar a documentação final baseada no arquivo gerado pelo compilador, você pode criar uma ferramenta personalizada ou usar uma ferramenta como o [Sandcastle](https://github.com/EWSoftware/SHFB).  
@@ -38,7 +38,7 @@ O compilador do C# processa comentários de documentação em seu código e os f
   
  Se você quiser que os colchetes angulares sejam exibidos no texto de um comentário de documentação, use `<` e `>`, conforme mostrado no exemplo a seguir.  
   
-```xml  
+```csharp  
 /// <summary cref="C < T >">  
 /// </summary>  
 ```  

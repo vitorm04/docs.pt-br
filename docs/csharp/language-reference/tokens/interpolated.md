@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244798"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307169"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – interpolação de cadeia de caracteres (Referência de C#)
 
@@ -95,6 +95,7 @@ Se não estiver familiarizado com a interpolação de cadeia de caracteres, conf
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [Formatação de composição](../../../standard/base-types/composite-formatting.md)
+- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Cadeias de Caracteres](../../programming-guide/strings/index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Caracteres especiais de C#](index.md)
