@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201012"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416021"
 ---
 # Novidades do .NET Framework <a name="introduction"></a>
 
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 A [DI (injeção de dependência)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) separa os objetos de suas dependências para que o código do objeto não precise mais ser alterado somente porque uma dependência foi modificada. Ao desenvolver aplicativos ASP.NET direcionados para o .NET Framework 4.7.2, é possível:
 
-- Use uma injeção baseada em setter, interfaces e construtores nos [manipuladores e módulos](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) de projetos de aplicativo Web ASP.NET.
+- Use uma injeção baseada em setter, interfaces e construtores nos [manipuladores e módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projetos de aplicativo Web ASP.NET.
 
-- Use uma injeção baseada em setter e interface nos [manipuladores e módulos](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) de projetos de site da Web do ASP.NET.
+- Use uma injeção baseada em setter e interface nos [manipuladores e módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instâncias Página](xref:System.Web.UI.Page) e [controles de usuário](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de projetos de site da Web do ASP.NET.
 
 - Conecte estruturas de injeção de dependência diferentes.
 
@@ -1096,7 +1096,7 @@ Para saber mais sobre [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], co
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Criptografia: suporte para certificados X509 contendo ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Criptografia: Suporte aos certificados X509 contendo ECDSA
  O .NET Framework 4.6 adicionou o suporte a RSACng para certificados X509. O [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] adiciona suporte para certificados X509 ECDSA (Algoritmo de Assinatura Digital de Curva Elíptica).
 
  O ECDSA oferece melhor desempenho e é um algoritmo de criptografia mais seguro do que o RSA, fornecendo uma excelente opção quando o desempenho e a escalabilidade de TLS (Transport Layer Security) forem uma preocupação. A implementação do .NET Framework envolve chamadas para funcionalidades existentes do Windows.
@@ -1641,7 +1641,7 @@ A API de criação de perfil não gerenciado foi aprimorada da seguinte forma:
 
     - É possível usar as APIs do Tempo de Execução do Windows em bibliotecas portáteis que tenham como destino Windows 8.1, Windows Phone 8.1 e Windows Phone Silverlight 8.1. 
 
-    - Você pode incluir XAML (Windows.UI.XAML types) em bibliotecas portáteis quando o destino for Windows 8.1 ou Windows Phone 8.1. Os seguintes modelos XAML são compatíveis: Blank Page, Resource Dictionary, Templated Control e User Control.
+    - Você pode incluir XAML (Windows.UI.XAML types) em bibliotecas portáteis quando o destino for Windows 8.1 ou Windows Phone 8.1. Há suporte para os seguintes modelos XAML:  Página em Branco, Dicionário de Recursos, Controle Modelo e Controle de Usuário.
 
     - Você pode criar um componente de Tempo de Execução do Windows portátil (.winmd file) para uso em Store apps cujo destino seja Windows 8.1 e Windows Phone 8.1.
 
@@ -1655,7 +1655,7 @@ A API de criação de perfil não gerenciado foi aprimorada da seguinte forma:
 
  Os novos recursos e aprimoramentos principais no .NET Framework 4.5.1 incluem:
 
-- Redirecionamento de associação automático de assemblies. A partir do Visual Studio 2013, quando você compilar um aplicativo destinado ao [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], os redirecionamentos de associação poderão ser adicionados ao arquivo de configuração do aplicativo se o aplicativo ou seus componentes referenciarem várias versões do mesmo assembly. Você também pode habilitar esse recurso para projetos que se destinam a versões anteriores do .NET Framework. Para saber mais, confira [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Redirecionamento de associação automático de assemblies. A partir do Visual Studio 2013, quando você compilar um aplicativo destinado ao [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], os redirecionamentos de associação poderão ser adicionados ao arquivo de configuração do aplicativo se o aplicativo ou seus componentes referenciarem várias versões do mesmo assembly. Você também pode habilitar esse recurso para projetos que se destinam a versões anteriores do .NET Framework. Para obter mais informações, confira [Como: Habilitar e desabilitar o redirecionamento automático de associação](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Capacidade de coletar informações de diagnóstico para ajudar desenvolvedores na melhoria do desempenho dos aplicativos de servidor e de nuvem. Para obter mais informações, consulte os métodos <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> e <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> na classe <xref:System.Diagnostics.Tracing.EventSource>.
 
