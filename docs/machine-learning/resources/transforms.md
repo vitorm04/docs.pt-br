@@ -3,13 +3,13 @@ title: Transformações de dados do aprendizado de máquina – ML.NET
 description: Explore os componentes de engenharia de recursos com suporte no ML.NET.
 author: JRAlexander
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.date: 01/14/2019
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249119"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415345"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Transformações de dados do aprendizado de máquina – ML.NET
 
@@ -23,11 +23,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | Transformar | Definição |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Agrupa valores de uma coluna escalar em um vetor com base em uma ID de grupo contígua. |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Combina todos os recursos em uma única coluna de recursos. |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | Combina uma sequência de TransformModels e um PredictorModel em um único PredictorModel. |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | Combina uma sequência de TransformModels em um único modelo. |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | Desagrupa colunas de vetor em sequências de linhas, ou seja, o inverso da transformação de grupo. |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | Combina um TransformModel e um PredictorModel em um único PredictorModel. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Desagrupa colunas de vetor em sequências de linhas, o inverso da transformação de Grupo. |
 
 ## <a name="conversions"></a>Conversões 
@@ -35,7 +30,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | Transformar | Definição |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Cria hashes de colunas com valor único ou colunas de vetor. Para colunas de vetor, cria hashes de cada slot separadamente. Pode criar hashes de valores de texto ou valores de chave. |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Converte os valores de coluna em hashes. Essa transformação aceita entradas numéricas e de texto, colunas únicas e com valores de vetor. |
 | <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Converte vários valores de coluna em hashes. Essa transformação aceita entradas numéricas e de texto, colunas únicas e com valores de vetor. |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Converte uma chave em uma coluna de vetor binária. |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Utiliza metadados KeyValues para mapear os índices de chave para os valores correspondentes nos metadados KeyValues. |
@@ -56,10 +50,10 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | Transformar | Definição |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Remove a lista especificada de palavras irrelevantes (stop words) comparando tokens individuais (comparação que não diferencia maiúsculas de minúsculas) com as palavras irrelevantes.| 
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | Usa uma ou mais colunas ImageType e converte-as em uma representação em escala de cinza da mesma imagem.|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | Usa uma ou mais colunas ReadOnlyMemory e carrega-as como um ImageType. |
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | Usa uma ou mais colunas ImageType e converte-as em uma representação de vetor.|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | Usa uma ou mais colunas ImageType e redimensiona-as para a altura e a largura fornecidas.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Usa uma ou mais colunas ImageType e converte-as em uma representação em escala de cinza da mesma imagem.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Usa uma ou mais colunas ReadOnlyMemory e carrega-as como um ImageType. |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Usa uma ou mais colunas ImageType e converte-as em uma representação de vetor.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Usa uma ou mais colunas ImageType e redimensiona-as para a altura e a largura fornecidas.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementa o LightLDA, uma implementação de última geração da Alocação de Dirichlet Latente.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Carrega transformações específicas do arquivo de modelo especificado. Permite transformações 'cherry-picking' de uma cadeia serializada ou aplica uma transformação pré-treinada a uma exibição de dados diferente (mas ainda compatível). |
 | <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Produz um recipiente de contagens de ngramas (sequências de valores consecutivos de comprimento 1 – n) em um determinado vetor de chaves. Ele faz isso criando um dicionário de ngramas e usando a ID no dicionário como o índice no recipiente. | 
@@ -70,7 +64,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Calcula a projeção do vetor de recurso em um subespaço de classificação baixa. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Usa um modelo de sentimento previamente treinado para pontuar cadeias de caracteres de entrada. |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Remove a lista específica a um idioma de palavras irrelevantes (palavras comuns, em sua maioria) comparando tokens individuais (comparação que não diferencia maiúsculas de minúsculas) com as palavras irrelevantes. |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | Mapeia colunas de valores de texto para novas colunas usando um conjunto de dados de mapa fornecido por meio de seus argumentos. |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Produz um recipiente de contagens de ngrams (sequências de palavras consecutivas) em determinado texto. Ele faz isso criando um dicionário de ngramas e usando a ID no dicionário como o índice no recipiente. |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Produz um recipiente de contagens de ngrams (sequências de palavras consecutivas de tamanho 1-n) em determinado texto. Isso é feito pela criação de um hash de cada ngram e pelo uso do valor de hash como o índice no recipiente. |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Divide o texto em palavras usando os caracteres separadores. |
@@ -89,12 +82,8 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 
 | Transformar | Definição |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Converte os valores de entrada (palavras, números, etc.) em um índice em um dicionário. |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Transforma o rótulo em uma chave ou em um booliano (se necessário) para torná-lo adequado para classificação. |
 | <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Converte os rótulos. |
 | <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Remapeia rótulos multiclasse para rótulos binários True, False, principalmente para uso com o OVA.|
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | Transforma o rótulo em float para torná-lo adequado para a regressão. |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | Transforma uma coluna de rótulo previsto em seus valores originais, a menos que ela seja do tipo booliano. |
 
 ## <a name="missing-values"></a>Valores ausentes
 
@@ -112,7 +101,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Calcula a média e a variação de uma coluna com valor de vetor. Acompanha a média atual e o M2 (soma das comparações quadradas dos valores da média), o número de NaNs e o número de elementos diferentes de zero. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Calcula a média e a variação de uma coluna com valor de vetor. Acompanha a média atual e o M2 (soma das comparações quadradas dos valores da média), o número de NaNs e o número de elementos diferentes de zero. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Acompanha mín., máx., número de valores não esparsos (vCount) e número de chamadas ProcessValue() (trainCount) de uma coluna com valor de vetor. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | Acompanha mín., máx., número de valores não esparsos (vCount) e número de chamadas ProcessValue() (trainCount) de uma coluna com valor de vetor. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Padroniza os intervalos de recurso. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Padroniza os intervalos de recurso. |
 
@@ -147,7 +135,6 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Duplica as colunas do conjunto de dados.|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Seleciona um conjunto de colunas a serem removidas ou mantidas de determinada entrada. |
 | <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Remove slots de colunas.|
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform utiliza metadados KeyValues para mapear os índices de chave aos valores correspondentes nos metadados KeyValues. |
 | <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Cria uma coluna com o tipo especificado e os valores padrão. |
 | <xref:Microsoft.ML.Transforms.RangeFilter> | Filtra uma dataview em uma coluna do tipo Single, Double ou Key (contígua). Mantém os valores que estão no intervalo mín./máx. especificados. NaNs sempre são filtrados. Se a entrada for do tipo Key, os mín./máx. serão considerados porcentagens do número de valores. |
 
@@ -168,15 +155,15 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 
 | Transformar | Definição |
 | --- | --- |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | Usa uma média ponderada dos valores: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | Implementa a transformação de detector de ponto de alteração para uma sequência i.i.d. (amostra aleatória) com base em martingales e na estimativa de densidade de kernel adaptável. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | Implementa a transformação de detector de pico para uma sequência i.i.d. (amostra aleatória) com base na estimativa de densidade de kernel adaptável. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | Fornece uma média ponderada dos valores da janela deslizante. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | Decide se o valor atual da série temporal pertence ao percentil dos valores máximos da janela deslizante. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | Calcula o valor p empírico do valor atual da série com base nos outros valores da janela deslizante. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | Gera uma janela deslizante em uma série temporal do tipo Single. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | Implementa a transformação de detector de ponto de alteração com base na modelagem de Singular Spectrum da série temporal. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | Implementa a transformação de detector de pico com base na modelagem de Singular Spectrum da série temporal. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Usa uma média ponderada dos valores: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Implementa a transformação de detector de ponto de alteração para uma sequência i.i.d. (amostra aleatória) com base em martingales e na estimativa de densidade de kernel adaptável. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implementa a transformação de detector de pico para uma sequência i.i.d. (amostra aleatória) com base na estimativa de densidade de kernel adaptável. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Fornece uma média ponderada dos valores da janela deslizante. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | Decide se o valor atual da série temporal pertence ao percentil dos valores máximos da janela deslizante. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | Calcula o valor p empírico do valor atual da série com base nos outros valores da janela deslizante. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Gera uma janela deslizante em uma série temporal do tipo Single. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | Implementa a transformação de detector de ponto de alteração com base na modelagem de Singular Spectrum da série temporal. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | Implementa a transformação de detector de pico com base na modelagem de Singular Spectrum da série temporal. |
 
 ## <a name="miscellaneous"></a>Diversos
 
@@ -187,4 +174,3 @@ As tabelas a seguir contêm informações sobre todas as transformações de dad
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Adiciona uma coluna com uma sequência de números gerada. |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | Produz uma coluna com a ID do cursor como uma coluna. |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Gera um número aleatório. |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | Combina informações de vários modelos preditivos para gerar um novo modelo no pipeline, usando as pontuações de um modelo já treinado. |

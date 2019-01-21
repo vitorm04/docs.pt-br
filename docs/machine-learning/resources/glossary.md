@@ -3,12 +3,12 @@ title: Glossário de aprendizado de máquina – ML.NET
 description: Um glossário de termos essenciais sobre o aprendizado de máquina, que são úteis ao criar seus modelos personalizados no ML.NET.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760387"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415371"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -17,8 +17,6 @@ A lista a seguir é uma compilação de termos essenciais sobre o aprendizado de
 ## <a name="accuracy"></a>Precisão
 
 Na [classificação](#classification), a precisão consiste no número de itens classificados corretamente dividido pelo número total de itens no conjunto de testes. Varia de 0 (menos preciso) a 1 (mais preciso). A precisão é uma das métricas de avaliação do desempenho do seu modelo. Considere isso em conjunção com [precisão](#precision), [recall](#recall)e [F-score](#f-score).
-
-API do ML.NET relacionada: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Área sob a curva (AUC)
 
@@ -87,8 +85,6 @@ Todas as operações necessárias para ajustar um modelo a um conjunto de dados.
 ## <a name="precision"></a>Precisão
 
 Na [classificação](#classification), a precisão de uma classe é o número de itens preditos corretamente como pertencentes a essa classe dividido pelo número total de itens previstos como pertencentes à classe.
-
-APIs do ML.NET relacionadas: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Recall
 

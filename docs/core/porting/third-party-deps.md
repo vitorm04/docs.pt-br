@@ -4,16 +4,16 @@ description: Aprenda a analisar as dependências externas para fazer a portabili
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170308"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415215"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analisar suas dependências para fazer a portabilidade do código para o .NET Core
 
-Para fazer a portabilidade de seu código para o .NET Core ou .NET Standard, é preciso compreender suas dependências. As dependências externas são os [pacotes NuGet](#analyze-referenced-nuget-packages-on-your-project) ou [DLLs](#analyze-dependencies-that-arent-nuget-packages) que você faz referência em seu projeto, mas que você não compila. Avalie cada dependência e desenvolva um plano de contingência para as dependências que não são compatíveis com o .NET Core. Veja como determinar se a dependência é compatível com o .NET Core.
+Para fazer a portabilidade de seu código para o .NET Core ou .NET Standard, é preciso compreender suas dependências. As dependências externas são os [pacotes NuGet](#analyze-referenced-nuget-packages-in-your-projects) ou [DLLs](#analyze-dependencies-that-arent-nuget-packages) que você faz referência em seu projeto, mas que você não compila. Avalie cada dependência e desenvolva um plano de contingência para as dependências que não são compatíveis com o .NET Core. Veja como determinar se a dependência é compatível com o .NET Core.
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analisar os pacotes NuGet referenciados em seu projetos
 
@@ -77,7 +77,7 @@ Depois de analisar os pacotes NuGet, você pode chegar à conclusão de que eles
 
 O modo de compatibilidade do .NET Framework foi introduzido a partir do .NET Standard 2.0. Esse modo de compatibilidade permite que os projetos do .NET Standard e do .NET Core referenciem bibliotecas do .NET Framework. Fazer referência a bibliotecas do .NET Framework não funciona para todos os projetos, como nos casos em que a biblioteca usa APIs do WPF (Windows Presentation Foundation), mas isso desbloqueia muitos cenários de portabilidade.
 
-Ao fazer referência a pacotes NuGet que se destinam ao .NET Framework em seu projeto, como [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), você receberá um aviso de fallback do pacote ([NU1701](/nuget/reference/errors-and-warnings#nu1701)) semelhante ao exemplo a seguir:
+Ao fazer referência a pacotes NuGet que se destinam ao .NET Framework em seu projeto, como [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), você receberá um aviso de fallback do pacote ([NU1701](/nuget/reference/errors-and-warnings/nu1701)) semelhante ao exemplo a seguir:
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,7 +91,7 @@ Para suprimir o aviso editando o arquivo de projeto, localize a entrada `Package
 </ItemGroup>
 ```
 
-Para obter mais informações sobre como suprimir avisos do compilador no Visual Studio, consulte [Suprimir avisos de pacotes NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+Para obter mais informações sobre como suprimir avisos do compilador no Visual Studio, consulte [Suprimir avisos de pacotes NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
 ### <a name="port-your-packages-to-packagereference"></a>Fazer a portabilidade de seus pacotes para `PackageReference`
 
