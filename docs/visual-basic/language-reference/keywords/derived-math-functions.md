@@ -21,38 +21,38 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 87faa623f5b145eec8b88e350fce4171125324dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1273871faf65afdd1a894c03f13a2c93507c1b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505855"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Funções matemáticas derivadas (Visual Basic)
-A tabela a seguir mostra funções matemáticas intrínsecos que podem ser derivadas das funções matemáticas intrínsecas do <xref:System.Math?displayProperty=nameWithType> objeto. Você pode acessar as funções matemáticas intrínsecas adicionando `Imports System.Math` ao projeto ou arquivo.  
+A tabela a seguir mostra funções matemáticas intrínsecos que podem ser derivadas das funções matemáticas intrínsecas do <xref:System.Math?displayProperty=nameWithType> objeto. Você pode acessar as funções matemáticas intrínseco adicionando `Imports System.Math` ao seu arquivo ou projeto.  
   
 |Função|Equivalentes derivadas|  
 |--------------|-------------------------|  
 |Secante (Sec(x))|1 / cos (x)|  
-|Cossecante (Csc(x))|1 / sin (x)|  
-|Cotangente (Ctan(x))|1 / tan (x)|  
-|Seno inverso (Asin(x))|ATAN (x / Sqrt (-x * x + 1))|  
+|Cossecante (Csc(x))|1 / Sin(x)|  
+|Cotangente (Ctan(x))|1 / Tan(x)|  
+|Seno inverso (Asin(x))|Atan(x / Sqrt(-x * x + 1))|  
 |Cosseno inverso (Acos(x))|ATAN (-x / Sqrt (-x * x + 1)) + 2 \* Atan(1)|  
 |Secante inversa (Asec(x))|2 * Atan(1) – Atan(Sign(x) / Sqrt (x \* x – 1))|  
-|Cossecante inversa (Acsc(x))|ATAN(Sign(x) / Sqrt (x * x – 1))|  
+|Cossecante inversa (Acsc(x))|Atan(Sign(x) / Sqrt(x * x – 1))|  
 |Cotangente inversa (Acot(x))|2 * Atan(1) - ATAN (x)|  
-|Seno hiperbólico (Sinh(x))|(EXP (x) – Exp(-x)) / 2|  
-|Cosseno hiperbólico (Cosh(x))|(EXP (x) + Exp(-x)) / 2|  
-|Tangente hiperbólica (TANH|(EXP (x) – Exp(-x)) / (EXP (x) + Exp(-x))|  
-|Secante hiperbólico (Sech(x))|2 / (EXP (x) + Exp(-x))|  
-|Cossecante hiperbólico (Csch(x))|2 / (EXP (x) – Exp(-x))|  
-|Cotangente hiperbólica (Coth(x))|(EXP (x) + Exp(-x)) / (EXP (x) – Exp(-x))|  
-|Seno hiperbólico inverso (Asinh(x))|Log (x + Sqrt (x * x + 1))|  
-|O cosseno hiperbólico inverso (Acosh(x))|Log (x + Sqrt (x * x – 1))|  
-|Tangente hiperbólica inversa (Atanh(x))|Log ((1 + x) / (1 – x)) / 2|  
-|Secante hiperbólico inversa (AsecH(x))|Log ((Sqrt (-x * x + 1) + 1) / x)|  
-|Cossecante hiperbólico inversa (Acsch(x))|Log((Sign(x) * Sqrt (x \* x + 1) + 1) / x)|  
-|Cotangente hiperbólica inversa (Acoth(x))|Log ((x + 1) / (x – 1)) / 2|  
+|Seno hiperbólico (Sinh(x))|(Exp(x) – Exp(-x)) / 2|  
+|Cosseno hiperbólico (Cosh(x))|(Exp(x) + Exp(-x)) / 2|  
+|Tangente hiperbólica (TANH|(Exp(x) – Exp(-x)) / (Exp(x) + Exp(-x))|  
+|Secante hiperbólico (Sech(x))|2 / (Exp(x) + Exp(-x))|  
+|Cossecante hiperbólico (Csch(x))|2 / (Exp(x) – Exp(-x))|  
+|Cotangente hiperbólica (Coth(x))|(Exp(x) + Exp(-x)) / (Exp(x) – Exp(-x))|  
+|Seno hiperbólico inverso (Asinh(x))|Log(x + Sqrt(x * x + 1))|  
+|Cosseno hiperbólico inverso (Acosh(x))|Log(x + Sqrt(x * x – 1))|  
+|Tangente hiperbólica (Atanh(x))|Log((1 + x) / (1 – x)) / 2|  
+|Secante hiperbólico inversa (AsecH(x))|Log((Sqrt(-x * x + 1) + 1) / x)|  
+|Cossecante hiperbólico inversa (Acsch(x))|Log((Sign(x) * Sqrt(x \* x + 1) + 1) / x)|  
+|Cotangente hiperbólica inversa (Acoth(x))|Log((x + 1) / (x – 1)) / 2|  
   
-## <a name="see-also"></a>Consulte também  
- [Funções Matemáticas](../../../visual-basic/language-reference/functions/math-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções Matemáticas](../../../visual-basic/language-reference/functions/math-functions.md)

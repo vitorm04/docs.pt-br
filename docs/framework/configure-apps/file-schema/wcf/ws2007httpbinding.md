@@ -2,18 +2,18 @@
 title: '&lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 62a330eb2e8b71234d2ee683f3354834e3946bff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 05ab5c772a27c7e00e56701c6626ae8657265b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502657"
 ---
 # <a name="ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt;
 Define uma associação interoperável que fornece suporte para as versões corretas dos <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, e <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementos de associação.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<ws2007HttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -92,7 +92,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O `WS2007HttpBinding` adiciona uma associação fornecida pelo sistema semelhante ao `WSHttpBinding` mas utiliza a organização para as versões padrão do avanço dos Structured Information Standards (OASIS) dos protocolos TransactionFlow, ReliableSession e segurança. Nenhuma alteração para as configurações padrão ou de modelo de objeto é necessária ao usar essa associação.  
@@ -135,10 +135,10 @@ Define uma associação interoperável que fornece suporte para as versões corr
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WS2007HttpBinding>  
- <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.WS2007HttpBinding>
+- <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -1,5 +1,5 @@
 ---
-title: Interface1 ICorDebugAppDomain2
+title: ICorDebugAppDomain2 Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff6ffdd733cf6e7b923d88d057d7cd230c8d8541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4549b0fe6379979a7b9bd6344d65ff465f33f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506128"
 ---
-# <a name="icordebugappdomain2-interface1"></a>Interface1 ICorDebugAppDomain2
+# <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 Interface1
 Fornece métodos para trabalhar com matrizes, ponteiros, ponteiros de função e tipos de referência. Essa interface é uma extensão da interface ICorDebugAppDomain.  
   
 ## <a name="methods"></a>Métodos  
@@ -31,21 +31,21 @@ Fornece métodos para trabalhar com matrizes, ponteiros, ponteiros de função e
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método GetArrayOrPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Obtém uma matriz do tipo especificado, ou um ponteiro ou referência ao tipo especificado.|  
-|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Obtém um ponteiro para uma função que tem uma assinatura fornecida.|  
+|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Obtém um ponteiro para uma função que tem uma determinada assinatura.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
