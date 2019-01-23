@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6025a31f26c635ac40dcc2e35e7017be1c81feba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 22eae4d59cbd6eba14e5784526c33774300a8367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493710"
 ---
-# <a name="icordebugstackwalksetcontext-method"></a><span data-ttu-id="fa13b-102">Método ICorDebugStackWalk::SetContext</span><span class="sxs-lookup"><span data-stu-id="fa13b-102">ICorDebugStackWalk::SetContext Method</span></span>
-<span data-ttu-id="fa13b-103">Conjuntos de [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) o contexto atual do objeto para um contexto válido para o thread.</span><span class="sxs-lookup"><span data-stu-id="fa13b-103">Sets the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object’s current context to a valid context for the thread.</span></span>  
+# <a name="icordebugstackwalksetcontext-method"></a><span data-ttu-id="786fb-102">Método ICorDebugStackWalk::SetContext</span><span class="sxs-lookup"><span data-stu-id="786fb-102">ICorDebugStackWalk::SetContext Method</span></span>
+<span data-ttu-id="786fb-103">Define o [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) o contexto atual de objeto para um contexto válido para o thread.</span><span class="sxs-lookup"><span data-stu-id="786fb-103">Sets the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object’s current context to a valid context for the thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa13b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fa13b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="786fb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="786fb-104">Syntax</span></span>  
   
 ```  
 HRESULT SetContext([in] CorDebugSetContextFlag flag,  
@@ -35,44 +35,44 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
                    [in, size_is(contextSize)] BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fa13b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fa13b-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="786fb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="786fb-105">Parameters</span></span>  
  `flag`  
- <span data-ttu-id="fa13b-106">[in] Um [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) sinalizador que indica se o contexto é do quadro ativo na pilha ou um contexto obtido pela desenrolamento da pilha.</span><span class="sxs-lookup"><span data-stu-id="fa13b-106">[in] A [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) flag that indicates whether the context is from the active frame on the stack, or a context obtained by unwinding the stack.</span></span>  
+ <span data-ttu-id="786fb-106">[in] Um [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) sinalizador que indica se o contexto é do quadro ativo na pilha ou um contexto obtido pelo desenrolamento de pilha.</span><span class="sxs-lookup"><span data-stu-id="786fb-106">[in] A [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) flag that indicates whether the context is from the active frame on the stack, or a context obtained by unwinding the stack.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="fa13b-107">[in] O tamanho alocado do `CONTEXT` buffer.</span><span class="sxs-lookup"><span data-stu-id="fa13b-107">[in] The allocated size of the `CONTEXT` buffer.</span></span>  
+ <span data-ttu-id="786fb-107">[in] O tamanho alocado do `CONTEXT` buffer.</span><span class="sxs-lookup"><span data-stu-id="786fb-107">[in] The allocated size of the `CONTEXT` buffer.</span></span>  
   
  `context`  
- <span data-ttu-id="fa13b-108">[in] O `CONTEXT` buffer.</span><span class="sxs-lookup"><span data-stu-id="fa13b-108">[in] The `CONTEXT` buffer.</span></span>  
+ <span data-ttu-id="786fb-108">[in] O `CONTEXT` buffer.</span><span class="sxs-lookup"><span data-stu-id="786fb-108">[in] The `CONTEXT` buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fa13b-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="fa13b-109">Return Value</span></span>  
- <span data-ttu-id="fa13b-110">Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="fa13b-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="786fb-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="786fb-109">Return Value</span></span>  
+ <span data-ttu-id="786fb-110">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="786fb-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="fa13b-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fa13b-111">HRESULT</span></span>|<span data-ttu-id="fa13b-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="fa13b-112">Description</span></span>|  
+|<span data-ttu-id="786fb-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="786fb-111">HRESULT</span></span>|<span data-ttu-id="786fb-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="786fb-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="fa13b-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="fa13b-113">S_OK</span></span>|<span data-ttu-id="fa13b-114">O `ICorDebugStackWalk` contexto do objeto foi definido com êxito.</span><span class="sxs-lookup"><span data-stu-id="fa13b-114">The `ICorDebugStackWalk` object's context was successfully set.</span></span>|  
-|<span data-ttu-id="fa13b-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fa13b-115">E_FAIL</span></span>|<span data-ttu-id="fa13b-116">O `ICorDebugStackWalk` contexto do objeto não foi definido.</span><span class="sxs-lookup"><span data-stu-id="fa13b-116">The `ICorDebugStackWalk` object's context was not set.</span></span>|  
-|<span data-ttu-id="fa13b-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="fa13b-117">E_INVALIDARG</span></span>|<span data-ttu-id="fa13b-118">O contexto é nulo.</span><span class="sxs-lookup"><span data-stu-id="fa13b-118">The context is null.</span></span>|  
-|<span data-ttu-id="fa13b-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="fa13b-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="fa13b-120">O buffer de contexto é muito pequeno.</span><span class="sxs-lookup"><span data-stu-id="fa13b-120">The context buffer is too small.</span></span>|  
+|<span data-ttu-id="786fb-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="786fb-113">S_OK</span></span>|<span data-ttu-id="786fb-114">O `ICorDebugStackWalk` contexto de objeto foi definido com êxito.</span><span class="sxs-lookup"><span data-stu-id="786fb-114">The `ICorDebugStackWalk` object's context was successfully set.</span></span>|  
+|<span data-ttu-id="786fb-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="786fb-115">E_FAIL</span></span>|<span data-ttu-id="786fb-116">O `ICorDebugStackWalk` contexto de objeto não foi definido.</span><span class="sxs-lookup"><span data-stu-id="786fb-116">The `ICorDebugStackWalk` object's context was not set.</span></span>|  
+|<span data-ttu-id="786fb-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="786fb-117">E_INVALIDARG</span></span>|<span data-ttu-id="786fb-118">O contexto é nulo.</span><span class="sxs-lookup"><span data-stu-id="786fb-118">The context is null.</span></span>|  
+|<span data-ttu-id="786fb-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="786fb-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="786fb-120">O buffer de contexto é muito pequeno.</span><span class="sxs-lookup"><span data-stu-id="786fb-120">The context buffer is too small.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="fa13b-121">Exceções</span><span class="sxs-lookup"><span data-stu-id="fa13b-121">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="786fb-121">Exceções</span><span class="sxs-lookup"><span data-stu-id="786fb-121">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fa13b-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="fa13b-122">Remarks</span></span>  
- <span data-ttu-id="fa13b-123">Este método não altera o contexto atual do thread.</span><span class="sxs-lookup"><span data-stu-id="fa13b-123">This method does not alter the current context of the thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="786fb-122">Comentários</span><span class="sxs-lookup"><span data-stu-id="786fb-122">Remarks</span></span>  
+ <span data-ttu-id="786fb-123">Esse método não altera o contexto atual do thread.</span><span class="sxs-lookup"><span data-stu-id="786fb-123">This method does not alter the current context of the thread.</span></span>  
   
- <span data-ttu-id="fa13b-124">Definir o contexto atual para um contexto inválido pode causar resultados imprevisíveis de movimentador de pilha.</span><span class="sxs-lookup"><span data-stu-id="fa13b-124">Setting the current context to an invalid context may cause unpredictable results from the stack walker.</span></span>  
+ <span data-ttu-id="786fb-124">Definir o contexto atual para um contexto inválido pode causar resultados imprevisíveis de movimentador de pilhas.</span><span class="sxs-lookup"><span data-stu-id="786fb-124">Setting the current context to an invalid context may cause unpredictable results from the stack walker.</span></span>  
   
- <span data-ttu-id="fa13b-125">Você pode recuperar uma cópia exata de bit a bit deste contexto chamando imediatamente o [Icordebugstackwalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="fa13b-125">You can retrieve an exact bitwise copy of this context by immediately calling the [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) method.</span></span>  
+ <span data-ttu-id="786fb-125">Você pode recuperar uma cópia bit a bit exata deste contexto imediatamente chamando o [icordebugstackwalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="786fb-125">You can retrieve an exact bitwise copy of this context by immediately calling the [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa13b-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fa13b-126">Requirements</span></span>  
- <span data-ttu-id="fa13b-127">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa13b-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="786fb-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="786fb-126">Requirements</span></span>  
+ <span data-ttu-id="786fb-127">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="786fb-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa13b-128">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fa13b-128">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="786fb-128">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="786fb-128">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fa13b-129">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa13b-129">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="786fb-129">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="786fb-129">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fa13b-130">**Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa13b-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="786fb-130">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="786fb-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa13b-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fa13b-131">See Also</span></span>  
- [<span data-ttu-id="fa13b-132">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="fa13b-132">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="fa13b-133">Depuração</span><span class="sxs-lookup"><span data-stu-id="fa13b-133">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="786fb-131">Consulte também</span><span class="sxs-lookup"><span data-stu-id="786fb-131">See also</span></span>
+- [<span data-ttu-id="786fb-132">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="786fb-132">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="786fb-133">Depuração</span><span class="sxs-lookup"><span data-stu-id="786fb-133">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
