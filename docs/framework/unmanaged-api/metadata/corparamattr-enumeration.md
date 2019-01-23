@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491461"
 ---
 # <a name="corparamattr-enumeration"></a>Enumeração CorParamAttr
 Contém valores que descrevem os metadados de um parâmetro de método.  
@@ -48,7 +48,7 @@ typedef enum CorParamAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`pdIn`|Especifica que o parâmetro é passado para a chamada do método.|  
+|`pdIn`|Especifica que o parâmetro é passado para a chamada de método.|  
 |`pdOut`|Especifica se o parâmetro é passado do método de retorno.|  
 |`pdOptional`|Especifica que o parâmetro é opcional.|  
 |`pdReservedMask`|Reservado para uso interno pelo common language runtime.|  
@@ -57,11 +57,11 @@ typedef enum CorParamAttr {
 |`pdUnused`|Não utilizado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

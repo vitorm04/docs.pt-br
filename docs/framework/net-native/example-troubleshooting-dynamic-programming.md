@@ -1,17 +1,17 @@
 ---
-title: 'Exemplo: solucionando problemas de programação dinâmica'
+title: 'Exemplo: Solução de problemas de programação dinâmica'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492280"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>Exemplo: solucionando problemas de programação dinâmica
+# <a name="example-troubleshooting-dynamic-programming"></a>Exemplo: Solução de problemas de programação dinâmica
 > [!NOTE]
 >  Este tópico refere-se ao Developer Preview do .NET Nativo, que é um software em pré-lançamento. Você pode baixar a versão prévia do [site Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (registro obrigatório).  
   
@@ -60,6 +60,6 @@ AppViewModel.Current.LayoutVM.PageMap
 ## <a name="could-the-code-be-rewritten"></a>O código pode ser reescrito?  
  Se o aplicativo tivesse usado `typeof(LayoutApplicationVM)` em vez de `Type.GetType("LayoutApplicationVM")`, a cadeia de ferramentas poderia ter preservado os metadados `browse`.  No entanto, ele ainda não criaria os metadados de `invoke`, o que levaria a uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ao instanciar o tipo. Para evitar a exceção, ainda seria necessário adicionar uma diretiva de tempo de execução para o namespace ou o tipo que especifica a política `dynamic`. Para obter informações sobre as diretivas de tempo de execução, consulte a [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Exemplo: tratando exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Exemplo: Tratamento de exceções ao associar dados](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

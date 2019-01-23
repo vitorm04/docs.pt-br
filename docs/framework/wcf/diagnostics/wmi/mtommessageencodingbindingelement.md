@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ad4f2cc3b03111854d10d6a1c1128f090a629a07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490967"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -33,28 +33,28 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 ### <a name="encoding"></a>Codificando  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O conjunto de caracteres codificação a ser usada para emitir mensagens na associação.  
   
-### <a name="maxreadpoolsize"></a>maxReadPoolSize  
+### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um inteiro que define quantas mensagens pode ser lidas simultaneamente sem alocar novos leitores.  
   
-### <a name="maxwritepoolsize"></a>maxWritePoolSize  
+### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um inteiro que define quantas mensagens pode ser enviado simultaneamente sem alocar novos escritores.  
   
-### <a name="readerquotas"></a>readerQuotas  
+### <a name="readerquotas"></a>ReaderQuotas  
  Tipo de dados: XmlDictionaryReaderQuotas  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  As cotas dos leitores.  
   
@@ -64,5 +64,5 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

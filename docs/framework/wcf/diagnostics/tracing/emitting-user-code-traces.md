@@ -2,12 +2,12 @@
 title: Emitindo traços de código de usuário
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492658"
 ---
 # <a name="emitting-user-code-traces"></a>Emitindo traços de código de usuário
 Além de habilitar o rastreamento na configuração para coletar dados de instrumentação gerados pelo Windows Communication Foundation (WCF), você também pode emitir rastreamentos programaticamente no código do usuário. Dessa forma, você pode criar proativamente os dados de instrumentação que você pode analisar posteriormente para fins de diagnóstico. Este tópico discute como você pode fazer isso.  
@@ -123,7 +123,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  No diagrama a seguir, também vemos os rastreamentos de transferência de e para a atividade de Calculadora, bem como dois pares de iniciar e parar rastreamentos por atividade de solicitação, um para o cliente e outra para o serviço (uma para cada origem de rastreamento).  
   
- ![Visualizador de rastreamento: Emitindo o usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Visualizador de rastreamento: Emissão de usuário&#45;rastreamentos de código](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Lista de atividades por hora de criação (painel esquerdo) e suas atividades aninhadas (o painel superior direito)  
   
  Se o código de serviço gera uma exceção que faz com que o cliente gere também (por exemplo, quando o cliente não obteve resposta à sua solicitação), o serviço e cliente de aviso ou mensagens de erro ocorrerem na mesma atividade para correlação direta. No diagrama a seguir, o serviço gera uma exceção afirmando que "o serviço se recusará a processar essa solicitação no código do usuário." O cliente também gerará uma exceção informando que "o servidor foi capaz de processar a solicitação devido a um erro interno."  
@@ -140,5 +140,5 @@ Modo de exibição de gráfico de correlação de erro
   
  Definir as atividades e propagação de ID de atividade nos permite executar a correlação de erro direto entre pontos de extremidade. Dessa forma, podemos localizar a causa raiz de um erro mais rapidamente.  
   
-## <a name="see-also"></a>Consulte também  
- [Estendendo o rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+## <a name="see-also"></a>Consulte também
+- [Estendendo o rastreamento](../../../../../docs/framework/wcf/samples/extending-tracing.md)

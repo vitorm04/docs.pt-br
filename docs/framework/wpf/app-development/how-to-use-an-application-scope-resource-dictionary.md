@@ -1,5 +1,5 @@
 ---
-title: Como usar um dicionário de recursos de escopo do aplicativo
+title: 'Como: Usar um dicionário de recursos de escopo do aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 081ce8d350995d5321acbb24d220bed229ff17ae
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8df357d3b366a057b2a6072fb69b47a6075df5a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492540"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Como usar um dicionário de recursos de escopo do aplicativo
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Como: Usar um dicionário de recursos de escopo do aplicativo
 Este exemplo mostra como definir e usar um dicionário de recursos personalizado de escopo do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- <xref:System.Windows.Application> expõe um armazenamento de escopo do aplicativo para recursos compartilhados: <xref:System.Windows.Application.Resources%2A>. Por padrão, o <xref:System.Windows.Application.Resources%2A> propriedade é inicializada com uma instância das <xref:System.Windows.ResourceDictionary> tipo. Usar essa instância ao obter e definir propriedades de escopo do aplicativo usando <xref:System.Windows.Application.Resources%2A>. Para obter mais informações, consulte [como: obter e definir um recurso de escopo do aplicativo](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> expõe um armazenamento de escopo do aplicativo para recursos compartilhados: <xref:System.Windows.Application.Resources%2A>. Por padrão, o <xref:System.Windows.Application.Resources%2A> propriedade é inicializada com uma instância das <xref:System.Windows.ResourceDictionary> tipo. Usar essa instância ao obter e definir propriedades de escopo do aplicativo usando <xref:System.Windows.Application.Resources%2A>. Para obter mais informações, confira [Como: Obter e definir um recurso de escopo do aplicativo](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Se você tiver vários recursos que você definir usando <xref:System.Windows.Application.Resources%2A>, em vez disso, você pode usar um dicionário de recurso personalizado para armazenar esses recursos e definir <xref:System.Windows.Application.Resources%2A> com ele em vez disso. O exemplo a seguir mostra como declarar um dicionário de recurso personalizado usando XAML.
   
@@ -41,8 +41,8 @@ Este exemplo mostra como definir e usar um dicionário de recursos personalizado
   
  Há duas considerações a fazer ao usar <xref:System.Windows.Application.Resources%2A>. Primeiro, o dicionário *chave* é um objeto, então você deve usar exatamente a mesma instância de objeto quando ambos definem e obtêm um valor da propriedade. (Note que a chave faz distinção entre maiúsculas e minúsculas ao usar uma cadeia de caracteres.) Segundo, o dicionário *valor* é um objeto, então você precisará converter o valor para o tipo desejado ao obter um valor de propriedade.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.ResourceDictionary>  
- <xref:System.Windows.Application.Resources%2A>  
- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Dicionários de recursos mesclados](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.ResourceDictionary>
+- <xref:System.Windows.Application.Resources%2A>
+- [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Dicionários de recursos mesclados](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)
