@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494750"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>Método ISymUnmanagedReader::Initialize
-Inicializa o leitor de símbolo com a interface de Importador de metadados que este leitor será associado, juntamente com o nome de arquivo do módulo.  
+Inicializa o leitor de símbolo com a interface do importador de metadados que esse leitor será associado, juntamente com o nome de arquivo do módulo.  
   
 > [!NOTE]
 >  Esse método pode ser chamado apenas uma vez e deve ser chamado antes de quaisquer outros métodos de leitor.  
@@ -42,13 +42,13 @@ HRESULT Initialize (
   
 #### <a name="parameters"></a>Parâmetros  
  `importer`  
- [in] A interface de Importador de metadados com a qual este leitor será associado.  
+ [in] A interface de Importador de metadados com o qual esse leitor será associado.  
   
  `filename`  
  [in] O nome do arquivo do módulo. Você pode usar o `pIStream` parâmetro em vez disso.  
   
  `searchPath`  
- [in] Caminho de pesquisa. Esse parâmetro é opcional.  
+ [in] O caminho para pesquisar. Esse parâmetro é opcional.  
   
  `pIStream`  
  [in] O fluxo de arquivos, usado como uma alternativa para o parâmetro de nome de arquivo.  
@@ -57,10 +57,10 @@ HRESULT Initialize (
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Você precisa especificar apenas um o `filename` ou `pIStream` parâmetros, não ambos. O parâmetro `searchPath` é opcional.  
+ Você precisa especificar apenas um dos `filename` ou o `pIStream` parâmetros, não ambos. O parâmetro `searchPath` é opcional.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

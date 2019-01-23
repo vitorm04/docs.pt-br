@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: efa34d262157faed2e05cd6e7517c259cd279146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7e84d912a96752a893230393b59496377b783956
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494906"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>Método ISymUnmanagedReader2::GetMethodByVersionPreRemap
-Obtém um método de leitor de símbolo, considerando um token de método e um número de versão de edit-and-continue. Números de versão começam em 1 e são incrementados cada vez que o método é alterado como resultado de uma operação Editar e continuar.  
+Obtém um método de leitor de símbolo, considerando um token de método e um número de versão de editar e continuar. Números de versão começam em 1 e são incrementados sempre que o método é alterado como resultado de uma operação de editar e continuar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ HRESULT GetMethodByVersionPreRemap(
   
 #### <a name="parameters"></a>Parâmetros  
  `token`  
- [in] O token de metadados de método.  
+ [in] O token de metadados do método.  
   
  `version`  
  [in] A versão do método.  
@@ -52,5 +52,5 @@ HRESULT GetMethodByVersionPreRemap(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl. CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

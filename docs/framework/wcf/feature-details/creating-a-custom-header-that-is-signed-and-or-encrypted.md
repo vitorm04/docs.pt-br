@@ -2,15 +2,15 @@
 title: Criar um cabeçalho personalizado que é assinado e- ou criptografado
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 4770d650cba5c182aa56d9ac7afa39e585512d4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494815"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Criar um cabeçalho personalizado que é assinado e- ou criptografado
-Ao chamar um serviço WCF não usando um cliente WCF, às vezes, é necessário usar cabeçalhos SOAP personalizados. Há um bug de conversão em formato canônico no WCF que impede a trabalhar com um serviço WCF não cabeçalhos personalizados que são assinados e criptografados. O problema é causado pela concessão incorreta de namespaces XML padrão. Isso só será um problema ao chamar serviços WCF não com cabeçalhos personalizados que são assinados e/ou criptografados.  Quando o serviço recebe a mensagem que contém o cabeçalho personalizado assinado e/ou criptografado não é possível verificar a assinatura. Essa solução alternativa evita o erro de conversão em formato canônico, permite a interoperabilidade com serviços WCF não, mas não impede que a interoperabilidade com serviços WCF.  
+Ao chamar um serviço não WCF usando um cliente WCF, às vezes, é necessário usar cabeçalhos SOAP personalizados. Há um bug de conversão em formato canônico no WCF que impede que os cabeçalhos personalizados que são assinados e criptografados trabalhando com um serviço não WCF. O problema é causado pela concessão incorreta de namespaces XML padrão. Isso só é um problema ao chamar os serviços não WCF com cabeçalhos personalizados que são assinados e/ou criptografados.  Quando o serviço recebe a mensagem que contém o cabeçalho personalizado assinado e/ou criptografado não consegue verificar a assinatura. Essa solução alternativa evita o bug de conversão em formato canônico, permite a interoperabilidade com serviços não WCF, mas não impede que a interoperabilidade com serviços WCF.  
   
 ## <a name="defining-the-custom-header"></a>Definindo o cabeçalho personalizado  
  Cabeçalhos personalizados são definidos com a definição de um contrato de mensagem e marcar os membros que deve ser enviado como cabeçalhos com um <xref:System.ServiceModel.MessageHeaderAttribute> atributo. Para solucionar o erro de conversão em formato canônico, você deve garantir que o serializador XML declara o namespace do cabeçalho personalizado com um prefixo, em vez de uma declaração de namespace padrão. O código a seguir mostra como definir o tipo de dados que será usado como um cabeçalho de mensagem com a declaração de namespace correto.  
@@ -43,7 +43,7 @@ public partial class msgHeaderElement
 }  
 ```  
   
- Esse código declara um novo tipo denominado `msgHeaderElement` que será serializado com o serializador XML. Quando uma instância desse tipo é serializada, ela definirá um namespace com um prefixo 'h', portanto contornar o erro de conversão em formato canônico.  O contrato de mensagem, em seguida, define uma instância de `msgHeaderElement` e marcá-la com o <xref:System.ServiceModel.MessageHeaderAttribute> atributo conforme mostrado no exemplo a seguir.  
+ Esse código declara um novo tipo chamado `msgHeaderElement` que será serializado com o serializador de XML. Quando uma instância desse tipo é serializada, ele definirá um namespace com um prefixo 'h', proporcionando uma solução alternativa o bug de conversão em formato canônico.  O contrato de mensagem, em seguida, define uma instância do `msgHeaderElement` e marcá-la com o <xref:System.ServiceModel.MessageHeaderAttribute> atributo conforme mostrado no exemplo a seguir.  
   
 ```  
 [MessageContract]  
@@ -56,7 +56,7 @@ public  class MyMessageContract
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Contrato de mensagem padrão](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [Contratos de mensagem](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [Usando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>Consulte também
+- [Contrato de mensagem padrão](../../../../docs/framework/wcf/samples/default-message-contract.md)
+- [Contratos de mensagem](../../../../docs/framework/wcf/samples/message-contracts.md)
+- [Usando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

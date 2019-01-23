@@ -1,15 +1,15 @@
 ---
-title: Como especificar credenciais de segurança de canal
+title: 'Como: Especifique as credenciais de segurança de canal'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: f4c2977fe5bc819ff7e9b7a8030b2c2e20b71429
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495195"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Como especificar credenciais de segurança de canal
+# <a name="how-to-specify-channel-security-credentials"></a>Como: Especifique as credenciais de segurança de canal
 O Moniker de serviço do Windows Communication Foundation (WCF) permite que aplicativos de COM chamar serviços WCF. A maioria dos serviços WCF requer que o cliente especificar credenciais para autenticação e autorização. Ao chamar um serviço WCF de um cliente WCF, você pode especificar essas credenciais no código gerenciado ou em um arquivo de configuração de aplicativo. Ao chamar um serviço WCF em um aplicativo COM, você pode usar o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface para especificar as credenciais. Este tópico será ilustram várias maneiras para especificar as credenciais usando o <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface.  
   
 > [!NOTE]
@@ -137,9 +137,9 @@ O Moniker de serviço do Windows Communication Foundation (WCF) permite que apli
   
      Para obter mais informações sobre os parâmetros para esse método, consulte <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
-## <a name="see-also"></a>Consulte também  
- [Federação](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Como configurar as credenciais em um Serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Como criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+## <a name="see-also"></a>Consulte também
+- [Federação](../../../../docs/framework/wcf/feature-details/federation.md)
+- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Segurança de mensagem](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

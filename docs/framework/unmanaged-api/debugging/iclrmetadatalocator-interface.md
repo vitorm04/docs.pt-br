@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd7a67237d89864915f8b4f1f7361d1f113d1e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d1d767de88b239c96cb98130b6ff006e3f75b09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495026"
 ---
 # <a name="iclrmetadatalocator-interface"></a>Interface ICLRMetadataLocator
-Usado pela camada de serviços de acesso a dados para localizar metadados de assemblies em um processo de destino.  
+Usado pela camada de serviços de acesso a dados para localizar os metadados dos assemblies em um processo de destino.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -33,16 +33,16 @@ Usado pela camada de serviços de acesso a dados para localizar metadados de ass
 |[Método GetMetadata](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Recupera os metadados de uma imagem do processo de destino.|  
   
 ## <a name="remarks"></a>Comentários  
- O cliente da API (ou seja, o depurador) deve implementar a interface conforme o apropriado para o processo de destino específico. Por exemplo, a implementação de um processo em tempo real deve ser diferente de um despejo de memória.  
+ O cliente da API (ou seja, o depurador) deve implementar a interface conforme o apropriado para o processo de destino específico. Por exemplo, a implementação de um processo dinâmico seria diferente de um despejo de memória.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.** **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.** **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

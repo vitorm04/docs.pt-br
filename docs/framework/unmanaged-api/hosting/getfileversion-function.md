@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494802"
 ---
 # <a name="getfileversion-function"></a>Função GetFileVersion
 Obtém as informações de versão de runtime (CLR) de linguagem comum do arquivo especificado, usando o buffer especificado.  
@@ -44,7 +44,7 @@ HRESULT GetFileVersion (
  [in] O caminho do arquivo a ser examinado.  
   
  `szBuffer`  
- [out no] O buffer alocado para as informações de versão que são retornadas.  
+ [no, out] O buffer alocado para as informações de versão que são retornadas.  
   
  `cchBuffer`  
  [in] O tamanho, em caracteres largos, de `szBuffer`.  
@@ -53,11 +53,11 @@ HRESULT GetFileVersion (
  [out] O tamanho, em bytes, do retornado `szBuffer`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
