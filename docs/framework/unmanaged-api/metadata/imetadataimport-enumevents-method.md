@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514512"
 ---
 # <a name="imetadataimportenumevents-method"></a>Método IMetaDataImport::EnumEvents
 Enumera os tokens de definição de eventos para o token de TypeDef especificado.  
@@ -41,7 +41,7 @@ HRESULT EnumEvents (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador.  
+ [no, out] Um ponteiro para o enumerador.  
   
  `td`  
  [in] O token de TypeDef cujas definições de evento são a serem enumerados.  
@@ -59,18 +59,18 @@ HRESULT EnumEvents (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` retornou com êxito.|  
-|`S_FALSE`|Não existem eventos para enumerar. Nesse caso, `pcEvents` é zero.|  
+|`S_OK`|`EnumEvents` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum evento para enumerar. Nesse caso, `pcEvents` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

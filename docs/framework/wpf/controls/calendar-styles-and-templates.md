@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 5398828d1526436ab5abbbd2e87515018b0cd8bf
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: a92882e7e1f1b5c24b613c61b575df8c34832f5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517442"
 ---
 # <a name="calendar-styles-and-templates"></a>Estilos e modelos de calendário
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Calendar> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para que o controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.Calendar> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="calendar-parts"></a>Partes de Calendário  
  A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.Calendar> controle.  
   
 |Parte|Tipo|Descrição|  
 |-|-|-|  
-|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|O atualmente mês ou ano exibido no <xref:System.Windows.Controls.Calendar>.|  
+|PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|O mês exibido no momento ou ano no <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|O painel que contém o <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
   
 ## <a name="calendar-states"></a>Estados de calendário  
@@ -33,8 +33,8 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |----------------------|---------------------------|-----------------|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="calendaritem-parts"></a>Partes de CalendarItem  
  A tabela a seguir lista as partes nomeadas para o <xref:System.Windows.Controls.Primitives.CalendarItem> controle.  
@@ -48,7 +48,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |PART_MonthView|<xref:System.Windows.Controls.Grid>|Hospeda o conteúdo no modo de mês.|  
 |PART_YearView|<xref:System.Windows.Controls.Grid>|Hospeda o conteúdo no modo de ano ou década.|  
 |PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|A sobreposição para o estado desabilitado.|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|O <xref:System.Windows.DataTemplate> que descreve a estrutura de visual.|  
+|DayTitleTemplate|<xref:System.Windows.DataTemplate>|O <xref:System.Windows.DataTemplate> que descreve a estrutura visual.|  
   
 ## <a name="calendaritem-states"></a>Estados de CalendarItem  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.CalendarItem> controle.  
@@ -58,14 +58,14 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Estado normal|CommonStates|O estado padrão.|  
 |Estado desabilitado|CommonStates|O estado do calendário quando o <xref:System.Windows.UIElement.IsEnabled%2A> é de propriedade `false`.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="calendardaybutton-parts"></a>Partes de CalendarDayButton  
- O <xref:System.Windows.Controls.Primitives.CalendarDayButton> controle não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.Primitives.CalendarDayButton> controle não tem nenhuma parte nomeada.  
   
 ## <a name="calendardaybutton-states"></a>Estados de CalendarDayButton  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.CalendarDayButton> controle.  
@@ -74,7 +74,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
 |Disabled|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarDayButton> está desabilitado.|  
-|MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
+|MouseOver|CommonStates|O ponteiro do mouse está posicionado sobre o <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Pressionado|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarDayButton> é pressionado.|  
 |Selecionado|SelectionStates|O botão está selecionado.|  
 |Não selecionado|SelectionStates|O botão não está selecionado.|  
@@ -84,16 +84,16 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Sem foco|FocusStates|O botão não tem o foco.|  
 |Ativo|ActiveStates|O botão está ativo.|  
 |Inativo|ActiveStates|O botão está inativo.|  
-|RegularDay|DayStates|O botão não representam <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|RegularDay|DayStates|O botão não representa <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Hoje|DayStates|Representa o botão <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|O botão representa um dia que pode ser selecionado.|  
 |BlackoutDay|BlackoutDayStates|O botão representa um dia que não pode ser selecionado.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="calendarbutton-parts"></a>Partes de CalendarButton  
- O <xref:System.Windows.Controls.Primitives.CalendarButton> controle não tem as partes nomeadas.  
+ O <xref:System.Windows.Controls.Primitives.CalendarButton> controle não tem nenhuma parte nomeada.  
   
 ## <a name="calendarbutton-states"></a>Estados de CalendarButton  
  A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.Primitives.CalendarButton> controle.  
@@ -102,7 +102,7 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
 |Disabled|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarButton> está desabilitado.|  
-|MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
+|MouseOver|CommonStates|O ponteiro do mouse está posicionado sobre o <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Pressionado|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarButton> é pressionado.|  
 |Selecionado|SelectionStates|O botão está selecionado.|  
 |Não selecionado|SelectionStates|O botão não está selecionado.|  
@@ -113,8 +113,8 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Ativo|ActiveStates|O botão está ativo.|  
 |Inativo|ActiveStates|O botão está inativo.|  
 |Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é de propriedade anexada `true` tem o controle não tem foco.|  
+|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
+|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
   
 ## <a name="calendar-controltemplate-example"></a>Exemplo de ControlTemplate de calendário  
  O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.Calendar> controle e tipos associados.  
@@ -127,10 +127,10 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
   
  Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Estilos com a amostra ControlTemplates)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Estilos e modelos de controle](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
+- [Personalização do controle](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Personalizando a aparência de um controle existente criando um ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
