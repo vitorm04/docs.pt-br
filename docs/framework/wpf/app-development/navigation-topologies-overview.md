@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 8976ba7973e4f53022846b98c47d5613fd6ba158
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7aa47d8613cb206273410626ef0c38d226a9365
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498431"
 ---
 # <a name="navigation-topologies-overview"></a>Visão geral de topologias da navegação
-<a name="introduction"></a> Esta visão geral fornece uma introdução a topologias de navegação no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Em seguida, três topologias de navegação comuns, com amostras, são abordadas.  
+<a name="introduction"></a> Esta visão geral fornece uma introdução às topologias de navegação no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Em seguida, três topologias de navegação comuns, com amostras, são abordadas.  
   
 > [!NOTE]
->  Antes de ler este tópico, você deve estar familiarizado com o conceito de navegação estruturada em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando funções de página. Para obter mais informações sobre ambos esses tópicos, consulte [visão geral de navegação estruturada](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  
+>  Antes de ler este tópico, você deve estar familiarizado com o conceito de navegação estruturada em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando funções de página. Para obter mais informações sobre esses tópicos, consulte [visão geral da navegação estruturada](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  
   
  Esse tópico contém as seguintes seções:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33557544"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologias de navegação  
- Em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], navegação normalmente consiste de páginas (<xref:System.Windows.Controls.Page>) com hiperlinks (<xref:System.Windows.Documents.Hyperlink>) que navegam para outras páginas quando clicados. Páginas que são acessadas são identificadas por [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (consulte [URIs de pacote no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)). Considere o seguinte exemplo simple que exibe páginas, hiperlinks, e [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+ Na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], navegação normalmente consiste em páginas (<xref:System.Windows.Controls.Page>) com hiperlinks (<xref:System.Windows.Documents.Hyperlink>) que navegam para outras páginas quando clicados. Páginas que são acessadas são identificadas por [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] (consulte [URIs de pacote no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)). Considere o seguinte exemplo simple que exibe páginas, hiperlinks, e [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33557544"
   
  Essas páginas são organizadas em uma *topologia de navegação* cuja estrutura é determinada por como você pode navegar entre as páginas. Essa topologia de navegação em particular é adequada para cenários simples, embora a navegação possa exigir topologias mais complexas, algumas das quais só podem ser definidas quando um aplicativo está em execução.  
   
- Este tópico aborda três topologias comuns de navegação: *linear fixa*, *hierárquica fixa*, e *gerado dinamicamente*. Cada topologia de navegação é demonstrada com um exemplo que tem um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] como aquele mostrado na figura a seguir:  
+ Este tópico aborda três topologias comuns de navegação: *linear fixa*, *hierárquica fixa*, e *gerado dinamicamente*. Cada topologia de navegação é demonstrada com um exemplo que tem um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] como aquele que é mostrado na figura a seguir:  
   
  ![Páginas de tarefa com itens de dados](../../../../docs/framework/wpf/app-development/media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
   
@@ -66,7 +66,7 @@ ms.locfileid: "33557544"
   
  Os comportamentos típicos para navegar em uma topologia linear fixa incluem o seguinte:  
   
--   Navegar da página de chamada para uma página de inicializador que inicia o assistente e navega até a primeira página do assistente. Uma página iniciadora (uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) não é necessária, já que uma página de chamada pode chamar diretamente a primeira página do assistente. Entretanto, usar uma página de inicializador pode simplificar a inicialização do assistente, especialmente se ela for complexa.  
+-   Navegar da página de chamada para uma página de inicializador que inicia o assistente e navega até a primeira página do assistente. Uma página de inicializador (uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) não for necessária, pois uma página de chamada pode chamar diretamente a primeira página do assistente. Entretanto, usar uma página de inicializador pode simplificar a inicialização do assistente, especialmente se ela for complexa.  
   
 -   Os usuários podem navegar entre páginas usando os botões Voltar e Avançar (ou hiperlinks).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "33557544"
   
  Embora a sequência em que as páginas de uma estrutura hierárquica fixa são navegadas seja determinada em tempo de execução, a experiência do usuário é a mesma que a experiência do usuário para uma topologia linear fixa:  
   
--   Navegar da página de chamada para uma página de inicializador que inicia o assistente e navega até a primeira página do assistente. Uma página iniciadora (uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) não é necessária, já que uma página de chamada pode chamar diretamente a primeira página do assistente. Entretanto, usar uma página de inicializador pode simplificar a inicialização do assistente, especialmente se ela for complexa.  
+-   Navegar da página de chamada para uma página de inicializador que inicia o assistente e navega até a primeira página do assistente. Uma página de inicializador (uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) não for necessária, pois uma página de chamada pode chamar diretamente a primeira página do assistente. Entretanto, usar uma página de inicializador pode simplificar a inicialização do assistente, especialmente se ela for complexa.  
   
 -   Os usuários podem navegar entre páginas usando os botões Voltar e Avançar (ou hiperlinks).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33557544"
   
  A sequência de navegação é conhecida como uma topologia gerada dinamicamente. Para o usuário, assim como ocorre com as outras topologias de navegação, a experiência do usuário é a mesmo das topologias anteriores:  
   
--   Navegar da página de chamada para uma página de inicializador que inicia o assistente e navega até a primeira página do assistente. Uma página iniciadora (uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) não é necessária, já que uma página de chamada pode chamar diretamente a primeira página do assistente. Entretanto, usar uma página de inicializador pode simplificar a inicialização do assistente, especialmente se ela for complexa.  
+-   Navegar da página de chamada para uma página de inicializador que inicia o assistente e navega até a primeira página do assistente. Uma página de inicializador (uma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-menos <xref:System.Windows.Navigation.PageFunction%601>) não for necessária, pois uma página de chamada pode chamar diretamente a primeira página do assistente. Entretanto, usar uma página de inicializador pode simplificar a inicialização do assistente, especialmente se ela for complexa.  
   
 -   Os usuários podem navegar entre páginas usando os botões Voltar e Avançar (ou hiperlinks).  
   
@@ -140,8 +140,8 @@ ms.locfileid: "33557544"
   
 -   Quando o assistente for concluído (aceito ou cancelado), as páginas que compreendem o assistente serão removidas do diário. Isso mantém cada instância do assistente isolada, evitando assim potenciais anomalias de dados ou de estado.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Controls.Page>  
- <xref:System.Windows.Navigation.PageFunction%601>  
- <xref:System.Windows.Navigation.NavigationService>  
- [Visão geral da navegação estruturada](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Controls.Page>
+- <xref:System.Windows.Navigation.PageFunction%601>
+- <xref:System.Windows.Navigation.NavigationService>
+- [Visão geral da navegação estruturada](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
