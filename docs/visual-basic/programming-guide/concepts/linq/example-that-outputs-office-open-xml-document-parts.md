@@ -1,21 +1,21 @@
 ---
-title: Exemplo de saídas de partes de documentos do Office Open XML (Visual Basic)
+title: Exemplo que resulta em partes de documentos do Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ad7dc9d6f68ecde88888b0f0250632f3f946f92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670245"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="6293d-102">Exemplo de saídas de partes de documentos do Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6293d-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
-<span data-ttu-id="6293d-103">Este tópico mostra como abrir um documento do Office Open XML e acessar partes dentro deles.</span><span class="sxs-lookup"><span data-stu-id="6293d-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="50751-102">Exemplo que resulta em partes de documentos do Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50751-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="50751-103">Este tópico mostra como abrir um documento do Office Open XML e acessar partes dentro deles.</span><span class="sxs-lookup"><span data-stu-id="50751-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6293d-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6293d-104">Example</span></span>  
- <span data-ttu-id="6293d-105">O exemplo a seguir abre um documento do Office Open XML, e imprime a parte do documento e parte de estilo para o console.</span><span class="sxs-lookup"><span data-stu-id="6293d-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="50751-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="50751-104">Example</span></span>  
+ <span data-ttu-id="50751-105">O exemplo a seguir abre um documento do Office Open XML, e imprime a parte do documento e parte de estilo para o console.</span><span class="sxs-lookup"><span data-stu-id="50751-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="6293d-106">Este exemplo usa classes do assembly WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="6293d-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="6293d-107">Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6293d-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="50751-106">Este exemplo usa classes do assembly WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="50751-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="50751-107">Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="50751-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -64,5 +64,5 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6293d-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6293d-108">See Also</span></span>  
- [<span data-ttu-id="6293d-109">Detalhes do Office abrir documentos de WordprocessingML XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6293d-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="50751-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="50751-108">See also</span></span>
+- [<span data-ttu-id="50751-109">Detalhes do Office Open XML WordprocessingML documentos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="50751-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f0ffb85dc5f321e45432d6c2fa9448919957f0e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665195"
 ---
-# <a name="ememoryavailable-enumeration"></a><span data-ttu-id="ed16b-102">Enumeração EMemoryAvailable</span><span class="sxs-lookup"><span data-stu-id="ed16b-102">EMemoryAvailable Enumeration</span></span>
-<span data-ttu-id="ed16b-103">Contém valores que indicam a quantidade de memória física livre no computador.</span><span class="sxs-lookup"><span data-stu-id="ed16b-103">Contains values that indicate the amount of free physical memory on the computer.</span></span> <span data-ttu-id="ed16b-104">Esses valores mapeiam logicamente para os eventos de alta e baixa memória retornado do `CreateMemoryResourceNotification` função na API do Win32.</span><span class="sxs-lookup"><span data-stu-id="ed16b-104">These values logically map to the events for high and low memory returned from the `CreateMemoryResourceNotification` function in the Win32 API.</span></span>  
+# <a name="ememoryavailable-enumeration"></a><span data-ttu-id="fc497-102">Enumeração EMemoryAvailable</span><span class="sxs-lookup"><span data-stu-id="fc497-102">EMemoryAvailable Enumeration</span></span>
+<span data-ttu-id="fc497-103">Contém valores que indicam a quantidade de memória física livre no computador.</span><span class="sxs-lookup"><span data-stu-id="fc497-103">Contains values that indicate the amount of free physical memory on the computer.</span></span> <span data-ttu-id="fc497-104">Esses valores são mapeados logicamente para os eventos de alta e baixa memória retornado do `CreateMemoryResourceNotification` função na API do Win32.</span><span class="sxs-lookup"><span data-stu-id="fc497-104">These values logically map to the events for high and low memory returned from the `CreateMemoryResourceNotification` function in the Win32 API.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ed16b-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ed16b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc497-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fc497-105">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -36,25 +36,25 @@ typedef enum {
 } EMemoryAvailable;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ed16b-106">Membros</span><span class="sxs-lookup"><span data-stu-id="ed16b-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fc497-106">Membros</span><span class="sxs-lookup"><span data-stu-id="fc497-106">Members</span></span>  
   
-|<span data-ttu-id="ed16b-107">Membro</span><span class="sxs-lookup"><span data-stu-id="ed16b-107">Member</span></span>|<span data-ttu-id="ed16b-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="ed16b-108">Description</span></span>|  
+|<span data-ttu-id="fc497-107">Membro</span><span class="sxs-lookup"><span data-stu-id="fc497-107">Member</span></span>|<span data-ttu-id="fc497-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="fc497-108">Description</span></span>|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|<span data-ttu-id="ed16b-109">Muita memória física está disponível.</span><span class="sxs-lookup"><span data-stu-id="ed16b-109">Plenty of physical memory is available.</span></span>|  
-|`eMemoryAvailableLow`|<span data-ttu-id="ed16b-110">Há muito pouca memória física.</span><span class="sxs-lookup"><span data-stu-id="ed16b-110">Very little physical memory is available.</span></span>|  
-|`eMemoryAvailableNeutral`|<span data-ttu-id="ed16b-111">A memória física disponível é neutra.</span><span class="sxs-lookup"><span data-stu-id="ed16b-111">The available physical memory is neutral.</span></span>|  
+|`eMemoryAvailableHigh`|<span data-ttu-id="fc497-109">Muita memória física está disponível.</span><span class="sxs-lookup"><span data-stu-id="fc497-109">Plenty of physical memory is available.</span></span>|  
+|`eMemoryAvailableLow`|<span data-ttu-id="fc497-110">Muito pouca memória física está disponível.</span><span class="sxs-lookup"><span data-stu-id="fc497-110">Very little physical memory is available.</span></span>|  
+|`eMemoryAvailableNeutral`|<span data-ttu-id="fc497-111">A memória física disponível é neutra.</span><span class="sxs-lookup"><span data-stu-id="fc497-111">The available physical memory is neutral.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ed16b-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="ed16b-112">Remarks</span></span>  
- <span data-ttu-id="ed16b-113">Esse valor é passado pelo host para o common language runtime (CLR), usando uma chamada para o [Iclrmemorynotificationcallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="ed16b-113">This value is passed by the host to the common language runtime (CLR) by using a call to the [ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc497-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="fc497-112">Remarks</span></span>  
+ <span data-ttu-id="fc497-113">Esse valor é passado pelo host para o common language runtime (CLR) pelo uso de uma chamada para o [iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="fc497-113">This value is passed by the host to the common language runtime (CLR) by using a call to the [ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ed16b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ed16b-114">Requirements</span></span>  
- <span data-ttu-id="ed16b-115">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed16b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc497-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fc497-114">Requirements</span></span>  
+ <span data-ttu-id="fc497-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc497-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ed16b-116">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ed16b-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="fc497-116">**Cabeçalho:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fc497-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ed16b-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ed16b-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="fc497-117">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fc497-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ed16b-118">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed16b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fc497-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc497-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed16b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ed16b-119">See Also</span></span>  
- [<span data-ttu-id="ed16b-120">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="ed16b-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="fc497-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fc497-119">See also</span></span>
+- [<span data-ttu-id="fc497-120">Enumerações de hospedagem</span><span class="sxs-lookup"><span data-stu-id="fc497-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
