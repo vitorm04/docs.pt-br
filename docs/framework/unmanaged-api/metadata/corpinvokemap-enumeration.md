@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745943"
 ---
 # <a name="corpinvokemap-enumeration"></a>Enumeração CorPinvokeMap
 Especifica opções para uma chamada de PInvoke.  
@@ -78,24 +78,24 @@ typedef enum  CorPinvokeMap {
 |`pmBestFitDisabled`|Não execute o mapeamento de melhor ajuste de caracteres Unicode. Nesse caso, todos os caracteres não mapeável serão substituídos por um '?'.|  
 |`pmBestFitMask`|Reservado.|  
 |`pmThrowOnUnmappableCharUseAssem`|Reservado.|  
-|`pmThrowOnUnmappableCharEnabled`|Gera uma exceção quando interop marshaler encontra um caractere não mapeável.|  
-|`pmThrowOnUnmappableCharDisabled`|Não gera uma exceção quando interop marshaler encontra um caractere não mapeável.|  
+|`pmThrowOnUnmappableCharEnabled`|Gera uma exceção quando o marshaler de interoperabilidade encontra um caractere não mapeável.|  
+|`pmThrowOnUnmappableCharDisabled`|Não lance uma exceção quando o marshaler de interoperabilidade encontra um caractere não mapeável.|  
 |`pmThrowOnUnmappableCharMask`|Reservado|  
 |`pmSupportsLastError`|Permitir que o receptor chamar o Win32 `SetLastError` função antes de retornar do método atribuído.|  
 |`pmCallConvMask`|Reservado|  
-|`pmCallConvWinapi`|Use a plataforma padrão convenção de chamada. Por exemplo, no Windows o padrão é `StdCall` e no Windows CE .NET é `Cdecl`.|  
-|`pmCallConvCdecl`|Use o `Cdecl` convenção de chamada. Nesse caso, o chamador limpa a pilha. Isso permite que as funções de chamada com `varargs` (ou seja, funções que aceitam um número variável de parâmetros).|  
+|`pmCallConvWinapi`|Use a plataforma padrão de convenção de chamada. Por exemplo, no Windows o padrão é `StdCall` e no Windows CE .NET é `Cdecl`.|  
+|`pmCallConvCdecl`|Use o `Cdecl` convenção de chamada. Nesse caso, o chamador limpa a pilha. Isso permite chamar funções com `varargs` (ou seja, funções que aceitam um número variável de parâmetros).|  
 |`pmCallConvStdcall`|Use o `StdCall` convenção de chamada. Nesse caso, o receptor limpa a pilha. Essa é a convenção padrão para chamar funções não gerenciadas com a invocação da plataforma.|  
-|`pmCallConvThiscall`|Use o `ThisCall` convenção de chamada. Nesse caso, o primeiro parâmetro é o `this` ponteiro e é armazenado no registro ECX. Outros parâmetros são enviados por push na pilha. O `ThisCall` convenção de chamada é usada para chamar métodos em classes exportadas de uma DLL não gerenciada.|  
+|`pmCallConvThiscall`|Use o `ThisCall` convenção de chamada. Nesse caso, o primeiro parâmetro é o `this` ponteiro e é armazenado no ecx. Outros parâmetros são enviados por push na pilha. O `ThisCall` convenção de chamada é usada para chamar métodos em classes exportadas de uma DLL não gerenciada.|  
 |`pmCallConvFastcall`|Reservado.|  
 |`pmMaxValue`|Reservado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -2,23 +2,23 @@
 title: FailFast
 ms.date: 03/30/2017
 ms.assetid: 4fc4e476-997b-4166-90af-8d164f775924
-ms.openlocfilehash: b5303e91f4854667d7593691ad524a54950d4758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 628a030444169241b700c6a266f92b783eb74bb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727411"
 ---
 # <a name="failfast"></a>FailFast
-ID: 102  
+Id: 102  
   
- Severidade: erro  
+ Gravidade: Erro  
   
- Categoria: rastreamento  
+ Categoria: Rastreamento  
   
 ## <a name="description"></a>Descrição  
- FailFast foi invocado. O evento lista a mensagem, o rastreamento de pilha, o nome do processo e a ID de processo.  
+ FailFast foi invocado. O evento de lista a mensagem, o rastreamento de pilha, o nome do processo e a ID de processo.  
   
-## <a name="see-also"></a>Consulte também  
- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Registro de eventos em log](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [Referência geral de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

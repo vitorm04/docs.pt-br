@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737619"
 ---
 # <a name="corprfstatictype-enumeration"></a>Enumeração COR_PRF_STATIC_TYPE
 Indica se um campo é estático e, em caso positivo, a qualidade estática aplicada ao campo. Esses valores podem ser combinados usando a operação OR bit a bit para indicar que o campo tem várias qualidades estáticas diferentes.  
@@ -43,19 +43,19 @@ typedef enum {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|O campo não é estático.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|O campo é estático de domínio de aplicativo.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|O campo é estático de domínio do aplicativo.|  
 |`COR_PRF_FIELD_THREAD_STATIC`|O campo é de thread estático.|  
 |`COR_PRF_FIELD_CONTEXT_STATIC`|O campo é o contexto estático.|  
 |`COR_PRF_FIELD_RVA_STATIC`|O campo é o endereço virtual relativo (RVA)-estático.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

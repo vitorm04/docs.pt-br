@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc193402120780c605f6139feac6f0d60a34118e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674149"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirecionando versões de assembly
 
@@ -67,7 +67,7 @@ Se a versão 1.0.0.0 do mesmo assembly faz referência a outro projeto em seu ap
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Você pode habilitar o redirecionamento de associação automático se seu aplicativo tem como alvo as versões mais antigas do .NET Framework. Você pode substituir esse comportamento padrão, fornecendo informações de redirecionamento de associação no arquivo App. config para qualquer assembly ou desativando o recurso de redirecionamento de associação. Para obter informações sobre como ativar ou desativar a esse recurso, consulte [como: Habilitar e desabilitar o redirecionamento de associação automática](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+Você pode habilitar o redirecionamento de associação automático se seu aplicativo tem como alvo as versões mais antigas do .NET Framework. Você pode substituir esse comportamento padrão, fornecendo informações de redirecionamento de associação no arquivo App. config para qualquer assembly ou desativando o recurso de redirecionamento de associação. Para obter informações sobre como ativar ou desativar a esse recurso, consulte [como: Habilitar e desabilitar o redirecionamento automático de associação](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Ignorar políticas de editor

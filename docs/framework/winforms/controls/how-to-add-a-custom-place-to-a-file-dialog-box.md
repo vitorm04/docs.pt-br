@@ -1,5 +1,5 @@
 ---
-title: Como adicionar um local personalizado a uma caixa de diálogo Arquivo
+title: 'Como: Adicionar um local personalizado para uma caixa de diálogo de arquivo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 7a6ace385f7594a467785fbc677517c8a6e1ab53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 797b98cb408c7f9fc1d55b774f7ceccef009bb22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674642"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Como adicionar um local personalizado a uma caixa de diálogo Arquivo
-O padrão abrir e salvar caixas de diálogo em [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] tem uma área no lado esquerdo da caixa de diálogo intitulada **Links Favoritos**. Essa área é denominada locais personalizados. O <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> classes permitem que você adicione pastas para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção.  
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Como: Adicionar um local personalizado para uma caixa de diálogo de arquivo
+O padrão abrir e salvar as caixas de diálogo no [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] têm uma área no lado esquerdo da caixa de diálogo intitulada **Links Favoritos**. Essa área é chamada de locais personalizados. O <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> classes permitem que você adicione pastas para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção.  
   
 > [!NOTE]
->  Para que um local personalizado para aparecer no <xref:System.Windows.Forms.OpenFileDialog> ou <xref:System.Windows.Forms.SaveFileDialog>, o <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> propriedade deve ser definida como `true` (o padrão).  
+>  Em ordem para um local personalizado apareça na <xref:System.Windows.Forms.OpenFileDialog> ou <xref:System.Windows.Forms.SaveFileDialog>, o <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> propriedade deve ser definida como `true` (o padrão).  
   
-### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Para adicionar um local personalizado para uma caixa de diálogo  
+### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a>Para adicionar um local personalizado a uma caixa de diálogo de arquivo  
   
--   Adicione um caminho, um GUID de pasta conhecidas, ou um <xref:System.Windows.Forms.FileDialogCustomPlace> o objeto para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção da caixa de diálogo.  
+-   Adicionar um caminho, um GUID de pasta conhecida, ou um <xref:System.Windows.Forms.FileDialogCustomPlace> do objeto para o <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção da caixa de diálogo.  
   
      O exemplo de código a seguir mostra como adicionar um caminho:  
   
@@ -36,7 +36,7 @@ O padrão abrir e salvar caixas de diálogo em [!INCLUDE[wiprlhext](../../../../
     openFileDialog1.CustomPlaces.Add("C:\\MyCustomPlace");  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.FileDialog>  
- <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>  
- [GUIDs de pasta conhecida para locais personalizados de diálogo de arquivo](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.FileDialog>
+- <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
+- [GUIDs de pasta conhecida para locais personalizados de diálogo de arquivo](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)

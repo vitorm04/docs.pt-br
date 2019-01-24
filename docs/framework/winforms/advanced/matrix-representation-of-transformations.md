@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: 4c840d8a5abc89493bc684526ce76d34307f4ba1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1feda5547a96a0deac6f9d2e6ba1139e3fa73f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732083"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representação matricial de transformações
 Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. A ilustração a seguir mostra diversas matrizes.  
@@ -66,7 +66,7 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- Em [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , você pode armazenar uma transformação afim de um <xref:System.Drawing.Drawing2D.Matrix> objeto. Como a terceira coluna de uma matriz que representa uma transformação afim sempre é (0, 0, 1), você especificar apenas os seis números nas duas primeiras colunas quando você construir um <xref:System.Drawing.Drawing2D.Matrix> objeto. A instrução `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constrói a matriz mostrada na figura anterior.  
+ Na [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] você pode armazenar uma transformação afim em um <xref:System.Drawing.Drawing2D.Matrix> objeto. Como a terceira coluna de uma matriz que representa uma transformação afim sempre é (0, 0, 1), especifique somente os seis números nas duas primeiras colunas quando você constrói um <xref:System.Drawing.Drawing2D.Matrix> objeto. A instrução `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` constrói a matriz mostrada na figura anterior.  
   
 ## <a name="composite-transformations"></a>Transformações de composição  
  Uma transformação de composição é uma sequência de transformações, uma seguida da outra. Considere as matrizes e transformações na lista a seguir:  
@@ -89,12 +89,12 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
- O fato de que a matriz de uma transformação composta pode ser formada pela multiplicação de matrizes de transformação individuais significa que qualquer sequência de transformações afins pode ser armazenada em uma única <xref:System.Drawing.Drawing2D.Matrix> objeto.  
+ O fato de que a matriz de uma transformação composta pode ser formada pela multiplicação de matrizes de transformação individuais significa que qualquer sequência de transformações afins pode ser armazenada em um único <xref:System.Drawing.Drawing2D.Matrix> objeto.  
   
 > [!CAUTION]
 >  A ordem de uma transformação de composição é importante. Em geral, girar, dimensionar e converter não é o mesmo que dimensionar, girar e converter. Da mesma forma, a ordem de multiplicação de matriz é importante. Em geral, ABC não é o mesmo que BAC.  
   
- O <xref:System.Drawing.Drawing2D.Matrix> classe fornece vários métodos para criar uma transformação composta: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, e <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. O exemplo a seguir cria a matriz de uma transformação de composição que primeiro gira 30 graus e, então, é dimensionada por um fator de 2 na direção y e movida em 5 unidades na direção x:  
+ O <xref:System.Drawing.Drawing2D.Matrix> classe fornece vários métodos para a criação de uma transformação de composição: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, e <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. O exemplo a seguir cria a matriz de uma transformação de composição que primeiro gira 30 graus e, então, é dimensionada por um fator de 2 na direção y e movida em 5 unidades na direção x:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
@@ -103,6 +103,6 @@ Uma matriz m×n é um conjunto de números organizados em m linhas e n colunas. 
   
  ![Transformações](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
-## <a name="see-also"></a>Consulte também  
- [Sistemas de Coordenadas e Transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [Usando Transformações no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Consulte também
+- [Sistemas de Coordenadas e Transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [Usando Transformações no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

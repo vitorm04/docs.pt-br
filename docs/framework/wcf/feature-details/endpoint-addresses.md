@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730939"
 ---
 # <a name="endpoint-addresses"></a>Endereços do ponto de extremidade
 Cada ponto de extremidade tem um endereço associado a ele, que é usado para localizar e identificar o ponto de extremidade. Esse endereço consiste principalmente de um identificador de URI (Uniform Resource), que especifica o local do ponto de extremidade. O endereço do ponto de extremidade é representado no modelo de programação pelo Windows Communication Foundation (WCF) a <xref:System.ServiceModel.EndpointAddress> classe, que contém um recurso opcional <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriedade que permite a autenticação do ponto de extremidade por outros pontos de extremidade que trocar mensagens com ele e um conjunto de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriedades que definem outros cabeçalhos SOAP exigidos para alcançar o serviço. Os cabeçalhos opcionais fornecem adicionais e informações de endereçamento para identificar ou interagir com o ponto de extremidade de serviço mais detalhadas. O endereço de um ponto de extremidade é representado na transmissão como uma referência de ponto de extremidade WS-Addressing (EPR).  
@@ -25,7 +25,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
 -   (opcional) Porta: 322  
   
--   Caminho: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definindo um endereço para um serviço  
  O endereço do ponto de extremidade para um serviço pode ser especificado com o modo imperativo usando código ou declarativamente com a configuração. Definir pontos de extremidade no código geralmente não é prático porque as associações e endereços para um serviço implantado normalmente são diferentes daqueles usados enquanto o serviço está sendo desenvolvido. Em geral, é mais prático definir pontos de extremidade de serviço usando a configuração em vez de código. Informações fora do código de endereçamento e manter a associação permite que eles alterem os sem ter que recompilar ou reimplantar o aplicativo.  
@@ -46,7 +46,7 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  O exemplo a seguir mostra os componentes que podem estar presentes em uma associação do IIS:  
   
--   Associação de protocolo: HTTP  
+-   Protocolo de associação: HTTP  
   
 -   Informações de associação: Endereço IP, porta, cabeçalho de Host  
   
@@ -137,6 +137,6 @@ Cada ponto de extremidade tem um endereço associado a ele, que é usado para lo
   
  Em alguns cenários, um ponto de extremidade recebe todas as mensagens que chegam no transporte subjacente e não apenas aqueles com os devidos `To` cabeçalho. Para habilitar isso, o usuário pode usar o <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> classe.  
   
-## <a name="see-also"></a>Consulte também  
- [Especificando um endereço do ponto de extremidade](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Consulte também
+- [Especificando um endereço do ponto de extremidade](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

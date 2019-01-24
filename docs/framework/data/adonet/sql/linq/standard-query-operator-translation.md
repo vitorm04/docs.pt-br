@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588568"
 ---
 # <a name="standard-query-operator-translation"></a>Conversão padrão de operador de consulta
 O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] converte operadores de consulta padrão em comandos SQL. O processador de consultas do banco de dados determina a semântica de execução de conversão SQL.  
@@ -84,7 +84,7 @@ ORDER BY [t0].[CustomerID]
   
  Uma comparação com o nulo literal é convertida na versão apropriada do SQL (`is null` ou `is not null`).  
   
- O valor de `null` no agrupamento é definido pelo SQL Server. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não altera o agrupamento.  
+ O valor de `null` na ordenação é definido pelo SQL Server. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não altera o agrupamento.  
   
 ### <a name="aggregates"></a>Agregações  
  O método de agregação do operador de consulta padrão <xref:System.Linq.Enumerable.Sum%2A> avalia uma sequência vazia ou uma sequência que contém somente nulos como zero. Na [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], a semântica do SQL é deixada inalterado, e <xref:System.Linq.Enumerable.Sum%2A> é avaliada como `null` em vez de zero para uma sequência vazia ou uma sequência que contém somente nulos.  
@@ -147,14 +147,14 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>Suporte à herança  
   
 ### <a name="inheritance-mapping-restrictions"></a>Restrições de mapeamento de herança  
- Para obter mais informações, consulte [como: hierarquias de herança de mapa](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+ Para obter mais informações, confira [Como: Mapear hierarquias de herança](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
   
 ### <a name="inheritance-in-queries"></a>Herança em consultas  
  As conversões do C# são suportadas apenas na projeção. Conversões que são usadas em outro lugar não são convertidas e são ignoradas. Com exceção dos nomes de funções SQL, o SQL realmente executa apenas o equivalente do <xref:System.Convert> do CLR (Common Language Runtime). Isto é, o SQL pode alterar o valor de um tipo para outro. Não há nenhum equivalente de conversão do CLR porque não há nenhum conceito de reinterpretação dos mesmos bits como os de outro tipo. É por isso que uma conversão C# funciona apenas localmente. Ela não funciona remotamente.  
   
  Os operadores `is` e `as` e o método `GetType` não são restritos ao operador `Select`. Podem ser usados em outros operadores de consulta também.  
   
-## <a name="sql-server-2008-support"></a>Suporte do SQL Server 2008  
+## <a name="sql-server-2008-support"></a>SQL Server 2008 Support  
  A partir do .NET Framework 3.5 SP1, o LINQ to SQL dá suporte ao mapeamento para novos tipos de data e hora introduzidos com o SQL Server 2008. Mas, há algumas limitações aos operadores de consulta do LINQ to SQL que você pode usar ao operar com valores mapeados para esses novos tipos.  
   
 ### <a name="unsupported-query-operators"></a>Operadores de consulta não suportados  
@@ -172,7 +172,7 @@ ORDER BY [t0].[CustomerID]
   
  Para obter mais informações sobre o mapeamento para esses tipos de data e hora do SQL Server, consulte [mapeamento de tipo CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
-## <a name="sql-server-2005-support"></a>Suporte do SQL Server 2005  
+## <a name="sql-server-2005-support"></a>SQL Server 2005 Support  
  O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não dá suporte aos seguintes recursos do SQL Server 2005:  
   
 -   Procedimentos armazenados escritos para SQL CLR.  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Retornar ou ignorar elementos em uma sequência](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [Concatenar duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [Retornar a diferença de conjunto entre duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Retornar a interseção de conjunto de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Retornar a união de conjunto de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>Consulte também
+- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Retornar ou ignorar elementos em uma sequência](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [Concatenar duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [Retornar a diferença de conjunto entre duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [Retornar a interseção de conjunto de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [Retornar a união de conjunto de duas sequências](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

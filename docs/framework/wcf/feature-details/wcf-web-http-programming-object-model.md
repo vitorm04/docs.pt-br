@@ -2,12 +2,12 @@
 title: Modelo de objeto de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739359"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objeto de programação HTTP Web do WCF
 O modelo de programação WCF WEB HTTP permite que os desenvolvedores a expor serviços Web do Windows Communication Foundation (WCF) por meio de solicitações HTTP básicos sem a necessidade de SOAP. O modelo de programação WCF WEB HTTP é criado sobre o modelo de extensibilidade do WCF existente. Ele define as classes a seguir:  
@@ -51,7 +51,7 @@ O modelo de programação WCF WEB HTTP permite que os desenvolvedores a expor se
 |`ResponseFormat`|Controla como as mensagens de resposta são formatadas.|  
 |`UriTemplate`|Especifica o modelo URI que controla quais solicitações HTTP são mapeadas para a operação de serviço, que o atributo é aplicado.|  
   
-## <a name="webhttpbinding"></a>webHttpBinding  
+## <a name="webhttpbinding"></a>WebHttpBinding  
  O <xref:System.ServiceModel.WebHttpBinding> classe incorpora o suporte para XML, JSON e dados binários brutos usando o <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>. Ele é composto de um <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> e um <xref:System.ServiceModel.WebHttpSecurity> objeto. O <xref:System.ServiceModel.WebHttpBinding> foi projetado para ser usado em conjunto com o <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
 ## <a name="webinvokeattribute"></a>WebInvokeAttribute  
@@ -94,15 +94,15 @@ O modelo de programação WCF WEB HTTP permite que os desenvolvedores a expor se
  O <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> classe usa <xref:System.UriTemplate> e <xref:System.UriTemplateTable> classes para expedir as chamadas para operações de serviço.  
   
 ## <a name="compatibility"></a>Compatibilidade  
- O modelo de programação WCF WEB HTTP não usa mensagens com base em SOAP e, portanto, não oferece suporte a WS-* protocolos. No entanto, você pode expor o mesmo contrato pelo ponto de extremidade duas diferentes: uma usando SOAP e outro não usando SOAP. Ver [como: expor um contrato para clientes SOAP e da Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obter um exemplo.  
+ O modelo de programação WCF WEB HTTP não usa mensagens com base em SOAP e, portanto, não oferece suporte a WS-* protocolos. No entanto, você pode expor o mesmo contrato pelo ponto de extremidade duas diferentes: uma usando SOAP e outro não usando SOAP. Confira [Como Expor um contrato para clientes SOAP e da Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obter um exemplo.  
   
 ## <a name="security"></a>Segurança  
  Porque o modelo de programação WCF WEB HTTP não dá suporte a WS-* protocolos, a única maneira de proteger um serviço Web criado o modelo de programação do WCF WEB HTTP é expor seu serviço usando SSL. Para obter mais informações sobre como configurar o SSL com [!INCLUDE[iisver](../../../../includes/iisver-md.md)] consulte [como implementar o SSL no IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

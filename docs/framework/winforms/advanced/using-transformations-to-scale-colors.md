@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 6cfe90cef42086672990c45c99961db3d29c3ff3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff6172d571a7ca449ab21d1f7a7f9a699bf40f8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737969"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Usando transformações para ajustar a escala de cores
 Uma transformação de dimensionamento multiplica um ou mais dos quatro componentes de cor por um número. As entradas de matriz de cores que representam o dimensionamento são dadas na tabela a seguir.  
@@ -63,8 +63,8 @@ Uma transformação de dimensionamento multiplica um ou mais dos quatro componen
 |(1, 1, 0, 1)|(0.75, 0.65, 0, 1)|  
 |(1, 0, 1, 1)|(0.75, 0, 0.5, 1)|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Imaging.ColorMatrix>  
- <xref:System.Drawing.Imaging.ImageAttributes>  
- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Imaging.ColorMatrix>
+- <xref:System.Drawing.Imaging.ImageAttributes>
+- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)

@@ -2,15 +2,9 @@
 title: Consultas (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- queries [Visual Basic]
-- LINQ, queries
+  - 'queries [Visual Basic]'
+  - 'LINQ, queries'
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861605"
 ---
 # <a name="queries-visual-basic"></a>Consultas (Visual Basic)
 Visual Basic permite que você crie [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões no seu código.  
@@ -58,6 +52,6 @@ Visual Basic permite que você crie [!INCLUDE[vbteclinqext](~/includes/vbteclinq
  [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)  
  Descreve o `Where` cláusula que especifica uma condição de filtragem para uma consulta.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

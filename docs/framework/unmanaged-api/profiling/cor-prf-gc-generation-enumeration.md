@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8283139566050b1858a003316dc46581822a9bbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590127"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>Enumeração COR_PRF_GC_GENERATION
 Identifica uma geração de coleta de lixo.  
@@ -44,23 +44,23 @@ typedef enum {
 |`COR_PRF_GC_GEN_0`|O objeto é armazenado como geração 0.|  
 |`COR_PRF_GC_GEN_1`|O objeto é armazenado como geração 1.|  
 |`COR_PRF_GC_GEN_2`|O objeto é armazenado como geração 2.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|O objeto é armazenado no heap de objeto grande.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|O objeto é armazenado na heap de objeto grande.|  
   
 ## <a name="remarks"></a>Comentários  
- O coletor de lixo melhora o desempenho de gerenciamento de memória por objetos separam em gerações com base na idade. O coletor de lixo atualmente usa três gerações, numeradas de 0, 1 e 2, além de um segmento de pilha especial que é usado para objetos grandes. Objetos cujo tamanho é maior que um valor específico são armazenados no heap de objeto grande. Outros objetos alocados começam pertencentes a geração 0. Todos os objetos que existem após a coleta de lixo na geração 0 são promovidos para a geração 1. Movem objetos existentes após a coleta de lixo na geração 1 na geração 2.  
+ O coletor de lixo melhora o desempenho de gerenciamento de memória, divisão de objetos em gerações com base na idade. Atualmente, o coletor de lixo usa três gerações, numeradas de 0, 1 e 2, além de um segmento de heap especial que é usado para objetos grandes. Objetos cujo tamanho é maior do que um determinado valor são armazenados no heap de objeto grande. Outros objetos alocados começam que pertencem a geração 0. Todos os objetos que existem após a coleta de lixo na geração 0 são promovidos à geração 1. Movem objetos existentes após a coleta de lixo na geração 1 para a geração 2.  
   
- O uso de gerações significa que o coletor de lixo precisa trabalhar com apenas um subconjunto dos objetos alocados a qualquer momento.  
+ O uso de gerações significa que o coletor de lixo tem que trabalhar com apenas um subconjunto dos objetos alocados a qualquer momento.  
   
  O `COR_PRF_GC_GENERATION` enumeração é usada pelo [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) estrutura.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

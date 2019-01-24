@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674762"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de bitmaps
 Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz retangular de pixels. O número de bits dedicados a um pixel individual determina o número de cores que podem ser atribuídos a esse pixel. Por exemplo, se cada pixel é representado por 4 bits, em seguida, um determinado pixel pode ser atribuído um dos 16 cores diferentes (2^4 = 16). A tabela a seguir mostra alguns exemplos do número de cores que podem ser atribuídos a um pixel representado por um determinado número de bits.  
@@ -39,7 +39,7 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
 |16|2^16 = 65.536|  
 |24|2^24 = 16,777,216|  
   
- Arquivos de disco que armazenam os bitmaps geralmente contêm um ou mais blocos de informações que armazenam informações como o número de bits por pixel, o número de pixels em cada linha e o número de linhas na matriz. Esse arquivo também pode conter uma tabela de cores (às vezes chamada de uma paleta de cores). Uma tabela de cores mapeia os números no bitmap para cores específicas. A ilustração a seguir mostra uma imagem ampliada juntamente com sua tabela de cores e bitmap. Cada pixel é representado por um número de 4 bits, portanto, existem 2^4 = 16 cores na tabela de cores. Cada cor na tabela é representada por um número de 24 bits: 8 bits para vermelho, 8 bits para verde e 8 bits para azul. Os números são exibidos em formato hexadecimal (base 16): um = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
+ Arquivos de disco que armazenam os bitmaps geralmente contêm um ou mais blocos de informações que armazenam informações como o número de bits por pixel, o número de pixels em cada linha e o número de linhas na matriz. Esse arquivo também pode conter uma tabela de cores (às vezes chamada de uma paleta de cores). Uma tabela de cores mapeia os números no bitmap para cores específicas. A ilustração a seguir mostra uma imagem ampliada juntamente com sua tabela de cores e bitmap. Cada pixel é representado por um número de 4 bits, portanto, existem 2^4 = 16 cores na tabela de cores. Cada cor na tabela é representada por um número de 24 bits: 8 bits para vermelho, 8 bits para verde e 8 bits para azul. Os números são exibidos em formato hexadecimal (base 16): A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
  ![Exemplo de bitmap](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
@@ -85,9 +85,9 @@ Um bitmap é uma matriz de bits que especifica a cor de cada pixel em uma matriz
 ### <a name="tag-image-file-format-tiff"></a>Formato Tag Image File (TIFF)  
  TIFF é um formato flexível e extensível que tem suporte em uma ampla variedade de plataformas e aplicativos de processamento de imagem. Arquivos TIFF podem armazenar imagens com um número arbitrário de bits por pixel e podem empregar uma variedade de algoritmos de compactação. Várias imagens podem ser armazenadas em um único arquivo TIFF de várias páginas. Informações relacionadas à imagem (marca de scanner, computador host, tipo de compactação, orientação, amostras por pixel e assim por diante) podem ser armazenadas no arquivo e organizadas com o uso de marcas. O formato TIFF pode ser estendido conforme necessário para a aprovação e a adição de novas marcas.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Image?displayProperty=nameWithType>  
- <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
- <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>  
- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Image?displayProperty=nameWithType>
+- <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
+- <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
+- [Imagens, bitmaps e metarquivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

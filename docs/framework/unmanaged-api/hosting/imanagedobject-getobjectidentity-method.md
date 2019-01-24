@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1975e5bf20453a3bcd6761d9734be7ddd2ceef7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fbc4abe55d59c3140c5c180d5844404e357e3a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586294"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>Método IManagedObject::GetObjectIdentity
 Obtém a identidade do objeto gerenciado.  
@@ -42,22 +42,22 @@ HRESULT GetObjectIdentity (
  [out] Um ponteiro para o GUID do processo no qual o objeto reside.  
   
  `AppDomainID`  
- [out] Um ponteiro para a ID de domínio de aplicativo do objeto.  
+ [out] Um ponteiro para a ID do objeto domínio do aplicativo.  
   
  `pCCW`  
- [out] Um ponteiro para o índice do objeto do COM clássico tabela v.  
+ [out] Um ponteiro para o índice do objeto no COM clássico tabela v.  
   
 ## <a name="remarks"></a>Comentários  
- A identidade de um objeto gerenciado inclui o GUID do processo, ID de domínio de aplicativo e o índice do objeto da COM clássica tabela v.  
+ A identidade de um objeto gerenciado inclui o GUID do processo, ID de domínio do aplicativo e o índice do objeto no COM clássica tabela v.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IManagedObject](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IManagedObject](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

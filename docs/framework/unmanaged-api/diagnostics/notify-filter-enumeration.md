@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fcd1d7fb1fdcd8b1ad1abf159a7828e51be392a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735760"
 ---
 # <a name="notifyfilter-enumeration"></a>Enumeração NOTIFY_FILTER
-Identifica os retornos de chamada para funções do depurador. Para obter mais informações, consulte o [Inotifysource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) método.  
+Identifica os retornos de chamada para funções do depurador. Para obter mais informações, consulte o [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,16 +45,16 @@ enum tagNOTIFY_FILTER
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indica que o [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) método deve ser invocado.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indica que o [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) método deve ser invocado.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indica que o [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) método deve ser invocado.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indica que o [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) método deve ser invocado.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indica que o [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) método deve ser invocado.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indica que o [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) método deve ser invocado.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indica que o [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) método deve ser invocado.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indica que o [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) método deve ser invocado.|  
 |`NOTIFY_FILTER_ALLSYNC`|Indica que todos os [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) métodos devem ser chamados.|  
-|`NOTIFY_FILTER_ALL`|Ativa todas as notificações existentes e futuras.|  
+|`NOTIFY_FILTER_ALL`|Ativa todas as notificações de futuras e existentes.|  
 |`NOTIFY_FILTER_NONE`|Indica que nenhum método de notificação deve ser chamado.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

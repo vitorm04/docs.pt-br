@@ -2,12 +2,12 @@
 title: Detalhes de implementação de protocolo do WCF Data Services
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728746"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Detalhes de implementação de protocolo do WCF Data Services
 ## <a name="odata-protocol-implementation-details"></a>Detalhes de implementação do protocolo OData  
@@ -22,6 +22,6 @@ ms.locfileid: "47195674"
 ### <a name="default-sorting-behavior"></a>Comportamento de classificação padrão  
  Quando uma solicitação de consulta é enviada para o serviço de dados inclui um `$top` ou `$skip` opção de consulta de sistema e não inclui o `$orderby` opção de consulta do sistema, o feed retornado é classificada pelas propriedades de chave, em ordem crescente. Isso ocorre porque a ordenação é necessária para garantir a correta de paginação de resultados. Para fazer isso, o serviço de dados adiciona uma expressão de classificação na consulta. Esse comportamento também ocorre quando a paginação orientado para servidor está habilitada no serviço de dados. Para obter mais informações, consulte [Configurando o serviço de dados](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Para controlar a ordenação de feed retornado, você deve incluir `$orderby` no URI de consulta.  
   
-## <a name="see-also"></a>Consulte também  
- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)  
- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+## <a name="see-also"></a>Consulte também
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

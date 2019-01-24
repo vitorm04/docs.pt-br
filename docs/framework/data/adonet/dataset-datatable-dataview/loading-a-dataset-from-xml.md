@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 7fb00046eb9ab92ed2514cd7615c41ea40124de9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594909"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Carregando um DataSet a partir de XML
 O conteúdo de um <xref:System.Data.DataSet> ADO.NET pode ser criado de um fluxo ou documento XML. Além disso, com o .NET Framework, você tem grande flexibilidade sobre quais informações são carregadas do XML e como o esquema ou estrutura relacional do <xref:System.Data.DataSet> é criado.  
   
- Para preencher uma <xref:System.Data.DataSet> com dados de XML, use o **ReadXml** método da <xref:System.Data.DataSet> objeto. O **ReadXml** método lê de um arquivo, um fluxo ou um **XmlReader**e utiliza como argumentos a origem do XML mais um recurso opcional **XmlReadMode** argumento. (Para obter mais informações sobre o **XmlReader**, consulte [NIB: leitura de dados XML com XmlTextReader](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) O **ReadXml** método lê o conteúdo do fluxo XML ou documento e carrega o <xref:System.Data.DataSet> com os dados. Ele também criará o esquema relacional do <xref:System.Data.DataSet> dependendo a **XmlReadMode** especificado e se existe ou não um esquema relacional já.  
+ Para preencher uma <xref:System.Data.DataSet> com dados de XML, use o **ReadXml** método da <xref:System.Data.DataSet> objeto. O **ReadXml** método lê de um arquivo, um fluxo ou um **XmlReader**e utiliza como argumentos a origem do XML mais um recurso opcional **XmlReadMode** argumento. (Para obter mais informações sobre o **XmlReader**, consulte [NIB: Lendo dados XML com XmlTextReader](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) O **ReadXml** método lê o conteúdo do fluxo XML ou documento e carrega o <xref:System.Data.DataSet> com os dados. Ele também criará o esquema relacional do <xref:System.Data.DataSet> dependendo a **XmlReadMode** especificado e se existe ou não um esquema relacional já.  
   
  A tabela a seguir descreve as opções para o **XmlReadMode** argumento.  
   
@@ -115,12 +115,12 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="merging-data-from-xml"></a>Mesclando dados de XML  
  Se o <xref:System.Data.DataSet> já contiver dados, os novos dados XML serão adicionados aos dados já presentes no <xref:System.Data.DataSet>. **ReadXml** não mescla do XML para o <xref:System.Data.DataSet> qualquer informação de linha com as chaves primárias correspondentes. Para substituir as informações de linha existentes por novas informações de XML, use **ReadXml** para criar uma nova <xref:System.Data.DataSet>e então <xref:System.Data.DataSet.Merge%2A> nova <xref:System.Data.DataSet> à existente <xref:System.Data.DataSet>. Observe que carregar um DiffGram usando **ReadXML** com um **XmlReadMode** dos **DiffGram** mesclará as linhas que têm o mesmo identificador exclusivo.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>  
- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)  
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [Derivando a estrutura relacional do DataSet do esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [Carregando informações de esquema de conjunto de dados de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
+- [Using XML in a DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)
+- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
+- [Derivando a estrutura relacional do conjunto de dados de esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Derivando a estrutura relacional do DataSet do esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [Carregando informações de esquema de conjunto de dados de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

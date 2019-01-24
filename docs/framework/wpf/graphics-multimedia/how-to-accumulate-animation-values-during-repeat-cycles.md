@@ -1,22 +1,22 @@
 ---
-title: Como acumular valores de animação durante ciclos de repetição
+title: 'Como: Acumular valores de animação durante ciclos de repetição'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: 7b954a388549f1bc6f3fa6ec1bcb2df61cc4e045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e98b7eefd0c30e728b60926096c0f082bc079ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587275"
 ---
-# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Como acumular valores de animação durante ciclos de repetição
+# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Como: Acumular valores de animação durante ciclos de repetição
 Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propriedade para acumular valores de animação entre ciclos de repetição.  
   
 ## <a name="example"></a>Exemplo  
- Use o <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propriedade acumular valores de base de uma animação entre ciclos de repetição. Por exemplo, se você definir uma animação para repetir 9 vezes (<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> = "9x") e você definir a propriedade para animar entre 10 e 15 (de = 10 para = 15), a propriedade anima de 10 a 15 durante o primeiro ciclo, de 15 a 20 durante o segundo ciclo , de 20 a 25 durante o ciclo de terceiro e assim por diante. Portanto, cada ciclo de animação usa o valor final de animação do ciclo de animação anterior como seu valor de base.  
+ Use o <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> propriedade para acumular valores de base de uma animação entre ciclos de repetição. Por exemplo, se você definir uma animação para repetir 9 vezes (<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> = "9x") e você definir a propriedade para animar entre 10 e 15 (From = 10 To = 15), a propriedade anima de 10 a 15 durante o primeiro ciclo, de 15 a 20 durante o segundo ciclo , de 20 a 25 durante o terceiro ciclo e assim por diante. Portanto, cada ciclo de animação usa o valor final de animação do ciclo de animação anterior como seu valor de base.  
   
  Você pode usar a propriedade `IsCumulative` com animações mais básicas e a maioria das animações de quadro-chave. Para obter mais informações, consulte [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) e [Visão geral de animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
@@ -32,9 +32,9 @@ Este exemplo mostra como usar o <xref:System.Windows.Media.Animation.DoubleAnima
   
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
-## <a name="see-also"></a>Consulte também  
- [Adicionar um valor de saída da animação a um valor inicial de animação](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Repetir uma animação](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- [Adicionar um valor de saída da animação a um valor inicial de animação](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
+- [Repetir uma animação](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

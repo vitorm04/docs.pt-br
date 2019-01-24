@@ -1,15 +1,15 @@
 ---
-title: Particionamento de dados (Visual Basic)
+title: O particionamento de dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 17e929d3c95e079a0a73b8e8cadf51d3ece6f5f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbbd479d3dadd69b81cdd6aead0a4263b92dfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645906"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728262"
 ---
-# <a name="partitioning-data-visual-basic"></a>Particionamento de dados (Visual Basic)
+# <a name="partitioning-data-visual-basic"></a>O particionamento de dados (Visual Basic)
 Particionamento em LINQ refere-se à operação de dividir uma sequência de entrada em duas seções sem reorganizar os elementos e, depois, retornar uma das seções.  
   
  A ilustração a seguir mostra os resultados de três operações de particionamento diferentes em uma sequência de caracteres. A primeira operação retorna os três primeiros elementos na sequência. A segunda operação ignora os três primeiros elementos e retorna os elementos restantes. A terceira operação ignora os dois primeiros elementos na sequência e retorna os três elementos seguintes.  
@@ -35,7 +35,7 @@ Particionamento em LINQ refere-se à operação de dividir uma sequência de ent
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- O seguinte exemplo de código usa o `Skip While` cláusula no Visual Basic para ignorar as cadeias de caracteres em uma matriz durante a primeira letra da cadeia de caracteres "a". As cadeias de caracteres restantes na matriz são retornadas.  
+ O seguinte exemplo de código usa o `Skip While` cláusula no Visual Basic para ignorar as cadeias de caracteres em uma matriz enquanto a primeira letra da cadeia de caracteres é "a". As cadeias de caracteres restantes na matriz são retornadas.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
@@ -49,10 +49,10 @@ Particionamento em LINQ refere-se à operação de dividir uma sequência de ent
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>  
- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Cláusula Skip](../../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Cláusula Skip While](../../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Cláusula Take](../../../../visual-basic/language-reference/queries/take-clause.md)  
- [Cláusula Take While](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Linq>
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cláusula Skip](../../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Cláusula Skip While](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Cláusula Take](../../../../visual-basic/language-reference/queries/take-clause.md)
+- [Cláusula Take While](../../../../visual-basic/language-reference/queries/take-while-clause.md)

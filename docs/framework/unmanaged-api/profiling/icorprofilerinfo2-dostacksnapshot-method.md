@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727268"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Método ICorProfilerInfo2::DoStackSnapshot
 Orienta os quadros gerenciados na pilha para o thread especificado e envia informações para o criador de perfil por meio de um retorno de chamada.  
@@ -100,14 +100,14 @@ HRESULT DoStackSnapshot(
  Também há um risco de deadlock se você chamar `DoStackSnapshot` de um thread que seu gerador de perfil foi criado para que você pode movimentar a pilha de um thread de destino separado. Na primeira vez que o thread que você criou entra em determinados `ICorProfilerInfo*` métodos (incluindo `DoStackSnapshot`), o CLR realizará a inicialização por thread, CLR específico nesse thread. Se seu gerador de perfil suspendeu cuja pilha está tentando movimentar o thread-alvo, e se esse thread-alvo aconteceu possua um bloqueio necessário para realizar essa inicialização por thread, ocorrerá um deadlock. Para evitar esse deadlock, faça uma chamada inicial em `DoStackSnapshot` de seu thread criado pelo criador de perfil para movimentar um separado thread de destino, mas não suspender o thread de destino primeiro. Essa chamada inicial garante que a inicialização por thread pode ser concluída sem deadlock. Se `DoStackSnapshot` for bem-sucedida e relata a pelo menos um quadro, após esse ponto, será seguro para que esse thread criado pelo criador de perfil de suspender qualquer thread-alvo e chamada `DoStackSnapshot` para movimentar a pilha do thread-alvo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, Corprof.  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

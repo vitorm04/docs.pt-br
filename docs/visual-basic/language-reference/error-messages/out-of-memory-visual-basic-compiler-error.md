@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 543dfa8900fb14b30f6e70cdd0b4d281cc52708d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0efebfaa9c922ea7b72a7c4314801eb2c35dda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595520"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>Sem memória (erro do compilador do Visual Basic)
-Foi necessária que a disponível mais memória.  
+Mais memória era necessária, que está disponível.  
   
  **ID do erro:** BC2004  
   
@@ -23,15 +23,15 @@ Foi necessária que a disponível mais memória.
   
 -   Feche os aplicativos desnecessários, documentos e arquivos de origem.  
   
--   Eliminar controles e formulários desnecessários pois menos são carregados de uma vez  
+-   Eliminar formulários e controles desnecessário, pois menos são carregados ao mesmo tempo  
   
--   Reduza o número de `Public` variáveis.  
+-   Reduzir o número de `Public` variáveis.  
   
 -   Verifique o espaço em disco disponível.  
   
--   Aumente a RAM disponível instalando memória adicional ou realocando memória.  
+-   Aumente a RAM disponível ao instalar memória adicional ou realocar a memória.  
   
 -   Certifique-se de que a memória é liberada quando ele não for mais necessário.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Consulte também
+- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)

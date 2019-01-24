@@ -3,12 +3,12 @@ title: '&lt;nameClaimType&gt;'
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: bd4033b2edea7450b66c25f446669b3ded65e9af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 502fc5dd14d7bc3d979153607e1eeeb9354031bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737423"
 ---
 # <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
 Define o tipo de declaração que especifica o <xref:System.Security.Principal.IIdentity.Name%2A> propriedade. O tipo de declaração é usado para pesquisar um <xref:System.Security.Claims.Claim> na coleção de <xref:System.Security.Claims.ClaimsIdentity> objetos retornados pelo <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> método desse manipulador de token. O valor da declaração correspondente, em seguida, é definido como o nome da <xref:System.Security.Principal.IIdentity> gerado deste manipulador de token.  
@@ -17,8 +17,8 @@ Define o tipo de declaração que especifica o <xref:System.Security.Principal.I
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<samlSecurityTokenRequirement >  
-\<nameClaimType >  
+\<samlSecurityTokenRequirement>  
+\<nameClaimType>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -68,5 +68,5 @@ Define o tipo de declaração que especifica o <xref:System.Security.Principal.I
 </add>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

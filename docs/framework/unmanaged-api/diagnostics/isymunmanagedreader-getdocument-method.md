@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738099"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>Método ISymUnmanagedReader::GetDocument
-Localiza um documento. O idioma do documento, o fornecedor e o tipo são opcionais.  
+Localiza um documento. O idioma do documento, fornecedor e tipo são opcionais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +52,7 @@ HRESULT GetDocument (
  [in] O tipo do documento. Esse parâmetro é opcional.  
   
  `pRetVal`  
- [out] Um ponteiro para a interface retornado.  
+ [out] Um ponteiro para a interface retornada.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -60,5 +60,5 @@ HRESULT GetDocument (
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

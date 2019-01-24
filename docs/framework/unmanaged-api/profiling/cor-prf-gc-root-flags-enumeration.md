@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4ce8fb8d9d941544982c8da852260b8018788a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680735"
 ---
 # <a name="corprfgcrootflags-enumeration"></a>Enumeração COR_PRF_GC_ROOT_FLAGS
 Indica uma propriedade de uma raiz de coleta de lixo.  
@@ -41,22 +41,22 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|A raiz impede uma coleta de lixo de mover o objeto.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|A raiz não impede que a coleta de lixo.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|A raiz refere-se a um campo do objeto, em vez do próprio objeto.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|A raiz impede que a coleta de lixo se a contagem de referência do objeto é um determinado valor.|  
+|`COR_PRF_GC_ROOT_PINNING`|A raiz impede que uma coleta de lixo mova o objeto.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|A raiz não impede a coleta de lixo.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|A raiz refere-se a um campo de objeto em vez do próprio objeto.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|A raiz impede a coleta de lixo se a contagem de referência do objeto é um valor determinado.|  
   
 ## <a name="remarks"></a>Comentários  
- `COR_PRF_GC_ROOT_FLAGS` é um bitmask que fornece informações adicionais sobre raízes especiais. No entanto, nem todas as raízes são especiais. Por exemplo, alguns raízes não são referências fracas, ponteiros internos, fixos ou contado por referência. Para tal raízes, não há nenhum sinalizador para transmitir. Portanto, os métodos que usam essa enumeração, como o [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) método send 0 para a máscara de bits de sinalizadores indicando que todos os sinalizadores são desativados.  
+ `COR_PRF_GC_ROOT_FLAGS` é um bitmask que fornece informações adicionais sobre raízes especiais. No entanto, nem todas as raízes são especiais. Por exemplo, alguns raízes não são referências fracas, ponteiros interiores, fixos ou contado por referência. Para tais raízes, não há nenhum sinalizador para transmitir. Portanto, os métodos que usam essa enumeração, como o [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) método, envio de 0 para a máscara de bits de sinalizadores, indicando que todos os sinalizadores são desativados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

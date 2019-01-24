@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee808ba403a513b897134420b45ebe8cd3537571
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9ed3cdac726fbdbf9ee2b33f42565d8594bc36e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669673"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>Enumeração CorLocalRefPreservation
-Contém valores de sinalizador para o tratamento de referências de locais.  
+Contém valores de sinalizador para o tratamento das referências locais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,16 +41,16 @@ typedef enum CorLocalRefPreservation
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`MDPreserveLocalRefsNone`|Não preserve nenhuma referência de local.|  
+|`MDPreserveLocalRefsNone`|Não preserve nenhuma referência local.|  
 |`MDPreserveLocalTypeRef`|Preserve as referências de tipo local.|  
-|`MDPreserveLocalMemberRef`|Preserve referências de membro local.|  
+|`MDPreserveLocalMemberRef`|Preserve as referências de membro local.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

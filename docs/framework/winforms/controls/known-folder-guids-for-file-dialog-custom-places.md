@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679390"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
-Você usa um <xref:System.Guid> para especificar um [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pasta conhecidos quando você adicionar pastas para um <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção. GUIDs de pasta conhecida não diferenciam maiúsculas de minúsculas e são definidas no arquivo KnownFolders.h no [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Você usa um <xref:System.Guid> para especificar um [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pasta conhecida ao adicionar pastas para um <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção. GUIDs de pasta conhecida não diferenciam maiúsculas de minúsculas e são definidas no arquivo KnownFolders.h no [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
->  Em alguns casos, uma pasta conhecida adicionados para o <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> não serão mostradas no **Links Favoritos** área. Por exemplo, se a pasta conhecida especificada não estiver presente no computador que está executando o aplicativo, a pasta conhecia não será mostrada.  
+>  Em alguns casos, uma pasta conhecida adicionada para o <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> não serão mostrados na **Links Favoritos** área. Por exemplo, se a pasta conhecida especificada não estiver presente no computador que está executando o aplicativo, a pasta conhecia não será mostrada.  
   
 ## <a name="list-of-guids"></a>Lista de GUIDs  
- A seguinte tabela lista [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pastas conhecido e seus respectivos <xref:System.Guid>.  
+ A seguinte tabela lista [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pastas conhecidas e seus respectivos <xref:System.Guid>.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -286,6 +286,6 @@ Você usa um <xref:System.Guid> para especificar um [!INCLUDE[wiprlhext](../../.
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Como adicionar um local personalizado para uma caixa de diálogo Arquivo](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [Como: Adicionar um local personalizado para uma caixa de diálogo de arquivo](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

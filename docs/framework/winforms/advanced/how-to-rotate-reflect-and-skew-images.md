@@ -1,5 +1,5 @@
 ---
-title: Como girar, refletir e distorcer imagens
+title: 'Como: Girar, refletir e distorcer imagens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 7f580b4d3016f1ecedc33302fe57caeec5698aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2150e7797095b88227b499ec5481a3ce521270e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667905"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>Como girar, refletir e distorcer imagens
+# <a name="how-to-rotate-reflect-and-skew-images"></a>Como: Girar, refletir e distorcer imagens
 Você pode girar, refletir e distorcer uma imagem especificando pontos de destino para os cantos superior esquerdo, superior direito e inferior esquerdo da imagem original. Os três pontos de destino determinam uma transformação afim que mapeia a imagem retangular original para um paralelogramo.  
   
 ## <a name="example"></a>Exemplo  
@@ -46,7 +46,7 @@ Você pode girar, refletir e distorcer uma imagem especificando pontos de destin
  [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `Stripes.bmp` pelo caminho até uma imagem válida no seu sistema.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos. Substitua `Stripes.bmp` pelo caminho até uma imagem válida no seu sistema.  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Consulte também
+- [Trabalhando com Imagens, Bitmaps, Ícones e Metarquivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,15 +1,15 @@
 ---
-title: Gerenciamento de simultaneidade com DependentTransaction
+title: Gerenciando a simultaneidade com DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664454"
 ---
-# <a name="managing-concurrency-with-dependenttransaction"></a>Gerenciamento de simultaneidade com DependentTransaction
+# <a name="managing-concurrency-with-dependenttransaction"></a>Gerenciando a simultaneidade com DependentTransaction
 O <xref:System.Transactions.Transaction> objeto é criado usando o <xref:System.Transactions.Transaction.DependentClone%2A> método. Sua única finalidade é garantir que a transação não confirmada enquanto alguns outros trechos de código (por exemplo, um thread de trabalho) ainda estão executando o trabalho na transação. Quando o trabalho realizado dentro da transação clonada é concluído e pronto para ser confirmada, ele pode notificar o criador da transação usando o <xref:System.Transactions.DependentTransaction.Complete%2A> método. Portanto, você pode preservar a consistência e correção dos dados.  
   
  O <xref:System.Transactions.DependentTransaction> classe também pode ser usada para gerenciar a simultaneidade entre tarefas assíncronas. Nesse cenário, o pai pode continuar a executar qualquer código enquanto o clone dependente funciona em suas tarefas. Em outras palavras, a execução do pai não é bloqueada até que o dependente é concluída.  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  O `ThreadMethod` método é executado no novo segmento. O cliente inicia um novo thread, passando a transação dependente como o `ThreadMethod` parâmetro.  
   
- Como a transação dependente é criada com <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, terá a garantia de que a transação não pode ser confirmada até que todos os do trabalho transacional feito no segundo thread é concluído e <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado na transação dependente. Isso significa que, se o escopo do cliente termina (quando ele tenta descartar o objeto de transação no final de **usando** instrução) antes da chamada de thread novo <xref:System.Transactions.DependentTransaction.Complete%2A> na transação dependente, o código do cliente bloqueia até <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado em dependente. Em seguida, a transação pode concluir a confirmação ou anulação.  
+ Como a transação dependente é criada com <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, terá a garantia de que a transação não pode ser confirmada até que todos os do trabalho transacional feito no segundo thread é concluído e <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado na transação dependente. Isso significa que, se o escopo do cliente termina (quando ele tenta descartar o objeto de transação no final o **usando** instrução) antes do novo thread chama <xref:System.Transactions.DependentTransaction.Complete%2A> na transação dependente, o código do cliente bloqueia até <xref:System.Transactions.DependentTransaction.Complete%2A> é chamado em dependente. Em seguida, a transação pode concluir a confirmação ou anulação.  
   
 ## <a name="concurrency-issues"></a>Problemas de simultaneidade  
  Existem alguns problemas de simultaneidade adicionais que precisam ser consideradas ao usar o <xref:System.Transactions.DependentTransaction> classe:  
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   Se o thread de trabalho gera um novo thread de trabalho, certifique-se de criar um clone dependente do clone dependente e passá-lo para o novo thread.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Transactions.DependentTransaction>

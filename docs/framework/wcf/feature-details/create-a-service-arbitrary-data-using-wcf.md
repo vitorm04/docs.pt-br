@@ -1,20 +1,20 @@
 ---
-title: Como criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
+title: 'Como: Criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666992"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
-Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato não tem suporte a byWCF. Este tópico discute como usar o modelo de programação WCF REST para criar um serviço que recebe dados arbitrários.  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Como: Criar um serviço que aceita dados arbitrários usando o modelo de programação WCF REST
+Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato não tem suporte byWCF. Este tópico discute usando o modelo de programação WCF REST para criar um serviço que recebe dados arbitrários.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
   
-1.  Defina o contrato de serviço. A operação que recebe os dados arbitrários deve ter um parâmetro do tipo <xref:System.IO.Stream>. Além disso, esse parâmetro deve ser o único parâmetro passado no corpo da solicitação. A operação descrita neste exemplo também usa um parâmetro de nome de arquivo. Este parâmetro é passado na URL da solicitação. Você pode especificar que um parâmetro é passado na URL de especificando um <xref:System.UriTemplate> no <xref:System.ServiceModel.Web.WebInvokeAttribute>. Nesse caso, que o URI usado para chamar esse método termina em "UploadFile/alguns-nome de arquivo". A parte "{filename}" do modelo de URI especifica que o parâmetro de nome de arquivo para a operação é passado no URI usado para chamar a operação.  
+1.  Defina o contrato de serviço. A operação que recebe os dados arbitrários deve ter um parâmetro de tipo <xref:System.IO.Stream>. Além disso, esse parâmetro deve ser o único parâmetro passado no corpo da solicitação. A operação descrita neste exemplo também usa um parâmetro de nome de arquivo. Este parâmetro é passado na URL da solicitação. Você pode especificar que um parâmetro é passado na URL, especificando um <xref:System.UriTemplate> no <xref:System.ServiceModel.Web.WebInvokeAttribute>. Nesse caso, que o URI usado para chamar esse método termina em "UploadFile/alguns-nome do arquivo". A parte "{filename}" do modelo de URI especifica que o parâmetro de nome de arquivo para a operação é passado no URI usado para chamar a operação.  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ ms.locfileid: "33494157"
     }  
     ```  
   
-2.  Implemente o contrato de serviço. O contrato tem apenas um método, `UploadFile` que recebe um arquivo de dados arbitrários em um fluxo. A operação lê o fluxo de contar o número de bytes lidos e, em seguida, exibe o nome do arquivo e o número de bytes lidos.  
+2.  Implemente o contrato de serviço. O contrato tem apenas um método, `UploadFile` que recebe um arquivo de dados arbitrários em um fluxo. A operação lê o fluxo de contagem do número de bytes lidos e, em seguida, exibe o nome do arquivo e o número de bytes lidos.  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -57,19 +57,19 @@ ms.locfileid: "33494157"
     }  
     ```  
   
-2.  Criar uma variável para conter o endereço base para o serviço dentro do `Main` método.  
+2.  Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço que especifica a classe de serviço e o endereço base.  
+3.  Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço que especifica a classe de serviço e o endereço básico.  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  Adicionar um ponto de extremidade que especifica o contrato, <xref:System.ServiceModel.WebHttpBinding>, e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4.  Adicionar um ponto de extremidade que especifica o contrato <xref:System.ServiceModel.WebHttpBinding>, e <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
@@ -82,15 +82,15 @@ ms.locfileid: "33494157"
     Console.WriteLine("Host opened");  
     ```  
   
-### <a name="to-call-the-service-programmatically"></a>Para chamar o serviço programaticamente  
+### <a name="to-call-the-service-programmatically"></a>Para chamar o serviço de forma programática  
   
-1.  Criar um <xref:System.Net.HttpWebRequest> com o URI usado para chamar o serviço. Nesse código, o endereço base é combinado com `"/UploadFile/Text"`. O `"UploadFile"` parte do URI especifica a operação a ser chamada. O `"Test.txt"` parte do URI especifica o parâmetro de nome de arquivo para passar para o `UploadFile` operação. Ambos esses itens do mapa para o <xref:System.UriTemplate> aplicados ao contrato de operação.  
+1.  Criar um <xref:System.Net.HttpWebRequest> com o URI usado para chamar o serviço. Nesse código, o endereço base é combinado com `"/UploadFile/Text"`. O `"UploadFile"` parte do URI especifica a operação para chamar. O `"Test.txt"` parte do URI especifica o parâmetro de nome de arquivo para passar para o `UploadFile` operação. Ambos esses itens do mapa para o <xref:System.UriTemplate> aplicados ao contrato de operação.  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  Definir o <xref:System.Net.HttpWebRequest.Method%2A> propriedade do <xref:System.Net.HttpWebRequest> para `POST` e o <xref:System.Net.HttpWebRequest.ContentType%2A> propriedade `"text/plain"`. Isso informa ao serviço que o código de envio de dados e que dados em texto sem formatação.  
+2.  Defina a <xref:System.Net.HttpWebRequest.Method%2A> propriedade do <xref:System.Net.HttpWebRequest> para `POST` e o <xref:System.Net.HttpWebRequest.ContentType%2A> propriedade para `"text/plain"`. Isso instrui o serviço que o código está enviando dados e são de que os dados em texto sem formatação.  
   
     ```csharp  
     req.Method = "POST";  
@@ -191,9 +191,9 @@ namespace ReceiveRawData
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
--   Ao compilar a referência de código System.ServiceModel.dll e System  
+-   Ao compilar o ServiceModel e referência de código de ServiceModel  
   
-## <a name="see-also"></a>Consulte também  
- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Consulte também
+- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

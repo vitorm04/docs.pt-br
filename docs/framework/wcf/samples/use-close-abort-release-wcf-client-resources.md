@@ -3,12 +3,12 @@ title: Use fechar e anular para liberar recursos de cliente do WCF
 description: Dispose pode falhar e lançar exceções quando ocorre falha na rede. Isso pode causar um comportamento indesejado. Em vez disso, use fechar e anular para liberar recursos de cliente quando a falha da rede.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736423"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Fechar e anular liberar recursos com segurança quando as conexões de rede tem sido descartado
 Este exemplo demonstra como usar o `Close` e `Abort` métodos para limpar os recursos ao usar um cliente com tipo. O `using` instrução faz com que exceções quando a conexão de rede não é robusto. Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o cliente é um aplicativo de console (.exe) e o serviço é hospedado pelo Internet Information Services (IIS).  

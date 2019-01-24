@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672052"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>Método IMetaDataImport::GetPropertyProps
-Obtém os metadados da propriedade representada pelo token especificado.  
+Obtém os metadados para a propriedade representada pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,10 +61,10 @@ HRESULT GetPropertyProps (
  [out] Um buffer para armazenar o nome da propriedade.  
   
  `cchProperty`  
- [in] O tamanho em caracteres largos de `szProperty`.  
+ [in] O tamanho em caracteres largos da `szProperty`.  
   
  `pchProperty`  
- [out] O número de caracteres largos retornados em `szProperty`.  
+ [out] O número de caracteres largos retornado no `szProperty`.  
   
  `pdwPropFlags`  
  [out] Um ponteiro para os sinalizadores de atributo aplicado à propriedade. Esse valor é um bitmask do [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeração.  
@@ -76,13 +76,13 @@ HRESULT GetPropertyProps (
  [out] O número de bytes retornados em `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Um sinalizador que especifica o tipo de constante que é o valor padrão da propriedade. Esse valor é da enumeração CorElementType.  
+ [out] Um sinalizador que especifica o tipo da constante que é o valor padrão da propriedade. Esse valor é da enumeração CorElementType.  
   
  `ppDefaultValue`  
- [out] Um ponteiro para os bytes que armazena o valor padrão para essa propriedade.  
+ [out] Um ponteiro para os bytes que armazenam o valor padrão para essa propriedade.  
   
  `pcchDefaultValue`  
- [out] O tamanho em caracteres largos de `ppDefaultValue`, se `pdwCPlusTypeFlag` é ELEMENT_TYPE_STRING; caso contrário, esse valor não é relevante. Nesse caso, o comprimento de `ppDefaultValue` é inferido do tipo especificado pelo `pdwCPlusTypeFlag`.  
+ [out] O tamanho em caracteres largos da `ppDefaultValue`, se `pdwCPlusTypeFlag` é ELEMENT_TYPE_STRING; caso contrário, esse valor não é relevante. Nesse caso, o comprimento da `ppDefaultValue` é inferido do tipo especificado pelo `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
  [out] Um ponteiro para o token MethodDef que representa o método de acessador set da propriedade.  
@@ -91,23 +91,23 @@ HRESULT GetPropertyProps (
  [out] Um ponteiro para o token MethodDef que representa o método de acessador get da propriedade.  
   
  `rmdOtherMethod`  
- [out] Uma matriz de MethodDef tokens que representam os outros métodos associados à propriedade.  
+ [out] Uma matriz de MethodDef tokens que representam outros métodos associados à propriedade.  
   
  `cMax`  
- [in] O tamanho máximo da `rmdOtherMethod` matriz. Se você não fornecer uma matriz grande o suficiente para manter todos os métodos, eles serão ignorados sem aviso.  
+ [in] O tamanho máximo da `rmdOtherMethod` matriz. Se você não fornecer uma matriz grande o suficiente para conter todos os métodos, eles serão ignorados sem aviso.  
   
  `pcOtherMethod`  
- [out] O número de tokens de MethodDef retornados em `rmdOtherMethod`.  
+ [out] O número de tokens MethodDef retornado no `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

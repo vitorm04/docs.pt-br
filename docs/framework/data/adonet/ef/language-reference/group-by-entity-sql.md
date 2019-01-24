@@ -2,15 +2,15 @@
 title: AGRUPAR POR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 3b5edee08afef8418f19df433223818218ae909d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763180"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740561"
 ---
 # <a name="group-by-entity-sql"></a>AGRUPAR POR (Entity SQL)
-Especifica os grupos no qual os objetos retornados por uma consulta ([selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expressão devem ser colocados.  
+Especifica os grupos nos quais os objetos retornados por uma consulta ([selecionar](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expressão devem ser colocados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,7 +46,7 @@ Especifica os grupos no qual os objetos retornados por uma consulta ([selecione]
   
  `GROUP BY o.Product as name`  
   
- Esta consulta usa o cláusula GROUP BY para gerar um relatório de custo de todos os produtos ordenados, subproduto dividido. Ele fornece o nome `name` para o produto como parte da expressão de agrupamento e referências de nome na lista de seleção. Ela também especifica a agregação `sum` na lista de seleção que referencia internamente o preço e quantidade da linha da ordem.  
+ Esta consulta usa o cláusula GROUP BY para gerar um relatório de custo de todos os produtos ordenados, subproduto dividido. Ele fornece o nome `name` ao produto como parte da expressão de agrupamento e, em seguida, as referências que nomeiam na lista de seleção. Ela também especifica a agregação `sum` na lista de seleção que referencia internamente o preço e quantidade da linha da ordem.  
   
  Cada GROUP BY expressão chave deve ter pelo menos uma referência ao escopo de entrada:  
   
@@ -62,12 +62,12 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o GRUPO pelo operador para especificar os grupos em que os objetos são retornados por uma consulta. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1.  Siga o procedimento [como: executar uma consulta que retorna resultados de PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Siga o procedimento em [como: Executar uma consulta que retorna resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2.  Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

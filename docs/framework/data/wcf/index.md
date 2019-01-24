@@ -2,21 +2,15 @@
 title: WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Astoria
-- WCF Data Services, getting started
+  - Astoria
+  - 'WCF Data Services, getting started'
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 9ece2fe051855d0fd39556f56a4343ead2c437bc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702794"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
 WCF Data Services (anteriormente conhecido como "ADO.NET Data Services") é um componente do .NET Framework que permite que você crie serviços que usam o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor e consumir dados na Web ou intranet usando a semântica de [ transferência de estado representacional (REST)](https://go.microsoft.com/fwlink/?LinkId=113919). OData expõem dados como recursos que são endereçáveis por URIs. Os dados são acessados e alterados usando os verbos HTTP padrão GET, PUT, POST e DELETE. OData usa as convenções de relacionamento entre entidades do [modelo de dados de entidade](../../../../docs/framework/data/adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.
 
-WCF Data Services usa o protocolo OData para endereçamento e atualização de recursos. Dessa forma, você pode acessar esses serviços de qualquer cliente que dê suporte a OData. OData lhe permite solicitar e gravar dados em recursos usando formatos de transferência conhecidos: Atom, um conjunto de padrões de troca e atualização de dados como XML e JSON JavaScript Object Notation (), um formato de troca de dados com base em texto usado extensivamente em AJAX aplicativo.
+WCF Data Services usa o protocolo OData para endereçamento e atualização de recursos. Dessa forma, você pode acessar esses serviços de qualquer cliente que dê suporte a OData. OData lhe permite solicitar e gravar dados em recursos usando formatos de transferência conhecidos: Atom, um conjunto de padrões de troca e atualização de dados como XML e JSON JavaScript Object Notation (), um formato de troca de dados com base em texto usado extensivamente em aplicativos AJAX.
 
 WCF Data Services pode expor dados provenientes de várias fontes como feeds OData. Ferramentas do Visual Studio facilitam a criação de um serviço baseado em OData usando um modelo de dados do ADO.NET Entity Framework. Você também pode criar feeds OData com base em classes do common language runtime (CLR) e dados de até mesmo associação tardia ou não tipados.
 
@@ -40,19 +34,19 @@ Mostre-me apenas algum código...
 
 -   [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) (Início rápido)
 
--   [How to: Execute Data Service Queries](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md) (Como executar consultas de serviço de dados)
+-   [Como: Executar consultas de serviço de dados](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
--   [How to: Bind Data to Windows Presentation Foundation Elements](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md) (Como associar dados aos elementos do Windows Presentation Foundation)
+-   [Como: Associar dados aos elementos do Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
 
 Quero saber mais sobre OData...
 
- -   [Whitepaper: Introducing OData](https://go.microsoft.com/fwlink/?LinkId=220867) (White paper: Introdução ao OData)
+ -   [White paper: Introdução ao OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 -   [Site do Protocolo Open Data](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 -   [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
 
--   [OData: Frequently Asked Questions](https://go.microsoft.com/fwlink/?LinkId=185867) (OData: perguntas frequentes)
+-   [OData: Perguntas frequentes](https://go.microsoft.com/fwlink/?LinkId=185867)
 
 Eu desejo assistir a alguns vídeos...
 
@@ -60,7 +54,7 @@ Eu desejo assistir a alguns vídeos...
 
 -   [WCF Data Services Developer Videos](https://go.microsoft.com/fwlink/?LinkId=220861) (Vídeos para desenvolvedores do WCF Data Services)
 
--   [OData: Developers Web site](https://go.microsoft.com/fwlink/?LinkId=185866) (OData: site para desenvolvedores)
+-   [OData: Site de desenvolvedores](https://go.microsoft.com/fwlink/?LinkId=185866)
 
 Desejo ver exemplos de ponta a ponta...
 
@@ -82,7 +76,7 @@ O que posso fazer com ele?
 
 -   [Visão geral](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
 
--   [Whitepaper: Introducing OData](https://go.microsoft.com/fwlink/?LinkId=220867) (White paper: Introdução ao OData)
+-   [White paper: Introdução ao OData](https://go.microsoft.com/fwlink/?LinkId=220867)
 
 -   [Application Scenarios](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md) (Cenários de aplicativo)
 
@@ -100,7 +94,7 @@ Desejo usar LINQ...
 
 -   [LINQ Considerations](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md) (Considerações sobre LINQ)
 
--   [How to: Execute Data Service Queries](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md) (Como executar consultas de serviço de dados)
+-   [Como: Executar consultas de serviço de dados](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)
 
 Eu ainda preciso de mais algumas informações...
 

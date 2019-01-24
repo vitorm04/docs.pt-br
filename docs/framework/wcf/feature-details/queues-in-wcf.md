@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742741"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Filas no Windows Communication Foundation
 Os tópicos desta seção discutem o suporte do Windows Communication Foundation (WCF) para filas. O WCF fornece suporte para enfileiramento de mensagens por aproveitando Microsoft Message Queuing (anteriormente conhecido como MSMQ) como um transporte e permite os seguintes cenários:  
@@ -22,7 +22,7 @@ Os tópicos desta seção discutem o suporte do Windows Communication Foundation
   
 -   Operações desconectadas. Envio, recebimento e operações de processamento podem ser desconectados ao se comunicar por redes de alta latência ou disponibilidade limitada, como no caso de dispositivos móveis. As filas permitem que essas operações continuar, mesmo quando os pontos de extremidade são desconectados. Quando a conexão for restabelecida, a fila encaminha mensagens para o aplicativo de recebimento.  
   
- Para usar o recurso de filas em um aplicativo WCF, você pode usar uma das associações padrão, ou você pode criar uma ligação personalizada, se uma das associações padrão não atender às suas necessidades. Para obter mais informações sobre associações padrão relevantes e como escolher um, consulte [como: troca de mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagem](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obter mais informações sobre como criar associações personalizadas, confira [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Para usar o recurso de filas em um aplicativo WCF, você pode usar uma das associações padrão, ou você pode criar uma ligação personalizada, se uma das associações padrão não atender às suas necessidades. Para obter mais informações sobre associações padrão relevantes e como escolher um, consulte [como: Trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obter mais informações sobre como criar associações personalizadas, confira [Associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -31,10 +31,10 @@ Os tópicos desta seção discutem o suporte do Windows Communication Foundation
  [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Uma visão geral do suporte de fila do WCF.  
   
- [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Como: Troca de mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Explica como usar o <xref:System.ServiceModel.NetMsmqBinding> classe para a comunicação entre um cliente WCF e o serviço WCF.  
   
- [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Como: Trocar mensagens com pontos de extremidade do WCF e aplicativos do serviço de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Explica como usar o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para comunicação entre aplicativos WCF e o enfileiramento de mensagens.  
   
  [Agrupamento de mensagens em fila em uma sessão](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ Os tópicos desta seção discutem o suporte do Windows Communication Foundation
  [Práticas recomendadas para a comunicação em fila](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Explica as práticas recomendadas para uso do WCF de comunicação em fila.  
   
-## <a name="see-also"></a>Consulte também  
- [Enfileiramento de mensagens](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>Consulte também
+- [Enfileiramento de mensagens](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
