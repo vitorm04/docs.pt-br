@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4b511dc229c9e8321b91fbb0f9395627680e5d12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591949"
 ---
 # <a name="ltxmlserializergt-element"></a>Elemento &lt;xmlSerializer&gt;
 Especifica se uma verificação adicional de progresso do <xref:System.Xml.Serialization.XmlSerializer> é feita.  
@@ -45,7 +45,7 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
 |[\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)|Contém definições de configuração para as classes <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o <xref:System.Xml.Serialization.XmlSerializer> fornece uma camada adicional de segurança contra potenciais ataques de negação de serviço ao desserializar dados não confiáveis. Ele faz isso tentando detectar loops infinitos durante a desserialização. Se uma condição desse tipo for detectada, uma exceção será gerada com a seguinte mensagem: “Erro interno: a desserialização não pôde avançar sobre o fluxo subjacente”.  
+ Por padrão, o <xref:System.Xml.Serialization.XmlSerializer> fornece uma camada adicional de segurança contra potenciais ataques de negação de serviço ao desserializar dados não confiáveis. Ele faz isso tentando detectar loops infinitos durante a desserialização. Se uma condição desse tipo for detectada, uma exceção é lançada com a seguinte mensagem: "Erro interno: desserialização não pôde Avançar sobre o fluxo subjacente."  
   
  Receber essa mensagem não necessariamente indica que um ataque de negação de serviço esteja em andamento. Em algumas circunstâncias raras, o mecanismo de detecção de loop infinito produz um falso positivo e a exceção é gerada para uma mensagem de entrada legítima. Se você achar que em seus aplicativos específicos mensagens legítimas estão sendo rejeitadas por essa camada extra de proteção, defina o atributo **checkDeserializeAdvances** como “false”.  
   
@@ -62,6 +62,6 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

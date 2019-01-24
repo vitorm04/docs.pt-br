@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05bd896dded0bc67510ccc45d6fd91bdc1c069f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786421"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614547"
 ---
 # <a name="using-keyboard-events"></a>Usando eventos do teclado
 A maioria dos programas do Windows Forms processa a entrada do teclado tratando eventos de teclado. Este tópico fornece uma visão geral dos eventos de teclado, incluindo detalhes sobre quando usar cada evento e os dados que são fornecidos para cada evento.  Consulte também [Visão geral de manipuladores de eventos (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Visão geral de eventos (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
@@ -38,7 +38,7 @@ A maioria dos programas do Windows Forms processa a entrada do teclado tratando 
 |<xref:System.Windows.Forms.Control.KeyPress>|Esse evento é gerado quando as teclas são pressionadas resultam em um caractere. Por exemplo, um usuário pressiona as teclas SHIFT e a letra “a” minúscula, o que resulta em uma letra “A” maiúscula.|<xref:System.Windows.Forms.Control.KeyPress> é gerado após <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>O manipulador para <xref:System.Windows.Forms.Control.KeyPress> recebe:</li><li>Um <xref:System.Windows.Forms.KeyPressEventArgs> parâmetro, que contém o código de caractere da tecla que foi pressionada. Esse código de caractere é exclusivo para cada combinação de uma tecla de caractere e tecla modificadora.<br /><br />     Por exemplo, a tecla “A” gerará:<br /><br /> <ul><li>O código de caractere 65, se ela estiver pressionada com a tecla SHIFT</li><li>Ou a tecla CAPS LOCK, 97 se ela for pressionada sozinha,</li><li>E 1 se ela estiver pressionada com a tecla CTRL.</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyUp>|Esse evento é gerado quando um usuário libera uma tecla física.|O manipulador para <xref:System.Windows.Forms.Control.KeyUp> recebe:<br /><br /> <ul><li>Um <xref:System.Windows.Forms.KeyEventArgs> parâmetro:<br /><br /> <ul><li>Que fornece o <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> propriedade (que especifica um botão físico do teclado).</li><li>O <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> propriedade (SHIFT, CTRL ou ALT).</li><li>O <xref:System.Globalization.SortKey.KeyData%2A> propriedade (que combina o código e tecla modificadora).</li></ul></li></ul>|  
   
-## <a name="see-also"></a>Consulte também  
- [Entrada do teclado em um aplicativo dos Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Como a entrada do teclado funciona](../../../docs/framework/winforms/how-keyboard-input-works.md)  
- [Entrada do mouse em um Aplicativo do Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Consulte também
+- [Entrada do teclado em um aplicativo dos Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Como a entrada do teclado funciona](../../../docs/framework/winforms/how-keyboard-input-works.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

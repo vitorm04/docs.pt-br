@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608083"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Método ICorDebugManagedCallback2::MDANotification
-Fornece notificação de que a execução de código encontrou um Assistente de depuração gerenciado (MDA) no aplicativo que está sendo depurado.  
+Fornece notificação de que a execução de código encontrou um Assistente para depuração gerenciada (MDA) no aplicativo que está sendo depurado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,12 +39,12 @@ HRESULT MDANotification(
   
 #### <a name="parameters"></a>Parâmetros  
  `pController`  
- [in] Um ponteiro para uma interface ICorDebugController que expõe o processo ou um domínio de aplicativo no qual ocorreu o MDA.  
+ [in] Um ponteiro para um domínio de aplicativo no qual ocorreu o MDA ou de interface ICorDebugController que expõe o processo.  
   
- Um depurador não deve fazer suposições sobre se o controlador é um processo ou um domínio de aplicativo, embora ele sempre pode consultar a interface para tomar uma decisão.  
+ Um depurador não deve fazer suposições sobre se o controlador é um processo ou um domínio de aplicativo, embora ele sempre pode consultar a interface para a determinação.  
   
  `pThread`  
- [in] Um ponteiro para uma interface ICorDebugThread que expõe o thread gerenciado em que ocorreu o evento de depuração.  
+ [in] Um ponteiro para uma interface ICorDebugThread que expõe o thread gerenciado no qual ocorreu o evento de depuração.  
   
  Se o MDA ocorreu em uma não gerenciado de thread, o valor de `pThread` será nulo.  
   
@@ -54,24 +54,24 @@ HRESULT MDANotification(
  [in] Um ponteiro para um [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) interface que expõe as informações de MDA.  
   
 ## <a name="remarks"></a>Comentários  
- Um MDA é um aviso de heurística e não exigir ação explícita do depurador, exceto chamada [Icordebugcontroller](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
+ Um MDA é um aviso de heurística e não requer nenhuma ação explícita do depurador, exceto para chamar [icordebugcontroller:: continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
   
- O common language runtime (CLR) pode determinar qual MDAs são acionados e os dados que estão em qualquer determinado MDA a qualquer momento. Portanto, os depuradores não deverá criar qualquer funcionalidade que exigem padrões específicos de MDA.  
+ O common language runtime (CLR) pode determinar qual MDAs são acionados e quais dados estão em qualquer determinado MDA a qualquer momento. Portanto, os depuradores não deverá criar qualquer funcionalidade que exigem os padrões MDA específicos.  
   
- MDAs podem ser enfileirados e acionados logo após o MDA é encontrado. Isso pode acontecer se o tempo de execução precisa esperar até que ele atinja um ponto de segurança para acionar o MDA, em vez de disparar o MDA quando ele encontra. Isso também significa que o tempo de execução pode disparar um número de MDAs em um único conjunto de retornos de chamada na fila (semelhantes a uma operação de evento "anexar").  
+ Os MDAs podem ser enfileirados e acionados logo depois que o MDA é encontrado. Isso pode acontecer se o tempo de execução precisa esperar até que ela atinja um ponto seguro para acionar o MDA, em vez de disparar o MDA quando ele encontra. Isso também significa que o tempo de execução pode disparar um número de MDAs em um único conjunto de retornos de chamada na fila (semelhantes a uma operação de evento "anexar").  
   
- Um depurador deve liberar a referência a um `ICorDebugMDA` instância imediatamente depois do retorno do `MDANotification` retorno de chamada, para permitir que o CLR reciclar a memória consumida por um MDA. Liberar a instância pode melhorar o desempenho se muitos MDAs são acionados.  
+ Um depurador deve liberar a referência a um `ICorDebugMDA` instância imediatamente depois de retornar do `MDANotification` retorno de chamada, para permitir que o CLR reciclar a memória consumida por um MDA. Liberação da instância pode melhorar o desempenho se MDAs muitos estão disparando.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617688"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Método IMetaDataImport2::EnumGenericParamConstraints
-Obtém um enumerador para uma matriz de restrições de parâmetro genérico associadas com o parâmetro genérico representado pelo token especificado.  
+Obtém um enumerador para uma matriz de restrições de parâmetro genérico associado com o parâmetro genérico representado pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ HRESULT EnumGenericParamConstraints (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador.  
+ [no, out] Um ponteiro para o enumerador.  
   
  `tk`  
- [in]   Um token que representa o parâmetro genérico cujas restrições devem ser enumerados.  
+ [in]   Um token que representa o parâmetro genérico cujas restrições são a serem enumerados.  
   
  `rGenericParamConstraints`  
  [out] A matriz de restrições de parâmetro genérico para enumerar.  
@@ -59,18 +59,18 @@ HRESULT EnumGenericParamConstraints (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` retornou com êxito.|  
+|`S_OK`|`EnumGenericParameterConstraints` retornado com êxito.|  
 |`S_FALSE`|`phEnum` não tem nenhum elemento de membro. Nesse caso, `pcGenericParameterConstraints` é definido como 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

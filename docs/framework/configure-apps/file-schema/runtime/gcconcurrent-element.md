@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4c83576c5c46d9a32f990d23fa20b116be36e4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611989"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; elemento
 Especifica se o common language runtime executa a coleta de lixo em um thread separado.  
   
  \<configuration>  
 \<runtime>  
-\<gcConcurrent >  
+\<gcConcurrent>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -89,7 +89,7 @@ Especifica se o common language runtime executa a coleta de lixo em um thread se
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Conceitos básicos da coleta de lixo](../../../../../docs/standard/garbage-collection/fundamentals.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 69eb1490c61cc7187d11c776fe95c659271750b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608476"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Consumir um conjunto de dados de um serviço Web XML
 O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte para facilitar o transporte conveniente de dados pela Internet. O **DataSet** é "serializável" em que ele pode ser especificado como uma entrada ou saída do Web services XML sem qualquer codificação adicional é necessária para transmitir o conteúdo da **conjunto de dados** de um serviço Web XML para um cliente e vice-versa. O **DataSet** é convertido implicitamente em um fluxo XML usando o formato DiffGram, enviados pela rede e, em seguida, reconstruídos do fluxo XML como um **conjunto de dados** na extremidade receptora. Isso lhe oferece um método muito simples e flexível para transmitir e retornando dados relacionais usando serviços Web XML. Para obter mais informações sobre o formato DiffGram, consulte [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -259,12 +259,12 @@ O <xref:System.Data.DataSet> foi projetada com um design desconectado, em parte 
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) (Preenchendo um DataSet por meio de um DataAdapter)  
- [Updating Data Sources with DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)  
- [Parâmetros DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Ferramenta do Web Services Description Language (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [DataSets, DataTables, and DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Populating a DataSet from a DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) (Preenchendo um DataSet por meio de um DataAdapter)
+- [Updating Data Sources with DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md) (Atualizando fontes de dados com DataAdapters)
+- [Parâmetros DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [Ferramenta do Web Services Description Language (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

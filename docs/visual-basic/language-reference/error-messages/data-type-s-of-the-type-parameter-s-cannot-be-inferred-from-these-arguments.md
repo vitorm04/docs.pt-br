@@ -10,20 +10,20 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 6f84df5c9388220e5ca817d95362753df0920534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68ed7541d76c1678f9f308ed2cda8afec1231a73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608713"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Não é possível inferir o(s) tipo(s) de dados do(s) parâmetro(s) de tipo a partir destes argumentos
-Tipos de dados dos parâmetros de tipo não podem ser inferidos a partir destes argumentos. Especificando os dados tipos explicitamente talvez corrija esse erro.  
+Tipos de dados dos parâmetros de tipo não podem ser inferidos destes argumentos. Especificar os dados de tipo (s) explicitamente talvez corrija esse erro.  
   
- Esse erro ocorre quando ocorre falha na resolução de sobrecarga. Isso ocorre como uma mensagem subordinada que indica por que um candidato a sobrecarga específica foi eliminado. A mensagem de erro explica que o compilador não pode usar a inferência de tipo para localizar tipos de dados para os parâmetros de tipo.  
+ Esse erro ocorre quando ocorre falha na resolução de sobrecarga. Ele ocorre como uma mensagem subordinada que indica por que um candidato a sobrecarga específica foi eliminado. A mensagem de erro explica que o compilador não pode usar inferência de tipo para localizar os tipos de dados para os parâmetros de tipo.  
   
 > [!NOTE]
->  Quando especificar argumentos não é uma opção (por exemplo, para operadores de consulta em expressões de consulta), a mensagem de erro aparece sem a segunda frase.  
+>  Ao especificar argumentos não é uma opção (por exemplo, para operadores de consulta em expressões de consulta), a mensagem de erro é exibido sem a segunda frase.  
   
  O código a seguir demonstra o erro.  
   
@@ -57,7 +57,7 @@ End Interface
   
 -   Você poderá especificar um tipo de dados para o parâmetro de tipo ou os parâmetros em vez de depender de inferência de tipo.  
   
-## <a name="see-also"></a>Consulte também  
- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Procedimentos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+## <a name="see-also"></a>Consulte também
+- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Procedimentos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

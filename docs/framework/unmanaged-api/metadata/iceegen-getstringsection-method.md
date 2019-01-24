@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a8617c9e818ec514c912a85373c916559d89df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605512"
 ---
 # <a name="iceegengetstringsection-method"></a>Método ICeeGen::GetStringSection
 Obtém uma representação de cadeia de caracteres da seção de código referenciada pelo identificador especificado.  
   
- Esse método está obsoleto e não deve ser usado.  
+ Esse método é obsoleto e não deve ser usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,16 +39,16 @@ HRESULT GetStringSection (
   
 #### <a name="parameters"></a>Parâmetros  
  `section`  
- [out no] O identificador para a seção de código.  
+ [no, out] O identificador para a seção de código.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

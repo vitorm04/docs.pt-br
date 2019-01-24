@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5171022d35c6f9e194ddcf615d29610ea2e0d4fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b5e021116b29045837a5afae14aa560690cc944
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595364"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Método ICorProfilerInfo3::RequestProfilerDetach
 Instrui o tempo de execução para desanexar o criador de perfil.  
@@ -44,7 +44,7 @@ HRESULT RequestProfilerDetach(
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A solicitação de desanexação é válida e o procedimento de desanexar agora continua em outro thread. Quando a desanexação for totalmente concluída, um `ProfilerDetachSucceeded` evento é emitido.|  
-|E _ CORPROF_E_CALLBACK3_REQUIRED|O criador de perfil falhou uma [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) tentativa para o [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, que ele deve implementar para dar suporte a operação desanexar. Desanexar não foi tentada.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|O criador de perfil falhou uma [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) tentativa para o [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, que ele deve implementar para dar suporte a operação desanexar. Desanexar não foi tentada.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|Desanexação é impossível porque o criador de perfil definir sinalizadores imutáveis na inicialização. Não foi tentada a desanexação; o criador de perfil ainda totalmente está anexado.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Desanexação é impossível porque o criador de perfil usado instrumentado código Microsoft intermediate language (MSIL) ou inseridas `enter` / `leave` ganchos. Não foi tentada a desanexação; o criador de perfil ainda totalmente está anexado.<br /><br /> **Observação** MSIL instrumentado é o código é um código que é fornecido pelo criador de perfil usando o [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) método.|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|O tempo de execução não foi inicializado ainda no aplicativo gerenciado. (Ou seja, o tempo de execução não foi totalmente carregado.) Esse código de erro pode ser retornado quando desanexação for solicitada dentro do retorno de chamada criador de perfil [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método.|  
@@ -58,15 +58,15 @@ HRESULT RequestProfilerDetach(
  Se o criador de perfil especifica `dwExpectedCompletionMilliseconds` como 0 (zero), o CLR usa um valor padrão de 5000, o que significa que ele executará uma verificação depois de 5 segundos, novamente após 10 segundos, e, em seguida, cada 10 minutos e depois disso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, Corprof.  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

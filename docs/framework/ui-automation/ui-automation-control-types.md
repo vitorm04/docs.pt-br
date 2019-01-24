@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f15bdfd2643a8d4b17926d3a05cc15cb80e7a505
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9eb9b7193a1800a9c73c925bd8f699633efb719d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615918"
 ---
 # <a name="ui-automation-control-types"></a>Tipos de controle de automação de interface do usuário
-**Observação** desta documentação é destinada a desenvolvedores de .NET Framework que desejam usar o gerenciados [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes definidas no <xref:System.Windows.Automation> namespace. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+**Observação** desta documentação é destinada a desenvolvedores de .NET Framework que desejam usar o gerenciados [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes definidas no <xref:System.Windows.Automation> namespace. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Esta seção contém informações sobre o suporte para tipos de controle em [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
@@ -65,5 +65,5 @@ ms.locfileid: "49086148"
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Automation.ControlType>  
   
-## <a name="see-also"></a>Consulte também  
- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)
+## <a name="see-also"></a>Consulte também
+- [UI Automation Control Patterns](../../../docs/framework/ui-automation/ui-automation-control-patterns.md) (Padrões de controle da Automação da Interface do Usuário)

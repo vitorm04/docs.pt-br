@@ -2,12 +2,12 @@
 title: Compensação
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: 840730acd9289fd394906c49186846e3204c4a99
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: e8a7140e677b553d07014d0ac5a77dd1c7488f53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607599"
 ---
 # <a name="compensation"></a>Compensação
 Compensação do Windows Workflow Foundation (WF) é o mecanismo pelo qual anteriormente trabalho concluído pode ser desfeito ou compensado (seguindo a lógica definida pelo aplicativo) quando ocorre uma falha subsequente. Esta seção descreve como usar a compensação em fluxos de trabalho.  
@@ -50,7 +50,7 @@ Compensação do Windows Workflow Foundation (WF) é o mecanismo pelo qual anter
  **ReserveFlight: Tíquete é reservado.**  
 **ManagerApproval: Aprovação do Gerenciador recebida.**   
 **PurchaseFlight: A permissão é comprado.**   
-**Fluxo de trabalho foi concluído com êxito com status: fechado.**    
+**O fluxo de trabalho foi concluído com êxito com status: Fechado.**    
 > [!NOTE]
 >  As atividades de exemplo neste tópico como `ReserveFlight` exibem seu nome e finalidade no console ajudar a ilustrar a ordem em que as atividades são executadas quando a compensação ocorre.  
   
@@ -94,9 +94,9 @@ Compensação do Windows Workflow Foundation (WF) é o mecanismo pelo qual anter
  **ReserveFlight: Tíquete é reservado.**  
 **SimulatedErrorCondition: Lançando um ApplicationException.**   
 **Exceção sem tratamento do fluxo de trabalho:**   
-**System. ApplicationException: Condição de erro simulada no fluxo de trabalho.**   
+**System.ApplicationException: Condição de erro simulada no fluxo de trabalho.**   
 **CancelFlight: A permissão é cancelado.**   
-**Fluxo de trabalho foi concluído com êxito com status: cancelado.**    
+**O fluxo de trabalho foi concluído com êxito com status: Cancelado.**    
 ### <a name="cancellation-and-compensableactivity"></a>Cancelar e CompensableActivity  
  Se as atividades em <xref:System.Activities.Statements.CompensableActivity.Body%2A> de <xref:System.Activities.Statements.CompensableActivity> não foram concluídas e a atividade é cancelada, as atividades em <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> são executadas.  
   
@@ -164,9 +164,9 @@ Activity wf = new Sequence()
  **ChargeCreditCard: Cartão de crédito para o voo.**  
 **SimulatedErrorCondition: Lançando um ApplicationException.**   
 **Exceção sem tratamento do fluxo de trabalho:**   
-**System. ApplicationException: Condição de erro simulada no fluxo de trabalho.**   
-**CancelCreditCard: Cancelar o cartão de crédito.**   
-**Fluxo de trabalho foi concluído com êxito com status: cancelado.**  Para obter mais informações sobre cancelamento, consulte [cancelamento](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**System.ApplicationException: Condição de erro simulada no fluxo de trabalho.**   
+**CancelCreditCard: Cancele o cartão de crédito.**   
+**O fluxo de trabalho foi concluído com êxito com status: Cancelado.**  Para obter mais informações sobre cancelamento, consulte [cancelamento](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Compensação explícita usando a atividade de compesação  
  Na seção anterior, a compensação implícita foi abordada. A compensação implícita pode ser adequado para cenários simples, mas se um controle mais explícito é necessário sobre programação de compensação que manipula a atividade de <xref:System.Activities.Statements.Compensate> pode ser usada. Para iniciar o processo de compensação pela atividade de <xref:System.Activities.Statements.Compensate> , <xref:System.Activities.Statements.CompensationToken> de <xref:System.Activities.Statements.CompensableActivity> para que a compensação é desejada é usado. A atividade de <xref:System.Activities.Statements.Compensate> pode ser usada para iniciar a compensação em qualquer <xref:System.Activities.Statements.CompensableActivity> concluído que não foi confirmada ou não foi compensada. Por exemplo, uma atividade de <xref:System.Activities.Statements.Compensate> pode ser usada na seção de <xref:System.Activities.Statements.TryCatch.Catches%2A> de uma atividade de <xref:System.Activities.Statements.TryCatch> , ou após <xref:System.Activities.Statements.CompensableActivity> tiver concluído em qualquer momento que. Nesse exemplo, a atividade de <xref:System.Activities.Statements.Compensate> é usada na seção de <xref:System.Activities.Statements.TryCatch.Catches%2A> de uma atividade de <xref:System.Activities.Statements.TryCatch> para reverter a ação de <xref:System.Activities.Statements.CompensableActivity>.  
@@ -247,7 +247,7 @@ Activity wf = new Sequence()
  **ReserveFlight: Tíquete é reservado.**  
 **SimulatedErrorCondition: Lançando um ApplicationException.**   
 **CancelFlight: A permissão é cancelado.**   
-**Fluxo de trabalho foi concluído com êxito com status: fechado.**    
+**O fluxo de trabalho foi concluído com êxito com status: Fechado.**    
 ### <a name="confirming-compensation"></a>Compensação de confirmação  
  Por padrão, as atividades compensáveis podem ser compensadas em qualquer momento que depois que terminar. Em alguns cenários isso pode não ser adequado. No exemplo anterior a compensação para permitir a permissão foi cancelar a reserva. No entanto, depois que o voo foi concluído essa etapa de compensação não é mais válido. Confirmando a atividade compensável chama a atividade especificada por <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>. Um uso possível para este é permitir todos os recursos que são necessários para executar a compensação a ser liberada. Depois que uma atividade compensável é confirmada não é possível que ele ser compensado, e se esta é tentada uma exceção de <xref:System.InvalidOperationException> é lançada. Quando um fluxo de trabalho concluída com sucesso, as atividades compensáveis qualquer não confirmadas e não compensadas que eles concluíram com êxito são confirmadas em ordem inversa de conclusão. Nesse exemplo o voo é reservado, comprado, e concluído, e a atividade é confirmada em compensável. Para confirmar <xref:System.Activities.Statements.CompensableActivity>, use a atividade de <xref:System.Activities.Statements.Confirm> e especificar <xref:System.Activities.Statements.CompensationToken> de <xref:System.Activities.Statements.CompensableActivity> para confirmar.  
   
@@ -318,7 +318,7 @@ Quando o fluxo de trabalho é chamado, a saída a seguir são exibidas no consol
 **PurchaseFlight: A permissão é comprado.**   
 **TakeFlight: O voo terminar.**   
 **ConfirmFlight: O voo não foi colocada, nenhuma compensação possível.**   
-**Fluxo de trabalho foi concluído com êxito com status: fechado.**   
+**O fluxo de trabalho foi concluído com êxito com status: Fechado.**   
 
 ## <a name="nesting-compensation-activities"></a>Atividades de compensação de aninhamento  
 
@@ -326,7 +326,7 @@ Quando o fluxo de trabalho é chamado, a saída a seguir são exibidas no consol
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Activities.Statements.CompensableActivity>  
-- <xref:System.Activities.Statements.Compensate>  
-- <xref:System.Activities.Statements.Confirm>  
+- <xref:System.Activities.Statements.CompensableActivity>
+- <xref:System.Activities.Statements.Compensate>
+- <xref:System.Activities.Statements.Confirm>
 - <xref:System.Activities.Statements.CompensationToken>

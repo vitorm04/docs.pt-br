@@ -2,14 +2,14 @@
 title: 'Arquivo XML de exemplo: Várias ordens de compra em um Namespace3'
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
-ms.openlocfilehash: 20d1807b58e0cf9302413cf9007c62d0fbec9c16
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4ef1e715bf9b1fd8e417f189655a1badc6d0df2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616167"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Arquivo XML de Exemplo: Vários pedidos de compra em um namespace
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Arquivo XML de exemplo: Várias ordens de compra em um Namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém várias ordens de compra. XML é em um namespace.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
@@ -109,5 +109,5 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

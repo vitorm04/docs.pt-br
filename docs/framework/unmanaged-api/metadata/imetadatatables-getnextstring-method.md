@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eea43e5eaa037a3b70f482b0602d8d8d3d594f75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 595bc20b51ef81d7dea61620040ceb50c9418f4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589859"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>Método IMetaDataTables::GetNextString
-Obtém o índice da seguinte cadeia de caracteres na coluna da tabela atual.  
+Obtém o índice da próxima cadeia de caracteres na coluna da tabela atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,17 +41,17 @@ HRESULT GetNextString (
  [in] O valor de índice de uma coluna de tabela de cadeia de caracteres.  
   
  `pNext`  
- [out] Um ponteiro para o índice da seguinte cadeia de caracteres na coluna.  
+ [out] Um ponteiro para o índice da próxima cadeia de caracteres na coluna.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

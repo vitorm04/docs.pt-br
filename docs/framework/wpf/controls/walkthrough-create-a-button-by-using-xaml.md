@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606777"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Passo a passo: Criar um botão usando XAML
 O objetivo deste passo a passo é aprender a criar um botão animado para uso em um aplicativo do Windows Presentation Foundation (WPF). Este passo a passo usa estilos e um modelo para criar um recurso de botão personalizado que permite a reutilização de código e separação da lógica do botão da declaração do botão. Este passo a passo é escrito inteiramente em [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
      Pressione F5 para executar o aplicativo e clique em um dos botões. Observe que o botão permanece realçado depois que você clica nele, porque ele ainda tem foco. Se você clicar em outro botão, o novo botão obtém o foco e o outro perde o foco.  
   
-4.  **Adicionar animações para** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:  ** Em seguida, adicionamos algumas animações aos gatilhos. Adicione a seguinte marcação em qualquer local dentro do bloco `ControlTemplate.Triggers`.  
+4.  **Adicionar animações para** <xref:System.Windows.UIElement.MouseEnter> **e** <xref:System.Windows.UIElement.MouseLeave> **:** Em seguida, adicionamos algumas animações aos gatilhos. Adicione a seguinte marcação em qualquer local dentro do bloco `ControlTemplate.Triggers`.  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -431,9 +431,9 @@ O objetivo deste passo a passo é aprender a criar um botão animado para uso em
   
 -   Personalizou comportamento para os botões em resposta às ações do usuário (como <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, e <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) que incluiu efeitos de animação.  
   
-## <a name="see-also"></a>Consulte também  
- [Criar um botão usando o Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Visão geral dos efeitos de bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Criar um botão usando o Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Visão geral dos efeitos de bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

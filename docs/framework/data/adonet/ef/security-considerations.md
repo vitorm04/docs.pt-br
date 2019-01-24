@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612815"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve considerações de segurança específicas para desenvolver, implantar e executar aplicativos [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Você também deve seguir as recomendações para criar aplicativos seguros do [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obter mais informações, consulte [visão geral de segurança](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -46,7 +46,7 @@ Este tópico descreve considerações de segurança específicas para desenvolve
   
 -   Usar construtores de cadeias de conexão para criar conexões dinamicamente.  
   
-     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, consulte [como: criar uma cadeia de caracteres de Conexão EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Também usar a classe de construtor de cadeia de caracteres apropriada para construir a cadeia de conexão de fonte de dados que faz parte do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadeia de caracteres de conexão. Para obter informações sobre construtores de cadeia de caracteres de conexão para provedores ADO.NET, consulte [construtores de cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, confira [Como: Compilar uma cadeia de Conexão EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Também usar a classe de construtor de cadeia de caracteres apropriada para construir a cadeia de conexão de fonte de dados que faz parte do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] cadeia de caracteres de conexão. Para obter informações sobre construtores de cadeia de caracteres de conexão para provedores ADO.NET, consulte [construtores de cadeia de Conexão](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Para obter mais informações, consulte [Protegendo informações de conexão](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -159,9 +159,9 @@ Este tópico descreve considerações de segurança específicas para desenvolve
  Os componentes do serviço de metadados [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] não registram em log informações particulares. Se houver resultados que não possam ser retornados devido às restrições de acesso, os sistemas de gerenciamento de bancos de dados e os sistemas de arquivos retornarão um número zero de resultados, em vez de gerar uma exceção que possa conter informações confidenciais.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Não aceite objetos MetadataWorkspace de fontes não confiáveis.  
- Os aplicativos não devem aceitar instâncias da classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> de fontes não confiáveis. Em vez disso, você deve construir e popular explicitamente um espaço de trabalho como fonte.  
+ Os aplicativos não devem aceitar instâncias da classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> de fontes não confiáveis. Em vez disso, você deve construir e popular explicitamente um workspace como fonte.  
   
-## <a name="see-also"></a>Consulte também  
- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
- [Considerações de implantação](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Considerações sobre migração](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>Consulte também
+- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
+- [Considerações de implantação](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Considerações sobre migração](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

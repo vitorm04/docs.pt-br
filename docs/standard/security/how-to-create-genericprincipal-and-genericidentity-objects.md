@@ -1,5 +1,5 @@
 ---
-title: Como criar objetos GenericPrincipal e GenericIdentity
+title: 'Como: Criar objetos GenericPrincipal e GenericIdentity'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0567fd12bee19e860373affdf0fdc286d6d5405a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608057"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como criar objetos GenericPrincipal e GenericIdentity
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como: Criar objetos GenericPrincipal e GenericIdentity
 Você pode usar o <xref:System.Security.Principal.GenericIdentity> classe junto com o <xref:System.Security.Principal.GenericPrincipal> classe para criar um esquema de autorização que existe independentemente de um domínio do Windows.  
   
 ### <a name="to-create-a-genericprincipal-object"></a>Para criar um objeto GenericPrincipal  
@@ -142,8 +142,8 @@ Is this a Manager? True
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Security.Principal.GenericIdentity>  
-- <xref:System.Security.Principal.GenericPrincipal>  
-- <xref:System.Security.Permissions.PrincipalPermission>  
-- [Como substituir um objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)  
+- <xref:System.Security.Principal.GenericIdentity>
+- <xref:System.Security.Principal.GenericPrincipal>
+- <xref:System.Security.Permissions.PrincipalPermission>
+- [Como substituir um objeto Principal](../../../docs/standard/security/replacing-a-principal-object.md)
 - [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

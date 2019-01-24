@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a1da4015a202debe1d864f3c0135cc296ce6fce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605470"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Método IMetaDataEmit::DefineTypeDef
 Cria uma definição de tipo para um tipo common language runtime e obtém um token de metadados para essa definição de tipo.  
@@ -47,7 +47,7 @@ HRESULT DefineTypeDef (
  [in] `TypeDef` atributos. Esse é um bitmask de `CoreTypeAttr` valores.  
   
  `tkExtends`  
- [in] O token de classe base. Ele deve ser um `mdTypeDef` ou um `mdTypeRef` token.  
+ [in] O token da classe base. Ele deve ser um `mdTypeDef` ou um `mdTypeRef` token.  
   
  `rtkImplements`  
  [in] Uma matriz de tokens especificando as interfaces que implementa essa interface ou classe.  
@@ -56,21 +56,21 @@ HRESULT DefineTypeDef (
  [out] O `mdTypeDef` token atribuído.  
   
 ## <a name="remarks"></a>Comentários  
- Um sinalizador no `dwTypeDefFlags` Especifica se o tipo que está sendo criado é um tipo system referência tipo comum (classe ou interface) ou um tipo de valor de sistema de tipo comum.  
+ Um sinalizador no `dwTypeDefFlags` Especifica se o tipo que está sendo criado é um tipo sistema referência tipo comum (classe ou interface) ou um tipo de valor de sistema de tipo comum.  
   
- Dependendo dos parâmetros fornecidos, esse método, como um efeito colateral, também pode criar um `mdInterfaceImpl` registro para cada interface que é herdada ou implementada por este tipo. No entanto, esse método não retorna qualquer um desses `mdInterfaceImpl` tokens. Se um cliente deseja mais tarde, adicionar ou modificar uma `mdInterfaceImpl` token, ele deve usar o `IMetaDataImport` interface para enumerá-los. Se você deseja usar COM semântica do `[default]` interface, você deve fornecer a interface padrão como o primeiro elemento em `rtkImplements`; um atributo personalizado definido na classe indicará que a classe tem uma interface padrão (que sempre é considerado como o primeiro `mdInterfaceImpl` token declarado para a classe).  
+ Dependendo dos parâmetros fornecidos, esse método, como um efeito colateral, também pode criar um `mdInterfaceImpl` registros para cada interface que é herdada ou implementada por esse tipo. No entanto, esse método não retorna qualquer um desses `mdInterfaceImpl` tokens. Se um cliente deseja posteriormente, adicionar ou modificar uma `mdInterfaceImpl` token, ele deve usar o `IMetaDataImport` interface para enumerá-los. Se você quiser usar semântica COM do `[default]` interface, você deve fornecer a interface padrão como o primeiro elemento no `rtkImplements`; um atributo personalizado definido na classe indicará que a classe tem uma interface padrão (que é sempre considerado como o primeiro `mdInterfaceImpl` token declarado para a classe).  
   
- Cada elemento do `rtkImplements` matriz mantém um `mdTypeDef` ou `mdTypeRef` token. O último elemento da matriz deve ser `mdTokenNil`.  
+ Cada elemento do `rtkImplements` matriz mantém uma `mdTypeDef` ou `mdTypeRef` token. O último elemento na matriz deve ser `mdTokenNil`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

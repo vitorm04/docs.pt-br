@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: e7e687dfa6af47161be9d26054eb58f319a5099d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 69bdf4d23463cc07259a2b1de6b9efaa78f0f0de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593752"
 ---
 # <a name="datarow-deletion"></a>Exclusão de DataRow
 Há dois métodos que você pode usar para excluir uma <xref:System.Data.DataRow> do objeto de um <xref:System.Data.DataTable> objeto: o **remover** método da <xref:System.Data.DataRowCollection> objeto e o <xref:System.Data.DataRow.Delete%2A> o método da **DataRow**objeto. Enquanto o <xref:System.Data.DataRowCollection.Remove%2A> exclusões de método uma **DataRow** da **DataRowCollection**, o <xref:System.Data.DataRow.Delete%2A> método marca apenas a linha para exclusão. A remoção real ocorre quando o aplicativo chama o **AcceptChanges** método. Usando <xref:System.Data.DataRow.Delete%2A>, você pode verificar programaticamente quais linhas estão marcadas para exclusão antes de realmente removê-las. Quando uma linha está marcada para exclusão, sua propriedade <xref:System.Data.DataRow.RowState%2A> é definida como <xref:System.Data.DataRow.Delete%2A>.  
@@ -44,9 +44,9 @@ workRow.Delete();
 > [!NOTE]
 >  Se o **RowState** de uma **DataRow** está **adicionado**, que significa que ele acabou de ser adicionado à tabela e está marcado como **Deleted**, é removido da tabela.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataRowCollection>  
- <xref:System.Data.DataTable>  
- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataRowCollection>
+- <xref:System.Data.DataTable>
+- [Manipulação de dados em uma DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

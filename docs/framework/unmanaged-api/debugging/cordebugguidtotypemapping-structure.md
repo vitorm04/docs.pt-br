@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803a805da605bd52fd50eb1e292c0e277143d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610039"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>Estrutura CorDebugGuidToTypeMapping
-Mapeia um [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID correspondente ao objeto ICorDebugType.  
+Mapeia um [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID para seu objeto correspondente do ICorDebugType.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,8 +41,8 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`iid`|O GUID do cache [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo.|  
-|`pType`|Um ponteiro para um objeto de ICorDebugType que fornece informações sobre o tipo de cache.|  
+|`iid`|O GUID do cache no [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo.|  
+|`pType`|Um ponteiro para um objeto ICorDebugType que fornece informações sobre o tipo de cache.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
@@ -51,8 +51,8 @@ typedef struct CorDebugGuidToTypeMapping {
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

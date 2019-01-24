@@ -1,18 +1,18 @@
 ---
-title: Como hospedar um serviço WCF em um serviço Windows gerenciado
+title: 'Como: Hospedar um serviço WCF em um serviço Windows gerenciado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613813"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Como hospedar um serviço WCF em um serviço Windows gerenciado
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Como: Hospedar um serviço WCF em um serviço Windows gerenciado
 
 Este tópico descreve as etapas básicas necessárias para criar um serviço do Windows Communication Foundation (WCF) que é hospedado por um serviço do Windows. O cenário é habilitado pelo serviço Windows gerenciado opção que é um serviço WCF de longa execução hospedado fora do Internet Information Services (IIS) em um ambiente seguro que não é ativada de mensagem de hospedagem. O tempo de vida do serviço é controlado pelo sistema operacional. Essa opção de hospedagem está disponível em todas as versões do Windows.
 

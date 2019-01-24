@@ -1,5 +1,5 @@
 ---
-title: Como executar um som a partir de um Windows Form
+title: 'Como: Reproduzir um som de um formulário do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607245"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Como executar um som a partir de um Windows Form
-Este exemplo toca um som em um determinado caminho em tempo de execução.  
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Como: Reproduzir um som de um formulário do Windows
+Este exemplo reproduz um som em um determinado caminho em tempo de execução.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -45,7 +45,7 @@ private void playSimpleSound()
 -   (C#) Uma referência para o <xref:System.Media?displayProperty=nameWithType> namespace.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- Operações de arquivo devem ser incluídas dentro de tratamento blocos de exceções estruturado apropriada.  
+ Operações de arquivo devem ser incluídas dentro de blocos de tratamento de exceções de estruturado apropriada.  
   
  As seguintes condições podem causar uma exceção:  
   
@@ -53,7 +53,7 @@ private void playSimpleSound()
   
 -   O caminho é somente leitura (<xref:System.IO.IOException> classe).  
   
--   O nome do caminho é `null` (<xref:System.ArgumentNullException> classe).  
+-   É o nome do caminho `null` (<xref:System.ArgumentNullException> classe).  
   
 -   O nome do caminho é muito longo (<xref:System.IO.PathTooLongException> classe).  
   
@@ -64,7 +64,7 @@ private void playSimpleSound()
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Por exemplo, o arquivo `Form1.vb` não pode ser um arquivo de origem do Visual Basic. Verifique todas as entradas antes de usar os dados no seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Media.SoundPlayer>  
- [Como carregar um som de forma assíncrona dentro de um Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>Consulte também
+- <xref:System.Media.SoundPlayer>
+- [Como: Carregar um som de forma assíncrona dentro de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

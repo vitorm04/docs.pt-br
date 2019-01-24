@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ba8d07a26b7e6abc511e5b24db26162b46a2b0a1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 39e78be4806a58d8e274d1e6ce58a1f1ee46ce1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592027"
 ---
 # <a name="application-management-overview"></a>Visão geral de gerenciamento do aplicativo
 Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades que se aplicam à implementação e ao gerenciamento do aplicativo. Este tópico fornece uma visão geral da funcionalidade no <xref:System.Windows.Application> classe para criar e gerenciar aplicativos.  
@@ -365,11 +365,11 @@ Todos os aplicativos tendem a compartilhar um conjunto comum de funcionalidades 
   
  ![XBAP &#45; Eventos de objeto do aplicativo](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Application>  
- [Visão geral das janelas do WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Modelo de aplicativo: Tópicos de instruções](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)  
- [Desenvolvimento de aplicativos](../../../../docs/framework/wpf/app-development/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Application>
+- [Visão geral das janelas do WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
+- [Visão geral de navegação](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [URIs "pack://" no WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Modelo de aplicativo: Tópicos de instruções](https://msdn.microsoft.com/library/76771b09-3688-4d1c-8818-9b3f4cf39a30)
+- [Desenvolvimento de aplicativos](../../../../docs/framework/wpf/app-development/index.md)

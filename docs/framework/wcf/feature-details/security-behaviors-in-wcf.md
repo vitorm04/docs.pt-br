@@ -2,23 +2,23 @@
 title: Comportamentos de segurança no WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592803"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamentos de segurança no WCF
 No Windows Communication Foundation (WCF), comportamentos de modificar o comportamento de tempo de execução no nível de serviço ou no nível do ponto de extremidade. (Para obter mais informações sobre os comportamentos em geral, consulte [especificando comportamento de tempo de execução do serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Comportamentos de segurança* permitem o controle sobre as credenciais, autenticação, autorização e os logs de auditoria. Você pode usar comportamentos por meio da programação ou por meio da configuração. Este tópico concentra-se sobre como configurar os seguintes comportamentos relacionados às funções de segurança:  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+-   [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+-   [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
--   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+-   [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+-   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 -   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), que também permite que você especifique um ponto de extremidade seguro que os clientes podem acessar para metadados.  
   
@@ -115,18 +115,18 @@ No Windows Communication Foundation (WCF), comportamentos de modificar o comport
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > elemento  
- Defina o certificado usado para autenticar o cliente com este elemento. Para obter mais informações, consulte [como: Especificar valores de credenciais de cliente](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Defina o certificado usado para autenticar o cliente com este elemento. Para obter mais informações, confira [Como: Especificar valores de credenciais de cliente](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-#### <a name="httpdigest"></a>\<httpDigest >  
+#### <a name="httpdigest"></a>\<httpDigest>  
  Esse recurso deve ser habilitado com o Active Directory no Windows e serviços de informações da Internet (IIS). Para obter mais informações, consulte [a autenticação Digest no IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > elemento  
  O [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contém os elementos usados para configurar um emissor local de tokens ou comportamentos usados com um serviço de token de segurança. Para obter instruções sobre como configurar um cliente para usar um emissor local, consulte [como: Configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress >  
+#### <a name="localissueraddress"></a>\<localIssuerAddress>  
  Especifica um endereço de serviço de token de segurança padrão. Isso é usado quando o <xref:System.ServiceModel.WSFederationHttpBinding> não fornece uma URL para o serviço de token de segurança, ou quando é o endereço do emissor de uma associação federado `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`. Nesses casos, o <xref:System.ServiceModel.Description.ClientCredentials> deve ser configurado com o endereço do emissor local e a associação usar para se comunicar com esse emissor.  
   
-#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
+#### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors>  
  Use o [ \<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md) para adicionar comportamentos de cliente do WCF usados ao se comunicar com um serviço de token de segurança. Definir os comportamentos do cliente na [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) seção. Para usar um comportamento definido, adicione um <`add`> elemento para o `<issuerChannelBehaviors>` elemento com dois atributos. Defina a `issuerAddress` para a URL do serviço de token de segurança e definido o `behaviorConfiguration` de atributo para o nome do comportamento do ponto de extremidade definido, conforme mostrado no exemplo a seguir.  
   
 ```xml  
@@ -144,7 +144,7 @@ No Windows Communication Foundation (WCF), comportamentos de modificar o comport
   
  Use o [ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) e [ \<Adicionar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) para definir os certificados de serviço que estão associados a serviços específicos. O `<add>` elemento inclui um `targetUri` atributo que é usado para associar o certificado com o serviço.  
   
- O [ \<autenticação >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elemento Especifica o nível de confiança usado para autenticar certificados. Por padrão, o nível é definido como "ChainTrust", que especifica que cada certificado deve ser localizado em uma hierarquia de certificados terminam em uma autoridade de certificação confiável na parte superior da cadeia. Este é o modo mais seguro. Você também pode definir o valor "PeerOrChainTrust", que especifica que os certificados emitidos por conta própria (confiança de par) são aceitos, bem como certificados que estão em uma cadeia confiável. Esse valor é usado ao desenvolver e depurar clientes e serviços, porque os certificados emitidos por conta própria não precisam ser adquiridos de uma autoridade confiável. Ao implantar um cliente, use o valor de "ChainTrust" em vez disso. Você também pode definir o valor como "Custom" ou "None". Para usar o valor de "Custom", você também deve definir o `CustomCertificateValidatorType` de atributo para um assembly e o tipo usado para validar o certificado. Para criar seu próprio validador personalizado, você deve herdar de abstrata <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe. Para obter mais informações, consulte [como: Criar um serviço que utiliza um validador de certificado personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ O [ \<autenticação >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elemento Especifica o nível de confiança usado para autenticar certificados. Por padrão, o nível é definido como "ChainTrust", que especifica que cada certificado deve ser localizado em uma hierarquia de certificados terminam em uma autoridade de certificação confiável na parte superior da cadeia. Este é o modo mais seguro. Você também pode definir o valor "PeerOrChainTrust", que especifica que os certificados emitidos por conta própria (confiança de par) são aceitos, bem como certificados que estão em uma cadeia confiável. Esse valor é usado ao desenvolver e depurar clientes e serviços, porque os certificados emitidos por conta própria não precisam ser adquiridos de uma autoridade confiável. Ao implantar um cliente, use o valor de "ChainTrust" em vez disso. Você também pode definir o valor como "Custom" ou "None". Para usar o valor de "Custom", você também deve definir o `CustomCertificateValidatorType` de atributo para um assembly e o tipo usado para validar o certificado. Para criar seu próprio validador personalizado, você deve herdar de abstrata <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe. Para obter mais informações, confira [Como: Criar um serviço que utiliza um validador de certificado personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
  O [ \<autenticação >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elemento inclui um `RevocationMode` atributo que especifica como os certificados são verificados para revogação. O padrão é "online", que indica que os certificados são automaticamente verificados para revogação. Para obter mais informações, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -217,6 +217,6 @@ No Windows Communication Foundation (WCF), comportamentos de modificar o comport
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

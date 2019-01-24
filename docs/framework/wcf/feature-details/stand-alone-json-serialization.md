@@ -2,26 +2,26 @@
 title: Serialização JSON autônoma
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618416"
 ---
 # <a name="stand-alone-json-serialization"></a>Serialização JSON autônoma
 JSON (JavaScript Object Notation) é um formato de dados que foi especificamente desenvolvido para ser usado pelo código JavaScript em execução em páginas da Web dentro do navegador. É o formato de dados padrão usado pelos serviços do ASP.NET AJAX criados no Windows Communication Foundation (WCF).  
   
  Esse formato também pode ser usado quando a criação de serviços AJAX sem integração com o ASP.NET - nesse caso, o XML é o padrão, mas JSON pode ser escolhido.  
   
- Por fim, se você precisar de suporte do JSON, mas não estiver criando um serviço de AJAX, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> torna possível para diretamente serializar objetos .NET em dados JSON e desserializar esses dados em instâncias de tipos do .NET. Para obter uma descrição de como fazer isso, consulte [como: serializar e desserializar dados do JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+ Por fim, se você precisar de suporte do JSON, mas não estiver criando um serviço de AJAX, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> torna possível para diretamente serializar objetos .NET em dados JSON e desserializar esses dados em instâncias de tipos do .NET. Para obter uma descrição de como fazer isso, consulte [como: Serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  Ao trabalhar com JSON, os mesmos tipos de .NET têm suporte com raras exceções, conforme são compatíveis com o <xref:System.Runtime.Serialization.DataContractSerializer>. Para obter uma lista dos tipos suportados, consulte [tipos com suporte pelo serializador de contrato de dados](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Isso inclui tipos mais primitivos, a maioria de matriz e tipos de coleção, complexos, bem como tipos que usam o <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
 ## <a name="mapping-net-types-to-json-types"></a>Mapeando tipos de .NET para tipos de JSON  
  A tabela a seguir mostra a correspondência entre tipos .NET e tipos de JSON/JavaScript quando mapeado pelos procedimentos de serialização e desserialização.  
   
-|Tipos do .NET|JavaScript/JSON|Observações|  
+|Tipos do .NET|JSON/JavaScript|Observações|  
 |----------------|----------------------|-----------|  
 |Todos os tipos numéricos, por exemplo <xref:System.Int32>, <xref:System.Decimal> ou <xref:System.Double>|Número|Valores especiais, como `Double.NaN`, `Double.PositiveInfinity` e `Double.NegativeInfinity` não têm suporte e resultar em JSON inválido.|  
 |<xref:System.Enum>|Número|Consulte "Enumerações e JSON", mais adiante neste tópico.|  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Nomes de chave JSON válido  
  Os nomes de chave do serializador codifica em formato XML que não são nomes XML válidos. Por exemplo, um membro de dados com o nome de "123" teria um nome codificado como "\_x0031\_\_x0032\_\_x0033\_" como "123" é um nome de elemento XML inválido (começa com um Dígito). Pode surgir uma situação semelhante com alguns conjuntos de caracteres internacionais não válidos em nomes XML. Para obter uma explicação do efeito de XML no processamento de JSON, consulte [mapeamento entre JSON e XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
 - [Suporte para JSON e outros formatos de transferência de dados](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

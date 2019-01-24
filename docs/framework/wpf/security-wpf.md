@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592674"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a> Ao desenvolver autônomo do Windows Presentation Foundation (WPF) e aplicativos hospedados pelo navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos executados com permissões ilimitadas ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** conjunto de permissões), se implantado usando o Windows Installer (. msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo host de confiança total pode criar uma confiança parcial <xref:System.AppDomain> usando o modelo de suplemento do .NET Framework. Para obter mais informações, consulte [visão geral de suplementos WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -184,7 +184,7 @@ ms.locfileid: "44202226"
  Controles de recurso são aplicados pelo processo que instancia o objeto WebBrowser ActiveX. Portanto, se estiver criando um aplicativo autônomo capaz de navegar até o conteúdo não confiável, considere seriamente a possibilidade de habilitar controles de recurso adicionais.  
   
 > [!NOTE]
->  Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, consulte [perguntas Frequentes a segurança de Host MSHTML: parte I de II](https://go.microsoft.com/fwlink/?LinkId=179396) e [perguntas Frequentes a segurança de Host MSHTML: Parte II de II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+>  Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, consulte [a FAQ de segurança do Host MSHTML: Parte I de II](https://go.microsoft.com/fwlink/?LinkId=179396) e [a segurança do Host MSHTML perguntas Frequentes: Parte II de II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Para o executável, considere a possibilidade de habilitar os controles de recurso a seguir ao definir o valor de Registro como 1.  
   
@@ -271,11 +271,11 @@ ms.locfileid: "44202226"
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [Estratégia de segurança do WPF – segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [Estratégia de segurança do WPF – Engenharia de segurança](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
- [Padrões e práticas de orientação de segurança para aplicativos](https://go.microsoft.com/fwlink/?LinkId=117426)  
- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)  
- [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Consulte também
+- [Segurança parcialmente confiável do WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [Estratégia de segurança do WPF – segurança da plataforma](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [Estratégia de segurança do WPF – Engenharia de segurança](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Padrões e práticas de orientação de segurança para aplicativos](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Segurança de acesso do código](../../../docs/framework/misc/code-access-security.md)
+- [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Visão geral de XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

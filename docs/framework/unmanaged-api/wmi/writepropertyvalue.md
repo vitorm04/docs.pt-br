@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590114"
 ---
 # <a name="writepropertyvalue-function"></a>Função WritePropertyValue
 Grava um número especificado de bytes em uma propriedade identificada por um identificador de propriedade.
@@ -76,11 +76,11 @@ Use essa função para definir a cadeia de caracteres e todos os outros não -`D
 Para valores de propriedade não cadeia de caracteres, `lNumBytes` deve ser o tamanho dos dados corretos do tipo de propriedade especificado. Para valores de propriedade de cadeia de caracteres, `lNumBytes` deve ser o comprimento da cadeia de caracteres especificada em bytes e a cadeia de caracteres em si deve ser de um mesmo comprimento em bytes e ser seguida por um caractere nulo de terminação.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

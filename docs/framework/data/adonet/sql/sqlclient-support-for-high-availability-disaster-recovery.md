@@ -2,12 +2,12 @@
 title: Suporte do SqlClient para alta disponibilidade, recuperação de desastres
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513020"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609116"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Suporte do SqlClient para alta disponibilidade, recuperação de desastres
 Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) para recuperação de desastres de alta disponibilidade – grupos de disponibilidade AlwaysOn.  O recurso de grupos de disponibilidade AlwaysOn foi adicionado ao SQL Server 2012. Para obter mais informações sobre grupos de disponibilidade AlwaysOn, consulte os Manuais Online do SQL Server.  
@@ -51,7 +51,7 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
 -   Conectando a um servidor SQL instância configurada com mais de 64 endereços IP causará uma falha de conexão.  
   
--   Comportamento de um aplicativo que usa o `MultiSubnetFailover` propriedade de conexão não é afetada com base no tipo de autenticação: autenticação do SQL Server, a autenticação Kerberos ou autenticação do Windows.  
+-   Comportamento de um aplicativo que usa o `MultiSubnetFailover` propriedade de conexão não é afetada com base no tipo de autenticação: Autenticação do SQL Server, a autenticação Kerberos ou autenticação do Windows.  
   
 -   Aumente o valor de `Connect Timeout` para compensar o tempo de failover e reduzir as tentativas de conexão do aplicativo.  
   
@@ -96,6 +96,6 @@ Este tópico aborda o suporte ao SqlClient (adicionado no [!INCLUDE[net_v45](../
   
  O roteamento de somente leitura pode demorar mais do que a conexão principal porque ele primeiro se conecta ao primário e, em seguida, procura o melhor secundário legível disponível. Por isso, aumente o tempo limite de logon.  
   
-## <a name="see-also"></a>Consulte também  
- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md) (Recursos do SQL Server e o ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

@@ -2,18 +2,18 @@
 title: '&lt;ws2007FederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 1006289485ee1509c57ebaffeec2b6a366494470
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7869737f1e3d8c7a9ba569991ead6f7f759e6c58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616882"
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 Uma associação segura e interoperável que deriva [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e suporta segurança federada.  
   
  \<system.ServiceModel>  
-\<associações >  
+\<bindings>  
 \<ws2007FederationHttpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -75,7 +75,7 @@ Uma associação segura e interoperável que deriva [ \<wsFederationHttpBinding 
 |`proxyAddress`|Um URI que especifica o endereço do proxy HTTP. Se `useDefaultWebProxy` está `true`, essa configuração deve ser `null`. O padrão é `null`.|  
 |`receiveTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de recebimento ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 10:00:00.|  
 |`sendTimeout`|Um <xref:System.TimeSpan> valor que especifica o intervalo de tempo fornecido para uma operação de envio ser concluída. Esse valor deve ser maior que ou igual a <xref:System.TimeSpan.Zero>. O padrão é 01:00:00.|  
-|`textEncoding`|Define a codificação a ser usada para emitir mensagens na associação de conjunto de caracteres. Os valores válidos incluem o seguinte:<br /><br /> -BigEndianUnicode: Big Endian codificação Unicode.<br />-Unicode: codificação de 16 bits.<br />-UTF8: codificação de 8 bits.<br /><br /> O padrão é UTF8. Esse atributo é do tipo <xref:System.Text.Encoding>.|  
+|`textEncoding`|Define a codificação a ser usada para emitir mensagens na associação de conjunto de caracteres. Os valores válidos incluem o seguinte:<br /><br /> -   BigEndianUnicode: Big Endian codificação Unicode.<br />-Unicode: codificação de 16 bits.<br />-   UTF8: codificação de 8 bits.<br /><br /> O padrão é UTF8. Esse atributo é do tipo <xref:System.Text.Encoding>.|  
 |`transactionFlow`|Um valor que especifica se a associação dá suporte a fluxo de WS-Transactions. O padrão é `false`.|  
 |`useDefaultWebProxy`|Um valor que indica se o proxy HTTP configurado automaticamente do sistema é usado. O endereço de proxy deve ser `null` (ou seja, não definido) se esse atributo for `true`. O padrão é `true`.|  
   
@@ -91,7 +91,7 @@ Uma associação segura e interoperável que deriva [ \<wsFederationHttpBinding 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  Federação é a capacidade de compartilhar identidades em várias empresas ou domínios de confiança para autenticação e autorização. Ele usa o protocolo WS-Trust para mapear a representação de identidade de domínio de uma relação de confiança para outro. Associação de HTTP federada dá suporte a segurança SOAP, bem como a segurança de modo misto, mas não oferece suporte a segurança de transporte. Serviços configurados com essa associação devem usar o transporte HTTP. Para obter mais informações, consulte [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -129,11 +129,11 @@ Uma associação segura e interoperável que deriva [ \<wsFederationHttpBinding 
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WS2007FederationHttpBinding>  
- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
- [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.WS2007FederationHttpBinding>
+- <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>
+- [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

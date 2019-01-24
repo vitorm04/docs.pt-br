@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: a1758ef83adf11cdeee8bd3560ad2275985b3788
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: efcccb651ec838aa8d2173200c100ed89ddb50c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618679"
 ---
 # <a name="self-host"></a>Self-Host
 Este exemplo demonstra como implementar um serviço auto-hospedado em um aplicativo de console. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md). O arquivo de configuração do serviço foi renomeado de Web. config para App. config e modificado para configurar um endereço de base, que usa o host. O código-fonte de serviço foi modificado para implementar um estático `Main` função que cria e abre um host de serviço que fornece o endereço básico configurado. A implementação do serviço foi modificada para gravar a saída no console para cada operação. O cliente ficou sem modificações, com exceção de configuração do endereço do ponto de extremidade correto do serviço.  
@@ -75,5 +75,5 @@ public static void Main()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Consulte também
+- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

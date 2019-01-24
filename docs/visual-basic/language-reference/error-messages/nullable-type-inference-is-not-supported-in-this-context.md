@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: ea531c7be676e940a263b019a66cc80cf280a772
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dffc5233656257cd892f573a2f8b9f91d781c21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611885"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Inferência de tipo que permite valor nulo não suportada neste contexto
-Estruturas e tipos de valor podem ser declaradas anuláveis.  
+Tipos de valor e estruturas podem ser declaradas que permitem valor nulas.  
   
 ```vb  
 Dim a? As Integer  
 Dim b As Integer?  
 ```  
   
- No entanto, você não pode usar a declaração anulável em combinação com a inferência de tipo. Os exemplos a seguir causam esse erro.  
+ No entanto, você não pode usar a declaração que permite valor nula em combinação com a inferência de tipo. Os exemplos a seguir causam esse erro.  
   
 ```vb  
 ' Not valid.  
@@ -36,6 +36,6 @@ Dim b As Integer?
   
 -   Use um `As` cláusula para declarar a variável como anulável.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+## <a name="see-also"></a>Consulte também
+- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

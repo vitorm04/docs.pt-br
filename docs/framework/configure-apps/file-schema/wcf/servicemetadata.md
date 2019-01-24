@@ -2,21 +2,21 @@
 title: '&lt;serviceMetadata&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 4cff141d7e012e865280e4397e6e3d65075a8f45
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 3e363e90f9436073a30c228eca5c962763418e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610195"
 ---
 # <a name="ltservicemetadatagt"></a>&lt;serviceMetadata&gt;
 Especifica a publicação de metadados de serviço e informações associadas.  
   
 \<system.serviceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
-\<serviceMetadata >  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceMetadata>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ Especifica a publicação de metadados de serviço e informações associadas.
 |httpsGetBindingConfiguration|Uma cadeia de caracteres que define o nome da associação que é especificado no `httpsGetBinding` atributo, o que faz referência às informações de configuração adicionais desta associação. O mesmo nome deve ser definido no `<bindings>` seção.|  
 |httpsGetEnabled|Um valor booliano que especifica se a publicação de metadados de serviço para recuperação usando uma solicitação HTTPS/Get. O padrão é `false`.<br /><br /> Se o atributo httpsGetUrl não for especificado, o endereço no qual os metadados são publicados é o endereço de serviço além de um "? wsdl". Por exemplo, se o endereço do serviço for "https://localhost:8080/CalculatorService", o endereço de metadados HTTP/Get é"https://localhost:8080/CalculatorService?wsdl".<br /><br /> Se essa propriedade for `false`, ou o endereço do serviço não é baseado em HTTP ou HTTPS, "? wsdl" será ignorado.|  
 |httpsGetUrl|Um Uri que especifica o endereço no qual os metadados são publicados para recuperação usando uma solicitação HTTPS/Get.|  
-|Policyversion="1.0|Uma cadeia de caracteres que especifica a versão da especificação WS-Policy sendo usada. Esse atributo é do tipo <xref:System.ServiceModel.Description.PolicyVersion>.|  
+|policyVersion|Uma cadeia de caracteres que especifica a versão da especificação WS-Policy sendo usada. Esse atributo é do tipo <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -58,7 +58,7 @@ Especifica a publicação de metadados de serviço e informações associadas.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
  Este elemento de configuração permite que você controle os recursos de publicação de metadados de um serviço. Para evitar a divulgação acidental de metadados de serviço potencialmente confidenciais, a configuração padrão para serviços Windows Communication Foundation (WCF) desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar metadados importar ferramenta (como Svcutil.exe) para gerar o código de cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço é explicitamente habilitado na configuração. Usando este elemento de configuração, você pode habilitar esse comportamento de publicação para seu serviço.  
@@ -116,8 +116,8 @@ Especifica a publicação de metadados de serviço e informações associadas.
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Comportamento de publicação de metadados](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.ServiceMetadataPublishingElement>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Comportamento de publicação de metadados](../../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)

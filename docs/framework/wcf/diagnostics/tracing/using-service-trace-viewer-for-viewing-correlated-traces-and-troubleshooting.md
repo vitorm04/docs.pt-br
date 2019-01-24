@@ -2,12 +2,12 @@
 title: Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594795"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilizando o visualizador de rastreamento de serviço para visualização de rastreamento correlacionados e soluções de problemas
 Este tópico descreve o formato dos dados de rastreamento, como exibir e abordagens que usam o Visualizador de rastreamento de serviço para solucionar problemas de seu aplicativo.  
@@ -119,7 +119,7 @@ Este tópico descreve o formato dos dados de rastreamento, como exibir e abordag
   
 -   Processar a ação Adicionar.  
   
--   Configurar a sessão segura (esse ocorrido na primeira solicitação) e processado de três mensagens de resposta de infraestrutura de segurança: RST, RSTR, SCT (processo mensagem 1, 2, 3).  
+-   Configure a sessão segura (esse ocorrido na primeira solicitação) e infraestrutura de segurança processado de três mensagens de resposta: RST, RSTR, SCT (processo mensagem 1, 2, 3).  
   
 -   Processado a subtração, multiplicação e divisão de solicitações.  
   
@@ -138,7 +138,7 @@ Atividades do cliente WCF listadas por hora de criação (painel esquerdo) e sua
  Se podemos clicar duas vezes a ação de processo Adicionar atividade no painel esquerdo, podemos ver uma representação gráfica das atividades do WCF cliente relacionados a adicionar. A primeira atividade à esquerda é a atividade raiz (0000), que é a atividade padrão. Transferências WCF fora da atividade de ambiente. Se não estiver definido, o WCF transfere fora 0000. Aqui, a segunda atividade adicionar da ação de processo, transfere proveito do 0. Em seguida, podemos ver que a sessão de seguro de instalação.  
   
  ![Usando o Visualizador de rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Exibição de atividades do cliente WCF de gráfico: atividade de ambiente (aqui 0), ação de processo e conjunto seguro de sessão  
+Modo de exibição de gráfico de atividades de cliente do WCF: Ambiente atividade (aqui 0), ação de processo e conjunto seguro de sessão  
   
  No painel superior direito, podemos ver todos os rastreamentos relacionados à atividade de ação do processo de adicionar. Especificamente, podemos ter enviou a mensagem de solicitação ("enviados uma mensagem por um canal") e recebeu a resposta ("recebeu uma mensagem por um canal") na mesma atividade. Isso é mostrado no seguinte gráfico. Para maior clareza, a atividade da sessão segura de configurar é recolhida no gráfico.  
   
@@ -198,7 +198,7 @@ Expandindo as atividades para acompanhar a causa raiz de um problema
  ![Usando o Visualizador de rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Para iniciar a solução de problemas, você também pode escolher um rastreamento de mensagem de vermelho ou amarelo e clique duas vezes para acompanhar a causa raiz  
   
-## <a name="see-also"></a>Consulte também  
- [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Consulte também
+- [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

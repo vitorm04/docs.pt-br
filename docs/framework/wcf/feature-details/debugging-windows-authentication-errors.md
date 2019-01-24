@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595130"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Depurando erros de autenticação do Windows
 Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface de provedor de suporte de segurança (SSPI) lida com processos de segurança. Quando ocorrem erros de segurança na camada de SSPI, elas são exibidas pelo Windows Communication Foundation (WCF). Este tópico fornece uma estrutura e um conjunto de perguntas para ajudar a diagnosticar os erros.  
@@ -36,12 +36,12 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface
   
  Os cabeçalhos de tabela mostram os tipos possíveis de conta usados pelo servidor. A coluna esquerda mostra os tipos possíveis de conta usados pelo cliente.  
   
-||Usuário local|Sistema Local|Usuário de domínio|Máquina de domínio|  
+||Usuário local|Sistema Local|Domain User|Domain Machine|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Usuário local|NTLM|NTLM|NTLM|NTLM|  
 |Sistema Local|NTLM anônimo|NTLM anônimo|NTLM anônimo|NTLM anônimo|  
-|Usuário de domínio|NTLM|NTLM|Kerberos|Kerberos|  
-|Máquina de domínio|NTLM|NTLM|Kerberos|Kerberos|  
+|Domain User|NTLM|NTLM|Kerberos|Kerberos|  
+|Domain Machine|NTLM|NTLM|Kerberos|Kerberos|  
   
  Especificamente, os quatro tipos de conta incluem:  
   
@@ -51,7 +51,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface
   
 -   Usuário de domínio: Uma conta de usuário em um domínio do Windows. Por exemplo: `DomainName\ProfileName`.  
   
--   Máquina de domínio: Um processo com a identidade da máquina em execução em um computador ingressado em um domínio do Windows. Por exemplo: `MachineName\Network Service`.  
+-   Domain Machine: Um processo com a identidade da máquina em execução em um computador ingressado em um domínio do Windows. Por exemplo: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  A credencial de serviço é capturada quando o <xref:System.ServiceModel.ICommunicationObject.Open%2A> método da <xref:System.ServiceModel.ServiceHost> classe é chamada. A credencial do cliente é lida sempre que o cliente envia uma mensagem.  
@@ -139,15 +139,15 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a Interface
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>SSPI não está disponível  
- Os seguintes sistemas operacionais têm suporte quando usado como um servidor de autenticação do Windows: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, e [!INCLUDE[wv](../../../../includes/wv-md.md)]Home editions.  
+ Os seguintes sistemas operacionais não têm suporte quando usado como um servidor de autenticação do Windows: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, e [!INCLUDE[wv](../../../../includes/wv-md.md)]Home editions.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Desenvolvendo e implantando com identidades diferentes  
  Se você desenvolve seu aplicativo em um computador e implantar em outro e usa diferentes tipos de conta para autenticar em cada computador, você pode enfrentar um comportamento diferente. Por exemplo, suponha que você desenvolve seu aplicativo em um computador Windows XP Pro usando o `SSPI Negotiated` modo de autenticação. Se você usar uma conta de usuário local para autenticar com o, protocolo NTLM será usado. Depois que o aplicativo é desenvolvido, você implantar o serviço a uma máquina Windows Server 2003 onde ele é executado sob uma conta de domínio. Neste ponto o cliente não será capaz de autenticar o serviço, pois ele estará usando Kerberos e um controlador de domínio.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

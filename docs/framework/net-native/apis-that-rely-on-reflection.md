@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98488a8e552940055a6ea06d360af1bd2c6b6079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610829"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs que dependem de reflexão
 Em alguns casos, o uso de reflexo no código não é óbvio, por isso a cadeia de ferramentas [!INCLUDE[net_native](../../../includes/net-native-md.md)] não preserva os metadados necessários no tempo de execução. Este tópico abrange algumas APIs ou padrões de programação comuns que não são consideradas como parte da API de reflexão, mas que dependem de reflexão para serem executados com êxito. Se você usá-los no código-fonte, poderá adicionar informações sobre eles no arquivo de diretivas de tempo de execução (.rd.xml), de modo que as chamadas a essas APIs não gerem uma exceção [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ou outras exceções em tempo de execução.  
@@ -92,6 +92,6 @@ Unfortunately, no further information is available.
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

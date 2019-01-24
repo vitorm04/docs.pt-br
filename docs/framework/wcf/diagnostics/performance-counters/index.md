@@ -2,14 +2,8 @@
 title: Contadores de desempenho do WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance counters [WCF]
+  - 'performance counters [WCF]'
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846208"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de desempenho do WCF
 Windows Communication Foundation (WCF) inclui um grande conjunto de contadores de desempenho para ajudá-lo a medir o desempenho do seu aplicativo.  
@@ -27,11 +21,11 @@ Windows Communication Foundation (WCF) inclui um grande conjunto de contadores d
   
  O `performanceCounters` atributo pode ser definido para habilitar um tipo específico de contadores de desempenho. Os valores válidos são  
   
--   All: Todos os contadores de categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) estão habilitados.  
+-   Todos os: Todos os contadores de categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) estão habilitados.  
   
--   ServiceOnly: Somente contadores de categoria ServiceModelService estão habilitados. Este é o valor padrão.  
+-   ServiceOnly: Somente os contadores de categoria ServiceModelService estão habilitados. Este é o valor padrão.  
   
--   Off: Contadores de desempenho do ServiceModel * estão desabilitados.  
+-   Off: Contadores de desempenho ServiceModel * estão desabilitados.  
   
  Se você quiser habilitar os contadores de desempenho para todos os aplicativos do WCF, você pode colocar as definições de configuração no arquivo Machine. config.  Consulte a **aumentando o tamanho de memória para contadores de desempenho** seção abaixo para obter mais informações sobre como configurar a memória suficiente para contadores de desempenho em seu computador.  
   
@@ -59,7 +53,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>Aumentando o tamanho da memória para contadores de desempenho  
  WCF usa a memória compartilhada separada para suas categorias de contador de desempenho.  
   
- Por padrão, memória compartilhada separada é definida como um quarto do tamanho da memória do contador de desempenho global. A memória de contador de desempenho global padrão é 524.288 bytes. Portanto, as três categorias de contador de desempenho do WCF têm um tamanho padrão de aproximadamente 128KB cada. Dependendo as características de tempo de execução de aplicativos WCF em um computador, memória de contador de desempenho pode ser esgotada. Quando isso acontece, o WCF grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado, e a entrada contém a exceção "System. InvalidOperationException: modo de exibição de arquivo de contadores personalizado está sem memória." Se o rastreamento está habilitado no nível de erro, essa falha também é rastreada. Se a memória de contador de desempenho é esgotada, continuando a executar seus aplicativos do WCF com contadores de desempenho habilitados pode resultar em degradação de desempenho. Se você for um administrador da máquina, você deve configurá-lo para alocar memória suficiente para suportar o número máximo de contadores de desempenho que podem existir em qualquer momento.  
+ Por padrão, memória compartilhada separada é definida como um quarto do tamanho da memória do contador de desempenho global. A memória de contador de desempenho global padrão é 524.288 bytes. Portanto, as três categorias de contador de desempenho do WCF têm um tamanho padrão de aproximadamente 128KB cada. Dependendo as características de tempo de execução de aplicativos WCF em um computador, memória de contador de desempenho pode ser esgotada. Quando isso acontece, o WCF grava um erro no log de eventos do aplicativo. O conteúdo do erro informa que um contador de desempenho não foi carregado, e a entrada contém a exceção "System. InvalidOperationException: Modo de exibição de arquivo de contadores personalizados está sem memória." Se o rastreamento está habilitado no nível de erro, essa falha também é rastreada. Se a memória de contador de desempenho é esgotada, continuando a executar seus aplicativos do WCF com contadores de desempenho habilitados pode resultar em degradação de desempenho. Se você for um administrador da máquina, você deve configurá-lo para alocar memória suficiente para suportar o número máximo de contadores de desempenho que podem existir em qualquer momento.  
   
  Você pode alterar a quantidade de memória do contador de desempenho para as categorias WCF no registro. Para fazer isso, você precisará adicionar um novo valor DWORD chamado `FileMappingSize` para os três locais a seguir e defina-o como o valor desejado em bytes. Reinicie o computador para que essas alterações são levadas em efeito.  
   
@@ -72,7 +66,7 @@ config.Save();
  Quando um grande número de objetos (por exemplo, o ServiceHost) sejam descartado, mas esperando para ser coletado como lixo, o `PrivateBytes` contador de desempenho serão registrados em um número extraordinariamente alto. Para resolver esse problema, você pode adicionar seus próprios contadores específicos do aplicativo, ou usar o `performanceCounters` atributo para habilitar os contadores apenas do nível de serviço.  
   
 ## <a name="types-of-performance-counters"></a>Tipos de contadores de desempenho  
- Contadores de desempenho estão no escopo para três níveis diferentes: serviço, o ponto de extremidade e a operação.  
+ Contadores de desempenho estão no escopo para três níveis diferentes: Serviço, ponto de extremidade e operação.  
   
  Você pode usar o WMI para recuperar o nome de uma instância do contador de desempenho. Por exemplo,  
   
@@ -138,5 +132,5 @@ ServiceName@ServiceBaseAddress
   
  Para obter mais informações sobre como acessar os contadores de forma programática, consulte [arquitetura de programação de contador de desempenho](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
-## <a name="see-also"></a>Consulte também  
- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Consulte também
+- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e02274b63ddf7df42d26621791de0286df9655b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608070"
 ---
 # <a name="security-etw-events"></a>Eventos ETW de segurança
 <a name="top"></a> Eventos de segurança são gerados durante a verificação de nome forte e a verificação de Authenticode.  
@@ -73,5 +73,5 @@ ms.locfileid: "33395506"
 |ModulePath|win:UnicodeString|O caminho do módulo.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Consulte também
+- [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

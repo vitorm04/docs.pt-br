@@ -1,5 +1,5 @@
 ---
-title: Como listar os codificadores instalados
+title: 'Como: Listar os codificadores instalados'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image encoders [Windows Forms], listing
 ms.assetid: 49e8e4e9-7a67-42d9-86bf-08821cdc282e
-ms.openlocfilehash: 1882ce9a140fb325c29411173ba7bde717bd3f98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5019a349b4f3c881190241042cecc6c4c571950
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605650"
 ---
-# <a name="how-to-list-installed-encoders"></a>Como listar os codificadores instalados
-Pode ser que você deseja listar os codificadores de imagem disponíveis em um computador, para determinar se o seu aplicativo pode salvar em um formato de arquivo de imagem específico. O <xref:System.Drawing.Imaging.ImageCodecInfo> classe fornece a <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> métodos estáticos para que você possa determinar qual imagem codificadores estão disponíveis. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Retorna uma matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  
+# <a name="how-to-list-installed-encoders"></a>Como: Listar os codificadores instalados
+Você talvez queira listar os codificadores de imagem disponíveis em um computador, para determinar se o seu aplicativo pode salvar em um formato de arquivo de imagem em particular. O <xref:System.Drawing.Imaging.ImageCodecInfo> classe fornece o <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> métodos estáticos para que você possa determinar qual imagem codificadores estão disponíveis. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Retorna uma matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir gera a lista de codificadores instalados e seus valores de propriedade.  
@@ -31,6 +31,6 @@ Pode ser que você deseja listar os codificadores de imagem disponíveis em um c
   
 -   Um <xref:System.Windows.Forms.PaintEventArgs>, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## <a name="see-also"></a>Consulte também  
- [Como Listar os Decodificadores Instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)  
- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Listar os decodificadores instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-decoders.md)
+- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

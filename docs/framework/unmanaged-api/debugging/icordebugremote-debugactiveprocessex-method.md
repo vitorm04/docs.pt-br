@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e3cdbff5054ec990c40c333ed4bd4029a91f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb085cc486c307a308258709f4c58619597bc202
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608382"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Método ICorDebugRemote::DebugActiveProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -40,13 +40,13 @@ HRESULT DebugActiveProcessEx (
   
 #### <a name="parameters"></a>Parâmetros  
  `pRemoteTarget`  
- [in] Ponteiro para um [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Esse parâmetro é usado para determinar a máquina na qual o processo está sendo executado.  
+ [in] Ponteiro para um [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Esse parâmetro é usado para determinar a máquina na qual o processo está em execução.  
   
  `id`  
- [in] A ID do processo ao qual o depurador será anexada.  
+ [in] A ID do processo ao qual o depurador deve ser anexado.  
   
  `win32Attach`  
- [in] `true` se o depurador deve se comportar conforme o depurador do Win32 para o processo e distribuir os retornos de chamada não gerenciados; caso contrário, `false`.  
+ [in] `true` se o depurador deve se comportar como o depurador do Win32 para o processo e expedir os retornos de chamada não gerenciados; caso contrário, `false`.  
   
  `ppProcess`  
  [out] Um ponteiro para o endereço de um objeto de "ICorDebugProcess" que representa o processo ao qual o depurador foi anexado.  
@@ -55,14 +55,14 @@ HRESULT DebugActiveProcessEx (
  S_OK  
  Anexado com êxito o processo no computador remoto.  
   
- E_FAIL (ou outros códigos de retorno E_)  
+ E_FAIL (ou outros códigos de retorno e _)  
  Não é possível anexar ao processo no computador remoto.  
   
 ## <a name="remarks"></a>Comentários  
  Não há suporte para a depuração de modo misto no Silverlight.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
@@ -70,8 +70,8 @@ HRESULT DebugActiveProcessEx (
   
  **Versões do .NET framework:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

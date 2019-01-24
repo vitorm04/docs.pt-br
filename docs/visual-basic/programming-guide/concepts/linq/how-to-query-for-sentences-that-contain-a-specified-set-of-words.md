@@ -1,15 +1,15 @@
 ---
-title: 'Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)'
+title: 'Como: Consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-ms.openlocfilehash: 0b61b75c5f26c48d817b8f51c740cc1758607838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe28b236ffd5f87f29201f3bd040289a5717681c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610338"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Como: Consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (Visual Basic)
 Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado. Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em tempo de execução. Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".  
   
 ## <a name="example"></a>Exemplo  
@@ -65,5 +65,5 @@ End Class
 ## <a name="compiling-the-code"></a>Compilando o código  
  Crie um projeto que tenha como alvo o .NET Framework versão 3.5 ou posterior com uma referência a System.Core.dll e uma instrução `Imports` para o namespace System.Linq.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

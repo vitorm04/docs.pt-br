@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592426"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configurando suporte de transações de WS-Atomic
 Este tópico descreve como você pode configurar o suporte de WS-AtomicTransaction (WS-AT) usando o utilitário de configuração do WS-AT.  
@@ -29,7 +29,7 @@ Este tópico descreve como você pode configurar o suporte de WS-AtomicTransacti
   
  Para habilitar a interface do usuário da ferramenta, você deve primeiro registrar o arquivo WsatUI.dll, localizado no seguinte caminho  
   
- %ProgramFiles%\Microsoft SDKs\Windows\v6.0\Bin  
+ %PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin  
   
  Para registrar o produto, execute o seguinte comando em uma janela do Prompt de comando:  
   
@@ -54,7 +54,7 @@ Este tópico descreve como você pode configurar o suporte de WS-AtomicTransacti
 ### <a name="creating-and-exporting-certificates"></a>Criando e exportando certificados  
  Este procedimento requer o snap-in MMC de certificados. O snap-in pode ser acessado abrindo o menu Iniciar/Executar, digite "mmc" na caixa de entrada e pressionar Okey. Em seguida, nos **Console1** janela, navegue até **arquivo/adicionar ou remover** Snap-in, clique em Adicionar e escolha **certificados** do **autônomos disponíveis Snap-ins** lista. Por fim, selecione **conta de computador** para gerenciar e clique em **Okey**. O **certificados** nó aparece no console do snap-in.  
   
- Você já deve ter os certificados necessários para estabelecer a confiança. Para saber como criar e instalar novos certificados antes das etapas a seguir, consulte [como: criar e instalar certificados de cliente temporários no WCF durante o desenvolvimento](https://go.microsoft.com/fwlink/?LinkId=158925).  
+ Você já deve ter os certificados necessários para estabelecer a confiança. Para saber como criar e instalar novos certificados antes das etapas a seguir, consulte [como: Criar e instalar certificados de cliente temporário no WCF durante o desenvolvimento](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  No computador A usando o snap-in, a importação de certificados do MMC o certificado existente (certA) no LocalMachine\MY (nó pessoal) e store LocalMachine\ROOT (nó de autoridade de certificação raiz confiável). Para importar um certificado para um nó específico, clique com botão direito no nó e escolha **todas as tarefas/importação**.  
   
@@ -118,6 +118,6 @@ Este tópico descreve como você pode configurar o suporte de WS-AtomicTransacti
   
 -   31: detalhado  
   
-## <a name="see-also"></a>Consulte também  
- [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [Snap-in do MMC de configuração de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>Consulte também
+- [Utilitário de configuração de WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Snap-in do MMC de configuração de WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

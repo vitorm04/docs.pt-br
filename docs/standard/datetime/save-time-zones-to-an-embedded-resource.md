@@ -1,5 +1,5 @@
 ---
-title: 'Como: salvar fusos horários em um recurso inserido'
+title: 'Como: Salvar fusos horários em um recurso inserido'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592868"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Como: salvar fusos horários em um recurso inserido
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Como: Salvar fusos horários em um recurso inserido
 
 Um aplicativo com reconhecimento de fuso horário geralmente exige a presença de um determinado fuso horário. No entanto, como a disponibilidade do indivíduo <xref:System.TimeZoneInfo> objetos depende de informações armazenadas no registro do sistema local, fusos horários disponíveis até mesmo normalmente pode estar ausentes. Além disso, informações sobre fusos horários personalizados é instanciado usando o <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método não são armazenadas com outras informações de fuso horário no registro. Para garantir que essas zonas de tempo estejam disponíveis quando eles forem necessários, salvá-los ao serializá-los e depois restaurá-los por desserializá-las.
 
@@ -37,9 +37,9 @@ Além de um arquivo de recurso que é compilado com o aplicativo, vários outros
 
 1. Recuperar uma zona de tempo existente ou crie um novo fuso horário.
 
-   Para recuperar uma zona de tempo existente, consulte [como: acessar os objetos de fuso horário UTC e local predefinidos](../../../docs/standard/datetime/access-utc-and-local.md) e [como: instanciar um objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Para recuperar uma zona de tempo existente, consulte [como: Acessar os objetos de fuso horário UTC e local predefinidos](../../../docs/standard/datetime/access-utc-and-local.md) e [como: Criar uma instância de um objeto TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-   Para criar um novo fuso horário, chame uma das sobrecargas do <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método. Para obter mais informações, consulte [como: criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [como: criar fusos horários com regras de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Para criar um novo fuso horário, chame uma das sobrecargas do <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método. Para obter mais informações, confira [Como: Criar fusos horários sem regras de ajuste](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [como: Criar fusos horários com regras de ajuste](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
 2. Chamar o <xref:System.TimeZoneInfo.ToSerializedString%2A> método para criar uma cadeia de caracteres que contém os dados do fuso horário.
 
@@ -85,6 +85,6 @@ Este exemplo requer:
 
 ## <a name="see-also"></a>Consulte também
 
-* [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
-* [Visão geral de fusos horários](../../../docs/standard/datetime/time-zone-overview.md)
-* [Como restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+- [Visão geral de fusos horários](../../../docs/standard/datetime/time-zone-overview.md)
+- [Como: Restaurar fusos horários de um recurso inserido](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
