@@ -1,15 +1,15 @@
 ---
 title: Implementar repetições de chamadas HTTP com retirada exponencial com a Polly
-description: Saiba como lidar com falhas de HTTP com a Polly e o HttpClientFactory
+description: Saiba como tratar falhas de HTTP com a Polly e o HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143981"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362750"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementar repetições de chamadas HTTP com retirada exponencial com o HttpClientFactory e políticas da Polly
 
@@ -36,9 +36,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-O método **AddPolicyHandler()** é o que adiciona políticas aos objetos `HttpClient` que você usará. Nesse caso, ele está adicionando a política da Polly para repetições de HTTP com retirada exponencial.
+O método **AddPolicyHandler()** é aquele que adiciona políticas aos objetos `HttpClient` que você usará. Nesse caso, ele está adicionando a política da Polly para repetições de HTTP com retirada exponencial.
 
-Para obter uma abordagem mais modular, a política de repetição de HTTP pode ser definida em um método separado dentro do método ConfigureServices(), como o código a seguir.
+Para obter uma abordagem mais modular, a política de repetição de HTTP pode ser definida em um método separado no arquivo `Startup.cs`, como mostra o código a seguir:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -51,11 +51,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-Com a Polly, é possível definir uma política de repetição com o número de repetições, a configuração de retirada exponencial e as ações a serem executadas quando há uma exceção de HTTP, como registrar o erro em log. Nesse caso, a política é configurada para tentar seis vezes com uma repetição exponencial, começando em dois segundos. 
+Com a Polly, você pode definir uma política de repetição com o número de repetições, a configuração de retirada exponencial e as ações a serem executadas quando houver uma exceção de HTTP, como registrar o erro em log. Nesse caso, a política é configurada para tentar seis vezes com uma repetição exponencial, começando em dois segundos. 
 
 Portanto, ela tentará seis vezes e os segundos entre cada repetição serão exponenciais, começando em dois segundos.
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Adicionando uma estratégia de tremulação à política de repetição
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Adicionar uma estratégia de tremulação à política de repetição
 
 Uma política de Repetição regular pode afetar o sistema em casos de alta simultaneidade e escalabilidade e sob alta contenção. Para superar os picos de novas tentativas semelhantes provenientes de muitos clientes em caso de interrupções parciais, uma boa solução alternativa é adicionar uma estratégia de variação à política/ao algoritmo de novas tentativas. Isso pode melhorar o desempenho geral do sistema de ponta a ponta, adicionando aleatoriedade à retirada exponencial. Isso espalha os picos quando surgem problemas. Quando você usa uma política da Polly simples, o código para implementar a variação pode ser semelhante ao seguinte exemplo:
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Padrão de repetição**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **Padrão de repetição**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly e HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly e HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (biblioteca de tratamento de falhas transitórias e resiliência do .NET)**
+- **Polly (biblioteca de tratamento de falhas transitórias e resiliência do .NET)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker. Jitter: Making Things Better With Randomness** (Variação: melhorando as coisas com aleatoriedade)
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker. Jitter: Making Things Better With Randomness**\ (Tremulação: melhorando as coisas com aleatoriedade)
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Anterior](explore-custom-http-call-retries-exponential-backoff.md)

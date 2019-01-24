@@ -7,14 +7,14 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170022"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362256"
 ---
-# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Crie um aplicativo Olá, Mundo do .NET Core em Visual Basic no Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Criar um aplicativo Olá, Mundo em Visual Basic com o SDK do .NET Core no Visual Studio 2017
 
 Este tópico fornece uma introdução passo a passo para compilação, depuração e publicação de um aplicativo de console simples do .NET Core usando Visual Basic no Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tenha como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
 
@@ -78,9 +78,9 @@ Aprimore seu aplicativo para solicitar o nome do usuário e exibi-lo juntamente 
 
 Você criou e executou seu aplicativo. Para desenvolver um aplicativo profissional, realize algumas etapas adicionais para deixar seu aplicativo pronto para a liberação:
 
-- Para obter informações sobre a depuração do aplicativo, consulte [Depurando um aplicativo Olá, Mundo em C# com o Visual Studio 2017](debugging-with-visual-studio.md).
+- Para depurar seu aplicativo, confira [Depurar seu aplicativo Olá, Mundo do .NET Core usando o Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Para obter informações sobre o desenvolvimento e a publicação de uma versão distribuível do seu aplicativo, consulte [Publishing your C# Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicando um aplicativo Olá, Mundo em C# com o Visual Studio 2017).
+- Para publicar uma versão distribuível do seu aplicativo, confira [Publicar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017](publishing-with-visual-studio.md).
 
 <!--
 ## Related topics

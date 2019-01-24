@@ -1,78 +1,56 @@
 ---
 title: Usando o Azure Key Vault para proteger segredos no momento da produção
-description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Usando o Azure Key Vault para proteger segredos no momento da produção
+description: Segurança em microsserviços e aplicativos Web do .NET – o Azure Key Vault é uma excelente maneira de lidar com os segredos do aplicativo que são totalmente controlados pelos administradores. Os administradores podem até mesmo atribuir e revogar os valores de desenvolvimento sem que os desenvolvedores precisam lidar com eles.
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cbe893dcdd71f0ce8bf8a26a8502d6c0b3a0dedb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: 291d60f941e4280ff120296ce1c392df3300dc44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151136"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362413"
 ---
-# <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Usando o Azure Key Vault para proteger segredos no momento da produção
+# <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar o Azure Key Vault para proteger os segredos no tempo de produção
 
 Os segredos armazenados como variáveis de ambiente ou armazenados pela ferramenta Secret Manager ainda são armazenados localmente e descriptografados no computador. Uma opção mais segura para armazenar segredos é o [Azure Key Vault](https://azure.microsoft.com/services/key-vault/), que oferece um local seguro e central para armazenar chaves e segredos.
 
-O pacote Microsoft.Extensions.Configuration.AzureKeyVault permite que um aplicativo do ASP.NET Core leia informações de configuração do Azure Key Vault. Para começar a usar os segredos de um Azure Key Vault, siga estas etapas:
+O pacote **Microsoft.Extensions.Configuration.AzureKeyVault** permite que um aplicativo do ASP.NET Core leia informações de configuração do Azure Key Vault. Para começar a usar os segredos de um Azure Key Vault, siga estas etapas:
 
-Primeiro, registre seu aplicativo como um aplicativo Azure AD. (O acesso a cofres de chaves é gerenciado pelo Azure AD). Isso pode ser feito por meio do Portal de Gerenciamento do Azure.
+1. Registre seu aplicativo como um aplicativo do Azure AD. (O acesso a cofres de chaves é gerenciado pelo Azure AD). Isso pode ser feito por meio do portal de gerenciamento do Azure.\
 
-Ou, se você desejar que seu aplicativo seja autenticado usando um certificado em vez de um segredo do cliente ou senha, será possível usar o cmdlet do PowerShell [AzureRmADApplication novo](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication). O certificado que você registrar com o Azure Key Vault precisa apenas de sua chave pública. (O aplicativo usará a chave privada.)
+   Ou, se você desejar que seu aplicativo seja autenticado usando um certificado em vez de um segredo do cliente ou senha, será possível usar o cmdlet do PowerShell [AzureRmADApplication novo](/powershell/module/azurerm.resources/new-azurermadapplication). O certificado que você registrar com o Azure Key Vault precisa apenas de sua chave pública. (O aplicativo usará a chave privada.)
 
-Segundo, conceda ao aplicativo registrado acesso ao cofre de chaves criando uma nova entidade de serviço. É possível fazer isso usando os seguintes comandos do PowerShell:
+2. Permita que o aplicativo registrado acesse o Key Vault criando uma entidade de serviço. É possível fazer isso usando os seguintes comandos do PowerShell:
 
-```powershell
-$sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
-```
+   ```powershell
+   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   ```
 
-Em terceiro lugar, inclua o cofre de chaves como uma fonte de configuração em seu aplicativo chamando o método de extensão IConfigurationBuilder.AddAzureKeyVault quando você criar uma instância IConfigurationRoot. Observe que chamar AddAzureKeyVault exigirá a ID do aplicativo que foi registrado e que recebeu acesso ao cofre de chaves nas etapas anteriores.
+3. Inclua o Key Vault como uma fonte de configuração em seu aplicativo chamando o método de extensão <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> ao criar uma instância de <xref:Microsoft.Extensions.Configuration.IConfigurationRoot>. Observe que a chamada de `AddAzureKeyVault` requer a ID do aplicativo que foi registrada e permitiu acesso ao Key Vault nas etapas anteriores.
 
-  No momento, o .NET Standard e o .NET Core dão suporte à obtenção de informações de configuração de um Azure Key Vault usando uma ID de cliente e o segredo do cliente. Os aplicativos do .NET Framework podem usar uma sobrecarga de IConfigurationBuilder.AddAzureKeyVault que usa um certificado no lugar do segredo do cliente. No momento da redação deste artigo, o trabalho está [em andamento](https://github.com/aspnet/Configuration/issues/605) para disponibilizar essa sobrecarga no .NET Standard e no .NET Core. Até que a sobrecarga AddAzureKeyVault que aceita um certificado esteja disponível, os aplicativos do ASP.NET Core poderão acessar um Azure Key Vault com autenticação baseada em certificado criando explicitamente um objeto KeyVaultClient, conforme mostrado no exemplo a seguir:
+   Você também pode usar uma sobrecarga de `AddAzureKeyVault`, que usa um certificado no lugar do segredo do cliente, apenas incluindo uma referência ao pacote [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory).
 
-```csharp
-// Configure Key Vault client
-var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(async
-    (authority, resource, scope) =>
-    {
-        var cert = // Get certificate from local store/file/key vault etc. as needed
-        // From the Microsoft.IdentityModel.Clients.ActiveDirectory pacakge
-        var authContext = new AuthenticationContext(authority,
-            TokenCache.DefaultShared);
-        var result = await authContext.AcquireTokenAsync(resource,
-            // From the Microsoft.Rest.ClientRuntime.Azure.Authentication pacakge
-            new ClientAssertionCertificate("{Application ID}", cert));
-        return result.AccessToken;
-    }));
-
-    // Get configuration values from Key Vault
-    var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        // Other configuration providers go here.
-        .AddAzureKeyVault("{KeyValueUri}", kvClient,
-        new DefaultKeyVaultSecretManager());
-```
-
-Neste exemplo, a chamada a AddAzureKeyVault vem no final do registro do provedor de configuração. É uma melhor prática registrar o Azure Key Vault como o último provedor de configuração para que ele tenha uma oportunidade de substituir valores de configuração de provedores anteriores, e para que nenhum valor de configuração de outras fontes substituam os do cofre de chaves.
+> [!IMPORTANT]
+> Recomendamos que você registre o Azure Key Vault como o último provedor de configuração, para que ele possa substituir os valores de configuração dos provedores anteriores.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
--   **Usando o Azure Key Vault para proteger segredos do aplicativo**
-    [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
+- **Usando o Azure Key Vault para proteger segredos do aplicativo** \
+  [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **Armazenamento seguro dos segredos do aplicativo durante o desenvolvimento**
-    [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
+- **Armazenamento seguro dos segredos do aplicativo durante o desenvolvimento** \
+  [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
 
--   **Configurando a proteção de dados**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
+- **Configurando a proteção de dados** \
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
 
--   **Gerenciamento de chaves e tempo de vida**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
+- **Gerenciamento e tempo de vida de chaves** \
+  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
--   Repositório do GitHub **Microsoft.Extensions.Configuration.KeyPerFile**.
-    [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+- Repositório do GitHub **Microsoft.Extensions.Configuration.KeyPerFile**. \
+  [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
 >[Anterior](developer-app-secrets-storage.md)

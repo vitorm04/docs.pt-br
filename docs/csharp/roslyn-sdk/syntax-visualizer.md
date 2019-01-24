@@ -3,12 +3,12 @@ title: Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 description: O visualizador de sintaxe fornece uma ferramenta visual para explorar os modelos que o SDK do .NET Compiler Platform gera para o código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143552"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307195"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 
@@ -80,11 +80,11 @@ Veja o layout de encaixe para usar com a janela de ferramentas do visualizador e
 
 Outra opção é colocar a janela de gráfico de sintaxe em um segundo monitor, em uma configuração de dois monitores.
 
-# <a name="inspecting-semantics"></a>Inspecionando semântica
+## <a name="inspecting-semantics"></a>Inspecionando semântica
 
 O Visualizador de sintaxe possibilita uma inspeção rudimentar de símbolos e informações semânticas. Digite `double x = 1 + 1;` dentro de Main() no exemplo de C#. Em seguida, selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** no visualizador. Clique com o botão direito do mouse nesse **AddExpression** e clique em **Exibir Symbol (se houver)**. Observe que a maioria dos itens de menu tem o qualificador "se houver". O Visualizador de sintaxe inspeciona as propriedades de um Nó, incluindo propriedades que podem não estar presentes em todos os nós. 
 
-A grade de propriedade do visualizador é atualizada conforme mostrado na figura a seguir: o símbolo da expressão é um **SynthesizedIntrinsicOperatorSymbol** com **Kind = Method**.
+A grade de propriedades nas atualizações do visualizador, como mostra a figura a seguir: O símbolo da expressão é um **SynthesizedIntrinsicOperatorSymbol** com **Kind = Method**.
 
 ![Propriedades Symbol](media/syntax-visualizer/symbol-properties.png)
 

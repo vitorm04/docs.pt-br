@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194131"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415891"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
@@ -56,7 +56,7 @@ O WCF dá suporte ao TLS 1.0, 1.1 e 1.2 como o padrão no .NET Framework 4.7. A 
 
 Para aplicativos ASP.NET, inspecione o elemento `<system.web><httpRuntime targetFramework>` de _web.config_ para verificar se você está usando a versão desejada do .NET Framework.
 
-Para o Windows Forms e outros aplicativos, confira [Como definir a uma versão do .NET Framework como destino](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Para o Windows Forms e outros aplicativos, confira [Como Direcionar a uma versão do .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 Use as seções a seguir para verificar se você não está usando uma versão específica do TLS ou SSL.
 
@@ -150,7 +150,7 @@ As opções têm o mesmo efeito, seja para uma rede HTTP (<xref:System.Net.Servi
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-Um valor `false` para `Switch.System.Net.DontEnableSchUseStrongCrypto` faz com que seu aplicativo use criptografia forte. Um valor `false` para `DontEnableSchUseStrongCrypto` usa protocolos de rede mais seguros (TLS 1.2, TLS 1.1 e TLS 1.0) e bloqueia protocolos não seguros. Para saber mais, confira [O sinalizador SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag). Um valor `true` desabilita uma criptografia forte para o aplicativo.
+Um valor `false` para `Switch.System.Net.DontEnableSchUseStrongCrypto` faz com que seu aplicativo use criptografia forte. Um valor `false` para `DontEnableSchUseStrongCrypto` usa protocolos de rede mais seguros (TLS 1.2, TLS 1.1 e TLS 1.0) e bloqueia protocolos não seguros. Para saber mais, confira [O sinalizador SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag). Um valor `true` desabilita uma criptografia forte para o aplicativo.
 
 Se o aplicativo for destinado ao .NET Framework 4.6 ou versões posteriores, essa opção será definida como `false` por padrão. Esse é um padrão seguro que recomendamos. Se o aplicativo for executado em .NET Framework 4.6, mas for destinado a uma versão anterior, a opção será definida como `true` por padrão. Nesse caso, defina-a explicitamente como `false`.
 
@@ -191,7 +191,7 @@ Todas as chaves do Registro descritas abaixo têm o mesmo efeito, seja para uma 
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-A chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` tem um valor do tipo DWORD. Um valor 1 faz com que seu aplicativo use criptografia forte. A criptografia forte usa protocolos de rede mais seguros (TLS 1.2, TLS 1.1 e TLS 1.0) e bloqueia protocolos não seguros. Um valor 0 desabilita a criptografia forte. Para saber mais, confira [O sinalizador SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag).
+A chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` tem um valor do tipo DWORD. Um valor 1 faz com que seu aplicativo use criptografia forte. A criptografia forte usa protocolos de rede mais seguros (TLS 1.2, TLS 1.1 e TLS 1.0) e bloqueia protocolos não seguros. Um valor 0 desabilita a criptografia forte. Para saber mais, confira [O sinalizador SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
 Se o aplicativo for destinado ao .NET Framework 4.6 ou versões posteriores, o valor dessa chave será definido como 1 por padrão. Esse é um padrão seguro que recomendamos. Se o aplicativo for executado em .NET Framework 4.6, mas for destinado a uma versão anterior, a chave será definida como 0 por padrão. Nesse caso, defina o valor explicitamente como 1.
 
@@ -205,7 +205,7 @@ A `<VERSION>` deve ser v4.0.30319 (para o .NET Framework 4 e superior) ou v2.0.5
 
 Se o aplicativo for destinado ao .NET Framework 4.7 ou versões posteriores, o valor dessa chave será definido como 1 por padrão. Esse é um padrão seguro que recomendamos. Se o aplicativo for executado no .NET Framework 4.7 ou versões posteriores, mas for destinado a uma versão anterior, a chave será definida como 0 por padrão. Nesse caso, defina o valor explicitamente como 1.
 
-Para saber mais, confira [Atualização Cumulativa para Windows 10 Versão 1511 e Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
+Para obter mais informações, confira [Atualização cumulativa do Windows 10 Versão 1511 e do Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
 Para saber mais sobre o .NET Framework 3.5.1, confira [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5.1 no Windows 7 SP1 e Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 
@@ -258,7 +258,7 @@ Para atualizar o .NET Framework para permitir que o sistema operacional escolha 
 Confira também: 
 
 - [Versões e dependências do .NET Framework](../migration-guide/versions-and-dependencies.md)
-- [Como determinar quais versões do .NET Framework estão instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
+- [Como: Determinar quais versões do .NET Framework estão instaladas](../migration-guide/how-to-determine-which-versions-are-installed.md).
 
 ## <a name="support-for-tls-12"></a>Suporte para o TLS 1.2
 
@@ -285,7 +285,7 @@ Esta tabela mostra a atualização do sistema operacional que você precisará p
 
 | **Sistema operacional** | **Atualização mínima necessária para dar suporte ao TLS 1.2 com .NET Framework 3.5** |
 | --- | --- |
-| Windows 10</br>Windows Server 2016 | [Atualização Cumulativa para Windows 10 Versão 1511 e Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 10</br>Windows Server 2016 | [Atualização cumulativa do Windows 10 Versão 1511 e do Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1</br>Windows Server 2012 R2 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 8.0</br>Windows Server 2012 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5.1 no Windows 7 SP1 e Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |

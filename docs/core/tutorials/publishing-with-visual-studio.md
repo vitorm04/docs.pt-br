@@ -1,18 +1,18 @@
 ---
-title: Publicar um aplicativo Olá, Mundo com o Visual Studio 2017
-description: A publicação cria o conjunto de arquivos necessários para executar seu aplicativo.
+title: Publicar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
+description: A publicação cria o conjunto de arquivos necessários para executar seu aplicativo .NET Core.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: ae202d8102d470e4260394f427e861750d4f0ee6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169112"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362464"
 ---
-# <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publicar um aplicativo Olá, Mundo com o Visual Studio 2017
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Publicar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
 
 Em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017), você compilou um aplicativo de console Olá, Mundo. Em [Debug your C# Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) (Depurar um aplicativo Olá, Mundo em C# com o Visual Studio 2017), você o testou usando o depurador do Visual Studio. Agora que você tem certeza de que ele funciona conforme o esperado, publique-o para que outros usuários possam executá-lo. A publicação cria o conjunto de arquivos necessários para executar seu aplicativo e você pode implantá-los copiando-os para um computador de destino.
 

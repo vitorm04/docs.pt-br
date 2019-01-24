@@ -4,12 +4,12 @@ description: Descubra as opções para orquestrar microsserviços e aplicativos 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152705"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307429"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestrar microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade
 
@@ -17,7 +17,7 @@ O uso de orquestradores em aplicativos prontos para produção é essencial se o
 
 A Figura 4-23 ilustra a implantação de um aplicativo composto por vários microsserviços (contêineres) em um cluster.
 
-![Aplicativos do Docker compostos em um cluster: você usa um contêiner para cada instância de serviço. Contêineres do Docker são "unidades de implantação" e um contêiner é uma instância de um host do Docker. Um host lida com vários contêineres](./media/image23.png)
+![Aplicativos do Docker compostos em um cluster: você pode usar um contêiner para cada instância de serviço. Contêineres do Docker são "unidades de implantação" e um contêiner é uma instância de um host do Docker. Um host lida com vários contêineres](./media/image23.png)
 
 **Figura 4-23**. Um cluster de contêineres
 
@@ -87,11 +87,11 @@ O AKS é uma maneira de simplificar a criação, configuração e gerenciamento 
 
 O Serviço de Kubernetes do Azure otimiza a configuração de ferramentas de software livre e tecnologias conhecidas do Docker especificamente para o Azure. É uma solução aberta que oferece portabilidade para contêineres e configuração de aplicativo. Selecione o tamanho, a quantidade de hosts e as ferramentas de orquestrador e deixe o AKS cuidar de todo o resto.
 
-![Estrutura de cluster do Kubernetes: há um nó mestre que manipula o DNS, o agendador, o proxy, etc. e vários nós de trabalho, os quais hospedam os contêineres.](media/image36.png)
+![Estrutura de cluster Kubernetes: há um nó mestre que manipula o DNS, o agendador, o proxy, entre outros e vários nós de trabalho que hospedam os contêineres.](media/image36.png)
 
 **Figura 4-24**. Topologia e estrutura simplificadas do cluster Kubernetes
 
-Na figura 4-24 você pode ver a estrutura de um cluster Kubernetes em que um nó mestre (VM) controla a maior parte da coordenação do cluster e você pode implantar contêineres para o restante dos nós que são gerenciados como um único pool de um ponto de vista do aplicativo, permitindo que você dimensione para milhares ou até mesmo dezenas de milhares de contêineres.
+Na figura 4-24 veja a estrutura de um cluster Kubernetes em que um nó mestre (VM) controla a maior parte da coordenação do cluster e você pode implantar contêineres no restante dos nós que são gerenciados como um único pool de um ponto de vista do aplicativo, permitindo dimensionar para milhares ou até mesmo dezenas de milhares de contêineres.
 
 ## <a name="development-environment-for-kubernetes"></a>Ambiente de desenvolvimento para Kubernetes
 

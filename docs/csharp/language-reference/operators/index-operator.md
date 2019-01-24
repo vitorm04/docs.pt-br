@@ -1,7 +1,7 @@
 ---
-title: Operador [] – Referência de C#
+title: Operador [] – referência do C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243992"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333389"
 ---
-# <a name="-operator-c-reference"></a>Operador [] (Referência de C#)
-Os colchetes (`[]`) são usados para matrizes, indexadores e atributos. Eles também podem ser usados com ponteiros.  
-  
-## <a name="remarks"></a>Comentários  
- Um tipo de matriz é um tipo seguido por `[]`:  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- Para acessar um elemento de uma matriz, o índice do elemento desejado é colocado entre colchetes:  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- Uma exceção será lançada se um índice de matriz estiver fora do intervalo.  
-  
- O operador de indexação da matriz não pode ser sobrecarregado. No entanto, os tipos podem definir indexadores que recebem um ou mais parâmetros. Os parâmetros do indexador são colocados entre colchetes, assim como os índices de matriz, mas os parâmetros do indexador podem ser declarados para serem de qualquer tipo, ao contrário dos índices de matriz, que devem ser integrais.  
-  
- Por exemplo, o .NET Framework define um tipo `Hashtable` que associa chaves e valores de tipo arbitrário:  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- Os colchetes também são usados para especificar [Atributos](../../../csharp/programming-guide/concepts/attributes/index.md):  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- Você pode usar colchetes para desindexar um ponteiro:  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- Nenhuma verificação de limites é executada.  
-  
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+# <a name="-operator-c-reference"></a>Operador [] (referência do C#)
+
+Os colchetes, `[]`, normalmente são usados para acesso de elemento de matriz, indexador ou ponteiro.
+
+Para obter mais informações sobre o acesso de elemento de ponteiro, confira [Como acessar um elemento de matriz com um ponteiro](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+
+Os colchetes também são usados para especificar [atributos](../../programming-guide/concepts/attributes/index.md):
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>Acesso de matriz
+
+O exemplo a seguir demonstra como acessar elementos de matriz:
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+Se um índice de matriz estiver fora dos limites da dimensão correspondente de uma matriz, uma <xref:System.IndexOutOfRangeException> será gerada.
+
+Como mostra o exemplo anterior, você também pode usar colchetes na declaração de um tipo de matriz e na criação de instâncias da matriz.
+
+Para obter mais informações sobre matrizes, confira [Matrizes](../../programming-guide/arrays/index.md).
+
+## <a name="indexer-access"></a>Acesso de indexador
+
+O exemplo a seguir usa o tipo <xref:System.Collections.Generic.Dictionary%602> do .NET para demonstrar o acesso de indexador:
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+Os indexadores permitem indexar instâncias de um tipo definido pelo usuário de maneira semelhante à indexação de matriz. Ao contrário dos índices da matriz, que precisam ser um inteiro, os argumentos do indexador podem ser declarados como qualquer tipo.
+
+Para obter mais informações sobre indexadores, confira [Indexadores](../../programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
+
+O acesso de elemento `[]` não é considerado um operador que pode ser sobrecarregado. Use [indexadores](../../programming-guide/indexers/index.md) para permitir a indexação com tipos definidos pelo usuário.
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+Para obter mais informações, confira as seções [Acesso de elemento](~/_csharplang/spec/expressions.md#element-access) e [Acesso de elemento de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-element-access) da [Especificação da linguagem C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Operadores do C#](../../../csharp/language-reference/operators/index.md)  
-- [Matrizes](../../../csharp/programming-guide/arrays/index.md)  
-- [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Operadores do C#](index.md)
+- [Matrizes](../../programming-guide/arrays/index.md)
+- [Indexadores](../../programming-guide/indexers/index.md)
+- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Atributos](../../programming-guide/concepts/attributes/index.md)

@@ -1,20 +1,20 @@
 ---
-title: Compilação de uma biblioteca de classes .NET Core do Visual Basic no Visual Studio 2017
-description: Saiba como compilar uma biblioteca de classes .NET Core escrita em Visual Basic usando o Visual Studio 2017
+title: Criar uma biblioteca de classes .NET Standard em Visual Basic no Visual Studio 2017
+description: Saiba como criar uma biblioteca de classes .NET Standard escrita em Visual Basic usando o Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168826"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362035"
 ---
-# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Compilar uma biblioteca de classes com Visual Basic e o .SDK do NET Core no Visual Studio 2017
+# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Criar uma biblioteca .NET Standard com o Visual Basic e o SDK do .NET Core no Visual Studio 2017
 
 Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes que direciona o .NET Standard 2.0 permite que sua biblioteca seja chamada por qualquer implementação do .NET que dê suporte à versão do .NET Standard. Quando você finaliza sua biblioteca de classes, pode decidir se deseja distribuí-la como um componente de terceiros ou se quer incluí-la como um componente agrupado com um ou mais aplicativos.
 

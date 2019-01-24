@@ -4,12 +4,12 @@ description: Arquitetura de microsserviços do .NET para aplicativos .NET em con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127128"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415930"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementar um modelo de domínio de microsserviço com o .NET Core 
 
@@ -33,7 +33,7 @@ Uma agregação refere-se a um cluster de objetos de domínio agrupados de acord
 
 Consistência transacional significa que uma agregação está garantidamente consistente e atualizada ao final de uma ação de negócios. Por exemplo, a agregação de ordem do modelo de domínio de microsserviços de pedidos eShopOnContainers é composta conforme mostra a Figura 7-11.
 
-![Uma exibição detalhada da pasta OrderAggregate: Address.cs é um objeto de valor, IOrderRepository é uma interface de repositório, Order.cs é uma raiz de agregação, OrderItem.cs é uma entidade filho e OrderStatus.cs é uma classe de enumeração.](./media/image12.png)
+![Uma exibição detalhada da pasta OrderAggregate: Address.cs é um objeto de valor, IOrderRepository é uma interface de repositório, Order.cs é uma raiz agregada, OrderItem.cs é uma entidade filho e OrderStatus.cs é uma classe de enumeração.](./media/image12.png)
 
 **Figura 7-11**. A agregação de ordem na solução do Visual Studio
 
@@ -152,7 +152,7 @@ Além disso, a nova operação OrderItem(params) também será controlada e exec
 
 Quando você usar o Entity Framework Core 1.1 ou posterior, uma entidade DDD pode ser melhor expressada porque ela permite [mapear para os campos](https://docs.microsoft.com/ef/core/modeling/backing-field) além das propriedades. Isso é útil ao proteger as coleções de entidades filho ou objetos de valor. Com esse aprimoramento, você pode usar os campos privados, em vez das propriedades, e pode implementar qualquer atualização à coleção de campo nos métodos públicos e fornecer acesso somente leitura por meio do método AsReadOnly.
 
-No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou no construtor) para controlar qualquer invariável e a consistência dos dados, portanto, as propriedades são definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core precisa definir esses campos também (para poder retornar o objeto com os valores adequados).
+No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou no construtor) para controlar qualquer invariável e a consistência dos dados, portanto, as propriedades são definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core também precisa definir esses campos (para que ele possa retornar o objeto com os valores adequados).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapear propriedades com apenas acessadores get para os campos na tabela de banco de dados
 
@@ -171,8 +171,8 @@ Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos 
 - **Vaughn Vernon. Modelagem de agregações com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core. \
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
-- **Julie Lerman. Codificação para o Design Controlado por Domínio: dicas para desenvolvedores centrados em dados** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs** \ (Codificando para o design controlado por domínio: dicas para desenvolvedores com foco em dados)
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

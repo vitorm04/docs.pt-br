@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos que virão na futura versão 7 da linguagem C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155282"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415722"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -105,7 +105,7 @@ Você pode especificar nomes para os campos no lado esquerdo e direito da atribu
 
 A linha acima gera um aviso, `CS8123`, informando que os nomes no lado direito da atribuição, `Alpha` e `Beta`, são ignorados porque eles estão em conflito com os nomes no lado esquerdo, `First` e `Second`.
 
-Os exemplos acima mostram a sintaxe básica para declarar tuplas. As tuplas são mais úteis como tipos de retorno para os métodos `private` e `internal`. As tuplas fornecem uma sintaxe simples para esses métodos retornarem vários valores distintos: salve o trabalho de criação de um `class` ou um `struct` que define o tipo retornado. Não é necessário criar um novo tipo.
+Os exemplos acima mostram a sintaxe básica para declarar tuplas. As tuplas são mais úteis como tipos de retorno para os métodos `private` e `internal`. As tuplas fornecem uma sintaxe simples para que esses métodos retornem vários valores distintos: Você salva o trabalho de criação de um `class` ou um `struct` que define o tipo retornado. Não é necessário criar um novo tipo.
 
 Criar uma tupla é mais eficiente e produtivo.
 É uma sintaxe mais simples e leve para definir uma estrutura de dados que contém mais de um valor. O método de exemplo a seguir retorna os valores mínimo e máximo encontrados em uma sequência de inteiros:
@@ -168,7 +168,7 @@ A correspondência de padrões tem suporte a expressões `is` e `switch`. Cada u
 
 ### <a name="is-expression"></a>Expressão `is`
 
-A expressão de padrão `is` estende o operador familiar `is` para consultar um objeto além de seu tipo.
+A expressão `is` padrão estende o [operador`is`](../language-reference/keywords/is.md#pattern-matching-with-is) familiar para consultar um objeto além de seu tipo.
 
 Vamos começar com um cenário simples. Vamos adicionar recursos a este cenário que demonstram como expressões de correspondência de padrões tornam algoritmos que funcionam com tipos não relacionados fáceis. Começaremos com um método que calcula a soma de uma série de rolagens de dado:
 
@@ -329,7 +329,7 @@ O C# 6 introduziu [membros aptos para expressão](csharp-6.md#expression-bodied-
 > [!NOTE]
 > Este exemplo não precisa de um finalizador, mas ele é mostrado para demonstrar a sintaxe. Você não deve implementar um finalizador em sua classe a menos que seja necessário para liberar recursos não gerenciados. Você também deve considerar o uso da classe <xref:System.Runtime.InteropServices.SafeHandle> em vez de gerenciar recursos não gerenciados diretamente.
 
-Esses novos locais para membros aptos para expressão representam uma etapa importante para a linguagem C#: esses recursos foram implementados por membros da comunidade trabalhando no projeto [Roslyn](https://github.com/dotnet/Roslyn) de software livre.
+Esses novos locais para membros aptos para expressão representam um marco importante para a linguagem C#: Esses recursos foram implementados por membros da comunidade que trabalham no projeto [Roslyn](https://github.com/dotnet/Roslyn) de software livre.
 
 A alteração de um método para um membro de corpo da expressão é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
 

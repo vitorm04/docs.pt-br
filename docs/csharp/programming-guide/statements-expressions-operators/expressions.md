@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239284"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362308"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 Uma *expressão* é uma sequência de um ou mais operandos e zero ou mais operadores que podem ser avaliados como um valor, objeto, método ou namespace único. As expressões podem consistir de um valor literal, uma invocação de método, um operador e seus operandos ou um *nome simples*. Os nomes simples podem ser o nome de uma variável, um membro de tipo, um parâmetro de método, um namespace ou um tipo.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Valores de expressão  
- Na maioria dos contextos em que as expressões são usadas, por exemplo, em instruções ou parâmetros de método, espera-se que a expressão seja avaliada como algum valor. Se x e y são inteiros, a expressão `x + y` será avaliada como um valor numérico. A expressão `new MyClass()` é avaliada como uma referência a uma nova instância de um objeto `MyClass`. A expressão `myClass.ToString()` é avaliada como uma cadeia de caracteres, porque esse é o tipo de retorno do método. No entanto, embora um nome de namespace seja classificado como uma expressão, ele não é avaliado como um valor e, portanto, nunca pode ser o resultado final de qualquer expressão. Não é possível passar um nome de namespace para um parâmetro de método, usá-lo em uma nova expressão ou atribuí-lo a uma variável. Ele poderá ser usado somente como uma subexpressão em uma expressão maior. Isso também se aplica a tipos (diferentes dos objetos <xref:System.Type?displayProperty=nameWithType>), a nomes de grupos de métodos (diferentes de métodos específicos) e aos acessadores de eventos [add](../../../csharp/language-reference/keywords/add.md) e [remove](../../../csharp/language-reference/keywords/remove.md).  
+ Na maioria dos contextos em que as expressões são usadas, por exemplo, em instruções ou parâmetros de método, espera-se que a expressão seja avaliada como algum valor. Se x e y são inteiros, a expressão `x + y` será avaliada como um valor numérico. A expressão `new MyClass()` é avaliada como uma referência a uma nova instância de uma classe `MyClass`. A expressão `myClass.ToString()` é avaliada como uma cadeia de caracteres, porque esse é o tipo de retorno do método. No entanto, embora um nome de namespace seja classificado como uma expressão, ele não é avaliado como um valor e, portanto, nunca pode ser o resultado final de qualquer expressão. Não é possível passar um nome de namespace para um parâmetro de método, usá-lo em uma nova expressão ou atribuí-lo a uma variável. Ele poderá ser usado somente como uma subexpressão em uma expressão maior. Isso também se aplica a tipos (diferentes dos objetos <xref:System.Type?displayProperty=nameWithType>), a nomes de grupos de métodos (diferentes de métodos específicos) e aos acessadores de eventos [add](../../../csharp/language-reference/keywords/add.md) e [remove](../../../csharp/language-reference/keywords/remove.md).  
   
  Cada valor tem um tipo associado. Por exemplo, se x e y forem variáveis do tipo `int`, o valor da expressão `x + y` também será tipado como `int`. Se o valor for atribuído a uma variável de um tipo diferente ou se x e y forem tipos diferentes, as regras de conversão de tipo serão aplicadas. Para obter mais informações sobre como essas conversões funcionam, consulte [Conversões e Conversões de Tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

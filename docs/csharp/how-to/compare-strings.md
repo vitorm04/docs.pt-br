@@ -1,16 +1,16 @@
 ---
 title: 'Como: Comparar cadeias de caracteres – Guia do C#'
 description: Saiba como comparar e ordenar valores de cadeia de caracteres, com ou sem ordem específica de cultura ou de diferenciação entre maiúsculas e minúsculas
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334828"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415878"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Como comparar cadeias de caracteres no C\#
 
@@ -29,7 +29,13 @@ Ao comparar cadeias de caracteres, você pode definir uma ordem entre elas. As c
 
 ## <a name="default-ordinal-comparisons"></a>Comparações ordinárias padrão
 
-Os métodos mais comuns que testam a igualdade, <xref:System.String.Equals%2A?displayProperty=nameWithType> e <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, usam uma comparação ordinal que diferencia maiúsculas de minúsculas. Os resultados são mostrados no exemplo a seguir.
+As operações mais comuns:
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+usar uma comparação ordinal, uma comparação que diferencia maiúsculas de minúsculas e a cultura atual. Os resultados são mostrados no exemplo a seguir:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

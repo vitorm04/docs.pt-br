@@ -1,5 +1,5 @@
 ---
-title: Operador ^= – Referência de C#
+title: Operador ^= – referência do C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,38 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-ms.openlocfilehash: cf39c8e8586e9d4f537fe38d8b28f55542db6ab8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 12189d6469a9716d3b7ebcffef23423a75692d1a
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237149"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333545"
 ---
-# <a name="-operator-c-reference"></a>Operador ^= (Referência de C#)
-O operador de atribuição OR exclusivo.  
-  
-## <a name="remarks"></a>Comentários  
- Uma expressão da forma  
-  
-```csharp  
-x ^= y  
-```  
-  
- é avaliada como  
-  
-```csharp  
-x = x ^ y  
-```  
-  
- exceto que `x` é avaliado apenas uma vez. O [operador ^](../../../csharp/language-reference/operators/xor-operator.md) realiza uma operação OR exclusiva bit a bit em operandos integrais e OR exclusiva lógica em operandos [bool](../../../csharp/language-reference/keywords/bool.md).  
-  
- O operador ^= não pode ser sobrecarregado diretamente, mas tipos definidos pelo usuário podem sobrecarregar o [operador ^](../../../csharp/language-reference/operators/xor-operator.md) (consulte [operador](../../../csharp/language-reference/keywords/operator.md)).  
-  
-## <a name="example"></a>Exemplo  
- [!code-csharp[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-assignment-operator_1.cs)]  
-  
+# <a name="-operator-c-reference"></a>Operador ^= (referência do C#)
+
+O operador de atribuição OR exclusivo.
+
+## <a name="remarks"></a>Comentários
+
+Uma expressão da forma
+
+```csharp
+x ^= y
+```
+
+é avaliada como
+
+```csharp
+x = x ^ y
+```
+
+exceto que `x` é avaliado apenas uma vez. O [operador ^](xor-operator.md) realiza uma operação OR exclusiva bit a bit em operandos integrais e OR exclusiva lógica em operandos [bool](../keywords/bool.md).
+
+O operador ^= não pode ser sobrecarregado diretamente, mas tipos definidos pelo usuário podem sobrecarregar o [operador ^](xor-operator.md) (consulte [operador](../keywords/operator.md)).
+
+## <a name="example"></a>Exemplo
+
+[!code-csharp[csRefOperators#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#23)]
+
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Operadores do C#](index.md)

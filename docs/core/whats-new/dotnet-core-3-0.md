@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156664"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415540"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>Novidades do .NET Core 3.0 (versão prévia 1)
 
@@ -30,15 +30,12 @@ O .NET Core 3.0 implementa o .NET Standard 2.1.
 
 ## <a name="default-executables"></a>Executáveis por padrão
 
-Agora, o .NET Core cria arquivos executáveis por padrão. Isso é novidade para aplicativos que usam uma versão do .NET Core instalada globalmente. Até agora, somente [implantações autocontidas](../deploying/index.md#self-contained-deployments-scd) tinham executáveis.
+Agora, o .NET Core criará [executáveis dependentes da estrutura](../deploying/index.md#framework-dependent-executables-fde), por padrão. Isso é novidade para aplicativos que usam uma versão do .NET Core instalada globalmente. Até agora, apenas [implantações autossuficientes](../deploying/index.md#self-contained-deployments-scd) produziam um executável.
 
 Durante `dotnet build` ou `dotnet publish`, um arquivo executável é criado, desde que corresponda ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
 
 * Você pode clicar duas vezes no arquivo executável.
 * Você pode iniciar o aplicativo diretamente de um prompt de comando, como `myapp.exe` no Windows e `./myapp` no Linux e macOS.
-
-> [!NOTE]
-> Não há suporte para a especificação de um tempo de execução próprio com os argumentos `dotnet publish -r` ou `dotnet build -r` para outros ambientes de tempo de execução.
 
 ## <a name="build-copies-dependencies"></a>O build copia dependências
 
@@ -175,8 +172,8 @@ Compartilhe seus comentários nos repositórios [dotnet/winforms](https://github
 
 Essa nova API incluirá os seguintes componentes:
 
-* Na Versão prévia 1: leitor JSON (acesso sequencial)
-* Em breve: gravador JSON, DOM (acesso aleatório), serializador poco, desserializador poco
+* Na versão prévia 1: Leitor de JSON (acesso sequencial)
+* Em breve: Gravação de JSON, DOM (acesso aleatório), serializador POCO, desserializador POCO
 
 Veja aqui o loop de leitor básico para o `Utf8JsonReader` que pode ser usado como ponto de partida:
 

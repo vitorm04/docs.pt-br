@@ -3,13 +3,13 @@ title: Bibliotecas do NuGet e .NET
 description: Recomendações de melhor prática para o empacotamento com o NuGet para bibliotecas do .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/15/2019
+ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614539"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333415"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -98,6 +98,8 @@ O NuGet.org hospeda seu próprio [repositório do servidor de símbolos](/nuget/
 
 > [!IMPORTANT]
 > O servidor de símbolos do NuGet.org é compatível apenas com novos [arquivos de símbolo portátil](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) criados por projetos no estilo de SDK.
+>
+> Para usar o servidor de símbolos do NuGet.org durante a depuração de uma biblioteca do .NET, os desenvolvedores precisam ter o Visual Studio 2017 15.9 ou posterior.
 
 Uma alternativa para criar um pacote de símbolos é inserir arquivos de símbolo no pacote do NuGet principal. O pacote do NuGet principal será maior, mas os arquivos de símbolos inseridos significam que os desenvolvedores não precisam configurar o servidor de símbolos do NuGet.org. Se você estiver criando seu pacote do NuGet usando um projeto de estilo do SDK, poderá inserir arquivos de símbolo definindo a propriedade `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 

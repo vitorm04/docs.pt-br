@@ -1,22 +1,22 @@
 ---
-title: Como criar assemblies amigáveis não assinados (C#)
+title: 'Como: criar assemblies amigáveis sem sinal (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211795"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362139"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Como criar assemblies amigáveis não assinados (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Como: criar assemblies amigáveis sem sinal (C#)
 Este exemplo mostra como usar assemblies amigáveis com assemblies não assinados.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Para criar um assembly e um assembly amigável  
   
 1.  Abra um prompt de comando.  
   
-2.  Crie um arquivo do C# chamado `friend_signed_A.` que contenha o seguinte código. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly autorizado.  
+2.  Crie um arquivo do C# chamado `friend_unsigned_A.` que contenha o seguinte código. O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como um assembly amigável.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
     }  
     ```  
   
-3.  Compile e assine o friend_signed_A usando o seguinte comando.  
+3.  Compile e assine friend_unsigned_A usando o comando a seguir.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
     }  
     ```  
   
-5.  Compile friend_signed_B usando o comando a seguir.  
+5.  Compile friend_unsigned_B usando o comando a seguir.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
   
      O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Você deve especificar explicitamente o nome do assembly de saída (.exe ou .dll) usando a opção do compilador `/out`. Para obter mais informações, consulte [/out (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Execute o arquivo friend_signed_B.exe.  
+6.  Execute o arquivo friend_unsigned_B.exe.  
   
      O programa imprime duas cadeias de caracteres: "Class1.Test" e "Class2.Test".  
   
@@ -93,7 +93,7 @@ Este exemplo mostra como usar assemblies amigáveis com assemblies não assinado
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Assemblies e o cache de assembly global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
 - [Assemblies Amigáveis (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
-- [Como criar assemblies amigáveis assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [Como: Criar assemblies amigáveis com sinal (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
 - [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)

@@ -1,16 +1,16 @@
 ---
-title: Compilar um aplicativo .NET Core Olá, Mundo em C# no Visual Studio 2017
+title: Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017
 description: Saiba como compilar um aplicativo de console simples do .NET Core com C# usando o Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 455058ad0a9155b8c6d2a267259783c2a7cc9815
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7a2a7b251f38a2f1add39e50e32a832adaedc965
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168917"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362789"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em C# com o SDK do .NET Core no Visual Studio 2017
 
@@ -76,9 +76,9 @@ Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com
 
 Você criou e executou seu aplicativo. Para desenvolver um aplicativo profissional, realize algumas etapas adicionais para deixar seu aplicativo pronto para a liberação:
 
-- Para obter informações sobre a depuração do aplicativo, consulte [Depurando um aplicativo Olá, Mundo em C# com o Visual Studio 2017](debugging-with-visual-studio.md).
+- Para obter informações de como depurar seu aplicativo, confira [Depurar seu aplicativo Olá, Mundo do .NET Core usando o Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Para obter informações sobre o desenvolvimento e a publicação de uma versão distribuível do seu aplicativo, consulte [Publishing your C# Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicando um aplicativo Olá, Mundo em C# com o Visual Studio 2017).
+- Para obter informações de como desenvolver e publicar uma versão distribuível do seu aplicativo, confira [Publicar um aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

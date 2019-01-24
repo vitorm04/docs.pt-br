@@ -1,5 +1,5 @@
 ---
-title: . Operador – Referência de C#
+title: . Operador – referência do C#
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,45 +9,47 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: f5048761973e10bec9650469383e2f52cee74da4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235040"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333714"
 ---
-# <a name="-operator-c-reference"></a>. Operador (Referência de C#)
-O operador ponto (`.`) é usado para o acesso de membro. O operador ponto especifica um membro de um tipo ou namespace. Por exemplo, o operador ponto é usado para acessar métodos específicos dentro das bibliotecas de classes do .NET Framework:  
-  
- [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
-  
- Por exemplo, considere a seguinte classe:  
-  
- [!code-csharp[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
-  
- [!code-csharp[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
-  
- A variável `s` tem dois membros, `a` e `b`. Para acessá-los, use o operador ponto:  
-  
- [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
-  
- O ponto é usado também para formar nomes qualificados, que são nomes que especificam o namespace ou interface, por exemplo, à qual eles pertencem.  
-  
- [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
-  
- A diretiva using torna algumas qualificações de nome opcionais:  
-  
- [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
-  
- Mas quando um identificador é ambíguo, ele deve ser qualificado:  
-  
- [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
-  
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+# <a name="-operator-c-reference"></a>. operator (Referência de C#)
+
+O operador ponto (`.`) é usado para o acesso de membro. O operador ponto especifica um membro de um tipo ou namespace. Por exemplo, o operador ponto é usado para acessar métodos específicos dentro das bibliotecas de classes do .NET Framework:
+
+[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+
+Por exemplo, considere a seguinte classe:
+
+[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+
+[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+
+A variável `s` tem dois membros, `a` e `b`. Para acessá-los, use o operador ponto:
+
+[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+
+O ponto é usado também para formar nomes qualificados, que são nomes que especificam o namespace ou interface, por exemplo, à qual eles pertencem.
+
+[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+
+A diretiva using torna algumas qualificações de nome opcionais:
+
+[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+
+Mas quando um identificador é ambíguo, ele deve ser qualificado:
+
+[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+
+## <a name="c-language-specification"></a>Especificação da linguagem C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+- [Referência de C#](../index.md)
+- [Guia de Programação em C#](../../programming-guide/index.md)
+- [Operadores do C#](index.md)

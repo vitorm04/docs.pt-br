@@ -4,12 +4,12 @@ description: Microsserviços precisam ser projetados para resistir a falhas de d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745323"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362230"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resiliência e a alta disponibilidade em microsserviços
 
@@ -29,12 +29,12 @@ Pode parecer óbvio, e isso muitas vezes é negligenciado, mas um microsserviço
 
 Integridade é diferente de diagnóstico. Integridade é sobre o microsserviço relatar seu estado atual para executar as ações apropriadas. Um bom exemplo é trabalhar com mecanismos de atualização e implantação para manter a disponibilidade. Embora um serviço possa não estar íntegro no momento devido a uma falha de processo ou reinicialização do computador, o serviço ainda pode estar operacional. A última coisa de que você precisa é tornar isso pior executando uma atualização. A melhor abordagem é fazer uma investigação primeiro ou aguardar até o microsserviço se recuperar. Eventos de integridade de um microsserviço ajudam-nos a tomar decisões informadas e, na verdade, ajudam a criar serviços com autorrecuperação.
 
-Na seção [Implementação de verificações de integridade nos serviços ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) deste guia, explicamos como usar uma nova biblioteca ASP.NET HealthChecks em seus microsserviços para que eles possam relatar o próprio estado a um serviço de monitoramento para executar as ações apropriadas.
+Na seção [Implementação de verificações de integridade nos serviços ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) deste guia, explicamos como usar uma nova biblioteca ASP.NET HealthChecks em seus microsserviços para que eles possam relatar o próprio estado a um serviço de monitoramento para executar as ações apropriadas.
 
 Você também tem a opção de usar uma excelente biblioteca de código-fonte aberto chamada Pulse vencer, disponível no [GitHub](https://github.com/Xabaril/BeatPulse) e como um [pacote do NuGet](https://www.nuget.org/packages/BeatPulse/). Essa biblioteca também faz verificações de integridade, mas com uma diferença, pois ela lida com dois tipos de verificação:
 
-- **Vivacidade**: verifica se o microsserviço está ativo, ou seja, se ele é capaz de aceitar solicitações e responder. 
-- **Preparação**: verifica se as dependências do microsserviço (banco de dados, serviços de fila, etc.) estão prontas, de modo que o microsserviço pode fazer o que se espera. 
+- **Atividade**: verifica se o microsserviço está ativo, ou seja, se ele é capaz de aceitar solicitações e responder. 
+- **Preparação**: verifica se as dependências do microsserviço (banco de dados, serviços de fila, etc.) estão prontas, para que o microsserviço possa fazer o que deve ser feito. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Usando fluxos de eventos de logs e diagnóstico
 
@@ -70,7 +70,7 @@ Orquestradores diferentes podem parecer semelhantes, mas o diagnóstico e as ver
 - **Conectar computadores Windows ao serviço do Log Analytics no Azure** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **Registrando o que você quer: usando o bloco de aplicativo de log de semântica** \
+- **Logging What You Mean: Using the Semantic Logging Application Block** \ (Registrando em log aquilo que importa: usando o bloco de aplicativo de registro em log semântico)
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - Site oficial do **Splunk**. \
