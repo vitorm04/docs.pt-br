@@ -1,7 +1,7 @@
 ---
-title: Operador [] – Referência de C#
+title: Operador [] – referência do C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243992"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333389"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="63b46-102">Operador [] (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="63b46-102">[] Operator (C# Reference)</span></span>
-<span data-ttu-id="63b46-103">Os colchetes (`[]`) são usados para matrizes, indexadores e atributos.</span><span class="sxs-lookup"><span data-stu-id="63b46-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="63b46-104">Eles também podem ser usados com ponteiros.</span><span class="sxs-lookup"><span data-stu-id="63b46-104">They can also be used with pointers.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="63b46-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="63b46-105">Remarks</span></span>  
- <span data-ttu-id="63b46-106">Um tipo de matriz é um tipo seguido por `[]`:</span><span class="sxs-lookup"><span data-stu-id="63b46-106">An array type is a type followed by `[]`:</span></span>  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- <span data-ttu-id="63b46-107">Para acessar um elemento de uma matriz, o índice do elemento desejado é colocado entre colchetes:</span><span class="sxs-lookup"><span data-stu-id="63b46-107">To access an element of an array, the index of the desired element is enclosed in brackets:</span></span>  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- <span data-ttu-id="63b46-108">Uma exceção será lançada se um índice de matriz estiver fora do intervalo.</span><span class="sxs-lookup"><span data-stu-id="63b46-108">An exception is thrown if an array index is out of range.</span></span>  
-  
- <span data-ttu-id="63b46-109">O operador de indexação da matriz não pode ser sobrecarregado. No entanto, os tipos podem definir indexadores que recebem um ou mais parâmetros.</span><span class="sxs-lookup"><span data-stu-id="63b46-109">The array indexing operator cannot be overloaded; however, types can define indexers that take one or more parameters.</span></span> <span data-ttu-id="63b46-110">Os parâmetros do indexador são colocados entre colchetes, assim como os índices de matriz, mas os parâmetros do indexador podem ser declarados para serem de qualquer tipo, ao contrário dos índices de matriz, que devem ser integrais.</span><span class="sxs-lookup"><span data-stu-id="63b46-110">Indexer parameters are enclosed in square brackets, just like array indexes, but indexer parameters can be declared to be of any type, unlike array indexes, which must be integral.</span></span>  
-  
- <span data-ttu-id="63b46-111">Por exemplo, o .NET Framework define um tipo `Hashtable` que associa chaves e valores de tipo arbitrário:</span><span class="sxs-lookup"><span data-stu-id="63b46-111">For example, the .NET Framework defines a `Hashtable` type that associates keys and values of arbitrary type:</span></span>  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- <span data-ttu-id="63b46-112">Os colchetes também são usados para especificar [Atributos](../../../csharp/programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="63b46-112">Square brackets are also used to specify [Attributes](../../../csharp/programming-guide/concepts/attributes/index.md):</span></span>  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- <span data-ttu-id="63b46-113">Você pode usar colchetes para desindexar um ponteiro:</span><span class="sxs-lookup"><span data-stu-id="63b46-113">You can use square brackets to index off a pointer:</span></span>  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- <span data-ttu-id="63b46-114">Nenhuma verificação de limites é executada.</span><span class="sxs-lookup"><span data-stu-id="63b46-114">No bounds checking is performed.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="63b46-115">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="63b46-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="63b46-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="63b46-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="d2400-102">Operador [] (referência do C#)</span><span class="sxs-lookup"><span data-stu-id="d2400-102">[] operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="63b46-117">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="63b46-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="63b46-118">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="63b46-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="63b46-119">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="63b46-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="63b46-120">Matrizes</span><span class="sxs-lookup"><span data-stu-id="63b46-120">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="63b46-121">Indexadores</span><span class="sxs-lookup"><span data-stu-id="63b46-121">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
-- [<span data-ttu-id="63b46-122">unsafe</span><span class="sxs-lookup"><span data-stu-id="63b46-122">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
-- [<span data-ttu-id="63b46-123">Instrução fixed</span><span class="sxs-lookup"><span data-stu-id="63b46-123">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+<span data-ttu-id="d2400-103">Os colchetes, `[]`, normalmente são usados para acesso de elemento de matriz, indexador ou ponteiro.</span><span class="sxs-lookup"><span data-stu-id="d2400-103">Square brackets, `[]`, are typically used for array, indexer, or pointer element access.</span></span>
+
+<span data-ttu-id="d2400-104">Para obter mais informações sobre o acesso de elemento de ponteiro, confira [Como acessar um elemento de matriz com um ponteiro](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="d2400-104">For more information about pointer element access, see [How to: access an array element with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).</span></span>
+
+<span data-ttu-id="d2400-105">Os colchetes também são usados para especificar [atributos](../../programming-guide/concepts/attributes/index.md):</span><span class="sxs-lookup"><span data-stu-id="d2400-105">You also use square brackets to specify [attributes](../../programming-guide/concepts/attributes/index.md):</span></span>
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a><span data-ttu-id="d2400-106">Acesso de matriz</span><span class="sxs-lookup"><span data-stu-id="d2400-106">Array access</span></span>
+
+<span data-ttu-id="d2400-107">O exemplo a seguir demonstra como acessar elementos de matriz:</span><span class="sxs-lookup"><span data-stu-id="d2400-107">The following example demonstrates how to access array elements:</span></span>
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+<span data-ttu-id="d2400-108">Se um índice de matriz estiver fora dos limites da dimensão correspondente de uma matriz, uma <xref:System.IndexOutOfRangeException> será gerada.</span><span class="sxs-lookup"><span data-stu-id="d2400-108">If an array index is outside the bounds of the corresponding dimension of an array, an <xref:System.IndexOutOfRangeException> is thrown.</span></span>
+
+<span data-ttu-id="d2400-109">Como mostra o exemplo anterior, você também pode usar colchetes na declaração de um tipo de matriz e na criação de instâncias da matriz.</span><span class="sxs-lookup"><span data-stu-id="d2400-109">As the preceding example shows, you also use square brackets in declaration of an array type and instantiation of array instances.</span></span>
+
+<span data-ttu-id="d2400-110">Para obter mais informações sobre matrizes, confira [Matrizes](../../programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="d2400-110">For more information about arrays, see [Arrays](../../programming-guide/arrays/index.md).</span></span>
+
+## <a name="indexer-access"></a><span data-ttu-id="d2400-111">Acesso de indexador</span><span class="sxs-lookup"><span data-stu-id="d2400-111">Indexer access</span></span>
+
+<span data-ttu-id="d2400-112">O exemplo a seguir usa o tipo <xref:System.Collections.Generic.Dictionary%602> do .NET para demonstrar o acesso de indexador:</span><span class="sxs-lookup"><span data-stu-id="d2400-112">The following example uses .NET <xref:System.Collections.Generic.Dictionary%602> type to demonstrate indexer access:</span></span>
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+<span data-ttu-id="d2400-113">Os indexadores permitem indexar instâncias de um tipo definido pelo usuário de maneira semelhante à indexação de matriz.</span><span class="sxs-lookup"><span data-stu-id="d2400-113">Indexers allow you to index instances of a user-defined type in the similar way as array indexing.</span></span> <span data-ttu-id="d2400-114">Ao contrário dos índices da matriz, que precisam ser um inteiro, os argumentos do indexador podem ser declarados como qualquer tipo.</span><span class="sxs-lookup"><span data-stu-id="d2400-114">Unlike array indices, which must be integer, the indexer arguments can be declared to be of any type.</span></span>
+
+<span data-ttu-id="d2400-115">Para obter mais informações sobre indexadores, confira [Indexadores](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="d2400-115">For more information about indexers, see [Indexers](../../programming-guide/indexers/index.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="d2400-116">Capacidade de sobrecarga do operador</span><span class="sxs-lookup"><span data-stu-id="d2400-116">Operator overloadability</span></span>
+
+<span data-ttu-id="d2400-117">O acesso de elemento `[]` não é considerado um operador que pode ser sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="d2400-117">Element access `[]` is not considered an overloadable operator.</span></span> <span data-ttu-id="d2400-118">Use [indexadores](../../programming-guide/indexers/index.md) para permitir a indexação com tipos definidos pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="d2400-118">Use [indexers](../../programming-guide/indexers/index.md) to support indexing with user-defined types.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="d2400-119">Especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="d2400-119">C# language specification</span></span>
+
+<span data-ttu-id="d2400-120">Para obter mais informações, confira as seções [Acesso de elemento](~/_csharplang/spec/expressions.md#element-access) e [Acesso de elemento de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-element-access) da [Especificação da linguagem C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="d2400-120">For more information, see the [Element access](~/_csharplang/spec/expressions.md#element-access) and [Pointer element access](~/_csharplang/spec/unsafe-code.md#pointer-element-access) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d2400-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d2400-121">See also</span></span>
+
+- [<span data-ttu-id="d2400-122">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="d2400-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="d2400-123">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="d2400-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="d2400-124">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="d2400-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="d2400-125">Matrizes</span><span class="sxs-lookup"><span data-stu-id="d2400-125">Arrays</span></span>](../../programming-guide/arrays/index.md)
+- [<span data-ttu-id="d2400-126">Indexadores</span><span class="sxs-lookup"><span data-stu-id="d2400-126">Indexers</span></span>](../../programming-guide/indexers/index.md)
+- [<span data-ttu-id="d2400-127">Tipos de ponteiro</span><span class="sxs-lookup"><span data-stu-id="d2400-127">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="d2400-128">Atributos</span><span class="sxs-lookup"><span data-stu-id="d2400-128">Attributes</span></span>](../../programming-guide/concepts/attributes/index.md)
