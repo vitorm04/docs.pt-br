@@ -6,51 +6,51 @@ helpviewer_keywords:
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: 2770b82f71f3c4b43df4c44f75248e5392c528c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4b511dc229c9e8321b91fbb0f9395627680e5d12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585248"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591949"
 ---
-# <a name="ltxmlserializergt-element"></a><span data-ttu-id="de737-102">Elemento &lt;xmlSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="de737-102">&lt;xmlSerializer&gt; Element</span></span>
-<span data-ttu-id="de737-103">Especifica se uma verificação adicional de progresso do <xref:System.Xml.Serialization.XmlSerializer> é feita.</span><span class="sxs-lookup"><span data-stu-id="de737-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  
+# <a name="ltxmlserializergt-element"></a><span data-ttu-id="effbe-102">Elemento &lt;xmlSerializer&gt;</span><span class="sxs-lookup"><span data-stu-id="effbe-102">&lt;xmlSerializer&gt; Element</span></span>
+<span data-ttu-id="effbe-103">Especifica se uma verificação adicional de progresso do <xref:System.Xml.Serialization.XmlSerializer> é feita.</span><span class="sxs-lookup"><span data-stu-id="effbe-103">Specifies whether an additional check of progress of the <xref:System.Xml.Serialization.XmlSerializer> is done.</span></span>  
   
- <span data-ttu-id="de737-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="de737-104">\<configuration></span></span>  
-<span data-ttu-id="de737-105">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="de737-105">\<system.xml.serialization></span></span>  
+ <span data-ttu-id="effbe-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="effbe-104">\<configuration></span></span>  
+<span data-ttu-id="effbe-105">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="effbe-105">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de737-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="de737-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="effbe-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="effbe-106">Syntax</span></span>  
   
 ```xml  
 <xmlSerializer checkDeserializerAdvance = "true"|"false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="de737-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="de737-107">Attributes and Elements</span></span>  
- <span data-ttu-id="de737-108">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="de737-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="effbe-107">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="effbe-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="effbe-108">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="effbe-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="de737-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="de737-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="effbe-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="effbe-109">Attributes</span></span>  
   
-|<span data-ttu-id="de737-110">Atributo</span><span class="sxs-lookup"><span data-stu-id="de737-110">Attribute</span></span>|<span data-ttu-id="de737-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="de737-111">Description</span></span>|  
+|<span data-ttu-id="effbe-110">Atributo</span><span class="sxs-lookup"><span data-stu-id="effbe-110">Attribute</span></span>|<span data-ttu-id="effbe-111">Descrição</span><span class="sxs-lookup"><span data-stu-id="effbe-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="de737-112">**checkDeserializeAdvances**</span><span class="sxs-lookup"><span data-stu-id="de737-112">**checkDeserializeAdvances**</span></span>|<span data-ttu-id="de737-113">Especifica se o progresso do <xref:System.Xml.Serialization.XmlSerializer> é verificado.</span><span class="sxs-lookup"><span data-stu-id="de737-113">Specifies whether the progress of the <xref:System.Xml.Serialization.XmlSerializer> is checked.</span></span> <span data-ttu-id="de737-114">Defina o atributo como "true" ou "false".</span><span class="sxs-lookup"><span data-stu-id="de737-114">Set the attribute to "true" or "false".</span></span> <span data-ttu-id="de737-115">O padrão é "true".</span><span class="sxs-lookup"><span data-stu-id="de737-115">The default is "true".</span></span>|  
-|<span data-ttu-id="de737-116">**useLegacySerializationGeneration**</span><span class="sxs-lookup"><span data-stu-id="de737-116">**useLegacySerializationGeneration**</span></span>|<span data-ttu-id="de737-117">Especifica se o <xref:System.Xml.Serialization.XmlSerializer> usa a geração de serialização herdada que gera assemblies escrevendo código C# em um arquivo e, em seguida, compilando-o em um assembly.</span><span class="sxs-lookup"><span data-stu-id="de737-117">Specifies whether the <xref:System.Xml.Serialization.XmlSerializer> uses legacy serialization generation which generates assemblies by writing C# code to a file and then compiling it to an assembly.</span></span> <span data-ttu-id="de737-118">O padrão é **false**.</span><span class="sxs-lookup"><span data-stu-id="de737-118">The default is **false**.</span></span>|  
+|<span data-ttu-id="effbe-112">**checkDeserializeAdvances**</span><span class="sxs-lookup"><span data-stu-id="effbe-112">**checkDeserializeAdvances**</span></span>|<span data-ttu-id="effbe-113">Especifica se o progresso do <xref:System.Xml.Serialization.XmlSerializer> é verificado.</span><span class="sxs-lookup"><span data-stu-id="effbe-113">Specifies whether the progress of the <xref:System.Xml.Serialization.XmlSerializer> is checked.</span></span> <span data-ttu-id="effbe-114">Defina o atributo como "true" ou "false".</span><span class="sxs-lookup"><span data-stu-id="effbe-114">Set the attribute to "true" or "false".</span></span> <span data-ttu-id="effbe-115">O padrão é "true".</span><span class="sxs-lookup"><span data-stu-id="effbe-115">The default is "true".</span></span>|  
+|<span data-ttu-id="effbe-116">**useLegacySerializationGeneration**</span><span class="sxs-lookup"><span data-stu-id="effbe-116">**useLegacySerializationGeneration**</span></span>|<span data-ttu-id="effbe-117">Especifica se o <xref:System.Xml.Serialization.XmlSerializer> usa a geração de serialização herdada que gera assemblies escrevendo código C# em um arquivo e, em seguida, compilando-o em um assembly.</span><span class="sxs-lookup"><span data-stu-id="effbe-117">Specifies whether the <xref:System.Xml.Serialization.XmlSerializer> uses legacy serialization generation which generates assemblies by writing C# code to a file and then compiling it to an assembly.</span></span> <span data-ttu-id="effbe-118">O padrão é **false**.</span><span class="sxs-lookup"><span data-stu-id="effbe-118">The default is **false**.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="de737-119">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="de737-119">Child Elements</span></span>  
- <span data-ttu-id="de737-120">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="de737-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="effbe-119">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="effbe-119">Child Elements</span></span>  
+ <span data-ttu-id="effbe-120">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="effbe-120">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="de737-121">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="de737-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="effbe-121">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="effbe-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="de737-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="de737-122">Element</span></span>|<span data-ttu-id="de737-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="de737-123">Description</span></span>|  
+|<span data-ttu-id="effbe-122">Elemento</span><span class="sxs-lookup"><span data-stu-id="effbe-122">Element</span></span>|<span data-ttu-id="effbe-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="effbe-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="de737-124">\<Elemento system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="de737-124">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="de737-125">Contém definições de configuração para as classes <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="de737-125">Contains configuration settings for the <xref:System.Xml.Serialization.XmlSerializer> and <xref:System.Xml.Serialization.XmlSchemaImporter> classes.</span></span>|  
+|[<span data-ttu-id="effbe-124">\<Elemento system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="effbe-124">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)|<span data-ttu-id="effbe-125">Contém definições de configuração para as classes <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="effbe-125">Contains configuration settings for the <xref:System.Xml.Serialization.XmlSerializer> and <xref:System.Xml.Serialization.XmlSchemaImporter> classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="de737-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="de737-126">Remarks</span></span>  
- <span data-ttu-id="de737-127">Por padrão, o <xref:System.Xml.Serialization.XmlSerializer> fornece uma camada adicional de segurança contra potenciais ataques de negação de serviço ao desserializar dados não confiáveis.</span><span class="sxs-lookup"><span data-stu-id="de737-127">By default, the <xref:System.Xml.Serialization.XmlSerializer> provides an additional layer of security against potential denial of service attacks when deserializing untrusted data.</span></span> <span data-ttu-id="de737-128">Ele faz isso tentando detectar loops infinitos durante a desserialização.</span><span class="sxs-lookup"><span data-stu-id="de737-128">It does so by attempting to detect infinite loops during deserialization.</span></span> <span data-ttu-id="de737-129">Se uma condição desse tipo for detectada, uma exceção será gerada com a seguinte mensagem: “Erro interno: a desserialização não pôde avançar sobre o fluxo subjacente”.</span><span class="sxs-lookup"><span data-stu-id="de737-129">If such a condition is detected, an exception is thrown with the following message: "Internal error: deserialization failed to advance over underlying stream."</span></span>  
+## <a name="remarks"></a><span data-ttu-id="effbe-126">Comentários</span><span class="sxs-lookup"><span data-stu-id="effbe-126">Remarks</span></span>  
+ <span data-ttu-id="effbe-127">Por padrão, o <xref:System.Xml.Serialization.XmlSerializer> fornece uma camada adicional de segurança contra potenciais ataques de negação de serviço ao desserializar dados não confiáveis.</span><span class="sxs-lookup"><span data-stu-id="effbe-127">By default, the <xref:System.Xml.Serialization.XmlSerializer> provides an additional layer of security against potential denial of service attacks when deserializing untrusted data.</span></span> <span data-ttu-id="effbe-128">Ele faz isso tentando detectar loops infinitos durante a desserialização.</span><span class="sxs-lookup"><span data-stu-id="effbe-128">It does so by attempting to detect infinite loops during deserialization.</span></span> <span data-ttu-id="effbe-129">Se uma condição desse tipo for detectada, uma exceção é lançada com a seguinte mensagem: "Erro interno: desserialização não pôde Avançar sobre o fluxo subjacente."</span><span class="sxs-lookup"><span data-stu-id="effbe-129">If such a condition is detected, an exception is thrown with the following message: "Internal error: deserialization failed to advance over underlying stream."</span></span>  
   
- <span data-ttu-id="de737-130">Receber essa mensagem não necessariamente indica que um ataque de negação de serviço esteja em andamento.</span><span class="sxs-lookup"><span data-stu-id="de737-130">Receiving this message does not necessarily indicate that a denial of service attack is in progress.</span></span> <span data-ttu-id="de737-131">Em algumas circunstâncias raras, o mecanismo de detecção de loop infinito produz um falso positivo e a exceção é gerada para uma mensagem de entrada legítima.</span><span class="sxs-lookup"><span data-stu-id="de737-131">In some rare circumstances, the infinite loop detection mechanism produces a false positive and the exception is thrown for a legitimate incoming message.</span></span> <span data-ttu-id="de737-132">Se você achar que em seus aplicativos específicos mensagens legítimas estão sendo rejeitadas por essa camada extra de proteção, defina o atributo **checkDeserializeAdvances** como “false”.</span><span class="sxs-lookup"><span data-stu-id="de737-132">If you find that in your particular application legitimate messages are being rejected by this extra layer of protection, set **checkDeserializeAdvances** attribute to "false".</span></span>  
+ <span data-ttu-id="effbe-130">Receber essa mensagem não necessariamente indica que um ataque de negação de serviço esteja em andamento.</span><span class="sxs-lookup"><span data-stu-id="effbe-130">Receiving this message does not necessarily indicate that a denial of service attack is in progress.</span></span> <span data-ttu-id="effbe-131">Em algumas circunstâncias raras, o mecanismo de detecção de loop infinito produz um falso positivo e a exceção é gerada para uma mensagem de entrada legítima.</span><span class="sxs-lookup"><span data-stu-id="effbe-131">In some rare circumstances, the infinite loop detection mechanism produces a false positive and the exception is thrown for a legitimate incoming message.</span></span> <span data-ttu-id="effbe-132">Se você achar que em seus aplicativos específicos mensagens legítimas estão sendo rejeitadas por essa camada extra de proteção, defina o atributo **checkDeserializeAdvances** como “false”.</span><span class="sxs-lookup"><span data-stu-id="effbe-132">If you find that in your particular application legitimate messages are being rejected by this extra layer of protection, set **checkDeserializeAdvances** attribute to "false".</span></span>  
   
-## <a name="example"></a><span data-ttu-id="de737-133">Exemplo</span><span class="sxs-lookup"><span data-stu-id="de737-133">Example</span></span>  
- <span data-ttu-id="de737-134">O exemplo de código a seguir define o atributo **checkDeserializeAdvances** como “false”.</span><span class="sxs-lookup"><span data-stu-id="de737-134">The following code example sets the **checkDeserializeAdvances** attribute to "false".</span></span>  
+## <a name="example"></a><span data-ttu-id="effbe-133">Exemplo</span><span class="sxs-lookup"><span data-stu-id="effbe-133">Example</span></span>  
+ <span data-ttu-id="effbe-134">O exemplo de código a seguir define o atributo **checkDeserializeAdvances** como “false”.</span><span class="sxs-lookup"><span data-stu-id="effbe-134">The following code example sets the **checkDeserializeAdvances** attribute to "false".</span></span>  
   
 ```xml  
 <configuration>  
@@ -60,8 +60,8 @@ ms.locfileid: "46585248"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="de737-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="de737-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="effbe-135">Consulte também</span><span class="sxs-lookup"><span data-stu-id="effbe-135">See also</span></span>
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [<span data-ttu-id="de737-136">\<Elemento system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="de737-136">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
-- [<span data-ttu-id="de737-137">Serialização XML e SOAP</span><span class="sxs-lookup"><span data-stu-id="de737-137">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [<span data-ttu-id="effbe-136">\<Elemento system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="effbe-136">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [<span data-ttu-id="effbe-137">Serialização XML e SOAP</span><span class="sxs-lookup"><span data-stu-id="effbe-137">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)

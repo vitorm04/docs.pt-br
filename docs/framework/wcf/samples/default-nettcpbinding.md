@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589863"
 ---
-# <a name="default-nettcpbinding"></a><span data-ttu-id="bd0e1-102">NetTcpBinding padrão</span><span class="sxs-lookup"><span data-stu-id="bd0e1-102">Default NetTcpBinding</span></span>
-<span data-ttu-id="bd0e1-103">Este exemplo demonstra o uso do <xref:System.ServiceModel.NetTcpBinding> associação.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="bd0e1-104">Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="bd0e1-105">Neste exemplo, o serviço é hospedado internamente.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="bd0e1-106">O cliente e o serviço são aplicativos de console.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-106">Both the client and service are console applications.</span></span>  
+# <a name="default-nettcpbinding"></a><span data-ttu-id="432a7-102">NetTcpBinding padrão</span><span class="sxs-lookup"><span data-stu-id="432a7-102">Default NetTcpBinding</span></span>
+<span data-ttu-id="432a7-103">Este exemplo demonstra o uso do <xref:System.ServiceModel.NetTcpBinding> associação.</span><span class="sxs-lookup"><span data-stu-id="432a7-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="432a7-104">Este exemplo se baseia a [guia de Introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.</span><span class="sxs-lookup"><span data-stu-id="432a7-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="432a7-105">Neste exemplo, o serviço é hospedado internamente.</span><span class="sxs-lookup"><span data-stu-id="432a7-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="432a7-106">O cliente e o serviço são aplicativos de console.</span><span class="sxs-lookup"><span data-stu-id="432a7-106">Both the client and service are console applications.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bd0e1-107">As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="432a7-107">As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="432a7-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="bd0e1-108">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bd0e1-109">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-109">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="432a7-108">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="432a7-108">The samples may already be installed on your machine.</span></span> <span data-ttu-id="432a7-109">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="432a7-109">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="bd0e1-110">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bd0e1-111">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-111">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="432a7-110">Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos.</span><span class="sxs-lookup"><span data-stu-id="432a7-110">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="432a7-111">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="432a7-111">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- <span data-ttu-id="bd0e1-112">A associação é especificada nos arquivos de configuração para o cliente e o serviço.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-112">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="bd0e1-113">O tipo de associação é especificado na `binding` atributo do [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, conforme mostrado no seguinte exemplo de configuração.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-113">The binding type is specified in the `binding` attribute of the [\<endpoint>](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="432a7-112">A associação é especificada nos arquivos de configuração para o cliente e o serviço.</span><span class="sxs-lookup"><span data-stu-id="432a7-112">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="432a7-113">O tipo de associação é especificado na `binding` atributo do [ \<ponto de extremidade >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento, conforme mostrado no seguinte exemplo de configuração.</span><span class="sxs-lookup"><span data-stu-id="432a7-113">The binding type is specified in the `binding` attribute of the [\<endpoint>](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ ms.locfileid: "43397780"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- <span data-ttu-id="bd0e1-114">O exemplo anterior mostra como configurar um ponto de extremidade para usar o `netTcpBinding` associação com as configurações padrão.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-114">The previous sample shows how to configure an endpoint to use the `netTcpBinding` binding with the default settings.</span></span> <span data-ttu-id="bd0e1-115">Se você quiser configurar o `netTcpBinding` de associação e alterar algumas de suas configurações, é necessário definir uma configuração de associação.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-115">If you want to configure the `netTcpBinding` binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="bd0e1-116">O ponto de extremidade deve fazer referência a configuração de associação por nome com um `bindingConfiguration` atributo.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-116">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span> <span data-ttu-id="bd0e1-117">Neste exemplo, a configuração de associação é chamada `Binding1` e é definido como mostrado no seguinte exemplo de configuração.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-117">In this sample, the binding configuration is named `Binding1` and is defined as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="432a7-114">O exemplo anterior mostra como configurar um ponto de extremidade para usar o `netTcpBinding` associação com as configurações padrão.</span><span class="sxs-lookup"><span data-stu-id="432a7-114">The previous sample shows how to configure an endpoint to use the `netTcpBinding` binding with the default settings.</span></span> <span data-ttu-id="432a7-115">Se você quiser configurar o `netTcpBinding` de associação e alterar algumas de suas configurações, é necessário definir uma configuração de associação.</span><span class="sxs-lookup"><span data-stu-id="432a7-115">If you want to configure the `netTcpBinding` binding and change some of its settings, it is necessary to define a binding configuration.</span></span> <span data-ttu-id="432a7-116">O ponto de extremidade deve fazer referência a configuração de associação por nome com um `bindingConfiguration` atributo.</span><span class="sxs-lookup"><span data-stu-id="432a7-116">The endpoint must reference the binding configuration by name with a `bindingConfiguration` attribute.</span></span> <span data-ttu-id="432a7-117">Neste exemplo, a configuração de associação é chamada `Binding1` e é definido como mostrado no seguinte exemplo de configuração.</span><span class="sxs-lookup"><span data-stu-id="432a7-117">In this sample, the binding configuration is named `Binding1` and is defined as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <services>  
@@ -81,7 +81,7 @@ ms.locfileid: "43397780"
 </bindings>  
 ```  
   
- <span data-ttu-id="bd0e1-118">Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="bd0e1-119">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-119">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="432a7-118">Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente.</span><span class="sxs-lookup"><span data-stu-id="432a7-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="432a7-119">Pressione ENTER na janela do cliente para desligar o cliente.</span><span class="sxs-lookup"><span data-stu-id="432a7-119">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -92,22 +92,22 @@ Divide(22,7) = 3.14285714285714
 Press ENTER to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="bd0e1-120">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="bd0e1-120">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="432a7-120">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="432a7-120">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="bd0e1-121">Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-121">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
+1.  <span data-ttu-id="432a7-121">Instalar [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando o comando a seguir.</span><span class="sxs-lookup"><span data-stu-id="432a7-121">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  <span data-ttu-id="bd0e1-122">Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="bd0e1-122">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2.  <span data-ttu-id="432a7-122">Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="432a7-122">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  <span data-ttu-id="bd0e1-123">Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="bd0e1-123">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+3.  <span data-ttu-id="432a7-123">Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="432a7-123">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  <span data-ttu-id="bd0e1-124">Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="bd0e1-124">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+4.  <span data-ttu-id="432a7-124">Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="432a7-124">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="bd0e1-125">Como o servidor for auto-hospedado, você deve especificar uma identidade no arquivo de App. config do cliente para executar o exemplo em uma configuração de várias máquinas.</span><span class="sxs-lookup"><span data-stu-id="bd0e1-125">Because the server is self-hosted, you must specify an identity in the client's App.config file to run the sample in a cross-machine configuration.</span></span>  
+    >  <span data-ttu-id="432a7-125">Como o servidor for auto-hospedado, você deve especificar uma identidade no arquivo de App. config do cliente para executar o exemplo em uma configuração de várias máquinas.</span><span class="sxs-lookup"><span data-stu-id="432a7-125">Because the server is self-hosted, you must specify an identity in the client's App.config file to run the sample in a cross-machine configuration.</span></span>  
   
     ```xml  
     <client>  
@@ -122,4 +122,4 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="bd0e1-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bd0e1-126">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="432a7-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="432a7-126">See also</span></span>
