@@ -1,5 +1,5 @@
 ---
-title: Como aplicar propriedades de ampliação ao conteúdo de uma caixa de exibição
+title: 'Como: Aplicar propriedades de ampliação ao conteúdo de uma caixa de exibição'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - controls [WPF], Viewbox
 - Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
-ms.openlocfilehash: 3e81ec9fd045bb3fcf359943e455d2cce94aec55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ddf3e8fb0c1a75c8917dfd50876f9259e292fb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711714"
 ---
-# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a><span data-ttu-id="48034-102">Como aplicar propriedades de ampliação ao conteúdo de uma caixa de exibição</span><span class="sxs-lookup"><span data-stu-id="48034-102">How to: Apply Stretch Properties to the Contents of a Viewbox</span></span>
-## <a name="example"></a><span data-ttu-id="48034-103">Exemplo</span><span class="sxs-lookup"><span data-stu-id="48034-103">Example</span></span>  
- <span data-ttu-id="48034-104">Este exemplo mostra como alterar o valor de <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> e <xref:System.Windows.Controls.Viewbox.Stretch%2A> propriedades de um <xref:System.Windows.Controls.Viewbox>.</span><span class="sxs-lookup"><span data-stu-id="48034-104">This example shows how to change the value of the <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> and <xref:System.Windows.Controls.Viewbox.Stretch%2A> properties of a <xref:System.Windows.Controls.Viewbox>.</span></span>  
+# <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a><span data-ttu-id="60632-102">Como: Aplicar propriedades de ampliação ao conteúdo de uma caixa de exibição</span><span class="sxs-lookup"><span data-stu-id="60632-102">How to: Apply Stretch Properties to the Contents of a Viewbox</span></span>
+## <a name="example"></a><span data-ttu-id="60632-103">Exemplo</span><span class="sxs-lookup"><span data-stu-id="60632-103">Example</span></span>  
+ <span data-ttu-id="60632-104">Este exemplo mostra como alterar o valor de <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> e <xref:System.Windows.Controls.Viewbox.Stretch%2A> propriedades de um <xref:System.Windows.Controls.Viewbox>.</span><span class="sxs-lookup"><span data-stu-id="60632-104">This example shows how to change the value of the <xref:System.Windows.Controls.Viewbox.StretchDirection%2A> and <xref:System.Windows.Controls.Viewbox.Stretch%2A> properties of a <xref:System.Windows.Controls.Viewbox>.</span></span>  
   
- <span data-ttu-id="48034-105">O primeiro exemplo usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para definir um <xref:System.Windows.Controls.Viewbox> elemento.</span><span class="sxs-lookup"><span data-stu-id="48034-105">The first example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to define a <xref:System.Windows.Controls.Viewbox> element.</span></span> <span data-ttu-id="48034-106">Ele atribui um <xref:System.Windows.FrameworkElement.MaxWidth%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> de 400.</span><span class="sxs-lookup"><span data-stu-id="48034-106">It assigns a <xref:System.Windows.FrameworkElement.MaxWidth%2A> and <xref:System.Windows.FrameworkElement.MaxHeight%2A> of 400.</span></span> <span data-ttu-id="48034-107">O exemplo aninha um <xref:System.Windows.Controls.Image> elemento dentro do <xref:System.Windows.Controls.Viewbox>.</span><span class="sxs-lookup"><span data-stu-id="48034-107">The example nests an <xref:System.Windows.Controls.Image> element within the <xref:System.Windows.Controls.Viewbox>.</span></span> <span data-ttu-id="48034-108"><xref:System.Windows.Controls.Button> elementos que correspondem aos valores de propriedade para o <xref:System.Windows.Controls.Viewbox.Stretch%2A> e <xref:System.Windows.Controls.StretchDirection> enumerações manipulam o comportamento de aninhada alongamento <xref:System.Windows.Controls.Image>.</span><span class="sxs-lookup"><span data-stu-id="48034-108"><xref:System.Windows.Controls.Button> elements that correspond to the property values for the <xref:System.Windows.Controls.Viewbox.Stretch%2A> and <xref:System.Windows.Controls.StretchDirection> enumerations manipulate the stretching behavior of the nested <xref:System.Windows.Controls.Image>.</span></span>  
+ <span data-ttu-id="60632-105">O primeiro exemplo usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para definir um <xref:System.Windows.Controls.Viewbox> elemento.</span><span class="sxs-lookup"><span data-stu-id="60632-105">The first example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] to define a <xref:System.Windows.Controls.Viewbox> element.</span></span> <span data-ttu-id="60632-106">Ele atribui uma <xref:System.Windows.FrameworkElement.MaxWidth%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> de 400.</span><span class="sxs-lookup"><span data-stu-id="60632-106">It assigns a <xref:System.Windows.FrameworkElement.MaxWidth%2A> and <xref:System.Windows.FrameworkElement.MaxHeight%2A> of 400.</span></span> <span data-ttu-id="60632-107">O exemplo aninha um <xref:System.Windows.Controls.Image> elemento dentro do <xref:System.Windows.Controls.Viewbox>.</span><span class="sxs-lookup"><span data-stu-id="60632-107">The example nests an <xref:System.Windows.Controls.Image> element within the <xref:System.Windows.Controls.Viewbox>.</span></span> <span data-ttu-id="60632-108"><xref:System.Windows.Controls.Button> elementos que correspondem aos valores de propriedade para o <xref:System.Windows.Controls.Viewbox.Stretch%2A> e <xref:System.Windows.Controls.StretchDirection> enumerações manipulam o comportamento de alongamento de aninhada <xref:System.Windows.Controls.Image>.</span><span class="sxs-lookup"><span data-stu-id="60632-108"><xref:System.Windows.Controls.Button> elements that correspond to the property values for the <xref:System.Windows.Controls.Viewbox.Stretch%2A> and <xref:System.Windows.Controls.StretchDirection> enumerations manipulate the stretching behavior of the nested <xref:System.Windows.Controls.Image>.</span></span>  
   
  [!code-xaml[viewboxStretchLayoutSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml#1)]  
   
- <span data-ttu-id="48034-109">Os seguintes identificadores de arquivos de lógica de <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos que o anterior [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo define.</span><span class="sxs-lookup"><span data-stu-id="48034-109">The following code-behind file handles the <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events that the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example defines.</span></span>  
+ <span data-ttu-id="60632-109">Os seguintes identificadores de arquivos de lógica de <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos que o anterior [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo define.</span><span class="sxs-lookup"><span data-stu-id="60632-109">The following code-behind file handles the <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> events that the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example defines.</span></span>  
   
  [!code-csharp[viewboxStretchLayoutSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/viewboxStretchLayoutSamp/CSharp/Window1.xaml.cs#2)]
  [!code-vb[viewboxStretchLayoutSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/viewboxStretchLayoutSamp/VisualBasic/Window1.xaml.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="48034-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="48034-110">See Also</span></span>  
- <xref:System.Windows.Controls.Viewbox>  
- <xref:System.Windows.Media.Stretch>  
- <xref:System.Windows.Controls.StretchDirection>
+## <a name="see-also"></a><span data-ttu-id="60632-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="60632-110">See also</span></span>
+- <xref:System.Windows.Controls.Viewbox>
+- <xref:System.Windows.Media.Stretch>
+- <xref:System.Windows.Controls.StretchDirection>

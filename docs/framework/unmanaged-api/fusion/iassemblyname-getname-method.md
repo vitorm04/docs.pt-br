@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06c918de10f86442b10b0d85e6554bb1af0a8928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640869"
 ---
-# <a name="iassemblynamegetname-method"></a><span data-ttu-id="5efc9-102">Método IAssemblyName::GetName</span><span class="sxs-lookup"><span data-stu-id="5efc9-102">IAssemblyName::GetName Method</span></span>
-<span data-ttu-id="5efc9-103">Obtém o nome simple, não criptografado do assembly referenciado por essa [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="5efc9-103">Gets the simple, unencrypted name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynamegetname-method"></a><span data-ttu-id="4117a-102">Método IAssemblyName::GetName</span><span class="sxs-lookup"><span data-stu-id="4117a-102">IAssemblyName::GetName Method</span></span>
+<span data-ttu-id="4117a-103">Obtém o nome simple e não criptografado do assembly referenciado por este [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="4117a-103">Gets the simple, unencrypted name of the assembly referenced by this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5efc9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5efc9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4117a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4117a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -36,19 +36,19 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5efc9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5efc9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4117a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4117a-105">Parameters</span></span>  
  `lpcwBuffer`  
- <span data-ttu-id="5efc9-106">[out no] O tamanho de `pwzName` em caracteres largos, incluindo o caractere terminador nulo.</span><span class="sxs-lookup"><span data-stu-id="5efc9-106">[in, out] The size of `pwzName` in wide characters, including the null terminator character.</span></span>  
+ <span data-ttu-id="4117a-106">[no, out] O tamanho de `pwzName` em caracteres largos, incluindo o caractere terminador nulo.</span><span class="sxs-lookup"><span data-stu-id="4117a-106">[in, out] The size of `pwzName` in wide characters, including the null terminator character.</span></span>  
   
  `pwzName`  
- <span data-ttu-id="5efc9-107">[out] Um buffer para armazenar o nome do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="5efc9-107">[out] A buffer to hold the name of the referenced assembly.</span></span>  
+ <span data-ttu-id="4117a-107">[out] Um buffer para armazenar o nome do assembly referenciado.</span><span class="sxs-lookup"><span data-stu-id="4117a-107">[out] A buffer to hold the name of the referenced assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5efc9-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5efc9-108">Requirements</span></span>  
- <span data-ttu-id="5efc9-109">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5efc9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4117a-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4117a-108">Requirements</span></span>  
+ <span data-ttu-id="4117a-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4117a-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5efc9-110">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="5efc9-110">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="4117a-110">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="4117a-110">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="5efc9-111">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5efc9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4117a-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4117a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5efc9-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5efc9-112">See Also</span></span>  
- [<span data-ttu-id="5efc9-113">Interface IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="5efc9-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4117a-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4117a-112">See also</span></span>
+- [<span data-ttu-id="4117a-113">Interface IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="4117a-113">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

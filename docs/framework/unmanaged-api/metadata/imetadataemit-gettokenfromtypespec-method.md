@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0b7d0364b6f58579ee8573d168d6c8180ac9dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d45f818c74204517a238e4c9d40ebd4fcd88b0f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641311"
 ---
-# <a name="imetadataemitgettokenfromtypespec-method"></a><span data-ttu-id="81c12-102">Método IMetaDataEmit::GetTokenFromTypeSpec</span><span class="sxs-lookup"><span data-stu-id="81c12-102">IMetaDataEmit::GetTokenFromTypeSpec Method</span></span>
-<span data-ttu-id="81c12-103">Obtém os metadados de um token para o tipo com a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="81c12-103">Gets a metadata token for the type with the specified metadata signature.</span></span>  
+# <a name="imetadataemitgettokenfromtypespec-method"></a><span data-ttu-id="c7d2e-102">Método IMetaDataEmit::GetTokenFromTypeSpec</span><span class="sxs-lookup"><span data-stu-id="c7d2e-102">IMetaDataEmit::GetTokenFromTypeSpec Method</span></span>
+<span data-ttu-id="c7d2e-103">Obtém os metadados de um token para o tipo com a assinatura de metadados especificado.</span><span class="sxs-lookup"><span data-stu-id="c7d2e-103">Gets a metadata token for the type with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81c12-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="81c12-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7d2e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c7d2e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTokenFromTypeSpec (   
@@ -37,25 +37,25 @@ HRESULT GetTokenFromTypeSpec (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="81c12-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="81c12-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c7d2e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c7d2e-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="81c12-106">[in] A assinatura está sendo definida.</span><span class="sxs-lookup"><span data-stu-id="81c12-106">[in] The signature being defined.</span></span>  
+ <span data-ttu-id="c7d2e-106">[in] A assinatura que está sendo definida.</span><span class="sxs-lookup"><span data-stu-id="c7d2e-106">[in] The signature being defined.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="81c12-107">[in] A contagem de bytes em `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="81c12-107">[in] The count of bytes in `pvSig`.</span></span>  
+ <span data-ttu-id="c7d2e-107">[in] A contagem de bytes em `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="c7d2e-107">[in] The count of bytes in `pvSig`.</span></span>  
   
  `ptypespec`  
- <span data-ttu-id="81c12-108">[out] O `mdTypeSpec` token atribuído.</span><span class="sxs-lookup"><span data-stu-id="81c12-108">[out] The `mdTypeSpec` token assigned.</span></span>  
+ <span data-ttu-id="c7d2e-108">[out] O `mdTypeSpec` token atribuído.</span><span class="sxs-lookup"><span data-stu-id="c7d2e-108">[out] The `mdTypeSpec` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81c12-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="81c12-109">Requirements</span></span>  
- <span data-ttu-id="81c12-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81c12-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7d2e-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c7d2e-109">Requirements</span></span>  
+ <span data-ttu-id="c7d2e-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7d2e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81c12-111">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="81c12-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c7d2e-111">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c7d2e-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="81c12-112">**Biblioteca:** usado como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="81c12-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c7d2e-112">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c7d2e-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="81c12-113">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81c12-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c7d2e-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7d2e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81c12-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="81c12-114">See Also</span></span>  
- [<span data-ttu-id="81c12-115">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="81c12-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="81c12-116">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="81c12-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c7d2e-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c7d2e-114">See also</span></span>
+- [<span data-ttu-id="c7d2e-115">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="c7d2e-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c7d2e-116">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="c7d2e-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
