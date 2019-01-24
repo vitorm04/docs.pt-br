@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: ebaf524997ae4ed50b28aec53507f843f028bc31
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 776fa01d78c59d38a55de969a10096c22f34e9e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49348963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588465"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Hospedagem do IIS utilizando código embutido
 Este exemplo demonstra como implementar um serviço hospedado pelo Internet Information Services (IIS), em que o código de serviço está contido na linha em um arquivo. svc e é compilado sob demanda. Código de serviço também pode ser implementado diretamente em arquivos de código-fonte localizado no diretório de \App_Code do aplicativo ou compilados no assembly implantado em \bin. Este exemplo não demonstra essas técnicas.  
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
   
 3.  Depois que a solução foi criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. O diretório ServiceModelSamples agora deve aparecer como um [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplicativo.  
   
-4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Para obter um exemplo sobre como criar um aplicativo cliente que pode chamar esse serviço, consulte [como: criar um cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+4.  Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Para obter um exemplo sobre como criar um aplicativo cliente que pode chamar esse serviço, consulte [como: Criar um cliente](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Consulte também
+- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)

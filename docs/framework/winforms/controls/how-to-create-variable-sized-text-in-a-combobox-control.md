@@ -1,5 +1,5 @@
 ---
-title: Como criar texto dimensionado da variável em um controle ComboBox
+title: 'Como: Criar texto dimensionado da variável em um controle ComboBox'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: a76e1d78cd9fade550fa846488e8bf4a93a21c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a9f6e8a1c96c2a9bf9e56c1c6acefc4181a18dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526984"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Como criar texto dimensionado da variável em um controle ComboBox
-Este exemplo demonstra o desenho personalizado de texto em uma <xref:System.Windows.Forms.ComboBox> controle. Quando um item atende a certos critérios, ele é desenhado em uma fonte maior e ativado vermelho.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Como: Criar texto dimensionado da variável em um controle ComboBox
+Este exemplo demonstra um desenho personalizado de texto em um <xref:System.Windows.Forms.ComboBox> controle. Quando um item atende a certos critérios, ele é desenhado com uma fonte maior e ativado vermelho.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -60,17 +60,17 @@ End Sub
   
 -   Um formulário do Windows.  
   
--   Um <xref:System.Windows.Forms.ComboBox> controle chamado `ListBox1` com três itens no <xref:System.Windows.Forms.ComboBox.Items%2A> propriedade. Neste exemplo, três itens são nomeados `"One", Two", and Three"`. O <xref:System.Windows.Forms.ComboBox.DrawMode%2A> propriedade `ComboBox1` deve ser definido como <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+-   Um <xref:System.Windows.Forms.ComboBox> controle chamado `ListBox1` com três itens a <xref:System.Windows.Forms.ComboBox.Items%2A> propriedade. Neste exemplo, os três itens são nomeados `"One", Two", and Three"`. O <xref:System.Windows.Forms.ComboBox.DrawMode%2A> propriedade de `ComboBox1` deve ser definida como <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
-    >  Essa técnica também é aplicável para o <xref:System.Windows.Forms.ListBox> controle — você pode substituir um <xref:System.Windows.Forms.ListBox> para o <xref:System.Windows.Forms.ComboBox>.  
+    >  Essa técnica também é aplicável para o <xref:System.Windows.Forms.ListBox> controle — você pode substituir uma <xref:System.Windows.Forms.ListBox> para o <xref:System.Windows.Forms.ComboBox>.  
   
 -   Referências aos namespaces <xref:System.Windows.Forms?displayProperty=nameWithType> e <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.ComboBox.DrawItem>  
- <xref:System.Windows.Forms.DrawItemEventArgs>  
- <xref:System.Windows.Forms.ComboBox.MeasureItem>  
- [Controles com suporte para desenho do proprietário interno](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [Controle ListBox](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- [Controle ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.ComboBox.DrawItem>
+- <xref:System.Windows.Forms.DrawItemEventArgs>
+- <xref:System.Windows.Forms.ComboBox.MeasureItem>
+- [Controles com suporte para desenho do proprietário interno](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
+- [Controle ListBox](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)
+- [Controle ComboBox](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

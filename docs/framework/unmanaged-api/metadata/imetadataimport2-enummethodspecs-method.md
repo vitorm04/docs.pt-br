@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2122c06c6e4f1137173f02e37fb0982864e7ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d660deb69e694a70a140b6d00c355442e3c5094
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558898"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>Método IMetaDataImport2::EnumMethodSpecs
 Obtém um enumerador para uma matriz de tokens MethodSpec associados com a especificada MethodDef ou MemberRef token.  
@@ -41,13 +41,13 @@ HRESULT EnumMethodSpecs (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador para `rMethodSpecs`.  
+ [no, out] Um ponteiro para o enumerador para `rMethodSpecs`.  
   
  `tk`  
  [in] O token de MemberRef ou MethodDef que representa o método cujos MethodSpec tokens são a serem enumerados. Se o valor de `tk` é 0 (zero), todos os tokens de MethodSpec no escopo serão enumerados.  
   
  `rMethodSpecs`  
- [out] A matriz de tokens MethodSpec enumerar.  
+ [out] A matriz de tokens MethodSpec para enumerar.  
   
  `cMax`  
  [in] O número máximo solicitado de tokens para colocar em `rMethodSpecs`.  
@@ -59,18 +59,18 @@ HRESULT EnumMethodSpecs (
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` retornou com êxito.|  
+|`S_OK`|`EnumMethodSpecs` retornado com êxito.|  
 |`S_FALSE`|`phEnum` não tem nenhum elemento de membro. Nesse caso, `pcMethodSpecs` é definido como 0 (zero).|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

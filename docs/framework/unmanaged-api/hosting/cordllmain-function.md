@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5d541f834e829305fa2b091c45d0dc8f387bb55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512366"
 ---
 # <a name="cordllmain-function"></a>Função _CorDllMain
-Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly DLL e começa a ser executada.  
+Inicializa o common language runtime (CLR), localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly da DLL e inicia a execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +38,34 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 #### <a name="parameters"></a>Parâmetros  
  `hInst`  
- [in] O identificador de instância do módulo carregado.  
+ [in] O identificador da instância do módulo carregado.  
   
  `dwReason`  
- [in] Indica o motivo pelo qual a função de ponto de entrada DLL está sendo chamada. Esse parâmetro pode ser um dos seguintes valores: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH ou DLL_PROCESS_DETACH. Para obter descrições desses valores, consulte o `DllMain` documentação no SDK da plataforma.  
+ [in] Indica por que a função de ponto de entrada DLL está sendo chamada. Esse parâmetro pode ser um dos seguintes valores: DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH, DLL_THREAD_ATTACH ou DLL_PROCESS_DETACH. Para obter descrições desses valores, consulte o `DllMain` documentação no SDK da plataforma.  
   
  `lpReserved`  
- [in] Não usado.  
+ [in] Não utilizado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna `true` para êxito e `false` se ocorrer um erro.  
+ Esse método retornará `true` para o sucesso e `false` se ocorrer um erro.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é chamada pelo carregador do sistema operacional para os assemblies DLL. Para assemblies executável, o carregador chama o [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function em vez disso.  
+ Essa função é chamada pelo carregador do sistema operacional para os assemblies DLL. Para assemblies executáveis, o carregador de chamadas a [CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function em vez disso.  
   
- O carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de DLL.  
+ Carregador do sistema operacional chama esse método, independentemente do ponto de entrada especificado no arquivo de DLL.  
   
- No Windows 98, Windows ME, Windows NT e Windows 2000, o `_CorDllMain` função é chamada indiretamente por meio de um fixupin carregador do sistema operacional. Em todas as outras versões do Windows, ele é chamado diretamente pelo carregador do sistema operacional.  
+ No Windows 98, Windows ME, Windows NT e Windows 2000, o `_CorDllMain` função é chamada indiretamente por meio de um fixupin carregador do sistema operacional. Todas as outras versões do Windows, ele é chamado diretamente pelo carregador do sistema operacional.  
   
  Para obter mais informações, consulte a seção comentários a [CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tópico.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

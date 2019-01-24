@@ -1,5 +1,5 @@
 ---
-title: Como criar controles compostos
+title: 'Como: Criar controles compostos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], creating composite controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2dc0ca7c2514ad444904b707a2cea9d57849660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549792"
 ---
-# <a name="how-to-author-composite-controls"></a>Como criar controles compostos
+# <a name="how-to-author-composite-controls"></a>Como: Criar controles compostos
 Os controles de composição podem ser usados de várias maneiras. É possível criá-los como parte de um projeto de aplicativo da área de trabalho do Windows e usá-los somente em formulários do projeto. Também é possível criá-los em um projeto da Biblioteca de Controles do Windows, compilar o projeto em um assembly e usar os controles em outros projetos. É possível até mesmo herdar deles e usar a herança visual para personalizá-los rapidamente para fins especiais.  
   
 > [!NOTE]
@@ -78,11 +78,11 @@ Os controles de composição podem ser usados de várias maneiras. É possível 
   
      É possível ver os controles constituintes que foram herdados do controle composição na DLL e alterar as propriedades de controles cuja propriedade **Modificadores** for **Pública**. Não é possível alterar as propriedades do controle cuja propriedade **Modificadores** for **Privada**.  
   
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: criando um controle de composição com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Passo a passo: criando um controle de composição com o Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Passo a passo: herdando um controle dos Windows Forms com Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [Passo a passo: herdando um controle dos Windows Forms com Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- [Recomendações do Tipo de Controle](../../../../docs/framework/winforms/controls/control-type-recommendations.md)  
- [Como Criar Controles para o Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)  
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Consulte também
+- [Passo a passo: Criando um controle composto com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Passo a passo: Criando um controle composto com VisualC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Passo a passo: Herdando um controle de formulários do Windows com VisualC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Recomendações do Tipo de Controle](../../../../docs/framework/winforms/controls/control-type-recommendations.md)
+- [Como: Criar controles para Windows Forms](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

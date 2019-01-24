@@ -2,12 +2,12 @@
 title: Consultando DataSets (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: ddd92b1a95889b44eba2ec582308bf08358eeea7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba7e4b29267728721ee5b91bcf7c83e7bfbc1660
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519357"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Consultando DataSets (LINQ to DataSet)
 Depois que um objeto de <xref:System.Data.DataSet> foi populado com dados, você pode começar a consulta. A formulação de consultas com o [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] é semelhante ao uso do [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] em outra fonte de dados habilitada para [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Lembre-se, no entanto, que quando você usa [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consultas em relação a um <xref:System.Data.DataSet> objeto você está consultando uma enumeração de <xref:System.Data.DataRow> objetos, em vez de uma enumeração de um tipo personalizado. Isso significa que você pode usar qualquer um dos membros a <xref:System.Data.DataRow> classe no seu [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consultas. Isso permite que você crie consultas sofisticadas e complexas.  
@@ -24,6 +24,6 @@ Depois que um objeto de <xref:System.Data.DataSet> foi populado com dados, você
  [Consultando DataSets tipados](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  Descreve como consultar objetos <xref:System.Data.DataSet> tipados.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Carregar dados para um conjunto de dados](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

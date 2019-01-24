@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 21d3b31fe19db7abf1a78d0c6d33abfbc2882089
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 4b21624ea31fd0e11e598bab435b9f3c6f6d9b9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512834"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Tipo de dados UShort (Visual Basic)
 
@@ -74,10 +74,10 @@ Dim number = &H_5826us
   
 -   **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.UInt16?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.UInt16>  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)  
- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Como: chamar uma função do Windows que use tipos não assinados](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.UInt16>
+- [Tipos de Dados](../../../visual-basic/language-reference/data-types/index.md)
+- [Funções de Conversão do Tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Resumo da Conversão](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Como: chamar uma função do Windows que use tipos não assinados](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Uso Eficiente de Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

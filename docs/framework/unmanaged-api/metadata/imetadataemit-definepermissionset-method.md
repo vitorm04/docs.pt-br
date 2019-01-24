@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05339787b112ad029cb9870e8c6ffca37e55e631
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56665997e529227ca82b34a2303f4a2a705c3b1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445183"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522500"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>Método IMetaDataEmit::DefinePermissionSet
-Cria uma definição para um conjunto de permissões com a assinatura de metadados especificado e recebe um token para essa definição de conjunto de permissões.  
+Cria uma definição para um conjunto de permissões com a assinatura de metadados especificado e obtém um token para essa definição de conjunto de permissões.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,29 +41,29 @@ HRESULT DefinePermissionSet (
   
 #### <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] O objeto a ser decorado.  
+ [in] O objeto a ser decorada.  
   
  `dwAction`  
- [in] Um [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) valor que especifica o tipo de segurança declarativa para ser usado.  
+ [in] Um [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) valor que especifica o tipo de segurança declarativa a ser usado.  
   
  `pvPermission`  
- [in] O BLOB de permissão.  
+ [in] A permissão de BLOB.  
   
  `cbPermission`  
- [in] O tamanho, em bytes, de `pvPermission`.  
+ [in] O tamanho, em bytes, do `pvPermission`.  
   
  `ppm`  
  [out] O token retornado de permissão.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

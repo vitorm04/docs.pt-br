@@ -2,12 +2,12 @@
 title: Arquitetura e design
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576324"
 ---
 # <a name="architecture-and-design"></a>Arquitetura e design
 O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) é implementado como um visitante na árvore de expressão que representa a árvore de comando. A geração é feita em uma única passada sobre a árvore de expressão.  
@@ -18,7 +18,7 @@ O módulo de geração de SQL no [provedor de exemplo](https://code.msdn.microso
   
 -   Para renomear alias, você deve identificar todas as aliases usadas para evitar colisões em renomear. Para adiar as opções renomeando em SqlBuilder, o símbolo de uso objetos para representar as colunas que são candidatos para renomear.  
   
- ![Diagrama](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  Na primeira etapa, a visitar a árvore de expressão, as expressões são agrupadas em SqlSelectStatements, join são aplainadas, e ingressar em alias são aplainadas. Durante esta etapa, os objetos do símbolo representam colunas ou alias de entrada que podem ser renomeados.  
   
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  Para gerar nomes exclusivos para alias de extensão e para colunas, existing_name_n <>de uso onde n é o alias as menores que ainda não foram usadas. A lista global de todas as aliases aumenta a necessidade de se conectar renomear.  
   
-## <a name="see-also"></a>Consulte também  
- [Geração de SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Consulte também
+- [Geração de SQL no provedor exemplo](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

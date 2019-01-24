@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute'
+title: 'Passo a passo: Serializando coleções de tipos padrão com a DesignerSerializationVisibilityAttribute'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 54859b3065e8e9bb9680d8b6bf7946b393f73b9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533540"
 ---
-# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Instruções passo a passo: serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute
+# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Passo a passo: Serializando coleções de tipos padrão com a DesignerSerializationVisibilityAttribute
 Seus controles personalizados às vezes exporão uma coleção como uma propriedade. Este passo a passo demonstra como usar o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> classe para controlar como uma coleção é serializada em tempo de design. Aplicando o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor à sua propriedade de coleção garante que a propriedade será serializada.  
   
- Para copiar o código neste tópico como uma lista única, consulte [Como serializar coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Para copiar o código neste tópico como uma única lista, consulte [como: Serializar coleções de tipos padrão com DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -38,7 +38,7 @@ Seus controles personalizados às vezes exporão uma coleção como uma propried
   
 1.  Crie um projeto de Biblioteca de Controle do Windows chamado `SerializationDemoControlLib`. Para obter mais informações, consulte [Modelo de Biblioteca de Controle do Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, consulte [Como renomear identificadores](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, confira [Como: Renomear identificadores](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  No **propriedades** janela, defina o valor da <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> propriedade `10`.  
   
@@ -84,7 +84,7 @@ Seus controles personalizados às vezes exporão uma coleção como uma propried
   
 1.  Adicione um projeto de Aplicativos do Windows à solução. Nomeie o projeto `SerializationDemoControlTest`.  
   
-2.  Na **Caixa de Ferramentas**, localize a guia chamada **Componentes da SerializationDemoControlLib**. Nessa guia, você encontrará o `SerializationDemoControl`. Para mais informações, consulte [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+2.  Na **Caixa de Ferramentas**, localize a guia chamada **Componentes da SerializationDemoControlLib**. Nessa guia, você encontrará o `SerializationDemoControl`. Para obter mais informações, confira [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 3.  Coloque um `SerializationDemoControl` em seu formulário.  
   
@@ -135,10 +135,10 @@ Seus controles personalizados às vezes exporão uma coleção como uma propried
   
 -   [Visão geral da serialização do designer](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [Instruções passo a passo: criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [Passo a passo: Criando um controle de formulários do Windows que tira proveito dos recursos de tempo de Design do Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
- [Visão geral da serialização do designer](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
- [Como serializar coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [Passo a passo: preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
+- [Visão geral da serialização do designer](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
+- [Como: Serializar coleções de tipos padrão com DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Passo a passo: Preenchendo automaticamente a caixa de ferramentas com componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

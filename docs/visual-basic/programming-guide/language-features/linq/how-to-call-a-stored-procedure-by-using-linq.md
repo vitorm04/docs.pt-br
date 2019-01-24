@@ -1,5 +1,5 @@
 ---
-title: Como chamar um procedimento armazenado usando LINQ (Visual Basic)
+title: 'Como: Chamar um procedimento armazenado usando LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bd1a3b0b163d3ab0fcc7eb9616e88c11381ff189
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552041"
 ---
-# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Como chamar um procedimento armazenado usando LINQ (Visual Basic)
+# <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Como: Chamar um procedimento armazenado usando LINQ (Visual Basic)
 Consulta integrada à linguagem (LINQ) facilita o acesso a informações de banco de dados, incluindo o banco de dados objetos como procedimentos armazenados.  
   
  O exemplo a seguir mostra como criar um aplicativo que chama um procedimento armazenado em um banco de dados do SQL Server. O exemplo mostra como chamar dois diferentes procedimentos armazenados no banco de dados. Cada procedimento retorna os resultados de uma consulta. Um procedimento utiliza parâmetros de entrada e o outro procedimento não aceita parâmetros.  
@@ -68,9 +68,9 @@ Consulta integrada à linguagem (LINQ) facilita o acesso a informações de banc
   
 4.  Pressione F5 para executar seu projeto e exibir os resultados.  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Consultas](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Como atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>Consulte também
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Consultas](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Métodos DataContext (Designer Relacional de Objetos)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Como: Atribuir procedimentos armazenados para executar atualizações, inserções e exclusões (Designer Relacional de Objetos)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

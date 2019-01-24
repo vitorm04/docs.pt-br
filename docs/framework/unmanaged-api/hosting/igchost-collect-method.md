@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f911d99470b9870f5c42d4170a4024123c10e7f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511115"
 ---
 # <a name="igchostcollect-method"></a>Método IGCHost::Collect
-Força uma coleta ocorra para determinada geração, independentemente do estado da coleção atual de lixo.  
+Força uma coleta ocorrer para a geração de determinado, independentemente do estado da coleta de lixo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,13 +40,13 @@ HRESULT Collect (
  [in] A geração na qual executar a coleta de lixo. Um valor de -1 indica que todas as gerações passará por uma coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** GCHost.idl, GCHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IGCHost](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

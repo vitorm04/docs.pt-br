@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507363"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms adicionar elemento de configuração
 
@@ -109,6 +109,6 @@ Controles dos Windows Forms a partir do .NET Framework 4.7, geram um número de 
 Dimensionando único ou vários passos influencia a capacidade de resposta percebida da interface do usuário e a aparência visual de elementos da interface do usuário conforme eles são dimensionados. Começando com o .NET Framework 4.7, Windows Forms usa o dimensionamento de única passagem. Nas versões anteriores do .NET Framework, o dimensionamento foi executado por meio de várias passagens, o que causou alguns controles sejam escalonados de mais do que era necessário. Dimensionamento de passagem única só deve ser desabilitado se seu aplicativo depende do comportamento antigo.  
 
 ## <a name="see-also"></a>Consulte também
- 
-[Seção de configuração do Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[High DPI Support in Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md) (Suporte a alto DPI no Windows Forms)
+
+- [Seção de configuração do Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [High DPI Support in Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md) (Suporte a alto DPI no Windows Forms)

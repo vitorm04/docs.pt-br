@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 1220ea07501e68fd8d2a8075c686d949be9a7020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91d74d1d72bb2a39c6b6d408839746c45ddad3db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555512"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Personalizando operações usando procedimentos armazenados
 Os procedimentos armazenados representam uma abordagem mais comum para substituir o comportamento padrão. Os exemplos neste tópico mostram como você pode usar wrappers gerados do método para procedimentos armazenados, e como você pode chamar procedimentos armazenados diretamente.  
   
- Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] atribuir procedimentos armazenados para executar as inserções, atualizações e exclusões.  
+ Se você estiver usando o Visual Studio, você pode usar o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para atribuir procedimentos armazenados para executar inserções, atualizações e exclusões.  
   
 > [!NOTE]
 >  Para ler valores base de dados - gerados novamente, use parâmetros de saída em seus procedimentos armazenados. Se você não pode usar parâmetros de saída, escreva uma implementação de método parcial em vez de depender nas substituições geradas por [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Os membros mapeados para os valores base de dados - gerados devem ser definidos para apropriado valores depois que `INSERT` ou operações de `UPDATE` terminar com êxito. Para obter mais informações, consulte [responsabilidades do desenvolvedor em Substituir padrão comportamento](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
@@ -47,5 +47,5 @@ Os procedimentos armazenados representam uma abordagem mais comum para substitui
  [!code-csharp[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#3)]  
   
-## <a name="see-also"></a>Consulte também  
- [Responsabilidades do desenvolvedor em substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+## <a name="see-also"></a>Consulte também
+- [Responsabilidades do desenvolvedor em substituir o comportamento padrão](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

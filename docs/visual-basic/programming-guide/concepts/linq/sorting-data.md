@@ -2,12 +2,12 @@
 title: Classificando dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f52000d37df45c97754463de1e81cd523806e9c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e36ccc72689e756105f51c988d4cafd06d4d8da5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520120"
 ---
 # <a name="sorting-data-visual-basic"></a>Classificando dados (Visual Basic)
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.  
@@ -142,9 +142,9 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>  
- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Cláusula Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Como classificar resultados de consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
- [Como: classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Linq>
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cláusula Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Como: Classificar os resultados de consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

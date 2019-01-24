@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8a999dc1850a41612f8896ff9a7ed96cd8c3a2fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509129"
 ---
 # <a name="getcurrentapartmenttype-function"></a>Função GetCurrentApartmentType
 Recupera o tipo de apartment no qual o chamador está sendo executado.   
@@ -62,11 +62,11 @@ HRESULT GetCurrentApartmentType (
 Essa função encapsula uma chamada para o [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

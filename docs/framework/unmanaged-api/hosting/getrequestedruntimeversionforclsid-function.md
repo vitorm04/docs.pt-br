@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e00bc95dd9b54d5451da65cefbfff13395e467f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511951"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Função GetRequestedRuntimeVersionForCLSID
-Obtém as comuns language runtime (CLR) versão informações apropriadas para a classe com especificado `CLSID`.  
+Obtém o common language runtime (CLR) versão informações apropriadas para a classe com especificado `CLSID`.  
   
  Essa função foi preterida no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
@@ -48,7 +48,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  [out]  Um buffer que contém a cadeia de caracteres de número de versão após a conclusão bem-sucedida.  
   
  `cchBuffer`  
- [in]  O tamanho, em caracteres largos, do `pVersion` buffer.  
+ [in]  O tamanho, em caracteres largos, da `pVersion` buffer.  
   
  `dwLength`  
  [out] O comprimento, em bytes, do buffer retornado.  
@@ -56,26 +56,26 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  [in]  Um dos valores CLSID_RESOLUTION_FLAGS. Há suporte para os seguintes valores:  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) Especifica o comportamento padrão interoperabilidade deve ser usado.  
+-   CLSID_RESOLUTION_DEFAULT: (0x0) Especifica que o comportamento de interoperabilidade padrão deve ser usado.  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) Especifica que o registro deve ser pesquisado e corrigir a política deve ser aplicada.  
+-   CLSID_RESOLUTION_REGISTERED: (0x1) Especifica que o registro deve ser pesquisado e política de correção deve ser aplicada.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A função retornou com êxito.|  
-|E_INVALIDARG|Um dos parâmetros tem um formato ou tipo inválido.|  
-|ERROR_INSUFFICIENT_BUFFER|O `pVersion` buffer não é grande o suficiente para manter a cadeia de caracteres de versão.|  
-|REGDB_E_CLASSNOTREG|Não há nenhuma classe registrada com o `CLSID`.|  
+|E_INVALIDARG|Um dos parâmetros tem um tipo ou formato inválido.|  
+|ERROR_INSUFFICIENT_BUFFER|O `pVersion` buffer não é grande o suficiente para manter a cadeia de caracteres de versão inteira.|  
+|REGDB_E_CLASSNOTREG|Não há nenhuma classe registrada com o especificado `CLSID`.|  
 |E_POINTER|`dwLength` é nulo, ou `cchBuffer` é grande o suficiente para manter a cadeia de caracteres de versão, mas `pVersion` é nulo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

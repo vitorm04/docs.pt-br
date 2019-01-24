@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b5e4db8e385baefe3067755bbdc4555c5887ab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508295"
 ---
 # <a name="bucketparameters-structure"></a>Estrutura BucketParameters
-Armazena o nome de um evento e os parâmetros de tipo para a exceção atual que está associado com o evento.  
+Armazena o nome do tipo de um evento e os parâmetros para a exceção atual que está associado com o evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,14 +42,14 @@ typedef struct _BucketParameters {
 |------------|-----------------|  
 |`fInited`|`true`, se o restante dessa estrutura é válido. Caso contrário, `false`.|  
 |`pszEventTypeName`|Nome do tipo de evento.|  
-|`pszParams`|Uma matriz de cadeias de caracteres, cada uma delas Especifica um parâmetro para a exceção atual associado ao evento.|  
+|`pszParams`|Uma matriz de cadeias de caracteres, cada um deles especifica um parâmetro para a exceção atual associado ao evento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.idl  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d93c50968192a7789cbf08968d7ec272c9775d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6133b558e62d66cfaac201317f66d784aac264c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513705"
 ---
 # <a name="ihostmemorymanageracquiredvirtualaddressspace-method"></a>Método IHostMemoryManager::AcquiredVirtualAddressSpace
 Notifica o host que o common language runtime (CLR) adquiriu a memória especificada do sistema operacional.  
@@ -44,16 +44,16 @@ HRESULT AcquiredVirtualAddressSpace(
  [in] O tamanho, em bytes, da memória.  
   
 ## <a name="remarks"></a>Comentários  
- O `AcquiredVirtualAddressSpace` é um método de retorno de chamada de método e deve ser implementado pelo gerador de aplicativo host. Ele é chamado pelo CLR.  
+ O `AcquiredVirtualAddressSpace` é um método de retorno de chamada de método e deve ser implementado pelo gravador do aplicativo host. Ele é chamado pelo CLR.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

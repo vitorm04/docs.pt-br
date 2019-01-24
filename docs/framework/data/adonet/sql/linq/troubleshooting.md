@@ -2,12 +2,12 @@
 title: Solução de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586404"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 As seguintes informações expostas alguns problemas que você pode encontrar em seus aplicativos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e oferece sugestões para evitar ou reduzir de outra maneira o efeito desses problemas.  
@@ -37,7 +37,7 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
   
  Se não, uma exceção é lançada de <xref:System.Data.SqlClient.SqlException> .  
   
- Para obter mais informações, consulte [como: excluir linhas do banco de dados da](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Para obter mais informações, confira [Como: Excluir linhas do banco de dados](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Expressão não Queryable  
  Se você receber a "expressão [expressão] não é passível de consulta; está faltando uma referência de assembly?" erro, certifique-se das seguintes opções:  
@@ -69,6 +69,6 @@ As seguintes informações expostas alguns problemas que você pode encontrar em
 ## <a name="oncreated-partial-method"></a>Método parcial deOnCreated()  
  O método gerado `OnCreated()` é chamado em cada vez que o construtor do objeto é chamado, incluindo a situação em que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chama o construtor para fazer uma cópia para valores originais. Leve em conta esse comportamento se você implementar o método de `OnCreated()` em sua própria classe parcial.  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte à depuração](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [Perguntas frequentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>Consulte também
+- [Suporte à depuração](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Perguntas frequentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

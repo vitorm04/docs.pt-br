@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8db3b02ba4766d046fc549eec8add31f51069
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3759be77cd6e6265eb8328669c88225067b99bfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509708"
 ---
 # <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
-Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` valores que começam no seguinte local na enumeração. Esta interface é uma subclasse de "ICorDebugEnum".  
+Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDomainEnum` começando no próximo local na enumeração de valores. Essa interface é uma subclasse de "ICorDebugEnum".  
   
 ## <a name="methods"></a>Métodos  
   
@@ -35,17 +35,17 @@ Fornece o `Next` método, que retorna um número especificado de `ICorDebugAppDo
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

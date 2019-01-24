@@ -1,5 +1,5 @@
 ---
-title: Como usar uma matriz de cores para transformar uma única cor
+title: 'Como: Use uma matriz de cores para transformar uma única cor'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 741259fcf853c82dfd13b43edc92e50d8767887b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 050bb147358636ff9ce250bd5026facd53e9bf51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498941"
 ---
-# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Como usar uma matriz de cores para transformar uma única cor
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece o <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classes para armazenar e manipular imagens. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> objetos armazenam a cor de cada pixel como um número de 32 bits: 8 bits para vermelho, verde, azul e alfa. Cada um dos quatro componentes é um número de 0 a 255, sendo que 0 representa nenhuma intensidade e 255 representa intensidade total. O componente alfa especifica a transparência da cor: 0 é completamente transparente e 255 é totalmente opaca.  
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Como: Use uma matriz de cores para transformar uma única cor
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece o <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classes para armazenar e manipular imagens. <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> objetos armazenam a cor de cada pixel como um número de 32 bits: 8 bits cada para vermelho, verde, azul e alfa. Cada um dos quatro componentes é um número de 0 a 255, sendo que 0 representa nenhuma intensidade e 255 representa intensidade total. O componente alfa Especifica a transparência da cor: 0 é completamente transparente e 255 é totalmente opaca.  
   
  Um vetor de cor é uma tupla de 4 do formulário (vermelho, verde, azul, alfa). Por exemplo, o vetor de cor (0, 255, 0, 255) representa uma cor opaca que não tem nenhum vermelho nem azul, mas tem verde na intensidade total.  
   
@@ -53,16 +53,16 @@ ms.locfileid: "33527398"
   
 1.  Inicializar um <xref:System.Drawing.Imaging.ColorMatrix> objeto.  
   
-2.  Criar um <xref:System.Drawing.Imaging.ImageAttributes> do objeto e passar o <xref:System.Drawing.Imaging.ColorMatrix> do objeto para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método o <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
+2.  Criar uma <xref:System.Drawing.Imaging.ImageAttributes> do objeto e passe a <xref:System.Drawing.Imaging.ColorMatrix> do objeto para o <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> método da <xref:System.Drawing.Imaging.ImageAttributes> objeto.  
   
-3.  Passar o <xref:System.Drawing.Imaging.ImageAttributes> o objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método de um <xref:System.Drawing.Graphics> objeto.  
+3.  Passe o <xref:System.Drawing.Imaging.ImageAttributes> do objeto para o <xref:System.Drawing.Graphics.DrawImage%2A> método de um <xref:System.Drawing.Graphics> objeto.  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior é projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
+ O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro do <xref:System.Windows.Forms.Control.Paint> manipulador de eventos.  
   
-## <a name="see-also"></a>Consulte também  
- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- [Sistemas de Coordenadas e Transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+## <a name="see-also"></a>Consulte também
+- [Recolorindo Imagens](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Sistemas de Coordenadas e Transformações](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

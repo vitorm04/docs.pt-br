@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23a38297526090f1df35f8541026accd5a5cb9bc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ed128cc2ddec3c599932cd5a82364d1cf6642cde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505231"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; elemento
 Usam solicitações que o common language runtime (CLR) reduzir a memória com a especificação de tamanhos de pilha explícito ao criar certos threads que ele usa internamente, em vez de usar o tamanho da pilha padrão para esses threads.  
@@ -72,6 +72,6 @@ Usam solicitações que o common language runtime (CLR) reduzir a memória com a
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

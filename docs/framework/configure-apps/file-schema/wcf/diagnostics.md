@@ -2,12 +2,12 @@
 title: '&lt;Diagnóstico&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524580"
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;Diagnóstico&gt;
 O `diagnostics` elemento define configurações que podem ser usadas por um administrador para inspeção de tempo de execução e controle.  
@@ -47,15 +47,15 @@ O `diagnostics` elemento define configurações que podem ser usadas por um admi
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |etwProviderId|Uma cadeia de caracteres que especifica o identificador para o provedor de rastreamento de eventos, que grava eventos em sessões ETW.|  
-|PerformanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> -Off: Os contadores de desempenho estão desabilitados.<br />-ServiceOnly: Estão habilitados apenas contadores de desempenho relevantes para esse serviço.<br />-Todos os itens: Contadores de desempenho podem ser exibidos em tempo de execução.<br />-Padrão: Uma instância única de contador de desempenho _WCF_Admin é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Isso é o valor padrão se nenhuma configuração estiver presente para o WCF.|  
+|performanceCounters|Especifica se contadores de desempenho para o assembly estão habilitados. Os valores válidos são<br /><br /> -Off: Os contadores de desempenho estão desabilitados.<br />-   ServiceOnly: Estão habilitados apenas contadores de desempenho relevantes para esse serviço.<br />-Todos os itens: Contadores de desempenho podem ser exibidos em tempo de execução.<br />-Padrão: Uma instância única de contador de desempenho _WCF_Admin é criada. Esta instância é usada para habilitar a coleta de dados SQM usados pela infraestrutura. Nenhum dos valores de contador para esta instância estão atualizados e, portanto, permanecerão em zero. Isso é o valor padrão se nenhuma configuração estiver presente para o WCF.|  
 |wmiProviderEnabled|Um valor booliano que especifica se o provedor WMI para o assembly está habilitado. O provedor WMI é necessário para o usuário obtenha acesso de tempo de execução para os recursos de inspeção e controle do Windows Communication Foundation (WCF). O padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Um elemento de configuração que permite que você habilitar e desabilitar diferentes aspectos de rastreamento de ponta a ponta durante a execução de um aplicativo de serviço.|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Descreve as configurações de log de mensagens do WCF.|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Um elemento de configuração que permite que você habilitar e desabilitar diferentes aspectos de rastreamento de ponta a ponta durante a execução de um aplicativo de serviço.|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Descreve as configurações de log de mensagens do WCF.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -84,6 +84,6 @@ O `diagnostics` elemento define configurações que podem ser usadas por um admi
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>

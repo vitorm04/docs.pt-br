@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 8b5a7f7d428925590236351d56073024f6ad32b7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cfa796d40fad35077c3d7b55e36bc7336c5d26b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562759"
 ---
 # <a name="brush-transformation-overview"></a>Visão geral da transformação de pincel
 A classe pincel fornece duas propriedades de transformação: <xref:System.Windows.Media.Brush.Transform%2A> e <xref:System.Windows.Media.Brush.RelativeTransform%2A>. As propriedades permitem que você gire, ajuste a escala, distorça e traduza o conteúdo do pincel. Este tópico descreve as diferenças entre essas duas propriedades e fornece exemplos de uso.  
@@ -78,7 +78,7 @@ A classe pincel fornece duas propriedades de transformação: <xref:System.Windo
      ![Projete o pincel transformado na área de saída](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
 <a name="rotateexample"></a>   
-## <a name="example-rotate-an-imagebrush-45-degrees"></a>Exemplo: gire um ImageBrush em 45 graus  
+## <a name="example-rotate-an-imagebrush-45-degrees"></a>Exemplo: Gire um ImageBrush 45 graus  
  O exemplo a seguir aplica uma <xref:System.Windows.Media.RotateTransform> para o <xref:System.Windows.Media.Brush.RelativeTransform%2A> propriedade de um <xref:System.Windows.Media.ImageBrush>. O <xref:System.Windows.Media.RotateTransform> do objeto <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> propriedades são definidas como 0,5, as coordenadas relativas do centro do conteúdo do ponto. Como resultado, o conteúdo do pincel é girado em torno de seu centro.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
@@ -97,11 +97,11 @@ A classe pincel fornece duas propriedades de transformação: <xref:System.Windo
   
  Este exemplo é parte de um exemplo maior. Para obter o exemplo completo, consulte [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973) (Exemplo de pincéis). Para obter mais informações sobre pincéis, consulte [WPF Brushes Overview](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md) (Visão geral de pincéis do WPF).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Brush.Transform%2A>  
- <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Brush>  
- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Brush.Transform%2A>
+- <xref:System.Windows.Media.Brush.RelativeTransform%2A>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Brush>
+- [Visão geral da pintura com cores sólidas e gradientes](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Pintando com imagens, desenhos e visuais](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Visão geral de transformações](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

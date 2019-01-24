@@ -1,5 +1,5 @@
 ---
-title: Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms
+title: 'Como: Classificar e filtrar dados ADO.NET com o Windows Forms componente BindingSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 932d30d356225d88d7ef149561cc4c5cc8ac4dd0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: edb639f25970c6946eb33c68dd5a99cad566d4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584773"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Como: Classificar e filtrar dados ADO.NET com o Windows Forms componente BindingSource
 Você pode expor a classificação e filtragem de capacidade do <xref:System.Windows.Forms.BindingSource> controlar por meio de <xref:System.Windows.Forms.BindingSource.Sort%2A> e <xref:System.Windows.Forms.BindingSource.Filter%2A> propriedades. Você pode aplicar a classificação simples quando a fonte de dados subjacente é uma <xref:System.ComponentModel.IBindingList>, e você pode aplicar a filtragem e classificação quando a fonte de dados é avançada um <xref:System.ComponentModel.IBindingListView>. O <xref:System.Windows.Forms.BindingSource.Sort%2A> propriedade requer standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintaxe: uma cadeia de caracteres que representa o nome de uma coluna de dados na fonte de dados seguido `ASC` ou `DESC` para indicar se a lista deve ser classificada em ordem crescente ou decrescente. Você pode definir a classificação avançada ou a classificação em várias colunas separando cada coluna com um separador de vírgula. O <xref:System.Windows.Forms.BindingSource.Filter%2A> propriedade usa uma expressão de cadeia de caracteres.  
   
 > [!NOTE]
@@ -53,8 +53,8 @@ Você pode expor a classificação e filtragem de capacidade do <xref:System.Win
 ## <a name="compiling-the-code"></a>Compilando o código  
  Para executar este exemplo, cole o código em um formulário que contém um <xref:System.Windows.Forms.BindingSource> nomeado `BindingSource1` e uma <xref:System.Windows.Forms.DataGridView> denominada `dataGridView1`. Lidar com o <xref:System.Windows.Forms.Form.Load> eventos para o formulário e chame `InitializeSortedFilteredBindingSource` no método do manipulador de eventos de carga.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.BindingSource.Sort%2A>  
- <xref:System.Windows.Forms.BindingSource.Filter%2A>  
- [Como instalar bancos de dados de exemplo](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)  
- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.BindingSource.Sort%2A>
+- <xref:System.Windows.Forms.BindingSource.Filter%2A>
+- [Como: Instalar os bancos de dados](https://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+- [Componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component.md)

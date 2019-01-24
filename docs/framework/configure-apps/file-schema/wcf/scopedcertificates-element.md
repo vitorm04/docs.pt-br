@@ -2,12 +2,12 @@
 title: Elemento &lt;scopedCertificates&gt;
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c6236093eada1b7be5244d98eabd99482017a395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556490"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>Elemento &lt;scopedCertificates&gt;
 Representa uma coleção de certificados X.509 fornecidos por serviços específicos (escopo) para autenticação. Essa coleção é normalmente usada para especificar os certificados de serviço para serviços de Token de segurança em um cenário federado.  
@@ -15,9 +15,9 @@ Representa uma coleção de certificados X.509 fornecidos por serviços específ
  \<system.ServiceModel>  
 \<comportamentos >  
 seção endpointBehaviors  
-\<comportamento de >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
+\<serviceCertificate>  
 \<scopedCertificates > elemento  
 \<Adicionar > elemento para \<scopedCertificates >  
   
@@ -49,7 +49,7 @@ seção endpointBehaviors
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Especifica um certificado a ser usado ao autenticar um serviço para o cliente.|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)|Especifica um certificado a ser usado ao autenticar um serviço para o cliente.|  
   
 ## <a name="remarks"></a>Comentários  
  Essa coleção permite que o cliente configurar os certificados de serviço para usar com base na URL do serviço comunica-se com. Isso é especialmente útil em cenários de token emitidos em que um cliente pode estar se comunicando a vários serviços (o serviço end como serviços de token de segurança intermediário). Para associações que usam a segurança de mensagem baseada em certificado, esse certificado é usado para criptografar mensagens para o serviço e deve ser usado pelo serviço para assinar respostas ao cliente.  
@@ -73,14 +73,14 @@ seção endpointBehaviors
 </serviceCertificate>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Como: Criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)  
- [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)  
- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Como: Criar um cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)
+- [Protegendo clientes](../../../../../docs/framework/wcf/securing-clients.md)
+- [Protegendo serviços e clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

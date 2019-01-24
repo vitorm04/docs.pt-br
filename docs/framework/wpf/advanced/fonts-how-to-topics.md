@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: dea203ab62ae751cf59eb299db9ea39d44f8e26d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aefae32182a7bc808ac72f053c233305da32032e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543796"
 ---
 # <a name="fonts-how-to-topics"></a>Tópicos explicativos de fontes
 Os tópicos nesta seção demonstram como usar os recursos de fonte incluídos no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -20,8 +20,8 @@ Os tópicos nesta seção demonstram como usar os recursos de fonte incluídos n
  [Enumerar fontes de sistema](../../../../docs/framework/wpf/advanced/how-to-enumerate-system-fonts.md)  
  [Usar a classe FontSizeConverter](../../../../docs/framework/wpf/advanced/how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Tipografia no WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

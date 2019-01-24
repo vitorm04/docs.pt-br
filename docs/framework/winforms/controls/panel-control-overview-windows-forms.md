@@ -7,24 +7,24 @@ helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c346a9b77d49cde007310a2beb13bed3b1f30d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501757"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Visão geral do controle de painel (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para fornecer um agrupamento de identificação para outros controles. Normalmente, você usa painéis para subdividir um formulário por função. Por exemplo, você pode ter um formulário de pedido que especifica as opções de mala direta, como qual carrier noturna usar. Agrupar todas as opções em um painel fornece ao usuário uma indicação visual lógica. No design de tempo todos os controles podem ser movidos facilmente — quando você move o <xref:System.Windows.Forms.Panel> controlar, todos os seus controles contidos mover, muito. Os controles agrupados em um painel podem ser acessados por meio de seu <xref:System.Windows.Forms.Control.Controls%2A> propriedade. Essa propriedade retorna uma coleção de <xref:System.Windows.Forms.Control> instâncias, portanto, geralmente será necessário converter um controle recuperados dessa maneira ao seu tipo específico.  
+Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para fornecer um agrupamento identificável para outros controles. Normalmente, você usa painéis para subdividir um formulário por função. Por exemplo, você pode ter um formulário de pedido que especifica as opções de mala direta, como qual carrier noturna usar. Agrupar todas as opções em um painel fornece ao usuário uma indicação visual lógica. No tempo de design todos os controles podem ser movidos facilmente — quando você move o <xref:System.Windows.Forms.Panel> controlar todos os seus controles contidos se movem também. Os controles agrupados em um painel podem ser acessados por meio de seu <xref:System.Windows.Forms.Control.Controls%2A> propriedade. Essa propriedade retorna uma coleção de <xref:System.Windows.Forms.Control> instâncias, portanto, você geralmente precisará converter um controle recuperado dessa forma para seu tipo específico.  
   
 ## <a name="panel-versus-groupbox"></a>Painel Versus GroupBox  
- O <xref:System.Windows.Forms.Panel> controle é semelhante ao <xref:System.Windows.Forms.GroupBox> controlar; no entanto, somente o <xref:System.Windows.Forms.Panel> controle pode ter barras de rolagem e somente o <xref:System.Windows.Forms.GroupBox> controle exibe uma legenda.  
+ O <xref:System.Windows.Forms.Panel> controle é semelhante ao <xref:System.Windows.Forms.GroupBox> controle; no entanto, somente o <xref:System.Windows.Forms.Panel> controle pode ter barras de rolagem e apenas o <xref:System.Windows.Forms.GroupBox> controle exibe uma legenda.  
   
 ## <a name="key-properties"></a>Propriedades da chave  
- Para exibir as barras de rolagem, defina o <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> propriedade `true`. Você também pode personalizar a aparência do painel, definindo o <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, e <xref:System.Windows.Forms.Panel.BorderStyle%2A> propriedades. Para obter mais informações sobre o <xref:System.Windows.Forms.Control.BackColor%2A> e <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriedades, consulte [como: definir o plano de fundo de um painel](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md). O <xref:System.Windows.Forms.Panel.BorderStyle%2A> propriedade determina se o painel é descrito com nenhuma borda visível (<xref:System.Windows.Forms.BorderStyle.None>), uma linha simples (<xref:System.Windows.Forms.BorderStyle.FixedSingle>), ou uma linha sombreada (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
+ Para exibir as barras de rolagem, defina as <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> propriedade para `true`. Você também pode personalizar a aparência do painel, definindo a <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, e <xref:System.Windows.Forms.Panel.BorderStyle%2A> propriedades. Para obter mais informações sobre o <xref:System.Windows.Forms.Control.BackColor%2A> e <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriedades, consulte [como: Definir plano de fundo de um painel](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md). O <xref:System.Windows.Forms.Panel.BorderStyle%2A> propriedade determina se o painel é destacado com nenhuma borda visível (<xref:System.Windows.Forms.BorderStyle.None>), uma linha simples (<xref:System.Windows.Forms.BorderStyle.FixedSingle>), ou uma linha sombreada (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Panel>  
- [Controle GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- [Como agrupar controles com o controle de painel dos Windows Forms usando o Designer](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
- [Como definir a tela de fundo de um painel dos Windows Forms usando o Designer](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Panel>
+- [Controle GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+- [Como: Agrupar controles com o controle de painel do Windows Forms usando o Designer](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)
+- [Como: Definir plano de fundo de um painel dos Windows Forms usando o Designer](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

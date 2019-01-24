@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a117fcdf2ba9d37fb5483cc85fb575e5d3476794
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580220"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Método IMetaDataDispenserEx::GetOption
 Obtém o valor da opção especificada para o escopo de metadados atual. A opção controla como as chamadas para o escopo de metadados atual são tratadas.  
@@ -44,7 +44,7 @@ HRESULT GetOption (
  [out] O valor da opção retornado. O tipo desse valor será uma variante do tipo da opção especificada.  
   
 ## <a name="remarks"></a>Comentários  
- A lista a seguir mostra os GUIDs que têm suporte para esse método. Para obter descrições, consulte o [Imetadatadispenserex](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) método. Se `optionId` é ausentes nesta lista, esse método retorna o HRESULT `E_INVALIDARG`, que indica um parâmetro incorreto.  
+ A lista a seguir mostra os GUIDs que têm suporte para esse método. Para obter descrições, consulte o [imetadatadispenserex:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) método. Se `optionId` é não esteja na lista, esse método retornará o HRESULT `E_INVALIDARG`, indicando um parâmetro incorreto.  
   
 -   MetaDataCheckDuplicatesFor  
   
@@ -61,14 +61,14 @@ HRESULT GetOption (
 -   MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- [Interface IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [Interface IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
