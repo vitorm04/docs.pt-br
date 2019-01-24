@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09db41c71ef21ed6422785d3127c11af08420110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55877f42d7def89cf29dc156ba7f7a4b6613c753
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417372"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559717"
 ---
-# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="2e83a-102">Método ICorDebugObjectValue::GetVirtualMethod</span><span class="sxs-lookup"><span data-stu-id="2e83a-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
-<span data-ttu-id="2e83a-103">`GetVirtualMethod` não está implementado nesta versão do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2e83a-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="a62eb-102">Método ICorDebugObjectValue::GetVirtualMethod</span><span class="sxs-lookup"><span data-stu-id="a62eb-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
+<span data-ttu-id="a62eb-103">`GetVirtualMethod` não está implementado nesta versão do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a62eb-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e83a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2e83a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a62eb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a62eb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethod (  
@@ -36,9 +36,9 @@ HRESULT GetVirtualMethod (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2e83a-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2e83a-105">Requirements</span></span>  
- <span data-ttu-id="2e83a-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2e83a-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a62eb-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a62eb-105">Requirements</span></span>  
+ <span data-ttu-id="a62eb-106">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a62eb-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e83a-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2e83a-107">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="a62eb-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a62eb-107">See also</span></span>
+
+
