@@ -1,19 +1,13 @@
 ---
-title: Tipos que permitem valor nulo – Guia de Programação em C#
+title: 'Tipos que permitem valor nulo – Guia de Programação em C#'
 ms.custom: seodec18
-description: Saiba mais sobre os tipos que permitem valor nulo C# e como usá-los
+description: 'Saiba mais sobre os tipos que permitem valor nulo C# e como usá-los'
 ms.date: 07/30/2018
 helpviewer_keywords:
-- nullable types [C#]
-- C# language, nullable types
-- types [C#], nullable
+  - 'nullable types [C#]'
+  - 'C# language, nullable types'
+  - 'types [C#], nullable'
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245113"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que permitem valor nulo (Guia de Programação em C#)
 
@@ -57,10 +51,10 @@ Confira mais informações nos tópicos [Uso de tipos que permitem valor nulo](u
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [Operador ??](../../language-reference/operators/null-coalescing-operator.md)  
-- [Guia de Programação em C#](../index.md)  
-- [Guia do C#](../../index.md)  
-- [Referência de C#](../../language-reference/index.md)  
-- [Tipos de valor que permitem valor nulo (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [Operador ??](../../language-reference/operators/null-coalescing-operator.md)
+- [Guia de Programação em C#](../index.md)
+- [Guia do C#](../../index.md)
+- [Referência de C#](../../language-reference/index.md)
+- [Tipos de valor que permitem valor nulo (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

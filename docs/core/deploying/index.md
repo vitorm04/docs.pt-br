@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415683"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -98,7 +92,7 @@ Para obter exemplos passo a passo de como implantar aplicativos .NET Core com fe
 
 ## <a name="see-also"></a>Consulte também
 
-* [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)
-* [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)
-* [Pacotes, Metapacotes e Estruturas](../packages.md)
-* [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+- [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)
+- [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)
+- [Pacotes, Metapacotes e Estruturas](../packages.md)
+- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)

@@ -3,18 +3,13 @@ title: Introdução ao .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453129"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>Introdução ao .NET Framework
 
 O .NET Framework é um ambiente de execução do tempo de execução que gerencia os aplicativos que direcionam o .NET Framework. Ele consiste no Common Language Runtime, que fornece gerenciamento de memória e outros serviços do sistema, além de em uma biblioteca de classes extensa, o que permite que programadores usem o código robusto e confiável para todas as áreas principais do desenvolvimento de aplicativos.
@@ -89,7 +84,7 @@ Para obter mais informações sobre o desenvolvimento de aplicativos direcionado
 
 ## <a name="see-also"></a>Consulte também
 
-- [Guia do .NET Framework](../../../docs/framework/index.md)   
-- [Novidades](../../../docs/framework/whats-new/index.md)   
-- [Navegador de API do .NET](/dotnet/api/)   
+- [Guia do .NET Framework](../../../docs/framework/index.md)
+- [Novidades](../../../docs/framework/whats-new/index.md)
+- [Navegador de API do .NET](/dotnet/api/)
 - [Guia de desenvolvimento](../../../docs/framework/development-guide.md)
