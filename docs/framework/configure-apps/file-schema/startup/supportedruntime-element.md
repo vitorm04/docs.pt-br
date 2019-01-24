@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600512"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; elemento
 
@@ -66,7 +66,7 @@ O `runtime` atributo especifica a versão de tempo de execução de linguagem co
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>valores de "id de sku"
@@ -77,12 +77,12 @@ O `sku` atributo usa um moniker de estrutura de destino (TFM) para indicar a ver
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0, o perfil de cliente|".NETFramework,Version=v4.0,Profile=Client"|  
-|atualização 1 da plataforma 4.0,|". NETFramework, versão = 4.0.1 "|  
-|4.0, o perfil de cliente, a atualização 1|". NETFramework, versão 4.0.1, perfil de = = cliente "|  
-|atualização da plataforma do 4.0, 2|". NETFramework, versão = 4.0.2 "|  
-|4.0, o perfil de cliente, atualização 2|". NETFramework, versão = 4.0.2, perfil = cliente "|  
-|atualização da plataforma do 4.0, 3|". NETFramework, versão = verze 4.0.3 "|  
-|4.0, o perfil de cliente, a atualização 3|". NETFramework, versão = verze 4.0.3, perfil = cliente "|  
+|atualização 1 da plataforma 4.0,|".NETFramework,Version=v4.0.1"|  
+|4.0, o perfil de cliente, a atualização 1|".NETFramework,Version=v4.0.1,Profile=Client"|  
+|atualização da plataforma do 4.0, 2|".NETFramework,Version=v4.0.2"|  
+|4.0, o perfil de cliente, atualização 2|".NETFramework,Version=v4.0.2,Profile=Client"|  
+|atualização da plataforma do 4.0, 3|".NETFramework,Version=v4.0.3"|  
+|4.0, o perfil de cliente, a atualização 3|".NETFramework,Version=v4.0.3,Profile=Client"|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  
@@ -91,7 +91,7 @@ O `sku` atributo usa um moniker de estrutura de destino (TFM) para indicar a ver
 |4.6.2|".NETFramework,Version=v4.6.2"|  
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
-|4.7.2|". NETFramework, versão = v4.7.2 "|
+|4.7.2|".NETFramework,Version=v4.7.2"|
 
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como especificar a versão de tempo de execução com suporte em um arquivo de configuração. O arquivo de configuração indica que o aplicativo tem como alvo o .NET Framework 4.7.  
@@ -110,6 +110,6 @@ Este elemento pode ser usado no arquivo de configuração do aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 
- [Esquema de configurações de inicialização](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Execução lado a lado em processo](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Esquema de configurações de inicialização](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Execução lado a lado em processo](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

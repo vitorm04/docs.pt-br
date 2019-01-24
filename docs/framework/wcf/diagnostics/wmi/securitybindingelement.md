@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f7c4e30b72af36de1d3088e4ca8cd98ced734104
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692318"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -32,45 +32,45 @@ class SecurityBindingElement : BindingElement
 ## <a name="properties"></a>Propriedades  
  A classe SecurityBindingElement tem as seguintes propriedades:  
   
-### <a name="defaultalgorithmsuite"></a>defaultAlgorithmSuite  
+### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Especifica os algoritmos para usar com a associação.  
   
-### <a name="includetimestamp"></a>includeTimestamp  
+### <a name="includetimestamp"></a>IncludeTimestamp  
  Tipo de dados: boolean  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um valor booliano que especifica se cada mensagem contém um carimbo de hora.  
   
-### <a name="keyentropymode"></a>keyEntropyMode  
+### <a name="keyentropymode"></a>KeyEntropyMode  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  A origem da entropia usada para criar chaves.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
  Tipo de dados: LocalServiceSecuritySettings  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  As propriedades específicas de segurança de associação para o serviço local.  
   
-### <a name="messagesecurityversion"></a>messageSecurityVersion  
+### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  A versão usada para segurança de mensagem.  
   
-### <a name="securityheaderlayout"></a>securityHeaderLayout  
+### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  A ordem dos elementos no cabeçalho de segurança para essa associação.  
   
@@ -80,5 +80,5 @@ class SecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>

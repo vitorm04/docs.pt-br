@@ -2,20 +2,20 @@
 title: '&lt;serviceThrottling&gt;'
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 000124c8d0dda81f99668cd330f7cc97c2520464
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ebef29360f661c77f51557ae4c9ca0bdf8177b99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689475"
 ---
 # <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
 Especifica o mecanismo de limitação de um serviço do Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
+\<serviceBehaviors>  
+\<behavior>  
 \<serviceThrottling>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -44,7 +44,7 @@ Especifica o mecanismo de limitação de um serviço do Windows Communication Fo
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento de >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica um elemento de comportamento.|  
   
 ## <a name="remarks"></a>Comentários  
  Os controles de limitação colocam limites no número de chamadas simultâneas, instâncias ou sessões para evitar a sobrecarga de consumo de recursos.  
@@ -68,7 +68,7 @@ Especifica o mecanismo de limitação de um serviço do Windows Communication Fo
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [Usando o ServiceThrottlingBehavior para desempenho do serviço WCF de controle](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
+- [Usando o ServiceThrottlingBehavior para desempenho do serviço WCF de controle](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

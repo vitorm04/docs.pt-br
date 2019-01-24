@@ -1,19 +1,19 @@
 ---
-title: Como criar um controle associado e formatar os dados exibidos
+title: 'Como: Criar um controle associado e formatar os dados exibidos'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689725"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Como criar um controle associado e formatar os dados exibidos
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Como: Criar um controle associado e formatar os dados exibidos
 Com a associação de dados do Windows Forms, você pode formatar os dados exibidos em um controle associado a dados usando a caixa de diálogo **Formatação e associação avançada**.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Com a associação de dados do Windows Forms, você pode formatar os dados exibi
     |Moeda|Especifique o número de casas decimais usando o controle superior/inferior **Casas decimais**.|  
     |Date Time|Selecione como a data e a hora devem ser exibidas selecionando um dos itens na caixa de seleção **Tipo**.|  
     |Científico|Especifique o número de casas decimais usando o controle superior/inferior **Casas decimais**.|  
-    |Personalizado|Especifique uma cadeia de caracteres de formato personalizada usando.<br /><br /> Para obter mais informações, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md). **Observação:** não há garantias de que as cadeias de caracteres de formato personalizadas realização a viagem de ida e volta entre a fonte de dados e o controle associado com êxito. Em vez disso, lidar com o <xref:System.Windows.Forms.Binding.Parse> ou <xref:System.Windows.Forms.Binding.Format> evento para a associação e aplicar formatação personalizada no código de manipulação de eventos.|  
+    |Personalizado|Especifique uma cadeia de caracteres de formato personalizada usando.<br /><br /> Para obter mais informações, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md). **Observação:**  Cadeias de caracteres de formato personalizado não têm garantia com êxito de ida e volta entre a fonte de dados e o controle associado. Em vez disso, lidar com o <xref:System.Windows.Forms.Binding.Parse> ou <xref:System.Windows.Forms.Binding.Format> evento para a associação e aplicar formatação personalizada no código de manipulação de eventos.|  
   
 8.  Clique em **OK** para fechar a caixa de diálogo **Formatação e associação avançada** e retornar para a janela Propriedades.  
   
-## <a name="see-also"></a>Consulte também  
- [Como criar um controle associado simples em um Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Validação da entrada do usuário nos Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Criar um controle associado simples em um formulário do Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validação da entrada do usuário nos Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Associação de dados do Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

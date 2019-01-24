@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd3c19bbbcb5b1a5f0e89b9df86f87beca32cd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0dfc1535338f45ac812c089203f2ae13a500ceec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689163"
 ---
 # <a name="iinstallreferenceitem-interface"></a>Interface IInstallReferenceItem
 Representa um item instalado no cache de assembly global.  
@@ -30,15 +30,15 @@ Representa um item instalado no cache de assembly global.
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetReference](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Obtém um ponteiro para o `FUSION_INSTALL_REFERENCE` estrutura representada por esse `IInstallReferenceItem`.|  
+|[Método GetReference](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Obtém um ponteiro para o `FUSION_INSTALL_REFERENCE` estrutura representada por este `IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Estrutura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>Consulte também
+- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Estrutura FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

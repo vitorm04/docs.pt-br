@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685523"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Método IMetaDataImport::GetParamProps
 Obtém os valores de metadados para o parâmetro referenciado pelo ParamDef especificado token.  
@@ -58,13 +58,13 @@ HRESULT GetParamProps (
  [out] Um buffer para armazenar o nome do parâmetro.  
   
  `cchName`  
- [in] O tamanho solicitado em caracteres largos de `szName`.  
+ [in] O tamanho solicitado em caracteres largos da `szName`.  
   
  `pchName`  
- [out] O tamanho retornado em caracteres largos de `szName`.  
+ [out] O tamanho retornado em caracteres largos da `szName`.  
   
  `pdwAttr`  
- [out] Um ponteiro para os sinalizadores do atributo associado ao parâmetro.  
+ [out] Um ponteiro para os sinalizadores de atributo associado ao parâmetro.  
   
  `pdwCPlusTypeFlag`  
  [out] Um ponteiro para um sinalizador que especifica que o parâmetro é um <xref:System.ValueType>.  
@@ -73,17 +73,17 @@ HRESULT GetParamProps (
  [out] Um ponteiro para uma cadeia de caracteres constante retornado pelo parâmetro.  
   
  `pcchValue`  
- [out] O tamanho de `ppValue` em caracteres largos ou zero se `ppValue` não tem uma cadeia de caracteres.  
+ [out] O tamanho de `ppValue` em caracteres largos ou zero se `ppValue` não mantém uma cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7da5f50a9d0fa867244a569e03685cc637bf3ce6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692513"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Ignorar cláusula While (Visual Basic)
 Ignora elementos em uma coleção, desde que uma condição especificada seja `true` e, em seguida, retorna os elementos restantes.  
@@ -42,11 +42,11 @@ Skip While expression
   
  [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Cláusula Skip](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Cláusula Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Cláusula Skip](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Cláusula Take While](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)

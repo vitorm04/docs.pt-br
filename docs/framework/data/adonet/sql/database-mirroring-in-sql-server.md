@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599979"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Espelhamento de banco de dados no SQL Server
 O espelhamento de banco de dados no SQL Server permite que você mantenha uma cópia, ou o espelho, de um banco de dados do SQL Server em um servidor em espera. O espelhamento garante que duas cópias separadas dos dados existam o tempo todo, fornecendo a alta disponibilidade e a redundância completa de dados. O provedor de dados .NET para o SQL Server fornece suporte implícito para espelhamento de banco de dados, de modo que o desenvolvedor não precisa realizar nenhuma ação ou gravar código quando tiver sido configurado para um banco de dados do SQL Server. Além disso, o objeto <xref:System.Data.SqlClient.SqlConnection> oferece suporte a um modo de conexão explícita que permite fornecer o nome de um servidor de parceiro de failover no <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -63,5 +63,5 @@ string activeServer = connection.DataSource;
 |--------------|-----------------|  
 |[Espelhamento de banco de dados](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Descreve como configurar o espelhamento no SQL Server.|  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

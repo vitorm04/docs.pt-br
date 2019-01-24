@@ -1,5 +1,5 @@
 ---
-title: Como criar um contrato duplex
+title: 'Como: Criar um contrato Duplex'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 39aea526992c503943c3f458854d09677e1b5717
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cc53f6842d55892ae178e22e2835555a132778b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693630"
 ---
-# <a name="how-to-create-a-duplex-contract"></a>Como criar um contrato duplex
-Este tópico mostra as etapas básicas para criar métodos que usam um contrato duplex (bidirecional). Um contrato duplex permite que os clientes e os servidores se comuniquem entre si independentemente, de modo que qualquer um possa iniciar chamadas para o outro. O contrato duplex é um dos três padrões de mensagens disponíveis para serviços Windows Communication Foundation (WCF). Os outros padrões de duas mensagens são unidirecionais e solicitação-resposta. Um contrato duplex consiste de dois contratos unidirecionais entre o cliente e o servidor e não exige que as chamadas de método sejam correlacionadas. Use esse tipo de contrato quando o serviço tiver que consultar o cliente para obter mais informações ou explicitamente gerar eventos no cliente. Para obter mais informações sobre como criar um aplicativo cliente para um contrato duplex, consulte [como: serviços do Access com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obter um exemplo de funcionamento, consulte o [Duplex](../../../../docs/framework/wcf/samples/duplex.md) exemplo.  
+# <a name="how-to-create-a-duplex-contract"></a>Como: Criar um contrato Duplex
+Este tópico mostra as etapas básicas para criar métodos que usam um contrato duplex (bidirecional). Um contrato duplex permite que os clientes e os servidores se comuniquem entre si independentemente, de modo que qualquer um possa iniciar chamadas para o outro. O contrato duplex é um dos três padrões de mensagem disponíveis para serviços Windows Communication Foundation (WCF). Os outros padrões de duas mensagens são unidirecionais e solicitação-resposta. Um contrato duplex consiste de dois contratos unidirecionais entre o cliente e o servidor e não exige que as chamadas de método sejam correlacionadas. Use esse tipo de contrato quando o serviço tiver que consultar o cliente para obter mais informações ou explicitamente gerar eventos no cliente. Para obter mais informações sobre como criar um aplicativo cliente para um contrato duplex, consulte [como: Acessar os serviços com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Para obter um exemplo funcional, consulte o [Duplex](../../../../docs/framework/wcf/samples/duplex.md) exemplo.  
   
 ### <a name="to-create-a-duplex-contract"></a>Para criar um contrato duplex  
   
@@ -63,15 +63,15 @@ Este tópico mostra as etapas básicas para criar métodos que usam um contrato 
   
 -   Aplicar os atributos <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute> permite a geração automática de definições do contrato de serviço na linguagem WSDL.  
   
--   Use o [Ferramenta Utilitária de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para recuperar o documento WSDL e o código (opcional) e a configuração para um cliente.  
+-   Use o [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para recuperar o documento WSDL e o código (opcional) e a configuração para um cliente.  
   
 -   Os pontos de extremidade que expõem serviços duplex devem ser protegidos. Quando um serviço recebe uma mensagem duplex, ele olha o ReplyTo na mensagem de entrada para determinar para onde enviar a resposta. Se o canal não estiver protegido, um cliente não confiável poderá enviar uma mensagem mal-intencionada com um ReplyTo do computador de destino, resultando em uma negação de serviço do computador de destino. Com mensagens normais de solicitação-resposta, isso não é um problema, pois o ReplyTo é ignorado e a resposta é enviada no canal no qual a mensagem original chegou.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Como acessar serviços com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Duplex](../../../../docs/framework/wcf/samples/duplex.md)  
- [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Como definir um contrato de serviço](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [Sessão](../../../../docs/framework/wcf/samples/session.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Como: Serviços do Access com um contrato Duplex](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Duplex](../../../../docs/framework/wcf/samples/duplex.md)
+- [Serviços de design e implantação](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Como: Definir um contrato de serviço](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Sessão](../../../../docs/framework/wcf/samples/session.md)

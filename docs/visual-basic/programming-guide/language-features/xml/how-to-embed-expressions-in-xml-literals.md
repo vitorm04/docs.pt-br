@@ -1,18 +1,18 @@
 ---
-title: Como inserir expressões em literais XML (Visual Basic)
+title: 'Como: Inserir expressões em literais XML (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681775"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Como inserir expressões em literais XML (Visual Basic)
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Como: Inserir expressões em literais XML (Visual Basic)
 Você pode combinar literais XML com expressões incorporadas para criar um documento XML, fragmento ou elemento que contém o conteúdo criado no tempo de execução. Os exemplos a seguir demonstram como usar expressões inseridas para preencher os nomes de elementos, atributos e conteúdo do elemento no tempo de execução.  
   
  É a sintaxe para uma expressão inserida `<%=` `exp` `%>`, que é a mesma sintaxe que [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] usa. Para obter mais informações, consulte [expressões inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
@@ -65,8 +65,8 @@ Você pode combinar literais XML com expressões incorporadas para criar um docu
     </contact>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Como criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)  
- [Expressões Inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [Expressões Inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

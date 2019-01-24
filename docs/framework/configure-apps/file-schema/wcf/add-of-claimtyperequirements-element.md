@@ -2,23 +2,23 @@
 title: '&lt;adicionar&gt; elemento &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 7f86073d0ecce353c63f31fd28c4bfeffb2411ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: fb5e723f6cff9f6e573a45a1dabe008beb9399e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687305"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;adicionar&gt; elemento &lt;claimTypeRequirements&gt;
 Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  
   
  \<system.ServiceModel>  
-\<associações >  
+\<bindings>  
 \<wsFederatedBinding>  
-\<associação >  
+\<binding>  
 \<segurança >  
 \<message>  
-\<claimTypeRequirements >  
+\<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|ClaimType|Um URI que define o tipo de declaração. Por exemplo, para adquirir um produto de um site, o usuário deve apresentar um cartão de crédito válido com limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.|  
+|claimType|Um URI que define o tipo de declaração. Por exemplo, para adquirir um produto de um site, o usuário deve apresentar um cartão de crédito válido com limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.|  
 |isOptional|Um valor booliano que especifica se esta é uma declaração opcional. Defina esse atributo como `false` quando se trata de uma declaração necessária.<br /><br /> Você pode usar esse atributo quando o serviço solicita algumas informações, mas não a exige. Por exemplo, se você precisar que o usuário insira seu nome, sobrenome e endereço, mas decidir que o número de telefone é opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -72,9 +72,9 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
 </bindings>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>

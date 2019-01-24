@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 37d91ca7935e114504864683075f4809de7270fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599108"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>Método IMetaDataAssemblyEmit::SetAssemblyProps
 Modifica especificado `Assembly` estrutura de metadados.  
@@ -46,7 +46,7 @@ HRESULT SetAssemblyProps (
  [in] O token de metadados que especifica o `Assembly` estrutura de metadados a ser modificado.  
   
  `pbPublicKey`  
- [in] Um ponteiro para a chave pública do publicador do assembly.  
+ [in] Um ponteiro para a chave pública do Editor do assembly.  
   
  `cbPublicKey`  
  [in] O tamanho em bytes do `pbPublicKey`.  
@@ -58,22 +58,22 @@ HRESULT SetAssemblyProps (
  [in] O nome de texto legível do assembly.  
   
  `pMetaData`  
- [in] Um ponteiro para o ASSEMBLYMETADATA que contém informações de localidade, plataforma e versão do assembly.  
+ [in] Um ponteiro para o ASSEMBLYMETADATA que contém informações de localidade, plataforma e versão para o assembly.  
   
  `dwAssemblyFlags`  
  [in] Uma combinação bit a bit de [AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md) valores que especificam vários atributos do assembly.  
   
 ## <a name="remarks"></a>Comentários  
- Para criar um `Assembly` estrutura de metadados, use o [: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) método.  
+ Para criar uma `Assembly` estrutura de metadados, use o [imetadataassemblyemit:: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

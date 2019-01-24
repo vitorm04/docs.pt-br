@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebfa886e85cd72c4ea7d088ef345bc9968dec18f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc182687b12f5941996c17f4c09da44c49ef815c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694900"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>Método INotifySink2::OnSyncCallReturn
-Chamado quando uma chamada retorna.  
+É invocado quando uma chamada é retornada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT OnSyncCallReturn
   
 #### <a name="parameters"></a>Parâmetros  
  `in_CallID`  
- [in] ID de chamada que está sendo retornada do. Consulte [estrutura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] ID da chamada seja retornada do. Ver [estrutura CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
  [in] Buffer de chamada.  
@@ -54,7 +54,7 @@ HRESULT OnSyncCallReturn
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Consulte também  
- [Interface INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [Interface INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [Interface INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [Interface INotifySource2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [Interface INotifyConnection2](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Como passar argumentos para um procedimento (Visual Basic)
+title: 'Como: Passar argumentos para um procedimento (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: f393f17f87c5920fb9bfa2a2097c09d48bebdc16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691223"
 ---
-# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Como passar argumentos para um procedimento (Visual Basic)
-Quando você chama um procedimento, você pode seguir o nome do procedimento com uma lista de argumentos entre parênteses. Forneça um argumento correspondente a cada parâmetro necessário que o procedimento define, e, opcionalmente, você pode fornecer argumentos para o `Optional` parâmetros. Se você não fornecer um `Optional` parâmetro na chamada, você deve incluir uma vírgula para marcar seu lugar na lista de argumentos, se você estiver fornecendo argumentos subsequentes.  
+# <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Como: Passar argumentos para um procedimento (Visual Basic)
+Quando você chama um procedimento, você pode seguir o nome do procedimento com uma lista de argumentos entre parênteses. Você fornece um argumento correspondente a cada parâmetro necessário que o procedimento define e, opcionalmente, você pode fornecer argumentos para o `Optional` parâmetros. Se você não fornecer um `Optional` parâmetro na chamada, você deve incluir uma vírgula para marcar seu lugar na lista de argumentos, se você estiver fornecendo quaisquer argumentos subsequentes.  
   
- Se você pretende passar um argumento de um tipo de dados diferente do seu parâmetro correspondente, como `Byte` para `String`, você pode definir a opção de verificação de tipo ([instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) para `Off`. Se `Option Strict` é `On`, você deve usar conversões ampliadoras ou palavras-chave de conversão explícita. Para obter mais informações, consulte [Widening e conversões de estreitamento](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) e [funções de conversão de tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
+ Se você pretende passar um argumento de tipo de dados diferente do seu parâmetro correspondente, tal como `Byte` à `String`, você pode definir a opção de verificação de tipo ([instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) para `Off`. Se `Option Strict` é `On`, você deve usar conversões ampliadoras ou palavras-chave de conversão explícita. Para obter mais informações, consulte [ampliando e restringindo conversões](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) e [funções de conversão de tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
- Para obter mais informações, consulte [argumentos e parâmetros de procedimento](./procedure-parameters-and-arguments.md).  
+ Para obter mais informações, consulte [parâmetros de procedimento e os argumentos](./procedure-parameters-and-arguments.md).  
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Para passar um ou mais argumentos para um procedimento  
   
@@ -41,19 +41,19 @@ Quando você chama um procedimento, você pode seguir o nome do procedimento com
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
-     O exemplo anterior fornece o primeiro argumento necessário, que é a cadeia de caracteres de mensagem a ser exibida. Ele omite um argumento para o segundo parâmetro opcional, que especifica os botões a serem exibidos na caixa de mensagem. Como a chamada não fornece um valor, `MsgBox` usa o valor padrão, `MsgBoxStyle.OKOnly`, que exibe apenas uma **Okey** botão.  
+     O exemplo anterior fornece o primeiro argumento obrigatório, que é a cadeia de caracteres de mensagem a ser exibido. Ele omite um argumento para o segundo parâmetro opcional, que especifica os botões a serem exibidos na caixa de mensagem. Como a chamada não fornece um valor `MsgBox` usa o valor padrão, `MsgBoxStyle.OKOnly`, que exibe apenas uma **Okey** botão.  
   
      A segunda vírgula na lista de argumentos marca o local do segundo argumento omitido, e a última cadeia de caracteres é passada para o terceiro parâmetro opcional de `MsgBox`, que é o texto a ser exibido na barra de título.  
   
 ## <a name="see-also"></a>Consulte também
 
- [Subprocedimentos](./sub-procedures.md)  
- [Procedimentos de Função](./function-procedures.md)  
- [Procedimentos de Propriedade](./property-procedures.md)  
- [Procedimentos de Operador](./operator-procedures.md)  
- [Como definir um parâmetro para um procedimento](./how-to-define-a-parameter-for-a-procedure.md)  
- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)  
- [Procedimentos Recursivos](./recursive-procedures.md)  
- [Sobrecarga de Procedimento](./procedure-overloading.md)  
- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)  
+- [Subprocedimentos](./sub-procedures.md)
+- [Procedimentos de Função](./function-procedures.md)
+- [Procedimentos de Propriedade](./property-procedures.md)
+- [Procedimentos de Operador](./operator-procedures.md)
+- [Como: Definir um parâmetro para um procedimento](./how-to-define-a-parameter-for-a-procedure.md)
+- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)
+- [Procedimentos Recursivos](./recursive-procedures.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Programação orientada a objeto (Visual Basic)](../../concepts/object-oriented-programming.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e3337dddcc39517558cf85af76223306d20d2bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599693"
 ---
 # <a name="control-type-recommendations"></a>Recomendações do tipo de controle
 O .NET Framework fornece a capacidade de desenvolver e implementar novos controles. Além do controle de usuário familiar, agora você poderá gravar controles personalizados que executam sua os que executam suas próprias pinturas e que podem até mesmo estender as funcionalidades de controles existentes por meio de herança. Decidindo qual tipo de controle criar pode ser confuso. Esta seção destaca as diferenças entre os vários tipos de controles pelos quais você pode herdar e fornece considerações relacionadas ao tipo que você escolher para seu projeto.  
@@ -45,40 +45,40 @@ O .NET Framework fornece a capacidade de desenvolver e implementar novos control
   
 -   Você precisa implementar a funcionalidade personalizada que não está disponível por controles padrão.  
   
--   [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Como: Exibir um controle na caixa de diálogo de itens de caixa de ferramentas de escolha](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
--   [Passo a passo: serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [Passo a passo: Serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Passo a passo: herdando um controle dos Windows Forms com Visual C#](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [Passo a passo: Herdando um controle de formulários do Windows com VisualC#](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
--   [Como fornecer um bitmap da caixa de ferramentas para um controle](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [Como: Fornecer um Bitmap da caixa de ferramentas para um controle](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
--   [Como herdar de controles dos Windows Forms existentes](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [Como: Herdar controles de formulários do Windows existentes](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
   
--   [Passo a passo: depurando controles personalizados dos Windows Forms em tempo de Design](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [Passo a passo: Depuração de controles personalizados do Windows Forms em tempo de design](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
   
--   [Como herdar da classe de controle](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [Como: Herdar da classe de controle](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [Como testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Como: Testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Como alinhar um controle às bordas de formulários no tempo de design](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [Como: Alinhar um controle às bordas de formulários no tempo de Design](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
--   [Como herdar da classe UserControl](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [Como: Herdar da classe UserControl](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
   
--   [Como Criar Controles para o Windows Forms](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [Como: Criar controles para Windows Forms](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
   
--   [Como criar controles de composição](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [Como: Criar controles compostos](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
   
--   [Passo a passo: criando um controle de composição com o Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [Passo a passo: Criando um controle composto com o Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Passo a passo: criando um controle de composição com o Visual C#](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [Passo a passo: Criando um controle composto com VisualC#](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
--   [Passo a passo: herdando um controle dos Windows Forms com Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [Passo a passo: Herdando um controle de formulários do Windows com o Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [Como criar um controle dos Windows Forms que aproveita recursos de tempo de design](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [Como: Criar um controle de formulários do Windows que tira proveito dos recursos de tempo de Design](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Como criar um controle dos Windows Forms que aproveita recursos de tempo de design](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Como: Criar um controle de formulários do Windows que tira proveito dos recursos de tempo de Design](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>Consulte também  
- [Como desenvolver um controle simples dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Desenvolver um controle de formulários do Windows simples](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

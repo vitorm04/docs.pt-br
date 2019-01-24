@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 6beeec86ba8bf16be432bc2ae2de20aa08a0d2d9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7552db2b0d1f9063733ddac29612057e0475570e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597185"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapeamento de Padrão de Controles para Clientes de Automação de IU
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Este tópico lista os tipos de controle e seus padrões de controle associado.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47113115"
 |Editar|Nenhum|Valor de texto, o valor de intervalo|Nenhum|  
 |Grupo|Nenhum|Expandir e recolher|Nenhum|  
 |Cabeçalho|Nenhum|Transformar|Nenhum|  
-|Item de Cabeçalho|Nenhum|Transforme, invocar|Nenhum|  
+|Item de Cabeçalho|Nenhum|Transform, Invoke|Nenhum|  
 |Hiperlink|Chamar|Valor|Nenhum|  
 |Image|Nenhum|Item de grade, o Item de tabela|Invocar o Item de seleção|  
 |Lista|Nenhum|Rolagem da grade, exibição de várias, seleção|Tabela|  
@@ -78,5 +78,5 @@ ms.locfileid: "47113115"
 > [!NOTE]
 >  Se um tipo de controle não tem nenhum padrão de controle com suporte listado, mas tem um ou mais padrões de controle tem suporte condicionalmente, em seguida, um desses padrões de controle condicional terão suporte em todos os tempos.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de Automação da Interface do Usuário](../../../docs/framework/ui-automation/ui-automation-overview.md)

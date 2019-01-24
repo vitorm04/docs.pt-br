@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b550c7b3cec999b0420fbdc06582a24f420abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf6a08b17819e3d3cdaa62b0e209fc2064de4a4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425978"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688695"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>Método ISymUnmanagedReader::GetDocumentVersion
-Obtém a versão especificada do documento especificado. A versão do documento começa em 1 e é incrementada toda vez que o documento é atualizado usando o [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) método. Se o `pbCurrent` parâmetro é `true`, esta é a versão mais recente do documento.  
+Obtém a versão especificada do documento especificado. A versão do documento começa em 1 e é incrementada toda vez que o documento é atualizado usando o [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) método. Se o `pbCurrent` parâmetro é `true`, essa é a versão mais recente do documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ HRESULT GetDocumentVersion (
  [out] Um ponteiro para uma variável que recebe a versão do documento especificado.  
   
  `pbCurrent`  
- [out] Um ponteiro para uma variável que recebe `true` se esta é a versão mais recente do documento, ou `false` se não for a versão mais recente.  
+ [out] Um ponteiro para uma variável que recebe `true` se esta for a versão mais recente do documento, ou `false` se não for a versão mais recente.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -52,5 +52,5 @@ HRESULT GetDocumentVersion (
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

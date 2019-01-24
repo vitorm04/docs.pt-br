@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 9883f9166007405c3f47a9a1d66a3f4c546197d0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cd78a0f2513d0e352efa1b1b866627586e6068bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683918"
 ---
 # <a name="varieties-of-custom-controls"></a>Variedades de controles personalizados
 Com o .NET Framework, você pode desenvolver e implementar novos controles. Você pode estender a funcionalidade do controle de usuário familiar, além dos controles existentes, por herança. Você também pode escrever controles personalizados que executam suas próprias pinturas.  
@@ -53,7 +53,7 @@ Com o .NET Framework, você pode desenvolver e implementar novos controles. Voc�
   
  Um controle de composição contém todas as funcionalidades inerentes associadas a cada um dos controles dos Windows Forms contidos e permite que você exponha seletivamente e associe suas propriedades. Um controle de composição também é ideal para a funcionalidade de manipulação do teclado padrão sem nenhum esforço adicional de desenvolvimento de sua parte.  
   
- Por exemplo, um controle de composição poderia ser criado para exibir dados de endereço de cliente de um banco de dados. Esse controle pode incluir um <xref:System.Windows.Forms.DataGridView> controle para exibir os campos de banco de dados, uma <xref:System.Windows.Forms.BindingSource> para lidar com a associação a uma fonte de dados e um <xref:System.Windows.Forms.BindingNavigator> controle para percorrer os registros. Você pode expor seletivamente propriedades de vinculação de dados, além de poder empacotar e reutilizar todo o controle do aplicativo para o aplicativo. Para obter um exemplo desse tipo de controle de composição, consulte [Como aplicar atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Por exemplo, um controle de composição poderia ser criado para exibir dados de endereço de cliente de um banco de dados. Esse controle pode incluir um <xref:System.Windows.Forms.DataGridView> controle para exibir os campos de banco de dados, uma <xref:System.Windows.Forms.BindingSource> para lidar com a associação a uma fonte de dados e um <xref:System.Windows.Forms.BindingNavigator> controle para percorrer os registros. Você pode expor seletivamente propriedades de vinculação de dados, além de poder empacotar e reutilizar todo o controle do aplicativo para o aplicativo. Para obter um exemplo desse tipo de controle de composição, consulte [como: Aplicar atributos em controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
  Para criar um controle composto, derivam o <xref:System.Windows.Forms.UserControl> classe. O <xref:System.Windows.Forms.UserControl> classe base fornece o roteamento de teclado para controles filho e permite que os controles filho funcionem como um grupo. Para obter mais informações, consulte [Desenvolvendo um controle composto do Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
   
@@ -85,7 +85,7 @@ Com o .NET Framework, você pode desenvolver e implementar novos controles. Voc�
   
  Para implementar um controle personalizado, você deve escrever código para o <xref:System.Windows.Forms.Control.OnPaint%2A> eventos de controle, bem como qualquer código específico de recurso necessário. Você também pode substituir o <xref:System.Windows.Forms.Control.WndProc%2A> diretamente mensagens método e o identificador do windows. Essa é a maneira mais eficiente para criar um controle, mas, para usar essa técnica com eficiência, você precisa estar familiarizado com a API do Win32® da Microsoft.  
   
- Um exemplo de um controle personalizado é um controle de relógio que duplica a aparência e o comportamento de um relógio analógico. A pintura personalizada é invocada para fazer com que os ponteiros do relógio se movam em resposta às <xref:System.Windows.Forms.Timer.Tick> eventos de interno <xref:System.Windows.Forms.Timer> componente. Para obter mais informações, consulte [Como desenvolver um controle simples dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+ Um exemplo de um controle personalizado é um controle de relógio que duplica a aparência e o comportamento de um relógio analógico. A pintura personalizada é invocada para fazer com que os ponteiros do relógio se movam em resposta às <xref:System.Windows.Forms.Timer.Tick> eventos de interno <xref:System.Windows.Forms.Timer> componente. Para obter mais informações, confira [Como: Desenvolver um controle de formulários do Windows simples](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
  **Recomendação**  
   
@@ -96,7 +96,7 @@ Com o .NET Framework, você pode desenvolver e implementar novos controles. Voc�
 -   Você precisa implementar a funcionalidade personalizada que não está disponível por controles padrão.  
   
 ### <a name="activex-controls"></a>Controles ActiveX  
- Embora a infraestrutura dos Windows Forms tenha sido otimizada para hospedar controles dos Windows Forms, você ainda poderá usar controles ActiveX. Há suporte para esta tarefa no Visual Studio. Para mais informações, consulte [Como adicionar controles ActiveX ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+ Embora a infraestrutura dos Windows Forms tenha sido otimizada para hospedar controles dos Windows Forms, você ainda poderá usar controles ActiveX. Há suporte para esta tarefa no Visual Studio. Para obter mais informações, confira [Como: Adicionar controles ActiveX ao Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
   
 ### <a name="windowless-controls"></a>Controles sem janelas  
  As tecnologias ActiveX e Microsoft Visual Basic® 6.0 dão suporte a controles *sem janelas*. Os controles sem janelas não têm suporte nos Windows Forms.  
@@ -104,11 +104,11 @@ Com o .NET Framework, você pode desenvolver e implementar novos controles. Voc�
 ## <a name="custom-design-experience"></a>Experiência de design personalizado  
  Se você precisar implementar uma experiência de tempo de design personalizada, você poderá criar seu próprio designer. Para controles de composição, derive sua classe de designer personalizado do <xref:System.Windows.Forms.Design.ParentControlDesigner> ou o <xref:System.Windows.Forms.Design.DocumentDesigner> classes. Para controles estendidos e personalizados, derive sua classe de designer personalizado do <xref:System.Windows.Forms.Design.ControlDesigner> classe.  
   
- Use o <xref:System.ComponentModel.DesignerAttribute> para associar o controle a seu designer. Para obter mais informações, consulte [Estendendo o suporte em tempo de design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) e [Como criar um controle dos Windows Forms que aproveita os recursos de tempo de design](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Use o <xref:System.ComponentModel.DesignerAttribute> para associar o controle a seu designer. Para obter mais informações, consulte [estendendo o suporte de tempo de Design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) e [como: Criar um controle de formulários do Windows que aproveita os recursos de tempo de Design do](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
-## <a name="see-also"></a>Consulte também  
- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Como desenvolver um controle simples dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Desenvolvendo um controle de composição dos Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
- [Estendendo o suporte ao tempo de design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Como criar um controle dos Windows Forms que aproveita recursos de tempo de design](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)
+## <a name="see-also"></a>Consulte também
+- [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Como: Desenvolver um controle de formulários do Windows simples](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Desenvolvendo um controle de composição dos Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [Estendendo o suporte ao tempo de design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)
+- [Como: Criar um controle de formulários do Windows que tira proveito dos recursos de tempo de Design](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

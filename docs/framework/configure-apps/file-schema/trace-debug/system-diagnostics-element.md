@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 54c20e56fa1729cb534821e263e316c26e01cde6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687304"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;System. Diagnostics&gt; elemento
 Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  
   
  \<configuration>  
-\<System. Diagnostics >  
+\<system.diagnostics>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -74,7 +74,7 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: 0fadb13d4fcfbe87eb2c08fc35323c726c0ac2a6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 405a6f21af1cb3508b7b88625101ed75f198bbaa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682661"
 ---
 # <a name="ltdeclaredtypesgt"></a>&lt;declaredTypes&gt;
 Contém tipos conhecidos de que o <xref:System.Runtime.Serialization.DataContractSerializer> usa durante a desserialização.  
@@ -21,8 +21,8 @@ Contém tipos conhecidos de que o <xref:System.Runtime.Serialization.DataContrac
  Para obter mais informações sobre contratos de dados e tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  system.runtime.serialization  
-\<dataContractSerializer >  
-\<declaredTypes >  
+\<dataContractSerializer>  
+\<declaredTypes>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ Contém tipos conhecidos de que o <xref:System.Runtime.Serialization.DataContrac
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Contém dados de configuração para o <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Contém dados de configuração para o <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -88,8 +88,8 @@ Contém tipos conhecidos de que o <xref:System.Runtime.Serialization.DataContrac
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

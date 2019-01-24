@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c4e2a094f018b4f77423b6dbfe990925632edf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683853"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>Método ICorProfilerInfo::GetInprocInspectionInterface
-Obtém um objeto que pode ser consultado para uma interface de "ICorDebugProcess". Este método está obsoleto no .NET Framework versão 2.0.  
+Obtém um objeto que pode ser consultado para uma interface "ICorDebugProcess". Este método é obsoleto no .NET Framework versão 2.0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,19 +36,19 @@ HRESULT GetInprocInspectionInterface(
   
 #### <a name="parameters"></a>Parâmetros  
  `ppicd`  
- [out](/cpp/atl/iunknown) objeto que pode ser consultado por um `ICorDebugProcess` interface.  
+ [-out](/cpp/atl/iunknown) objeto que pode ser consultado por um `ICorDebugProcess` interface.  
   
 ## <a name="remarks"></a>Comentários  
- O common language runtime (CLR) depuração da API com suporte limitado em processo depuração do .NET Framework versão 1.0. No processo de depuração habilitado um criador de perfil usar as partes de inspeção da API de depuração. Como resultado de comentários do cliente, no processo de depuração foi removido do .NET Framework versão 2.0 e substituído por um conjunto de funcionalidades mais alinhados com a API de criação de perfil.  
+ O common language runtime (CLR) API de depuração tem suporte limitado depuração em andamento no .NET Framework versão 1.0. No processo de depuração habilitado um criador de perfil usar as partes de inspeção da API de depuração. Como resultado de comentários do cliente, no processo de depuração foi removido do .NET Framework versão 2.0 e substituída por um conjunto de funcionalidade que é mais alinhada com a API de criação de perfil.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
  **Versão do .NET framework:** 1.0  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Como filtrar dados em uma exibição
+title: 'Como: Filtrar dados em uma exibição'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: b972da093fc50563c5db93e61aeb8421f9bf20b2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33af517c086f8f89cc06a1de7a2979c5b1624109
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689299"
 ---
-# <a name="how-to-filter-data-in-a-view"></a>Como filtrar dados em uma exibição
+# <a name="how-to-filter-data-in-a-view"></a>Como: Filtrar dados em uma exibição
 Este exemplo mostra como filtrar dados em uma exibição.  
   
 ## <a name="example"></a>Exemplo  
@@ -47,9 +47,9 @@ Este exemplo mostra como filtrar dados em uma exibição.
  [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Data.CollectionView.CanFilter%2A>  
- <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>  
- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Classificar dados em uma exibição](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Data.CollectionView.CanFilter%2A>
+- <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
+- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Classificar dados em uma exibição](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

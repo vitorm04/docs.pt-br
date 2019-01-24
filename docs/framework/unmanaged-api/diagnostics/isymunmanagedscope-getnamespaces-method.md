@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c786cd43a25aa0c69c19e57452a3b190c7bfb167
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e577fd6bafecb9adaf3b759d100ab21f6b32ffd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693169"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>Método ISymUnmanagedScope::GetNamespaces
 Obtém os namespaces que estão sendo usados dentro desse escopo.  
@@ -54,5 +54,5 @@ HRESULT GetNamespaces(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: Como obter propriedades do objeto do sistema de impressão sem reflexão
+title: 'Como: Obter propriedades do objeto do sistema de impressão sem reflexão'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: 1fa8029b8245aef5e10e9082a1038fd89fc1c84e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b081586d201bed537c086447c4ddb116f179fbca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693247"
 ---
-# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Como obter propriedades do objeto do sistema de impressão sem reflexão
+# <a name="how-to-get-print-system-object-properties-without-reflection"></a>Como: Obter propriedades do objeto do sistema de impressão sem reflexão
 Usando a reflexão para relacionar as propriedades (e os tipos dessas propriedades) em um objeto pode diminuir o desempenho do aplicativo. O <xref:System.Printing.IndexedProperties> namespace fornece um meio para obter essas informações com o uso de reflexão.  
   
 ## <a name="example"></a>Exemplo  
@@ -22,24 +22,24 @@ Usando a reflexão para relacionar as propriedades (e os tipos dessas propriedad
   
 1.  Crie uma instância do tipo. No exemplo a seguir, o tipo é o <xref:System.Printing.PrintQueue> que é fornecido com o Microsoft .NET Framework, mas código quase idêntico deve funcionar para tipos que derivam de <xref:System.Printing.PrintSystemObject>.  
   
-2.  Criar um <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> do tipo de <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. O <xref:System.Collections.DictionaryEntry.Value%2A> propriedade de cada entrada neste dicionário é um objeto de um tipo derivado de <xref:System.Printing.IndexedProperties.PrintProperty>.  
+2.  Criar uma <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> do tipo de <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>. O <xref:System.Collections.DictionaryEntry.Value%2A> propriedade de cada entrada neste dicionário é um objeto de um tipo derivado de <xref:System.Printing.IndexedProperties.PrintProperty>.  
   
 3.  Enumere os membros do dicionário. Para cada um deles, faça o seguinte:  
   
 4.  Cast o valor de cada entrada para <xref:System.Printing.IndexedProperties.PrintProperty> e usá-lo para criar um <xref:System.Printing.IndexedProperties.PrintProperty> objeto.  
   
-5.  Obtenha o tipo do <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> de cada uma da <xref:System.Printing.IndexedProperties.PrintProperty> objeto.  
+5.  Obter o tipo dos <xref:System.Printing.IndexedProperties.PrintProperty.Value%2A> de cada um do <xref:System.Printing.IndexedProperties.PrintProperty> objeto.  
   
  [!code-csharp[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/CSharp/Program.cs#showpropertytypeswithoutreflection)]
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Printing.IndexedProperties.PrintProperty>  
- <xref:System.Printing.PrintSystemObject>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
- <xref:System.Printing.LocalPrintServer>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Collections.DictionaryEntry>  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Printing.IndexedProperties.PrintProperty>
+- <xref:System.Printing.PrintSystemObject>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
+- <xref:System.Printing.LocalPrintServer>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Collections.DictionaryEntry>
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)

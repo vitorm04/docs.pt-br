@@ -5,12 +5,12 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 60ee90c69aeda38f95107a6043801a4994972079
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 56466856bc70f4bde428f7087efdf4e71a50021f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689137"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Espaço em branco em literais XML (Visual Basic)
 O compilador do Visual Basic incorpora somente os caracteres de espaço em branco significativo de um literal XML quando ele cria um [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objeto. Os caracteres de espaço em branco insignificante não são incorporados.  
@@ -46,5 +46,5 @@ O compilador do Visual Basic incorpora somente os caracteres de espaço em branc
 </outer>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
