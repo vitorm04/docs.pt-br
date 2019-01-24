@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: 0cbb3b3906ad83349f02cf6a345f2e3d5336a2e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3d5e02d092489e01975037c811fedb2727e2041f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566644"
 ---
 # <a name="wcf-data-services-overview"></a>Visão geral do WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite a criação e consumo de serviços de dados para a Web ou uma intranet usando o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] permite que você exponha seus dados como recursos endereçáveis por URIs. Isso permite que você acesse e alterar dados usando a semântica de transferência de estado representacional (REST), especificamente os verbos HTTP padrão de GET, PUT, POSTAM e excluir. Este tópico fornece uma visão geral dos padrões e práticas definidas pela [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] e também os recursos fornecidos pelo [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aproveitar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] em aplicativos baseados no .NET Framework.  
@@ -25,7 +25,7 @@ ms.locfileid: "43523131"
 ## <a name="interoperable-data-access"></a>Acesso a dados interoperáveis  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protocolos de Internet padrão para tornar os serviços de dados interoperável com aplicativos que não usam o .NET Framework se baseia. Como você pode usar URIs padrão para dados de endereço, seu aplicativo pode acessar e alterar dados usando a semântica de transferência de estado representacional (REST), especificamente os verbos HTTP padrão de GET, PUT, POSTAM e excluir. Isso permite acessar esses serviços de qualquer cliente que possa analisar e acessar dados transmitidos por protocolos HTTP padrão.  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um conjunto de extensões para o protocolo de publicação Atom (AtomPub). Ele dá suporte a solicitações e respostas HTTP em mais de um formato de dados para acomodar vários aplicativos cliente e plataformas. Um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pode representar dados em Atom, JSON (JavaScript Object Notation) e como XML sem formatação. Quando Atom é o formato padrão, o formato do feed é especificado no cabeçalho da solicitação HTTP. Para obter mais informações, consulte [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794) e [OData: formato JSON](https://go.microsoft.com/fwlink/?LinkID=185795).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um conjunto de extensões para o protocolo de publicação Atom (AtomPub). Ele dá suporte a solicitações e respostas HTTP em mais de um formato de dados para acomodar vários aplicativos cliente e plataformas. Um feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pode representar dados em Atom, JSON (JavaScript Object Notation) e como XML sem formatação. Quando Atom é o formato padrão, o formato do feed é especificado no cabeçalho da solicitação HTTP. Para obter mais informações, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794) e [OData: Formato JSON](https://go.microsoft.com/fwlink/?LinkID=185795).  
   
  Ao publicar dados como uma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] depende de outros recursos da Internet para operações como o armazenamento em cache e autenticação. Para fazer isso, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] integra-se com aplicativos de hospedagem existentes e serviços, como ASP.NET, Windows Communication Foundation (WCF) e serviços de informações da Internet (IIS).  
   
@@ -55,10 +55,10 @@ ms.locfileid: "43523131"
   
  ![Diagrama de arquitetura do WCF Data Services](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
   
-## <a name="see-also"></a>Consulte também  
- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)  
- [Acessando um serviço de dados (WCF Data Services)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)  
- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)  
- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) [REST (Transferência de Estado Representacional)]
+## <a name="see-also"></a>Consulte também
+- [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
+- [Introdução](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md) (Definindo o WCF Data Services)
+- [Acessando um serviço de dados (WCF Data Services)](https://msdn.microsoft.com/library/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)
+- [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
+- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) [REST (Transferência de Estado Representacional)]

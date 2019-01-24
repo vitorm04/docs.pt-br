@@ -1,5 +1,5 @@
 ---
-title: Como implementar a interface ITypedList
+title: 'Como: Implementar a Interface ITypedList'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: 181879d3e41e0dd140c79a4c63d52e6999acf86d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d12c0b82d9475981d0c72f082665b11135d8bb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562161"
 ---
-# <a name="how-to-implement-the-itypedlist-interface"></a>Como implementar a interface ITypedList
-Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a descoberta do esquema para obter uma lista associável.  
+# <a name="how-to-implement-the-itypedlist-interface"></a>Como: Implementar a Interface ITypedList
+Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a descoberta do esquema para uma lista vinculável.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.ITypedList> interface. Um tipo genérico chamado `SortableBindingList` deriva o <xref:System.ComponentModel.BindingList%601> classe e implemente o <xref:System.ComponentModel.ITypedList> interface. Uma classe simples denominada `Customer` fornece dados, que são associados ao cabeçalho de uma <xref:System.Windows.Forms.DataGridView> controle.  
+ O exemplo de código a seguir demonstra como implementar o <xref:System.ComponentModel.ITypedList> interface. Um tipo genérico chamado `SortableBindingList` deriva de <xref:System.ComponentModel.BindingList%601> classe e implementa o <xref:System.ComponentModel.ITypedList> interface. Uma classe simples denominada `Customer` fornece os dados, o que estão associados ao cabeçalho de uma <xref:System.Windows.Forms.DataGridView> controle.  
   
  [!code-csharp[System.ComponentModel.ITypedList#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/SortableBindingList.cs#1)]
  [!code-vb[System.ComponentModel.ITypedList#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/SortableBindingList.vb#1)]  
@@ -37,8 +37,8 @@ Implementar o <xref:System.ComponentModel.ITypedList> interface para habilitar a
   
 -   Referências aos assemblies System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Vinculação de dados e os Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: bee0cf4a1fcd70274ff8c1107a35ec3501ef2249
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49415244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563633"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante o WCF Data Services
 
@@ -42,7 +42,7 @@ Ao desenvolver um WCF Data Service como um [!INCLUDE[vstecasp](../../../../inclu
 
 1.  **Servidor IIS local**
 
-     Quando você cria um serviço de dados que é um aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou um site do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que é executado nos Serviços de Informações da Internet (IIS), recomendamos que você desenvolva e teste o serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar seu serviço de dados no IIS, você deve torna-se de que o IIS e o Windows Communication Foundation (WCF) são instalados e configurados corretamente e conceder acesso às contas do IIS no sistema de arquivos e bancos de dados. Para obter mais informações, consulte [como: desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Quando você cria um serviço de dados que é um aplicativo do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ou um site do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que é executado nos Serviços de Informações da Internet (IIS), recomendamos que você desenvolva e teste o serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar seu serviço de dados no IIS, você deve torna-se de que o IIS e o Windows Communication Foundation (WCF) são instalados e configurados corretamente e conceder acesso às contas do IIS no sistema de arquivos e bancos de dados. Para obter mais informações, confira [Como: Desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Você deve executar o Visual Studio com direitos de administrador para permitir que o ambiente de desenvolvimento para configurar o servidor IIS local.
@@ -82,7 +82,7 @@ Você deve considerar o seguinte ao desenvolver um serviço de dados:
 
 -   Quando estiver depurando um serviço de dados, você talvez queira obter mais informações sobre o erro do serviço de dados que, durante a operação normal. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. Para obter mais informações, consulte a postagem [depuração WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Você também pode habilitar o rastreamento do WCF para exibir as exceções geradas na camada de mensagens HTTP. Para obter mais informações, consulte [Configurando o rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Um serviço de dados é geralmente desenvolvido como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto de aplicativo, mas você também pode criar serviço de dados como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto de site da Web no Visual Studio. Para obter informações sobre as diferenças entre os dois tipos de projetos, consulte [NIB: projetos de aplicativos Web versus projetos de Site da Web no Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
+-   Um serviço de dados é geralmente desenvolvido como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto de aplicativo, mas você também pode criar serviço de dados como um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto de site da Web no Visual Studio. Para obter informações sobre as diferenças entre os dois tipos de projetos, consulte [NIB: Projetos de aplicativo versus projetos de Site da Web no Visual Studio Web](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 
 -   Quando você cria um serviço de dados usando o **Adicionar Novo Item** caixa de diálogo no Visual Studio, o serviço de dados é hospedada por [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] no IIS. Embora o [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e o IIS sejam o host padrão para um serviço de dados, outras opções de hospedagem têm suporte. Para obter mais informações, consulte [que hospeda o serviço de dados](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
@@ -90,7 +90,7 @@ Você deve considerar o seguinte ao desenvolver um serviço de dados:
 
 O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o serviço de dados. Você pode usar o Visual Studio para implantar um serviço de dados para as seguintes plataformas:
 
--   **Servidor Web hospedado no IIS**
+-   **IIS-Hosted Web Server**
 
      Quando um serviço de dados é desenvolvido como um projeto do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], ele pode ser implantado em um servidor Web no IIS usando os processos de implantação padrão do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  O Visual Studio fornece as seguintes tecnologias de implantação para [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], dependendo do tipo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projeto que hospeda o serviço de dados que você está implantando.
 
@@ -111,7 +111,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
      Para obter mais informações sobre as opções de implantação para um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo, consulte [visão geral de implantação da Web para Visual Studio e o ASP.NET](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).
 
     > [!TIP]
-    > Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, consulte [como: desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+    > Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, confira [Como: Desenvolver um WCF Data Service em execução no IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 -   **Windows Azure**
 
@@ -121,7 +121,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 Você deve considerar o seguinte ao implantar um serviço de dados:
 
--   Quando você implanta um serviço de dados que usa o provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para acessar um banco de dados do SQL Server, você também pode ter que propagar as estruturas de dados, os dados ou ambos com a implantação do serviço de dados. Visual Studio pode criar automaticamente scripts (arquivos. SQL) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo. Para obter mais informações, consulte [como: implantar um banco de dados com um projeto de aplicativo Web](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Para um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site da Web, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [Implantando um banco de dados usando o Assistente de publicação de banco de dados](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
+-   Quando você implanta um serviço de dados que usa o provedor do [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] para acessar um banco de dados do SQL Server, você também pode ter que propagar as estruturas de dados, os dados ou ambos com a implantação do serviço de dados. Visual Studio pode criar automaticamente scripts (arquivos. SQL) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplicativo. Para obter mais informações, confira [Como: Implantar um banco de dados com um projeto de aplicativo Web](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Para um [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] site da Web, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [Implantando um banco de dados usando o Assistente de publicação de banco de dados](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
 
 -   Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte a postagem [rastreamento do WCF Data Services com o Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

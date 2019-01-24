@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6784848a5103dc9206267fc25fe7457257624cb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564663"
 ---
 # <a name="marshalcleanuperror-mda"></a>MDA marshalCleanupError
 O MDA (assistente de depuração gerenciado) do `marshalCleanupError` é ativado quando o CLR (Common Language Runtime) encontra um erro ao tentar limpar estruturas temporárias e a memória usada para realizar marshaling de tipos de dados entre limites de código gerenciado e nativo.  
@@ -47,7 +47,7 @@ O MDA (assistente de depuração gerenciado) do `marshalCleanupError` é ativado
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling de interoperabilidade](../../../docs/framework/interop/interop-marshaling.md)

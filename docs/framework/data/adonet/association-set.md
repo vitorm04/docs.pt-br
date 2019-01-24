@@ -2,17 +2,17 @@
 title: conjunto de associações
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 53eeac5c3408bc35a02a368c093feda81cc16378
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29150eea7781784c2cdbd1f0137e02b94f66e106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565924"
 ---
 # <a name="association-set"></a>conjunto de associações
-Um *conjunto de associações* é um contêiner lógico para [associação](../../../../docs/framework/data/adonet/association-type.md) instâncias do mesmo tipo. Um conjunto de associações não é um dados que modelam a compilação; isto é, não descreve a estrutura de dados ou relações. Em vez disso, um conjunto de associações fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados SQL Server) às instâncias de associação do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
+Uma *conjunto de associações* é um contêiner lógico para [associação](../../../../docs/framework/data/adonet/association-type.md) instâncias do mesmo tipo. Um conjunto de associações não é um dados que modelam a compilação; isto é, não descreve a estrutura de dados ou relações. Em vez disso, um conjunto de associações fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados SQL Server) às instâncias de associação do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
   
- Um conjunto de associação é definido dentro de um [contêiner de entidade](../../../../docs/framework/data/adonet/entity-container.md), que é um agrupamento lógico de [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md) e conjuntos de associação.  
+ Um conjunto de associações é definido dentro de um [contêiner de entidade](../../../../docs/framework/data/adonet/entity-container.md), que é um agrupamento lógico de [conjuntos de entidades](../../../../docs/framework/data/adonet/entity-set.md) e conjuntos de associações.  
   
  Uma definição de um conjunto de associações contém as informações a seguir:  
   
@@ -20,26 +20,26 @@ Um *conjunto de associações* é um contêiner lógico para [associação](../.
   
 -   A associação de que irá conter instâncias. (Necessário)  
   
--   Dois [extremidades do conjunto de associação](../../../../docs/framework/data/adonet/association-set-end.md).  
+-   Duas [termina do conjunto de associações](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Exemplo  
  O diagrama a seguir mostra um modelo conceitual com duas associações: `PublishedBy`, e `WrittenBy`. Embora informações sobre conjuntos de associações não é transmitida no diagrama, o diagrama a seguir mostra um exemplo de conjuntos de associações e conjuntos de entidades baseados nesse modelo.  
   
  ![Modelo de exemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
- O exemplo a seguir mostra um conjunto de associações (`PublishedBy`) e dois conjuntos de entidades (`Books` e `Publishers`) com base no modelo conceitual mostrado acima. BI no `Books` conjunto de entidade representa uma ocorrência da `Book` tipo de entidade em tempo de execução. Da mesma forma, Pj representa um `Publisher` de instância de `Publishers` conjunto de entidades. BiPj representa uma ocorrência da `PublishedBy` associação no `PublishedBy` conjunto de associações.  
+ O exemplo a seguir mostra um conjunto de associações (`PublishedBy`) e dois conjuntos de entidades (`Books` e `Publishers`) com base no modelo conceitual mostrado acima. BI na `Books` conjunto de entidades representa uma instância das `Book` tipo de entidade em tempo de execução. Da mesma forma, Pj representa uma `Publisher` da instância no `Publishers` conjunto de entidades. BiPj representa uma instância das `PublishedBy` associação no `PublishedBy` conjunto de associações.  
   
- ![Exemplo](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Define o exemplo](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
   
  O [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa uma linguagem específica de domínio (DSL) chamada linguagem de definição de esquema conceitual ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir modelos conceituais. CSDL seguir define um contêiner de entidade com um conjunto de associações para cada associação no diagrama anterior. Observe que o nome e a associação para cada conjunto de associações são definidos usando atributos XML.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- É possível definir vários conjuntos de associação por associação, contanto que nenhum compartilhamento de conjuntos de dois associação um [final do conjunto de associação](../../../../docs/framework/data/adonet/association-set-end.md). CSDL seguir define um contêiner de entidade com dois conjuntos de associações para associação de `WrittenBy` . Observe que os vários conjuntos de entidades foram definidos para os tipos de entidade de `Book` e de `Author` e que nenhum conjunto de associações compartilha fim do conjunto de associações.  
+ É possível definir vários conjuntos de associações pela associação, contanto que não há conjuntos de duas associações compartilham um [final do conjunto de associações](../../../../docs/framework/data/adonet/association-set-end.md). CSDL seguir define um contêiner de entidade com dois conjuntos de associações para associação de `WrittenBy` . Observe que os vários conjuntos de entidades foram definidos para os tipos de entidade de `Book` e de `Author` e que nenhum conjunto de associações compartilha fim do conjunto de associações.  
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
-## <a name="see-also"></a>Consulte também  
- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)  
- [propriedade de chave estrangeira](../../../../docs/framework/data/adonet/foreign-key-property.md)
+## <a name="see-also"></a>Consulte também
+- [Principais conceitos do Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Modelo de Dados de Entidade](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [propriedade de chave estrangeira](../../../../docs/framework/data/adonet/foreign-key-property.md)
