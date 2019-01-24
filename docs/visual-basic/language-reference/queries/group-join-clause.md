@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: f4c0d7fa9f14868404cde6201692e26b919198be
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619735"
 ---
 # <a name="group-join-clause-visual-basic"></a>Cláusula Join Group (Visual Basic)
 Combina duas coleções em uma única coleção hierárquica. A operação de junção é baseada em chaves correspondentes.  
@@ -36,7 +36,7 @@ Group Join element [As type] In collection _
 |`element`|Necessário. A variável de controle para a coleção sendo unida.|  
 |`type`|Opcional. O tipo de `element`. Se nenhum `type` for especificado, o tipo de `element` é inferido do `collection`.|  
 |`collection`|Necessário. A coleção a combinar com a coleção que está no lado esquerdo do `Group Join` operador. Um `Group Join` cláusula pode ser aninhada em um `Join` cláusula ou em outro `Group Join` cláusula.|  
-|`key1``Equals``key2`|Necessário. Identifica as chaves para as coleções que estão sendo unidas. Você deve usar o `Equals` operador para comparar as chaves das coleções que estão sendo combinadas. Você pode combinar condições de junção, usando o `And` operador para identificar várias chaves. O `key1` parâmetro deve ser da coleção no lado esquerdo do `Join` operador. O `key2` parâmetro deve ser da coleção no lado direito do `Join` operador.<br /><br /> As chaves usadas na condição de junção podem ser expressões que incluem mais de um item da coleção. No entanto, cada expressão de chave pode conter apenas os itens de sua respectiva coleção.|  
+|`key1` `Equals` `key2`|Necessário. Identifica as chaves para as coleções que estão sendo unidas. Você deve usar o `Equals` operador para comparar as chaves das coleções que estão sendo combinadas. Você pode combinar condições de junção, usando o `And` operador para identificar várias chaves. O `key1` parâmetro deve ser da coleção no lado esquerdo do `Join` operador. O `key2` parâmetro deve ser da coleção no lado direito do `Join` operador.<br /><br /> As chaves usadas na condição de junção podem ser expressões que incluem mais de um item da coleção. No entanto, cada expressão de chave pode conter apenas os itens de sua respectiva coleção.|  
 |`expressionList`|Necessário. Uma ou mais expressões que identificam como os grupos de elementos da coleção são agregados. Para identificar um nome de membro para os resultados agrupados, use o `Group` palavra-chave (`<alias> = Group`). Você também pode incluir funções agregadas para aplicar ao grupo.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -55,11 +55,11 @@ Group Join element [As type] In collection _
   
  [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Consultas](../../../visual-basic/language-reference/queries/index.md)  
- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Cláusula Join](../../../visual-basic/language-reference/queries/join-clause.md)  
- [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)  
- [Cláusula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Consultas](../../../visual-basic/language-reference/queries/index.md)
+- [Cláusula Select](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Cláusula Join](../../../visual-basic/language-reference/queries/join-clause.md)
+- [Cláusula Where](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Cláusula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)

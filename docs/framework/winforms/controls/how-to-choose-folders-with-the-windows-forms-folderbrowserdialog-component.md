@@ -1,5 +1,5 @@
 ---
-title: Como escolher pastas com o componente FolderBrowserDialog dos Windows Forms
+title: 'Como: Escolher pastas com o componente do Windows Forms FolderBrowserDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 657aad6efa195ec3d9741f4f91d4e01af4a54a19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614687"
 ---
-# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Como escolher pastas com o componente FolderBrowserDialog dos Windows Forms
-Muitas vezes, dentro de aplicativos do Windows que você criou, será necessário solicitar que os usuários selecionem uma pasta e com mais frequência que eles salvem um conjunto de arquivos. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> componente permite que você facilmente realizar essa tarefa.  
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Como: Escolher pastas com o componente do Windows Forms FolderBrowserDialog
+Muitas vezes, dentro de aplicativos do Windows que você criou, será necessário solicitar que os usuários selecionem uma pasta e com mais frequência que eles salvem um conjunto de arquivos. Os formulários do Windows <xref:System.Windows.Forms.FolderBrowserDialog> componente permite que você facilmente realizar essa tarefa.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>Escolher pastas com o componente FolderBrowserDialog  
   
-1.  Em um procedimento, verifique o <xref:System.Windows.Forms.FolderBrowserDialog> do componente <xref:System.Windows.Forms.Form.DialogResult%2A> propriedade para ver como a caixa de diálogo foi fechada e obter o valor da <xref:System.Windows.Forms.FolderBrowserDialog> do componente <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriedade.  
+1.  Em um procedimento, verifique as <xref:System.Windows.Forms.FolderBrowserDialog> do componente <xref:System.Windows.Forms.Form.DialogResult%2A> propriedade para ver como a caixa de diálogo foi fechada e obter o valor da <xref:System.Windows.Forms.FolderBrowserDialog> do componente <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriedade.  
   
-2.  Se você precisa definir o nível mais alto pasta que será exibido na exibição de árvore da caixa de diálogo, defina o <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propriedade, que usa um membro do <xref:System.Environment.SpecialFolder> enumeração.  
+2.  Se você precisar de pasta de conjunto o mais alto que será exibido dentro da exibição de árvore da caixa de diálogo, defina as <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propriedade, que usa um membro do <xref:System.Environment.SpecialFolder> enumeração.  
   
 3.  Além disso, você pode definir o <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> propriedade, que especifica o texto da cadeia de caracteres que aparece na parte superior do modo de exibição de árvore do navegador de pasta.  
   
-     No exemplo a seguir, o <xref:System.Windows.Forms.FolderBrowserDialog> componente é usado para selecionar uma pasta, semelhante a quando você cria um projeto no Visual Studio e é solicitado a selecionar uma pasta para salvá-lo no. Neste exemplo, o nome de pasta, em seguida, é exibido em um <xref:System.Windows.Forms.TextBox> controle no formulário. É aconselhável colocar o local em uma área editável, como um <xref:System.Windows.Forms.TextBox> controlar, de forma que os usuários podem editar sua seleção no caso de erro ou outros problemas. Este exemplo supõe que um formulário com um <xref:System.Windows.Forms.FolderBrowserDialog> componente e um <xref:System.Windows.Forms.TextBox> controle.  
+     No exemplo a seguir, o <xref:System.Windows.Forms.FolderBrowserDialog> componente é usado para selecionar uma pasta, semelhante a quando você cria um projeto no Visual Studio e será solicitado a selecionar uma pasta para salvá-lo no. Neste exemplo, o nome da pasta é exibido em um <xref:System.Windows.Forms.TextBox> controle no formulário. É uma boa ideia colocar o local em uma área editável, como um <xref:System.Windows.Forms.TextBox> controle, para que os usuários podem editar a seleção em caso de erro ou outros problemas. Este exemplo pressupõe um formulário com um <xref:System.Windows.Forms.FolderBrowserDialog> componente e um <xref:System.Windows.Forms.TextBox> controle.  
   
     ```vb  
     Public Sub ChooseFolder()  
@@ -62,11 +62,11 @@ Muitas vezes, dentro de aplicativos do Windows que você criou, será necessári
     ```  
   
     > [!IMPORTANT]
-    >  Para usar essa classe, seu assembly requer um nível de privilégio concedido pelo <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> propriedade, que é parte do <xref:System.Security.Permissions.FileIOPermissionAccess> enumeração. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Para usar essa classe, seu assembly requer um nível de privilégio concedido pela <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> propriedade, que é parte do <xref:System.Security.Permissions.FileIOPermissionAccess> enumeração. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../docs/framework/misc/code-access-security-basics.md).  
   
- Para obter informações sobre como salvar arquivos, consulte [Como salvar arquivos usando o componente SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
+ Para obter informações sobre como salvar arquivos, consulte [como: Salvar arquivos usando o componente SaveFileDialog](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.FolderBrowserDialog>  
- [Visão geral do componente FolderBrowserDialog (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- [Componente FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.FolderBrowserDialog>
+- [Visão geral do componente FolderBrowserDialog (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
+- [Componente FolderBrowserDialog](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

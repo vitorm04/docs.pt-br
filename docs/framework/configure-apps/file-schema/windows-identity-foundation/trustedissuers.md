@@ -3,12 +3,12 @@ title: '&lt;trustedIssuers&gt;'
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 1459027ae22344d5b1abc917c490b8e98fa0f2c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633879"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 Configura a lista de certificados do emissor confiável usado pelo registro de nome do emissor e baseada em configuração (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
@@ -16,9 +16,9 @@ Configura a lista de certificados do emissor confiável usado pelo registro de n
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry >  
-\<trustedIssuers >  
+\<securityTokenHandlerConfiguration>  
+\<issuerNameRegistry>  
+\<trustedIssuers>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,7 +58,7 @@ Configura a lista de certificados do emissor confiável usado pelo registro de n
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura o registro do nome do emissor. **Importante:** as `type` atributo do `<issuerNameRegistry>` deve fazer referência a elemento o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe para o `<trustedIssuers>` elemento a ser válido.|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configura o registro do nome do emissor. **Importante:**  O `type` atributo do `<issuerNameRegistry>` deve fazer referência a elemento o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe para o `<trustedIssuers>` elemento a ser válido.|  
   
 ## <a name="remarks"></a>Comentários  
  Windows Identity Foundation (WIF) fornece uma única implementação do <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe imediato, o <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. O registro do nome de emissor configuração mantém uma lista de emissores confiáveis carregado a partir da configuração. A lista associa cada nome do emissor do certificado X.509 que é necessário para verificar a assinatura de tokens produzidos pelo emissor. A lista de certificados do emissor confiável é especificada sob o `<trustedIssuers>` elemento. Cada elemento na lista associa um nome de emissor mnemônico com o certificado X.509 que é necessário para verificar a assinatura de tokens produzidos por esse emissor. Certificados de confiança são especificados usar o ASN. 1 codificada em forma de impressão digital do certificado e são adicionados a coleção usando `<add>` elemento. Você pode limpar e remover emissores (certificados) da lista usando o `<clear>` e `<remove>` elementos.  
@@ -76,6 +76,6 @@ Configura a lista de certificados do emissor confiável usado pelo registro de n
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+## <a name="see-also"></a>Consulte também
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>

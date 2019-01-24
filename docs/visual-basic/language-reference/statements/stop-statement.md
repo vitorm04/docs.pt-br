@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 955a3b6a2f7dc1d0e9823ed6d500ab7f7f9fe5b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9a1942903dff6f673d87b67ebcad047a410425
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624776"
 ---
 # <a name="stop-statement-visual-basic"></a>Instrução Stop (Visual Basic)
 Suspende a execução.  
@@ -29,17 +29,17 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Você pode colocar `Stop` instruções em qualquer lugar em procedimentos para suspender a execução. Usando o `Stop` instrução é semelhante à configuração de um ponto de interrupção no código.  
+ Você pode colocar `Stop` instruções em qualquer lugar nos procedimentos para suspender a execução. Usando o `Stop` instrução é semelhante à configuração de um ponto de interrupção no código.  
   
- O `Stop` instrução suspende a execução, mas diferentemente `End`, ele não feche quaisquer arquivos ou desmarca todas as variáveis, a menos que ela seja encontrada em um arquivo executável compilado (.exe).  
+ O `Stop` instrução suspende a execução, mas ao contrário `End`, não feche quaisquer arquivos ou desmarca todas as variáveis, a menos que ela seja encontrada em um arquivo executável compilado (.exe).  
   
 > [!NOTE]
 >  Se o `Stop` instrução for encontrada no código que está em execução fora do ambiente de desenvolvimento integrado (IDE), o depurador é invocado. Isso é verdadeiro independentemente se o código foi compilado no modo de depuração ou de varejo.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o `Stop` instrução suspender a execução de cada iteração por meio de `For...Next` loop.  
+ Este exemplo usa o `Stop` instrução para suspender a execução para cada iteração por meio de `For...Next` loop.  
   
  [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução End](../../../visual-basic/language-reference/statements/end-statement.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução End](../../../visual-basic/language-reference/statements/end-statement.md)

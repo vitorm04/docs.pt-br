@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8609857f142000245aef4326c8ef7490e6d4c95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610533"
 ---
 # <a name="etasktype-enumeration"></a>Enumeração ETaskType
 Contém valores que indicam o tipo de tarefa que é representado por um [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) ou um [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.  
@@ -52,22 +52,22 @@ typedef enum ETaskType {
 |`TT_DEBUGGERHELPER`|A interface representa uma tarefa de auxiliar do depurador.|  
 |`TT_FINALIZER`|A interface representa uma tarefa do finalizador.|  
 |`TT_GC`|A interface representa uma tarefa de coleta de lixo.|  
-|`TT_THREADPOOL_GATE`|A interface representa uma tarefa de thread de entrada.|  
+|`TT_THREADPOOL_GATE`|A interface representa uma tarefa de thread de porta.|  
 |`TT_THREADPOOL_IOCOMPLETION`|A interface representa uma tarefa de thread de e/s ou uma tarefa de thread de porta de conclusão.|  
-|`TT_THREADPOOL_TIMER`|A interface representa uma tarefa de thread do timer.|  
+|`TT_THREADPOOL_TIMER`|A interface representa uma tarefa de thread do temporizador.|  
 |`TT_THREADPOOL_WAIT`|A interface representa uma tarefa de thread de espera.|  
 |`TT_THREADPOOL_WORKER`|A interface representa uma tarefa de thread de trabalho.|  
 |`TT_UNKNOWN`|A tarefa é desconhecida.|  
-|`TT_USER`|A interface representa uma tarefa de usuário.|  
+|`TT_USER`|A interface representa uma tarefa do usuário.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

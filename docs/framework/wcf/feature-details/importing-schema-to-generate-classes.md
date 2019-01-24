@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620520"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importando esquema para gerar classes
 Para gerar classes de esquemas que podem ser usadas com o Windows Communication Foundation (WCF), use o <xref:System.Runtime.Serialization.XsdDataContractImporter> classe. Este tópico descreve o processo e variações.  
@@ -129,7 +129,7 @@ Para gerar classes de esquemas que podem ser usadas com o Windows Communication 
   
  O `ReferencedCollectionTypes` propriedade corresponde à **/collectionType** alternar da ferramenta SvcUtil.exe. Observe que, para fazer referência a vários tipos de coleção, o **/collectionType** switch deve ser especificado várias vezes. Se o tipo não estiver no mscorlib. dll, seu assembly também deve ser referenciado usando a **/Reference** alternar.  
   
-#### <a name="import-options-referencing-existing-types"></a>Opções de importação: Referência a tipos existentes  
+#### <a name="import-options-referencing-existing-types"></a>Opções de importação: Fazendo referência a tipos existentes  
  Ocasionalmente, os tipos no esquema correspondem a existente [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tipos, e não é necessário para gerar esses tipos a partir do zero. (Esta seção se aplica somente aos tipos de noncollection. Para tipos de coleção, consulte a seção anterior.)  
   
  Por exemplo, você pode ter um padrão em toda a empresa "Person" tipo de contrato que você deseja sempre usado ao representar uma pessoa. Sempre que algum serviço faz uso desse tipo e seu esquema é exibida nos metadados de serviço, talvez você queira reutilizar existente `Person` digite ao importar esse esquema em vez de gerar um novo para cada serviço.  
@@ -143,7 +143,7 @@ Para gerar classes de esquemas que podem ser usadas com o Windows Communication 
 > [!NOTE]
 >  Ao usar o Svcutil.exe ou (no Visual Studio) a **adicionar referência de serviço** ferramentas, todos os tipos em mscorlib. dll são referenciadas automaticamente.  
   
-#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opções de importação: Importando esquema de não DataContract como IXmlSerializable tipos  
+#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opções de importação: Importando o esquema de não DataContract como IXmlSerializable tipos  
  O <xref:System.Runtime.Serialization.XsdDataContractImporter> dá suporte a um subconjunto limitado do esquema. Se houver construções de esquema sem suporte (por exemplo, os atributos XML), a tentativa de importação falhará com uma exceção. No entanto, definir a <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> propriedade para `true` estenderá o intervalo de esquema com suporte. Quando definido como `true`, o <xref:System.Runtime.Serialization.XsdDataContractImporter> gera tipos que implementam o <xref:System.Xml.Serialization.IXmlSerializable> interface. Isso permite acesso direto a representação XML desses tipos.  
   
 ##### <a name="design-considerations"></a>Considerações de design  
@@ -179,13 +179,13 @@ Para gerar classes de esquemas que podem ser usadas com o Windows Communication 
   
 -   Propriedade <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Um <xref:System.Runtime.Serialization.IDataContractSurrogate> implementação pode ser especificada com essa propriedade. O <xref:System.Runtime.Serialization.IDataContractSurrogate> personaliza o processo de importação. Para obter mais informações, consulte [substitutos de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Por padrão, não há substituto é usado.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Alternativas de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Exportação e importação de esquema](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Alternativas de contrato de dados](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Exportação e importação de esquema](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Exportando esquemas de Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Referência de esquema de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

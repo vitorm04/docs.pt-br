@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c81b403fa4d633428946d36960d5df32df76d21
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc33405d8fbb3e5f66be9ea2deb4545bd4ca0971
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620585"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; elemento
 Especifica se o tempo de execução aplica a política do editor.  
@@ -25,8 +25,8 @@ Especifica se o tempo de execução aplica a política do editor.
  \<configuration>  
 \<runtime>  
 \<assemblyBinding>  
-\<dependentAssembly >  
-\<publisherPolicy >  
+\<dependentAssembly>  
+\<publisherPolicy>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -85,8 +85,8 @@ Especifica se o tempo de execução aplica a política do editor.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Como o tempo de execução localiza assemblies](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Redirecionando versões de assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

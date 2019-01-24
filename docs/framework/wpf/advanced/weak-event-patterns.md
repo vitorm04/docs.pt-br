@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 52692bf165927ba50ab55e4c0f8bbc92b23d2272
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632896"
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -130,8 +130,8 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.WeakEventManager>  
- <xref:System.Windows.IWeakEventListener>  
- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.WeakEventManager>
+- <xref:System.Windows.IWeakEventListener>
+- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)

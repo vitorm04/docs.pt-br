@@ -2,19 +2,19 @@
 title: Mensagens sem quebra de texto
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 835312101ba9e0daaa7986a78c9a0040535881b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a3f3548e8dc8a85127eae3d080888c304bfa4b90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623125"
 ---
 # <a name="unwrapped-messages"></a>Mensagens sem quebra de texto
 Este exemplo demonstra as mensagens sem quebra de texto. Por padrão, o corpo da mensagem é formatado, de modo que os parâmetros para uma operação de serviço são encapsulados. O exemplo a seguir mostra uma `Add` mensagem de solicitação para o `ICalculator` serviço no modo encapsulado.  
   
 ```xml  
 <s:Envelope   
-    xmlns:s=http://www.w3.org/2003/05/soap-envelope  
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
         …  

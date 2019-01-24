@@ -2,23 +2,23 @@
 title: '&lt;adicionar&gt; &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 5d4f0cd71ab9bf69921704300018207c9f7af107
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7c3516736f9aa4bbfcf24c2cd58c73438e5314b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633265"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt"></a>&lt;adicionar&gt; &lt;claimTypeRequirements&gt;
 Especifica os tipos de declarações obrigatórias e opcionais esperados para aparecer na credencial federada. Por exemplo, serviços de estado os requisitos de credenciais de entrada, que devem ter um determinado conjunto de tipos de declaração.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
+\<binding>  
 \<segurança >  
-\<issuedTokenParameters >  
-\<claimTypeRequirements >  
+\<issuedTokenParameters>  
+\<claimTypeRequirements>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|ClaimType|Um URI que define o tipo de declaração. Por exemplo, para adquirir um produto de um site, o usuário deve apresentar um cartão de crédito válido com limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.|  
+|claimType|Um URI que define o tipo de declaração. Por exemplo, para adquirir um produto de um site, o usuário deve apresentar um cartão de crédito válido com limite de crédito suficiente. O tipo de declaração seria o URI do cartão de crédito.|  
 |isOptional|Um valor booliano que especifica se esta é uma declaração opcional. Defina esse atributo como `false` quando se trata de uma declaração necessária.<br /><br /> Você pode usar esse atributo quando o serviço solicita algumas informações, mas não a exige. Por exemplo, se você precisar que o usuário insira seu nome, sobrenome e endereço, mas decidir que o número de telefone é opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
@@ -72,17 +72,17 @@ Especifica os tipos de declarações obrigatórias e opcionais esperados para ap
 </bindings>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

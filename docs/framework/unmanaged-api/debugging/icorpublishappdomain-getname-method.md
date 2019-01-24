@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 796f8ea42cc5cbe13729f7b92e15bc214d62734d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4afbc41e680d8a20166095aeb1afbc0de9bbacbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423852"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631731"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>Método ICorPublishAppDomain::GetName
 Obtém o nome do domínio do aplicativo que é representado por esse [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -43,24 +43,24 @@ HRESULT GetName (
  [in] O tamanho do `szName` matriz.  
   
  `pcchName`  
- [out] Um ponteiro para o número de caracteres largos, incluindo o caractere nulo, retornado na `szName` matriz.  
+ [out] Um ponteiro para o número de caracteres largos, incluindo o caractere nulo, retornado no `szName` matriz.  
   
  `szName`  
- [out] Uma matriz na qual deseja armazenar o nome.  
+ [out] Uma matriz na qual armazenar o nome.  
   
 ## <a name="remarks"></a>Comentários  
- Se `szName` não for nulo, o `GetName` método copia até `cchName` caracteres (incluindo o terminador nulo) em `szName`. Se não null é retornado em `pcchName`, o número real de caracteres no nome (incluindo o terminador nulo) é armazenado na `szName` matriz.  
+ Se `szName` não for nulo, o `GetName` método copia até `cchName` caracteres (incluindo o terminador nulo) em `szName`. Se não nulo é retornado em `pcchName`, o número real de caracteres no nome (incluindo o terminador nulo) é armazenado na `szName` matriz.  
   
- O `GetName` método retorna um HRESULT S_OK, independentemente de quantos caracteres foram copiado.  
+ O `GetName` método retorna um S_OK HRESULT, independentemente de quantos caracteres foram copiado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub.idl, CorPub.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

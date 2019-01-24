@@ -2,12 +2,12 @@
 title: Mapeamento de tipo SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617333"
 ---
 # <a name="sql-clr-type-mapping"></a>Mapeamento de tipo SQL-CLR
 No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para um modelo de objeto que é expresso na linguagem de programação de sua escolha. Quando o aplicativo é executado, o LINQ to SQL converte consultas integradas à linguagem no modelo de objeto em SQL e as envia para o banco de dados para execução. Quando o banco de dados retorna os resultados, o LINQ to SQL converte os resultados de volta para os objetos com os quais você pode trabalhar em sua própria linguagem de programação.  
@@ -38,7 +38,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
 ## <a name="default-type-mapping"></a>Mapeamento de tipo padrão  
  Você pode criar o modelo de objeto ou arquivo de mapeamento externo automaticamente com o Object Relational Designer (Designer Relacional de Objetos) ou a ferramenta de linha de comando SQLMetal. Os mapeamentos de tipo padrão para essas ferramentas definem quais tipos CLR são escolhidos para mapear colunas dentro do banco de dados do SQL Server. Para obter mais informações sobre como usar essas ferramentas, consulte [criando o modelo de objeto](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
   
- Você também pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para criar um banco de dados do SQL Server com base nas informações de mapeamento no modelo de objeto ou no arquivo de mapeamento externo. Os mapeamentos de tipo padrão para o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definem quais tipos de colunas do SQL Server são criados para mapear para os tipos CLR no modelo de objeto. Para obter mais informações, consulte [como: criar um banco de dados de forma dinâmica](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
+ Você também pode usar o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> para criar um banco de dados do SQL Server com base nas informações de mapeamento no modelo de objeto ou no arquivo de mapeamento externo. Os mapeamentos de tipo padrão para o método <xref:System.Data.Linq.DataContext.CreateDatabase%2A> definem quais tipos de colunas do SQL Server são criados para mapear para os tipos CLR no modelo de objeto. Para obter mais informações, confira [Como: Criar um banco de dados de forma dinâmica](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md).  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Matriz de comportamento em tempo de execução de mapeamento de tipo  
@@ -60,7 +60,7 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
   
 -   O SQL Server pede alguns tipos de dados de maneira diferente dos dados de tipo equivalente no CLR. Por exemplo, os dados do SQL Server do tipo `UNIQUEIDENTIFIER` são pedidos de maneira diferente dos dados CLR de tipo <xref:System.Guid?displayProperty=nameWithType>.  
   
--   O SQL Server manipula algumas operações de comparação de cadeia de caracteres de maneira diferente do que no CLR. No SQL Server, o comportamento de comparação de cadeia de caracteres depende das configurações de agrupamento no servidor. Para obter mais informações, consulte [trabalhando com agrupamentos](https://go.microsoft.com/fwlink/?LinkId=115330) nos Manuais Online do Microsoft SQL Server.  
+-   O SQL Server manipula algumas operações de comparação de cadeia de caracteres de maneira diferente do que no CLR. No SQL Server, o comportamento de comparação de cadeia de caracteres depende das configurações de ordenação no servidor. Para obter mais informações, consulte [trabalhando com agrupamentos](https://go.microsoft.com/fwlink/?LinkId=115330) nos Manuais Online do Microsoft SQL Server.  
   
 -   O SQL Server pode retornar valores diferentes para algumas funções mapeadas do CLR. Por exemplo, as funções de igualdade serão diferentes porque o SQL Server considera que duas cadeias de caracteres serão iguais se diferirem apenas no espaço em branco à direita, enquanto o CLR não as considera iguais.  
   
@@ -256,8 +256,8 @@ No LINQ to SQL, o modelo de dados de um banco de dados relacional mapeia para u
   
  O LINQ to SQL não dá suporte a nenhum outro mapeamentos de tipo para esses tipos variados.  Para obter mais informações, consulte o [tipo de mapeamento de matriz tempo de execução comportamento](#BehaviorMatrix).  
   
-## <a name="see-also"></a>Consulte também  
- [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>Consulte também
+- [Mapeamento baseado em atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Mapeamento Externo](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Funções e tipos de dados](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Tipos incompatíveis CLR do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

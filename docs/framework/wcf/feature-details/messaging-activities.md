@@ -2,12 +2,12 @@
 title: Atividades de mensagem
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 3391f7442ef4922a847a58b6316eb177cbcfbd5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 839e9225db7b5d76cf05f148811634389e81502a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617623"
 ---
 # <a name="messaging-activities"></a>Atividades de mensagem
 As atividades de mensagem permitem que os fluxos de trabalho enviar e receber mensagens do WCF. Adicionando atividades de mensagem para um fluxo de trabalho, você pode modelar qualquer padrões de troca de mensagem arbitrariamente complexas (MEP).

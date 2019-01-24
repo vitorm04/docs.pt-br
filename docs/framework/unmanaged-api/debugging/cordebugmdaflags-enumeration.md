@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620380"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>Enumeração CorDebugMDAFlags
 Especifica o status do thread no qual o assistente de depuração gerenciada (MDA) é disparado.  
@@ -38,19 +38,19 @@ typedef enum CorDebugMDAFlags {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|O thread em que o MDA foi acionado passou desde o MDA foi acionado.|  
+|`MDA_FLAG_SLIP`|O thread em que o MDA foi disparado passou desde que o MDA foi acionado.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando a pilha de chamadas não descreve onde o MDA foi gerado originalmente, o thread é considerado como tendo *adiadas*. Esta é uma circunstância incomum provocada pela execução do thread de uma operação inválida ao sair.  
+ Quando a pilha de chamadas não descreve onde o MDA originalmente foi gerado, o thread é considerado como tendo *adiadas*. Esta é uma circunstância incomum provocada pela execução do thread de uma operação inválida após o fechamento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

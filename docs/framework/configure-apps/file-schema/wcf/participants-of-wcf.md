@@ -2,12 +2,12 @@
 title: '&lt;participantes&gt; do WCF'
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: 341e5492f7a45ca89c18d478766b8ebd369dbdf2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 892392454b9969e0c63e0ad7eb15f788466ad963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630964"
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>&lt;participantes&gt; do WCF
 Configure uma lista de participantes que ouça em registros de rastreamento emissores de tempo de execução diretamente e processá-los de forma que eles são configurados de rastreamento. Isso inclui a escrita em uma saída específica (por exemplo, arquivo, Console, ETW), processamento/agregando os registros ou qualquer outra combinação que pode ser necessária.  
@@ -15,7 +15,7 @@ Configure uma lista de participantes que ouça em registros de rastreamento emis
  Para obter mais informações no controle de fluxo de trabalho e os participantes de rastreamento, consulte [fluxo de trabalho, controle e rastreamento](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [participantes de rastreamento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<Acompanhamento >  
+\<tracking>  
 \<os participantes >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -46,7 +46,7 @@ Configure uma lista de participantes que ouça em registros de rastreamento emis
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Acompanhamento >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.|  
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.|  
   
 ## <a name="remarks"></a>Comentários  
  Os participantes de rastreamento são usados para obter os dados de rastreamento emissores de fluxo de trabalho e armazená-lo em mídias diferentes. Da mesma forma, qualquer pós-processamento no controle de que registros também podem ser realizados o participante de rastreamento.  
@@ -85,8 +85,8 @@ Configure uma lista de participantes que ouça em registros de rastreamento emis
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Acompanhando participantes](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Acompanhando participantes](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

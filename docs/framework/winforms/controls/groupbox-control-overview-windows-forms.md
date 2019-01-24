@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], about GroupBox control
 - grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-ms.openlocfilehash: 122e7a60cf31f3b7db506cb3bb69a2571e9115c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: add6756e88173982d87bebf80b78707072ff2fc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630743"
 ---
 # <a name="groupbox-control-overview-windows-forms"></a>Visão geral do controle GroupBox (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para fornecer um agrupamento de identificação para outros controles. Normalmente, você usa caixas de grupo para subdividir um formulário pela função. Por exemplo, você pode ter um formulário de pedido que especifica as opções de mala direta, como qual carrier noturna usar. Agrupamento de todas as opções em uma caixa de grupo dá ao usuário uma indicação visual lógica, e em tempo de design todos os controles podem ser movidos facilmente — quando você move o único <xref:System.Windows.Forms.GroupBox> controlar, todos os seus controles contidos mover, muito.  
+Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para fornecer um agrupamento identificável para outros controles. Normalmente, você usa caixas de grupo para subdividir um formulário por função. Por exemplo, você pode ter um formulário de pedido que especifica as opções de mala direta, como qual carrier noturna usar. Agrupar todas as opções em uma caixa de grupo dá ao usuário uma indicação visual lógica e em tempo de design todos os controles podem ser movidos facilmente — quando você move o único <xref:System.Windows.Forms.GroupBox> controlar todos os seus controles contidos se movem também.  
   
- Legenda da caixa de grupo é definida pelo <xref:System.Windows.Forms.GroupBox.Text%2A> propriedade. Para obter mais informações, consulte [Como definir o texto exibido por um controle dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Legenda da caixa de grupo é definida pela <xref:System.Windows.Forms.GroupBox.Text%2A> propriedade. Para obter mais informações, confira [Como: Definir o texto exibido pelo controle de um Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="groupbox-and-panel"></a>Caixa de grupo e do painel  
- O <xref:System.Windows.Forms.GroupBox> controle é semelhante ao <xref:System.Windows.Forms.Panel> controlar; no entanto, somente o <xref:System.Windows.Forms.GroupBox> controle exibe uma legenda e somente o <xref:System.Windows.Forms.Panel> controle pode ter barras de rolagem.  
+ O <xref:System.Windows.Forms.GroupBox> controle é semelhante ao <xref:System.Windows.Forms.Panel> controle; no entanto, somente o <xref:System.Windows.Forms.GroupBox> controle exibe uma legenda e apenas o <xref:System.Windows.Forms.Panel> controle pode ter barras de rolagem.  
   
-## <a name="see-also"></a>Consulte também  
- [Controle GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Controle GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

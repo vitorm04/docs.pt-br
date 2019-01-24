@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d4b5f94bdbb7319cef14c8b86f8ea995df7ff21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a4a0bac056c7c88a491ac05a17b662ace833df1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614452"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>Método ISymUnmanagedDispose::Destroy
-Faz com que o objeto subjacente liberar todas as referências internas e retornar falha em todas as chamadas método subsequentes.  
+Faz com que o objeto subjacente liberar todas as referências internas e retornar a falha em todas as chamadas método subsequentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,5 +39,5 @@ HRESULT Destroy();
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedDispose](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedDispose](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)

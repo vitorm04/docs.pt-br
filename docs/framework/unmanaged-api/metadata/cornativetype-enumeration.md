@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612249"
 ---
 # <a name="cornativetype-enumeration"></a>Enumeração CorNativeType
-Contém valores que descrevem os tipos nativos de não gerenciados.  
+Contém valores que descrevem os tipos não gerenciados nativos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -94,19 +94,19 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_END`|Obsoleto.|  
 |`NATIVE_TYPE_VOID`|Obsoleto.|  
 |`NATIVE_TYPE_BOOLEAN`|Um valor booliano de 4 bytes, onde TRUE é diferente de zero e FALSE é zero.|  
-|`NATIVE_TYPE_I1`|Um valor inteiro assinado de 8 bits.|  
-|`NATIVE_TYPE_U1`|Um valor inteiro não assinado de 8 bits.|  
-|`NATIVE_TYPE_I2`|Um valor inteiro de 16 bits com sinal.|  
-|`NATIVE_TYPE_U2`|Um valor inteiro de 16 bits sem sinal.|  
+|`NATIVE_TYPE_I1`|Um valor inteiro com sinal de 8 bits.|  
+|`NATIVE_TYPE_U1`|Um valor inteiro de 8 bits sem sinal.|  
+|`NATIVE_TYPE_I2`|Um valor inteiro com sinal de 16 bits.|  
+|`NATIVE_TYPE_U2`|Um valor inteiro sem sinal de 16 bits.|  
 |`NATIVE_TYPE_I4`|Um valor inteiro de 32 bits com sinal.|  
 |`NATIVE_TYPE_U4`|Um valor inteiro de 32 bits sem sinal.|  
 |`NATIVE_TYPE_I8`|Um valor inteiro com sinal de 64 bits.|  
-|`NATIVE_TYPE_U8`|Um valor inteiro não assinado de 64 bits.|  
+|`NATIVE_TYPE_U8`|Um valor inteiro sem sinal de 64 bits.|  
 |`NATIVE_TYPE_R4`|Um valor numérico ponto flutuante de 4 bytes.|  
 |`NATIVE_TYPE_R8`|Um valor numérico ponto flutuante de 8 bytes.|  
 |`NATIVE_TYPE_SYSCHAR`|Obsoleto.|  
 |`NATIVE_TYPE_VARIANT`|Obsoleto.|  
-|`NATIVE_TYPE_CURRENCY`|Um tipo numérico COM que corresponde ao gerenciado <xref:System.Decimal> tipo.|  
+|`NATIVE_TYPE_CURRENCY`|Um tipo COM numérico que corresponde ao gerenciado <xref:System.Decimal> tipo.|  
 |`NATIVE_TYPE_PTR`|Obsoleto.|  
 |`NATIVE_TYPE_DECIMAL`|Obsoleto.|  
 |`NATIVE_TYPE_DATE`|Obsoleto.|  
@@ -114,7 +114,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_LPSTR`|Um valor de cadeia de caracteres LPSTR.|  
 |`NATIVE_TYPE_LPWSTR`|Um valor de cadeia de caracteres LPWSTR.|  
 |`NATIVE_TYPE_LPTSTR`|Um valor de cadeia de caracteres LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Um valor de cadeia de caracteres fixa, definido pelo sistema.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Um valor de cadeia de caracteres fixa e definida pelo sistema.|  
 |`NATIVE_TYPE_OBJECTREF`|Obsoleto.|  
 |`NATIVE_TYPE_IUNKNOWN`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_IDISPATCH`|Interoperabilidade COM.|  
@@ -122,30 +122,30 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_INTF`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_SAFEARRAY`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_FIXEDARRAY`|Um valor de matriz de comprimento fixo.|  
-|`NATIVE_TYPE_INT`|Um valor inteiro assinado de 16 bits nativo.|  
-|`NATIVE_TYPE_UINT`|Um valor inteiro não assinado de 16 bits nativo.|  
+|`NATIVE_TYPE_INT`|Um valor inteiro com sinal de 16 bits nativo.|  
+|`NATIVE_TYPE_UINT`|Um valor inteiro sem sinal de 16 bits nativo.|  
 |`NATIVE_TYPE_NESTEDSTRUCT`|Obsoleto.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
 |`NATIVE_TYPE_BYVALSTR`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_ANSIBSTR`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_TBSTR`|Interoperabilidade COM.<br /><br /> Selecione BSTR ou ANSIBSTR dependendo da plataforma.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Um 2 bytes valor booliano, onde TRUE é -1 e FALSE é zero.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Um 2 bytes valor booliano, em que verdadeiro é -1 e FALSE é zero.|  
 |`NATIVE_TYPE_FUNC`|Um ponteiro de função.|  
 |`NATIVE_TYPE_ASANY`|Uma referência a qualquer tipo nativo.|  
-|`NATIVE_TYPE_ARRAY`|Uma referência a uma matriz com membros de um tipo não especificado.|  
+|`NATIVE_TYPE_ARRAY`|Uma referência a uma matriz com os membros de um tipo não especificado.|  
 |`NATIVE_TYPE_LPSTRUCT`|Um ponteiro de inteiro de 32 bits para uma estrutura.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Um tipo nativo do marshaler personalizado.<br /><br /> Isso deve ser seguido por uma cadeia de caracteres de formato a seguir: "empacotador de nome/0Custom tipo nativo de tipo de cookie de nome/0Optional/0" ou "{nativo digite GUID} 0Custom marshaler cookie de nome/0Optional/0 do tipo"|  
-|`NATIVE_TYPE_ERROR`|Interoperabilidade COM.<br /><br /> Com ELEMENT_TYPE_I4 esse tipo é mapeado para VT_HRESULT.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Um tipo nativo do empacotador personalizado.<br /><br /> Isso deve ser seguido por uma cadeia de caracteres de formato a seguir: "Tipo de marshaler 0Custom/nome de tipo nativo cookie de nome/0Optional/0" ou "{nativo digite GUID} / tipo de marshaler 0Custom cookie de nome/0Optional/0"|  
+|`NATIVE_TYPE_ERROR`|Interoperabilidade COM.<br /><br /> Com ELEMENT_TYPE_I4 esse tipo mapeia para VT_HRESULT.|  
 |`NATIVE_TYPE_IINSPECTABLE`|Um nativo `IInspectable` tipo.|  
 |`NATIVE_TYPE_HSTRING`|Um nativo `HString`.|  
 |`NATIVE_TYPE_MAX`|Um valor inválido.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
