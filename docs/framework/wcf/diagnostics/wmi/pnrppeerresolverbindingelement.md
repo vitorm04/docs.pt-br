@@ -2,31 +2,31 @@
 title: PnrpPeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 050f24bf-dc23-4181-ad1e-a4cce1dc89fb
-ms.openlocfilehash: cc43d894282b858208bccaaa02c65ecc9c10d552
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 6d7727383509668172bb85487d2f9e05754d8e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687005"
 ---
-# <a name="pnrppeerresolverbindingelement"></a><span data-ttu-id="d5609-102">PnrpPeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="d5609-102">PnrpPeerResolverBindingElement</span></span>
-<span data-ttu-id="d5609-103">PnrpPeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="d5609-103">PnrpPeerResolverBindingElement</span></span>  
+# <a name="pnrppeerresolverbindingelement"></a><span data-ttu-id="10645-102">PnrpPeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="10645-102">PnrpPeerResolverBindingElement</span></span>
+<span data-ttu-id="10645-103">PnrpPeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="10645-103">PnrpPeerResolverBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5609-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d5609-104">Syntax</span></span> 
+## <a name="syntax"></a><span data-ttu-id="10645-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="10645-104">Syntax</span></span> 
 ```csharp 
 class PnrpPeerResolverBindingElement : PeerResolverBindingElement
 { 
 };
 ```  
   
-## <a name="methods"></a><span data-ttu-id="d5609-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="d5609-105">Methods</span></span>  
- <span data-ttu-id="d5609-106">A classe PnrpPeerResolverBindingElement herda da classe PeerResolverBindingElement, mas não define as propriedades ou métodos adicionais.</span><span class="sxs-lookup"><span data-stu-id="d5609-106">The PnrpPeerResolverBindingElement class inherits from PeerResolverBindingElement but does not define additional methods or properties.</span></span>  
+## <a name="methods"></a><span data-ttu-id="10645-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="10645-105">Methods</span></span>  
+ <span data-ttu-id="10645-106">A classe PnrpPeerResolverBindingElement herda da classe PeerResolverBindingElement, mas não define as propriedades ou métodos adicionais.</span><span class="sxs-lookup"><span data-stu-id="10645-106">The PnrpPeerResolverBindingElement class inherits from PeerResolverBindingElement but does not define additional methods or properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5609-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d5609-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10645-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="10645-107">Requirements</span></span>  
   
-|<span data-ttu-id="d5609-108">MOF</span><span class="sxs-lookup"><span data-stu-id="d5609-108">MOF</span></span>|<span data-ttu-id="d5609-109">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="d5609-109">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="10645-108">MOF</span><span class="sxs-lookup"><span data-stu-id="10645-108">MOF</span></span>|<span data-ttu-id="10645-109">Declarado em Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="10645-109">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="d5609-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="d5609-110">Namespace</span></span>|<span data-ttu-id="d5609-111">Definido no root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d5609-111">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="10645-110">Namespace</span><span class="sxs-lookup"><span data-stu-id="10645-110">Namespace</span></span>|<span data-ttu-id="10645-111">Definido no root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="10645-111">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="d5609-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d5609-112">See Also</span></span>  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+## <a name="see-also"></a><span data-ttu-id="10645-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="10645-112">See also</span></span>
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
