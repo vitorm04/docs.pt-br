@@ -1,5 +1,5 @@
 ---
-title: Como editar colunas e linhas em um controle TableLayoutPanel
+title: 'Como: Editar colunas e linhas em um controle TableLayoutPanel'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 820d2f98290650bfaf377bd2d4b863dfb2e6e704
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1ae7afe2a99870e4befc04992148080aff6bfad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500778"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720321"
 ---
-# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Como editar colunas e linhas em um controle TableLayoutPanel
+# <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Como: Editar colunas e linhas em um controle TableLayoutPanel
 Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutPanel> controle, chamado de **estilos de linha e coluna** caixa de diálogo para editar as linhas e colunas dos controles.  
   
 > [!NOTE]
->  Se você quiser que um controle ocupe várias linhas ou colunas, defina as propriedades `RowSpan` e `ColumnSpan` do controle. Para obter mais informações, consulte [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+>  Se você quiser que um controle ocupe várias linhas ou colunas, defina as propriedades `RowSpan` e `ColumnSpan` do controle. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
 >   
->  Se você deseja alinhar um controle dentro de uma célula, ou se você quiser um controle se alongue por uma célula, use o controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade. Para obter mais informações, consulte [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
+>  Se você deseja alinhar um controle dentro de uma célula, ou se você quiser um controle se alongue por uma célula, use o controle <xref:System.Windows.Forms.Control.Anchor%2A> propriedade. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).  
 >   
 >  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, confira [Personalizar o IDE do Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -43,6 +43,6 @@ Você pode usar o editor de coleção do <xref:System.Windows.Forms.TableLayoutP
   
 8.  Para remover uma linha ou coluna, clique no botão **Remover** para excluir o item selecionado no momento na lista **Membro**.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.SizeType>  
- [Controle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.SizeType>
+- [Controle TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

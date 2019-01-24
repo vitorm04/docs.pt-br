@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428996"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663538"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Método ISymUnmanagedWriter::SetMethodSourceRange
-Especifica os verdadeiros início e término de um método de dentro de um arquivo de origem. Use esse método para especificar a extensão de um método independentemente dos pontos de sequência que existe dentro do método.  
+Especifica os verdadeiros início e término de um método de dentro de um arquivo de origem. Use esse método para especificar a extensão de um método independentemente dos pontos de sequência que existem dentro do método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ HRESULT SetMethodSourceRange(
  [in] O número de linha inicial.  
   
  `startColumn`  
- [in] A coluna de início.  
+ [in] A coluna inicial.  
   
  `endDoc`  
  [in] Um ponteiro para o documento que contém a posição final.  
@@ -64,5 +64,5 @@ HRESULT SetMethodSourceRange(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

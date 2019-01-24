@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104dfcaa4120d72f3aa758b66134050f178fef75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9031ae9b4870c182922baaa41883de4cddb469d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676673"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>Método ICorProfilerInfo::GetClassFromObject
-Obtém o `ClassID` de um objeto, considerando seus `ObjectID`.  
+Obtém o `ClassID` de um objeto, dado seu `ObjectID`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ HRESULT GetClassFromObject(
   
 #### <a name="parameters"></a>Parâmetros  
  `objectId`  
- [in] A ID de objeto para o qual obter o `ClassID`.  
+ [in] A ID do objeto para o qual obter o `ClassID`.  
   
  `pClassId`  
  [out] Um ponteiro para retornado `ClassID`.  
@@ -46,13 +46,13 @@ HRESULT GetClassFromObject(
  Um valor nulo `pClassId` indica que `objectId` tem um tipo que está descarregando.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

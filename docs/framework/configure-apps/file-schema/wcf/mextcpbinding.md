@@ -2,18 +2,18 @@
 title: '&lt;mexTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: a69f0af60d3f6723285ceb239a86775c9a1b510f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4c3858ee0dc7fd20bd1269c74a4499998d530f03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733981"
 ---
 # <a name="ltmextcpbindinggt"></a>&lt;mexTcpBinding&gt;
 Especifica as configurações para uma associação usada para a troca de mensagens WS-MetadataExchange (WS-MEX) sobre TCP.  
   
  \<system.ServiceModel>  
-\<associações >  
+\<bindings>  
 \<mexTcpBinding>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -49,15 +49,15 @@ Especifica as configurações para uma associação usada para a troca de mensag
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associações >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.MexTcpBindingElement>  
- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>  
- [Como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Publicando e recuperando metadados através de uma associação personalizada](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- [Metadados](../../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<associação >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.MexTcpBindingElement>
+- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>
+- [Como: Publicar metadados para um serviço usando um arquivo de configuração](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Publicando e recuperando metadados através de uma associação personalizada](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
+- [Metadados](../../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Configurando associações fornecidas pelo sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Usando associações para configurar serviços e clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

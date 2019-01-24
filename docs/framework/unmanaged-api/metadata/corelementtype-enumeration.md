@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2520c37b1969e5e98f02772857f96195b211b549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674148"
 ---
 # <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
 Especifica um common language runtime <xref:System.Type>, um modificador de tipo ou informações sobre um tipo em uma assinatura de tipo de metadados.  
@@ -129,21 +129,21 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF < um `CorElementType` valor >|  
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE < um `mdTypeDef` token de metadados >|  
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS < um `mdTypeDef` token de metadados >|  
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<número >|  
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|  
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < uma `CorElementType` valor > \<classificação > \<count1 > \<bound1 >... \<countN > \<boundN >|  
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < uma `mdTypeDef` token de metadados > \<argumento contagem > \<arg1 >... \<argN >|  
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<assinatura completa para a função, incluindo a convenção de chamada >|  
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY < um `CorElementType` valor >|  
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<número >|  
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|  
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE _ < uma `mdTypeRef` ou `mdTypeDef` token de metadados >|  
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < uma `mdTypeRef` ou `mdTypeDef` token de metadados >|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** corhdr. H  
+ **Cabeçalho:** CorHdr.h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

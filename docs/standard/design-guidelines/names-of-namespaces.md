@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665130"
 ---
 # <a name="names-of-namespaces"></a>Nomes de Namespaces
 Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é criando clareza suficiente para o programador usando a estrutura de saber imediatamente qual o conteúdo do namespace é provavelmente será. O modelo a seguir especifica a regra geral para a nomeação de namespaces:  
@@ -86,5 +86,5 @@ Como com outras diretrizes de nomenclatura, a meta ao nomear namespaces é crian
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

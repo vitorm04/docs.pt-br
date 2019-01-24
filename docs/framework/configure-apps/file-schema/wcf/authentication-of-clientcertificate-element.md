@@ -2,22 +2,22 @@
 title: '&lt;autenticação&gt; de elemento &lt;clientCertificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 97c742cbcaeba10bc7fcf88a461360b96beebc22
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1e15bd10495a2dff4a844f89a3ba5124235eea7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656839"
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;autenticação&gt; de elemento &lt;clientCertificate&gt;
 Especifica os comportamentos de autenticação para certificados de cliente usados por um serviço.  
   
  \<system.ServiceModel>  
 \<comportamentos >  
-\<serviceBehaviors >  
-\<comportamento de >  
+\<serviceBehaviors>  
+\<behavior>  
 \<serviceCredentials>  
-\<clientCertificate >  
+\<clientCertificate>  
 \<autenticação >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -76,7 +76,7 @@ Especifica os comportamentos de autenticação para certificados de cliente usad
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Define um certificado X.509 usado para autenticar um cliente a um serviço.|  
+|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|Define um certificado X.509 usado para autenticar um cliente a um serviço.|  
   
 ## <a name="remarks"></a>Comentários  
  O `<authentication>` elemento corresponde ao <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> classe. Ele permite que você personalize como os clientes são autenticados. Você pode definir as `certificateValidationMode` de atributo para `None`, `ChainTrust`, `PeerOrChainTrust`, `PeerTrust`, ou `Custom`. Por padrão, o nível é definido como `ChainTrust`, que especifica que cada certificado deve ser localizado em uma hierarquia de certificados terminam em um *autoridade raiz* na parte superior da cadeia. Este é o modo mais seguro. Você também pode definir o valor `PeerOrChainTrust`, que especifica que os certificados emitidos por conta própria (confiança de par) são aceitos, bem como certificados que estão em uma cadeia confiável. Esse valor é usado ao desenvolver e depurar clientes e serviços, porque os certificados emitidos por conta própria não precisam ser adquiridos de uma autoridade confiável. Ao implantar um cliente, use o `ChainTrust` valor em vez disso.  
@@ -104,12 +104,12 @@ Especifica os comportamentos de autenticação para certificados de cliente usad
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>  
- <xref:System.ServiceModel.Security.X509CertificateValidationMode>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Como: Criar um serviço que utiliza um validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
+- <xref:System.ServiceModel.Security.X509CertificateValidationMode>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
+- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
+- [Comportamentos de segurança](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Como: Criar um serviço que utiliza um validador de certificado personalizado](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Trabalhando com certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

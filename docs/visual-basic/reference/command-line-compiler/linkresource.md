@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729990"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 Cria um link a um recurso gerenciado.  
@@ -57,7 +57,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>Consulte também
 
-- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
-- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

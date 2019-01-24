@@ -1,22 +1,22 @@
 ---
-title: 'Como: depurar conjuntos de resultados de consulta vazia (Visual Basic)'
+title: 'Como: Depurar conjuntos de resultados de consultas vazios (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 33dcfe9b0c0ad41353ca845ed4d8e21ff77292df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715446"
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Como: depurar conjuntos de resultados de consulta vazia (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Como: Depurar conjuntos de resultados de consultas vazios (Visual Basic)
 Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
   
  Definir primeiro exemplos neste tópico mostra uma maneira comum que XML em um namespace padrão é carregado, e deduzido de modo inadequado.  
   
  O segundo conjunto de exemplos a seguir mostra as correções necessárias para que você possa ver XML em um namespace.  
   
- Para obter mais informações, consulte [trabalhando com Namespaces de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Para obter mais informações, consulte [trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que retorna um conjunto de resultados vazia.  
@@ -51,7 +51,7 @@ End of result set
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.  
   
- A solução é declarar e inicializar um namespace padrão global. Isso coloca todas as propriedades XML no namespace padrão. Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.  
+ A solução é declarar e inicializar um namespace global padrão. Isso coloca todas as propriedades XML no namespace padrão. Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -89,5 +89,5 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas básicas (LINQ para XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

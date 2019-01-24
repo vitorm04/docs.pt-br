@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570873"
 ---
 # <a name="prebindassemblyex-function"></a>Função PreBindAssemblyEx
 Obtém o nome de exibição de pós-política para um assembly.  
   
- Essa função dá suporte à infraestrutura .NET Framework e não se destina a ser usado diretamente no seu código.  
+ Essa função dá suporte à infraestrutura do .NET Framework e não se destina a ser usado diretamente do seu código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,16 +61,16 @@ HRESULT PreBindAssemblyEx (
  [in] Reservado para extensibilidade futura. `pvReserved` deve ser uma referência nula.  
   
 ## <a name="remarks"></a>Comentários  
- O `ppNamePostPolicy` parâmetro de saída é definido somente se a função retorna um HRESULT FUSION_E_REF_DEF_MISMATCH. Caso contrário, será nulo.  
+ O `ppNamePostPolicy` parâmetro de saída será definido somente se a função retorna FUSION_E_REF_DEF_MISMATCH HRESULT. Caso contrário, será nulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Fusion.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções estáticas globais de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c54ea70049544e5205613ab76eb810798513fab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680212"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalização de feed (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dá suporte a formatos Atom e notação JSON (JavaScript Object) para feeds de dados. Quando você usa um feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornece um método padrão para serializar os dados, como entidades e relações, em um formato XML que pode ser incluído no corpo da mensagem HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e os elementos do Atom. Para obter mais informações, consulte [OData: formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa o [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para expor dados como um feed. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dá suporte a formatos Atom e notação JSON (JavaScript Object) para feeds de dados. Quando você usa um feed Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fornece um método padrão para serializar os dados, como entidades e relações, em um formato XML que pode ser incluído no corpo da mensagem HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define um mapeamento de propriedade de entidade padrão entre os dados contidos em entidades e os elementos do Atom. Para obter mais informações, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Você pode ter um cenário de aplicativo que exige que os dados de propriedade retornados pelo serviço de dados seja serializado em uma maneira personalizada em vez de no padrão de formato de feed. Com [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você pode personalizar a serialização em um feed de dados para que as propriedades de uma entidade podem ser mapeadas para elementos não utilizados e os atributos de uma entrada ou para elementos personalizados de uma entrada no feed.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "44207480"
 >  Quando você define feeds personalizados, você deve assegurar que todas as propriedades de entidade que têm mapeamentos personalizados definidos são incluídas na projeção. Quando uma propriedade de entidade mapeada não está incluída na projeção, pode ocorrer perda de dados. Para obter mais informações, consulte [projeções de consulta](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Como personalizar Feeds com o provedor do Entity Framework  
- O modelo de dados usado com o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor é representado como XML no arquivo. edmx. Nesse caso, os atributos que definem os feeds personalizados são adicionados para o `EntityType` e `Property` elementos que representam os tipos de entidade e propriedades no modelo de dados. Esses atributos de personalização de feed não estão definidos na [ \[CSDL MC\]: formato de arquivo de definição de esquema conceitual](https://go.microsoft.com/fwlink/?LinkId=159072), que é o formato que o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor usa para definir o modelo de dados. Portanto, você deve declarar atributos de personalização de feed em um namespace de esquema específico, que é definida como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. O fragmento XML a seguir mostra os atributos de personalização de feed aplicados a `Property` elementos do `Products` tipo de entidade que definem a `ProductName`, `ReorderLevel`, e `UnitsInStock` propriedades.  
+ O modelo de dados usado com o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor é representado como XML no arquivo. edmx. Nesse caso, os atributos que definem os feeds personalizados são adicionados para o `EntityType` e `Property` elementos que representam os tipos de entidade e propriedades no modelo de dados. Esses atributos de personalização de feed não estão definidos na [ \[MC CSDL\]: Formato de arquivo de definição de esquema conceitual](https://go.microsoft.com/fwlink/?LinkId=159072), que é o formato que o [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] provedor usa para definir o modelo de dados. Portanto, você deve declarar atributos de personalização de feed em um namespace de esquema específico, que é definida como `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. O fragmento XML a seguir mostra os atributos de personalização de feed aplicados a `Property` elementos do `Products` tipo de entidade que definem a `ProductName`, `ReorderLevel`, e `UnitsInStock` propriedades.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -39,7 +39,7 @@ ms.locfileid: "44207480"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- Para obter mais informações, consulte [como: Personalizar Feeds com o provedor do Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
+ Para obter mais informações, confira [Como: Personalizar Feeds com o provedor do Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
 >  Porque não há suporte para extensões para o modelo de dados pelo Designer de entidade, você deve modificar manualmente o arquivo XML que contém o modelo de dados. Para obter mais informações sobre o arquivo. edmx são geradas pelo [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ferramentas, consulte [visão geral do arquivo. edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
@@ -63,7 +63,7 @@ ms.locfileid: "44207480"
  Para personalizar feeds para um modelo de dados que foi implementada usando o provedor de reflexão, adicione uma ou mais instâncias da <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> atributo às classes que representam os tipos de entidade no modelo de dados. As propriedades do <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> classe correspondem aos atributos de personalização de feed que são descritos na seção anterior. A seguir está um exemplo da declaração do `Order` tipo, com o mapeamento definido para ambas as propriedades do feed personalizado.  
   
 > [!NOTE]
->  O modelo de dados para este exemplo é definido no tópico [como: criar um serviço de dados usando o provedor de reflexão](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+>  O modelo de dados para este exemplo é definido no tópico [como: Criar um serviço de dados usando o provedor de reflexão](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,7 +72,7 @@ ms.locfileid: "44207480"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Para obter mais informações, consulte [como: Personalizar Feeds com o provedor de reflexão](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
+ Para obter mais informações, confira [Como: Personalizar Feeds com o provedor de reflexão](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Como personalizar Feeds com um provedor de serviços de dados personalizados  
  Personalização de feed para um modelo de dados definido usando um provedor de serviços de dados personalizados é definido para um tipo de recurso chamando o <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> sobre o <xref:System.Data.Services.Providers.ResourceType> que representa um tipo de entidade no modelo de dados. Para obter mais informações, consulte [provedores de serviço de dados personalizado](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
@@ -92,6 +92,6 @@ ms.locfileid: "44207480"
   
  Para obter mais informações, consulte [controle de versão de serviço de dados](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Entity Framework Provider](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md) (Provedor de Entity Framework)
+## <a name="see-also"></a>Consulte também
+- [Provedor de reflexão](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Entity Framework Provider](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md) (Provedor de Entity Framework)

@@ -1,5 +1,5 @@
 ---
-title: Interface ICorDebugVariableHome
+title: ICorDebugVariableHome Interface
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -18,14 +18,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae11cdbbdb0fa63d1b903d18aff133344fd17f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78325236ab262c474e57b0d903033990b0e85f12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721868"
 ---
-# <a name="icordebugvariablehome-interface"></a>Interface ICorDebugVariableHome
+# <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome Interface
 Representa um argumento de uma função ou variável local.  
   
 ## <a name="methods"></a>Métodos  
@@ -33,10 +33,10 @@ Representa um argumento de uma função ou variável local.
 |Método|Descrição|  
 |------------|-----------------|  
 |[Método GetArgumentIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getargumentindex-method.md)|Obtém o índice de um argumento de função.|  
-|[Método GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Obtém a instância de "ICorDebugCode" que contém essa `ICorDebugVariableHome` objeto.|  
+|[Método GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getcode-method.md)|Obtém a instância de "ICorDebugCode" que contém este `ICorDebugVariableHome` objeto.|  
 |[Método GetLiveRange](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getliverange-method.md)|Obtém o intervalo nativo através da qual esta variável está ativo.|  
 |[Método GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)|Obtém o tipo de local nativo da variável.|  
-|[Método GetOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Obtém o deslocamento do registro base para uma variável.|  
+|[Método GetOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getoffset-method.md)|Obtém o deslocamento a partir do registro de base para uma variável.|  
 |[Método GetRegister](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getregister-method.md)|Obtém o registro que contém uma variável com um tipo de local de `VLT_REGISTER`e o registro de base para uma variável com um tipo de local de `VLT_REGISTER_RELATIVE`.|  
 |[Método GetSlotIndex](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getslotindex-method.md)|Obtém o índice de slot gerenciado de uma variável local.|  
   
@@ -83,14 +83,14 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Interface ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

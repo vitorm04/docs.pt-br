@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 832d66eee14680870e70f1e0e8d40987eff3257f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bcbae7b5de54bd2134adbbdee1986c4e1dfae3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667005"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>Função GetHashFromAssemblyFileW
-Obtém um hash do arquivo de assembly especificado, usando o algoritmo de hash especificado. O caminho para o arquivo do assembly deve ser especificado como uma cadeia de caracteres Unicode.  
+Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado. O caminho para o arquivo do assembly deve ser especificado como uma cadeia de caracteres Unicode.  
   
- Essa função foi preterida. Use o [: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) método em vez disso.  
+ Essa função foi preterida. Use o [iclrstrongname:: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) método em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromAssemblyFileW (
   
 #### <a name="parameters"></a>Parâmetros  
  `wszFilePath`  
- [in] O caminho para o arquivo a ser transformado em hash. Esse parâmetro deve ser uma cadeia de caracteres Unicode.  
+ [in] O caminho para o arquivo a ser transformada em hash. Esse parâmetro deve ser uma cadeia de caracteres Unicode.  
   
  `piHashAlg`  
- [out no] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo de hash padrão.  
+ [no, out] Uma constante que especifica o algoritmo de hash. Use zero para o algoritmo de hash padrão.  
   
  `pbHash`  
  [out] O buffer de hash retornado.  
   
  `cchHash`  
- [in] O tamanho máximo solicitado da `pbHash`.  
+ [in] O tamanho máximo solicitado de `pbHash`.  
   
  `pchHash`  
- [out] O retornou o tamanho, em bytes, de `pbHash`.  
+ [out] O retornado tamanho, em bytes, do `pbHash`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Método GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [Método GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)  
- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Método GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [Método GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

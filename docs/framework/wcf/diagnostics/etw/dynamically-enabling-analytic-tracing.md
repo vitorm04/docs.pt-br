@@ -2,12 +2,12 @@
 title: Rastreamento analítico habilitado dinamicamente
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: f03d2ce381be430121a11df95341886a4be667e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719983"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Rastreamento analítico habilitado dinamicamente
 Usando as ferramentas fornecidas com o sistema operacional Windows, você pode habilitar ou desabilitar o rastreamento dinamicamente usando o rastreamento de eventos para Windows (ETW). Para todos os [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] serviços Windows Communication Foundation (WCF), o rastreamento analítico pode ser habilitados e desabilitados dinamicamente sem modificar o arquivo do aplicativo Web. config ou reiniciar o serviço. Isso permite que o aplicativo que emite os eventos de rastreamento para permanecer inalterado.  
@@ -40,5 +40,5 @@ Usando as ferramentas fornecidas com o sistema operacional Windows, você pode h
 |`ServiceHost`|Eventos emitidos pelo host de serviço.|  
 |`WCFMessageLogging`|Eventos de registro em log de mensagem do WCF.|  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços do WCF e Rastreamento de Eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a>Consulte também
+- [Serviços do WCF e Rastreamento de Eventos para Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

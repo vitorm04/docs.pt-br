@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fbedb7b1c10dcc2b9b9940db10aae7e4101436b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0fc5fd29b8b423ddd3a659ee2fc8a339eea0105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733877"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Método ISymUnmanagedMethod::GetParameters
-Obtém os parâmetros para este método. Os parâmetros são retornados na ordem em que eles estão definidos na assinatura do método.  
+Obtém os parâmetros para esse método. Os parâmetros são retornados na ordem em que eles são definidos dentro da assinatura do método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,5 +53,5 @@ HRESULT GetParameters(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
