@@ -16,81 +16,81 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732746"
 ---
-# <a name="icordebugenum-interface1"></a><span data-ttu-id="05adb-102">ICorDebugEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="05adb-102">ICorDebugEnum Interface1</span></span>
-<span data-ttu-id="05adb-103">Serve como a interface base abstrata para os enumeradores que são usados por um aplicativo de depuração.</span><span class="sxs-lookup"><span data-stu-id="05adb-103">Serves as the abstract base interface for the enumerators that are used by a debugging application.</span></span>  
+# <a name="icordebugenum-interface1"></a><span data-ttu-id="38d73-102">ICorDebugEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="38d73-102">ICorDebugEnum Interface1</span></span>
+<span data-ttu-id="38d73-103">Serve como a interface base abstrata para os enumeradores que são usados por um aplicativo de depuração.</span><span class="sxs-lookup"><span data-stu-id="38d73-103">Serves as the abstract base interface for the enumerators that are used by a debugging application.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="05adb-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="05adb-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="38d73-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="38d73-104">Methods</span></span>  
   
-|<span data-ttu-id="05adb-105">Método</span><span class="sxs-lookup"><span data-stu-id="05adb-105">Method</span></span>|<span data-ttu-id="05adb-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="05adb-106">Description</span></span>|  
+|<span data-ttu-id="38d73-105">Método</span><span class="sxs-lookup"><span data-stu-id="38d73-105">Method</span></span>|<span data-ttu-id="38d73-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="38d73-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="05adb-107">Método Clone</span><span class="sxs-lookup"><span data-stu-id="05adb-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|<span data-ttu-id="05adb-108">Cria uma cópia deste objeto `ICorDebugEnum`.</span><span class="sxs-lookup"><span data-stu-id="05adb-108">Creates a copy of this `ICorDebugEnum` object.</span></span>|  
-|[<span data-ttu-id="05adb-109">Método GetCount</span><span class="sxs-lookup"><span data-stu-id="05adb-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|<span data-ttu-id="05adb-110">Obtém o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="05adb-110">Gets the number of items in the enumeration.</span></span>|  
-|[<span data-ttu-id="05adb-111">Método Reset</span><span class="sxs-lookup"><span data-stu-id="05adb-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|<span data-ttu-id="05adb-112">Move o cursor para o início da enumeração.</span><span class="sxs-lookup"><span data-stu-id="05adb-112">Moves the cursor to the beginning of the enumeration.</span></span>|  
-|[<span data-ttu-id="05adb-113">Método Skip</span><span class="sxs-lookup"><span data-stu-id="05adb-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|<span data-ttu-id="05adb-114">Move o cursor para a frente na enumeração pelo número especificado de itens.</span><span class="sxs-lookup"><span data-stu-id="05adb-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
+|[<span data-ttu-id="38d73-107">Método Clone</span><span class="sxs-lookup"><span data-stu-id="38d73-107">Clone Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|<span data-ttu-id="38d73-108">Cria uma cópia deste objeto `ICorDebugEnum`.</span><span class="sxs-lookup"><span data-stu-id="38d73-108">Creates a copy of this `ICorDebugEnum` object.</span></span>|  
+|[<span data-ttu-id="38d73-109">Método GetCount</span><span class="sxs-lookup"><span data-stu-id="38d73-109">GetCount Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|<span data-ttu-id="38d73-110">Obtém o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="38d73-110">Gets the number of items in the enumeration.</span></span>|  
+|[<span data-ttu-id="38d73-111">Método Reset</span><span class="sxs-lookup"><span data-stu-id="38d73-111">Reset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|<span data-ttu-id="38d73-112">Move o cursor para o início da enumeração.</span><span class="sxs-lookup"><span data-stu-id="38d73-112">Moves the cursor to the beginning of the enumeration.</span></span>|  
+|[<span data-ttu-id="38d73-113">Método Skip</span><span class="sxs-lookup"><span data-stu-id="38d73-113">Skip Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|<span data-ttu-id="38d73-114">Move o cursor para frente na enumeração pelo número especificado de itens.</span><span class="sxs-lookup"><span data-stu-id="38d73-114">Moves the cursor forward in the enumeration by the specified number of items.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="05adb-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="05adb-115">Remarks</span></span>  
- <span data-ttu-id="05adb-116">Os seguintes enumeradores derivam `ICorDebugEnum`:</span><span class="sxs-lookup"><span data-stu-id="05adb-116">The following enumerators derive from `ICorDebugEnum`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="38d73-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="38d73-115">Remarks</span></span>  
+ <span data-ttu-id="38d73-116">Os enumeradores seguintes derivam `ICorDebugEnum`:</span><span class="sxs-lookup"><span data-stu-id="38d73-116">The following enumerators derive from `ICorDebugEnum`:</span></span>  
   
--   <span data-ttu-id="05adb-117">"ICorDebugAppDomainEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-117">"ICorDebugAppDomainEnum"</span></span>  
+-   <span data-ttu-id="38d73-117">"ICorDebugAppDomainEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-117">"ICorDebugAppDomainEnum"</span></span>  
   
--   <span data-ttu-id="05adb-118">"ICorDebugAssemblyEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-118">"ICorDebugAssemblyEnum"</span></span>  
+-   <span data-ttu-id="38d73-118">"ICorDebugAssemblyEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-118">"ICorDebugAssemblyEnum"</span></span>  
   
--   [<span data-ttu-id="05adb-119">ICorDebugBlockingObjectEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-119">ICorDebugBlockingObjectEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+-   [<span data-ttu-id="38d73-119">ICorDebugBlockingObjectEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-119">ICorDebugBlockingObjectEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   <span data-ttu-id="05adb-120">"ICorDebugBreakpointEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-120">"ICorDebugBreakpointEnum"</span></span>  
+-   <span data-ttu-id="38d73-120">"ICorDebugBreakpointEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-120">"ICorDebugBreakpointEnum"</span></span>  
   
--   <span data-ttu-id="05adb-121">"ICorDebugChainEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-121">"ICorDebugChainEnum"</span></span>  
+-   <span data-ttu-id="38d73-121">"ICorDebugChainEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-121">"ICorDebugChainEnum"</span></span>  
   
--   <span data-ttu-id="05adb-122">"ICorDebugCodeEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-122">"ICorDebugCodeEnum"</span></span>  
+-   <span data-ttu-id="38d73-122">"ICorDebugCodeEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-122">"ICorDebugCodeEnum"</span></span>  
   
--   <span data-ttu-id="05adb-123">"ICorDebugErrorInfoEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-123">"ICorDebugErrorInfoEnum"</span></span>  
+-   <span data-ttu-id="38d73-123">"ICorDebugErrorInfoEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-123">"ICorDebugErrorInfoEnum"</span></span>  
   
--   [<span data-ttu-id="05adb-124">ICorDebugExceptionObjectCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-124">ICorDebugExceptionObjectCallStackEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+-   [<span data-ttu-id="38d73-124">ICorDebugExceptionObjectCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-124">ICorDebugExceptionObjectCallStackEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
--   <span data-ttu-id="05adb-125">"ICorDebugFrameEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-125">"ICorDebugFrameEnum"</span></span>  
+-   <span data-ttu-id="38d73-125">"ICorDebugFrameEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-125">"ICorDebugFrameEnum"</span></span>  
   
--   [<span data-ttu-id="05adb-126">ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-126">ICorDebugGCReferenceEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+-   [<span data-ttu-id="38d73-126">ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-126">ICorDebugGCReferenceEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
--   [<span data-ttu-id="05adb-127">ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-127">ICorDebugGuidToTypeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+-   [<span data-ttu-id="38d73-127">ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-127">ICorDebugGuidToTypeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
   
--   [<span data-ttu-id="05adb-128">ICorDebugHeapEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-128">ICorDebugHeapEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+-   [<span data-ttu-id="38d73-128">ICorDebugHeapEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-128">ICorDebugHeapEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
   
--   [<span data-ttu-id="05adb-129">ICorDebugHeapSegmentEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-129">ICorDebugHeapSegmentEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+-   [<span data-ttu-id="38d73-129">ICorDebugHeapSegmentEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-129">ICorDebugHeapSegmentEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
--   <span data-ttu-id="05adb-130">"ICorDebugModuleEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-130">"ICorDebugModuleEnum"</span></span>  
+-   <span data-ttu-id="38d73-130">"ICorDebugModuleEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-130">"ICorDebugModuleEnum"</span></span>  
   
--   <span data-ttu-id="05adb-131">"ICorDebugObjectEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-131">"ICorDebugObjectEnum"</span></span>  
+-   <span data-ttu-id="38d73-131">"ICorDebugObjectEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-131">"ICorDebugObjectEnum"</span></span>  
   
--   <span data-ttu-id="05adb-132">"ICorDebugProcessEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-132">"ICorDebugProcessEnum"</span></span>  
+-   <span data-ttu-id="38d73-132">"ICorDebugProcessEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-132">"ICorDebugProcessEnum"</span></span>  
   
--   <span data-ttu-id="05adb-133">"ICorDebugStepperEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-133">"ICorDebugStepperEnum"</span></span>  
+-   <span data-ttu-id="38d73-133">"ICorDebugStepperEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-133">"ICorDebugStepperEnum"</span></span>  
   
--   <span data-ttu-id="05adb-134">"ICorDebugThreadEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-134">"ICorDebugThreadEnum"</span></span>  
+-   <span data-ttu-id="38d73-134">"ICorDebugThreadEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-134">"ICorDebugThreadEnum"</span></span>  
   
--   <span data-ttu-id="05adb-135">"ICorDebugTypeEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-135">"ICorDebugTypeEnum"</span></span>  
+-   <span data-ttu-id="38d73-135">"ICorDebugTypeEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-135">"ICorDebugTypeEnum"</span></span>  
   
--   <span data-ttu-id="05adb-136">"ICorDebugValueEnum"</span><span class="sxs-lookup"><span data-stu-id="05adb-136">"ICorDebugValueEnum"</span></span>  
+-   <span data-ttu-id="38d73-136">"ICorDebugValueEnum"</span><span class="sxs-lookup"><span data-stu-id="38d73-136">"ICorDebugValueEnum"</span></span>  
   
--   [<span data-ttu-id="05adb-137">ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="05adb-137">ICorDebugVariableHomeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+-   [<span data-ttu-id="38d73-137">ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="38d73-137">ICorDebugVariableHomeEnum</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  <span data-ttu-id="05adb-138">Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="05adb-138">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="38d73-138">Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.</span><span class="sxs-lookup"><span data-stu-id="38d73-138">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05adb-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05adb-139">Requirements</span></span>  
- <span data-ttu-id="05adb-140">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05adb-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="38d73-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="38d73-139">Requirements</span></span>  
+ <span data-ttu-id="38d73-140">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38d73-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05adb-141">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="05adb-141">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="38d73-141">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38d73-141">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="05adb-142">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05adb-142">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="38d73-142">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38d73-142">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05adb-143">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05adb-143">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="38d73-143">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38d73-143">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05adb-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="05adb-144">See Also</span></span>  
- [<span data-ttu-id="05adb-145">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="05adb-145">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="38d73-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="38d73-144">See also</span></span>
+- [<span data-ttu-id="38d73-145">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="38d73-145">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

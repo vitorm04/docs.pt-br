@@ -2,20 +2,20 @@
 title: System.ServiceModel.Activation.MessageQueueDuplicatedPipeError
 ms.date: 03/30/2017
 ms.assetid: ebfe9af1-76f7-4416-abf9-1d777708e0f1
-ms.openlocfilehash: d3e550993f1831ffecd858a70aa7af5cb2b939c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab1c92323dd1b04d0091c7c1df72b608601774a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475933"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667918"
 ---
-# <a name="systemservicemodelactivationmessagequeueduplicatedpipeerror"></a><span data-ttu-id="af751-102">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span><span class="sxs-lookup"><span data-stu-id="af751-102">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span></span>
-<span data-ttu-id="af751-103">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span><span class="sxs-lookup"><span data-stu-id="af751-103">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span></span>  
+# <a name="systemservicemodelactivationmessagequeueduplicatedpipeerror"></a><span data-ttu-id="c6b87-102">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span><span class="sxs-lookup"><span data-stu-id="c6b87-102">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span></span>
+<span data-ttu-id="c6b87-103">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span><span class="sxs-lookup"><span data-stu-id="c6b87-103">System.ServiceModel.Activation.MessageQueueDuplicatedPipeError</span></span>  
   
-## <a name="description"></a><span data-ttu-id="af751-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="af751-104">Description</span></span>  
- <span data-ttu-id="af751-105">Ocorreu um erro ao duplicar um pipe nomeado.</span><span class="sxs-lookup"><span data-stu-id="af751-105">An error occurred while duplicating a named pipe.</span></span>  
+## <a name="description"></a><span data-ttu-id="c6b87-104">Descrição</span><span class="sxs-lookup"><span data-stu-id="c6b87-104">Description</span></span>  
+ <span data-ttu-id="c6b87-105">Ocorreu um erro ao duplicar um pipe nomeado.</span><span class="sxs-lookup"><span data-stu-id="c6b87-105">An error occurred while duplicating a named pipe.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af751-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="af751-106">See Also</span></span>  
- [<span data-ttu-id="af751-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="af751-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="af751-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="af751-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="af751-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="af751-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c6b87-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6b87-106">See also</span></span>
+- [<span data-ttu-id="c6b87-107">Rastreamento</span><span class="sxs-lookup"><span data-stu-id="c6b87-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="c6b87-108">Usando o rastreamento para solucionar problemas do seu aplicativo</span><span class="sxs-lookup"><span data-stu-id="c6b87-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c6b87-109">Administração e diagnósticos</span><span class="sxs-lookup"><span data-stu-id="c6b87-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

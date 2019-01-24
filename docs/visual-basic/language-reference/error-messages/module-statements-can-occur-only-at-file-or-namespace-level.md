@@ -1,5 +1,5 @@
 ---
-title: '&#39;Módulo&#39; instruções só podem ocorrer no nível de namespace ou arquivo'
+title: '&#39;Módulo&#39; instruções podem ocorrer apenas no nível de namespace ou arquivo'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30617
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: 53199c2d7081445dc5490d5c54c98f93ee7522eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdbf8df5942e9df4b9696aeea4e3492121efe21a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746306"
 ---
-# <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a><span data-ttu-id="8bd8a-102">&#39;Módulo&#39; instruções só podem ocorrer no nível de namespace ou arquivo</span><span class="sxs-lookup"><span data-stu-id="8bd8a-102">&#39;Module&#39; statements can occur only at file or namespace level</span></span>
-<span data-ttu-id="8bd8a-103">`Module` instruções devem aparecer na parte superior do seu arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.</span><span class="sxs-lookup"><span data-stu-id="8bd8a-103">`Module` statements must appear at the top of your source file immediately after `Option` and `Imports` statements, global attributes, and namespace declarations, but before all other declarations.</span></span>  
+# <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a><span data-ttu-id="15ca4-102">&#39;Módulo&#39; instruções podem ocorrer apenas no nível de namespace ou arquivo</span><span class="sxs-lookup"><span data-stu-id="15ca4-102">&#39;Module&#39; statements can occur only at file or namespace level</span></span>
+<span data-ttu-id="15ca4-103">`Module` as instruções devem aparecer na parte superior do seu arquivo de origem imediatamente após `Option` e `Imports` instruções, atributos globais e declarações de namespace, mas antes de todas as outras declarações.</span><span class="sxs-lookup"><span data-stu-id="15ca4-103">`Module` statements must appear at the top of your source file immediately after `Option` and `Imports` statements, global attributes, and namespace declarations, but before all other declarations.</span></span>  
   
- <span data-ttu-id="8bd8a-104">**ID do erro:** BC30617</span><span class="sxs-lookup"><span data-stu-id="8bd8a-104">**Error ID:** BC30617</span></span>  
+ <span data-ttu-id="15ca4-104">**ID do erro:** BC30617</span><span class="sxs-lookup"><span data-stu-id="15ca4-104">**Error ID:** BC30617</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8bd8a-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="8bd8a-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="15ca4-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="15ca4-105">To correct this error</span></span>  
   
--   <span data-ttu-id="8bd8a-106">Mover o `Module` à parte superior do seu arquivo de origem ou de declaração de namespace.</span><span class="sxs-lookup"><span data-stu-id="8bd8a-106">Move the `Module` statement to the top of your namespace declaration or source file.</span></span>  
+-   <span data-ttu-id="15ca4-106">Mover o `Module` instrução na parte superior do seu arquivo de origem ou de declaração de namespace.</span><span class="sxs-lookup"><span data-stu-id="15ca4-106">Move the `Module` statement to the top of your namespace declaration or source file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8bd8a-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8bd8a-107">See Also</span></span>  
- [<span data-ttu-id="8bd8a-108">Instrução Module</span><span class="sxs-lookup"><span data-stu-id="8bd8a-108">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+## <a name="see-also"></a><span data-ttu-id="15ca4-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="15ca4-107">See also</span></span>
+- [<span data-ttu-id="15ca4-108">Instrução Module</span><span class="sxs-lookup"><span data-stu-id="15ca4-108">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)

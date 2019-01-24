@@ -1,5 +1,5 @@
 ---
-title: Como animar um valor de BorderThickness
+title: 'Como: Animar um valor de BorderThickness'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - border thickness [WPF], animating changes to
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
-ms.openlocfilehash: d1ead0493d75f708557f0598d603440221182ebc
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: bd9c75ecb6c95f0dad562701940850e111dddbff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664376"
 ---
-# <a name="how-to-animate-a-borderthickness-value"></a><span data-ttu-id="4ac5d-102">Como animar um valor de BorderThickness</span><span class="sxs-lookup"><span data-stu-id="4ac5d-102">How to: Animate a BorderThickness Value</span></span>
-<span data-ttu-id="4ac5d-103">Este exemplo mostra como animar alterações para a espessura de uma borda usando o <xref:System.Windows.Media.Animation.ThicknessAnimation> classe.</span><span class="sxs-lookup"><span data-stu-id="4ac5d-103">This example shows how to animate changes to the thickness of a border by using the <xref:System.Windows.Media.Animation.ThicknessAnimation> class.</span></span>  
+# <a name="how-to-animate-a-borderthickness-value"></a><span data-ttu-id="1a1e5-102">Como: Animar um valor de BorderThickness</span><span class="sxs-lookup"><span data-stu-id="1a1e5-102">How to: Animate a BorderThickness Value</span></span>
+<span data-ttu-id="1a1e5-103">Este exemplo mostra como animar alterações para a espessura de uma borda usando o <xref:System.Windows.Media.Animation.ThicknessAnimation> classe.</span><span class="sxs-lookup"><span data-stu-id="1a1e5-103">This example shows how to animate changes to the thickness of a border by using the <xref:System.Windows.Media.Animation.ThicknessAnimation> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4ac5d-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4ac5d-104">Example</span></span>  
- <span data-ttu-id="4ac5d-105">O exemplo a seguir anima a espessura de uma borda usando <xref:System.Windows.Media.Animation.ThicknessAnimation>.</span><span class="sxs-lookup"><span data-stu-id="4ac5d-105">The following example animates the thickness of a border by using <xref:System.Windows.Media.Animation.ThicknessAnimation>.</span></span> <span data-ttu-id="4ac5d-106">O exemplo usa o <xref:System.Windows.Controls.Border.BorderThickness%2A> propriedade de <xref:System.Windows.Controls.Border>.</span><span class="sxs-lookup"><span data-stu-id="4ac5d-106">The example uses the <xref:System.Windows.Controls.Border.BorderThickness%2A> property of <xref:System.Windows.Controls.Border>.</span></span>  
+## <a name="example"></a><span data-ttu-id="1a1e5-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1a1e5-104">Example</span></span>  
+ <span data-ttu-id="1a1e5-105">O exemplo a seguir anima a espessura de uma borda usando <xref:System.Windows.Media.Animation.ThicknessAnimation>.</span><span class="sxs-lookup"><span data-stu-id="1a1e5-105">The following example animates the thickness of a border by using <xref:System.Windows.Media.Animation.ThicknessAnimation>.</span></span> <span data-ttu-id="1a1e5-106">O exemplo usa o <xref:System.Windows.Controls.Border.BorderThickness%2A> propriedade de <xref:System.Windows.Controls.Border>.</span><span class="sxs-lookup"><span data-stu-id="1a1e5-106">The example uses the <xref:System.Windows.Controls.Border.BorderThickness%2A> property of <xref:System.Windows.Controls.Border>.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#ThicknessAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/ThicknessAnimationExample.cs#thicknessanimationwholepage)]
  [!code-vb[BasicAnimations_snip#ThicknessAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/ThicknessAnimationExample.vb#thicknessanimationwholepage)]  
   
- <span data-ttu-id="4ac5d-107">Para obter o exemplo completo, consulte [Galeria de exemplo de animação](https://go.microsoft.com/fwlink/?LinkID=159969).</span><span class="sxs-lookup"><span data-stu-id="4ac5d-107">For the complete sample, see [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969).</span></span>  
+ <span data-ttu-id="1a1e5-107">Para obter o exemplo completo, consulte [Galeria de exemplo de animação](https://go.microsoft.com/fwlink/?LinkID=159969).</span><span class="sxs-lookup"><span data-stu-id="1a1e5-107">For the complete sample, see [Animation Example Gallery](https://go.microsoft.com/fwlink/?LinkID=159969).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ac5d-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4ac5d-108">See Also</span></span>  
- <xref:System.Windows.Media.Animation.ThicknessAnimation>  
- <xref:System.Windows.Controls.Border.BorderThickness%2A>  
- <xref:System.Windows.Controls.Border>  
- [<span data-ttu-id="4ac5d-109">Visão geral da animação</span><span class="sxs-lookup"><span data-stu-id="4ac5d-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="4ac5d-110">Animação e tempo</span><span class="sxs-lookup"><span data-stu-id="4ac5d-110">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="4ac5d-111">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="4ac5d-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
- [<span data-ttu-id="4ac5d-112">Animar a espessura de uma borda usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="4ac5d-112">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)
+## <a name="see-also"></a><span data-ttu-id="1a1e5-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1a1e5-108">See also</span></span>
+- <xref:System.Windows.Media.Animation.ThicknessAnimation>
+- <xref:System.Windows.Controls.Border.BorderThickness%2A>
+- <xref:System.Windows.Controls.Border>
+- [<span data-ttu-id="1a1e5-109">Visão geral da animação</span><span class="sxs-lookup"><span data-stu-id="1a1e5-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [<span data-ttu-id="1a1e5-110">Animação e tempo</span><span class="sxs-lookup"><span data-stu-id="1a1e5-110">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
+- [<span data-ttu-id="1a1e5-111">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="1a1e5-111">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [<span data-ttu-id="1a1e5-112">Animar a espessura de uma borda usando quadros principais</span><span class="sxs-lookup"><span data-stu-id="1a1e5-112">Animate the Thickness of a Border by Using Key Frames</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)
