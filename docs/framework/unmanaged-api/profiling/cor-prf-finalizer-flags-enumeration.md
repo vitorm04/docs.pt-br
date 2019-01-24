@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9292e7c5908b2e4fd7e2c0ae9412375249f2fdfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7800567f51196154f49c93dbbbe819f77cefdfe8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499032"
 ---
-# <a name="corprffinalizerflags-enumeration"></a><span data-ttu-id="60ef3-102">Enumeração COR_PRF_FINALIZER_FLAGS</span><span class="sxs-lookup"><span data-stu-id="60ef3-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
-<span data-ttu-id="60ef3-103">Descreve o finalizador de um objeto.</span><span class="sxs-lookup"><span data-stu-id="60ef3-103">Describes the finalizer for an object.</span></span>  
+# <a name="corprffinalizerflags-enumeration"></a><span data-ttu-id="52c24-102">Enumeração COR_PRF_FINALIZER_FLAGS</span><span class="sxs-lookup"><span data-stu-id="52c24-102">COR_PRF_FINALIZER_FLAGS Enumeration</span></span>
+<span data-ttu-id="52c24-103">Descreve o finalizador de um objeto.</span><span class="sxs-lookup"><span data-stu-id="52c24-103">Describes the finalizer for an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="60ef3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="60ef3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52c24-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="52c24-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,23 +34,23 @@ typedef enum {
 } COR_PRF_FINALIZER_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="60ef3-105">Membros</span><span class="sxs-lookup"><span data-stu-id="60ef3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="52c24-105">Membros</span><span class="sxs-lookup"><span data-stu-id="52c24-105">Members</span></span>  
   
-|<span data-ttu-id="60ef3-106">Membro</span><span class="sxs-lookup"><span data-stu-id="60ef3-106">Member</span></span>|<span data-ttu-id="60ef3-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="60ef3-107">Description</span></span>|  
+|<span data-ttu-id="52c24-106">Membro</span><span class="sxs-lookup"><span data-stu-id="52c24-106">Member</span></span>|<span data-ttu-id="52c24-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="52c24-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FINALIZER_CRITICAL`|<span data-ttu-id="60ef3-108">O finalizador é crítico.</span><span class="sxs-lookup"><span data-stu-id="60ef3-108">The finalizer is critical.</span></span>|  
+|`COR_PRF_FINALIZER_CRITICAL`|<span data-ttu-id="52c24-108">O finalizador é essencial.</span><span class="sxs-lookup"><span data-stu-id="52c24-108">The finalizer is critical.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="60ef3-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="60ef3-109">Remarks</span></span>  
- <span data-ttu-id="60ef3-110">O `COR_PRF_FINALIZER_FLAGS` enumeração é usada pelo [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) método para descrever o finalizador de um objeto.</span><span class="sxs-lookup"><span data-stu-id="60ef3-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52c24-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="52c24-109">Remarks</span></span>  
+ <span data-ttu-id="52c24-110">O `COR_PRF_FINALIZER_FLAGS` enumeração é usada pelo [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) método para descrever o finalizador de um objeto.</span><span class="sxs-lookup"><span data-stu-id="52c24-110">The `COR_PRF_FINALIZER_FLAGS` enumeration is used by the [ICorProfilerCallback2::FinalizeableObjectQueued](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) method to describe the finalizer for an object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="60ef3-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="60ef3-111">Requirements</span></span>  
- <span data-ttu-id="60ef3-112">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="60ef3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52c24-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="52c24-111">Requirements</span></span>  
+ <span data-ttu-id="52c24-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52c24-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="60ef3-113">**Cabeçalho:** Corprof. idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="60ef3-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="52c24-113">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="52c24-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="60ef3-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="60ef3-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="52c24-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="52c24-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="60ef3-115">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="60ef3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="52c24-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52c24-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="60ef3-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="60ef3-116">See Also</span></span>  
- [<span data-ttu-id="60ef3-117">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="60ef3-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="52c24-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="52c24-116">See also</span></span>
+- [<span data-ttu-id="52c24-117">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="52c24-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

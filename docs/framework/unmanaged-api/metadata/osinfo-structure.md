@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c5bc63da7ebe86b653c9bef7caeb1cf28d3a7f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abab67f28a5fabfc6c348af6b8b502b46510d460
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450044"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548749"
 ---
-# <a name="osinfo-structure"></a><span data-ttu-id="54882-102">Estrutura OSINFO</span><span class="sxs-lookup"><span data-stu-id="54882-102">OSINFO Structure</span></span>
-<span data-ttu-id="54882-103">Contém detalhes sobre o sistema operacional para um assembly ou módulo.</span><span class="sxs-lookup"><span data-stu-id="54882-103">Contains details about the operating system for an assembly or module.</span></span>  
+# <a name="osinfo-structure"></a><span data-ttu-id="25981-102">Estrutura OSINFO</span><span class="sxs-lookup"><span data-stu-id="25981-102">OSINFO Structure</span></span>
+<span data-ttu-id="25981-103">Contém detalhes sobre o sistema operacional para um assembly ou módulo.</span><span class="sxs-lookup"><span data-stu-id="25981-103">Contains details about the operating system for an assembly or module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54882-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="54882-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25981-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="25981-104">Syntax</span></span>  
   
 ```  
 typedef struct {  
@@ -36,26 +36,26 @@ typedef struct {
 } OSINFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="54882-105">Membros</span><span class="sxs-lookup"><span data-stu-id="54882-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="25981-105">Membros</span><span class="sxs-lookup"><span data-stu-id="25981-105">Members</span></span>  
   
-|<span data-ttu-id="54882-106">Membro</span><span class="sxs-lookup"><span data-stu-id="54882-106">Member</span></span>|<span data-ttu-id="54882-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="54882-107">Description</span></span>|  
+|<span data-ttu-id="25981-106">Membro</span><span class="sxs-lookup"><span data-stu-id="25981-106">Member</span></span>|<span data-ttu-id="25981-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="25981-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwOSPlatformId`|<span data-ttu-id="54882-108">Um dos valores de identificador definidos pela função de plataforma do Microsoft Windows `GetVersionEx`.</span><span class="sxs-lookup"><span data-stu-id="54882-108">One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="54882-109">Há suporte para os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="54882-109">The following values are supported:</span></span><br /><br /> <span data-ttu-id="54882-110">-VER_PLATFORM_WIN32s, ou 0x0000, para especificar o Microsoft Windows 3.1.</span><span class="sxs-lookup"><span data-stu-id="54882-110">-   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.</span></span><br /><span data-ttu-id="54882-111">-VER_PLATFORM_WIN32_WINDOWS, ou 0x0001, para especificar o Windows 95, Windows 98 ou sistemas operacionais descendentes do-los.</span><span class="sxs-lookup"><span data-stu-id="54882-111">-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.</span></span><br /><span data-ttu-id="54882-112">-VER_PLATFORM_WIN32_NT, ou 0x0010, para especificar o Windows NT ou sistemas operacionais descendentes dele.</span><span class="sxs-lookup"><span data-stu-id="54882-112">-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.</span></span>|  
-|`dwOSMajorVersion`|<span data-ttu-id="54882-113">A versão principal do sistema operacional, ou um valor nulo para indicar qualquer versão.</span><span class="sxs-lookup"><span data-stu-id="54882-113">The operating system major version, or a NULL value to indicate any version.</span></span>|  
-|`dwOSMinorVersion`|<span data-ttu-id="54882-114">A versão secundária do sistema operacional, ou um valor nulo para indicar qualquer versão.</span><span class="sxs-lookup"><span data-stu-id="54882-114">The operating system minor version, or a NULL value to indicate any version.</span></span>|  
+|`dwOSPlatformId`|<span data-ttu-id="25981-108">Um dos valores de identificador definidos pela função de plataforma do Microsoft Windows `GetVersionEx`.</span><span class="sxs-lookup"><span data-stu-id="25981-108">One of the identifier values defined by the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="25981-109">Há suporte para os seguintes valores:</span><span class="sxs-lookup"><span data-stu-id="25981-109">The following values are supported:</span></span><br /><br /> <span data-ttu-id="25981-110">-VER_PLATFORM_WIN32s, ou 0x0000, para especificar o Microsoft Windows 3.1.</span><span class="sxs-lookup"><span data-stu-id="25981-110">-   VER_PLATFORM_WIN32s, or 0x0000, to specify Microsoft Windows 3.1.</span></span><br /><span data-ttu-id="25981-111">-VER_PLATFORM_WIN32_WINDOWS, ou 0x0001, para especificar o Windows 95, Windows 98 ou sistemas operacionais descendente de-los.</span><span class="sxs-lookup"><span data-stu-id="25981-111">-   VER_PLATFORM_WIN32_WINDOWS, or 0x0001, to specify Windows 95, Windows 98, or operating systems descended from them.</span></span><br /><span data-ttu-id="25981-112">-VER_PLATFORM_WIN32_NT, ou 0x0010, para especificar o Windows NT ou sistemas operacionais descendentes dele.</span><span class="sxs-lookup"><span data-stu-id="25981-112">-   VER_PLATFORM_WIN32_NT, or 0x0010, to specify Windows NT or operating systems descended from it.</span></span>|  
+|`dwOSMajorVersion`|<span data-ttu-id="25981-113">A versão principal do sistema operacional ou um valor nulo para indicar qualquer versão.</span><span class="sxs-lookup"><span data-stu-id="25981-113">The operating system major version, or a NULL value to indicate any version.</span></span>|  
+|`dwOSMinorVersion`|<span data-ttu-id="25981-114">A versão secundária do sistema operacional ou um valor nulo para indicar qualquer versão.</span><span class="sxs-lookup"><span data-stu-id="25981-114">The operating system minor version, or a NULL value to indicate any version.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="54882-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="54882-115">Remarks</span></span>  
- <span data-ttu-id="54882-116">`OSINFO` se baseia o `OSVERSIONINFOEX` estrutura que é usado em chamadas para a função de plataforma do Microsoft Windows `GetVersionEx`.</span><span class="sxs-lookup"><span data-stu-id="54882-116">`OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="54882-117">Essa estrutura é usada pela estrutura ASSEMBLYMETADATA para indicar o suporte do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="54882-117">This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25981-115">Comentários</span><span class="sxs-lookup"><span data-stu-id="25981-115">Remarks</span></span>  
+ <span data-ttu-id="25981-116">`OSINFO` se baseia a `OSVERSIONINFOEX` estrutura que é usado em chamadas para a função de plataforma do Microsoft Windows `GetVersionEx`.</span><span class="sxs-lookup"><span data-stu-id="25981-116">`OSINFO` is based on the `OSVERSIONINFOEX` structure that is used in calls to the Microsoft Windows platform function `GetVersionEx`.</span></span> <span data-ttu-id="25981-117">Essa estrutura é usada pela estrutura ASSEMBLYMETADATA para indicar o suporte do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="25981-117">This structure is used by the ASSEMBLYMETADATA structure to indicate its operating system support.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54882-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="54882-118">Requirements</span></span>  
- <span data-ttu-id="54882-119">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54882-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25981-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="25981-118">Requirements</span></span>  
+ <span data-ttu-id="25981-119">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25981-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54882-120">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="54882-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25981-120">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="25981-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="54882-121">**Biblioteca:** usado como um recurso no MSCOREE</span><span class="sxs-lookup"><span data-stu-id="54882-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="25981-121">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="25981-121">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="54882-122">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54882-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25981-122">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25981-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54882-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54882-123">See Also</span></span>  
- [<span data-ttu-id="54882-124">Estruturas de metadados</span><span class="sxs-lookup"><span data-stu-id="54882-124">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [<span data-ttu-id="54882-125">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="54882-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="25981-123">Consulte também</span><span class="sxs-lookup"><span data-stu-id="25981-123">See also</span></span>
+- [<span data-ttu-id="25981-124">Estruturas de metadados</span><span class="sxs-lookup"><span data-stu-id="25981-124">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="25981-125">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="25981-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
