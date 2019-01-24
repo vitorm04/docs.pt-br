@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347988"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704898"
 ---
 # <a name="structure-statement"></a>Instrução Structure
 Declara o nome de uma estrutura e introduz a definição de variáveis, propriedades, eventos e procedimentos que compõem a estrutura.  
@@ -104,14 +104,14 @@ End Structure
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Instrução Module](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Instrução Enum](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Estruturas e Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Instrução Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Instrução Module](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Instrução Enum](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Estruturas e Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

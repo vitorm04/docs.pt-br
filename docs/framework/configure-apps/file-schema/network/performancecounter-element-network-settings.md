@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ea0eba097505741aba31bce4f23e0cc9ca1d4608
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712477"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; (configurações de rede)
 Habilita ou desabilita os contadores de desempenho de rede.  
@@ -21,7 +21,7 @@ Habilita ou desabilita os contadores de desempenho de rede.
  \<configuration>  
 \<system.net>  
 \<Configurações >  
-\<performanceCounters >  
+\<performanceCounters>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -73,8 +73,8 @@ Habilita ou desabilita os contadores de desempenho de rede.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [Contadores de desempenho de rede](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

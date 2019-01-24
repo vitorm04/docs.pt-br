@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691470"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Alguns métodos podem não ser adequados para permitir que código não confiável arbitrário chamar. Esses métodos apresentam vários riscos: O método pode fornecer algumas informações restritas; ele pode acreditar que todas as informações passadas a ele. ele não pode fazer a verificação de erro em parâmetros. ou, com os parâmetros errados, talvez ele não funcione corretamente ou fazer algo perigoso. Você deve estar ciente desses casos e tomar medidas para ajudar a proteger o método.  
+ Alguns métodos podem não ser adequados para permitir que código não confiável arbitrário chamar. Esses métodos representam vários riscos: O método pode fornecer algumas informações restritas; ele pode acreditar que todas as informações passadas a ele. ele não pode fazer a verificação de erro em parâmetros. ou, com os parâmetros errados, talvez ele não funcione corretamente ou fazer algo perigoso. Você deve estar ciente desses casos e tomar medidas para ajudar a proteger o método.  
   
  Em alguns casos, você precisa restringir os métodos que não se destina para uso público, mas ainda devem ser públicos. Por exemplo, você pode ter uma interface que precisa ser chamado em seus próprio DLLs e, portanto, deve ser públicos, mas você não deseja expô-lo publicamente para impedir que os clientes usá-lo ou para impedir que código mal-intencionado que explora o ponto de entrada no seu componente. Outra razão comum para restringir um método não se destina para uso público (mas que devem ser públicos) é evitar ter que documentar e oferecer suporte o que pode ser uma interface muito interna.  
   
@@ -240,5 +240,5 @@ class Implemented : ICanCastToMe
   
  Observe que, mesmo que um compilador de linguagem impede essas substituições com um erro de compilação, é possível que código escrito com outros compiladores para substituir.  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Consulte também
+- [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

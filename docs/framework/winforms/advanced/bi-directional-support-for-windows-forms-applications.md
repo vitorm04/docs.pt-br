@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e35f097380272822e9dbcda01617cce9fed8fc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676842"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
 Você pode usar o Visual Studio para criar aplicativos baseados no Windows que dão suporte a espelhamento bidirecional (direita para esquerda) idiomas como árabe e hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles que você pode trabalhar com esses formulários — ou seja, todos os objetos no <xref:System.Windows.Forms.Control> namespace.  
@@ -23,7 +23,7 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
  Configurações de cultura e da interface do usuário determinam como um aplicativo funciona com datas, horas, moeda e outras informações. Suporte para a cultura e cultura da interface do usuário é o mesmo para idiomas bidirecionais, assim como para outros idiomas.   Consulte também [Classes específicas de cultura para Global Windows Forms e Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) ou [Classes específicas de cultura para Global Windows Forms e Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>Propriedades RightToLeft e RightToLeftLayout  
- A base <xref:System.Windows.Forms.Control> classe, da qual os formulários derivam, inclui um <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade que você pode definir para alterar a ordem de leitura de um formulário e seus controles. Se você definir o formulário <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade, por controles padrão no formulário herdarão essa configuração. No entanto, você também pode definir o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade individualmente na maioria dos controles. Também consultar [Como exibir texto da direita para a esquerda nos Windows Forms para globalização](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ A base <xref:System.Windows.Forms.Control> classe, da qual os formulários derivam, inclui um <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade que você pode definir para alterar a ordem de leitura de um formulário e seus controles. Se você definir o formulário <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade, por controles padrão no formulário herdarão essa configuração. No entanto, você também pode definir o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade individualmente na maioria dos controles. Consulte também [como: Exibir o texto da direita para a esquerda nos Windows Forms para globalização](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
  O efeito do <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade pode diferir de um controle para outro. Em alguns controles a propriedade somente define a ordem de leitura, como mostra a <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ToolTip> controles. Em outros controles, o <xref:System.Windows.Forms.Control.RightToLeft%2A> propriedade altera a ordem de leitura e de layout. Isso inclui o <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.CheckBox> controles. Outros controles exigem que o <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedade ser aplicada para espelhar o seu layout da direita para esquerda. A tabela a seguir fornece detalhes sobre como o <xref:System.Windows.Forms.Control.RightToLeft%2A> e <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> propriedades afetam controles individuais dos Windows Forms.  
   
@@ -119,5 +119,5 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
   
 ## <a name="see-also"></a>Consulte também
 
-[Suporte bidirecional para aplicativos Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
-[Globalizando aplicativos dos Windows Forms](globalizing-windows-forms.md)
+- [Suporte bidirecional para aplicativos Web ASP.NET](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)
+- [Globalizando aplicativos dos Windows Forms](globalizing-windows-forms.md)

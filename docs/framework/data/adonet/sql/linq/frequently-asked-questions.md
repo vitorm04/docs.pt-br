@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679755"
 ---
 # <a name="frequently-asked-questions"></a>Perguntas frequentes
 As seções a seguir respondem a alguns problemas comuns que você pode encontrar ao implementar o [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
- Problemas adicionais serão tratados nas [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+ Problemas adicionais são abordados [solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="cannot-connect"></a>Não é possível conectar  
  P. Não consigo me conectar a meu banco de dados.  
@@ -27,7 +27,7 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
   
  R. Verifique se você chamou <xref:System.Data.Linq.DataContext.SubmitChanges%2A> para salvar os resultados no banco de dados.  
   
-## <a name="database-connection-open-how-long"></a>Conexão do banco de dados: há quanto tempo está aberta?  
+## <a name="database-connection-open-how-long"></a>Conexão de banco de dados: Abrir quanto?  
  P. Quanto tempo a conexão do banco de dados permanece aberta?  
   
  R. Uma conexão geralmente permanece aberta até você consumir os resultados da consulta. Se você pretende processar todos os resultados e não se opõe a armazenar em cache os resultados, aplique <xref:System.Linq.Enumerable.ToList%2A> à consulta. Em cenários comuns onde cada objeto é processado somente uma vez, o modelo de streaming é superior no `DataReader` e no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -97,17 +97,17 @@ As seções a seguir respondem a alguns problemas comuns que você pode encontra
   
  `end`  
   
- Para obter mais informações, consulte [personalizando operações, usando procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).  
+ Para obter mais informações, consulte [personalizando operações por usando procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).  
   
 ## <a name="serialization-errors"></a>Erros de serialização  
- P. Ao tentar serializar, recebo o seguinte erro: "digite 'System.Data.Linq.ChangeTracker+StandardChangeTracker'... não é marcado como serializável."  
+ P. Quando eu tento serializar, obtenho o erro a seguir: "Digite 'ChangeTracker + standardchangetracker'... não é marcado como serializável."  
   
  R. A geração de código no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte à serialização do <xref:System.Runtime.Serialization.DataContractSerializer>. Ela não dá suporte a <xref:System.Xml.Serialization.XmlSerializer> ou <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Para obter mais informações, consulte [Serialização](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
   
 ## <a name="multiple-dbml-files"></a>Vários arquivos DBML  
  P. Quando eu tenho vários arquivos DBML que compartilham algumas tabelas em comum, eu obtenho um erro do compilador.  
   
- R. Definir o **contexto Namespace** e **entidade Namespace** propriedades do [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para um valor distinto para cada arquivo DBML. Essa abordagem elimina a colisão nome/namespace.  
+ R. Defina a **Namespace de contexto** e **Namespace da entidade** propriedades do [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para um valor diferente para cada arquivo DBML. Essa abordagem elimina a colisão nome/namespace.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Evitando a configuração explícita de valores gerados por banco de dados em Insert ou Update  
  P. Tenho uma tabela de banco de dados com uma coluna `DateCreated` que usa como padrão o `Getdate()` do SQL. Quando tento inserir um novo registro usando o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], o valor é definido como `NULL`. Eu gostaria que ele fosse definido como o padrão do banco de dados.  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Modelo do provedor  
  P. Um modelo de provedor público está disponível?  
   
- R. Nenhum modelo de provedor público está disponível. Neste momento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte ao SQL Server e [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] apenas.  
+ R. Nenhum modelo de provedor público está disponível. Neste momento [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suporte ao SQL Server e [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] apenas.  
   
 ## <a name="sql-injection-attacks"></a>Ataques de injeção de SQL  
  P. Como o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é protegido contra ataques de injeção de SQL?  
@@ -163,14 +163,14 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  Examine o valor padrão <xref:System.Data.Linq.Mapping.UpdateCheck> (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) para determinar se este é o valor correto para seu aplicativo.  
   
     > [!CAUTION]
-    >  Se você estiver usando o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no Visual Studio, as alterações poderão ser substituídas.  
+    >  Se você estiver usando o [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no Visual Studio, suas alterações poderão ser substituídas.  
   
 ## <a name="aptca"></a>APTCA  
  P. O System.Data.Linq está marcado para ser usado pelo código parcialmente confiável?  
   
  R. Sim, o conjunto System.Data.Linq.dll está entre os assemblies do [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] marcados com o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Sem esta marcação, os assemblies no [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] são destinados para o uso somente pelo código totalmente confiável.  
   
- O cenário principal [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para permitir parcialmente confiável é permitir que os chamadores a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly seja acessado por aplicativos Web, onde o *confiança* configuração é médio.  
+ O principal cenário no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para permitir que parcialmente confiável é permitir que os chamadores a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] assembly para ser acessado de aplicativos da Web, em que o *confiança* configuração é médio.  
   
 ## <a name="mapping-data-from-multiple-tables"></a>Dados de mapeamento de várias tabelas  
  P. Os dados na minha entidade vêm de várias tabelas. Como posso mapeá-los?  
@@ -178,7 +178,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  R. Você pode criar uma exibição em um banco de dados e mapear a entidade para a exibição. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gera o mesmo SQL para exibições da mesma forma que faz para tabelas.  
   
 > [!NOTE]
->  O uso de exibições nesse cenário tem limitações. Essa abordagem funciona com mais segurança quando as operações realizadas no <xref:System.Data.Linq.Table%601> têm suporte pela exibição subjacente. Somente você sabe quais operações são desejadas. Por exemplo, a maioria dos aplicativos são somente leitura e executar outro número considerável `Create` / `Update` / `Delete` operações usando somente procedimentos armazenados em modos de exibição.  
+>  O uso de exibições nesse cenário tem limitações. Essa abordagem funciona com mais segurança quando as operações realizadas no <xref:System.Data.Linq.Table%601> têm suporte pela exibição subjacente. Somente você sabe quais operações são desejadas. Por exemplo, a maioria dos aplicativos são somente leitura, e outro número grande realiza `Create` / `Update` / `Delete` operações somente usando os procedimentos armazenados em modos de exibição.  
   
 ## <a name="connection-pooling"></a>Pool de conexões  
  P. Há uma construção que possa ajudar com o pool de <xref:System.Data.Linq.DataContext>?  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>O segundo DataContext não é atualizado  
  P. Eu usei uma instância do <xref:System.Data.Linq.DataContext> para armazenar valores no banco de dados. No entanto, um segundo <xref:System.Data.Linq.DataContext> no mesmo banco de dados não reflete os valores atualizados. A segunda instância do <xref:System.Data.Linq.DataContext> parece retornar os valores armazenados em cache.  
   
- R. Esse comportamento é padrão. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continua a retornar as mesmas instâncias/valores que você viu na primeira instância. Quando você faz atualizações, usa a simultaneidade otimista. Os dados originais são usados para verificar o estado atual do banco de dados e declarar que ainda estão de fato inalterados. Se eles forem alterados, um conflito ocorre e seu aplicativo deve resolvê-lo. Uma opção do aplicativo é redefinir o estado original para o estado atual do banco de dados e tentar novamente a atualização. Para obter mais informações, consulte [como: gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ R. Esse comportamento é padrão. O [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] continua a retornar as mesmas instâncias/valores que você viu na primeira instância. Quando você faz atualizações, usa a simultaneidade otimista. Os dados originais são usados para verificar o estado atual do banco de dados e declarar que ainda estão de fato inalterados. Se eles forem alterados, um conflito ocorre e seu aplicativo deve resolvê-lo. Uma opção do aplicativo é redefinir o estado original para o estado atual do banco de dados e tentar novamente a atualização. Para obter mais informações, confira [Como: Gerenciar conflitos de alteração](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Você também pode definir o <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> como falso, o que desativa o cache e o controle de alterações. Você pode então recuperar os valores mais recentes toda vez que consultar.  
   
@@ -199,7 +199,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  R. O modo somente leitura desativa a capacidade de o contexto controlar as alterações.  
   
-## <a name="see-also"></a>Consulte também  
- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [Segurança em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Referência](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Solução de problemas](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [Segurança em LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

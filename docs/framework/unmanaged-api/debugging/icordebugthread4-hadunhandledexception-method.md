@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704297"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>Método ICorDebugThread4::HadUnhandledException
 Indica se o thread nunca teve uma exceção sem tratamento.  
@@ -40,7 +40,7 @@ HRESULT GetBlockingObjects (
  [out] Um ponteiro para o endereço de uma enumeração ordenada de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) estruturas.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -48,18 +48,18 @@ HRESULT GetBlockingObjects (
 |S_FALSE|O thread nunca teve uma exceção sem tratamento.|  
   
 ## <a name="remarks"></a>Comentários  
- Este método indica se o thread nunca teve uma exceção sem tratamento. No momento do retorno de chamada de exceção sem tratamento é acionado ou anexação JIT nativo é iniciado, esse método é garantido para retornar S_OK. Não há nenhuma garantia de que o [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método retornará a exceção não tratada; no entanto, ele irá se o processo não ainda sido continua depois de obter o retorno de chamada de exceção sem tratamento ou após nativo de anexação JIT. Além disso, é possível (embora improvável) para ter mais de um thread com uma exceção sem tratamento no momento nativo de anexação JIT é disparado. Nesse caso, não há nenhuma maneira de determinar qual exceção acionada a anexação JIT.  
+ Este método indica se o thread nunca teve uma exceção sem tratamento. No momento, o retorno de chamada de exceção sem tratamento é acionado ou nativo de anexação JIT é iniciada, esse método é garantido para retornar S_OK. Não há nenhuma garantia de que o [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) método retornará a exceção sem tratamento; no entanto, ele se o processo não ainda foi continuado depois de obter o retorno de chamada de exceção sem tratamento ou após nativo de anexação JIT. Além disso, é possível (embora improvável) ter mais de um thread com uma exceção sem tratamento ao tempo nativo de anexação JIT é disparado. Nesse caso, não há nenhuma maneira de determinar qual exceção disparou a anexação JIT.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,12 +2,12 @@
 title: Terminologia do Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3b46a695f5984ec23f4a5ef28bd871d6d651c6ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684555"
 ---
 # <a name="entity-framework-terminology"></a>Terminologia do Entity Framework
 Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentação. Os links são fornecidos para tópicos relevantes em que há informações adicionais disponíveis.  
@@ -50,7 +50,7 @@ Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_
 |MSL (linguagem de especificação de mapeamento)|Uma linguagem baseada em XML usada para mapear itens definidos em um modelo conceitual para itens de um modelo de armazenamento.<br /><br /> Para obter mais informações, consulte [especificação de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |funções de modificação|Procedimentos armazenados que são usados para inserir, atualizar e excluir os dados que estão na fonte de dados. Essas funções são usadas no lugar dos comandos gerados do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. As funções de modificação são definidas pelo elemento `Function` no modelo de armazenamento. O [ModificationFunctionMapping](https://msdn.microsoft.com/library/b44b5b13-9937-448b-ba36-7a0cfefea782) elemento mapeia essas funções de modificação para inserir, atualizar e excluir operações em entidades definidas no modelo conceitual.|  
 |multiplicidade|O número de entidades que podem existir em cada lado de uma relação, conforme definido por uma associação. Também conhecido como cardinalidade.<br /><br /> Para obter mais informações, consulte [elemento End (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c) e [final da associação](../../../../../docs/framework/data/adonet/association-end.md).|  
-|vários conjuntos de entidades por tipo|A capacidade de um tipo de entidade a ser definido em mais de um conjunto de entidades.<br /><br /> Para obter mais informações, consulte [elemento EntitySet (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) e [como: definir um modelo com vários conjuntos de entidades por tipo](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
+|vários conjuntos de entidades por tipo|A capacidade de um tipo de entidade a ser definido em mais de um conjunto de entidades.<br /><br /> Para obter mais informações, consulte [elemento EntitySet (CSDL)](https://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) e [como: Definir um modelo com vários conjuntos de entidades por tipo](https://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |propriedade de navegação|A propriedade de um tipo de entidade que representa uma relação com outro tipo de entidade, conforme definido por uma associação. As propriedades de navegação são usadas para retornar objetos relacionados como <xref:System.Data.Objects.DataClasses.EntityCollection%601> ou <xref:System.Data.Objects.DataClasses.EntityReference%601>, dependendo da multiplicidade na outra extremidade da associação.<br /><br /> Para obter mais informações, consulte [elemento NavigationProperty (CSDL)](https://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) e [propriedade de navegação](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |caminhos de consulta|A representação de cadeia de caracteres de um caminho que especifica quais objetos serão retornados quando uma consulta de objeto for executada. Um caminho de consulta é definido chamando o método <xref:System.Data.Objects.ObjectQuery%601.Include%2A> em <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Para obter mais informações, consulte [Carregando objetos relacionados](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
 |contexto de objeto|Representa o contêiner de entidade definido no modelo conceitual. Ele contém uma conexão com a fonte de dados subjacente e fornece serviços como controle de alterações e resolução de identidade. Um contexto de objeto é representado por uma instância da classe <xref:System.Data.Objects.ObjectContext> ou `DbContext`.<br /><br /> `DbContext` faz parte do [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900). O Entity Framework 5.0 não faz parte do .NET Framework, mas é criado no .NET Framework 4.5. O Entity Framework 5.0 está disponível como a ['Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488) pacote. Para obter mais informações, consulte [versões do Entity Framework e controle de versão](https://go.microsoft.com/fwlink/?LinkId=234899).|  
@@ -67,16 +67,16 @@ Este tópico define os termos referenciados com frequência na [!INCLUDE[adonet_
 |função|O nome fornecido para cada `End` de uma associação para esclarecer a semântica da relação.<br /><br /> Para obter mais informações, consulte [elemento End (CSDL)](https://msdn.microsoft.com/library/04f3c141-95bc-424b-989b-1c071b449e7c) e [final da associação](../../../../../docs/framework/data/adonet/association-end.md).|  
 |propriedade escalar|A propriedade de uma entidade que é mapeada para um único campo no modelo de armazenamento.|  
 |entidade de rastreamento automático|Uma entidade criada a partir de um kit de ferramentas de transformação do modelo de texto (T4) que tem a capacidade de registrar alterações em propriedades escalares, complexas e de navegação.|  
-|tipo simples|Um tipo primitivo que é usado definir propriedades no modelo conceitual.<br /><br /> Para obter mais informações, consulte [tipos de modelo conceituais (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4) e [modelo de dados de entidade: tipos de dados primitivos](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).|  
-|entidade de divisão|Um tipo de entidade mapeado para dois tipos separados no modelo de armazenamento.<br /><br /> Para obter mais informações, consulte [como: definir um modelo com uma única entidade mapeada para duas tabelas](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed).|  
+|tipo simples|Um tipo primitivo que é usado definir propriedades no modelo conceitual.<br /><br /> Para obter mais informações, consulte [tipos de modelo conceituais (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4) e [modelo de dados de entidade: Tipos de dados primitivos](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).|  
+|entidade de divisão|Um tipo de entidade mapeado para dois tipos separados no modelo de armazenamento.<br /><br /> Para obter mais informações, confira [Como: Definir um modelo com uma única entidade mapeada para duas tabelas](https://msdn.microsoft.com/library/01762517-e4ab-439d-99e6-564ab7d6f3ed).|  
 |modelo de armazenamento|Uma definição do modelo lógico de dados em uma fonte de dados com suporte, como um banco de dados relacional. O modelo de armazenamento é definido em SSDL no arquivo .ssdl.<br /><br /> Para obter mais informações, consulte [modelagem e mapeamento](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md) e [especificação de SSDL](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |arquivo .ssdl|Um arquivo XML que contém o modelo de armazenamento, expresso em SSDL.|  
 |SSDL (linguagem de definição de esquema repositório)|Uma linguagem baseada em XML usada para definir os tipos de entidade, as associações, os contêineres de entidade, os conjuntos de entidades e os conjuntos de associações de um modelo de armazenamento que corresponde frequentemente a um esquema de banco de dados.<br /><br /> Para obter mais informações, consulte [especificação de SSDL](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |tabela por hierarquia|Um método de modelagem de uma hierarquia de tipo em um banco de dados que inclui os atributos de todos os tipos da hierarquia em uma tabela.|  
 |tabela por tipo|Um método de modelagem de uma hierarquia de tipo em um banco de dados que usa várias tabelas com relações um-para-um para modelar os vários tipos.|  
   
-## <a name="see-also"></a>Consulte também  
- [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
- [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Recursos do Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)
+## <a name="see-also"></a>Consulte também
+- [Entity Framework do ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
+- [Visão geral do Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [Introdução](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [Recursos do Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)

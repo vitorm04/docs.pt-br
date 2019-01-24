@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682950"
 ---
 # <a name="attached-events-overview"></a>Visão geral de eventos anexados
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define um componente de linguagem e o tipo de evento chamado de *evento anexado*. O conceito de um evento anexado permite que você adicione um manipulador para um evento específico a um elemento arbitrário em vez de um elemento que realmente define ou herda o evento. Nesse caso, nem o objeto potencialmente aumentando o evento, nem a instância de tratamento define ou caso contrário, é "proprietário" do evento.  
@@ -91,7 +91,7 @@ ms.locfileid: "47196337"
   
  No entanto, se você estiver definindo um evento anexado personalizado com base nas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de basear os eventos anexados na <xref:System.Windows.RoutedEvent>, você pode usar <xref:System.Windows.UIElement.RaiseEvent%2A> para gerar um evento de qualquer <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement>. Gerar um evento roteado (anexado ou não) requer que você declare um determinado elemento na árvore de elementos como a origem do evento; Essa fonte é relatada como o <xref:System.Windows.UIElement.RaiseEvent%2A> chamador. Determinar qual elemento é relatado como a fonte na árvore é responsabilidade do serviço  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Sintaxe XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML e classes personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de eventos roteados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Sintaxe XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [XAML e classes personalizadas para WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

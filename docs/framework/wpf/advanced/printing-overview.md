@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 04ea64f0e6563012a3b272306df6be4575ed7659
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695602"
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
 Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windows Presentation Foundation (WPF) têm um novo conjunto avançado de gerenciamento de sistema de impressão e imprimir [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Com o [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], alguns desses aprimoramentos do sistema de impressão também estão disponíveis para os desenvolvedores que criam aplicativos do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e desenvolvedores que usam código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] e o caminho de impressão [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -78,7 +78,7 @@ Com o Microsoft .NET Framework, os desenvolvedores de aplicativos usando o Windo
  Para acessar o conjunto completo de recursos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], a [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] de impressão avançada deve ser usada. Várias [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] relevantes são descritas em mais detalhes abaixo. Para obter uma lista completa dos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] caminho de impressão [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], consulte o <xref:System.Windows.Xps> e <xref:System.Printing> referências de namespace.  
   
 #### <a name="printticket-and-printcapabilities"></a>PrintTicket e PrintCapabilities  
- O <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes são a base da avançada [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] recursos. Os dois tipos de objetos são estruturas formatadas [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] de recursos orientados a impressão, como agrupamentos, impressão de dois lados, grampeamento, etc. Essas estruturas são definidas pelo esquema de impressão. Um <xref:System.Printing.PrintTicket> instrui uma impressora sobre como processar um trabalho de impressão. O <xref:System.Printing.PrintCapabilities> classe define os recursos de uma impressora. Ao consultar os recursos de uma impressora, um <xref:System.Printing.PrintTicket> podem ser criados que tira total proveito de uma impressora recursos suportados. Da mesma forma, os recursos sem suporte podem ser evitados.  
+ O <xref:System.Printing.PrintTicket> e <xref:System.Printing.PrintCapabilities> classes são a base da avançada [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] recursos. Os dois tipos de objetos são estruturas formatadas [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] de recursos orientados a impressão, como ordenações, impressão de dois lados, grampeamento, etc. Essas estruturas são definidas pelo esquema de impressão. Um <xref:System.Printing.PrintTicket> instrui uma impressora sobre como processar um trabalho de impressão. O <xref:System.Printing.PrintCapabilities> classe define os recursos de uma impressora. Ao consultar os recursos de uma impressora, um <xref:System.Printing.PrintTicket> podem ser criados que tira total proveito de uma impressora recursos suportados. Da mesma forma, os recursos sem suporte podem ser evitados.  
   
  O exemplo a seguir demonstra como consultar o <xref:System.Printing.PrintCapabilities> de uma impressora e criar um <xref:System.Printing.PrintTicket> usando código.  
   
@@ -134,16 +134,16 @@ Para aplicativos que não exigem a funcionalidade ou suporte [!INCLUDE[TLA2#tla_
   
 -   **Compactação ZIP**. Todos os documentos [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] usam a compactação ZIP.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Controls.PrintDialog>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.PrintQueue>  
- [Tópicos de instruções](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)  
- [Serialização e armazenamento de documentos](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [Microsoft XPS Document conversor (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Controls.PrintDialog>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.PrintQueue>
+- [Tópicos de instruções](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)
+- [Serialização e armazenamento de documentos](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Microsoft XPS Document conversor (MXDC)](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)
