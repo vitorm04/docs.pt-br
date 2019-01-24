@@ -1,17 +1,11 @@
 ---
-title: Delegados – Guia de Programação em C#
+title: 'Delegados – Guia de Programação em C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240431"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
 Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
@@ -30,7 +24,7 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
 ## <a name="delegates-overview"></a>Visão geral de delegados  
  Os delegados têm as seguintes propriedades:  
   
--   Delegados são semelhantes a ponteiros de função do C++, mas delegados são totalmente orientados a objeto e, ao contrário dos ponteiros de C++ para funções de membro, os delegados encapsulam uma instância do objeto e um método.
+-   Representantes são semelhantes a ponteiros de função do C++, mas delegados são totalmente orientados a objeto e, ao contrário dos ponteiros de C++ para funções de membro, os delegados encapsulam uma instância do objeto e um método.
   
 -   Os delegados permitem que métodos sejam passados como parâmetros.  
   
@@ -70,6 +64,6 @@ Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md)
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Delegate>  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
+- <xref:System.Delegate>
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
 - [Eventos](../../../csharp/programming-guide/events/index.md)

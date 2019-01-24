@@ -1,17 +1,11 @@
 ---
-title: Erros do compilador de C#
+title: 'Erros do compilador de C#'
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, compiler errors
-- Visual C# compiler, errors
-- errors [C#]
+  - 'C# language, compiler errors'
+  - 'Visual C# compiler, errors'
+  - 'errors [C#]'
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706392"
 ---
 # <a name="c-compiler-errors"></a>Erros do compilador de C#
 
@@ -31,8 +25,8 @@ Alguns erros do compilador do C# têm tópicos correspondentes que explicam por 
   
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Infelizmente, não há informações específicas sobre este erro de C#](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
-- [Página de Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
-- [/warn (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Infelizmente, não há informações específicas sobre este erro de C#](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [Página de Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [/warn (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
 - [/nowarn (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)

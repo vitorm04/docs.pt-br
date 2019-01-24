@@ -4,13 +4,8 @@ description: Este artigo ensina como controlar a versão do SDK do .NET Core (se
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e4ab5e3a6dd487437e267aec042639c70fdc61ad
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334802"
 ---
+
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
 O .NET Core refere-se ao Tempo de Execução do .NET Core e ao SDK do .NET Core, que contém as ferramentas que necessárias para desenvolver aplicativos. Os SDKs do .NET Core são projetados para funcionar com qualquer versão anterior do Tempo de Execução do .NET Core. Este artigo explica o tempo de execução e a estratégia de versão do SDK. Uma explicação de números de versão do .NET Standard pode ser encontrada no artigo que faz a introdução do [.NET Standard](../../standard/net-standard.md#net-implementation-support).
@@ -106,8 +101,8 @@ Cada versão do .NET Core implementa uma versão do .NET Standard. Implementar u
 
 ## <a name="see-also"></a>Consulte também
 
-* [Estruturas de destino](../../standard/frameworks.md)  
-* [Pacote de distribuição do .NET Core](../build/distribution-packaging.md)  
-* [Folha informativa sobre o ciclo de vida do suporte do .NET Core](https://www.microsoft.com/net/core/support)  
-* [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (Associação de versão do .NET Core 2+)  
-* [Imagens do Docker para .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Estruturas de destino](../../standard/frameworks.md)
+- [Pacote de distribuição do .NET Core](../build/distribution-packaging.md)
+- [Folha informativa sobre o ciclo de vida do suporte do .NET Core](https://www.microsoft.com/net/core/support)
+- [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (Associação de versão do .NET Core 2+)
+- [Imagens do Docker para .NET Core](https://hub.docker.com/r/microsoft/dotnet/)

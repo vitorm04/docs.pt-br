@@ -1,18 +1,12 @@
 ---
-title: Diretivas de pré-processador do C#
+title: 'Diretivas de pré-processador do C#'
 ms.date: 07/20/2015
 f1_keywords:
-- cs.preprocessor
+  - cs.preprocessor
 helpviewer_keywords:
-- preprocessor directives [C#]
-- keywords [C#], preprocessor directives
+  - 'preprocessor directives [C#]'
+  - 'keywords [C#], preprocessor directives'
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036085"
 ---
 # <a name="c-preprocessor-directives"></a>Diretivas de pré-processador do C#
 Esta seção contém informações sobre as seguintes diretivas de pré-processador do C#:
@@ -40,5 +34,5 @@ Uma diretiva de pré-processador deve ser a única instrução em uma linha.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
+- [Referência de C#](../../../csharp/language-reference/index.md)
 - [Guia de Programação em C#](../../../csharp/programming-guide/index.md)

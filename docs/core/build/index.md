@@ -4,13 +4,8 @@ description: Saiba como compilar o .NET Core e a CLI do .NET Core no código-fon
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170061"
 ---
+
 # <a name="build-net-core-from-source"></a>Compilar Build .NET Core da origem
 
 A capacidade de criar o .NET Core do seu código-fonte é importante de várias maneiras: facilita compatibilizar o .NET Core com novas plataformas, permite contribuições e correções no produto e permite a criação de versões personalizadas do .NET.
@@ -101,6 +96,6 @@ Use o `dotnet` executável de *artefatos/{os}-{arch}/stage2* para testar a CLI r
 
 ## <a name="see-also"></a>Veja também
 
-* [Common Language Runtime do .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [Guia do Desenvolvedor da CLI do .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [Pacote de distribuição do .NET Core](./distribution-packaging.md)
+- [Common Language Runtime do .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Guia do Desenvolvedor da CLI do .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [Pacote de distribuição do .NET Core](./distribution-packaging.md)

@@ -1,23 +1,17 @@
 ---
-title: Tipos – Guia de Programação em C#
+title: 'Tipos – Guia de Programação em C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- value types [C#]
-- reference types [C#]
-- types [C#]
-- C# language, data types
-- common type system [C#]
-- data types [C#]
-- C# language, types
-- strong typing [C#]
+  - 'value types [C#]'
+  - 'reference types [C#]'
+  - 'types [C#]'
+  - 'C# language, data types'
+  - 'common type system [C#]'
+  - 'data types [C#]'
+  - 'C# language, types'
+  - 'strong typing [C#]'
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 74362642a57bcdffc51a447ef044dc899cc83b71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237214"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 ## <a name="types-variables-and-values"></a>Tipos, variáveis e valores  
@@ -186,7 +180,7 @@ stringList.Add(4);
   
 ## <a name="see-also"></a>Consulte também
 
-- [Referência de C#](../../../csharp/language-reference/index.md)  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Conversão de tipos de dados XML](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [Referência de C#](../../../csharp/language-reference/index.md)
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Conversão de tipos de dados XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md)

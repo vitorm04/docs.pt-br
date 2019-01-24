@@ -1,18 +1,12 @@
 ---
-title: Exceções e manipulação de exceções – Guia de Programação em C#
+title: 'Exceções e manipulação de exceções – Guia de Programação em C#'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- exception handling [C#]
-- exceptions [C#]
-- C# language, exceptions
+  - 'exception handling [C#]'
+  - 'exceptions [C#]'
+  - 'C# language, exceptions'
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236837"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Exceções e manipulação de exceções (Guia de Programação em C#)
 Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar com quaisquer situações excepcionais ou inesperadas que ocorram quando um programa for executado. A manipulação de exceção usa as palavras-chave `try`, `catch` e `finally` para executar ações que podem não ser bem-sucedidas, lidar com falhas quando decidir se é razoável fazer isso e limpar recursos posteriormente. As exceções podem ser geradas pelo CLR (Common Language Runtime), pelo .NET Framework ou por quaisquer bibliotecas de terceiros, ou pelo código do aplicativo. As exceções são criadas usando a palavra-chave `throw`.  
@@ -67,11 +61,11 @@ Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.m
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.SystemException>  
-- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)  
-- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)  
-- [throw](../../../csharp/language-reference/keywords/throw.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
-- [Exceções](../../../standard/exceptions/index.md)  
+- <xref:System.SystemException>
+- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+- [throw](../../../csharp/language-reference/keywords/throw.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Exceções](../../../standard/exceptions/index.md)
