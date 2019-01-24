@@ -17,40 +17,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e96dccdd2836eebb08e88fe09dda531cd62baeee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e6f739902738f05e103cce9365a3afc0379f9b0e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646978"
 ---
-# <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="4f881-102">Método ICorDebugProcess5::GetArrayLayout</span><span class="sxs-lookup"><span data-stu-id="4f881-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
-<span data-ttu-id="4f881-103">Fornece informações sobre o layout dos tipos de matriz.</span><span class="sxs-lookup"><span data-stu-id="4f881-103">Provides information about the layout of array types.</span></span>  
+# <a name="icordebugprocess5getarraylayout-method"></a><span data-ttu-id="392e0-102">Método ICorDebugProcess5::GetArrayLayout</span><span class="sxs-lookup"><span data-stu-id="392e0-102">ICorDebugProcess5::GetArrayLayout Method</span></span>
+<span data-ttu-id="392e0-103">Fornece informações sobre o layout dos tipos de matriz.</span><span class="sxs-lookup"><span data-stu-id="392e0-103">Provides information about the layout of array types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f881-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4f881-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="392e0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="392e0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetArrayLayout(    [in] COR_TYPEID id,     [out] COR_ARRAY_LAYOUT *pLayout);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4f881-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4f881-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="392e0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="392e0-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="4f881-106">[in] Um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token que especifica a matriz cujo layout é desejado.</span><span class="sxs-lookup"><span data-stu-id="4f881-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the array whose layout is desired.</span></span>  
+ <span data-ttu-id="392e0-106">[in] Um [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token que especifica a matriz cujo layout é desejado.</span><span class="sxs-lookup"><span data-stu-id="392e0-106">[in] A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) token that specifies the array whose layout is desired.</span></span>  
   
  `pLayout`  
- <span data-ttu-id="4f881-107">[out] Um ponteiro para um [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) estrutura que contém informações sobre o layout da matriz na memória.</span><span class="sxs-lookup"><span data-stu-id="4f881-107">[out] A pointer to a [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) structure that contains information about the layout of the array in memory.</span></span>  
+ <span data-ttu-id="392e0-107">[out] Um ponteiro para um [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) estrutura que contém informações sobre o layout da matriz na memória.</span><span class="sxs-lookup"><span data-stu-id="392e0-107">[out] A pointer to a [COR_ARRAY_LAYOUT](../../../../docs/framework/unmanaged-api/debugging/cor-array-layout-structure.md) structure that contains information about the layout of the array in memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4f881-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="4f881-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="392e0-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="392e0-108">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f881-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4f881-109">Requirements</span></span>  
- <span data-ttu-id="4f881-110">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f881-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="392e0-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="392e0-109">Requirements</span></span>  
+ <span data-ttu-id="392e0-110">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="392e0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f881-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4f881-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="392e0-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="392e0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4f881-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4f881-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="392e0-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="392e0-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4f881-113">**Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f881-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="392e0-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="392e0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f881-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4f881-114">See Also</span></span>  
- [<span data-ttu-id="4f881-115">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="4f881-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [<span data-ttu-id="4f881-116">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="4f881-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="392e0-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="392e0-114">See also</span></span>
+- [<span data-ttu-id="392e0-115">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="392e0-115">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="392e0-116">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="392e0-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcdb5883e109d7e0c73c8fb76ee61b52cf23091f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bfc576e1b4f0bf1666dcd585a24dbfa398e9abde
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715849"
 ---
-# <a name="corpubenumprocess-enumeration"></a><span data-ttu-id="a0e37-102">Enumeração COR_PUB_ENUMPROCESS</span><span class="sxs-lookup"><span data-stu-id="a0e37-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
-<span data-ttu-id="a0e37-103">Identifica o tipo de processo que será enumerado.</span><span class="sxs-lookup"><span data-stu-id="a0e37-103">Identifies the type of process to be enumerated.</span></span>  
+# <a name="corpubenumprocess-enumeration"></a><span data-ttu-id="dea61-102">Enumeração COR_PUB_ENUMPROCESS</span><span class="sxs-lookup"><span data-stu-id="dea61-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
+<span data-ttu-id="dea61-103">Identifica o tipo de processo que será enumerado.</span><span class="sxs-lookup"><span data-stu-id="dea61-103">Identifies the type of process to be enumerated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0e37-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a0e37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dea61-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="dea61-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,23 +34,23 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a0e37-105">Membros</span><span class="sxs-lookup"><span data-stu-id="a0e37-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dea61-105">Membros</span><span class="sxs-lookup"><span data-stu-id="dea61-105">Members</span></span>  
   
-|<span data-ttu-id="a0e37-106">Nome do membro</span><span class="sxs-lookup"><span data-stu-id="a0e37-106">Member name</span></span>|<span data-ttu-id="a0e37-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="a0e37-107">Description</span></span>|  
+|<span data-ttu-id="dea61-106">Nome do membro</span><span class="sxs-lookup"><span data-stu-id="dea61-106">Member name</span></span>|<span data-ttu-id="dea61-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="dea61-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="a0e37-108">Um processo gerenciado.</span><span class="sxs-lookup"><span data-stu-id="a0e37-108">A managed process.</span></span>|  
+|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="dea61-108">Um processo gerenciado.</span><span class="sxs-lookup"><span data-stu-id="dea61-108">A managed process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0e37-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="a0e37-109">Remarks</span></span>  
- <span data-ttu-id="a0e37-110">A versão atual da API de depuração não gerenciada enumera somente os processos gerenciados.</span><span class="sxs-lookup"><span data-stu-id="a0e37-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dea61-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="dea61-109">Remarks</span></span>  
+ <span data-ttu-id="dea61-110">A versão atual da API de depuração não gerenciada enumera somente os processos gerenciados.</span><span class="sxs-lookup"><span data-stu-id="dea61-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0e37-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a0e37-111">Requirements</span></span>  
- <span data-ttu-id="a0e37-112">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0e37-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dea61-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="dea61-111">Requirements</span></span>  
+ <span data-ttu-id="dea61-112">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dea61-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0e37-113">**Cabeçalho:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="a0e37-113">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="dea61-113">**Cabeçalho:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="dea61-113">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="a0e37-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0e37-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dea61-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dea61-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0e37-115">**Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0e37-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="dea61-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dea61-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0e37-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a0e37-116">See Also</span></span>  
- [<span data-ttu-id="a0e37-117">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="a0e37-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="dea61-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dea61-116">See also</span></span>
+- [<span data-ttu-id="dea61-117">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="dea61-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

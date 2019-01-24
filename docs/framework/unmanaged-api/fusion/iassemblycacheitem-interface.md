@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d89a531ad09e6865bd9c7dad00c1d8c1840fab8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662160"
 ---
-# <a name="iassemblycacheitem-interface"></a><span data-ttu-id="f8944-102">Interface IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="f8944-102">IAssemblyCacheItem Interface</span></span>
-<span data-ttu-id="f8944-103">Representa um único assembly no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="f8944-103">Represents a single assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheitem-interface"></a><span data-ttu-id="ff051-102">Interface IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="ff051-102">IAssemblyCacheItem Interface</span></span>
+<span data-ttu-id="ff051-103">Representa um único assembly no cache de assembly global.</span><span class="sxs-lookup"><span data-stu-id="ff051-103">Represents a single assembly in the global assembly cache.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f8944-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="f8944-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ff051-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="ff051-104">Methods</span></span>  
   
-|<span data-ttu-id="f8944-105">Método</span><span class="sxs-lookup"><span data-stu-id="f8944-105">Method</span></span>|<span data-ttu-id="f8944-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="f8944-106">Description</span></span>|  
+|<span data-ttu-id="ff051-105">Método</span><span class="sxs-lookup"><span data-stu-id="ff051-105">Method</span></span>|<span data-ttu-id="ff051-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="ff051-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f8944-107">Método AbortItem</span><span class="sxs-lookup"><span data-stu-id="f8944-107">AbortItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|<span data-ttu-id="f8944-108">Permite que o assembly no cache de assembly global executar operações de limpeza antes que ele seja liberado.</span><span class="sxs-lookup"><span data-stu-id="f8944-108">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>|  
-|[<span data-ttu-id="f8944-109">Método Commit</span><span class="sxs-lookup"><span data-stu-id="f8944-109">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|<span data-ttu-id="f8944-110">Confirma a referência de assembly em cache na memória.</span><span class="sxs-lookup"><span data-stu-id="f8944-110">Commits the cached assembly reference to memory.</span></span>|  
-|[<span data-ttu-id="f8944-111">Método CreateStream</span><span class="sxs-lookup"><span data-stu-id="f8944-111">CreateStream Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|<span data-ttu-id="f8944-112">Cria um fluxo com o nome especificado e o formato.</span><span class="sxs-lookup"><span data-stu-id="f8944-112">Creates a stream with the specified name and format.</span></span>|  
+|[<span data-ttu-id="ff051-107">Método AbortItem</span><span class="sxs-lookup"><span data-stu-id="ff051-107">AbortItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|<span data-ttu-id="ff051-108">Permite que o assembly no cache de assembly global executar operações de limpeza antes do lançamento.</span><span class="sxs-lookup"><span data-stu-id="ff051-108">Allows the assembly in the global assembly cache to perform cleanup operations before it is released.</span></span>|  
+|[<span data-ttu-id="ff051-109">Método Commit</span><span class="sxs-lookup"><span data-stu-id="ff051-109">Commit Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|<span data-ttu-id="ff051-110">Confirma a referência de assembly em cache na memória.</span><span class="sxs-lookup"><span data-stu-id="ff051-110">Commits the cached assembly reference to memory.</span></span>|  
+|[<span data-ttu-id="ff051-111">Método CreateStream</span><span class="sxs-lookup"><span data-stu-id="ff051-111">CreateStream Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|<span data-ttu-id="ff051-112">Cria um fluxo com o nome especificado e o formato.</span><span class="sxs-lookup"><span data-stu-id="ff051-112">Creates a stream with the specified name and format.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f8944-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f8944-113">Requirements</span></span>  
- <span data-ttu-id="f8944-114">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8944-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ff051-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ff051-113">Requirements</span></span>  
+ <span data-ttu-id="ff051-114">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff051-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8944-115">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f8944-115">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="ff051-115">**Cabeçalho:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ff051-115">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f8944-116">**Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8944-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ff051-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff051-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8944-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f8944-117">See Also</span></span>  
- [<span data-ttu-id="f8944-118">Interfaces de fusão</span><span class="sxs-lookup"><span data-stu-id="f8944-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [<span data-ttu-id="f8944-119">Cache de assembly global</span><span class="sxs-lookup"><span data-stu-id="f8944-119">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)  
- [<span data-ttu-id="f8944-120">Interface IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="f8944-120">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ff051-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ff051-117">See also</span></span>
+- [<span data-ttu-id="ff051-118">Interfaces de fusão</span><span class="sxs-lookup"><span data-stu-id="ff051-118">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="ff051-119">Cache de assembly global</span><span class="sxs-lookup"><span data-stu-id="ff051-119">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="ff051-120">Interface IAssemblyCache</span><span class="sxs-lookup"><span data-stu-id="ff051-120">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

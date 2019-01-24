@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e060fc62a93d98d8b86a244db1bc53a769cb31c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717162"
 ---
-# <a name="cordebugexceptionobjectstackframe-structure"></a><span data-ttu-id="b3556-102">Estrutura CorDebugExceptionObjectStackFrame</span><span class="sxs-lookup"><span data-stu-id="b3556-102">CorDebugExceptionObjectStackFrame Structure</span></span>
-<span data-ttu-id="b3556-103">Representa informações de quadro de pilha de um objeto de exceção.</span><span class="sxs-lookup"><span data-stu-id="b3556-103">Represents stack frame information from an exception object.</span></span>  
+# <a name="cordebugexceptionobjectstackframe-structure"></a><span data-ttu-id="e1c55-102">Estrutura CorDebugExceptionObjectStackFrame</span><span class="sxs-lookup"><span data-stu-id="e1c55-102">CorDebugExceptionObjectStackFrame Structure</span></span>
+<span data-ttu-id="e1c55-103">Representa informações de quadro de pilha de um objeto de exceção.</span><span class="sxs-lookup"><span data-stu-id="e1c55-103">Represents stack frame information from an exception object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3556-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b3556-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1c55-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e1c55-104">Syntax</span></span>  
   
 ```  
 typedef struct CorDebugExceptionObjectStackFrame {  
@@ -37,27 +37,27 @@ typedef struct CorDebugExceptionObjectStackFrame {
 } CorDebugExceptionObjectStackFrame;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b3556-105">Membros</span><span class="sxs-lookup"><span data-stu-id="b3556-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e1c55-105">Membros</span><span class="sxs-lookup"><span data-stu-id="e1c55-105">Members</span></span>  
   
-|<span data-ttu-id="b3556-106">Membro</span><span class="sxs-lookup"><span data-stu-id="b3556-106">Member</span></span>|<span data-ttu-id="b3556-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="b3556-107">Description</span></span>|  
+|<span data-ttu-id="e1c55-106">Membro</span><span class="sxs-lookup"><span data-stu-id="e1c55-106">Member</span></span>|<span data-ttu-id="e1c55-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="e1c55-107">Description</span></span>|  
 |------------|-----------------|  
-|`pModule`|<span data-ttu-id="b3556-108">Um ponteiro para o objeto ICorDebugModule para o quadro atual.</span><span class="sxs-lookup"><span data-stu-id="b3556-108">A pointer to the ICorDebugModule object for the current frame.</span></span>|  
-|`ip`|<span data-ttu-id="b3556-109">O valor do ponteiro de instrução (EIP/RIP) para o quadro atual.</span><span class="sxs-lookup"><span data-stu-id="b3556-109">The value of the instruction pointer (EIP/RIP) for the current frame.</span></span>|  
-|`methodDef`|<span data-ttu-id="b3556-110">O token de método para o quadro atual.</span><span class="sxs-lookup"><span data-stu-id="b3556-110">The method token for the current frame.</span></span>|  
-|`isLastForeignExceptionFrame`|<span data-ttu-id="b3556-111">Um valor que indica se o quadro é o último quadro de uma exceção externa.</span><span class="sxs-lookup"><span data-stu-id="b3556-111">A value that indicates whether the frame is the last frame in a foreign exception.</span></span>|  
+|`pModule`|<span data-ttu-id="e1c55-108">Um ponteiro para o objeto ICorDebugModule para o quadro atual.</span><span class="sxs-lookup"><span data-stu-id="e1c55-108">A pointer to the ICorDebugModule object for the current frame.</span></span>|  
+|`ip`|<span data-ttu-id="e1c55-109">O valor do ponteiro de instrução (EIP/RIP) para o quadro atual.</span><span class="sxs-lookup"><span data-stu-id="e1c55-109">The value of the instruction pointer (EIP/RIP) for the current frame.</span></span>|  
+|`methodDef`|<span data-ttu-id="e1c55-110">O token de método para o quadro atual.</span><span class="sxs-lookup"><span data-stu-id="e1c55-110">The method token for the current frame.</span></span>|  
+|`isLastForeignExceptionFrame`|<span data-ttu-id="e1c55-111">Um valor que indica se o quadro é o último quadro em uma exceção externa.</span><span class="sxs-lookup"><span data-stu-id="e1c55-111">A value that indicates whether the frame is the last frame in a foreign exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b3556-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="b3556-112">Remarks</span></span>  
- <span data-ttu-id="b3556-113">O chamador deve liberar o ponteiro para o objeto ICorDebugModule depois que ele não está mais em uso.</span><span class="sxs-lookup"><span data-stu-id="b3556-113">The caller must release the pointer to the ICorDebugModule object once it is no longer in use.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1c55-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="e1c55-112">Remarks</span></span>  
+ <span data-ttu-id="e1c55-113">O chamador deve liberar o ponteiro para o objeto ICorDebugModule depois que ele não está mais em uso.</span><span class="sxs-lookup"><span data-stu-id="e1c55-113">The caller must release the pointer to the ICorDebugModule object once it is no longer in use.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3556-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b3556-114">Requirements</span></span>  
- <span data-ttu-id="b3556-115">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3556-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1c55-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e1c55-114">Requirements</span></span>  
+ <span data-ttu-id="e1c55-115">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1c55-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3556-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b3556-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e1c55-116">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1c55-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b3556-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3556-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e1c55-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1c55-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b3556-118">**Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3556-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e1c55-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1c55-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3556-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b3556-119">See Also</span></span>  
- [<span data-ttu-id="b3556-120">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="b3556-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="b3556-121">Depuração</span><span class="sxs-lookup"><span data-stu-id="b3556-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="e1c55-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e1c55-119">See also</span></span>
+- [<span data-ttu-id="e1c55-120">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="e1c55-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="e1c55-121">Depuração</span><span class="sxs-lookup"><span data-stu-id="e1c55-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

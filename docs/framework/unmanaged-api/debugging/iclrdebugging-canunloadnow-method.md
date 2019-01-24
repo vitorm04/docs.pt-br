@@ -17,49 +17,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 557b53df3669bb0567e4d1261124ac725c796c70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8fd0a7322437cb89fe62729f86f5ce8005ed3b5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646744"
 ---
-# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="51ddd-102">Método ICLRDebugging::CanUnloadNow</span><span class="sxs-lookup"><span data-stu-id="51ddd-102">ICLRDebugging::CanUnloadNow Method</span></span>
-<span data-ttu-id="51ddd-103">Determina se uma biblioteca que foi fornecida por um [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface ainda está em uso ou pode ser descarregado.</span><span class="sxs-lookup"><span data-stu-id="51ddd-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
+# <a name="iclrdebuggingcanunloadnow-method"></a><span data-ttu-id="2826d-102">Método ICLRDebugging::CanUnloadNow</span><span class="sxs-lookup"><span data-stu-id="2826d-102">ICLRDebugging::CanUnloadNow Method</span></span>
+<span data-ttu-id="2826d-103">Determina se uma biblioteca que foi fornecida por um [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface ainda está em uso ou pode ser descarregado.</span><span class="sxs-lookup"><span data-stu-id="2826d-103">Determines whether a library that was provided by an [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) interface is still in use or can be unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51ddd-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="51ddd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2826d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2826d-104">Syntax</span></span>  
   
 ```  
 HRESULT CanUnloadNow(HMODULE hModule);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="51ddd-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="51ddd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2826d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="2826d-105">Parameters</span></span>  
  `hmodule`  
- <span data-ttu-id="51ddd-106">[in] O endereço base de um módulo no processo de destino.</span><span class="sxs-lookup"><span data-stu-id="51ddd-106">[in] The base address of a module in the target process.</span></span>  
+ <span data-ttu-id="2826d-106">[in] O endereço básico de um módulo no processo de destino.</span><span class="sxs-lookup"><span data-stu-id="2826d-106">[in] The base address of a module in the target process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51ddd-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="51ddd-107">Return Value</span></span>  
- <span data-ttu-id="51ddd-108">Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="51ddd-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2826d-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="2826d-107">Return Value</span></span>  
+ <span data-ttu-id="2826d-108">Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.</span><span class="sxs-lookup"><span data-stu-id="2826d-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="51ddd-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="51ddd-109">HRESULT</span></span>|<span data-ttu-id="51ddd-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="51ddd-110">Description</span></span>|  
+|<span data-ttu-id="2826d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2826d-109">HRESULT</span></span>|<span data-ttu-id="2826d-110">Descrição</span><span class="sxs-lookup"><span data-stu-id="2826d-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="51ddd-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="51ddd-111">S_OK</span></span>|<span data-ttu-id="51ddd-112">O módulo que é referenciado por `hmodule` pode ser descarregado.</span><span class="sxs-lookup"><span data-stu-id="51ddd-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
-|<span data-ttu-id="51ddd-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="51ddd-113">S_FALSE</span></span>|<span data-ttu-id="51ddd-114">O módulo que é referenciado por `hmodule` ainda está em uso.</span><span class="sxs-lookup"><span data-stu-id="51ddd-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
-|<span data-ttu-id="51ddd-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="51ddd-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="51ddd-116">O módulo indicado não é um módulo CLR.</span><span class="sxs-lookup"><span data-stu-id="51ddd-116">The indicated module is not a CLR module.</span></span>|  
+|<span data-ttu-id="2826d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="2826d-111">S_OK</span></span>|<span data-ttu-id="2826d-112">O módulo que é referenciado por `hmodule` pode ser descarregado.</span><span class="sxs-lookup"><span data-stu-id="2826d-112">The module that is referenced by `hmodule` can be unloaded.</span></span>|  
+|<span data-ttu-id="2826d-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="2826d-113">S_FALSE</span></span>|<span data-ttu-id="2826d-114">O módulo que é referenciado por `hmodule` ainda está em uso.</span><span class="sxs-lookup"><span data-stu-id="2826d-114">The module that is referenced by `hmodule` is still in use.</span></span>|  
+|<span data-ttu-id="2826d-115">COR_E_NOT_CLR</span><span class="sxs-lookup"><span data-stu-id="2826d-115">COR_E_NOT_CLR</span></span>|<span data-ttu-id="2826d-116">O módulo indicado não é um módulo CLR.</span><span class="sxs-lookup"><span data-stu-id="2826d-116">The indicated module is not a CLR module.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="51ddd-117">Exceções</span><span class="sxs-lookup"><span data-stu-id="51ddd-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="2826d-117">Exceções</span><span class="sxs-lookup"><span data-stu-id="2826d-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="51ddd-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="51ddd-118">Remarks</span></span>  
- <span data-ttu-id="51ddd-119">Esse método verifica se todas as instâncias do `ICorDebug*` interfaces foram lançadas e nenhum thread está dentro de uma chamada para o [Iclrdebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="51ddd-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2826d-118">Comentários</span><span class="sxs-lookup"><span data-stu-id="2826d-118">Remarks</span></span>  
+ <span data-ttu-id="2826d-119">Esse método verifica se todas as instâncias do `ICorDebug*` interfaces foram lançadas e nenhum thread está atualmente em uma chamada para o [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="2826d-119">This method checks to see if all instances of `ICorDebug*` interfaces have been released and no thread is currently within a call to the [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51ddd-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="51ddd-120">Requirements</span></span>  
- <span data-ttu-id="51ddd-121">**Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51ddd-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2826d-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2826d-120">Requirements</span></span>  
+ <span data-ttu-id="2826d-121">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2826d-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="51ddd-122">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="51ddd-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2826d-122">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2826d-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="51ddd-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="51ddd-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2826d-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2826d-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="51ddd-124">**Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51ddd-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="2826d-124">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2826d-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51ddd-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="51ddd-125">See Also</span></span>  
- [<span data-ttu-id="51ddd-126">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="51ddd-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="51ddd-127">Depuração</span><span class="sxs-lookup"><span data-stu-id="51ddd-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="2826d-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2826d-125">See also</span></span>
+- [<span data-ttu-id="2826d-126">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="2826d-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2826d-127">Depuração</span><span class="sxs-lookup"><span data-stu-id="2826d-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
