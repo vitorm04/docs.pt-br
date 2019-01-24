@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: d865f76b1a3e1ef72717fe790d3f1bc8895f8f58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0756eb0917e812101006f000db07f55f39afda57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597119"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Populando um DataSet a partir de um DataAdapter
 O [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> é uma representação de dados residentes na memória que fornecem um modelo de programação relacional, consistente e independente da fonte de dados. O `DataSet` representa um conjunto completo de dados, que inclui tabelas, restrições e relações entre as tabelas. Como `DataSet` é independente da fonte de dados, um `DataSet` pode incluir o local de dados para o aplicativo, e os dados de várias fontes de dados. A interação com fontes de dados existente é controlada com o `DataAdapter`.  
@@ -165,7 +165,7 @@ adapter.Fill(customers, "Customers");
   
  Quando a operação de `Fill` estiver concluída, o `DataSet` conterá duas tabelas: `Customers` e `CustomersOrders`, onde `CustomersOrders` representa a coluna de capítulos. Uma coluna adicional chamada `Orders` é adicionada à tabela `Customers` e uma coluna extra chamada `CustomersOrders` é adicionada à tabela `CustomersOrders`. A coluna `Orders` na tabela `Customers` é definida para incrementar automaticamente. Um `DataRelation`, `CustomersOrders`, é criado usando as colunas que foram adicionadas às tabelas com `Customers` como a tabela pai. As tabelas a seguir mostram alguns resultados de exemplo.  
   
-### <a name="tablename-customers"></a>TableName: Customers  
+### <a name="tablename-customers"></a>TableName: Clientes  
   
 |CustomerID|CompanyName|Orders|  
 |----------------|-----------------|------------|  
@@ -181,9 +181,9 @@ adapter.Fill(customers, "Customers");
 |ANATR|10308|1|  
 |ANATR|10625|1|  
   
-## <a name="see-also"></a>Consulte também  
- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)  
- [Modificando dados com um DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [DataAdapters e DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Data Type Mappings in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)
+- [Modificando dados com um DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
+- [MARS (Conjunto de Resultados Ativos Múltiplos)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

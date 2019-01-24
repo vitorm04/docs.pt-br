@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582069"
 ---
 # <a name="overrides-visual-basic"></a>Substituições (Visual Basic)
 Especifica que uma propriedade ou procedimento substitui uma propriedade nomeada de forma idêntica ou procedimento herdado de uma classe base.  
@@ -27,13 +27,13 @@ Especifica que uma propriedade ou procedimento substitui uma propriedade nomeada
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto de declaração.** Você pode usar `Overrides` somente na declaração de uma propriedade ou procedimento.  
+-   **Contexto da declaração.** Você pode usar `Overrides` somente em uma instrução de declaração de propriedade ou procedimento.  
   
--   **Modificadores combinados.** Não é possível especificar `Overrides` junto com `Shadows` ou `Shared` na mesma declaração. Como um elemento de substituição é implicitamente substituível, você não pode combinar `Overridable` com `Overrides`.  
+-   **Modificadores combinados.** Não é possível especificar `Overrides` junto com `Shadows` ou `Shared` na mesma declaração. Como um elemento de substituição é implicitamente substituível, não é possível combinar `Overridable` com `Overrides`.  
   
 -   **Correspondência de assinaturas.** A assinatura dessa declaração deve corresponder exatamente a *assinatura* da propriedade ou procedimento que ela substitui. Isso significa que as listas de parâmetros devem ter o mesmo número de parâmetros, na mesma ordem, com os mesmos tipos de dados.  
   
-     Além da assinatura, a declaração de substituição deve corresponder exatamente também o seguinte:  
+     Além de assinatura, a declaração de substituição deve corresponder exatamente também o seguinte:  
   
     -   O nível de acesso  
   
@@ -41,7 +41,7 @@ Especifica que uma propriedade ou procedimento substitui uma propriedade nomeada
   
 -   **Assinaturas genéricas.** Para um procedimento genérico, a assinatura inclui o número de parâmetros de tipo. Portanto, a declaração de substituição deve corresponder à versão de classe base em também.  
   
--   **Correspondência adicionais.** Além de correspondência a assinatura da versão da classe base, essa declaração deve também coincidir nos seguintes aspectos:  
+-   **Correspondência adicionais.** Além de correspondência a assinatura da versão da classe base, essa declaração também deve corresponder ao-lo nos seguintes aspectos:  
   
     -   Modificador de nível de acesso (como [pública](../../../visual-basic/language-reference/modifiers/public.md))  
   
@@ -51,9 +51,9 @@ Especifica que uma propriedade ou procedimento substitui uma propriedade nomeada
   
 -   **Sombreamento e sobreposição.** Tanto o sombreamento e sobreposição redefinem um elemento herdado, mas há diferenças significativas entre as duas abordagens. Para obter mais informações, consulte [sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Se você usar `Overrides`, o compilador adiciona implicitamente `Overloads` para que sua biblioteca de APIs trabalhar mais facilmente com c#.  
+ Se você usar `Overrides`, o compilador adicionará implicitamente `Overloads` para que sua biblioteca de APIs de trabalhar com C# com mais facilidade.  
   
- O `Overrides` modificador pode ser usado nesses contextos:  
+ O `Overrides` modificador pode ser usado nestes contextos:  
   
  [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -61,11 +61,11 @@ Especifica que uma propriedade ou procedimento substitui uma propriedade nomeada
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)  
- [Sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>Consulte também
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+- [Sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)

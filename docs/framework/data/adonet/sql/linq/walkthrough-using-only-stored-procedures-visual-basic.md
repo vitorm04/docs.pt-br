@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 8bb4ad3dd544f90c479e696e29499242c22920a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577361"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Passo a passo: Usando somente procedimentos armazenados (Visual Basic)
 Essa explicação passo a passo fornece um cenário de ponta a ponta básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para acessar dados usando somente procedimentos armazenados. Essa abordagem é frequentemente usada por administradores de banco de dados para limitar como o repositório de dados é acessado.  
@@ -17,9 +17,9 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
 > [!NOTE]
 >  Você também pode usar procedimentos armazenados nos aplicativos do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para substituir o comportamento padrão, especialmente para os processos `Create`, `Update` e `Delete`. Para obter mais informações, consulte [personalizando inserir, atualizar e excluir operações](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- Neste passo a passo, você usará dois métodos que foram mapeados para os procedimentos armazenados no banco de dados de exemplo Northwind: CustOrdersDetail e CustOrderHist. O mapeamento ocorre quando você executar a ferramenta de linha de comando SqlMetal para gerar um arquivo do Visual Basic. Para obter mais informações, consulte a seção Pré-requisitos posteriormente neste passo a passo.  
+ Para fins deste passo a passo, você usará dois métodos que foram mapeados para procedimentos armazenados no banco de dados de exemplo Northwind: CustOrdersDetail e CustOrderHist. O mapeamento ocorre quando você executar a ferramenta de linha de comando SqlMetal para gerar um arquivo de Visual Basic. Para obter mais informações, consulte a seção Pré-requisitos posteriormente neste passo a passo.  
   
- Este passo a passo não se baseia no [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Os desenvolvedores usando o Visual Studio também podem usar o [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar a funcionalidade do procedimento armazenado. Consulte [LINQ to SQL Tools no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Este passo a passo não se baseia no [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Os desenvolvedores usando o Visual Studio também podem usar o [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar a funcionalidade do procedimento armazenado. Ver [ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -32,7 +32,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 -   O banco de dados de exemplo Northwind.  
   
-     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [baixando bancos de dados de exemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois que você baixou o base de dados, copie o arquivo de northwnd.mdf para a pasta de c:\linqtest3.  
+     Se você não tiver esse banco de dados no seu computador de desenvolvimento, poderá baixá-lo no site de download da Microsoft. Para obter instruções, consulte [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Depois que você baixou o base de dados, copie o arquivo de northwnd.mdf para a pasta de c:\linqtest3.  
   
 -   Um arquivo de código do Visual Basic gerado do banco de dados Northwind.  
   
@@ -58,15 +58,15 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
 -   Executar e testar o aplicativo.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Criando uma solução LINQ to SQL  
- Na primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
+ A primeira tarefa, você cria uma solução do Visual Studio que contém as referências necessárias para compilar e executar um [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para criar uma solução LINQ to SQL  
   
 1.  No Visual Studio **arquivo** menu, clique em **novo projeto**.  
   
-2.  No **tipos de projeto** painel o **novo projeto** caixa de diálogo caixa, expanda **Visual Basic**e, em seguida, clique em **Windows**.  
+2.  No **tipos de projeto** painel na **novo projeto** caixa de diálogo caixa, expanda **Visual Basic**e, em seguida, clique em **Windows**.  
   
-3.  No **modelos** painel, clique em **aplicativo do Windows Forms**.  
+3.  No **modelos** painel, clique em **aplicativo de formulários do Windows**.  
   
 4.  No **nome** , digite **SprocOnlyApp**.  
   
@@ -79,11 +79,11 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 #### <a name="to-add-systemdatalinqdll"></a>Para adicionar o System.Data.Linq.dll  
   
-1.  Em **Solution Explorer**, clique em **Mostrar todos os arquivos**.  
+1.  Na **Gerenciador de soluções**, clique em **Mostrar todos os arquivos**.  
   
-2.  Em **Solution Explorer**, clique com botão direito **referências**e, em seguida, clique em **adicionar referência**.  
+2.  Na **Gerenciador de soluções**, clique com botão direito **referências**e, em seguida, clique em **Add Reference**.  
   
-3.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique em assembly System.Data.Linq e, em seguida, clique em **Okey**.  
+3.  No **adicionar referência** caixa de diálogo, clique em **.NET**, clique no assembly System e, em seguida, clique em **Okey**.  
   
      O assembly é adicionado ao projeto.  
   
@@ -92,9 +92,9 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para adicionar o arquivo do código Northwind ao projeto  
   
-1.  Sobre o **projeto** menu, clique em **Add Existing Item**.  
+1.  Sobre o **Project** menu, clique em **Add Existing Item**.  
   
-2.  No **Add Existing Item** caixa de diálogo, mova para c:\linqtest3\northwind.vb e, em seguida, clique em **adicionar**.  
+2.  No **Adicionar Item existente** caixa de diálogo, mova para c:\linqtest3\northwind.vb e, em seguida, clique em **Add**.  
   
      O arquivo northwind.vb é adicionado ao projeto.  
   
@@ -103,7 +103,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 #### <a name="to-create-the-database-connection"></a>Par criar a conexão de banco de dados  
   
-1.  Em **Solution Explorer**, clique com botão direito **Form1. vb**e, em seguida, clique em **Exibir código**.  
+1.  Na **Gerenciador de soluções**, clique com botão direito **Form1.vb**e, em seguida, clique em **Exibir código**.  
   
      `Class Form1` aparece no editor de códigos.  
   
@@ -116,26 +116,26 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 #### <a name="to-set-up-the-user-interface"></a>Para configurar a interface do usuário  
   
-1.  Voltar para o Windows Forms Designer (**Form1.vb[Design]**).  
+1.  Retorne para o Windows Forms Designer (**Form1.vb design []**).  
   
-2.  Sobre o **exibição** menu, clique em **caixa de ferramentas**.  
+2.  No menu **Exibir**, clique em **Caixa de Ferramentas**.  
   
      A caixa de ferramentas é aberta.  
   
     > [!NOTE]
-    >  Clique o **AutoOcultar** pino para manter a caixa de ferramentas aberta enquanto você executa o restante das etapas nesta seção.  
+    >  Clique o **ocultar automaticamente** pino para manter a caixa de ferramentas aberta enquanto você executa o restante das etapas nesta seção.  
   
-3.  Arraste dois rótulos, duas caixas de texto e dois botões da caixa de ferramentas para **Form1**.  
+3.  Arraste dois botões, duas caixas de texto e dois rótulos da toolbox **Form1**.  
   
-     Organize os controles conforme mostrado na ilustração de acompanhamento. Expanda **Form1** para que os controles se ajustar facilmente.  
+     Organize os controles conforme mostrado na ilustração de acompanhamento. Expandir **Form1** para que os controles se encaixem facilmente.  
   
 4.  Clique com botão direito **Label1**e, em seguida, clique em **propriedades**.  
   
-5.  Alterar o **texto** propriedade **Label1** para **insira OrderID:**.  
+5.  Alterar o **texto** propriedade de **Label1** para **Enter OrderID:**.  
   
-6.  Da mesma forma para **Label2**, alterar o **texto** propriedade **Label2** para **digite CustomerID:**.  
+6.  Da mesma forma para **Label2**, altere o **texto** propriedade de **Label2** para **Enter CustomerID:**.  
   
-7.  Da mesma forma, alterar o **texto** propriedade **Button1** para **detalhes do pedido**.  
+7.  Da mesma forma, altere o **texto** propriedade **Button1** para **detalhes do pedido**.  
   
 8.  Alterar o **texto** propriedade **Button2** para **histórico de pedidos**.  
   
@@ -143,13 +143,13 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
 #### <a name="to-handle-button-clicks"></a>Para manipular cliques de botão  
   
-1.  Clique duas vezes em **Order Details** na **Form1** para criar o `Button1` manipulador de eventos e abra o editor de códigos.  
+1.  Clique duas vezes em **detalhes do pedido** nos **Form1** para criar o `Button1` manipulador de eventos e abrir o editor de códigos.  
   
 2.  Digite o código a seguir no manipulador `Button1`:  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  Agora clique duas vezes em **Button2** no Form1 para criar o `Button2` manipulador de eventos e abra o editor de códigos.  
+3.  Agora clique duas vezes **Button2** em Form1 para criar o `Button2` manipulador de eventos e abrir o editor de códigos.  
   
 4.  Digite o código a seguir no manipulador `Button2`:  
   
@@ -164,33 +164,33 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
      Form1 aparecerá.  
   
-2.  No **OrderID insira** , digite **10249** e, em seguida, clique em **detalhes do pedido**.  
+2.  No **Enter OrderID** , digite **10249** e, em seguida, clique em **detalhes do pedido**.  
   
      Uma caixa de mensagem lista os produtos incluídos no pedido 10249.  
   
      Clique em **Okey** para fechar a caixa de mensagem.  
   
-3.  No **digite CustomerID** , digite `ALFKI`e, em seguida, clique em **histórico de pedidos**.  
+3.  No **Enter CustomerID** , digite `ALFKI`e, em seguida, clique em **histórico de pedidos**.  
   
      Uma caixa de mensagem lista o histórico de pedidos para o cliente ALFKI.  
   
      Clique em **Okey** para fechar a caixa de mensagem.  
   
-4.  No **OrderID insira** , digite `123`e, em seguida, clique em **detalhes do pedido**.  
+4.  No **Enter OrderID** , digite `123`e, em seguida, clique em **detalhes do pedido**.  
   
      Uma caixa de mensagem não exibe “nenhum” resultado.  
   
      Clique em **Okey** para fechar a caixa de mensagem.  
   
-5.  Sobre o **depurar** menu, clique em **parar a depuração**.  
+5.  Sobre o **Debug** menu, clique em **parar a depuração**.  
   
      A sessão de depuração é fechada.  
   
-6.  Se você concluiu a experimentar, você pode clicar em **fechar projeto** no **arquivo** menu e salve o projeto quando você for solicitado.  
+6.  Se você tiver terminado o teste, você pode clicar em **fechar projeto** sobre o **arquivo** menu e salvar o projeto quando solicitado.  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Você pode aprimorar esse projeto fazendo algumas alterações. Por exemplo, você pode listar os procedimentos armazenados disponíveis em uma caixa de listagem e fazer com que o usuário selecione os procedimentos que serão executados. Você também pode transmitir a saída dos relatórios para um arquivo de texto.  
   
-## <a name="see-also"></a>Consulte também  
- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Consulte também
+- [Aprendendo com explicações passo a passo](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Procedimentos armazenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

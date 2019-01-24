@@ -2,20 +2,20 @@
 title: Registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 405b29bc68773400f1ece06c01794d24f40b1c3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585845"
 ---
 # <a name="message-logging"></a>Registro em log de mensagens
-Windows Communication Foundation (WCF) fornece a capacidade de registrar em log mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja quais a mensagem e é de corpo de mensagem semelhante. Esse tipo de log é particularmente útil para que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem foi recebida. Você também pode examinar a segurança tokens utilizados, partes criptografado e assinado e partes permanecem intactas.  
+Windows Communication Foundation (WCF) fornece a capacidade para registrar mensagens de entrada e saídas para consumo offline. Log de mensagens permite que você veja o que a mensagem e é de corpo de mensagem semelhante. Esse tipo de registro em log é particularmente útil na permitindo que você saiba o que foram passados argumentos e como o ponto de extremidade de recebimento viu os argumentos expressos como XML. Além disso, o registro em log a mensagem conforme ela foi recebida permite diagnosticar mensagens malformadas, bem como para ver como a mensagem chegou. Você também pode examinar a segurança tokens usados, as partes criptografada e assinada e partes permanecem intactas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do fluxo de mensagens](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- Este tópico descreve como as mensagens de log de eventos correspondem aos eventos do cliente e de serviço.  
+ Este tópico descreve como as mensagens de log de eventos correspondem aos eventos de cliente e o serviço.  
   
  [Configurando registros de mensagens em log](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
@@ -23,11 +23,11 @@ Windows Communication Foundation (WCF) fornece a capacidade de registrar em log 
   
  [Visualizando logs de mensagem](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- Este tópico descreve como você pode exibir os logs de mensagem.  
+ Este tópico descreve como você pode exibir os logs de mensagens.  
   
  [Questões de segurança para o log de mensagem](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- Este tópico descreve como você pode proteger dados confidenciais de serem expostas em logs de mensagem, bem como os eventos gerados pelo log de mensagens.  
+ Este tópico descreve como você pode proteger dados confidenciais sejam expostas em logs de mensagens, bem como os eventos gerados pelo log de mensagens.  
   
-## <a name="see-also"></a>Consulte também  
- [Administração e diagnósticos](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>Consulte também
+- [Administração e diagnósticos](../../../../docs/framework/wcf/diagnostics/index.md)

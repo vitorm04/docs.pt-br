@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffa06fd42b5cfa09817bae9f0b3a3810e30f99c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bc3f9e8c581bc95bea8cfeb549177966eae22a43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584487"
 ---
 # <a name="iapartmentcallback-interface"></a>Interface IApartmentCallback
-Fornece métodos para fazer retornos de chamada em um apartment. Um *apartment* é um contêiner lógico em um processo para objetos que compartilham os mesmos requisitos de acesso de thread.  
+Fornece métodos para fazer retornos de chamada dentro de um apartamento. Uma *apartment* é um contêiner lógico dentro de um processo para objetos que compartilham os mesmos requisitos de acesso de thread.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -33,13 +33,13 @@ Fornece métodos para fazer retornos de chamada em um apartment. Um *apartment* 
 |[Método DoCallback](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Executa a função especificada em um apartment.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

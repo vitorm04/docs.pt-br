@@ -1,5 +1,5 @@
 ---
-title: 'Otimizando desempenho: recursos do aplicativo'
+title: 'Otimizando desempenho: Recursos do aplicativo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF], performance
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 53e906f31f32fb0f1df3f8d986daa0ae95ea9e4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa412a4f900179c22868b2ef3e7429e7dc2acc9c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507545"
 ---
-# <a name="optimizing-performance-application-resources"></a>Otimizando desempenho: recursos do aplicativo
+# <a name="optimizing-performance-application-resources"></a>Otimizando desempenho: Recursos do aplicativo
 O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite compartilhar recursos do aplicativo para dar suporte a um comportamento ou a uma aparência consistente entre elementos de tipos semelhantes. Este tópico dá algumas recomendações nessa área que podem ajudar a melhorar o desempenho dos seus aplicativos.  
   
  Para obter mais informações sobre recursos, consulte [Recursos de XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 ## <a name="sharing-resources"></a>Compartilhando recursos  
- Se seu aplicativo usa controles personalizados e define os recursos em um <xref:System.Windows.ResourceDictionary> (ou nó de recursos XAML), é recomendável que você defina os recursos no <xref:System.Windows.Application> ou <xref:System.Windows.Window> nível de objeto ou defini-los no tema padrão para o controles personalizados. Definir recursos em um controle personalizado <xref:System.Windows.ResourceDictionary> impõe um impacto de desempenho para cada instância do controle. Por exemplo, se você tiver operações de pincel com uso intenso de desempenho definidas como parte da definição de recurso de um controle personalizado e muitas instâncias do controle personalizado, o conjunto de trabalho do aplicativo aumentará significativamente.  
+ Se seu aplicativo usa controles personalizados e define os recursos em um <xref:System.Windows.ResourceDictionary> (ou nó de recursos XAML), é recomendável que você defina os recursos na <xref:System.Windows.Application> ou <xref:System.Windows.Window> nível de objeto, ou defini-los no tema padrão para o controles personalizados. Definir recursos em um controle personalizado <xref:System.Windows.ResourceDictionary> causa um impacto de desempenho para cada instância desse controle. Por exemplo, se você tiver operações de pincel com uso intenso de desempenho definidas como parte da definição de recurso de um controle personalizado e muitas instâncias do controle personalizado, o conjunto de trabalho do aplicativo aumentará significativamente.  
   
- Para ilustrar esse ponto, considere o seguinte. Digamos que você esteja desenvolvendo um jogo de cartas usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para a maioria dos jogos de cartas, você precisa de 52 cartas com 52 naipes diferentes. Você decide implementar um controle personalizado de carta e definir 52 pincéis (cada um representando um naipe de carta) nos recursos do seu controle personalizado de carta. No aplicativo principal, você inicialmente cria 52 instâncias desse controle personalizado de carta. Cada instância do controle personalizado cartão gera 52 instâncias de <xref:System.Windows.Media.Brush> objetos, o que resulta em um total de 52 * 52 <xref:System.Windows.Media.Brush> objetos em seu aplicativo. Movendo os pincéis sem os recursos de controle personalizado do cartão para o <xref:System.Windows.Application> ou <xref:System.Windows.Window> nível de objeto, ou definindo-os no tema padrão para o controle personalizado, você reduz o conjunto de trabalho do aplicativo, já que agora você está compartilhando os 52 pincéis entre as 52 instâncias do controle cartão.  
+ Para ilustrar esse ponto, considere o seguinte. Digamos que você esteja desenvolvendo um jogo de cartas usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para a maioria dos jogos de cartas, você precisa de 52 cartas com 52 naipes diferentes. Você decide implementar um controle personalizado de carta e definir 52 pincéis (cada um representando um naipe de carta) nos recursos do seu controle personalizado de carta. No aplicativo principal, você inicialmente cria 52 instâncias desse controle personalizado de carta. Cada instância do controle personalizado de carta gera 52 instâncias de <xref:System.Windows.Media.Brush> objetos, que lhe dá um total de 52 * 52 <xref:System.Windows.Media.Brush> objetos em seu aplicativo. Movendo os pincéis para fora os recursos de controle personalizado do cartão para o <xref:System.Windows.Application> ou <xref:System.Windows.Window> nível de objeto, ou definindo-os no tema padrão para o controle personalizado, você reduzir o conjunto de trabalho do aplicativo, já que agora você está compartilhando os 52 pincéis entre as 52 instâncias do controle cartão.  
   
 ## <a name="sharing-a-brush-without-copying"></a>Compartilhando um pincel sem copiar  
- Se você tiver vários elementos usando o mesmo <xref:System.Windows.Media.Brush> do objeto, defina o brush como um recurso e fazer referência a ele, em vez de definir o brush inline no [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Esse método cria uma instância e a reutiliza, enquanto definir pincéis embutidos no [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] cria uma nova instância para cada elemento.  
+ Se você tiver vários elementos usando as mesmas <xref:System.Windows.Media.Brush> do objeto, defina o pincel como um recurso e fazer referência a ele, em vez de definir o pincel embutido no [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Esse método cria uma instância e a reutiliza, enquanto definir pincéis embutidos no [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] cria uma nova instância para cada elemento.  
   
  O exemplo de marcação a seguir ilustra este ponto:  
   
@@ -42,13 +42,13 @@ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
   
  [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## <a name="see-also"></a>Consulte também  
- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Comportamento do objeto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>Consulte também
+- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
+- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento do objeto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
+- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009d70423a3eb29c97f3279a288c37623dac927e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fed8097c472be487256840f289c1d8252d978a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397267"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637094"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do tempo de execução (rd.xml)
 O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de configuração XML que especifica se os elementos do programa designado estão disponíveis para reflexão. Aqui está um exemplo de um arquivo de diretivas de tempo de execução:  
@@ -459,6 +459,6 @@ O arquivo de diretivas de tempo de execução (. rd.xml) é um arquivo de config
   
  Para obter mais informações, consulte a seção "Diferenças em serializadores" em [Migrar seu aplicativo da Windows Store para .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+## <a name="see-also"></a>Consulte também
+- [Elementos da diretiva de tempo de execução](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Reflexão e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

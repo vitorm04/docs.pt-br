@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574762"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Método IMetaDataImport::EnumMethodImpls
-Enumera os tokens de MethodBody e MethodDeclaration que representa os métodos do tipo especificado.  
+Enumera MethodBody e MethodDeclaration tokens que representam os métodos do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ HRESULT EnumMethodImpls (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada do método.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
   
  `td`  
  [in] Um TypeDef de token para o tipo cujas implementações de método para enumerar.  
@@ -54,27 +54,27 @@ HRESULT EnumMethodImpls (
  [out] A matriz para armazenar os tokens de MethodDeclaration.  
   
  `cMax`  
- [in] O tamanho máximo de `rMethodBody` e `rMethodDecl` matrizes.  
+ [in] O tamanho máximo do `rMethodBody` e `rMethodDecl` matrizes.  
   
  `pcTokens`  
- [in] O número real de métodos retornados em `rMethodBody` e `rMethodDecl`.  
+ [in] O número real de métodos retornados na `rMethodBody` e `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` retornou com êxito.|  
+|`S_OK`|`EnumMethodImpls` retornado com êxito.|  
 |`S_FALSE`|Não há nenhum token de método para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: badd79926e8f039cf6b947dd6655e2cd679e3000
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 572087bd6f14c43b439910be32fca54af66a2e8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585530"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Enumeração CorDebugSetContextFlag
 Indica se o contexto é do quadro ativo (ou folha) na pilha ou se foi computado pelo desenrolamento de outro quadro.  
@@ -41,20 +41,20 @@ typedef enum CorDebugSetContextFlag
 |Membro|Descrição|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|O contexto é o contexto do thread ativo.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|O contexto foi calculado pelo desenrolamento de outro quadro.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|O contexto foi computado pelo desenrolamento de outro quadro.|  
   
 ## <a name="remarks"></a>Comentários  
- `CorDebugSetContextFlag` fornece valores que são usados pelo [Icordebugstackwalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) método.  
+ `CorDebugSetContextFlag` fornece valores que são usados pela [icordebugstackwalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

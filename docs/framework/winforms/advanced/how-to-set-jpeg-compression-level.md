@@ -1,5 +1,5 @@
 ---
-title: Como definir o nível de compactação de JPEG
+title: 'Como: Definir a nível de compactação de JPEG'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628096"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Como definir o nível de compactação de JPEG
-É possível modificar os parâmetros de uma imagem ao salvar a imagem em disco para minimizar o tamanho do arquivo ou melhorar sua qualidade. Você pode ajustar a qualidade de uma imagem JPEG modificando seu nível de compactação. Para especificar o nível de compactação quando você salva uma imagem JPEG, você deve criar um <xref:System.Drawing.Imaging.EncoderParameters> de objeto e passá-lo para o <xref:System.Drawing.Image.Save%2A> método o <xref:System.Drawing.Image> classe. Inicializar o <xref:System.Drawing.Imaging.EncoderParameters> objeto para que ele tenha uma matriz que consiste em uma <xref:System.Drawing.Imaging.EncoderParameter>. Quando você cria o <xref:System.Drawing.Imaging.EncoderParameter>, especifique o <xref:System.Drawing.Imaging.Encoder.Quality> codificador e o nível de compactação desejado.  
+# <a name="how-to-set-jpeg-compression-level"></a>Como: Definir a nível de compactação de JPEG
+É possível modificar os parâmetros de uma imagem ao salvar a imagem em disco para minimizar o tamanho do arquivo ou melhorar sua qualidade. Você pode ajustar a qualidade de uma imagem JPEG modificando seu nível de compactação. Para especificar o nível de compactação quando você salva uma imagem JPEG, você deve criar uma <xref:System.Drawing.Imaging.EncoderParameters> do objeto e passá-lo para o <xref:System.Drawing.Image.Save%2A> método o <xref:System.Drawing.Image> classe. Inicializar o <xref:System.Drawing.Imaging.EncoderParameters> objeto para que ele tenha uma matriz que consiste em uma <xref:System.Drawing.Imaging.EncoderParameter>. Quando você cria o <xref:System.Drawing.Imaging.EncoderParameter>, especifique o <xref:System.Drawing.Imaging.Encoder.Quality> codificador e o nível de compactação desejado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir cria um <xref:System.Drawing.Imaging.EncoderParameter> do objeto e o salva três imagens JPEG. Cada imagem JPEG é salvo com um nível de qualidade diferente, modificando o `long` valor passado para o <xref:System.Drawing.Imaging.EncoderParameter> construtor. Um nível de qualidade de 0 corresponde a uma compactação maior e um nível de qualidade de 100 corresponde a uma compactação menor.  
+ O exemplo de código a seguir cria um <xref:System.Drawing.Imaging.EncoderParameter> do objeto e salva três imagens JPEG. Cada imagem JPEG é salvo com um nível de qualidade diferente, modificando o `long` valor passado para o <xref:System.Drawing.Imaging.EncoderParameter> construtor. Um nível de qualidade de 0 corresponde a uma compactação maior e um nível de qualidade de 100 corresponde a uma compactação menor.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -129,7 +129,7 @@ End Function
   
 -   Um arquivo de imagem chamado `TestPhoto.jpg` e localizado em **c:\\**.  
   
-## <a name="see-also"></a>Consulte também  
- [Como Determinar os Parâmetros com Suporte em um Codificador](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
- [Tipos de Bitmaps](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Determinar os parâmetros com suporte em um codificador](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Tipos de Bitmaps](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
+- [Usando Codificadores e Decodificadores de Imagem no GDI+ Gerenciado](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

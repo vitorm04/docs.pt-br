@@ -13,12 +13,12 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: KrzysztofCwalina
-ms.openlocfilehash: ce0daae9b5994808a6ef5d35f09533d96d1d697f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621819"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Nomes de Classes, Structs e Interfaces
 As diretrizes de nomenclatura que seguem se aplicam a nomenclatura de tipo geral.  
@@ -102,5 +102,5 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

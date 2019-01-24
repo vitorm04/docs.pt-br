@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582365"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumeração CorAssemblyFlags
-Contém valores que descrevem os metadados aplicado a uma compilação do assembly.  
+Contém valores que descrevem os metadados aplicados a uma compilação do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,31 +59,31 @@ typedef enum CorAssemblyFlags {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`afPublicKey`|Indica que a referência de assembly contém a chave pública completa, sem hash.|  
-|`afPA_None`|Indica que a arquitetura do processador é não especificada.|  
+|`afPublicKey`|Indica que a referência de assembly retém a chave pública completa, sem hash.|  
+|`afPA_None`|Indica que a arquitetura do processador é especificada.|  
 |`afPA_MSIL`|Indica que a arquitetura do processador é neutra (PE32).|  
 |`afPA_x86`|Indica que a arquitetura de processador x86 (PE32).|  
-|`afPA_IA64`|Indica que a arquitetura de processador Itanium (PE32 +).|  
-|`afPA_AMD64`|Indica que a arquitetura de processador AMD X64 (PE32 +).|  
-|`afPA_ARM`|Indica que a arquitetura de processador ARM (PE32).|  
-|`afPA_NoPlatform`|Indica que o assembly é um assembly de referência. ou seja, ele se aplica a qualquer arquitetura, mas não pode ser executado em qualquer arquitetura. Portanto, o sinalizador é o mesmo que `afPA_Mask`.|  
+|`afPA_IA64`|Indica que a arquitetura do processador Itanium (PE32 +).|  
+|`afPA_AMD64`|Indica que a arquitetura do processador AMD X64 (PE32 +).|  
+|`afPA_ARM`|Indica que a arquitetura do processador ARM (PE32).|  
+|`afPA_NoPlatform`|Indica que o assembly é um assembly de referência; ou seja, ele se aplica a qualquer arquitetura, mas não pode ser executado em qualquer arquitetura. Portanto, o sinalizador é o mesmo que `afPA_Mask`.|  
 |`afPA_Specified`|Indica que os sinalizadores de arquitetura de processador devem ser propagados para o `AssemblyRef` registro.|  
 |`afPA_Mask`|Uma máscara que descreve a arquitetura do processador.|  
-|`afPA_FullMask`|Especifica que a descrição de arquitetura do processador é incluída.|  
-|`afPA_Shift`|Indica uma contagem de shift os sinalizadores de arquitetura de processador de e para o índice.|  
+|`afPA_FullMask`|Especifica que a descrição da arquitetura de processador está incluída.|  
+|`afPA_Shift`|Indica uma contagem de shift os sinalizadores de arquitetura do processador de e para o índice.|  
 |`afEnableJITcompileTracking`|Indica o valor correspondente do <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> do <xref:System.Diagnostics.DebuggableAttribute>.|  
 |`afDisableJITcompileOptimizer`|Indica o valor correspondente do <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> do <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indica que o assembly pode ser redirecionado em tempo de execução para um assembly de um editor diferente.|  
+|`afRetargetable`|Indica que o assembly pode ser redirecionado em tempo de execução a um assembly de um outro editor.|  
 |`afContentType_Mask`|Uma máscara que descreve o tipo de conteúdo.|  
 |`afContentType_Default`|Indica o tipo de conteúdo padrão.|  
 |`afContentType_WindowsRuntime`|Indica o [!INCLUDE[wrt](../../../../includes/wrt-md.md)] tipo de conteúdo.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

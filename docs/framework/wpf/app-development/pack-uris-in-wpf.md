@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 111b129b17d0fe473b0249c43e25ddc50bfe6fd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513443"
 ---
 # <a name="pack-uris-in-wpf"></a>URIs "pack://" no WPF
 No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] são usados para identificar e carregar arquivos de várias maneiras, incluindo o seguinte:  
@@ -46,11 +46,11 @@ No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
  ![Diagrama de pacote e peças](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
   
- Para identificar partes, a especificação OPC utiliza a extensibilidade RFC 2396 (identificadores de recurso uniforme (URI): sintaxe genérica) para definir o pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquema.  
+ Para identificar partes, a especificação OPC utiliza a extensibilidade RFC 2396 (identificadores de recurso uniforme (URI): Sintaxe genérica) para definir o pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquema.  
   
  O esquema especificado por um [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] é definido por seu prefixo; http, ftp e file são exemplos bem conhecidos. O pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] esquema usa "pack" como seu esquema e contém dois componentes: autoridade e caminho. Este é o formato para um pacote de [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
- pacote: / /*autoridade*/*caminho*
+ pack://*authority*/*path*
   
  O *autoridade* Especifica o tipo de pacote que contém a parte, enquanto o *caminho* Especifica o local de uma parte dentro de um pacote.  
   
@@ -89,7 +89,7 @@ No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridade**: application:///.  
   
--   **Caminho**: o nome do arquivo de recurso, incluindo seu caminho, em relação à raiz da pasta de projeto do assembly local.  
+-   **Caminho**: O nome do arquivo de recurso, incluindo seu caminho, relativo à pasta raiz do projeto do assembly local.  
   
  O exemplo a seguir mostra o pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de recurso que está localizado na raiz da pasta do projeto do assembly local.  
   
@@ -105,9 +105,9 @@ No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridade**: application:///.  
   
--   **Caminho**: o nome de um arquivo de recurso compilado em um assembly referenciado. O caminho deve estar de acordo com o seguinte formato:  
+-   **Caminho**: O nome de um arquivo de recurso que é compilado em um assembly referenciado. O caminho deve estar de acordo com o seguinte formato:  
   
-     *AssemblyShortName*{*; Versão*] {*; PublicKey*]; componente /*caminho*  
+     *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
     -   **AssemblyShortName**: o nome curto do assembly referenciado.  
   
@@ -141,7 +141,7 @@ No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridade**: application:///.  
   
--   **Caminho**: o nome do arquivo de conteúdo, incluindo o caminho em relação ao local do sistema de arquivos do principal assembly executável do aplicativo.  
+-   **Caminho**: O nome do arquivo de conteúdo, incluindo seu caminho relativo ao local de sistema do arquivo do assembly executável principal do aplicativo.  
   
  O exemplo a seguir mostra o pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo de conteúdo, localizado na mesma pasta do assembly executável.  
   
@@ -160,7 +160,7 @@ No Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 -   **Autoridade**: siteoforigin:///.  
   
--   **Caminho**: o nome do arquivo de site de origem, incluindo o caminho em relação ao local a partir do qual o assembly executável foi iniciado.  
+-   **Caminho**: O nome do site do arquivo de origem, incluindo seu caminho relativo ao local do qual o assembly executável foi iniciado.  
   
  O exemplo a seguir mostra o pacote [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] para um [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] site de origem, armazenado no local do qual o assembly executável é iniciado.  
   
@@ -423,5 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  Para uma visão geral de temas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], consulte [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Arquivos de recurso, conteúdo e dados de aplicativo do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>Consulte também
+- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

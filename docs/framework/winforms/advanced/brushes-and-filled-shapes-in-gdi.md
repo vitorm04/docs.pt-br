@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 197678cfdced1e17ad87f521a30c7103c49df4e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624159"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pincéis e formas preenchidas no GDI+
 Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutura de tópicos e um interior. A estrutura de tópicos é desenhada com uma caneta e o interior é preenchido com um pincel. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece várias classes de pincel para preencher os interiores das formas fechadas: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, e <xref:System.Drawing.Drawing2D.PathGradientBrush>. Todas essas classes herdam o <xref:System.Drawing.Brush> classe. A ilustração a seguir mostra um retângulo preenchido com um pincel sólido e uma elipse preenchida com um pincel de hachura.  
@@ -26,7 +26,7 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
  ![Formas Preenchidas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
 ## <a name="solid-brushes"></a>Pincéis Sólidos  
- Para preencher uma forma fechada, você precisa de uma ocorrência da <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Brush>. A instância do <xref:System.Drawing.Graphics> classe fornece métodos, como <xref:System.Drawing.Graphics.FillRectangle%2A> e <xref:System.Drawing.Graphics.FillEllipse%2A>e o <xref:System.Drawing.Brush> armazena atributos de preenchimento, como cor e o padrão. O <xref:System.Drawing.Brush> é passado como um dos argumentos para o método de preenchimento. O exemplo de código a seguir mostra como preencher uma elipse com uma cor vermelha sólida.  
+ Para preencher uma forma fechada, você precisa de uma instância das <xref:System.Drawing.Graphics> classe e um <xref:System.Drawing.Brush>. A instância das <xref:System.Drawing.Graphics> classe fornece métodos, tais como <xref:System.Drawing.Graphics.FillRectangle%2A> e <xref:System.Drawing.Graphics.FillEllipse%2A>e o <xref:System.Drawing.Brush> armazena atributos do preenchimento, como cor e padrão. O <xref:System.Drawing.Brush> é passado como um dos argumentos para o método de preenchimento. O exemplo de código a seguir mostra como preencher uma elipse com uma cor vermelha sólida.  
   
  [!code-csharp[LinesCurvesAndShapes#121](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#121)]
  [!code-vb[LinesCurvesAndShapes#121](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#121)]  
@@ -40,7 +40,7 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece a mais de 50 estilos de hachura; os três estilos mostrados na ilustração a seguir são <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, e <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece mais de 50 estilos de hachura; os três estilos mostrados na ilustração a seguir são <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>, <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>, e <xref:System.Drawing.Drawing2D.HatchStyle.Cross>.  
   
  ![Formas Preenchidas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -76,11 +76,11 @@ Uma forma fechada, como um retângulo ou uma elipse, é composta por uma estrutu
   
  ![Forma Preenchida](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
- <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Como Desenhar um Retângulo Preenchido em um Formulário dos Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- [Como Desenhar uma Elipse Preenchida em um Formulário dos Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
+- <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
+- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
+- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Como: Desenhar um retângulo preenchido em um formulário do Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Como: Desenhar uma elipse preenchida em um formulário do Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)

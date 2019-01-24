@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8985fb081443d931be3210c81099d510e2da057d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491890"
 ---
 # <a name="-operator"></a>\\= Operador
 Divide o valor de uma variável ou propriedade pelo valor de uma expressão e atribui o resultado de inteiro à variável ou propriedade.  
@@ -49,11 +49,11 @@ variableorproperty \= expression
   
  [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [\ Operador (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
- [Operador / = (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
- [Operadores de Atribuição](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Consulte também
+- [\ Operador (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Operador / = (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operadores de Atribuição](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)

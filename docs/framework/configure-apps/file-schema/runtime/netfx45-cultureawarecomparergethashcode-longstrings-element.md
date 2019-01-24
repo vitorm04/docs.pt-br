@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2dfd5d3944618cf94d32fac2708d6daef5a410
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 67dae26733527a85f4fc13734da896193e53db8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613681"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576883"
 ---
 # <a name="ltnetfx45cultureawarecomparergethashcodelongstringsgt-element"></a>&lt;NetFx45_CultureAwareComparerGetHashCode_LongStrings&gt; elemento
 Especifica se o tempo de execução usa uma quantidade fixa de memória para calcular códigos hash para o método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.  
   
  \<configuration>  
 \<runtime>  
-< NetFx45_CultureAwareComparerGetHashCode_LongStrings >  
+<NetFx45_CultureAwareComparerGetHashCode_LongStrings>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,7 +61,7 @@ Especifica se o tempo de execução usa uma quantidade fixa de memória para cal
 > [!IMPORTANT]
 >  O elemento `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` não é usado em [!INCLUDE[win8](../../../../../includes/win8-md.md)] e versões posteriores.  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Consulte também
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

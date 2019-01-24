@@ -1,5 +1,5 @@
 ---
-title: Como criar manipuladores de eventos em tempo de execução para formulários do Windows Forms
+title: 'Como: Criar manipuladores de eventos em tempo de execução para formulários do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 38453c751e6cc63827f3f1e9d20ad2ebdfc841d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e02fec0a131523059f88d4f12f62398d80fddf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632043"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Como criar manipuladores de eventos em tempo de execução para formulários do Windows Forms
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Como: Criar manipuladores de eventos em tempo de execução para formulários do Windows
 Além de criar eventos usando o Designer de Formulários do Windows, também é possível criar um manipulador de eventos no tempo de execução. Essa ação permite que você conecte manipuladores de eventos com base em condições no código no tempo de execução em vez de conectá-los quando o programa inicia.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Para criar um manipulador de eventos no tempo de execução  
@@ -28,7 +28,7 @@ Além de criar eventos usando o Designer de Formulários do Windows, também é 
   
 2.  Adicione um método ao seu formulário com a assinatura do método para o evento que deseja manipular.  
   
-     Por exemplo, se você estivesse tratando o <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle, você deve criar um método como o seguinte:  
+     Por exemplo, se você estiver manipulando o <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle, você criaria um método como o seguinte:  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)  
@@ -56,7 +56,7 @@ Além de criar eventos usando o Designer de Formulários do Windows, também é 
   
 4.  Determine para qual formulário ou controle deseja criar um manipulador de eventos.  
   
-5.  Em um método na classe do formulário, adicione o código que especifica o manipulador de eventos para manipular o evento. Por exemplo, o código a seguir especifica o manipulador de eventos `button1_Click` identificadores de <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle:  
+5.  Em um método na classe do formulário, adicione o código que especifica o manipulador de eventos para manipular o evento. Por exemplo, o código a seguir especifica o manipulador de eventos `button1_Click` manipula a <xref:System.Windows.Forms.Control.Click> eventos de um <xref:System.Windows.Forms.Button> controle:  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  
@@ -70,9 +70,9 @@ Além de criar eventos usando o Designer de Formulários do Windows, também é 
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     O <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> método demonstrado no código do Visual Basic acima estabelece um manipulador de eventos de clique do botão.  
+     O <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> método demonstrado no código Visual Basic acima estabelece um manipulador de eventos click do botão.  
   
-## <a name="see-also"></a>Consulte também  
- [Criando manipuladores de eventos no Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Visão geral de manipuladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
- [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+## <a name="see-also"></a>Consulte também
+- [Criando manipuladores de eventos no Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Visão geral de manipuladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d3b8f1e869e90fd3388cc0844e608b7ff40fc89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d8cbf09ab4ad0192902a964d55a050685b024284
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574294"
 ---
 # <a name="cordebugplatform-enumeration"></a>Enumeração CorDebugPlatform
-Fornece valores de plataforma de destino que são usados pelo [Icordebugdatatarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método.  
+Fornece valores de plataforma de destino que são usados pela [icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,21 +48,21 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_WINDOWS_X86|A plataforma de destino é Windows executando em hardware Intel x86.|  
 |CORDB_PLATFORM_WINDOWS_AMD64|A plataforma de destino é Windows de 64 bits executando em hardware AMD64 ou Intel EM64T.|  
 |CORDB_PLATFORM_WINDOWS_IA64|A plataforma de destino é Windows de 32 bits executando em hardware Intel IA-64.|  
-|CORDB_PLATFORM_MAC_PPC|A plataforma de destino é o sistema de operacional Macintosh em execução no hardware PowerPC.|  
-|CORDB_PLATFORM_MAC_X86|A plataforma de destino é o sistema operacional Macintosh em execução no hardware Intel x86.|  
-|CORDB_PLATFORM_WINDOWS_ARM|A plataforma de destino é o sistema de operacional Macintosh em execução no hardware de ARM do Windows.|  
-|CORDB_PLATFORM_MAC_AMD64|A plataforma de destino é o sistema de operacional Macintosh em execução no hardware AMD64.|  
+|CORDB_PLATFORM_MAC_PPC|A plataforma de destino é o sistema operacional Macintosh executando em hardware PowerPC.|  
+|CORDB_PLATFORM_MAC_X86|A plataforma de destino é o sistema operacional Macintosh executando em hardware Intel x86.|  
+|CORDB_PLATFORM_WINDOWS_ARM|A plataforma de destino é o sistema operacional Macintosh executando em hardware Windows ARM.|  
+|CORDB_PLATFORM_MAC_AMD64|A plataforma de destino é o sistema operacional Macintosh executando em hardware AMD64.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
  Os membros `CORDB_PLATFORM_WINDOWS_ARM` e `CORDB_PLATFORM_MAC_AMD64` estão disponíveis no .NET Framework 4.5.2 e em versões posteriores.  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

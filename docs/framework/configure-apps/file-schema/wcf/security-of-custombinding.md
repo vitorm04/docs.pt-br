@@ -2,20 +2,20 @@
 title: '&lt;segurança&gt; de &lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: d0a14af56f888c5c4c2c3924625f2e6d45ed2eeb
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c80a4a34d5315dbc5a22d3953fee437ebe2e938f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573438"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;segurança&gt; de &lt;customBinding&gt;
 Especifica as opções de segurança para uma associação personalizada.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
+\<binding>  
 \<segurança >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -53,7 +53,7 @@ Especifica as opções de segurança para uma associação personalizada.
 |includeTimestamp|Um valor booliano que especifica se os carimbos de data / hora é incluídos em cada mensagem. O padrão é `true`.|  
 |keyEntropyMode|Especifica a maneira que as chaves para proteger as mensagens são computadas. As chaves podem se basear o material de chave de cliente somente, somente o material de chave de serviço ou uma combinação de ambos. Os valores válidos são<br /><br /> -   `ClientEntropy`: A chave de sessão se baseia em dados de chave fornecidos pelo cliente.<br />-   `ServerEntropy`: A chave de sessão se baseia em dados de chave fornecidos pelo servidor.<br />-   `CombinedEntropy`: A chave de sessão se baseia nos dados de chave fornecidos pelo cliente e serviço.<br /><br /> O padrão é `CombinedEntropy`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |messageProtectionOrder|Define a ordem na qual mensagem algoritmos de segurança em nível são aplicados à mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   `SignBeforeEncrypt`: Entrar pela primeira vez e, em seguida, criptografar.<br />-   `SignBeforeEncryptAndEncryptSignature`: Entrar pela primeira vez, criptografar, criptografar a assinatura.<br />-   `EncryptBeforeSign`: Criptografe primeiro, em seguida, entrada.<br /><br /> O valor padrão depende da versão do WS-Security que está sendo usado. O valor padrão é `SignBeforeEncryptAndEncryptSignature` ao usar o WS-Security 1.1. O valor padrão é `SignBeforeEncrypt` ao usar o WS-Security 1.0.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|messageSecurityVersion|Opcional. Define a versão do WS-Security, o que é usado. Os valores válidos incluem o seguinte:<br /><br /> -WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> O padrão é WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 e podem ser expressos no XML simplesmente `Default`. Esse atributo é do tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|messageSecurityVersion|Opcional. Define a versão do WS-Security, o que é usado. Os valores válidos incluem o seguinte:<br /><br /> -   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />-   WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />-   WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> O padrão é WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 e podem ser expressos no XML simplesmente `Default`. Esse atributo é do tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |requireDerivedKeys|Um valor booliano que especifica se chaves podem ser derivadas das chaves de prova originais. O padrão é `true`.|  
 |requireSecurityContextCancellation|Opcional. Um valor booliano que especifica se contexto de segurança deve ser cancelado e encerrado quando ele não for mais necessário. O padrão é `true`.|  
 |requireSignatureConfirmation|Opcional. Um valor booliano que especifica se a confirmação de assinatura de WS-Security está habilitada. Quando definido como `true`, as assinaturas de mensagem são confirmadas pelo respondente.  Quando a ligação personalizada está configurada para certificados mútuos ou ele está configurado para esse atributo usa como padrão de tokens de uso emitido (associações de WSS 1.1) `true`. Caso contrário, o padrão é `false`.<br /><br /> Confirmação de assinatura é usada para confirmar que o serviço está respondendo no reconhecimento total de uma solicitação.|  
@@ -91,15 +91,15 @@ Especifica as opções de segurança para uma associação personalizada.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica um token emitido atual. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
-|[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Especifica as configurações de segurança de um cliente local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
-|[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Especifica as configurações de segurança de um serviço local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
+|[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Especifica as configurações de segurança de um cliente local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
+|[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Especifica as configurações de segurança de um serviço local para esta associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Especifica os valores padrão usados para iniciar um serviço de conversa segura.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<associação >](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todos os recursos de associação de associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre como usar esse elemento, consulte [modos de autenticação de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) e [como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
@@ -166,13 +166,13 @@ Especifica as opções de segurança para uma associação personalizada.
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.SecurityElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.SecurityElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Segurança de associação personalizada](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

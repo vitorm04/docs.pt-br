@@ -18,12 +18,12 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: c98868e16fc609a49721724fdd32221a380ff834
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8930e0e5c6bf9bd713b5601c91e6d1a5cbfd7a51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568211"
 ---
 # <a name="ifthenelse-directives"></a>Diretivas #If...Then...#Else
 Compila condicionalmente blocos de código do Visual Basic selecionados.  
@@ -80,10 +80,10 @@ As instruções dentro de um bloco de compilação condicional devem ser conclu�
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
-[Diretiva #Const](../../../visual-basic/language-reference/directives/const-directive.md)  
-[Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
-[Compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
-<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+## <a name="see-also"></a>Consulte também
+- [Diretiva #Const](../../../visual-basic/language-reference/directives/const-directive.md)
+- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>
 
 

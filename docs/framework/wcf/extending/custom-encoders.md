@@ -2,17 +2,17 @@
 title: Decodificadores personalizados
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
-ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
+ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "50034313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509357"
 ---
 # <a name="custom-encoders"></a>Decodificadores personalizados
 Este tópico discute como criar codificadores personalizados.  
   
- No Windows Communication Foundation (WCF), use uma *associação* para especificar como transferir dados através de uma rede entre pontos de extremidade. Uma associação é composta de uma sequência de *elementos de associação*. Uma associação inclui elementos de associação de protocolo opcional, como segurança, um necessária *codificador de mensagem* elemento de associação e um elemento de associação de transporte obrigatório. Um codificador de mensagem é representado por uma elemento de associação de codificação de mensagem. Três codificadores de mensagem são incluídos no WCF: binário, MTOM Message Transmission Optimization Mechanism () e texto.  
+ No Windows Communication Foundation (WCF), use uma *associação* para especificar como transferir dados através de uma rede entre pontos de extremidade. Uma associação é composta de uma sequência de *elementos de associação*. Uma associação inclui elementos de associação de protocolo opcional, como segurança, um necessária *codificador de mensagem* elemento de associação e um elemento de associação de transporte obrigatório. Um codificador de mensagem é representado por uma elemento de associação de codificação de mensagem. Três codificadores de mensagem estão incluídos no WCF: Binário, o mecanismo de otimização de transmissão de mensagens (MTOM) e o texto.  
   
  Uma elemento de associação de codificação que serializa uma saída de mensagem <xref:System.ServiceModel.Channels.Message> e passa-o para o transporte ou recebe o formato serializado de uma mensagem de transporte e passa para a camada de protocolo, se estiver presente, ou para o aplicativo, se ainda não presentes.  
   
@@ -89,12 +89,12 @@ Este tópico discute como criar codificadores personalizados.
   
  Em seguida, conecte seu personalizado <xref:System.ServiceModel.Channels.MessageEncoderFactory> a pilha do elemento de associação usada para configurar o serviço ou cliente, substituindo o <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> método para retornar uma instância desse Data Factory.  
   
- Há dois exemplos fornecidos com o WCF que ilustram esse processo com o código de exemplo: [codificador de mensagem personalizada: codificador de texto personalizado](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) e [codificador de mensagem personalizada: codificador de compactação](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
+ Há dois exemplos fornecidos com o WCF que ilustram esse processo com o código de exemplo: [Codificador de mensagem personalizada: Codificador de texto personalizado](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) e [codificador de mensagem personalizada: Codificador de compactação](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
- <xref:System.ServiceModel.Channels.MessageEncoder>  
- [Visão geral da arquitetura de transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- [Escolhendo um codificador de mensagem](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [Escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>
+- <xref:System.ServiceModel.Channels.MessageEncoder>
+- [Visão geral da arquitetura de transferência de dados](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Escolhendo um codificador de mensagem](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Escolhendo um transporte](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

@@ -1,16 +1,16 @@
 ---
-title: Como implementar um serviço de descoberta que registra usando o proxy de descoberta
+title: 'Como: Implementar um serviço de descoberta que registra com o Proxy de descoberta'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30cf098b97b1e0188f264bee2ce3dbcdcdb8921b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623684"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como implementar um serviço de descoberta que registra usando o proxy de descoberta
-Este tópico é a segunda de quatro tópicos que descreve como implementar um proxy de descoberta. No tópico anterior, [como: implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), implementado um proxy de descoberta. Neste tópico, você cria um serviço WCF que envia mensagens de aviso (`Hello` e `Bye`) para o proxy de descoberta, deixá-lo registrar e cancelar seu registro com o proxy de descoberta.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Como: Implementar um serviço de descoberta que registra com o Proxy de descoberta
+Este tópico é o segundo de quatro tópicos que discute como implementar um proxy de descoberta. No tópico anterior, [como: Implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), você implementou um proxy de descoberta. Neste tópico, você cria um serviço WCF que envia mensagens de comunicado (`Hello` e `Bye`) para o proxy de descoberta, fazendo com que ele se registrar e cancelar seu registro com o proxy de descoberta.  
   
 ### <a name="to-define-the-service-contract"></a>Para definir o contrato de serviço  
   
@@ -22,16 +22,16 @@ Este tópico é a segunda de quatro tópicos que descreve como implementar um pr
   
     2.  System.ServiceModel.Discovery  
   
-3.  Adicionar uma nova classe ao projeto chamado `CalculatorService`.  
+3.  Adicione uma nova classe ao projeto chamado `CalculatorService`.  
   
-4.  Adicione o seguinte usando instruções.  
+4.  Adicione as seguintes instruções using.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-5.  Em CalculatorService.cs, defina o contrato de serviço.  
+5.  Dentro do CalculatorService.cs, defina o contrato de serviço.  
   
     ```csharp  
     // Define a service contract.  
@@ -49,7 +49,7 @@ Este tópico é a segunda de quatro tópicos que descreve como implementar um pr
         }  
     ```  
   
-6.  Também no CalculatorService.cs, implemente o contrato de serviço.  
+6.  Também dentro de CalculatorService.cs, implemente o contrato de serviço.  
   
     ```csharp  
     // Service class which implements the service contract.      
@@ -93,7 +93,7 @@ Este tópico é a segunda de quatro tópicos que descreve como implementar um pr
   
 1.  Abra o arquivo Program.cs que foi gerado quando você criou o projeto.  
   
-2.  Adicione o seguinte usando instruções.  
+2.  Adicione as seguintes instruções using.  
   
     ```csharp 
     using System;  
@@ -154,10 +154,10 @@ Este tópico é a segunda de quatro tópicos que descreve como implementar um pr
     }  
     ```  
   
- Você concluiu a implementação de um serviço detectável. Continue no [como: implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ Você concluiu a implementação de um serviço detectável. Continue no [como: Implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Exemplo  
- Essa é a lista completa do código usado neste tópico.  
+ Isso é a listagem completa do código usado neste tópico.  
   
 ```csharp  
 // CalculatorService.cs  
@@ -284,7 +284,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>Consulte também  
- [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Como implementar um proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [Como implementar um aplicativo cliente que usa o proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>Consulte também
+- [Descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Como: Implementar um Proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Como: Implementar um aplicativo cliente que usa o Proxy de descoberta para localizar um serviço](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

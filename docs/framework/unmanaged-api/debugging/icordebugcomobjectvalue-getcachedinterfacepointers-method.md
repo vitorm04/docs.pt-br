@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef6fb76ca25a1255393b66c52d82cb94df2b48b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46f5742f6f91fec303a37dcc1bab25bee8428c10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631016"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>Método ICorDebugComObjectValue::GetCachedInterfacePointers
-Obtém os ponteiros de interface bruto em cache no atual runtime callable wrapper (RCW).  
+Obtém os ponteiros de interface bruto armazenado em cache no runtime callable wrapper atual (RCW).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +37,13 @@ HRESULT GetCachedInterfacePointers(
   
 #### <a name="parameters"></a>Parâmetros  
  `bIInspectableOnly`  
- [in] Um valor que indica se o método retornará somente [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) ou interfaces COM todos os que são armazenados em cache pelo runtime callable wrapper (RCW).  
+ [in] Um valor que indica se o método retornará somente [!INCLUDE[wrt](../../../../includes/wrt-md.md)] interfaces (`IInspectable` interfaces) ou todas as interfaces COM que são armazenados em cache, o runtime callable wrapper (RCW).  
   
  `celt`  
- [in] O número de objetos cujos endereços devem ser recuperados.  
+ [in] O número de objetos cujos endereços devem ser recuperadas.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `CORDB_ADDRESS` valores retornados na verdade em `ptrs`.  
+ [out] Um ponteiro para o número de `CORDB_ADDRESS` valores realmente retornados na `ptrs`.  
   
  `ptrs`  
  Um ponteiro para o endereço inicial de uma matriz de `CORDB_ADDRESS` que contêm os endereços dos valores armazenados em cache objetos de interface.  
@@ -51,14 +51,14 @@ HRESULT GetCachedInterfacePointers(
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugComObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugComObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

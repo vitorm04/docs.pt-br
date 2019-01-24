@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576181"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Método IMetaDataAssemblyImport::FindExportedTypeByName
-Obtém um ponteiro para um tipo exportado, dado seu nome e o tipo de delimitador.  
+Obtém um ponteiro para um tipo exportado, dado seu nome e tipo de fechamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,23 +42,23 @@ HRESULT FindExportedTypeByName (
  [in] O nome do tipo exportado.  
   
  `mdtExportedType`  
- [in] O token de metadados para a classe delimitador do tipo exportado. Esse valor é `mdExportedTypeNil` se a solicitação exportado tipo não é um tipo aninhado.  
+ [in] O token de metadados para a classe delimitadora do tipo exportado. Esse valor é `mdExportedTypeNil` se exportado solicitada tipo não é um tipo aninhado.  
   
  `ptkExportedType`  
  [out] Um ponteiro para o `mdExportedType` token que representa o tipo exportado.  
   
 ## <a name="remarks"></a>Comentários  
- O `FindExportedTypeByName` método usa as regras padrão usadas pelo common language runtime para resolver referências.  
+ O `FindExportedTypeByName` método usa as regras padrão empregadas pelo common language runtime para resolver referências.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [Como o tempo de execução localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [Como o tempo de execução localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

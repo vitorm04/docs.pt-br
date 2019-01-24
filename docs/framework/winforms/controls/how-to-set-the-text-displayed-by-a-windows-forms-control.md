@@ -1,5 +1,5 @@
 ---
-title: Como definir o texto exibido por um controle dos Windows Forms
+title: 'Como: Definir o texto exibido pelo controle de um Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525029"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636437"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como definir o texto exibido por um controle dos Windows Forms
-Controles dos Windows Forms normalmente exibem algum texto que está relacionado à função primária do controle. Por exemplo, um <xref:System.Windows.Forms.Button> controle normalmente exibe uma legenda que indica qual ação será executada quando o botão é clicado. Para todos os controles, você pode definir ou retornar o texto usando o <xref:System.Windows.Forms.Control.Text%2A> propriedade. Você pode alterar a fonte usando o <xref:System.Windows.Forms.Control.Font%2A> propriedade. Você também pode definir o texto usando o designer.  Consulte também [Como criar chaves de acesso para controles dos Windows Forms usando o Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Como definir o texto exibido por um controle dos Windows Forms usando o Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Como definir a imagem exibida por um controle dos Windows Forms usando o Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como: Definir o texto exibido pelo controle de um Windows Forms
+Controles dos Windows Forms normalmente exibem algum texto que está relacionado à função primária do controle. Por exemplo, um <xref:System.Windows.Forms.Button> controle normalmente exibe uma legenda que indica qual ação será executada quando o botão é clicado. Para todos os controles, você pode definir ou retornar o texto usando o <xref:System.Windows.Forms.Control.Text%2A> propriedade. Você pode alterar a fonte usando o <xref:System.Windows.Forms.Control.Font%2A> propriedade. Você também pode definir o texto usando o designer.  Consulte também [como: Criar chaves de acesso para controles usando o Designer de formulários do Windows](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [como: Definir o texto exibido por um Windows Forms usando o Designer de controle](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [como: Definir a imagem exibida por um Windows Forms usando o Designer de controle](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Como definir o texto exibido por um controle de forma programática  
   
@@ -71,7 +71,7 @@ Controles dos Windows Forms normalmente exibem algum texto que está relacionado
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
- [Como criar teclas de acesso para controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [Como responder a cliques no botão dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
+- [Como: Criar chaves de acesso para controles dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
+- [Como: Responder a cliques de botão do Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

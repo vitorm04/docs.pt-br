@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d237aa83a6bd1c6c68f96aa4fa58a88cfa23c2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510137"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Noções básicas sobre estruturas e conceitos do fluxo de nó XAML
 Leitores XAML e gravadores XAML como implementado no serviços de XAML do .NET Framework baseiam-se no conceito de design de um fluxo de nó XAML. O fluxo do nó XAML é uma conceitualização de um conjunto de nós XAML. Este conceitualização, um processador XAML conduz através da estrutura das relações em que o XAML em um nó por vez. A qualquer momento, somente um registro atual ou a posição atual existe em um fluxo de nó XAML aberto e muitos aspectos da API de relatório apenas as informações disponíveis de posição. O nó atual em um fluxo de nó XAML pode ser descrito como sendo um objeto, um membro ou um valor. Tratando o XAML como um fluxo do nó XAML, os leitores XAML podem se comunicar com gravadores XAML e habilitar um programa exibir, interagir com ou alterar o conteúdo de um fluxo de nó XAML durante um caminho de carga ou salvar operação de caminho que envolve a XAML. Design de API de leitor e gravador XAML e o conceito de fluxo do nó XAML são semelhantes ao anterior leitor relacionado e designs de gravador e conceitos, como o [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] e o <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> classes. Este tópico aborda os conceitos de fluxo de nó XAML e descreve como você pode escrever rotinas que interagem com representações de XAML no nível do nó XAML.  
@@ -194,17 +194,17 @@ public class GameBoard {
   
  As seguintes observações de lista todos os casos em que um leitor XAML é esperado para introduzir um nó de membro XAML diretiva e como esse nó de membro é identificado em implementações de serviços de XAML do .NET Framework.  
   
--   **Texto de inicialização para um nó de objeto:** é o nome deste nó de membro `_Initialization`, ele representa uma diretiva XAML, e ele é definido no namespace XAML de linguagem XAML. Você pode obter uma entidade de estática para ela da <xref:System.Xaml.XamlLanguage.Initialization%2A>.  
+-   **Texto de inicialização para um nó de objeto:** O nome deste nó de membro é `_Initialization`, ele representa uma diretiva XAML, e ele é definido no namespace XAML de linguagem XAML. Você pode obter uma entidade de estática para ela da <xref:System.Xaml.XamlLanguage.Initialization%2A>.  
   
--   **Parâmetros posicionais para uma extensão de marcação:** é o nome deste nó de membro `_PositionalParameters`, e ele é definido no namespace XAML de linguagem XAML. Ele sempre contém uma lista genérica de objetos, cada um deles é um parâmetro posicional previamente separado pela divisão do `,` caractere delimitador como fornecidos na entrada de XAML. Você pode obter uma entidade de estática para a diretiva de parâmetros posicionais de <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.  
+-   **Parâmetros posicionais para uma extensão de marcação:** O nome deste nó de membro é `_PositionalParameters`, e ele é definido no namespace XAML de linguagem XAML. Ele sempre contém uma lista genérica de objetos, cada um deles é um parâmetro posicional previamente separado pela divisão do `,` caractere delimitador como fornecidos na entrada de XAML. Você pode obter uma entidade de estática para a diretiva de parâmetros posicionais de <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>.  
   
--   **Conteúdo desconhecido:** é o nome deste nó de membro `_UnknownContent`. Estritamente falando, é um <xref:System.Xaml.XamlDirective>, e ele é definido no namespace XAML de linguagem XAML. Essa diretiva é usada como uma Sentinela casos em que um elemento de objeto XAML contém o conteúdo na fonte de XAML, mas nenhuma propriedade de conteúdo pode ser determinada sob o contexto de esquema XAML disponível no momento. Você pode detectar esse caso em um fluxo do nó XAML através da verificação de membros nomeados `_UnknownContent`. Se nenhuma outra ação é executada em um fluxo de nó XAML do caminho de carga, o padrão <xref:System.Xaml.XamlObjectWriter> gera na tentativa `WriteEndObject` quando ele encontra o `_UnknownContent` membro em qualquer objeto. O padrão <xref:System.Xaml.XamlXmlWriter> não gerará e tratará o membro como implícita. Você pode obter uma entidade de estática para `_UnknownContent` de <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
+-   **Conteúdo desconhecido:** O nome deste nó de membro é `_UnknownContent`. Estritamente falando, é um <xref:System.Xaml.XamlDirective>, e ele é definido no namespace XAML de linguagem XAML. Essa diretiva é usada como uma Sentinela casos em que um elemento de objeto XAML contém o conteúdo na fonte de XAML, mas nenhuma propriedade de conteúdo pode ser determinada sob o contexto de esquema XAML disponível no momento. Você pode detectar esse caso em um fluxo do nó XAML através da verificação de membros nomeados `_UnknownContent`. Se nenhuma outra ação é executada em um fluxo de nó XAML do caminho de carga, o padrão <xref:System.Xaml.XamlObjectWriter> gera na tentativa `WriteEndObject` quando ele encontra o `_UnknownContent` membro em qualquer objeto. O padrão <xref:System.Xaml.XamlXmlWriter> não gerará e tratará o membro como implícita. Você pode obter uma entidade de estática para `_UnknownContent` de <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
 -   **Propriedade de coleção de uma coleção:** Embora o tipo de CLR de apoio de uma classe de coleção que é usado normalmente para XAML tem dedicada chamada de propriedade que contém os itens da coleção, essa propriedade não é conhecida para um sistema de tipo XAML antes do tipo subjacente resolução. Em vez disso, o fluxo do nó XAML apresenta um `Items` espaço reservado como um membro da coleção de tipo XAML. Na implementação de serviços de XAML do .NET Framework o nome dessa diretiva / membro no fluxo de nó é `_Items`. Uma constante para essa diretiva pode ser obtida em <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      Observe que um fluxo do nó XAML pode conter uma propriedade de itens com os itens que se tornar não pode ser analisado com base no contexto do esquema XAML e resolução de tipo de backup. Por exemplo,  
   
--   **Membros definidos pelo XML:** definidas para o XML `xml:base`, `xml:lang` e `xml:space` membros são relatados como diretivas XAML nomeadas `base`, `lang`, e `space` nos serviços de XAML do .NET Framework implementações. O namespace para eles é o namespace de XML `http://www.w3.org/XML/1998/namespace`. Constantes para cada um deles podem ser obtidas em <xref:System.Xaml.XamlLanguage>.  
+-   **Membros definidos por XML:** O XML definido `xml:base`, `xml:lang` e `xml:space` membros são relatados como diretivas XAML nomeadas `base`, `lang`, e `space` em implementações de serviços de XAML do .NET Framework. O namespace para eles é o namespace de XML `http://www.w3.org/XML/1998/namespace`. Constantes para cada um deles podem ser obtidas em <xref:System.Xaml.XamlLanguage>.  
   
 ## <a name="node-order"></a>Ordem de nó  
  Em alguns casos, <xref:System.Xaml.XamlXmlReader> altera a ordem de nós do XAML no fluxo de nó XAML, em comparação com a ordem em que os nós exibidos se exibido na marcação ou se processados como XML. Isso é feito para ordenar os nós de tal forma que um <xref:System.Xaml.XamlObjectWriter> pode processar o fluxo do nó de uma maneira de somente avanço.  Nos serviços de XAML do .NET Framework, o leitor XAML reordena nós em vez de deixar essa tarefa para o gravador XAML, como uma otimização de desempenho para os consumidores de gravador de objeto XAML do fluxo de nó.  
@@ -217,7 +217,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` representa um nó XAML em que, em vez de construir um novo objeto, um gravador de objeto XAML deve em vez disso, obter o valor da propriedade do objeto contentor. Um caso típico onde um `GetObject` nó é encontrado em um nó XAML fluxo é para um objeto de coleção ou um objeto de dicionário, quando a propriedade recipiente é deliberadamente somente leitura no modelo de objeto do tipo de backup. Nesse cenário, a coleção ou dicionário geralmente é criado e inicializado (geralmente vazio) pela lógica de inicialização de um tipo de proprietário.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xaml.XamlObjectReader>  
- [Serviços XAML](../../../docs/framework/xaml-services/index.md)  
- [Namespaces XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Xaml.XamlObjectReader>
+- [Serviços XAML](../../../docs/framework/xaml-services/index.md)
+- [Namespaces XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

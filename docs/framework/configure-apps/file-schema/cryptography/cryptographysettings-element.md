@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d1dfe5cadf59122994f1a751f985e186c6cf5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602501"
 ---
 # <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; elemento
 Contém configurações de criptografia.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
+\<mscorlib>  
+\<cryptographySettings>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,8 +41,8 @@ Contém configurações de criptografia.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Contém mapeamentos de classes para nomes amigáveis.|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.|  
+|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Contém mapeamentos de classes para nomes amigáveis.|  
+|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contém mapeamentos OID (identificador) de objeto do ASN.1 para classes.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -78,7 +78,7 @@ Contém configurações de criptografia.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)

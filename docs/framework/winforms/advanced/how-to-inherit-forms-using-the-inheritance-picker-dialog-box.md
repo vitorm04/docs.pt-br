@@ -1,19 +1,19 @@
 ---
-title: Como herdar formulários usando a caixa de diálogo Selecionador de Herança
+title: 'Como: Herdar formulários usando a caixa de diálogo selecionador de herança'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601825"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como herdar formulários usando a caixa de diálogo Selecionador de Herança
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Como: Herdar formulários usando a caixa de diálogo selecionador de herança
 A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa de diálogo **Selecionador de Herança**. Com ela, você pode aproveitar códigos ou interfaces do usuário já criados em outras soluções.  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ A maneira mais fácil de herdar um formulário ou outro objeto é usar a caixa d
      Para obter informações sobre como alterar a aparência do formulário de base, consulte [Efeitos da modificação da aparência de um formulário de base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Ao combinar controles e componentes herdados com controles e componentes padrão no Windows Forms, você pode encontrar conflitos com a ordenação z. Você pode corrigir isso modificando a ordenação z, o que é feito clicando no menu **Formato**, apontando para **Ordem** e, em seguida, clicando em **Trazer para Frente** ou **Enviar para Trás**. Para obter mais informações sobre a ordem z de controles, consulte [Como dispor em camadas objetos no Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Ao combinar controles e componentes herdados com controles e componentes padrão no Windows Forms, você pode encontrar conflitos com a ordenação z. Você pode corrigir isso modificando a ordenação z, o que é feito clicando no menu **Formato**, apontando para **Ordem** e, em seguida, clicando em **Trazer para Frente** ou **Enviar para Trás**. Para obter mais informações sobre a ordem z dos controles, consulte [como: Camada de objetos no Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Efeitos da Modificação da Aparência de um Formulário Base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Efeitos da Modificação da Aparência de um Formulário Base](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Herança Visual dos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

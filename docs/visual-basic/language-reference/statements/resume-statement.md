@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624789"
 ---
 # <a name="resume-statement"></a>Instrução Resume
 Retoma a execução após a conclusão de uma rotina de tratamento de erros.  
@@ -58,11 +58,11 @@ Resume [ Next | line ]
  [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## <a name="requirements"></a>Requisitos  
- **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Assembly:** biblioteca de tempo de execução do Visual Basic (em VisualBasic)  
+ **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Instrução Error](../../../visual-basic/language-reference/statements/error-statement.md)  
- [Instrução On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Instrução Error](../../../visual-basic/language-reference/statements/error-statement.md)
+- [Instrução On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)

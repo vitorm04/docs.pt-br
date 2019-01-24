@@ -2,12 +2,12 @@
 title: Host de serviço do WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505634"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
 Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) permite que você iniciar o depurador do Visual Studio (F5) para hospedar automaticamente e testar um serviço que você implementou. Em seguida, você pode testar o serviço usando o cliente de teste do WCF (WcfTestClient.exe) ou seu próprio cliente, para encontrar e corrigir os erros em potencial.  
@@ -21,7 +21,7 @@ Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) perm
 >  Host de serviço do WCF não oferece suporte a confiança parcial. Se você quiser usar um serviço WCF em confiança parcial, não use o modelo de projeto de biblioteca de serviço do WCF no Visual Studio para criar seu serviço. Em vez disso, crie um novo site no Visual Studio escolhendo o modelo de site do serviço WCF, que pode hospedar o serviço em um servidor Web no qual a confiança parcial do WCF é suportado.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Tipos de projeto hospedados pelo Host de serviço do WCF  
- Host de serviço WCF pode hospedar os seguintes tipos de projeto de biblioteca de serviço WCF: WCF Service Library, Sequential Workflow Service Library, State Machine Workflow Service Library e Syndication Service Library. Host de serviço WCF também pode hospedar os serviços que podem ser adicionados a um projeto de biblioteca de serviço usando o **Adicionar Item** funcionalidade. Isso inclui o serviço WCF, o serviço de máquina de estado do WF, WF Sequential Service, serviço de máquina de estado do XAML WF e XAML WF Sequential Service.  
+ Host de serviço WCF pode hospedar os seguintes tipos de projeto de biblioteca de serviço WCF: WCF Service Library, biblioteca de serviço de fluxo de trabalho sequencial, State Machine Workflow Service Library e Syndication Service Library. Host de serviço WCF também pode hospedar os serviços que podem ser adicionados a um projeto de biblioteca de serviço usando o **Adicionar Item** funcionalidade. Isso inclui o serviço WCF, o serviço de máquina de estado do WF, WF Sequential Service, serviço de máquina de estado do XAML WF e XAML WF Sequential Service.  
   
  No entanto, você deve observar que a ferramenta não ajudará a configurar um host. Para essa tarefa, você deve editar manualmente o arquivo App. config. A ferramenta também não valida arquivos de configuração definido pelo usuário.  
   
@@ -72,19 +72,19 @@ Host de serviço do Windows Communication Foundation (WCF) (WcfSvcHost.exe) perm
   
  O **Host de serviço WCF** janela principal contém dois menus:  
   
--   **Arquivo**: contém o **feche** e **Exit** comandos. Quando você clica em **feche**, o **Host de serviço WCF** caixa de diálogo é fechada, mas os serviços continuarão a ser hospedado. Quando você clica em **Exit**, Host de serviço WCF também é desligado. Isso também interrompe todos os serviços hospedados.  
+-   **Arquivo**: Contém o **feche** e **sair** comandos. Quando você clica em **feche**, o **Host de serviço WCF** caixa de diálogo é fechada, mas os serviços continuarão a ser hospedado. Quando você clica em **Exit**, Host de serviço WCF também é desligado. Isso também interrompe todos os serviços hospedados.  
   
--   **Ajudar**: contém o **sobre** comando que contém informações de versão. Ele também contém o **ajudar** comando que pode abrir um arquivo de Ajuda.  
+-   **Ajudar a**: Contém o **sobre** comando que contém informações de versão. Ele também contém o **ajudar** comando que pode abrir um arquivo de Ajuda.  
   
  A principal **Host de serviço WCF** janela contém duas áreas:  
   
 -   É a primeira área **serviço**. Ele contém uma lista que exibe informações básicas de todos os serviços. As informações incluem:  
   
-    -   **Serviço**: lista todos os serviços.  
+    -   **Serviço**: Lista todos os serviços.  
   
-    -   **Status**: lista o status do serviço. Valores válidos são "Iniciado", "Stopped" e "Error".  
+    -   **status**: Lista o status do serviço. Valores válidos são "Iniciado", "Stopped" e "Error".  
   
-    -   **Endereço de metadados**: exibe o endereço de metadados dos serviços.  
+    -   **Endereço de metadados**: Exibe o endereço de metadados dos serviços.  
   
 -   A segunda área é **informações adicionais**. Ele exibe uma explicação detalhada sobre o status do serviço quando a linha de serviço específica for selecionada na **serviço** área. Se o status de erro, você pode exibir a mensagem de erro completa na tela.  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Para obter mais informações sobre netsh.exe, consulte "[como usar a ferramenta de Netsh.exe e as opções de linha de comando](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
-## <a name="see-also"></a>Consulte também  
- [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Consulte também
+- [Cliente de teste do WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

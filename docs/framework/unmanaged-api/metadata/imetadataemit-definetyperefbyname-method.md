@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4fd6102b65137a06009428c1245b80c0d44924a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517130"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Método IMetaDataEmit::DefineTypeRefByName
 Obtém os metadados de um token para um tipo que é definido no escopo especificado, que está fora do escopo atual.  
@@ -41,31 +41,31 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in] O token especificando o escopo de resolução. Os seguintes tipos de token são válidos:  
   
--   `mdModuleRef`, se o tipo é definido no mesmo assembly no qual o chamador está definido.  
+-   `mdModuleRef`, se o tipo é definido no mesmo assembly no qual o chamador é definido.  
   
--   `mdAssemblyRef`, se o tipo é definido em um assembly diferente no qual o chamador está definido.  
+-   `mdAssemblyRef`, se o tipo é definido em um assembly diferente no qual o chamador é definido.  
   
 -   `mdTypeRef`, se o tipo for um tipo aninhado.  
   
--   `mdModule`, se o tipo é definido no mesmo módulo no qual o chamador está definido.  
+-   `mdModule`, se o tipo é definido no mesmo módulo no qual o chamador é definido.  
   
--   NULL se o tipo é definido globalmente.  
+-   Nulo, se o tipo é definido globalmente.  
   
  `szName`  
  [in] O nome do tipo de destino em Unicode.  
   
  `ptr`  
- [out] Um ponteiro para o `mdTypeRef` que é atribuído ao tipo de token.  
+ [out] Um ponteiro para o `mdTypeRef` token que é atribuído ao tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

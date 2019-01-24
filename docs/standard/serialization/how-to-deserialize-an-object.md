@@ -1,5 +1,5 @@
 ---
-title: Como desserializar um objeto
+title: 'Como: Desserializar um objeto'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 6da8ec2b78066cd251e4ad492afd2d9d37f7b965
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583305"
 ---
-# <a name="how-to-deserialize-an-object"></a>Como desserializar um objeto
+# <a name="how-to-deserialize-an-object"></a>Como: Desserializar um objeto
 Quando você desserializar um objeto, o formato do transporte determina se você criará um fluxo ou objeto de arquivo. Após o formato do transporte ser determinado, você poderá chamar os métodos <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> ou <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>, conforme o necessário.  
   
 ### <a name="to-deserialize-an-object"></a>Para desserializar um objeto  
@@ -53,5 +53,5 @@ Quando você desserializar um objeto, o formato do transporte determina se você
   
 ## <a name="see-also"></a>Consulte também
 
-- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)

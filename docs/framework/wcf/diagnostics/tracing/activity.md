@@ -2,12 +2,12 @@
 title: Atividade
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505582"
 ---
 # <a name="activity"></a>Atividade
 Este tópico descreve os rastreamentos de atividade no modelo de rastreamento do Windows Communication Foundation (WCF). As atividades são unidades que ajudam o usuário a restringir o escopo de uma falha de processamento. Erros que ocorrem na mesma atividade estão diretamente relacionados. Por exemplo, uma operação falhará porque a falha na descriptografia mensagem. Os rastreamentos para a operação e a falha na descriptografia mensagem aparecem na mesma atividade, mostrando uma correlação direta entre o erro de descriptografia e o erro da solicitação.  
@@ -66,9 +66,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Início: Indica o início de uma atividade. Um rastreamento "Start" fornece um registro do início de uma nova etapa de processamento. Ele contém uma nova ID de atividade para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Start" por ponto de extremidade. Exemplos de iniciar uma nova atividade incluem a criação de um novo thread para processamento, ou inserindo um novo método público.  
   
--   STOP: Indica o final de uma atividade. Um rastreamento de "Parar" fornece um registro de encerramento de uma etapa de processamento existente. Ele contém uma ID de atividade existente para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Stop" por ponto de extremidade.  Encerrar um thread de processamento ou sair de um método cujo início foi marcado com um rastreamento "Start" são exemplos de parar uma atividade.  
+-   Parar: Indica o final de uma atividade. Um rastreamento de "Parar" fornece um registro de encerramento de uma etapa de processamento existente. Ele contém uma ID de atividade existente para uma determinada origem em um determinado processo, exceto quando a ID de atividade for propagada entre pontos de extremidade, nesse caso, podemos ver um "Stop" por ponto de extremidade.  Encerrar um thread de processamento ou sair de um método cujo início foi marcado com um rastreamento "Start" são exemplos de parar uma atividade.  
   
--   Suspender: Indica a suspensão de processamento de uma atividade. Um rastreamento de "Suspender" contém uma ID de atividade existente cujo processamento é esperado para retomar um momento posterior. Nenhum rastreamento é emitido com essa ID entre os eventos suspender e retomar da origem de rastreamento atual. Exemplos de pausar uma atividade durante uma chamada a uma função de biblioteca externa ou ao esperar em um recurso como uma porta de conclusão de e/s.  
+-   Suspenda: Indica a suspensão de processamento de uma atividade. Um rastreamento de "Suspender" contém uma ID de atividade existente cujo processamento é esperado para retomar um momento posterior. Nenhum rastreamento é emitido com essa ID entre os eventos suspender e retomar da origem de rastreamento atual. Exemplos de pausar uma atividade durante uma chamada a uma função de biblioteca externa ou ao esperar em um recurso como uma porta de conclusão de e/s.  
   
 -   Retomar: Indica a retomada do processamento de uma atividade. Um rastreamento de "Continuação" contém uma id de atividade existente cujo último rastreamento emitido da origem de rastreamento atual foi um rastreamento de "Suspender". Exemplos de retornar de uma chamada para uma função de biblioteca externa, ou quando sinalizado para retomar o processamento por um recurso, como uma porta de conclusão de e/s.  
   
@@ -97,9 +97,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   As atividades representam atividades, não necessariamente objetos. Uma atividade deve ser interpretada como "isso estava acontecendo quando. . . (emissão de rastreamento significativo ocorreu)."  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando o rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Emitindo rastreamentos de código do usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a>Consulte também
+- [Configurando o rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Emitindo rastreamentos de código do usuário](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

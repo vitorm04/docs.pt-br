@@ -2,19 +2,19 @@
 title: '&lt;schemeSettings&gt; (configurações de Uri)'
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 7c75e9a6d29637e1701fe0b9e05adf0ccc3596b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3320fde81df3ec31bd52e3194a84686acc5d9216
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628884"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; (configurações de Uri)
 Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.  
   
  \<configuration>  
-\<URI >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,7 +41,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contém configurações que especificam como o .NET Framework controla endereços da web expressados usando identificadores de recurso uniformes (URIs).|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contém configurações que especificam como o .NET Framework controla endereços da web expressados usando identificadores de recurso uniformes (URIs).|  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, o <xref:System.Uri?displayProperty=nameWithType> por cento un-escapes de classe codificado delimitadores de caminho antes de executar a compactação de caminho. Isso era implementado como um mecanismo de segurança contra ataques, como o seguinte:  
@@ -83,11 +83,11 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
 |Arquivo de validação||  
 |Pode ser vazio||  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

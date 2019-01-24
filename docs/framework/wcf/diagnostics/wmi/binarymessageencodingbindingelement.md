@@ -2,12 +2,12 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: 326fe6a7ca8dc5dba0dd64b1c5fc97cec49279c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 330496d5f0f80affcb6bc44a1f66f4321a635f00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580584"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
@@ -30,31 +30,31 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 ## <a name="properties"></a>Propriedades  
  A classe BinaryMessageEncodingBindingElement tem as seguintes propriedades.  
   
-## <a name="maxreadpoolsize"></a>maxReadPoolSize  
+## <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um inteiro que define quantas mensagens pode ser lidas simultaneamente sem alocar novos leitores.  
   
-## <a name="maxsessionsize"></a>maxSessionSize  
+## <a name="maxsessionsize"></a>MaxSessionSize  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um valor que especifica o tamanho, em bytes, do buffer usado para codificação.  
   
-## <a name="maxwritepoolsize"></a>maxWritePoolSize  
+## <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Tipo de dados: sint32  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Um inteiro que define quantas mensagens pode ser enviado simultaneamente sem alocar novos escritores.  
   
-## <a name="readerquotas"></a>readerQuotas  
+## <a name="readerquotas"></a>ReaderQuotas  
  Tipo de dados: XmlDictionaryReaderQuotas  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  As cotas dos leitores.  
   
@@ -64,5 +64,5 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

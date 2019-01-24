@@ -1,5 +1,5 @@
 ---
-title: Como localizar assemblies usando DEVPATH
+title: 'Como: Localizar Assemblies usando DEVPATH'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627533"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>Como localizar assemblies usando DEVPATH
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>Como: Localizar Assemblies usando DEVPATH
 Talvez os desenvolvedores queiram certificar-se de que um assembly compartilhado que elas estão criando funciona corretamente com vários aplicativos. Em vez de continuamente colocar o assembly no cache de assembly global durante o ciclo de desenvolvimento, o desenvolvedor pode criar uma variável de ambiente DEVPATH que aponta para o diretório de saída de compilação para o assembly.  
   
  Por exemplo, suponha que você esteja criando um assembly compartilhado chamado MySharedAssembly e o diretório de saída é C:\MySharedAssembly\Debug. Você pode colocar C:\MySharedAssembly\Debug na variável DEVPATH. Em seguida, você deve especificar o [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) elemento no arquivo de configuração do computador. Esse elemento informa o common language runtime usar DEVPATH para localizar assemblies.  
@@ -45,5 +45,5 @@ Talvez os desenvolvedores queiram certificar-se de que um assembly compartilhado
 > [!NOTE]
 >  Use essa configuração somente em tempo de desenvolvimento. O tempo de execução não verifica as versões de assemblies de nome forte encontrados no DEVPATH. Ela simplesmente usa o assembly primeiro que ele localiza.  
   
-## <a name="see-also"></a>Consulte também  
- [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Consulte também
+- [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

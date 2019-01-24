@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cd1c077a8f2a5fe3b2b46c2e1da2e92b5a797a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d73c158fa9d7b5574e4f875b8d51e932e30041b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572234"
 ---
 # <a name="emitassembly-method"></a>Método EmitAssembly
-Cria o assembly. Chame este método depois que todos os outros arquivos são fechados, exceto o arquivo de assembly. Não chame este método durante a produção de módulos não associados.  
+Cria o assembly. Chame esse método depois que todos os outros arquivos são fechados, exceto para o arquivo do assembly. Não chame este método durante a produção de módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,12 +40,12 @@ HRESULT EmitAssembly(
  ID do assembly.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

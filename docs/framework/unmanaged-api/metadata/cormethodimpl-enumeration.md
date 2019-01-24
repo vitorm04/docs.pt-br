@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491279"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumeração CorMethodImpl
 Contém valores que descrevem os recursos de implementação de método.  
@@ -59,28 +59,28 @@ typedef enum CorMethodImpl {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Sinalizadores que descrevem o tipo de código.|  
-|`miIL`|Especifica que a implementação do método Microsoft intermediate language (MSIL).|  
+|`miIL`|Especifica que a implementação do método é Microsoft intermediate language (MSIL).|  
 |`miNative`|Especifica que a implementação do método é nativa.|  
 |`miOPTIL`|Especifica que a implementação do método OPTIL.|  
 |`miRuntime`|Especifica que a implementação do método é fornecida pelo common language runtime.|  
 |`miManagedMask`|Sinalizadores que indicam se o código é gerenciado ou não.|  
-|`miUnmanaged`|Especifica que a implementação do método é não gerenciada.|  
+|`miUnmanaged`|Especifica que a implementação do método não gerenciada.|  
 |`miManaged`|Especifica que a implementação do método é gerenciada.|  
-|`miForwardRef`|Especifica que o método está definido. Este sinalizador é usado principalmente em cenários de mesclagem.|  
-|`miPreserveSig`|Especifica que a assinatura do método não pode ser desconfigurada para uma conversão de HRESULT.|  
+|`miForwardRef`|Especifica que o método é definido. Este sinalizador é usado principalmente em cenários de mesclagem.|  
+|`miPreserveSig`|Especifica que a assinatura do método não pode ser danificada para uma conversão de HRESULT.|  
 |`miInternalCall`|Reservado para uso interno pelo common language runtime.|  
-|`miSynchronized`|Especifica que o método de thread único por meio de seu corpo.|  
+|`miSynchronized`|Especifica que o método é single-threaded por meio de seu corpo.|  
 |`miNoInlining`|Especifica que o método não pode estar em linha.|  
 |`miAggressiveInlining`|Especifica que o método deve ser embutido se possível.|  
 |`miNoOptimization`|Especifica que o método não deve ser otimizado.|  
 |`miMaxMethodImplVal`|O valor válido máximo para um `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

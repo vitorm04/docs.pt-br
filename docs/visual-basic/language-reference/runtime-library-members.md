@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: 438094d00375531752f575f1f99b3db4ddf4e2e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514797"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membros da biblioteca em tempo de execução do Visual Basic
-O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e enumerações que constituem a biblioteca de tempo de execução do Visual Basic. Esses membros de biblioteca fornecem procedimentos, propriedades e valores constantes que você pode usar em seu código. Cada módulo e a classe representam uma categoria específica de funcionalidade.  
+O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e enumerações que constituem a biblioteca de tempo de execução do Visual Basic. Esses membros da biblioteca fornecem procedimentos, propriedades e valores constantes que você pode usar em seu código. Cada módulo e a classe representam uma categoria específica de funcionalidade.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Classe Microsoft.VisualBasic.Collection  
   
@@ -32,7 +32,7 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.ComClassAttribute.ClassID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.EventID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceID%2A>|<xref:Microsoft.VisualBasic.ComClassAttribute.InterfaceShadows%2A>|  
   
-## <a name="microsoftvisualbasiccontrolchars-class"></a>Classe Microsoft.VisualBasic.ControlChars  
+## <a name="microsoftvisualbasiccontrolchars-class"></a>Microsoft.VisualBasic.ControlChars Class  
   
 |||||  
 |---|---|---|---|  
@@ -40,7 +40,7 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |<xref:Microsoft.VisualBasic.ControlChars.Lf>|<xref:Microsoft.VisualBasic.ControlChars.NewLine>|<xref:Microsoft.VisualBasic.ControlChars.NullChar>|<xref:Microsoft.VisualBasic.ControlChars.Quote>|  
 |<xref:Microsoft.VisualBasic.ControlChars.Tab>|<xref:Microsoft.VisualBasic.ControlChars.VerticalTab>|||  
   
-## <a name="microsoftvisualbasicconstants-class"></a>Classe Microsoft.VisualBasic.Constants  
+## <a name="microsoftvisualbasicconstants-class"></a>Microsoft.VisualBasic.Constants Class  
   
 |||||  
 |---|---|---|---|  
@@ -78,7 +78,7 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |<xref:Microsoft.VisualBasic.Conversion.ErrorToString%2A>|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>|<xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
 |<xref:Microsoft.VisualBasic.Conversion.Oct%2A>|<xref:Microsoft.VisualBasic.Conversion.Str%2A>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>||  
   
-## <a name="microsoftvisualbasicdateandtime-module"></a>Módulo Microsoft.VisualBasic.DateAndTime  
+## <a name="microsoftvisualbasicdateandtime-module"></a>Microsoft.VisualBasic.DateAndTime Module  
   
 |||||  
 |---|---|---|---|  
@@ -89,7 +89,7 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Today%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>|  
 |<xref:Microsoft.VisualBasic.DateAndTime.WeekdayName%2A>|<xref:Microsoft.VisualBasic.DateAndTime.Year%2A>|||  
   
-## <a name="microsoftvisualbasicerrobject-class"></a>Classe Microsoft.VisualBasic.ErrObject  
+## <a name="microsoftvisualbasicerrobject-class"></a>Microsoft.VisualBasic.ErrObject Class  
   
 |||||  
 |---|---|---|---|  
@@ -97,7 +97,7 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |<xref:Microsoft.VisualBasic.ErrObject.HelpContext%2A>|<xref:Microsoft.VisualBasic.ErrObject.HelpFile%2A>|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|<xref:Microsoft.VisualBasic.ErrObject.Number%2A>|  
 |<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|||  
   
-## <a name="microsoftvisualbasicfilesystem-module"></a>Módulo Microsoft.VisualBasic.FileSystem  
+## <a name="microsoftvisualbasicfilesystem-module"></a>Microsoft.VisualBasic.FileSystem Module  
   
 |||||  
 |---|---|---|---|  
@@ -121,7 +121,7 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |<xref:Microsoft.VisualBasic.Financial.PPmt%2A>|<xref:Microsoft.VisualBasic.Financial.PV%2A>|<xref:Microsoft.VisualBasic.Financial.Rate%2A>|<xref:Microsoft.VisualBasic.Financial.SLN%2A>|  
 |<xref:Microsoft.VisualBasic.Financial.SYD%2A>||||  
   
-## <a name="microsoftvisualbasicglobals-module"></a>Módulo Microsoft.VisualBasic.Globals  
+## <a name="microsoftvisualbasicglobals-module"></a>Microsoft.VisualBasic.Globals Module  
   
 |||||  
 |---|---|---|---|  
@@ -153,13 +153,13 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>|<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|<xref:Microsoft.VisualBasic.Interaction.Partition%2A>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
 |<xref:Microsoft.VisualBasic.Interaction.Shell%2A>|<xref:Microsoft.VisualBasic.Interaction.Switch%2A>|||  
   
-## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Classe Microsoft.VisualBasic.MyGroupCollectionAttribute  
+## <a name="microsoftvisualbasicmygroupcollectionattribute-class"></a>Microsoft.VisualBasic.MyGroupCollectionAttribute Class  
   
 |||||  
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.CreateMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DefaultInstanceAlias%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.DisposeMethod%2A>|<xref:Microsoft.VisualBasic.MyGroupCollectionAttribute.MyGroupName%2A>|  
   
-## <a name="microsoftvisualbasicstrings-module"></a>Módulo Microsoft.VisualBasic.Strings  
+## <a name="microsoftvisualbasicstrings-module"></a>Microsoft.VisualBasic.Strings Module  
   
 |||||  
 |---|---|---|---|  
@@ -190,9 +190,9 @@ O `Microsoft.VisualBasic` namespace contém as classes, módulos, constantes e e
 |---|---|---|---|  
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
-## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft. VisualBasic constantes e enumerações  
- O `Microsoft.VisualBasic` namespace fornece constantes e enumerações como parte da biblioteca de tempo de execução do Visual Basic. Você pode usar esses valores constantes em seu código. Cada enumeração representa uma categoria específica de funcionalidade. Para obter mais informações, consulte [constantes e enumerações](../../visual-basic/language-reference/constants-and-enumerations.md).  
+## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Enumerações e constantes de Microsoft. VisualBasic  
+ O `Microsoft.VisualBasic` namespace fornece constantes e enumerações como parte da biblioteca de tempo de execução do Visual Basic. Você pode usar esses valores de constantes em seu código. Cada enumeração representa uma categoria específica de funcionalidade. Para obter mais informações, consulte [constantes e enumerações](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Constantes e Enumerações](../../visual-basic/language-reference/constants-and-enumerations.md)  
- [Palavras-chave](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Consulte também
+- [Constantes e Enumerações](../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Palavras-chave](../../visual-basic/language-reference/keywords/index.md)

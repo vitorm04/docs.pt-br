@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: 2a39e1332625d1614ea9e0243f2ac610e1f9287c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca4e4beed068d47bef7a5cd4f7b05bde0a19de23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510788"
 ---
 # <a name="webbrowser-control-windows-forms"></a>Controle WebBrowser (Windows Forms)
 O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recursos de navegação na Web para seu aplicativo.  
@@ -23,19 +23,19 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  [Segurança do WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
  Discute problemas de segurança relacionados ao controle.  
   
- [Como navegar até uma URL com o controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Como: Navegue até uma URL com o controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  Demonstra como usar o controle para navegar até uma URL específica.  
   
- [Como imprimir com um controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Como: Imprimir com um controle WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
  Demonstra como imprimir uma página da Web sem exibi-la.  
   
- [Como adicionar recursos do navegador da Web a um Aplicativo dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Como: Adicionar recursos do navegador da Web a um aplicativo do Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  Descreve como inicializar o controle para ser usado como um navegador da Web.  
   
- [Como criar um visualizador de documento HTML em um Aplicativo dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  Descreve como inicializar o controle a ser usado como um visualizador HTML.  
   
- [Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
  Descreve como configurar a comunicação bidirecional entre o código do aplicativo e DHTML em uma página da Web hospedada pelo controle.  
   
  [Usando o Modelo de Objeto do Documento HTML gerenciado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
@@ -78,5 +78,5 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Descreve esta enumeração e todos os seus valores.  
   
-## <a name="see-also"></a>Consulte também  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

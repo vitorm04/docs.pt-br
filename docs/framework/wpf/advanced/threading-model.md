@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513640"
 ---
 # <a name="threading-model"></a>Modelo de threading
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] foi projetado para livrar os desenvolvedores das dificuldades de threading. Como resultado, a maioria dos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] os desenvolvedores não terão que escrever uma interface que usa mais de um thread. Como os programas multi-threaded são complexos e difíceis de serem depurados, deve-se evitá-los quando existem soluções single-threaded.  
@@ -54,7 +54,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  O <xref:System.Windows.Threading.Dispatcher> ordena os elementos em sua fila por prioridade. Existem dez níveis que podem ser especificados ao adicionar um elemento para o <xref:System.Windows.Threading.Dispatcher> fila. Essas prioridades são mantidas no <xref:System.Windows.Threading.DispatcherPriority> enumeração. Informações detalhadas sobre <xref:System.Windows.Threading.DispatcherPriority> níveis podem ser encontrados no [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)] documentação.  
   
 <a name="samples"></a>   
-## <a name="threads-in-action-the-samples"></a>Threads em ação: as amostras  
+## <a name="threads-in-action-the-samples"></a>Threads em ação: Os exemplos  
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Um aplicativo single-threaded com um cálculo de execução longa  
@@ -217,5 +217,5 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
  A tarefa para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é evitar a reentrância inesperada sem reintroduzir a perda de memória, por isso, não bloqueamos a reentrada em todos os lugares.  
   
-## <a name="see-also"></a>Consulte também  
- [Amostra de aplicativo single-threaded com um cálculo de execução longa](https://go.microsoft.com/fwlink/?LinkID=160038)
+## <a name="see-also"></a>Consulte também
+- [Amostra de aplicativo single-threaded com um cálculo de execução longa](https://go.microsoft.com/fwlink/?LinkID=160038)

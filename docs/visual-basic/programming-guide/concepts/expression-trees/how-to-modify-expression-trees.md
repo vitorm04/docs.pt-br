@@ -1,22 +1,22 @@
 ---
-title: 'Como: modificar árvores de expressão (Visual Basic)'
+title: 'Como: Modificar árvores de expressão (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 92a0fb37e2a383c68beb2e4a56deb16f89a9bd28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41af4ba3933931eb62f85cd4ad69eb1b8cc50ac2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603516"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>Como: modificar árvores de expressão (Visual Basic)
+# <a name="how-to-modify-expression-trees-visual-basic"></a>Como: Modificar árvores de expressão (Visual Basic)
 Este tópico mostra como modificar uma árvore de expressão. As árvores de expressão são imutáveis, o que significa que elas não podem ser diretamente modificadas. Para alterar uma árvore de expressão, você deve criar uma cópia de uma árvore de expressão existente e, ao criar a cópia, faça as alterações necessárias. Você pode usar a classe <xref:System.Linq.Expressions.ExpressionVisitor> para percorrer uma árvore de expressão existente e copiar cada nó que ela visitar.  
   
 ### <a name="to-modify-an-expression-tree"></a>Para modificar uma árvore de expressão  
   
 1.  Crie um novo projeto de **Aplicativo de Console**.  
   
-2.  Adicionar uma `Imports` instrução para o arquivo para o `System.Linq.Expressions` namespace.  
+2.  Adicionar um `Imports` instrução para o arquivo para o `System.Linq.Expressions` namespace.  
   
 3.  Adicione a classe `AndAlsoModifier` ao seu projeto.  
   
@@ -46,9 +46,9 @@ Este tópico mostra como modificar uma árvore de expressão. As árvores de exp
   
      Essa classe herda a classe <xref:System.Linq.Expressions.ExpressionVisitor> e é especializada para modificar expressões que representam operações `AND` condicionais. Ela muda essas operações de uma `AND` condicional para uma `OR` condicional. Para fazer isso, a classe substitui o método <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> do tipo base, pois as expressões `AND` condicionais são representadas como expressões binárias. No método `VisitBinary`, se a expressão que é passada a ele representa uma operação `AND` condicional, o código cria uma nova expressão que contém o operador `OR` condicional em vez do operador `AND` condicional. Se a expressão que é passada para o `VisitBinary` não representa uma operação `AND` condicional, o método adia para a implementação da classe base. Os métodos da classe base constroem nós que são semelhantes às árvores de expressão que são passadas, mas os nós têm suas subárvores substituídas pelas árvores de expressão que são produzidas recursivamente pelo visitante.  
   
-4.  Adicionar uma `Imports` instrução para o arquivo para o `System.Linq.Expressions` namespace.  
+4.  Adicionar um `Imports` instrução para o arquivo para o `System.Linq.Expressions` namespace.  
   
-5.  Adicione código para o `Main` método no arquivo Module1. vb para criar uma árvore de expressão e passá-lo para o método que modificá-la.  
+5.  Adicione código para o `Main` método no arquivo Module1.vb para criar uma árvore de expressão e passá-lo para o método que modificá-lo.  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -70,6 +70,6 @@ Este tópico mostra como modificar uma árvore de expressão. As árvores de exp
   
 6.  Compile e execute o aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
- [Como: executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

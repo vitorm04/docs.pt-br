@@ -1,5 +1,5 @@
 ---
-title: Como alterar estilos em um elemento no Document Object Model HTML gerenciado
+title: 'Como: Alterar estilos em um elemento no modelo de objeto do documento HTML gerenciado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: 9ecb6b90508ca53e3801a633ac2444426e2f8113
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db67936e368c1cb6d942b348ebacd87b6127e19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579375"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Como alterar estilos em um elemento no Document Object Model HTML gerenciado
-Você pode usar estilos em HTML para controlar a aparência de um documento e seus elementos. <xref:System.Windows.Forms.HtmlDocument> e <xref:System.Windows.Forms.HtmlElement> suporte <xref:System.Windows.Forms.HtmlElement.Style%2A> propriedades que usam cadeias de caracteres de estilo do seguinte formato:  
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Como: Alterar estilos em um elemento no modelo de objeto do documento HTML gerenciado
+Você pode usar estilos em HTML para controlar a aparência de um documento e seus elementos. <xref:System.Windows.Forms.HtmlDocument> e <xref:System.Windows.Forms.HtmlElement> suporte <xref:System.Windows.Forms.HtmlElement.Style%2A> as propriedades que usam cadeias de caracteres de estilo no seguinte formato:  
   
  `name1:value1;...;nameN:valueN;`  
   
@@ -27,7 +27,7 @@ Você pode usar estilos em HTML para controlar a aparência de um documento e se
   
  `</DIV>`  
   
- O problema com a manipulação de estilos usando o <xref:System.Windows.Forms.HtmlElement.Style%2A> é de propriedade que pode ser inconveniente para adicionar a e remover definições de estilo individuais da cadeia de caracteres. Por exemplo, seria um procedimento complexo renderizar o texto anterior em itálico sempre que o usuário posicionar o cursor sobre o `DIV` e remover o itálico quando o cursor deixar o `DIV`. O tempo poderia se tornar um problema se você precisasse manipular um grande número de estilos dessa maneira.  
+ O problema em manipular estilos usando o <xref:System.Windows.Forms.HtmlElement.Style%2A> é de propriedade que pode ser inconveniente para adicionar a e remover definições de estilo individuais da cadeia de caracteres. Por exemplo, seria um procedimento complexo renderizar o texto anterior em itálico sempre que o usuário posicionar o cursor sobre o `DIV` e remover o itálico quando o cursor deixar o `DIV`. O tempo poderia se tornar um problema se você precisasse manipular um grande número de estilos dessa maneira.  
   
  O procedimento a seguir contém o código que pode ser usado para manipular facilmente os estilos em documentos e elementos HTML. O procedimento exige que você saiba como executar tarefas básicas no Windows Forms, tal como criar um novo projeto e adicionar um controle a um formulário.  
   
@@ -57,12 +57,12 @@ Você pode usar estilos em HTML para controlar a aparência de um documento e se
     </HTML>  
     ```  
   
-5.  Adicionar um <xref:System.Windows.Forms.WebBrowser> controle chamado `webBrowser1` ao formulário principal de seu projeto.  
+5.  Adicionar um <xref:System.Windows.Forms.WebBrowser> controle chamado `webBrowser1` ao formulário principal do seu projeto.  
   
 6.  Adicione o seguinte código ao arquivo de código do seu projeto.  
   
     > [!IMPORTANT]
-    >  Certifique-se de que o `webBrowser1_DocumentCompleted` manipulador de eventos é configurado como um ouvinte para o <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> evento. No Visual Studio, clique duas vezes no <xref:System.Windows.Forms.WebBrowser> controlar; em um editor de texto, configurar o ouvinte de forma programática.  
+    >  Certifique-se de que o `webBrowser1_DocumentCompleted` manipulador de eventos é configurado como um ouvinte para o <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. No Visual Studio, clique duas vezes no <xref:System.Windows.Forms.WebBrowser> controle; em um editor de texto, configure o ouvinte por meio de programação.  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
@@ -75,5 +75,5 @@ Você pode usar estilos em HTML para controlar a aparência de um documento e se
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
  [!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.HtmlElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.HtmlElement>

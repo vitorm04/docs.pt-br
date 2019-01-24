@@ -2,21 +2,21 @@
 title: '&lt;segurança&gt; de &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 901a1d0b29fa6ea7d9e520b379dc7c7ff1d1e522
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8b0b8c5f230e8e93c07e13212201896010429af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585374"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;segurança&gt; de &lt;peerTransport&gt;
 Contém as definições de segurança associadas a um canal de pares, incluindo o tipo de autenticação utilizada e a segurança usada para o transporte de mensagens.  
   
  \<system.serviceModel>  
-\<associações >  
+\<bindings>  
 \<customBinding>  
-\<associação >  
-\<peerTransport >  
+\<binding>  
+\<peerTransport>  
 \<segurança >  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -49,22 +49,22 @@ Contém as definições de segurança associadas a um canal de pares, incluindo 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<transporte >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Define um transporte de par para uma associação personalizada. Este elemento tem um `clientCredentialType` atributo que especifica as credenciais a serem usadas ao interagir com um serviço. Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Define um transporte de par para uma associação personalizada. Este elemento tem um `clientCredentialType` atributo que especifica as credenciais a serem usadas ao interagir com um serviço. Esse atributo é do tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Define um transporte de par para uma associação personalizada.|  
+|[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Define um transporte de par para uma associação personalizada.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
- <xref:System.ServiceModel.PeerSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Segurança de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Associações](../../../../../docs/framework/wcf/bindings.md)  
- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Configuration.PeerSecurityElement>
+- <xref:System.ServiceModel.PeerSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Segurança de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Escolhendo um transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Associações](../../../../../docs/framework/wcf/bindings.md)
+- [Estendendo associações](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Associações personalizadas](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

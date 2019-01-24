@@ -2,12 +2,12 @@
 title: Arquivo especificado no nome de arquivo não é um arquivo XML válido
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: d4babe81f950bcf9b23d053405fb293e81056c36
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ffa39653c20127bb6af5e85654fee940a191fe5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603515"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>Arquivo especificado no nome de arquivo não é um arquivo XML válido
 O nome do arquivo que você forneceu não é um arquivo XML válido. Para especificar a estrutura permitida e conteúdo de um documento XML, você pode usar uma definição de tipo de documento (DTD), um esquema do Microsoft XML-Data Reduced (XDR) ou um esquema XSD (linguagem) de definição de esquema XML. Esquemas XSD são a maneira preferencial para especificar as gramáticas XML no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
@@ -26,4 +26,4 @@ O nome do arquivo que você forneceu não é um arquivo XML válido. Para especi
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml>
-- [Como analisar demarcadores de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Como: Analisar demarcadores de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

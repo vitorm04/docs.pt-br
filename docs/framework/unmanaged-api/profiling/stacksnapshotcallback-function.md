@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e73afa7ef33e12d6bc658c944c79ce1bc4f94f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459079"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572403"
 ---
 # <a name="stacksnapshotcallback-function"></a>Função StackSnapshotCallback
-Fornece o criador de perfil com informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados na pilha durante um exame da pilha, que é iniciado com a [Icorprofilerinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método.  
+Fornece o criador de perfil com informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados na pilha durante uma movimentação de pilha, que é iniciada com o [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,10 +41,10 @@ HRESULT __stdcall StackSnapshotCallback (
   
 #### <a name="parameters"></a>Parâmetros  
  `funcId`  
- [in] Se esse valor for zero, esse retorno de chamada é para uma execução de quadros não gerenciados; Caso contrário, o identificador de uma função gerenciada e esse retorno de chamada é para um quadro gerenciado.  
+ [in] Se esse valor for zero, esse retorno de chamada é para uma execução de quadros não gerenciados; Caso contrário, ele é o identificador de uma função gerenciada e esse retorno de chamada é para um quadro gerenciado.  
   
  `ip`  
- [in] O valor do ponteiro de instrução do código nativo no quadro.  
+ [in] O valor do ponteiro de instrução de código nativo no quadro.  
   
  `frameInfo`  
  [in] Um `COR_PRF_FRAME_INFO` valor que faz referência a informações sobre o quadro de pilha. Esse valor é válido para uso somente durante esse retorno de chamada.  
@@ -53,7 +53,7 @@ HRESULT __stdcall StackSnapshotCallback (
  [in] O tamanho do `CONTEXT` estrutura, que é referenciada pelo `context` parâmetro.  
   
  `context`  
- [in] Um ponteiro para um Win32 `CONTEXT` estrutura que representa o estado da CPU por este quadro.  
+ [in] Um ponteiro para um Win32 `CONTEXT` estrutura que representa o estado da CPU para este quadro.  
   
  O `context` parâmetro é válido somente se o sinalizador COR_PRF_SNAPSHOT_CONTEXT foi passado `ICorProfilerInfo2::DoStackSnapshot`.  
   
@@ -61,19 +61,19 @@ HRESULT __stdcall StackSnapshotCallback (
  [in] Um ponteiro para os dados do cliente, que são passados diretamente por meio da `ICorProfilerInfo2::DoStackSnapshot`.  
   
 ## <a name="remarks"></a>Comentários  
- O `StackSnapshotCallback` função é implementada pelo gerador de criador de perfil. Você deve limitar a complexidade do trabalho no `StackSnapshotCallback`. Por exemplo, ao usar `ICorProfilerInfo2::DoStackSnapshot` de maneira assíncrona, o thread de destino pode ser mantendo bloqueios. Se código dentro de `StackSnapshotCallback` requer os mesmos bloqueios, poderia causar um deadlock.  
+ O `StackSnapshotCallback` função é implementada pelo gravador do criador de perfil. Você deve limitar a complexidade do trabalho feito em `StackSnapshotCallback`. Por exemplo, ao usar `ICorProfilerInfo2::DoStackSnapshot` de maneira assíncrona, o thread de destino pode manter bloqueios. Se código dentro do `StackSnapshotCallback` exige que os mesmos bloqueios, isso de poderia causar um deadlock.  
   
- O `ICorProfilerInfo2::DoStackSnapshot` chamadas de método de `StackSnapshotCallback` função uma vez por quadro gerenciado ou de uma vez por execução de quadros não gerenciados. Se `StackSnapshotCallback` é chamado para uma execução de quadros não gerenciados, o criador de perfil pode usar o contexto de registro (referenciado pelo `context` parâmetro) para executar seu próprios não gerenciados na pilha. Nesse caso, o Win32 `CONTEXT` estrutura representa o estado da CPU para o quadro enviado mais recentemente dentro da execução de quadros não gerenciados. Embora o Win32 `CONTEXT` estrutura inclui valores para todos os registros, você deve depender apenas os valores do registro de ponteiro de pilha, registro de ponteiro de quadro, registro de ponteiro de instrução e não-volátil (que é, preservado) registra inteiro.  
+ O `ICorProfilerInfo2::DoStackSnapshot` chamadas de método a `StackSnapshotCallback` função uma vez por quadro gerenciado ou de uma vez por execução de quadros não gerenciados. Se `StackSnapshotCallback` é chamado de uma execução de quadros não gerenciados, o criador de perfil pode usar o contexto de registro (referenciado pelo `context` parâmetro) para executar seu próprio movimentação de pilha não gerenciada. Nesse caso, o Win32 `CONTEXT` estrutura representa o estado da CPU para o quadro mais recentemente enviadas por push dentro da execução de quadros não gerenciados. Embora o Win32 `CONTEXT` estrutura inclui valores para todos os registros, você deve contar somente os valores de registro de ponteiro de quadro, o registro de ponteiro de pilha, registro de ponteiro de instrução e não-volátil (que é, preservado) registros de inteiros.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl  
+ **Cabeçalho:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Método DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
- [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Método DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)
+- [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Como: localizar elementos descendentes (XPath-LINQ para XML) (Visual Basic)'
+title: 'Como: Localizar elementos descendentes (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: e5915eb06af427c0631049af6dfc30399cb775e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578669"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Como: localizar elementos descendentes (XPath-LINQ para XML) (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Como: Localizar elementos descendentes (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como obter os elementos descendentes com um nome específico.  
   
  A expressão XPath é `//Name`.  
@@ -17,7 +17,7 @@ Este tópico mostra como obter os elementos descendentes com um nome específico
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza os descendentes chamados `Name`.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -51,5 +51,5 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to XML para XPath usuários (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ to XML para os usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

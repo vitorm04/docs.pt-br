@@ -2,15 +2,15 @@
 title: DE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: de2ad24e5c6399ed1ca91e3907da4a66c056e337
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a2550b667617ccf945acad79f0d63c52df118061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516326"
 ---
 # <a name="from-entity-sql"></a>DE (Entity SQL)
-Especifica a coleção usada em [selecione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruções.  
+Especifica a coleção usada em [selecionar](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instruções.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -96,14 +96,14 @@ LOB.Customers
 >  Ao contrário em [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], não há necessidade de uma etapa para mais unnest explícita em [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` e operadores de `OUTER APPLY` foram introduzidos em [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Em alguns casos, o canal de consulta pode gerar Transact-SQL que contém `CROSS APPLY` e/ou operadores de `OUTER APPLY` . Como alguns provedores de back-end, incluindo versões do SQL Server anteriores ao [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], não oferecem suporte a esses operadores, tais consultas não podem ser executadas nesses provedores de back-end.  
+>  `CROSS` e operadores de `OUTER APPLY` foram introduzidos em [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. Em alguns casos, o canal de consulta pode gerar Transact-SQL que contém `CROSS APPLY` e/ou operadores de `OUTER APPLY` . Porque alguns provedores de back-end, incluindo versões do SQL Server anteriores ao [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], não dão suporte a esses operadores, essas consultas não podem ser executadas nesses provedores backend.  
 >   
 >  Alguns cenários típicos que podem resultar na presença de `CROSS APPLY` e/ou operadores de `OUTER APPLY` na saída consulte são os seguintes: um subconsulta correlacionado com paginação; AnyElement sobre um subconsulta correlacionado ou em uma coleção gerada por navegação; LINQ consulta que uso que agrupa os métodos que aceitam um seletor do elemento; uma consulta em que `CROSS APPLY` ou `OUTER APPLY` são especificados explicitamente; uma consulta que tenha uma compilação de `DEREF` sobre uma compilação de `REF` .  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>Várias coleções na cláusula  
  A cláusula de `FROM` pode conter mais de uma coleção separados por vírgulas. Nesses casos, coleções são assumidas para ser agrupadas. Pense nesses CRUZ como uma maneira de n- JOIN.  
   
- No exemplo a seguir, `C` e `D` são coleções independentes, mas `c.Names` é dependente de `C`.  
+ No exemplo a seguir `C` e `D` coleções são independentes, mas `c.Names` depende `C`.  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
@@ -131,7 +131,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  A cláusula de `FROM` gerencia logicamente um multiset das linhas da linha de tipo (c, d, e) onde os campos c, d, e e são considerados para ser do tipo de elemento de `C`, de `D`, e de `c.Names`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] apresenta um alias para cada item simples de cláusula de `FROM` no escopo. Por exemplo, o seguinte trecho da cláusula, os nomes são introduzidos no escopo c, d, e E.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] apresenta um alias para cada item simples de cláusula de `FROM` no escopo. Por exemplo, o seguinte snippet da cláusula, os nomes são introduzidos no escopo c, d, e E.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
@@ -152,7 +152,7 @@ select c.Orders from Customers as c
 select {1} from {2, 3}  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Tipos estruturados anulável](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Expressões de Consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Tipos estruturados anulável](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

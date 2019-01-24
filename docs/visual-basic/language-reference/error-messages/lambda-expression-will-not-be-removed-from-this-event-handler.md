@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590161"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568095"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>A expressão lambda não será removida deste manipulador de eventos
-Expressão lambda não será removida deste manipulador de eventos. Atribua a expressão lambda a uma variável e use a variável para adicionar e remover o evento.  
+Expressão lambda não será removida deste manipulador de eventos. Atribuir a expressão lambda a uma variável e use a variável para adicionar e remover o evento.  
   
  Quando as expressões lambda são usadas com manipuladores de eventos, você não poderá ver o comportamento esperado. O compilador gera um novo método para cada definição de expressão lambda, mesmo se eles são idênticos. Portanto, o código a seguir exibe `False`.  
   
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- Quando as expressões lambda são usadas com manipuladores de eventos, isso pode causar resultados inesperados. No exemplo a seguir, a expressão lambda adicionado por `AddHandler` não é removido o `RemoveHandler` instrução.  
+ Quando as expressões lambda são usadas com manipuladores de eventos, isso pode causar resultados inesperados. No exemplo a seguir, a expressão lambda é adicionado pelo `AddHandler` não é removido pelo `RemoveHandler` instrução.  
   
 ```vb  
 Module Module1  
@@ -60,7 +60,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Para evitar o aviso e remova a expressão lambda, atribua a expressão lambda a uma variável e use a variável em ambos os `AddHandler` e `RemoveHandler` instruções, conforme mostrado no exemplo a seguir.  
+-   Para evitar o aviso e remova a expressão lambda, atribuir a expressão lambda a uma variável e use a variável em ambos os `AddHandler` e `RemoveHandler` instruções, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,7 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Consulte também
+- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Instruções passo a passo: realizando tarefas comuns usando smart tags em controles dos Windows Forms'
+title: 'Passo a passo: Executando tarefas comuns usando marcas inteligentes nos controles do Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b17fbaea48660a47630dd310c74be9cd3cc78609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201797"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579310"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Instruções passo a passo: realizando tarefas comuns usando smart tags em controles dos Windows Forms
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Passo a passo: Executando tarefas comuns usando marcas inteligentes nos controles do Windows Forms
 Ao construir formulários e controles para o seu Aplicativo dos Windows Forms, há várias tarefas que serão executadas repetidamente. Estas são algumas das tarefas realizadas com frequência que você encontrará:  
   
 -   Adicionando ou removendo uma guia em um <xref:System.Windows.Forms.TabControl>.  
@@ -65,9 +65,9 @@ Ao construir formulários e controles para o seu Aplicativo dos Windows Forms, h
   
 6.  Clique no glifo de marca inteligente. No menu de atalho que aparece ao lado do glifo, selecione o item **Orientação de divisor horizontal**. Observe que o <xref:System.Windows.Forms.SplitContainer> barra divisora do controle é agora orientado horizontalmente.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.TextBox>  
- <xref:System.Windows.Forms.TabControl>  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.ComponentModel.Design.DesignerActionList>  
- [Instruções passo a passo: adicionando smart tags a um componente dos Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.TextBox>
+- <xref:System.Windows.Forms.TabControl>
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.ComponentModel.Design.DesignerActionList>
+- [Passo a passo: Adicionar marcas inteligentes a um componente do Windows Forms](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

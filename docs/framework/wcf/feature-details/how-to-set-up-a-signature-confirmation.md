@@ -1,5 +1,5 @@
 ---
-title: Como definir uma confirmação de assinatura
+title: 'Como: Configurar uma confirmação de assinatura'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +8,29 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: d7076917e48124b2501826ecb0ac7599c663ba7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5163436f75e403ee7f682cdbe378922657116063
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513611"
 ---
-# <a name="how-to-set-up-a-signature-confirmation"></a>Como definir uma confirmação de assinatura
-*Confirmação de assinatura* é um mecanismo para um iniciador de mensagem garantir que uma resposta recebida foi gerada em resposta à mensagem original do remetente. Confirmação de assinatura é definida na especificação WS-Security 1.1. Se um ponto de extremidade oferece suporte ao WS-Security 1.0, você não pode usar a confirmação de assinatura.  
+# <a name="how-to-set-up-a-signature-confirmation"></a>Como: Configurar uma confirmação de assinatura
+*Confirmação de assinatura* é um mecanismo para um iniciador de mensagem garantir que uma resposta recebida foi gerada em resposta à mensagem original do remetente. Confirmação de assinatura é definida na especificação WS-Security 1.1. Se um ponto de extremidade dá suporte a WS-Security 1.0, você não pode usar a confirmação de assinatura.  
   
- Especificam os procedimentos a seguir habilitar o uso de confirmação de assinatura um <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Você pode usar o mesmo procedimento com um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. O procedimento tem como base as etapas básicas encontradas em [como: criar um personalizado de associação usando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Os procedimentos a seguir especificam como habilitar a confirmação de assinatura usando um <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Você pode usar o mesmo procedimento com um <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. O procedimento tem como base as etapas básicas encontradas em [como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
-### <a name="to-enable-signature-confirmation-in-code"></a>Para habilitar a confirmação de assinatura de código  
+### <a name="to-enable-signature-confirmation-in-code"></a>Para habilitar a confirmação de assinatura no código  
   
 1.  Crie uma instância da classe <xref:System.ServiceModel.Channels.BindingElementCollection>.  
   
-2.  Criar uma instância do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> classe.  
+2.  Criar uma instância da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> classe.  
   
 3.  Defina o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> como `true`.  
   
 4.  Adicione o elemento de segurança para a coleção de associação.  
   
-5.  Criar uma associação personalizada, conforme especificado na [como: criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+5.  Criar uma ligação personalizada, conforme especificado na [como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>Para habilitar a confirmação de assinatura na configuração  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33491982"
   
 4.  Adicionar um `<security>` elemento filho e defina o `requireSignatureConfirmation` atributo `true`.  
   
-5.  Opcional. Para habilitar a confirmação de assinatura durante a inicialização, adicione um [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento filho e defina o `equireSignatureConfirmation` atributo `true`.  
+5.  Opcional. Para habilitar a confirmação de assinatura durante a inicialização, adicione uma [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento filho e defina o `equireSignatureConfirmation` atributo `true`.  
   
 6.  Adicione um elemento de transporte apropriado. O exemplo a seguir adiciona uma [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
@@ -61,14 +61,14 @@ ms.locfileid: "33491982"
     ```  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir cria uma instância do <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e define o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> propriedade `true`. Observe que esse exemplo não usa o `<secureConversationBootstrap>` elemento mostrado no exemplo anterior. Este exemplo demonstra a confirmação de assinatura ao usar um token do Windows (Kerberos protocol). Nesse caso, a assinatura do cliente é retornada em todas as respostas do serviço e é confirmada pelo cliente.  
+ O código a seguir cria uma instância das <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e define o <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> propriedade `true`. Observe que este exemplo usa o `<secureConversationBootstrap>` elemento mostrado no exemplo anterior. Este exemplo demonstra a confirmação de assinatura ao usar um token do Windows (Kerberos protocol). Nesse caso, a assinatura do cliente é retornada em todas as respostas do serviço e é confirmada pelo cliente.  
   
  [!code-csharp[c_SignatureConfirmation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_signatureconfirmation/cs/source.cs#1)]
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>  
- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [Como criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
+- [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Como: Criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600421"
 ---
 # <a name="queues-overview"></a>Visão geral de filas
 Esta seção apresenta geral e principais conceitos por trás de comunicação em fila. As seções subsequentes entram em detalhes sobre como os conceitos de enfileiramento de mensagens descritos aqui se manifestam no Windows Communication Foundation (WCF).  
@@ -73,14 +73,14 @@ Esta seção apresenta geral e principais conceitos por trás de comunicação e
 ## <a name="poison-message-queue-programming"></a>Programação de fila de mensagens suspeitas  
  Depois que uma mensagem torna-se à fila de destino, o serviço repetidamente pode falhar ao processar a mensagem. Por exemplo, um aplicativo ler uma mensagem da fila em uma transação e atualizar um banco de dados podem localizar o banco de dados temporariamente desconectado. Nesse caso, a transação é revertida, uma nova transação é criada e a mensagem é reler da fila. Uma segunda tentativa pode ser bem-sucedida ou falhar. Em alguns casos, dependendo da causa do erro, a mensagem pode repetidamente não entrega para o aplicativo. Nesse caso, a mensagem é considerada como "suspeitas". Essas mensagens são movidas para uma fila de mensagens suspeitas que pode ser lidos por um aplicativo de tratamento de suspeitas.  
   
-## <a name="see-also"></a>Consulte também  
- [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Comunicação em fila volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Exemplos de associação de integração de enfileiramento de mensagem](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>Consulte também
+- [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Sessões e filas](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Filas de mensagens mortas](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Comunicação em fila volátil](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
+- [Windows Communication Foundation para Enfileiramento de Mensagens](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [Instalando o Enfileiramento de Mensagens (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Exemplos de associação de integração de enfileiramento de mensagem](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
+- [Enfileiramento de mensagens para o Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

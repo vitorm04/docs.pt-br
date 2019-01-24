@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9987640f988f2239a01d2dfdbcd6b1684579d8bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601500"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>Função CertTimestampAuthenticodeLicense
 Carimbo de data/hora em uma licença Authenticode XrML.  
@@ -46,5 +46,5 @@ HRESULT CertTimestampAuthenticodeLicense (
 ## <a name="return-value"></a>Valor de retorno  
  `S_OK` se a função for bem-sucedida. Caso contrário, retornará um código de erro.  
   
-## <a name="see-also"></a>Consulte também  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Consulte também
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae5c16f9f508511e4a15b2eae2c28d68238f1d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7bfdcc3c8328d71146732fc4ba5664ebee9bea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574866"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>Método ICorDebugModule::IsInMemory
 Obtém um valor que indica se este módulo existe apenas na memória.  
@@ -40,17 +40,17 @@ HRESULT IsInMemory(
  [out] `true` se esse módulo existe apenas na memória; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- O common language runtime (CLR) suporta o carregamento dos módulos de fluxos brutos de bytes. Esses módulos são chamados de *módulos de memória* e não existe no disco.  
+ O common language runtime (CLR) dá suporte o carregamento de módulos de brutos fluxos de bytes. Esses módulos são chamados *módulos de memória* e não existem no disco.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
-    
- 
+## <a name="see-also"></a>Consulte também
+
+

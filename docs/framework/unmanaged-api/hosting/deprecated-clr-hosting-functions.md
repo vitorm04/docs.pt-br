@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580897"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Funções de hospedagem CLR reprovadas
-Esta seção descreve as funções estáticas globais não gerenciadas usados por versões anteriores da API de hospedagem.  
+Esta seção descreve as funções estáticas globais não gerenciadas que versões anteriores da API de hospedagem usavam.  
   
- Com exceção das funções de infraestrutura (`_Cor*` funções), que são usados apenas pelo .NET Framework, essas funções foram preteridas a [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Com exceção de funções de infraestrutura (`_Cor*` funções), que são usados apenas pelo .NET Framework, essas funções foram preteridas no [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="activation-functions"></a>Funções de ativação  
  [Função ClrCreateManagedInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreatemanagedinstance-function.md)  
@@ -29,37 +29,37 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  Obsoleto. Para inicializar o common language runtime (CLR), use [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
  [Função CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- Preterido. Garante que o mecanismo de execução de CLR é carregado em um processo. Use o [Iclrruntimehost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.  
+ Preterido. Garante que o mecanismo de execução de CLR é carregado em um processo. Use o [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método em vez disso.  
   
  [Função CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
  Preterido. Carrega o common language runtime (CLR) em um processo usando informações de versão armazenadas em um arquivo XML.  
   
  [Função CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)  
- Preterido. Habilita a hosts não gerenciados para carregar o CLR em um processo.  
+ Preterido. Habilita hosts não gerenciados para carregar o CLR em um processo.  
   
  [Função CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)  
- Preterido. Carrega o CLR em um processo usando as informações de versão que é lido de um arquivo XML.  
+ Preterido. Carrega o CLR em um processo usando informações de versão que é lido de um arquivo XML.  
   
  [Função CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)  
- Preterido. Permite que os hosts gerenciados carregar o CLR em um processo e permite que você defina os sinalizadores para especificar o comportamento do CLR.  
+ Preterido. Habilita hosts não gerenciados carregar o CLR em um processo e permite que você defina sinalizadores para especificar o comportamento do CLR.  
   
  [Função CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)  
- Preterido. Permite que os hosts carregar uma versão especificada do CLR em um processo.  
+ Preterido. Permite que hosts carreguem uma versão especificada do CLR em um processo.  
   
  [Função GetCORRequiredVersion](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md)  
- Preterido. Obtém o número de versão necessário do CLR.  
+ Preterido. Obtém o número de versão do CLR necessário.  
   
  [Função GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md)  
  Preterido. Retorna o diretório de instalação do CLR que é carregado no processo.  
   
  [Função GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)  
- Preterido. Obtém o endereço da função especificada é exportado da versão instalada mais recente do CLR.  
+ Preterido. Obtém o endereço da função especificada exportada da versão instalada mais recente do CLR.  
   
  [Função GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- Preterido. Obtém a versão e informações de diretório sobre o CLR solicitado por um aplicativo.  
+ Preterido. Obtém informações de versão e diretório sobre o CLR solicitado por um aplicativo.  
   
-## <a name="clr-version-functions"></a>Funções de versão CLR  
- As funções nesta seção retornam uma versão do CLR. eles não ativaram o CLR.  
+## <a name="clr-version-functions"></a>Funções de versão do CLR  
+ As funções nesta seção retornam uma versão do CLR; elas não ativam o CLR.  
   
  [Função GetCORVersion](../../../../docs/framework/unmanaged-api/hosting/getcorversion-function.md)  
  Preterido. Retorna o número de versão do CLR que está em execução no processo atual.  
@@ -68,32 +68,32 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  Preterido. Obtém as informações de versão do CLR do arquivo especificado, usando o buffer especificado.  
   
  [Função GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
- Preterido. Obtém o número de versão do CLR solicitado pelo aplicativo especificado. Se essa versão não estiver instalado, obtém a versão mais recente está instalada antes da versão solicitada.  
+ Preterido. Obtém o número de versão do CLR solicitado pelo aplicativo especificado. Se essa versão não estiver instalado, obtém a versão mais recente instalado antes da versão solicitada.  
   
  [Função GetRequestedRuntimeVersionForCLSID](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversionforclsid-function.md)  
- Preterido. Obtém as informações de versão apropriadas do CLR para a classe com CLSID especificado.  
+ Preterido. Obtém as informações de versão do CLR apropriadas para a classe com CLSID especificado.  
   
  [Função GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
  Preterido. Obtém o número de versão do CLR que está associado com o identificador de processo especificado.  
   
  [Função LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)  
- Preterido. Permite que o host determinar qual versão do CLR será usado dentro do processo antes de inicializar explicitamente o CLR.  
+ Preterido. Permite que o host determine qual versão do CLR será usado dentro do processo antes de inicializar explicitamente o CLR.  
   
 ## <a name="hosting-functions"></a>Funções de hospedagem  
  [Função CallFunctionShim](../../../../docs/framework/unmanaged-api/hosting/callfunctionshim-function.md)  
  Preterido. Faz uma chamada para a função que tem o nome especificado e os parâmetros na biblioteca especificada.  
   
  [Função CoEEShutDownCOM](../../../../docs/framework/unmanaged-api/hosting/coeeshutdowncom-function.md)  
- Preterido. Descarrega um assembly COM o processo.  
+ Preterido. Descarrega um assembly COM do processo.  
   
  [Função CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)  
- Preterido. Desliga o processo atual de não gerenciado.  
+ Preterido. Desliga o processo não gerenciado atual.  
   
  [Função CorLaunchApplication](../../../../docs/framework/unmanaged-api/hosting/corlaunchapplication-function.md)  
  Preterido. Inicia o aplicativo no caminho de rede especificado, usando os manifestos especificados e outros dados de aplicativo.  
   
  [Função CorMarkThreadInThreadPool](../../../../docs/framework/unmanaged-api/hosting/cormarkthreadinthreadpool-function.md)  
- Preterido. Marca o thread do pool de threads atualmente em execução para a execução de código gerenciado. Iniciando com o .NET Framework versão 2.0, essa função não tem efeito. Ele não é necessário e pode ser removido do seu código.  
+ Preterido. Marca o thread do pool de threads em execução no momento para a execução de código gerenciado. Começando com o .NET Framework versão 2.0, essa função não tem efeito. Ele não é necessário e pode ser removido do seu código.  
   
  [Função CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)  
  Obsoleto. O CLR não pode ser descarregado de um processo.  
@@ -102,10 +102,10 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  Obsoleto.  
   
  [Função CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
- Preterido. Cria um [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) objeto com base nas informações de versão especificada.  
+ Preterido. Cria uma [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) objeto com base nas informações de versão especificadas.  
   
  [Função CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
- Preterido. Cria um [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
+ Preterido. Cria uma [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
   
  [Função DestroyICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Preterido. Destrói um [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.  
@@ -114,10 +114,10 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  Preterido. Aponta para uma função que o CLR chama para executar código gerenciado.  
   
  [Ponteiro de função FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)  
- Preterido. Aponta para uma função que o CLR chama para notificar o host que a inicialização tiver seja iniciada ou concluída.  
+ Preterido. Aponta para uma função que o CLR chama para notificar o host que a inicialização foi iniciada ou concluída.  
   
  [Função GetCLRIdentityManager](../../../../docs/framework/unmanaged-api/hosting/getclridentitymanager-function.md)  
- Preterido. Obtém um ponteiro para uma interface que permite que o CLR gerenciar identidades.  
+ Preterido. Obtém um ponteiro para uma interface que permite ao CLR gerenciar identidades.  
   
  [Função LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md)  
  Preterido. Carrega uma versão especificada de uma DLL do .NET Framework.  
@@ -129,7 +129,7 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  Preterido. Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.  
   
  [Ponteiro de função LPOVERLAPPED_COMPLETION_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpoverlapped-completion-routine-function-pointer.md)  
- Preterido. Aponta para uma função que notifica o host quando um sobreposto (ou seja, assíncrona) e/s para um dispositivo foi concluída.  
+ Preterido. Aponta para uma função que notifica o host quando um sobreposta (ou seja, assíncrona) e/s para um dispositivo foi concluída.  
   
  [Ponteiro de função LPTHREAD_START_ROUTINE](../../../../docs/framework/unmanaged-api/hosting/lpthread-start-routine-function-pointer.md)  
  Preterido. Aponta para uma função que notifica o host que um thread começou a executar.  
@@ -144,19 +144,19 @@ Esta seção descreve as funções estáticas globais não gerenciadas usados po
  As funções nesta seção são para uso apenas do .NET Framework.  
   
  [Função _CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)  
- Inicializa o CLR, localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly DLL e começa a ser executada.  
+ Inicializa o CLR, localiza o ponto de entrada gerenciado no cabeçalho do CLR do assembly da DLL e inicia a execução.  
   
  [Função _CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)  
- Inicializa o CLR, localiza o ponto de entrada gerenciado no cabeçalho do executável do assembly CLR e começa a ser executada.  
+ Inicializa o CLR, localiza o ponto de entrada gerenciado no cabeçalho CLR do assembly executável e inicia a execução.  
   
  [Função _CorExeMain2](../../../../docs/framework/unmanaged-api/hosting/corexemain2-function.md)  
- Executa o ponto de entrada no código do mapeamento de memória especificado. Essa função é chamada pelo carregador do sistema operacional.  
+ Executa o ponto de entrada no código mapeado na memória especificado. Essa função é chamada pelo carregador do sistema operacional.  
   
  [Função _CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)  
- Notifica o carregador quando as imagens do módulo gerenciado são descarregadas.  
+ Notifica o carregador quando as imagens de módulo gerenciado são descarregadas.  
   
  [Função _CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
- Valida as imagens do módulo gerenciado e notifica o carregador do sistema operacional depois de terem sido carregados.  
+ Valida imagens de módulo gerenciado e notifica o carregador do sistema operacional, depois de eles terem sido carregados.  
   
-## <a name="see-also"></a>Consulte também  
- [.NET Framework 4 hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+## <a name="see-also"></a>Consulte também
+- [.NET Framework 4 hospedando funções estáticas globais](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

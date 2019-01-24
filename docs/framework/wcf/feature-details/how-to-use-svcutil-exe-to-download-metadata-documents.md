@@ -1,15 +1,15 @@
 ---
-title: Como usar o Svcutil.exe para baixar documentos de metadados
+title: 'Como: Use Svcutil.exe para baixar documentos de metadados'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc3a1d402a9f6ffb69c1f692800698609f9fa84b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603268"
 ---
-# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Como usar o Svcutil.exe para baixar documentos de metadados
+# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Como: Use Svcutil.exe para baixar documentos de metadados
 Você pode usar Svcutil.exe para baixar os metadados de serviços em execução e salvar os metadados em arquivos locais. Para esquemas de URL HTTP e HTTPS, Svcutil.exe tenta recuperar metadados usando WS-MetadataExchange e [XML Web Service Discovery](https://go.microsoft.com/fwlink/?LinkId=94950). Para todos os outros esquemas de URL, Svcutil.exe usa apenas WS-MetadataExchange.  
   
  Por padrão, Svcutil.exe usa as associações definidas a <xref:System.ServiceModel.Description.MetadataExchangeBindings> classe. Para configurar a associação usada para WS-MetadataExchange, você deve definir um ponto de extremidade do cliente no arquivo de configuração para Svcutil.exe (svcutil) que usa o `IMetadataExchange` contrato e que tem o mesmo nome como o identificador de URI (Uniform Resource) esquema do endereço do ponto de extremidade de metadados.  
@@ -46,5 +46,5 @@ Você pode usar Svcutil.exe para baixar os metadados de serviços em execução 
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Consulte também
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

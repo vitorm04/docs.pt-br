@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: a3b8de254c28aedc21df5baf54bd67527e35b7f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32b84412edf2d7c9943391909659dc91d8060cc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625739"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Adicionar&gt; elemento para connectionManagement (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -75,7 +75,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

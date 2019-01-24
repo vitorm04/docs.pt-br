@@ -2,12 +2,12 @@
 title: Selecionando um tipo de credencial
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577107"
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 *Credenciais* são os dados que usa o Windows Communication Foundation (WCF) para estabelecer uma identidade reivindicada ou recursos. Por exemplo, o passport é uma credencial que um governo emite para provar cidadania em um país ou região. No WCF, as credenciais podem assumir várias formas, como tokens de nome de usuário e certificados x. 509. Este tópico discute como selecionar o credencial correto para seu aplicativo, como eles são usados no WCF e credenciais.  
@@ -26,8 +26,8 @@ ms.locfileid: "43503385"
 |Configuração|Descrição|  
 |-------------|-----------------|  
 |Nenhum|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
-|Basic|Especifica a autenticação básica para o cliente. Para obter mais informações, consulte RFC2617 —[autenticação HTTP: autenticação básica e Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Digest|Especifica a autenticação digest para o cliente. Para obter mais informações, consulte RFC2617 —[autenticação HTTP: autenticação básica e Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Basic|Especifica a autenticação básica para o cliente. Para obter mais informações, consulte o RFC2617 –[autenticação HTTP: Autenticação Básica e Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
+|Digest|Especifica a autenticação digest para o cliente. Para obter mais informações, consulte o RFC2617 –[autenticação HTTP: Autenticação Básica e Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |NTLM|Especifica a autenticação NT LAN Manager (NTLM). Isso é usado quando você não pode usar a autenticação Kerberos por algum motivo. Você também pode desabilitar seu uso como um fallback definindo a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriedade para `false`, que faz com que o WCF fazer um esforço para lançar uma exceção se NTLM for usado. Observe que a definição dessa propriedade `false` talvez não impeçam que as credenciais do NTLM sejam enviados durante a transmissão.|  
 |Windows|Especifica autenticação do Windows. Para especificar apenas o protocolo Kerberos em um domínio do Windows, defina as <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> propriedade para `false` (o padrão é `true`).|  
 |Certificado|Executa a autenticação de cliente usando um certificado X.509.|  
@@ -97,20 +97,20 @@ ms.locfileid: "43503385"
   
  Para obter mais informações sobre credenciais e sessões seguras, consulte [considerações sobre segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>  
- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpMessageSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
+- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [Segurança de transporte de HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

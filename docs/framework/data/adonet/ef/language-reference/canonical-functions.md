@@ -2,12 +2,12 @@
 title: Funções canônicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513874"
 ---
 # <a name="canonical-functions"></a>Funções canônicas
 Essa seção discute as funções canônicas que têm suporte por todos os provedores de dados e podem ser usadas por todas as tecnologias de consulta. As funções canônicas não podem ser estendidas por um provedor.  
@@ -20,7 +20,7 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
   
  Todas as funções canônicas têm as condições de erro e o comportamento de entrada nulo especificadas explicitamente. Os provedores de repositório devem estar de acordo com esse comportamento, mas o [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] não impõem esse comportamento.  
   
- Para cenários LINQ, consultas em relação a [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] envolver métodos CLR de mapeamento para métodos na fonte de dados subjacente. Os métodos CLR mapeiam para funções canônicas, de modo que um conjunto específico de métodos mapeará corretamente, independentemente da fonte de dados.  
+ Para cenários LINQ, consultas em relação a [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] envolvem mapeamento de métodos CLR para métodos na fonte de dados subjacente. Os métodos CLR mapeiam para funções canônicas, de modo que um conjunto específico de métodos mapeará corretamente, independentemente da fonte de dados.  
   
 ## <a name="canonical-functions-namespace"></a>Namespace de funções canônicas  
  O namespace para a função canônica é <xref:System.Data.Metadata.Edm>. O namespace <xref:System.Data.Metadata.Edm> é incluído automaticamente em todas as consultas. No entanto, se outro namespace for importado e contiver uma função com o mesmo nome de uma função canônica (no namespace <xref:System.Data.Metadata.Edm>), você deverá especificar o namespace.  
@@ -47,8 +47,8 @@ Essa seção discute as funções canônicas que têm suporte por todos os prove
  [Outras funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  Discute as funções não classificadas como bit a bit, data/hora, cadeia de caracteres, matemática ou de agregação.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Mapeamento de funções canônicas de modelo conceitual para o SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [Funções definidas pelo usuário](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Referência de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Mapeamento de funções canônicas de modelo conceitual para o SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [Funções definidas pelo usuário](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

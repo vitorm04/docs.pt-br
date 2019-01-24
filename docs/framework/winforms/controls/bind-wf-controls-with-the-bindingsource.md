@@ -1,19 +1,19 @@
 ---
-title: Como associar controles dos Windows Forms ao componente BindingSource usando o designer
+title: 'Como: Associar controles dos Windows Forms com o componente BindingSource usando o Designer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1a9baa5a602edd0ef91ef7dff5cdc42832bd7532
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633295"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Como associar controles dos Windows Forms ao componente BindingSource usando o designer
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Como: Associar controles dos Windows Forms com o componente BindingSource usando o Designer
 Depois de adicionar controles ao formulário e determinar a interface do usuário para seu aplicativo, você pode associar os controles a uma fonte de dados, para que os usuários possam alterar e salvar dados relacionados ao aplicativo no tempo de execução.  
   
  Associação de um controle ou uma série de controles nos Windows Forms é feito com mais facilidade usando o <xref:System.Windows.Forms.BindingSource> controle como uma ponte entre os controles no formulário e a fonte de dados.  
@@ -59,8 +59,8 @@ Depois de adicionar controles ao formulário e determinar a interface do usuári
   
      O **fonte de dados** editor fecha e o conjunto de dados de tipo de interface do usuário <xref:System.Windows.Forms.BindingSource> e adaptador de tabela específica para que a conexão de dados são adicionados ao seu formulário.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [Adicionar novas fontes de dados](/visualstudio/data-tools/add-new-data-sources)  
- [Janela Fontes de Dados](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [Adicionar novas fontes de dados](/visualstudio/data-tools/add-new-data-sources)
+- [Janela Fontes de Dados](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)

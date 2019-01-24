@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 106ef520f64233323cbb3f26cb3efdee152559b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c69c67c5c9d996bd746d82ea86caf4a396c0b10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625231"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Método IMetaDataImport::ResolveTypeRef
 Resolve um <xref:System.Type> referência representada pelo token TypeRef especificado.  
@@ -40,7 +40,7 @@ HRESULT ResolveTypeRef (
   
 #### <a name="parameters"></a>Parâmetros  
  `tr`  
- [in] O token de metadados de TypeRef para retornar as informações de tipo referenciado.  
+ [in] O token de metadados TypeRef para retornar as informações de tipo referenciado.  
   
  `riid`  
  [in] O IID da interface para retornar em `ppIScope`. Normalmente, isso seria IID_IMetaDataImport.  
@@ -49,26 +49,26 @@ HRESULT ResolveTypeRef (
  [out] Uma interface para o escopo de módulo no qual o tipo referenciado é definido.  
   
  `ptd`  
- [out] Um ponteiro para um token de TypeDef que representa o tipo de referência.  
+ [out] Um ponteiro para um token de TypeDef que representa o tipo referenciado.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
->  Não use esse método se vários domínios de aplicativo são carregados. O método não respeita os limites de domínio de aplicativo. Se várias versões de um assembly são carregadas e contêm o mesmo tipo com o mesmo namespace, o método retorna o escopo de módulo do tipo primeiro encontra.  
+>  Não use esse método se vários domínios de aplicativo são carregados. O método não respeita os limites de domínio de aplicativo. Se várias versões de um assembly são carregadas e que eles contêm o mesmo tipo com o mesmo namespace, o método retorna o escopo de módulo do primeiro tipo, que ele localiza.  
   
- O `ResolveTypeRef` pesquisas de método para a definição de tipo em outros módulos. Se a definição do tipo for encontrada, `ResolveTypeRef` retorna uma interface para esse escopo de módulo, bem como o token de TypeDef para o tipo.  
+ O `ResolveTypeRef` pesquisas de método para a definição de tipo em outros módulos. Se a definição de tipo for encontrada, `ResolveTypeRef` retorna uma interface para esse escopo de módulo, bem como o token de TypeDef para o tipo.  
   
- Se a referência de tipo a ser resolvido tem um escopo de resolução de AssemblyRef, o `ResolveTypeRef` método procura uma correspondência somente nos escopos de metadados que já foi aberto com chamadas para o o [Imetadatadispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)método ou o [Imetadatadispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) método. Isso ocorre porque `ResolveTypeRef` não é possível determinar de apenas o escopo de AssemblyRef onde no disco ou no cache de assembly global o assembly é armazenado.  
+ Se a referência de tipo a serem resolvidas tem um escopo de resolução de AssemblyRef, o `ResolveTypeRef` método procura uma correspondência somente em escopos metadados que já foi aberto com chamadas para qualquer um de [imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)método ou o [imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) método. Isso ocorre porque `ResolveTypeRef` não é possível determinar de apenas o escopo de AssemblyRef onde no disco ou no cache de assembly global assembly é armazenado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

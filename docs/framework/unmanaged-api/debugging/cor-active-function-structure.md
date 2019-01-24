@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ab3d3a0f460f1ecdf86147b14df205aaf49635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502046"
 ---
 # <a name="coractivefunction-structure"></a>Estrutura COR_ACTIVE_FUNCTION
-Contém informações sobre as funções que estão atualmente ativas nos quadros de um thread. Essa estrutura é usada pelo [Icordebugthread2](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  
+Contém informações sobre as funções que estão atualmente ativas nos quadros de um thread. Essa estrutura é usada o [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,18 +45,18 @@ typedef struct  _COR_ACTIVE_FUNCTION {
 |`pAppDomain`|Ponteiro para o proprietário do domínio de aplicativo do `ilOffset` campo.|  
 |`pModule`|Ponteiro para o proprietário do módulo do `ilOffset` campo.|  
 |`pFunction`|Ponteiro para o proprietário da função do `ilOffset` campo.|  
-|`ilOffset`|O deslocamento de linguagem intermediária (MSIL) da Microsoft do quadro.|  
+|`ilOffset`|O deslocamento do MSIL (linguagem intermediária) Microsoft do quadro.|  
 |`flags`|Reservado para extensibilidade futura.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

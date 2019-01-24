@@ -1,19 +1,19 @@
 ---
-title: 'Como: trabalhar com dicionários usando LINQ to XML (Visual Basic)'
+title: 'Como: Trabalhar com dicionários usando LINQ to XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-ms.openlocfilehash: b6e41f61358563472f49b22df389df00e721503e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f08430aeb92b9c6e0b7b08481027fb3b5b77cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572338"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Como: trabalhar com dicionários usando LINQ to XML (Visual Basic)
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>Como: Trabalhar com dicionários usando LINQ to XML (Visual Basic)
 É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa literais XML e uma consulta em uma expressão inserida. Os projetos de consulta nova <xref:System.Xml.Linq.XElement> objetos, que então se tornar o novo conteúdo para o `Root` <xref:System.Xml.Linq.XElement> objeto.  
+ Este exemplo usa literais XML e uma consulta em uma expressão inserida. A consulta projetos novos <xref:System.Xml.Linq.XElement> objetos, que então se tornar o novo conteúdo para o `Root` <xref:System.Xml.Linq.XElement> objeto.  
   
 ```vb  
 Dim dict As Dictionary(Of String, String) = New Dictionary(Of String, String)()  
@@ -70,5 +70,5 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Consulte também
+- [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

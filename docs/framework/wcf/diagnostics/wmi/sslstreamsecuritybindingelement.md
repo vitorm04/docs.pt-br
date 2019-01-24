@@ -2,12 +2,12 @@
 title: SslStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
-ms.openlocfilehash: f75fa33be2857904417edb78757b3d40d6efdb59
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 44a1a2db3ed8c942bb0d7d815c594ad3aa3ff4cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588714"
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  
@@ -30,7 +30,7 @@ class SslStreamSecurityBindingElement : BindingElement
 ### <a name="requireclientcertificate"></a>RequireClientCertificate  
  Tipo de dados: boolean  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Especifica se um certificado de cliente é necessário para esta associação.  
   
@@ -40,5 +40,5 @@ class SslStreamSecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

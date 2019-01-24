@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597938"
 ---
 # <a name="loadstringrcex-function"></a>Função LoadStringRCEx
 Converte um valor HRESULT a uma mensagem de erro apropriada para a cultura especificada.  
@@ -43,7 +43,7 @@ HRESULT LoadStringRCEx (
   
 #### <a name="parameters"></a>Parâmetros  
  `lcid`  
- [in] Um identificador de cultura. Passe -1 para `lcid` para usar a cultura padrão.  
+ [in] Um identificador de cultura. Passe -1 `lcid` para usar a cultura padrão.  
   
  `iResourceID`  
  [in] Um HRESULT.  
@@ -61,7 +61,7 @@ HRESULT LoadStringRCEx (
  [out] Um ponteiro para o comprimento da mensagem de erro.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Esse método retorna códigos de erro COM padrão, conforme definido no Winerror. H, além dos valores a seguir.  
+ Esse método retorna códigos de erro COM padrão, conforme definido em Winerror. H, além dos valores a seguir.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
@@ -72,15 +72,15 @@ HRESULT LoadStringRCEx (
  Se o método não for concluída com êxito, `szBuffer` contém uma cadeia de caracteres vazia.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [Função LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [Função LoadStringRC](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

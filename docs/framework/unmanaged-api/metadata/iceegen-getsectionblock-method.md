@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5da2936a46dcf3d8f69acc3367db64712165b0cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515346"
 ---
 # <a name="iceegengetsectionblock-method"></a>Método ICeeGen::GetSectionBlock
 Obtém um bloco de seção da base de código.  
   
- Esse método está obsoleto e não deve ser usado.  
+ Esse método é obsoleto e não deve ser usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,13 +42,13 @@ HRESULT GetSectionBlock (
   
 #### <a name="parameters"></a>Parâmetros  
  `section`  
- [in] A seção da qual recuperar um bloco da base de código.  
+ [in] A seção da qual recuperar um bloco de base de código.  
   
  `len`  
- [in] O comprimento do bloco a ser recuperado.  
+ [in] O tamanho do bloco a ser recuperado.  
   
  `align`  
- [in] O byte, relativo ao início da seção, com a qual alinhar o primeiro byte do bloco. Esta é a posição do bloco dentro da seção.  
+ [in] O byte, relativo ao início da seção, com a qual alinhar o primeiro byte do bloco. Esta é a posição do bloco de dentro da seção.  
   
  `ppBytes`  
  [out] Um ponteiro para um local que recebe o endereço do bloco recuperado.  
@@ -57,13 +57,13 @@ HRESULT GetSectionBlock (
  Chamar `GetSectionBlock` somente se você tiver requisitos especiais de seção que não são manipulados por outros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** usado como um recurso no MSCOREE  
+ **Biblioteca:** Usado como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

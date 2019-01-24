@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0f2a0c646b5af91d5296bafb01f5261d7ee6b9fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969766"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574307"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procedimentos genéricos no Visual Basic
 Um *procedimento genérico*, também chamado um *método genérico*, é um procedimento definido pelo menos um parâmetro de tipo. Isso permite que o código de chamada personalizar os tipos de dados para seus requisitos de cada vez que ele chama o procedimento.  
@@ -64,11 +64,11 @@ End Sub
   
  As chamadas anteriores para `MsgBox` exibir "0", "1" e "-1", respectivamente.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [Como usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Procedimentos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Parâmetros e Argumentos de Procedimento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
- [Lista de Tipos](../../../../visual-basic/language-reference/statements/type-list.md)  
- [Lista de Parâmetros](../../../../visual-basic/language-reference/statements/parameter-list.md)
+## <a name="see-also"></a>Consulte também
+- [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Como: definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [Como: usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Procedimentos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Parâmetros e Argumentos de Procedimento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [Lista de Tipos](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Lista de Parâmetros](../../../../visual-basic/language-reference/statements/parameter-list.md)

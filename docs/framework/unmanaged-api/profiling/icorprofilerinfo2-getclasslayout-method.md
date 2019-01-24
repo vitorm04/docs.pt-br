@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b826e9c30fbf7007ac6b0093608ab7d926cc499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602436"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>Método ICorProfilerInfo2::GetClassLayout
-Obtém informações sobre o layout, na memória, os campos definidos pela classe especificada. Ou seja, esse método obtém os deslocamentos de campos da classe.  
+Obtém informações sobre o layout, na memória, dos campos definidos pela classe especificada. Ou seja, esse método obtém os deslocamentos de campos da classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +40,10 @@ HRESULT GetClassLayout(
   
 #### <a name="parameters"></a>Parâmetros  
  `classID`  
- [in] A ID da classe para a qual o layout será recuperado.  
+ [in] A ID da classe para o qual o layout será recuperado.  
   
  `rFieldOffset`  
- [out no] Uma matriz de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) estruturas, cada qual contendo os tokens e deslocamentos de campos da classe.  
+ [no, out] Uma matriz de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) estruturas, cada uma delas contém os tokens e os deslocamentos de campos da classe.  
   
  `cFieldOffset`  
  [in] O tamanho do `rFieldOffset` matriz.  
@@ -55,25 +55,25 @@ HRESULT GetClassLayout(
  [out] Um ponteiro para um local que contém o tamanho, em bytes, da classe.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetClassLayout` método retorna apenas os campos definidos pela classe em si. Se a classe do pai definiu campos, o criador de perfil deve chamar `GetClassLayout` na classe pai para obter esses campos.  
+ O `GetClassLayout` método retorna apenas os campos definidos pela classe em si. Se a classe do pai da classe definir campos bem, o criador de perfil deve chamar `GetClassLayout` na classe pai para obter esses campos.  
   
  Se você usar `GetClassLayout` com classes de cadeia de caracteres, o método falhará com o código de erro E_INVALIDARG. Use [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) para obter informações sobre o layout de uma cadeia de caracteres. `GetClassLayout` também falharão quando chamado com uma classe de matriz.  
   
- Depois de `GetClassLayout` retorna, você deve verificar se o `rFieldOffset` buffer era grande o suficiente para conter todos os disponíveis `COR_FIELD_OFFSET` estruturas. Para fazer isso, o valor de comparação que `pcFieldOffset` aponta para o tamanho de `rFieldOffset` dividida pelo tamanho de um `COR_FIELD_OFFSET` estrutura. Se `rFieldOffset` não é grande o suficiente, alocar uma maior `rFieldOffset` buffer, atualize `cFieldOffset` com o novo tamanho maior e chame `GetClassLayout` novamente.  
+ Após `GetClassLayout` é retornado, você deve verificar se o `rFieldOffset` buffer era grande o suficiente para conter todos os disponíveis `COR_FIELD_OFFSET` estruturas. Para fazer isso, o valor de comparação que `pcFieldOffset` aponta para com o tamanho de `rFieldOffset` dividida pelo tamanho de um `COR_FIELD_OFFSET` estrutura. Se `rFieldOffset` não é grande o suficiente, alocar uma maior `rFieldOffset` buffer, atualize `cFieldOffset` com o novo e maior tamanho e a chamada `GetClassLayout` novamente.  
   
- Como alternativa, você pode primeiro chamar `GetClassLayout` com um comprimento zero `rFieldOffset` buffer para obter o tamanho do buffer correto. Você pode definir o tamanho do buffer para o valor retornado em `pcFieldOffset` e chame `GetClassLayout` novamente.  
+ Como alternativa, você pode primeiro chamar `GetClassLayout` com um comprimento de zero `rFieldOffset` buffer para obter o tamanho do buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcFieldOffset` e chamar `GetClassLayout` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)

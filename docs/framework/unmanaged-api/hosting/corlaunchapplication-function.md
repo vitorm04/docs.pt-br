@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580961"
 ---
 # <a name="corlaunchapplication-function"></a>Função CorLaunchApplication
 Inicia o aplicativo no caminho de rede especificado, usando os manifestos especificados e outros dados de aplicativo.  
@@ -45,7 +45,7 @@ HRESULT CorLaunchApplication (
   
 #### <a name="parameters"></a>Parâmetros  
  `dwClickOnceHost`  
- [in] Um valor de [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeração que especifica o tipo de host que está iniciando o aplicativo.  
+ [in] Um valor igual a [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeração que especifica o tipo de host que está iniciando o aplicativo.  
   
  `pwzAppFullName`  
  [in] O nome completo do aplicativo que está sendo iniciado.  
@@ -54,7 +54,7 @@ HRESULT CorLaunchApplication (
  [in] O número de caminhos do manifesto do aplicativo.  
   
  `ppwzManifestPaths`  
- [in] Uma matriz de cadeias de caracteres, cada uma delas Especifica um caminho para um manifesto do aplicativo que está sendo iniciado.  
+ [in] Uma matriz de cadeias de caracteres, cada um deles especifica um caminho para um manifesto do aplicativo que está sendo iniciado.  
   
  `dwActivationData`  
  [in] O número de itens de dados de ativação para o aplicativo que está sendo iniciado.  
@@ -66,13 +66,13 @@ HRESULT CorLaunchApplication (
  [out] Um ponteiro para obter informações sobre o processo no qual o aplicativo foi carregado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

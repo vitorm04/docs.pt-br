@@ -1,25 +1,25 @@
 ---
-title: Como configurar notificação das atualizações de associação
+title: 'Como: Configurar notificação das atualizações de associação'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-ms.openlocfilehash: 896ce103361590dceecccf8534fd330aabe18086
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca6af88d6ba8ba4e242faa5d1443ee95925fbe2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511859"
 ---
-# <a name="how-to-set-up-notification-of-binding-updates"></a>Como configurar notificação das atualizações de associação
+# <a name="how-to-set-up-notification-of-binding-updates"></a>Como: Configurar notificação das atualizações de associação
 Este exemplo mostra como configurar para ser notificado quando o destino de associação (destino) ou a origem da associação (origem) de uma associação foi atualizada.  
   
 ## <a name="example"></a>Exemplo  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] levanta um evento de atualização de dados cada vez que a fonte de associação ou destino foi atualizada. Internamente este evento é usado para informar [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que ele deve atualizar, porque os dados associados foram alterados. Observe que esses eventos trabalhar e também para a associação unidirecional ou bidirecional funcione corretamente, você precisa implementar sua classe de dados usando o <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Implementar notificação de alteração da propriedade](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] levanta um evento de atualização de dados cada vez que a fonte de associação ou destino foi atualizada. Internamente este evento é usado para informar [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que ele deve atualizar, porque os dados associados foram alterados. Observe que, para esses eventos funcionem e também para a associação unidirecional ou bidirecional funcione corretamente, você precisa implementar a classe de dados usando o <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Implementar notificação de alteração da propriedade](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
   
- Definir o <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> ou <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> propriedade (ou ambos) para `true` na associação. O manipulador fornecido para ouvir este evento deve ser anexado diretamente ao elemento do qual se espera informações de mudanças ou ao contexto geral de dados, se é preciso estar ciente de qualquer mudança no contexto.  
+ Defina as <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> ou <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> propriedade (ou ambos) para `true` na associação. O manipulador fornecido para ouvir este evento deve ser anexado diretamente ao elemento do qual se espera informações de mudanças ou ao contexto geral de dados, se é preciso estar ciente de qualquer mudança no contexto.  
   
  Aqui temos um exemplo que mostra como configurar a notificação quando uma propriedade de destino foi atualizada.  
   
@@ -32,6 +32,6 @@ Este exemplo mostra como configurar para ser notificado quando o destino de asso
   
  Os parâmetros do evento podem ser usados para determinar detalhes sobre a propriedade que mudou (como o tipo ou o elemento específico se o mesmo manipulador estiver conectado a mais de um elemento), o que poderá ser útil se houver várias propriedades associadas em um único elemento.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

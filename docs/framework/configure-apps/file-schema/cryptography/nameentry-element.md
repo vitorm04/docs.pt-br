@@ -1,5 +1,5 @@
 ---
-title: '&lt;nameEntry&gt; elemento'
+title: '&lt;nameEntry&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a4c29db3f84570d4d5e99a1deaf8beb3145c8ea1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626934"
 ---
-# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; elemento
+# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; Element
 Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que uma classe tenha vários nomes amigáveis.  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<nameEntry>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,8 +77,8 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de configurações de criptografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Serviços criptográficos](../../../../../docs/standard/security/cryptographic-services.md)
 - [Configurando classes de criptografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

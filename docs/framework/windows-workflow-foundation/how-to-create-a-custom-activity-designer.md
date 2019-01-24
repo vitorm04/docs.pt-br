@@ -1,15 +1,15 @@
 ---
-title: 'Como: Criar um designer personalizado de atividades'
+title: 'Como: Criar um Designer de atividade personalizada'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 86cd3544e9117cca273b6c8dde8454672f14a36a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 034b8b8be828288f840dbfd902725c4f63c779ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638178"
 ---
-# <a name="how-to-create-a-custom-activity-designer"></a>Como: Criar um designer personalizado de atividades
+# <a name="how-to-create-a-custom-activity-designer"></a>Como: Criar um Designer de atividade personalizada
 
 Designers personalizados de atividade são normalmente implementados de modo que as atividades passível de composição sejam associados com outras atividades cujos os designers podem ser ignorados sobre a superfície de design com eles. Essa funcionalidade requer que um designer personalizado de atividade fornecem uma "zona de soltar" onde uma atividade arbitrária pode ser colocada e também os meios para gerenciar a coleção resultante dos elementos na superfície de design. Este tópico descreve como criar um designer personalizado de atividade que contém uma área para arrastar e soltar e como criar um designer personalizado de atividade que fornece a funcionalidade de edição necessária gerenciar a coleção de elementos de designer.
 

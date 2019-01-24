@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585543"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>Enumeração CorDebugExceptionCallbackType
-Indica o tipo de retorno de chamada é feito de um [Icordebugmanagedcallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) eventos.  
+Indica o tipo de retorno de chamada é feito de um [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) eventos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,18 +42,18 @@ typedef enum CorDebugExceptionCallbackType {
 |Membro|Descrição|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Uma exceção foi lançada.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|O processo de windup exceção inseriu o código de usuário.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|O processo de windup exceção encontrou um `catch` bloquear no código do usuário.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|O processo de exceção windup inseriu o código de usuário.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|O processo de windup exceção encontrado uma `catch` bloquear no código do usuário.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|A exceção não foi tratada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

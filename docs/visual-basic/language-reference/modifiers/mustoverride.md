@@ -15,30 +15,30 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: 5dabd90d29bc41d017436876af24a67fa87e8e17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fedebf3ee791fbab02ace2ba2dc121590a241c53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627320"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-Especifica que uma propriedade ou procedimento não é implementado dessa classe e deve ser substituído em uma classe derivada antes que ele possa ser usado.  
+Especifica que uma propriedade ou procedimento não está implementado nesta classe e deve ser substituído em uma classe derivada antes que ele pode ser usado.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar `MustOverride` somente na declaração de uma propriedade ou procedimento. A propriedade ou procedimento que especifica `MustOverride` deve ser um membro de uma classe, e a classe deve ser marcada como [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
+ Você pode usar `MustOverride` somente em uma instrução de declaração de propriedade ou procedimento. A propriedade ou procedimento que especifica `MustOverride` deve ser um membro de uma classe, e a classe deve ser marcada [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).  
   
 ## <a name="rules"></a>Regras  
   
--   **Declaração incompleta.** Quando você especifica `MustOverride`, você não fornecer quaisquer linhas adicionais de código para a propriedade ou procedimento, não até mesmo o `End Function`, `End Property`, ou `End Sub` instrução.  
+-   **Declaração incompleta.** Quando você especifica `MustOverride`, você não fornecer quaisquer linhas adicionais de código para a propriedade ou procedimento, não até mesmo os `End Function`, `End Property`, ou `End Sub` instrução.  
   
 -   **Modificadores combinados.** Não é possível especificar `MustOverride` junto com `NotOverridable`, `Overridable`, ou `Shared` na mesma declaração.  
   
 -   **Sombreamento e sobreposição.** Tanto o sombreamento e sobreposição redefinem um elemento herdado, mas há diferenças significativas entre as duas abordagens. Para obter mais informações, consulte [sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
--   **Termos alternativos.** Um elemento que não pode ser usado, exceto em uma substituição às vezes é chamado um *puro virtual* elemento.  
+-   **Termos alternativos.** Um elemento que não pode ser usado, exceto em uma substituição às vezes é chamado um *pura virtual* elemento.  
   
- O `MustOverride` modificador pode ser usado nesses contextos:  
+ O `MustOverride` modificador pode ser usado nestes contextos:  
   
  [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -46,10 +46,10 @@ Especifica que uma propriedade ou procedimento não é implementado dessa classe
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)  
- [Sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>Consulte também
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+- [Sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

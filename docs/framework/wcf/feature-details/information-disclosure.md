@@ -2,12 +2,12 @@
 title: Divulgação de informações
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588232"
 ---
 # <a name="information-disclosure"></a>Divulgação de informações
 Divulgação de informações permite que um invasor obtenha informações valiosas sobre um sistema. Portanto, sempre considere quais informações você está revelando e se ele pode ser usado por um usuário mal-intencionado. A seguir lista os ataques de divulgação de informações possíveis e fornece atenuações para cada um.  
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Se o domínio for especificado, mas um nome de entidade de serviço inválido é especificado usando o recurso de identidade do ponto de extremidade, o NTLM é usado. Para obter mais informações sobre como a identidade do ponto de extremidade é especificada, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Consulte também
+- [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Elevação de privilégio](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Negação de serviço](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Violação](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Ataques de reprodução](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

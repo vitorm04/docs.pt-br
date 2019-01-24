@@ -1,18 +1,18 @@
 ---
-title: Como configurar um serviço do Windows Communication Foundation para utilizar o compartilhamento de porta
+title: 'Como: Configurar um serviço do Windows Communication Foundation para usar compartilhamento de porta'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 19f61e6e38a5eeb477833b0d5ea94c1b1a8447b4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 942dea9b745d3dd7cda366ad3e855ddaed0473db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582546"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Como configurar um serviço do Windows Communication Foundation para utilizar o compartilhamento de porta
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Como: Configurar um serviço do Windows Communication Foundation para usar compartilhamento de porta
 A maneira mais fácil de usar em seu aplicativo do Windows Communication Foundation (WCF) de compartilhamento de porta net.tcp:// é expor um serviço usando o <xref:System.ServiceModel.NetTcpBinding>.  
   
  Essa associação fornece uma <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> propriedade que controla se o compartilhamento de porta net.tcp:// está habilitado para o serviço que está sendo configurado com essa associação.  
@@ -60,6 +60,6 @@ A maneira mais fácil de usar em seu aplicativo do Windows Communication Foundat
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-* [Compartilhamento de porta do NET.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
-* [Como habilitar o serviço de compartilhamento de porta do NET.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>Consulte também
+- [Compartilhamento de porta do NET.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [Como: Habilitar o serviço de compartilhamento de porta NET. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

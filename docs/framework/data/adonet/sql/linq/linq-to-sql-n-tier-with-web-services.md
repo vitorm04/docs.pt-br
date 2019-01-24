@@ -2,18 +2,18 @@
 title: LINQ to SQL de n camadas com serviços da Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: bf13c34a058d33d240e780cb1ce0e665bd1322d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862232"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623606"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL de n camadas com serviços da Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] é projetado principalmente para uso na camada intermediária em uma camada de acesso de dados flexível (DAL) como um serviço Web. Se a camada de apresentação é uma página da Web ASP.NET, então você usa o controle de servidor Web de <xref:System.Web.UI.WebControls.LinqDataSource> para gerenciar a transferência de dados entre a interface do usuário e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] na camada intermediária. Se a camada de apresentação não é uma página ASP.NET, então a camada intermediária e a camada de apresentação devem fazer qualquer trabalho adicional para gerenciar serialização e desserialização de dados.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Foundation LINQ to SQL na camada intermediária  
- Em um serviço Web ou em um aplicativo de n camadas, a camada intermediária contém o contexto de dados e classes de entidade. Você pode criar essas classes manualmente, ou usando SQLMetal.exe ou [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] como descrito em outro lugar na documentação. Em tempo de design, você tem a opção fazer as classes de entidade serializável. Para obter mais informações, consulte [como: fazer entidades serializável](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Outra opção é criar um conjunto separado de classes que encapsulam os dados a ser serializados, e em projetos nesses tipos serializados quando você retorna dados nas consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] .  
+ Em um serviço Web ou em um aplicativo de n camadas, a camada intermediária contém o contexto de dados e classes de entidade. Você pode criar essas classes manualmente, ou usando SQLMetal.exe ou [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] como descrito em outro lugar na documentação. Em tempo de design, você tem a opção fazer as classes de entidade serializável. Para obter mais informações, confira [Como: Tornar entidades serializáveis](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Outra opção é criar um conjunto separado de classes que encapsulam os dados a ser serializados, e em projetos nesses tipos serializados quando você retorna dados nas consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] .  
   
  Você então define a interface com métodos que os clientes chamarão para recuperar, inserir e atualizar dados. Os métodos de interface envolvem as consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] . Você pode usar qualquer tipo de mecanismo de serialização para manipular chamadas remotos do método e serialização de dados. O único requisito é que se você tiver relações cíclicas ou bidirecionais no seu modelo de objeto, tal como aquela entre clientes e pedidos no modelo de objeto padrão do Northwind, então você deve usar um serializador que ofereça. O Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> dá suporte a relações de bi-direcional, mas o XmlSerializer que é usado com os serviços não WCF Web não faz isso. Se você optar por usar o XmlSerializer, em seguida, certifique-se de que seu modelo de objeto não tem nenhuma relação cíclica.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "43862232"
   
  Para obter mais informações, consulte [recuperação de dados e operações de CUD em aplicativos de N camadas (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: Visão geral do controle de servidor Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+## <a name="see-also"></a>Consulte também
+- [Aplicativos de N camadas e remotos com o LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [NIB: Visão geral do controle de servidor Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

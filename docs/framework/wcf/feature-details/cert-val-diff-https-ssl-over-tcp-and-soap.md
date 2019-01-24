@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 978ef8f0abe3b65110864773a19c15f0c8363236
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f85b45186c7cbc299e68f6f914f591f337aa3993
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517065"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Diferenças de validação de certificado entre segurança de SOAP, HTTPS, SSL através de TCP
 Você pode usar certificados no Windows Communication Foundation (WCF) com a segurança de camada de mensagem (SOAP) além da segurança de camada de transporte (TLS) sobre HTTPS (HTTP) ou TCP. Este tópico descreve as diferenças na maneira como esses certificados são validados.  
@@ -47,6 +47,6 @@ Você pode usar certificados no Windows Communication Foundation (WCF) com a seg
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.Security.RemoteCertificateValidationCallback>
+- [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

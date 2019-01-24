@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599342"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > elemento para \<configuration >
 
 Especifica a diretiva de ligação de assembly no nível de configuração.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+&nbsp;&nbsp;**\<assemblyBinding>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -47,7 +47,7 @@ Especifica a diretiva de ligação de assembly no nível de configuração.
 
 |     | Descrição |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Especifica um arquivo de configuração a ser incluído. |
+| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Especifica um arquivo de configuração a ser incluído. |
 
 ## <a name="remarks"></a>Comentários
 
@@ -70,4 +70,4 @@ O exemplo a seguir mostra como incluir um arquivo de configuração no disco rí
 
 ## <a name="see-also"></a>Consulte também
 
-[Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de arquivo de configuração para o .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

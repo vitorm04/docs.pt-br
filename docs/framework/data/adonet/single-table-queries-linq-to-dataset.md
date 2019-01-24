@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 5a128349ea81cda7397b2dadbc2ce4096f692744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637214"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabela única (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] as consultas funcionam em fontes de dados que implementam o <xref:System.Collections.Generic.IEnumerable%601> interface ou <xref:System.Linq.IQueryable%601> interface. O <xref:System.Data.DataTable> a classe não implementa a interface, portanto você deve chamar o <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método se você quiser usar o <xref:System.Data.DataTable> como uma fonte no `From` cláusula de um [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] as consultas funcionam em fontes de dados que implementam o <xref:System.Collections.Generic.IEnumerable%601> interface ou o <xref:System.Linq.IQueryable%601> interface. O <xref:System.Data.DataTable> classe não implementa nenhuma das interfaces, então você deve chamar o <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método se você quiser usar o <xref:System.Data.DataTable> como uma fonte no `From` cláusula de um [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
   
  O exemplo a seguir obtém todos os pedidos online da tabela SalesOrderHeader e gera a identificação do pedido, a data do pedido e o número de ordem para o console.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- A consulta a variável local é inicializada com uma expressão de consulta, que opera em uma ou mais fontes de informações, aplicando um ou mais operadores de consulta do que os operadores de consulta padrão ou, no caso de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operadores específicos para o <xref:System.Data.DataSet>classe. A expressão de consulta no exemplo anterior usa dois dos operadores de consulta padrão: `Where` e `Select`.  
+ A consulta a variável local é inicializada com uma expressão de consulta, que opera em uma ou mais fontes de informações aplicando um ou mais operadores de consulta do que os operadores de consulta padrão ou, no caso de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operadores específicos para o <xref:System.Data.DataSet>classe. A expressão de consulta no exemplo anterior usa dois dos operadores de consulta padrão: `Where` e `Select`.  
   
  A cláusula `Where` filtra a sequência com base em uma condição, nesse caso de que `OnlineOrderFlag` seja definido como `true`. O operador `Select` aloca e retorna um objeto enumerável que captura os argumentos passados para o operador. Nesse exemplo acima, um tipo anônimo é criado com três propriedades: `SalesOrderID`, `OrderDate` e `SalesOrderNumber`. Os valores dessas três propriedades são definidos como os valores das colunas `SalesOrderID`, `OrderDate` e `SalesOrderNumber` da tabela `SalesOrderHeader`.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33360472"
   
  Observe que o tipo de dados especificado no parâmetro genérico `T` dos métodos <xref:System.Data.DataRowExtensions.Field%2A> e <xref:System.Data.DataRowExtensions.SetField%2A> deve corresponder ao tipo do valor subjacente ou <xref:System.InvalidCastException> será gerado. O nome da coluna especificado também deve corresponder ao nome de uma coluna no <xref:System.Data.DataSet> ou <xref:System.ArgumentException> será gerado. Em ambos os casos, a exceção é gerada na enumeração de dados em tempo de execução quando a consulta é executada.  
   
-## <a name="see-also"></a>Consulte também  
- [Consultas de tabela cruzada](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Consultando DataSets tipados](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Campo genérico e métodos de SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+## <a name="see-also"></a>Consulte também
+- [Consultas de tabela cruzada](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
+- [Consultando DataSets tipados](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [Campo genérico e métodos de SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

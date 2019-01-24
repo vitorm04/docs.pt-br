@@ -1,16 +1,16 @@
 ---
-title: Como criar um serviço de fluxo de trabalho com atividades de mensagens
+title: 'Como: Criar um serviço de fluxo de trabalho com atividades de mensagem'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584971"
 ---
-# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Como criar um serviço de fluxo de trabalho com atividades de mensagens
-Este tópico descreve como criar um serviço de fluxo de trabalho simples usando as atividades de mensagem. Este tópico se concentra na mecânica de criação de um serviço de fluxo de trabalho em que o serviço consiste inteiramente de atividades de mensagem. Em um serviço do mundo real, o fluxo de trabalho contém muitas outras atividades. O serviço implementa uma única operação chamada Echo, que usa uma cadeia de caracteres e retorna a cadeia de caracteres para o chamador. Este tópico é o primeiro de uma série de dois tópicos. O próximo tópico [How To: acessar um serviço de um fluxo de trabalho aplicativo](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) discute como criar um aplicativo de fluxo de trabalho que possa chamar o serviço criado neste tópico.  
+# <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Como: Criar um serviço de fluxo de trabalho com atividades de mensagem
+Este tópico descreve como criar um serviço de fluxo de trabalho simples usando as atividades de mensagem. Este tópico se concentra na mecânica de criação de um serviço de fluxo de trabalho em que o serviço consiste inteiramente de atividades de mensagem. Em um serviço do mundo real, o fluxo de trabalho contém muitas outras atividades. O serviço implementa uma única operação chamada Echo, que usa uma cadeia de caracteres e retorna a cadeia de caracteres para o chamador. Este tópico é o primeiro de uma série de dois tópicos. O próximo tópico [How To: Acessar um serviço de um fluxo de trabalho aplicativo](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) discute como criar um aplicativo de fluxo de trabalho que possa chamar o serviço criado neste tópico.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Para criar um projeto de serviço de fluxo de trabalho  
   
@@ -87,9 +87,9 @@ Este tópico descreve como criar um serviço de fluxo de trabalho simples usando
   
      ![Página de Ajuda do WCF](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
   
-4.  Continue para a [How To: acessar um serviço de um fluxo de trabalho aplicativo](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) tópico para criar um cliente de fluxo de trabalho que chama esse serviço.  
+4.  Continue para o [como: Acessar um serviço de um fluxo de trabalho aplicativo](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) tópico para criar um cliente de fluxo de trabalho que chama esse serviço.  
   
-## <a name="see-also"></a>Consulte também  
- [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
- [Atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+## <a name="see-also"></a>Consulte também
+- [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Visão geral dos serviços de fluxo de trabalho de hospedagem](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
+- [Atividades de mensagens](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

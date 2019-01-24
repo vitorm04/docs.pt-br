@@ -1,5 +1,5 @@
 ---
-title: 'Otimizando desempenho: comportamento do objeto'
+title: 'Otimizando desempenho: Comportamento do objeto'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: c599542668a2bbc4d13dbbf5590fdc50113a25af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 45e93e1ce7d4cca21019cd0be4547bdaa220c301
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631211"
 ---
-# <a name="optimizing-performance-object-behavior"></a>Otimizando desempenho: comportamento do objeto
+# <a name="optimizing-performance-object-behavior"></a>Otimizando desempenho: Comportamento do objeto
 O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ajudará você a fazer o balanceamento correto entre desempenho e funcionalidade.  
   
 
@@ -69,7 +69,7 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
   
 |**Estado**|**Size**|  
 |---------------|--------------|  
-|Congelado <xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
+|Frozen <xref:System.Windows.Media.SolidColorBrush>|212 bytes|  
 |Não congelado <xref:System.Windows.Media.SolidColorBrush>|972 bytes|  
   
  O exemplo de código a seguir demonstra esse conceito:  
@@ -110,13 +110,13 @@ O entendimento do comportamento intrínseco de objetos [!INCLUDE[TLA2#tla_wincli
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
-## <a name="see-also"></a>Consulte também  
- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>Consulte também
+- [Otimizando o desempenho do aplicativo WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Planejando para desempenho do aplicativo](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
+- [Aproveitando o hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout e design](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Elementos gráficos e geração de imagens 2D](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Recursos do aplicativo](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
+- [Texto](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Outras recomendações de desempenho](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

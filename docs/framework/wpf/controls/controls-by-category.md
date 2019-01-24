@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576844"
 ---
 # <a name="controls-by-category"></a>Controles por categoria
 Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamente em várias categorias. Essas categorias podem ser usadas para selecionar o controle apropriado para seu cenário, ajudando a ver quais controles têm padrões de uso ou funcionalidades semelhantes.  
@@ -177,5 +177,5 @@ Controles do Windows Presentation Foundation (WPF) podem ser agrupados logicamen
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>Consulte também  
- [Biblioteca de controles](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>Consulte também
+- [Biblioteca de controles](../../../../docs/framework/wpf/controls/control-library.md)

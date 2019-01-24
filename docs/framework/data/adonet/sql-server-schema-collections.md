@@ -2,12 +2,12 @@
 title: Coleções de esquema do SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635033"
 ---
 # <a name="sql-server-schema-collections"></a>Coleções de esquema do SQL Server
 O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleções de esquema adicionais além das coleções de esquema comuns. As coleções de esquema variam ligeiramente conforme a versão do SQL Server que você está usando. Para determinar a lista de coleções de esquema com suporte, chame o **GetSchema** método sem argumentos ou com o nome da coleção de esquema "MetaDataCollections". Isso retornará um <xref:System.Data.DataTable> com uma lista de coleções de esquema com suporte, o número de restrições que oferecem suporte a cada um deles e o número de partes do identificador que eles usam.  
@@ -16,7 +16,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
   
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
-|Database_Name|Cadeia de Caracteres|Nome do banco de dados.|  
+|database_name|Cadeia de Caracteres|Nome do banco de dados.|  
 |DBID|Int16|ID do banco de dados.|  
 |create_date|DateTime|Data de criação do banco de dados.|  
   
@@ -51,7 +51,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
   
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
-|type_desc|Cadeia de Caracteres|O tipo do índice será um dos seguintes:<br /><br /> -HEAP<br />-CLUSTER<br />-NÃO CLUSTERIZADO<br />-   XML<br />-ESPACIAL|  
+|type_desc|Cadeia de Caracteres|O tipo do índice será um dos seguintes:<br /><br /> -HEAP<br />-   CLUSTERED<br />-   NONCLUSTERED<br />-   XML<br />-ESPACIAL|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -63,7 +63,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |table_catalog|Cadeia de Caracteres|Nome da tabela de índice está associado.|  
 |table_schema|Cadeia de Caracteres|Esquema que contém a tabela de índice está associado.|  
 |table_name|Cadeia de Caracteres|Nome da tabela.|  
-|nome da coluna|Cadeia de Caracteres|Nome da coluna de índice está associado.|  
+|column_name|Cadeia de Caracteres|Nome da coluna de índice está associado.|  
 |ordinal_position|Int32|Posição ordinal da coluna.|  
 |KeyType|Byte|O tipo de objeto.|  
 |index_name|Cadeia de Caracteres|Nome do índice.|  
@@ -211,7 +211,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
   
 |ColumnName|DataType|Descrição|  
 |----------------|--------------|-----------------|  
-|UID|Int16|ID de usuário, exclusivo neste banco de dados. 1 é o proprietário do banco de dados.|  
+|uid|Int16|ID de usuário, exclusivo neste banco de dados. 1 é o proprietário do banco de dados.|  
 |user_name|Cadeia de Caracteres|Nome de usuário ou grupo de nome, exclusivo neste banco de dados.|  
 |CREATEDATE formato|DateTime|Data em que a conta foi adicionada.|  
 |updatedate|DateTime|Data em que a conta foi alterada pela última vez.|  
@@ -246,7 +246,7 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |udt_name|Cadeia de Caracteres|O nome de classe para o assembly.|  
 |version_major|Objeto|Número de versão principal.|  
 |version_minor|Objeto|Número de versão secundária.|  
-|versão compilação|Objeto|Número de compilação.|  
+|version_build|Objeto|Número de compilação.|  
 |version_revision|Objeto|Número de revisão.|  
 |culture_info|Objeto|As informações de cultura associadas a esse UDT.|  
 |public_key|Objeto|A chave pública usada por esse Assembly.|  
@@ -255,6 +255,6 @@ O Microsoft .NET Framework Data Provider para SQL Server dá suporte a coleçõe
 |Create_Date|DateTime|A data em que o assembly foi criado/registrado.|  
 |Permission_set_desc|Cadeia de Caracteres|O nome amigável para o permissão-set/nível de segurança para o assembly.|  
   
-## <a name="see-also"></a>Consulte também  
- [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Recuperando informações de esquema de banco de dados](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
