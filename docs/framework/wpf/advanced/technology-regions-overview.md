@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 2fef7a0f3b4e01d7ce29baeb70fbdd7ea37f2c89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 978cd428989aa76f82f01711ccfa566b57352f48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695735"
 ---
 # <a name="technology-regions-overview"></a>Visão geral das regiões de tecnologia
 Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF, Win32 ou DirectX, elas deverão compartilhar as áreas de renderização em uma janela de nível superior comum. Este tópico descreve problemas que podem influenciar a apresentação e a entrada para seu aplicativo de interoperação do WPF.  
@@ -50,7 +50,7 @@ Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF
   
  As janelas em camadas podem tornar a janela inteira translúcida (semitransparente) ao especificarem um valor alfa para aplicar a cada pixel na janela.  (na verdade, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dá suporte para a versão alfa por pixel, mas é muito difícil de usá-la em programas práticos porque, neste modo, você precisaria desenhar qualquer HWND filho, inclusive as caixas de diálogo e os menus suspensos).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte para os HRGNs. No entanto, não há nenhuma [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerenciada para essa funcionalidade. Você pode usar a plataforma chamar e <xref:System.Windows.Interop.HwndSource> para chamar o relevantes [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Para obter mais informações, consulte [Chamando funções nativas do código gerenciado](/cpp/dotnet/calling-native-functions-from-managed-code).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte para os HRGNs. No entanto, não há nenhuma [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] gerenciada para essa funcionalidade. Você pode usar a plataforma de invocação e <xref:System.Windows.Interop.HwndSource> para chamar o relevantes [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Para obter mais informações, consulte [Chamando funções nativas do código gerenciado](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
  As janelas em camadas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm recursos diferentes em sistemas operacionais distintos. Isso ocorre porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] para renderizar e as janelas em camadas foram projetadas principalmente para a renderização de [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] e não de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)].  
   
@@ -60,7 +60,7 @@ Se várias tecnologias de apresentação forem usadas em um aplicativo, como WPF
   
 -   Se seu aplicativo for executado no [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], as janelas em camadas na parte superior das superfícies do [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] cintilarão quando o aplicativo [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] for renderizado.  (A sequência de processamento real consiste no [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ocultar a janela em camadas e, em seguida, o [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] desenhar e então, o [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] colocar a janela em camadas novamente).  As janelas em camadas não [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também têm essa limitação.  
   
-## <a name="see-also"></a>Consulte também  
- [Interoperação do WPF e do Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Passo a passo: hospedando um relógio do WPF em Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)  
- [Hospedando conteúdo Win32 no WPF](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+## <a name="see-also"></a>Consulte também
+- [Interoperação do WPF e do Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [Passo a passo: Hospedando um relógio do WPF no Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [Hospedando conteúdo Win32 no WPF](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)

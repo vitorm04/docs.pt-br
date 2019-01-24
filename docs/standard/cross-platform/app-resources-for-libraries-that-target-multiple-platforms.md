@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641142"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
 Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para garantir que os recursos em suas bibliotecas de classe podem ser acessados em várias plataformas de projeto. Esse tipo de projeto está disponível no Visual Studio 2012 e tem como alvo o subconjunto portátil da biblioteca de classes do .NET Framework. Usar um [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garante que a biblioteca possa ser acessada de aplicativos da área de trabalho, Silverlight, Windows Phone e [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -52,7 +52,7 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
  Se seu projeto do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluir recursos localizados, use o modelo hub e spoke para implantá-los exatamente como faria para uma biblioteca em um aplicativo da área de trabalho. Para consumir seu arquivo de recurso principal e quaisquer arquivos de recursos localizados em seu aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], adicione uma referência ao assembly principal. No tempo de compilação, o Visual Studio extrai os recursos do arquivo de recursos principal e quaisquer arquivos de recursos localizados em arquivos .resw separados. Em seguida, ele cria os arquivos .resw em um único arquivo de PRI que acessa o [!INCLUDE[wrt](../../../includes/wrt-md.md)] em tempo de execução.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Exemplo: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] não localizado
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Exemplo: Não localizado [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  O exemplo simples e não localizado do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] a seguir usa recursos para armazenar os nomes das colunas e determinar o número de caracteres a serem reservados para dados tabulares. O exemplo usa um arquivo chamado LibResources.resx para armazenar os recursos de cadeia de caracteres listados na tabela a seguir.
 
 |Nome do recurso|Valor do recurso|
@@ -81,7 +81,7 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Exemplo: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizado
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Exemplo: Localizada [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  O exemplo do [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizado a seguir inclui recursos para francês (França) e inglês (Estados Unidos). A cultura do inglês (Estados Unidos) é a cultura do aplicativo padrão; seus recursos são mostrados na tabela a [seção anterior](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). O arquivo de recursos para francês (França) é chamado LibResources.fr-FR.resx e consiste nos recursos de cadeia de caracteres listados na tabela a seguir. O código-fonte para a classe `UILibrary` é o mesmo mostrado na seção anterior.
 
 |Nome do recurso|Valor do recurso|
@@ -106,6 +106,6 @@ Você pode usar o .NET Framework [biblioteca de classes portátil](../../../docs
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.Resources.ResourceManager>  
-- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)
 - [Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

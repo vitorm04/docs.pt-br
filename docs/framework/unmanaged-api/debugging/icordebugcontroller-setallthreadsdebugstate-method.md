@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee396c512dca2bea0a7a9737d5515defce4b2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8d14deae1923e2904818fc01ffa3665fdf5ea6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710567"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>Método ICorDebugController::SetAllThreadsDebugState
 Define o estado de depuração de todos os threads gerenciados no processo.  
@@ -38,22 +38,22 @@ HRESULT SetAllThreadsDebugState (
   
 #### <a name="parameters"></a>Parâmetros  
  `state`  
- [in] Um valor da enumeração "CorDebugThreadState" que especifica o estado do thread para depuração.  
+ [in] Um valor de enumeração "CorDebugThreadState" que especifica o estado do thread para depuração.  
   
  `pExceptThisThread`  
- [in] Um ponteiro para um objeto de "ICorDebugThread" que representa um segmento a ser isentos da configuração de estado de depuração. Se esse valor for nulo, nenhum thread é isento.  
+ [in] Um ponteiro para um objeto de "ICorDebugThread" que representa um thread para ser isentos da configuração de estado de depuração. Se esse valor for nulo, nenhum thread é isento.  
   
 ## <a name="remarks"></a>Comentários  
- O `SetAllThreadsDebugState` método pode afetar os threads que não são visíveis por meio de [método EnumerateThreads](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md), portanto threads que foram suspensos com o `SetAllThreadsDebugState` método precisará ser reiniciada com o `SetAllThreadsDebugState` método.  
+ O `SetAllThreadsDebugState` método pode afetar os threads que não estão visíveis por meio [método EnumerateThreads](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md), então threads que foram suspensos com o `SetAllThreadsDebugState` método precisará ser retomada, com o `SetAllThreadsDebugState` método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- 
+## <a name="see-also"></a>Consulte também
+

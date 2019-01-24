@@ -2,12 +2,12 @@
 title: Bloqueio de segurança PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699773"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueio de segurança PII
 Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço do Windows Communication Foundation (WCF) por:  
@@ -47,7 +47,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
 3.  Criptografar as definições de configuração appSettings na pasta Web. config, emitindo o comando a seguir: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Para obter mais informações sobre como criptografar seções de arquivos de configuração podem ser encontradas lendo instruções DPAPI na configuração do ASP.NET ([Building Secure ASP.NET Applications: autenticação, autorização e comunicação segura](https://go.microsoft.com/fwlink/?LinkId=95137)) e instruções sobre o RSA na configuração do ASP.NET ([How To: criptografar seções de configuração no ASP.NET 2.0 usando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Para obter mais informações sobre como criptografar seções de arquivos de configuração podem ser encontradas lendo instruções DPAPI na configuração do ASP.NET ([Building Secure ASP.NET Applications: Autenticação, autorização e comunicação segura](https://go.microsoft.com/fwlink/?LinkId=95137)) e instruções sobre o RSA na configuração do ASP.NET ([How To: Criptografar seções de configuração no ASP.NET 2.0 usando o RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Elementos de arquivo de configuração de bloqueio  
  Em cenários hospedados na Web, é possível ter serviços em subdiretórios de serviços. Nessas situações, os valores de configuração para o serviço no subdiretório são calculados examinando os valores em Machine. config e mesclando sucessivamente com todos os arquivos Web. config em diretórios pai ao mover para baixo a árvore de diretório e, finalmente, mesclando o Arquivo Web. config no diretório que contém o serviço. É o comportamento padrão para a maioria dos elementos de configuração Permitir que os arquivos de configuração em subpastas para substituir os valores definidos em diretórios pai. Em determinadas situações, talvez seja desejável para impedir que arquivos de configuração em subdiretórios substituindo os valores definidos na configuração do diretório pai.  
@@ -142,5 +142,5 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
 1.  Editar Machine. config para definir a `enableLoggingKnownPii` atributo `false`.  
   
-## <a name="see-also"></a>Consulte também  
- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Consulte também
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713295"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Método ICorDebugNativeFrame2::IsMatchingParentFrame
-Determina se o intervalo especificado é o pai do quadro atual.  
+Determina se o quadro especificado é o pai do quadro atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +37,13 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 #### <a name="parameters"></a>Parâmetros  
  `pPotentialParentFrame`  
- [in] Um ponteiro para o objeto de quadro que você deseja avaliar o status de pai.  
+ [in] Um ponteiro para o objeto de quadro que você deseja avaliar o status do pai.  
   
  `pIsParent`  
- [out] `true` se `pPotentialParentFrame` é pai do quadro atual; caso contrário, `false`.  
+ [out] `true` se `pPotentialParentFrame` é o pai do quadro atual; caso contrário, `false`.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Este método retorna a seguintes HRESULTs específicos, bem como o HRESULT erros que indicam falha do método.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -54,18 +54,18 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- `IsMatchingParentFrame` Retorna `true` se o objeto de quadro passar para o método é o pai do objeto de quadro no qual o método foi chamado. Se você chamar o método em um quadro que não é um filho do quadro especificado, ele retornará um erro.  
+ `IsMatchingParentFrame` Retorna `true` se o objeto de quadro que você passa para o método é o pai do objeto de quadro no qual o método foi chamado. Se você chamar o método em um quadro que não é um filho do quadro especificado, ele retornará um erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)

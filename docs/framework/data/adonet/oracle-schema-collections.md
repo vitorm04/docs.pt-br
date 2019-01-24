@@ -2,12 +2,12 @@
 title: Coleções de esquema do Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694458"
 ---
 # <a name="oracle-schema-collections"></a>Coleções de esquema do Oracle
 O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleções de esquema específico, além das coleções de esquema comuns:  
@@ -107,15 +107,15 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |SECUNDÁRIO|Cadeia de Caracteres|Se o índice é um objeto secundário criado pelo método ODCIIndexCreate do cartucho de dados Oracle9i (Y&#124;N).|  
 |BUFFER_POOL|Cadeia de Caracteres|Nome do pool de buffer padrão a ser usado para os blocos de índice.|  
 |USER_STATS|Cadeia de Caracteres|Se as estatísticas foram inseridas diretamente pelo usuário.|  
-|DURAÇÃO|Cadeia de Caracteres|Indica a duração de uma tabela temporária: 1) sessão de $SYS: as linhas são preservadas durante a sessão, a transação de $ SYS 2): as linhas são excluídas após a confirmação, 3) Null para a tabela permanente.|  
+|DURAÇÃO|Cadeia de Caracteres|Indica a duração de uma tabela temporária: 1) SYS$ sessão: as linhas são preservadas durante a sessão, a transação de $ SYS 2): as linhas são excluídas após a confirmação, 3) Null para a tabela permanente.|  
 |PCT_DIRECT_ACCESS|Decimal|Para um índice secundário em uma tabela organizadas por índice, a porcentagem de linhas por estimativa válida|  
 |ITYP_OWNER|Cadeia de Caracteres|Para um índice de domínio, o proprietário do indextype.|  
 |ITYP_NAME|Cadeia de Caracteres|Para um índice de domínio, o nome da indextype.|  
 |PARÂMETROS|Cadeia de Caracteres|Para um índice de domínio, a cadeia de caracteres do parâmetro.|  
 |GLOBAL_STATS|Cadeia de Caracteres|Para índices particionados, indica se as estatísticas foram coletadas pela análise de índice como um todo (Sim) ou foram estimadas de estatísticas em partições de índice subjacente e subpartições (não).|  
 |DOMIDX_STATUS|Cadeia de Caracteres|Reflete o status do índice de domínio. NULL: o índice especificado não é um índice de domínio. VÁLIDO: é o índice é um índice de domínio válido. IDXTYP_INVLD: o tipo de índice desse índice de domínio é inválido.|  
-|DOMIDX_OPSTATUS|Cadeia de Caracteres|Reflete o status de uma operação que foi executada em um índice de domínio: nulo: o índice especificado não é um índice de domínio. VÁLIDO: a operação executada sem erros. Falha: a operação falhou com um erro.|  
-|FUNCIDX_STATUS|Cadeia de Caracteres|Indica o status de um índice baseado em função: nulo: isso não é uma função baseada em índice habilitado: o índice baseado em função está habilitado, desabilitada: o índice baseado em função está desabilitado.|  
+|DOMIDX_OPSTATUS|Cadeia de Caracteres|Reflete o status de uma operação que foi executada em um índice de domínio: NULL: o índice especificado não é um índice de domínio. VÁLIDO: a operação executada sem erros. Falha: a operação falhou com um erro.|  
+|FUNCIDX_STATUS|Cadeia de Caracteres|Indica o status de um índice baseado em função: NULL: isso não é uma função baseada em índice habilitado: o índice baseado em função está habilitado, desabilitada: o índice baseado em função está desabilitado.|  
 |JOIN_INDEX|Cadeia de Caracteres|Indica se este é um índice de junção ou não.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -145,7 +145,7 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere).|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que ele colocado neste objeto em si).|  
-|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &AMP;#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate do cartucho de dados Oracle9i (Y &#124; N).|  
 |CRIADO|DateTime|A data em que o objeto foi criado.|  
   
@@ -160,7 +160,7 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |INCREMENT_BY|Decimal|Valor pelo qual a sequência é incrementada.|  
 |CYCLE_FLAG|Cadeia de Caracteres|Sequência circundar ao atingir o limite.|  
 |ORDER_FLAG|Cadeia de Caracteres|Números de sequência são gerados na ordem.|  
-|TAMANHO_DO_CACHE|Decimal|Número de números de sequência em cache.|  
+|CACHE_SIZE|Decimal|Número de números de sequência em cache.|  
 |LAST_NUMBER|Decimal|Número de sequência de último gravado em disco. Se uma sequência usa armazenamento em cache, o número gravado em disco é o último número colocado no cache de sequência. Esse número é provavelmente será maior que o último número de sequência que foi usado.|  
   
 ## <a name="synonyms"></a>Sinônimos  
@@ -220,7 +220,7 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caracteres)|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que ele colocado neste objeto em si).|  
-|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &AMP;#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate do cartucho de dados Oracle9i (Y &#124; N).|  
   
 ## <a name="packages"></a>Pacotes  
@@ -236,7 +236,7 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere).|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que ele colocado neste objeto em si).|  
-|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &AMP;#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate do cartucho de dados Oracle9i (Y &#124; N).|  
 |CRIADO|DateTime|A data em que o objeto foi criado.|  
   
@@ -253,7 +253,7 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |TIMESTAMP|Cadeia de Caracteres|Carimbo de hora para a especificação do objeto (dados de caractere).|  
 |STATUS|Cadeia de Caracteres|Status do objeto (válido, inválido ou n/d).|  
 |TEMPORÁRIO|Cadeia de Caracteres|Se o objeto é temporário (a sessão atual pode ver apenas os dados que ele colocado neste objeto em si).|  
-|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &AMP;#124; N).|  
+|GERADO|Cadeia de Caracteres|É o nome desse sistema de objeto gerado? (Y &#124; N).|  
 |SECUNDÁRIO|Cadeia de Caracteres|Se este é um objeto secundário criado pelo método ODCIIndexCreate do cartucho de dados Oracle9i (Y &#124; N).|  
 |CRIADO|DateTime|A data em que o objeto foi criado.|  
   
@@ -379,5 +379,5 @@ O Microsoft .NET Framework Data Provider for Oracle suporta as seguintes coleç�
 |CHAR_LENGTH|Decimal|Limite de caracteres para tipos de dados de cadeia de caracteres.|  
 |CHAR_USED|Cadeia de Caracteres|Indica se o limite de bytes (B) ou char (C) é oficial para a cadeia de caracteres.|  
   
-## <a name="see-also"></a>Consulte também  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

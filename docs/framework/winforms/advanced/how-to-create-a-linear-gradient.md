@@ -1,5 +1,5 @@
 ---
-title: Como criar um gradiente linear
+title: 'Como: Criar um gradiente Linear'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696289"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>Como criar um gradiente linear
+# <a name="how-to-create-a-linear-gradient"></a>Como: Criar um gradiente Linear
 O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gradientes lineares horizontais, verticais e diagonais. Por padrão, a cor em um gradiente linear muda uniformemente. No entanto, você pode personalizar um gradiente linear para que a cor mude de maneira não uniforme.  
   
  O exemplo a seguir preenche uma linha, uma elipse e um retângulo com um pincel de gradiente linear horizontal.  
@@ -49,7 +49,7 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gr
   
  Observe que o componente vermelho está na metade da intensidade quando a coordenada horizontal está a apenas 20% do caminho de 0 a 200.  
   
- O exemplo a seguir define o <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> propriedade de um <xref:System.Drawing.Drawing2D.LinearGradientBrush> objeto para associar três intensidades relativas três posições relativas. Como na tabela anterior, uma intensidade relativa de 0,5 é associada a uma posição relativa de 0,2. O código preenche uma elipse e um retângulo com o pincel de gradiente.  
+ O exemplo a seguir define o <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> propriedade de um <xref:System.Drawing.Drawing2D.LinearGradientBrush> objeto para associar três intensidades relativas com três posições relativas. Como na tabela anterior, uma intensidade relativa de 0,5 é associada a uma posição relativa de 0,2. O código preenche uma elipse e um retângulo com o pincel de gradiente.  
   
  A ilustração a seguir mostra o retângulo e elipse resultantes.  
   
@@ -77,6 +77,6 @@ O [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornece gr
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>Consulte também  
- [Usando um Pincel de Gradiente para Preencher Formas](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Usando um Pincel de Gradiente para Preencher Formas](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
+- [Elementos Gráficos e Desenho nos Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

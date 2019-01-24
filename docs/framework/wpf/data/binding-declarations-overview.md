@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: a8652648e1ac9da96a027f9aa56f0eee40cbaf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704011"
 ---
 # <a name="binding-declarations-overview"></a>Visão geral das declarações de associação
 Este tópico discute as diferentes maneiras que você pode declarar uma associação.  
@@ -36,13 +36,13 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Uso da extensão de marcação  
- <xref:System.Windows.Data.Binding> é uma extensão da marcação. Quando você usa a extensão de associação para declarar uma associação, a declaração consiste em uma série de cláusulas após a palavra-chave `Binding` separadas por vírgulas (,). As cláusulas na declaração da associação podem estar em qualquer ordem e há várias combinações possíveis. As cláusulas são *nome*=*valor* pares onde *nome* é o nome do <xref:System.Windows.Data.Binding> propriedade e *valor* é o valor que você está definindo a propriedade.  
+ <xref:System.Windows.Data.Binding> é uma extensão da marcação. Quando você usa a extensão de associação para declarar uma associação, a declaração consiste em uma série de cláusulas após a palavra-chave `Binding` separadas por vírgulas (,). As cláusulas na declaração da associação podem estar em qualquer ordem e há várias combinações possíveis. As cláusulas são *nome*=*valor* pares onde *nome* é o nome da <xref:System.Windows.Data.Binding> propriedade e *valor* é o valor que você está definindo a propriedade.  
   
- Ao criar cadeias de caracteres de declaração de associação em marcação, elas devem ser anexadas à propriedade de dependência específica de um objeto de destino. O exemplo a seguir mostra como associar o <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propriedade usando a extensão de associação, especificando o <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.Path%2A> propriedades.  
+ Ao criar cadeias de caracteres de declaração de associação em marcação, elas devem ser anexadas à propriedade de dependência específica de um objeto de destino. O exemplo a seguir mostra como associar o <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> propriedade usando a extensão de associação, especificando as <xref:System.Windows.Data.Binding.Source%2A> e <xref:System.Windows.Data.Binding.Path%2A> propriedades.  
   
  [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Você pode especificar a maioria das propriedades da <xref:System.Windows.Data.Binding> classe dessa maneira. Para obter mais informações sobre as extensões de associação, bem como uma lista de <xref:System.Windows.Data.Binding> propriedades que não podem ser definidas usando a extensão de associação, consulte o [extensão de marcação de associação](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) visão geral.  
+ Você pode especificar a maioria das propriedades do <xref:System.Windows.Data.Binding> classe dessa maneira. Para obter mais informações sobre as extensões de associação, bem como uma lista de <xref:System.Windows.Data.Binding> propriedades que não podem ser definidas usando a extensão de associação, consulte o [extensão de marcação de associação](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) visão geral.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Sintaxe de elemento de objeto  
@@ -52,17 +52,17 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
  [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
- O exemplo associa o <xref:System.Windows.Controls.TextBlock.Foreground%2A> propriedade declarando a associação usando a sintaxe de extensão. A declaração de associação para o <xref:System.Windows.Controls.TextBlock.Text%2A> propriedade usa a sintaxe de elemento de objeto.  
+ O exemplo associa o <xref:System.Windows.Controls.TextBlock.Foreground%2A> propriedade, declarando uma associação usando a sintaxe de extensão. A declaração de associação para o <xref:System.Windows.Controls.TextBlock.Text%2A> propriedade usa a sintaxe de elemento de objeto.  
   
  Para obter mais informações sobre diferentes termos, consulte [Sintaxe de XAML em detalhes](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding e PriorityBinding  
- <xref:System.Windows.Data.MultiBinding> e <xref:System.Windows.Data.PriorityBinding> não dão suporte a sintaxe de extensão do XAML. Portanto, você deve usar a sintaxe de elemento de objeto se você está declarando um <xref:System.Windows.Data.MultiBinding> ou um <xref:System.Windows.Data.PriorityBinding> em XAML.  
+ <xref:System.Windows.Data.MultiBinding> e <xref:System.Windows.Data.PriorityBinding> não dão suporte a sintaxe de extensão do XAML. Portanto, você deve usar a sintaxe de elemento de objeto se você está declarando uma <xref:System.Windows.Data.MultiBinding> ou um <xref:System.Windows.Data.PriorityBinding> em XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Criar uma associação em código  
- Outra maneira de especificar uma associação é para definir propriedades diretamente em um <xref:System.Windows.Data.Binding> objeto no código. O exemplo a seguir mostra como criar um <xref:System.Windows.Data.Binding> do objeto e especificar as propriedades no código.  Neste exemplo, `TheConverter` é um objeto que implementa o <xref:System.Windows.Data.IValueConverter> interface.  
+ Outra maneira de especificar uma associação é definir propriedades diretamente em um <xref:System.Windows.Data.Binding> objeto no código. O exemplo a seguir mostra como criar um <xref:System.Windows.Data.Binding> do objeto e especifique as propriedades no código.  Neste exemplo, `TheConverter` é um objeto que implementa o <xref:System.Windows.Data.IValueConverter> interface.  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
@@ -75,7 +75,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 -   No caso mais simples, o <xref:System.Windows.Data.Binding.Path%2A> o valor da propriedade é o nome da propriedade do objeto fonte a ser usada para a associação, como `Path=PropertyName`.  
   
--   Subpropriedades de uma propriedade podem ser especificadas por uma sintaxe similar como c#. Por exemplo, a cláusula `Path=ShoppingCart.Order` define a associação com a subpropriedade `Order` do objeto ou da propriedade `ShoppingCart`.  
+-   Subpropriedades de uma propriedade podem ser especificadas por uma sintaxe similar como em C#. Por exemplo, a cláusula `Path=ShoppingCart.Order` define a associação com a subpropriedade `Order` do objeto ou da propriedade `ShoppingCart`.  
   
 -   Para associar a uma propriedade anexada, coloque parênteses na propriedade anexada. Por exemplo, para associar a propriedade anexada <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, a sintaxe é `Path=(DockPanel.Dock)`.  
   
@@ -95,7 +95,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 -   Dentro dos indexadores ([]), o caractere de acento circunflexo (^) pula o próximo caractere.  
   
--   Se você definir <xref:System.Windows.Data.Binding.Path%2A> em XAML, você também precisa de escape (usando entidades XML) certos caracteres que são especiais para a definição de linguagem XML:  
+-   Se você definir <xref:System.Windows.Data.Binding.Path%2A> em XAML, você também precisará pular (usando entidades XML) certos caracteres que são especiais para a definição de linguagem XML:  
   
     -   Use `&` para pular o caractere "&".  
   
@@ -119,14 +119,14 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
   
 -   Se você não definir <xref:System.Windows.Data.Binding.ConverterCulture%2A>, o mecanismo de associação usa o `Language` propriedade do objeto de destino de associação. No XAML, esse padrão é "en-US" ou herda o valor do elemento raiz (ou qualquer elemento) da página, se um tiver sido definido explicitamente.  
   
--   Contanto que a associação já tenha um contexto de dados (por exemplo, o contexto de dados herdados vem de um elemento pai) e qualquer item ou coleção que esteja sendo retornado por aquele contexto seja apropriado para a associação sem novas modificação do caminho, uma declaração de associação não poderá ter nenhuma cláusula: `{Binding}`. Essa geralmente é a maneira que uma associação é especificada para estilos de dados, em que a associação age em uma coleção. Para obter mais informações, consulte a seção "Todos os objetos usados como uma origem de associação" em [Visão geral das origens da associação](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Contanto que a associação já tem um contexto de dados (por exemplo, o contexto de dados herdado proveniente de um elemento pai), e qualquer item ou coleção que está sendo retornada por esse contexto é adequada para associação sem a necessidade de modificação adicional de caminho, um declaração de associação não pode ter nenhum cláusulas em todos os: `{Binding}` Isso geralmente é a maneira que uma associação é especificada para estilos de dados, onde a associação age em uma coleção. Para obter mais informações, consulte a seção "Todos os objetos usados como uma origem de associação" em [Visão geral das origens da associação](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
--   O padrão <xref:System.Windows.Data.Binding.Mode%2A> varia entre unidirecional e bidirecional, dependendo da propriedade de dependência que está sendo associada. Você sempre pode declarar o modo de associação explicitamente para garantir que sua associação tenha o comportamento desejado. Nas propriedades do controle de usuário editável, geral, como <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, bidirecionais associações padrão, ao passo que a maioria das outras propriedades padrão para a associação unidirecional.  
+-   O padrão <xref:System.Windows.Data.Binding.Mode%2A> varia entre unidirecional e bidirecional, dependendo da propriedade de dependência que está sendo associada. Você sempre pode declarar o modo de associação explicitamente para garantir que sua associação tenha o comportamento desejado. Nas propriedades de controle editáveis pelo usuário, geral, como <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, padrão como vinculações bidirecionais, enquanto a maioria das outras propriedades padrão para a associação unidirecional.  
   
--   O padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor varia entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> e <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> dependendo da propriedade de dependência associado também. O valor padrão para a maioria das propriedades de dependência é <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, enquanto a propriedade <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> tem um valor padrão de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
+-   O padrão <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> valor varia entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> e <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> , dependendo da propriedade de dependência associada também. O valor padrão para a maioria das propriedades de dependência é <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, enquanto a propriedade <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> tem um valor padrão de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Sintaxe PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral da vinculação de dados](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Tópicos de instruções](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Associação de dados](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Sintaxe PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703257"
 ---
 # <a name="like-operator-visual-basic"></a>Operador Like (Visual Basic)
 Compara uma cadeia de caracteres com um padrão.  
@@ -73,7 +73,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>Caracteres especiais  
  Para corresponder o colchete esquerdo de caracteres especiais (`[`), ponto de interrogação (`?`), sinal numérico (`#`) e o asterisco (`*`), coloque-as entre colchetes. O colchete direito (`]`) não pode ser usado dentro de um grupo para corresponder em si, mas pode ser usado fora de um grupo como um caractere individual.  
   
- A sequência de caracteres `[]` é considerado uma cadeia de caracteres de comprimento zero (`""`). No entanto, ele não pode ser parte de uma lista de caracteres entre colchetes. Se você quiser verificar se uma posição na `string` contém um de um grupo de caracteres ou nenhum caractere, você pode usar `Like` duas vezes. Por exemplo, consulte [como: corresponder uma cadeia de caracteres com um padrão](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ A sequência de caracteres `[]` é considerado uma cadeia de caracteres de comprimento zero (`""`). No entanto, ele não pode ser parte de uma lista de caracteres entre colchetes. Se você quiser verificar se uma posição na `string` contém um de um grupo de caracteres ou nenhum caractere, você pode usar `Like` duas vezes. Para obter um exemplo, consulte [ Corresponder um padrão de um cadeia de caracteres](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Intervalos de caracteres  
  Usando um hífen (`–`) para separar os limites inferior e superior do intervalo, `charlist` pode especificar um intervalo de caracteres. Por exemplo, `[A–Z]` resulta em uma correspondência se posição do caractere correspondente em `string` contém qualquer caractere no intervalo `A`–`Z`, e `[!H–L]` resulta em uma correspondência se a posição de caractere correspondente contém qualquer caractere fora do intervalo `H`–`L`.  
@@ -102,12 +102,12 @@ result = string Like pattern
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Como corresponder uma cadeia de caracteres a um padrão](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Como: Corresponder um padrão de um cadeia de caracteres](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

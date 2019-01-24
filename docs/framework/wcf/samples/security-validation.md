@@ -2,12 +2,12 @@
 title: Validação de segurança
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699760"
 ---
 # <a name="security-validation"></a>Validação de segurança
 Este exemplo demonstra como usar um comportamento personalizado para validar os serviços em um computador para garantir que eles atendam a critérios específicos. Neste exemplo, os serviços são validados pelo comportamento personalizado de verificação por meio de cada ponto de extremidade no serviço e verificando para ver se eles contêm elementos de associação de segurança. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Ao adicionar o comportamento para todos os serviços, é recomendável fazer backup do arquivo Machine. config antes de fazer qualquer alteração.  
   
- Agora execute o cliente fornecido no diretório client\bin deste exemplo. Tem uma exceção ocorre com a seguinte mensagem: "o serviço solicitado, 'http://localhost/servicemodelsamples/service.svc' não pôde ser ativado." Isso é esperado, pois um ponto de extremidade é considerado inseguro pelo ponto de extremidade de validar o comportamento e impede que o serviço seja iniciado. O comportamento também gera uma exceção interna que descreve qual ponto de extremidade não é seguro e grava uma mensagem no Visualizador de eventos do sistema com a origem de "System. ServiceModel 4.0.0.0" e a categoria "WebHost". Também é possível ativar o rastreamento no serviço neste exemplo. Isso permite que o usuário exibir as exceções geradas pelo comportamento de validação de ponto de extremidade, abrindo os rastreamentos resultante do serviço usando a ferramenta Visualizador de rastreamento de serviço.  
+ Agora execute o cliente fornecido no diretório client\bin deste exemplo. Tem uma exceção ocorre com a seguinte mensagem: "O serviço solicitado, 'http://localhost/servicemodelsamples/service.svc' não pôde ser ativado." Isso é esperado, pois um ponto de extremidade é considerado inseguro pelo ponto de extremidade de validar o comportamento e impede que o serviço seja iniciado. O comportamento também gera uma exceção interna que descreve qual ponto de extremidade não é seguro e grava uma mensagem no Visualizador de eventos do sistema com a origem de "System. ServiceModel 4.0.0.0" e a categoria "WebHost". Também é possível ativar o rastreamento no serviço neste exemplo. Isso permite que o usuário exibir as exceções geradas pelo comportamento de validação de ponto de extremidade, abrindo os rastreamentos resultante do serviço usando a ferramenta Visualizador de rastreamento de serviço.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Para exibir mensagens de exceção de validação de ponto de extremidade no Visualizador de eventos de falha  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Consulte também  
- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Consulte também
+- [AppFabric que monitora exemplos](https://go.microsoft.com/fwlink/?LinkId=193959)

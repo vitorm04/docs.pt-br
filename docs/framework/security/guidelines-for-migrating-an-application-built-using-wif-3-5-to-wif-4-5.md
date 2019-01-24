@@ -3,12 +3,12 @@ title: Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696175"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5
 ## <a name="applies-to"></a>Aplica-se a  
@@ -94,7 +94,7 @@ ms.locfileid: "48582509"
 ### <a name="visual-studio-tooling-changes"></a>Alterações de ferramentas do Visual Studio  
  O SDK do WIF 3.5 oferecia um utilitário de federação autônomo, FedUtil.exe (FedUtil), que você podia usar para terceirizar o gerenciamento de identidades em aplicativos habilitados para WIF para um serviço de token de segurança (STS). Essa ferramenta adicionava configurações do WIF ao arquivo de configuração do aplicativo e permitia ao aplicativo obter tokens de segurança de um ou mais STSs e apareceu no Visual Studio por meio do botão **Adicionar referência de serviço do STS**. O FedUtil não é fornecido com o WIF 4.5. Em vez disso, o WIF 4.5 oferece suporte a uma nova extensão do Visual Studio chamada ferramenta de identidade e acesso para o Visual Studio 2012 que você pode usar para modificar o arquivo de configuração do aplicativo com as configurações do WIF necessárias para terceirizar o gerenciamento de identidade para um STS. A ferramenta de acesso e identidade também implementa um STS chamado STS Local que você pode usar para testar seus aplicativos habilitados para o WIF. Em muitos casos, este recurso elimina a necessidade de criar STSs personalizados que geralmente eram necessários no WIF 3.5 para testar soluções em desenvolvimento. Por esse motivo, os modelos de STS não são mais suportados no Visual Studio 2012; no entanto, as classes que oferecem suporte ao desenvolvimento de STSs ainda estão disponíveis no WIF 4.5.  
   
- Você pode instalar a ferramenta de acesso e identidade do gerenciador de atualizações e extensões do Visual Studio ou você pode baixá-lo na seguinte página na Galeria de Código: [Ferramenta de identidade e acesso para o Visual Studio 2012 na Galeria de Código](https://go.microsoft.com/fwlink/?LinkID=245849). As alterações de ferramentas do Visual Studio são resumidas na lista a seguir:  
+ Você pode instalar a ferramenta de acesso e identidade do Gerenciador de atualizações no Visual Studio e extensões, ou você pode baixá-lo da seguinte página na Galeria de código: [Ferramenta de identidade e acesso para Visual Studio 2012 na Galeria de códigos](https://go.microsoft.com/fwlink/?LinkID=245849). As alterações de ferramentas do Visual Studio são resumidas na lista a seguir:  
   
 -   A funcionalidade Adicionar referência de serviço do STS foi removida. Essa funcionalidade foi substituída pela ferramenta de acesso e identidade.  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  Como muitas das classes no WIF 3.5 e WIF 4.5 compartilham os mesmos nomes, quando você estiver usando o WIF 3.5 e o WIF 4.5 juntos, certifique-se de usar nomes de classe totalmente qualificados ou usar um alias de namespace para distinguir entre classes no WIF 3.5 e no WIF 4.5.  
   
-## <a name="see-also"></a>Consulte também  
- [Esquema de configuração do WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Novidades no Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Ferramenta de identidade e acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>Consulte também
+- [Esquema de configuração do WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Novidades no Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
+- [Ferramenta de identidade e acesso para o Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

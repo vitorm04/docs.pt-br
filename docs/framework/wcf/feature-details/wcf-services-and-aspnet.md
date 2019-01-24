@@ -2,12 +2,12 @@
 title: Serviços WCF e ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712279"
 ---
 # <a name="wcf-services-and-aspnet"></a>Serviços WCF e ASP.NET
 Este tópico discute hospedagem Windows Communication Foundation (WCF) serviços lado a lado com o ASP.NET e os hospeda em modo de compatibilidade do ASP.NET.  
@@ -29,13 +29,13 @@ Este tópico discute hospedagem Windows Communication Foundation (WCF) serviços
   
     -   HttpContext: <xref:System.Web.HttpContext.Current%2A> é sempre `null` quando acessada de dentro de um serviço WCF. Use <!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>--> `RequestContext` em vez disso.  
   
-    -   Autorização baseada em arquivo: modelo de segurança do WCF a não permite a lista de controle de acesso (ACL) aplicada ao arquivo. svc do serviço ao decidir se uma solicitação de serviço é autorizada.  
+    -   Autorização baseada em arquivo: O modelo de segurança do WCF não permite a lista de controle de acesso (ACL) aplicada ao arquivo. svc do serviço ao decidir se uma solicitação de serviço é autorizada.  
   
     -   Autorização baseada em configuração de URL: Da mesma forma, o modelo de segurança do WCF não adere à quaisquer regras de autorização baseada em URL especificadas do System. Web \<autorização > elemento de configuração. Essas configurações serão ignoradas para solicitações WCF, se um serviço reside em um espaço de URL protegido pelo ASP. Regras de autorização de URL da rede.  
   
-    -   Extensibilidade de HttpModule: infraestrutura de hospedagem do WCF a intercepta o WCF solicita quando o <xref:System.Web.HttpApplication.PostAuthenticateRequest> evento é gerado e não retorna o processamento para o pipeline HTTP do ASP.NET. Os módulos que são codificados para interceptar solicitações em estágios posteriores do pipeline não interceptar solicitações do WCF.  
+    -   Extensibilidade de HttpModule: A infraestrutura de hospedagem do WCF intercepta o WCF solicita quando o <xref:System.Web.HttpApplication.PostAuthenticateRequest> evento é gerado e não retorna o processamento para o pipeline HTTP do ASP.NET. Os módulos que são codificados para interceptar solicitações em estágios posteriores do pipeline não interceptar solicitações do WCF.  
   
-    -   Personificação do ASP.NET: por padrão, WCF solicita sempre é executado como o IIS processar identidade, mesmo que o ASP.NET é definido para habilitar a representação usando System. Web \<identity impersonate = "true" / > opção de configuração.  
+    -   Personificação do ASP.NET: Por padrão, WCF solicita sempre é executado como o IIS processar identidade, mesmo que o ASP.NET é definido para habilitar a representação usando System. Web \<identity impersonate = "true" / > opção de configuração.  
   
  Essas restrições se aplicam apenas a serviços WCF hospedados no aplicativo do IIS. O comportamento do conteúdo do ASP.NET não é afetado pela presença do WCF.  
   
@@ -56,15 +56,15 @@ Este tópico discute hospedagem Windows Communication Foundation (WCF) serviços
   
  Ao contrário da configuração de lado a lado padrão, em que a infraestrutura de hospedagem do WCF intercepta mensagens do WCF e os direciona fora do pipeline de HTTP, os serviços WCF executados no modo de compatibilidade do ASP.NET participarem totalmente do ciclo de vida de solicitação HTTP do ASP.NET. No modo de compatibilidade, os serviços WCF usam o pipeline HTTP por meio de um <xref:System.Web.IHttpHandler> implementação, semelhante às solicitações de maneira para páginas ASPX e serviços Web ASMX são manipulados. Como resultado, o WCF comporta-se identicamente para ASMX em relação aos seguintes recursos do ASP.NET:  
   
--   <xref:System.Web.HttpContext>: Os serviços do WCF em execução no modo de compatibilidade do ASP.NET podem acessar <xref:System.Web.HttpContext.Current%2A> e seu estado associado.  
+-   <xref:System.Web.HttpContext>: Os serviços WCF executados no modo de compatibilidade do ASP.NET podem acessar <xref:System.Web.HttpContext.Current%2A> e seu estado associado.  
   
--   Autorização baseada em arquivo: serviços WCF executados no modo de compatibilidade do ASP.NET podem ser seguros, anexando as listas de controle de acesso do sistema de arquivos (ACLs) para o arquivo do serviço. svc.  
+-   Autorização baseada em arquivo: Os serviços WCF executados no modo de compatibilidade do ASP.NET podem ser seguros, anexando as listas de controle de acesso do sistema de arquivos (ACLs) para o arquivo do serviço. svc.  
   
 -   Autorização de URL configurável: ASP. As regras de autorização de URL da rede são impostas para solicitações WCF quando o serviço WCF estiver sendo executado no modo de compatibilidade do ASP.NET.  
   
--   <xref:System.Web.HttpModuleCollection> extensibilidade: serviços WCF porque em execução no modo de compatibilidade do ASP.NET participar totalmente do ciclo de vida de solicitação de HTTP do ASP.NET, qualquer módulo HTTP configurado no pipeline de HTTP é capaz de operar em solicitações WCF, antes e depois da invocação de serviço.  
+-   <xref:System.Web.HttpModuleCollection> extensibilidade: Porque os serviços WCF executados no modo de compatibilidade do ASP.NET participarem totalmente do ciclo de vida de solicitação HTTP do ASP.NET, qualquer módulo HTTP configurado no pipeline de HTTP é capaz de operar em solicitações WCF, antes e depois da invocação de serviço.  
   
--   Personificação do ASP.NET: Serviços WCF executados usando a identidade do ASP.NET atual representada thread, que pode ser diferente da identidade de processo do IIS se personificação do ASP.NET tiver sido habilitada para o aplicativo. Se a representação do ASP.NET e a representação de WCF estão habilitados para uma operação de serviço em particular, a implementação do serviço, por fim, é executado usando a identidade obtida do WCF.  
+-   Personificação do ASP.NET: Os serviços WCF executados usando a identidade do ASP.NET atual representada thread, que pode ser diferente da identidade de processo do IIS se personificação do ASP.NET tiver sido habilitada para o aplicativo. Se a representação do ASP.NET e a representação de WCF estão habilitados para uma operação de serviço em particular, a implementação do serviço, por fim, é executado usando a identidade obtida do WCF.  
   
  Modo de compatibilidade do ASP.NET do WCF está habilitado no nível do aplicativo por meio de configuração a seguir (localizada no arquivo de Web. config do aplicativo):  
   
@@ -100,6 +100,6 @@ Este tópico discute hospedagem Windows Communication Foundation (WCF) serviços
   
  Para obter mais informações sobre como habilitar o modo de compatibilidade do ASP.NET para serviços WCF, consulte <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> e o [compatibilidade ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) exemplo.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar listas mestre / detalhes com o controle DataGrid dos Windows Forms'
+title: 'Como: Criar listas mestre / detalhes com o controle DataGrid dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 528d07b766987bdeca22ce480c601a2bdd324c89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ff13264709c4557d698435ac05b7759be58f1e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712886"
 ---
-# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Como criar listas mestre/detalhes com o controle DataGrid dos Windows Forms
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Como: Criar listas mestre/detalhes com o controle DataGrid dos Windows Forms
 > [!NOTE]
 >  O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Se seu <xref:System.Data.DataSet> contém uma série de tabelas relacionadas, você pode usar dois <xref:System.Windows.Forms.DataGrid> controles para exibir os dados em um formato de detalhes/mestre. Um <xref:System.Windows.Forms.DataGrid> é designado como a grade principal, e o segundo é designado como a grade de detalhes. Quando você seleciona uma entrada na lista mestra, todas as entradas filho relacionados são mostradas na lista de detalhes. Por exemplo, se seu <xref:System.Data.DataSet> contém uma tabela clientes e uma tabela relacionada Orders, você deve especificar a tabela de clientes para a grade principal e a tabela de pedidos para a grade de detalhes. Quando um cliente é selecionado na grade principal, todos os pedidos associados a ele na tabela Pedidos serão exibidos na grade de detalhes.  
+ Se sua <xref:System.Data.DataSet> contém uma série de tabelas relacionadas, você pode usar dois <xref:System.Windows.Forms.DataGrid> controles para exibir os dados em um formato de mestre/detalhes. Um <xref:System.Windows.Forms.DataGrid> é designada como a grade mestre, e o segundo é designado como a grade de detalhes. Quando você seleciona uma entrada na lista mestra, todas as entradas filho relacionados são mostradas na lista de detalhes. Por exemplo, se seu <xref:System.Data.DataSet> contém uma tabela de clientes e uma tabela Pedidos relacionada, você deve especificar a tabela de clientes para a grade mestra e a tabela de pedidos para a grade de detalhes. Quando um cliente é selecionado na grade principal, todos os pedidos associados a ele na tabela Pedidos serão exibidos na grade de detalhes.  
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Definir uma relação mestre/detalhes com programação  
   
-1.  Crie dois novos <xref:System.Windows.Forms.DataGrid> controla e definir suas propriedades.  
+1.  Crie duas novas <xref:System.Windows.Forms.DataGrid> controla e defina suas propriedades.  
   
 2.  Adicione tabelas ao conjunto de dados.  
   
-3.  Declare uma variável do tipo <xref:System.Data.DataRelation> representar a relação que você deseja criar.  
+3.  Declare uma variável do tipo <xref:System.Data.DataRelation> para representar a relação que você deseja criar.  
   
 4.  Instancie o relacionamento especificando um nome para o relacionamento e especificando a tabela, coluna e item que associará as duas tabelas.  
   
-5.  Adicionar a relação com o <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Relations%2A> coleção.  
+5.  Adicionar a relação para o <xref:System.Data.DataSet> do objeto <xref:System.Data.DataSet.Relations%2A> coleção.  
   
-6.  Use o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método o <xref:System.Windows.Forms.DataGrid> para associar cada uma das grades para o <xref:System.Data.DataSet>.  
+6.  Use o <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método da <xref:System.Windows.Forms.DataGrid> para associar cada uma das grades para o <xref:System.Data.DataSet>.  
   
      O exemplo a seguir mostra como definir uma relação mestre/detalhes entre as tabelas Customers e Orders no gerado anteriormente <xref:System.Data.DataSet> (`ds`).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "33531112"
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Visão geral do controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
- [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a>Consulte também
+- [Controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Visão geral do controle DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
+- [Como: Associar o controle DataGrid dos Windows Forms a uma fonte de dados](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

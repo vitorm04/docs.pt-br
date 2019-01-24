@@ -2,12 +2,12 @@
 title: '&lt;customTrackingQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: f75c6bf50d30da5a136137c858a5cd96ce0783ff
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f4f6186aa51ef1656f31fb0035f58a07e5c2447b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700787"
 ---
 # <a name="ltcustomtrackingqueriesgt-of-wcf"></a>&lt;customTrackingQueries&gt; de WCF
 
@@ -16,11 +16,11 @@ Representa uma coleção de consultas que são usados para controlar os eventos 
  Para obter mais informações sobre consultas de perfil de controle, consulte [perfis de acompanhamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
-\<Acompanhamento >  
-\<perfis de >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
 \<workflow>  
-\<customTrackingQueries >  
+\<customTrackingQueries>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ nenhuma.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](customtrackingquery-of-wcf.md)|Uma consulta que é usada para controlar os eventos que você define em suas atividades de código.|  
+|[\<customTrackingQuery>](customtrackingquery-of-wcf.md)|Uma consulta que é usada para controlar os eventos que você define em suas atividades de código.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -61,7 +61,7 @@ nenhuma.
   
 ## <a name="see-also"></a>Consulte também
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>       
-- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
+- [Acompanhamento e rastreamento de fluxo de trabalho](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Acompanhando perfis](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

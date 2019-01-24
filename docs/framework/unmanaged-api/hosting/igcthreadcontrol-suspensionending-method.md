@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0986645a8ce4076c27f39f2ae8004ef20bb4bdb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d77380e35d8f5eee1e50b1030493e0b17cbadfba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713282"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>Método IGCThreadControl::SuspensionEnding
-Notifica o host que o tempo de execução está retomando threads após uma coleta de lixo ou outros suspensão.  
+Notifica o host que o tempo de execução está retomando threads após uma coleta de lixo ou outro suspensão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,19 +37,19 @@ HRESULT SuspensionEnding (
   
 #### <a name="parameters"></a>Parâmetros  
  `Generation`  
- [in] A geração na qual uma coleta de lixo foi executada.  
+ [in] A geração no qual uma coleta de lixo foi executada.  
   
 ## <a name="remarks"></a>Comentários  
- Não reagendar qualquer threads durante o `SuspensionEnding` retorno de chamada.  
+ Não reagendar os threads durante o `SuspensionEnding` retorno de chamada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

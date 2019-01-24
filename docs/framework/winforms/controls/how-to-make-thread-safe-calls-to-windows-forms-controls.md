@@ -1,5 +1,5 @@
 ---
-title: Como fazer chamadas thread-safe para controles dos Windows Forms
+title: 'Como: Fazer chamadas Thread-Safe para controles dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710463"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Como fazer chamadas thread-safe para controles dos Windows Forms
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Como: Fazer chamadas Thread-Safe para controles dos Windows Forms
 
 Se você usar multithreading para melhorar o desempenho de seus aplicativos do Windows Forms, deverá garantir que faça chamadas para os controles de uma maneira thread-safe.
 
@@ -406,7 +406,7 @@ private:
  O exemplo de código a seguir é um aplicativo completo do Windows Forms que consiste em um formulário com três botões e uma caixa de texto. O primeiro botão demonstra acesso por thread não seguro, o segundo botão demonstra acesso seguro usando <xref:System.Windows.Forms.Control.Invoke%2A> e o terceiro botão demonstra acesso seguro usando <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Para obter instruções sobre como executar o exemplo, consulte [Como compilar e executar um exemplo de código completo dos Windows Forms usando Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Este exemplo requer referências aos assemblies System.Drawing e System.Windows.Forms.
+> Para obter instruções sobre como executar o exemplo, consulte [como: Compilar e executar um exemplo de código completa do Windows Forms usando o Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Este exemplo requer referências aos assemblies System.Drawing e System.Windows.Forms.
 
 ```csharp
 using System;
@@ -1051,7 +1051,7 @@ Quando você executa o aplicativo e clica no botão **Chamada Não Segura**, vê
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Como executar uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Como implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Como: Executar uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Como: Implementar um formulário que usa uma operação em segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

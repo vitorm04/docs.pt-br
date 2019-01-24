@@ -1,23 +1,23 @@
 ---
-title: '&lt;Escopos&gt;'
+title: '&lt;scopes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 7afab700c2d9eb91ffe57bfefaf5864782a0af5f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1235b483f63ab71405803c16f2d3c9926b15cfad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642981"
 ---
-# <a name="ltscopesgt"></a>&lt;Escopos&gt;
+# <a name="ltscopesgt"></a>&lt;scopes&gt;
 Contém uma coleção de elementos de configuração que especificam Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.  
   
 \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento de >  
-\<endpointDiscovery >  
-\<escopos >  
+\<behavior>  
+\<endpointDiscovery>  
+\<scopes>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,7 +51,7 @@ Contém uma coleção de elementos de configuração que especificam Uris que po
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Especifica as várias configurações de descoberta para um ponto de extremidade, como sua capacidade de descoberta, escopos e quaisquer extensões personalizadas para seus metadados.|  
+|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Especifica as várias configurações de descoberta para um ponto de extremidade, como sua capacidade de descoberta, escopos e quaisquer extensões personalizadas para seus metadados.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

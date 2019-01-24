@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 513d68f49e4182979b492fa67e65860aee96e09a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699409"
 ---
 # <a name="federation-and-issued-tokens"></a>Federação e tokens emitidos
 Com o Windows Communication Foundation (WCF), você pode criar clientes que se comunicam com segurança com os serviços que implementam as especificações de WS-Federation e WS-Trust. As especificações de usarem o XML, SOAP e descrição de linguagem WSDL (Web Services) para fornecer mecanismos que permitem a autenticação e autorização em realms de confiança diferente.  
@@ -23,25 +23,25 @@ Com o Windows Communication Foundation (WCF), você pode criar clientes que se c
  [Federação e confiabilidade](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  Lista os problemas de design, você deve estar ciente de quando criar federado serviços ou clientes.  
   
- [Como criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  Descreve os fundamentos da criação de um cliente federado com o WCF.  
   
- [Como configurar as credenciais em um Serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Descreve as etapas de criação de um serviço federado.  
   
- [Como criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Como: Criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  Descreve como configurar clientes e serviços que usam o `WSFederationHttpBinding`.  
   
- [Como criar um serviço de token de segurança](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Como: Criar um serviço de Token de segurança](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  Descreve as etapas de criação de um serviço de token de segurança.  
   
  [Declarações e tokens de SAML (Security Assertions Markup Language)](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  Descreve os tokens de segurança asserções SAML (Markup Language), que são extensíveis e permitem que você crie avançados tipos de declaração.  
   
- [Como configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Como: Configurar um emissor Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Descreve como criar um emissor local dos tokens de segurança.  
   
- [Como: desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Como: Desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Descreve como desabilitar sessões seguras em um `WSFederationHttpBinding`. É necessário desabilitar sessões seguras, ao criar uma Web farm que exige uma sessão para cada cliente.  
   
 ## <a name="reference"></a>Referência  
@@ -61,7 +61,7 @@ Com o Windows Communication Foundation (WCF), você pode criar clientes que se c
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a>Consulte também  
- [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Tokens personalizados](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Tokens personalizados](../../../../docs/framework/wcf/extending/custom-tokens.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

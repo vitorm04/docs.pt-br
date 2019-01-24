@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff01c21481e2265a82cb9788beb8abd7b213af63
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709215"
 ---
 # <a name="specifying-an-endpoint-address"></a>Especificando um endereço de ponto de extremidade
 Toda a comunicação com um serviço do Windows Communication Foundation (WCF) ocorre por meio de seus pontos de extremidade. Cada <xref:System.ServiceModel.Description.ServiceEndpoint> contém uma <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, um <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>e um <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. O contrato especifica quais operações estão disponíveis. A associação especifica como se comunicar com o serviço e o endereço Especifica onde encontrar o serviço. Cada ponto de extremidade deve ter um endereço exclusivo. O endereço do ponto de extremidade é representado pela <xref:System.ServiceModel.EndpointAddress> classe, que contém um identificador de URI (Uniform Resource) que representa o endereço do serviço, um <xref:System.ServiceModel.EndpointAddress.Identity%2A>, que representa a identidade de segurança do serviço e uma coleção de opcional <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Os cabeçalhos opcionais fornecem informações mais detalhadas de endereçamento para identificar ou interagir com o ponto de extremidade. Por exemplo, os cabeçalhos podem indicar qual instância de um serviço para usar para processar uma mensagem de entrada de um determinado usuário, quando várias instâncias estiverem disponíveis, onde o ponto de extremidade deve enviar uma mensagem de resposta ou como processar uma mensagem de entrada.  
@@ -28,7 +28,7 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
   
 -   (Opcional) Porta: 322  
   
--   Caminho: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
  Parte do modelo EPR é que cada referência de ponto de extremidade pode carregar alguns parâmetros de referência que adicionar informações de identificação extra. No WCF, esses parâmetros de referência são modelados como instâncias do <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   
@@ -45,7 +45,7 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
   
  Quando o <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> método é chamado (ou seja, quando o aplicativo host tenta iniciar o serviço), o sistema procura por um [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento com um atributo de nome que especifica "UE. Samples.HelloService". Se o [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento for encontrado, o sistema carrega a classe especificada e cria pontos de extremidade usando as definições de ponto de extremidade fornecidas no arquivo de configuração. Esse mecanismo permite que você carregar e iniciar um serviço com duas linhas de código enquanto mantém a associação e informações fora do seu código de endereçamento. A vantagem dessa abordagem é que essas alterações podem ser feitas sem ter que recompilar ou reimplantar o aplicativo.  
   
- Os cabeçalhos opcionais são declarados em uma [ \<cabeçalhos >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). A seguir está um exemplo dos elementos usados para especificar pontos de extremidade para um serviço em um arquivo de configuração que faz distinção entre dois cabeçalhos: "Gold" clientes do `http://tempuri1.org/` e os clientes "Padrão" de `http://tempuri2.org/`. O cliente chamar esse serviço deve ter o devido [ \<cabeçalhos >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) em seu arquivo de configuração.  
+ Os cabeçalhos opcionais são declarados em uma [ \<cabeçalhos >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Este é um exemplo dos elementos usados para especificar pontos de extremidade para um serviço em um arquivo de configuração que faz distinção entre dois cabeçalhos: Os clientes "Gold" de `http://tempuri1.org/` e clientes "Padrão" de `http://tempuri2.org/`. O cliente chamar esse serviço deve ter o devido [ \<cabeçalhos >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) em seu arquivo de configuração.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -82,8 +82,8 @@ Toda a comunicação com um serviço do Windows Communication Foundation (WCF) o
   
  Se os pontos de extremidade forem fornecidos explicitamente, os pontos de extremidade padrão ainda podem ser adicionados chamando <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sobre o <xref:System.ServiceModel.ServiceHost> antes de chamar <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Para obter mais informações sobre pontos de extremidade, associações e comportamentos padrão, confira [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md) e [Configuração simplificada para serviços WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.EndpointAddress>  
- [Autenticação e identidade de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hospedagem](../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.EndpointAddress>
+- [Autenticação e identidade de serviço](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Visão geral de criação de ponto de extremidade](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Hospedagem](../../../docs/framework/wcf/feature-details/hosting.md)

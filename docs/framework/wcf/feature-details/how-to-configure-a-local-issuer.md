@@ -1,5 +1,5 @@
 ---
-title: Como configurar um emissor local
+title: 'Como: Configurar um emissor Local'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3fb4577e6a79bc6b42cb0ef6f24648d1b016214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713230"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>Como configurar um emissor local
+# <a name="how-to-configure-a-local-issuer"></a>Como: Configurar um emissor Local
 Este tópico descreve como configurar um cliente para usar um emissor local para tokens emitidos.  
   
  Muitas vezes, quando um cliente se comunica com um serviço federado, o serviço Especifica o endereço da segurança do serviço de token que é esperado para emitir o token o cliente usará para se autenticar para o serviço federado. Em determinadas situações, o cliente pode ser configurado para usar um *emissor local*.  
@@ -74,7 +74,7 @@ Este tópico descreve como configurar um cliente para usar um emissor local para
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Observe que, se um endereço do emissor e a associação forem especificados para uma determinada vinculação, o emissor local não é usado para pontos de extremidade que usam essa associação. Os clientes que esperam usar sempre o emissor local devem garantir que eles não usam essa associação ou que eles modificarem a associação para que o endereço do emissor é `null`.  
   
-## <a name="see-also"></a>Consulte também  
- [Como configurar as credenciais em um Serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Como criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Como criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Configurar credenciais em um serviço de Federação](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Como: Criar um cliente federado](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Como: Criar um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: a11dcfc9030944365adda3656a8895912b0ef0d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700566"
 ---
 # <a name="tooltip-overview"></a>Visão geral de ToolTip
 Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuário pausa o ponteiro do mouse sobre um elemento, como por um <xref:System.Windows.Controls.Button>. Este tópico apresenta a dica de ferramenta e discute como criar e personalizar o conteúdo da dica de ferramenta.  
@@ -67,7 +67,7 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Usando as propriedades Intervalo de Tempo de ToolTipService  
  O <xref:System.Windows.Controls.ToolTipService> classe fornece as seguintes propriedades para definir a dica de ferramenta exibem tempos: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Use o <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriedades para especificar um atraso, normalmente breve, antes uma <xref:System.Windows.Controls.ToolTip> aparece e também para especificar por quanto tempo um <xref:System.Windows.Controls.ToolTip> permanece visível. Para obter mais informações, consulte [Como adiar a exibição de uma ToolTip](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Use o <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriedades para especificar um atraso, normalmente breve, antes uma <xref:System.Windows.Controls.ToolTip> aparece e também para especificar por quanto tempo um <xref:System.Windows.Controls.ToolTip> permanece visível. Para obter mais informações, confira [Como: Adiar a exibição de uma dica de ferramenta](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
  O <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriedade determina se as dicas de ferramentas para controles diferentes aparecem sem um atraso inicial quando você move o ponteiro do mouse rapidamente entre eles. Para obter mais informações sobre o <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriedade, consulte [usar a propriedade BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
@@ -75,9 +75,9 @@ Uma dica de ferramenta é uma pequena janela pop-up que aparece quando um usuár
   
  [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Controls.ToolTipService>  
- <xref:System.Windows.Controls.ToolTip>  
- <xref:System.Windows.Controls.ToolTipEventArgs>  
- <xref:System.Windows.Controls.ToolTipEventHandler>  
- [Tópicos de instruções](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Controls.ToolTipService>
+- <xref:System.Windows.Controls.ToolTip>
+- <xref:System.Windows.Controls.ToolTipEventArgs>
+- <xref:System.Windows.Controls.ToolTipEventHandler>
+- [Tópicos de instruções](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

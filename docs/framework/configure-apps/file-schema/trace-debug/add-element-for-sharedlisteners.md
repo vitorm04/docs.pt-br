@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712464"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Adicione&gt; elemento para &lt;sharedListeners&gt;
 Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners` é uma coleção de ouvintes que quaisquer [ \<fonte >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<rastreamento >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) pode fazer referência.  Por padrão, os ouvintes na `sharedListeners` coleção não são colocados em um `Listeners` coleção. Eles devem ser adicionados por nome para o [ \<fonte >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<rastreamento >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Não é possível obter os ouvintes no `sharedListeners` coleção no código em tempo de execução.  
   
  \<configuration>  
-&nbsp;&nbsp;\<System. Diagnostics >  
-&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > elemento  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Adicionar >  
+&nbsp;&nbsp;\<system.diagnostics>  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners> Element  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<add>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,8 +110,8 @@ Adiciona um ouvinte na coleção `sharedListeners`. `sharedListeners` é uma col
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

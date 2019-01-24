@@ -2,12 +2,12 @@
 title: '&lt;adicionar&gt; &lt;escopos&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705567"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;adicionar&gt; &lt;escopos&gt;
 Adiciona um Uri que pode ser usado para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.  
@@ -15,9 +15,9 @@ Adiciona um Uri que pode ser usado para filtrar pontos de extremidade de serviç
 \<system.ServiceModel>  
 \<comportamentos >  
 \<endpointBehaviors>  
-\<comportamento de >  
-\<endpointDiscovery >  
-\<escopos >  
+\<behavior>  
+\<endpointDiscovery>  
+\<scopes>  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -52,7 +52,7 @@ Adiciona um Uri que pode ser usado para filtrar pontos de extremidade de serviç
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<escopos >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contém uma coleção de elementos de configuração que especificam Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contém uma coleção de elementos de configuração que especificam Uris que podem ser usados para filtrar pontos de extremidade de serviço durante consulta de escopo personalizado.|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

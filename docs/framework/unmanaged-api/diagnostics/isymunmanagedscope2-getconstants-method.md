@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73d4cc609694610aead2a3bfaeed1f5cca5f33fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24fd642b8eaba19a8bfb32d2dc61a87595cb3c61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643722"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>Método ISymUnmanagedScope2::GetConstants
 Obtém as constantes locais definidas dentro desse escopo.  
@@ -40,7 +40,7 @@ HRESULT GetConstants(
   
 #### <a name="parameters"></a>Parâmetros  
  `cConstants`  
- [in] O comprimento do buffer que o `pcConstants` parâmetro aponta para.  
+ [in] O comprimento do buffer que o `pcConstants` parâmetro aponta.  
   
  `pcConstants`  
  [out] Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter as constantes.  
@@ -54,5 +54,5 @@ HRESULT GetConstants(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

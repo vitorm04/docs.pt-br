@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 035882b60c90d9a6141ad0d34b4c40682e0c32a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78981e5af0d4bf1694a3ad7c9ead2e4e7fd9330e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703543"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Acesso de membro compartilhado por meio de uma instância; a expressão de qualificação não será avaliada
-Uma variável de instância de uma classe ou estrutura é usada para acessar um `Shared` variável, propriedade, procedimento ou evento definido na classe ou estrutura. Esse aviso também pode ocorrer se uma variável de instância é usada para acessar um membro implicitamente compartilhado de uma classe ou estrutura, como uma constante de enumeração, ou uma classe aninhada ou estrutura.  
+Uma variável de instância de uma classe ou estrutura é usada para acessar um `Shared` variável, propriedade, procedimento ou evento definido na classe ou estrutura. Esse aviso também pode ocorrer se uma variável de instância é usada para acessar um membro implicitamente compartilhado de uma classe ou estrutura, como uma constante ou enumeração, ou uma classe aninhada ou estrutura.  
   
- A finalidade de compartilhar um membro é criar uma única cópia do membro e disponibilizar essa cópia única para cada instância da classe ou estrutura na qual ela é declarada. É consistente com essa finalidade para acessar um `Shared` membro por meio do nome de sua classe ou estrutura, em vez de por meio de uma variável que contém uma instância individual de classe ou estrutura.  
+ A finalidade de compartilhar um membro é apenas uma única cópia desse membro de criar e disponibilizar essa cópia única para todas as instâncias da classe ou estrutura na qual ela é declarada. Ele fiquem consistentes com essa finalidade para acessar um `Shared` membro por meio do nome de sua classe ou estrutura, em vez de por meio de uma variável que contém uma instância individual da classe ou estrutura.  
   
- Acessando um `Shared` membro por meio de uma variável de instância pode tornar seu código mais difícil de entender, ocultando o fato de que o membro é `Shared`. Além disso, se tal acesso for parte de uma expressão que executa outras ações, como uma `Function` procedimento que retorna uma instância do membro compartilhado, o Visual Basic ignora a expressão e quaisquer outras ações executaria caso contrário.  
+ Acessando uma `Shared` membro por meio de uma variável de instância pode tornar seu código mais difícil de entender, ocultando o fato de que o membro é `Shared`. Além disso, se tal acesso for parte de uma expressão que executa outras ações, como um `Function` procedimento que retorna uma instância de membro compartilhado, o Visual Basic ignora a expressão e quaisquer outras ações que ele executaria.  
   
  Para obter mais informações e um exemplo, consulte [compartilhado](../../../visual-basic/language-reference/modifiers/shared.md).  
   
@@ -53,8 +53,8 @@ End Module
 ```  
   
 > [!NOTE]
->  Ser alerta para os efeitos de escopo quando dois elementos de programação com o mesmo nome. No exemplo anterior, se você declarar uma instância usando `Dim testClass as testClass = Nothing`, o compilador trata uma chamada para `testClass.sayHello()` como o acesso do método por meio do nome da classe e nenhum aviso ocorre.  
+>  Ser alerta para os efeitos de escopo quando dois elementos de programação têm o mesmo nome. No exemplo anterior, se você declarar uma instância por meio `Dim testClass as testClass = Nothing`, o compilador trata uma chamada para `testClass.sayHello()` como um acesso do método por meio do nome de classe e nenhum aviso ocorre.  
   
-## <a name="see-also"></a>Consulte também  
- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Escopo no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>Consulte também
+- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Escopo no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

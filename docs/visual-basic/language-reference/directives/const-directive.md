@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7e855f76a0fa8e6c06fd557a944c518641415f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710593"
 ---
 # <a name="const-directive"></a>Diretiva #Const
 Define constantes condicionais de compilador do Visual Basic.  
@@ -48,9 +48,9 @@ Define constantes condicionais de compilador do Visual Basic.
   
  [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [/Define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [Diretivas #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a>Consulte também
+- [/Define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [Diretivas #If...Then...#Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

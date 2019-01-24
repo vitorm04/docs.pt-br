@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7351dfb046653e4f3e20e0dc8a4bba8653ec36e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 02bba59a1c4445b3e432d5e44f2bccc4b72ce1da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711649"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>Método ICLRDataTarget2::FreeVirtual
-Chamado pelos common language runtime (CLR) dados serviços de acesso para liberar memória anteriormente alocado no espaço de endereço do processo de destino.  
+Chamado pelo serviço common language runtime (CLR) data access para liberar memória que foi alocado anteriormente no espaço de endereço do processo de destino.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,28 +39,28 @@ HRESULT FreeVirtual(
   
 #### <a name="parameters"></a>Parâmetros  
  `addr`  
- [in] Um `CLRDATA_ADDRESS` valor que especifica o endereço inicial da memória para ser liberado.  
+ [in] Um `CLRDATA_ADDRESS` valor que especifica o endereço inicial da memória a ser liberado.  
   
  `size`  
- [in] O tamanho, em bytes, da memória para ser liberado.  
+ [in] O tamanho, em bytes, da memória a ser liberado.  
   
  `typeFlags`  
  [in] Sinalizadores que controlam a liberação de memória. Consulte o Win32 `VirtualFree` função.  
   
 ## <a name="remarks"></a>Comentários  
- O `FreeVirtual` método serve como um wrapper lógico para o Win32 `VirtualFree` função.  
+ O `FreeVirtual` método serve como um wrapper de lógico do Win32 `VirtualFree` função.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [Método AllocVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [Método AllocVirtual](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
