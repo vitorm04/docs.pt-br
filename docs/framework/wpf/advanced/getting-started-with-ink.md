@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646234"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introdução a tinta no WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) tem um recurso de tinta que facilita a inc
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para usar os exemplos a seguir, primeiro [instalar o Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ele também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda na introdução ao WPF, consulte [instruções passo a passo: meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Para usar os exemplos a seguir, primeiro [instalar o Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Ele também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda na introdução ao WPF, consulte [passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Início rápido
 

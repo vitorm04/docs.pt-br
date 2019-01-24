@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 18c249348fe0daafc24dc939fe796f513128139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746724"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personalizando projetos e estendendo My com o Visual Basic
 Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso torna mais fácil para outros desenvolvedores a localizar e usar seus objetos.  
@@ -45,5 +45,5 @@ Você pode personalizar modelos de projeto para fornecer mais `My` objetos. Isso
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  Descreve o `My` objeto que fornece propriedades, métodos e eventos relacionados ao aplicativo atual.  
   
-## <a name="see-also"></a>Consulte também  
- [Desenvolvendo aplicativos com o Visual Basic](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>Consulte também
+- [Desenvolvendo aplicativos com o Visual Basic](../../../visual-basic/developing-apps/index.md)

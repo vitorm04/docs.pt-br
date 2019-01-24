@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732746"
 ---
 # <a name="icordebugenum-interface1"></a>ICorDebugEnum Interface1
 Serve como a interface base abstrata para os enumeradores que são usados por um aplicativo de depuração.  
@@ -33,10 +33,10 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 |[Método Clone](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Cria uma cópia deste objeto `ICorDebugEnum`.|  
 |[Método GetCount](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Obtém o número de itens na enumeração.|  
 |[Método Reset](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Move o cursor para o início da enumeração.|  
-|[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Move o cursor para a frente na enumeração pelo número especificado de itens.|  
+|[Método Skip](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Move o cursor para frente na enumeração pelo número especificado de itens.|  
   
 ## <a name="remarks"></a>Comentários  
- Os seguintes enumeradores derivam `ICorDebugEnum`:  
+ Os enumeradores seguintes derivam `ICorDebugEnum`:  
   
 -   "ICorDebugAppDomainEnum"  
   
@@ -81,16 +81,16 @@ Serve como a interface base abstrata para os enumeradores que são usados por um
 -   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  Esta interface não dá suporte a que está sendo chamado remotamente, entre computadores ou entre processos.  
+>  Essa interface não dá suporte a ser chamada remotamente, entre computadores ou entre processos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

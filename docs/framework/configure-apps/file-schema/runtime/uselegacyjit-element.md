@@ -1,23 +1,23 @@
 ---
-title: '&lt;useLegacyJit&gt; elemento'
+title: '&lt;useLegacyJit&gt; Element'
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648174"
 ---
-# <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; elemento
+# <a name="ltuselegacyjitgt-element"></a>&lt;useLegacyJit&gt; Element
 
 Determina se o Common Language Runtime usa o compilador JIT de 64 bits herdado para uma compilação just-in-time.  
   
 \<configuration>  
 \<runtime>  
-\<useLegacyJit >
+\<useLegacyJit>
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -95,6 +95,6 @@ O arquivo de configuração a seguir desabilita a compilação com o novo compil
   
 ## <a name="see-also"></a>Consulte também
 
-- [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [\<tempo de execução > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [Mitigação: Novo compilador JIT de 64 bits](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

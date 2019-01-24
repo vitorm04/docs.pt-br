@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cc7a299e6be328095c0368acf0a4b767fb74d01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653210"
 ---
 # <a name="variablelocationtype-enumeration"></a>Enumeração VariableLocationType
 Indica o tipo de local nativo de uma variável.  
@@ -42,20 +42,20 @@ typedef enum VariableLocationType
 |Membro|Descrição|  
 |------------|-----------------|  
 |`VLT_REGISTER`|A variável está em um registro.|  
-|`VLT_REGISTER_RELATIVE`|A variável está em um local relativo ao registro de memória.|  
-|`VLT_INVALID`|A variável não é armazenada em um registro ou um local de memória relativa de registro.|  
+|`VLT_REGISTER_RELATIVE`|A variável está em um local de memória relativo ao registro.|  
+|`VLT_INVALID`|A variável não é armazenada em um registro ou um local de memória relativo ao registro.|  
   
 ## <a name="remarks"></a>Comentários  
- Um membro do `VariableLocationType` retornada pela enumeração o [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) método.  
+ Um membro do `VariableLocationType` enumeração é retornada pelo [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

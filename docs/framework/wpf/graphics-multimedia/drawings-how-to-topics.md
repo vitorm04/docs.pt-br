@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670310"
 ---
 # <a name="drawings-how-to-topics"></a>Tópicos explicativos de desenhos
 Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing> objetos para desenhar formas, imagens ou texto.  
@@ -29,8 +29,8 @@ Os tópicos nesta seção descrevem como usar <xref:System.Windows.Media.Drawing
   [Executar mídia usando um VideoDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
   [Usar um desenho como uma fonte de imagem](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.Drawing>  
- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.Drawing>
+- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 0211438e8b4c02fead910dd7a32e0df9ed73ddc5
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ecb75e71225d2b6705d6235a941ecd83b3aab75b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699799"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Instrução Imports (tipo e namespace .NET)
 Permite que digite o nome para ser referenciados sem qualificação de namespace.  
@@ -56,7 +56,7 @@ Imports [ aliasname = ] namespace.element
  Observe que o `Imports` instrução não torna os elementos de outros projetos e assemblies disponíveis para seu projeto. Importar não toma o lugar de uma referência de configuração. Ele apenas remove a necessidade de qualificar nomes que já estão disponíveis para seu projeto. Para obter mais informações, consulte "Importação de elementos que contém" na [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 > [!NOTE]
->  Você pode definir implícita `Imports` instruções usando o [página referências, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Para obter mais informações, consulte [como: Adicionar ou remover Namespaces importados (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
+>  Você pode definir implícita `Imports` instruções usando o [página referências, Designer de projeto (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Para obter mais informações, confira [Como: Adicionar ou remover Namespaces importados (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ## <a name="import-aliases"></a>Aliases de importação  
  Uma *importação alias* define o alias para um namespace ou tipo. Aliases de importação são úteis quando você precisa usar itens com o mesmo nome que são declarados em um ou mais namespaces. Para obter mais informações e um exemplo, consulte "Qualificando um nome de elemento" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
@@ -98,9 +98,9 @@ Imports [ aliasname = ] namespace.element
   
  [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)  
- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
- [Referências e a Instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Instrução Imports (Namespace de XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>Consulte também
+- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Referências e a Instrução Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Instrução Imports (Namespace de XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf35715564e58f1811618b6859a860008e9660c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655394"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>Método ICorDebugRemoteTarget::GetHostName
-Retorna o nome de domínio totalmente qualificado ou o endereço IPv4 do computador de destino de depuração remota. Não há suporte para IPv6 neste momento.  
+Retorna o nome de domínio totalmente qualificado ou endereço IPv4 do computador de destino de depuração remota. Não há suporte para IPv6 neste momento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT GetHostName (
   
 #### <a name="parameters"></a>Parâmetros  
  `cchHostName`  
- [in] O tamanho, em caracteres, do `szHostName` buffer. Se esse parâmetro for 0 (zero), `szHostName` deve ser nulo.  
+ [in] O tamanho, em caracteres, da `szHostName` buffer. Se esse parâmetro for 0 (zero), `szHostName` deve ser nulo.  
   
  `pcchHostName`  
  [out] O número de caracteres, incluindo um terminador nulo, o nome do host ou endereço IP. Este parâmetro pode ser nulo.  
@@ -51,21 +51,21 @@ HRESULT GetHostName (
  S_OK  
  O nome do host ou endereço IP foi retornado com êxito.  
   
- E_FAIL (ou outros códigos de retorno E_)  
- Não é possível retornar o nome de host ou endereço IP.  
+ E_FAIL (ou outros códigos de retorno e _)  
+ Não é possível retornar o nome do host ou endereço IP.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é implementado pelo gerador de depurador. Ele deve seguir o paradigma de chamada vários: na primeira chamada, o chamador passa nulo para ambos `cchHostName` e `szHostName`, e `pcchHostName` retorna o tamanho do buffer necessário. Na segunda chamada, o tamanho que anteriormente era retornado é passado `cchHostName`, e um buffer de tamanho apropriado é passado no `szHostName`.  
+ Esse método é implementado pelo gravador do depurador. Ele deve seguir o paradigma de várias chamadas: Na primeira chamada, o chamador passa nulo para ambos `cchHostName` e `szHostName`, e `pcchHostName` retorna o tamanho do buffer necessário. Na segunda chamada, o tamanho que foi retornado anteriormente é passado `cchHostName`, e um buffer adequadamente dimensionado é passado no `szHostName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 3.5 SP1  
+ **Versões do .NET framework:** 3,5 SP1  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

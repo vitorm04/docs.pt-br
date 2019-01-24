@@ -2,12 +2,12 @@
 title: Usando XSLT para transformar uma árvore XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-ms.openlocfilehash: bee661ea2a3261d25ed9f9d1aabdc656c898610f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37fd25a327906327f33106ae145d45c5387cae47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690391"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>Usando XSLT para transformar uma árvore XML (Visual Basic)
 Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento. Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação. Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.  
@@ -60,7 +60,7 @@ Console.WriteLine(newTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
- [Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
+- [LINQ to XML (Visual Basic) de programação avançada](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

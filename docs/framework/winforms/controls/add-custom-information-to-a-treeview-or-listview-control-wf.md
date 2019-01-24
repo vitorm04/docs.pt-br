@@ -1,5 +1,5 @@
 ---
-title: Como adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)
+title: 'Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: b4131504e5c5d7f2075c72c72b98153c783000d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694588"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Como adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)
-Você pode criar um nó derivado em um Windows Forms <xref:System.Windows.Forms.TreeView> controle ou um item derivado em uma <xref:System.Windows.Forms.ListView> controle. A derivação permite adicionar todos os campos necessários, assim como métodos e construtores personalizados para manipulá-los. Um uso desse recurso é anexar um objeto do cliente a cada nó de árvore ou item de lista. Os exemplos aqui são para uma <xref:System.Windows.Forms.TreeView> controle, mas a mesma abordagem pode ser usado para um <xref:System.Windows.Forms.ListView> controle.  
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Como: Adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)
+Você pode criar um nó derivado em um Windows Forms <xref:System.Windows.Forms.TreeView> controle ou um item derivado em um <xref:System.Windows.Forms.ListView> controle. A derivação permite adicionar todos os campos necessários, assim como métodos e construtores personalizados para manipulá-los. Um uso desse recurso é anexar um objeto do cliente a cada nó de árvore ou item de lista. Os exemplos aqui são para um <xref:System.Windows.Forms.TreeView> controle, mas a mesma abordagem pode ser usado para um <xref:System.Windows.Forms.ListView> controle.  
   
 ### <a name="to-derive-a-tree-node"></a>Para derivar um nó de árvore  
   
--   Criar uma nova classe do nó, derivada de <xref:System.Windows.Forms.TreeNode> classe, que tem um campo personalizado para gravar um caminho de arquivo.  
+-   Criar uma nova classe de nó, derivada de <xref:System.Windows.Forms.TreeNode> classe, que tem um campo personalizado para gravar um caminho de arquivo.  
   
     ```vb  
     Class myTreeNode  
@@ -100,7 +100,7 @@ Você pode criar um nó derivado em um Windows Forms <xref:System.Windows.Forms.
        "\\TextFile.txt")));  
     ```  
   
-2.  Se são passados ao nó de árvore e seu tipo for um <xref:System.Windows.Forms.TreeNode> classe, em seguida, você precisará converter para sua classe derivada. Se trata de uma conversão explícita de um tipo de objeto para outro. Para obter mais informações sobre conversão, consulte [conversões explícitas e implícitas](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [() operador](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual c#), ou [operador Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).  
+2.  Se você é passados no nó de árvore e ele é digitado como um <xref:System.Windows.Forms.TreeNode> de classe, em seguida, você precisará converter sua classe derivada. Se trata de uma conversão explícita de um tipo de objeto para outro. Para obter mais informações sobre conversão, consulte [conversões explícitas e implícitas](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [() operador](~/docs/csharp/language-reference/operators/invocation-operator.md) (Visual C#), ou [operador Cast: ()](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) .  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  
@@ -130,6 +130,6 @@ Você pode criar um nó derivado em um Windows Forms <xref:System.Windows.Forms.
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Controle TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [Controle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Controle TreeView](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [Controle ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

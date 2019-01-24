@@ -1,5 +1,5 @@
 ---
-title: Como validar e mesclar PrintTickets
+title: 'Como: Validar e mesclar PrintTickets'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671935"
 ---
-# <a name="how-to-validate-and-merge-printtickets"></a>Como validar e mesclar PrintTickets
+# <a name="how-to-validate-and-merge-printtickets"></a>Como: Validar e mesclar PrintTickets
 O [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema de impressão](https://go.microsoft.com/fwlink/?LinkId=186397) inclui flexíveis e extensíveis <xref:System.Printing.PrintCapabilities> e <xref:System.Printing.PrintTicket> elementos. O primeiro lista os recursos de um dispositivo de impressão e o último especifica como o dispositivo deve usar esses recursos em relação a uma sequência específica de documentos, a um documento individual ou a uma página individual.  
   
  Uma sequência de tarefas comuns de um aplicativo que dá suporte à impressão seria o seguinte.  
@@ -51,19 +51,19 @@ O [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [esquema d
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- Para que seja possível testar este exemplo rapidamente, o restante dele será apresentado logo abaixo. Crie um projeto e um namespace e, em seguida, cole os dois trechos de código deste artigo no bloco do namespace.  
+ Para que seja possível testar este exemplo rapidamente, o restante dele será apresentado logo abaixo. Crie um projeto e um namespace e, em seguida, cole os dois snippets de código deste artigo no bloco do namespace.  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Esquema de Impressão](https://go.microsoft.com/fwlink/?LinkId=186397)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [Documentos no WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Visão Geral da Impressão](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Esquema de Impressão](https://go.microsoft.com/fwlink/?LinkId=186397)

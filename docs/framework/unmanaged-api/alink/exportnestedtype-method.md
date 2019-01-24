@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710333"
 ---
 # <a name="exportnestedtype-method"></a>Método ExportNestedType
-Especifica tipos aninhados como exportável. O [método ExportType](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) também pode criar tipos de exportação aninhado, mas esse método é mais rápido.  
+Especifica os tipos aninhados como exportável. O [método ExportType](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) também pode tipos aninhado de exportação, mas esse método é mais rápido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,12 +64,12 @@ HRESULT ExportNestedType(
  Recebe o token para o tipo exportado.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

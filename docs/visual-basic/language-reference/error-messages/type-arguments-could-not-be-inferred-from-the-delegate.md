@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 757483f1e88276dd9db82de1c2a7e47b5c975b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b65a39082ddaf54aabf12ca9b95e49af80f5f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666300"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Não foi possível inferir argumentos de tipo a partir do delegado
-Usa uma instrução de atribuição `AddressOf` para atribuir o endereço de um generic procedimento como um delegado, mas não fornece nenhum argumento de tipo para o procedimento genérico.  
+Usa uma instrução de atribuição `AddressOf` para atribuir o endereço de um genérico o procedimento para um delegado, mas ele não fornece quaisquer argumentos de tipo para o procedimento genérico.  
   
- Normalmente, quando você invoca um tipo genérico, você fornece um argumento de tipo para cada parâmetro de tipo que define o tipo genérico. Se você não fornecer nenhum argumento de tipo, o compilador tenta inferir os tipos a serem passados para os parâmetros de tipo. Se o contexto não fornece informações suficientes para o compilador inferir os tipos, um erro será gerado.  
+ Normalmente, quando você invoca um tipo genérico, você fornece um argumento de tipo para cada parâmetro de tipo que define o tipo genérico. Se você não fornecer nenhum argumento de tipo, o compilador tentará inferir os tipos a serem passados para os parâmetros de tipo. Se o contexto não fornece informações suficientes para que o compilador inferir os tipos, um erro será gerado.  
   
  **ID do erro:** BC36564  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
--   Especificar os argumentos de tipo para o procedimento genérico de `AddressOf` expressão.  
+-   Especifica os argumentos de tipo para o procedimento genérico no `AddressOf` expressão.  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Procedimentos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)  
- [Métodos de Extensão](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Consulte também
+- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Procedimentos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
+- [Métodos de Extensão](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

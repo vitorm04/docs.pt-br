@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe2fcf10b517f4eb7b1c7e87142afb386821246
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 31b302977950b3daeab6ac2be117c7f8db51eb2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654757"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>Enumeração CorDebugExceptionUnwindCallbackType
 Indica o evento que está sendo sinalizado pelo retorno de chamada durante a fase de desenrolamento.  
@@ -39,17 +39,17 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_UNWIND_BEGIN`|O início do processo de liberação.|  
+|`DEBUG_EXCEPTION_UNWIND_BEGIN`|O início do processo de desenrolamento.|  
 |`DEBUG_EXCEPTION_INTERCEPTED`|A exceção foi interceptada.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

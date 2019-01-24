@@ -1,5 +1,5 @@
 ---
-title: GetScope Method1
+title: Método1 GetScope
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2746073fbc6adfd7090aa9b3cc38e46c4411744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 782697536f5e01fa29830a64e47d960a47fe4eae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663135"
 ---
-# <a name="getscope-method1"></a>GetScope Method1
+# <a name="getscope-method1"></a>Método1 GetScope
 Obtém um escopo de importação.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -45,18 +45,18 @@ HRESULT GetScope(
  ID exclusiva do arquivo de origem.  
   
  `dwScope`  
- Escopo com base em zero para importar.  
+ Escopo baseado em zero para importar.  
   
  `ppImportScope`  
  Recebe [IMetaDataImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface para o escopo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

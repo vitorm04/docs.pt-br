@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7120e092b422b755ecbde9e48236b42e67636fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83524b24fd05969fa4f45fd742d1df955c441d44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732382"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>Método ICorDebugManagedCallback::Break
-Notifica o depurador quando um <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.  
+Notifica o depurador quando uma <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,16 +41,16 @@ HRESULT Break (
  [in] Um ponteiro para um objeto ICorDebugAppDomain que representa o domínio de aplicativo que contém a instrução break.  
   
  `thread`  
- [in] Um ponteiro para um objeto ICorDebugThread que representa o segmento que contém a instrução break.  
+ [in] Um ponteiro para um objeto de ICorDebugThread que representa o thread que contém a instrução break.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

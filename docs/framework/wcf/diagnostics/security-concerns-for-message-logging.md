@@ -2,12 +2,12 @@
 title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731992"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais sejam expostas em logs de mensagens, bem como os eventos gerados pelo log de mensagens.  
@@ -99,16 +99,16 @@ Este tópico descreve como você pode proteger dados confidenciais sejam exposta
 ## <a name="events-triggered-by-message-logging"></a>Eventos disparados pelo log de mensagens  
  O exemplo a seguir lista todos os eventos emitidos pelo log de mensagens.  
   
--   Logon da mensagem: esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "mensagem de log foi ativado. Informações confidenciais podem ser registradas em texto não criptografado, mesmo se eles foram criptografados durante a transmissão, por exemplo, corpos de mensagem."  
+-   Mensagem de log em: Esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "mensagem de log foi ativado. Informações confidenciais podem ser registradas em texto não criptografado, mesmo se eles foram criptografados durante a transmissão, por exemplo, corpos de mensagem."  
   
--   Fazer logoff da mensagem: esse evento é emitido quando o log de mensagens é desabilitado por meio do WMI. O conteúdo do evento é "Mensagem de log foi desativado."  
+-   Mensagem de logoff: Esse evento é emitido quando o log de mensagens é desabilitado por meio do WMI. O conteúdo do evento é "Mensagem de log foi desativado."  
   
--   Log conhecido PII em: Esse evento é emitido quando o log de PII conhecido é habilitado. Isso acontece quando o `enableLoggingKnownPii` de atributo na `machineSettings` do arquivo Machine. config é definido como `true`e o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`.  
+-   Logon PII conhecido: Esse evento é emitido quando o log de PII conhecido é habilitado. Isso acontece quando o `enableLoggingKnownPii` de atributo na `machineSettings` do arquivo Machine. config é definido como `true`e o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`.  
   
--   Faça logon conhecidos PII não permitido: esse evento é emitido quando o registro em log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`, mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
+-   Faça logon PII conhecido não permitida: Esse evento é emitido quando o registro em log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo do `source` elemento no arquivo App. config ou Web. config é definido como `true`, mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
   
  Esses eventos podem ser exibidos na ferramenta do Visualizador de eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Questões de segurança e dicas úteis para rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Consulte também
+- [Registro de mensagens em log](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Questões de segurança e dicas úteis para rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

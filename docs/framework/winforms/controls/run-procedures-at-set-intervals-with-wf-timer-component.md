@@ -1,5 +1,5 @@
 ---
-title: Como executar procedimentos em intervalos definidos com o componente de temporizador dos Windows Forms
+title: 'Como: Executar procedimentos em intervalos definidos com o componente de temporizador do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: bf0e22eab3b6517521dbe06a73f63af232746df1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d1149e6a0c8fdb04b37af15feabfd965b5cc993
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638448"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642263"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Como executar procedimentos em intervalos definidos com o componente de temporizador dos Windows Forms
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Como: Executar procedimentos em intervalos definidos com o componente de temporizador do Windows Forms
 Às vezes, pode ser útil criar um procedimento que é executado em intervalos de tempo específicos até que um loop termine ou que seja executado quando um determinado período tiver decorrido. O <xref:System.Windows.Forms.Timer> componente possibilita tal procedimento.  
   
  Esse componente foi projetado para um ambiente do Windows Forms. Se você precisar de um temporizador que seja adequado para um ambiente de servidor, consulte [Introdução a temporizadores baseados em servidor](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
@@ -30,7 +30,7 @@ ms.locfileid: "45638448"
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Executar um procedimento em intervalos definidos com o componente Timer  
   
-1.  Adicionar um <xref:System.Windows.Forms.Timer> ao seu formulário. Consulte a seção Exemplo a seguir para obter ver como fazer isso com programação. Visual Studio também tem suporte para adicionar componentes a um formulário. Consulte também: [Como adicionar controles sem uma interface do usuário ao Windows Forms](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
+1.  Adicionar um <xref:System.Windows.Forms.Timer> ao seu formulário. Consulte a seção Exemplo a seguir para obter ver como fazer isso com programação. Visual Studio também tem suporte para adicionar componentes a um formulário. Consulte também [como: Adicionar controles sem uma Interface do usuário ao Windows Forms](https://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
   
 2.  Defina o <xref:System.Windows.Forms.Timer.Interval%2A> propriedade (em milissegundos) para o temporizador. Essa propriedade determina quanto tempo passará antes do procedimento ser executado novamente.  
   
@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Timer>  
- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Visão geral do componente de temporizador](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Timer>
+- [Componente Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
+- [Visão geral do componente de temporizador](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)

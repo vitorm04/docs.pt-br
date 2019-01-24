@@ -2,12 +2,12 @@
 title: Protegendo as mensagens com a segurança de mensagens
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: ff1d488e58be64f31836587c8893ba608ccd821b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610937"
 ---
 # <a name="securing-messages-using-message-security"></a>Protegendo as mensagens com a segurança de mensagens
 Esta seção aborda a segurança de mensagem do WCF ao usar <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -63,8 +63,8 @@ Esta seção aborda a segurança de mensagem do WCF ao usar <xref:System.Service
 ## <a name="using-transport-and-message-security"></a>Usando o transporte e segurança de mensagem  
  Ao usar a segurança de transporte e segurança de mensagem, o certificado usado para proteger a mensagem no transporte e o nível de mensagem SOAP deve ser o mesmo.  
   
-## <a name="see-also"></a>Consulte também  
- [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Consulte também
+- [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

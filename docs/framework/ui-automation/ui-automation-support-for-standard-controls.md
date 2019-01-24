@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9c5e4133a3bc1f019ada00299df929c2e3915880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726579"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Suporte de automação de interface do usuário para Controles Padrão
 > [!NOTE]
->  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+>  Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automação de interface do usuário](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Este tópico contém informações sobre [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] suporte para controles padrão em aplicativos desenvolvidos para o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], e [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] estruturas.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48037333"
 |Botão|Grupo|  
 |Botão|CheckBox|  
 |Botão|Hiperlink|  
-|Botão|Botão de divisão|  
+|Botão|SplitButton|  
 |Botão|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
@@ -49,7 +49,7 @@ ms.locfileid: "48037333"
 |Estático|Texto|  
 |Estático|Image|  
 |SysIPAddress32|Personalizado|  
-|SysHeader32|Cabeçalho/HeaderItem|  
+|SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Lista|  
 |ListBox|Lista|  
@@ -108,7 +108,7 @@ ms.locfileid: "48037333"
 |ColorDialog|  
 |ComboBox|  
 |FolderBrowser|  
-|FolderBrowserDialog|  
+|FontDialog|  
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
@@ -128,12 +128,12 @@ ms.locfileid: "48037333"
 |ScrollableControl|  
 |SoundPlayer|  
 |StatusBar|  
-|TabPage/TabControl|  
+|TabControl/TabPage|  
 |TextBox|  
 |Temporizador|  
 |Barra de ferramentas|  
 |ToolTip|  
-|Barra de controle|  
+|TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |WebBrowser|  
@@ -158,8 +158,8 @@ ms.locfileid: "48037333"
 |Painel|  
 |PictureBox|  
 |PrintDocument|  
-|Controle PrintPreview|  
-|Caixa de diálogo PrintPreview|  
+|PrintPreview-Control|  
+|PrintPreview-Dialog|  
 |PropertyGrid|  
 |UserControl|  
 |ToolStrip|  
@@ -169,5 +169,5 @@ ms.locfileid: "48037333"
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>Consulte também  
- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)
+## <a name="see-also"></a>Consulte também
+- [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)

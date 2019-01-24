@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar, inicializar e configurar opções de rastreamento'
+title: 'Como: Criar, inicializar e configurar opções de rastreamento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739609"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: criar, inicializar e configurar opções de rastreamento
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>Como: Criar, inicializar e configurar opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento.  
   
 <a name="create"></a>   
@@ -75,11 +75,11 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 2.  Se o projeto não contiver um arquivo de configuração (app.config ou Web.config), no menu **Projeto**, selecione **Adicionar Novo Item**.  
   
-    -   **Visual Basic:** na caixa de diálogo **Adicionar Novo Item**, escolha **Arquivo de Configuração de Aplicativo**.  
+    -   **Visual Basic:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo de configuração de aplicativo**.  
   
          O arquivo de configuração de aplicativo será criado e aberto. Este é um documento XML cujo elemento raiz é `<configuration>.`  
   
-    -   **Visual C#:** na caixa de diálogo **Adicionar Novo Item**, escolha **Arquivo XML**. Nomeie esse arquivo **app.config**. No editor de XML, após a declaração XML, adicione o seguinte XML:  
+    -   **Visual C#:** No **Adicionar Novo Item** diálogo caixa, escolha **arquivo XML**. Nomeie esse arquivo **app.config**. No editor de XML, após a declaração XML, adicione o seguinte XML:  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [Como adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [Esquema de configurações de rastreamento e depuração](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Consulte também
+- [Rastreando e instrumentando aplicativos](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Opções de rastreamento](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Esquema de configurações de rastreamento e depuração](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

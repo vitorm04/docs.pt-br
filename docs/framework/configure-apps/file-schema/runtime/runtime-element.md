@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5ab9fafeb6c836f1561752a8e2bdfddb97296399
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 10cc81bee24fb757e4d826eb42d4ccf2324e6dab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659521"
 ---
 # <a name="ltruntimegt-element"></a>&lt;tempo de execução&gt; elemento
 Fornece informações usadas pelo common language runtime para configurar os aplicativos.  
@@ -68,7 +68,7 @@ Fornece informações usadas pelo common language runtime para configurar os apl
 |[<NetFx40_LegacySecurityPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Especifica se o tempo de execução usa a política de CAS (Segurança de Acesso do Código) herdada.|  
 |[<NetFx40_PInvokeStackResilience>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Especifica se o tempo de execução corrige automaticamente declarações de invocação de plataforma incorretas em tempo de execução, às custas de transições mais lentas entre o código gerenciado e não gerenciado.|  
 |[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Especifica se o tempo de execução usa uma quantidade fixa de memória para calcular códigos hash para o método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.|  
-|[\<PreferComInsteadOfRemoting >](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Especifica que o tempo de execução usará a interoperabilidade COM em vez de comunicação remota entre limites de domínio de aplicativo.|  
+|[\<PreferComInsteadOfRemoting>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Especifica que o tempo de execução usará a interoperabilidade COM em vez de comunicação remota entre limites de domínio de aplicativo.|  
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Otimiza o teste para assemblies satélites.|  
 |[\<shadowCopyVerifyByTimeStamp>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Especifica se a cópia de sombra usa o comportamento de inicialização padrão introduzido no [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] ou reverte para o comportamento de inicialização de versões anteriores do .NET Framework.|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Especifica que um aplicativo pode fazer referência ao mesmo assembly em duas implementações diferentes do .NET Framework, desabilitando o comportamento padrão que trata os assemblies como equivalentes para fins de portabilidade do aplicativo.|  
@@ -91,6 +91,6 @@ Fornece informações usadas pelo common language runtime para configurar os apl
   
  Os elementos na [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção são lidas automaticamente pelo common language runtime na inicialização do aplicativo. Você também pode definir o arquivo de configuração para um domínio de aplicativo não padrão, fornecendo seu nome para o <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propriedade; suas configurações são lidas automaticamente quando o domínio do aplicativo é carregado. Raramente, ou nunca, que a necessidade de ler diretamente as configurações de [ \<tempo de execução >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) seção no arquivo de configuração do seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também  
-- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Consulte também
+- [Esquema de configurações do tempo de execução](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: organizando conteúdo WPF em Windows Forms na hora do design'
+title: 'Passo a passo: Organizando conteúdo WPF nos Windows Forms em tempo de Design'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 66fb814bbf0a40ccaa9339eb24dcc49332861deb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647654"
 ---
-# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Instruções passo a passo: organizando conteúdo WPF em Windows Forms na hora do design
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Organizando conteúdo WPF nos Windows Forms em tempo de Design
 Esta instrução passo a passo mostra como usar os recursos de layout dos Windows Forms, como ancoragem e guias de alinhamento para organizar controles do WPF (Windows Presentation Foundation).
 
  Nesta instrução passo a passo, as seguintes tarefas serão executadas:
@@ -54,9 +54,9 @@ Esta instrução passo a passo mostra como usar os recursos de layout dos Window
   
 #### <a name="to-create-wpf-controls"></a>Para criar controles WPF  
   
-1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> ao projeto. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, consulte [Instruções passo a passo: como criar novo conteúdo WPF nos Windows Forms em tempo de design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Adicione um novo WPF <xref:System.Windows.Controls.UserControl> ao projeto. Use o nome padrão do tipo de controle, `UserControl1.xaml`. Para obter mais informações, confira [Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, consulte [Como Selecionar e Mover Elementos na Superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, confira [Como: Selecionar e mover elementos na superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
 3.  No **propriedades** janela, defina o valor da <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades a serem `200`.  
   
@@ -90,7 +90,7 @@ Esta instrução passo a passo mostra como usar os recursos de layout dos Window
      Ambos <xref:System.Windows.Forms.Integration.ElementHost> controles são redimensionados para caber no novo layout.  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>Usando guias de alinhamento para alinhar controles WPF  
- Guias de alinhamento permitem fácil alinhamento de controles em um formulário. Você também pode usar guias de alinhamento para alinhar os controles WPF. Para obter mais informações, consulte [Instruções passo a passo: organizando controles nos Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+ Guias de alinhamento permitem fácil alinhamento de controles em um formulário. Você também pode usar guias de alinhamento para alinhar os controles WPF. Para obter mais informações, confira [Passo a passo: Organizando controles nos Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>Para usar guias de alinhamento para alinhar controles WPF  
   
@@ -145,14 +145,14 @@ Esta instrução passo a passo mostra como usar os recursos de layout dos Window
   
      Todos os três <xref:System.Windows.Forms.Integration.ElementHost> controles são redimensionados adequadamente.  
   
-     Para obter mais informações, consulte [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
+     Para obter mais informações, confira [Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [Como alinhar um controle às bordas de formulários no tempo de design](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Como: Alinhar um controle às bordas de formulários no tempo de Design](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Passo a passo: Organizando controles nos formulários do Windows usando guias de alinhamento](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Migração e interoperabilidade](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Usando Controles do WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Criar o XAML no Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

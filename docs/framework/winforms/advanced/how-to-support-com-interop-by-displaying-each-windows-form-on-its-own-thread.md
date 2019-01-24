@@ -1,5 +1,5 @@
 ---
-title: Como dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado
+title: 'Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: d0d8dfd4a19b31be790d2643847396d136098278
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5df3b4868a514fb520a66aa89ae7795d68eaffd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085602"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672065"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Como dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread
 Você pode resolver problemas de interoperabilidade com exibindo seu formulário em um [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] loop de mensagem, você pode criar usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
   
  Para fazer um Windows Form funcionar corretamente em um aplicativo cliente COM, execute o formulário em um loop de mensagem dos Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
   
--   Use o <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> método para exibir o formulário do Windows. Para mais informações, consulte [Como dar suporte à interoperabilidade COM exibindo um Formulário do Windows Forms com o método ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).  
+-   Use o <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> método para exibir o formulário do Windows. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).  
   
 -   Exiba cada Windows Form em um thread separado.  
   
  Há suporte abrangente para este recurso no Visual Studio.  
   
- Consulte também [Instruções passo a passo: dando suporte à interoperabilidade COM exibindo cada Windows Form no próprio thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ Consulte também [passo a passo: Dando suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra como exibir o formulário em um thread separado e chamar o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método para iniciar uma bomba de mensagem do Windows Forms nesse thread. Para usar essa abordagem, você deve empacotar as chamadas para o formulário do aplicativo não gerenciado usando o <xref:System.Windows.Forms.Control.Invoke%2A> método.  
@@ -45,9 +45,9 @@ Você pode resolver problemas de interoperabilidade com exibindo seu formulário
   
 -   Compile os tipos `COMForm`, `Form1` e `FormManager` em um assembly chamado `COMWinform.dll`. Registre o assembly de interoperabilidade COM usando um dos métodos descritos em [Empacotando um assembly para COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md). Agora você pode usar o assembly e o arquivo de biblioteca de tipos (.tlb) correspondente em aplicativos não gerenciados. Por exemplo, você pode usar a biblioteca de tipos como uma referência em um projeto executável do Visual Basic 6.0.  
   
-## <a name="see-also"></a>Consulte também  
- [Expondo componentes do .NET Framework ao COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Empacotando um assembly para COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
- [Registrando assemblies usando COM](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Como dar suporte à interoperabilidade COM exibindo um Windows Form com o método ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
- [Visão Geral dos Aplicativos dos Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Expondo componentes do .NET Framework ao COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Empacotando um assembly para COM](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [Registrando assemblies usando COM](../../../../docs/framework/interop/registering-assemblies-with-com.md)
+- [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)
+- [Visão Geral dos Aplicativos dos Windows Forms e Aplicativos Não Gerenciados](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)

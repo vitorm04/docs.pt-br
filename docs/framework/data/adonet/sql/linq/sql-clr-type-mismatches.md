@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700943"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilidade de SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatiza muitas de conversão entre o modelo de objeto e o SQL Server. Entretanto, algumas situações impedem a conversão exata. Essas incompatíveis chave entre os tipos do common language runtime (CLR) e os tipos de banco de dados do SQL Server são resumidas nas seções a seguir. Você pode encontrar mais detalhes sobre mapeamentos de tipo específico e tradução de função em [mapeamento de tipo de SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) e [tipos de dados e funções](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -293,5 +293,5 @@ Where Col1 + Col2 > 4
   
  Além de diferenças semânticas, é importante considerar impactos o desempenho ao cruzar-se entre o SQL Server e sistemas de tipos de CLR. Para grandes conjuntos de dados, tais problemas de desempenho podem determinar se um aplicativo está deployable.  
   
-## <a name="see-also"></a>Consulte também  
- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Consulte também
+- [Informações gerais](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

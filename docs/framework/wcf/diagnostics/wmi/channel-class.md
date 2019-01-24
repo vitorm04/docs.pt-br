@@ -2,12 +2,12 @@
 title: Classe de canal
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668386"
 ---
 # <a name="channel-class"></a>Classe de canal
 Canal  
@@ -34,35 +34,35 @@ class Channel
 ### <a name="localaddress"></a>LocalAddress  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O ponto de extremidade local para o canal.  
   
 ### <a name="ref"></a>ref  
- Tipo de dados: ponto de extremidade  
+ Tipo de dados: Ponto de extremidade  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  Uma referência para o ponto de extremidade do canal se conecta ao.  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O endereço remoto associado ao canal.  
   
 ### <a name="sessionid"></a>SessionId  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  A sessão atual de Id, se houver.  
   
 ### <a name="type"></a>Tipo  
  Tipo de dados: cadeia de caracteres  
   
- Tipo de acesso: somente leitura  
+ Tipo de acesso: Somente leitura  
   
  O tipo de canal.  
   
@@ -72,5 +72,5 @@ class Channel
 |---------|-----------------------------------|  
 |Namespace|Definido no root\ServiceModel|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Channels.ChannelBase>

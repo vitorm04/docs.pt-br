@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 515c12a87ddab6c616f98325624e7fd31ea926d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642916"
 ---
 # <a name="mycomputerfilesystem-object"></a>Objeto My.Computer.FileSystem
 Fornece propriedades e métodos para trabalhar com unidades, arquivos e diretórios.  
@@ -35,8 +35,8 @@ Fornece propriedades e métodos para trabalhar com unidades, arquivos e diretór
   
  **Classe:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (fornece acesso a <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Assembly:** biblioteca de tempo de execução do Visual Basic (em VisualBasic)  
+ **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Consulte também
+- [Objeto My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
+- [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)

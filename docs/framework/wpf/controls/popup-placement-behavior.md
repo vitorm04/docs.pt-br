@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 99875de320d6728fdacb55c153064c5c1267efdf
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 924d099a17390eeac61bd87a0c3ca0e05b1c8172
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672078"
 ---
 # <a name="popup-placement-behavior"></a>Comportamento de posicionamento do pop-up
 Um <xref:System.Windows.Controls.Primitives.Popup> controle exibe conteúdo em uma janela separada que flutua sobre um aplicativo. Você pode especificar a posição de um <xref:System.Windows.Controls.Primitives.Popup> em relação a um controle, o mouse ou tela usando o <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, e <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriedades.  Essas propriedades trabalham juntos para proporcionar a você flexibilidade para especificar a posição do <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -227,5 +227,5 @@ O posicionamento é Mouse e o pop-up encontra a borda inferior da tela
 ### <a name="customizing-popup-placement"></a>Personalizando o posicionamento do pop-up  
  Você pode personalizar o ponto de alinhamento de pop-up e de origem do destino, definindo o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriedade para <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Em seguida, defina uma <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegado que retorna um conjunto de pontos possíveis para posicionamento e eixos principais (em ordem de preferência) para o <xref:System.Windows.Controls.Primitives.Popup>. O ponto que mostra a maior parte do <xref:System.Windows.Controls.Primitives.Popup> está selecionado.  A posição do <xref:System.Windows.Controls.Primitives.Popup> será ajustada automaticamente se o <xref:System.Windows.Controls.Primitives.Popup> é escondido pela borda da tela. Para ver um exemplo, consulte [Especificar uma posição de pop-up personalizada](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Amostra de posicionamento do pop-up](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+## <a name="see-also"></a>Consulte também
+- [Amostra de posicionamento do pop-up](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

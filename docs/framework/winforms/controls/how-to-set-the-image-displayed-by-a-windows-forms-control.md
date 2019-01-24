@@ -1,5 +1,5 @@
 ---
-title: Como definir a imagem exibida por um controle dos Windows Forms
+title: 'Como: Definir a imagem exibida pelo controle de um Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644918"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Como definir a imagem exibida por um controle dos Windows Forms
-Vários controles de formulários do Windows podem exibir imagens. Essas imagens podem ser ícones esclarecer a finalidade do controle, como um ícone de disquete em um botão denotando o **salvar** comando. Como alternativa, os ícones podem ser imagens de plano de fundo para dar o controle a aparência e o comportamento desejado.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Como: Definir a imagem exibida pelo controle de um Windows Forms
+Vários controles de Windows Forms podem exibir imagens. Essas imagens podem ser ícones que esclarecem o propósito de controle, como um ícone de disquete em um botão que indica a **salvar** comando. Como alternativa, os ícones podem ser imagens de plano de fundo para dar o controle a aparência e o comportamento desejado.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Para definir a imagem exibida por um controle  
   
-1.  Definir o controle `Image` ou `BackgroundImage` propriedade para um objeto do tipo <xref:System.Drawing.Image>. Em geral, você será possível carregar a imagem de um arquivo usando o <xref:System.Drawing.Image.FromFile%2A> método.  
+1.  Defina o controle `Image` ou `BackgroundImage` propriedade em um objeto do tipo <xref:System.Drawing.Image>. Em geral, você será ser carregar a imagem de um arquivo usando o <xref:System.Drawing.Image.FromFile%2A> método.  
   
-     No exemplo de código a seguir, o caminho definido para o local da imagem é o **Minhas imagens** pasta. A maioria dos computadores que executam o sistema operacional Windows incluirá esse diretório. Isso também permite que os usuários com níveis de acesso mínimos do sistema executar o aplicativo com segurança. O exemplo de código a seguir exige que você já tenha um formulário com um <xref:System.Windows.Forms.PictureBox> controle adicionado.  
+     No exemplo de código a seguir, o caminho definido para o local da imagem é o **Minhas imagens** pasta. A maioria dos computadores que executam o sistema operacional Windows vão incluir este diretório. Isso também permite que os usuários com níveis de acesso mínimos do sistema executar o aplicativo com segurança. O exemplo de código a seguir exige que você já tenha um formulário com um <xref:System.Windows.Forms.PictureBox> controle adicionado.  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ Vários controles de formulários do Windows podem exibir imagens. Essas imagens
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

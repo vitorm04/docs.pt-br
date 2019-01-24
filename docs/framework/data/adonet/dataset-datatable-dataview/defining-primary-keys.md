@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: aecd16357857dca7393eac879159c916d8cf8ac7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3b9e8835c50ea6c1795fc33aa46bac51cd77defc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650594"
 ---
 # <a name="defining-primary-keys"></a>Definindo chaves primárias
 Uma tabela de banco de dados geralmente tem uma coluna ou um grupo de colunas que identifica exclusivamente cada linha na tabela. Esta coluna de identificação ou grupo de colunas é chamado de chave primária.  
@@ -65,8 +65,8 @@ keyColumn[1] = workTable.Columns["CustFName"];
 workTable.PrimaryKey = keyColumn;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Data.DataTable>  
- [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Data.DataTable>
+- [Definição de esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

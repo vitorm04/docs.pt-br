@@ -1,5 +1,5 @@
 ---
-title: Como determinar itens verificados no controle CheckedListBox dos Windows Forms
+title: 'Como: Determinar itens marcados no controle CheckedListBox Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 70884051ba440c5d0f9d282b7edf189c8f52807e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643592"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Como determinar itens verificados no controle CheckedListBox dos Windows Forms
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Como: Determinar itens marcados no controle CheckedListBox Windows Forms
 Ao apresentar dados em um Windows Forms <xref:System.Windows.Forms.CheckedListBox> controle, você pode iterar por meio da coleção armazenada na <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> propriedade ou percorra a lista usando o <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método para determinar quais itens estão marcados. O <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método usa um número de índice do item como seu argumento e retorna `true` ou `false`. Ao contrário do que você poderia esperar, o <xref:System.Windows.Forms.ListBox.SelectedItems%2A> e <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> propriedades não determinam quais itens estão marcados; elas determinam quais itens são realçados.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Como determinar itens marcados em um controle CheckedListBox  
@@ -111,5 +111,5 @@ Ao apresentar dados em um Windows Forms <xref:System.Windows.Forms.CheckedListBo
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Controles dos Windows Forms usados para listar opções](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Consulte também
+- [Controles dos Windows Forms usados para listar opções](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

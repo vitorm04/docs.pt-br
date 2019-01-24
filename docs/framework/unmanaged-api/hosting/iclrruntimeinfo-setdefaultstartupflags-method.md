@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b0871636f816d62c1f65c74d22014d74fb1fb97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d021eb2d8da8c85fe538f0c73527876482429718
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656876"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>Método ICLRRuntimeInfo::SetDefaultStartupFlags
-Define os sinalizadores de inicialização e o arquivo de configuração de host que será usado para iniciar o tempo de execução. Esse método substitui o uso do `startupFlags` parâmetro o [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) funções.  
+Define os sinalizadores de inicialização e o arquivo de configuração de host que será usado para iniciar o tempo de execução. Esse método substitui o uso do `startupFlags` parâmetro na [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) funções.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ HRESULT SetDefaultStartupFlags(
   
 #### <a name="parameters"></a>Parâmetros  
  `dwStartupFlags`  
- [in] Os sinalizadores de inicialização de host definido. Use os mesmos sinalizadores como com o [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) funções.  
+ [in] Os sinalizadores de inicialização do host para definir. Use os mesmos sinalizadores como com o [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) e [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md) funções.  
   
  `pwzHostConfigFile`  
  [in] O caminho do diretório do arquivo de configuração de host para definir.  
@@ -50,18 +50,18 @@ HRESULT SetDefaultStartupFlags(
 |S_OK|O método foi concluído com êxito.|  
   
 ## <a name="remarks"></a>Comentários  
- Um host multi-threaded deve sincronizar chamadas para esse método. Caso contrário, o thread A pode chamar o `SetStartupFlags` método após uma chamada para conclusão da thread B `SetStartupFlags` e antes do thread B inicia o tempo de execução.  
+ Um host de vários threads deve sincronizar chamadas para esse método. Caso contrário, o thread A pode chamar o `SetStartupFlags` método depois que o thread B conclui uma chamada para `SetStartupFlags` e antes do thread B se inicia o tempo de execução.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hospedagem](../../../../docs/framework/unmanaged-api/hosting/index.md)

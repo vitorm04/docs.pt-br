@@ -2,12 +2,12 @@
 title: Convertendo tipos de dados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 9821b2d6caad8feeac856185b92518c25de88da3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3845c14bc7390d486668916fe7d5d5ad840b7990
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653730"
 ---
 # <a name="converting-data-types-visual-basic"></a>Convertendo tipos de dados (Visual Basic)
 Os métodos de conversão alteram o tipo dos objetos de entrada.  
@@ -77,8 +77,8 @@ Sub Cast()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>  
- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [Como: consultar um ArrayList com LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Linq>
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Como: Consultar um ArrayList com LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

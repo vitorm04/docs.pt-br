@@ -2,12 +2,12 @@
 title: Namespaces XAML para serviços XAML do .NET Framework
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736793"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Namespaces XAML para serviços XAML do .NET Framework
 Um namespace XAML é um conceito que se expande na definição de um namespace de XML. Semelhante a um namespace de XML, você pode definir um namespace XAML usando um `xmlns` atributo na marcação. Namespaces XAML também estão representados no fluxo de nó XAML e outras APIs de serviços de XAML. Este tópico define o conceito de namespace XAML e descreve como namespaces XAML podem ser definidas e usadas por contextos de esquema XAML e outros aspectos dos serviços de XAML do .NET Framework.  
@@ -63,5 +63,5 @@ Um namespace XAML é um conceito que se expande na definição de um namespace d
   
  Outra API que são relevantes para serviços XAML do .NET Framework de tratamento de namespace XAML são os atributos <xref:System.Windows.Markup.XmlnsDefinitionAttribute> e <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Esses atributos se aplicam a assemblies. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> é usado por um contexto de esquema XAML para interpretar qualquer declaração de namespace XAML que inclui um URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> é usado por ferramentas de emissão de XAML para que um namespace XAML específico pode ser serializado com um prefixo previsível. Para obter mais informações, consulte [XAML-Related atributos de CLR para tipos personalizados e bibliotecas](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre estruturas e conceitos do fluxo de nó XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>Consulte também
+- [Noções básicas sobre estruturas e conceitos do fluxo de nó XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

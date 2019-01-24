@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 86ded7351d435b3a7077f0354d8a923b33a3f2b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f48f9486c5d29fc0b70e4487a12a1c499235cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732642"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Criando o aplicativo cliente do .NET Framework (Início rápido do WCF Data Services)
 
@@ -23,7 +23,7 @@ Esta é a tarefa final do início rápido WCF Data Services. Nesta tarefa, você
 
 1.  Na **Gerenciador de soluções**, a solução com o botão direito, clique em **Add**e, em seguida, clique em **novo projeto**.
 
-2.  No painel esquerdo, selecione **Installed** > [**Visual c#** ou **Visual Basic**] > **Windows Desktop**e, em seguida, selecione o **Aplicativo WPF** modelo.
+2.  No painel esquerdo, selecione **Installed** > [**Visual C#**  ou **Visual Basic**] > **Desktop Windows**e, em seguida, selecione o  **Aplicativo WPF** modelo.
 
 3.  Insira `NorthwindClient` para o nome do projeto e clique **Okey**.
 

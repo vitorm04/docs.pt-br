@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30747fa25528f5679264ebfb67addf401b7d01d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 780c19acd3d6980c0fb3e31d01e569a61fd04d6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647303"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>Método ISymUnmanagedWriter::Close
-Fecha o gravador de símbolo depois confirmando os símbolos para o repositório de símbolos.  
+Fecha o gravador de símbolo depois de confirmar os símbolos para o repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,10 +37,10 @@ HRESULT Close();
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="remarks"></a>Comentários  
- Após essa chamada, o gravador de símbolo se torna inválido para obter informações mais atualizadas. Para fechar o gravador de símbolo sem confirmar os símbolos, use o [Isymunmanagedwriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) método em vez disso.  
+ Após essa chamada, o gravador de símbolo se torna inválido para obter informações mais atualizadas. Para fechar o gravador de símbolo sem confirmar os símbolos, use o [isymunmanagedwriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) método em vez disso.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

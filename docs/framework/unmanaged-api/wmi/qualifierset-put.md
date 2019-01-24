@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694133"
 ---
 # <a name="qualifiersetput-function"></a>Função QualifierSet_Put
 Grava o qualificador nomeado e o valor. O novo qualificador substitui o valor anterior do mesmo nome. Se o qualificador não existir, ele é criado. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | O qualificador pode ser substituído em uma classe derivada ou instância. **Esse é o valor padrão.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | O qualificador é propagado para instâncias. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | O qualificador é propagado para classes derivadas. |
-| ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | O qualificador não pode ser substituído em uma instância ou classe derivada. |
-| ' WBEM_FLAVOR_AMENDED | 0x80 | O qualificador é localizado. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | O qualificador não pode ser substituído em uma instância ou classe derivada. |
+| `WBEM_FLAVOR_AMENDED | 0x80 | O qualificador é localizado. |
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -80,11 +80,11 @@ Os seguintes valores retornados por essa função são definidos na *WbemCli.h* 
 Essa função encapsula uma chamada para o [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) método.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** WMINet_Utils.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também  
-[WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+## <a name="see-also"></a>Consulte também
+- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)

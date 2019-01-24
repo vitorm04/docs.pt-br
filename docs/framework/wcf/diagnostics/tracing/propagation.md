@@ -2,12 +2,12 @@
 title: Propagação
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686329"
 ---
 # <a name="propagation"></a>Propagação
 Este tópico descreve a propagação de atividade no modelo de rastreamento do Windows Communication Foundation (WCF).  
@@ -76,8 +76,8 @@ Este tópico descreve a propagação de atividade no modelo de rastreamento do W
 ## <a name="synchronization"></a>Sincronização  
  Para sincronizar os eventos em pontos de extremidade que são executados em máquinas diferentes, uma CorrelationId é adicionada ao cabeçalho da ActivityId é propagado nas mensagens. Ferramentas podem usar essa ID para sincronizar os eventos em máquinas com discrepância de relógio. Especificamente, a ferramenta Visualizador de rastreamento de serviço usa essa ID para mostrar os fluxos de mensagens entre pontos de extremidade.  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando o rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>Consulte também
+- [Configurando o rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Usando o Visualizador de Rastreamento de Serviço para exibir rastreamentos correlacionados e solucionar problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Cenários de rastreamento ponta a ponta](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

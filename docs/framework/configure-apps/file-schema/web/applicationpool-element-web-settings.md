@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d5d6ee0b5153c734249e64a4d29f6621edcc61bf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8700d58ff9b07c286c713544777205e043da40a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643111"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; (configurações da Web)
 Especifica as configurações que são usadas pelo ASP.NET para gerenciar o comportamento de todo o processo quando um aplicativo ASP.NET estiver em execução no modo integrado [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] ou uma versão posterior.  
@@ -96,5 +96,5 @@ Especifica as configurações que são usadas pelo ASP.NET para gerenciar o comp
 |Arquivo de validação||  
 |Pode ser vazio||  
   
-## <a name="see-also"></a>Consulte também  
- [\<system.web> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md) [Elemento system.web> (configurações da Web)]
+## <a name="see-also"></a>Consulte também
+- [\<system.web> Element (Web Settings)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md) [Elemento system.web> (configurações da Web)]

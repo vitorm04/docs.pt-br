@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: 4ecac4ffe665d724d625aaeb7cc1e008eb13ca54
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05dcaa18d799912d1b92685338a269a050db3f1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703478"
 ---
 # <a name="-win32resource"></a>-win32resource
 Insere um arquivo de recurso Win32 no arquivo de saída.  
@@ -46,6 +46,6 @@ Insere um arquivo de recurso Win32 no arquivo de saída.
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Consulte também
+- [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

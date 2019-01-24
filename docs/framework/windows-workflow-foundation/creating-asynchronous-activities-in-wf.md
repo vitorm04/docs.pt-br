@@ -2,12 +2,12 @@
 title: Criando atividades assíncrono em WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650922"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Criando atividades assíncrono em WF
 fornece<xref:System.Activities.AsyncCodeActivity> autores de atividade de uma classe base para usar que permite atividades derivados para implementar a lógica assíncrona de execução. Isso é útil para as atividades personalizados que devem realizar o trabalho assíncrona sem armazenar o segmento de agendador de fluxo de trabalho e bloquear quaisquer atividades que podem ser capaz executar paralelamente. Este tópico fornece uma visão geral sobre como criar atividades assíncronos personalizados usando <xref:System.Activities.AsyncCodeActivity>.  
@@ -44,9 +44,9 @@ fornece<xref:System.Activities.AsyncCodeActivity> autores de atividade de uma cl
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Ações de programação ou atividades filhos usando AsyncCodeActivity  
- <xref:System.Activities.AsyncCodeActivity> derivado atividades personalizados fornece um método para fazer o trabalho de forma assíncrona com relação ao segmento de fluxo de trabalho, mas não fornece a capacidade de agendar atividades filho ou ações. No entanto, o comportamento assíncrono pode ser inserido com programação de atividades filho através de composição. Uma atividade assíncrona pode ser criada, e redigir em com <xref:System.Activities.Activity> ou <xref:System.Activities.NativeActivity> derivado a atividade para fornecer o comportamento assíncrono e a programação de atividades filho ou de ações. Por exemplo, uma atividade pode ser criada que é derivado de <xref:System.Activities.Activity>, e tem como sua implementação <xref:System.Activities.Statements.Sequence> que contém a atividade assíncrono também as outras atividades que implementam a lógica de atividade. Para obter mais exemplos de composição atividades usando <xref:System.Activities.Activity> e <xref:System.Activities.NativeActivity>, consulte [como: criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) e [opções de criação de atividades](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ <xref:System.Activities.AsyncCodeActivity> derivado atividades personalizados fornece um método para fazer o trabalho de forma assíncrona com relação ao segmento de fluxo de trabalho, mas não fornece a capacidade de agendar atividades filho ou ações. No entanto, o comportamento assíncrono pode ser inserido com programação de atividades filho através de composição. Uma atividade assíncrona pode ser criada, e redigir em com <xref:System.Activities.Activity> ou <xref:System.Activities.NativeActivity> derivado a atividade para fornecer o comportamento assíncrono e a programação de atividades filho ou de ações. Por exemplo, uma atividade pode ser criada que é derivado de <xref:System.Activities.Activity>, e tem como sua implementação <xref:System.Activities.Statements.Sequence> que contém a atividade assíncrono também as outras atividades que implementam a lógica de atividade. Para obter mais exemplos de composição atividades usando <xref:System.Activities.Activity> e <xref:System.Activities.NativeActivity>, consulte [como: Criar uma atividade](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) e [opções de criação de atividade](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

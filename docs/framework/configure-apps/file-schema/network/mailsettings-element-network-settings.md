@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 5c7b4d8fae2774fe8e52718fbce91e4bc193c124
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 954755c7576e0ca4dd7946926c77e1e7e18055e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713948"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; (configurações de rede)
 Configura as opções de envio de email.  
@@ -26,7 +26,7 @@ Configura as opções de envio de email.
   
 ```xml  
 <mailSettings>
-  <smtp> … </smtp>  
+  <smtp>...</smtp>  
 </mailSettings>
 ```  
   
@@ -67,6 +67,6 @@ Configura as opções de envio de email.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Net.Mail.SmtpClient>  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Net.Mail.SmtpClient>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

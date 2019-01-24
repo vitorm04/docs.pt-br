@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98b99493e54b123d37eb281455180b9a25baddd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79e65d86eda2f01e1d6f2af46c5ee8e15ff03ccb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730237"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>Método IMetaDataImport::EnumUserStrings
-Enumera os tokens de cadeia de caracteres que representa a cadeias de caracteres codificadas no escopo atual de metadados.  
+Enumera os tokens de cadeia de caracteres que representa cadeias de caracteres codificadas no escopo atual de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT EnumUserStrings (
   
 #### <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out no] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada do método.  
+ [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
   
  `rStrings`  
  [out] A matriz usada para armazenar os tokens de cadeia de caracteres.  
@@ -49,27 +49,27 @@ HRESULT EnumUserStrings (
  [in] O tamanho máximo da `rStrings` matriz.  
   
  `pcStrings`  
- [out] O número de tokens de cadeia de caracteres retornados em `rStrings`.  
+ [out] O número de tokens de cadeia de caracteres retornada no `rStrings`.  
   
 ## <a name="return-value"></a>Valor de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` retornou com êxito.|  
-|`S_FALSE`|Não há nenhum tokens para enumerar. Nesse caso, `pcStrings` é zero.|  
+|`S_OK`|`EnumUserStrings` retornado com êxito.|  
+|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcStrings` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- Os tokens de cadeia de caracteres são criados pelo [: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) método. Esse método foi projetado para ser usado por um navegador de metadados em vez de um compilador.  
+ Os tokens de cadeia de caracteres são criados pela [imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) método. Esse método é projetado para ser usado por um navegador de metadados em vez de um compilador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

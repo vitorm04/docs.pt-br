@@ -9,18 +9,18 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 10a6451827a16605ba738cf74b7f684b69adb5dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643956"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Ordem dos eventos em formulários do Windows Forms
 A ordem na qual os eventos são gerados em aplicativos do Windows Forms é de interesse específico para os desenvolvedores preocupados com tratamento de cada um desses eventos sucessivamente. Quando uma situação exigir tratamento meticuloso de eventos, como quando você estiver redesenhando partes do formulário, será necessário um reconhecimento da ordem exata na qual os eventos são gerados em tempo de execução. Este tópico fornece alguns detalhes sobre a ordem dos eventos durante vários estágios importantes no tempo de vida de aplicativos e controles. Para obter detalhes específicos sobre a ordem de eventos de entrada do mouse, consulte [Eventos de mouse no Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Para obter uma visão geral de eventos no Windows Forms, consulte [Visão geral de eventos](../../../docs/framework/winforms/events-overview-windows-forms.md). Para obter detalhes sobre a composição de manipuladores de eventos, consulte [Visão geral de manipuladores de eventos](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
 ## <a name="application-startup-and-shutdown-events"></a>Eventos de inicialização e desligamento de aplicativos  
- O <xref:System.Windows.Forms.Form> e <xref:System.Windows.Forms.Control> classes exponham um conjunto de eventos relacionados ao aplicativo de inicialização e desligamento. Quando um Aplicativo do Windows Forms é iniciado, os eventos de inicialização do formulário principal são gerados na seguinte ordem:  
+ O <xref:System.Windows.Forms.Form> e <xref:System.Windows.Forms.Control> classes expõem um conjunto de eventos relacionados ao aplicativo de inicialização e desligamento. Quando um Aplicativo do Windows Forms é iniciado, os eventos de inicialização do formulário principal são gerados na seguinte ordem:  
   
 -   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
@@ -46,13 +46,13 @@ A ordem na qual os eventos são gerados em aplicativos do Windows Forms é de in
   
 -   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- O <xref:System.Windows.Forms.Application.ApplicationExit> evento o <xref:System.Windows.Forms.Application> classe é gerada após os eventos de desligamento do formulário principal.  
+ O <xref:System.Windows.Forms.Application.ApplicationExit> eventos do <xref:System.Windows.Forms.Application> classe é gerado após os eventos de desligamento do formulário principal.  
   
 > [!NOTE]
->  Visual Basic 2005 inclui eventos de aplicativo adicionais, como <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.  
+>  Visual Basic 2005 inclui eventos de aplicativo adicionais, tais como <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> e <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.  
   
 ## <a name="focus-and-validation-events"></a>Eventos de foco e validação  
- Quando você altera o foco usando o teclado (guia, SHIFT + TAB e assim por diante), chamando o <xref:System.Windows.Forms.Control.Select%2A> ou <xref:System.Windows.Forms.Control.SelectNextControl%2A> métodos, ou definindo o <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> propriedade para o formulário atual, eventos de foco do <xref:System.Windows.Forms.Control> classe ocorrem na seguinte ordem :  
+ Quando você altera o foco usando o teclado (TAB, SHIFT + TAB e assim por diante), chamando o <xref:System.Windows.Forms.Control.Select%2A> ou <xref:System.Windows.Forms.Control.SelectNextControl%2A> métodos, ou definindo o <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> propriedade ao formulário atual, eventos de foco do <xref:System.Windows.Forms.Control> classe ocorrem na seguinte ordem :  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -66,7 +66,7 @@ A ordem na qual os eventos são gerados em aplicativos do Windows Forms é de in
   
 -   <xref:System.Windows.Forms.Control.LostFocus>  
   
- Quando você altera o foco, usando o mouse ou chamando o <xref:System.Windows.Forms.Control.Focus%2A> método, eventos de foco do <xref:System.Windows.Forms.Control> classe ocorrem na seguinte ordem:  
+ Quando você altera o foco usando o mouse ou chamando o <xref:System.Windows.Forms.Control.Focus%2A> eventos de foco de um método, o <xref:System.Windows.Forms.Control> classe ocorrem na seguinte ordem:  
   
 -   <xref:System.Windows.Forms.Control.Enter>  
   
@@ -80,5 +80,5 @@ A ordem na qual os eventos são gerados em aplicativos do Windows Forms é de in
   
 -   <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>Consulte também  
- [Criando manipuladores de eventos no Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Criando manipuladores de eventos no Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

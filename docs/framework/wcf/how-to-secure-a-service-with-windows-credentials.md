@@ -1,5 +1,5 @@
 ---
-title: Como proteger um serviço com credenciais Windows
+title: 'Como: Proteger um serviço com credenciais do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657552"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>Como proteger um serviço com credenciais Windows
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>Como: Proteger um serviço com credenciais do Windows
 Este tópico mostra como habilitar a segurança de transporte em um serviço do Windows Communication Foundation (WCF) que reside em um domínio do Windows e é chamado por clientes no mesmo domínio. Para obter mais informações sobre esse cenário, consulte [segurança de transporte com autenticação do Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Para um aplicativo de exemplo, consulte o [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemplo.  
   
  Este tópico pressupõe que você tem uma interface de contrato existente e a implementação já definida e adiciona o logon em que. Você também pode modificar um serviço existente e o cliente.  
@@ -74,7 +74,7 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Usar uma associação em um cliente com o código  
   
-1.  Use a ferramenta de SvcUtil.exe para gerar o código de proxy de metadados do serviço. Para obter mais informações, consulte [como: criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). O código de proxy gerada herda o <xref:System.ServiceModel.ClientBase%601> classe, que garante que cada cliente tenha o necessário construtores, métodos e propriedades para se comunicar com um serviço WCF. Neste exemplo, o código gerado inclui o `CalculatorClient` de classe que implementa o `ICalculator` interface, habilitando a compatibilidade com o código de serviço.  
+1.  Use a ferramenta de SvcUtil.exe para gerar o código de proxy de metadados do serviço. Para obter mais informações, confira [Como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). O código de proxy gerada herda o <xref:System.ServiceModel.ClientBase%601> classe, que garante que cada cliente tenha o necessário construtores, métodos e propriedades para se comunicar com um serviço WCF. Neste exemplo, o código gerado inclui o `CalculatorClient` de classe que implementa o `ICalculator` interface, habilitando a compatibilidade com o código de serviço.  
   
 2.  Esse código de procedimento é inserido no início do `Main` método do programa cliente.  
   
@@ -127,7 +127,7 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Usar uma associação em um cliente com a configuração  
   
-1.  Use a ferramenta de SvcUtil.exe para gerar o arquivo de código e a configuração de proxy de metadados do serviço. Para obter mais informações, consulte [como: criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Use a ferramenta de SvcUtil.exe para gerar o arquivo de código e a configuração de proxy de metadados do serviço. Para obter mais informações, confira [Como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Substitua os [ \<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) seção do arquivo de configuração gerado com o código de configuração da seção anterior.  
   
@@ -147,9 +147,9 @@ Este tópico mostra como habilitar a segurança de transporte em um serviço do 
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.WSHttpBinding>  
- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Como criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)  
- [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.WSHttpBinding>
+- [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Como: Criar um cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Protegendo serviços](../../../docs/framework/wcf/securing-services.md)
+- [Visão geral de segurança](../../../docs/framework/wcf/feature-details/security-overview.md)

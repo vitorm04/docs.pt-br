@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728759"
 ---
 # <a name="icordebugcodegetcode-method"></a>Método ICorDebugCode::GetCode
-Obtém a todo o código para a função especificada, formatada para a desmontagem. Esse método foi preterido no .NET Framework versão 2.0. Use [Icordebugcode2](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) em vez disso.  
+Obtém todo o código para a função especificada, formatada para desmontagem. Esse método foi preterido no .NET Framework versão 2.0. Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ HRESULT GetCode (
  [in] O deslocamento do final da função.  
   
  `cBufferAlloc`  
- [in] O tamanho do `buffer` matriz na qual o código será retornado.  
+ [in] O tamanho do `buffer` de matriz no qual o código será retornado.  
   
  `buffer`  
  [out] A matriz na qual o código será retornado.  
@@ -57,17 +57,17 @@ HRESULT GetCode (
  [out] O número de bytes retornados.  
   
 ## <a name="remarks"></a>Comentários  
- Se o código da função foi dividido em várias partes, eles são concatenados em ordem crescente de deslocamento nativo. Limites de instrução não são verificados.  
+ Se o código da função foi dividido em várias partes, elas são concatenadas em ordem crescente de deslocamento nativo. Limites de instrução não são verificados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 1.1 e 1.0  
+ **Versões do .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Consulte também  
- [Método GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>Consulte também
+- [Método GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

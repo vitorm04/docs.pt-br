@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18247a947449ea5fd19f1882031b598086332742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698720"
 ---
 # <a name="rundll32shimw-function"></a>Função RunDll32ShimW
 Executa o comando especificado.  
@@ -41,7 +41,7 @@ HRESULT RunDll32ShimW (
   
 #### <a name="parameters"></a>Parâmetros  
  `hwnd`  
- [in] Um identificador para uma janela de saída do comando será exibida.  
+ [in] Um identificador para uma janela na qual a saída do comando será exibida.  
   
  `hinst`  
  [in] Um identificador para a biblioteca que contém o comando.  
@@ -50,16 +50,16 @@ HRESULT RunDll32ShimW (
  [in] Uma cadeia de caracteres que especifica o comando a ser executado.  
   
  `nCmdShow`  
- [in] Um inteiro que especifica o modo de exibição para a janela de saída.  
+ [in] Um inteiro que especifica o modo de exibição da janela de saída.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Consulte também
+- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

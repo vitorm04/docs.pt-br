@@ -2,12 +2,12 @@
 title: Transações distribuídas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660327"
 ---
 # <a name="distributed-transactions"></a>Transações distribuídas
 Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (confirmação) ou falha (anulação) como uma unidade, entre outras coisas. Um *transação distribuída* é uma transação que afeta vários recursos. Para que uma transação distribuída seja confirmada, todos os participantes devem garantir que qualquer alteração nos dados será permanente. As alterações devem persistir mesmo que haja falhas do sistema ou outros eventos imprevisíveis. Mesmo se um único participante não fizer essa garantia, a transação inteira falhará e todas as alterações aos dados dentro do escopo da transação serão revertidas.  
@@ -47,7 +47,7 @@ Uma transação é um conjunto de tarefas relacionadas que é bem-sucedida (conf
 ## <a name="configuring-distributed-transactions"></a>Configurando transações distribuídas  
  Você talvez precise habilitar o MS DTC na rede para usar transações distribuídas. Se tiver o Firewall do Windows habilitado, você deverá permitir que o serviço do MS DTC use a rede ou abra a porta do MS DTC.  
   
-## <a name="see-also"></a>Consulte também  
- [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Integração de System.Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Transações e simultaneidade](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Integração de System.Transactions com o SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

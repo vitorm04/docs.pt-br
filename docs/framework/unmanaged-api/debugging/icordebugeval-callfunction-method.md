@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 493b4850436b3724287210878992d1d8ce8fe168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589393"
 ---
 # <a name="icordebugevalcallfunction-method"></a>Método ICorDebugEval::CallFunction
-Configura uma chamada para a função especificada.  
+Define uma chamada para a função especificada.  
   
- Este método está obsoleto no .NET Framework versão 2.0. Use [Icordebugeval2](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) em vez disso.  
+ Este método é obsoleto no .NET Framework versão 2.0. Use [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,13 +44,13 @@ HRESULT CallFunction (
  [in] Ponteiro para um objeto de ICorDebugFunction que especifica a função a ser chamado.  
   
  `nArgs`  
- [in] O número de argumentos para a função.  
+ [in] O número de argumentos da função.  
   
  `ppArgs`  
  [in] Uma matriz de ponteiros, cada um deles aponta para um objeto de ICorDebugValue que especifica um argumento a ser passado para a função.  
   
 ## <a name="remarks"></a>Comentários  
- Se a função é virtual, `CallFunction` executará expedição virtual. Se a função está em um domínio de aplicativo diferente, ocorrerá uma transição desde que todos os argumentos também estão no domínio de aplicativo.  
+ Se a função é virtual, `CallFunction` executará a expedição virtual. Se a função está em um domínio de aplicativo diferente, uma transição ocorrerá desde que todos os argumentos também estão no domínio do aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** WindowSee [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -59,7 +59,7 @@ HRESULT CallFunction (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 1.1 e 1.0  
+ **Versões do .NET framework:** 1.1, 1.0  
   
-## <a name="see-also"></a>Consulte também  
- [Método CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)
+## <a name="see-also"></a>Consulte também
+- [Método CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

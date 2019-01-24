@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665845"
 ---
 # <a name="path-animation-how-to-topics"></a>Tópicos explicativos de animação do caminho
 Os tópicos nesta seção demonstram como animar um objeto ao longo de um caminho.  
@@ -30,7 +30,7 @@ Os tópicos nesta seção demonstram como animar um objeto ao longo de um caminh
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>Consulte também  
- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Elementos gráficos e multimídia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Visão geral da animação](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Visão geral das animações de quadro-chave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

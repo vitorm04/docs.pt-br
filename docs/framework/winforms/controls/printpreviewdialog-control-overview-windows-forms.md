@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0946220017fb78775f045bb225d84ea95aecd06b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667551"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Visão geral do controle PrintPreviewDialog (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> controle é uma caixa de diálogo pré-configurada usada para exibir como um [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) aparecerá quando impresso. Use-o em seu aplicativo baseado no Windows como uma solução simples em vez de configurar sua própria caixa de diálogo. O controle contém botões para imprimir, aumentar o zoom, exibir uma ou várias páginas e fechar a caixa de diálogo.  
+Os formulários do Windows <xref:System.Windows.Forms.PrintPreviewDialog> controle é uma caixa de diálogo pré-configurada usada para exibir como um [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) aparecerá quando impresso. Use-o em seu aplicativo baseado no Windows como uma solução simples em vez de configurar sua própria caixa de diálogo. O controle contém botões para imprimir, aumentar o zoom, exibir uma ou várias páginas e fechar a caixa de diálogo.  
   
 ## <a name="key-properties-and-methods"></a>Métodos e propriedades de chave  
- Propriedade de chave do controle é <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, que define o documento a ser visualizado. O documento deve ser um <xref:System.Drawing.Printing.PrintDocument> objeto. Para exibir a caixa de diálogo, você deve chamar o <xref:System.Windows.Forms.Form.ShowDialog%2A> método. A suavização pode fazer o texto pareça mais suave, mas ele também pode tornar a exibição mais lenta; para usá-lo, defina o <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> propriedade `true`.  
+ Propriedade de chave do controle é <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, que define o documento a ser visualizado. O documento deve ser um <xref:System.Drawing.Printing.PrintDocument> objeto. Para exibir a caixa de diálogo, você deve chamar seu <xref:System.Windows.Forms.Form.ShowDialog%2A> método. A suavização pode tornar o texto mais suave, mas também pode tornar a exibição mais lenta; para usá-lo, defina as <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> propriedade para `true`.  
   
- Determinadas propriedades estão disponíveis por meio de <xref:System.Windows.Forms.PrintPreviewControl> que o <xref:System.Windows.Forms.PrintPreviewDialog> contém. (Você não precisa adicionar este <xref:System.Windows.Forms.PrintPreviewControl> para o formulário; ele é automaticamente incluído no <xref:System.Windows.Forms.PrintPreviewDialog> quando você adiciona a caixa de diálogo ao formulário.) Exemplos de propriedades disponíveis por meio de <xref:System.Windows.Forms.PrintPreviewControl> são o <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> e <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> propriedades, que determina o número de páginas exibidas horizontalmente e verticalmente no controle. Você pode acessar o <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> a propriedade como `PrintPreviewDialog1.PrintPreviewControl.Columns` no Visual Basic, `printPreviewDialog1.PrintPreviewControl.Columns` no Visual c#, ou `printPreviewDialog1->PrintPreviewControl->Columns` em [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].  
+ Certas propriedades estão disponíveis por meio de <xref:System.Windows.Forms.PrintPreviewControl> que o <xref:System.Windows.Forms.PrintPreviewDialog> contém. (Não é preciso adicionar isso <xref:System.Windows.Forms.PrintPreviewControl> ao formulário; ele é automaticamente incluído no <xref:System.Windows.Forms.PrintPreviewDialog> quando você adiciona a caixa de diálogo ao formulário.) Exemplos de propriedades disponíveis por meio de <xref:System.Windows.Forms.PrintPreviewControl> são a <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> e <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> propriedades que determinam o número de páginas exibidas horizontal e verticalmente no controle. Você pode acessar o <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> a propriedade como `PrintPreviewDialog1.PrintPreviewControl.Columns` no Visual Basic `printPreviewDialog1.PrintPreviewControl.Columns` no Visual C#, ou `printPreviewDialog1->PrintPreviewControl->Columns` na [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].  
   
 ## <a name="printpreviewdialog-performance"></a>Desempenho PrintPreviewDialog
 
 Sob as seguintes condições, o <xref:System.Windows.Forms.PrintPreviewDialog> controle inicializa muito lenta:
 
 - Uma impressora de rede é usada.
-- Preferências do usuário para esta impressora, como configurações de duplex são modificadas.
+- As preferências do usuário para essa impressora, como as configurações duplex, são modificadas.
   
 Para aplicativos em execução no .NET Framework 4.5.2, você pode adicionar a seguinte chave para o \<appSettings > seção do arquivo de configuração para melhorar o desempenho de <xref:System.Windows.Forms.PrintPreviewDialog> controlam a inicialização:
 
@@ -39,20 +39,20 @@ Para aplicativos em execução no .NET Framework 4.5.2, você pode adicionar a s
 ```
 Se o `EnablePrintPreviewOptimization` chave é definida como qualquer outro valor, ou se a chave não estiver presente, a otimização não é aplicada.
 
-Para aplicativos em execução no .NET Framework 4.6 ou posterior, você pode adicionar a seguinte opção para o [ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elemento o [ \<tempo de execução >](../../configure-apps/file-schema/runtime/index.md) seção de seu arquivo de configuração do aplicativo:
+Para aplicativos em execução no .NET Framework 4.6 ou versões posteriores, você pode adicionar a seguinte opção para o [ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elemento no [ \<tempo de execução >](../../configure-apps/file-schema/runtime/index.md) seção do arquivo de configuração de aplicativo:
 
 ```xml
 <runtime >
-   <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false -->
+   <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false -->
    <AppContextSwitchOverrides value = "Switch.System.Drawing.Printing.OptimizePrintPreview=true" />
 </runtime >
 ``` 
-Se a opção não estiver presente ou se ele é definido como qualquer outro valor, a otimização não é aplicada. 
+Se a opção não estiver presente ou se ele for definido como qualquer outro valor, a otimização não é aplicada. 
 
-Se você usar o <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> eventos para modificar as configurações de impressora, o desempenho do <xref:System.Windows.Forms.PrintPreviewDialog> controle não melhorará o mesmo que uma opção de configuração de otimização é definida.  
+Se você usar o <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> evento para modificar as configurações de impressora, o desempenho do <xref:System.Windows.Forms.PrintPreviewDialog> controle não melhorará o mesmo que uma opção de configuração de otimização é definida.  
 
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.PrintPreviewDialog>  
- [Visão geral do controle PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
- [Controle PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [Controles e componentes da caixa de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.PrintPreviewDialog>
+- [Visão geral do controle PrintPreviewControl](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
+- [Controle PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
+- [Controles e componentes da caixa de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)

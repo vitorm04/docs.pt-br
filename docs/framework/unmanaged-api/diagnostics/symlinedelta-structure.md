@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77cd8b7d791d11f6d40386f4747c60cd4832521a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d534ae381e0dc105731cf0a537f81afe80d87e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732733"
 ---
 # <a name="symlinedelta-structure"></a>Estrutura SYMLINEDELTA
-Fornece informações sobre os métodos que foram movidos em decorrência de edições para o manipulador de símbolo.  
+Fornece informações para o manipulador de símbolo sobre os métodos que foram movidos em decorrência de edições.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,5 +46,5 @@ typedef struct _SYMLINEDELTA
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl  
   
-## <a name="see-also"></a>Consulte também  
- [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>Consulte também
+- [Estruturas de repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

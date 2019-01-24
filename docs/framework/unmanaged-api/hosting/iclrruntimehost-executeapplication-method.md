@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656356"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>Método ICLRRuntimeHost::ExecuteApplication
-Usado em cenários de implantação de ClickOnce baseado no manifesto para especificar o aplicativo a ser ativado em um novo domínio. Para obter mais informações sobre esses cenários, consulte [segurança ClickOnce e implantação](/visualstudio/deployment/clickonce-security-and-deployment).  
+Usado em cenários de implantação de ClickOnce baseado em manifesto para especificar o aplicativo a ser ativado em um novo domínio. Para obter mais informações sobre esses cenários, consulte [implantação e segurança do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,16 +45,16 @@ HRESULT ExecuteApplication(
  [in] O nome completo do aplicativo, conforme definido para <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- [in] O número de cadeias de caracteres dentro de `ppwzManifestPaths` matriz.  
+ [in] O número de cadeias de caracteres contidos no `ppwzManifestPaths` matriz.  
   
  `ppwzManifestPaths`  
  [in] Opcional. Uma matriz de cadeia de caracteres que contém os caminhos do manifesto do aplicativo.  
   
  `dwActivationData`  
- [in] O número de cadeias de caracteres dentro de `ppwzActivationData` matriz.  
+ [in] O número de cadeias de caracteres contidos no `ppwzActivationData` matriz.  
   
  `ppwzActivationData`  
- [in] Opcional. Uma matriz de cadeia de caracteres que contém os dados de ativação do aplicativo, como a parte da cadeia de caracteres de consulta da URL para os aplicativos implantados pela Web.  
+ [in] Opcional. Uma matriz de cadeia de caracteres que contém dados de ativação do aplicativo, como a parte da cadeia de caracteres de consulta da URL para aplicativos implantados pela Web.  
   
  `pReturnValue`  
  [out] O valor retornado do ponto de entrada do aplicativo.  
@@ -63,34 +63,34 @@ HRESULT ExecuteApplication(
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` retornou com êxito.|  
-|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar código gerenciado ou processar a chamada com êxito.|  
-|HOST_E_TIMEOUT|A chamada foi atingido.|  
-|HOST_E_NOT_OWNER|O chamador não possui o bloqueio.|  
-|HOST_E_ABANDONED|Um evento foi cancelado durante um thread bloqueado ou fibra estava aguardando nele.|  
-|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornará E_FAIL, o CLR não será mais utilizável dentro do processo. As chamadas subsequentes para hospedagem métodos retornam HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`ExecuteApplication` retornado com êxito.|  
+|HOST_E_CLRNOTAVAILABLE|O common language runtime (CLR) não foi carregado em um processo ou o CLR está em um estado em que ele não pode executar o código gerenciado ou processar a chamada com êxito.|  
+|HOST_E_TIMEOUT|A chamada atingiu o tempo limite.|  
+|HOST_E_NOT_OWNER|O chamador não é proprietário do bloqueio.|  
+|HOST_E_ABANDONED|Um evento foi cancelado enquanto um thread bloqueado ou fibra estava esperando por ele.|  
+|E_FAIL|Ocorreu uma falha catastrófica desconhecida. Se um método retornar E_FAIL, o CLR não é mais utilizável dentro do processo. As chamadas subsequentes à hospedagem de métodos de retorno HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentários  
  `ExecuteApplication` é usada para ativar aplicativos ClickOnce em um domínio de aplicativo recém-criado.  
   
- O `pReturnValue` parâmetro de saída é definido como o valor retornado pelo aplicativo. Se você fornecer um valor nulo para `pReturnValue`, `ExecuteApplication` não falha, mas não retorna um valor.  
+ O `pReturnValue` parâmetro de saída é definido como o valor retornado pelo aplicativo. Se você fornecer um valor null para `pReturnValue`, `ExecuteApplication` não falhar, mas não retorna um valor.  
   
 > [!IMPORTANT]
->  Não chame o [método Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método antes de chamar o `ExecuteApplication` método para ativar um aplicativo baseado no manifesto. Se o `Start` método é chamado pela primeira vez, o `ExecuteApplication` haverá falha na chamada de método.  
+>  Não chame o [método Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método antes de chamar o `ExecuteApplication` método para ativar um aplicativo baseado em manifesto. Se o `Start` método é chamado pela primeira vez, o `ExecuteApplication` chamada de método falhará.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ActivationContext>  
- <xref:System.AppDomainManager>  
- <xref:System.ApplicationIdentity>  
- [Interface ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [Método SetAppDomainManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)  
- [Passo a passo: baixando assemblies sob demanda com a API de implantação do ClickOnce usando o designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+## <a name="see-also"></a>Consulte também
+- <xref:System.ActivationContext>
+- <xref:System.AppDomainManager>
+- <xref:System.ApplicationIdentity>
+- [Interface ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [Método SetAppDomainManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
+- [Passo a passo: Como baixar assemblies sob demanda com a API de implantação do ClickOnce usando o designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

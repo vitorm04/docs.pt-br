@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861839"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675061"
 ---
 # <a name="using-drawingvisual-objects"></a>Usando objetos DrawingVisual
 Este tópico fornece uma visão geral de como usar <xref:System.Windows.Media.DrawingVisual> objetos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] camada visual.  
@@ -69,8 +69,8 @@ Este tópico fornece uma visão geral de como usar <xref:System.Windows.Media.Dr
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Media.DrawingVisual>  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Teste de clique na camada visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Media.DrawingVisual>
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- [Visão geral de renderização de gráficos do WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Teste de clique na camada visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

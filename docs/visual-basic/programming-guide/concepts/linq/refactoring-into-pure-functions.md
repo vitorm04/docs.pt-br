@@ -2,12 +2,12 @@
 title: Refatoração em funções puras (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 207b77ff50cd2aaeede758db69b48c8f29a16ab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4be0c3574f2bd3171b8f5a86359d3181fe8731
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644452"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Refatoração em funções puras (Visual Basic)
 Um aspecto importante de transformações e puras é aprender como o código do refatorar usando funções puras.  
@@ -20,7 +20,7 @@ Um aspecto importante de transformações e puras é aprender como o código do 
   
  Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas. Dessa maneira, você pode criar versões puras de função do código existente.  
   
- Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial mostra como manipular um documento de WordprocessingML e inclui dois exemplos de como a refatoração usando uma função pura.  
+ Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) tutorial mostra como manipular um documento WordprocessingML e inclui dois exemplos de como refatorar usando uma função pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminando efeitos colaterais e dependências externas  
  Os seguintes exemplos contrastam duas funções não puras e uma função pura.  
@@ -49,7 +49,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- Observe que é irrelevante se os dados que está sendo modificados tem `public` ou `private` acessar, ou é um `shared` membro ou um membro de instância. Uma função pura não altera quaisquer dados fora da função.  
+ Observe que é irrelevante se os dados que está sendo modificados tem `public` ou `private` acessar ou é um `shared` membro ou um membro de instância. Uma função pura não altera quaisquer dados fora da função.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>Função não pura que altera um argumento  
  Além disso, a seguinte versão dessa mesma função não é pura porque modifica o conteúdo do seu parâmetro, `sb`.  
@@ -97,8 +97,8 @@ End Module
 ## <a name="standard-query-operators"></a>Operadores de consulta padrão  
  Uma característica importante dos operadores de consulta padrão é que são implementados como funções puras.  
   
- Para obter mais informações, consulte [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Para obter mais informações, consulte [visão geral de operadores padrão consulta (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Consulte também  
- [Introdução às transformações e puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Consulte também
+- [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Programação funcional versus Programação imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -1,19 +1,19 @@
 ---
-title: Como desenhar um retângulo
+title: 'Como: Desenhar um retângulo'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], rectangles
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 5f65bd11976817fe3f4d3e5d016f820a249769c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674671"
 ---
-# <a name="how-to-draw-a-rectangle"></a>Como desenhar um retângulo
+# <a name="how-to-draw-a-rectangle"></a>Como: Desenhar um retângulo
 Este exemplo mostra como desenhar um retângulo usando o <xref:System.Windows.Shapes.Rectangle> elemento.  
   
  Para desenhar um retângulo, crie uma <xref:System.Windows.Shapes.Rectangle> elemento e especifique seus <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A>. Para pintar o interior de um retângulo, defina seu <xref:System.Windows.Shapes.Shape.Fill%2A>. Para fornecer uma estrutura de tópicos de retângulo, use seus <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> propriedades.  
@@ -29,8 +29,8 @@ Este exemplo mostra como desenhar um retângulo usando o <xref:System.Windows.Sh
   
  Este exemplo faz parte de um exemplo maior; para ver o exemplo completo, consulte o [Exemplo de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Shapes.Rectangle>  
- [Exemplo de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Visão geral da tabela](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Shapes.Rectangle>
+- [Exemplo de elementos de forma](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Visão geral de formas e desenho básico no WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Visão geral da tabela](../../../../docs/framework/wpf/advanced/table-overview.md)

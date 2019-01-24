@@ -2,12 +2,12 @@
 title: Recursos de segurança com associações personalizadas
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: c18bec095866c70622c75834e8a4d5fe6a491b08
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51359dd555db44891b4c8fe7bca9b62cab5f8d29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708513"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Recursos de segurança com associações personalizadas
 Você pode executar tarefas mais comuns de segurança usando uma das associações fornecidas pelo sistema. Se você precisar de mais controle, no entanto, você pode criar uma ligação personalizada com um <xref:System.ServiceModel.Channels.SecurityBindingElement>, conforme explicado nestes tópicos. Para obter mais informações sobre ligações personalizadas, consulte [ligações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -16,28 +16,28 @@ Você pode executar tarefas mais comuns de segurança usando uma das associaçõ
  [Modos de autenticação de SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
  Descreve os modos de autenticação que são possíveis com uma associação personalizada.  
   
- [Como criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Como: Criar uma associação personalizada utilizando o SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  Descreve as etapas básicas para criar uma associação personalizada com um elemento de segurança.  
   
- [Como criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [Como: Criar um SecurityBindingElement para um modo de autenticação especificado](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
  Descreve como criar um elemento de segurança para um modo de autenticação especificado.  
   
- [Como: desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Como: Desabilitar sessões seguras em um WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Descreve como desabilitar sessões seguras ao criar um serviço de Federação.  
   
- [Como habilitar a detecção de reprodução de mensagem](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
+ [Como: Habilitar a detecção de reprodução de mensagem](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  Descreve como determinar quando ocorre um ataque de repetição.  
   
- [Como criar uma credencial de suporte](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
+ [Como: Criar uma credencial de suporte](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
  Descreve como fornecer uma credencial de suporte a um serviço, se o serviço exigir.  
   
- [Como configurar uma confirmação de assinatura](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
+ [Como: Configurar uma confirmação de assinatura](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
  Descreve as etapas para confirmar assinaturas ao assinar digitalmente as mensagens.  
   
- [Como definir uma distorção máxima do relógio](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
+ [Como: Definir uma distorção máxima do relógio](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
  Descreve como definir a diferença de tempo máximo permitido entre um serviço e um cliente.  
   
- [Como desabilitar a criptografia de assinaturas digitais](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
+ [Como: Desabilitar a criptografia de assinaturas digitais](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
  Descreve como desabilitar a criptografia de assinaturas digitais que pode ter um benefício de desempenho.  
   
 ## <a name="reference"></a>Referência  
@@ -50,7 +50,7 @@ Você pode executar tarefas mais comuns de segurança usando uma das associaçõ
   
  [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
+## <a name="see-also"></a>Consulte também
+- [Associações e segurança](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)

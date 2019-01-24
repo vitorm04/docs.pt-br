@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: ac789ba81d728c067be515479e749440bb5809d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744577"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confiança
 Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. Os serviços Web são projetados para que o acesso a recursos adicionais (como bancos de dados ou outros serviços da Web) é encapsulado na lógica de negócios do serviço Web. Esses recursos devem ser protegidos contra acesso não autorizado. A ilustração a seguir ilustra um processo de subsistema confiável.  
   
- ![Confiável subsistema](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![Trusted subsystem](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  As etapas a seguir descrevem o processo de subsistema confiável, conforme ilustrado:  
   
@@ -101,7 +101,7 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Configuração  
- A configuração a seguir configura o mesmo ponto de extremidade usando a configuração. Observe duas ligações: uma protege o serviço hospedado no subsistema confiável e o outro se comunica entre o subsistema confiável e o serviço de back-end.  
+ A configuração a seguir configura o mesmo ponto de extremidade usando a configuração. Observe as duas associações: Um protege o serviço hospedado no subsistema confiável e o outro se comunica entre o subsistema confiável e o serviço de back-end.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -210,6 +210,6 @@ Um cliente acessa um ou mais serviços Web que são distribuídos em uma rede. O
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

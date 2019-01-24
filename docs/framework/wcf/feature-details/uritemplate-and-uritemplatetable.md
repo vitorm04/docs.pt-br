@@ -2,12 +2,12 @@
 title: UriTemplate and UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722602"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate and UriTemplateTable
 Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout dos URIs que seus serviços respondem a. Windows Communication Foundation (WCF) adicionadas duas novas classes para dar aos desenvolvedores controle sobre seus URIs. <xref:System.UriTemplate> e <xref:System.UriTemplateTable> formam a base do mecanismo de expedição baseada em URI no WCF. Essas classes também podem ser usadas em seu próprios, permitindo que os desenvolvedores tirem proveito de modelos e o URI de mecanismo de mapeamento sem implementar um serviço WCF.  
@@ -18,9 +18,9 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 |Dados|Modelo|  
 |----------|--------------|  
 |Previsão nacional|clima/nacional|  
-|Previsão do estado|clima / {state}|  
-|Previsão de cidade|clima / {state} / {cidade}|  
-|Previsão de atividade|clima / {state} / {cidade} / {atividade}|  
+|Previsão do estado|weather/{state}|  
+|Previsão de cidade|weather/{state}/{city}|  
+|Previsão de atividade|weather/{state}/{city}/{activity}|  
   
  Esta tabela descreve um conjunto de URIs estruturalmente semelhantes. Cada entrada é um modelo de URI. Os segmentos entre chaves descrevem variáveis. Os segmentos não entre chaves descrevem cadeias de caracteres literais. As classes de modelo WCF permitir que os desenvolvedores utilizam um URI de entrada, por exemplo, "/ clima/wa/seattle/circulando" e fazer sua correspondência para um modelo que descreve, "/weather/ {estado} / {cidade} / {atividade}".  
   
@@ -48,7 +48,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 - net.tcp://  
   
-- NET.pipe://  
+- net.pipe://  
   
 - sb://  
   
@@ -87,15 +87,15 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 - "calçado / {barco} /\*"  
   
-- "calçado/barco? x = 2"  
+- "shoe/boat?x=2"  
   
-- "calçado / {barco}? x = {cama}"  
+- "shoe/{boat}?x={bed}"  
   
-- "calçado / {barco}? x = {cama} & y = faixa"  
+- "shoe/{boat}?x={bed}&y=band"  
   
 - "?x={shoe}"  
   
-- "calçados? x = 3 & y = {var}  
+- "shoe?x=3&y={var}  
   
  Exemplos de cadeias de caracteres de modelo inválido:  
   
@@ -120,7 +120,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
   
 - /{filename}.{ext}/  
   
-- / {a}. {b}someLiteral{c}({d}) /  
+- /{a}.{b}someLiteral{c}({d})/  
   
  A seguir estão exemplos de segmentos de caminho inválido.  
   
@@ -129,7 +129,7 @@ Os desenvolvedores da Web exigem a capacidade para descrever a forma e o layout 
 - / {calçado} {barco} - variáveis devem ser separadas por um literal.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmentos de caminho correspondentes e compostas  
- Segmentos de caminho composto permitem que você defina um UriTemplate que tem diversas variáveis dentro de um único segmento de caminho. Por exemplo, na seguinte cadeia de caracteres de modelo: "endereços / {state}. {Cidade} "duas variáveis (estado e cidade) são definidas dentro do mesmo segmento. Este modelo corresponderia a uma URL como `http://example.com/Washington.Redmond` , mas também serão compatíveis com uma URL como `http://example.com/Washington.Redmond.Microsoft`. No último caso, a variável de estado conterá "Washington" e a variável de cidade irá conter "Redmond.Microsoft". Nesse caso, qualquer texto (exceto '/') corresponderá a variável {cidade}. Se você quiser um modelo que não corresponderá o texto "extra", coloca a variável em um segmento de modelo separado, por exemplo: "endereços / {state} / {cidade}.  
+ Segmentos de caminho composto permitem que você defina um UriTemplate que tem diversas variáveis dentro de um único segmento de caminho. Por exemplo, na seguinte cadeia de caracteres de modelo: "Endereços / {state}. {Cidade} "duas variáveis (estado e cidade) são definidas dentro do mesmo segmento. Este modelo corresponderia a uma URL como `http://example.com/Washington.Redmond` , mas também serão compatíveis com uma URL como `http://example.com/Washington.Redmond.Microsoft`. No último caso, a variável de estado conterá "Washington" e a variável de cidade irá conter "Redmond.Microsoft". Nesse caso, qualquer texto (exceto '/') corresponderá a variável {cidade}. Se você quiser um modelo que não corresponderá o texto "extra", coloca a variável em um segmento de modelo separado, por exemplo: "Endereços / {state} / {cidade}.  
   
 ### <a name="named-wildcard-segments"></a>Segmentos nomeados curinga  
  Um segmento curinga nomeado é qualquer segmento de caminho variável cujo nome de variável começa com o caractere curinga '\*'. A seguinte cadeia de caracteres de modelo contém um segmento curinga nomeado chamado "sapato".  
@@ -242,9 +242,9 @@ Quando uma variável recebe um valor padrão de `null` há algumas restrições 
 ### <a name="template-equivalence"></a>Equivalência de modelo  
  Dois modelos são considerados *estruturalmente equivalente* quando todos os literais dos modelos correspondem e têm variáveis nos mesmos segmentos. Por exemplo, os seguintes modelos são estruturalmente equivalentes:  
   
-- /a/ {var1} / b b / {var2}? x = 1 & y = 2  
+- /a/{var1}/b b/{var2}?x=1&y=2  
   
-- a/{x}/b%20b/{var1}?y=2 & x = 1  
+- a/{x}/b%20b/{var1}?y=2&x=1  
   
 - a/{y}/B%20B/{z}/?y=2&x=1  
   
@@ -275,13 +275,13 @@ Quando uma variável recebe um valor padrão de `null` há algumas restrições 
   
 - ?x=1  
   
-- ? x = 2  
+- ?x=2  
   
 - ?x=3  
   
-- ? x = 1 & y = {var}  
+- ?x=1&y={var}  
   
-- ? x = 2 e z = {var}  
+- ?x=2&z={var}  
   
 - ?x=3  
   
@@ -295,11 +295,11 @@ Quando uma variável recebe um valor padrão de `null` há algumas restrições 
   
 - ?m=get&c=rss  
   
-- ? m = put & c = rss  
+- ?m=put&c=rss  
   
 - ?m=get&c=atom  
   
-- ? m = put & c = atom  
+- ?m=put&c=atom  
   
  Os seguintes conjuntos de modelos de cadeia de caracteres de consulta são ambíguos em si mesmos:  
   
@@ -311,26 +311,26 @@ Quando uma variável recebe um valor padrão de `null` há algumas restrições 
   
 - ?x=1  
   
-- ? y = 2  
+- ?y=2  
   
  "x = 1 & y = 2" corresponde a ambos os modelos. Isso ocorre porque uma cadeia de caracteres de consulta pode conter mais variáveis de cadeia de caracteres de consulta e em seguida, o modelo que ela corresponde.  
   
 - ?x=1  
   
-- ? x = 1 & y = {var}  
+- ?x=1&y={var}  
   
  "x = 1 & y = 3" corresponde a ambos os modelos.  
   
-- ? x = 3 & y = 4  
+- ?x=3&y=4  
   
 - ?x=3&z=5  
   
 > [!NOTE]
 > Os caracteres á e Á são considerados diferentes caracteres quando eles são exibidos como parte de um caminho de URI ou <xref:System.UriTemplate> literal do segmento de caminho (mas os caracteres a e A são considerados para ser o mesmo). Os caracteres á e Á são considerados os mesmos caracteres quando eles são exibidos como parte de um <xref:System.UriTemplate> {variableName} ou uma cadeia de caracteres de consulta (e a e também são considerados para ser os mesmos caracteres).  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Dispatcher de Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral do modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Dispatcher de Tabela de UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

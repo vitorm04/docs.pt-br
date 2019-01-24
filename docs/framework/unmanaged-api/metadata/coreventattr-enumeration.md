@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4e4b9d9c7481bdc51aaf75b26b3805940875f8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d34aa954126cc26519aaea963f99299e5557d2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743044"
 ---
 # <a name="coreventattr-enumeration"></a>Enumeração CorEventAttr
 Contém valores que descrevem os metadados de um evento.  
@@ -43,16 +43,16 @@ typedef enum CorEventAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`evSpecialName`|Especifica que o evento é especial, e que descreve seu nome como.|  
+|`evSpecialName`|Especifica que o evento é especial, e que seu nome descreve como.|  
 |`evReservedMask`|Reservado para uso interno pelo common language runtime.|  
 |`evRTSpecialName`|Especifica que o common language runtime deve verificar a codificação do nome do evento.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corhdr  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

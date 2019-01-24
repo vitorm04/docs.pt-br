@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717396"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configurando serviços usando arquivos de configuração
 Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo de configuração fornece a flexibilidade de fornecer o ponto de extremidade e os dados de comportamento de serviço no ponto de implantação, em vez de em tempo de design. Este tópico descreve as principais técnicas disponíveis.  
@@ -21,7 +21,7 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 > [!IMPORTANT]
 >  Ao implantar os cenários lado a lado onde duas versões diferentes de um serviço são implantadas, é necessário especificar nomes parciais de assemblies referenciados em arquivos de configuração. Isso ocorre porque o arquivo de configuração é compartilhado entre todas as versões de um serviço e pode estar em execução em versões diferentes do .NET Framework.  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System. Configuration: Web. config e App. config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web. config e App. config  
  O WCF usa o sistema de configuração do System. Configuration de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Ao configurar um serviço no Visual Studio, use um arquivo Web. config ou um arquivo App. config para especificar as configurações. A escolha do nome do arquivo de configuração é determinada pelo ambiente de hospedagem que você escolhe para o serviço. Se você estiver usando o IIS para hospedar o serviço, use um arquivo Web.config. Se você estiver usando qualquer outro ambiente de hospedagem, use um arquivo App.config.  
@@ -69,7 +69,7 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 ### <a name="the-services-element"></a>O \<serviços > elemento  
  O elemento `services` contém as especificações de todos os serviços que o aplicativo hospeda. A partir do modelo de configuração simplificada no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], esta seção é opcional.  
   
- [\<Serviços >](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [\<services>](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
   
 ### <a name="the-service-element"></a>O \<service > elemento  
  Cada serviço tem os seguintes atributos:  
@@ -96,24 +96,24 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
 ### <a name="the-bindings-element"></a>O \<associações > elemento  
  O elemento `bindings` contém as especificações de todas as associações que podem ser usadas por qualquer ponto de extremidade definido em qualquer serviço.  
   
- [\<associações >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>O \<associação > elemento  
  O `binding` elementos contidos na `bindings` elemento pode ser uma das associações fornecidas pelo sistema (consulte [System-Provided ligações](../../../docs/framework/wcf/system-provided-bindings.md)) ou uma associação personalizada (consulte [ligações personalizadas](../../../docs/framework/wcf/extending/custom-bindings.md)). O elemento `binding` tem um atributo `name` que correlaciona a associação ao ponto de extremidade especificado no atributo `bindingConfiguration` do elemento `endpoint`. Se nenhum nome for especificado, a associação corresponderá ao padrão desse tipo de associação.  
   
  Para obter mais informações sobre como configurar serviços e clientes, consulte [Configurando o Windows Communication Foundation aplicativos](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
- [\<associação >](../../../docs/framework/misc/binding.md)  
+ [\<binding>](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>O \<comportamentos > elemento  
  Esse é um elemento contêiner dos elementos `behavior` que definem os comportamentos de um serviço.  
   
- [\<comportamentos >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>O \<comportamento > elemento  
  Cada `behavior` elemento é identificado por um `name` do atributo e fornece um comportamento fornecido pelo sistema, como <`throttling`>, ou um comportamento personalizado. Se nenhum nome for fornecido, esse elemento de comportamento corresponderá ao comportamento padrão do serviço ou do ponto de extremidade.  
   
- [\<comportamento de >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Como usar as configurações de associação e de comportamento  
  WCF torna mais fácil compartilhar configurações entre pontos de extremidade usando um sistema de referência na configuração. Em vez de atribuir valores de configuração diretamente a um ponto de extremidade, os valores da configuração relacionados à associação são agrupados em elementos `bindingConfiguration` na seção `<binding>`. A configuração de uma associação é um grupo nomeado de configurações em uma associação. Os pontos de extremidade podem fazer referência a `bindingConfiguration` por nome.  
@@ -262,8 +262,8 @@ Configurar um serviço do Windows Communication Foundation (WCF) com um arquivo 
   
  Se uma coleção de comportamentos filho contiver um comportamento que já esteja presente na coleção de comportamentos pai, o comportamento filho substituirá o pai. Portanto, se uma coleção de comportamentos pai tivesse `<serviceMetadata httpGetEnabled="False" />` e uma coleção de comportamentos filho tivesse `<serviceMetadata httpGetEnabled="True" />`, o comportamento filho substituiria o comportamento pai na coleção de comportamentos e httpGetEnabled seria "true".  
   
-## <a name="see-also"></a>Consulte também  
- [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)  
- [Configuring Windows Communication Foundation Applications](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<associação >](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Consulte também
+- [Configuração simplificada](../../../docs/framework/wcf/simplified-configuration.md)
+- [Configuring Windows Communication Foundation Applications](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a) (Configurando aplicativos do Windows Communication Foundation)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<binding>](../../../docs/framework/misc/binding.md)

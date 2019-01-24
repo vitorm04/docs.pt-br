@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716772"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>Enumeração CorValidatorModuleType
 Especifica o tipo de um módulo.  
@@ -47,20 +47,20 @@ typedef enum
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|O módulo é um tipo inválido.|  
 |`ValidatorModuleTypeMin`|O valor mínimo do `CorValidatorModuleType` enum.|  
-|`ValidatorModuleTypePE`|O módulo é um arquivo PE (executável portátil).|  
+|`ValidatorModuleTypePE`|O módulo é um arquivo executável portátil (PE).|  
 |`ValidatorModuleTypeObj`|O módulo é um arquivo. obj.|  
-|`ValidatorModuleTypeEnc`|O módulo é uma sessão do depurador edit-and-continue.|  
-|`ValidatorModuleTypeIncr`|O módulo é aquele que foi criado incrementalmente.|  
-|`ValidatorModuleTypeMax`|O valor máximo de `CorValidatorModuleType` enum.|  
+|`ValidatorModuleTypeEnc`|O módulo é uma sessão do depurador de editar e continuar.|  
+|`ValidatorModuleTypeIncr`|O módulo é aquele que foi compilado incrementalmente.|  
+|`ValidatorModuleTypeMax`|O valor máximo da `CorValidatorModuleType` enum.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

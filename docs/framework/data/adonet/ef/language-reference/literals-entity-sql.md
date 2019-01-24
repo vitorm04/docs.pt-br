@@ -2,12 +2,12 @@
 title: Literais (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643098"
 ---
 # <a name="literals-entity-sql"></a>Literais (Entity SQL)
 Este tópico descreve o suporte de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para literais.  
@@ -15,9 +15,9 @@ Este tópico descreve o suporte de [!INCLUDE[esql](../../../../../../includes/es
 ## <a name="null"></a>Nulo  
  O literal nulo é usado para representar o zero valor de qualquer tipo. Um literal nulo é compatível com qualquer tipo.  
   
- Tipado anula pode ser criado por uma conversão sobre um literal nulo. Para obter mais informações, consulte [CONVERSÃO](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Tipado anula pode ser criado por uma conversão sobre um literal nulo. Para obter mais informações, consulte [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
   
- Para regras sobre onde livre flutuante literais nulas pode ser usado, consulte [literais nulos e Inferência de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Para as regras sobre onde flutuante livres literais nulos podem ser usados, consulte [literais nulos e Inferência de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boolean  
  Literais booleanos são representados pelas palavras-chave `true` e `false`.  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Um literal de datetime é independente da localidade e é composto de uma parte da data e uma parte de tempo. Partes de data e hora são imperativas e não há nenhum valor padrão.  
   
- A parte de data deve ter o formato: `YYYY` - `MM` - `DD`, onde `YYYY` é um valor de ano de quatro dígitos entre 0001 e 9999, `MM` é o mês entre 1 e 12 e `DD` é o valor de dia é válido para o mês determinado `MM`.  
+ A parte de data deve ter o formato: `YYYY` - `MM` - `DD`, onde `YYYY` é um valor de ano de quatro dígitos entre 0001 e 9999, `MM` é o mês entre 1 e 12 e `DD` é o valor do dia que é válido para o mês determinado `MM`.  
   
  A parte de tempo deve ter o formato: `HH`:`MM`[:`SS`[.fffffff]], onde `HH` é o valor de hora entre 0 e 23, `MM` é minúsculo o valor entre 0 e 59, `SS` é o segundo valor entre 0 e 59 e o fffffff são o segundo valor fracionário entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou os segundos fracionários não for especificado, o valor padrão de zero será usado em vez disso.  
   
@@ -67,7 +67,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Um literal de datetimeoffset é independente da localidade e composta de uma parte da data, uma parte de tempo, e uma parte de deslocamento. Todos datam, multiplicado por, e as partes de deslocamento são imperativas e não há nenhum valor padrão. A parte de data deve ter o formato YYYY YYYY-MM-DD, onde é um valor do ano de quatro dígitos entre 0001 e 9999, mm é o mês entre 1 e 12, e o DD é o valor do dia que é válido para o mês determinado. A parte de tempo deve ter o formato HH:MM[:SS[.fffffff]], onde HH é o valor de hora entre 0 e 23, MM são o minuto valor entre 0 e 59, SS são o segundo valor entre 0 e 59, e fffffff é o segundo valor fracionário entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou frações não for especificado, o valor padrão de zero será usado em vez disso. A parte de deslocamento deve ter o formato {+&#124;-} hh: mm, onde HH e MM têm o mesmo significado como a parte de hora. O intervalo de deslocamento, no entanto, deve estar entre o 14:00 e + -14:00  
+ Um literal de datetimeoffset é independente da localidade e composta de uma parte da data, uma parte de tempo, e uma parte de deslocamento. Todos datam, multiplicado por, e as partes de deslocamento são imperativas e não há nenhum valor padrão. A parte de data deve ter o formato YYYY YYYY-MM-DD, onde é um valor do ano de quatro dígitos entre 0001 e 9999, mm é o mês entre 1 e 12, e o DD é o valor do dia que é válido para o mês determinado. A parte de tempo deve ter o formato HH:MM[:SS[.fffffff]], onde HH é o valor de hora entre 0 e 23, MM são o minuto valor entre 0 e 59, SS são o segundo valor entre 0 e 59, e fffffff é o segundo valor fracionário entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou frações não for especificado, o valor padrão de zero será usado em vez disso. A parte do deslocamento deve ter o formato {+&#124;-} hh: mm, onde HH e MM têm o mesmo significado que a parte de hora. O intervalo de deslocamento, no entanto, deve estar entre o 14:00 e + -14:00  
   
  Pode haver qualquer número de espaços entre o símbolo de DATETIMEOFFSET e a carga útil literal, mas nenhuma novas linhas.  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- Um literal de `GUID` representa um identificador exclusivo. É uma sequência formada pela palavra-chave `GUID` seguido de dígitos hexadecimais no formato conhecido como *registro* formato: 8-4-4-4-12 entre aspas. Os dígitos hexadecimais não diferenciam maiúsculas de minúsculas.  
+ Um literal de `GUID` representa um identificador exclusivo. É uma sequência formada pela palavra-chave `GUID` seguido por dígitos hexadecimais no formulário conhecido como *registro* formato: 8-4-4-4-12 colocado entre aspas. Os dígitos hexadecimais não diferenciam maiúsculas de minúsculas.  
   
  Pode haver qualquer número de espaços entre o símbolo de TEMPOS e a carga útil literal, mas nenhuma novas linhas.  
   
@@ -101,5 +101,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral do Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d461f5dc85c7107e36fc1492ac88f37d42ba9f24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64cea7fe9bb426ee9c2e98719d57e2370cab717c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640895"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>Método ICorProfilerInfo3::GetModuleInfo2
-Especificado um ID de módulo, retorna o nome do arquivo do módulo, a ID do pai do módulo assembly e uma máscara de bits que descreve as propriedades do módulo.  
+Dado um ID de módulo, retorna o nome do arquivo do módulo, a ID do pai do módulo de assembly e um bitmask que descreve as propriedades do módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,42 +46,42 @@ HRESULT GetModuleInfo2(
  [in] A ID do módulo para o qual as informações serão recuperadas.  
   
  `ppBaseLoadAddress`  
- [out] O endereço base no qual o módulo é carregado.  
+ [out] O endereço básico no qual o módulo é carregado.  
   
  `cchName`  
- [in] O comprimento, em caracteres, do `szName` buffer de retorno.  
+ [in] O comprimento, em caracteres, da `szName` buffer de retorno.  
   
  `pcchName`  
  [out] Um ponteiro para o total de caracteres do nome de arquivo do módulo que é retornado.  
   
  `szName`  
- [out] Um buffer de caractere largo fornecida pelo chamador. Quando o método retorna, esse buffer contém o nome de arquivo do módulo.  
+ [out] Um buffer de caractere largo fornecido pelo chamador. Quando o método retorna, esse buffer contém o nome do arquivo do módulo.  
   
  `pAssemblyId`  
  [out] Um ponteiro para a ID do assembly do pai do módulo.  
   
  `pdwModuleFlags`  
- [out] Um bitmask de valores da [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeração que especifica as propriedades do módulo.  
+ [out] Um bitmask de valores da [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeração que especificam as propriedades do módulo.  
   
 ## <a name="remarks"></a>Comentários  
- Para módulos dinâmicos, o `szName` parâmetro é o nome de metadados do módulo e o endereço base for 0 (zero). O nome de metadados é o valor na coluna Nome da tabela de módulo dentro de metadados. Isso também é exposto como o <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> propriedade para código gerenciado e como o `szName` parâmetro o [: Getscopeprops](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) método ao código do cliente não gerenciado de metadados.  
+ Para módulos dinâmicos, o `szName` parâmetro é o nome de metadados do módulo e o endereço básico é 0 (zero). O nome de metadados é o valor na coluna Nome da tabela de módulo dentro de metadados. Isso também é exposto como o <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> propriedade para o código gerenciado e como o `szName` parâmetro do [imetadataimport:: Getscopeprops](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) método ao código de cliente de metadados não gerenciados.  
   
- Embora o `GetModuleInfo2` método pode ser chamado como ID do módulo existe, a ID do assembly pai não estarão disponível até que o criador de perfil recebe o [: Moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) retorno de chamada.  
+ Embora o `GetModuleInfo2` método pode ser chamado assim que a ID do módulo existe, a ID do assembly pai não estarão disponível até que o criador de perfil recebe as [ICorProfilerCallback:: Moduleattachedtoassembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) retorno de chamada.  
   
- Quando `GetModuleInfo2` retorna, você deve verificar se o `szName` buffer era grande o suficiente para conter o nome completo do arquivo do módulo. Para fazer isso, o valor de comparação que `pcchName` aponta para com o valor de `cchName` parâmetro. Se `pcchName` aponta para um valor que é maior do que `cchName`, alocar uma maior `szName` buffer, atualize `cchName` com o novo tamanho maior e chame `GetModuleInfo2` novamente.  
+ Quando `GetModuleInfo2` é retornado, você deve verificar se o `szName` buffer era grande o suficiente para conter o nome completo do arquivo do módulo. Para fazer isso, o valor de comparação que `pcchName` aponta para com o valor da `cchName` parâmetro. Se `pcchName` aponta para um valor maior que `cchName`, alocar uma maior `szName` buffer, atualize `cchName` com o novo e maior tamanho e a chamada `GetModuleInfo2` novamente.  
   
- Como alternativa, você pode primeiro chamar `GetModuleInfo2` com um comprimento zero `szName` buffer para obter o tamanho do buffer correto. Você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chame `GetModuleInfo2` novamente.  
+ Como alternativa, você pode primeiro chamar `GetModuleInfo2` com um comprimento de zero `szName` buffer para obter o tamanho do buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chamar `GetModuleInfo2` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
