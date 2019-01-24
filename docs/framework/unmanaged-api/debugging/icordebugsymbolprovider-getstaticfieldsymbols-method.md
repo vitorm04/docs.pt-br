@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7d5195215762c25b2d7dc2b71fcd53959656303
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a72e9911adf5b48638c2323adcbbb76e721618a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553744"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>Método ICorDebugSymbolProvider::GetStaticFieldSymbols
-Obtém os símbolos de campo estático que correspondem a uma assinatura typespec.  
+Obtém os símbolos de campo estático que correspondem a uma assinatura de typespec.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,7 +28,7 @@ HRESULT GetStaticFieldSymbols(
   
 #### <a name="parameters"></a>Parâmetros  
  `cbSignature`  
- [in] O número de bytes a `typeSig` matriz.  
+ [in] O número de bytes no `typeSig` matriz.  
   
  `typeSig`  
  [in] Uma matriz de bytes que contém o `typespec` assinatura.  
@@ -37,7 +37,7 @@ HRESULT GetStaticFieldSymbols(
  [in] O número de símbolos solicitado.  
   
  `pcFetchedSymbols`  
- [out] Um ponteiro para o número de símbolos recuperada pelo método.  
+ [out] Um ponteiro para o número de símbolos recuperados pelo método.  
   
  `pSymbols`  
  [out] Um ponteiro para um [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) matriz que contém os símbolos de campo estático solicitado.  
@@ -48,15 +48,15 @@ HRESULT GetStaticFieldSymbols(
 >  Esse método só está disponível com o .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Método GetInstanceFieldSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)  
- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Método GetInstanceFieldSymbols](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)
+- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,15 +2,15 @@
 title: Método CLR ao mapeamento canônico de função
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 31e6bfaf86ffb6721491a8d6681d713075a628f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551573"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Método CLR ao mapeamento canônico de função
-Entity Framework fornece um conjunto de funções canônicas que implementam a funcionalidade que são comuns através de muitos sistemas de base de dados, como a manipulação de cadeia de caracteres e funções matemáticas. Isso permite aos desenvolvedores para direcionar uma ampla gama de sistemas de base de dados. Quando chamadas de uma tecnologia consultando, como LINQ to Entities, essas funções canônicas são transmitidos para a função correspondente correta do armazenamento para o provedor que está sendo usado. Isso permite que as chamadas de função são expressos em um formulário comuns através de fontes de dados, fornecendo uma experiência consistente de consulta por de fontes de dados. Bit a bit AND, OR, NOT, e operadores XOR também são mapeados para funções canônicas quando o operando é um tipo numérico. Para operandos boolianos, o bit a bit AND, OR, NOT, e operadores XOR de computação não, a lógica AND, OR e XOR operações do respectivos operandos. Para obter mais informações, consulte [funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+Entity Framework fornece um conjunto de funções canônicas que implementam a funcionalidade que são comuns através de muitos sistemas de base de dados, como a manipulação de cadeia de caracteres e funções matemáticas. Isso permite aos desenvolvedores para direcionar uma ampla gama de sistemas de base de dados. Quando chamadas de uma tecnologia consultando, como LINQ to Entities, essas funções canônicas são transmitidos para a função correspondente correta do armazenamento para o provedor que está sendo usado. Isso permite que as chamadas de função são expressos em um formulário comuns através de fontes de dados, fornecendo uma experiência consistente de consulta por de fontes de dados. Bit a bit AND, OR, NOT, e operadores também são mapeados para funções canônicas quando o operando é um tipo numérico. Para operandos Boolean, bit a bit AND, OR, NOT, e operadores lógicos AND, OR, de computação não e as operações de XOR de seus operandos. Para obter mais informações, consulte [funções canônicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
  Para cenários LINQ, as consultas em Entity Framework envolvem mapear determinados métodos de CLR métodos na fonte de dados subjacente com as funções canônicas. Todas as chamadas de método em consulte LINQ to entidades que não são mapeados explicitamente a uma função canônica resultarão em uma exceção de <xref:System.NotSupportedException> de tempo de execução que está sendo lançada.  
   
@@ -40,16 +40,16 @@ Entity Framework fornece um conjunto de funções canônicas que implementam a f
 |Método de instância System.String ()|Função canônica|Observações|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean contém (cadeia de caracteres `value`)|`this` GOSTA de “% de`value`%”|Se `value` não é uma constante, então este mapeia para IndexOf (`this`, `value`0) >|  
-|EndsWith booleano (cadeia de caracteres `value`)|`this` COMO `'` % `value`'|Se `value` não é uma constante, então este mapeados para a direita (`this`,`value`comprimento ()) = `value`.|  
+|EndsWith booleano (cadeia de caracteres `value`)|`this` COMO O `'` % `value`'|Se `value` não é uma constante, então este mapeados para a direita (`this`,`value`comprimento ()) = `value`.|  
 |StartsWith booleano (cadeia de caracteres `value`)|`this` GOSTA de '`value`% "|Se `value` não é uma constante, então este mapeia para IndexOf (`this`, `value`) = 1.|  
 |Comprimento|Comprimento (`this`)||  
 |Int32 IndexOf (cadeia de caracteres `value`)|IndexOf (`this`, `value`) - 1||  
 |Inserção de System.String (Int32, `startIndex`cadeia de caracteres `value`)|Concat (Concat (subcadeia de caracteres (`this`, 1, `startIndex`), `value`), subcadeia de caracteres (`this`, `startIndex`+1, comprimento (`this`) - `startIndex`))||  
 |System.String remove (Int32 `startIndex`)|Subsequência de caracteres (`this`, 1, `startIndex`)||  
-|System.String remove (Int32 `startIndex`, Int32 `count`)|Concat (subcadeia de caracteres (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, tamanho (`this`)-(`startIndex` + `count`)))|Remova (`startIndex`, `count`) é suportado apenas se `count` é um inteiro maior ou igual a 0.|  
-istema. Substituição de cadeia de caracteres (cadeia de caracteres `oldValue`, cadeia de caracteres `newValue`)|Substitua (`this`, `oldValue`, `newValue`)||  
+|System.String remove (Int32 `startIndex`, Int32 `count`)|Concat (subcadeia de caracteres (`this`, 1, `startIndex`), subcadeia de caracteres (`this`, `startIndex`  +  `count` + 1, comprimento (`this`)-(`startIndex` + `count`)))|Remova (`startIndex`, `count`) é suportado apenas se `count` é um inteiro maior ou igual a 0.|  
+ystem.String Replace(String `oldValue`, String `newValue`)|Substitua (`this`, `oldValue`, `newValue`)||  
 |Subsequência de caracteres de System.String (Int32 `startIndex`)|Subsequência de caracteres (`this`, `startIndex` +1, comprimento (`this`) - `startIndex`)||  
-|Subsequência de caracteres de System.String (Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||  
+|Subsequência de caracteres de System.String (Int32 `startIndex`, Int32 `length`)|Substring(`this`, `startIndex` +1, `length`)||  
 |System.String ToLower()|ToLower (`this`)||  
 |System.String ToUpper()|ToUpper (`this`)||  
 |System.String Trim()|Preparo (`this`)||  
@@ -68,9 +68,9 @@ istema. Substituição de cadeia de caracteres (cadeia de caracteres `oldValue`,
 |Op_GreaterThan booleano (DateTime `t1`, DateTime `t2`)|Operador >||  
 |Op_GreaterThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|Operador >=||  
 |Op_Inequality booleano (DateTime `t1`, DateTime `t2`)|Operador !=||  
-|Op_LessThan booliano (DateTime `t1`, DateTime `t2`)|< operador||  
+|Op_LessThan booleano (DateTime `t1`, data e hora `t2`)|< operador||  
 |Op_LessThanOrEqual booleano (DateTime `t1`, DateTime `t2`)|<operador =||  
-|Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` como DateInterval, \_<br /><br /> ByVal `DateValue` como DateTime, \_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal opcional `FirstWeekOfYearValue` como FirstWeekOfYear = VbFirstJan1 \_<br /><br /> Como o inteiro)||Consulte a seção de função DatePart para mais informações.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` como DateInterval, \_<br /><br /> ByVal `DateValue` como DateTime, \_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday, \_<br /><br /> Optional ByVal `FirstWeekOfYearValue` As FirstWeekOfYear = VbFirstJan1 \_<br /><br /> Como o inteiro)||Consulte a seção de função DatePart para mais informações.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year (DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month (DateTime `TimeValue`)|Month()||  
@@ -196,5 +196,5 @@ icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

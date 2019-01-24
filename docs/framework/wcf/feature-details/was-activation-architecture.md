@@ -2,12 +2,12 @@
 title: Arquitetura de ativação do WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557101"
 ---
 # <a name="was-activation-architecture"></a>Arquitetura de ativação do WAS
 Este tópico relaciona e descreve os componentes do Windows Process Activation Service (também conhecido como WAS).  
@@ -37,8 +37,8 @@ Este tópico relaciona e descreve os componentes do Windows Process Activation S
 |W3SVC|HTTP|Componente comum que fornece a ativação de HTTP para IIS 7.0 e o WCF.|  
 |NetTcpActivator|net.tcp|Depende do serviço NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|NET. MSMQ|Para uso com aplicativos de enfileiramento de mensagens baseada no WCF.|  
-|NetMsmqActivator|FormatName|É compatível com aplicativos de enfileiramento de mensagens existentes.|  
+|NetMsmqActivator|net.msmq|Para uso com aplicativos de enfileiramento de mensagens baseada no WCF.|  
+|NetMsmqActivator|msmq.formatname|É compatível com aplicativos de enfileiramento de mensagens existentes.|  
   
  Os adaptadores de escuta para protocolos específicos são registrados durante a instalação no arquivo applicationHost. config, conforme mostrado no exemplo XML a seguir.  
   
@@ -85,6 +85,6 @@ Este tópico relaciona e descreve os componentes do Windows Process Activation S
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Consulte também
+- [Configurando o WAS para utilização com o WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

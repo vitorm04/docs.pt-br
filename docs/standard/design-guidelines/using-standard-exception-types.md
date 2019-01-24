@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: KrzysztofCwalina
-ms.openlocfilehash: dbf54f602fbe4ace01b60bb57e1106d3f19ba7df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543900"
 ---
 # <a name="using-standard-exception-types"></a>Usando tipos de exceção padrão
 Esta seção descreve as exceções padrão fornecidas pela estrutura e os detalhes de uso. A lista não é exaustiva. Consulte a documentação de referência do .NET Framework para o uso de outros tipos de exceção do Framework.  
@@ -32,7 +32,7 @@ Esta seção descreve as exceções padrão fornecidas pela estrutura e os detal
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
  **✓ DO** lançar um <xref:System.InvalidOperationException> se o objeto está em um estado inadequado.  
   
-## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException e ArgumentOutOfRangeException  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException, and ArgumentOutOfRangeException  
  **✓ DO** gerar <xref:System.ArgumentException> ou um de seus subtipos se argumentos inválidos são passados para um membro. Prefira o tipo de exceção mais derivado, se aplicável.  
   
  **✓ DO** definir o `ParamName` propriedade ao lançar uma destas subclasses de `ArgumentException`.  
@@ -41,7 +41,7 @@ Esta seção descreve as exceções padrão fornecidas pela estrutura e os detal
   
  **✓ DO** usar `value` para o nome do parâmetro de valor implícito de setters de propriedade.  
   
-## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException e AccessViolationException  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException, and AccessViolationException  
  **X DO NOT** permitir que APIs publicamente que pode ser chamado explicitamente ou implicitamente gerar <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, ou <xref:System.IndexOutOfRangeException>. Essas exceções são reservadas e gerada pelo mecanismo de execução e, na que maioria dos casos indicam um bug.  
   
  Fazer a verificação para evitar o lançamento essas exceções de argumento. Gerar essas exceções expõe os detalhes da implementação do método que pode ser alterado ao longo do tempo.  
@@ -65,5 +65,5 @@ Esta seção descreve as exceções padrão fornecidas pela estrutura e os detal
   
 ## <a name="see-also"></a>Consulte também
 
-- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de design para exceções](../../../docs/standard/design-guidelines/exceptions.md)

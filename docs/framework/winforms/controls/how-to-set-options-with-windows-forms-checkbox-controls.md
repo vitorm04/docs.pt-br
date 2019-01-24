@@ -1,5 +1,5 @@
 ---
-title: Como definir opções com controles CheckBox dos Windows Forms
+title: 'Como: Definir opções com controles CheckBox dos Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: dc9e7b1aea74874c66bf9eb96a5b919ed9b4b73b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8159e9e9a2484b95399aba67b1a10b1252a4357
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525554"
 ---
-# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Como definir opções com controles CheckBox dos Windows Forms
-Um Windows Forms <xref:System.Windows.Forms.CheckBox> controle é usado para fornecer aos usuários True/False ou Yes/No opções. O controle exibe uma marca de seleção quando ele é selecionado.  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Como: Definir opções com controles CheckBox dos Windows Forms
+Um Windows Forms <xref:System.Windows.Forms.CheckBox> controle é usado para dar aos usuários True/False ou opções de Sim/não. O controle exibe uma marca de seleção quando ele é selecionado.  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>Para definir opções com controles CheckBox  
   
-1.  Examinar o valor da <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade para determinar o estado e usar esse valor para definir uma opção.  
+1.  Examinar o valor da <xref:System.Windows.Forms.CheckBox.Checked%2A> propriedade para determinar seu estado e usar esse valor para definir uma opção.  
   
-     No exemplo de código a seguir, quando o <xref:System.Windows.Forms.CheckBox> do controle <xref:System.Windows.Forms.CheckBox.CheckedChanged> é gerado, o formulário <xref:System.Windows.Forms.Control.AllowDrop%2A> está definida como `false` se a caixa de seleção estiver marcada. Isso é útil para situações em que você deseja restringir a interação do usuário.  
+     No exemplo de código abaixo, quando o <xref:System.Windows.Forms.CheckBox> do controle <xref:System.Windows.Forms.CheckBox.CheckedChanged> é gerado, o formulário <xref:System.Windows.Forms.Control.AllowDrop%2A> estiver definida como `false` se a caixa de seleção estiver marcada. Isso é útil para situações em que você deseja restringir a interação do usuário.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -65,8 +65,8 @@ Um Windows Forms <xref:System.Windows.Forms.CheckBox> controle é usado para for
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.CheckBox>  
- [Visão geral do controle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [Como responder a cliques em CheckBox dos Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
- [Controle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.CheckBox>
+- [Visão geral do controle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
+- [Como: Responder ao Windows Forms cliques no CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Controle CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

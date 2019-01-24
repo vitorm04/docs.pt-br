@@ -1,5 +1,5 @@
 ---
-title: Como executar um bipe a partir de um Windows Form
+title: 'Como: Executar um bipe de um formulário do Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: 460309d853f2b3b423d14a820771e0230358e3c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b847f2f759667eed5dfb6f9168a5c2fc50909cc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544504"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a>Como executar um bipe a partir de um Windows Form
-Este exemplo executa um bipe em tempo de execução.  
+# <a name="how-to-play-a-beep-from-a-windows-form"></a>Como: Executar um bipe de um formulário do Windows
+Este exemplo reproduz um aviso sonoro em tempo de execução.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -37,13 +37,13 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  O som tocado no exemplo de código c# é determinado pelo <xref:System.Media.SystemSounds.Beep%2A> configuração do sistema de som. Para obter mais informações, consulte <xref:System.Media.SystemSounds>.  
+>  O som tocado C# exemplo de código é determinado pelo <xref:System.Media.SystemSounds.Beep%2A> configuração do sistema de som. Para obter mais informações, consulte <xref:System.Media.SystemSounds>.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Para c#, este exemplo requer uma referência para o <xref:System.Media?displayProperty=nameWithType> namespace.  
+ Para C#, este exemplo requer uma referência para o <xref:System.Media?displayProperty=nameWithType> namespace.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Interaction.Beep%2A>  
- <xref:System.Media.SoundPlayer>  
- [Como reproduzir um som do sistema de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
- [Como reproduzir um som de um Windows Form](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
+- <xref:System.Media.SoundPlayer>
+- [Como: Reproduzir um som do sistema de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)
+- [Como: Reproduzir um som de um formulário do Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

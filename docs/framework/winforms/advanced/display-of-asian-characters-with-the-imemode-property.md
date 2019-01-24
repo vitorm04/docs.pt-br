@@ -14,16 +14,16 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: c60ae399-0dab-4f07-9dea-6dbfb15ec0ae
-ms.openlocfilehash: d3733f642d4218c851040582ee5637b5486a7804
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 25602e1a878443bd54411dfd6481581abebda5c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500507"
 ---
 # <a name="display-of-asian-characters-with-the-imemode-property"></a>Exibição de caracteres asiáticos com a propriedade ImeMode
-O <xref:System.Windows.Forms.Control.ImeMode%2A> propriedade é usada por formulários e controles para forçar um modo específico para um editor de método de entrada (IME). O IME é um componente essencial para escrever scripts chinês, japonês e coreano, pois esses sistemas de escrita têm mais caracteres que podem ser codificados para um teclado normal. Por exemplo, convém permitir que apenas caracteres ASCII em uma caixa de texto. Nesse caso, você pode definir o <xref:System.Windows.Forms.Control.ImeMode%2A> propriedade <xref:System.Windows.Forms.ImeMode> e os usuários somente poderão inserir caracteres ASCII para a caixa de texto. O valor padrão de <xref:System.Windows.Forms.Control.ImeMode%2A> é de propriedade <xref:System.Windows.Forms.ImeMode>, portanto, se você definir a propriedade de um formulário, todos os controles no formulário herdarão essa definição. Para obter mais informações, consulte <xref:System.Windows.Forms.Control.ImeMode%2A> ) e <xref:System.Windows.Forms.ImeMode>.  
+O <xref:System.Windows.Forms.Control.ImeMode%2A> por formulários e controles, a propriedade é usada para forçar um modo específico para um editor de método de entrada (IME). O IME é um componente essencial para escrever scripts de chinês, japonês e coreano, já que esses sistemas de escrita têm mais caracteres que podem ser codificados para um teclado normal. Por exemplo, você talvez queira permitir que apenas caracteres ASCII em uma caixa de texto específica. Nesse caso, você pode definir as <xref:System.Windows.Forms.Control.ImeMode%2A> propriedade para <xref:System.Windows.Forms.ImeMode> e os usuários somente poderão inserir caracteres ASCII para a caixa de texto. O valor padrão de <xref:System.Windows.Forms.Control.ImeMode%2A> é de propriedade <xref:System.Windows.Forms.ImeMode>, portanto, se você definir a propriedade de um formulário, todos os controles no formulário herdarão essa definição. Para obter mais informações, consulte <xref:System.Windows.Forms.Control.ImeMode%2A> ) e <xref:System.Windows.Forms.ImeMode>.  
   
 ## <a name="see-also"></a>Consulte também
 
-[Globalizando aplicativos do Windows Forms](globalizing-windows-forms.md)
+- [Globalizando aplicativos dos Windows Forms](globalizing-windows-forms.md)

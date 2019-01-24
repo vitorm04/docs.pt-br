@@ -1,18 +1,18 @@
 ---
-title: Como acessar caracteres em cadeias de caracteres no Visual Basic
+title: 'Como: Caracteres de acesso em cadeias de caracteres no Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 48507cade639660e6ce36697975d09fb29206c20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618916"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Como acessar caracteres em cadeias de caracteres no Visual Basic
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Como: Caracteres de acesso em cadeias de caracteres no Visual Basic
 Este exemplo demonstra como usar o <xref:System.String.Chars%2A> propriedade para acessar o caractere no local especificado em uma cadeia de caracteres.  
   
 ## <a name="example"></a>Exemplo  
@@ -20,15 +20,15 @@ Este exemplo demonstra como usar o <xref:System.String.Chars%2A> propriedade par
   
  [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
- O `index` parâmetro o <xref:System.String.Chars%2A> propriedade é baseado em zero.  
+ O `index` parâmetro do <xref:System.String.Chars%2A> propriedade é baseado em zero.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- O <xref:System.String.Chars%2A> propriedade retorna o caractere na posição especificada. No entanto, alguns caracteres Unicode podem ser representados por mais de um caractere. Para obter mais informações sobre como trabalhar com caracteres Unicode, consulte [como: converter uma cadeia de caracteres em uma matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
+ O <xref:System.String.Chars%2A> propriedade retorna o caractere na posição especificada. No entanto, alguns caracteres Unicode podem ser representados por mais de um caractere. Para obter mais informações sobre como trabalhar com caracteres Unicode, consulte [como: Converter uma cadeia de caracteres em uma matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).  
   
- O <xref:System.String.Chars%2A> propriedade gera uma <xref:System.IndexOutOfRangeException> exceção se o `index` parâmetro for maior que ou igual ao comprimento da cadeia de caracteres, ou se ele for menor que zero  
+ O <xref:System.String.Chars%2A> propriedade gera uma <xref:System.IndexOutOfRangeException> exceção se o `index` parâmetro é maior que ou igual ao comprimento da cadeia de caracteres, ou se ele for menor que zero  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.String.Chars%2A>  
- [Como converter uma cadeia de caracteres em uma matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)  
- [Convertendo cadeias de caracteres em outros tipos de dados no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- [Cadeias de Caracteres](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.String.Chars%2A>
+- [Como: Converter uma cadeia de caracteres em uma matriz de caracteres](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [Convertendo cadeias de caracteres em outros tipos de dados no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Cadeias de Caracteres](../../../../visual-basic/programming-guide/language-features/strings/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
-ms.openlocfilehash: 3cf42ec2734801dfffcd0115f8bb42d0353c7014
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a102de6780b59295b12bbaca50bca8ff170febe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538473"
 ---
 # <a name="security-guidance-and-best-practices"></a>Orientação de segurança e práticas recomendadas
 Os tópicos nesta seção apresentam diretrizes para e itens a serem considerados ao criar aplicativos seguros do Windows Communication Foundation (WCF). Para obter mais informações sobre o Windows Server AppFabric e segurança, consulte [segurança modelo para o Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
@@ -24,6 +24,6 @@ Os tópicos nesta seção apresentam diretrizes para e itens a serem considerado
  [Considerações sobre desempenho](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  Contém as entradas relacionadas a desempenho e segurança.  
   
-## <a name="see-also"></a>Consulte também  
- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Consulte também
+- [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

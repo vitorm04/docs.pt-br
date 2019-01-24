@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d43467a0f3ff94eb7903b808e192230e6c0ff1e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561056"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>Método ISymUnmanagedReader::GetSymAttribute
-Obtém um atributo personalizado com base no seu nome. Ao contrário de atributos personalizados de metadados, os atributos personalizados são mantidos no repositório de símbolos.  
+Obtém um atributo personalizado com base em seu nome. Ao contrário de atributos personalizados de metadados, os atributos personalizados são mantidos no repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,22 +44,22 @@ HRESULT GetSymAttribute (
  [in] O token de metadados para o objeto para o qual o atributo é solicitado.  
   
  `name`  
- [in] Um ponteiro para a variável que indica o atributo para recuperar.  
+ [in] Um ponteiro para a variável que indica o atributo a ser recuperado.  
   
  `cBuffer`  
  [in] O tamanho do `buffer` matriz.  
   
  `pcBuffer`  
- [out] Um ponteiro para a variável que recebe o comprimento dos dados de atributo.  
+ [out] Um ponteiro para a variável que recebe o comprimento dos dados do atributo.  
   
  `buffer`  
  [out] Um ponteiro para a variável que recebe os dados de atributo.  
   
 ## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro...  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

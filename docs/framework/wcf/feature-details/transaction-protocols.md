@@ -2,12 +2,12 @@
 title: Protocolos de transação
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 2e4f464d88a63a0aad17982d0329971de4fc5a07
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533761"
 ---
 # <a name="transaction-protocols"></a>Protocolos de transação
 Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination e de transações de WS-Atomic.  
@@ -62,15 +62,15 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
 |s11||[https://go.microsoft.com/fwlink/?LinkId=96014](https://go.microsoft.com/fwlink/?LinkId=96014)|  
 |wsa|Pré-1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96022](https://go.microsoft.com/fwlink/?LinkId=96022)|  
 |wscoor|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96078](https://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WSAT|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96081](https://go.microsoft.com/fwlink/?LinkId=96081)|  
+|wsat|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96081](https://go.microsoft.com/fwlink/?LinkId=96081)|  
 |t|Pré-1.3<br /><br /> 1.3|[https://go.microsoft.com/fwlink/?LinkId=96082](https://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96100](https://go.microsoft.com/fwlink/?LinkId=96100)|  
 |o||[https://go.microsoft.com/fwlink/?LinkId=96101](https://go.microsoft.com/fwlink/?LinkId=96101)|  
-|XSD||[https://go.microsoft.com/fwlink/?LinkId=96102](https://go.microsoft.com/fwlink/?LinkId=96102)|  
+|xsd||[https://go.microsoft.com/fwlink/?LinkId=96102](https://go.microsoft.com/fwlink/?LinkId=96102)|  
   
 ## <a name="transaction-manager-bindings"></a>Associações do Gerenciador de transações  
- R1001: Gerenciadores de transações que participam de uma transação WS-AT 1.0 devem usar os SOAP 1.1 e 08/2004 de WS-Addressing para transações de WS-Atomic e trocas de mensagens WS-Coordination.  
+ R1001: Gerenciadores de transações que participam de uma transação WS-AT 1.0 devem usar o SOAP 1.1 e 08/2004 de WS-Addressing para transações de WS-Atomic e trocas de mensagens WS-Coordination.  
   
- R1002: Gerenciadores de transações que participam de uma transação WS-AT 1.1 devem usar os SOAP 1.1 e WS-Addressing 2005/08 para transações de WS-Atomic e trocas de mensagens WS-Coordination.  
+ R1002: Gerenciadores de transações que participam de uma transação WS-AT 1.1 devem usar o SOAP 1.1 e WS-Addressing 2005/08 para transações de WS-Atomic e trocas de mensagens WS-Coordination.  
   
  Mensagens de aplicativo não são restritos a essas associações e são descritas posteriormente.  
   
@@ -80,9 +80,9 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
 #### <a name="https-transport-configuration"></a>Configuração do transporte HTTPS  
  Certificados X.509 são usados para estabelecer a identidade do Gerenciador de transações. Autenticação de cliente/servidor é necessária e autorização de cliente/servidor é deixada como um detalhe de implementação:  
   
--   R1111: Certificados x. 509 apresentados durante a transmissão devem ter um nome de assunto que corresponda o nome de domínio totalmente qualificado (FQDN) do computador de origem.  
+-   R1111: Os certificados x. 509 apresentados durante a transmissão devem ter um nome de assunto que corresponda o nome de domínio totalmente qualificado (FQDN) do computador de origem.  
   
--   B1112: O DNS deve ser funcional entre cada par de receptor de remetente no sistema para verificações de nome de assunto de x. 509 seja bem-sucedida.  
+-   B1112: DNS deve ser funcional entre cada par de receptor de remetente no sistema para verificações de nome de assunto de x. 509 seja bem-sucedida.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Ativação e registro de configuração de associação  
  WCF requer a associação de solicitação/resposta duplex com correlação via HTTPS. (Para obter mais informações sobre a correlação e as descrições dos padrões de troca de mensagem de solicitação/resposta, consulte transações WS-Atomic, seção 8).  
@@ -90,7 +90,7 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
 #### <a name="2pc-protocol-binding-configuration"></a>Configuração de associação de protocolo 2PC  
  WCF dá suporte a mensagens unidirecionais (datagram) por HTTPS. Correlação entre as mensagens é deixada como um detalhe de implementação.  
   
- B1131: Implementações devem dar suporte à `wsa:ReferenceParameters` conforme descrito em WS-Addressing para alcançar a correlação das mensagens de 2PC do WCF.  
+ B1131: Devem dar suporte a implementações `wsa:ReferenceParameters` conforme descrito em WS-Addressing para alcançar a correlação das mensagens de 2PC do WCF.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Gerenciador de transações misto de associação de segurança  
  Essa é uma alternativa (modo misto) que usa segurança de transporte combinada com o modelo de Token emitido de WS-Coordination para fins de estabelecimento de identidade de associação. Ativação e registro são os únicos elementos que diferem entre as duas associações.  
@@ -105,7 +105,7 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
   
  Especificação WS-AT, seção 8 descreve ainda mais detalhes sobre a correlação e os padrões de troca de mensagem.  
   
--   R1222: ao receber um `CreateCoordinationContext`, o coordenador deve emitir uma `SecurityContextToken` com o segredo associado `STx`. Esse token é retornado dentro de um `t:IssuedTokens` cabeçalho seguindo a especificação WS-Trust.  
+-   R1222: Ao receber um `CreateCoordinationContext`, o coordenador deve emitir uma `SecurityContextToken` com o segredo associado `STx`. Esse token é retornado dentro de um `t:IssuedTokens` cabeçalho seguindo a especificação WS-Trust.  
   
 -   R1223: Se a ativação ocorrer dentro de um contexto de coordenação existente, o `t:IssuedTokens` cabeçalho com o `SecurityContextToken` associado existente contexto deve fluir no `CreateCoordinationContext` mensagem.  
   
@@ -123,7 +123,7 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
 #### <a name="2pc-protocol-binding-configuration"></a>Configuração de associação de protocolo 2PC  
  WCF dá suporte a mensagens unidirecionais (datagram) por HTTPS. Correlação entre as mensagens é deixada como um detalhe de implementação.  
   
- B1241: Implementações devem dar suporte à `wsa:ReferenceParameters` conforme descrito em WS-Addressing para alcançar a correlação das mensagens de 2PC do WCF.  
+ B1241: Devem dar suporte a implementações `wsa:ReferenceParameters` conforme descrito em WS-Addressing para alcançar a correlação das mensagens de 2PC do WCF.  
   
 ## <a name="application-message-exchange"></a>Troca de mensagens de aplicativo  
  Aplicativos são livres para usar qualquer associação específica para mensagens de aplicativo para aplicativo, desde que a associação atende aos seguintes requisitos de segurança:  
@@ -287,9 +287,9 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Coordination 
 <t:IssuedTokens>   
 <wst:RequestSecurityTokenResponse   
 xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"   
-xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-     wssecurity-utility-1.0.xsd"   
-xmlns:wst=http://docs.oasis-open.org/ws-sx/ws-trust/200512  
-xmlns:wsc=http://schemas.xmlsoap.org/ws/2005/02/sc  
+xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"   
+xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512"  
+xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc"  
 xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">  
 <wst:TokenType>http://schemas.xmlsoap.org/ws/2005/02/sc/sct</wst:TokenType>  
 <wst:RequestedSecurityToken>   
@@ -302,14 +302,14 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 <wst:RequestedAttachedReference>   
 <wsse:SecurityTokenReference >   
 <wsse:Reference  
-  ValueType=http://schemas.xmlsoap.org/ws/2005/02/sc/sct  
+  ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
   URI="http://fabrikam123.com/SCTi"/>  
 </wsse:SecurityTokenReference>   
 </wst:RequestedAttachedReference>   
 <wst:RequestedUnattachedReference>   
 <wsse:SecurityTokenReference>   
 <wsse:Reference  
- ValueType=http://schemas.xmlsoap.org/ws/2005/02/sc/sct  
+ ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
  URI="http://fabrikam123.com/SCTi"/>  
 </wsse:SecurityTokenReference>   
 </wst:RequestedUnattachedReference>   

@@ -2,24 +2,24 @@
 title: Especificando um algoritmo de criptografia personalizada
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537680"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificando um algoritmo de criptografia personalizada
-WCF permite que você especifique um algoritmo de criptografia personalizado para usar ao criptografar dados ou computação assinaturas digitais. Isso é feito com as seguintes etapas:  
+O WCF permite que você especifique um algoritmo de criptografia personalizado para usar ao criptografar dados ou computação em assinaturas digitais. Isso é feito com as seguintes etapas:  
   
 1.  Derive uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  Registre o algoritmo  
+2.  Registre-se o algoritmo  
   
 3.  Configurar a associação com o <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-classe derivada.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Derive uma classe de SecurityAlgorithmSuite  
- O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> é uma classe base abstrata que permite que você especifique o algoritmo a ser usado ao executar segurança várias operações relacionadas. Por exemplo, computar um hash de uma assinatura digital ou criptografar uma mensagem. O código a seguir mostra como derivar uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
+ O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> é uma classe base abstrata que permite que você especifique o algoritmo a ser usado ao executar a segurança de várias operações relacionadas. Por exemplo, computar um hash para uma assinatura digital ou criptografar uma mensagem. O código a seguir mostra como derivar uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -86,8 +86,8 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
     }  
 ```  
   
-## <a name="register-the-custom-algorithm"></a>Registre o algoritmo personalizado  
- Registro pode ser feito em um arquivo de configuração ou em código obrigatório. Registrar um algoritmo personalizado é feito criando um mapeamento entre uma classe que implementa um provedor de serviços de criptografia e um alias. O alias é então mapeado para um URI que é usado ao especificar o algoritmo de associação do serviço WCF. O trecho de configuração a seguir ilustra como registrar um algoritmo personalizado na configuração:  
+## <a name="register-the-custom-algorithm"></a>Registre-se o algoritmo personalizado  
+ Registro pode ser feito em um arquivo de configuração ou no código obrigatório. Registrar um algoritmo personalizado é feito criando um mapeamento entre uma classe que implementa um provedor de serviços de criptografia e um alias. O alias é então mapeado para um URI que é usado ao especificar o algoritmo na associação do serviço WCF. O trecho de configuração a seguir ilustra como registrar um algoritmo personalizado na configuração:  
   
 ```xml  
 <configuration>  
@@ -107,7 +107,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
   
  A seção sob o <`cryptoClasses`> elemento cria o mapeamento entre o SHA256CryptoServiceProvider e o alias "SHA256CSP". O <`nameEntry`> elemento cria o mapeamento entre o alias "SHA256CSP" e a URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
- Para registrar o algoritmo personalizado em código de uso de <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> método. Esse método cria ambos os mapeamentos. O exemplo a seguir mostra como chamar esse método:  
+ Para registrar o algoritmo personalizado no uso de código a <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> método. Esse método cria dois mapeamentos. O exemplo a seguir mostra como chamar esse método:  
   
 ```  
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
@@ -116,7 +116,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.
 ```  
   
 ## <a name="configure-the-binding"></a>Configurar a associação  
- Configurar a associação especificando personalizado <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-a classe derivada nas configurações de associação conforme mostrado no trecho de código a seguir:  
+ Configurar a associação, especificando o personalizado <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-derivado classe nas configurações de associação, conforme mostrado no trecho de código a seguir:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
@@ -125,8 +125,8 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Para obter um exemplo de código completo, consulte o [agilidade criptográfica de segurança do WCF](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) exemplo.  
   
-## <a name="see-also"></a>Consulte também  
- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)  
- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>Consulte também
+- [Protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)
+- [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)

@@ -1,5 +1,5 @@
 ---
-title: Referência necessária para o assembly &#39; &lt;assemblyidentity&gt; &#39; contendo o tipo &#39; &lt;typename&gt;&#39;, mas não foi possível encontrar uma referência adequada devido à ambiguidade entre projetos &#39; &lt;projectname1&gt; &#39; e &#39; &lt;projectname2&gt;&#39;
+title: Referência obrigatória ao assembly &#39; &lt;assemblyidentity&gt; &#39; que contém o tipo &#39; &lt;typename&gt;&#39;, mas não foi possível encontrar uma referência adequada devido à ambiguidade entre projetos &#39; &lt;projectname1&gt; &#39; e &#39; &lt;projectname2&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - bc30969
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 670ac3ceb6a703a11b8f00a341dbcf868d4ceb7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a0c2a2fd235026729901153a0c0c300f914a78f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553003"
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Referência necessária para o assembly &#39; &lt;assemblyidentity&gt; &#39; contendo o tipo &#39; &lt;typename&gt;&#39;, mas não foi possível encontrar uma referência adequada devido à ambiguidade entre projetos &#39; &lt;projectname1&gt; &#39; e &#39; &lt;projectname2&gt;&#39;
-Uma expressão usa um tipo, como classe, estrutura, interface, enumeração ou representante, que está definido fora do seu projeto. No entanto, você tem referências do projeto para definir o tipo de mais de um assembly.  
+# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Referência obrigatória ao assembly &#39; &lt;assemblyidentity&gt; &#39; que contém o tipo &#39; &lt;typename&gt;&#39;, mas não foi possível encontrar uma referência adequada devido à ambiguidade entre projetos &#39; &lt;projectname1&gt; &#39; e &#39; &lt;projectname2&gt;&#39;
+Uma expressão usa um tipo, como uma classe, estrutura, interface, enumeração ou delegado, que é definido fora de seu projeto. No entanto, você tem referências do projeto para definir o tipo de mais de um assembly.  
   
  Os projetos citados produzem assemblies com o mesmo nome. Portanto, o compilador não pode determinar qual assembly usar para o tipo que você está acessando.  
   
- Para acessar um tipo definido em outro assembly, o compilador do Visual Basic deve ter uma referência a esse assembly. Isso deve ser uma referência única, não ambígua que não cause referências circulares entre projetos.  
+ Para acessar um tipo definido em outro assembly, o compilador do Visual Basic deve ter uma referência a esse assembly. Isso deve ser uma referência única e não ambígua, que não faz com que referências circulares entre projetos.  
   
  **ID do erro:** BC30969  
   
@@ -29,9 +29,9 @@ Uma expressão usa um tipo, como classe, estrutura, interface, enumeração ou r
   
 2.  Nas propriedades do projeto, adicione uma referência para o arquivo que contém o assembly que define o tipo que você está usando.  
   
-## <a name="see-also"></a>Consulte também  
- [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)  
- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
-   
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)  
- [Solução de Problemas de Referências Quebradas](/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a>Consulte também
+- [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project)
+- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+
+- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Solução de Problemas de Referências Quebradas](/visualstudio/ide/troubleshooting-broken-references)

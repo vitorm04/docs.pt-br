@@ -2,12 +2,12 @@
 title: Escolhendo um codificador de mensagem
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44248924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538421"
 ---
 # <a name="choosing-a-message-encoder"></a>Escolhendo um codificador de mensagem
 Este tópico discute os critérios para escolher entre os codificadores de mensagem que estão incluídos no Windows Communication Foundation (WCF): MTOM Message Transmission Optimization Mechanism (), texto e binário.  
@@ -84,4 +84,4 @@ O cliente e o serviço precisam concordar em enviar e receber mensagens compacta
   
 ## <a name="see-also"></a>Consulte também
 
-[Associações](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Associações](../../../../docs/framework/wcf/feature-details/bindings.md)

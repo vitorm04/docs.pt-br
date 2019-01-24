@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 364dffe3b4b63e3a369f87dd851ab54a975f881a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496238"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Suavização com linhas e curvas
 Ao usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para desenhar uma linha, você deverá fornecer o ponto inicial e final da linha, mas não será necessário fornecer todas as informações sobre os pixels individuais nela. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona junto com o software de driver de vídeo para determinar quais pixels serão ativados para mostrar a linha em um dispositivo de vídeo específico.  
@@ -39,12 +39,12 @@ Ao usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para
   
  ![Exemplo de suavização](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02_Art36")  
   
- Para desenhar linhas e curvas que usam suavização, crie uma instância do <xref:System.Drawing.Graphics> de classe e defina seu <xref:System.Drawing.Graphics.SmoothingMode%2A> propriedade <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> ou <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. Em seguida, chame um dos métodos de desenho do mesmo <xref:System.Drawing.Graphics> classe.  
+ Para desenhar linhas e curvas que usam suavização, crie uma instância das <xref:System.Drawing.Graphics> de classe e defina sua <xref:System.Drawing.Graphics.SmoothingMode%2A> propriedade a ser <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> ou <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. Em seguida, chame um dos métodos de desenho desse mesmo <xref:System.Drawing.Graphics> classe.  
   
  [!code-csharp[LinesCurvesAndShapes#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#81)]
  [!code-vb[LinesCurvesAndShapes#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Como usar suavização com texto](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
+- [Linhas, Curvas e Formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Como: Usar suavização com texto](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

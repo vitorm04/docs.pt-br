@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519353"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funcionalidades do Visual Basic que suportam LINQ
 O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se à tecnologia no Visual Basic que dá suporte à sintaxe de consulta e outra linguagem constrói diretamente na linguagem. Com [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa aprender uma nova linguagem de consulta em relação a uma fonte de dados externa. Você pode consultar em relação aos dados em bancos de dados relacionais, armazenamentos de XML ou objetos usando o Visual Basic. Essa integração de recursos de consulta para o idioma permite a verificação de tempo de compilação para erros de sintaxe e segurança de tipo. Essa integração também garante que você já sabe a maioria dos quais você precisa saber para escrever consultas avançadas e variadas em Visual Basic.  
   
- As seções a seguir descrevem as construções de linguagem que dão suporte a LINQ em detalhes suficientes para que você possa começar a ler a documentação introdutória, exemplos de código e aplicativos de exemplo. Você também pode clicar nos links para localizar explicações mais detalhadas sobre como os recursos de linguagem se unem para habilitar a consulta integrada à linguagem. É um bom lugar para começar [instruções passo a passo: escrevendo consultas em Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ As seções a seguir descrevem as construções de linguagem que dão suporte a LINQ em detalhes suficientes para que você possa começar a ler a documentação introdutória, exemplos de código e aplicativos de exemplo. Você também pode clicar nos links para localizar explicações mais detalhadas sobre como os recursos de linguagem se unem para habilitar a consulta integrada à linguagem. Um bom lugar para começar é [passo a passo: Escrevendo consultas em Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Expressões de consulta  
  Expressões de consulta no Visual Basic podem ser expressa em uma sintaxe declarativa semelhante do SQL ou XQuery. Em tempo de compilação, a sintaxe de consulta é convertida em chamadas de método para implementação de um provedor LINQ dos métodos de extensão do operador de consulta padrão. Controle de aplicativos que os operadores de consulta padrão estão no escopo, especificando o namespace apropriado com um `Imports` instrução. Sintaxe para uma expressão de consulta do Visual Basic tem esta aparência:  
@@ -44,7 +44,7 @@ O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se à tecn
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Para obter mais informações, consulte [inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Para obter mais informações, consulte [inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Tipos anônimos  
  Tipos anônimos fornecem uma maneira conveniente de agrupar temporariamente um conjunto de propriedades em um elemento que você deseja incluir em um resultado de consulta. Isso permite que você escolher qualquer combinação de campos disponíveis na consulta, em qualquer ordem, sem definir um tipo de dados nomeado para o elemento.  
@@ -93,9 +93,9 @@ O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] refere-se à tecn
   
  Para obter mais informações, consulte [Expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Consulte também
+- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

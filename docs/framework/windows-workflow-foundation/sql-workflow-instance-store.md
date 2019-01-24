@@ -2,12 +2,12 @@
 title: Store instância de fluxo de trabalho do SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538291"
 ---
 # <a name="sql-workflow-instance-store"></a>Store instância de fluxo de trabalho do SQL
 Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] com a instância Store de fluxo de trabalho SQL, que permite que fluxos de trabalho persistam informações de estado sobre instâncias de fluxo de trabalho em uma base de dados SQL Server 2005 ou SQL Server 2008. Esse recurso é implementado primeiro na forma da classe de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> , que deriva da classe abstrata de <xref:System.Runtime.DurableInstancing.InstanceStore> a estrutura de persistência. O recurso de Store de instância de fluxo de trabalho do SQL constitui um provedor de persistência SQL, que é uma implementação concreta de persistência API que um host usa para enviar comandos de persistência no armazenamento.  
@@ -24,7 +24,7 @@ Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-m
   
 -   [Propriedades do repositório de instâncias de fluxo de trabalho do SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
   
--   [Como habilitar a persistência de SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Como: Habilitar a persistência do SQL para fluxos de trabalho e serviços de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Ativação de instância](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
   
@@ -36,5 +36,5 @@ Os vem de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-m
   
 -   [Banco de dados de persistência do SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Persistência exemplos](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>Consulte também
+- [Persistência exemplos](https://go.microsoft.com/fwlink/?LinkID=177735)

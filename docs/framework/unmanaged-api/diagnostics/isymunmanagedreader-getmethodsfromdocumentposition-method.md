@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c84aceb0faabd879911e9595a7f3154065e2191
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f55c8986d2efc78b6fcd2840bad588af84228017
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561772"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>Método ISymUnmanagedReader::GetMethodsFromDocumentPosition
-Retorna uma matriz de métodos, cada qual contendo o ponto de interrupção na posição fornecida em um documento.  
+Retorna uma matriz dos métodos, cada uma delas contém o ponto de interrupção na posição especificada em um documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -65,5 +65,5 @@ HRESULT GetMethodsFromDocumentPosition (
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

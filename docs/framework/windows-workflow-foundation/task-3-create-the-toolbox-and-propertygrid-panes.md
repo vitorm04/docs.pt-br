@@ -1,26 +1,26 @@
 ---
-title: 'Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid'
+title: 'Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519744"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558417"
 ---
-# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid
-Nesta tarefa, você criará o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
+# <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Criar caixa de ferramentas e painéis de PropertyGrid
+Nesta tarefa, você aprenderá a criar o **caixa de ferramentas** e **PropertyGrid** painéis e adicioná-los para o rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Para referência, o código que deve estar no arquivo de MainWindow.xaml.cs depois de concluir as três tarefas a [nova hospedagem o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) série de tópicos é fornecido no final deste tópico.  
+ Para referência, o código que deve estar no arquivo MainWindow.xaml.cs após concluir as três tarefas a [Rehosting o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) série de tópicos é fornecido no final deste tópico.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Para criar a caixa de ferramentas e adicioná-la à grade  
   
-1.  Abra o projeto HostingApplication obtido seguindo o procedimento descrito em [tarefa 2: hospedar Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Abra o projeto de HostingApplication você obteve seguindo o procedimento descrito em [tarefa 2: Hospedar o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
   
-2.  No **Solution Explorer** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
+2.  No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
   
-3.  Adicionar um `GetToolboxControl` método para o `MainWindow` classe cria um <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adiciona um novo **caixa de ferramentas** categoria para o **caixa de ferramentas**e atribui o <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipos de atividade para essa categoria.  
+3.  Adicionar um `GetToolboxControl` método para o `MainWindow` classe que cria um <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, adiciona um novo **caixa de ferramentas** categoria para o **caixa de ferramentas**e atribui o <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipos de atividade para essa categoria.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ Nesta tarefa, você criará o **caixa de ferramentas** e **PropertyGrid** painé
     }  
     ```  
   
-4.  Adicionar uma particular `AddToolbox` método para o `MainWindow` classe coloca o **caixa de ferramentas** na coluna esquerda da grade.  
+4.  Adicionar uma privada `AddToolbox` método para o `MainWindow` classe coloca o **caixa de ferramentas** na coluna esquerda na grade.  
   
     ```csharp  
     private void AddToolBox()  
@@ -77,9 +77,9 @@ Nesta tarefa, você criará o **caixa de ferramentas** e **PropertyGrid** painé
   
 ### <a name="to-create-the-propertygrid"></a>Para criar o PropertyGrid  
   
-1.  No **Solution Explorer** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
+1.  No **Gerenciador de soluções** painel, clique no arquivo MainWindow. XAML e selecione **Exibir código**.  
   
-2.  Adicionar o `AddPropertyInspector` método para o `MainWindow` classe para colocar o **PropertyGrid** painel na coluna mais à direita na grade.  
+2.  Adicione a `AddPropertyInspector` método para o `MainWindow` classe para colocar o **PropertyGrid** painel na coluna mais à direita na grade.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,7 +103,7 @@ Nesta tarefa, você criará o **caixa de ferramentas** e **PropertyGrid** painé
     }  
     ```  
   
-4.  Pressione F5 para compilar e executar a solução. O **caixa de ferramentas**, tela de design de fluxo de trabalho, e **PropertyGrid** painéis devem todas ser exibidos, e quando você arrasta um <xref:System.Activities.Statements.Assign> atividade ou um <xref:System.Activities.Statements.Sequence> atividade para a tela de design, o grade de propriedades deve atualizar dependendo da atividade realçada.  
+4.  Pressione F5 para compilar e executar a solução. O **caixa de ferramentas**, tela de design de fluxo de trabalho, e **PropertyGrid** painéis devem todos ser exibidos, e quando você arrasta um <xref:System.Activities.Statements.Assign> atividade ou um <xref:System.Activities.Statements.Sequence> atividade na tela de design, o grade de propriedades deve atualizar dependendo da atividade realçado.  
   
 ## <a name="example"></a>Exemplo  
  O arquivo de MainWindow.xaml.cs agora deve conter o código a seguir.  
@@ -212,7 +212,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Hospedando novamente o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Tarefa 2: Hospedar o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>Consulte também
+- [Hospedando novamente o Designer de Fluxo de Trabalho](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Tarefa 2: Hospedar o Designer de fluxo de trabalho](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

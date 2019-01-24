@@ -1,24 +1,24 @@
 ---
-title: 'Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)'
+title: 'Como: Preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638815"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Como: Preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)
 
 Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de novos tipos.
 
 > [!NOTE]
-> Não tente unir dados na memória ou dados no sistema de arquivos com dados que ainda está em um banco de dados. Essas junções entre domínios podem gerar resultados indefinidos, devido às diferentes formas em que as operações de junção podem ser definidas para consultas de banco de dados e outros tipos de fontes. Além disso, há um risco de que essa operação possa causar uma exceção de falta de memória, se a quantidade de dados no banco de dados for grande o suficiente. Para unir dados de um banco de dados com os dados na memória, primeiro chame `ToList` ou `ToArray` na consulta de banco de dados e, em seguida, realize a junção na coleção retornada.
+> Não tente unir dados na memória ou dados no sistema de arquivos com os dados que ainda estão em um banco de dados. Essas junções entre domínios podem gerar resultados indefinidos, devido às diferentes formas em que as operações de junção podem ser definidas para consultas de banco de dados e outros tipos de fontes. Além disso, há um risco de que essa operação possa causar uma exceção de falta de memória, se a quantidade de dados no banco de dados for grande o suficiente. Para unir dados de um banco de dados com os dados na memória, primeiro chame `ToList` ou `ToArray` na consulta de banco de dados e, em seguida, realize a junção na coleção retornada.
 
 ## <a name="to-create-the-data-file"></a>Para criar o arquivo de dados
 
-- Copie os arquivos names.csv e scores.csv em sua pasta de projeto, conforme descrito em [como: unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Copie os arquivos Names e Scores em sua pasta de projeto, conforme descrito em [como: Unir conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-No [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, um inicializador de objeto é usada para criar uma instância de cada novo `Student` objeto por meio de duas fontes de dados.
+No [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, um inicializador de objeto é usada para instanciar cada novo `Student` objeto usando os dados de duas fontes.
 
-Se você não precisa armazenar os resultados de uma consulta, os tipos anônimos podem ser mais convenientes que tipos nomeados. Os tipos nomeados são necessários se você passa os resultados da consulta para fora do método em que a consulta é executada. O exemplo a seguir realiza a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:
+Se você não tiver que armazenar os resultados de uma consulta, os tipos anônimos poderão ser mais convenientes que os tipos nomeados. Os tipos nomeados são necessários se você passa os resultados da consulta para fora do método em que a consulta é executada. O exemplo a seguir realiza a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,12 +130,12 @@ Next
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Criar e compilar um projeto que tem como alvo uma das opções a seguir:
+Crie e compile um projeto direcionado para uma das seguintes opções:
 
-- .NET framework versão 3.5 com uma referência a System.Core.dll.
-- .NET framework versão 4.0 ou superior.
-- Versão do .NET core 1.0 ou superior.
+- Versão 3.5 do .NET Framework com uma referência ao System.Core.dll.
+- .NET Framework versão 4.0 ou posterior.
+- .NET Core versão 1.0 ou posterior.
 
 ## <a name="see-also"></a>Consulte também
 
-[LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

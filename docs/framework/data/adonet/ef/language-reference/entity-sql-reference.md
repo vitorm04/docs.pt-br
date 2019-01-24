@@ -2,12 +2,12 @@
 title: Referência de Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522148"
 ---
 # <a name="entity-sql-reference"></a>Referência de Entity SQL
 
@@ -55,7 +55,7 @@ Igualdade e desigualdade são definidas para qualquer tipo de objeto que tem ide
 |[<= (Menor ou igual a)](less-than-or-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda tem um valor menor que ou igual à expressão da direita.|
 |[\[NÃO\] BETWEEN](between-entity-sql.md)|Determina se uma expressão resulta em um valor em um intervalo especificado.|
 |[\!= (Igual a)](not-equal-to-entity-sql.md)|Compara duas expressões para determinar se a expressão da esquerda não é igual à expressão da direita.|
-|[\[NÃO\] COMO](like-entity-sql.md)|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.|
+|[\[NOT\] LIKE](like-entity-sql.md)|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado.|
 
 ## <a name="logical-and-case-expression-operators"></a>Operadores lógicos e de expressão case
 
@@ -108,7 +108,7 @@ Entity SQL fornece várias operações de conjunto avançadas. Isso inclui os op
 |[EXCEPT](except-entity-sql.md)|Retorna uma coleção de valores distintos da expressão de consulta à esquerda do operando EXCEPT que também não são retornados da expressão de consulta à direita do operando EXCEPT.|
 |[\[NÃO\] EXISTS](exists-entity-sql.md)|Determina se uma coleção está vazia.|
 |[FLATTEN](flatten-entity-sql.md)|Converte uma coleção de coleções em uma coleção combinada.|
-|[\[NÃO\] IN](in-entity-sql.md)|Determina se um valor corresponde a qualquer valor em uma coleção.|
+|[\[NOT\] IN](in-entity-sql.md)|Determina se um valor corresponde a qualquer valor em uma coleção.|
 |[INTERSECT](intersect-entity-sql.md)|Retorna uma coleção de todos os valores diferentes que são retornados pelas expressões de consulta nos lados esquerdo e direito do operando INTERSECT.|
 |[OVERLAPS](overlaps-entity-sql.md)|Determina se duas coleções têm elementos comuns.|
 |[SET](set-entity-sql.md)|Usado para converter uma coleção de objetos em um conjunto gerando uma nova coleção com todos os elementos duplicados removidos.|
@@ -142,4 +142,4 @@ A tabela a seguir lista outros operadores de Entity SQL:
 
 ## <a name="see-also"></a>Consulte também
 
-[Entity SQL Language](entity-sql-language.md) (Linguagem SQL de entidade)
+- [Entity SQL Language](entity-sql-language.md) (Linguagem SQL de entidade)

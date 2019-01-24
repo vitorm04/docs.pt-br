@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25f66d7092c50247e24051280eaa7b714297c20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da19a77637e64fec676fdaac7ba56d47b5b07769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549883"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>Método ISymUnmanagedDocumentWriter::SetSource
-Conjuntos fonte para um documento que está sendo gravado.  
+Conjuntos de inserido o código-fonte para um documento que está sendo gravado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT SetSource(
  [in] Um `ULONG32` que contém o tamanho do `source` buffer.  
   
  `source`  
- [in] O buffer que armazena a fonte inserida.  
+ [in] O buffer que armazena a origem inserida.  
   
 ## <a name="return-value"></a>Valor de retorno  
  S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
@@ -48,5 +48,5 @@ HRESULT SetSource(
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ISymUnmanagedDocumentWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

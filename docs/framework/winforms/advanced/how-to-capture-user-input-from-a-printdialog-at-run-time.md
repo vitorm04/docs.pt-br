@@ -1,5 +1,5 @@
 ---
-title: Como capturar a entrada do usuário de um PrintDialog em tempo de execução
+title: 'Como: Capturar a entrada do usuário de um PrintDialog em tempo de execução'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: 554c3c43f8ac4d41ddfc8651472d0b7fbed960bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a15563560615f5b857220c0b548fc57f31ee4e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527660"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Como capturar a entrada do usuário de um PrintDialog em tempo de execução
-Enquanto você pode definir opções de impressão em tempo de design, às vezes, convém alterar essas opções em tempo de execução, provavelmente devido a escolhas feitas pelo usuário. Você pode capturar a entrada do usuário para imprimir um documento usando o <xref:System.Windows.Forms.PrintDialog> e <xref:System.Drawing.Printing.PrintDocument> componentes.  
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Como: Capturar a entrada do usuário de um PrintDialog em tempo de execução
+Embora você possa definir as opções relacionadas à impressão em tempo de design, às vezes, convém alterar essas opções em tempo de execução, provavelmente devido a escolhas feitas pelo usuário. Você pode capturar a entrada do usuário para imprimir um documento usando o <xref:System.Windows.Forms.PrintDialog> e o <xref:System.Drawing.Printing.PrintDocument> componentes.  
   
-### <a name="to-change-print-options-programmatically"></a>Para alterar opções de impressão programaticamente  
+### <a name="to-change-print-options-programmatically"></a>Para alterar as opções de impressão de forma programática  
   
-1.  Adicionar um <xref:System.Windows.Forms.PrintDialog> e um <xref:System.Drawing.Printing.PrintDocument> componente para seu formulário.  
+1.  Adicionar um <xref:System.Windows.Forms.PrintDialog> e um <xref:System.Drawing.Printing.PrintDocument> ao seu formulário.  
   
-2.  Definir o <xref:System.Windows.Forms.PrintDialog.Document%2A> propriedade o <xref:System.Windows.Forms.PrintDialog> para o <xref:System.Drawing.Printing.PrintDocument> adicionado ao formulário.  
+2.  Defina a <xref:System.Windows.Forms.PrintDialog.Document%2A> propriedade do <xref:System.Windows.Forms.PrintDialog> para o <xref:System.Drawing.Printing.PrintDocument> adicionado ao formulário.  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
@@ -53,8 +53,8 @@ Enquanto você pode definir opções de impressão em tempo de design, às vezes
     printDialog1->ShowDialog();  
     ```  
   
-4.  Opções de impressão do usuário na caixa de diálogo serão copiadas para o <xref:System.Drawing.Printing.PrinterSettings> propriedade o <xref:System.Drawing.Printing.PrintDocument> componente.  
+4.  Opções de impressão do usuário na caixa de diálogo serão copiadas para o <xref:System.Drawing.Printing.PrinterSettings> propriedade do <xref:System.Drawing.Printing.PrintDocument> componente.  
   
-## <a name="see-also"></a>Consulte também  
- [Como Imprimir um Arquivo de Texto de Várias Páginas nos Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- [Suporte à impressão nos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Consulte também
+- [Como: Imprimir um arquivo de texto de várias páginas nos Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Suporte à impressão nos Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d1db0e3d2a423c4ba21311b6b9deb0d2565c103
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523149"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Desmarque&gt; elemento para &lt;ouvintes&gt; para &lt;fonte&gt;
 Limpa a coleção `Listeners` de uma origem de rastreamento.  
   
  \<configuration>  
-\<System. Diagnostics >  
-\<fontes >  
+\<system.diagnostics>  
+\<sources>  
 \<origem >  
-\<ouvintes >  
-\<Limpar >  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,8 +86,8 @@ Limpa a coleção `Listeners` de uma origem de rastreamento.
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Esquema de configurações de rastreamento e depuração](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Ouvintes de rastreamento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

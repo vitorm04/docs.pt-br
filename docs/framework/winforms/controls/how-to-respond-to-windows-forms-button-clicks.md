@@ -1,5 +1,5 @@
 ---
-title: Como responder a cliques no botão dos Windows Forms
+title: 'Como: Responder a cliques de botão do Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539530"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Como responder a cliques no botão dos Windows Forms
-O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> controle é executar um código quando o botão é clicado.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Como: Responder a cliques de botão do Windows Forms
+O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> controle é executar algum código quando o botão é clicado.  
   
  Clicar em um <xref:System.Windows.Forms.Button> controle também gera um número de outros eventos, como o <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, e <xref:System.Windows.Forms.Control.MouseUp> eventos. Se você pretende anexar manipuladores de eventos para esses eventos relacionados, verifique se suas ações não entrem em conflito. Por exemplo, se clicar no botão limpa as informações que o usuário digitou na caixa de texto, pausar o ponteiro do mouse sobre o botão não deverá exibir uma dica de ferramenta com essas informações agora inexistentes.  
   
- Se o usuário tenta clique duas vezes o <xref:System.Windows.Forms.Button> controle, cada clique será processada separadamente; ou seja, o controle não oferece suporte para o evento de clique duplo.  
+ Se o usuário tentar clicar duas vezes o <xref:System.Windows.Forms.Button> controle, cada clique será processado separadamente; ou seja, o controle não dá suporte para o evento de clique duplo.  
   
 ### <a name="to-respond-to-a-button-click"></a>Para responder a um clique de botão  
   
--   O botão `Click` <xref:System.EventHandler> escrever o código para ser executado. `Button1_Click` deve ser associado ao controle. Para saber mais, veja [Como criar manipuladores de eventos em tempo de execução para formulários dos Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+-   O botão `Click` <xref:System.EventHandler> escrever o código seja executado. `Button1_Click` deve ser associado ao controle. Para obter mais informações, confira [Como: Criar manipuladores de eventos em tempo de execução para formulários do Windows](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -55,7 +55,7 @@ O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> contro
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral do controle de botão](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [Formas de selecionar um controle de botão dos Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Controle de botão](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Visão geral do controle de botão](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
+- [Formas de selecionar um controle de botão dos Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
+- [Controle de botão](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545024"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Diretrizes para criar controles com estilo
 Este documento resume um conjunto de práticas recomendadas a serem consideradas ao criar um controle que você deseja que seja fácil de criar estilos e modelos. Nós chegamos a este conjunto de práticas recomendadas por meio de muitas tentativas e erros ao trabalhar nos estilos de controle de tema do conjunto de controles internos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aprendemos que uma definição de estilo bem-sucedida é tanto uma função de um modelo de objeto com um bom design quanto é do próprio estilo. O público-alvo deste documento é o autor do controle, não os autores de estilo.  
@@ -30,10 +30,10 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
  Para obter uma introdução à definição de estilo e de modelo, consulte [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md) (Definição de estilo e de modelo).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>Antes de iniciar: entendendo seu controle  
+## <a name="before-you-start-understanding-your-control"></a>Antes de começar: Entendendo seu controle  
  Antes de começarmos com essas diretrizes, é importante compreender e definir o uso comum do seu controle. A definição de estilo expõe um conjunto geralmente irregular de possibilidades. Controles que são escritos para serem usados amplamente (em vários aplicativos, por vários desenvolvedores) enfrentam o desafio de que os estilos possam ser usados para fazer alterações de grande alcance na aparência visual do controle. Na verdade, o controle com estilo aplicado nem sempre se parece com a intenção do autor do controle. Como a flexibilidade oferecida pela definição de estilo é essencialmente ilimitada, você pode usar o conceito de uso comum para ajudá-lo a definir o escopo de suas decisões.  
   
- Para entender o uso comum do controle, é bom pensar sobre a proposta de valor do controle. O que seu controle tem de especial que nenhum outro controle pode oferecer? O uso comum não implica nenhuma aparência visual específica, mas sim a filosofia do controle e um conjunto razoável de expectativas sobre seu uso. Essa compreensão permite que você faça algumas suposições sobre o modelo de composição e os comportamentos definidos pelo estilo do controle no caso comum. No caso de <xref:System.Windows.Controls.ComboBox>, por exemplo, Noções básicas sobre o uso comum não dará qualquer esclarecimento sobre se um determinado <xref:System.Windows.Controls.ComboBox> tem cantos arredondados, mas ele fornecerá informações sobre o fato que o <xref:System.Windows.Controls.ComboBox> provavelmente precisa de uma janela pop-up e alguma forma de alternância se ele é aberto.  
+ Para entender o uso comum do controle, é bom pensar sobre a proposta de valor do controle. O que seu controle tem de especial que nenhum outro controle pode oferecer? O uso comum não implica nenhuma aparência visual específica, mas sim a filosofia do controle e um conjunto razoável de expectativas sobre seu uso. Essa compreensão permite que você faça algumas suposições sobre o modelo de composição e os comportamentos definidos pelo estilo do controle no caso comum. No caso de <xref:System.Windows.Controls.ComboBox>, por exemplo, Noções básicas sobre o uso comum não dará nenhuma informação sobre se um determinado <xref:System.Windows.Controls.ComboBox> tem cantos arredondados, mas ele fornecerá informações sobre o fato de que o <xref:System.Windows.Controls.ComboBox> provavelmente precisa de uma janela pop-up e alguma forma de alternância se ele é aberto.  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Diretrizes gerais  
@@ -58,8 +58,8 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
     |Elemento|Tipo|Usado por|  
     |-------------|----------|-------------|  
-    |<xref:System.Windows.Controls.ContentPresenter>|Baseado em tipo|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>, e assim por diante (todos os <xref:System.Windows.Controls.ContentControl> tipos)|  
-    |<xref:System.Windows.Controls.ItemsPresenter>|Baseado em tipo|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>, e assim por diante (todos os <xref:System.Windows.Controls.ItemsControl> tipos)|  
+    |<xref:System.Windows.Controls.ContentPresenter>|Baseado em tipo|<xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.Frame>e assim por diante (todos os <xref:System.Windows.Controls.ContentControl> tipos)|  
+    |<xref:System.Windows.Controls.ItemsPresenter>|Baseado em tipo|<xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.Menu>e assim por diante (todos os <xref:System.Windows.Controls.ItemsControl> tipos)|  
     |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|Nomeado|<xref:System.Windows.Controls.ToolBar>|  
     |<xref:System.Windows.Controls.Primitives.Popup>|Autônomo|<xref:System.Windows.Controls.ComboBox>, <xref:System.Windows.Controls.ToolBar>, <xref:System.Windows.Controls.Menu>, <xref:System.Windows.Controls.ToolTip>e assim por diante|  
     |<xref:System.Windows.Controls.Primitives.RepeatButton>|Nomeado|<xref:System.Windows.Controls.Slider>, <xref:System.Windows.Controls.Primitives.ScrollBar>e assim por diante|  
@@ -73,7 +73,7 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
     -   Os elementos auxiliares nomeados devem ser identificados pelo pai e o pai deve estabelecer qualquer configuração necessária no elemento auxiliar.  
   
-    -   Os elementos auxiliares baseados em tipo devem estabelecer as configurações necessárias diretamente neles mesmos. Isso pode exigir que o elemento auxiliar consulte o contexto de informações no qual está sendo usado, incluindo seu `TemplatedParent` (o tipo de controle do modelo no qual ele está sendo usado). Por exemplo, <xref:System.Windows.Controls.ContentPresenter> automaticamente associa o `Content` propriedade do seu `TemplatedParent` para seus <xref:System.Windows.Controls.ContentPresenter.Content%2A> propriedade quando usado em um <xref:System.Windows.Controls.ContentControl> tipo derivado.  
+    -   Os elementos auxiliares baseados em tipo devem estabelecer as configurações necessárias diretamente neles mesmos. Isso pode exigir que o elemento auxiliar consulte o contexto de informações no qual está sendo usado, incluindo seu `TemplatedParent` (o tipo de controle do modelo no qual ele está sendo usado). Por exemplo, <xref:System.Windows.Controls.ContentPresenter> associa automaticamente a `Content` propriedade de seus `TemplatedParent` para sua <xref:System.Windows.Controls.ContentPresenter.Content%2A> propriedade quando usado em um <xref:System.Windows.Controls.ContentControl> tipo derivado.  
   
     -   Os elementos auxiliares autônomos não podem ser otimizados dessa maneira porque, por definição, nem o elemento auxiliar nem o pai sabem da existência um do outro.  
   
@@ -83,7 +83,7 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
     1.  Associação de propriedade. Exemplo: associação entre <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
-    2.  Alterações de propriedade ou animações de propriedade disparadas. Exemplo: o estado de foco de um <xref:System.Windows.Controls.Button>.  
+    2.  Alterações de propriedade ou animações de propriedade disparadas. Exemplo: o estado de focalização de uma <xref:System.Windows.Controls.Button>.  
   
     3.  Comando. Exemplo: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> em <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
@@ -118,6 +118,6 @@ Este documento resume um conjunto de práticas recomendadas a serem consideradas
   
 -   **Os estilos de tema não precisam ter a semântica de "layout" consistente entre todos os temas**. Por exemplo, o estilo padrão não precisa garantir que um controle ocupará a mesma quantidade de tamanho em todos os temas ou garantir que um controle terá as mesmas margens de conteúdo/preenchimento em todos os temas.  
   
-## <a name="see-also"></a>Consulte também  
- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>Consulte também
+- [Estilo e modelagem](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Visão geral da criação de controle](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

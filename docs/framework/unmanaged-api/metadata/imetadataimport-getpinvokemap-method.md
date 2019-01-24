@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2174537e9605ad35e4f6f878954e318c7032b080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2aed3367e20e32a387c8a1c58ead2899fbf0dcb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521433"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>Método IMetaDataImport::GetPinvokeMap
 Obtém um ModuleRef token para representar o assembly de destino de uma chamada de PInvoke.  
@@ -45,29 +45,29 @@ HRESULT GetPinvokeMap (
  [in] Um token para obter os metadados de mapeamento de PInvoke para FieldDef ou MethodDef.  
   
  `pdwMappingFlags`  
- [out] Um ponteiro para sinalizadores usados para mapeamento. Esse valor é um bitmask do [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeração.  
+ [out] Um ponteiro para os sinalizadores usados para mapeamento. Esse valor é um bitmask do [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeração.  
   
  `szImportName`  
- [out] O nome do DLL não gerenciada de destino.  
+ [out] O nome da DLL de destino não gerenciado.  
   
  `cchImportName`  
- [in] O tamanho em caracteres largos de `szImportName`.  
+ [in] O tamanho em caracteres largos da `szImportName`.  
   
  `pchImportName`  
- [out] O número de caracteres largos retornados em `szImportName`.  
+ [out] O número de caracteres largos retornado no `szImportName`.  
   
  `pmrImportDLL`  
- [out] Um ponteiro para um token de ModuleRef que representa a biblioteca de objeto de destino não gerenciada.  
+ [out] Um ponteiro para um token de ModuleRef que representa a biblioteca de objeto de destino não gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

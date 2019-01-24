@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: a66f37e26d8d86e29e81161ea4585737140441ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd5cc270074a3a2845147bcad8baef8d1f8ba2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529405"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interoperação Direct3D9 e WPF
 Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presentation Foundation). Este tópico descreve como criar conteúdo Direct3D9 para interoperar com eficiência com o WPF.  
@@ -21,7 +21,7 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
 >  Ao usar o conteúdo Direct3D9 no WPF, você também precisa pensar a respeito do desempenho. Para obter mais informações sobre como otimizar o desempenho, consulte [Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
 ## <a name="display-buffers"></a>Buffers de exibição  
- O <xref:System.Windows.Interop.D3DImage> classe gerencia dois buffers de exibição, que são chamados de *buffer de fundo* e o *buffer frontal*. O buffer de fundo é a superfície do Direct3D9. Alterações para o buffer de fundo são copiadas para frente no buffer frontal ao chamar o <xref:System.Windows.Interop.D3DImage.Unlock%2A> método.  
+ O <xref:System.Windows.Interop.D3DImage> classe gerencia dois buffers de exibição, que são chamados de *buffer de fundo* e o *buffer frontal*. O buffer de fundo é a superfície do Direct3D9. As alterações para o buffer de fundo são copiadas e encaminhadas para o buffer frontal ao chamar o <xref:System.Windows.Interop.D3DImage.Unlock%2A> método.  
   
  A ilustração a seguir mostra a relação entre o buffer de fundo e o buffer frontal.  
   
@@ -39,7 +39,7 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
  No Windows Vista ou sistemas operacionais mais recentes, use o método `Direct3DCreate9Ex` com uma exibição que está configurada para usar o WDDM (Windows Display Driver Model). Use o método `Direct3DCreate9` em qualquer outra plataforma.  
   
 ### <a name="availability-of-the-direct3dcreate9ex-method"></a>Disponibilidade do método Direct3DCreate9Ex  
- O d3d9.dll tem o método `Direct3DCreate9Ex` somente no Windows Vista ou em sistemas operacionais posteriores. Se você vincular diretamente a função no Windows XP, o aplicativo falhará ao carregar. Para determinar se o método `Direct3DCreate9Ex` tem suporte, carregue a DLL e procure o endereço de proc. O código a seguir mostra como testar o método `Direct3DCreate9Ex`. Para obter um exemplo de código completo, consulte [Passo a passo: criando conteúdo Direct3D9 para hospedagem no WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+ O d3d9.dll tem o método `Direct3DCreate9Ex` somente no Windows Vista ou em sistemas operacionais posteriores. Se você vincular diretamente a função no Windows XP, o aplicativo falhará ao carregar. Para determinar se o método `Direct3DCreate9Ex` tem suporte, carregue a DLL e procure o endereço de proc. O código a seguir mostra como testar o método `Direct3DCreate9Ex`. Para obter um exemplo de código completo, consulte [passo a passo: Criando conteúdo Direct3D9 para hospedar no WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
@@ -60,7 +60,7 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
 ## <a name="creating-the-back-buffer-render-target"></a>Criando o destino de renderização do buffer de fundo  
- Para exibir o conteúdo de Direct3D9 em um <xref:System.Windows.Interop.D3DImage>, crie uma superfície Direct3D9 e atribuí-lo ao chamar o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> método.  
+ Para exibir o conteúdo de Direct3D9 em um <xref:System.Windows.Interop.D3DImage>, crie uma superfície de Direct3D9 e atribuí-lo chamando o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> método.  
   
 ### <a name="verifying-adapter-support"></a>Verificando o suporte do adaptador  
  Antes de criar uma superfície, verifique se todos os adaptadores dão suporte às propriedades de superfície que você precisa. Mesmo se você renderizar para apenas um adaptador, a janela do WPF poderá ser exibida em qualquer adaptador do sistema. Você sempre deve escrever um código do Direct3D9 que manipule configurações de vários adaptadores e deve verificar o suporte de todos os adaptadores, porque o WPF pode mover a superfície entre os adaptadores disponíveis.  
@@ -77,23 +77,23 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
 ### <a name="wddm"></a>WDDM  
- No Windows Vista e sistemas operacionais posteriores, que são configurados para usar o WDDM, você pode criar uma textura de destino de renderização e passar a superfície de nível 0 para o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> método. Essa abordagem não é recomendada no Windows XP, porque você não pode criar uma textura de destino de renderização bloqueável e o desempenho será reduzido.  
+ No Windows Vista e sistemas operacionais posteriores, o que são configurados para usar o WDDM, você pode criar uma textura de destino de renderização e passar a superfície de nível 0 para o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> método. Essa abordagem não é recomendada no Windows XP, porque você não pode criar uma textura de destino de renderização bloqueável e o desempenho será reduzido.  
   
 ## <a name="handling-device-state"></a>Manipulação de estado de dispositivo  
- O <xref:System.Windows.Interop.D3DImage> classe gerencia dois buffers de exibição, que são chamados de *buffer de fundo* e o *buffer frontal*. O buffer de fundo é a superfície do Direct3D.  Alterações para o buffer de fundo são copiadas para frente no buffer frontal ao chamar o <xref:System.Windows.Interop.D3DImage.Unlock%2A> método, onde ele é exibido no hardware. Ocasionalmente, o buffer frontal se torna indisponível. Essa falta de disponibilidade pode ser causada por bloqueio de tela, aplicativos Direct3D de uso exclusivo em tela inteira, troca de usuário ou outras atividades do sistema. Quando isso ocorrer, o aplicativo do WPF é notificado manipulando o <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> evento.  A maneira que seu aplicativo responde à indisponibilidade do buffer frontal depende de se o WPF está habilitado para voltar à renderização de software. O <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> método tem uma sobrecarga que usa um parâmetro que especifica se WPF voltará para renderização por software.  
+ O <xref:System.Windows.Interop.D3DImage> classe gerencia dois buffers de exibição, que são chamados de *buffer de fundo* e o *buffer frontal*. O buffer de fundo é a superfície do Direct3D.  As alterações para o buffer de fundo são copiadas e encaminhadas para o buffer frontal ao chamar o <xref:System.Windows.Interop.D3DImage.Unlock%2A> método, em que ele é exibido no hardware. Ocasionalmente, o buffer frontal se torna indisponível. Essa falta de disponibilidade pode ser causada por bloqueio de tela, aplicativos Direct3D de uso exclusivo em tela inteira, troca de usuário ou outras atividades do sistema. Quando isso ocorrer, o aplicativo do WPF é notificado pela manipulação de <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> eventos.  A maneira que seu aplicativo responde à indisponibilidade do buffer frontal depende de se o WPF está habilitado para voltar à renderização de software. O <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> método tem uma sobrecarga que utiliza um parâmetro que especifica se o WPF voltará à renderização de software.  
   
- Quando você chama o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> sobrecarregar ou chamar o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> sobrecarga com a `enableSoftwareFallback` parâmetro definido como `false`, o sistema de processamento libera sua referência para o buffer de fundo quando o buffer principal fica indisponível, e nada é exibido. Quando o buffer frontal está disponível novamente, o sistema de processamento gera o <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> evento para notificar o aplicativo do WPF.  Você pode criar um manipulador de eventos para o <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> eventos reiniciar renderização novamente com uma superfície Direct3D válida. Para reiniciar o processamento, você deve chamar <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>.  
+ Quando você chama o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> sobrecarregar ou ligue para o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> sobrecarga com o `enableSoftwareFallback` parâmetro definido como `false`, o sistema de renderização libera sua referência para o buffer de fundo quando o buffer frontal se torna indisponível e nada é exibido. Quando o buffer frontal estiver disponível novamente, o sistema de processamento aciona o <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> eventos para notificar o aplicativo do WPF.  Você pode criar um manipulador de eventos para o <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> evento reinicie a renderização novamente com uma superfície Direct3D válida. Para reiniciar a renderização, você deve chamar <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>.  
   
- Quando você chama o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> sobrecarga com a `enableSoftwareFallback` parâmetro definido como `true`, o sistema de processamento retém sua referência para o buffer de fundo quando o buffer principal fica indisponível, portanto, não há necessidade de chamar <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> quando o buffer frontal está disponível novamente.  
+ Quando você chama o <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> sobrecarga com o `enableSoftwareFallback` parâmetro definido como `true`, o sistema de renderização retém sua referência para o buffer de fundo quando o buffer frontal fica indisponível, portanto, não há nenhuma necessidade de chamar <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> quando a frente buffer estiver disponível novamente.  
   
- Quando a renderização de software é habilitada, pode haver situações em que o dispositivo do usuário fica indisponível, mas o sistema de renderização retém uma referência à superfície do Direct3D. Para verificar se um dispositivo de Direct3D9 está indisponível, chame o método `TestCooperativeLevel`. Para verificar um dispositivo Direct3D9Ex, chame o método `CheckDeviceState`, porque o método `TestCooperativeLevel` foi preterido e sempre retorna êxito. Se o dispositivo de usuário se tornou indisponível, chame <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> para liberar a referência do WPF para o buffer de fundo.  Se você precisar redefinir o dispositivo, chame <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> com o `backBuffer` parâmetro definido como `null`e, em seguida, chame <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> novamente com `backBuffer` definido como uma superfície Direct3D válida.  
+ Quando a renderização de software é habilitada, pode haver situações em que o dispositivo do usuário fica indisponível, mas o sistema de renderização retém uma referência à superfície do Direct3D. Para verificar se um dispositivo de Direct3D9 está indisponível, chame o método `TestCooperativeLevel`. Para verificar um dispositivo Direct3D9Ex, chame o método `CheckDeviceState`, porque o método `TestCooperativeLevel` foi preterido e sempre retorna êxito. Se o dispositivo do usuário ficou indisponível, chame <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> para liberar a referência do WPF ao buffer de fundo.  Se você precisar redefinir o dispositivo, chame <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> com o `backBuffer` parâmetro definido como `null`e, em seguida, chame <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> novamente com `backBuffer` definido como uma superfície Direct3D válida.  
   
  Chame o método `Reset` para recuperar de um dispositivo inválido somente se você implementar o suporte a vários adaptadores. Caso contrário, libere todas as interfaces de Direct3D9 e recrie-as completamente. Se o layout do adaptador for alterado, os objetos de Direct3D9 criados antes da alteração não serão atualizados.  
   
 ## <a name="handling-resizing"></a>Lidando com o redimensionamento  
- Se um <xref:System.Windows.Interop.D3DImage> é exibido em uma resolução diferente de seu tamanho nativo, ele é dimensionado de acordo com a atual <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>, exceto que <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> é substituído por <xref:System.Windows.Media.BitmapScalingMode.Fant>.  
+ Se um <xref:System.Windows.Interop.D3DImage> é exibido em uma resolução diferente de seu tamanho nativo, ela é dimensionada de acordo com a atual <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>, exceto pelo fato <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> é substituído por <xref:System.Windows.Media.BitmapScalingMode.Fant>.  
   
- Se você precisar de uma alta fidelidade, você deve criar um novo superfície quando o contêiner do <xref:System.Windows.Interop.D3DImage> tamanho é alterado.  
+ Se você precisar de maior fidelidade, você deve criar uma nova superfície quando o contêiner do <xref:System.Windows.Interop.D3DImage> muda de tamanho.  
   
  Há três abordagens possíveis para lidar com redimensionamento.  
   
@@ -101,10 +101,10 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
   
 -   Aguardar durante um período fixo de tempo sem que ocorra um evento de redimensionamento para criar a nova superfície.  
   
--   Criar um <xref:System.Windows.Threading.DispatcherTimer> que verifica as dimensões de contêiner várias vezes por segundo.  
+-   Criar um <xref:System.Windows.Threading.DispatcherTimer> que verifica as dimensões do contêiner várias vezes por segundo.  
   
 ## <a name="multi-monitor-optimization"></a>Otimização de vários monitores  
- Desempenho reduzido significativamente pode ocorrer quando o sistema de processamento move um <xref:System.Windows.Interop.D3DImage> para outro.  
+ Desempenho significativamente reduzido pode ocorrer quando o sistema de renderização move uma <xref:System.Windows.Interop.D3DImage> para outro monitor.  
   
  No WDDM, desde que os monitores estejam na mesma placa de vídeo e você use o `Direct3DCreate9Ex`, não haverá redução no desempenho. Se os monitores estiverem em placas de vídeo separadas, o desempenho será reduzido. No Windows XP, o desempenho é sempre reduzido.  
   
@@ -118,10 +118,10 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
   
 3.  Use o método `IDirect3D9::GetAdapterMonitor` para localizar em qual adaptador de Direct3D9 o monitor está.  
   
-4.  Se o adaptador não é o mesmo que o adaptador com o buffer de fundo, criar um novo buffer de fundo do novo monitor e atribuí-la para o <xref:System.Windows.Interop.D3DImage> buffer de fundo.  
+4.  Se o adaptador não for o mesmo que o adaptador com o buffer de fundo, crie um novo buffer de fundo no novo monitor e o atribui a <xref:System.Windows.Interop.D3DImage> buffer de fundo.  
   
 > [!NOTE]
->  Se o <xref:System.Windows.Interop.D3DImage> participa de monitores, o desempenho será lentos, exceto no caso do WDDM e `IDirect3D9Ex` no mesmo adaptador. Não há nenhuma maneira de melhorar o desempenho nessa situação.  
+>  Se o <xref:System.Windows.Interop.D3DImage> permeiam monitores, o desempenho será lentos, exceto no caso do WDDM e `IDirect3D9Ex` no mesmo adaptador. Não há nenhuma maneira de melhorar o desempenho nessa situação.  
   
  O exemplo de código a seguir mostra como localizar o monitor atual.  
   
@@ -138,17 +138,17 @@ Você pode incluir conteúdo Direct3D9 em um aplicativo do WPF (Windows Presenta
   
 -   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
- Quando uma dessas situações ocorre, o sistema de processamento chama o <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> método para copiar o buffer de hardware para o software. A implementação padrão chama o método `GetRenderTargetData` com sua superfície. Como essa chamada ocorre fora do padrão de bloqueio/desbloqueio, ela poderá falhar. Nesse caso, o método `CopyBackBuffer` retorna `null` e nenhuma imagem é exibida.  
+ Quando uma dessas situações ocorre, o sistema de renderização chama o <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> método para copiar o buffer de hardware para o software. A implementação padrão chama o método `GetRenderTargetData` com sua superfície. Como essa chamada ocorre fora do padrão de bloqueio/desbloqueio, ela poderá falhar. Nesse caso, o método `CopyBackBuffer` retorna `null` e nenhuma imagem é exibida.  
   
- Você pode substituir o <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> método, chamar a implementação base, e se ele retorna `null`, você pode retornar um espaço reservado <xref:System.Windows.Media.Imaging.BitmapSource>.  
+ Você pode substituir a <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> método, chamar a implementação base, e se ele retornar `null`, você pode retornar um espaço reservado <xref:System.Windows.Media.Imaging.BitmapSource>.  
   
  Você também pode implementar sua própria renderização de software em vez de chamar a implementação de base.  
   
 > [!NOTE]
->  Se a renderização completamente WPF de software, <xref:System.Windows.Interop.D3DImage> não é mostrada porque WPF não tem um buffer frontal.  
+>  Se o WPF estiver renderizando completamente no software, <xref:System.Windows.Interop.D3DImage> não é mostrada porque o WPF não tem um buffer frontal.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Interop.D3DImage>  
- [Considerações sobre Desempenho para Interoperabilidade entre Direct3D9 e WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
- [Passo a passo: criando conteúdo Direct3D9 para hospedar no WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
- [Instruções Passo a Passo: Hospedando Conteúdo Direct3D9 no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Interop.D3DImage>
+- [Considerações sobre Desempenho para Interoperabilidade entre Direct3D9 e WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [Passo a passo: Criando conteúdo Direct3D9 para hospedar no WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Passo a passo: Hospedando conteúdo Direct3D9 no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

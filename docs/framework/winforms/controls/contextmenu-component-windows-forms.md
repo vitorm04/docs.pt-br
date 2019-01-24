@@ -10,25 +10,25 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 35806d14701169206b1ce29ea8b0b6e5993ba3c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552808"
 ---
 # <a name="contextmenu-component-windows-forms"></a>Componente ContextMenu (Windows Forms)
 > [!NOTE]
->  Embora `MenuStrip` e `ContextMenuStrip` substituir e adiciona a funcionalidade para o <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> controles de versões anteriores, <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> são mantidos para uso futuro e compatibilidade com versões anteriores, se você escolher.  
+>  Embora `MenuStrip` e `ContextMenuStrip` substituam e adicionem funcionalidade para o <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> de versões anteriores, os controles <xref:System.Windows.Forms.MainMenu> e <xref:System.Windows.Forms.ContextMenu> são mantidos para compatibilidade com versões anteriores e uso futuro, se você escolher.  
   
- Windows Forms `ContextMenu` componente é usado para fornecer aos usuários um menu de atalho facilmente acessível de comandos usados com frequência que estão associados com o objeto selecionado. Os itens em um menu de atalho frequentemente são um subconjunto dos itens de menus principais que aparecem em outro lugar no aplicativo. Menus de atalho geralmente estão disponíveis clicando com o mouse. No Windows Forms, eles estão associados com outros controles.  
+ Os formulários do Windows `ContextMenu` componente é usado para fornecer aos usuários um menu de atalho facilmente acessível dos comandos usados com frequência que estão associados com o objeto selecionado. Os itens em um menu de atalho frequentemente são um subconjunto dos itens de menus principais que aparecem em outro lugar no aplicativo. Menus de atalho geralmente estão disponíveis clicando com o mouse. No Windows Forms, eles são associados a outros controles.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
- Apresenta os conceitos gerais do `ContextMenu` componente, que permite aos usuários criar menus de comandos usados com frequência associados ao objeto selecionado.  
+ Apresenta os conceitos gerais do `ContextMenu` componente, que permite aos usuários criar menus de comandos usados com frequência, associados a um objeto selecionado.  
   
- [Como adicionar e remover itens de menu com o componente ContextMenu dos Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- Explica como adicionar e remover itens de menu de atalho em formulários do Windows.  
+ [Como: Adicionar e remover itens de Menu com o componente do Windows Forms ContextMenu](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ Explica como adicionar e remover itens de menu de atalho no Windows Forms.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.ContextMenu>  
@@ -38,6 +38,6 @@ ms.locfileid: "33526147"
  [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ContextMenuStrip>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ContextMenuStrip>

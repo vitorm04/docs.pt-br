@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 692ac4ef4fe8ea64c6a63dc2f02cc04244a842c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab8965ca5d6c9c96cea5f5b351547ce2d4dfacc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546274"
 ---
 # <a name="iidentityauthority-interface"></a>Interface IIdentityAuthority
 Gerencia chaves de identidade para objetos de código.  
@@ -38,10 +38,10 @@ Gerencia chaves de identidade para objetos de código.
 |`IIdentityAuthority::CreateReference`|Obtém um ponteiro para um novo `IReferenceIdentity` instância que representa o objeto de código no escopo atual.|  
 |`IIdentityAuthority::DefinitionToText`|Obtém uma versão de cadeia de caracteres formatada especificada `IDefinitionIdentity`.|  
 |`IIdentityAuthority::DefinitionToTextBuffer`|Preenche o buffer de caractere largo especificado com uma versão de cadeia de caracteres especificada `IDefinitionIdentity`.|  
-|`IIdentityAuthority::DoesDefinitionMatchReference`|Obtém um valor que indica se o especificado `IDefinitionIdentity` e `IReferenceIdentity` instâncias façam referência ao mesmo objeto de código.|  
+|`IIdentityAuthority::DoesDefinitionMatchReference`|Obtém um valor que indica se a especificada `IDefinitionIdentity` e `IReferenceIdentity` instâncias se referem ao mesmo objeto de código.|  
 |`IIdentityAuthority::DoesTextualDefinitionMatchTextualReference`|Obtém um valor que indica se as cadeias de caracteres especificadas se referem ao mesmo objeto de código.|  
-|`IIdentityAuthority::GenerateDefinitionKey`|Obtém um ponteiro para uma chave de cadeia de caracteres recém-criado especificado `IDefinitionIdentity`.|  
-|`IIdentityAuthority::GenerateReferenceKey`|Obtém um ponteiro para uma chave de cadeia de caracteres recém-criado especificado `IReferenceIdentity`.|  
+|`IIdentityAuthority::GenerateDefinitionKey`|Obtém um ponteiro para uma chave de cadeia de caracteres criada recentemente especificado `IDefinitionIdentity`.|  
+|`IIdentityAuthority::GenerateReferenceKey`|Obtém um ponteiro para uma chave de cadeia de caracteres criada recentemente especificado `IReferenceIdentity`.|  
 |`IIdentityAuthority::HashDefinition`|Obtém um valor de hash especificado `IDefinitionIdentity`.|  
 |`IIdentityAuthority::HashReference`|Obtém um valor de hash especificado `IreferenceIdentity`.|  
 |`IIdentityAuthority::ReferenceToText`|Obtém uma versão de cadeia de caracteres formatada especificada `IReferenceIdentity`.|  
@@ -50,11 +50,11 @@ Gerencia chaves de identidade para objetos de código.
 |`IIdentityAuthority::TextToReference`|Obtém um ponteiro de interface para um `IReferenceIdentity` cadeia de caracteres formatada de instância gerada especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Isolation.h  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+## <a name="see-also"></a>Consulte também
+- [Interfaces de fusão](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

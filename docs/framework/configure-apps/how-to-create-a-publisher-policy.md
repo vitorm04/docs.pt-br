@@ -1,5 +1,5 @@
 ---
-title: Como criar uma política de editor
+title: 'Como: Criar uma política de editor'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530519"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Como criar uma política de editor
+# <a name="how-to-create-a-publisher-policy"></a>Como: Criar uma política de editor
 Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma versão mais recente de um assembly, incluindo um arquivo de política do publicador com o assembly atualizado. O arquivo de política de publicador Especifica as configurações de base de código e redirecionamento de assembly e usa o mesmo formato que o arquivo de configuração do aplicativo. O arquivo de política de publicador é compilado em um assembly e colocado no cache de assembly global.  
   
  Há três etapas envolvidas na criação de uma política de editor:  
@@ -55,7 +55,7 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
   
 1.  Digite o seguinte comando no prompt de comando:  
   
-     **Al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/platform:** *processorArchitecture*  
+     **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
      Neste comando:  
   
@@ -102,11 +102,11 @@ Os fornecedores de assemblies podem declarar que os aplicativos devem usar uma v
     > [!IMPORTANT]
     >  O assembly de política do publicador não pode ser adicionado ao cache de assembly global, a menos que o arquivo de política do publicador original está localizado no mesmo diretório que o assembly.  
   
-## <a name="see-also"></a>Consulte também  
- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)  
- [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Consulte também
+- [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Configurando aplicativos](../../../docs/framework/configure-apps/index.md)
+- [Configuração de aplicativos .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Esquema de configurações do tempo de execução](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Redirecionando versões de assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

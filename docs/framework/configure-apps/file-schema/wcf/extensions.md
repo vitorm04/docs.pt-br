@@ -2,12 +2,12 @@
 title: '&lt;Extensões&gt;'
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: 1110c9790b3afd1af5c5947b4976cbaca88fd324
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9589eaf8ee133f0be670782574dfd30272f29b45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556344"
 ---
 # <a name="ltextensionsgt"></a>&lt;Extensões&gt;
 Este elemento de configuração contém uma coleção de elementos XML que contêm metadados personalizados para serem publicados juntamente com os metadados detectáveis padrão (EPR, ContractTypeName, BindingName, escopo e ListenURI). O exemplo a seguir é um exemplo do uso desse elemento de configuração.  
@@ -45,5 +45,5 @@ Este elemento de configuração contém uma coleção de elementos XML que cont�
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Consulte também
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

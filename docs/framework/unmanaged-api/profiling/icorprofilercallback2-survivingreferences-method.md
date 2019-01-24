@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0ed1dc09e8dcee8a4c67e01279c6e13661e252d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2741f2f1a6c5f92c3d15ba7d0127cd69494afdce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545128"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Método ICorProfilerCallback2::SurvivingReferences
-Relata o layout dos objetos no heap como resultado de uma coleta de lixo não compactar.  
+Relata o layout dos objetos no heap como resultado de uma coleta de lixo sem compactação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,47 +40,47 @@ HRESULT SurvivingReferences(
   
 #### <a name="parameters"></a>Parâmetros  
  `cSurvivingObjectIDRanges`  
- [in] O número de blocos de contíguos objetos que sobreviveram como resultado da coleta de lixo não compactar. Ou seja, o valor de `cSurvivingObjectIDRanges` é o tamanho do `objectIDRangeStart` e `cObjectIDRangeLength` matrizes, qual repositório um `ObjectID` e um comprimento, respectivamente, para cada bloco de objetos.  
+ [in] O número de blocos contíguos objetos que sobreviveram como resultado da coleta de lixo sem compactação. Ou seja, o valor de `cSurvivingObjectIDRanges` é o tamanho do `objectIDRangeStart` e `cObjectIDRangeLength` matrizes, qual repositório um `ObjectID` e um comprimento, respectivamente, para cada bloco de objetos.  
   
- Os dois argumentos de `SurvivingReferences` matrizes paralelos. Em outras palavras, `objectIDRangeStart` e `cObjectIDRangeLength` do mesmo bloco de contíguos objetos estão relacionados.  
+ Os próximos dois argumentos de `SurvivingReferences` são matrizes paralelas. Em outras palavras, `objectIDRangeStart` e `cObjectIDRangeLength` referem-se do mesmo bloco de objetos contíguos.  
   
  `objectIDRangeStart`  
- [in] Uma matriz de `ObjectID` valores, cada um deles é o endereço inicial de um bloco de contígua, live objetos na memória.  
+ [in] Uma matriz de `ObjectID` valores, cada um deles é o endereço inicial de um bloco de contíguos, live objetos na memória.  
   
  `cObjectIDRangeLength`  
- [in] Uma matriz de inteiros, cada um deles é o tamanho de um bloco sobrevivente de contíguos objetos na memória.  
+ [in] Uma matriz de inteiros, cada um deles é o tamanho de um bloco sobrevivente de objetos adjacentes na memória.  
   
- Um tamanho é especificado para cada bloco que é referenciado no `objectIDRangeStart` matriz.  
+ Um tamanho for especificado para cada bloco que é referenciado no `objectIDRangeStart` matriz.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
->  Esse método informa os tamanhos como `MAX_ULONG` para objetos que são maiores do que 4 GB em plataformas de 64 bits. Para objetos que são maiores do que 4 GB, use o [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) método em vez disso.  
+>  Esse método informa os tamanhos como `MAX_ULONG` para objetos que são maiores que 4 GB em plataformas de 64 bits. Para objetos que são maiores do que 4 GB, use o [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) método em vez disso.  
   
- Os elementos do `objectIDRangeStart` e `cObjectIDRangeLength` matrizes devem ser interpretadas da seguinte maneira para determinar se um objeto sobreviveu a coleta de lixo. Suponha que um `ObjectID` valor (`ObjectID`) está dentro do seguinte intervalo:  
+ Os elementos do `objectIDRangeStart` e `cObjectIDRangeLength` matrizes devem ser interpretadas da seguinte maneira para determinar se um objeto sobreviveu a coleta de lixo. Suponha que um `ObjectID` valor (`ObjectID`) se encontra dentro do seguinte intervalo:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- Para qualquer valor de `i` que está no intervalo a seguir, o objeto sobreviveu a coleta de lixo:  
+ Para qualquer valor de `i` que está no intervalo a seguir, o objeto sobrevive à coleta de lixo:  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
- Uma coleta de lixo não compactar recupera a memória ocupada por objetos "inativos", mas não compactar o que o espaço livre. Como resultado, memória é retornada para o heap, mas não há objetos "ativos" são movidos.  
+ Uma coleta de lixo sem compactação recupera a memória ocupada por objetos "inativos", mas não compacta que o espaço livre. Como resultado, memória é retornada para o heap, mas não há objetos "ativos" são movidos.  
   
- O common language runtime (CLR) chama `SurvivingReferences` para não compactar coletas de lixo. Para compactar coletas de lixo, [: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) é chamado em vez disso. Uma coleta de lixo único pode ser compactação para uma geração e não compactar para outro. Para uma coleta de lixo na geração qualquer específica, o criador de perfil será exibido um `SurvivingReferences` retorno de chamada ou uma `MovedReferences` retorno de chamada, mas não ambos.  
+ O common language runtime (CLR) chama `SurvivingReferences` para coletas de lixo sem compactação. Para compactação coletas de lixo, [ICorProfilerCallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) é chamado em vez disso. Uma coleta de lixo único pode ser compactação para uma geração e sem compactação para outro. Para uma coleta de lixo de qualquer geração específica, o criador de perfil serão recebê-las uma `SurvivingReferences` retorno de chamada ou um `MovedReferences` retorno de chamada, mas não ambos.  
   
- Vários `SurvivingReferences` retornos de chamada podem ser recebidos durante uma coleta de lixo específico, devido a buffer interno limitado, vários threads reporting no caso de coleta de lixo do servidor e por outros motivos. No caso de vários retornos de chamadas durante uma coleta de lixo, as informações são cumulativas – todas as referências são relatadas em qualquer `SurvivingReferences` retorno de chamada sobreviver a coleta de lixo.  
+ Vários `SurvivingReferences` retornos de chamada podem ser recebidos durante uma coleta de lixo específico, devido a buffer interno limitado, vários threads reporting no caso de coleta de lixo do servidor e outros motivos. No caso de vários retornos de chamada durante uma coleta de lixo, as informações são cumulativas — todas as referências que são relatadas em qualquer `SurvivingReferences` retorno de chamada sobreviver a coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Corprof. idl, CorProf.h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
- [Método SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Método SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)

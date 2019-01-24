@@ -2,12 +2,12 @@
 title: Operações de quantificador (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 0a0a5fae35a14ab6451f2f56fb2eedd92ac437e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f732cdb51ed4e26039fc8c1d02b95ad32f901e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551914"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Operações de quantificador (Visual Basic)
 As operações de quantificador retornam um valor <xref:System.Boolean> que indica se alguns ou todos os elementos em uma sequência satisfazem uma condição.  
@@ -27,18 +27,18 @@ As operações de quantificador retornam um valor <xref:System.Boolean> que indi
 |Contém|Determina se uma sequência contém um elemento especificado.|Não aplicável.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Exemplos de sintaxe de expressão de consulta  
- Esses exemplos usam o `Aggregate` cláusula no Visual Basic, como parte da condição de filtragem em uma consulta LINQ.  
+ Esses exemplos usam o `Aggregate` cláusula no Visual Basic como parte da condição de filtragem em uma consulta LINQ.  
   
- O exemplo a seguir usa o `Aggregate` cláusula e o <xref:System.Linq.Enumerable.All%2A> método de extensão para as pessoas cujos animais de estimação são todos os mais antigos do que uma determinada idade de retorno de uma coleção.  
+ O exemplo a seguir usa o `Aggregate` cláusula e o <xref:System.Linq.Enumerable.All%2A> método de extensão para retornar de uma coleção às pessoas cujos animais de estimação são todos os mais antigos do que uma determinada idade.  
   
  [!code-vb[CsLINQAnyAll#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_1.vb)]  
   
- O exemplo a seguir usa o `Aggregate` cláusula e o <xref:System.Linq.Enumerable.Any%2A> método de extensão para retornar de uma coleção, as pessoas que possuem pelo menos um pet que é mais de uma determinada idade.  
+ O próximo exemplo usa o `Aggregate` cláusula e o <xref:System.Linq.Enumerable.Any%2A> método de extensão para retornar de uma coleção, as pessoas que possuem pelo menos uma pet que é mais antigo que uma determinada idade.  
   
  [!code-vb[CsLINQAnyAll#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_2.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>  
- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Cláusula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Como: consultar sentenças que contêm um conjunto especificado de palavras (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Linq>
+- [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Cláusula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Como: Consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)

@@ -3,12 +3,12 @@ title: Novidades do Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 673294ccdb76e6016169a4e2b4e7713ba63fa1e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: deb75494b2813aac3182270b027391b87fdeb0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619604"
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Novidades do Windows Identity Foundation 4.5
 Esta é a primeira versão do Windows Identity Foundation (WIF) fornecido como um download autônomo. Ela também é conhecida como WIF 3.5 porque foi introduzida no período de tempo de distribuição do .NET 3.5 SP1. A partir do .NET 4.5, o WIF faz parte do .NET Framework. Ter as classes do WIF diretamente disponíveis na estrutura permite uma integração muito mais profunda da identidade baseada em declarações no .NET, facilitando o uso de declarações. Os aplicativos escritos para o WIF 3.5 precisam ser modificados para aproveitar o novo modelo; para obter informações, consulte [Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -56,8 +56,8 @@ Esta é a primeira versão do Windows Identity Foundation (WIF) fornecido como u
   
      Ao usar a **Ferramenta de Identidade e Acesso para o Visual Studio 2012** (consulte **Alterações na experiência do Visual Studio** acima), a ferramenta adicionará um elemento `<serviceCredentials>` com o atributo `useIdentityConfiguration` definido com o arquivo de configuração para você. Ele também adiciona um elemento [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) correspondente que contém as definições de configuração do WIF e adiciona uma associação e outras configurações necessárias para terceirizar a autenticação para o STS escolhido.  
   
-## <a name="see-also"></a>Consulte também  
- [Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Referência de API do WIF](../../../docs/framework/security/wif-api-reference.md)  
- [Referência de configuração do WIF](../../../docs/framework/security/wif-configuration-reference.md)
+## <a name="see-also"></a>Consulte também
+- [Diretrizes para migrar um aplicativo criado usando o WIF 3.5 para o WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [Mapeamento de namespace entre o WIF 3.5 e o WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Referência de API do WIF](../../../docs/framework/security/wif-api-reference.md)
+- [Referência de configuração do WIF](../../../docs/framework/security/wif-configuration-reference.md)

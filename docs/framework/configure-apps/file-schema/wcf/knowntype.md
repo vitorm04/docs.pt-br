@@ -2,18 +2,18 @@
 title: '&lt;knownType&gt;'
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 6156f102573333ec0d5533b8f1a8506d91215f47
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cb36a0d1d1ceb13a6db902904783ee15b14e673b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541060"
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
 Especifica um tipo a ser usado por <xref:System.Runtime.Serialization.DataContractSerializer> durante a desserialização. O elemento Especifica um "tipo conhecido" que é retornado por um campo ou propriedade de um "tipo declarado". Para obter mais informações, consulte [tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
- \<Serialization >  
-\<dataContractSerializer >  
+ \<system.runtime.serialization>  
+\<dataContractSerializer>  
 \<declaredTypes > elemento  
 \<Adicionar > de \<declaredTypes >  
 \<knownType > elemento  
@@ -43,7 +43,7 @@ Especifica um tipo a ser usado por <xref:System.Runtime.Serialization.DataContra
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Parâmetro >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Especifica um índice de parâmetro quando o tipo declarado é um tipo genérico.|  
+|[\<parameter>](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Especifica um índice de parâmetro quando o tipo declarado é um tipo genérico.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -69,8 +69,8 @@ Especifica um tipo a ser usado por <xref:System.Runtime.Serialization.DataContra
 </add>
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Tipos conhecidos de contrato de dados](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

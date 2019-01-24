@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: ffeecc1dfe52f1703fc201ef196644afbcc4708c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536830"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540904"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Fornecendo informações de acessibilidade para controles em um Windows Form
 Os recursos de acessibilidade são programas e dispositivos especializados que ajudam as pessoas com deficiência a usarem computadores de forma mais eficaz. Alguns exemplos incluem leitores de tela para pessoas cegas e utilitários de entrada de voz para as pessoas que fornecem comandos verbais em vez de usar o mouse ou teclado. Esses recursos de acessibilidade interagem com as propriedades de acessibilidade expostas pelos controles dos Windows Forms. Essas propriedades são:  
@@ -27,7 +27,7 @@ Os recursos de acessibilidade são programas e dispositivos especializados que a
 -   **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>Propriedade AccessibilityObject  
- Esta propriedade somente leitura contém um <xref:System.Windows.Forms.AccessibleObject> instância. O **AccessibleObject** implementa o <xref:Accessibility.IAccessible> interface, que fornece informações sobre o controle descrição, local da tela, navegação habilidades e valor. O designer define esse valor quando o controle é adicionado ao formulário.  
+ Esta propriedade somente leitura contém um <xref:System.Windows.Forms.AccessibleObject> instância. O **AccessibleObject** implementa o <xref:Accessibility.IAccessible> interface, que fornece informações sobre o controle de descrição, local da tela, recursos de navegação e valor. O designer define esse valor quando o controle é adicionado ao formulário.  
   
 ## <a name="accessibledefaultactiondescription-property"></a>Propriedade AccessibleDefaultActionDescription  
  Essa cadeia de caracteres descreve as ações do controle. Ela não aparece na janela Propriedades e só pode ser definido no código. O exemplo a seguir define essa propriedade para um controle de botão:  
@@ -75,7 +75,7 @@ button1->AccessibleName = "Order";
 ```  
   
 ## <a name="accessiblerole-property"></a>Propriedade AccessibleRole  
- Essa propriedade, que contém um <xref:System.Windows.Forms.AccessibleRole> enumeração descreve a função de interface de usuário do controle. Um novo controle tem o valor definido como `Default`. Isso significa que, por padrão, um controle **Botão** atua como um **Botão**. Pode ser útil redefinir essa propriedade se um controle tiver outra função. Por exemplo, você pode estar usando um controle **PictureBox** como um **Gráfico** e pode desejar que os recursos de acessibilidade relatem a função como um **Gráfico**, não como **PictureBox**. Também pode ser útil especificar essa propriedade para controles personalizados desenvolvidos por você. Essa propriedade pode ser definida na janela Propriedades ou no código da seguinte maneira:  
+ Essa propriedade, que contém um <xref:System.Windows.Forms.AccessibleRole> enumeração, descreve a função de interface do usuário do controle. Um novo controle tem o valor definido como `Default`. Isso significa que, por padrão, um controle **Botão** atua como um **Botão**. Pode ser útil redefinir essa propriedade se um controle tiver outra função. Por exemplo, você pode estar usando um controle **PictureBox** como um **Gráfico** e pode desejar que os recursos de acessibilidade relatem a função como um **Gráfico**, não como **PictureBox**. Também pode ser útil especificar essa propriedade para controles personalizados desenvolvidos por você. Essa propriedade pode ser definida na janela Propriedades ou no código da seguinte maneira:  
   
 ```  
 ' Visual Basic  
@@ -88,11 +88,11 @@ PictureBox1.AccessibleRole = AccessibleRole.Chart;
 pictureBox1->AccessibleRole = AccessibleRole::Chart;  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.AccessibleObject>  
- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.AccessibleRole>
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.AccessibleObject>
+- <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleName%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.AccessibleRole%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.AccessibleRole>

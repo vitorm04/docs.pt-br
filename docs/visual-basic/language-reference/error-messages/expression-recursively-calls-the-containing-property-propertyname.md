@@ -1,5 +1,5 @@
 ---
-title: A expressão chama recursivamente a propriedade recipiente &#39; &lt;propertyname&gt;&#39;
+title: A expressão chama recursivamente a propriedade que contém &#39; &lt;propertyname&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553068"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>A expressão chama recursivamente a propriedade recipiente &#39; &lt;propertyname&gt;&#39;
-Uma instrução no `Set` procedimento com uma definição de propriedade armazena um valor para o nome da propriedade.  
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>A expressão chama recursivamente a propriedade que contém &#39; &lt;propertyname&gt;&#39;
+Uma instrução no `Set` procedimento de uma definição de propriedade armazena um valor no nome da propriedade.  
   
- A abordagem recomendada para armazenar o valor de uma propriedade é definir uma `Private` variável no recipiente da propriedade e usá-lo em ambos os `Get` e `Set` procedimentos. O `Set` procedimento deve, em seguida, armazenar o valor de entrada neste `Private` variável.  
+ A abordagem recomendada para armazenar o valor de uma propriedade é definir uma `Private` variável no recipiente da propriedade e usá-lo em ambos os `Get` e `Set` procedimentos. O `Set` procedimento deve, em seguida, armazenar o valor de entrada desta `Private` variável.  
   
- O `Get` procedimento se comporta como uma `Function` procedimento, para que possa atribuir um valor para o nome da propriedade e retornar controle encontrando o `End Get` instrução. No entanto, é a abordagem recomendada, inclua o `Private` variável como o valor em uma [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md).  
+ O `Get` procedimento se comporta como uma `Function` procedimento, para que ele possa atribuir um valor para o nome da propriedade e retornar controle encontrando o `End Get` instrução. No entanto, é a abordagem recomendada incluir a `Private` variável como o valor em uma [instrução Return](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- O `Set` procedimento se comporta como uma `Sub` procedimento, que não retorna um valor. Portanto, o nome do procedimento ou propriedade não tem significado especial em um `Set` procedimento e você não pode armazenar um valor nele.  
+ O `Set` procedimento se comporta como um `Sub` procedimento, que não retorna um valor. Portanto, o nome do procedimento ou propriedade não tem significado especial em um `Set` procedimento e você não pode armazenar um valor para ele.  
   
  O exemplo a seguir ilustra a abordagem que pode causar esse erro, seguido pela abordagem recomendada.  
   
@@ -63,7 +63,7 @@ End Class
   
 -   Reescreva a definição de propriedade para usar a abordagem recomendada, conforme ilustrado no exemplo anterior.  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Instrução Set](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>Consulte também
+- [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Instrução Set](../../../visual-basic/language-reference/statements/set-statement.md)

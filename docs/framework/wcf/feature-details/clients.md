@@ -2,12 +2,12 @@
 title: Clientes
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: 844412b211fe6187e3475fc71b9c3ccca8dd178f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ed1e0634344c93ba8e83035d393fc8cfb319b003
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546287"
 ---
 # <a name="clients"></a>Clientes
 Os tópicos nesta seção abordam a arquitetura do cliente, como para acessar o serviço de um Windows Communication Foundation (WCF), como configurar um cliente WCF e algumas considerações de segurança para clientes do WCF.  
@@ -25,5 +25,5 @@ Os tópicos nesta seção abordam a arquitetura do cliente, como para acessar o 
  [Protegendo clientes](../../../../docs/framework/wcf/securing-clients.md)  
  Descreve algumas considerações de segurança para clientes do WCF.  
   
-## <a name="see-also"></a>Consulte também  
- [Exemplos de cliente](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)
+## <a name="see-also"></a>Consulte também
+- [Exemplos de cliente](https://msdn.microsoft.com/library/849fc452-8718-4d4e-ba57-905eed943f63)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553185"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Método ICorDebugVariableHome::GetSlotIndex
 Obtém o índice de slot gerenciado de uma variável local.  
@@ -40,24 +40,24 @@ HRESULT GetSlotIndex(
  [out] Um ponteiro para o slot de índice de uma variável local.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O método retorna os seguintes valores.  
+ O método retorna os valores a seguir.  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`S_OK`|A chamada do método retornou um valor de índice de slot no `pSlotIndex`.|  
-|`E_FAIL`|Atual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instância representa um argumento de função.|  
+|`S_OK`|A chamada de método retornou um valor de índice de slot no `pSlotIndex`.|  
+|`E_FAIL`|O atual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instância representa um argumento de função.|  
   
 ## <a name="remarks"></a>Comentários  
- O índice de slot pode ser usado para recuperar os metadados da variável local.  
+ O índice de slot pode ser usado para recuperar os metadados para essa variável local.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

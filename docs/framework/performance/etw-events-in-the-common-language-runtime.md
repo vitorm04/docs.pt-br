@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 284b7f814f8a9355220f0da59e8fce7d79345609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620234"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventos ETW no Common Language Runtime
 O CLR (Common Language Runtime) fornece informações úteis de diagnóstico ETW (rastreamento de eventos para Windows) por meio de uma grande variedade de eventos de depuração e criação de perfil. Os eventos CLR ETW aproveitam o sistema de rastreamento ETW do Windows para ampliar o suporte existente de depuração e criação de perfil fornecido pelo Common Language Runtime.  
@@ -35,5 +35,5 @@ O CLR (Common Language Runtime) fornece informações úteis de diagnóstico ETW
  [Eventos de CLR ETW](../../../docs/framework/performance/clr-etw-events.md)  
  Fornece informações detalhadas sobre eventos CLR ETW, suas palavras-chave, níveis e dados de evento.  
   
-## <a name="see-also"></a>Consulte também  
- [Eventos ETW no .NET Framework](../../../docs/framework/performance/etw-events.md)
+## <a name="see-also"></a>Consulte também
+- [Eventos ETW no .NET Framework](../../../docs/framework/performance/etw-events.md)

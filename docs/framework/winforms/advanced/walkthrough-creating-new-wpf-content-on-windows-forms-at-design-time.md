@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: criando novo conteúdo WPF em Windows Forms na hora do design'
+title: 'Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: dc72b86a69d44ad282e30b000313b73211cad09c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9414eb8edc839b109aafa0c98fa3ed74a34a7d62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500493"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Instruções passo a passo: criando novo conteúdo WPF em Windows Forms na hora do design
+# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Passo a passo: Criando novo conteúdo WPF nos Windows Forms em tempo de Design
 
 Este tópico mostra como criar um controle do Windows Presentation Foundation (WPF) para uso em aplicativos baseados nos Windows Forms.
 
@@ -61,7 +61,7 @@ Criar um novo controle WPF e adicioná-lo ao projeto é tão fácil quanto adici
 
     - O arquivo UserControl1.xaml será aberto no [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, consulte [Como Selecionar e Mover Elementos na Superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
+2. No modo de exibição de Design, verifique se `UserControl1` está selecionado. Para obter mais informações, confira [Como: Selecionar e mover elementos na superfície de Design](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).
 
 3. No **propriedades** janela, defina o valor da <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> propriedades a serem **200**.
 
@@ -102,11 +102,11 @@ O novo controle WPF está pronto para uso no formulário. Windows Forms usa o <x
 
 O Windows Forms e o WPF são tecnologias diferentes, mas são projetados para interoperar estreitamente. Para fornecer mais avançados de aparência e comportamento em seus aplicativos, tente o seguinte:
 
-- Hospedar um controle dos Windows Forms em uma página WPF. Para obter mais informações, consulte [Instruções Passo a Passo: Hospedando um Controle dos Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Hospedar um controle dos Windows Forms em uma página WPF. Para obter mais informações, confira [Passo a passo: Controle hospeda um Windows Forms no WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Aplique estilos visuais dos Windows Forms ao conteúdo do WPF. Para obter mais informações, consulte [Como Habilitar Estilos Visuais em um Aplicativo Híbrido](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Aplique estilos visuais dos Windows Forms ao conteúdo do WPF. Para obter mais informações, confira [Como: Habilitar estilos visuais em um aplicativo híbrido](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Altere o estilo do conteúdo do WPF. Para obter mais informações, consulte [Instruções Passo a Passo: Definindo o Estilo do Conteúdo do WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
+- Altere o estilo do conteúdo do WPF. Para obter mais informações, confira [Passo a passo: Criando o conteúdo WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>Consulte também
 

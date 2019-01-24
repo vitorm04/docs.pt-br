@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552223"
 ---
 # <a name="optional-parameters-visual-basic"></a>Parâmetros opcionais (Visual Basic)
-Você pode especificar que um parâmetro de procedimento é opcional e nenhum argumento precisa ser fornecido para ele quando o procedimento é chamado. *Parâmetros opcionais* são indicadas pelo `Optional` palavra-chave na definição do procedimento. As seguintes regras se aplicam:  
+Você pode especificar que um parâmetro de procedimento é opcional e nenhum argumento precisa ser fornecido para ele quando o procedimento é chamado. *Parâmetros opcionais* são indicados pelo `Optional` palavra-chave na definição do procedimento. As seguintes regras se aplicam:  
   
 -   Cada parâmetro opcional na definição do procedimento deve especificar um valor padrão.  
   
@@ -50,7 +50,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Determinando se um argumento opcional está presente  
- Um procedimento não pode detectar no tempo de execução se um determinado argumento foi omitido ou o código de chamada forneceu explicitamente o valor padrão. Se você precisar fazer essa distinção, defina um valor improvável como o padrão. O procedimento a seguir define o parâmetro opcional `office`e testes para seu valor padrão, `QJZ`para ver se ele foi omitido na chamada:  
+ Um procedimento não pode detectar no tempo de execução se um determinado argumento foi omitido ou o código de chamada forneceu explicitamente o valor padrão. Se você precisar fazer essa distinção, defina um valor improvável como o padrão. O procedimento a seguir define o parâmetro opcional `office`e testa seu valor padrão, `QJZ`, para ver se ele foi omitido na chamada:  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
@@ -59,12 +59,12 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>Parâmetros opcionais e sobrecarga  
  Outra maneira de definir um procedimento com parâmetros opcionais é usar a sobrecarga. Se você tiver um parâmetro opcional, poderá definir duas versões sobrecarregadas do procedimento, uma aceitando o parâmetro e outra sem ele. Essa abordagem torna-se mais complicada à medida que o número de parâmetros opcionais aumenta. No entanto, sua vantagem é que você pode ter certeza absoluta se o programa de chamada forneceu cada argumento opcional.  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos](./index.md)  
- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)  
- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)  
- [Passando Argumentos por Posição e Nome](./passing-arguments-by-position-and-by-name.md)  
- [Matrizes de Parâmetros](./parameter-arrays.md)  
- [Sobrecarga de Procedimento](./procedure-overloading.md)  
- [Opcional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Consulte também
+- [Procedimentos](./index.md)
+- [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
+- [Passando Argumentos por Valor e por Referência](./passing-arguments-by-value-and-by-reference.md)
+- [Passando Argumentos por Posição e Nome](./passing-arguments-by-position-and-by-name.md)
+- [Matrizes de Parâmetros](./parameter-arrays.md)
+- [Sobrecarga de Procedimento](./procedure-overloading.md)
+- [Opcional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

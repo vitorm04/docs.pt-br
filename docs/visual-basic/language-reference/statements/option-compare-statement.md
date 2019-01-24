@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 59df00351d1c1cc4edf87853984d1d13187d4e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532455"
 ---
 # <a name="option-compare-statement"></a>Instrução Option Compare
 Declara o método padrão de comparação a ser usado ao comparar dados da cadeia de caracteres.  
@@ -87,16 +87,16 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
- <xref:Microsoft.VisualBasic.Strings.Replace%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Operadores de comparação no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Operador Like](../../../visual-basic/language-reference/operators/like-operator.md)  
- [Funções da Cadeia de Caracteres](../../../visual-basic/language-reference/functions/string-functions.md)  
- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Consulte também
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
+- <xref:Microsoft.VisualBasic.Strings.Replace%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Operadores de comparação no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operador Like](../../../visual-basic/language-reference/operators/like-operator.md)
+- [Funções da Cadeia de Caracteres](../../../visual-basic/language-reference/functions/string-functions.md)
+- [Instrução Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

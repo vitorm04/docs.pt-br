@@ -1,5 +1,5 @@
 ---
-title: Como descartar um recurso do sistema (Visual Basic)
+title: 'Como: Descartar um recurso do sistema (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: cbb66934833da2bd6f0b797944dbb9c4df267cfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523214"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como descartar um recurso do sistema (Visual Basic)
-Você pode usar um `Using` bloco para garantir que o sistema descarte um recurso quando seu código sai do bloco. Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Como: Descartar um recurso do sistema (Visual Basic)
+Você pode usar um `Using` bloco para garantir que o sistema de descarte de um recurso quando seu código sai do bloco. Isso é útil se você estiver usando um recurso do sistema que consome uma grande quantidade de memória ou outros componentes também desejam usar.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para descartar uma conexão de banco de dados quando o código for concluído com ele  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Para descartar uma conexão de banco de dados quando seu código for concluído com ele  
   
-1.  Certifique-se de incluir as [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início do seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).  
+1.  Certifique-se de incluir apropriado [instrução Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para a conexão de banco de dados no início de seu arquivo de origem (nesse caso, <xref:System.Data.SqlClient>).  
   
-2.  Criar um `Using` bloco com a `Using` e `End Using` instruções. Dentro do bloco, coloque o código que lida com a conexão de banco de dados.  
+2.  Criar uma `Using` bloco com o `Using` e `End Using` instruções. Dentro do bloco, coloque o código que lida com a conexão de banco de dados.  
   
 3.  A conexão de declarar e criar uma instância dela como parte do `Using` instrução.  
   
@@ -38,17 +38,17 @@ Você pode usar um `Using` bloco para garantir que o sistema descarte um recurso
     End Sub  
     ```  
   
-     O sistema descarta o recurso não importa como você sair do bloco, incluindo o caso de uma exceção sem tratamento.  
+     O sistema descarta o recurso não importa como você sai do bloco, incluindo o caso de uma exceção sem tratamento.  
   
-     Observe que você não pode acessar `sqc` de fora de `Using` bloquear, porque seu escopo é limitado para o bloco.  
+     Observe que você não pode acessar `sqc` de fora a `Using` bloquear, porque seu escopo é limitado ao bloco.  
   
      Você pode usar essa mesma técnica em um recurso do sistema como um identificador de arquivo ou um wrapper COM. Você usa um `Using` bloquear quando você deseja deixar o recurso disponível para outros componentes após você ter saído do `Using` bloco.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Data.SqlClient.SqlConnection>  
- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [Estruturas de Controle Aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Instrução Using](../../../../visual-basic/language-reference/statements/using-statement.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Data.SqlClient.SqlConnection>
+- [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Estruturas de Loop](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Outras Estruturas de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Estruturas de Controle Aninhadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Instrução Using](../../../../visual-basic/language-reference/statements/using-statement.md)

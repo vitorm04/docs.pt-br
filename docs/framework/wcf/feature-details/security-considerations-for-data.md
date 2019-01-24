@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c7451e5e914c372c8631922001cfec5e84a586c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527946"
 ---
 # <a name="security-considerations-for-data"></a>Considerações de segurança para dados
 Ao lidar com dados no Windows Communication Foundation (WCF), você deve considerar um número de categorias de ameaça. A tabela a seguir lista as classes de ameaças mais importantes relacionados ao processamento de dados. O WCF fornece ferramentas para atenuar essas ameaças.  
@@ -223,7 +223,7 @@ Ao lidar com dados no Windows Communication Foundation (WCF), você deve conside
   
  Ao escrever um método que retorna uma lista de tipos conhecidos, ou ao passar uma lista diretamente para o <xref:System.Runtime.Serialization.DataContractSerializer> construtor, certifique-se de que o código que prepara a lista é seguro e funciona apenas em dados confiáveis.  
   
- Se especificar os tipos conhecidos na configuração, certifique-se de que o arquivo de configuração é seguro. Sempre use nomes fortes na configuração (especificando a chave pública do assembly assinado em que reside o tipo), mas não especificar a versão do tipo a ser carregado. O carregador do tipo escolhe automaticamente a versão mais recente, se possível. Se você especificar uma versão específica na configuração, você corre o risco a seguir: um tipo pode ter uma vulnerabilidade de segurança que pode ser corrigida em uma versão futura, mas ainda é a versão vulnerável carregado porque ela é explicitamente especificada na configuração.  
+ Se especificar os tipos conhecidos na configuração, certifique-se de que o arquivo de configuração é seguro. Sempre use nomes fortes na configuração (especificando a chave pública do assembly assinado em que reside o tipo), mas não especificar a versão do tipo a ser carregado. O carregador do tipo escolhe automaticamente a versão mais recente, se possível. Se você especificar uma versão específica na configuração, você corre o risco a seguir: Um tipo pode ter uma vulnerabilidade de segurança que pode ser corrigida em uma versão futura, mas ainda é a versão vulnerável carregado porque ela é explicitamente especificada na configuração.  
   
  Número excessivo de tipos conhecidos tem outra consequência: O <xref:System.Runtime.Serialization.DataContractSerializer> cria um cache de código de serialização/desserialização no domínio do aplicativo, com uma entrada para cada tipo, ele deve serializar e desserializar. Esse cache nunca é limpo, desde que o domínio do aplicativo está em execução. Portanto, um invasor que está ciente de que um aplicativo usa muitos tipos conhecidos pode fazer com que a desserialização de todos esses tipos, fazendo com que o cache consumir uma desproporcionalmente grande quantidade de memória.  
   
@@ -353,8 +353,8 @@ Ao lidar com dados no Windows Communication Foundation (WCF), você deve conside
   
 -   Em geral, ao usar qualquer componente que aceita uma cota, compreender suas implicações de segurança e defini-lo como um valor seguro.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.XmlDictionaryReader>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.XmlDictionaryReader>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

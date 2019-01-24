@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529798"
 ---
 # <a name="icordebugcodeenumnext-method"></a>Método ICorDebugCodeEnum::Next
 Obtém o número especificado de instâncias de "ICorDebugCode" de enumeração, começando na posição atual.  
@@ -46,17 +46,17 @@ HRESULT Next (
  [out] Uma matriz de ponteiros, cada qual apontando para um `ICorDebugCode` objeto.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de `ICorDebugCode` , na verdade, retornadas de instâncias. Esse valor pode ser null se `celt` é um.  
+ [out] Um ponteiro para o número de `ICorDebugCode` instâncias, na verdade, retornadas. Esse valor pode ser nulo se `celt` é um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
-    
- 
+## <a name="see-also"></a>Consulte também
+
+

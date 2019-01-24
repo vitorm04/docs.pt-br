@@ -2,12 +2,12 @@
 title: Visão geral de operadores de consulta padrão (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526490"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Visão geral de operadores de consulta padrão (Visual Basic)
 Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ. A maioria desses métodos opera em sequências; neste contexto, uma sequência é um objeto cujo tipo implementa a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>. Os operadores de consulta padrão fornecem recursos de consulta incluindo filtragem, projeção, agregação, classificação e muito mais.  
@@ -76,15 +76,15 @@ MsgBox(output.ToString())
   
  [Operações de conjunto (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
- [Filtragem de dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
+ [Filtrando dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
  [Operações de quantificador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
  [Operações de projeção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
- [Particionamento de dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
+ [O particionamento de dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [Unir operações (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [Junte-se operações (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
  [Agrupando dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
@@ -100,10 +100,10 @@ MsgBox(output.ToString())
   
  [Operações de agregação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Introdução ao LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [Classificação de operadores de consulta padrão por meio da execução (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Métodos de Extensão](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Introdução ao LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Classificação de operadores de consulta padrão pelo modo de execução (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Métodos de Extensão](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

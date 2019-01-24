@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556162"
 ---
 # <a name="embedresource-method"></a>Método EmbedResource
-Declara um recurso inserido. Esse método não insere, na verdade, o recurso.  
+Declara um recurso inserido. Esse método insere, na verdade, o recurso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,24 +44,24 @@ HRESULT EmbedResource(
  ID do assembly.  
   
  `FileToken`  
- ID de token ou assembly de arquivo que contém o recurso do arquivo.  
+ Assembly ou token de ID de arquivo que contém o recurso.  
   
  `pszResourceName`  
  Nome do recurso.  
   
  `dwOffset`  
- Deslocamento do recurso do RVA.  
+ Deslocamento do recurso de RVA.  
   
  `dwFlags`  
- Acessibilidade como sinalizadores `mrPublic` e `mrPrivate`. Esses sinalizadores podem ser passados para [método DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ Acessibilidade, como sinalizadores `mrPublic` e `mrPrivate`. Esses sinalizadores podem ser passados para [método DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna S_OK se o método for bem-sucedido.  
+ Se o método for bem-sucedido, retornará S_OK.  
   
 ## <a name="requirements"></a>Requisitos  
  Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IALink](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Interface IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [API do ALink](../../../../docs/framework/unmanaged-api/alink/index.md)

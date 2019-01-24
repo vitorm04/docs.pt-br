@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 14ba24b414de0732be418210ec44613f840136d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639114"
 ---
 # <a name="datagridview-control-windows-forms"></a>Controle DataGridView (Windows Forms)
 O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibir dados em um formato de tabela. Você pode usar o controle `DataGridView` para mostrar as exibições somente leitura de uma pequena quantidade de dados ou pode ajustar a escala para mostrar exibições editáveis de grandes conjuntos de dados.  
@@ -82,5 +82,5 @@ O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibi
  <xref:System.Windows.Forms.BindingSource>  
  Fornece documentação de referência para o <xref:System.Windows.Forms.BindingSource> componente. O <xref:System.Windows.Forms.DataGridView> controle e o <xref:System.Windows.Forms.BindingSource> componente são projetados para funcionar juntos.  
   
-## <a name="see-also"></a>Consulte também  
- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- [Controles a serem usados nos Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

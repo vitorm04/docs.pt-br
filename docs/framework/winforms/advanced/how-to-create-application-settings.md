@@ -1,5 +1,5 @@
 ---
-title: Como criar configurações de aplicativo
+title: 'Como: Criar configurações de aplicativo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558950"
 ---
-# <a name="how-to-create-application-settings"></a>Como criar configurações de aplicativo
+# <a name="how-to-create-application-settings"></a>Como: Criar configurações de aplicativo
 Usando código gerenciado, é possível criar novas configurações de aplicativo e associá-las a propriedades no seu formulário ou aos controles de formulário, para que essas configurações sejam carregadas e salvas automaticamente no tempo de execução.  
   
  No procedimento a seguir, você criar manualmente uma classe wrapper que deriva de <xref:System.Configuration.ApplicationSettingsBase>. Uma propriedade publicamente acessível é adicionada a essa classe para cada configuração de aplicativo que você desejar expor.  
   
- Também é possível executar esse procedimento usando o mínimo de código possível no designer do Visual Studio.  Consulte também [Como criar configurações de aplicativo usando o Designer](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Também é possível executar esse procedimento usando o mínimo de código possível no designer do Visual Studio.  Consulte também [como: Criar configurações de aplicativo usando o Designer](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Criar novas configurações de aplicativo com programação  
   
@@ -46,8 +46,8 @@ Usando código gerenciado, é possível criar novas configurações de aplicativ
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  O provedor de configurações padrão, <xref:System.Configuration.LocalFileSettingsProvider>, persiste informações para os arquivos de configuração como texto sem formatação. Isso limita a segurança à segurança de acesso aos arquivos fornecida pelo sistema operacional para o usuário atual. Por isso, é necessário ter cuidado com as informações armazenadas nos arquivos de configuração. Por exemplo, um uso comum para configurações de aplicativo é armazenar cadeias de conexão que apontam para o armazenamento de dados do aplicativo. No entanto, devido a questões de segurança, tais cadeias de caracteres não devem incluir senhas. Para obter mais informações sobre cadeias de caracteres de conexão, consulte <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Visão Geral das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Como validar configurações de aplicativo](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Visão Geral das Configurações do Aplicativo](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Como: Validar configurações do aplicativo](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)

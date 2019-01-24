@@ -1,5 +1,5 @@
 ---
-title: Como expor propriedades de controles de membro
+title: 'Como: Expor as propriedades de controles constituintes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 8f7b5c44a5cb20b5da10df5fd630b371cc959fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532156"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a>Como expor propriedades de controles de membro
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Como: Expor as propriedades de controles constituintes
 Os controles que compõem um controle de composição são chamados *controles de membro*. Esses controles normalmente são declarados particulares e, portanto, não podem ser acessados pelo desenvolvedor. Se você quiser disponibilizar as propriedades desses controles para futuros usuários, deverá expô-las para o usuário. Uma propriedade de um controle de membro é exposta pela criação de uma propriedade no controle de usuário e usando os acessadores `get` e `set` dessa propriedade para efetivar a alteração na propriedade privada do controle de membro.  
   
- Considere um controle de usuário hipotético com um botão de membro chamado `MyButton`. Neste exemplo, quando o usuário solicita a `ConstituentButtonBackColor` propriedade, o valor armazenado no <xref:System.Windows.Forms.Control.BackColor%2A> propriedade `MyButton` é entregue. Quando o usuário atribui um valor para essa propriedade, esse valor é passado automaticamente para o <xref:System.Windows.Forms.Control.BackColor%2A> propriedade `MyButton` e `set` código será executado, alterar a cor do `MyButton`.  
+ Considere um controle de usuário hipotético com um botão de membro chamado `MyButton`. Neste exemplo, quando o usuário solicita a `ConstituentButtonBackColor` propriedade, o valor armazenado na <xref:System.Windows.Forms.Control.BackColor%2A> propriedade de `MyButton` é entregue. Quando o usuário atribui um valor para essa propriedade, esse valor é automaticamente passado para o <xref:System.Windows.Forms.Control.BackColor%2A> propriedade de `MyButton` e o `set` código será executado, alterando a cor de `MyButton`.  
   
- O exemplo a seguir mostra como expor o <xref:System.Windows.Forms.Control.BackColor%2A> propriedade do botão constituinte:  
+ O exemplo a seguir mostra como expor o <xref:System.Windows.Forms.Control.BackColor%2A> propriedade do botão de membro:  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -57,7 +57,7 @@ public Color ButtonColor
   
 3.  Na seção `set` da propriedade, escreva o código que passa o valor da propriedade para a propriedade exposta do controle de membro.  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.UserControl>  
- [Propriedades em controles do Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.UserControl>
+- [Propriedades em controles do Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

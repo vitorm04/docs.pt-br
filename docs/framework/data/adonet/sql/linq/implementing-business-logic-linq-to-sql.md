@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496082"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementando lógica de negócios (LINQ te o SQL)
 O termo “lógica de negócios” neste tópico faz referência a todas as regras personalizadas ou testes de validação que você aplica a dados antes de eles serem inseridos, atualizados ou excluídos do banco de dados. A lógica de negócios às vezes também é conhecida como "regras de negócio" ou "lógica de domínio". Em aplicativos de n camadas ela normalmente é criada como uma camada lógica para que possa ser modificada independentemente da camada de apresentação ou da camada de acesso a dados. A lógica de negócios pode ser chamada pela camada de acesso a dados antes ou depois de qualquer atualização, inserção ou exclusão de dados no banco de dados.  
@@ -69,7 +69,7 @@ public partial class MyNorthWindDataContext : System.Data.Linq.DataContext
         #endregion  
 ```  
   
- Se você implementar os métodos Insert, Update e Delete em sua classe parcial, o tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] os chamará em vez de seus próprios métodos padrão quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> for chamado. Isso permite que você substitua o comportamento padrão para operações de criação/leitura/atualização/exclusão. Para obter mais informações, consulte [instruções passo a passo: Personalizando a inserção, atualização e exclusão de comportamento de classes de entidade](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
+ Se você implementar os métodos Insert, Update e Delete em sua classe parcial, o tempo de execução do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] os chamará em vez de seus próprios métodos padrão quando <xref:System.Data.Linq.DataContext.SubmitChanges%2A> for chamado. Isso permite que você substitua o comportamento padrão para operações de criação/leitura/atualização/exclusão. Para obter mais informações, confira [Passo a passo: Personalizando a inserção, atualização e exclusão de comportamento de classes de entidade](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes).  
   
  O método `OnCreated` é chamado no construtor da classe.  
   
@@ -177,14 +177,14 @@ partial class Customer
   
  Para obter mais informações sobre como adicionar lógica de negócios a seu aplicativo usando métodos parciais, consulte os tópicos a seguir:  
   
- [Como adicionar validação a classes de entidade](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Como: Adicionar validação a classes de entidade](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
- [Passo a passo: personalizando a inserção, a atualização e o comportamento de exclusão de classes de entidade](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
+ [Passo a passo: Personalizando o comportamento de inserção, atualização e exclusão de classes de entidade](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
  [Passo a passo: Adicionando validação a Classes de entidade](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## <a name="see-also"></a>Consulte também  
- [Classes e métodos parciais](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [Métodos Parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>Consulte também
+- [Classes e métodos parciais](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Métodos Parciais](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [SqlMetal.exe (Ferramenta de Geração de Código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

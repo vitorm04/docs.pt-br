@@ -2,20 +2,15 @@
 title: Esquema de configurações do aplicativo
 ms.date: 05/01/2017
 helpviewer_keywords:
-- schema app settings
-- app settings, schema [Windows Forms]
-- Windows Forms, app settings schema
-- configuration schema [.NET Framework], app settings
+  - schema app settings
+  - 'app settings, schema [Windows Forms]'
+  - 'Windows Forms, app settings schema'
+  - 'configuration schema [.NET Framework], app settings'
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191136"
 ---
+
 # <a name="app-settings-schema"></a>Esquema de configurações do aplicativo
 
 Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo.
@@ -72,5 +67,5 @@ O exemplo a seguir mostra um arquivo de configuração de aplicativo que consome
 
 ## <a name="see-also"></a>Consulte também
 
-- [Visão Geral das Configurações do Aplicativo](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [Visão Geral das Configurações do Aplicativo](~/docs/framework/winforms/advanced/application-settings-overview.md)
 - [Arquitetura das Configurações do Aplicativo](~/docs/framework/winforms/advanced/application-settings-architecture.md)

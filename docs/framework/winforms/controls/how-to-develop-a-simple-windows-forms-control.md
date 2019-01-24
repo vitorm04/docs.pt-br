@@ -1,5 +1,5 @@
 ---
-title: Como desenvolver um controle simples dos Windows Forms
+title: 'Como: Desenvolver um controle de formulários do Windows simples'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527621"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>Como desenvolver um controle simples dos Windows Forms
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Como: Desenvolver um controle de formulários do Windows simples
 Esta seção explica as etapas principais para a criação de um controle personalizado dos Windows Forms. O controle simples desenvolvido neste passo a passo permite que o alinhamento de seu <xref:System.Windows.Forms.Control.Text%2A> propriedade a ser alterada. Ele não gera ou manipula eventos.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Para criar um controle personalizado simples  
@@ -102,6 +102,6 @@ Esta seção explica as etapas principais para a criação de um controle person
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## <a name="see-also"></a>Consulte também  
- [Propriedades em controles do Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Eventos em controles do Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+## <a name="see-also"></a>Consulte também
+- [Propriedades em controles do Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Eventos em controles do Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

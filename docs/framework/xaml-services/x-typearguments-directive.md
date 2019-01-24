@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520172"
 ---
 # <a name="xtypearguments-directive"></a>Diretiva x:TypeArguments
 Passa a restrição de tipo de argumentos de um genérico para o construtor do tipo genérico.  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  No WPF e ao direcionar [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar recursos do XAML 2009 junto com `x:TypeArguments` , mas somente para XAML flexível (XAML não é compilado por marcação). Compilado por marcação XAML para WPF e o formato BAML de XAML têm suporte no momento, as palavras-chave do XAML 2009 e os recursos. Se você precisa para marcação de compilar o XAML, você deve operar sob as restrições na seção "XAML 2006 and genérico XAML usos do WPF".  
   
-## <a name="see-also"></a>Consulte também  
- [Diretiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Extensão de marcação x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Tipos inseridos para primitivos de linguagem XML comuns](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Genéricos em XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Consulte também
+- [Diretiva x:Class](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Extensão de marcação x:Type](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Tipos inseridos para primitivos de linguagem XML comuns](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Genéricos em XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2a340af9ba196dbcd8618afdd83bcf7e56124bf7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529902"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Função AxlRSAKeyValueToPublicKeyToken
 
@@ -44,5 +44,5 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 ## <a name="return-value"></a>Valor de retorno  
  `S_OK` se a função for bem-sucedida. Caso contrário, retornará um código de erro.  
   
-## <a name="see-also"></a>Consulte também  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Consulte também
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

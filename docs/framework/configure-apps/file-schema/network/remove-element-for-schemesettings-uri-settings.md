@@ -2,19 +2,19 @@
 title: '&lt;remover&gt; elemento para schemeSettings (configurações de Uri)'
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: d444e2eeeace2dc59a53467316507d0bc38970d5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2a2ef83ac57c1978a0022a9c989aa03eeae8a71f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552821"
 ---
 # <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;remover&gt; elemento para schemeSettings (configurações de Uri)
 Remove uma definição de esquema para um nome de esquema.  
   
  \<configuration>  
-\<URI >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
 \<remove>  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -74,11 +74,11 @@ Remove uma definição de esquema para um nome de esquema.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>Consulte também
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [Esquema de configurações de rede](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

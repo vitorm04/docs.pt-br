@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d8f4254da256bf2814f66aa62d43204fb302701
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 11f62b8fe8a28d6fe6401d53dac4b9bc1c45b21d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554590"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Criando uma instância de um objeto DateTimeOffset
 
@@ -96,4 +96,4 @@ O exemplo a seguir ilustra chamadas para cada um desses métodos de conversão d
 
 ## <a name="see-also"></a>Consulte também
 
-* [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
+- [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)

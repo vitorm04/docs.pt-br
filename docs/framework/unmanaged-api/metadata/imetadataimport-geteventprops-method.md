@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552353"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Método IMetaDataImport::GetEventProps
-Obtém informações de metadados para o evento representado pelo token de evento especificado, incluindo o tipo de declaração, adicionar e remover métodos para delegados e os sinalizadores e outros dados associados.  
+Obtém informações de metadados para o evento representado pelo token de evento especificado, incluindo o tipo de declaração, adicionar e remover métodos para representantes e os sinalizadores e outros dados associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,13 +55,13 @@ HRESULT GetEventProps (
  [out] Um ponteiro para o token de TypeDef que representa a classe que declara o evento.  
   
  `szEvent`  
- [out] O nome do evento referenciado por `ev`.  
+ [out] O nome do evento referenciado pelo `ev`.  
   
  `pchEvent`  
- [in] O tamanho solicitado em caracteres largos de `szEvent`.  
+ [in] O comprimento solicitado em caracteres largos da `szEvent`.  
   
  `pdwEventFlags`  
- [out] O comprimento retornado em caracteres largos de `szEvent`.  
+ [out] O comprimento retornado em caracteres largos da `szEvent`.  
   
  `ptkEventType`  
  [out] Um ponteiro para um TypeRef ou TypeDef metadados token que representa o <xref:System.Delegate> tipo do evento.  
@@ -82,17 +82,17 @@ HRESULT GetEventProps (
  [in] O tamanho máximo da `rmdOtherMethod` matriz.  
   
  `pcOtherMethod`  
- [out] O número de tokens retornados em `rmdOtherMethod`.  
+ [out] O número de tokens retornado no `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor.h  
   
- **Biblioteca:** incluído como um recurso no MSCOREE  
+ **Biblioteca:** Incluído como um recurso em mscoree. dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Consulte também
+- [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

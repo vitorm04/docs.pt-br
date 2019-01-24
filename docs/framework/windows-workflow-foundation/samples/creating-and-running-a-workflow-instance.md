@@ -2,12 +2,12 @@
 title: Criando e executando uma instância de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a86835155417692bc332bf51eb5825ce0b017b04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527257"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Criando e executando uma instância de fluxo de trabalho
 Este exemplo mostra como executar uma instância de fluxo de trabalho. Mostra como executar forma síncrona e de forma assíncrona.  
@@ -29,5 +29,5 @@ Este exemplo mostra como executar uma instância de fluxo de trabalho. Mostra co
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
-## <a name="see-also"></a>Consulte também  
- [Usando WorkflowInvoker e WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+## <a name="see-also"></a>Consulte também
+- [Usando WorkflowInvoker e WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)

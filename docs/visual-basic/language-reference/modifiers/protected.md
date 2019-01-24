@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 5f279ed0a33840bb1f2321c17a1ffba412837c07
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 40dda40f68e535380a82a241e3ccd383b0c9809f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536285"
 ---
 # <a name="protected-visual-basic"></a>Protegido (Visual Basic)
 Um modificador de acesso de membro que especifica que um ou mais programação elementos declarados são acessíveis somente de dentro de sua própria classe ou de uma classe derivada.  
@@ -24,23 +24,23 @@ Um modificador de acesso de membro que especifica que um ou mais programação e
  Às vezes, um elemento de programação declarado em uma classe contém dados confidenciais ou código restrito, e você deseja limitar o acesso ao elemento. No entanto, se a classe é herdável e você espera uma hierarquia de classes derivadas, pode ser necessário para essas classes derivadas acessar os dados ou código. Nesse caso, você deseja que o elemento para ser acessível da classe base e de todas as classes derivadas. Para limitar o acesso a um elemento dessa maneira, você pode declará-la com `Protected`.  
 
 > [!NOTE]
-> O `Protected` modificador de acesso pode ser combinado com dois outros modificadores:
-> - O [Protected Friend](protected-friend.md) modificador faz com que um membro de classe podem ser acessados dessa classe de classes derivadas e do mesmo assembly no qual a classe é definida. 
-> - O [privada protegida](private-protected.md) modificador torna um membro de classe acessível por tipos derivados, mas apenas dentro de seu assembly que contém.
+> O `Protected` modificador de acesso pode ser combinado com dois outros modificadores de:
+> - O [Protected Friend](protected-friend.md) modificador torna um membro da classe acessível de dentro dessa classe, de classes derivadas e do mesmo assembly em que a classe é definida. 
+> - O [Private Protected](private-protected.md) modificador torna um membro da classe acessível por tipos derivados, mas somente dentro de seu assembly recipiente.
   
 ## <a name="rules"></a>Regras  
   
--   **Contexto de declaração.** Você pode usar `Protected` somente no nível de classe. Isso significa que o contexto da declaração para um `Protected` elemento deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, módulo, estrutura ou procedimento.  
+-   **Contexto da declaração.** Você pode usar `Protected` somente no nível de classe. Isso significa que o contexto da declaração para um `Protected` elemento deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, estrutura, módulo ou procedimento.  
 
 ## <a name="behavior"></a>Comportamento  
   
--   **Nível de acesso.** Todo o código em uma classe pode acessar seus elementos. O código em qualquer classe que deriva de uma classe base pode acessar todos os `Protected` elementos da classe base. Isso é verdadeiro para todas as gerações de derivação. Isso significa que uma classe pode acessar `Protected` elementos da classe base da classe base e assim por diante.  
+-   **Nível de acesso.** Todo o código em uma classe pode acessar seus elementos. Código em qualquer classe que deriva de uma classe base pode acessar todos os `Protected` elementos da classe base. Isso é verdadeiro para todas as gerações de derivação. Isso significa que uma classe pode acessar `Protected` elementos da classe base da classe base e assim por diante.  
   
-     Acesso protegido não é um superconjunto ou subconjunto de acesso friend.  
+     Acesso protegido não é um superconjunto ou subconjunto de acesso de amigo.  
   
--   **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas *modificadores de acesso*. Para uma comparação entre os modificadores de acesso, consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas *modificadores de acesso*. Para obter uma comparação os modificadores de acesso, consulte [acessar níveis no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- O `Protected` modificador pode ser usado nesses contextos:  
+ O `Protected` modificador pode ser usado nestes contextos:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -66,13 +66,13 @@ Um modificador de acesso de membro que especifica que um ou mais programação e
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Público](../../../visual-basic/language-reference/modifiers/public.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
- [Privado protegido](private-protected.md)   
- [Friend protegido](protected-friend.md)   
- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Consulte também
+- [Público](../../../visual-basic/language-reference/modifiers/public.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Privado](../../../visual-basic/language-reference/modifiers/private.md)
+- [Particular Protegido](private-protected.md)
+- [Amigo Protegido](protected-friend.md)
+- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
