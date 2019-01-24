@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 777fa850fcab1d1a6191c605ecb2f2a181fddcc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e44f84ed92f90a51ac1c5c7327d6de7b89887c7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536510"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>Enumeração ECustomDumpItemKind
-Reservado para extensão futura do [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) estrutura.  
+Reservado para uma futura extensão do [CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) estrutura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,14 +41,14 @@ typedef enum {
 |`DUMP_ITEM_None`|Reservado para uso futuro.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** consulte [requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MSCorEE.h  
   
  **Biblioteca:** MSCorEE.dll  
   
- **Versões do .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Interface ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Consulte também
+- [Interface ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Enumerações de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

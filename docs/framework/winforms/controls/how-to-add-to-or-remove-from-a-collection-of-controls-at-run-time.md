@@ -1,5 +1,5 @@
 ---
-title: Como adicionar a ou remover de uma coleção de controles em tempo de execução
+title: 'Como: Adicionar ou remover de uma coleção de controles em tempo de execução'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: cd903558fdb0e01b5ba55e0007fc78315408fa13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744902"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Como adicionar a ou remover de uma coleção de controles em tempo de execução
-Tarefas comuns no desenvolvimento de aplicativos são adicionando controles a e removendo controles de qualquer controle de contêiner em seus formulários (como o <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> controle ou até mesmo o próprio formulário). Em tempo de design, controles podem ser arrastados diretamente para um painel ou caixa de grupo. Em tempo de execução, esses controles mantêm uma coleção `Controls`, que mantém o controle de quais controles são colocados neles.  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Como: Adicionar ou remover de uma coleção de controles em tempo de execução
+Tarefas comuns no desenvolvimento de aplicativos são adicionar controles para e remover controles de qualquer controle de contêiner em formulários (como o <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> controle ou até mesmo o próprio formulário). Em tempo de design, controles podem ser arrastados diretamente para um painel ou caixa de grupo. Em tempo de execução, esses controles mantêm uma coleção `Controls`, que mantém o controle de quais controles são colocados neles.  
   
 > [!NOTE]
 >  O exemplo de código a seguir aplica-se a qualquer controle que mantém uma coleção de controles dentro dele.  
@@ -33,7 +33,7 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionando controles a e 
   
 3.  Adicione o controle à coleção `Controls` do controle pai.  
   
-     O exemplo de código a seguir mostra como criar uma instância do <xref:System.Windows.Forms.Button> controle. Ele requer um formulário com um <xref:System.Windows.Forms.Panel> controle e que o método de manipulação de eventos para o botão que está sendo criado, `NewPanelButton_Click`, já existe.  
+     O exemplo de código a seguir mostra como criar uma instância da <xref:System.Windows.Forms.Button> controle. Ele exige um formulário com um <xref:System.Windows.Forms.Panel> controle e que o método de manipulação de eventos para o botão que está sendo criado, `NewPanelButton_Click`, já existe.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -66,7 +66,7 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionando controles a e 
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Para remover os controles de uma coleção de forma programática  
   
-1.  Remova o manipulador de eventos do evento. No Visual Basic, utilize o [Instrução RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) palavra-chave; no Visual c#, use o [-= operador (referência de c#)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1.  Remova o manipulador de eventos do evento. No Visual Basic, use o [Instrução RemoveHandler](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) palavra-chave; no Visual C#, use o [-= operador (C# referência)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
 2.  Use o método `Remove` para excluir o controle desejado da coleção `Controls` do painel.  
   
@@ -100,6 +100,6 @@ Tarefas comuns no desenvolvimento de aplicativos são adicionando controles a e 
     }  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Windows.Forms.Panel>  
- [Controle de painel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+## <a name="see-also"></a>Consulte também
+- <xref:System.Windows.Forms.Panel>
+- [Controle de painel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

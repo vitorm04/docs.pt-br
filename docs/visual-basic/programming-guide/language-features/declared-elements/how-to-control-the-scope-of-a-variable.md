@@ -1,5 +1,5 @@
 ---
-title: Como controlar o escopo de uma variável (Visual Basic)
+title: 'Como: Controlar o escopo de uma variável (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,48 +12,48 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 6e8d1178398711226b88fee7e6defd5162b91fcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521397"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Como controlar o escopo de uma variável (Visual Basic)
-Normalmente, uma variável está no *escopo*, ou visível para referência, em toda a região em que você declare. Em alguns casos, a variável *nível de acesso* podem influenciar seu escopo.  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Como: Controlar o escopo de uma variável (Visual Basic)
+Normalmente, uma variável está no *escopo*, ou visível para referência, em toda a região na qual você declará-la. Em alguns casos, a variável *nível de acesso* podem influenciar seu escopo.  
   
  Para obter mais informações, consulte [escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
 ## <a name="scope-at-block-or-procedure-level"></a>Escopo no nível de procedimento ou bloco  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a>Para tornar uma variável visível somente dentro de um bloco  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>Para fazer uma variável visível somente dentro de um bloco  
   
--   Coloque o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para a variável entre o início e encerramento instruções de declaração desse bloco, por exemplo, entre o `For` e `Next` instruções de um `For` loop.  
+-   Coloque o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para a variável entre o Iniciando e encerrando instruções de declaração desse bloco, por exemplo, entre a `For` e `Next` instruções de um `For` loop.  
   
-     Você pode fazer referência à variável somente de dentro do bloco.  
+     Você pode fazer referência à variável apenas de dentro do bloco.  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Para tornar uma variável visível somente dentro de um procedimento  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Para fazer uma variável visível somente dentro de um procedimento  
   
 -   Coloque o `Dim` instrução para a variável dentro do procedimento, mas fora de qualquer bloco (como um `With`... `End With` bloco).  
   
-     Você pode fazer referência à variável somente de dentro do procedimento, inclusive dentro de qualquer bloco contido no procedimento.  
+     Você pode fazer referência à variável apenas de dentro do procedimento, inclusive dentro de qualquer bloco contido no procedimento.  
   
 ## <a name="scope-at-module-or-namespace-level"></a>Escopo no nível de Namespace ou módulo  
- Para sua conveniência, o termo único *nível de módulo* se aplica igualmente a módulos, classes e estruturas. O nível de acesso de uma variável de nível de módulo determina seu escopo. O namespace que contém o módulo, classe ou estrutura também influencia o escopo.  
+ Para sua conveniência, o termo simples *nível de módulo* se aplica igualmente a módulos, classes e estruturas. O nível de acesso de uma variável de nível de módulo determina seu escopo. O namespace que contém o módulo, classe ou estrutura também influencia o escopo.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Para tornar uma variável visível em um módulo, classe ou estrutura  
   
 1.  Coloque o `Dim` instrução para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [privada](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave no `Dim` instrução.  
+2.  Incluir o [privados](../../../../visual-basic/language-reference/modifiers/private.md) palavra-chave no `Dim` instrução.  
   
-3.  Você pode fazer referência à variável de qualquer lugar dentro do módulo, classe ou estrutura, mas não de fora.  
+3.  Você pode fazer referência à variável de qualquer lugar dentro do módulo, classe ou estrutura, mas não de fora dela.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Para tornar uma variável visível em um namespace  
   
 1.  Coloque o `Dim` instrução para a variável dentro do módulo, classe ou estrutura, mas fora de qualquer procedimento.  
   
-2.  Incluir o [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) ou [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave no `Dim` instrução.  
+2.  Incluir o [amigo](../../../../visual-basic/language-reference/modifiers/friend.md) ou [pública](../../../../visual-basic/language-reference/modifiers/public.md) palavra-chave no `Dim` instrução.  
   
 3.  Você pode fazer referência à variável de qualquer lugar dentro do namespace que contém o módulo, classe ou estrutura.  
   
@@ -72,7 +72,7 @@ Module demonstrateScope
 End Module  
 ```  
   
- No exemplo anterior, todos os procedimentos definidos no módulo `demonstrateScope` pode consultar o `String` variável `strMsg`. Quando o `usePrivateVariable` procedimento é chamado, ele exibe o conteúdo da variável de cadeia de caracteres `strMsg` em uma caixa de diálogo.  
+ No exemplo anterior, todos os procedimentos definidos no módulo `demonstrateScope` pode se referir a `String` variável `strMsg`. Quando o `usePrivateVariable` procedimento é chamado, ele exibe o conteúdo da variável de cadeia de caracteres `strMsg` em uma caixa de diálogo.  
   
  Com a seguinte alteração ao exemplo anterior, a variável de cadeia de caracteres `strMsg` pode ser chamada pelo código em qualquer lugar no namespace da sua declaração.  
   
@@ -81,15 +81,15 @@ Public strMsg As String
 ```  
   
 ## <a name="robust-programming"></a>Programação robusta  
- Quanto mais estreito o escopo de uma variável, menos oportunidades que você tem para acidentalmente referir-se a ele no lugar de outra variável com o mesmo nome. Você também pode minimizar problemas de referência correspondente.  
+ Quanto mais estreito o escopo de uma variável, e menos oportunidades que você tem para se referir acidentalmente a ele no lugar de outra variável com o mesmo nome. Você também pode minimizar problemas de referência correspondente.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Quanto mais estreito o escopo de uma variável, menores as chances de código mal-intencionado pode fazer inadequado usá-lo.  
+ Quanto mais estreito o escopo de uma variável, menores as chances de que um código mal-intencionado pode fazer inadequado usá-lo.  
   
-## <a name="see-also"></a>Consulte também  
- [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Consulte também
+- [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Tempo de vida no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Variáveis](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -2,12 +2,12 @@
 title: Oracle LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747993"
 ---
 # <a name="oracle-lobs"></a>Oracle LOBs
 O provedor de dados do .NET Framework para Oracle inclui a <xref:System.Data.OracleClient.OracleLob> classe, que é usado para trabalhar com a Oracle **LOB** tipos de dados.  
@@ -17,7 +17,7 @@ O provedor de dados do .NET Framework para Oracle inclui a <xref:System.Data.Ora
 |Tipo de dados|Descrição|  
 |---------------|-----------------|  
 |**Blob**|Um Oracle **BLOB** tipo de dados que contém dados binários com um tamanho máximo de 4 gigabytes. Isso é mapeado para um **Array** do tipo **bytes**.|  
-|**CLOB**|Um Oracle **CLOB** tipo de dados que contém dados de caractere, com base no caractere padrão definido no servidor, com um tamanho máximo de 4 gigabytes. Isso mapeia para **cadeia de caracteres**.|  
+|**Clob**|Um Oracle **CLOB** tipo de dados que contém dados de caractere, com base no caractere padrão definido no servidor, com um tamanho máximo de 4 gigabytes. Isso mapeia para **cadeia de caracteres**.|  
 |**NClob**|Um Oracle **NCLOB** tipo de dados que contém dados de caractere, com base em conjunto no servidor com um tamanho máximo de 4 gigabytes de caracteres nacional. Isso mapeia para **cadeia de caracteres**.|  
   
  Uma **OracleLob** difere de um <xref:System.Data.OracleClient.OracleBFile> em que os dados são armazenados no servidor, em vez de em um arquivo físico no sistema operacional. Ele também pode ser um objeto de leitura / gravação, ao contrário de um **OracleBFile**, que é sempre somente leitura.  
@@ -247,6 +247,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)  
- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)
+## <a name="see-also"></a>Consulte também
+- [Oracle and ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md) (Oracle e ADO.NET)
+- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917) (Central de desenvolvedores do DataSet e de provedores gerenciados do ADO.NET)

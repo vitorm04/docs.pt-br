@@ -1,18 +1,18 @@
 ---
-title: Como configurar uma associação de intercâmbio de WS-Metadata
+title: 'Como: Configurar um personalizado WS-Metadata Exchange associação'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 3d6f74d88dc9db775718c0098eccced4750d3b75
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642458"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como configurar uma associação de intercâmbio de WS-Metadata
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como: Configurar um personalizado WS-Metadata Exchange associação
 Este tópico explicará como configurar um personalizado WS-Metadata exchange associação. Windows Communication Foundation (WCF) inclui quatro associações de metadados definidos pelo sistema, mas você pode publicar os metadados usando a associação que você deseja. Este tópico mostra como publicar metadados usando o `wsHttpBinding`. Essa associação lhe dá a opção de expor metadados de uma maneira segura. O código neste artigo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Usando um arquivo de configuração  
@@ -113,9 +113,9 @@ Este tópico explicará como configurar um personalizado WS-Metadata exchange as
     Console.WriteLine("Metadata section: " + section.Dialect.ToString());  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- [Recuperar metadados](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Publicando metadados](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Publicando pontos de extremidade de metadados](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)
+## <a name="see-also"></a>Consulte também
+- [Comportamento de publicação de metadados](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
+- [Recuperar metadados](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
+- [Metadados](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Publicando metadados](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [Publicando pontos de extremidade de metadados](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)

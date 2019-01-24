@@ -2,12 +2,12 @@
 title: Adotando o Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643345"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adotando o Windows Communication Foundation
 
@@ -23,4 +23,4 @@ Até mesmo em alguns casos em que é necessário, migrando o código de uma tecn
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como recuperar metadados e implementar um serviço em conformidade](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [Como: Recuperar metadados e implementar um serviço em conformidade](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
